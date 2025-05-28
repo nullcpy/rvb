@@ -37,6 +37,20 @@ cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
+[Spotify-Extended]
+enabled = true
+app-name = "Spotify"
+build-mode = "apk"
+# arch = "arm64-v8a"
+# apkmirror-dpi = "480dpi"
+version = "auto"
+rv-brand = "ReVanced Extended"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+
 [Spotify]
 enabled = true
 app-name = "Spotify"
@@ -44,7 +58,7 @@ build-mode = "apk"
 # arch = "arm64-v8a"
 # apkmirror-dpi = "480dpi"
 version = "auto"
-patches-source = "anddea/revanced-patches"
+patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
@@ -90,7 +104,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "arm64-v8a"
