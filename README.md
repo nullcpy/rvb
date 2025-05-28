@@ -4,8 +4,8 @@ Repo contains
 - YouTube Extended
 - YouTube Music
 - YouTube Music Extended
-- Reddit
 - Reddit Extended
 - Spotify
+- Spotify-Extended
 
 [Download](https://github.com/geologically/revanced-apks/releases)
