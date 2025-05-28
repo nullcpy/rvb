@@ -92,7 +92,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 [Lightroom]
 enabled = true
 build-mode = "apk"
-# arch = "arm64-v8a"
+arch = "arm64-v8a"
 # apkmirror-dpi = "120-640dpi"
 version = "auto"
 app-name = "Lightroom"
