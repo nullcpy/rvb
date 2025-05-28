@@ -89,7 +89,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Lightroom]
-enabled = true
+enabled = false
 build-mode = "apk"
 arch = "both"
 version = "auto"
