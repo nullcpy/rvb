@@ -165,7 +165,7 @@ wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\nInstall [microG](https://github.com/ReVanced/GmsCore/releases) for GApps\n"
+log "\nℹ️ Install [microG](https://github.com/ReVanced/GmsCore/releases) for GApps\n"
 log "$(cat "$TEMP_DIR"/*-rv/changelog.md)"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
