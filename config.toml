@@ -86,7 +86,7 @@ rv-brand = "ReVanced Extended"
 patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit]
@@ -98,7 +98,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Lightroom]
