@@ -4,6 +4,7 @@ Repo contains
 - YouTube Extended
 - YouTube Music
 - YouTube Music Extended
+- Reddit
 - Reddit Extended
 - Spotify
 
