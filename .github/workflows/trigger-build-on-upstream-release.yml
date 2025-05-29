@@ -8,74 +8,68 @@ on:
 jobs:
   check-releases:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout update branch
         uses: actions/checkout@v4
+        with:
+          ref: update
 
-      - name: Get latest release from anddea
-        id: anddea
-        run: |
-          curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest > release_anddea.json
-          tag=$(jq -r .tag_name release_anddea.json)
-          echo "tag=$tag" >> $GITHUB_OUTPUT
-
-      - name: Get latest release from official revanced
-        id: official
-        run: |
-          curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest > release_official.json
-          tag=$(jq -r .tag_name release_official.json)
-          echo "tag=$tag" >> $GITHUB_OUTPUT
-
-      - name: Check if tag files exist
-        id: check_files
-        run: |
-          if [ -f ".ci/last_tag_anddea" ] && [ -f ".ci/last_tag_official" ]; then
-            echo "files_exist=true" >> $GITHUB_OUTPUT
-          else
-            echo "files_exist=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Create tag files if missing
-        if: steps.check_files.outputs.files_exist == 'false'
-        run: |
-          mkdir -p .ci
-          echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
-          echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
-
-      - name: Commit and push initial tag files
-        if: steps.check_files.outputs.files_exist == 'false'
+      - name: Set up Git config
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -B update
-          git add .ci/last_tag_anddea .ci/last_tag_official
-          git commit -m "Initialize tag tracking files"
-          git remote set-url origin https://x-access-token:${{ secrets.FG_PAT_PUSH }}@github.com/${{ github.repository }}.git
-          git push origin update
-          echo "Initial tags committed and pushed. Exiting..."
-          exit 0
 
-      - name: Compare tags and update if needed
-        id: compare
-        if: steps.check_files.outputs.files_exist == 'true'
+      - name: Fetch latest tags from repos
+        id: fetch_tags
         run: |
-          NEW_ANDDEA="${{ steps.anddea.outputs.tag }}"
-          NEW_OFFICIAL="${{ steps.official.outputs.tag }}"
+          curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest > release_anddea.json
+          curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest > release_official.json
 
+          echo "tag_anddea=$(jq -r .tag_name release_anddea.json)" >> $GITHUB_OUTPUT
+          echo "tag_official=$(jq -r .tag_name release_official.json)" >> $GITHUB_OUTPUT
+
+      - name: Ensure .ci folder and tag files exist
+        run: |
+          # Clone just the .ci directory from update branch
+          rm -rf .ci
+          mkdir .ci
+          git init .ci
+          cd .ci
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git fetch origin update
+          git checkout origin/update -- .
+          cd ..
+
+          # Create missing tag files and exit early if needed
+          if [ ! -f ".ci/last_tag_anddea" ] || [ ! -f ".ci/last_tag_official" ]; then
+            echo "${{ steps.fetch_tags.outputs.tag_anddea }}" > .ci/last_tag_anddea
+            echo "${{ steps.fetch_tags.outputs.tag_official }}" > .ci/last_tag_official
+            echo "Initialized missing tag files. Exiting early."
+            git add .ci/last_tag_*
+            git commit -m "Initialize tag tracking files"
+            git push origin update
+            exit 0
+          fi
+
+      - name: Compare and update tag files
+        id: compare
+        run: |
           LAST_ANDDEA=$(cat .ci/last_tag_anddea)
           LAST_OFFICIAL=$(cat .ci/last_tag_official)
+
+          NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
+          NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
 
           SHOULD_TRIGGER=0
 
           if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
             echo "$NEW_ANDDEA" > .ci/last_tag_anddea
-            echo "Updated anddea tag to $NEW_ANDDEA"
             SHOULD_TRIGGER=1
           fi
 
           if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
             echo "$NEW_OFFICIAL" > .ci/last_tag_official
-            echo "Updated official tag to $NEW_OFFICIAL"
             SHOULD_TRIGGER=1
           fi
 
@@ -84,17 +78,13 @@ jobs:
       - name: Commit and push updated tag files
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout update || git checkout -b update
-          git add .ci/last_tag_anddea .ci/last_tag_official
+          git add .ci/last_tag_*
           git commit -m "Update last release tags"
-          git remote set-url origin https://x-access-token:${{ secrets.FG_PAT_PUSH }}@github.com/${{ github.repository }}.git
           git push origin update
 
-      - name: Trigger Build workflow
+      - name: Trigger Build workflow if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: build.yml
-          token: ${{ secrets.FG_PAT_PUSH }}
+          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
