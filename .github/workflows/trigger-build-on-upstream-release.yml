@@ -33,6 +33,7 @@ jobs:
             echo "files_exist=true" >> $GITHUB_OUTPUT
           else
             echo "files_exist=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create tag files if missing
         if: steps.check_files.outputs.files_exist == 'false'
