@@ -13,12 +13,8 @@ jobs:
       - name: Checkout update branch
         uses: actions/checkout@v4
         with:
-          ref: update
-
-      - name: Set up Git config
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          fetch-depth: 0
+          ref: version
 
       - name: Fetch latest tags from repos
         id: fetch_tags
@@ -29,34 +25,35 @@ jobs:
           echo "tag_anddea=$(jq -r .tag_name release_anddea.json)" >> $GITHUB_OUTPUT
           echo "tag_official=$(jq -r .tag_name release_official.json)" >> $GITHUB_OUTPUT
 
-      - name: Ensure .ci folder and tag files exist
+      - name: Initialize missing tag files and exit early if needed
+        id: init_tags
         run: |
-          # Clone just the .ci directory from update branch
-          rm -rf .ci
-          mkdir .ci
-          git init .ci
-          cd .ci
-          git remote add origin https://github.com/${{ github.repository }}.git
-          git fetch origin update
-          git checkout origin/update -- .
-          cd ..
-
-          # Create missing tag files and exit early if needed
-          if [ ! -f ".ci/last_tag_anddea" ] || [ ! -f ".ci/last_tag_official" ]; then
-            echo "${{ steps.fetch_tags.outputs.tag_anddea }}" > .ci/last_tag_anddea
-            echo "${{ steps.fetch_tags.outputs.tag_official }}" > .ci/last_tag_official
-            echo "Initialized missing tag files. Exiting early."
-            git add .ci/last_tag_*
-            git commit -m "Initialize tag tracking files"
-            git push origin update
-            exit 0
+          if [ ! -f "last_tag_anddea" ] || [ ! -f "last_tag_official" ]; then
+            echo "${{ steps.fetch_tags.outputs.tag_anddea }}" > last_tag_anddea
+            echo "${{ steps.fetch_tags.outputs.tag_official }}" > last_tag_official
+            echo "missing=true" >> $GITHUB_OUTPUT
+          else
+            echo "missing=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Commit and push initialized tag files
+        if: steps.init_tags.outputs.missing == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: version
+          skip_checkout: true
+          file_pattern: last_tag_*
+          commit_message: "Initialize tag tracking files"
+
+      - name: Exit early if tags initialized
+        if: steps.init_tags.outputs.missing == 'true'
+        run: exit 0
 
       - name: Compare and update tag files
         id: compare
         run: |
-          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
-          LAST_OFFICIAL=$(cat .ci/last_tag_official)
+          LAST_ANDDEA=$(cat last_tag_anddea)
+          LAST_OFFICIAL=$(cat last_tag_official)
 
           NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
           NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
@@ -64,12 +61,12 @@ jobs:
           SHOULD_TRIGGER=0
 
           if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
-            echo "$NEW_ANDDEA" > .ci/last_tag_anddea
+            echo "$NEW_ANDDEA" > last_tag_anddea
             SHOULD_TRIGGER=1
           fi
 
           if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
-            echo "$NEW_OFFICIAL" > .ci/last_tag_official
+            echo "$NEW_OFFICIAL" > last_tag_official
             SHOULD_TRIGGER=1
           fi
 
@@ -77,10 +74,12 @@ jobs:
 
       - name: Commit and push updated tag files
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
-        run: |
-          git add .ci/last_tag_*
-          git commit -m "Update last release tags"
-          git push origin update
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: version
+          skip_checkout: true
+          file_pattern: last_tag_*
+          commit_message: "Update last release tags"
 
       - name: Trigger Build workflow if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
