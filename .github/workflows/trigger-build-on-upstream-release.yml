@@ -25,7 +25,7 @@ jobs:
           echo "tag_anddea=$(jq -r .tag_name release_anddea.json)" >> $GITHUB_OUTPUT
           echo "tag_official=$(jq -r .tag_name release_official.json)" >> $GITHUB_OUTPUT
 
-      - name: Initialize missing tag files and exit early if needed
+      - name: Initialize missing tag files
         id: init_tags
         run: |
           if [ ! -f "last_tag_anddea" ] || [ ! -f "last_tag_official" ]; then
@@ -45,30 +45,35 @@ jobs:
           file_pattern: last_tag_*
           commit_message: "Initialize tag tracking files"
 
-      - name: Exit early if tags initialized
-        if: steps.init_tags.outputs.missing == 'true'
-        run: exit 0
-
       - name: Compare and update tag files
         id: compare
         run: |
-          LAST_ANDDEA=$(cat last_tag_anddea)
-          LAST_OFFICIAL=$(cat last_tag_official)
+          read -r LAST_ANDDEA < last_tag_anddea
+          read -r LAST_OFFICIAL < last_tag_official
+
 
           NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
           NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
 
+          if [ -z "$NEW_ANDDEA" ] || [ -z "$NEW_OFFICIAL" ]; then
+            echo "One of the fetched tags is empty!"
+            exit 1
+          fi
+
           SHOULD_TRIGGER=0
 
-          if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
+          if [ "$(printf '%s\n' "$NEW_ANDDEA" "$LAST_ANDDEA" | sort -V | tail -n1)" != "$LAST_ANDDEA" ]; then
             echo "$NEW_ANDDEA" > last_tag_anddea
             SHOULD_TRIGGER=1
           fi
 
-          if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
+          if [ "$(printf '%s\n' "$NEW_OFFICIAL" "$LAST_OFFICIAL" | sort -V | tail -n1)" != "$LAST_OFFICIAL" ]; then
             echo "$NEW_OFFICIAL" > last_tag_official
             SHOULD_TRIGGER=1
           fi
+
+          echo "Comparing $LAST_ANDDEA vs $NEW_ANDDEA"
+          echo "Comparing $LAST_OFFICIAL vs $NEW_OFFICIAL"
 
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
 
