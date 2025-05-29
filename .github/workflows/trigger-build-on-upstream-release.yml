@@ -9,6 +9,9 @@ jobs:
   check-releases:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Try to restore tag records
         uses: actions/download-artifact@v4
         with:
@@ -48,20 +51,19 @@ jobs:
           echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
           echo "Created tag files for first time."
           echo "create_files=true" >> $GITHUB_OUTPUT
-          ls -l .ci
+          ls -la .ci
 
       - name: Upload tags if missing (First run)
         if: steps.create_files.outputs.create_files == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: last_tags
-          path: ${{ github.workspace }}/.ci
+          path: .ci/
+        # no `run` block here; the step must only use `uses`
 
-      - name: Exit after first tag creation and upload
+      - name: Stop workflow after creating tag files
         if: steps.create_files.outputs.create_files == 'true'
-        run: |
-          echo "Tags uploaded. Exiting workflow."
-          exit 0
+        run: exit 0
 
       - name: Compare tags with existing files
         id: compare
@@ -96,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: last_tags
-          path: .ci
+          path: .ci/
 
       - name: Trigger Build workflow if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
