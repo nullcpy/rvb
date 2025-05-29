@@ -1,8 +1,8 @@
-name: Trigger Build on ReVanced Patches Releases
+name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'  # Every 3 days at midnight UTC
+    - cron: '0 16 */3 * *'  # Every 3 days at 16:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -73,5 +73,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: build.yml
-          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
-          inputs: '{"from_ci": true}'
+          token: ${{ secrets.GITHUB_TOKEN }}
