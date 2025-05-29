@@ -1,0 +1,76 @@
+name: Trigger CI on ReVanced Patches Releases
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Check every 15 minutes
+  workflow_dispatch:
+
+jobs:
+  check-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore tag records
+        uses: actions/download-artifact@v4
+        with:
+          name: last_tags
+          path: .ci
+        continue-on-error: true
+
+      - name: Get latest release from anddea
+        id: anddea
+        run: |
+          curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest > release_anddea.json
+          tag=$(jq -r .tag_name release_anddea.json)
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - name: Get latest release from official revanced
+        id: official
+        run: |
+          curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest > release_official.json
+          tag=$(jq -r .tag_name release_official.json)
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - name: Compare tags
+        id: compare
+        run: |
+          mkdir -p .ci
+          touch .ci/last_tag_anddea
+          touch .ci/last_tag_official
+
+          LAST_ANDDEA=$(cat .ci/last_tag_anddea || echo "")
+          LAST_OFFICIAL=$(cat .ci/last_tag_official || echo "")
+          echo "Previous anddea: $LAST_ANDDEA"
+          echo "Previous official: $LAST_OFFICIAL"
+
+          NEW_ANDDEA="${{ steps.anddea.outputs.tag }}"
+          NEW_OFFICIAL="${{ steps.official.outputs.tag }}"
+
+          SHOULD_TRIGGER=0
+
+          if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
+            echo "New release detected from anddea: $NEW_ANDDEA"
+            echo "$NEW_ANDDEA" > .ci/last_tag_anddea
+            SHOULD_TRIGGER=1
+          fi
+
+          if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
+            echo "New release detected from official revanced: $NEW_OFFICIAL"
+            echo "$NEW_OFFICIAL" > .ci/last_tag_official
+            SHOULD_TRIGGER=1
+          fi
+
+          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
+
+      - name: Upload latest tags
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: last_tags
+          path: .ci
+
+      - name: Trigger CI workflow
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: CI
+          token: ${{ secrets.GITHUB_TOKEN }}
