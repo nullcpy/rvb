@@ -1,12 +1,15 @@
 # ReVanced Builder
-## Automatically builds on new patch release 
+**Automatically builds on new patch release** 
 
+### [Download from GitHub](https://github.com/geologically/revanced-apks/releases)
+
+## Patch: [revanced/revanced-patches](https://github.com/revanced/revanced-patches)
 - YouTube
-- YouTube Extended
 - YouTube Music
-- YouTube Music Extended
-- Reddit Extended
 - Spotify
-- Spotify-Extended
 
-[Download](https://github.com/geologically/revanced-apks/releases)
+## Patch: [anddea/revanced-patches](https://github.com/anddea/revanced-patches)
+- YouTube Anddea
+- YouTube Music Anddea
+- Reddit Anddea
+- Spotify-Anddea
