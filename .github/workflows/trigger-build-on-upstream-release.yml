@@ -48,6 +48,7 @@ jobs:
           echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
           echo "Created tag files for first time."
           echo "create_files=true" >> $GITHUB_OUTPUT
+          ls -l .ci
 
       - name: Upload tags if missing (First run)
         if: steps.create_files.outputs.create_files == 'true'
