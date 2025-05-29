@@ -6,14 +6,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-and-update-tags:
+  check-releases:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout update branch
-        uses: actions/checkout@v3
-        with:
-          ref: update
-          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Get latest release from anddea
         id: anddea
@@ -29,63 +26,74 @@ jobs:
           tag=$(jq -r .tag_name release_official.json)
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
-      - name: Ensure .ci directory exists
-        run: mkdir -p .ci
-
-      - name: Read previous tags if files exist
-        id: read_prev
+      - name: Check if tag files exist
+        id: check_files
         run: |
-          if [ -f ".ci/last_tag_anddea" ]; then
-            echo "LAST_ANDDEA=$(cat .ci/last_tag_anddea)" >> $GITHUB_ENV
+          if [ -f ".ci/last_tag_anddea" ] && [ -f ".ci/last_tag_official" ]; then
+            echo "files_exist=true" >> $GITHUB_OUTPUT
           else
-            echo "LAST_ANDDEA=" >> $GITHUB_ENV
-          fi
+            echo "files_exist=false" >> $GITHUB_OUTPUT
 
-          if [ -f ".ci/last_tag_official" ]; then
-            echo "LAST_OFFICIAL=$(cat .ci/last_tag_official)" >> $GITHUB_ENV
-          else
-            echo "LAST_OFFICIAL=" >> $GITHUB_ENV
-          fi
+      - name: Create tag files if missing
+        if: steps.check_files.outputs.files_exist == 'false'
+        run: |
+          mkdir -p .ci
+          echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
+          echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
 
-      - name: Compare and update tags files
+      - name: Commit and push initial tag files
+        if: steps.check_files.outputs.files_exist == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B update
+          git add .ci/last_tag_anddea .ci/last_tag_official
+          git commit -m "Initialize tag tracking files"
+          git remote set-url origin https://x-access-token:${{ secrets.FG_PAT_PUSH }}@github.com/${{ github.repository }}.git
+          git push origin update
+          echo "Initial tags committed and pushed. Exiting..."
+          exit 0
+
+      - name: Compare tags and update if needed
         id: compare
+        if: steps.check_files.outputs.files_exist == 'true'
         run: |
-          SHOULD_PUSH=0
-          NEW_ANDDEA=${{ steps.anddea.outputs.tag }}
-          NEW_OFFICIAL=${{ steps.official.outputs.tag }}
+          NEW_ANDDEA="${{ steps.anddea.outputs.tag }}"
+          NEW_OFFICIAL="${{ steps.official.outputs.tag }}"
 
-          echo "Previous anddea tag: $LAST_ANDDEA"
-          echo "New anddea tag: $NEW_ANDDEA"
-          echo "Previous official tag: $LAST_OFFICIAL"
-          echo "New official tag: $NEW_OFFICIAL"
+          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
+          LAST_OFFICIAL=$(cat .ci/last_tag_official)
+
+          SHOULD_TRIGGER=0
 
           if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
             echo "$NEW_ANDDEA" > .ci/last_tag_anddea
-            SHOULD_PUSH=1
+            echo "Updated anddea tag to $NEW_ANDDEA"
+            SHOULD_TRIGGER=1
           fi
 
           if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
             echo "$NEW_OFFICIAL" > .ci/last_tag_official
-            SHOULD_PUSH=1
+            echo "Updated official tag to $NEW_OFFICIAL"
+            SHOULD_TRIGGER=1
           fi
 
-          echo "SHOULD_PUSH=$SHOULD_PUSH" >> $GITHUB_OUTPUT
+          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
 
-      - name: Commit and push updated tags
-        if: steps.compare.outputs.SHOULD_PUSH == '1'
+      - name: Commit and push updated tag files
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout update || git checkout -b update
           git add .ci/last_tag_anddea .ci/last_tag_official
           git commit -m "Update last release tags"
+          git remote set-url origin https://x-access-token:${{ secrets.FG_PAT_PUSH }}@github.com/${{ github.repository }}.git
           git push origin update
 
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
-
-      - name: Trigger Build workflow if new tags
-        if: steps.compare.outputs.SHOULD_PUSH == '1'
+      - name: Trigger Build workflow
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: build.yml
-          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
+          token: ${{ secrets.FG_PAT_PUSH }}
