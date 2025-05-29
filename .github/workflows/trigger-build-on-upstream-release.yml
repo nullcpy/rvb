@@ -2,7 +2,7 @@ name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: "0 15 * * *"  # Run daily at 15:00 UTC
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,16 +16,11 @@ jobs:
           path: .ci
         continue-on-error: true
 
-      - name: Check if tag records restored
+      - name: Ensure tag files exist
         run: |
-          if [ ! -d ".ci" ] || [ -z "$(ls -A .ci)" ]; then
-            echo "No previous tag artifact found, assuming first run."
-            mkdir -p .ci
-            echo "" > .ci/last_tag_anddea
-            echo "" > .ci/last_tag_official
-          else
-            echo "Restored previous tag artifact."
-          fi
+          mkdir -p .ci
+          [ -f .ci/last_tag_anddea ] || echo "" > .ci/last_tag_anddea
+          [ -f .ci/last_tag_official ] || echo "" > .ci/last_tag_official
 
       - name: Get latest release from anddea
         id: anddea
