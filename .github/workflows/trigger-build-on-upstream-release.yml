@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: last_tags
-          path: .ci
+          path: ${{ github.workspace }}/.ci
 
       - name: Exit after first tag creation and upload
         if: steps.create_files.outputs.create_files == 'true'
