@@ -1,4 +1,4 @@
-name: Trigger CI on ReVanced Patches Releases
+name: Trigger Build on Patch Update
 
 on:
   schedule:
