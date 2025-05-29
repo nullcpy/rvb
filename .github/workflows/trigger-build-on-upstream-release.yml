@@ -2,7 +2,7 @@ name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: "0 15 * * *"  # Daily at 15:00 UTC
+    - cron: "0 15 * * *"  # Run daily at 15:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -15,6 +15,17 @@ jobs:
           name: last_tags
           path: .ci
         continue-on-error: true
+
+      - name: Check if tag records restored
+        run: |
+          if [ ! -d ".ci" ] || [ -z "$(ls -A .ci)" ]; then
+            echo "No previous tag artifact found, assuming first run."
+            mkdir -p .ci
+            echo "" > .ci/last_tag_anddea
+            echo "" > .ci/last_tag_official
+          else
+            echo "Restored previous tag artifact."
+          fi
 
       - name: Get latest release from anddea
         id: anddea
@@ -30,18 +41,11 @@ jobs:
           tag=$(jq -r .tag_name release_official.json)
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
-      - name: Compare tags and detect changes
+      - name: Compare tags
         id: compare
         run: |
-          mkdir -p .ci
-
-          # Initialize tag files if missing
-          [ -f .ci/last_tag_anddea ] || echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
-          [ -f .ci/last_tag_official ] || echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
-
-          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
-          LAST_OFFICIAL=$(cat .ci/last_tag_official)
-
+          LAST_ANDDEA=$(cat .ci/last_tag_anddea || echo "")
+          LAST_OFFICIAL=$(cat .ci/last_tag_official || echo "")
           echo "Previous anddea: $LAST_ANDDEA"
           echo "Previous official: $LAST_OFFICIAL"
 
@@ -64,7 +68,7 @@ jobs:
 
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
 
-      - name: Upload updated tag records
+      - name: Upload latest tags
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: actions/upload-artifact@v4
         with:
