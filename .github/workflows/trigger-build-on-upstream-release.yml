@@ -6,18 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-releases:
+  check-and-update-tags:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Try to restore tag records
-        uses: actions/download-artifact@v4
+      - name: Checkout update branch
+        uses: actions/checkout@v3
         with:
-          name: last_tags
-          path: .ci
-        continue-on-error: true
+          ref: update
+          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
 
       - name: Get latest release from anddea
         id: anddea
@@ -33,75 +29,62 @@ jobs:
           tag=$(jq -r .tag_name release_official.json)
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
-      - name: Check if tag files exist
-        id: check_files
+      - name: Ensure .ci directory exists
+        run: mkdir -p .ci
+
+      - name: Read previous tags if files exist
+        id: read_prev
         run: |
-          if [ -f ".ci/last_tag_anddea" ] && [ -f ".ci/last_tag_official" ]; then
-            echo "files_exist=true" >> $GITHUB_OUTPUT
+          if [ -f ".ci/last_tag_anddea" ]; then
+            echo "LAST_ANDDEA=$(cat .ci/last_tag_anddea)" >> $GITHUB_ENV
           else
-            echo "files_exist=false" >> $GITHUB_OUTPUT
+            echo "LAST_ANDDEA=" >> $GITHUB_ENV
           fi
 
-      - name: Create tag files if missing (First run)
-        id: create_files
-        if: steps.check_files.outputs.files_exist == 'false'
-        run: |
-          mkdir -p .ci
-          echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
-          echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
-          echo "Created tag files for first time."
-          echo "create_files=true" >> $GITHUB_OUTPUT
-          ls -la .ci
+          if [ -f ".ci/last_tag_official" ]; then
+            echo "LAST_OFFICIAL=$(cat .ci/last_tag_official)" >> $GITHUB_ENV
+          else
+            echo "LAST_OFFICIAL=" >> $GITHUB_ENV
+          fi
 
-      - name: Upload tags if missing (First run)
-        if: steps.create_files.outputs.create_files == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: last_tags
-          path: .ci/
-        # no `run` block here; the step must only use `uses`
-
-      - name: Stop workflow after creating tag files
-        if: steps.create_files.outputs.create_files == 'true'
-        run: exit 0
-
-      - name: Compare tags with existing files
+      - name: Compare and update tags files
         id: compare
-        if: steps.check_files.outputs.files_exist == 'true'
         run: |
-          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
-          LAST_OFFICIAL=$(cat .ci/last_tag_official)
-          echo "Previous anddea: $LAST_ANDDEA"
-          echo "Previous official: $LAST_OFFICIAL"
+          SHOULD_PUSH=0
+          NEW_ANDDEA=${{ steps.anddea.outputs.tag }}
+          NEW_OFFICIAL=${{ steps.official.outputs.tag }}
 
-          NEW_ANDDEA="${{ steps.anddea.outputs.tag }}"
-          NEW_OFFICIAL="${{ steps.official.outputs.tag }}"
-
-          SHOULD_TRIGGER=0
+          echo "Previous anddea tag: $LAST_ANDDEA"
+          echo "New anddea tag: $NEW_ANDDEA"
+          echo "Previous official tag: $LAST_OFFICIAL"
+          echo "New official tag: $NEW_OFFICIAL"
 
           if [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
-            echo "New release detected from anddea: $NEW_ANDDEA"
             echo "$NEW_ANDDEA" > .ci/last_tag_anddea
-            SHOULD_TRIGGER=1
+            SHOULD_PUSH=1
           fi
 
           if [ "$NEW_OFFICIAL" != "$LAST_OFFICIAL" ]; then
-            echo "New release detected from official revanced: $NEW_OFFICIAL"
             echo "$NEW_OFFICIAL" > .ci/last_tag_official
-            SHOULD_TRIGGER=1
+            SHOULD_PUSH=1
           fi
 
-          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
+          echo "SHOULD_PUSH=$SHOULD_PUSH" >> $GITHUB_OUTPUT
 
-      - name: Upload updated tags if new releases found
-        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
-        uses: actions/upload-artifact@v4
-        with:
-          name: last_tags
-          path: .ci/
+      - name: Commit and push updated tags
+        if: steps.compare.outputs.SHOULD_PUSH == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .ci/last_tag_anddea .ci/last_tag_official
+          git commit -m "Update last release tags"
+          git push origin update
 
-      - name: Trigger Build workflow if new releases found
-        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
+
+      - name: Trigger Build workflow if new tags
+        if: steps.compare.outputs.SHOULD_PUSH == '1'
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: build.yml
