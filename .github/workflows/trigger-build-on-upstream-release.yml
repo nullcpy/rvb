@@ -9,18 +9,12 @@ jobs:
   check-releases:
     runs-on: ubuntu-latest
     steps:
-      - name: Restore tag records
+      - name: Try to restore tag records
         uses: actions/download-artifact@v4
         with:
           name: last_tags
           path: .ci
         continue-on-error: true
-
-      - name: Ensure tag files exist
-        run: |
-          mkdir -p .ci
-          [ -f .ci/last_tag_anddea ] || echo "" > .ci/last_tag_anddea
-          [ -f .ci/last_tag_official ] || echo "" > .ci/last_tag_official
 
       - name: Get latest release from anddea
         id: anddea
@@ -36,11 +30,30 @@ jobs:
           tag=$(jq -r .tag_name release_official.json)
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
-      - name: Compare tags
-        id: compare
+      - name: Check if tag files exist
+        id: check_files
         run: |
-          LAST_ANDDEA=$(cat .ci/last_tag_anddea || echo "")
-          LAST_OFFICIAL=$(cat .ci/last_tag_official || echo "")
+          if [ -f ".ci/last_tag_anddea" ] && [ -f ".ci/last_tag_official" ]; then
+            echo "files_exist=true" >> $GITHUB_OUTPUT
+          else
+            echo "files_exist=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create tag files if missing (First run)
+        if: steps.check_files.outputs.files_exist == 'false'
+        run: |
+          mkdir -p .ci
+          echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
+          echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
+          echo "Created tag files for first time. Exiting workflow."
+          exit 0
+
+      - name: Compare tags with existing files
+        id: compare
+        if: steps.check_files.outputs.files_exist == 'true'
+        run: |
+          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
+          LAST_OFFICIAL=$(cat .ci/last_tag_official)
           echo "Previous anddea: $LAST_ANDDEA"
           echo "Previous official: $LAST_OFFICIAL"
 
@@ -63,14 +76,14 @@ jobs:
 
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
 
-      - name: Upload latest tags
+      - name: Upload updated tags if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: actions/upload-artifact@v4
         with:
           name: last_tags
           path: .ci
 
-      - name: Trigger Build workflow
+      - name: Trigger Build workflow if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: benc-uk/workflow-dispatch@v1
         with:
