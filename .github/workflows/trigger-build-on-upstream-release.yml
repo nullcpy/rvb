@@ -2,13 +2,12 @@ name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: "0 15 * * *"  # Every day at 15:00 UTC
+    - cron: "0 15 * * *"  # Daily at 15:00 UTC
   workflow_dispatch:
 
 jobs:
   check-releases:
     runs-on: ubuntu-latest
-
     steps:
       - name: Restore tag records
         uses: actions/download-artifact@v4
@@ -31,15 +30,17 @@ jobs:
           tag=$(jq -r .tag_name release_official.json)
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
-      - name: Compare tags
+      - name: Compare tags and detect changes
         id: compare
         run: |
           mkdir -p .ci
-          touch .ci/last_tag_anddea
-          touch .ci/last_tag_official
 
-          LAST_ANDDEA=$(cat .ci/last_tag_anddea || echo "")
-          LAST_OFFICIAL=$(cat .ci/last_tag_official || echo "")
+          # Initialize tag files if missing
+          [ -f .ci/last_tag_anddea ] || echo "${{ steps.anddea.outputs.tag }}" > .ci/last_tag_anddea
+          [ -f .ci/last_tag_official ] || echo "${{ steps.official.outputs.tag }}" > .ci/last_tag_official
+
+          LAST_ANDDEA=$(cat .ci/last_tag_anddea)
+          LAST_OFFICIAL=$(cat .ci/last_tag_official)
 
           echo "Previous anddea: $LAST_ANDDEA"
           echo "Previous official: $LAST_OFFICIAL"
@@ -61,9 +62,9 @@ jobs:
             SHOULD_TRIGGER=1
           fi
 
-          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> "$GITHUB_OUTPUT"
+          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
 
-      - name: Upload latest tags
+      - name: Upload updated tag records
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: actions/upload-artifact@v4
         with:
