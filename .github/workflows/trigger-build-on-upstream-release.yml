@@ -2,7 +2,7 @@ name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: '0 16 */3 * *'  # Every 3 days at 16:00 UTC
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 jobs:
