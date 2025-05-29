@@ -1,5 +1,6 @@
-# ReVanced Apks
-Repo contains
+# ReVanced Builder
+## Automatically builds on new patch release 
+
 - YouTube
 - YouTube Extended
 - YouTube Music
