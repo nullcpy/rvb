@@ -2,12 +2,13 @@ name: Trigger CI on ReVanced Patches Releases
 
 on:
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "0 15 * * *"  # Every day at 15:00 UTC
   workflow_dispatch:
 
 jobs:
   check-releases:
     runs-on: ubuntu-latest
+
     steps:
       - name: Restore tag records
         uses: actions/download-artifact@v4
@@ -39,6 +40,7 @@ jobs:
 
           LAST_ANDDEA=$(cat .ci/last_tag_anddea || echo "")
           LAST_OFFICIAL=$(cat .ci/last_tag_official || echo "")
+
           echo "Previous anddea: $LAST_ANDDEA"
           echo "Previous official: $LAST_OFFICIAL"
 
@@ -59,7 +61,7 @@ jobs:
             SHOULD_TRIGGER=1
           fi
 
-          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
+          echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> "$GITHUB_OUTPUT"
 
       - name: Upload latest tags
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
