@@ -74,5 +74,4 @@ jobs:
         with:
           workflow: build.yml
           token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
-          inputs: |
-            from_ci: true
+          inputs: '{"from_ci": true}'
