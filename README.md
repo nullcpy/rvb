@@ -9,7 +9,7 @@
 - Spotify
 
 ## Patch: [anddea/revanced-patches](https://github.com/anddea/revanced-patches)
-- YouTube Anddea
-- YouTube Music Anddea
-- Reddit Anddea
+- YouTube-Anddea
+- YouTube-Music Anddea
+- Reddit-Anddea
 - Spotify-Anddea
