@@ -7,6 +7,7 @@
 - YouTube
 - YouTube Music
 - Spotify
+- Photos
 
 ## Patch: [anddea/revanced-patches](https://github.com/anddea/revanced-patches)
 - YouTube-Anddea
