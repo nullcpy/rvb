@@ -38,7 +38,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify-Anddea]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 # arch = "arm64-v8a"
@@ -65,7 +65,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Music-Anddea]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "apk"
 arch = "arm64-v8a"
@@ -91,7 +91,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Reddit-Anddea]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "arm64-v8a"
