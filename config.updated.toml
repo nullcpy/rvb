@@ -78,7 +78,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Anddea]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
