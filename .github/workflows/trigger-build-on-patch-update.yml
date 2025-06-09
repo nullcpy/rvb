@@ -34,7 +34,8 @@ jobs:
             echo "missing=true" >> $GITHUB_OUTPUT
           else
             echo "missing=false" >> $GITHUB_OUTPUT
-
+            fi
+          
       - name: Commit and push initialized tag files
         if: steps.init_tags.outputs.missing == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
