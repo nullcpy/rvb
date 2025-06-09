@@ -34,7 +34,6 @@ jobs:
             echo "missing=true" >> $GITHUB_OUTPUT
           else
             echo "missing=false" >> $GITHUB_OUTPUT
-          fi
 
       - name: Commit and push initialized tag files
         if: steps.init_tags.outputs.missing == 'true'
@@ -50,7 +49,6 @@ jobs:
         run: |
           read -r LAST_ANDDEA < last_tag_anddea
           read -r LAST_OFFICIAL < last_tag_official
-
 
           NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
           NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
@@ -85,6 +83,37 @@ jobs:
           skip_checkout: true
           file_pattern: last_tag_*
           commit_message: "Update last release tags"
+
+      - name: Checkout main branch to update config
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generate filtered config
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        run: |
+          cp config.toml config.updated.toml
+
+          if [ "$(printf '%s\n' "${{ steps.fetch_tags.outputs.tag_anddea }}" "$(cat last_tag_anddea)" | sort -V | tail -n1)" != "$(cat last_tag_anddea)" ]; then
+            echo "Keeping anddea apps enabled"
+          else
+            sed -i '/\[.*-Anddea\]/,/^\[/ s/enabled = true/enabled = false/' config.updated.toml
+          fi
+
+          if [ "$(printf '%s\n' "${{ steps.fetch_tags.outputs.tag_official }}" "$(cat last_tag_official)" | sort -V | tail -n1)" != "$(cat last_tag_official)" ]; then
+            echo "Keeping official apps enabled"
+          else
+            sed -i '/\[[^]]*\]/,/^\[/ {/patches-source = "revanced\/revanced-patches"/!b}; s/enabled = true/enabled = false/' config.updated.toml
+          fi
+
+      - name: Commit updated config
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: "Update config.updated.toml for new patches"
+          file_pattern: config.updated.toml
 
       - name: Trigger Build workflow if new releases found
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
