@@ -75,8 +75,6 @@ jobs:
           echo "Comparing $LAST_OFFICIAL vs $NEW_OFFICIAL"
 
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
-
-          # Pass old and new tags as outputs for use in next step
           echo "old_anddea=$LAST_ANDDEA" >> $GITHUB_OUTPUT
           echo "new_anddea=$NEW_ANDDEA" >> $GITHUB_OUTPUT
           echo "old_official=$LAST_OFFICIAL" >> $GITHUB_OUTPUT
@@ -102,17 +100,39 @@ jobs:
         run: |
           cp config.toml config.updated.toml
 
-          if [ "${{ steps.compare.outputs.new_anddea }}" != "${{ steps.compare.outputs.old_anddea }}" ]; then
-            echo "Keeping anddea apps enabled"
-          else
-            sed -i '/\[.*-Anddea\]/,/^\[/ s/enabled = true/enabled = false/' config.updated.toml
-          fi
+          awk -v old_anddea="${{ steps.compare.outputs.old_anddea }}" \
+              -v new_anddea="${{ steps.compare.outputs.new_anddea }}" \
+              -v old_official="${{ steps.compare.outputs.old_official }}" \
+              -v new_official="${{ steps.compare.outputs.new_official }}" '
+            BEGIN {
+              in_section = 0
+              should_disable = 0
+            }
+            /^\[.*\]/ {
+              section = $0
+              in_section = 1
+              should_disable = 0
+              is_official = 0
 
-          if [ "${{ steps.compare.outputs.new_official }}" != "${{ steps.compare.outputs.old_official }}" ]; then
-            echo "Keeping official apps enabled"
-          else
-            sed -i '/\[[^]]*\]/,/^\[/ {/patches-source = "revanced\/revanced-patches"/!b}; s/enabled = true/enabled = false/' config.updated.toml
-          fi
+              if (section ~ /\[.*-Anddea\]/) {
+                if (new_anddea == old_anddea) {
+                  should_disable = 1
+                }
+              }
+            }
+            /patches-source *= *"revanced\/revanced-patches"/ {
+              is_official = 1
+              if (new_official == old_official) {
+                should_disable = 1
+              }
+            }
+            {
+              if (should_disable && $0 ~ /enabled *= *true/) {
+                sub(/enabled *= *true/, "enabled = false")
+              }
+              print
+            }
+          ' config.updated.toml > config.tmp && mv config.tmp config.updated.toml
 
       - name: Commit updated config
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
