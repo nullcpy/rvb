@@ -1,6 +1,7 @@
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
 
 parallel-jobs = 1
+remove-rv-integrations-checks = true
 
 [YouTube]
 enabled = true
