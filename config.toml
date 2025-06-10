@@ -3,7 +3,7 @@
 parallel-jobs = 1
 
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
@@ -52,7 +52,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Spotify]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 # arch = "arm64-v8a"
@@ -78,7 +78,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Anddea]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
@@ -104,7 +104,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "apk"
 arch = "arm64-v8a"
@@ -130,7 +130,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Reddit-Extended]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "arm64-v8a"
