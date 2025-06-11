@@ -50,5 +50,5 @@
 - Install [GmsCore a.k.a MicroG](https://github.com/ReVanced/GmsCore/releases) for GApps.
 - These builds are intended for users who want prebuilt APKs without having to compile or patch manually. All credits go to the respective patch authors.
 
----
+
 
