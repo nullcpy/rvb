@@ -12,10 +12,18 @@
 
 1. Open the **Obtainium** app.
 2. Tap **Add App**.
-3. In the **App source URL** field, enter: `github.com/geologically/revanced-builder`
-4. Scroll down to the **Filter APKs by regular expression** field.
-5. Enter the appropriate regex from the table below for the app you want.
-6. Tap the **Add** button next to the URL field to begin the download.
+3. In the **App source URL** field, enter: <br>
+- **For ReVanced APKs**
+```
+github.com/geologically/revanced-builder
+```
+- **For MicroG Apk**
+```
+github.com/ReVanced/GmsCore
+```
+5. Scroll down to the **Filter APKs by regular expression** field.
+6. Enter the appropriate regex from the table below for the app you want.
+7. Tap the **Add** button next to the URL field to begin the download.
 
 ---
 
@@ -36,8 +44,6 @@
 |                                                                            | Spotify        | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
 ### 🔎 Regex Patterns for MicroG APK Filtering
-
-In the **App source URL** field, enter: `github.com/ReVanced/GmsCore`
 
 | App                        | Variant    | Regex Pattern                                                           |
 |----------------------------|------------|-------------------------------------------------------------------------|
