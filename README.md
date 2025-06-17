@@ -37,7 +37,7 @@
 
 ### 🔎 Regex Patterns for MicroG APK Filtering
 
-**URL**: `https://github.com/ReVanced/GmsCore`
+In the **App source URL** field, enter: `https://github.com/ReVanced/GmsCore`
 
 | App                        | Variant    | Regex Pattern                                                           |
 |----------------------------|------------|-------------------------------------------------------------------------|
