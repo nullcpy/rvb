@@ -35,8 +35,9 @@
 |                                                                            | Reddit         | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
 |                                                                            | Spotify        | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
-
 ### 🔎 Regex Patterns for MicroG APK Filtering
+
+**URL**: `https://github.com/ReVanced/GmsCore`
 
 | App                        | Variant    | Regex Pattern                                                           |
 |----------------------------|------------|-------------------------------------------------------------------------|
