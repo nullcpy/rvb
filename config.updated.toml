@@ -143,7 +143,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
-[Reddit-Anddea]
+[Reddit-Anddea-All]
 enabled = true
 app-name = "Reddit"
 build-mode = "apk"
@@ -156,7 +156,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
-[Reddit-Extended]
+[Reddit-Extended-All]
 enabled = true
 app-name = "Reddit"
 build-mode = "apk"
