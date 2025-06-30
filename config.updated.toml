@@ -118,7 +118,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit-Anddea]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "arm64-v8a"
@@ -130,41 +130,15 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
-[Reddit-Extended]
+[Reddit]
 enabled = true
 app-name = "Reddit"
 build-mode = "apk"
-arch = "arm64-v8a"
+# arch = "arm64-v8a"
 version = "auto"
-rv-brand = "ReVanced Extended"
-patches-source = "inotia00/revanced-patches"
+patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
-[Reddit-Anddea-All]
-enabled = true
-app-name = "Reddit"
-build-mode = "apk"
-arch = "all"
-version = "auto"
-rv-brand = "ReVanced Anddea"
-patches-source = "anddea/revanced-patches"
-cli-source = "j-hc/revanced-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
-
-[Reddit-Extended-All]
-enabled = true
-app-name = "Reddit"
-build-mode = "apk"
-arch = "all"
-version = "auto"
-rv-brand = "ReVanced Extended"
-patches-source = "inotia00/revanced-patches"
-cli-source = "j-hc/revanced-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
