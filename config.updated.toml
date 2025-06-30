@@ -4,10 +4,10 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "apk"
-arch = "all"
+# arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
@@ -16,10 +16,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "apk"
-arch = "all"
+# arch = "all"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
@@ -29,10 +29,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Anddea]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "apk"
-arch = "all"
+# arch = "all"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
@@ -42,10 +42,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "apk"
-arch = "both"
+# arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
@@ -54,10 +54,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Extended]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "apk"
-arch = "both"
+# arch = "both"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
@@ -67,10 +67,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Anddea]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "apk"
-arch = "both"
+# arch = "both"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
@@ -80,10 +80,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "apk"
-arch = "both"
+# arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
@@ -91,7 +91,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
-enabled = false
+enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 # arch = "arm64-v8a"
@@ -104,7 +104,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Spotify-Anddea]
-enabled = false
+enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 # arch = "arm64-v8a"
@@ -116,19 +116,6 @@ cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
-
-[Reddit-Anddea]
-enabled = false
-app-name = "Reddit"
-build-mode = "apk"
-arch = "arm64-v8a"
-version = "auto"
-rv-brand = "ReVanced Anddea"
-patches-source = "anddea/revanced-patches"
-cli-source = "j-hc/revanced-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit]
 enabled = true
@@ -142,3 +129,28 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
+[Reddit-Anddea]
+enabled = true
+app-name = "Reddit"
+build-mode = "apk"
+# arch = "arm64-v8a"
+version = "auto"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+
+[Reddit-Extended]
+enabled = true
+app-name = "Reddit"
+build-mode = "apk"
+# arch = "arm64-v8a"
+version = "auto"
+rv-brand = "ReVanced Extended"
+patches-source = "inotia00/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
