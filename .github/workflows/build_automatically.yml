@@ -160,7 +160,42 @@ jobs:
           commit_message: "Update config.updated.toml for new patches"
           file_pattern: config.updated.toml
 
-      # Step 9: Build modules/APKs
+      # Step 9: Switch to update branch for build.md
+      - name: Switch to update branch
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        run: |
+          git fetch origin update
+          git checkout update
+
+      # Step 10: Verify build.md exists
+      - name: Verify build.md exists
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        run: |
+          if [[ -f "build.md" ]]; then
+            echo "build.md found in the update branch."
+          else
+            echo "Error: build.md not found in the update branch."
+            exit 1
+          fi
+
+      # Step 11: Process build log
+      - name: Process build log
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        run: |
+          DELIM="$(openssl rand -hex 8)"
+          if [[ -f "build.md" ]]; then
+            echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+            cat build.md >> "$GITHUB_OUTPUT"
+            echo "${DELIM}" >> "$GITHUB_OUTPUT"
+            cp -f build.md build.tmp
+          else
+            echo "Warning: build.md not found. Writing an empty BUILD_LOG."
+            echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+            echo "No build log available." >> "$GITHUB_OUTPUT"
+            echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Step 12: Build modules/APKs
       - name: Build modules/APKs
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         run: |
@@ -169,7 +204,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
 
-      # Step 10: Get next version code
+      # Step 13: Get next version code
       - name: Get next version code
         id: next_ver_code
         env:
@@ -179,17 +214,7 @@ jobs:
           if [ -z "$TAG" ]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
 
-      # Step 11: Get output log
-      - name: Get output
-        id: get_output
-        run: |
-          DELIM="$(openssl rand -hex 8)"
-          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
-          cat build.md >> "$GITHUB_OUTPUT"
-          echo "${DELIM}" >> "$GITHUB_OUTPUT"
-          cp -f build.md build.tmp
-
-      # Step 12: Upload modules to release
+      # Step 14: Upload modules to release
       - name: Upload modules to release
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: svenstaro/upload-release-action@v2
@@ -202,7 +227,7 @@ jobs:
           file_glob: true
           overwrite: true
 
-      # Step 13: Update changelog and Magisk update JSON
+      # Step 15: Update changelog and Magisk update JSON
       - name: Update changelog and Magisk update json
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         id: update_config
@@ -233,7 +258,7 @@ jobs:
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      # Step 14: Commit updated changelog and Magisk update JSON
+      # Step 16: Commit updated changelog and Magisk update JSON
       - name: Commit updated changelog and Magisk update JSON
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: stefanzweifel/git-auto-commit-action@v5
