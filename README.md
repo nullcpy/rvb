@@ -32,17 +32,17 @@ github.com/ReVanced/GmsCore
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
 | [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
-|                                                                            |                | arm32      | `^music-revanced-v[\d.]+-armeabi-v7a\.apk$`                  |
+|                                                                            |                | arm32      | `^music-revanced-v[\d.]+-arm-v7a\.apk$`                  |
 |                                                                            | Spotify        | universal  | `^spotify-revanced-v[\d.]+-all\.apk$`                        |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
-|                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-armeabi-v7a\.apk$`                 |
+|                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                 |
 | [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
-|                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-armeabi-v7a\.apk$`         |
+|                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`         |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
 | [anddea/revanced-patches](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
-|                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-armeabi-v7a\.apk$`           |
+|                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`           |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
 |                                                                            | Spotify        | universal  | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
