@@ -28,20 +28,27 @@ github.com/ReVanced/GmsCore
 ---
 
 ### 🔍 Regex Patterns for APK Filtering
+| Patch                                                                      | App            | Arch       | Regex Pattern                                                |
+|----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
+| [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
+|                                                                            | YouTube Music  | arm64      | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
+|                                                                            |                | arm32      | `^music-revanced-v[\d.]+-armeabi-v7a\.apk$`                  |
+|                                                                            | Spotify        | universal  | `^spotify-revanced-v[\d.]+-all\.apk$`                        |
+|                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
+|                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-armeabi-v7a\.apk$`                 |
+| [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
+|                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
+|                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-armeabi-v7a\.apk$`         |
+|                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
+| [anddea/revanced-patches](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
+|                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
+|                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-armeabi-v7a\.apk$`           |
+|                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
+|                                                                            | Spotify        | universal  | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
-| Patch                                                                      | App            | Regex Pattern                                                |
-|----------------------------------------------------------------------------|----------------|--------------------------------------------------------------|
-| [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
-|                                                                            | YouTube Music  | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
-|                                                                            | Spotify        | `^spotify-revanced-v[\d.]+-all\.apk$`                        |
-|                                                                            | Google Photos  | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
-| [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
-|                                                                            | YouTube Music  | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
-|                                                                            | Reddit         | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
-| [anddea/revanced-patches](https://github.com/anddea/revanced-patches)      | YouTube        | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
-|                                                                            | YouTube Music  | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
-|                                                                            | Reddit         | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
-|                                                                            | Spotify        | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
+- `universal`: For all devices.
+- `arm32`: For most older (before 2017) or low-end devices.
+- `arm64`: For most modern devices (after 2017).
 
 ### 🔎 Regex Patterns for MicroG APK Filtering
 
@@ -53,8 +60,12 @@ github.com/ReVanced/GmsCore
 ---
 
 ### ℹ️ Notes
-- Install [GmsCore a.k.a MicroG](https://github.com/ReVanced/GmsCore/releases) for GApps.
-- These builds are intended for users who want prebuilt APKs without having to compile or patch manually. All credits go to the respective patch authors.
+
+- Install [GmsCore (a.k.a. MicroG)](https://github.com/ReVanced/GmsCore/releases) if you use Google apps (GApps).
+- If you're unsure which version to use, go with the `revanced` build. The `revanced-extended` and `revanced-anddea` versions offer more features but are not updated as frequently and may stop working unexpectedly.
+- These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
+
+
 
 
 
