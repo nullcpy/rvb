@@ -27,7 +27,7 @@ github.com/ReVanced/GmsCore
 
 ---
 
-### 🔍 Regex Patterns for APK Filtering
+### 🔍 Regex Patterns for ReVanced APK Filtering
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
 | [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
