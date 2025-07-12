@@ -4,7 +4,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
@@ -42,7 +42,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "apk"
 arch = "both"
@@ -91,7 +91,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
-enabled = false
+enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
@@ -118,7 +118,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
-enabled = false
+enabled = true
 app-name = "Reddit"
 build-mode = "apk"
 arch = "arm64-v8a"
