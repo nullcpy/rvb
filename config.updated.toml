@@ -80,7 +80,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "apk"
 arch = "both"
@@ -88,7 +88,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
 enabled = false
