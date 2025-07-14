@@ -184,7 +184,7 @@ uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
 
 [TikTok]
-enabled = false
+enabled = true
 app-name = "Tiktok"
 build-mode = "apk"
 arch = "both"
