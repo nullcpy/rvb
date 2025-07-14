@@ -80,7 +80,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "apk"
 arch = "both"
