@@ -36,15 +36,20 @@ github.com/ReVanced/GmsCore
 |                                                                            | Spotify        | universal  | `^spotify-revanced-v[\d.]+-all\.apk$`                        |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
-|                                                                            | Reddit         | universal  | `^reddit-revanced-v[\d.]+-all\.apk$`                         |
+|                                                                            | Twitch         | arm64      | `^twitch-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
+|                                                                            |                | arm32      | `^twitch-revanced-v[\d.]+-arm-v7a\.apk$`                     |
+|                                                                            | Twitter/X      | arm64      | `^twitter-revanced-v[\d.]+-arm64-v8a\.apk$`                  |
+|                                                                            |                | arm32      | `^twitter-revanced-v[\d.]+-arm-v7a\.apk$`                    |
 | [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
-|                                                                            | Reddit         | universal  | `^reddit-revanced-extended-v[\d.]+-all\.apk$`                |
+|                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
+|                                                                            |                | arm32      | `^reddit-revanced-extended-v[\d.]+-arm-v7a\.apk$`            |
 | [anddea/revanced-patches](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
 |                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`               |
-|                                                                            | Reddit         | universal  | `^reddit-revanced-anddea-v[\d.]+-all\.apk$`            |
+|                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
+|                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
 |                                                                            | Spotify        | universal  | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
 - `universal`: For all devices.
