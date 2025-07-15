@@ -63,6 +63,9 @@ github.com/ReVanced/GmsCore
 | GmsCore (microG Services)  | Huawei     | `^app\.revanced\.android\.gms-[\d]+-hw-signed\.apk$`                    |
 | GmsCore (microG Services)  | Default    | `^app\.revanced\.android\.gms-[\d]+-signed\.apk$`                       |
 
+- `Default`: For all devices except Huawei.
+- `Huawei`: For only Huawei devices.
+
 ---
 
 ### ℹ️ Notes
