@@ -83,12 +83,12 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 enabled = true
 app-name = "Photos"
 build-mode = "apk"
-arch = "all"
+arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
 enabled = false
@@ -118,7 +118,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "all"
@@ -184,7 +184,7 @@ uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
 
 [TikTok]
-enabled = true
+enabled = false
 app-name = "Tiktok"
 build-mode = "apk"
 arch = "all"
