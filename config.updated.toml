@@ -29,7 +29,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Anddea]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
@@ -114,7 +114,7 @@ rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
