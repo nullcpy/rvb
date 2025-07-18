@@ -4,7 +4,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "apk"
 arch = "all"
@@ -42,7 +42,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "apk"
 arch = "both"
@@ -67,7 +67,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Anddea]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "apk"
 arch = "both"
@@ -80,7 +80,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "apk"
 arch = "both"
@@ -91,7 +91,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
@@ -109,13 +109,13 @@ app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
 # apkmirror-dpi = "480dpi"
-version = "auto"
+version = "latest"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
 enabled = false
@@ -131,7 +131,7 @@ apkmirror-dpi = "120-640dpi"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit-Anddea]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -158,7 +158,7 @@ apkmirror-dpi = "120-640dpi"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Twitter]
-enabled = true
+enabled = false
 app-name = "Twitter"
 build-mode = "apk"
 arch = "both"
@@ -171,7 +171,7 @@ uptodown-durl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
 [Twitch]
-enabled = true
+enabled = false
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
