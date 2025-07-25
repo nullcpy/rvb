@@ -38,7 +38,7 @@ github.com/ReVanced/GmsCore
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
 |                                                                            | Twitch         | arm64      | `^twitch-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^twitch-revanced-v[\d.]+-arm-v7a\.apk$`                     |
-|                                                                            | Twitter/X      | arm64      | `^twitter-revanced-v[\d.]+-arm64-v8a\.apk$`                  |
+|                                                                            | Twitter        | arm64      | `^twitter-revanced-v[\d.]+-arm64-v8a\.apk$`                  |
 |                                                                            |                | arm32      | `^twitter-revanced-v[\d.]+-arm-v7a\.apk$`                    |
 | [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
