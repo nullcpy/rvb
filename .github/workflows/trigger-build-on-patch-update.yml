@@ -127,13 +127,20 @@ jobs:
               awk -v source="$source" '
                 BEGIN { in_block = 0 }
                 /^\[.*\]/ { 
-                  if ($0 ~ ("\\[" "[^]]+" "\\]") && match($0, /patches-source *= *"[^"]+"/) && (substr($0, RSTART+RLENGTH-1-RLENGTH+16, length(source)) == source)) {
-                    in_block = 1
-                  } else {
-                    in_block = 0
+                  # Match section headers (e.g., [YouTube-Anddea])
+                  in_block = 0
+                  if ($0 ~ /patches-source *= *"[^"]+"/) {
+                    # Extract the value of patches-source
+                    match($0, /patches-source *= *"([^"]+)"/, m)
+                    if (m[1] == source) {
+                      in_block = 1
+                    }
                   }
                 }
-                in_block && /enabled = true/ { sub(/enabled = true/, "enabled = false") }
+                in_block && /enabled *= *true/ { 
+                  # Disable the section by setting enabled = false
+                  sub(/enabled *= *true/, "enabled = false") 
+                }
                 { print }
               ' config.updated.toml > tmp && mv tmp config.updated.toml
             fi
