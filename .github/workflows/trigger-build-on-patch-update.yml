@@ -19,7 +19,6 @@ jobs:
       - name: Fetch latest tags from repos
         id: fetch_tags
         run: |
-          # Fetch latest releases and extract tag names, defaulting to empty string if missing or null
           echo "tag_anddea=$(curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
           echo "tag_official=$(curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
           echo "tag_extended=$(curl -s https://api.github.com/repos/inotia00/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
@@ -41,7 +40,6 @@ jobs:
             echo "missing=true" >> $GITHUB_OUTPUT
           else
             echo "missing=false" >> $GITHUB_OUTPUT
-          fi
 
       # Step 4: Commit initialized tag file if missing
       - name: Commit initialized tag file
@@ -57,17 +55,14 @@ jobs:
       - name: Compare and update tag JSON
         id: compare
         run: |
-          # Load old tags from last_tags.json
           LAST_ANDDEA=$(jq -r '.anddea // ""' last_tags.json)
           LAST_OFFICIAL=$(jq -r '.official // ""' last_tags.json)
           LAST_EXTENDED=$(jq -r '.extended // ""' last_tags.json)
 
-          # Extract new tags from fetch_tags step
           NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
           NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
           NEW_EXTENDED="${{ steps.fetch_tags.outputs.tag_extended }}"
 
-          # Determine if a build should be triggered
           SHOULD_TRIGGER=0
           if [ -n "$NEW_ANDDEA" ] && [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
             SHOULD_TRIGGER=1
@@ -79,7 +74,6 @@ jobs:
             SHOULD_TRIGGER=1
           fi
 
-          # Update last_tags.json with only non-empty tags
           jq -n \
             --arg a "$NEW_ANDDEA" \
             --arg o "$NEW_OFFICIAL" \
@@ -90,7 +84,6 @@ jobs:
               extended: ($e | select(length > 0)) 
             }' > last_tags.json
 
-          # Output variables for subsequent steps
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
           echo "old_anddea=$LAST_ANDDEA" >> $GITHUB_OUTPUT
           echo "new_anddea=$NEW_ANDDEA" >> $GITHUB_OUTPUT
@@ -115,7 +108,6 @@ jobs:
         run: |
           cp config.toml config.updated.toml
 
-          # Function to disable sections based on patches-source
           disable_section() {
             local source="$1"
             local old_tag="$2"
@@ -123,30 +115,51 @@ jobs:
 
             if [ -n "$new_tag" ] && [ "$new_tag" != "$old_tag" ]; then
               echo "Keeping apps with patches-source=$source enabled"
-            else
-              awk -v source="$source" '
-                BEGIN { in_block = 0 }
-                /^\[.*\]/ { 
-                  # Match section headers (e.g., [YouTube-Anddea])
-                  in_block = 0
-                  if ($0 ~ /patches-source *= *"[^"]+"/) {
-                    # Extract the value of patches-source
-                    match($0, /patches-source *= *"([^"]+)"/, m)
-                    if (m[1] == source) {
-                      in_block = 1
+              return
+            fi
+
+            awk -v src="$source" '
+              BEGIN { section = ""; keep = 1 }
+              /^\[.*\]/ {
+                if (section != "") {
+                  if (!keep) {
+                    for (i = 0; i < length(lines); i++) {
+                      gsub(/enabled *= *true/, "enabled = false", lines[i])
+                      print lines[i]
                     }
+                  } else {
+                    for (i = 0; i < length(lines); i++) print lines[i]
                   }
                 }
-                in_block && /enabled *= *true/ { 
-                  # Disable the section by setting enabled = false
-                  sub(/enabled *= *true/, "enabled = false") 
+                section = $0
+                delete lines
+                lines[0] = $0
+                n = 1
+                keep = 1
+                next
+              }
+              {
+                lines[n++] = $0
+                if ($0 ~ /patches-source *= *"[^"]+"/) {
+                  match($0, /patches-source *= *"([^"]+)"/, m)
+                  if (m[1] == src) keep = 0
                 }
-                { print }
-              ' config.updated.toml > tmp && mv tmp config.updated.toml
-            fi
+              }
+              END {
+                if (section != "") {
+                  if (!keep) {
+                    for (i = 0; i < length(lines); i++) {
+                      gsub(/enabled *= *true/, "enabled = false", lines[i])
+                      print lines[i]
+                    }
+                  } else {
+                    for (i = 0; i < length(lines); i++) print lines[i]
+                  }
+                }
+              }
+            ' config.updated.toml > tmp && mv tmp config.updated.toml
           }
 
-          # Disable sections dynamically based on patches-source
           disable_section "anddea/revanced-patches" "${{ steps.compare.outputs.old_anddea }}" "${{ steps.compare.outputs.new_anddea }}"
           disable_section "revanced/revanced-patches" "${{ steps.compare.outputs.old_official }}" "${{ steps.compare.outputs.new_official }}"
           disable_section "inotia00/revanced-patches" "${{ steps.compare.outputs.old_extended }}" "${{ steps.compare.outputs.new_extended }}"
