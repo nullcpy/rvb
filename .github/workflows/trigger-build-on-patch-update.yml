@@ -40,6 +40,7 @@ jobs:
             echo "missing=true" >> $GITHUB_OUTPUT
           else
             echo "missing=false" >> $GITHUB_OUTPUT
+          fi
 
       # Step 4: Commit initialized tag file if missing
       - name: Commit initialized tag file
