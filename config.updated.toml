@@ -1,3 +1,6 @@
+parallel-jobs = 1
+remove-rv-integrations-checks = true
+
 [Photos]
 enabled = false
 app-name = "Photos"
