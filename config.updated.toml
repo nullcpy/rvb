@@ -2,7 +2,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "apk"
 arch = "both"
