@@ -1,5 +1,78 @@
-parallel-jobs = 1
-remove-rv-integrations-checks = true
+[YouTube]
+enabled = true
+app-name = "YouTube"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+
+[YouTube-Extended]
+enabled = false
+app-name = "YouTube"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced Extended"
+patches-source = "inotia00/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+
+[YouTube-Anddea]
+enabled = false
+app-name = "YouTube"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+
+[Music]
+enabled = true
+app-name = "Music"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+
+[Music-Extended]
+enabled = false
+app-name = "Music"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Extended"
+patches-source = "inotia00/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+
+[Music-Anddea]
+enabled = false
+app-name = "Music"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
 enabled = true
@@ -11,3 +84,111 @@ patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
+
+[Spotify]
+enabled = true
+app-name = "Spotify"
+build-mode = "apk"
+arch = "all"
+# apkmirror-dpi = "480dpi"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+
+[Spotify-Anddea]
+enabled = false
+app-name = "Spotify"
+build-mode = "apk"
+arch = "all"
+# apkmirror-dpi = "480dpi"
+version = "latest"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+
+[Reddit]
+enabled = false
+app-name = "Reddit"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+apkmirror-dpi = "120-640dpi"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+
+[Reddit-Anddea]
+enabled = false
+app-name = "Reddit"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+
+[Reddit-Extended]
+enabled = false
+app-name = "Reddit"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Extended"
+patches-source = "inotia00/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+apkmirror-dpi = "120-640dpi"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+
+[Twitter]
+enabled = true
+app-name = "Twitter"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+apkmirror-dpi = "120-640dpi"
+uptodown-durl = "https://twitter.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
+
+[Twitch]
+enabled = true
+app-name = "Twitch"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
+
+[TikTok]
+enabled = false 
+app-name = "Tiktok"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
+
+
