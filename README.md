@@ -73,6 +73,7 @@ github.com/ReVanced/GmsCore
 - Install [GmsCore (a.k.a. MicroG)](https://github.com/ReVanced/GmsCore/releases) if you use Google apps (GApps).
 - If you're unsure which version to use, go with the `revanced` build. The `revanced-extended` and `revanced-anddea` versions offer more features but are not updated as frequently and may stop working unexpectedly.
 - These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
+- **Magisk and KSU modules available for YouTube, YouTube Music, and Google Photos. No need to install MicroG, if you install modules for Google apps (GApps).**
 
 
 
