@@ -1,10 +1,10 @@
 # ReVanced Builder
 
-**Automatically builds and publishes APKs whenever new patches are released.**
+**Automatically builds and publishes APKs & Modules whenever new patches are released.**
 
 ---
 
-### 📦 [Download Prebuilt APKs from GitHub Releases](https://github.com/geologically/revanced-apks/releases)
+### 📦 [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-apks/releases)
 
 ---
 
