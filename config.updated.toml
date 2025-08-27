@@ -13,7 +13,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -57,7 +57,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -87,7 +87,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -157,7 +157,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit-Extended]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
