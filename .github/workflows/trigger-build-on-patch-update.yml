@@ -185,3 +185,33 @@ jobs:
         with:
           workflow: build.yml
           token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
+
+      # Step 10: Notify Telegram Group
+      - name: Notify Telegram Group
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          NL=$'\n'
+          MSG="*New Patch Update Detected!*${NL}${NL}"
+
+          if [ "${{ steps.compare.outputs.new_anddea }}" != "${{ steps.compare.outputs.old_anddea }}" ]; then
+            MSG+="• \`anddea/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_anddea }}\` → New: \`${{ steps.compare.outputs.new_anddea }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.new_official }}" != "${{ steps.compare.outputs.old_official }}" ]; then
+            MSG+="• \`revanced/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_official }}\` → New: \`${{ steps.compare.outputs.new_official }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.new_extended }}" != "${{ steps.compare.outputs.old_extended }}" ]; then
+            MSG+="• \`inotia00/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_extended }}\` → New: \`${{ steps.compare.outputs.new_extended }}\`${NL}"
+          fi
+
+          MSG+="${NL}Triggering new build...${NL}${NL}@rvbygeo"
+
+          POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            "$POST"
