@@ -130,7 +130,7 @@ jobs:
           APKS=${APKS#"$NL"}
 
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
+          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
 
           ${BODY}
 
