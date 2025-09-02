@@ -121,26 +121,26 @@ jobs:
           for OUTPUT in *; do
             DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
-              APKS+="${NL}ㅇ [${OUTPUT}](${DL_URL})${NL}"
+              APKS+="${NL}⦿ [${OUTPUT}](${DL_URL})"
             elif [[ $OUTPUT = *.zip ]]; then
-              MODULES+="${NL}ㅇ [${OUTPUT}](${DL_URL})${NL}"
+              MODULES+="${NL}⦿ [${OUTPUT}](${DL_URL})"
             fi
           done
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
 
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="${NL}*❑ Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
+          MSG="${NL}*➜ Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
 
           ${BODY}
+          
+          @rvbygeo
 
-          [ReVanced by Geologically](https://t.me/rvbygeo): @rvbygeo
-
-          *➤ Download Links:*
-          ${NL}❏ Modules:
+          *➜ Download Links:*
+          ❏ Modules:
           ${MODULES}
 
-          ${NL}❏ APKs:
+          ❏ APKs:
           ${APKS}
           "
           echo "'$MSG'"
