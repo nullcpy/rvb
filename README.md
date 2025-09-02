@@ -5,6 +5,7 @@
 ---
 
 ### 💬 [Telegram Support Group](https://t.me/rvbygeo)
+> Get notified whenever new build drops.
 
 ---
 
