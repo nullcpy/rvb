@@ -4,6 +4,10 @@
 
 ---
 
+### 💬 [Telegram Support Group](https://t.me/rvbygeo)
+
+---
+
 ### 📦 [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-apks/releases)
 
 ---
@@ -73,9 +77,10 @@ github.com/ReVanced/GmsCore
 - Install [GmsCore (a.k.a. MicroG)](https://github.com/ReVanced/GmsCore/releases) if you use Google apps (GApps).
 - If you're unsure which version to use, go with the `revanced` build. The `revanced-extended` and `revanced-anddea` versions offer more features but are not updated as frequently and may stop working unexpectedly.
 - These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
-- **Magisk modules available for YouTube, YouTube Music, and Google Photos. No need to install MicroG, if you install modules for these apps.**
+- **Magisk modules are available for YouTube, YouTube Music, and Google Photos. There is no need to install MicroG if you install modules for these apps.**
 - **Magisk modules also work on KSU.**
-
+- Modules can be updated directly from within Magisk or KSU; no need to install manually. 
+- If you find any problem, please open a GitHub issue or report it in the Telegram group.
 
 
 
