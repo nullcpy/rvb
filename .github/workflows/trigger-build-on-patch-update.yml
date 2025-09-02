@@ -208,6 +208,9 @@ jobs:
 
           MSG+="${NL}Triggering new build...${NL}${NL}@rvbygeo"
 
+          echo "'$MSG'"
+          MSG=${MSG:0:9450}
+
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
