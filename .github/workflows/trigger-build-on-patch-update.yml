@@ -219,9 +219,12 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "$POST"
 
-      # Step 11: Clear older runs
-      - name: Clear older runs
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh run list -L400 --json databaseId -q '.[].databaseId' | tail -n+10 | xargs -IID gh api "repos/$GITHUB_REPOSITORY/actions/runs/ID" -X DELETE || :
+      # Step 11: Delete older releases and workflows
+      - name: Delete older releases and workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          releases_keep_latest: 20
+          delete_workflows: true
+          workflows_keep_day: 10
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
