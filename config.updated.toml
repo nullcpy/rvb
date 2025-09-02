@@ -87,7 +87,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -114,7 +114,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Spotify-Anddea]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
@@ -157,7 +157,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Reddit-Extended]
-enabled = false
+enabled = true
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
