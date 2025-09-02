@@ -194,7 +194,7 @@ jobs:
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
-          MSG="*New Patch Update Detected!*${NL}${NL}"
+          MSG="*New Patch Detected!*${NL}${NL}"
 
           if [ "${{ steps.compare.outputs.new_anddea }}" != "${{ steps.compare.outputs.old_anddea }}" ]; then
             MSG+="• \`anddea/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_anddea }}\` → New: \`${{ steps.compare.outputs.new_anddea }}\`${NL}"
