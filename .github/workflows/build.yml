@@ -118,12 +118,14 @@ jobs:
           NL=$'\n'
           APKS=""
           MODULES=""
+          HAS_MODULES=false
           for OUTPUT in *; do
             DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
               APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
             elif [[ $OUTPUT = *.zip ]]; then
               MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
             fi
           done
           MODULES=${MODULES#"$NL"}
@@ -136,13 +138,14 @@ jobs:
           
           @rvbygeo
 
-          *Download Links:*${NL}
-          Modules:
-          ${MODULES}
+          *Download Links:*${NL}"
+          
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="Modules:${MODULES}${NL}${NL}"
+          fi
 
-          APKs:
-          ${APKS}
-          "
+          MSG+="APKs:${APKS}"
+
           echo "'$MSG'"
           MSG=${MSG:0:9450}
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
