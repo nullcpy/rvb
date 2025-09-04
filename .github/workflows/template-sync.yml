@@ -26,6 +26,6 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
-          source_repo_path: <owner/repo>
-          upstream_branch: <target_branch> # defaults to main
-          pr_labels: <label1>,<label2>[,...] # defaults to template_sync
+          source_repo_path: j-hc/revanced-magisk-module
+         # upstream_branch: <target_branch> # defaults to main
+         # pr_labels: <label1>,<label2>[,...] # defaults to template_sync
