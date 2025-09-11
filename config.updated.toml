@@ -1,5 +1,5 @@
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -43,7 +43,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -100,7 +100,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
