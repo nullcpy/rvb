@@ -216,7 +216,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 
 [Lightroom]
-enabled = true 
+enabled = false 
 app-name = "Lightroom"
 build-mode = "apk"
 arch = "both"
