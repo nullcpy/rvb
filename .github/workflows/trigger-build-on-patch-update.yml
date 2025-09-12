@@ -221,6 +221,7 @@ jobs:
 
       # Step 11: Delete older releases and workflows
       - name: Delete older releases and workflows
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: ophub/delete-releases-workflows@main
         with:
           delete_releases: true
