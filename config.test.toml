@@ -196,7 +196,7 @@ version = "latest"
 patches-source = "revanced/revanced-patches"
 cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
 apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
@@ -210,9 +210,88 @@ version = "latest"
 patches-source = "revanced/revanced-patches"
 cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 
+[Lightroom]
+enabled = true 
+app-name = "Lightroom"
+build-mode = "apk"
+arch = "both"
+version = "9.3.0"
+patches-source = "revanced/revanced-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 
+[Crunchyroll]
+enabled = true 
+app-name = "Crunchyroll"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+patches-source = "revanced/revanced-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/crunchyroll-llc-2/crunchyroll"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://crunchyroll.en.uptodown.com/android"
+
+[Crunchyroll-Hoodles]
+enabled = true 
+app-name = "Crunchyroll"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+rv-brand = "ReVanced Hoodles"
+patches-source = "hoo-dles/revanced-custom-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/crunchyroll-llc-2/crunchyroll"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://crunchyroll.en.uptodown.com/android"
+
+[Merriam-Webster-Hoodles]
+enabled = true 
+app-name = "Merriam-Webster"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+rv-brand = "ReVanced Hoodles"
+patches-source = "hoo-dles/revanced-custom-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster/"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
+
+[Duolingo]
+enabled = true 
+app-name = "Duolingo"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+patches-source = "revanced/revanced-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+
+[Duolingo]
+enabled = true 
+app-name = "Duolingo"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+rv-brand = "ReVanced Hoodles"
+patches-source = "hoo-dles/revanced-custom-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+apkmirror-dpi = "120-640dpi"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
