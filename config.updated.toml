@@ -172,13 +172,13 @@ apkmirror-dpi = "120-640dpi"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Twitter]
-enabled = false
+enabled = true
 app-name = "Twitter"
 build-mode = "apk"
 arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-cli-source = "j-hc/revanced-cli"
+cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 apkmirror-dpi = "120-640dpi"
@@ -186,13 +186,13 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
 [Twitch]
-enabled = false
+enabled = true
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-cli-source = "j-hc/revanced-cli"
+cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
 apkmirror-dpi = "120-640dpi"
