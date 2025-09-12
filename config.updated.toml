@@ -172,7 +172,7 @@ apkmirror-dpi = "120-640dpi"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Twitter]
-enabled = true
+enabled = false
 app-name = "Twitter"
 build-mode = "apk"
 arch = "both"
@@ -186,7 +186,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
 [Twitch]
-enabled = true
+enabled = false
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
@@ -214,7 +214,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 
 [Lightroom]
-enabled = true 
+enabled = false 
 app-name = "Lightroom"
 build-mode = "apk"
 arch = "both"
@@ -228,7 +228,7 @@ uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.adobe.lrmobile"
 
 [Duolingo]
-enabled = true 
+enabled = false 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
