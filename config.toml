@@ -227,6 +227,7 @@ remove-rv-integrations-checks = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom"
 apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.adobe.lrmobile"
 
 [Duolingo]
 enabled = true 
