@@ -181,7 +181,7 @@ patches-source = "revanced/revanced-patches"
 cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-apkmirror-dpi = "120-640dpi"
+#apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
@@ -195,7 +195,7 @@ patches-source = "revanced/revanced-patches"
 cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
-apkmirror-dpi = "120-640dpi"
+#apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
 
@@ -224,7 +224,7 @@ patches-source = "crimera/piko"
 cli-source = "revanced/revanced-cli"
 cli-version = "v4.6.0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-apkmirror-dpi = "120-640dpi"
+#apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
