@@ -1,5 +1,5 @@
 [YouTube]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -43,7 +43,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -87,7 +87,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -100,7 +100,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 
 [Spotify]
-enabled = false
+enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
@@ -129,7 +129,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
-enabled = false
+enabled = true
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -172,7 +172,7 @@ apkmirror-dpi = "120-640dpi"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Twitter]
-enabled = false
+enabled = true
 app-name = "Twitter"
 build-mode = "apk"
 arch = "both"
@@ -186,7 +186,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
 
 [Twitch]
-enabled = false
+enabled = true
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
@@ -200,7 +200,7 @@ uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
 
 [TikTok]
-enabled = false 
+enabled = true 
 app-name = "Tiktok"
 build-mode = "apk"
 arch = "both"
@@ -214,7 +214,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 
 [Lightroom]
-enabled = false 
+enabled = true 
 app-name = "Lightroom"
 build-mode = "apk"
 arch = "both"
@@ -226,49 +226,8 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom"
 apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 
-[Crunchyroll]
-enabled = false 
-app-name = "Crunchyroll"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-patches-source = "revanced/revanced-patches"
-cli-source = "revanced/revanced-cli"
-remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/crunchyroll-llc-2/crunchyroll"
-apkmirror-dpi = "120-640dpi"
-uptodown-dlurl = "https://crunchyroll.en.uptodown.com/android"
-
-[Crunchyroll-Hoodles]
-enabled = true 
-app-name = "Crunchyroll"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-rv-brand = "ReVanced Hoodles"
-patches-source = "hoo-dles/revanced-custom-patches"
-cli-source = "revanced/revanced-cli"
-remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/crunchyroll-llc-2/crunchyroll"
-apkmirror-dpi = "120-640dpi"
-uptodown-dlurl = "https://crunchyroll.en.uptodown.com/android"
-
-[Merriam-Webster-Hoodles]
-enabled = true 
-app-name = "Merriam-Webster"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-rv-brand = "ReVanced Hoodles"
-patches-source = "hoo-dles/revanced-custom-patches"
-cli-source = "revanced/revanced-cli"
-remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster/"
-apkmirror-dpi = "120-640dpi"
-uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
-
 [Duolingo]
-enabled = false 
+enabled = true 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
@@ -281,11 +240,11 @@ apkmirror-dpi = "120-640dpi"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 
 [Duolingo-Hoodles]
-enabled = true 
+enabled = false 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
-version = "auto"
+version = "latest"
 rv-brand = "ReVanced Hoodles"
 patches-source = "hoo-dles/revanced-custom-patches"
 cli-source = "revanced/revanced-cli"
