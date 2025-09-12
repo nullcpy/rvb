@@ -19,9 +19,10 @@ jobs:
       - name: Fetch latest tags from repos
         id: fetch_tags
         run: |
-          echo "tag_anddea=$(curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
-          echo "tag_official=$(curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
-          echo "tag_extended=$(curl -s https://api.github.com/repos/inotia00/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
+          echo "tag_anddea=$(curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest   | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
+          echo "tag_official=$(curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest   | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
+          echo "tag_extended=$(curl -s https://api.github.com/repos/inotia00/revanced-patches/releases/latest   | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
+          echo "tag_hoodles=$(curl -s https://api.github.com/repos/hoo-dles/revanced-custom-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
 
       # Step 3: Initialize missing tag JSON file
       - name: Initialize missing tag JSON
@@ -32,10 +33,12 @@ jobs:
               --arg a "${{ steps.fetch_tags.outputs.tag_anddea }}" \
               --arg o "${{ steps.fetch_tags.outputs.tag_official }}" \
               --arg e "${{ steps.fetch_tags.outputs.tag_extended }}" \
+              --arg h "${{ steps.fetch_tags.outputs.tag_hoodles }}" \
               '{ 
                 anddea: ($a | select(length > 0)), 
                 official: ($o | select(length > 0)), 
-                extended: ($e | select(length > 0)) 
+                extended: ($e | select(length > 0)), 
+                hoodles: ($h | select(length > 0)) 
               }' > last_tags.json
             echo "missing=true" >> $GITHUB_OUTPUT
           else
@@ -59,10 +62,12 @@ jobs:
           LAST_ANDDEA=$(jq -r '.anddea // ""' last_tags.json)
           LAST_OFFICIAL=$(jq -r '.official // ""' last_tags.json)
           LAST_EXTENDED=$(jq -r '.extended // ""' last_tags.json)
+          LAST_HOODLES=$(jq -r '.hoodles // ""' last_tags.json)
 
           NEW_ANDDEA="${{ steps.fetch_tags.outputs.tag_anddea }}"
           NEW_OFFICIAL="${{ steps.fetch_tags.outputs.tag_official }}"
           NEW_EXTENDED="${{ steps.fetch_tags.outputs.tag_extended }}"
+          NEW_HOODLES="${{ steps.fetch_tags.outputs.tag_hoodles }}"
 
           SHOULD_TRIGGER=0
           if [ -n "$NEW_ANDDEA" ] && [ "$NEW_ANDDEA" != "$LAST_ANDDEA" ]; then
@@ -74,15 +79,20 @@ jobs:
           if [ -n "$NEW_EXTENDED" ] && [ "$NEW_EXTENDED" != "$LAST_EXTENDED" ]; then
             SHOULD_TRIGGER=1
           fi
+          if [ -n "$NEW_HOODLES" ] && [ "$NEW_HOODLES" != "$LAST_HOODLES" ]; then
+            SHOULD_TRIGGER=1
+          fi
 
           jq -n \
             --arg a "$NEW_ANDDEA" \
             --arg o "$NEW_OFFICIAL" \
             --arg e "$NEW_EXTENDED" \
+            --arg h "$NEW_HOODLES" \
             '{ 
               anddea: ($a | select(length > 0)), 
               official: ($o | select(length > 0)), 
-              extended: ($e | select(length > 0)) 
+              extended: ($e | select(length > 0)), 
+              hoodles: ($h | select(length > 0)) 
             }' > last_tags.json
 
           echo "SHOULD_TRIGGER=$SHOULD_TRIGGER" >> $GITHUB_OUTPUT
@@ -92,6 +102,8 @@ jobs:
           echo "new_official=$NEW_OFFICIAL" >> $GITHUB_OUTPUT
           echo "old_extended=$LAST_EXTENDED" >> $GITHUB_OUTPUT
           echo "new_extended=$NEW_EXTENDED" >> $GITHUB_OUTPUT
+          echo "old_hoodles=$LAST_HOODLES" >> $GITHUB_OUTPUT
+          echo "new_hoodles=$NEW_HOODLES" >> $GITHUB_OUTPUT
 
       # Step 6: Commit updated tag JSON if changes are detected
       - name: Commit updated tag JSON
@@ -141,7 +153,7 @@ jobs:
               }
               {
                 lines[n++] = $0
-                if ($0 ~ /patches-source *= *"[^"]+"/) {
+                if ($0 ~ /patches-source *= *"([^"]+)"/) {
                   match($0, /patches-source *= *"([^"]+)"/, m)
                   if (m[1] == src) keep = 0
                 }
@@ -164,6 +176,7 @@ jobs:
           disable_section "anddea/revanced-patches" "${{ steps.compare.outputs.old_anddea }}" "${{ steps.compare.outputs.new_anddea }}"
           disable_section "revanced/revanced-patches" "${{ steps.compare.outputs.old_official }}" "${{ steps.compare.outputs.new_official }}"
           disable_section "inotia00/revanced-patches" "${{ steps.compare.outputs.old_extended }}" "${{ steps.compare.outputs.new_extended }}"
+          disable_section "hoo-dles/revanced-custom-patches" "${{ steps.compare.outputs.old_hoodles }}" "${{ steps.compare.outputs.new_hoodles }}"
 
       # Step 8: Commit updated config
       - name: Commit updated config
@@ -179,7 +192,8 @@ jobs:
         if: steps.compare.outputs.SHOULD_TRIGGER == '1' && (
              steps.fetch_tags.outputs.tag_anddea != '' ||
              steps.fetch_tags.outputs.tag_official != '' ||
-             steps.fetch_tags.outputs.tag_extended != ''
+             steps.fetch_tags.outputs.tag_extended != '' ||
+             steps.fetch_tags.outputs.tag_hoodles != ''
            )
         uses: benc-uk/workflow-dispatch@v1
         with:
@@ -204,6 +218,9 @@ jobs:
           fi
           if [ "${{ steps.compare.outputs.new_extended }}" != "${{ steps.compare.outputs.old_extended }}" ]; then
             MSG+="• \`inotia00/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_extended }}\` → New: \`${{ steps.compare.outputs.new_extended }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.new_hoodles }}" != "${{ steps.compare.outputs.old_hoodles }}" ]; then
+            MSG+="• \`hoo-dles/revanced-custom-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_hoodles }}\` → New: \`${{ steps.compare.outputs.new_hoodles }}\`${NL}"
           fi
 
           MSG+="${NL}Triggering new build...${NL}${NL}@rvbygeo"
