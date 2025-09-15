@@ -10,9 +10,9 @@ patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Extended]
 enabled = true
@@ -25,8 +25,8 @@ patches-source = "inotia00/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [YouTube-Anddea]
@@ -40,8 +40,8 @@ patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
@@ -54,9 +54,9 @@ patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Extended]
 enabled = true
@@ -69,8 +69,8 @@ patches-source = "inotia00/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Music-Anddea]
@@ -84,8 +84,8 @@ patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
@@ -98,36 +98,36 @@ patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 [Spotify]
 enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
-# apkmirror-dpi = "480dpi"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-dpi = "480dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Spotify-Anddea]
 enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
-# apkmirror-dpi = "480dpi"
 version = "latest"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-dpi = "480dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit-Anddea]
@@ -140,8 +140,9 @@ rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
 [Reddit-Extended]
 enabled = true
@@ -153,9 +154,9 @@ rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
 [Twitter]
 enabled = true
@@ -166,8 +167,8 @@ version = "latest"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 
 [Twitch]
@@ -179,7 +180,20 @@ version = "latest"
 patches-source = "revanced/revanced-patches"
 cli-source = "j-hc/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+
+[Duolingo]
+enabled = true
+app-name = "Duolingo"
+build-mode = "apk"
+arch = "both"
+version = "latest"
+patches-source = "revanced/revanced-patches"
+cli-source = "j-hc/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 
