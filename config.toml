@@ -55,7 +55,7 @@ remove-rv-integrations-checks = true
 # apkmirror-dpi = "480dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 [Reddit]
 enabled = true
