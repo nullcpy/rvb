@@ -5,9 +5,9 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-cli-source = "j-hc/revanced-cli"
+cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dpi = "120-640dpi"
+# apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 
@@ -18,9 +18,9 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-cli-source = "j-hc/revanced-cli"
+cli-source = "revanced/revanced-cli"
 remove-rv-integrations-checks = true
-apkmirror-dpi = "120-640dpi"
+# apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom"
 uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 
