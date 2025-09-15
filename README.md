@@ -47,6 +47,7 @@ github.com/ReVanced/GmsCore
 |                                                                            | Twitter        | arm64      | `^twitter-revanced-v[\d.]+-arm64-v8a\.apk$`                  |
 |                                                                            |                | arm32      | `^twitter-revanced-v[\d.]+-arm-v7a\.apk$`                    |
 |                                                                            | Duolingo       | universal  | `^duolingo-revanced-v[\d.]+-all\.apk$`                       |
+|                                                                            | TikTok         | universal  | `^tikTok-revanced-v[\d.]+-all\.apk$`                         |
 | [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
