@@ -43,7 +43,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -87,7 +87,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -157,7 +157,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
 [Twitter]
-enabled = true
+enabled = false
 app-name = "Twitter"
 build-mode = "apk"
 arch = "both"
@@ -170,7 +170,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 
 [Twitch]
-enabled = true
+enabled = false
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
@@ -183,7 +183,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 
 [Duolingo]
-enabled = true
+enabled = false
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "all"
@@ -196,7 +196,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 
 [TikTok]
-enabled = true
+enabled = false
 app-name = "TikTok"
 build-mode = "apk"
 arch = "all"
