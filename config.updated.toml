@@ -1,5 +1,5 @@
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -207,4 +207,18 @@ remove-rv-integrations-checks = true
 # apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+
+[Reddit]
+enabled = true
+app-name = "Reddit"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+cli-source = "revanced/revanced-cli"
+remove-rv-integrations-checks = true
+apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
