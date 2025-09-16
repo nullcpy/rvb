@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  routine:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
