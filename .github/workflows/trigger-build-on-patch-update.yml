@@ -108,60 +108,66 @@ jobs:
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         run: |
           cp config.toml config.updated.toml
-
-          disable_section() {
-            local source="$1"
-            local old_tag="$2"
-            local new_tag="$3"
-
-            if [ -n "$new_tag" ] && [ "$new_tag" != "$old_tag" ]; then
-              echo "Keeping apps with patches-source=$source enabled"
-              return
-            fi
-
-            awk -v src="$source" '
-              BEGIN { section = ""; keep = 1 }
-              /^\[.*\]/ {
-                if (section != "") {
-                  if (!keep) {
-                    for (i = 0; i < length(lines); i++) {
-                      gsub(/enabled *= *true/, "enabled = false", lines[i])
-                      print lines[i]
-                    }
-                  } else {
-                    for (i = 0; i < length(lines); i++) print lines[i]
-                  }
-                }
-                section = $0
-                delete lines
-                lines[0] = $0
-                n = 1
-                keep = 1
-                next
-              }
-              {
-                lines[n++] = $0
-                if ($0 ~ /patches-source *= *"[^"]+"/) {
-                  match($0, /patches-source *= *"([^"]+)"/, m)
-                  if (m[1] == src) keep = 0
-                }
-              }
-              END {                
-                if (!keep) {
-                  for (i = 0; i < length(lines); i++) {
-                    gsub(/enabled *= *true/, "enabled = false", lines[i])
-                    print lines[i]
-                  }
-                } else {
-                  for (i = 0; i < length(lines); i++) print lines[i]
-                }
-              }
-            ' config.updated.toml > tmp && mv tmp config.updated.toml
+      
+          # Define the old and new tags for all three sources
+          OLD_ANDDEA="${{ steps.compare.outputs.old_anddea }}"
+          NEW_ANDDEA="${{ steps.compare.outputs.new_anddea }}"
+          OLD_OFFICIAL="${{ steps.compare.outputs.old_official }}"
+          NEW_OFFICIAL="${{ steps.compare.outputs.new_official }}"
+          OLD_EXTENDED="${{ steps.compare.outputs.old_extended }}"
+          NEW_EXTENDED="${{ steps.compare.outputs.new_extended }}"
+      
+          # Process the config file in a SINGLE pass
+          awk -v old_anddea="$OLD_ANDDEA" -v new_anddea="$NEW_ANDDEA" \
+              -v old_official="$OLD_OFFICIAL" -v new_official="$NEW_OFFICIAL" \
+              -v old_extended="$OLD_EXTENDED" -v new_extended="$NEW_EXTENDED" '
+          BEGIN {
+              section = ""
+              keep = 1
           }
-
-          disable_section "anddea/revanced-patches" "${{ steps.compare.outputs.old_anddea }}" "${{ steps.compare.outputs.new_anddea }}"
-          disable_section "revanced/revanced-patches" "${{ steps.compare.outputs.old_official }}" "${{ steps.compare.outputs.new_official }}"
-          disable_section "inotia00/revanced-patches" "${{ steps.compare.outputs.old_extended }}" "${{ steps.compare.outputs.new_extended }}"
+          /^\[.*\]/ {
+              # Flush the previous section
+              flush_section()
+              # Start new section
+              section = $0
+              delete lines
+              lines[0] = $0
+              n = 1
+              keep = 1 # Default to keeping the section enabled
+              next
+          }
+          {
+              lines[n++] = $0
+              # Check if this line defines the patches source
+              if ($0 ~ /patches-source *= *"[^"]+"/) {
+                  match($0, /patches-source *= *"([^"]+)"/, m)
+                  src = m[1]
+                  # Determine if we should disable this section
+                  if (src == "anddea/revanced-patches" && (new_anddea == "" || new_anddea == old_anddea)) {
+                      keep = 0
+                  } else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) {
+                      keep = 0
+                  } else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) {
+                      keep = 0
+                  }
+              }
+          }
+          END {
+              flush_section()
+          }
+      
+          function flush_section() {
+              if (length(lines) == 0) return
+              for (i = 0; i < length(lines); i++) {
+                  line = lines[i]
+                  if (!keep) {
+                      # Only disable the "enabled" line, leave others untouched
+                      gsub(/enabled *= *true/, "enabled = false", line)
+                  }
+                  print line
+              }
+          }
+          ' config.updated.toml > tmp && mv tmp config.updated.toml
 
       # Step 8: Commit updated config
       - name: Commit updated config
