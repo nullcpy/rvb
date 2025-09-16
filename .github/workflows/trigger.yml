@@ -2,28 +2,18 @@ name: Trigger Build on Patch Update
 
 on:
   schedule:
-    - cron: "0 16 * * *" # Runs daily at 4 PM UTC
+    - cron: "0 16 * * *" 
   workflow_dispatch:
 
 jobs:
-  check-releases:
+  routine:
     runs-on: ubuntu-latest
-    outputs:
-      SHOULD_TRIGGER: ${{ steps.compare.outputs.SHOULD_TRIGGER }}
-      old_anddea: ${{ steps.compare.outputs.old_anddea }}
-      new_anddea: ${{ steps.compare.outputs.new_anddea }}
-      old_official: ${{ steps.compare.outputs.old_official }}
-      new_official: ${{ steps.compare.outputs.new_official }}
-      old_extended: ${{ steps.compare.outputs.old_extended }}
-      new_extended: ${{ steps.compare.outputs.new_extended }}
     steps:
-      # Step 1: Checkout the main branch
       - name: Checkout main branch
         uses: actions/checkout@v4
         with:
           ref: main
 
-      # Step 2: Fetch latest tags from repositories
       - name: Fetch latest tags from repos
         id: fetch_tags
         run: |
@@ -31,7 +21,6 @@ jobs:
           echo "tag_official=$(curl -s https://api.github.com/repos/revanced/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
           echo "tag_extended=$(curl -s https://api.github.com/repos/inotia00/revanced-patches/releases/latest | jq -r '.tag_name // ""')" >> $GITHUB_OUTPUT
 
-      # Step 3: Initialize missing tag JSON file
       - name: Initialize missing tag JSON
         id: init_tags
         run: |
@@ -50,7 +39,6 @@ jobs:
             echo "missing=false" >> $GITHUB_OUTPUT
           fi
 
-      # Step 4: Commit initialized tag file if missing
       - name: Commit initialized tag file
         if: steps.init_tags.outputs.missing == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -60,7 +48,6 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Initialize tag tracking JSON"
 
-      # Step 5: Compare and update tag JSON
       - name: Compare and update tag JSON
         id: compare
         run: |
@@ -101,7 +88,6 @@ jobs:
           echo "old_extended=$LAST_EXTENDED" >> $GITHUB_OUTPUT
           echo "new_extended=$NEW_EXTENDED" >> $GITHUB_OUTPUT
 
-      # Step 6: Commit updated tag JSON if changes are detected
       - name: Commit updated tag JSON
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -111,29 +97,32 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Update last_tags.json with latest patch versions"
 
-      # Step 7: Generate filtered config.updated.toml
       - name: Generate filtered config.updated.toml
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         run: |
           cp config.toml config.updated.toml
+      
           OLD_ANDDEA="${{ steps.compare.outputs.old_anddea }}"
           NEW_ANDDEA="${{ steps.compare.outputs.new_anddea }}"
           OLD_OFFICIAL="${{ steps.compare.outputs.old_official }}"
           NEW_OFFICIAL="${{ steps.compare.outputs.new_official }}"
           OLD_EXTENDED="${{ steps.compare.outputs.old_extended }}"
           NEW_EXTENDED="${{ steps.compare.outputs.new_extended }}"
-
+      
           awk -v old_anddea="$OLD_ANDDEA" -v new_anddea="$NEW_ANDDEA" \
               -v old_official="$OLD_OFFICIAL" -v new_official="$NEW_OFFICIAL" \
               -v old_extended="$OLD_EXTENDED" -v new_extended="$NEW_EXTENDED" '
-          BEGIN { section = ""; keep = 1 }
+          BEGIN {
+              section = ""
+              keep = 1
+          }
           /^\[.*\]/ {
               flush_section()
               section = $0
               delete lines
               lines[0] = $0
               n = 1
-              keep = 1
+              keep = 1 
               next
           }
           {
@@ -141,22 +130,31 @@ jobs:
               if ($0 ~ /patches-source *= *"[^"]+"/) {
                   match($0, /patches-source *= *"([^"]+)"/, m)
                   src = m[1]
-                  if (src == "anddea/revanced-patches" && (new_anddea == "" || new_anddea == old_anddea)) keep = 0
-                  else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) keep = 0
-                  else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) keep = 0
+                  if (src == "anddea/revanced-patches" && (new_anddea == "" || new_anddea == old_anddea)) {
+                      keep = 0
+                  } else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) {
+                      keep = 0
+                  } else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) {
+                      keep = 0
+                  }
               }
           }
-          END { flush_section() }
+          END {
+              flush_section()
+          }
+      
           function flush_section() {
               if (length(lines) == 0) return
               for (i = 0; i < length(lines); i++) {
                   line = lines[i]
-                  if (!keep) gsub(/enabled *= *true/, "enabled = false", line)
+                  if (!keep) {
+                      gsub(/enabled *= *true/, "enabled = false", line)
+                  }
                   print line
               }
-          }' config.updated.toml > tmp && mv tmp config.updated.toml
+          }
+          ' config.updated.toml > tmp && mv tmp config.updated.toml
 
-      # Step 8: Commit updated config
       - name: Commit updated config
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -165,7 +163,17 @@ jobs:
           commit_message: "Update config.updated.toml for new patches"
           file_pattern: config.updated.toml
 
-      # Step 9: Notify Telegram Group
+      - name: Trigger Build workflow if needed
+        if: steps.compare.outputs.SHOULD_TRIGGER == '1' && (
+             steps.fetch_tags.outputs.tag_anddea != '' ||
+             steps.fetch_tags.outputs.tag_official != '' ||
+             steps.fetch_tags.outputs.tag_extended != ''
+           )
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: build.yml
+          token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
+
       - name: Notify Telegram Group
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         env:
@@ -198,7 +206,6 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "$POST"
 
-      # Step 10: Delete older releases and workflows
       - name: Delete older releases and workflows
         if: steps.compare.outputs.SHOULD_TRIGGER == '1'
         uses: ophub/delete-releases-workflows@main
@@ -207,12 +214,5 @@ jobs:
           delete_tags: true
           releases_keep_latest: 10
           delete_workflows: true
-          workflows_keep_day: 2
+          workflows_keep_day: 5
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-
-  build:
-    permissions: write-all
-    needs: check-releases
-    if: ${{ needs.check-releases.outputs.SHOULD_TRIGGER == '1' }}
-    uses: ./.github/workflows/build.yml
-    secrets: inherit
