@@ -146,16 +146,14 @@ jobs:
                   if (m[1] == src) keep = 0
                 }
               }
-              END {
-                if (section != "") {
-                  if (!keep) {
-                    for (i = 0; i < length(lines); i++) {
-                      gsub(/enabled *= *true/, "enabled = false", lines[i])
-                      print lines[i]
-                    }
-                  } else {
-                    for (i = 0; i < length(lines); i++) print lines[i]
+              END {                
+                if (!keep) {
+                  for (i = 0; i < length(lines); i++) {
+                    gsub(/enabled *= *true/, "enabled = false", lines[i])
+                    print lines[i]
                   }
+                } else {
+                  for (i = 0; i < length(lines); i++) print lines[i]
                 }
               }
             ' config.updated.toml > tmp && mv tmp config.updated.toml
