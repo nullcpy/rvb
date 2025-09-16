@@ -1,31 +1,33 @@
 # File: .github/workflows/template-sync.yml
-name: Template Sync 
+name: Template Sync
+
 on:
-  # cronjob trigger
+  # Cronjob trigger: runs at 00:00 UTC on the 1st of every month
   schedule:
-  - cron: "0 0 1 * *"
-  # manual trigger
+    - cron: "0 0 1 * *"
+  # Manual trigger
   workflow_dispatch:
+
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
-    # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+    # Permissions required for this job
     permissions:
       contents: write
       pull-requests: write
 
     steps:
-      # To use this repository's private action, you must check out the repository
+      # Step 1: Checkout this repository
       - name: Checkout
         uses: actions/checkout@v4
-        # https://github.com/actions/checkout#usage
-        # uncomment if you use submodules within the repository
+        # Uncomment if using submodules
         # with:
         #   submodules: true
 
+      # Step 2: Run the template sync action
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           source_repo_path: j-hc/revanced-magisk-module
-         # upstream_branch: <target_branch> # defaults to main
-         # pr_labels: <label1>,<label2>[,...] # defaults to template_sync
+          # upstream_branch: main          # defaults to main
+          # pr_labels: template_sync       # defaults to template_sync
