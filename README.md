@@ -83,7 +83,7 @@ github.com/ReVanced/GmsCore
 - **Magisk modules also work on KSU.**
 - Modules can be updated directly from within Magisk or KSU; no need to install manually. 
 - If you find any problem, please open a GitHub issue or report it in the Telegram group.
-- [MicroG RE](https://github.com/WSTxda/MicroG-RE) (GmsCore for ReVanced with *Material 3 Expressive*)
+- [MicroG RE](https://github.com/WSTxda/MicroG-RE) (GmsCore for ReVanced with Material 3 Expressive)
 
 
 
