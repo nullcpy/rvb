@@ -51,9 +51,9 @@ github.com/WSTxda/MicroG-RE
 |                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
 |                                                                            | Spotify        | universal  | `^spotify-revanced-anddea-v[\d.]+-all\.apk$`                 |
 
-> `universal` : For all devices. <br>
-> `arm32`     : For most older (before 2017) or low-end devices. <br>
-> `arm64`     : For most modern devices (after 2017).
+`universal` : For all devices. <br>
+`arm32`     : For most older (before 2017) or low-end devices. <br>
+`arm64`     : For most modern devices (after 2017).
 
 ---
 
