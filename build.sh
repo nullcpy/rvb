@@ -165,7 +165,7 @@ wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\nInstall [microG](https://github.com/ReVanced/GmsCore/releases) for GApps"
+log "\nInstall [microG](https://github.com/WSTxda/MicroG-RE/releases) for GApps"
 log "\n[revanced-builder](https://github.com/geologically/revanced-builder)\n"
 log "$(cat "$TEMP_DIR"/*-rv/changelog.md)"
 
