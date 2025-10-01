@@ -8,7 +8,7 @@ Get notified whenever new build drops.
 
 ---
 
-### 📦 [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-apks/releases)
+### 📦 [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
 If your desired APK or Module is not in the latest release then check older releases.
 
 ---
