@@ -1,21 +1,23 @@
 # ReVanced Builder
 **Automatically builds and publishes APKs & Modules whenever new patches are released.**
 
-### 💬 [Telegram Support Group](https://t.me/rvbygeo)
+### [Telegram Support Group](https://t.me/rvbygeo)
 Get notified whenever new build drops.
 
-### 📦 [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
+### [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
 If your desired APK or Module is not in the latest release then check older releases.
 
-### 📥 Install via [Obtainium](https://github.com/ImranR98/Obtainium)
+### [Install via Obtainium](https://github.com/ImranR98/Obtainium)
 1. Open the **Obtainium** app.
 2. Tap **Add App**.
 3. In the **App source URL** field, enter: <br>
-- **For ReVanced APKs**
+
+**For ReVanced APKs**
 ```
 github.com/geologically/revanced-builder
 ```
-- **For MicroG Apk**
+
+**For MicroG Apk**
 ```
 github.com/WSTxda/MicroG-RE
 ```
@@ -23,7 +25,7 @@ github.com/WSTxda/MicroG-RE
 6. Enter the appropriate regex from the table below for the app you want.
 7. Tap the **Add** button next to the URL field to begin the download.
 
-### 🔍 Regex Patterns for ReVanced APK Filtering
+### Regex Patterns for ReVanced APK Filtering
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
 | [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
@@ -47,7 +49,7 @@ github.com/WSTxda/MicroG-RE
 `arm32`     : For most older (before 2017) or low-end devices. <br>
 `arm64`     : For most modern devices (after 2017).
 
-### ℹ️ Notes
+### Notes
 - If you're unsure which version to use, go with the `revanced` build. The `revanced-extended` and `revanced-anddea` versions offer more features but are not updated as frequently and may stop working unexpectedly.
 - These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
 - Modules are available for YouTube, YouTube Music, and Google Photos.
