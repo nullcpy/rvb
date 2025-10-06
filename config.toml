@@ -110,14 +110,8 @@ enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
-version = "auto"
+version = "latest"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
-
-
-
-
-
