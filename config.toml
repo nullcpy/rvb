@@ -1,6 +1,4 @@
 parallel-jobs = 1
-cli-source = "j-hc/revanced-cli"
-remove-rv-integrations-checks = true
 
 [YouTube]
 enabled = true
@@ -117,7 +115,7 @@ rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 
 
