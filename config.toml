@@ -104,14 +104,3 @@ patches-source = "anddea/revanced-patches"
 apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-
-[Spotify-Anddea]
-enabled = false
-app-name = "Spotify"
-build-mode = "apk"
-arch = "all"
-version = "latest"
-rv-brand = "ReVanced Anddea"
-patches-source = "anddea/revanced-patches"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
