@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
 [Spotify-Anddea]
-enabled = true
+enabled = false
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
