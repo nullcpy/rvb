@@ -12,12 +12,12 @@ If your desired APK or Module is not in the latest release then check older rele
 2. Tap **Add App**.
 3. In the **App source URL** field, enter: <br>
 
-**For ReVanced APKs**
+**For [ReVanced](https://github.com/revanced) APKs**
 ```
 github.com/geologically/revanced-builder
 ```
 
-**For MicroG Apk**
+**For [MicroG](https://github.com/WSTxda/MicroG-RE) Apk**
 ```
 github.com/WSTxda/MicroG-RE
 ```
