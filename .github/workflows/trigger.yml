@@ -2,7 +2,7 @@ name: Trigger Build on Patch Update
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "20 */4 * * *"
   workflow_dispatch:
 
 jobs:
@@ -211,7 +211,7 @@ jobs:
         with:
           delete_releases: true
           delete_tags: true
-          releases_keep_latest: 10
+          releases_keep_latest: 6
           delete_workflows: true
           workflows_keep_day: 7
           gh_token: ${{ secrets.GITHUB_TOKEN }}
