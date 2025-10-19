@@ -17,7 +17,7 @@ If your desired APK or Module is not in the latest release then check older rele
 github.com/geologically/revanced-builder
 ```
 
-**For [MicroG](https://github.com/WSTxda/MicroG-RE) Apk**
+**For [MicroG](https://github.com/WSTxda/MicroG-RE) APK**
 ```
 github.com/WSTxda/MicroG-RE
 ```
