@@ -108,6 +108,7 @@ arch = "arm64-v8a"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
+dpi = "320-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 
