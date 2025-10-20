@@ -1,4 +1,5 @@
 parallel-jobs = 1
+enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [YouTube]
@@ -8,7 +9,6 @@ build-mode = "both"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 
@@ -19,7 +19,6 @@ build-mode = "both"
 arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
@@ -30,7 +29,6 @@ build-mode = "both"
 arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
@@ -42,7 +40,6 @@ arch = "all"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 
@@ -54,7 +51,6 @@ arch = "both"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
@@ -78,7 +74,6 @@ arch = "all"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 
@@ -90,7 +85,6 @@ arch = "both"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-enable-magisk-update = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
