@@ -23,7 +23,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -58,7 +58,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
 [Reddit-Extended]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -109,11 +109,11 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 enabled = true
 app-name = "Spotify"
 build-mode = "apk"
-arch = "arm64-v8a"
-version = "latest"
+arch = "both"
+version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-dpi = "320-640dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# dpi = "320-640dpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 
