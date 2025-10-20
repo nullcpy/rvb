@@ -28,21 +28,22 @@ github.com/WSTxda/MicroG-RE
 ### Regex Patterns for ReVanced APK Filtering
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
-| [revanced](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
+| [revanced](https://github.com/revanced/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
 |                                                                            |                | arm32      | `^music-revanced-v[\d.]+-arm-v7a\.apk$`                      |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
-| [inotia00](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
+| [inotia00](https://github.com/inotia00/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
 |                                                                            |                | arm32      | `^reddit-revanced-extended-v[\d.]+-arm-v7a\.apk$`            |
-| [anddea](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
+| [anddea](https://github.com/anddea/revanced-patches)                       | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
 |                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`               |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
 |                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
+|                                                                            | Spotify        | arm64      | `^spotify-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`                 |
 
 `universal` : For all devices. <br>
 `arm32`     : For most older (before 2017) or low-end devices. <br>
