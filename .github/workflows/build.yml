@@ -139,10 +139,10 @@ jobs:
           @rvbygeo${NL}${NL}"
           
           if [ "$HAS_MODULES" = true ]; then
-            MSG+="*Module:*${MODULES}${NL}${NL}"
+            MSG+="*Download Modules:*${MODULES}${NL}${NL}"
           fi
 
-          MSG+="*APK:*${APKS}"
+          MSG+="*Download APKs:*${APKS}"
 
           echo "'$MSG'"
           MSG=${MSG:0:9450}
