@@ -62,7 +62,6 @@ arch = "both"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
@@ -96,6 +95,17 @@ arch = "both"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+
+[Spotify-Anddea]
+enabled = true
+app-name = "Spotify"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Anddea"
+patches-source = "anddea/revanced-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+
