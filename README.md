@@ -7,7 +7,7 @@ Get notified whenever new build drops.
 ### [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
 If your desired APK or Module is not in the latest release then check older releases.
 
-### [Install via Obtainium](https://github.com/ImranR98/Obtainium)
+### Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 1. Open the **Obtainium** app.
 2. Tap **Add App**.
 3. In the **App source URL** field, enter: <br>
@@ -28,17 +28,17 @@ github.com/WSTxda/MicroG-RE
 ### Regex Patterns for ReVanced APK Filtering
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
-| [revanced/revanced-patches](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
+| [revanced](https://github.com/revanced/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
 |                                                                            |                | arm32      | `^music-revanced-v[\d.]+-arm-v7a\.apk$`                      |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
-| [inotia00/revanced-patches](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
+| [inotia00](https://github.com/inotia00/revanced-patches)  | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
 |                                                                            |                | arm32      | `^reddit-revanced-extended-v[\d.]+-arm-v7a\.apk$`            |
-| [anddea/revanced-patches](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
+| [anddea](https://github.com/anddea/revanced-patches)      | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
 |                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`               |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
