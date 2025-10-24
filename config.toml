@@ -32,23 +32,12 @@ patches-source = "revanced/revanced-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
-[Twitter]
-enabled = true
-app-name = "Twitter"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-patches-source = "revanced/revanced-patches"
-dpi = "120-640dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-
 [Twitch]
 enabled = true
 app-name = "Twitch"
 build-mode = "apk"
 arch = "both"
-version = "auto"
+version = "latest"
 patches-source = "revanced/revanced-patches"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch"
@@ -59,7 +48,7 @@ enabled = true
 app-name = "Tiktok"
 build-mode = "apk"
 arch = "both"
-version = "auto"
+version = "latest"
 patches-source = "revanced/revanced-patches"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
