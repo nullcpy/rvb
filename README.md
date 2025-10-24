@@ -33,6 +33,8 @@ github.com/WSTxda/MicroG-RE
 |                                                                            |                | arm32      | `^music-revanced-v[\d.]+-arm-v7a\.apk$`                      |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
+|                                                                            | Duolingo       | arm64      | `^duolingo-revanced-v[\d.]+-arm64-v8a\.apk$`                 |
+|                                                                            |                | arm32      | `^duolingo-revanced-v[\d.]+-arm-v7a\.apk$`                   |
 | [inotia00](https://github.com/inotia00/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
