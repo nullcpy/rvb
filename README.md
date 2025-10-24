@@ -1,31 +1,30 @@
-# ReVanced Builder
-**Automatically builds and publishes APKs & Modules whenever new patches are released.**
+# 🧩 ReVanced Builder
+**Automatically builds and publishes ReVanced APKs & Magisk Modules whenever new patches are released.**
 
-### [Telegram Support Group](https://t.me/rvbygeo)
-Get notified whenever new build drops.
+### 💬 [Join the Telegram Group](https://t.me/rvbygeo)
+Get notified instantly when new builds are released.
 
-### [Download Prebuilt APKs & Modules from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
-If your desired APK or Module is not in the latest release then check older releases.
+### 📦 [Download from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
+If you don’t see the app you want in the latest release, check the older ones.
 
-### Install via [Obtainium](https://github.com/ImranR98/Obtainium)
-1. Open the **Obtainium** app.
-2. Tap **Add App**.
-3. In the **App source URL** field, enter: <br>
+### 📲 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
+Obtainium is the easiest way to install and update ReVanced APKs.
 
-**For [ReVanced](https://github.com/revanced) APKs**
-```
-github.com/geologically/revanced-builder
-```
+1. Open the **Obtainium** app.  
+2. Tap **Add app**.  
+3. In the **App source URL** box, enter one of the following:
 
-**For [MicroG](https://github.com/WSTxda/MicroG-RE) APK**
-```
-github.com/WSTxda/MicroG-RE
-```
-5. Scroll down to the **Filter APKs by regular expression** field.
-6. Enter the appropriate regex from the table below for the app you want.
-7. Tap the **Add** button next to the URL field to begin the download.
+   - **For ReVanced APKs:**  
+     `github.com/geologically/revanced-builder`
 
-### Regex Patterns for ReVanced APK Filtering
+   - **For MicroG (required for Google login):**  
+     `github.com/WSTxda/MicroG-RE`
+
+4. Scroll down to **Filter APKs by regular expression**.  
+5. Copy the matching regex pattern from the table below.  
+6. Tap **Add** to begin downloading.
+
+### 🔍 Regex Patterns for Filtering APKs
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
 | [revanced](https://github.com/revanced/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
@@ -35,28 +34,33 @@ github.com/WSTxda/MicroG-RE
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
 |                                                                            | Duolingo       | arm64      | `^duolingo-revanced-v[\d.]+-arm64-v8a\.apk$`                 |
 |                                                                            |                | arm32      | `^duolingo-revanced-v[\d.]+-arm-v7a\.apk$`                   |
-| [inotia00](https://github.com/inotia00/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
+| [revanced-extended](https://github.com/inotia00/revanced-patches)          | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
 |                                                                            |                | arm32      | `^reddit-revanced-extended-v[\d.]+-arm-v7a\.apk$`            |
-| [anddea](https://github.com/anddea/revanced-patches)                       | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
+| [revanced-anddea](https://github.com/anddea/revanced-patches)              | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
 |                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`               |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
 |                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
-|                                                                            | Spotify        | arm64      | `^spotify-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`                 |
+|                                                                            | Spotify        | arm64      | `^spotify-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`           |
 
 `universal` : For all devices. <br>
 `arm32`     : For most older (before 2017) or low-end devices. <br>
 `arm64`     : For most modern devices (after 2017).
 
-### Notes
-- If you're unsure which version to use, go with the `revanced` build. The `revanced-extended` and `revanced-anddea` versions offer more features but are not updated as frequently and may stop working unexpectedly.
-- These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
-- Modules are available for YouTube, YouTube Music, and Google Photos.
-- Modules can be updated directly from within Magisk or KSU; no need to install manually. 
-- If you find any issues, please report it in the Telegram group.
+### 📝 Notes
+- **Recommendation for new users:** Start with the `revanced` build.  
+  The `revanced-extended` and `revanced-anddea` builds have extra features but updated less frequently.
+- **Modules:** YouTube, YouTube Music, and Google Photos modules can be updated directly from **Magisk** or **KSU**.
+- **Google login fix:** Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest) to enable login functionality.
+- **Found a bug?** Report it in the [Telegram group](https://t.me/rvbygeo).
 
+### ⭐ Credits
+All credit goes to the original ReVanced patch developers and maintainers.
+
+| [revanced](https://github.com/ReVanced) | [anddea](https://github.com/anddea/revanced-patches) | [j-hc](https://github.com/j-hc/revanced-magisk-module) | [inotia00](https://github.com/inotia00/revanced-patches) |
+|-----------------------------------------|------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
 
 
