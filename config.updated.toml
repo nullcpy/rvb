@@ -6,12 +6,8 @@ remove-rv-integrations-checks = true
 enabled = true
 app-name = "Spotify"
 build-mode = "apk"
-arch = "all"
-version = "latest"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-dpi = "120-640dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 
 
