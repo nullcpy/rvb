@@ -54,7 +54,7 @@ github.com/WSTxda/MicroG-RE
 - These builds are intended for users who want prebuilt APKs without having to compile or patch them manually. All credit goes to the respective patch authors.
 - Modules are available for YouTube, YouTube Music, and Google Photos.
 - Modules can be updated directly from within Magisk or KSU; no need to install manually. 
-- If you find any problem, please open a GitHub issue or report it in the Telegram group.
+- If you find any issues, please report it in the Telegram group.
 
 
 
