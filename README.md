@@ -24,7 +24,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
       `https://github.com/crimera/twitter-apk`
 
 4. Scroll down to **Filter APKs by regular expression**.  
-5. Copy the matching regex pattern from the table below.  
+5. Enter the appropriate regex from the table below for the app you want.  
 6. Tap **Add** to begin downloading.
 
 ### 🔍 Regex Patterns for Filtering APKs
@@ -48,7 +48,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
 |                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
 |                                                                            | Spotify        | arm64      | `^spotify-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`           |
-| [revanced-piko](https://github.com/crimera/piko)                           | Twitter/X      | universal  | `^x-piko-v(\d+\.\d+\.\d+)-release\.\d+\.apk$`                |
+| [revanced-piko](https://github.com/crimera/piko)                           | Twitter        | universal  | `^x-piko-v(\d+\.\d+\.\d+)-release\.\d+\.apk$`                |
 
 `universal` : For all devices. <br>
 `arm32`     : For most older (before 2017) or low-end devices. <br>
