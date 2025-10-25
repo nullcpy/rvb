@@ -137,10 +137,10 @@ jobs:
           ${BODY}${NL}${NL}"
           
           if [ "$HAS_MODULES" = true ]; then
-            MSG+="*Module:*${MODULES}${NL}${NL}"
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
 
-          MSG+="*APK:*${APKS}"
+          MSG+="*APKs:*${APKS}"
 
           echo "'$MSG'"
           MSG=${MSG:0:9450}
