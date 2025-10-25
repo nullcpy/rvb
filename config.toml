@@ -1,6 +1,5 @@
 parallel-jobs = 1
 enable-magisk-update = true
-remove-rv-integrations-checks = true
 
 [YouTube]
 enabled = true
@@ -116,7 +115,7 @@ enabled = true
 app-name = "Spotify"
 build-mode = "apk"
 arch = "arm64-v8a"
-version = "auto"
+version = "latest"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
