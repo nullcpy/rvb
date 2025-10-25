@@ -165,9 +165,9 @@ wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\n*Note:*"
-log "- Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest), required for Google APKs."
-log "- Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
+log "\n**Note:**"
+log "• Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest), required for Google APKs."
+log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
 log "\n[revanced-builder](https://github.com/geologically/revanced-builder)\n"
 log "$(cat "$TEMP_DIR"/*-rv/changelog.md)"
 
