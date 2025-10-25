@@ -134,7 +134,7 @@ jobs:
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
           MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
 
-          ${BODY}"
+          ${BODY}${NL}${NL}"
           
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Module:*${MODULES}${NL}${NL}"
