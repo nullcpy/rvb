@@ -134,15 +134,13 @@ jobs:
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
           MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
 
-          ${BODY}
-          
-          @rvbygeo${NL}${NL}"
+          ${BODY}"
           
           if [ "$HAS_MODULES" = true ]; then
-            MSG+="*Download Modules:*${MODULES}${NL}${NL}"
+            MSG+="*Module:*${MODULES}${NL}${NL}"
           fi
 
-          MSG+="*Download APKs:*${APKS}"
+          MSG+="*APK:*${APKS}"
 
           echo "'$MSG'"
           MSG=${MSG:0:9450}
