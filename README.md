@@ -55,11 +55,9 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 `arm64`     : For most modern devices (after 2017).
 
 ### Notes
-- **Recommendation for new users:** Start with the `revanced` build.  
-  The `revanced-extended` and `revanced-anddea` builds have extra features but updated less frequently.
-- **Modules:** YouTube, YouTube Music, and Google Photos modules can be updated directly from **Magisk** or **KSU**.
-- **Google login fix:** Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest) to enable login functionality.
-- **Found a bug?** Report it in the [Telegram group](https://t.me/rvbygeo).
+- All modules can be updated directly from Magisk and KSU.
+- [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest) is required for Google APKs to work properly.
+- Found a bug? Report it in the [Telegram group](https://t.me/rvbygeo).
 
 ### Credits
 All credit goes to the original ReVanced patch developers and maintainers.
