@@ -2,13 +2,13 @@ parallel-jobs = 1
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[YouTube-Anddea]
+[Music-Anddea]
 enabled = true
-app-name = "YouTube"
+app-name = "Music"
 build-mode = "both"
-arch = "all"
+arch = "both"
 version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
