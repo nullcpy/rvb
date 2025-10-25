@@ -193,7 +193,7 @@ jobs:
             MSG+="• \`inotia00/revanced-patches\`: ${NL}Old: \`${{ steps.compare.outputs.old_extended }}\` → New: \`${{ steps.compare.outputs.new_extended }}\`${NL}"
           fi
 
-          MSG+="${NL}[Triggering new build](https://github.com/geologically/revanced-builder/actions/workflows/build.yml)...${NL}${NL}@rvbygeo"
+          MSG+="${NL}Triggering [new build](https://github.com/geologically/revanced-builder/actions)...${NL}${NL}@rvbygeo"
 
           echo "'$MSG'"
           MSG=${MSG:0:9450}
