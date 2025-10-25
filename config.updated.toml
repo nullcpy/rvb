@@ -2,12 +2,13 @@ parallel-jobs = 1
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[Spotify-Anddea]
+[YouTube Anddea]
 enabled = true
-app-name = "Spotify"
-build-mode = "apk"
-arch = "arm64-v8a"
-version = "latest"
+app-name = "YouTube"
+build-mode = "both"
+arch = "all"
+version = "auto"
 rv-brand = "ReVanced Anddea"
 patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
