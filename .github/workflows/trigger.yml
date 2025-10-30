@@ -184,13 +184,13 @@ jobs:
           MSG="*New Patch Detected!*${NL}"
 
           if [ "${{ steps.compare.outputs.new_advanced }}" != "${{ steps.compare.outputs.old_advanced }}" ]; then
-            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/latest): ${NL}Old: \`${{ steps.compare.outputs.old_advanced }}\` → New: \`${{ steps.compare.outputs.new_advanced }}\`${NL}"
+            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.new_advanced }}): ${NL}Old: \`${{ steps.compare.outputs.old_advanced }}\` → New: \`${{ steps.compare.outputs.new_advanced }}\`${NL}"
           fi
           if [ "${{ steps.compare.outputs.new_official }}" != "${{ steps.compare.outputs.old_official }}" ]; then
-            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/latest): ${NL}Old: \`${{ steps.compare.outputs.old_official }}\` → New: \`${{ steps.compare.outputs.new_official }}\`${NL}"
+            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ steps.compare.outputs.new_official }}): ${NL}Old: \`${{ steps.compare.outputs.old_official }}\` → New: \`${{ steps.compare.outputs.new_official }}\`${NL}"
           fi
           if [ "${{ steps.compare.outputs.new_extended }}" != "${{ steps.compare.outputs.old_extended }}" ]; then
-            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/latest): ${NL}Old: \`${{ steps.compare.outputs.old_extended }}\` → New: \`${{ steps.compare.outputs.new_extended }}\`${NL}"
+            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ steps.compare.outputs.new_extended }}): ${NL}Old: \`${{ steps.compare.outputs.old_extended }}\` → New: \`${{ steps.compare.outputs.new_extended }}\`${NL}"
           fi
 
           MSG+="${NL}[Triggering new build...](https://github.com/geologically/revanced-builder/actions/workflows/build.yml)${NL}${NL}@rvbygeo"
