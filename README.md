@@ -47,7 +47,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            |                | arm32      | `^music-revanced-advanced-v[\d.]+-arm-v7a\.apk$`             |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`          |
 |                                                                            |                | arm32      | `^reddit-revanced-advanced-v[\d.]+-arm-v7a\.apk$`            |
-|                                                                            | Spotify        | arm64      | `^spotify-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`         |
+|                                                                            | Spotify        | universal  | `^spotify-revanced-advanced-v[\d.]+-all-v8a\.apk$`           |
 | [Piko](https://github.com/crimera/piko)                                    | Twitter        | universal  | `^x-piko-v(\d+\.\d+\.\d+)-release\.\d+\.apk$`                |
 
 `universal` : For all devices. <br>
