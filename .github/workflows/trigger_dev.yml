@@ -186,7 +186,7 @@ jobs:
            )
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: build.yml
+          workflow: build_dev.yml
           token: ${{ secrets.PAT_TRIGGER_WORKFLOW }}
 
       - name: Notify Telegram Group
