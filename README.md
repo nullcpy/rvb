@@ -42,12 +42,12 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
 |                                                                            | Reddit         | arm64      | `^reddit-revanced-extended-v[\d.]+-arm64-v8a\.apk$`          |
 |                                                                            |                | arm32      | `^reddit-revanced-extended-v[\d.]+-arm-v7a\.apk$`            |
-| [Advanced](https://github.com/anddea/revanced-patches)                     | YouTube        | universal  | `^youtube-revanced-anddea-v[\d.]+-all\.apk$`                 |
-|                                                                            | YouTube Music  | arm64      | `^music-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`             |
-|                                                                            |                | arm32      | `^music-revanced-anddea-v[\d.]+-arm-v7a\.apk$`               |
-|                                                                            | Reddit         | arm64      | `^reddit-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`            |
-|                                                                            |                | arm32      | `^reddit-revanced-anddea-v[\d.]+-arm-v7a\.apk$`              |
-|                                                                            | Spotify        | arm64      | `^spotify-revanced-anddea-v[\d.]+-arm64-v8a\.apk$`           |
+| [Advanced](https://github.com/anddea/revanced-patches)                     | YouTube        | universal  | `^youtube-revanced-advanced-v[\d.]+-all\.apk$`               |
+|                                                                            | YouTube Music  | arm64      | `^music-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`           |
+|                                                                            |                | arm32      | `^music-revanced-advanced-v[\d.]+-arm-v7a\.apk$`             |
+|                                                                            | Reddit         | arm64      | `^reddit-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`          |
+|                                                                            |                | arm32      | `^reddit-revanced-advanced-v[\d.]+-arm-v7a\.apk$`            |
+|                                                                            | Spotify        | arm64      | `^spotify-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`         |
 | [Piko](https://github.com/crimera/piko)                                    | Twitter        | universal  | `^x-piko-v(\d+\.\d+\.\d+)-release\.\d+\.apk$`                |
 
 `universal` : For all devices. <br>
