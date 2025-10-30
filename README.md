@@ -64,9 +64,9 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 - Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
 
 ### ⭐ Credits
-All credit goes to the original ReVanced patch developers and maintainers.
+- All credit goes to the original ReVanced patch developers and maintainers.
 
-| [revanced](https://github.com/ReVanced) | [anddea](https://github.com/anddea/revanced-patches) | [j-hc](https://github.com/j-hc/revanced-magisk-module) | [inotia00](https://github.com/inotia00/revanced-patches) |
-|-----------------------------------------|------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
+   | [revanced](https://github.com/ReVanced) | [anddea](https://github.com/anddea/revanced-patches) | [j-hc](https://github.com/j-hc/revanced-magisk-module) | [inotia00](https://github.com/inotia00/revanced-patches) |
+   |-----------------------------------------|------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
 
-
+- Icon by [u/droppermc](https://www.reddit.com/user/droppermc/) from [r/revancedapp](https://www.reddit.com/r/revancedapp/comments/1o908dm/designed_some_logos_for_revancedrevanced_yt_musiᴄ/). 
