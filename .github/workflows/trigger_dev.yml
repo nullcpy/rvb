@@ -196,7 +196,7 @@ jobs:
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
-          MSG="*New Patch Detected!* __(Pre-release)__${NL}"
+          MSG="*New Patch Detected!* (Pre-release)${NL}"
 
           if [ "${{ steps.compare.outputs.new_advanced }}" != "${{ steps.compare.outputs.old_advanced }}" ]; then
             MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.new_advanced }}): ${NL}Old: \`${{ steps.compare.outputs.old_advanced }}\` → New: \`${{ steps.compare.outputs.new_advanced }}\`${NL}"
