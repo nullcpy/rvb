@@ -187,21 +187,17 @@ jobs:
           awk -v sa_new="${{ steps.compare.outputs.sa_new }}" -v sa_old="${{ steps.compare.outputs.sa_old }}" \
               -v so_new="${{ steps.compare.outputs.so_new }}" -v so_old="${{ steps.compare.outputs.so_old }}" \
               -v se_new="${{ steps.compare.outputs.se_new }}" -v se_old="${{ steps.compare.outputs.se_old }}" '
-          BEGIN { keep = 1 }
+          BEGIN { in_section = 0; src = ""; keep = 1 }
+
           /^\[.*\]/ {
-            current_section = $0
-            print $0
+            in_section = 1
+            src = ""
             keep = 1
-            if (/patches-source *= *"anddea\/revanced-patches"/) {
-              if (sa_new == "" || sa_new == sa_old) keep = 0
-            } else if (/patches-source *= *"revanced\/revanced-patches"/) {
-              if (so_new == "" || so_new == so_old) keep = 0
-            } else if (/patches-source *= *"inotia00\/revanced-patches"/) {
-              if (se_new == "" || se_new == se_old) keep = 0
-            }
+            print $0
             next
           }
-          /patches-source *=/ {
+
+          in_section && /patches-source *= *"([^"]+)"/ {
             match($0, /patches-source *= *"([^"]+)"/, m)
             src = m[1]
             if (src == "anddea/revanced-patches") {
@@ -212,11 +208,13 @@ jobs:
               if (se_new == "" || se_new == se_old) keep = 0
             }
           }
-          /^enabled *=/ {
+
+          in_section && /^enabled *=/ {
             if (keep) print "enabled = true"
             else print "enabled = false"
             next
           }
+
           { print }
           ' config.stable.updated.toml > tmp && mv tmp config.stable.updated.toml
 
@@ -370,6 +368,7 @@ jobs:
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           cp config.toml config.dev.updated.toml
+          # Prepend patches-version = "dev"
           echo 'patches-version = "dev"' > tmp
           cat config.dev.updated.toml >> tmp
           mv tmp config.dev.updated.toml
@@ -377,23 +376,17 @@ jobs:
           awk -v pa_new="${{ steps.compare.outputs.pa_new }}" -v pa_old="${{ steps.compare.outputs.pa_old }}" \
               -v po_new="${{ steps.compare.outputs.po_new }}" -v po_old="${{ steps.compare.outputs.po_old }}" \
               -v pe_new="${{ steps.compare.outputs.pe_new }}" -v pe_old="${{ steps.compare.outputs.pe_old }}" '
-          BEGIN { in_section = 0; keep = 1 }
+          BEGIN { in_section = 0; src = ""; keep = 1 }
 
           /^\[.*\]/ {
-            current_section = $0
-            print $0
+            in_section = 1
+            src = ""
             keep = 1
-            if (/patches-source *= *"anddea\/revanced-patches"/) {
-              if (pa_new == "" || pa_new == pa_old) keep = 0
-            } else if (/patches-source *= *"revanced\/revanced-patches"/) {
-              if (po_new == "" || po_new == po_old) keep = 0
-            } else if (/patches-source *= *"inotia00\/revanced-patches"/) {
-              if (pe_new == "" || pe_new == pe_old) keep = 0
-            }
+            print $0
             next
           }
 
-          /patches-source *=/ {
+          in_section && /patches-source *= *"([^"]+)"/ {
             match($0, /patches-source *= *"([^"]+)"/, m)
             src = m[1]
             if (src == "anddea/revanced-patches") {
@@ -405,12 +398,9 @@ jobs:
             }
           }
 
-          /^enabled *=/ {
-            if (keep) {
-              print "enabled = true"
-            } else {
-              print "enabled = false"
-            }
+          in_section && /^enabled *=/ {
+            if (keep) print "enabled = true"
+            else print "enabled = false"
             next
           }
 
