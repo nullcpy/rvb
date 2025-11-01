@@ -215,6 +215,14 @@ jobs:
           }
           ' config.stable.updated.toml > tmp && mv tmp config.stable.updated.toml
 
+      - name: Commit updated stable config
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: config.stable.updated.toml
+          commit_message: "Update config.stable.updated.toml for new stable patches"
+
       - name: Build Stable
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: ./build.sh config.stable.updated.toml
@@ -387,6 +395,14 @@ jobs:
             delete lines; n = 0
           }
           ' config.dev.updated.toml > tmp && mv tmp config.dev.updated.toml
+
+      - name: Commit updated dev config
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: config.dev.updated.toml
+          commit_message: "Update config.dev.updated.toml for new dev patches"
 
       - name: Build Dev
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
