@@ -6,10 +6,10 @@ remove-rv-integrations-checks = true
 enabled = true 
 app-name = "TikTok"
 build-mode = "apk"
-arch = "both"
+arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-dpi = "120-640dpi"
+# dpi = "120-640dpi"
 apkmirror-dlurl = "apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "tiktok.en.uptodown.com/android"
 
@@ -20,26 +20,15 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-dpi = "120-640dpi"
+# dpi = "120-640dpi"
 apkmirror-dlurl = "apkmirror.com/apk/x-corp/twitter"
 uptodown-dlurl = "twitter.en.uptodown.com/android"
-
-[Twitch]
-enabled = true 
-app-name = "Twitch"
-build-mode = "apk"
-arch = "all"
-version = "25.3.0"
-patches-source = "revanced/revanced-patches"
-dpi = "120-640dpi"
-apkmirror-dlurl = "apkmirror.com/apk/twitch-interactive-inc/twitch"
-uptodown-dlurl = "twitch.en.uptodown.com/android"
 
 [Lightroom]
 enabled = true 
 app-name = "Lightroom"
 build-mode = "apk"
-arch = "arm64-v8a"
+arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 apkmirror-dlurl = "apkmirror.com/apk/adobe/lightroom"
@@ -49,30 +38,10 @@ uptodown-dlurl = "adobe-lightroom-mobile.en.uptodown.com/android"
 enabled = true 
 app-name = "Messenger"
 build-mode = "apk"
-arch = "both"
+arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 apkmirror-dlurl = "apkmirror.com/apk/facebook-2/messenger/"
 uptodown-dlurl = "facebook-messenger.en.uptodown.com/android"
-
-[ProtonMail]
-enabled = true 
-app-name = "ProtonMail"
-build-mode = "apk"
-arch = "all"
-version = "auto"
-patches-source = "revanced/revanced-patches"
-apkmirror-dlurl = "apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-uptodown-dlurl = "protonmail.en.uptodown.com/android"
-
-[SamsungRadio]
-enabled = true 
-app-name = "SamsungRadio"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-patches-source = "revanced/revanced-patches"
-apkmirror-dlurl = "apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-uptodown-dlurl = "samsung-radio.en.uptodown.com/android"
 
 
