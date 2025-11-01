@@ -1,4 +1,4 @@
-name: Maintenance
+name: Repo Maintenance
 
 on:
   schedule:
@@ -16,12 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: actions-template-sync
+      - name: Sync with Template Repository
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           source_repo_path: j-hc/revanced-magisk-module
 
-      - name: Delete older releases and workflows
+      - name: Delete Older Releases and Workflows
         uses: ophub/delete-releases-workflows@main
         with:
           delete_releases: true
