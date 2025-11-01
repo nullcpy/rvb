@@ -337,7 +337,7 @@ jobs:
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
-          MSG+="*APKs:*${APKS}${NL}${NL}@rvbygeo"
+          MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
@@ -546,7 +546,7 @@ jobs:
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
-          MSG+="*APKs:*${APKS}${NL}${NL}@rvbygeo"
+          MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
