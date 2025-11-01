@@ -161,7 +161,7 @@ jobs:
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
-          MSG="*New Patch Detected!* (Stable)${NL}"
+          MSG="*New Patch Detected!*${NL}"
           if [ "${{ steps.compare.outputs.sa_new }}" != "${{ steps.compare.outputs.sa_old }}" ]; then
             MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.sa_new }}):${NL}Old: \`${{ steps.compare.outputs.sa_old }}\` → New: \`${{ steps.compare.outputs.sa_new }}\`${NL}"
           fi
@@ -184,35 +184,40 @@ jobs:
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: |
           cp config.toml config.stable.updated.toml
-          { echo 'patches-version = "stable"'; cat config.stable.updated.toml; } > tmp && mv tmp config.stable.updated.toml
           awk -v sa_new="${{ steps.compare.outputs.sa_new }}" -v sa_old="${{ steps.compare.outputs.sa_old }}" \
               -v so_new="${{ steps.compare.outputs.so_new }}" -v so_old="${{ steps.compare.outputs.so_old }}" \
               -v se_new="${{ steps.compare.outputs.se_new }}" -v se_old="${{ steps.compare.outputs.se_old }}" '
-          BEGIN { keep = 1; n = 0 }
+          BEGIN { keep = 1 }
           /^\[.*\]/ {
-            flush(); section = $0; keep = 1; next
+            current_section = $0
+            print $0
+            keep = 1
+            if (/patches-source *= *"anddea\/revanced-patches"/) {
+              if (sa_new == "" || sa_new == sa_old) keep = 0
+            } else if (/patches-source *= *"revanced\/revanced-patches"/) {
+              if (so_new == "" || so_new == so_old) keep = 0
+            } else if (/patches-source *= *"inotia00\/revanced-patches"/) {
+              if (se_new == "" || se_new == se_old) keep = 0
+            }
+            next
           }
-          {
-            lines[++n] = $0
-            if (/patches-source *= *"[^"]+"/) {
-              match($0, /patches-source *= *"([^"]+)"/, m)
-              src = m[1]
-              if ((src == "anddea/revanced-patches" && (sa_new == "" || sa_new == sa_old)) ||
-                  (src == "revanced/revanced-patches" && (so_new == "" || so_new == so_old)) ||
-                  (src == "inotia00/revanced-patches" && (se_new == "" || se_new == se_old))) {
-                keep = 0
-              }
+          /patches-source *=/ {
+            match($0, /patches-source *= *"([^"]+)"/, m)
+            src = m[1]
+            if (src == "anddea/revanced-patches") {
+              if (sa_new == "" || sa_new == sa_old) keep = 0
+            } else if (src == "revanced/revanced-patches") {
+              if (so_new == "" || so_new == so_old) keep = 0
+            } else if (src == "inotia00/revanced-patches") {
+              if (se_new == "" || se_new == se_old) keep = 0
             }
           }
-          END { flush() }
-          function flush() {
-            for (i = 1; i <= n; i++) {
-              line = lines[i]
-              if (!keep) gsub(/enabled *= *true/, "enabled = false", line)
-              print line
-            }
-            delete lines; n = 0
+          /^enabled *=/ {
+            if (keep) print "enabled = true"
+            else print "enabled = false"
+            next
           }
+          { print }
           ' config.stable.updated.toml > tmp && mv tmp config.stable.updated.toml
 
       - name: Commit updated stable config
@@ -365,35 +370,51 @@ jobs:
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           cp config.toml config.dev.updated.toml
-          { echo 'patches-version = "dev"'; cat config.dev.updated.toml; } > tmp && mv tmp config.dev.updated.toml
+          echo 'patches-version = "dev"' > tmp
+          cat config.dev.updated.toml >> tmp
+          mv tmp config.dev.updated.toml
+
           awk -v pa_new="${{ steps.compare.outputs.pa_new }}" -v pa_old="${{ steps.compare.outputs.pa_old }}" \
               -v po_new="${{ steps.compare.outputs.po_new }}" -v po_old="${{ steps.compare.outputs.po_old }}" \
               -v pe_new="${{ steps.compare.outputs.pe_new }}" -v pe_old="${{ steps.compare.outputs.pe_old }}" '
-          BEGIN { keep = 1; n = 0 }
+          BEGIN { in_section = 0; keep = 1 }
+
           /^\[.*\]/ {
-            flush(); section = $0; keep = 1; next
+            current_section = $0
+            print $0
+            keep = 1
+            if (/patches-source *= *"anddea\/revanced-patches"/) {
+              if (pa_new == "" || pa_new == pa_old) keep = 0
+            } else if (/patches-source *= *"revanced\/revanced-patches"/) {
+              if (po_new == "" || po_new == po_old) keep = 0
+            } else if (/patches-source *= *"inotia00\/revanced-patches"/) {
+              if (pe_new == "" || pe_new == pe_old) keep = 0
+            }
+            next
           }
-          {
-            lines[++n] = $0
-            if (/patches-source *= *"[^"]+"/) {
-              match($0, /patches-source *= *"([^"]+)"/, m)
-              src = m[1]
-              if ((src == "anddea/revanced-patches" && (pa_new == "" || pa_new == pa_old)) ||
-                  (src == "revanced/revanced-patches" && (po_new == "" || po_new == po_old)) ||
-                  (src == "inotia00/revanced-patches" && (pe_new == "" || pe_new == pe_old))) {
-                keep = 0
-              }
+
+          /patches-source *=/ {
+            match($0, /patches-source *= *"([^"]+)"/, m)
+            src = m[1]
+            if (src == "anddea/revanced-patches") {
+              if (pa_new == "" || pa_new == pa_old) keep = 0
+            } else if (src == "revanced/revanced-patches") {
+              if (po_new == "" || po_new == po_old) keep = 0
+            } else if (src == "inotia00/revanced-patches") {
+              if (pe_new == "" || pe_new == pe_old) keep = 0
             }
           }
-          END { flush() }
-          function flush() {
-            for (i = 1; i <= n; i++) {
-              line = lines[i]
-              if (!keep) gsub(/enabled *= *true/, "enabled = false", line)
-              print line
+
+          /^enabled *=/ {
+            if (keep) {
+              print "enabled = true"
+            } else {
+              print "enabled = false"
             }
-            delete lines; n = 0
+            next
           }
+
+          { print }
           ' config.dev.updated.toml > tmp && mv tmp config.dev.updated.toml
 
       - name: Commit updated dev config
