@@ -330,8 +330,10 @@ jobs:
               HAS_MODULES=true
             fi
           done
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}*${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}*${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
@@ -537,8 +539,10 @@ jobs:
               HAS_MODULES=true
             fi
           done
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}* (Pre-release)${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
