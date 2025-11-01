@@ -142,17 +142,5 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "reddit-official-app.en.uptodown.com/android"
 
-[Spotify-Advanced]
-enabled = true
-app-name = "Spotify"
-build-mode = "apk"
-arch = "all"
-version = "auto"
-rv-brand = "ReVanced Advanced"
-patches-source = "anddea/revanced-patches"
-dpi = "120-640dpi"
-apkmirror-dlurl = "apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-uptodown-dlurl = "spotify.en.uptodown.com/android"
-# archive-dlurl = "archive.org/download/jhc-apks/apks/com.spotify.music"
 
 
