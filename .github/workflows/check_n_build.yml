@@ -1,4 +1,4 @@
-name: CI
+name: Check Patch and Build
 
 on:
   schedule:
