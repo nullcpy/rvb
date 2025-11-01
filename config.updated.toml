@@ -9,8 +9,6 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-# dpi = "120-640dpi"
-apkmirror-dlurl = "apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "tiktok.en.uptodown.com/android"
 
 [Twitter]
@@ -20,8 +18,6 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-# dpi = "120-640dpi"
-apkmirror-dlurl = "apkmirror.com/apk/x-corp/twitter"
 uptodown-dlurl = "twitter.en.uptodown.com/android"
 
 [Lightroom]
@@ -31,7 +27,6 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-apkmirror-dlurl = "apkmirror.com/apk/adobe/lightroom"
 uptodown-dlurl = "adobe-lightroom-mobile.en.uptodown.com/android"
 
 [Messenger]
@@ -41,7 +36,6 @@ build-mode = "apk"
 arch = "all"
 version = "auto"
 patches-source = "revanced/revanced-patches"
-apkmirror-dlurl = "apkmirror.com/apk/facebook-2/messenger/"
 uptodown-dlurl = "facebook-messenger.en.uptodown.com/android"
 
 
