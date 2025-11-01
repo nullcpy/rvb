@@ -243,7 +243,6 @@ jobs:
           file_glob: true
           release_name: Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
           tag: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
-          prerelease: false
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Stable)
