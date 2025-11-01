@@ -1,0 +1,512 @@
+name: Check Patch and Build
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"  # Every 4 hours
+  workflow_dispatch:
+
+jobs:
+  run:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      # ==============================
+      # 1. FETCH LATEST STABLE & PRE-RELEASE TAGS
+      # ==============================
+      - name: Fetch Latest Stable and Pre-release Tags
+        id: fetch_tags
+        run: |
+          get_latest_tag() {
+            local repo=$1
+            local prerelease=$2
+            curl -s "https://api.github.com/repos/$repo/releases" \
+              | jq -r "
+                map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) |
+                sort_by(.published_at) |
+                reverse |
+                .[0].tag_name // \"\"
+              "
+          }
+          echo "stable_advanced=$(get_latest_tag anddea/revanced-patches false)" >> "$GITHUB_OUTPUT"
+          echo "prerelease_advanced=$(get_latest_tag anddea/revanced-patches true)" >> "$GITHUB_OUTPUT"
+          echo "stable_official=$(get_latest_tag revanced/revanced-patches false)" >> "$GITHUB_OUTPUT"
+          echo "prerelease_official=$(get_latest_tag revanced/revanced-patches true)" >> "$GITHUB_OUTPUT"
+          echo "stable_extended=$(get_latest_tag inotia00/revanced-patches false)" >> "$GITHUB_OUTPUT"
+          echo "prerelease_extended=$(get_latest_tag inotia00/revanced-patches true)" >> "$GITHUB_OUTPUT"
+
+      # ==============================
+      # 2. INITIALIZE OR LOAD last_tags.json
+      # ==============================
+      - name: Initialize Tag Tracking File if Missing
+        id: init_tags
+        run: |
+          if [ ! -f last_tags.json ]; then
+            jq -n \
+              --arg sa "${{ steps.fetch_tags.outputs.stable_advanced }}" \
+              --arg pa "${{ steps.fetch_tags.outputs.prerelease_advanced }}" \
+              --arg so "${{ steps.fetch_tags.outputs.stable_official }}" \
+              --arg po "${{ steps.fetch_tags.outputs.prerelease_official }}" \
+              --arg se "${{ steps.fetch_tags.outputs.stable_extended }}" \
+              --arg pe "${{ steps.fetch_tags.outputs.prerelease_extended }}" \
+              '{
+                advanced: { stable: ($sa | select(length > 0)), prerelease: ($pa | select(length > 0)) },
+                official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
+                extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
+              }' > last_tags.json
+            echo "missing=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "missing=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit Initialized Tag File
+        if: steps.init_tags.outputs.missing == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: last_tags.json
+          commit_message: "Initialize tag tracking JSON"
+
+      # ==============================
+      # 3. COMPARE CURRENT VS. STORED TAGS
+      # ==============================
+      - name: Compare Current vs Stored Tags
+        id: compare
+        run: |
+          SA_OLD=$(jq -r '.advanced.stable // ""' last_tags.json)
+          PA_OLD=$(jq -r '.advanced.prerelease // ""' last_tags.json)
+          SO_OLD=$(jq -r '.official.stable // ""' last_tags.json)
+          PO_OLD=$(jq -r '.official.prerelease // ""' last_tags.json)
+          SE_OLD=$(jq -r '.extended.stable // ""' last_tags.json)
+          PE_OLD=$(jq -r '.extended.prerelease // ""' last_tags.json)
+
+          SA_NEW="${{ steps.fetch_tags.outputs.stable_advanced }}"
+          PA_NEW="${{ steps.fetch_tags.outputs.prerelease_advanced }}"
+          SO_NEW="${{ steps.fetch_tags.outputs.stable_official }}"
+          PO_NEW="${{ steps.fetch_tags.outputs.prerelease_official }}"
+          SE_NEW="${{ steps.fetch_tags.outputs.stable_extended }}"
+          PE_NEW="${{ steps.fetch_tags.outputs.prerelease_extended }}"
+
+          TRIGGER_STABLE=0
+          TRIGGER_PRERELEASE=0
+
+          [ -n "$SA_NEW" ] && [ "$SA_NEW" != "$SA_OLD" ] && TRIGGER_STABLE=1
+          [ -n "$SO_NEW" ] && [ "$SO_NEW" != "$SO_OLD" ] && TRIGGER_STABLE=1
+          [ -n "$SE_NEW" ] && [ "$SE_NEW" != "$SE_OLD" ] && TRIGGER_STABLE=1
+
+          [ -n "$PA_NEW" ] && [ "$PA_NEW" != "$PA_OLD" ] && TRIGGER_PRERELEASE=1
+          [ -n "$PO_NEW" ] && [ "$PO_NEW" != "$PO_OLD" ] && TRIGGER_PRERELEASE=1
+          [ -n "$PE_NEW" ] && [ "$PE_NEW" != "$PE_OLD" ] && TRIGGER_PRERELEASE=1
+
+          jq -n \
+            --arg sa "$SA_NEW" --arg pa "$PA_NEW" \
+            --arg so "$SO_NEW" --arg po "$PO_NEW" \
+            --arg se "$SE_NEW" --arg pe "$PE_NEW" \
+            '{
+              advanced: { stable: ($sa | select(length > 0)), prerelease: ($pa | select(length > 0)) },
+              official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
+              extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
+            }' > last_tags.json
+
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add last_tags.json
+          git commit -m "Update last_tags.json with latest patch versions" || echo "No changes"
+          git push origin main
+
+          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
+          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+          echo "sa_old=$SA_OLD" >> "$GITHUB_OUTPUT"
+          echo "sa_new=$SA_NEW" >> "$GITHUB_OUTPUT"
+          echo "so_old=$SO_OLD" >> "$GITHUB_OUTPUT"
+          echo "so_new=$SO_NEW" >> "$GITHUB_OUTPUT"
+          echo "se_old=$SE_OLD" >> "$GITHUB_OUTPUT"
+          echo "se_new=$SE_NEW" >> "$GITHUB_OUTPUT"
+          echo "pa_old=$PA_OLD" >> "$GITHUB_OUTPUT"
+          echo "pa_new=$PA_NEW" >> "$GITHUB_OUTPUT"
+          echo "po_old=$PO_OLD" >> "$GITHUB_OUTPUT"
+          echo "po_new=$PO_NEW" >> "$GITHUB_OUTPUT"
+          echo "pe_old=$PE_OLD" >> "$GITHUB_OUTPUT"
+          echo "pe_new=$PE_NEW" >> "$GITHUB_OUTPUT"
+
+      # ==============================
+      # 4. STABLE BUILD (if needed)
+      # ==============================
+      - name: Get next version for Stable
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        id: next_stable_ver
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Telegram – Patch Detected (Stable)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          NL=$'\n'
+          MSG="*New Patch Detected!* (Stable)${NL}"
+          if [ "${{ steps.compare.outputs.sa_new }}" != "${{ steps.compare.outputs.sa_old }}" ]; then
+            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.sa_new }}):${NL}Old: \`${{ steps.compare.outputs.sa_old }}\` → New: \`${{ steps.compare.outputs.sa_new }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.so_new }}" != "${{ steps.compare.outputs.so_old }}" ]; then
+            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ steps.compare.outputs.so_new }}):${NL}Old: \`${{ steps.compare.outputs.so_old }}\` → New: \`${{ steps.compare.outputs.so_new }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.se_new }}" != "${{ steps.compare.outputs.se_old }}" ]; then
+            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ steps.compare.outputs.se_new }}):${NL}Old: \`${{ steps.compare.outputs.se_old }}\` → New: \`${{ steps.compare.outputs.se_new }}\`${NL}"
+          fi
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      - name: Generate config.stable.updated.toml
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        run: |
+          cp config.toml config.stable.updated.toml
+          { echo 'patches-version = "stable"'; cat config.stable.updated.toml; } > tmp && mv tmp config.stable.updated.toml
+          awk -v sa_new="${{ steps.compare.outputs.sa_new }}" -v sa_old="${{ steps.compare.outputs.sa_old }}" \
+              -v so_new="${{ steps.compare.outputs.so_new }}" -v so_old="${{ steps.compare.outputs.so_old }}" \
+              -v se_new="${{ steps.compare.outputs.se_new }}" -v se_old="${{ steps.compare.outputs.se_old }}" '
+          BEGIN { keep = 1; n = 0 }
+          /^\[.*\]/ {
+            flush(); section = $0; keep = 1; next
+          }
+          {
+            lines[++n] = $0
+            if (/patches-source *= *"[^"]+"/) {
+              match($0, /patches-source *= *"([^"]+)"/, m)
+              src = m[1]
+              if ((src == "anddea/revanced-patches" && (sa_new == "" || sa_new == sa_old)) ||
+                  (src == "revanced/revanced-patches" && (so_new == "" || so_new == so_old)) ||
+                  (src == "inotia00/revanced-patches" && (se_new == "" || se_new == se_old))) {
+                keep = 0
+              }
+            }
+          }
+          END { flush() }
+          function flush() {
+            for (i = 1; i <= n; i++) {
+              line = lines[i]
+              if (!keep) gsub(/enabled *= *true/, "enabled = false", line)
+              print line
+            }
+            delete lines; n = 0
+          }
+          ' config.stable.updated.toml > tmp && mv tmp config.stable.updated.toml
+
+      - name: Build Stable
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        run: ./build.sh config.stable.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Get Output (Stable)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        id: get_output_stable
+        run: |
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload Stable Release
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+          tag: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+          prerelease: false
+          overwrite: true
+
+      - name: Update Changelog and Magisk Update JSON (Stable)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        run: |
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+          find . -name "*-update.json" | grep . || : >dummy-update.json
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Notify Telegram – Build Complete (Stable)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          cd build || exit 1
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          MSG="*Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}*${NL}${BODY}${NL}${NL}"
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+          MSG+="*APKs:*${APKS}${NL}${NL}@rvbygeo"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      # ==============================
+      # 5. DEV BUILD (if needed)
+      # ==============================
+      - name: Get next version for Dev (after stable may have published)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        id: next_dev_ver
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Telegram – Patch Detected (Pre-release)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          NL=$'\n'
+          MSG="*New Patch Detected!* (Pre-release)${NL}"
+          if [ "${{ steps.compare.outputs.pa_new }}" != "${{ steps.compare.outputs.pa_old }}" ]; then
+            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.pa_new }}):${NL}Old: \`${{ steps.compare.outputs.pa_old }}\` → New: \`${{ steps.compare.outputs.pa_new }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.po_new }}" != "${{ steps.compare.outputs.po_old }}" ]; then
+            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ steps.compare.outputs.po_new }}):${NL}Old: \`${{ steps.compare.outputs.po_old }}\` → New: \`${{ steps.compare.outputs.po_new }}\`${NL}"
+          fi
+          if [ "${{ steps.compare.outputs.pe_new }}" != "${{ steps.compare.outputs.pe_old }}" ]; then
+            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ steps.compare.outputs.pe_new }}):${NL}Old: \`${{ steps.compare.outputs.pe_old }}\` → New: \`${{ steps.compare.outputs.pe_new }}\`${NL}"
+          fi
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      - name: Generate config.dev.updated.toml
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: |
+          cp config.toml config.dev.updated.toml
+          { echo 'patches-version = "dev"'; cat config.dev.updated.toml; } > tmp && mv tmp config.dev.updated.toml
+          awk -v pa_new="${{ steps.compare.outputs.pa_new }}" -v pa_old="${{ steps.compare.outputs.pa_old }}" \
+              -v po_new="${{ steps.compare.outputs.po_new }}" -v po_old="${{ steps.compare.outputs.po_old }}" \
+              -v pe_new="${{ steps.compare.outputs.pe_new }}" -v pe_old="${{ steps.compare.outputs.pe_old }}" '
+          BEGIN { keep = 1; n = 0 }
+          /^\[.*\]/ {
+            flush(); section = $0; keep = 1; next
+          }
+          {
+            lines[++n] = $0
+            if (/patches-source *= *"[^"]+"/) {
+              match($0, /patches-source *= *"([^"]+)"/, m)
+              src = m[1]
+              if ((src == "anddea/revanced-patches" && (pa_new == "" || pa_new == pa_old)) ||
+                  (src == "revanced/revanced-patches" && (po_new == "" || po_new == po_old)) ||
+                  (src == "inotia00/revanced-patches" && (pe_new == "" || pe_new == pe_old))) {
+                keep = 0
+              }
+            }
+          }
+          END { flush() }
+          function flush() {
+            for (i = 1; i <= n; i++) {
+              line = lines[i]
+              if (!keep) gsub(/enabled *= *true/, "enabled = false", line)
+              print line
+            }
+            delete lines; n = 0
+          }
+          ' config.dev.updated.toml > tmp && mv tmp config.dev.updated.toml
+
+      - name: Build Dev
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: ./build.sh config.dev.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Get Output (Dev)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        id: get_output_dev
+        run: |
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload Dev Release
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+          tag: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+          prerelease: true
+          overwrite: true
+
+      - name: Update Changelog and Magisk Update JSON (Dev)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: |
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+          find . -name "*-update.json" | grep . || : >dummy-update.json
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Notify Telegram – Build Complete (Dev)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          cd build || exit 1
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          MSG="*Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}* (Pre-release)${NL}${BODY}${NL}${NL}"
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+          MSG+="*APKs:*${APKS}${NL}${NL}@rvbygeo"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      # ==============================
+      # 6. CLEANUP RELEASES AND WORKFLOWS
+      # ==============================
+      - name: Delete older releases and workflows
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 50
+          delete_workflows: true
+          workflows_keep_day: 30
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ==============================
+      # 7. SYNC WITH TEMPLATE REPO
+      # ==============================
+      - name: Sync Repo with Template
+        uses: AndreasAugustin/actions-template-sync@v2
+        with:
+          source_repo_path: j-hc/revanced-magisk-module
