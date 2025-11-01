@@ -1,4 +1,4 @@
-name: Check Patch and Build
+name: CI
 
 on:
   schedule:
@@ -555,24 +555,4 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-      # ==============================
-      # 6. CLEANUP RELEASES AND WORKFLOWS
-      # ==============================
-      - name: Delete older releases and workflows
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        uses: ophub/delete-releases-workflows@main
-        with:
-          delete_releases: true
-          delete_tags: true
-          releases_keep_latest: 50
-          delete_workflows: true
-          workflows_keep_day: 30
-          gh_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ==============================
-      # 7. SYNC WITH TEMPLATE REPO
-      # ==============================
-      - name: Sync Repo with Template
-        uses: AndreasAugustin/actions-template-sync@v2
-        with:
-          source_repo_path: j-hc/revanced-magisk-module
