@@ -13,7 +13,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "youtube.en.uptodown.com/android"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -23,7 +23,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "youtube-music.en.uptodown.com/android"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -33,7 +33,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/photos"
 uptodown-dlurl = "google-photos.en.uptodown.com/android"
 
 [Duolingo]
-enabled = true 
+enabled = false 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
@@ -55,7 +55,7 @@ apkmirror-dlurl = "apkmirror.com/apk/twitch-interactive-inc/twitch"
 uptodown-dlurl = "twitch.en.uptodown.com/android"
 
 [ProtonMail]
-enabled = true 
+enabled = false 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -65,7 +65,7 @@ apkmirror-dlurl = "apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted
 uptodown-dlurl = "protonmail.en.uptodown.com/android"
 
 [SamsungRadio]
-enabled = true 
+enabled = false 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
