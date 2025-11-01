@@ -3,7 +3,7 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -13,7 +13,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "youtube.en.uptodown.com/android"
 
 [Music]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -23,7 +23,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "youtube-music.en.uptodown.com/android"
 
 [Photos]
-enabled = false
+enabled = true
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -33,7 +33,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/photos"
 uptodown-dlurl = "google-photos.en.uptodown.com/android"
 
 [Duolingo]
-enabled = false 
+enabled = true 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
@@ -44,7 +44,7 @@ apkmirror-dlurl = "apkmirror.com/apk/duolingo/duolingo-duolingo"
 uptodown-dlurl = "duolingo.en.uptodown.com/android"
 
 [Twitch]
-enabled = false 
+enabled = true 
 app-name = "Twitch"
 build-mode = "apk"
 arch = "all"
@@ -55,7 +55,7 @@ apkmirror-dlurl = "apkmirror.com/apk/twitch-interactive-inc/twitch"
 uptodown-dlurl = "twitch.en.uptodown.com/android"
 
 [ProtonMail]
-enabled = false 
+enabled = true 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -65,7 +65,7 @@ apkmirror-dlurl = "apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted
 uptodown-dlurl = "protonmail.en.uptodown.com/android"
 
 [SamsungRadio]
-enabled = false 
+enabled = true 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
@@ -109,7 +109,7 @@ apkmirror-dlurl = "apkmirror.com/apk/redditinc/reddit"
 uptodown-dlurl = "reddit-official-app.en.uptodown.com/android"
 
 [YouTube-Advanced]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -120,7 +120,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "youtube.en.uptodown.com/android"
 
 [Music-Advanced]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -131,7 +131,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "youtube-music.en.uptodown.com/android"
 
 [Reddit-Advanced]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
