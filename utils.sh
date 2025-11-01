@@ -216,8 +216,8 @@ req() {
 		else
 			pr "Request failed for $url (attempt $attempt/$max_attempts)"
 			if [ $attempt -lt $max_attempts ]; then
-				pr "Retrying in 30 seconds..."
-				sleep 30
+				pr "Retrying in 300 seconds..."
+				sleep $((300 + RANDOM % 120))
 			fi
 		fi
 		attempt=$((attempt + 1))
