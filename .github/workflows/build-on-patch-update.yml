@@ -442,7 +442,7 @@ jobs:
 
   build-dev:
     needs: [check-patch, build-stable]
-    if: needs.check-patch.outputs.trigger_prerelease == '1'
+    if: always() && needs.check-patch.outputs.trigger_prerelease == '1'
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
@@ -583,7 +583,7 @@ jobs:
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   cleanup:
-    needs: [check-patch, build-dev]
+    needs: [check-patch, build-stable, build-dev]
     if: needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1'
     runs-on: ubuntu-latest
     permissions:
