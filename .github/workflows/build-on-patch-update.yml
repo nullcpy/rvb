@@ -85,7 +85,7 @@ jobs:
 
       - name: Commit Initialized Tag File
         if: steps.init_tags.outputs.missing == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           skip_checkout: true
@@ -147,7 +147,7 @@ jobs:
 
       - name: Commit Updated Tag JSON
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           skip_checkout: true
@@ -257,7 +257,7 @@ jobs:
 
       - name: Commit updated stable config
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           file_pattern: config.stable.updated.toml
@@ -265,7 +265,7 @@ jobs:
 
       - name: Commit updated dev config
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           file_pattern: config.dev.updated.toml
@@ -398,7 +398,7 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
           skip_checkout: true
@@ -540,7 +540,7 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
           skip_checkout: true
