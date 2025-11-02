@@ -177,9 +177,9 @@ jobs:
 
           # Write table header
           cat >> README.new <<EOF
-| Patch       | App             | Arch   | Download |
-|-------------|-----------------|--------|----------|
-EOF
+          | Patch       | App             | Arch   | Download |
+          |-------------|-----------------|--------|----------|
+          EOF
 
           # Define expected apps (from your config)
           declare -A APPS
