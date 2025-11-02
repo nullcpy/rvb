@@ -1,12 +1,12 @@
-name: Sync with Template Repository
+name: Pull Changes from Template
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+  - cron: "20 18 * * *"
   workflow_dispatch:
 
 jobs:
-  template-sync:
+  repo-sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -16,10 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Sync with Template Repository
+      - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           source_repo_path: j-hc/revanced-magisk-module
-
 
           
