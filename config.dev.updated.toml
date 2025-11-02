@@ -143,6 +143,17 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
+[Spotify]
+enabled = true
+app-name = "Spotify"
+build-mode = "apk"
+build-mode = "both"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced Advanced"
+patches-source = "anddea/revanced-patches"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
 
 
 
