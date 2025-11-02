@@ -138,27 +138,15 @@ jobs:
           curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" "$POST"
 
       - name: Update README Download Table
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           set -euo pipefail
           REPO="geologically/revanced-builder"
           README="README.md"
           TABLE_START="### 📦 [Download from GitHub Releases](https://github.com/geologically/revanced-builder/releases)"
+          NOW=$(date -u +"%Y-%m-%d %H:%M UTC")
           BUILD_DIR="./build"
           STABLE_VER="${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}"
           DEV_VER="${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}"
-
-          # Build map of existing APKs
-          declare -A APK_MAP
-          while IFS= read -r -d '' file; do
-            filename=$(basename "$file")
-            if [[ $filename == *"-dev-"* ]]; then
-              type="dev"
-            else
-              type="stable"
-            fi
-            APK_MAP["$filename"]="$type"
-          done < <(find "$BUILD_DIR" -name "*.apk" -print0)
 
           # Function to generate link
           gen_link() {
@@ -166,125 +154,136 @@ jobs:
             echo "https://github.com/$REPO/releases/download/$ver/$fname"
           }
 
-          # Extract or create table
+          # Start new README
           if grep -q "^$TABLE_START" "$README"; then
-            # Keep everything before table
             head -n "$(grep -n "^$TABLE_START" "$README" | cut -d: -f1)" "$README" > README.new
           else
             cat "$README" > README.new
             echo -e "\n$TABLE_START\n" >> README.new
           fi
 
-          # Write table header
-          cat >> README.new <<EOF
-          | Patch       | App             | Arch   | Download |
-          |-------------|-----------------|--------|----------|
+          echo "_Last updated: $NOW_\n" >> README.new
+
+          cat >> README.new <<'EOF'
+          | Patch       | App             | Arch   | APK | Module |
+          |-------------|-----------------|--------|-----|--------|
           EOF
 
-          # Define expected apps (from your config)
-          declare -A APPS
-          APPS["youtube-revanced"]="Official|YouTube|universal"
-          APPS["music-revanced"]="Official|YouTube Music|arm64"
-          APPS["music-revanced"]="Official|YouTube Music|arm32"
-          APPS["photos-revanced"]="Official|Google Photos|arm64"
-          APPS["photos-revanced"]="Official|Google Photos|arm32"
-          APPS["duolingo-revanced"]="Official|Duolingo|arm64"
-          APPS["duolingo-revanced"]="Official|Duolingo|arm32"
-          APPS["twitch-revanced"]="Official|Twitch|universal"
-          APPS["samsungradio-revanced"]="Official|Samsung Radio|arm64"
-          APPS["samsungradio-revanced"]="Official|Samsung Radio|arm32"
-          APPS["youtube-revanced-extended"]="Extended|YouTube|universal"
-          APPS["music-revanced-extended"]="Extended|YouTube Music|arm64"
-          APPS["music-revanced-extended"]="Extended|YouTube Music|arm32"
-          APPS["reddit-revanced-extended"]="Extended|Reddit|arm64"
-          APPS["reddit-revanced-extended"]="Extended|Reddit|arm32"
-          APPS["youtube-revanced-advanced"]="Advanced|YouTube|universal"
-          APPS["music-revanced-advanced"]="Advanced|YouTube Music|arm64"
-          APPS["music-revanced-advanced"]="Advanced|YouTube Music|arm32"
-          APPS["reddit-revanced-advanced"]="Advanced|Reddit|arm64"
-          APPS["reddit-revanced-advanced"]="Advanced|Reddit|arm32"
+          # Scan all APKs and modules
+          declare -A APKS MODULES
+          while IFS= read -r -d '' file; do
+            fname=$(basename "$file")
+            if [[ $fname == *.apk ]]; then
+              APKS["$fname"]=1
+            elif [[ $fname == *magisk*.zip ]]; then
+              MODULES["$fname"]=1
+            fi
+          done < <(find "$BUILD_DIR" -name "*.apk" -o -name "*magisk*.zip" -print0)
 
-          # Process each app
-          for base in youtube-revanced music-revanced photos-revanced duolingo-revanced twitch-revanced samsungradio-revanced reddit-revanced; do
+          # Define app base names and display names
+          declare -A APP_INFO
+          APP_INFO[youtube]="YouTube"
+          APP_INFO[music]="YouTube Music"
+          APP_INFO[photos]="Google Photos"
+          APP_INFO[duolingo]="Duolingo"
+          APP_INFO[twitch]="Twitch"
+          APP_INFO[samsungradio]="Samsung Radio"
+          APP_INFO[reddit]="Reddit"
+
+          # Process each base app
+          for base in youtube music photos duolingo twitch samsungradio reddit; do
+            app_name="${APP_INFO[$base]}"
             for variant in "" "-extended" "-advanced"; do
-              prefix="${base}${variant}"
-              for arch in universal arm64 arm32; do
-                # Skip invalid combos
-                if [[ "$base" == "reddit-revanced" && "$variant" == "" ]]; then continue; fi
-                if [[ "$base" == "twitch-revanced" && "$variant" != "" ]]; then continue; fi
-                if [[ "$base" == "samsungradio-revanced" && "$variant" != "" ]]; then continue; fi
-                if [[ "$arch" == "universal" && ("$base" == "music-revanced" || "$base" == "photos-revanced" || "$base" == "duolingo-revanced" || "$base" == "reddit-revanced") ]]; then continue; fi
-                if [[ "$arch" != "universal" && ("$base" == "youtube-revanced" || "$base" == "twitch-revanced") ]]; then continue; fi
+              # Skip invalid combos
+              if [[ "$base" == "reddit" && "$variant" == "" ]]; then continue; fi
+              if [[ "$base" == "twitch" && "$variant" != "" ]]; then continue; fi
+              if [[ "$base" == "samsungradio" && "$variant" != "" ]]; then continue; fi
 
-                # Determine patch type
-                if [[ "$variant" == "" ]]; then
-                  patch="Official"
-                elif [[ "$variant" == "-extended" ]]; then
-                  patch="Extended"
-                else
-                  patch="Advanced"
-                fi
+              # Determine patch type
+              if [[ "$variant" == "" ]]; then
+                patch_type="Official"
+              elif [[ "$variant" == "-extended" ]]; then
+                patch_type="Extended"
+              else
+                patch_type="Advanced"
+              fi
 
-                # App name
-                if [[ "$base" == "youtube-revanced" ]]; then app="YouTube"
-                elif [[ "$base" == "music-revanced" ]]; then app="YouTube Music"
-                elif [[ "$base" == "photos-revanced" ]]; then app="Google Photos"
-                elif [[ "$base" == "duolingo-revanced" ]]; then app="Duolingo"
-                elif [[ "$base" == "twitch-revanced" ]]; then app="Twitch"
-                elif [[ "$base" == "samsungradio-revanced" ]]; then app="Samsung Radio"
-                elif [[ "$base" == "reddit-revanced" ]]; then app="Reddit"
-                else app="Unknown"; fi
+              # Determine archs to check
+              if [[ "$base" == "youtube" || "$base" == "twitch" ]]; then
+                archs=("universal")
+              else
+                archs=("arm64" "arm32")
+              fi
 
-                # Build expected filenames
+              for arch in "${archs[@]}"; do
+                # Build filename patterns
                 if [[ "$arch" == "universal" ]]; then
-                  stable_file="${prefix}-v*-${arch}.apk"
-                  dev_file="${prefix}-dev-v*-${arch}.apk"
+                  stable_apk_pattern="${base}${variant}-v*-all.apk"
+                  dev_apk_pattern="${base}${variant}-dev-v*-all.apk"
+                  stable_mod_pattern="${base}${variant}-magisk-v*-all.zip"
+                  dev_mod_pattern="${base}${variant}-dev-magisk-v*-all.zip"
                 elif [[ "$arch" == "arm64" ]]; then
-                  stable_file="${prefix}-v*-arm64-v8a.apk"
-                  dev_file="${prefix}-dev-v*-arm64-v8a.apk"
-                else
-                  stable_file="${prefix}-v*-arm-v7a.apk"
-                  dev_file="${prefix}-dev-v*-arm-v7a.apk"
+                  stable_apk_pattern="${base}${variant}-v*-arm64-v8a.apk"
+                  dev_apk_pattern="${base}${variant}-dev-v*-arm64-v8a.apk"
+                  stable_mod_pattern="${base}${variant}-magisk-v*-arm64-v8a.zip"
+                  dev_mod_pattern="${base}${variant}-dev-magisk-v*-arm64-v8a.zip"
+                else # arm32
+                  stable_apk_pattern="${base}${variant}-v*-arm-v7a.apk"
+                  dev_apk_pattern="${base}${variant}-dev-v*-arm-v7a.apk"
+                  stable_mod_pattern="${base}${variant}-magisk-v*-arm-v7a.zip"
+                  dev_mod_pattern="${base}${variant}-dev-magisk-v*-arm-v7a.zip"
                 fi
 
                 # Find actual files
-                stable_found=$(find "$BUILD_DIR" -name "$stable_file" | head -1)
-                dev_found=$(find "$BUILD_DIR" -name "$dev_file" | head -1)
+                stable_apk=$(find "$BUILD_DIR" -name "$stable_apk_pattern" | head -1)
+                dev_apk=$(find "$BUILD_DIR" -name "$dev_apk_pattern" | head -1)
+                stable_mod=$(find "$BUILD_DIR" -name "$stable_mod_pattern" | head -1)
+                dev_mod=$(find "$BUILD_DIR" -name "$dev_mod_pattern" | head -1)
 
-                stable_link=""
-                dev_link=""
-
-                if [[ -n "$stable_found" ]]; then
-                  fname=$(basename "$stable_found")
-                  stable_link="[Stable]($(gen_link "$fname" "$STABLE_VER"))"
+                # Build APK cell
+                apk_cell=""
+                if [[ -n "$stable_apk" ]]; then
+                  fname=$(basename "$stable_apk")
+                  apk_cell="[Stable]($(gen_link "$fname" "$STABLE_VER"))"
                 fi
-                if [[ -n "$dev_found" ]]; then
-                  fname=$(basename "$dev_found")
+                if [[ -n "$dev_apk" ]]; then
+                  fname=$(basename "$dev_apk")
                   dev_link="[Dev]($(gen_link "$fname" "$DEV_VER"))"
+                  if [[ -n "$apk_cell" ]]; then
+                    apk_cell="$apk_cell \| $dev_link"
+                  else
+                    apk_cell="$dev_link"
+                  fi
                 fi
+                if [[ -z "$apk_cell" ]]; then apk_cell="—" fi
 
-                download_cell=""
-                if [[ -n "$stable_link" && -n "$dev_link" ]]; then
-                  download_cell="$stable_link \| $dev_link"
-                elif [[ -n "$stable_link" ]]; then
-                  download_cell="$stable_link"
-                elif [[ -n "$dev_link" ]]; then
-                  download_cell="$dev_link"
-                else
-                  download_cell="—"
+                # Build Module cell
+                mod_cell=""
+                if [[ -n "$stable_mod" ]]; then
+                  fname=$(basename "$stable_mod")
+                  mod_cell="[Stable]($(gen_link "$fname" "$STABLE_VER"))"
                 fi
+                if [[ -n "$dev_mod" ]]; then
+                  fname=$(basename "$dev_mod")
+                  dev_link="[Dev]($(gen_link "$fname" "$DEV_VER"))"
+                  if [[ -n "$mod_cell" ]]; then
+                    mod_cell="$mod_cell \| $dev_link"
+                  else
+                    mod_cell="$dev_link"
+                  fi
+                fi
+                if [[ -z "$mod_cell" ]]; then mod_cell="—" fi
 
                 # Write row
-                if [[ "$patch" == "Official" ]]; then
-                  echo "| $patch | $app | $arch | $download_cell |" >> README.new
+                if [[ "$patch_type" == "Official" ]]; then
+                  echo "| $patch_type | $app_name | $arch | $apk_cell | $mod_cell |" >> README.new
                 else
-                  echo "| | $app | $arch | $download_cell |" >> README.new
+                  echo "| | $app_name | $arch | $apk_cell | $mod_cell |" >> README.new
                 fi
               done
             done
           done
 
-          # Replace README
           mv README.new "$README"
 
       - name: Commit updated README
