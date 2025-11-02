@@ -6,9 +6,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  run:
+  check-patch:
     permissions: write-all
     runs-on: ubuntu-latest
+    outputs:
+      trigger_stable: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+      trigger_prerelease: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+      sa_old: ${{ steps.compare.outputs.sa_old }}
+      sa_new: ${{ steps.compare.outputs.sa_new }}
+      so_old: ${{ steps.compare.outputs.so_old }}
+      so_new: ${{ steps.compare.outputs.so_new }}
+      se_old: ${{ steps.compare.outputs.se_old }}
+      se_new: ${{ steps.compare.outputs.se_new }}
+      pa_old: ${{ steps.compare.outputs.pa_old }}
+      pa_new: ${{ steps.compare.outputs.pa_new }}
+      po_old: ${{ steps.compare.outputs.po_old }}
+      po_new: ${{ steps.compare.outputs.po_new }}
+      pe_old: ${{ steps.compare.outputs.pe_old }}
+      pe_new: ${{ steps.compare.outputs.pe_new }}
+      stable_config: ${{ steps.generate_configs.outputs.stable_config }}
+      dev_config: ${{ steps.generate_configs.outputs.dev_config }}
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
@@ -264,11 +281,25 @@ jobs:
           file_pattern: config.dev.updated.toml
           commit_message: "Update config.dev.updated.toml for new dev patches"
 
-      # ==============================
-      # 4. STABLE BUILD (if needed)
-      # ==============================
+  build-stable:
+    needs: check-patch
+    if: needs.check-patch.outputs.trigger_stable == '1'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
       - name: Get next version for Stable
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         id: next_stable_ver
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -278,21 +309,20 @@ jobs:
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram – Patch Detected (Stable)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!*${NL}"
-          if [ "${{ steps.compare.outputs.sa_new }}" != "${{ steps.compare.outputs.sa_old }}" ]; then
-            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.sa_new }}):${NL}Old: \`${{ steps.compare.outputs.sa_old }}\` → New: \`${{ steps.compare.outputs.sa_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.sa_new }}" != "${{ needs.check-patch.outputs.sa_old }}" ]; then
+            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ needs.check-patch.outputs.sa_new }}):${NL}Old: \`${{ needs.check-patch.outputs.sa_old }}\` → New: \`${{ needs.check-patch.outputs.sa_new }}\`${NL}"
           fi
-          if [ "${{ steps.compare.outputs.so_new }}" != "${{ steps.compare.outputs.so_old }}" ]; then
-            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ steps.compare.outputs.so_new }}):${NL}Old: \`${{ steps.compare.outputs.so_old }}\` → New: \`${{ steps.compare.outputs.so_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.so_new }}" != "${{ needs.check-patch.outputs.so_old }}" ]; then
+            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ needs.check-patch.outputs.so_new }}):${NL}Old: \`${{ needs.check-patch.outputs.so_old }}\` → New: \`${{ needs.check-patch.outputs.so_new }}\`${NL}"
           fi
-          if [ "${{ steps.compare.outputs.se_new }}" != "${{ steps.compare.outputs.se_old }}" ]; then
-            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ steps.compare.outputs.se_new }}):${NL}Old: \`${{ steps.compare.outputs.se_old }}\` → New: \`${{ steps.compare.outputs.se_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.se_new }}" != "${{ needs.check-patch.outputs.se_old }}" ]; then
+            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ needs.check-patch.outputs.se_new }}):${NL}Old: \`${{ needs.check-patch.outputs.se_old }}\` → New: \`${{ needs.check-patch.outputs.se_new }}\`${NL}"
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
           MSG=${MSG:0:9450}
@@ -304,7 +334,6 @@ jobs:
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
       - name: Build Stable
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: |
           rm -rf build
           mkdir -p build
@@ -315,7 +344,6 @@ jobs:
           NEXT_VER_CODE: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
 
       - name: Get Output (Stable)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         id: get_output_stable
         run: |
           DELIM="$(openssl rand -hex 8)"
@@ -325,7 +353,6 @@ jobs:
           cp -f build.md build.tmp
 
       - name: Upload Stable Release
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
@@ -337,7 +364,6 @@ jobs:
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Stable)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: |
           git checkout -f update || git switch --discard-changes --orphan update
           cp -f build.tmp build.md
@@ -364,7 +390,6 @@ jobs:
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
       - uses: stefanzweifel/git-auto-commit-action@v5
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         with:
           branch: update
           skip_checkout: true
@@ -372,7 +397,6 @@ jobs:
           commit_message: Bump version ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
 
       - name: Notify Telegram – Build Complete (Stable)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
@@ -407,11 +431,25 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-      # ==============================
-      # 5. DEV BUILD (if needed)
-      # ==============================
+  build-dev:
+    needs: check-patch
+    if: needs.check-patch.outputs.trigger_prerelease == '1'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
       - name: Get next version for Dev (after stable may have published)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         id: next_dev_ver
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -421,21 +459,20 @@ jobs:
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram – Patch Detected (Pre-release)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!* (Pre-release)${NL}"
-          if [ "${{ steps.compare.outputs.pa_new }}" != "${{ steps.compare.outputs.pa_old }}" ]; then
-            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ steps.compare.outputs.pa_new }}):${NL}Old: \`${{ steps.compare.outputs.pa_old }}\` → New: \`${{ steps.compare.outputs.pa_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.pa_new }}" != "${{ needs.check-patch.outputs.pa_old }}" ]; then
+            MSG+="${NL}• [Advanced](https://github.com/anddea/revanced-patches/releases/tag/${{ needs.check-patch.outputs.pa_new }}):${NL}Old: \`${{ needs.check-patch.outputs.pa_old }}\` → New: \`${{ needs.check-patch.outputs.pa_new }}\`${NL}"
           fi
-          if [ "${{ steps.compare.outputs.po_new }}" != "${{ steps.compare.outputs.po_old }}" ]; then
-            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ steps.compare.outputs.po_new }}):${NL}Old: \`${{ steps.compare.outputs.po_old }}\` → New: \`${{ steps.compare.outputs.po_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.po_new }}" != "${{ needs.check-patch.outputs.po_old }}" ]; then
+            MSG+="${NL}• [Official](https://github.com/ReVanced/revanced-patches/releases/tag/${{ needs.check-patch.outputs.po_new }}):${NL}Old: \`${{ needs.check-patch.outputs.po_old }}\` → New: \`${{ needs.check-patch.outputs.po_new }}\`${NL}"
           fi
-          if [ "${{ steps.compare.outputs.pe_new }}" != "${{ steps.compare.outputs.pe_old }}" ]; then
-            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ steps.compare.outputs.pe_new }}):${NL}Old: \`${{ steps.compare.outputs.pe_old }}\` → New: \`${{ steps.compare.outputs.pe_new }}\`${NL}"
+          if [ "${{ needs.check-patch.outputs.pe_new }}" != "${{ needs.check-patch.outputs.pe_old }}" ]; then
+            MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ needs.check-patch.outputs.pe_new }}):${NL}Old: \`${{ needs.check-patch.outputs.pe_old }}\` → New: \`${{ needs.check-patch.outputs.pe_new }}\`${NL}"
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
           MSG=${MSG:0:9450}
@@ -447,7 +484,6 @@ jobs:
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
       - name: Build Dev
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           rm -rf build
           mkdir -p build
@@ -458,7 +494,6 @@ jobs:
           NEXT_VER_CODE: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
 
       - name: Get Output (Dev)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         id: get_output_dev
         run: |
           DELIM="$(openssl rand -hex 8)"
@@ -468,7 +503,6 @@ jobs:
           cp -f build.md build.tmp
 
       - name: Upload Dev Release
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
@@ -481,7 +515,6 @@ jobs:
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Dev)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           git checkout -f update || git switch --discard-changes --orphan update
           cp -f build.tmp build.md
@@ -508,7 +541,6 @@ jobs:
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
       - uses: stefanzweifel/git-auto-commit-action@v5
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         with:
           branch: update
           skip_checkout: true
@@ -516,7 +548,6 @@ jobs:
           commit_message: Bump version ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
 
       - name: Notify Telegram – Build Complete (Dev)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
@@ -550,4 +581,3 @@ jobs:
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-
