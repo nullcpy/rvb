@@ -72,7 +72,7 @@ arch = "both"
 version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 
 [YouTube-Extended]
 enabled = true
