@@ -64,7 +64,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 - All modules can be updated directly from Magisk and KSU.
 - If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest) is required for Google APKs to work properly.
-- Want a app? Request in the [Telegram Group](https://t.me/rvbygeo).
+- Want a app? Request it in the [Telegram Group](https://t.me/rvbygeo).
 - Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
 
 ### ⭐ Credits
