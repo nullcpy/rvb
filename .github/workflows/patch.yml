@@ -120,12 +120,6 @@ jobs:
               extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
             }' > last_tags.json
 
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add last_tags.json
-          git commit -m "Update last_tags.json with latest patch versions" || echo "No changes"
-          git push origin main
-
           echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
           echo "sa_old=$SA_OLD" >> "$GITHUB_OUTPUT"
@@ -140,6 +134,15 @@ jobs:
           echo "po_new=$PO_NEW" >> "$GITHUB_OUTPUT"
           echo "pe_old=$PE_OLD" >> "$GITHUB_OUTPUT"
           echo "pe_new=$PE_NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Commit Updated Tag JSON
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: last_tags.json
+          commit_message: "Update last_tags.json with latest patch versions"
 
       # ==============================
       # 4. STABLE BUILD (if needed)
