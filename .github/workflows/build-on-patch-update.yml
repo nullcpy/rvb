@@ -1,4 +1,4 @@
-name: Check Patch and Build
+name: Build on Patch Update
 
 on:
   schedule:
