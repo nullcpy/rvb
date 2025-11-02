@@ -247,7 +247,10 @@ jobs:
 
       - name: Build Stable
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
-        run: ./build.sh config.stable.updated.toml
+        run: |
+          rm -rf build
+          mkdir -p build
+          ./build.sh config.stable.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -455,7 +458,10 @@ jobs:
 
       - name: Build Dev
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        run: ./build.sh config.dev.updated.toml
+        run: |
+          rm -rf build
+          mkdir -p build
+          ./build.sh config.stable.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
