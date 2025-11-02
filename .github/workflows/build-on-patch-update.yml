@@ -584,7 +584,7 @@ jobs:
 
   cleanup:
     needs: [check-patch, build-stable, build-dev]
-    if: needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1'
+    if: always() && needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1'
     runs-on: ubuntu-latest
     permissions:
       contents: write
