@@ -1,4 +1,4 @@
-name: Repository Maintenance
+name: Pull Changes from j-hc/revanced-magisk-module
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run:
+  template-sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,14 +21,5 @@ jobs:
         with:
           source_repo_path: j-hc/revanced-magisk-module
 
-      - name: Delete Older Releases and Workflows
-        uses: ophub/delete-releases-workflows@main
-        with:
-          delete_releases: true
-          delete_tags: true
-          releases_keep_latest: 50
-          delete_workflows: true
-          workflows_keep_day: 30
-          gh_token: ${{ secrets.GITHUB_TOKEN }}
 
           
