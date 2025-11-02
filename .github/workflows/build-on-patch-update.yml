@@ -26,6 +26,8 @@ jobs:
       pe_new: ${{ steps.compare.outputs.pe_new }}
       stable_config: ${{ steps.generate_configs.outputs.stable_config }}
       dev_config: ${{ steps.generate_configs.outputs.dev_config }}
+      next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
+      next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
@@ -39,9 +41,6 @@ jobs:
           distribution: "zulu"
           java-version: "17"
 
-      # ==============================
-      # 1. FETCH LATEST STABLE & PRE-RELEASE TAGS
-      # ==============================
       - name: Fetch Latest Stable and Pre-release Tags
         id: fetch_tags
         run: |
@@ -63,9 +62,6 @@ jobs:
           echo "stable_extended=$(get_latest_tag inotia00/revanced-patches false)" >> "$GITHUB_OUTPUT"
           echo "prerelease_extended=$(get_latest_tag inotia00/revanced-patches true)" >> "$GITHUB_OUTPUT"
 
-      # ==============================
-      # 2. INITIALIZE OR LOAD last_tags.json
-      # ==============================
       - name: Initialize Tag Tracking File if Missing
         id: init_tags
         run: |
@@ -96,9 +92,6 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Initialize tag tracking JSON"
 
-      # ==============================
-      # 3. COMPARE CURRENT VS. STORED TAGS
-      # ==============================
       - name: Compare Current vs Stored Tags
         id: compare
         run: |
@@ -161,9 +154,6 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Update last_tags.json with latest patch versions"
 
-      # ==============================
-      # 4. GENERATE CONFIGS (Stable & Dev)
-      # ==============================
       - name: Generate Configs (Stable & Dev)
         id: generate_configs
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
@@ -281,6 +271,34 @@ jobs:
           file_pattern: config.dev.updated.toml
           commit_message: "Update config.dev.updated.toml for new dev patches"
 
+      - name: Generate Version Numbers
+        id: versions
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get latest *numeric* tag (ignore non-integer ones)
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+
+          TRIGGER_STABLE=${{ steps.compare.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE=${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+
+          NEXT_STABLE=""
+          NEXT_DEV=""
+
+          if [ "$TRIGGER_STABLE" = "1" ] && [ "$TRIGGER_PRERELEASE" = "1" ]; then
+            NEXT_STABLE=$((TAG + 1))
+            NEXT_DEV=$((TAG + 2))
+          elif [ "$TRIGGER_STABLE" = "1" ]; then
+            NEXT_STABLE=$((TAG + 1))
+          elif [ "$TRIGGER_PRERELEASE" = "1" ]; then
+            NEXT_DEV=$((TAG + 1))
+          fi
+
+          echo "next_stable_ver=${NEXT_STABLE}" >> "$GITHUB_OUTPUT"
+          echo "next_dev_ver=${NEXT_DEV}" >> "$GITHUB_OUTPUT"
+
   build-stable:
     needs: check-patch
     if: needs.check-patch.outputs.trigger_stable == '1'
@@ -298,15 +316,6 @@ jobs:
         with:
           distribution: "zulu"
           java-version: "17"
-
-      - name: Get next version for Stable
-        id: next_stable_ver
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
-          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram – Patch Detected (Stable)
         env:
@@ -341,7 +350,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_stable_ver }}
 
       - name: Get Output (Stable)
         id: get_output_stable
@@ -359,8 +368,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*
           file_glob: true
-          release_name: Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+          release_name: Build No. ${{ needs.check-patch.outputs.next_stable_ver }}
+          tag: ${{ needs.check-patch.outputs.next_stable_ver }}
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Stable)
@@ -370,7 +379,7 @@ jobs:
           get_update_json() {
             echo "{
             \"version\": \"$1\",
-            \"versionCode\": ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }},
+            \"versionCode\": ${{ needs.check-patch.outputs.next_stable_ver }},
             \"zipUrl\": \"$2\",
             \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
@@ -383,7 +392,7 @@ jobs:
             UPDATE_JSON="${UPDATE_JSON##*/}"
             VER=$(echo "$ZIP_S" | grep version=)
             VER="${VER##*=}"
-            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/${OUTPUT}"
             get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
           done
           cd ..
@@ -394,7 +403,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: build.md *-update.json
-          commit_message: Bump version ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_stable_ver }}
 
       - name: Notify Telegram – Build Complete (Stable)
         env:
@@ -407,7 +416,7 @@ jobs:
           MODULES=""
           HAS_MODULES=false
           for OUTPUT in *; do
-            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
               APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
             elif [[ $OUTPUT = *.zip ]]; then
@@ -418,7 +427,7 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}*${NL}${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
@@ -448,15 +457,6 @@ jobs:
         with:
           distribution: "zulu"
           java-version: "17"
-
-      - name: Get next version for Dev (after stable may have published)
-        id: next_dev_ver
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
-          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram – Patch Detected (Pre-release)
         env:
@@ -491,7 +491,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_dev_ver }}
 
       - name: Get Output (Dev)
         id: get_output_dev
@@ -509,8 +509,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*
           file_glob: true
-          release_name: Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+          release_name: Build No. ${{ needs.check-patch.outputs.next_dev_ver }}
+          tag: ${{ needs.check-patch.outputs.next_dev_ver }}
           prerelease: true
           overwrite: true
 
@@ -521,7 +521,7 @@ jobs:
           get_update_json() {
             echo "{
             \"version\": \"$1\",
-            \"versionCode\": ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }},
+            \"versionCode\": ${{ needs.check-patch.outputs.next_dev_ver }},
             \"zipUrl\": \"$2\",
             \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
@@ -534,7 +534,7 @@ jobs:
             UPDATE_JSON="${UPDATE_JSON##*/}"
             VER=$(echo "$ZIP_S" | grep version=)
             VER="${VER##*=}"
-            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_dev_ver }}/${OUTPUT}"
             get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
           done
           cd ..
@@ -545,7 +545,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: build.md *-update.json
-          commit_message: Bump version ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_dev_ver }}
 
       - name: Notify Telegram – Build Complete (Dev)
         env:
@@ -558,7 +558,7 @@ jobs:
           MODULES=""
           HAS_MODULES=false
           for OUTPUT in *; do
-            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_dev_ver }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
               APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
             elif [[ $OUTPUT = *.zip ]]; then
@@ -569,7 +569,7 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
@@ -599,5 +599,3 @@ jobs:
           delete_workflows: true
           workflows_keep_day: 30
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-
-
