@@ -76,7 +76,7 @@ apkmirror-dlurl = "apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 uptodown-dlurl = "samsung-radio.en.uptodown.com/android"
 
 [YouTube-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -87,7 +87,7 @@ apkmirror-dlurl = "apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "youtube.en.uptodown.com/android"
 
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
