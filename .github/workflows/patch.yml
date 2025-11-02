@@ -145,6 +145,126 @@ jobs:
           commit_message: "Update last_tags.json with latest patch versions"
 
       # ==============================
+      # 4. GENERATE CONFIGS (Stable & Dev)
+      # ==============================
+      - name: Generate Configs (Stable & Dev)
+        id: generate_configs
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: |
+          # Common variables
+          OLD_ADVANCED_S="${{ steps.compare.outputs.sa_old }}"
+          NEW_ADVANCED_S="${{ steps.compare.outputs.sa_new }}"
+          OLD_OFFICIAL_S="${{ steps.compare.outputs.so_old }}"
+          NEW_OFFICIAL_S="${{ steps.compare.outputs.so_new }}"
+          OLD_EXTENDED_S="${{ steps.compare.outputs.se_old }}"
+          NEW_EXTENDED_S="${{ steps.compare.outputs.se_new }}"
+
+          OLD_ADVANCED_D="${{ steps.compare.outputs.pa_old }}"
+          NEW_ADVANCED_D="${{ steps.compare.outputs.pa_new }}"
+          OLD_OFFICIAL_D="${{ steps.compare.outputs.po_old }}"
+          NEW_OFFICIAL_D="${{ steps.compare.outputs.po_new }}"
+          OLD_EXTENDED_D="${{ steps.compare.outputs.pe_old }}"
+          NEW_EXTENDED_D="${{ steps.compare.outputs.pe_new }}"
+
+          BASE_CONFIG="config.toml"
+
+          # Function to generate filtered config
+          generate_config() {
+            local mode="$1"  # "stable" or "dev"
+            local out_file="config.$mode.updated.toml"
+            cp "$BASE_CONFIG" "$out_file"
+
+            if [ "$mode" = "dev" ]; then
+              # Prepend patches-version = "dev"
+              echo 'patches-version = "dev"' > tmp_header
+              cat "$out_file" >> tmp_header
+              mv tmp_header "$out_file"
+            fi
+
+            local old_a new_a old_o new_o old_e new_e
+            if [ "$mode" = "stable" ]; then
+              old_a="$OLD_ADVANCED_S"; new_a="$NEW_ADVANCED_S"
+              old_o="$OLD_OFFICIAL_S"; new_o="$NEW_OFFICIAL_S"
+              old_e="$OLD_EXTENDED_S"; new_e="$NEW_EXTENDED_S"
+            else
+              old_a="$OLD_ADVANCED_D"; new_a="$NEW_ADVANCED_D"
+              old_o="$OLD_OFFICIAL_D"; new_o="$NEW_OFFICIAL_D"
+              old_e="$OLD_EXTENDED_D"; new_e="$NEW_EXTENDED_D"
+            fi
+
+            awk -v old_advanced="$old_a" -v new_advanced="$new_a" \
+                -v old_official="$old_o" -v new_official="$new_o" \
+                -v old_extended="$old_e" -v new_extended="$new_e" '
+            BEGIN {
+                section = ""
+                keep = 1
+            }
+            /^\[.*\]/ {
+                flush_section()
+                section = $0
+                delete lines
+                lines[0] = $0
+                n = 1
+                keep = 1
+                next
+            }
+            {
+                lines[n++] = $0
+                if ($0 ~ /patches-source *= *"[^"]+"/) {
+                    match($0, /patches-source *= *"([^"]+)"/, m)
+                    src = m[1]
+                    if (src == "anddea/revanced-patches" && (new_advanced == "" || new_advanced == old_advanced)) {
+                        keep = 0
+                    } else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) {
+                        keep = 0
+                    } else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) {
+                        keep = 0
+                    }
+                }
+            }
+            END {
+                flush_section()
+            }
+            function flush_section() {
+                if (length(lines) == 0) return
+                for (i = 0; i < length(lines); i++) {
+                    line = lines[i]
+                    if (!keep) {
+                        gsub(/enabled *= *true/, "enabled = false", line)
+                    }
+                    print line
+                }
+            }
+            ' "$out_file" > tmp && mv tmp "$out_file"
+
+            echo "${mode}_config=${out_file}" >> "$GITHUB_OUTPUT"
+          }
+
+          # Generate configs only if needed
+          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
+            generate_config "stable"
+          fi
+          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
+            generate_config "dev"
+          fi
+
+      - name: Commit updated stable config
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: config.stable.updated.toml
+          commit_message: "Update config.stable.updated.toml for new stable patches"
+
+      - name: Commit updated dev config
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: config.dev.updated.toml
+          commit_message: "Update config.dev.updated.toml for new dev patches"
+
+      # ==============================
       # 4. STABLE BUILD (if needed)
       # ==============================
       - name: Get next version for Stable
@@ -182,71 +302,6 @@ jobs:
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-
-      - name: Generate config.stable.updated.toml
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
-        run: |
-          cp config.toml config.stable.updated.toml
-
-          OLD_ADVANCED="${{ steps.compare.outputs.sa_old }}"
-          NEW_ADVANCED="${{ steps.compare.outputs.sa_new }}"
-          OLD_OFFICIAL="${{ steps.compare.outputs.so_old }}"
-          NEW_OFFICIAL="${{ steps.compare.outputs.so_new }}"
-          OLD_EXTENDED="${{ steps.compare.outputs.se_old }}"
-          NEW_EXTENDED="${{ steps.compare.outputs.se_new }}"
-
-          awk -v old_advanced="$OLD_ADVANCED" -v new_advanced="$NEW_ADVANCED" \
-              -v old_official="$OLD_OFFICIAL" -v new_official="$NEW_OFFICIAL" \
-              -v old_extended="$OLD_EXTENDED" -v new_extended="$NEW_EXTENDED" '
-          BEGIN {
-              section = ""
-              keep = 1
-          }
-          /^\[.*\]/ {
-              flush_section()
-              section = $0
-              delete lines
-              lines[0] = $0
-              n = 1
-              keep = 1
-              next
-          }
-          {
-              lines[n++] = $0
-              if ($0 ~ /patches-source *= *"[^"]+"/) {
-                  match($0, /patches-source *= *"([^"]+)"/, m)
-                  src = m[1]
-                  if (src == "anddea/revanced-patches" && (new_advanced == "" || new_advanced == old_advanced)) {
-                      keep = 0
-                  } else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) {
-                      keep = 0
-                  } else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) {
-                      keep = 0
-                  }
-              }
-          }
-          END {
-              flush_section()
-          }
-          function flush_section() {
-              if (length(lines) == 0) return
-              for (i = 0; i < length(lines); i++) {
-                  line = lines[i]
-                  if (!keep) {
-                      gsub(/enabled *= *true/, "enabled = false", line)
-                  }
-                  print line
-              }
-          }
-          ' config.stable.updated.toml > tmp && mv tmp config.stable.updated.toml
-
-      - name: Commit updated stable config
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: main
-          file_pattern: config.stable.updated.toml
-          commit_message: "Update config.stable.updated.toml for new stable patches"
 
       - name: Build Stable
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
@@ -391,80 +446,12 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-      - name: Generate config.dev.updated.toml
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        run: |
-          cp config.toml config.dev.updated.toml
-          echo 'patches-version = "dev"' > tmp_header
-          cat config.dev.updated.toml >> tmp_header
-          mv tmp_header config.dev.updated.toml
-
-          OLD_ADVANCED="${{ steps.compare.outputs.pa_old }}"
-          NEW_ADVANCED="${{ steps.compare.outputs.pa_new }}"
-          OLD_OFFICIAL="${{ steps.compare.outputs.po_old }}"
-          NEW_OFFICIAL="${{ steps.compare.outputs.po_new }}"
-          OLD_EXTENDED="${{ steps.compare.outputs.pe_old }}"
-          NEW_EXTENDED="${{ steps.compare.outputs.pe_new }}"
-
-          awk -v old_advanced="$OLD_ADVANCED" -v new_advanced="$NEW_ADVANCED" \
-              -v old_official="$OLD_OFFICIAL" -v new_official="$NEW_OFFICIAL" \
-              -v old_extended="$OLD_EXTENDED" -v new_extended="$NEW_EXTENDED" '
-          BEGIN {
-              section = ""
-              keep = 1
-          }
-          /^\[.*\]/ {
-              flush_section()
-              section = $0
-              delete lines
-              lines[0] = $0
-              n = 1
-              keep = 1
-              next
-          }
-          {
-              lines[n++] = $0
-              if ($0 ~ /patches-source *= *"[^"]+"/) {
-                  match($0, /patches-source *= *"([^"]+)"/, m)
-                  src = m[1]
-                  if (src == "anddea/revanced-patches" && (new_advanced == "" || new_advanced == old_advanced)) {
-                      keep = 0
-                  } else if (src == "revanced/revanced-patches" && (new_official == "" || new_official == old_official)) {
-                      keep = 0
-                  } else if (src == "inotia00/revanced-patches" && (new_extended == "" || new_extended == old_extended)) {
-                      keep = 0
-                  }
-              }
-          }
-          END {
-              flush_section()
-          }
-          function flush_section() {
-              if (length(lines) == 0) return
-              for (i = 0; i < length(lines); i++) {
-                  line = lines[i]
-                  if (!keep) {
-                      gsub(/enabled *= *true/, "enabled = false", line)
-                  }
-                  print line
-              }
-          }
-          ' config.dev.updated.toml > tmp && mv tmp config.dev.updated.toml
-
-      - name: Commit updated dev config
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: main
-          file_pattern: config.dev.updated.toml
-          commit_message: "Update config.dev.updated.toml for new dev patches"
-
       - name: Build Dev
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
           rm -rf build
           mkdir -p build
-          ./build.sh config.stable.updated.toml
+          ./build.sh config.dev.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
