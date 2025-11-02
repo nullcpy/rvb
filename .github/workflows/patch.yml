@@ -1,9 +1,13 @@
-name: Check Patch and Build
-
 on:
   schedule:
     - cron: "0 */4 * * *"  # Every 4 hours
   workflow_dispatch:
+
+name: Check Patch and Build
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   run:
@@ -28,6 +32,8 @@ jobs:
       - name: Fetch Latest Stable and Pre-release Tags
         id: fetch_tags
         run: |
+          set -euo pipefail
+
           get_latest_tag() {
             local repo=$1
             local prerelease=$2
@@ -39,6 +45,7 @@ jobs:
                 .[0].tag_name // \"\"
               "
           }
+
           echo "stable_advanced=$(get_latest_tag anddea/revanced-patches false)" >> "$GITHUB_OUTPUT"
           echo "prerelease_advanced=$(get_latest_tag anddea/revanced-patches true)" >> "$GITHUB_OUTPUT"
           echo "stable_official=$(get_latest_tag revanced/revanced-patches false)" >> "$GITHUB_OUTPUT"
@@ -47,11 +54,13 @@ jobs:
           echo "prerelease_extended=$(get_latest_tag inotia00/revanced-patches true)" >> "$GITHUB_OUTPUT"
 
       # ==============================
-      # 2. INITIALIZE OR LOAD last_tags.json
+      # 2. COMPARE CURRENT VS STORED TAGS & UPDATE last_tags.json
       # ==============================
-      - name: Initialize Tag Tracking File if Missing
-        id: init_tags
+      - name: Compare Current vs Stored Tags
+        id: compare
         run: |
+          set -euo pipefail
+
           if [ ! -f last_tags.json ]; then
             jq -n \
               --arg sa "${{ steps.fetch_tags.outputs.stable_advanced }}" \
@@ -65,26 +74,8 @@ jobs:
                 official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
                 extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
               }' > last_tags.json
-            echo "missing=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "missing=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit Initialized Tag File
-        if: steps.init_tags.outputs.missing == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: main
-          skip_checkout: true
-          file_pattern: last_tags.json
-          commit_message: "Initialize tag tracking JSON"
-
-      # ==============================
-      # 3. COMPARE CURRENT VS. STORED TAGS
-      # ==============================
-      - name: Compare Current vs Stored Tags
-        id: compare
-        run: |
           SA_OLD=$(jq -r '.advanced.stable // ""' last_tags.json)
           PA_OLD=$(jq -r '.advanced.prerelease // ""' last_tags.json)
           SO_OLD=$(jq -r '.official.stable // ""' last_tags.json)
@@ -101,11 +92,9 @@ jobs:
 
           TRIGGER_STABLE=0
           TRIGGER_PRERELEASE=0
-
           [ -n "$SA_NEW" ] && [ "$SA_NEW" != "$SA_OLD" ] && TRIGGER_STABLE=1
           [ -n "$SO_NEW" ] && [ "$SO_NEW" != "$SO_OLD" ] && TRIGGER_STABLE=1
           [ -n "$SE_NEW" ] && [ "$SE_NEW" != "$SE_OLD" ] && TRIGGER_STABLE=1
-
           [ -n "$PA_NEW" ] && [ "$PA_NEW" != "$PA_OLD" ] && TRIGGER_PRERELEASE=1
           [ -n "$PO_NEW" ] && [ "$PO_NEW" != "$PO_OLD" ] && TRIGGER_PRERELEASE=1
           [ -n "$PE_NEW" ] && [ "$PE_NEW" != "$PE_OLD" ] && TRIGGER_PRERELEASE=1
@@ -119,12 +108,6 @@ jobs:
               official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
               extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
             }' > last_tags.json
-
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add last_tags.json
-          git commit -m "Update last_tags.json with latest patch versions" || echo "No changes"
-          git push origin main
 
           echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
@@ -141,8 +124,15 @@ jobs:
           echo "pe_old=$PE_OLD" >> "$GITHUB_OUTPUT"
           echo "pe_new=$PE_NEW" >> "$GITHUB_OUTPUT"
 
+      - name: Commit updated last_tags.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: last_tags.json
+          commit_message: "Update last_tags.json with latest patch versions"
+
       # ==============================
-      # 4. STABLE BUILD (if needed)
+      # 3. STABLE BUILD (if needed)
       # ==============================
       - name: Get next version for Stable
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
@@ -150,6 +140,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
@@ -160,6 +151,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
+          set -euo pipefail
           NL=$'\n'
           MSG="*New Patch Detected!*${NL}"
           if [ "${{ steps.compare.outputs.sa_new }}" != "${{ steps.compare.outputs.sa_old }}" ]; then
@@ -173,18 +165,18 @@ jobs:
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
           MSG=${MSG:0:9450}
-          curl -X POST \
+          curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null || true
 
       - name: Generate config.stable.updated.toml
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: |
+          set -euo pipefail
           cp config.toml config.stable.updated.toml
-
           OLD_ADVANCED="${{ steps.compare.outputs.sa_old }}"
           NEW_ADVANCED="${{ steps.compare.outputs.sa_new }}"
           OLD_OFFICIAL="${{ steps.compare.outputs.so_old }}"
@@ -247,21 +239,37 @@ jobs:
 
       - name: Build Stable
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
-        run: ./build.sh config.stable.updated.toml
+        run: |
+          set -euo pipefail
+          ./build.sh config.stable.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Save Stable Build Output
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        run: |
+          set -euo pipefail
+          mkdir -p build_outputs/stable
+          cp -r build/* build_outputs/stable/ 2>/dev/null || true
 
       - name: Get Output (Stable)
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         id: get_output_stable
         run: |
+          set -euo pipefail
           DELIM="$(openssl rand -hex 8)"
           echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
-          cat build.md >> "$GITHUB_OUTPUT"
+          # append build.md contents (if present)
+          if [ -f build.md ]; then
+            cat build.md >> "$GITHUB_OUTPUT"
+          fi
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
-          cp -f build.md build.tmp
+          # keep a tmp copy for later steps
+          if [ -f build.md ]; then
+            cp -f build.md build.tmp
+          fi
 
       - name: Upload Stable Release
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
@@ -278,8 +286,11 @@ jobs:
       - name: Update Changelog and Magisk Update JSON (Stable)
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         run: |
-          git checkout -f update || git switch --discard-changes --orphan update
-          cp -f build.tmp build.md
+          set -euo pipefail
+          # If update branch exists, checkout it; otherwise create an orphan branch named update
+          git rev-parse --verify update >/dev/null 2>&1 && git checkout -f update || git switch --orphan update
+          cp -f build.tmp build.md || true
+
           get_update_json() {
             echo "{
             \"version\": \"$1\",
@@ -288,6 +299,7 @@ jobs:
             \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
           }
+
           cd build || { echo "build folder not found"; exit 1; }
           for OUTPUT in *magisk*.zip; do
             [ "$OUTPUT" = "*magisk*.zip" ] && continue
@@ -316,6 +328,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
+          set -euo pipefail
           cd build || exit 1
           NL=$'\n'
           APKS=""
@@ -332,22 +345,22 @@ jobs:
           done
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /↪ /g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md || true)"
           MSG="*Build No. ${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}*${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
-          curl -X POST \
+          curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null || true
 
       # ==============================
-      # 5. DEV BUILD (if needed)
+      # 4. DEV BUILD (if needed)
       # ==============================
       - name: Get next version for Dev (after stable may have published)
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
@@ -355,6 +368,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
@@ -365,6 +379,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
+          set -euo pipefail
           NL=$'\n'
           MSG="*New Patch Detected!* (Pre-release)${NL}"
           if [ "${{ steps.compare.outputs.pa_new }}" != "${{ steps.compare.outputs.pa_old }}" ]; then
@@ -378,16 +393,17 @@ jobs:
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
           MSG=${MSG:0:9450}
-          curl -X POST \
+          curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null || true
 
       - name: Generate config.dev.updated.toml
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
+          set -euo pipefail
           cp config.toml config.dev.updated.toml
           echo 'patches-version = "dev"' > tmp_header
           cat config.dev.updated.toml >> tmp_header
@@ -455,21 +471,35 @@ jobs:
 
       - name: Build Dev
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
-        run: ./build.sh config.dev.updated.toml
+        run: |
+          set -euo pipefail
+          ./build.sh config.dev.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}
+
+      - name: Save Dev Build Output
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: |
+          set -euo pipefail
+          mkdir -p build_outputs/dev
+          cp -r build/* build_outputs/dev/ 2>/dev/null || true
 
       - name: Get Output (Dev)
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         id: get_output_dev
         run: |
+          set -euo pipefail
           DELIM="$(openssl rand -hex 8)"
           echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
-          cat build.md >> "$GITHUB_OUTPUT"
+          if [ -f build.md ]; then
+            cat build.md >> "$GITHUB_OUTPUT"
+          fi
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
-          cp -f build.md build.tmp
+          if [ -f build.md ]; then
+            cp -f build.md build.tmp
+          fi
 
       - name: Upload Dev Release
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
@@ -487,8 +517,10 @@ jobs:
       - name: Update Changelog and Magisk Update JSON (Dev)
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
-          git checkout -f update || git switch --discard-changes --orphan update
-          cp -f build.tmp build.md
+          set -euo pipefail
+          git rev-parse --verify update >/dev/null 2>&1 && git checkout -f update || git switch --orphan update
+          cp -f build.tmp build.md || true
+
           get_update_json() {
             echo "{
             \"version\": \"$1\",
@@ -497,6 +529,7 @@ jobs:
             \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
           }
+
           cd build || { echo "build folder not found"; exit 1; }
           for OUTPUT in *magisk*.zip; do
             [ "$OUTPUT" = "*magisk*.zip" ] && continue
@@ -525,6 +558,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
         run: |
+          set -euo pipefail
           cd build || exit 1
           NL=$'\n'
           APKS=""
@@ -541,18 +575,185 @@ jobs:
           done
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /↪ /g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md || true)"
           MSG="*Build No. ${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
-          curl -X POST \
+          curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null || true
 
+      # ==============================
+      # 5. FINAL: UPDATE download.md ONCE AFTER BOTH BUILDS
+      # ==============================
+      - name: Update download.md (Final)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        run: |
+          set -euo pipefail
+          DOWNLOAD_MD="download.md"
+          URL_BASE="https://github.com/$GITHUB_REPOSITORY/releases/download"
 
+          if [ ! -f "$DOWNLOAD_MD" ]; then
+            cat > "$DOWNLOAD_MD" <<'EOF'
+          # Stable Builds
+          
+          ## ReVanced Official (Last updated: )
+          ### APKs
+          
+          ### Modules
+          
+          ## ReVanced Extended (Last updated: )
+          ### APKs
+          
+          ### Modules
+          
+          ## ReVanced Anddea (Last updated: )
+          ### APKs
+          
+          ### Modules
+          
+          # Dev Builds
+          
+          ## ReVanced Official (Last updated: )
+          ### APKs
+          
+          ### Modules
+          
+          ## ReVanced Extended (Last updated: )
+          ### APKs
+          
+          ### Modules
+          
+          ## ReVanced Anddea (Last updated: )
+          ### APKs
+          
+          ### Modules
+          EOF
+          fi
+
+          get_app_name() {
+            local FILE="$1" SOURCE="$2"
+            case "$SOURCE" in
+              Official)
+                [[ "$FILE" =~ ^youtube-revanced-v[0-9.]+-all\.apk$ ]] && echo "YouTube" && return
+                [[ "$FILE" =~ ^music-revanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "YouTube Music" && return
+                [[ "$FILE" =~ ^photos-revanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "Google Photos" && return
+                [[ "$FILE" =~ ^duolingo-revanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "Duolingo" && return
+                [[ "$FILE" =~ ^twitch-revanced-v[0-9.]+-all\.apk$ ]] && echo "Twitch" && return
+                [[ "$FILE" =~ ^samsungradio-revanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "Samsung Radio" && return
+                ;;
+              Extended)
+                [[ "$FILE" =~ ^youtube-revanced-extended-v[0-9.]+-all\.apk$ ]] && echo "YouTube" && return
+                [[ "$FILE" =~ ^music-revanced-extended-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "YouTube Music" && return
+                [[ "$FILE" =~ ^reddit-revanced-extended-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "Reddit" && return
+                ;;
+              Anddea)
+                [[ "$FILE" =~ ^youtube-revanced-advanced-v[0-9.]+-all\.apk$ ]] && echo "YouTube" && return
+                [[ "$FILE" =~ ^music-revanced-advanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "YouTube Music" && return
+                [[ "$FILE" =~ ^reddit-revanced-advanced-v[0-9.]+-(arm64-v8a|arm-v7a)\.apk$ ]] && echo "Reddit" && return
+                ;;
+            esac
+            return 1
+          }
+
+          TMP_MD="$(mktemp)"
+          cp "$DOWNLOAD_MD" "$TMP_MD"
+
+          for BUILD_TYPE in stable dev; do
+            if [ "$BUILD_TYPE" = "stable" ] && [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" != "1" ]; then continue; fi
+            if [ "$BUILD_TYPE" = "dev" ] && [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" != "1" ]; then continue; fi
+
+            BUILD_DIR="build_outputs/$BUILD_TYPE"
+            [ ! -d "$BUILD_DIR" ] && continue
+
+            if [ "$BUILD_TYPE" = "stable" ]; then
+              VER_CODE="${{ steps.next_stable_ver.outputs.NEXT_VER_CODE }}"
+              CONFIG="config.stable.updated.toml"
+            else
+              VER_CODE="${{ steps.next_dev_ver.outputs.NEXT_VER_CODE }}"
+              CONFIG="config.dev.updated.toml"
+            fi
+
+            if [ ! -f "$CONFIG" ]; then continue; fi
+
+            if grep -q 'patches-source = "anddea/revanced-patches"' "$CONFIG" 2>/dev/null; then
+              SOURCE="Anddea"
+            elif grep -q 'patches-source = "inotia00/revanced-patches"' "$CONFIG" 2>/dev/null; then
+              SOURCE="Extended"
+            elif grep -q 'patches-source = "revanced/revanced-patches"' "$CONFIG" 2>/dev/null; then
+              SOURCE="Official"
+            else
+              continue
+            fi
+
+            SECTION_START="# $(echo "$BUILD_TYPE" | awk '{print toupper(substr($0,1,1)) substr($0,2)}') Builds"
+            case "$SOURCE" in
+              Official)   HEADER="## ReVanced Official (Last updated:" ;;
+              Extended)   HEADER="## ReVanced Extended (Last updated:" ;;
+              Anddea)     HEADER="## ReVanced Anddea (Last updated:" ;;
+            esac
+
+            NEW_APKS=""
+            NEW_ZIPS=""
+            for f in "$BUILD_DIR"/*; do
+              [ -f "$f" ] || continue
+              FILENAME="${f##*/}"
+              APP=$(get_app_name "$FILENAME" "$SOURCE") && true
+              if [ -n "$APP" ]; then
+                if [[ "$FILENAME" == *.apk ]]; then
+                  NEW_APKS+="${APP}: [Download]($URL_BASE/$VER_CODE/$FILENAME)"$'\n'
+                elif [[ "$FILENAME" == *.zip ]]; then
+                  NEW_ZIPS+="${APP}: [Download]($URL_BASE/$VER_CODE/$FILENAME)"$'\n'
+                fi
+              fi
+            done
+
+            awk -v SECTION_START="$SECTION_START" \
+                -v HEADER="$HEADER" \
+                -v VER_CODE="$VER_CODE" \
+                -v NEW_APKS="$NEW_APKS" \
+                -v NEW_ZIPS="$NEW_ZIPS" '
+              BEGIN { in_sec=0; in_hdr=0; in_apk=0; in_zip=0 }
+              {
+                line = $0
+                if (line == SECTION_START) { in_sec=1; print line; next }
+                if (in_sec && line ~ /^# [^#]/) { in_sec=0 }
+                if (in_sec && line == HEADER "*") {
+                  in_hdr=1; print HEADER " " VER_CODE ")"; next
+                }
+                if (in_hdr && line ~ /^## /) { in_hdr=0 }
+                if (in_hdr && line == "### APKs") { in_apk=1; in_zip=0; print line; next }
+                if (in_hdr && line == "### Modules") { in_apk=0; in_zip=1; print line; next }
+                if ((in_apk || in_zip) && line ~ /^[A-Za-z].*: \[Download\]\(.*\)/) {
+                  next  # skip old links
+                }
+                if ((in_apk || in_zip) && line == "") {
+                  if (length(NEW_APKS)) printf "%s", NEW_APKS
+                  if (length(NEW_ZIPS)) printf "%s", NEW_ZIPS
+                  in_apk=0; in_zip=0; in_hdr=0
+                }
+                if (!in_apk && !in_zip) print line
+              }
+              END {
+                if (in_apk && length(NEW_APKS)) printf "%s", NEW_APKS
+                if (in_zip && length(NEW_ZIPS)) printf "%s", NEW_ZIPS
+              }
+            ' "$TMP_MD" > "$TMP_MD.tmp"
+            mv "$TMP_MD.tmp" "$TMP_MD"
+          done
+
+          mv "$TMP_MD" "$DOWNLOAD_MD"
+
+      - name: Commit updated download.md
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: download.md
+          commit_message: "Update download.md with latest build links"
