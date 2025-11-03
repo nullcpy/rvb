@@ -58,15 +58,16 @@ jobs:
           commit_message: "Initialize FiorenMas APK timestamp tracking"
 
       # ==============================
-      # 3. COMPARE & DETECT CHANGES
+      # 3. COMPARE & DETECT CHANGES → SAVE LINKS TO FILE
       # ==============================
       - name: Compare and Detect Changes
         id: compare
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           CURRENT_FILE=".github/misc/current_apks.json"
+          LINKS_FILE="/tmp/apk_links.md"
 
-          # Build list of changed APKs
+          # Find changed APKs
           CHANGED_LIST=$(jq -s '
             .[0] as $stored |
             .[1][] as $apk |
@@ -74,28 +75,22 @@ jobs:
             | $apk.name
           ' "$TIMESTAMP_FILE" "$CURRENT_FILE")
 
-          if [ -n "$(echo "$CHANGED_LIST" | tr -d ' \t\n\r')" ]; then
+          if [ -n "$(echo "$CHANGED_LIST" | jq -r 'select(length > 0)')" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
 
-            # Build download links
-            NL=$'\n'
-            LINKS=""
+            # Build clean markdown list
+            echo "" > "$LINKS_FILE"
             echo "$CHANGED_LIST" | jq -r '.[]' | while IFS= read -r apk; do
               url=$(jq -r "map(select(.name == \"$apk\")) | .[0].url" "$CURRENT_FILE")
-              echo "• [${apk}](${url})" >> /tmp/links.txt
+              echo "• [${apk}](${url})" >> "$LINKS_FILE"
             done
-            if [ -f /tmp/links.txt ]; then
-              LINKS=$(cat /tmp/links.txt | sed ':a;N;$!ba;s/\n/\\n/g')
-              echo "download_links<<EOF" >> "$GITHUB_OUTPUT"
-              echo "$LINKS" >> "$GITHUB_OUTPUT"
-              echo "EOF" >> "$GITHUB_OUTPUT"
-            fi
 
             # Update timestamps
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' "$CURRENT_FILE" \
               > "$TIMESTAMP_FILE"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "" > "$LINKS_FILE"
           fi
 
       # ==============================
@@ -115,7 +110,8 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${NL}${{ steps.compare.outputs.download_links }}"
+          LINKS=$(cat /tmp/apk_links.md)
+          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${NL}${LINKS}"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
