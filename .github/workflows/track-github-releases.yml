@@ -73,11 +73,11 @@ jobs:
                 DL_URL=$(echo "$RESPONSE" | jq -r ".assets[$i].browser_download_url")
                 ESC_ASSET=$(echo "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
                 MSG+="[${ESC_ASSET}](${DL_URL})${NL}${NL}"
-                MSG+="@rvbygeo"
               done
             else
               MSG+="No assets attached."
             fi
+            MSG+="@rvbygeo"
 
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
