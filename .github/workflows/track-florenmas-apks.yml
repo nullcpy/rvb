@@ -1,0 +1,102 @@
+name: Track FiorenMas APK Updates
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # Every 4 hours
+  workflow_dispatch:
+
+env:
+  TG_CHAT: "@rvbygeo"
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Fetch Release Assets (APKs only)
+        id: fetch_assets
+        run: |
+          echo "current_data<<EOF" >> "$GITHUB_OUTPUT"
+          curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
+            | jq -r '
+              .assets[]
+              | select(.name | endswith(".apk"))
+              | { name: .name, updated_at: .updated_at, url: .browser_download_url }
+              | .
+            ' \
+            | jq -s 'add // []'
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Initialize Timestamp File in .github/misc
+        run: |
+          TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
+          mkdir -p "$(dirname "$TIMESTAMP_FILE")"
+          if [ ! -f "$TIMESTAMP_FILE" ]; then
+            echo "{}" > "$TIMESTAMP_FILE"
+          fi
+
+      - name: Detect Changed APKs
+        id: detect
+        run: |
+          TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          
+          STORED=$(cat "$TIMESTAMP_FILE")
+          CURRENT=${{ steps.fetch_assets.outputs.current_data }}
+
+          # Build new timestamps map
+          NEW_MAP=$(jq -n \
+            --argjson stored "$STORED" \
+            --argjson current "$CURRENT" \
+            'reduce $current[] as $asset ({}; .[$asset.name] = $asset.updated_at)')
+
+          # Find changed APKs
+          CHANGED_LIST=$(jq -n \
+            --argjson stored "$STORED" \
+            --argjson current "$CURRENT" \
+            '$current | map(select(.updated_at != ($stored[.name] // ""))) | map(.name)')
+
+          if [ "$(echo "$CHANGED_LIST" | jq 'length')" -gt 0 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            
+            # Build markdown-formatted download links
+            NL=$'\n'
+            LINKS=""
+            for apk in $(echo "$CHANGED_LIST" | jq -r '.[]'); do
+              url=$(echo "$CURRENT" | jq -r "map(select(.name == \"$apk\")) | .[0].url")
+              LINKS+="${NL}${NL}[${apk}](${url})"
+            done
+            echo "download_links=${LINKS}" >> "$GITHUB_OUTPUT"
+            
+            # Save updated timestamps
+            echo "$NEW_MAP" > "$TIMESTAMP_FILE"
+          fi
+
+      - name: Commit Updated Timestamps
+        if: steps.detect.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          file_pattern: .github/misc/apk_timestamps.json
+          commit_message: "Update FiorenMas APK timestamps"
+
+      - name: Notify Telegram (New APKs Available)
+        if: steps.detect.outputs.changed == 'true'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+        run: |
+          NL=$'\n'
+          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${{ steps.detect.outputs.download_links }}"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${{ env.TG_CHAT }}" \
+            "https://api.telegram.org/bot${{ secrets.TG_TOKEN }}/sendMessage"
