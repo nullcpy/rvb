@@ -41,7 +41,7 @@ jobs:
           distribution: "zulu"
           java-version: "17"
 
-      - name: Fetch Latest Stable and Pre-release Tags
+      - name: Fetch Latest Tags (Stable and Dev)
         id: fetch_tags
         run: |
           get_latest_tag() {
@@ -154,7 +154,7 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Update last_tags.json with latest patch versions"
 
-      - name: Generate Configs (Stable & Dev)
+      - name: Generate Configs (Stable and Dev)
         id: generate_configs
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
@@ -255,7 +255,7 @@ jobs:
             generate_config "dev"
           fi
 
-      - name: Commit updated stable config
+      - name: Commit Updated Config (Stable)
         if: steps.compare.outputs.TRIGGER_STABLE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -263,7 +263,7 @@ jobs:
           file_pattern: config.stable.updated.toml
           commit_message: "Update config.stable.updated.toml for new stable patches"
 
-      - name: Commit updated dev config
+      - name: Commit Updated Config (Dev)
         if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -271,7 +271,7 @@ jobs:
           file_pattern: config.dev.updated.toml
           commit_message: "Update config.dev.updated.toml for new dev patches"
 
-      - name: Generate Version Numbers
+      - name: Generate Version Numbers (Stable and Dev)
         id: versions
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         env:
@@ -317,7 +317,7 @@ jobs:
           distribution: "zulu"
           java-version: "17"
 
-      - name: Notify Telegram – Patch Detected (Stable)
+      - name: Notify Telegram (New Stable Patch)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
@@ -342,7 +342,7 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-      - name: Build Stable
+      - name: Build Modules and APKs (Stable)
         run: |
           rm -rf build
           mkdir -p build
@@ -361,7 +361,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Upload Stable Release
+      - name: Upload to Release (Stable)
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
@@ -405,7 +405,7 @@ jobs:
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ needs.check-patch.outputs.next_stable_ver }}
 
-      - name: Notify Telegram – Build Complete (Stable)
+      - name: Notify Telegram (Stable Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
@@ -458,7 +458,7 @@ jobs:
           distribution: "zulu"
           java-version: "17"
 
-      - name: Notify Telegram – Patch Detected (Pre-release)
+      - name: Notify Telegram (New Dev Patch)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
@@ -483,7 +483,7 @@ jobs:
             --data-urlencode "chat_id=${TG_CHAT}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-      - name: Build Dev
+      - name: Build Modules and APKs (Dev)
         run: |
           rm -rf build
           mkdir -p build
@@ -502,7 +502,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Upload Dev Release
+      - name: Upload to Release (Dev)
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
@@ -547,7 +547,7 @@ jobs:
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ needs.check-patch.outputs.next_dev_ver }}
 
-      - name: Notify Telegram – Build Complete (Dev)
+      - name: Notify Telegram (Dev Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
