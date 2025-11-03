@@ -25,7 +25,7 @@ jobs:
         id: notify
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: ${{ secrets.TG_CHAT }}
+          TG_CHAT: "@rvbygeo"
         run: |
           set -euo pipefail
           NL=$'\n'
