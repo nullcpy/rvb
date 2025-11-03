@@ -19,21 +19,6 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Notify Telegram (New Build)
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@rvbygeo"
-        run: |
-          NL=$'\n'
-          MSG="${NL}[Manually triggered new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
-          MSG=${MSG:0:9450}
-          curl -X POST \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "disable_web_page_preview=true" \
-            --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=${TG_CHAT}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-
       - name: Get Next Version Code
         id: next_ver_code
         env:
