@@ -330,7 +330,7 @@ jobs:
             MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ needs.check-patch.outputs.se_new }}):${NL}Old: \`${{ needs.check-patch.outputs.se_old }}\` → New: \`${{ needs.check-patch.outputs.se_new }}\`${NL}"
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
-          MSG=${MSG:0:4000}
+          MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
@@ -429,7 +429,7 @@ jobs:
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
           MSG+="*APKs:*${APKS}"
-          MSG=${MSG:0:4000}
+          MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
@@ -473,7 +473,7 @@ jobs:
             MSG+="${NL}• [Extended](https://github.com/inotia00/revanced-patches/releases/tag/${{ needs.check-patch.outputs.pe_new }}):${NL}Old: \`${{ needs.check-patch.outputs.pe_old }}\` → New: \`${{ needs.check-patch.outputs.pe_new }}\`${NL}"
           fi
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
-          MSG=${MSG:0:4000}
+          MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
@@ -573,7 +573,7 @@ jobs:
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
           MSG+="*APKs:*${APKS}"
-          MSG=${MSG:0:4000}
+          MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
