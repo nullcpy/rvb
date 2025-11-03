@@ -29,7 +29,7 @@ jobs:
       next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
       next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
     steps:
-      - name: Checkout Main Branch
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           ref: main
@@ -300,7 +300,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Main Branch
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           ref: main
@@ -441,7 +441,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Main Branch
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           ref: main
