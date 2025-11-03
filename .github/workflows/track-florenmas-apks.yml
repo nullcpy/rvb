@@ -2,7 +2,7 @@ name: Track FiorenMas APK Updates
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "20 20 * * *"
   workflow_dispatch:
 
 env:
@@ -14,16 +14,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout
+      - name: Checkout (Main)
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
 
-      # ==============================
-      # 1. FETCH APK LIST → SAVE TO FILE
-      # ==============================
-      - name: Fetch APK Assets from FiorenMas Repo
+      - name: Fetch APK Assets (FiorenMas Repo)
         run: |
           mkdir -p .github/misc
           curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
@@ -34,9 +31,6 @@ jobs:
               ' \
             > .github/misc/current_apks.json
 
-      # ==============================
-      # 2. INITIALIZE apk_timestamps.json IF MISSING
-      # ==============================
       - name: Initialize Timestamp File if Missing
         id: init_file
         run: |
@@ -56,11 +50,8 @@ jobs:
           branch: main
           skip_checkout: true
           file_pattern: .github/misc/apk_timestamps.json
-          commit_message: "Initialize FiorenMas APK timestamp tracking"
+          commit_message: "Initialize timestamp tracking JSON"
 
-      # ==============================
-      # 3. COMPARE & DETECT CHANGES → GENERATE LINKS
-      # ==============================
       - name: Compare and Detect Changes
         id: compare
         run: |
@@ -90,9 +81,6 @@ jobs:
             echo "" > "$LINKS_FILE"
           fi
 
-      # ==============================
-      # 4. COMMIT & NOTIFY
-      # ==============================
       - name: Commit Updated Timestamps
         if: steps.compare.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -100,9 +88,9 @@ jobs:
           branch: main
           skip_checkout: true
           file_pattern: .github/misc/apk_timestamps.json
-          commit_message: "Update FiorenMas APK timestamps — new version(s) detected"
+          commit_message: "Update apk_timestamps.json for new timestamps"
 
-      - name: Notify Telegram – New APKs Available
+      - name: Notify Telegram (New APK)
         if: steps.compare.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
@@ -116,11 +104,8 @@ jobs:
           fi
 
           LINKS=$(cat "$LINKS_FILE")
-          MSG="*New APKs Detected in FiorenMas Repo!*$NL$NL*APKs:*$NL$LINKS"
-          # Telegram message limit is 4096 chars; leave margin
-          MSG=${MSG:0:4000}
-
-          # Critical: No spaces in URL!
+          MSG="*New APK Detected in [FiorenMas](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root) Repo!*$NL$NL*APKs:*$NL$LINKS"
+          MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
