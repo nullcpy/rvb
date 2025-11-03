@@ -67,12 +67,13 @@ jobs:
 
             ASSET_COUNT=$(echo "$RESPONSE" | jq -r '.assets | length')
             if [ "$ASSET_COUNT" -gt 0 ]; then
-              MSG+="*Assets:*"
+              MSG+="*Assets:*${NL}"
               for i in $(seq 0 $((ASSET_COUNT - 1))); do
                 ASSET_NAME=$(echo "$RESPONSE" | jq -r ".assets[$i].name")
                 DL_URL=$(echo "$RESPONSE" | jq -r ".assets[$i].browser_download_url")
                 ESC_ASSET=$(echo "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
-                MSG+="${NL}[${ESC_ASSET}](${DL_URL})${NL}${NL}@rvbygeo"
+                MSG+="[${ESC_ASSET}](${DL_URL})${NL}${NL}"
+                MSG+="@rvbygeo"
               done
             else
               MSG+="No assets attached."
