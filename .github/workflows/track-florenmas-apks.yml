@@ -104,7 +104,7 @@ jobs:
           fi
 
           LINKS=$(cat "$LINKS_FILE")
-          MSG="*New APK Detected in FiorenMas Repo!*$NL$NL*GitHub*: [Revanced & Revanced Extended](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)$NL$NL*APKs:*$NL$LINKS$NL$NL@rvbygeo"
+          MSG="*New APK Detected in FiorenMas Repo!*$NL$NL*APKs:*$NL$LINKS$NL$NL@rvbygeo"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
