@@ -2,7 +2,7 @@ name: Track GitHub Releases
 
 on:
   schedule:
-    - cron: "20 16 * * *"  # every 12 hours
+    - cron: "20 16 * * *"  # Runs daily at 16:20 UTC 
   workflow_dispatch:
 
 jobs:
@@ -33,43 +33,39 @@ jobs:
           UPDATED=false
           TEMP_FILE="$(mktemp)"
 
-          jq -r 'keys[]' "$FILE" | while IFS= read -r repo; do
+          while IFS= read -r repo; do
             if [ -z "$repo" ]; then continue; fi
 
             LAST_TAG=$(jq -r --arg r "$repo" '.[$r] // empty' "$FILE")
             echo "Checking $repo (last: ${LAST_TAG:-<none>})"
 
-            # Fetch latest release
             RESPONSE=$(curl -sf \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/$repo/releases/latest" 2>/dev/null) || {
-              echo "No release or error"
+              echo "No release or error for $repo"
               continue
             }
 
             NEW_TAG=$(echo "$RESPONSE" | jq -r '.tag_name')
             if [ "$NEW_TAG" = "$LAST_TAG" ]; then
-              echo "No new release"
+              echo "No new release for $repo"
               continue
             fi
 
-            echo "New: $NEW_TAG"
+            echo "New release for $repo: $NEW_TAG"
 
+            # Update repos.json
             cp "$FILE" "$TEMP_FILE"
             jq --arg r "$repo" --arg t "$NEW_TAG" '.[$r] = $t' "$TEMP_FILE" > "$FILE"
             UPDATED=true
 
-            # Build message
             NAME=$(echo "$RESPONSE" | jq -r '.name // .tag_name')
             URL=$(echo "$RESPONSE" | jq -r '.html_url')
-
-            # Escape _ * [ ] for Telegram Markdown
             ESC_NAME=$(echo "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
             MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
 
-            # Add assets
-            ASSET_COUNT=$(echo "$RESPONSE" | jq '.assets | length')
+            ASSET_COUNT=$(echo "$RESPONSE" | jq -r '.assets | length')
             if [ "$ASSET_COUNT" -gt 0 ]; then
               MSG+="*Assets:*"
               for i in $(seq 0 $((ASSET_COUNT - 1))); do
@@ -89,7 +85,7 @@ jobs:
               --data-urlencode "text=${MSG:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
 
-          done
+          done < <(jq -r 'keys[]' "$FILE")
 
           if [ "$UPDATED" = true ]; then
             echo "updated=true" >> "$GITHUB_OUTPUT"
