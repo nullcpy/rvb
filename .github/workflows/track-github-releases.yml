@@ -66,7 +66,7 @@ jobs:
 
             # Escape _ * [ ] for Telegram Markdown
             ESC_NAME=$(echo "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
-            MSG="*New Release Detected!*${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
+            MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
 
             # Add assets
             ASSET_COUNT=$(echo "$RESPONSE" | jq '.assets | length')
@@ -76,7 +76,7 @@ jobs:
                 ASSET_NAME=$(echo "$RESPONSE" | jq -r ".assets[$i].name")
                 DL_URL=$(echo "$RESPONSE" | jq -r ".assets[$i].browser_download_url")
                 ESC_ASSET=$(echo "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
-                MSG+="[${ESC_ASSET}](${DL_URL})${NL}"
+                MSG+="${NL}[${ESC_ASSET}](${DL_URL})${NL}${NL}@rvbygeo"
               done
             else
               MSG+="No assets attached."
@@ -85,7 +85,7 @@ jobs:
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
               --data-urlencode "parse_mode=Markdown" \
-              --data-urlencode "disable_web_page_preview=false" \
+              --data-urlencode "disable_web_page_preview=true" \
               --data-urlencode "text=${MSG:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
 
