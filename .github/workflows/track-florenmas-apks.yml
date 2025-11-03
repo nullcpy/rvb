@@ -11,7 +11,8 @@ env:
 jobs:
   track:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,7 +59,7 @@ jobs:
           commit_message: "Initialize FiorenMas APK timestamp tracking"
 
       # ==============================
-      # 3. COMPARE & DETECT CHANGES → SAVE LINKS TO FILE
+      # 3. COMPARE & DETECT CHANGES → GENERATE LINKS
       # ==============================
       - name: Compare and Detect Changes
         id: compare
@@ -67,25 +68,22 @@ jobs:
           CURRENT_FILE=".github/misc/current_apks.json"
           LINKS_FILE="/tmp/apk_links.md"
 
-          # Find changed APKs
-          CHANGED_LIST=$(jq -s '
-            .[0] as $stored |
-            .[1][] as $apk |
-            select($apk.updated_at != ($stored[$apk.name] // ""))
-            | $apk.name
-          ' "$TIMESTAMP_FILE" "$CURRENT_FILE")
+          # Use jq to find changed APKs and generate markdown links in one go
+          CHANGED_MARKDOWN=$(jq -n --argjson current "$(cat $CURRENT_FILE)" --argjson stored "$(cat $TIMESTAMP_FILE)" '
+            [$current[] | select(.updated_at != ($stored[.name] // ""))] |
+            if length == 0 then
+              empty
+            else
+              map("• [\( .name )](\( .url ))") |
+              join("\n")
+            end
+          ')
 
-          if [ -n "$(echo "$CHANGED_LIST" | jq -r 'select(length > 0)')" ]; then
+          if [ -n "$CHANGED_MARKDOWN" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "$CHANGED_MARKDOWN" > "$LINKS_FILE"
 
-            # Build clean markdown list
-            echo "" > "$LINKS_FILE"
-            echo "$CHANGED_LIST" | jq -r '.[]' | while IFS= read -r apk; do
-              url=$(jq -r "map(select(.name == \"$apk\")) | .[0].url" "$CURRENT_FILE")
-              echo "• [${apk}](${url})" >> "$LINKS_FILE"
-            done
-
-            # Update timestamps
+            # Update timestamp file with latest values
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' "$CURRENT_FILE" \
               > "$TIMESTAMP_FILE"
           else
@@ -110,9 +108,20 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          LINKS=$(cat /tmp/apk_links.md)
-          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${NL}${LINKS}"
-          MSG=${MSG:0:9450}
+          NL=$'\n'
+          LINKS_FILE="/tmp/apk_links.md"
+
+          if [ ! -s "$LINKS_FILE" ]; then
+            echo "ERROR: Links file is unexpectedly empty." >&2
+            exit 1
+          fi
+
+          LINKS=$(cat "$LINKS_FILE")
+          MSG="*New APKs Detected in FiorenMas Repo!*$NL$NL*APKs:*$NL$LINKS"
+          # Telegram message limit is 4096 chars; leave margin
+          MSG=${MSG:0:4000}
+
+          # Critical: No spaces in URL!
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
