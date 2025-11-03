@@ -29,17 +29,12 @@ jobs:
       next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
       next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
     steps:
-      - name: Checkout main branch
+      - name: Checkout Main Branch
         uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
           submodules: true
-
-      - uses: actions/setup-java@v5
-        with:
-          distribution: "zulu"
-          java-version: "17"
 
       - name: Fetch Latest Tags (Stable and Dev)
         id: fetch_tags
@@ -305,7 +300,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
+      - name: Checkout Main Branch
         uses: actions/checkout@v5
         with:
           ref: main
@@ -446,7 +441,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
+      - name: Checkout Main Branch
         uses: actions/checkout@v5
         with:
           ref: main
