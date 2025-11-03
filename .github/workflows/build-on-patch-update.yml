@@ -29,7 +29,7 @@ jobs:
       next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
       next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
     steps:
-      - name: Checkout
+      - name: Checkout (Main)
         uses: actions/checkout@v5
         with:
           ref: main
@@ -87,7 +87,7 @@ jobs:
           file_pattern: last_tags.json
           commit_message: "Initialize tag tracking JSON"
 
-      - name: Compare Current vs Stored Tags
+      - name: Compare Latest vs Stored Tags
         id: compare
         run: |
           SA_OLD=$(jq -r '.advanced.stable // ""' last_tags.json)
@@ -300,14 +300,15 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (Main)
         uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
           submodules: true
 
-      - uses: actions/setup-java@v5
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
         with:
           distribution: "zulu"
           java-version: "17"
@@ -393,7 +394,8 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      - uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Commit Updated build.md Files (Stable)
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
           skip_checkout: true
@@ -441,14 +443,15 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (Main)
         uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
           submodules: true
 
-      - uses: actions/setup-java@v5
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
         with:
           distribution: "zulu"
           java-version: "17"
@@ -534,8 +537,9 @@ jobs:
           done
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
-
-      - uses: stefanzweifel/git-auto-commit-action@v7
+      
+      - name: Commit Updated build.md Files (Dev)
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
           skip_checkout: true
