@@ -2,7 +2,7 @@ name: Track FiorenMas APK Updates
 
 on:
   schedule:
-    - cron: "0 */4 * * *"  # Every 4 hours
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 env:
@@ -22,69 +22,81 @@ jobs:
       - name: Fetch Release Assets (APKs only)
         id: fetch_assets
         run: |
+          RESPONSE=$(curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all")
+          # Check if API returned valid JSON
+          if ! echo "$RESPONSE" | jq empty >/dev/null 2>&1; then
+            echo "API returned invalid JSON. Exiting safely."
+            echo "current_data=[]" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          APKS=$(echo "$RESPONSE" | jq -r '
+            .assets // []
+            | map(select(.name | endswith(".apk")))
+            | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
+          ')
           echo "current_data<<EOF" >> "$GITHUB_OUTPUT"
-          curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
-            | jq -r '
-              .assets[]
-              | select(.name | endswith(".apk"))
-              | { name: .name, updated_at: .updated_at, url: .browser_download_url }
-              | .
-            ' \
-            | jq -s 'add // []'
+          echo "$APKS" | jq -s 'add // []'
           echo "EOF" >> "$GITHUB_OUTPUT"
 
-      - name: Initialize Timestamp File in .github/misc
+      - name: Initialize Timestamp File
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           mkdir -p "$(dirname "$TIMESTAMP_FILE")"
-          if [ ! -f "$TIMESTAMP_FILE" ] || [ ! -s "$TIMESTAMP_FILE" ]; then
+          if [ ! -s "$TIMESTAMP_FILE" ]; then
             echo "{}" > "$TIMESTAMP_FILE"
-          fi
-          # Validate it's valid JSON (optional but safe)
-          if ! jq empty "$TIMESTAMP_FILE" >/dev/null 2>&1; then
-            echo "Warning: $TIMESTAMP_FILE was invalid. Resetting to {}"
-            echo "{}" > "$TIMESTAMP_FILE"
+          else
+            # Repair if invalid
+            if ! jq empty "$TIMESTAMP_FILE" >/dev/null 2>&1; then
+              echo "{}" > "$TIMESTAMP_FILE"
+            fi
           fi
 
       - name: Detect Changed APKs
         id: detect
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
-          echo "changed=false" >> "$GITHUB_OUTPUT"
-
-          # Read stored timestamps (guaranteed to be valid JSON now)
           STORED_JSON=$(cat "$TIMESTAMP_FILE")
           CURRENT_JSON=${{ steps.fetch_assets.outputs.current_data }}
 
-          # Use --arg (not --argjson) and parse with fromjson
+          # Validate both are JSON
+          if ! echo "$STORED_JSON" | jq empty >/dev/null 2>&1; then
+            echo "Stored JSON invalid. Skipping."
+            exit 0
+          fi
+          if ! echo "$CURRENT_JSON" | jq empty >/dev/null 2>&1; then
+            echo "Current JSON invalid. Skipping."
+            exit 0
+          fi
+
           CHANGED_LIST=$(jq -n \
-            --arg stored "$STORED_JSON" \
-            --arg current "$CURRENT_JSON" \
+            --argjson stored "$STORED_JSON" \
+            --argjson current "$CURRENT_JSON" \
             '
-            ($stored | fromjson) as $stored_map |
-            ($current | fromjson) as $assets |
-            $assets
-            | map(select(.updated_at != ($stored_map[.name] // "")))
+            $current
+            | map(select(.updated_at != ($stored[.name] // "")))
             | map(.name)
             ')
 
           if [ "$(echo "$CHANGED_LIST" | jq 'length')" -gt 0 ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
 
-            # Build download links
-            NL=$'\n'
             LINKS=""
+            NL=$'\n'
             for apk in $(echo "$CHANGED_LIST" | jq -r '.[]'); do
-              url=$(echo "$CURRENT_JSON" | jq -r "fromjson | map(select(.name == \"$apk\")) | .[0].url")
-              LINKS+="${NL}${NL}[${apk}](${url})"
+              url=$(echo "$CURRENT_JSON" | jq -r "map(select(.name == \"$apk\")) | .[0].url // \"\"")
+              if [ -n "$url" ]; then
+                LINKS+="${NL}${NL}[${apk}](${url})"
+              fi
             done
             echo "download_links=${LINKS}" >> "$GITHUB_OUTPUT"
 
-            # Update timestamps
+            # Update stored timestamps
             jq -n \
               --argjson assets "$CURRENT_JSON" \
-              'reduce ($assets | fromjson)[] as $a ({}; .[$a.name] = $a.updated_at)' \
+              'reduce $assets[] as $a ({}; .[$a.name] = $a.updated_at)' \
               > "$TIMESTAMP_FILE"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Commit Updated Timestamps
