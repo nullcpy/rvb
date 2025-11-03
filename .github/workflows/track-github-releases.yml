@@ -1,0 +1,214 @@
+name: Track GitHub Releases
+
+on:
+  schedule:
+    - cron: "20 20 * * *"   # Runs daily at 20:20 UTC
+  workflow_dispatch:
+
+env:
+  TG_CHAT: "@rvbygeo"
+
+jobs:
+  track-github-releases:
+    name: Track GitHub Releases
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure repos.json exists
+        run: |
+          mkdir -p .github/misc
+          if [ ! -f .github/misc/repos.json ]; then
+            echo "{}" > .github/misc/repos.json
+          fi
+
+      - name: Check releases and notify
+        id: notify
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+        run: |
+          set -euo pipefail
+          NL=$'\n'
+          FILE=".github/misc/repos.json"
+          UPDATED=false
+          TEMP_FILE="$(mktemp)"
+
+          while IFS= read -r repo; do
+            if [ -z "$repo" ]; then continue; fi
+
+            LAST_TAG=$(jq -r --arg r "$repo" '.[$r] // empty' "$FILE")
+            echo "Checking $repo (last: ${LAST_TAG:-<none>})"
+
+            RESPONSE=$(curl -sf \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/$repo/releases/latest" 2>/dev/null) || {
+              echo "No release or error for $repo"
+              continue
+            }
+
+            NEW_TAG=$(echo "$RESPONSE" | jq -r '.tag_name')
+            if [ "$NEW_TAG" = "$LAST_TAG" ]; then
+              echo "No new release for $repo"
+              continue
+            fi
+
+            echo "New release for $repo: $NEW_TAG"
+
+            cp "$FILE" "$TEMP_FILE"
+            jq --arg r "$repo" --arg t "$NEW_TAG" '.[$r] = $t' "$TEMP_FILE" > "$FILE"
+            UPDATED=true
+
+            NAME=$(echo "$RESPONSE" | jq -r '.name // .tag_name')
+            URL=$(echo "$RESPONSE" | jq -r '.html_url')
+            ESC_NAME=$(echo "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+            MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
+
+            ASSET_COUNT=$(echo "$RESPONSE" | jq -r '.assets | length')
+            if [ "$ASSET_COUNT" -gt 0 ]; then
+              MSG+="*Assets:*${NL}"
+              for i in $(seq 0 $((ASSET_COUNT - 1))); do
+                ASSET_NAME=$(echo "$RESPONSE" | jq -r ".assets[$i].name")
+                DL_URL=$(echo "$RESPONSE" | jq -r ".assets[$i].browser_download_url")
+                ESC_ASSET=$(echo "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+                MSG+="[${ESC_ASSET}](${DL_URL})${NL}${NL}"
+              done
+            else
+              MSG+="No assets attached."
+            fi
+            MSG+="@rvbygeo"
+
+            curl -s -X POST \
+              --data-urlencode "chat_id=${TG_CHAT}" \
+              --data-urlencode "parse_mode=Markdown" \
+              --data-urlencode "disable_web_page_preview=true" \
+              --data-urlencode "text=${MSG:0:9450}" \
+              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
+
+          done < <(jq -r 'keys[]' "$FILE")
+
+          if [ "$UPDATED" = true ]; then
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated repos.json
+        if: steps.notify.outputs.updated == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/repos.json
+          commit_message: "update tracked release versions"
+
+  track-fiorenmas-apks:
+    name: Track FiorenMas APK Updates
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs: track-github-releases
+    if: always()
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Fetch APK Assets (FiorenMas Repo)
+        run: |
+          mkdir -p .github/misc
+          curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
+            | jq -r '
+              .assets // []
+              | map(select(.name | endswith(".apk")))
+              | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
+              ' \
+            > .github/misc/current_apks.json
+
+      - name: Initialize Timestamp File if Missing
+        id: init_file
+        run: |
+          TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
+          if [ ! -f "$TIMESTAMP_FILE" ]; then
+            jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' .github/misc/current_apks.json \
+              > "$TIMESTAMP_FILE"
+            echo "missing=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "missing=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit Initialized Timestamp File
+        if: steps.init_file.outputs.missing == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/apk_timestamps.json
+          commit_message: "Initialize timestamp tracking JSON"
+
+      - name: Compare and Detect Changes
+        id: compare
+        run: |
+          TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
+          CURRENT_FILE=".github/misc/current_apks.json"
+          LINKS_FILE="/tmp/apk_links.md"
+
+          CHANGED_MARKDOWN=$(jq -nr --argjson current "$(cat $CURRENT_FILE)" --argjson stored "$(cat $TIMESTAMP_FILE)" '
+            [$current[] | select(.updated_at != ($stored[.name] // ""))] |
+            if length == 0 then
+              empty
+            else
+              map(.url |= sub("\\s+$"; "")) |
+              map("[\(.name)](\(.url))") |
+              join("\n\n")
+            end
+          ')
+
+          if [ -n "$CHANGED_MARKDOWN" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "$CHANGED_MARKDOWN" > "$LINKS_FILE"
+
+            jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' "$CURRENT_FILE" \
+              > "$TIMESTAMP_FILE"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "" > "$LINKS_FILE"
+          fi
+
+      - name: Commit Updated Timestamps
+        if: steps.compare.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/apk_timestamps.json
+          commit_message: "Update apk_timestamps.json for new timestamps"
+
+      - name: Notify Telegram (New APK)
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+        run: |
+          NL=$'\n'
+          LINKS_FILE="/tmp/apk_links.md"
+
+          if [ ! -s "$LINKS_FILE" ]; then
+            echo "ERROR: Links file is unexpectedly empty." >&2
+            exit 1
+          fi
+
+          LINKS=$(cat "$LINKS_FILE")
+          MSG="*New APK Detected in FiorenMas Repo!*$NL$NL*APKs:*$NL$LINKS$NL$NL@rvbygeo"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${{ env.TG_CHAT }}" \
+            "https://api.telegram.org/bot${{ secrets.TG_TOKEN }}/sendMessage"
