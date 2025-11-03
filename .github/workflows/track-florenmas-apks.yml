@@ -68,14 +68,14 @@ jobs:
           CURRENT_FILE=".github/misc/current_apks.json"
           LINKS_FILE="/tmp/apk_links.md"
 
-          # Use jq to find changed APKs and generate markdown links in one go
-          CHANGED_MARKDOWN=$(jq -n --argjson current "$(cat $CURRENT_FILE)" --argjson stored "$(cat $TIMESTAMP_FILE)" '
+          # Generate clean markdown with double-newline spacing and trimmed URLs
+          CHANGED_MARKDOWN=$(jq -nr --argjson current "$(cat $CURRENT_FILE)" --argjson stored "$(cat $TIMESTAMP_FILE)" '
             [$current[] | select(.updated_at != ($stored[.name] // ""))] |
             if length == 0 then
               empty
             else
-              map("• [\( .name )](\( .url ))") |
-              join("\n")
+              map("• [\(.name)](\(.url | rtrimstr(\" \")))")
+              | join("\n\n")
             end
           ')
 
@@ -83,7 +83,7 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "$CHANGED_MARKDOWN" > "$LINKS_FILE"
 
-            # Update timestamp file with latest values
+            # Update timestamps
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' "$CURRENT_FILE" \
               > "$TIMESTAMP_FILE"
           else
