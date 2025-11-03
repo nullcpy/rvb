@@ -2,7 +2,7 @@ name: Track FiorenMas APK Updates
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Every 4 hours
+    - cron: "0 */4 * * *"  # Every 4 hours
   workflow_dispatch:
 
 env:
@@ -14,7 +14,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
@@ -37,7 +37,12 @@ jobs:
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           mkdir -p "$(dirname "$TIMESTAMP_FILE")"
-          if [ ! -f "$TIMESTAMP_FILE" ]; then
+          if [ ! -f "$TIMESTAMP_FILE" ] || [ ! -s "$TIMESTAMP_FILE" ]; then
+            echo "{}" > "$TIMESTAMP_FILE"
+          fi
+          # Validate it's valid JSON (optional but safe)
+          if ! jq empty "$TIMESTAMP_FILE" >/dev/null 2>&1; then
+            echo "Warning: $TIMESTAMP_FILE was invalid. Resetting to {}"
             echo "{}" > "$TIMESTAMP_FILE"
           fi
 
@@ -46,36 +51,40 @@ jobs:
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           echo "changed=false" >> "$GITHUB_OUTPUT"
-          
-          STORED=$(cat "$TIMESTAMP_FILE")
-          CURRENT=${{ steps.fetch_assets.outputs.current_data }}
 
-          # Build new timestamps map
-          NEW_MAP=$(jq -n \
-            --argjson stored "$STORED" \
-            --argjson current "$CURRENT" \
-            'reduce $current[] as $asset ({}; .[$asset.name] = $asset.updated_at)')
+          # Read stored timestamps (guaranteed to be valid JSON now)
+          STORED_JSON=$(cat "$TIMESTAMP_FILE")
+          CURRENT_JSON=${{ steps.fetch_assets.outputs.current_data }}
 
-          # Find changed APKs
+          # Use --arg (not --argjson) and parse with fromjson
           CHANGED_LIST=$(jq -n \
-            --argjson stored "$STORED" \
-            --argjson current "$CURRENT" \
-            '$current | map(select(.updated_at != ($stored[.name] // ""))) | map(.name)')
+            --arg stored "$STORED_JSON" \
+            --arg current "$CURRENT_JSON" \
+            '
+            ($stored | fromjson) as $stored_map |
+            ($current | fromjson) as $assets |
+            $assets
+            | map(select(.updated_at != ($stored_map[.name] // "")))
+            | map(.name)
+            ')
 
           if [ "$(echo "$CHANGED_LIST" | jq 'length')" -gt 0 ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            
-            # Build markdown-formatted download links
+
+            # Build download links
             NL=$'\n'
             LINKS=""
             for apk in $(echo "$CHANGED_LIST" | jq -r '.[]'); do
-              url=$(echo "$CURRENT" | jq -r "map(select(.name == \"$apk\")) | .[0].url")
+              url=$(echo "$CURRENT_JSON" | jq -r "fromjson | map(select(.name == \"$apk\")) | .[0].url")
               LINKS+="${NL}${NL}[${apk}](${url})"
             done
             echo "download_links=${LINKS}" >> "$GITHUB_OUTPUT"
-            
-            # Save updated timestamps
-            echo "$NEW_MAP" > "$TIMESTAMP_FILE"
+
+            # Update timestamps
+            jq -n \
+              --argjson assets "$CURRENT_JSON" \
+              'reduce ($assets | fromjson)[] as $a ({}; .[$a.name] = $a.updated_at)' \
+              > "$TIMESTAMP_FILE"
           fi
 
       - name: Commit Updated Timestamps
@@ -84,9 +93,9 @@ jobs:
         with:
           branch: main
           file_pattern: .github/misc/apk_timestamps.json
-          commit_message: "Update FiorenMas APK timestamps"
+          commit_message: "Update FiorenMas APK timestamps — new version(s) detected"
 
-      - name: Notify Telegram (New APKs Available)
+      - name: Notify Telegram – New APKs Available
         if: steps.detect.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
