@@ -25,7 +25,7 @@ jobs:
           TG_CHAT: "@rvbygeo"
         run: |
           NL=$'\n'
-          MSG="${NL}[Manually triggered new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
+          MSG="${NL}[Manually triggered a build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@rvbygeo"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
