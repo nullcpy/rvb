@@ -394,7 +394,7 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      - name: Commit Updated build.md Files (Stable)
+      - name: Commit Updated Build MD and Update JSON Files (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
@@ -538,7 +538,7 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
       
-      - name: Commit Updated build.md Files (Dev)
+      - name: Commit Updated Build MD and Update JSON Files (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
