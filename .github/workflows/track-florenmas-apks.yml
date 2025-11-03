@@ -2,7 +2,7 @@ name: Track FiorenMas APK Updates
 
 on:
   schedule:
-    - cron: "0 */4 * * *"  # Every 4 hours
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 env:
@@ -20,21 +20,18 @@ jobs:
           fetch-depth: 1
 
       # ==============================
-      # 1. FETCH CURRENT APK ASSETS FROM RELEASE
+      # 1. FETCH APK LIST → SAVE TO FILE
       # ==============================
-      - name: Fetch APK Asset List
-        id: fetch_assets
+      - name: Fetch APK Assets from FiorenMas Repo
         run: |
-          echo "apks<<EOF" >> "$GITHUB_OUTPUT"
+          mkdir -p .github/misc
           curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
             | jq -r '
               .assets // []
               | map(select(.name | endswith(".apk")))
               | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
-              | .
-            ' \
-            | jq -s 'add // []'
-          echo "EOF" >> "$GITHUB_OUTPUT"
+              ' \
+            > .github/misc/current_apks.json
 
       # ==============================
       # 2. INITIALIZE apk_timestamps.json IF MISSING
@@ -43,13 +40,8 @@ jobs:
         id: init_file
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
-          mkdir -p "$(dirname "$TIMESTAMP_FILE")"
           if [ ! -f "$TIMESTAMP_FILE" ]; then
-            # Generate initial state from current assets
-            CURRENT_APKS=${{ steps.fetch_assets.outputs.apks }}
-            jq -n \
-              --argjson apks "$CURRENT_APKS" \
-              'reduce $apks[] as $a ({}; .[$a.name] = $a.updated_at)' \
+            jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' .github/misc/current_apks.json \
               > "$TIMESTAMP_FILE"
             echo "missing=true" >> "$GITHUB_OUTPUT"
           else
@@ -68,47 +60,46 @@ jobs:
       # ==============================
       # 3. COMPARE & DETECT CHANGES
       # ==============================
-      - name: Compare Current vs Stored Timestamps
+      - name: Compare and Detect Changes
         id: compare
         run: |
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
-          STORED=$(cat "$TIMESTAMP_FILE")
-          CURRENT_APKS=${{ steps.fetch_assets.outputs.apks }}
+          CURRENT_FILE=".github/misc/current_apks.json"
 
-          CHANGED=false
-          LINKS=""
-          NL=$'\n'
+          # Build list of changed APKs
+          CHANGED_LIST=$(jq -s '
+            .[0] as $stored |
+            .[1][] as $apk |
+            select($apk.updated_at != ($stored[$apk.name] // ""))
+            | $apk.name
+          ' "$TIMESTAMP_FILE" "$CURRENT_FILE")
 
-          # Use jq to compare
-          CHANGED_LIST=$(jq -n \
-            --argjson stored "$STORED" \
-            --argjson current "$CURRENT_APKS" \
-            '
-            $current
-            | map(select(.updated_at != ($stored[.name] // "")))
-            | map(.name)
-            ')
+          if [ -n "$(echo "$CHANGED_LIST" | tr -d ' \t\n\r')" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
 
-          if [ "$(echo "$CHANGED_LIST" | jq 'length')" -gt 0 ]; then
-            CHANGED=true
-            for apk in $(echo "$CHANGED_LIST" | jq -r '.[]'); do
-              url=$(echo "$CURRENT_APKS" | jq -r "map(select(.name == \"$apk\")) | .[0].url")
-              LINKS+="${NL}${NL}[${apk}](${url})"
+            # Build download links
+            NL=$'\n'
+            LINKS=""
+            echo "$CHANGED_LIST" | jq -r '.[]' | while IFS= read -r apk; do
+              url=$(jq -r "map(select(.name == \"$apk\")) | .[0].url" "$CURRENT_FILE")
+              echo "• [${apk}](${url})" >> /tmp/links.txt
             done
-          fi
+            if [ -f /tmp/links.txt ]; then
+              LINKS=$(cat /tmp/links.txt | sed ':a;N;$!ba;s/\n/\\n/g')
+              echo "download_links<<EOF" >> "$GITHUB_OUTPUT"
+              echo "$LINKS" >> "$GITHUB_OUTPUT"
+              echo "EOF" >> "$GITHUB_OUTPUT"
+            fi
 
-          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
-          if [ "$CHANGED" = true ]; then
-            echo "download_links=${LINKS}" >> "$GITHUB_OUTPUT"
-            # Update the file with latest timestamps
-            jq -n \
-              --argjson apks "$CURRENT_APKS" \
-              'reduce $apks[] as $a ({}; .[$a.name] = $a.updated_at)' \
+            # Update timestamps
+            jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' "$CURRENT_FILE" \
               > "$TIMESTAMP_FILE"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       # ==============================
-      # 4. COMMIT & NOTIFY IF CHANGED
+      # 4. COMMIT & NOTIFY
       # ==============================
       - name: Commit Updated Timestamps
         if: steps.compare.outputs.changed == 'true'
@@ -124,8 +115,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          NL=$'\n'
-          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${{ steps.compare.outputs.download_links }}"
+          MSG="*New APKs Detected in FiorenMas Repo!*${NL}${NL}*APKs:*${NL}${{ steps.compare.outputs.download_links }}"
           MSG=${MSG:0:9450}
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
