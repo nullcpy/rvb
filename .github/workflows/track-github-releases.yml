@@ -1,0 +1,107 @@
+name: Track GitHub Releases
+
+on:
+  schedule:
+    - cron: "20 16 * * *"  # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure repos.json exists
+        run: |
+          mkdir -p .github/misc
+          if [ ! -f .github/misc/repos.json ]; then
+            echo "{}" > .github/misc/repos.json
+          fi
+
+      - name: Check releases and notify
+        id: notify
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: |
+          set -euo pipefail
+          NL=$'\n'
+          FILE=".github/misc/repos.json"
+          UPDATED=false
+          TEMP_FILE="$(mktemp)"
+
+          jq -r 'keys[]' "$FILE" | while IFS= read -r repo; do
+            if [ -z "$repo" ]; then continue; fi
+
+            LAST_TAG=$(jq -r --arg r "$repo" '.[$r] // empty' "$FILE")
+            echo "Checking $repo (last: ${LAST_TAG:-<none>})"
+
+            # Fetch latest release
+            RESPONSE=$(curl -sf \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/$repo/releases/latest" 2>/dev/null) || {
+              echo "No release or error"
+              continue
+            }
+
+            NEW_TAG=$(echo "$RESPONSE" | jq -r '.tag_name')
+            if [ "$NEW_TAG" = "$LAST_TAG" ]; then
+              echo "No new release"
+              continue
+            fi
+
+            echo "New: $NEW_TAG"
+
+            cp "$FILE" "$TEMP_FILE"
+            jq --arg r "$repo" --arg t "$NEW_TAG" '.[$r] = $t' "$TEMP_FILE" > "$FILE"
+            UPDATED=true
+
+            # Build message
+            NAME=$(echo "$RESPONSE" | jq -r '.name // .tag_name')
+            URL=$(echo "$RESPONSE" | jq -r '.html_url')
+
+            # Escape _ * [ ] for Telegram Markdown
+            ESC_NAME=$(echo "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+            MSG="*New Release Detected!*${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
+
+            # Add assets
+            ASSET_COUNT=$(echo "$RESPONSE" | jq '.assets | length')
+            if [ "$ASSET_COUNT" -gt 0 ]; then
+              MSG+="*Assets:*"
+              for i in $(seq 0 $((ASSET_COUNT - 1))); do
+                ASSET_NAME=$(echo "$RESPONSE" | jq -r ".assets[$i].name")
+                DL_URL=$(echo "$RESPONSE" | jq -r ".assets[$i].browser_download_url")
+                ESC_ASSET=$(echo "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+                MSG+="[${ESC_ASSET}](${DL_URL})${NL}"
+              done
+            else
+              MSG+="No assets attached."
+            fi
+
+            curl -s -X POST \
+              --data-urlencode "chat_id=${TG_CHAT}" \
+              --data-urlencode "parse_mode=Markdown" \
+              --data-urlencode "disable_web_page_preview=false" \
+              --data-urlencode "text=${MSG:0:9450}" \
+              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
+
+          done
+
+          if [ "$UPDATED" = true ]; then
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated repos.json
+        if: steps.notify.outputs.updated == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/repos.json
+          commit_message: "update tracked release versions"
