@@ -91,7 +91,7 @@ jobs:
               --data-urlencode "text=${MSG:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
 
-            sleep 10
+            sleep 1
 
           done < <(jq -r 'keys[]' "$FILE")
 
@@ -198,22 +198,47 @@ jobs:
         if: steps.compare.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@rvbygeo"
+          TG_THREAD_ID: "267"
         run: |
           NL=$'\n'
           LINKS_FILE="/tmp/apk_links.md"
-
+      
           if [ ! -s "$LINKS_FILE" ]; then
             echo "ERROR: Links file is unexpectedly empty." >&2
             exit 1
           fi
-
-          LINKS=$(cat "$LINKS_FILE")
-          MSG="*New APK Detected in FiorenMas Repo!*$NL$NL*APKs:*$NL$LINKS$NL$NL@rvbygeo"
-          MSG=${MSG:0:9450}
-          curl -X POST \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "disable_web_page_preview=true" \
-            --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=${{ env.TG_CHAT }}" \
-            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-            "https://api.telegram.org/bot${{ secrets.TG_TOKEN }}/sendMessage"
+      
+          mapfile -t LINKS < <(grep -v '^$' "$LINKS_FILE")
+      
+          BASE_MSG_HEADER="*New APK Detected in FiorenMas Repo!*$NL$NL*APKs:*"
+          BASE_MSG_FOOTER="$NL$NL@rvbygeo"
+          MAX_LENGTH=4000  
+      
+          current_msg="$BASE_MSG_HEADER"
+          messages=()
+      
+          for link in "${LINKS[@]}"; do
+            candidate_msg="${current_msg}${NL}${NL}${link}"
+            if [ ${#candidate_msg} -le $MAX_LENGTH ]; then
+              current_msg="$candidate_msg"
+            else
+              messages+=("$current_msg$BASE_MSG_FOOTER")
+              current_msg="$BASE_MSG_HEADER${NL}${NL}${link}"
+            fi
+          done
+      
+          if [ ${#current_msg} -gt ${#BASE_MSG_HEADER} ]; then
+            messages+=("$current_msg$BASE_MSG_FOOTER")
+          fi
+      
+          for msg in "${messages[@]}"; do
+            curl -s -X POST \
+              --data-urlencode "chat_id=${TG_CHAT}" \
+              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+              --data-urlencode "parse_mode=Markdown" \
+              --data-urlencode "disable_web_page_preview=true" \
+              --data-urlencode "text=${msg:0:4096}" \
+              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
+            sleep 1  
+          done
