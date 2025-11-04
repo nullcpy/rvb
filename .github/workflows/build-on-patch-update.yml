@@ -415,31 +415,52 @@ jobs:
           APKS=""
           MODULES=""
           HAS_MODULES=false
-          for OUTPUT in *; do
-            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/${OUTPUT}"
-            if [[ $OUTPUT = *.apk ]]; then
-              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
-            elif [[ $OUTPUT = *.zip ]]; then
-              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+      
+          for FILE in *; do
+            URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/$FILE"
+            if [[ $FILE == *.apk ]]; then
+              APKS+="${NL}${NL}[${FILE}](${URL})"
+            elif [[ $FILE == *.zip ]]; then
+              MODULES+="${NL}${NL}[${FILE}](${URL})"
               HAS_MODULES=true
             fi
           done
-          MODULES=${MODULES#"$NL"}
+      
           APKS=${APKS#"$NL"}
+          MODULES=${MODULES#"$NL"}
+      
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
           MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
-          if [ "$HAS_MODULES" = true ]; then
-            MSG+="*Modules:*${MODULES}${NL}${NL}"
-          fi
+          [ "$HAS_MODULES" = true ] && MSG+="*Modules:*${MODULES}${NL}${NL}"
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
-          curl -X POST \
+      
+          RESPONSE=$(curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage")
+      
+          MESSAGE_ID=$(echo "$RESPONSE" | grep -o '"message_id":[0-9]*' | head -1 | cut -d: -f2)
+          echo "Sent Telegram message ID: $MESSAGE_ID"
+      
+          OLD_MESSAGE_ID=$(curl -s "https://api.telegram.org/bot${TG_TOKEN}/getChat?chat_id=${TG_CHAT}" \
+            | grep -o '"pinned_message":{[^}]*}' \
+            | grep -o '"message_id":[0-9]*' \
+            | head -1 \
+            | cut -d: -f2)
+      
+          if [[ -n "$OLD_MESSAGE_ID" && "$OLD_MESSAGE_ID" != "$MESSAGE_ID" ]]; then
+            echo "Unpinning previous message: $OLD_MESSAGE_ID"
+            curl -s -X POST -d "chat_id=${TG_CHAT}" -d "message_id=${OLD_MESSAGE_ID}" \
+              "https://api.telegram.org/bot${TG_TOKEN}/unpinChatMessage"
+          fi
+      
+          curl -s -X POST -d "chat_id=${TG_CHAT}" -d "message_id=${MESSAGE_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/pinChatMessage"
+
 
   build-dev:
     needs: [check-patch, build-stable]
