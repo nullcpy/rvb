@@ -554,7 +554,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
-          TG_THREAD_ID: "262"
+          TG_THREAD_ID: "350"
         run: |
           cd build || exit 1
           NL=$'\n'
