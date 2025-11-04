@@ -100,6 +100,7 @@ jobs:
           cd build || { echo "build folder not found"; exit 1; }
 
           TG_CHAT="@rvbygeo"
+          TG_THREAD_ID="262"
           NL=$'\n'
           APKS=""
           MODULES=""
@@ -129,5 +130,5 @@ jobs:
 
           MSG=${MSG:0:9450}
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-          curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" "$POST"
+          curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" --data-urlencode "message_thread_id=${TG_THREAD_ID}" "$POST"
 
