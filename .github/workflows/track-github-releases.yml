@@ -89,6 +89,8 @@ jobs:
               --data-urlencode "text=${MSG:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
 
+            sleep 10
+
           done < <(jq -r 'keys[]' "$FILE")
 
           if [ "$UPDATED" = true ]; then
