@@ -36,6 +36,9 @@ jobs:
           fetch-depth: 0
           submodules: true
 
+      - name: Create .github/misc directory
+        run: mkdir -p .github/misc
+
       - name: Fetch Latest Tags (Stable and Dev)
         id: fetch_tags
         run: |
@@ -60,7 +63,7 @@ jobs:
       - name: Initialize Tag Tracking File if Missing
         id: init_tags
         run: |
-          if [ ! -f last_tags.json ]; then
+          if [ ! -f .github/misc/last_tags.json ]; then
             jq -n \
               --arg sa "${{ steps.fetch_tags.outputs.stable_advanced }}" \
               --arg pa "${{ steps.fetch_tags.outputs.prerelease_advanced }}" \
@@ -72,7 +75,7 @@ jobs:
                 advanced: { stable: ($sa | select(length > 0)), prerelease: ($pa | select(length > 0)) },
                 official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
                 extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
-              }' > last_tags.json
+              }' > .github/misc/last_tags.json
             echo "missing=true" >> "$GITHUB_OUTPUT"
           else
             echo "missing=false" >> "$GITHUB_OUTPUT"
@@ -84,18 +87,18 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: last_tags.json
-          commit_message: "Initialize tag tracking JSON"
+          file_pattern: .github/misc/last_tags.json
+          commit_message: "Initialize tag tracking JSON in .github/misc"
 
       - name: Compare Latest vs Stored Tags
         id: compare
         run: |
-          SA_OLD=$(jq -r '.advanced.stable // ""' last_tags.json)
-          PA_OLD=$(jq -r '.advanced.prerelease // ""' last_tags.json)
-          SO_OLD=$(jq -r '.official.stable // ""' last_tags.json)
-          PO_OLD=$(jq -r '.official.prerelease // ""' last_tags.json)
-          SE_OLD=$(jq -r '.extended.stable // ""' last_tags.json)
-          PE_OLD=$(jq -r '.extended.prerelease // ""' last_tags.json)
+          SA_OLD=$(jq -r '.advanced.stable // ""' .github/misc/last_tags.json)
+          PA_OLD=$(jq -r '.advanced.prerelease // ""' .github/misc/last_tags.json)
+          SO_OLD=$(jq -r '.official.stable // ""' .github/misc/last_tags.json)
+          PO_OLD=$(jq -r '.official.prerelease // ""' .github/misc/last_tags.json)
+          SE_OLD=$(jq -r '.extended.stable // ""' .github/misc/last_tags.json)
+          PE_OLD=$(jq -r '.extended.prerelease // ""' .github/misc/last_tags.json)
 
           SA_NEW="${{ steps.fetch_tags.outputs.stable_advanced }}"
           PA_NEW="${{ steps.fetch_tags.outputs.prerelease_advanced }}"
@@ -123,7 +126,7 @@ jobs:
               advanced: { stable: ($sa | select(length > 0)), prerelease: ($pa | select(length > 0)) },
               official: { stable: ($so | select(length > 0)), prerelease: ($po | select(length > 0)) },
               extended: { stable: ($se | select(length > 0)), prerelease: ($pe | select(length > 0)) }
-            }' > last_tags.json
+            }' > .github/misc/last_tags.json
 
           echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
@@ -146,14 +149,13 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: last_tags.json
+          file_pattern: .github/misc/last_tags.json
           commit_message: "Update last_tags.json with latest patch versions"
 
       - name: Generate Configs (Stable and Dev)
         id: generate_configs
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         run: |
-          # Common variables
           OLD_ADVANCED_S="${{ steps.compare.outputs.sa_old }}"
           NEW_ADVANCED_S="${{ steps.compare.outputs.sa_new }}"
           OLD_OFFICIAL_S="${{ steps.compare.outputs.so_old }}"
@@ -170,14 +172,12 @@ jobs:
 
           BASE_CONFIG="config.toml"
 
-          # Function to generate filtered config
           generate_config() {
-            local mode="$1"  # "stable" or "dev"
-            local out_file="config.$mode.updated.toml"
+            local mode="$1"
+            local out_file=".github/misc/config.$mode.updated.toml"
             cp "$BASE_CONFIG" "$out_file"
 
             if [ "$mode" = "dev" ]; then
-              # Prepend patches-version = "dev"
               echo 'patches-version = "dev"' > tmp_header
               cat "$out_file" >> tmp_header
               mv tmp_header "$out_file"
@@ -242,7 +242,6 @@ jobs:
             echo "${mode}_config=${out_file}" >> "$GITHUB_OUTPUT"
           }
 
-          # Generate configs only if needed
           if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
             generate_config "stable"
           fi
@@ -255,7 +254,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
-          file_pattern: config.stable.updated.toml
+          file_pattern: .github/misc/config.stable.updated.toml
           commit_message: "Update config.stable.updated.toml for new stable patches"
 
       - name: Commit Updated Config (Dev)
@@ -263,7 +262,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
-          file_pattern: config.dev.updated.toml
+          file_pattern: .github/misc/config.dev.updated.toml
           commit_message: "Update config.dev.updated.toml for new dev patches"
 
       - name: Generate Version Numbers (Stable and Dev)
@@ -272,7 +271,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Get latest *numeric* tag (ignore non-integer ones)
           TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
 
@@ -344,7 +342,7 @@ jobs:
         run: |
           rm -rf build
           mkdir -p build
-          ./build.sh config.stable.updated.toml
+          ./build.sh .github/misc/config.stable.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -512,7 +510,7 @@ jobs:
         run: |
           rm -rf build
           mkdir -p build
-          ./build.sh config.dev.updated.toml
+          ./build.sh .github/misc/config.dev.updated.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -612,7 +610,7 @@ jobs:
 
   cleanup:
     needs: [check-patch, build-stable, build-dev]
-    if: always() && needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1'
+    if: always() && (needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1')
     runs-on: ubuntu-latest
     permissions:
       contents: write
