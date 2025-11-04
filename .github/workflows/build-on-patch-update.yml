@@ -317,6 +317,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
+          TG_THREAD_ID: "262"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!*${NL}"
@@ -336,6 +337,7 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
       - name: Build Modules and APKs (Stable)
@@ -406,6 +408,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
+          TG_THREAD_ID: "262"
         run: |
           cd build || exit 1
           NL=$'\n'
@@ -435,6 +438,7 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   build-dev:
@@ -460,6 +464,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
+          TG_THREAD_ID: "262"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!* (Pre-release)${NL}"
@@ -479,6 +484,7 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
       - name: Build Modules and APKs (Dev)
@@ -550,6 +556,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
+          TG_THREAD_ID: "262"
         run: |
           cd build || exit 1
           NL=$'\n'
@@ -579,6 +586,7 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   cleanup:
