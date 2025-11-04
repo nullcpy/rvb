@@ -7,6 +7,7 @@ on:
 
 env:
   TG_CHAT: "@rvbygeo"
+  TG_THREAD_ID: "267"
 
 jobs:
   track-github-releases:
@@ -84,6 +85,7 @@ jobs:
 
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
+              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
               --data-urlencode "parse_mode=Markdown" \
               --data-urlencode "disable_web_page_preview=true" \
               --data-urlencode "text=${MSG:0:9450}" \
@@ -213,4 +215,5 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${{ env.TG_CHAT }}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${{ secrets.TG_TOKEN }}/sendMessage"
