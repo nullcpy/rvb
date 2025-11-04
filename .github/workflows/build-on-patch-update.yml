@@ -315,7 +315,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
-          TG_THREAD_ID: "262"
+          TG_THREAD_ID: "345"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!*${NL}"
@@ -462,7 +462,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@rvbygeo"
-          TG_THREAD_ID: "262"
+          TG_THREAD_ID: "345"
         run: |
           NL=$'\n'
           MSG="*New Patch Detected!* (Pre-release)${NL}"
