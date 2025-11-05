@@ -65,7 +65,7 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 
 [SamsungRadio]
-enabled = false 
+enabled = true 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
