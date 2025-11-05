@@ -2,7 +2,7 @@ name: Build on Patch Update
 
 on:
   schedule:
-    - cron: "20 */2 * * *"  # Every 2 hours
+    - cron: "20 */4 * * *"  # Every 4 hours
   workflow_dispatch:
 
 jobs:
