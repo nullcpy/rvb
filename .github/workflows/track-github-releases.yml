@@ -211,7 +211,7 @@ jobs:
       
           mapfile -t LINKS < <(grep -v '^$' "$LINKS_FILE")
       
-          BASE_MSG_HEADER="*New APK Detected in FiorenMas Repo!*$NL$NL*APKs:*"
+          BASE_MSG_HEADER="*New APK Detected in FiorenMas Repo!*"
           BASE_MSG_FOOTER="$NL$NL@rvbygeo"
           MAX_LENGTH=4000  
       
