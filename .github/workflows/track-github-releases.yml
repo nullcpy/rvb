@@ -2,7 +2,7 @@ name: Track GitHub Releases
 
 on:
   schedule:
-    - cron: "20 */6 * * *"  # Every 6 hours
+    - cron: "20 20 * * *"
   workflow_dispatch:
 
 env:
