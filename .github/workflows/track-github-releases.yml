@@ -103,7 +103,7 @@ jobs:
 
       - name: Commit updated repos.json
         if: steps.notify.outputs.updated == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           skip_checkout: true
