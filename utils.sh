@@ -204,26 +204,7 @@ _req() {
 		mv -f "$dlp" "$op"
 	fi
 }
-req() {
-	local url="$1"
-	local output="$2"
-	local max_attempts=3
-	local attempt=1
-
-	while [ $attempt -le $max_attempts ]; do
-		if _req "$url" "$output" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; then
-			return 0
-		else
-			pr "Request failed for $url (attempt $attempt/$max_attempts)"
-			if [ $attempt -lt $max_attempts ]; then
-				pr "Retrying in 300 seconds..."
-				sleep $((300 + RANDOM % 120))
-			fi
-		fi
-		attempt=$((attempt + 1))
-	done
-	return 1
-}
+req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
