@@ -169,7 +169,7 @@ log "\n**Notes:**"
 log "• Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest), required for Google APKs."
 log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
 log "\n**GitHub:** [ReVanced Builder](https://github.com/geologically/revanced-builder)"
-log "**Telegram:** [ReVanced by Geologically](https://t.me/rvbygeo)\n"
+log "**Telegram:** [ReVanced Builder](https://t.me/revanced_builder)\n"
 log "$(cat "$TEMP_DIR"/*-rv/changelog.md)"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
