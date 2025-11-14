@@ -99,7 +99,7 @@ jobs:
         run: |
           cd build || { echo "build folder not found"; exit 1; }
 
-          TG_CHAT="@rvbygeo"
+          TG_CHAT="@revanced_builder"
           TG_THREAD_ID="262"
           NL=$'\n'
           APKS=""
