@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  TG_CHAT: "@rvbygeo"
+  TG_CHAT: "@revanced_builder"
   TG_THREAD_ID: "267"
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         id: notify
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@rvbygeo"
+          TG_CHAT: "@revanced_builder"
         run: |
           set -euo pipefail
           NL=$'\n'
@@ -81,7 +81,7 @@ jobs:
             else
               MSG+="No assets attached."
             fi
-            MSG+="@rvbygeo"
+            MSG+="@revanced_builder"
 
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
@@ -198,7 +198,7 @@ jobs:
         if: steps.compare.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@rvbygeo"
+          TG_CHAT: "@revanced_builder"
           TG_THREAD_ID: "267"
         run: |
           NL=$'\n'
@@ -212,7 +212,7 @@ jobs:
           mapfile -t LINKS < <(grep -v '^$' "$LINKS_FILE")
       
           BASE_MSG_HEADER="*New APK Detected in FiorenMas Repo!*"
-          BASE_MSG_FOOTER="$NL$NL@rvbygeo"
+          BASE_MSG_FOOTER="$NL$NL@revanced_builder"
           MAX_LENGTH=4000  
       
           current_msg="$BASE_MSG_HEADER"
