@@ -45,7 +45,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 
 [Twitch]
-enabled = false 
+enabled = true 
 app-name = "Twitch"
 build-mode = "apk"
 arch = "all"
@@ -56,7 +56,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 
 [ProtonMail]
-enabled = false 
+enabled = true 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -110,7 +110,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
 [Reddit-Extended-ARSCLib]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
