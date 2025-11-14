@@ -238,7 +238,7 @@ jobs:
               --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
               --data-urlencode "parse_mode=Markdown" \
               --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${msg:0:4096}" \
+              --data-urlencode "text=${msg:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
             sleep 1  
           done
