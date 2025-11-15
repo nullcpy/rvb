@@ -1,5 +1,4 @@
 parallel-jobs = 1
-patches-version = "dev"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
@@ -12,6 +11,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music]
 enabled = false
@@ -22,6 +22,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Photos]
 enabled = false
@@ -34,7 +35,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 
 [Duolingo]
-enabled = false 
+enabled = true 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "both"
@@ -66,7 +67,7 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 
 [SamsungRadio]
-enabled = false 
+enabled = false
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
@@ -75,8 +76,17 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 
-[YouTube-Extended]
+[Lightroom]
 enabled = true
+app-name = "Lightroom"
+build-mode = "apk"
+arch = "arm64-v8a"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[YouTube-Extended]
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -85,6 +95,7 @@ rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
 enabled = false
@@ -96,6 +107,7 @@ rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Extended]
 enabled = false
@@ -105,19 +117,6 @@ arch = "both"
 version = "auto"
 rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-
-[Reddit-Extended-ARSCLib]
-enabled = false
-app-name = "Reddit"
-build-mode = "apk"
-arch = "both"
-version = "auto"
-rv-brand = "ReVanced Extended ARSCLib"
-cli-source = "inotia00/revanced-cli-arsclib"
-patches-source = "inotia00/revanced-patches-arsclib"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
@@ -132,6 +131,7 @@ rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
 enabled = false
@@ -143,6 +143,7 @@ rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Advanced]
 enabled = false
@@ -157,15 +158,16 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
 [Spotify-Advanced]
-enabled = false 
+enabled = true 
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
 version = "auto"
 rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+# uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 
 
