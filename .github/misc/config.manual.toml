@@ -76,7 +76,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 
 [YouTube-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -123,7 +123,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
 [YouTube-Advanced]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -134,7 +134,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 
 [Music-Advanced]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -145,7 +145,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 
 [Reddit-Advanced]
-enabled = true
+enabled = false
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -157,7 +157,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
 [Spotify-Advanced]
-enabled = true 
+enabled = false 
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
