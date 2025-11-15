@@ -11,6 +11,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music]
 enabled = true
@@ -84,6 +85,7 @@ rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
 enabled = true
@@ -118,6 +120,7 @@ rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
 enabled = true
