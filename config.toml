@@ -165,8 +165,9 @@ arch = "all"
 version = "auto"
 rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+# uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 
 
