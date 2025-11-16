@@ -57,7 +57,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 
 [ProtonMail]
-enabled = true 
+enabled = false 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -67,7 +67,7 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 
 [SamsungRadio]
-enabled = true
+enabled = false 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
