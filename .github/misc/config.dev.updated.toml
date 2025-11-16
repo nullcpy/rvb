@@ -23,6 +23,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Photos]
 enabled = false
@@ -76,8 +77,17 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 
+[Lightroom]
+enabled = false
+app-name = "Lightroom"
+build-mode = "apk"
+arch = "arm64-v8a"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
 [YouTube-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -89,7 +99,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -98,9 +108,10 @@ rv-brand = "ReVanced Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Extended]
-enabled = true
+enabled = false 
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -112,7 +123,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -124,7 +135,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -133,9 +144,10 @@ rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Advanced]
-enabled = false
+enabled = false 
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -154,8 +166,9 @@ arch = "all"
 version = "auto"
 rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.spotify.music"
+# uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 
 
