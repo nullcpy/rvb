@@ -15,6 +15,8 @@ Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 
 ### 🔎 Regex Patterns for Filtering APKs
 
+#### 🦘 Jump Table
+
 | [YouTube](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube) | [YouTube Music](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube-music) | [Facebook](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-facebook) | 
 |:-------:|:-------:|:-------:|
 | [Twitter/X](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitterx) | [Instagram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-instagram) | [Threads](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-threads) |
