@@ -22,7 +22,7 @@ Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 - [Twitter/X](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitterx)
 - [Instagram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-instagram)
 - [Threads](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-threads)
-- [Google Photos](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-google-photos)
+- [Google Photos](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#%EF%B8%8F-google-photos)
 - [Messenger](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-messenger)
 - [Spotify](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-spotify)
 - [Telegram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-telegram)
