@@ -1,7 +1,7 @@
-# Other APKs
+# 🗃️ FiorenMas ReVanced APKs
 
 ### 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
-Obtainium is the easiest way to install and update FiorenMas APKs.
+Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 
 1. Open the **Obtainium** app.  
 2. Tap **Add app**.  
