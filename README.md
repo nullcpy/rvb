@@ -10,8 +10,8 @@ Get notified instantly when new builds are released.
 ### 📦 [Download from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
 If you don’t see the app you want in the latest release, check the older ones.
 
-### 🗃️ [Download FiorenMas APKs](./.github/pages/FiorenMas.md)
-Contains builds of many more apps from different ReVanced patches.
+### 🗃️ [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
+Contains APKs of many more apps from different ReVanced patches.
 
 ### 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update ReVanced APKs.
