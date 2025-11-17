@@ -16,37 +16,14 @@ Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 
 ### 🔎 Regex Patterns for Filtering APKs
 
-- [YouTube](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube)
-- [YouTube Music](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube-music)
-- [Facebook](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-facebook)
-- [Twitter/X](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitterx)
-- [Instagram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-instagram)
-- [Threads](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-threads)
-- [Google Photos](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#%EF%B8%8F-google-photos)
-- [Messenger](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-messenger)
-- [Spotify](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-spotify)
-- [Telegram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-telegram)
-- [TikTok](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tiktok)
-- [Twitch](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitch)
-- [Reddit](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-reddit)
-- [Lightroom](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-lightroom)
-- [Tumblr](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tumblr)
-- [SoundCloud](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-soundcloud)
-- [Duolingo](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-duolingo)
-- [Google News](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-google-news)
-- [Photomath](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-photomath)
-- [Proton Mail](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-proton-mail)
-- [RAR](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-rar)
-- [Strava](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-strava)
-- [Pixiv](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-pixiv)
-- [Bilibili (Chinese)](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-bilibili-chinese)
-- [Prime Video](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-prime-video)
-- [Viber](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-viber)
-- [Crunchyroll](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-crunchyroll)
-- [Solid Explorer](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-solid-explorer)
-- [Nova Launcher](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-nova-launcher)
-- [Tasker](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tasker)
-- [FX File Explorer](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-fx-file-explorer)
+| [YouTube](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube) | [YouTube Music](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-youtube-music) | [Facebook](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-facebook) | [Twitter/X](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitterx) | [Instagram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-instagram) |
+|:-------:|:-------:|:-------:|:-------:|:-------:|
+| [Threads](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-threads) | [Google Photos](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#%EF%B8%8F-google-photos) | [Messenger](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-messenger) | [Spotify](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-spotify) | [Telegram](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#%EF%B8%8F-telegram) 
+| [TikTok](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tiktok) | [Twitch](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-twitch) | [Reddit](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-reddit) | [Lightroom](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-lightroom)| [Tumblr](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tumblr)  
+| [SoundCloud](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-soundcloud) | [Duolingo](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-duolingo) |[Google News](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-google-news) | [Photomath](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-photomath) | [Proton Mail](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-proton-mail) 
+| [RAR](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-rar) | [Strava](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-strava) | [Pixiv](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-pixiv) | [Bilibili (Chinese)](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-bilibili-chinese) | [Prime Video](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-prime-video) 
+| [Viber](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-viber) | [Crunchyroll](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-crunchyroll) | [Solid Explorer](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-solid-explorer) | [Nova Launcher](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-nova-launcher) | [Tasker](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-tasker)
+ | [FX File Explorer](https://github.com/geologically/revanced-builder/blob/main/.github/pages/FiorenMas.md#-fx-file-explorer)
 
 #### 📺 YouTube
 
