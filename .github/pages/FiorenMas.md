@@ -1,4 +1,4 @@
-# 🗃️ FiorenMas ReVanced APKs
+# 🗃️ FiorenMas ReVanced Builds
 
 ### 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
