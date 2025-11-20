@@ -46,6 +46,8 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            | Twitch         | universal  | `^twitch-revanced-v[\d.]+-all\.apk$`                         |
 |                                                                            | Samsung Radio  | arm64      | `^samsungradio-revanced-v[\d.]+-arm64-v8a\.apk$`             |
 |                                                                            |                | arm32      | `^samsungradio-revanced-v[\d.]+-arm-v7a\.apk$`               |
+|
+                  | Proton Mail        | universal  | `^protonmail-revanced-v[\d.]+-all\.apk$`                        |
 | [Extended](https://github.com/inotia00/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
