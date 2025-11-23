@@ -44,6 +44,7 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Twitch]
 enabled = false 
@@ -55,6 +56,7 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [ProtonMail]
 enabled = false 
@@ -65,6 +67,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [SamsungRadio]
 enabled = false 
@@ -75,6 +78,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
 enabled = false
@@ -120,6 +124,7 @@ patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
 enabled = true
@@ -156,6 +161,7 @@ patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Spotify-Advanced]
 enabled = false 
