@@ -1,6 +1,5 @@
 parallel-jobs = 1
-enable-magisk-update = false
-remove-rv-integrations-checks = false
+enable-magisk-update = true
 
 [YouTube]
 enabled = false
