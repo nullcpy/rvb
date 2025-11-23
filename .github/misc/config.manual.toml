@@ -47,7 +47,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Twitch]
-enabled = true 
+enabled = false 
 app-name = "Twitch"
 build-mode = "apk"
 arch = "all"
@@ -59,7 +59,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [Twitter]
-enabled = true 
+enabled = false 
 app-name = "Twitter"
 build-mode = "apk"
 arch = "all"
@@ -71,7 +71,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [ProtonMail]
-enabled = true 
+enabled = false 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -82,7 +82,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [SamsungRadio]
-enabled = true 
+enabled = false 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "all"
