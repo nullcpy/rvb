@@ -70,6 +70,18 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
+[TikTok]
+enabled = false 
+app-name = "TikTok"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
 [ProtonMail]
 enabled = false 
 app-name = "ProtonMail"
