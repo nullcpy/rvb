@@ -37,25 +37,25 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 | Patch                                                                      | App            | Arch       | Regex Pattern                                                |
 |----------------------------------------------------------------------------|----------------|------------|--------------------------------------------------------------|
 | [Official](https://github.com/revanced/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-v[\d.]+-all\.apk$`                        |
+|                                                                            | Duolingo       |            | `^duolingo-revanced-v[\d.]+-all\.apk$`                       |
+|                                                                            | TikTok         |            | `^tiktok-revanced-v[\d.]+-all\.apk$`                         |
+|                                                                            | Twitch         |            | `^twitch-revanced-v[\d.]+-all\.apk$`                         |
+|                                                                            | Twitter        |            | `^twitter-revanced-v[\d.]+-all\.apk$`                        |
+|                                                                            | Samsung Radio  |            | `^samsungradio-revanced-v[\d.]+-all\.apk$`                   |
+|                                                                            | Proton Mail    |            | `^protonmail-revanced-v[\d.]+-all\.apk$`                     |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-v[\d.]+-arm64-v8a\.apk$`                    |
 |                                                                            |                | arm32      | `^music-revanced-v[\d.]+-arm-v7a\.apk$`                      |
 |                                                                            | Google Photos  | arm64      | `^photos-revanced-v[\d.]+-arm64-v8a\.apk$`                   |
 |                                                                            |                | arm32      | `^photos-revanced-v[\d.]+-arm-v7a\.apk$`                     |
-|                                                                            | Duolingo       | universal  | `^duolingo-revanced-v[\d.]+-all\.apk$`                       |
-|                                                                            | TikTok         | universal  | `^tiktok-revanced-v[\d.]+-all\.apk$`                         |
-|                                                                            | Twitch         | universal  | `^twitch-revanced-v[\d.]+-all\.apk$`                         |
-|                                                                            | Twitter        | universal  | `^twitter-revanced-v[\d.]+-all\.apk$`                        |
-|                                                                            | Samsung Radio  | universal  | `^samsungradio-revanced-v[\d.]+-all\.apk$`                   |
-|                                                                            | Proton Mail    | universal  | `^protonmail-revanced-v[\d.]+-all\.apk$`                     |
 | [Extended](https://github.com/inotia00/revanced-patches)                   | YouTube        | universal  | `^youtube-revanced-extended-v[\d.]+-all\.apk$`               |
+|                                                                            | Reddit         |            | `^reddit-revanced-extended-v[\d.]+-all\.apk$`                |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-extended-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-extended-v[\d.]+-arm-v7a\.apk$`             |
-|                                                                            | Reddit         | universal  | `^reddit-revanced-extended-v[\d.]+-all\.apk$`                |
 | [Advanced](https://github.com/anddea/revanced-patches)                     | YouTube        | universal  | `^youtube-revanced-advanced-v[\d.]+-all\.apk$`               |
+|                                                                            | Reddit         |            | `^reddit-revanced-advanced-v[\d.]+-all\.apk$`                |
+|                                                                            | Spotify        |            | `^spotify-revanced-advanced-v[\d.]+-all\.apk$`               |
 |                                                                            | YouTube Music  | arm64      | `^music-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`           |
 |                                                                            |                | arm32      | `^music-revanced-advanced-v[\d.]+-arm-v7a\.apk$`             |
-|                                                                            | Reddit         | universal  | `^reddit-revanced-advanced-v[\d.]+-all\.apk$`                |
-|                                                                            | Spotify        | universal  | `^spotify-revanced-advanced-v[\d.]+-all\.apk$`               |
 | [Piko](https://github.com/crimera/piko)                                    | Twitter        | universal  | `^x-piko-v(\d+\.\d+\.\d+)-release\.\d+\.apk$`                |
 
 `universal` : For all devices. <br>
