@@ -44,9 +44,10 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Twitch]
-enabled = false 
+enabled = true 
 app-name = "Twitch"
 build-mode = "apk"
 arch = "all"
@@ -55,9 +56,22 @@ patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[Twitter]
+enabled = true 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "all"
+version = "10.86.0-release.0"
+patches-source = "revanced/revanced-patches"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [ProtonMail]
-enabled = false 
+enabled = true 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -65,9 +79,10 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [SamsungRadio]
-enabled = false
+enabled = true 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "both"
@@ -75,9 +90,10 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
-enabled = true
+enabled = false
 app-name = "Lightroom"
 build-mode = "apk"
 arch = "arm64-v8a"
@@ -110,7 +126,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Extended]
-enabled = false
+enabled = true 
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -120,6 +136,7 @@ patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
 enabled = false
@@ -146,7 +163,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Advanced]
-enabled = false
+enabled = true 
 app-name = "Reddit"
 build-mode = "apk"
 arch = "both"
@@ -156,9 +173,10 @@ patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Spotify-Advanced]
-enabled = true 
+enabled = false 
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
