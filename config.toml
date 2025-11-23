@@ -58,6 +58,18 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
+[Twitter]
+enabled = false 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "all"
+version = "10.86.0-release.0"
+patches-source = "revanced/revanced-patches"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
 [ProtonMail]
 enabled = false 
 app-name = "ProtonMail"
