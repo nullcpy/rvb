@@ -82,9 +82,9 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-[Recorder]
+[GoogleRecorder]
 enabled = true 
-app-name = "Recorder"
+app-name = "GoogleRecorder"
 build-mode = "apk"
 arch = "arm64-v8a"
 version = "auto"
