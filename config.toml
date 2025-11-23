@@ -83,9 +83,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [Recorder]
-enabled = false 
+enabled = true 
 app-name = "Recorder"
-build-mode = "apk"
+build-mode = "both"
 arch = "arm64-v8a"
 version = "auto"
 patches-source = "revanced/revanced-patches"
