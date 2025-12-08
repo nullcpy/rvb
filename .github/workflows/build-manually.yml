@@ -132,3 +132,19 @@ jobs:
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
           curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" --data-urlencode "message_thread_id=${TG_THREAD_ID}" "$POST"
 
+  cleanup:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 20
+          delete_workflows: true
+          workflows_keep_day: 1
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
