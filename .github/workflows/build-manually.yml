@@ -100,7 +100,7 @@ jobs:
           cd build || { echo "build folder not found"; exit 1; }
 
           TG_CHAT="@revanced_builder"
-          TG_THREAD_ID="262"
+          TG_THREAD_ID="350"
           NL=$'\n'
           APKS=""
           MODULES=""
