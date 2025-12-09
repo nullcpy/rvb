@@ -55,9 +55,7 @@ jobs:
           file_pattern: .github/misc/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
-      # All remaining steps only run if patch_sources.json already existed
-      # and was NOT just created in this run.
-
+      # Only continue if patch_sources.json already existed (not just created)
       - name: Fetch Latest Tags (from patch_sources.json)
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: fetch_tags
@@ -124,7 +122,7 @@ jobs:
             NEW_JSON="{}"
           fi
 
-          # Compute triggers (use $old and $new properly)
+          # Compute triggers
           TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
             [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
@@ -374,13 +372,13 @@ jobs:
           if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
             MSG+="${NL}(No detailed changes available)${NL}"
           else
-            echo "$CHANGES" | jq -c '.[]' | while read -r item; do
+            while read -r item; do
               label=$(echo "$item" | jq -r '.label')
               repo=$(echo "$item" | jq -r '.repo')
               old=$(echo "$item" | jq -r '.old')
               new=$(echo "$item" | jq -r '.new')
               MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
-            done
+            done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
@@ -453,7 +451,7 @@ jobs:
           done
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
-      
+
       - name: Commit Updated Build MD and Update JSON Files (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -547,13 +545,13 @@ jobs:
           if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
             MSG+="${NL}(No detailed changes available)${NL}"
           else
-            echo "$CHANGES" | jq -c '.[]' | while read -r item; do
+            while read -r item; do
               label=$(echo "$item" | jq -r '.label')
               repo=$(echo "$item" | jq -r '.repo')
               old=$(echo "$item" | jq -r '.old')
               new=$(echo "$item" | jq -r '.new')
               MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
-            done
+            done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
           MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
