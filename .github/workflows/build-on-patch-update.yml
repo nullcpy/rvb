@@ -1,0 +1,678 @@
+name: Build on Patch Update
+
+on:
+  schedule:
+    - cron: "20 */4 * * *"  # Every 4 hours
+  workflow_dispatch:
+
+jobs:
+  check-patch:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    outputs:
+      trigger_stable: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+      trigger_prerelease: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+      tags_old: ${{ steps.compare.outputs.tags_old }}
+      tags_new: ${{ steps.compare.outputs.tags_new }}
+      stable_config: ${{ steps.generate_configs.outputs.stable_config }}
+      dev_config: ${{ steps.generate_configs.outputs.dev_config }}
+      next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
+      next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Create .github/misc directory
+        run: mkdir -p .github/misc
+
+      - name: Ensure patch_sources.json exists
+        id: ensure_patch_sources
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/misc/patch_sources.json"
+
+          if [ ! -f "$PATCH_FILE" ]; then
+            echo "{}" > "$PATCH_FILE"
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit dummy patch_sources.json if created
+        if: steps.ensure_patch_sources.outputs.created == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/patch_sources.json
+          commit_message: "Create dummy patch_sources.json"
+
+      - name: Fetch Latest Tags (from patch_sources.json)
+        id: fetch_tags
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/misc/patch_sources.json"
+
+          BASE_JSON=$(cat "$PATCH_FILE")
+          # If empty JSON (no entries), just propagate as-is
+          if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
+            DELIM="$(openssl rand -hex 8)"
+            echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+            echo "$BASE_JSON" >> "$GITHUB_OUTPUT"
+            echo "${DELIM}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          get_latest_tag() {
+            local repo=$1
+            local prerelease=$2
+            curl -s "https://api.github.com/repos/$repo/releases" \
+              | jq -r "
+                map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) |
+                sort_by(.published_at) |
+                reverse |
+                .[0].tag_name // \"\"
+              "
+          }
+
+          NEW_JSON="$BASE_JSON"
+
+          # For each patch source, get stable + prerelease tags
+          while read -r id repo; do
+            stable=$(get_latest_tag "$repo" false)
+            pre=$(get_latest_tag "$repo" true)
+
+            NEW_JSON=$(jq \
+              --arg id "$id" \
+              --arg stable "$stable" \
+              --arg pre "$pre" \
+              '.[$id].stable = $stable | .[$id].prerelease = $pre' \
+              <<<"$NEW_JSON")
+          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | "\(.key) \(.value.repo)"')
+
+          DELIM="$(openssl rand -hex 8)"
+          echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+
+      - name: Compare Latest vs Stored Tags
+        id: compare
+        run: |
+          set -euo pipefail
+
+          PATCH_FILE=".github/misc/patch_sources.json"
+
+          OLD_JSON=$(cat "$PATCH_FILE")
+          NEW_JSON='${{ steps.fetch_tags.outputs.latest }}'
+
+          # Safety: if NEW_JSON is empty for some reason, treat as empty JSON
+          if [ -z "$NEW_JSON" ]; then
+            NEW_JSON="{}"
+          fi
+
+          # Compute triggers
+          TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
+            [ new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+            ] | if length > 0 then 1 else 0 end
+          ')
+
+          TRIGGER_PRERELEASE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
+            [ new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
+            ] | if length > 0 then 1 else 0 end
+          ')
+
+          # Update patch_sources.json to the new tags
+          echo "$NEW_JSON" > "$PATCH_FILE"
+
+          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
+          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+
+          # Expose old & new JSON as outputs
+          DELIM1="$(openssl rand -hex 8)"
+          echo "tags_old<<${DELIM1}" >> "$GITHUB_OUTPUT"
+          echo "$OLD_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM1}" >> "$GITHUB_OUTPUT"
+
+          DELIM2="$(openssl rand -hex 8)"
+          echo "tags_new<<${DELIM2}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM2}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit Updated patch_sources.json
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/patch_sources.json
+          commit_message: "Update patch_sources.json with latest patch versions"
+
+      - name: Generate Configs (Stable and Dev)
+        id: generate_configs
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        env:
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+
+          BASE_CONFIG="config.toml"
+
+          # Write JSONs to temp files for jq
+          echo "$TAGS_NEW" > .github/misc/tags_new.json
+          echo "$TAGS_OLD" > .github/misc/tags_old.json
+
+          # Compute repos that should be disabled for stable/prerelease
+          jq -r '
+            .[0] as $new | .[1] as $old
+            | [ $new | to_entries[] | . as $e
+                | ($old[$e.key] // {}) as $o
+                | select($e.value.stable == "" or $e.value.stable == ($o.stable // ""))
+                | $e.value.repo
+              ]
+            | .[]
+          ' .github/misc/tags_new.json .github/misc/tags_old.json > .github/misc/disable.stable.txt || true
+
+          jq -r '
+            .[0] as $new | .[1] as $old
+            | [ $new | to_entries[] | . as $e
+                | ($old[$e.key] // {}) as $o
+                | select($e.value.prerelease == "" or $e.value.prerelease == ($o.prerelease // ""))
+                | $e.value.repo
+              ]
+            | .[]
+          ' .github/misc/tags_new.json .github/misc/tags_old.json > .github/misc/disable.prerelease.txt || true
+
+          generate_config() {
+            local mode="$1" # stable | dev
+            local out_file=".github/misc/config.$mode.updated.toml"
+            cp "$BASE_CONFIG" "$out_file"
+
+            # For dev we prepend patches-version = "dev"
+            if [ "$mode" = "dev" ]; then
+              echo 'patches-version = "dev"' > tmp_header
+              cat "$out_file" >> tmp_header
+              mv tmp_header "$out_file"
+            fi
+
+            local disable_file
+            if [ "$mode" = "stable" ]; then
+              disable_file=".github/misc/disable.stable.txt"
+            else
+              disable_file=".github/misc/disable.prerelease.txt"
+            fi
+
+            # If disable file doesn't exist, create empty
+            touch "$disable_file"
+
+            awk -v disable_file="$disable_file" '
+              BEGIN {
+                # Load repos to disable into associative array
+                while ((getline repo < disable_file) > 0) {
+                  if (repo != "") disabled[repo] = 1
+                }
+                close(disable_file)
+                section = ""
+                keep = 1
+              }
+              /^\[.*\]/ {
+                flush_section()
+                section = $0
+                delete lines
+                n = 0
+                lines[n++] = $0
+                keep = 1
+                next
+              }
+              {
+                lines[n++] = $0
+                if ($0 ~ /patches-source *= *"[^"]+"/) {
+                  match($0, /patches-source *= *"([^"]+)"/, m)
+                  src = m[1]
+                  if (src in disabled) {
+                    keep = 0
+                  }
+                }
+                next
+              }
+              END {
+                flush_section()
+              }
+              function flush_section() {
+                if (n == 0) return
+                for (i = 0; i < n; i++) {
+                  line = lines[i]
+                  if (!keep) {
+                    gsub(/enabled *= *true/, "enabled = false", line)
+                  }
+                  print line
+                }
+              }
+            ' "$out_file" > tmp && mv tmp "$out_file"
+
+            echo "${mode}_config=${out_file}" >> "$GITHUB_OUTPUT"
+          }
+
+          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
+            generate_config "stable"
+          fi
+
+          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
+            generate_config "dev"
+          fi
+
+      - name: Commit Updated Config (Stable)
+        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          file_pattern: .github/misc/config.stable.updated.toml
+          commit_message: "Update config.stable.updated.toml for new stable patches"
+
+      - name: Commit Updated Config (Dev)
+        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          file_pattern: .github/misc/config.dev.updated.toml
+          commit_message: "Update config.dev.updated.toml for new dev patches"
+
+      - name: Generate Version Numbers (Stable and Dev)
+        id: versions
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+
+          TRIGGER_STABLE=${{ steps.compare.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE=${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+
+          NEXT_STABLE=""
+          NEXT_DEV=""
+
+          if [ "$TRIGGER_STABLE" = "1" ] && [ "$TRIGGER_PRERELEASE" = "1" ]; then
+            NEXT_STABLE=$((TAG + 2))
+            NEXT_DEV=$((TAG + 1))
+          elif [ "$TRIGGER_STABLE" = "1" ]; then
+            NEXT_STABLE=$((TAG + 1))
+          elif [ "$TRIGGER_PRERELEASE" = "1" ]; then
+            NEXT_DEV=$((TAG + 1))
+          fi
+
+          echo "next_stable_ver=${NEXT_STABLE}" >> "$GITHUB_OUTPUT"
+          echo "next_dev_ver=${NEXT_DEV}" >> "$GITHUB_OUTPUT"
+
+  build-dev:
+    needs: check-patch
+    if: needs.check-patch.outputs.trigger_prerelease == '1'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Notify Telegram (New Dev Patch)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@revanced_builder"
+          TG_THREAD_ID: "345"
+          TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
+          TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+          NL=$'\n'
+          MSG="*New Patch Detected!* (Pre-release)${NL}"
+
+          CHANGES=$(jq -n --argjson old "$TAGS_OLD" --argjson new "$TAGS_NEW" '
+            [ new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
+              | {
+                  label: $e.value.label,
+                  repo: $e.value.repo,
+                  old: ($o.prerelease // ""),
+                  new: $e.value.prerelease
+                }
+            ]
+          ')
+
+          if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
+            MSG+="${NL}(No detailed changes available)${NL}"
+          else
+            echo "$CHANGES" | jq -c '.[]' | while read -r item; do
+              label=$(echo "$item" | jq -r '.label')
+              repo=$(echo "$item" | jq -r '.repo')
+              old=$(echo "$item" | jq -r '.old')
+              new=$(echo "$item" | jq -r '.new')
+              MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
+            done
+          fi
+
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
+          MSG=${MSG:0:9450}
+
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      - name: Build Modules and APKs (Dev)
+        run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+          ./build.sh .github/misc/config.dev.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_dev_ver }}
+
+      - name: Get Output (Dev)
+        id: get_output_dev
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to Release (Dev)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check-patch.outputs.next_dev_ver }}
+          tag: ${{ needs.check-patch.outputs.next_dev_ver }}
+          prerelease: true
+          overwrite: true
+
+      - name: Update Changelog and Magisk Update JSON (Dev)
+        run: |
+          set -euo pipefail
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ needs.check-patch.outputs.next_dev_ver }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_dev_ver }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+          find . -name "*-update.json" | grep . || : >dummy-update.json
+      
+      - name: Commit Updated Build MD and Update JSON Files (Dev)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_dev_ver }}
+
+      - name: Notify Telegram (Dev Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@revanced_builder"
+          TG_THREAD_ID: "350"
+        run: |
+          set -euo pipefail
+          cd build || exit 1
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_dev_ver }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+  build-stable:
+    needs: [check-patch, build-dev]
+    if: always() && needs.check-patch.outputs.trigger_stable == '1'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Notify Telegram (New Stable Patch)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@revanced_builder"
+          TG_THREAD_ID: "345"
+          TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
+          TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+          NL=$'\n'
+          MSG="*New Patch Detected!*${NL}"
+
+          CHANGES=$(jq -n --argjson old "$TAGS_OLD" --argjson new "$TAGS_NEW" '
+            [ new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+              | {
+                  label: $e.value.label,
+                  repo: $e.value.repo,
+                  old: ($o.stable // ""),
+                  new: $e.value.stable
+                }
+            ]
+          ')
+
+          if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
+            MSG+="${NL}(No detailed changes available)${NL}"
+          else
+            echo "$CHANGES" | jq -c '.[]' | while read -r item; do
+              label=$(echo "$item" | jq -r '.label')
+              repo=$(echo "$item" | jq -r '.repo')
+              old=$(echo "$item" | jq -r '.old')
+              new=$(echo "$item" | jq -r '.new')
+              MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
+            done
+          fi
+
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
+          MSG=${MSG:0:9450}
+
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      - name: Build Modules and APKs (Stable)
+        run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+          ./build.sh .github/misc/config.stable.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_stable_ver }}
+
+      - name: Get Output (Stable)
+        id: get_output_stable
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to Release (Stable)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check-patch.outputs.next_stable_ver }}
+          tag: ${{ needs.check-patch.outputs.next_stable_ver }}
+          overwrite: true
+
+      - name: Update Changelog and Magisk Update JSON (Stable)
+        run: |
+          set -euo pipefail
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ needs.check-patch.outputs.next_stable_ver }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+          find . -name "*-update.json" | grep . || : >dummy-update.json
+
+      - name: Commit Updated Build MD and Update JSON Files (Stable)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_stable_ver }}
+
+      - name: Notify Telegram (Stable Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@revanced_builder"
+          TG_THREAD_ID: "262"
+        run: |
+          set -euo pipefail
+          cd build || exit 1
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_stable_ver }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+  cleanup:
+    needs: [check-patch, build-dev, build-stable]
+    if: always() && (needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 20
+          delete_workflows: true
+          workflows_keep_day: 1
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
