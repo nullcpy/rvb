@@ -1,27 +1,26 @@
 {
-    "revanced": {
-        "label": "Official",
-        "repo": "revanced/revanced-patches",
-        "stable": "v5.46.0",
-        "prerelease": "v5.47.0-dev.12"
-    },
-    "extended": {
-        "label": "Extended",
-        "repo": "inotia00/revanced-patches",
-        "stable": "v5.13.0",
-        "prerelease": "v5.14.1-dev.1"
-    },
-    "advanced": {
-        "label": "Advanced",
-        "repo": "anddea/revanced-patches",
-        "stable": "v3.13.0",
-        "prerelease": "v3.15.0-dev.4"
-    },
-    "lisouseinaikyrios": {
-        "label": "LisoUseInAIKyrios",
-        "repo": "lisouseinaikyrios/revanced-patches",
-        "stable": "v1.0.0-dev.5",
-        "prerelease": ""
-    }
+  "revanced": {
+    "label": "Official",
+    "repo": "revanced/revanced-patches",
+    "stable": "v5.46.0",
+    "prerelease": "v5.47.0-dev.12"
+  },
+  "extended": {
+    "label": "Extended",
+    "repo": "inotia00/revanced-patches",
+    "stable": "v5.13.1",
+    "prerelease": "v5.14.1-dev.2"
+  },
+  "advanced": {
+    "label": "Advanced",
+    "repo": "anddea/revanced-patches",
+    "stable": "v3.14.0",
+    "prerelease": "v3.15.0-dev.5"
+  },
+  "lisouseinaikyrios": {
+    "label": "LisoUseInAIKyrios",
+    "repo": "lisouseinaikyrios/revanced-patches",
+    "stable": "v1.0.0-dev.6",
+    "prerelease": ""
+  }
 }
-
