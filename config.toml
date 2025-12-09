@@ -218,6 +218,28 @@ patches-source = "anddea/revanced-patches"
 # apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
+[YouTube-LisoUseInAIKyrios]
+enabled = true
+app-name = "YouTube"
+build-mode = "both"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced LisoUseInAIKyrios"
+cli-source = "LisoUseInAIKyrios/revanced-cli"
+patches-source = "LisoUseInAIKyrios/revanced-patches"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-
-
+[Music-LisoUseInAIKyrios]
+enabled = true
+app-name = "Music"
+build-mode = "both"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced LisoUseInAIKyrios"
+cli-source = "LisoUseInAIKyrios/revanced-cli"
+patches-source = "LisoUseInAIKyrios/revanced-patches"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
