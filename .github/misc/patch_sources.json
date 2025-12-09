@@ -1,3 +1,8 @@
 {
-  "revanced": { "label": "Official", "repo": "revanced/revanced-patches", "stable": "", "prerelease": "" }
+  "revanced": {
+    "label": "Official",
+    "repo": "revanced/revanced-patches",
+    "stable": "v5.46.0",
+    "prerelease": "v5.47.0-dev.12"
+  }
 }
