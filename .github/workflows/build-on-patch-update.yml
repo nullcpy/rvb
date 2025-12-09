@@ -201,10 +201,21 @@ jobs:
             local out_file=".github/misc/config.$mode.updated.toml"
             cp "$BASE_CONFIG" "$out_file"
 
-            # For dev we prepend patches-version = "dev"
-            if [ "$mode" = "dev" ]; then
-              echo 'patches-version = "dev"' > tmp_header
-              cat "$out_file" >> tmp_header
+            # Inject mode-specific global settings BEFORE patch toggling:
+            if [ "$mode" = "stable" ]; then
+              # Stable: magisk update enabled
+              {
+                echo 'enable-magisk-update = true'
+                cat "$out_file"
+              } > tmp_header
+              mv tmp_header "$out_file"
+            else
+              # Dev: patches-version + magisk update disabled
+              {
+                echo 'patches-version = "dev"'
+                echo 'enable-magisk-update = false'
+                cat "$out_file"
+              } > tmp_header
               mv tmp_header "$out_file"
             fi
 
