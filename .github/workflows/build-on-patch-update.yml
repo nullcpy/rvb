@@ -37,10 +37,10 @@ jobs:
 
           if [ ! -f "$PATCH_FILE" ]; then
             cat > "$PATCH_FILE" << 'EOF'
-{
-  "patch": { "label": "", "repo": "", "stable": "", "prerelease": "" }
-}
-EOF
+          {
+            "patch": { "label": "", "repo": "", "stable": "", "prerelease": "" }
+          }
+          EOF
             echo "created=true" >> "$GITHUB_OUTPUT"
           else
             echo "created=false" >> "$GITHUB_OUTPUT"
