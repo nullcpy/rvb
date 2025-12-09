@@ -3,7 +3,7 @@ enable-magisk-update = false
 parallel-jobs = 1
 
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -14,7 +14,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -25,7 +25,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -84,7 +84,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [GoogleRecorder]
-enabled = true 
+enabled = false 
 app-name = "GoogleRecorder"
 build-mode = "both"
 arch = "arm64-v8a"
@@ -105,7 +105,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [ProtonVPN]
-enabled = true 
+enabled = false 
 app-name = "ProtonVPN"
 build-mode = "apk"
 arch = "all"
@@ -135,7 +135,7 @@ patches-source = "revanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [YouTube-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -147,7 +147,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -172,7 +172,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -184,7 +184,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -227,8 +227,8 @@ build-mode = "both"
 arch = "all"
 version = "auto"
 rv-brand = "ReVanced LisoUseInAIKyrios"
-cli-source = "LisoUseInAIKyrios/revanced-cli"
-patches-source = "LisoUseInAIKyrios/revanced-patches"
+cli-source = "lisouseinaikyrios/revanced-cli"
+patches-source = "lisouseinaikyrios/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
@@ -240,8 +240,8 @@ build-mode = "both"
 arch = "both"
 version = "auto"
 rv-brand = "ReVanced LisoUseInAIKyrios"
-cli-source = "LisoUseInAIKyrios/revanced-cli"
-patches-source = "LisoUseInAIKyrios/revanced-patches"
+cli-source = "lisouseinaikyrios/revanced-cli"
+patches-source = "lisouseinaikyrios/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
