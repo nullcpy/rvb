@@ -227,21 +227,19 @@ arch = "all"
 version = "auto"
 rv-brand = "ReVanced LisoUseInAIKyrios"
 cli-source = "LisoUseInAIKyrios/revanced-cli"
-cli-version = "v1.0.0-dev.6"
 patches-source = "LisoUseInAIKyrios/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-LisoUseInAIKyrios]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
 version = "auto"
 rv-brand = "ReVanced LisoUseInAIKyrios"
 cli-source = "LisoUseInAIKyrios/revanced-cli"
-cli-version = "v1.0.0-dev.6"
 patches-source = "LisoUseInAIKyrios/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
