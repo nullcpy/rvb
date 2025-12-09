@@ -103,6 +103,16 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
+[ProtonVPN]
+enabled = false 
+app-name = "ProtonVPN"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+patches-source = "revanced/revanced-patches"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+
 [SamsungRadio]
 enabled = false 
 app-name = "SamsungRadio"
