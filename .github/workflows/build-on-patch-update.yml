@@ -36,7 +36,11 @@ jobs:
           PATCH_FILE=".github/misc/patch_sources.json"
 
           if [ ! -f "$PATCH_FILE" ]; then
-            echo "{}" > "$PATCH_FILE"
+            cat > "$PATCH_FILE" << 'EOF'
+{
+  "patch": { "label": "", "repo": "", "stable": "", "prerelease": "" }
+}
+EOF
             echo "created=true" >> "$GITHUB_OUTPUT"
           else
             echo "created=false" >> "$GITHUB_OUTPUT"
@@ -51,7 +55,11 @@ jobs:
           file_pattern: .github/misc/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
+      # All remaining steps only run if patch_sources.json already existed
+      # and was NOT just created in this run.
+
       - name: Fetch Latest Tags (from patch_sources.json)
+        if: steps.ensure_patch_sources.outputs.created == 'false'
         id: fetch_tags
         run: |
           set -euo pipefail
@@ -100,6 +108,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
 
       - name: Compare Latest vs Stored Tags
+        if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
         run: |
           set -euo pipefail
@@ -147,7 +156,7 @@ jobs:
           echo "${DELIM2}" >> "$GITHUB_OUTPUT"
 
       - name: Commit Updated patch_sources.json
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
@@ -156,8 +165,8 @@ jobs:
           commit_message: "Update patch_sources.json with latest patch versions"
 
       - name: Generate Configs (Stable and Dev)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         id: generate_configs
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         env:
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
@@ -170,9 +179,10 @@ jobs:
           echo "$TAGS_NEW" > .github/misc/tags_new.json
           echo "$TAGS_OLD" > .github/misc/tags_old.json
 
-          # Compute repos that should be disabled for stable/prerelease
+          # Compute repos that should be disabled for STABLE builds
           jq -r '
-            .[0] as $new | .[1] as $old
+            . as $new
+            | input as $old
             | [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
                 | select($e.value.stable == "" or $e.value.stable == ($o.stable // ""))
@@ -181,8 +191,10 @@ jobs:
             | .[]
           ' .github/misc/tags_new.json .github/misc/tags_old.json > .github/misc/disable.stable.txt || true
 
+          # Compute repos that should be disabled for PRERELEASE (dev) builds
           jq -r '
-            .[0] as $new | .[1] as $old
+            . as $new
+            | input as $old
             | [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
                 | select($e.value.prerelease == "" or $e.value.prerelease == ($o.prerelease // ""))
@@ -210,7 +222,7 @@ jobs:
               disable_file=".github/misc/disable.prerelease.txt"
             fi
 
-            # If disable file doesn't exist, create empty
+            # Ensure disable file exists
             touch "$disable_file"
 
             awk -v disable_file="$disable_file" '
@@ -270,7 +282,7 @@ jobs:
           fi
 
       - name: Commit Updated Config (Stable)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1'
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
@@ -278,7 +290,7 @@ jobs:
           commit_message: "Update config.stable.updated.toml for new stable patches"
 
       - name: Commit Updated Config (Dev)
-        if: steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
@@ -286,8 +298,8 @@ jobs:
           commit_message: "Update config.dev.updated.toml for new dev patches"
 
       - name: Generate Version Numbers (Stable and Dev)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         id: versions
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
