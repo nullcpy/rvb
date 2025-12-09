@@ -174,33 +174,27 @@ jobs:
 
           BASE_CONFIG="config.toml"
 
-          # Write JSONs to temp files for jq
-          echo "$TAGS_NEW" > .github/misc/tags_new.json
-          echo "$TAGS_OLD" > .github/misc/tags_old.json
+          # Build ACTIVE repo lists:
+          # For STABLE: repos where new.stable is non-empty AND changed vs old
+          # For PRERELEASE: repos where new.prerelease is non-empty AND changed vs old
 
-          # Compute repos that should be disabled for STABLE builds
-          jq -r '
-            . as $new
-            | input as $old
-            | [ $new | to_entries[] | . as $e
+          # active.stable.txt
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
-                | select($e.value.stable == "" or $e.value.stable == ($o.stable // ""))
+                | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
                 | $e.value.repo
-              ]
-            | .[]
-          ' .github/misc/tags_new.json .github/misc/tags_old.json > .github/misc/disable.stable.txt || true
+            ] | .[]
+          ' > .github/misc/active.stable.txt || true
 
-          # Compute repos that should be disabled for PRERELEASE (dev) builds
-          jq -r '
-            . as $new
-            | input as $old
-            | [ $new | to_entries[] | . as $e
+          # active.prerelease.txt
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
-                | select($e.value.prerelease == "" or $e.value.prerelease == ($o.prerelease // ""))
+                | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
                 | $e.value.repo
-              ]
-            | .[]
-          ' .github/misc/tags_new.json .github/misc/tags_old.json > .github/misc/disable.prerelease.txt || true
+            ] | .[]
+          ' > .github/misc/active.prerelease.txt || true
 
           generate_config() {
             local mode="$1" # stable | dev
@@ -214,25 +208,25 @@ jobs:
               mv tmp_header "$out_file"
             fi
 
-            local disable_file
+            local active_file
             if [ "$mode" = "stable" ]; then
-              disable_file=".github/misc/disable.stable.txt"
+              active_file=".github/misc/active.stable.txt"
             else
-              disable_file=".github/misc/disable.prerelease.txt"
+              active_file=".github/misc/active.prerelease.txt"
             fi
 
-            # Ensure disable file exists
-            touch "$disable_file"
+            # Ensure active file exists (may be empty)
+            touch "$active_file"
 
-            awk -v disable_file="$disable_file" '
+            awk -v active_file="$active_file" '
               BEGIN {
-                # Load repos to disable into associative array
-                while ((getline repo < disable_file) > 0) {
-                  if (repo != "") disabled[repo] = 1
+                # Load active repos into associative array
+                while ((getline repo < active_file) > 0) {
+                  if (repo != "") active[repo] = 1
                 }
-                close(disable_file)
+                close(active_file)
                 section = ""
-                keep = 1
+                keep = 0
               }
               /^\[.*\]/ {
                 flush_section()
@@ -240,7 +234,7 @@ jobs:
                 delete lines
                 n = 0
                 lines[n++] = $0
-                keep = 1
+                keep = 0   # default: disable section unless it matches an active repo
                 next
               }
               {
@@ -248,8 +242,8 @@ jobs:
                 if ($0 ~ /patches-source *= *"[^"]+"/) {
                   match($0, /patches-source *= *"([^"]+)"/, m)
                   src = m[1]
-                  if (src in disabled) {
-                    keep = 0
+                  if (src in active) {
+                    keep = 1
                   }
                 }
                 next
@@ -272,11 +266,11 @@ jobs:
             echo "${mode}_config=${out_file}" >> "$GITHUB_OUTPUT"
           }
 
-          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" == "1" ]; then
+          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
             generate_config "stable"
           fi
 
-          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" == "1" ]; then
+          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
             generate_config "dev"
           fi
 
