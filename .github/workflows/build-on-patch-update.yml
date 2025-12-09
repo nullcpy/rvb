@@ -80,7 +80,8 @@ jobs:
             local prerelease=$2
             curl -s "https://api.github.com/repos/$repo/releases" \
               | jq -r "
-                map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) |
+                (arrays | map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) //
+                 .) |
                 sort_by(.published_at) |
                 reverse |
                 .[0].tag_name // \"\"
@@ -89,7 +90,7 @@ jobs:
 
           NEW_JSON="$BASE_JSON"
 
-          # For each patch source, get stable + prerelease tags
+          # For each patch source, get stable + prerelease tags (skip empty repo)
           while read -r id repo; do
             stable=$(get_latest_tag "$repo" false)
             pre=$(get_latest_tag "$repo" true)
@@ -100,7 +101,7 @@ jobs:
               --arg pre "$pre" \
               '.[$id].stable = $stable | .[$id].prerelease = $pre' \
               <<<"$NEW_JSON")
-          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | "\(.key) \(.value.repo)"')
+          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo)"')
 
           DELIM="$(openssl rand -hex 8)"
           echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
@@ -123,16 +124,16 @@ jobs:
             NEW_JSON="{}"
           fi
 
-          # Compute triggers
+          # Compute triggers (use $old and $new properly)
           TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
-            [ new | to_entries[] | . as $e
+            [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
             ] | if length > 0 then 1 else 0 end
           ')
 
           TRIGGER_PRERELEASE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
-            [ new | to_entries[] | . as $e
+            [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
             ] | if length > 0 then 1 else 0 end
@@ -273,11 +274,11 @@ jobs:
             echo "${mode}_config=${out_file}" >> "$GITHUB_OUTPUT"
           }
 
-          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
+          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" == "1" ]; then
             generate_config "stable"
           fi
 
-          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
+          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" == "1" ]; then
             generate_config "dev"
           fi
 
@@ -358,7 +359,7 @@ jobs:
           MSG="*New Patch Detected!* (Pre-release)${NL}"
 
           CHANGES=$(jq -n --argjson old "$TAGS_OLD" --argjson new "$TAGS_NEW" '
-            [ new | to_entries[] | . as $e
+            [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
               | {
@@ -531,7 +532,7 @@ jobs:
           MSG="*New Patch Detected!*${NL}"
 
           CHANGES=$(jq -n --argjson old "$TAGS_OLD" --argjson new "$TAGS_NEW" '
-            [ new | to_entries[] | . as $e
+            [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
               | {
