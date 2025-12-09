@@ -1,6 +1,6 @@
 patches-version = "dev"
+enable-magisk-update = false
 parallel-jobs = 1
-enable-magisk-update = true
 
 [YouTube]
 enabled = true
@@ -33,6 +33,7 @@ version = "auto"
 patches-source = "revanced/revanced-patches"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Duolingo]
 enabled = false 
@@ -219,6 +220,28 @@ patches-source = "anddea/revanced-patches"
 # apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
+[YouTube-LisoUseInAIKyrios]
+enabled = false
+app-name = "YouTube"
+build-mode = "both"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced LisoUseInAIKyrios"
+cli-source = "LisoUseInAIKyrios/revanced-cli"
+patches-source = "LisoUseInAIKyrios/revanced-patches"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-
-
+[Music-LisoUseInAIKyrios]
+enabled = false
+app-name = "Music"
+build-mode = "both"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced LisoUseInAIKyrios"
+cli-source = "LisoUseInAIKyrios/revanced-cli"
+patches-source = "LisoUseInAIKyrios/revanced-patches"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
