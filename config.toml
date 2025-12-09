@@ -232,7 +232,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-LisoUseInAIKyrios]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
