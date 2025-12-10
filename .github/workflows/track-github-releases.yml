@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: track-updates
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   TG_CHAT: "@revanced_builder"
