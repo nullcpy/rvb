@@ -5,9 +5,14 @@ on:
     - cron: "20 */4 * * *"  # Every 4 hours
   workflow_dispatch:
 
+concurrency:
+  group: patch-build
+  cancel-in-progress: false
+
 jobs:
   check-patch:
-    permissions: write-all
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     outputs:
       trigger_stable: ${{ steps.compare.outputs.TRIGGER_STABLE }}
@@ -59,6 +64,8 @@ jobs:
       - name: Fetch Latest Tags (from patch_sources.json)
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: fetch_tags
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           PATCH_FILE=".github/misc/patch_sources.json"
@@ -76,14 +83,29 @@ jobs:
           get_latest_tag() {
             local repo=$1
             local prerelease=$2
-            curl -s "https://api.github.com/repos/$repo/releases" \
-              | jq -r "
-                (arrays | map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) //
-                 .) |
-                sort_by(.published_at) |
-                reverse |
-                .[0].tag_name // \"\"
-              "
+
+            # Fetch releases with auth, grab body + status
+            local resp status body
+            resp=$(curl -sS -w '%{http_code}' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$repo/releases" || true)
+
+            status="${resp: -3}"
+            body="${resp::-3}"
+
+            # On non-200, treat as "no tag"
+            if [ "$status" != "200" ]; then
+              echo ""
+              return 0
+            fi
+
+            printf '%s\n' "$body" | jq -r "
+              map(select(.prerelease == $prerelease and .tag_name != null and .tag_name != \"\")) |
+              sort_by(.published_at) |
+              reverse |
+              .[0].tag_name // \"\"
+            "
           }
 
           NEW_JSON="$BASE_JSON"
@@ -333,7 +355,8 @@ jobs:
   build-dev:
     needs: check-patch
     if: needs.check-patch.outputs.trigger_prerelease == '1'
-    permissions: write-all
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (Main)
@@ -375,7 +398,7 @@ jobs:
           ')
 
           if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
-            MSG+="${NL}(No detailed changes available)${NL}"
+            MSG+="${NL}(Patch versions changed, but details could not be parsed)${NL}"
           else
             while read -r item; do
               label=$(echo "$item" | jq -r '.label')
@@ -506,7 +529,8 @@ jobs:
   build-stable:
     needs: [check-patch, build-dev]
     if: always() && needs.check-patch.outputs.trigger_stable == '1'
-    permissions: write-all
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (Main)
@@ -548,7 +572,7 @@ jobs:
           ')
 
           if [ "$(echo "$CHANGES" | jq 'length')" -eq 0 ]; then
-            MSG+="${NL}(No detailed changes available)${NL}"
+            MSG+="${NL}(Patch versions changed, but details could not be parsed)${NL}"
           else
             while read -r item; do
               label=$(echo "$item" | jq -r '.label')
