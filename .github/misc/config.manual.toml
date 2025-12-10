@@ -1,6 +1,6 @@
 parallel-jobs = 1
-enable-magisk-update = true
-# patches-version = "dev"
+enable-magisk-update = false 
+patches-version = "dev"
 
 [YouTube]
 enabled = false
@@ -14,7 +14,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-LisoUseInAIKyrios]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -82,6 +82,21 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[Twitter-Piko]
+enabled = true
+app-name = "Twitter"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+rv-brand = "ReVanced Piko"
+patches-source = "crimera/piko"
+cli-source = "ReVanced/revanced-cli"
+cli-version = "v4.6.0"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [TikTok]
 enabled = false 
