@@ -1,10 +1,16 @@
 name: Build Manually
+
 on:
   workflow_dispatch:
 
+concurrency:
+  group: manual-build
+  cancel-in-progress: false
+
 jobs:
   build:
-    permissions: write-all
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Setup Java (Zulu 17)
@@ -24,12 +30,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
-          if [ -z "$TAG" ]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
+          set -euo pipefail
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
       - name: Build Modules and APKs
-        run: if [ -f ".github/misc/config.manual.toml" ]; then ./build.sh .github/misc/config.manual.toml; else ./build.sh config.toml; fi
+        run: |
+          set -euo pipefail
+          if [ -f ".github/misc/config.manual.toml" ]; then
+            ./build.sh .github/misc/config.manual.toml
+          else
+            ./build.sh config.toml
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -38,6 +51,7 @@ jobs:
       - name: Get Output
         id: get_output
         run: |
+          set -euo pipefail
           DELIM="$(openssl rand -hex 8)"
           echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
           cat build.md >> "$GITHUB_OUTPUT"
@@ -50,16 +64,18 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*
+          file_glob: true
           release_name: Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          file_glob: true
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON
         id: update_config
         run: |
+          set -euo pipefail
           git checkout -f update || git switch --discard-changes --orphan update
           cp -f build.tmp build.md
+
           get_update_json() {
             echo "{
             \"version\": \"$1\",
@@ -95,8 +111,8 @@ jobs:
       - name: Notify Telegram (Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-        if: env.TG_TOKEN != null
         run: |
+          set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
           TG_CHAT="@revanced_builder"
@@ -105,6 +121,7 @@ jobs:
           APKS=""
           MODULES=""
           HAS_MODULES=false
+
           for OUTPUT in *; do
             DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
@@ -114,23 +131,29 @@ jobs:
               HAS_MODULES=true
             fi
           done
+
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
 
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*
 
-          ${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${NL}${NL}${BODY}${NL}${NL}"
           
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
 
           MSG+="*APKs:*${APKS}"
-
           MSG=${MSG:0:9450}
+
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-          curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" --data-urlencode "message_thread_id=${TG_THREAD_ID}" "$POST"
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "$POST"
 
   cleanup:
     needs: build
