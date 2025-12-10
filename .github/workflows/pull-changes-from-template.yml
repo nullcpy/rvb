@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  repo-sync:
+  sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
