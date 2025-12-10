@@ -96,7 +96,7 @@ cli-version = "v4.6.0"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [TikTok]
 enabled = false 
