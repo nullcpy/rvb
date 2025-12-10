@@ -43,7 +43,7 @@ jobs:
           if [ ! -f "$PATCH_FILE" ]; then
             cat > "$PATCH_FILE" << 'EOF'
           {
-            "patch": { "label": "", "repo": "", "stable": "", "prerelease": "" }
+            "patch": { "repo": "", "stable": "", "prerelease": "" }
           }
           EOF
             echo "created=true" >> "$GITHUB_OUTPUT"
@@ -389,7 +389,7 @@ jobs:
               | ($old[$e.key] // {}) as $o
               | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
               | {
-                  label: $e.value.label,
+                  key: $e.key,
                   repo: $e.value.repo,
                   old: ($o.prerelease // ""),
                   new: $e.value.prerelease
@@ -401,11 +401,11 @@ jobs:
             MSG+="${NL}(Patch versions changed, but details could not be parsed)${NL}"
           else
             while read -r item; do
-              label=$(echo "$item" | jq -r '.label')
+              name=$(echo "$item" | jq -r '.key')
               repo=$(echo "$item" | jq -r '.repo')
               old=$(echo "$item" | jq -r '.old')
               new=$(echo "$item" | jq -r '.new')
-              MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
+              MSG+="${NL}• [${name}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
             done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
@@ -563,7 +563,7 @@ jobs:
               | ($old[$e.key] // {}) as $o
               | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
               | {
-                  label: $e.value.label,
+                  key: $e.key,
                   repo: $e.value.repo,
                   old: ($o.stable // ""),
                   new: $e.value.stable
@@ -575,11 +575,11 @@ jobs:
             MSG+="${NL}(Patch versions changed, but details could not be parsed)${NL}"
           else
             while read -r item; do
-              label=$(echo "$item" | jq -r '.label')
+              name=$(echo "$item" | jq -r '.key')
               repo=$(echo "$item" | jq -r '.repo')
               old=$(echo "$item" | jq -r '.old')
               new=$(echo "$item" | jq -r '.new')
-              MSG+="${NL}• [${label}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
+              MSG+="${NL}• [${name}](https://github.com/${repo}/releases/tag/${new}):${NL}Old: \`${old}\` → New: \`${new}\`${NL}"
             done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
