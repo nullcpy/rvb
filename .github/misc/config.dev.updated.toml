@@ -1,5 +1,6 @@
 patches-version = "dev"
 enable-magisk-update = false
+parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
@@ -135,7 +136,7 @@ patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [YouTube-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -147,7 +148,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -172,7 +173,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -184,7 +185,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
