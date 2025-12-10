@@ -25,7 +25,6 @@ jobs:
 
       - name: Ensure repos.json exists
         run: |
-          set -euo pipefail
           mkdir -p .github/misc
           if [ ! -f .github/misc/repos.json ]; then
             echo "{}" > .github/misc/repos.json
@@ -33,10 +32,9 @@ jobs:
 
       - name: Check releases and notify
         id: notify
-        if: ${{ secrets.TG_TOKEN != '' }}
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TG_CHAT: "@revanced_builder"
         run: |
           set -euo pipefail
           NL=$'\n'
@@ -52,14 +50,14 @@ jobs:
 
             RESPONSE=$(curl -sf \
               -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/$repo/releases/latest" 2>/dev/null) || {
               echo "No release or error for $repo"
               continue
             }
 
             NEW_TAG=$(echo "$RESPONSE" | jq -r '.tag_name')
-            if [ -z "$NEW_TAG" ] || [ "$NEW_TAG" = "$LAST_TAG" ]; then
+            if [ "$NEW_TAG" = "$LAST_TAG" ]; then
               echo "No new release for $repo"
               continue
             fi
@@ -85,7 +83,7 @@ jobs:
                 MSG+="[${ESC_ASSET}](${DL_URL})${NL}${NL}"
               done
             else
-              MSG+="No assets attached.${NL}${NL}"
+              MSG+="No assets attached."
             fi
             MSG+="@revanced\\_builder"
 
@@ -131,30 +129,19 @@ jobs:
           fetch-depth: 1
 
       - name: Fetch APK Assets (FiorenMas Repo)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
           mkdir -p .github/misc
-          RESP=$(curl -sS \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" || echo "")
-          if [ -z "$RESP" ]; then
-            echo "Failed to fetch releases from FiorenMas repo"
-            RESP='{"assets":[]}'
-          fi
-
-          printf '%s\n' "$RESP" | jq -r '
-            .assets // []
-            | map(select(.name | endswith(".apk")))
-            | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
-          ' > .github/misc/current_apks.json
+          curl -s "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
+            | jq -r '
+              .assets // []
+              | map(select(.name | endswith(".apk")))
+              | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
+              ' \
+            > .github/misc/current_apks.json
 
       - name: Initialize Timestamp File if Missing
         id: init_file
         run: |
-          set -euo pipefail
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           if [ ! -f "$TIMESTAMP_FILE" ]; then
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' .github/misc/current_apks.json \
@@ -176,12 +163,11 @@ jobs:
       - name: Compare and Detect Changes
         id: compare
         run: |
-          set -euo pipefail
           TIMESTAMP_FILE=".github/misc/apk_timestamps.json"
           CURRENT_FILE=".github/misc/current_apks.json"
           LINKS_FILE="/tmp/apk_links.md"
 
-          CHANGED_MARKDOWN=$(jq -nr --argjson current "$(cat "$CURRENT_FILE")" --argjson stored "$(cat "$TIMESTAMP_FILE")" '
+          CHANGED_MARKDOWN=$(jq -nr --argjson current "$(cat $CURRENT_FILE)" --argjson stored "$(cat $TIMESTAMP_FILE)" '
             [$current[] | select(.updated_at != ($stored[.name] // ""))] |
             if length == 0 then
               empty
@@ -213,11 +199,12 @@ jobs:
           commit_message: "Update apk_timestamps.json for new timestamps"
 
       - name: Notify Telegram (New APK)
-        if: steps.compare.outputs.changed == 'true' && secrets.TG_TOKEN != ''
+        if: steps.compare.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: "@revanced_builder"
+          TG_THREAD_ID: "267"
         run: |
-          set -euo pipefail
           NL=$'\n'
           LINKS_FILE="/tmp/apk_links.md"
       
