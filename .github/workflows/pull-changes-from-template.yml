@@ -5,6 +5,10 @@ on:
     - cron: "20 18 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: template-sync
+  cancel-in-progress: false
+
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
