@@ -133,6 +133,17 @@ version = "auto"
 patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
+[Spotify]
+enabled = false 
+app-name = "Spotify"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+patches-source = "ReVanced/revanced-patches"
+# uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
+
 [YouTube-Extended]
 enabled = true
 app-name = "YouTube"
