@@ -1,7 +1,7 @@
 parallel-jobs = 1
 enable-magisk-update = false
 patches-version = "dev"
-remove-rv-integrations-checks = true
+remove-rv-integrations-checks = false
 
 [YouTube]
 enabled = false
@@ -37,7 +37,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Duolingo]
-enabled = true 
+enabled = false 
 app-name = "Duolingo"
 build-mode = "apk"
 arch = "all"
@@ -49,7 +49,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Twitch]
-enabled = true 
+enabled = false 
 app-name = "Twitch"
 build-mode = "apk"
 arch = "all"
@@ -61,7 +61,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [Twitter]
-enabled = true 
+enabled = false 
 app-name = "Twitter"
 build-mode = "apk"
 arch = "all"
@@ -73,7 +73,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [TikTok]
-enabled = true 
+enabled = false 
 app-name = "TikTok"
 build-mode = "apk"
 arch = "all"
@@ -95,7 +95,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
 [ProtonMail]
-enabled = true 
+enabled = false 
 app-name = "ProtonMail"
 build-mode = "apk"
 arch = "all"
@@ -116,7 +116,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [SamsungRadio]
-enabled = true 
+enabled = false 
 app-name = "SamsungRadio"
 build-mode = "apk"
 arch = "all"
@@ -127,7 +127,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
-enabled = true
+enabled = false
 app-name = "Lightroom"
 build-mode = "apk"
 arch = "arm64-v8a"
@@ -136,7 +136,7 @@ patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [Spotify]
-enabled = true 
+enabled = false 
 app-name = "Spotify"
 build-mode = "apk"
 arch = "all"
@@ -145,6 +145,21 @@ patches-source = "ReVanced/revanced-patches"
 # uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 # apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
+
+[Twitter-Piko]
+enabled = true 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "arm64-v8a"
+version = "11.47.0-beta.2"
+rv-brand = "ReVanced Piko"
+patches-source = "crimera/piko"
+cli-source = "inotia00/revanced-cli"
+cli-version = "v4.6.2
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "480dpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Extended]
 enabled = false
