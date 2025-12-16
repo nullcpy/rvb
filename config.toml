@@ -144,6 +144,19 @@ patches-source = "ReVanced/revanced-patches"
 # apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
+[Twitter-Piko]
+enabled = true 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Piko"
+patches-source = "crimera/piko"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "480dpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
 [YouTube-Extended]
 enabled = true
 app-name = "YouTube"
