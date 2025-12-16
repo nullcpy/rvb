@@ -150,13 +150,13 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.musi
 enabled = true 
 app-name = "Twitter"
 build-mode = "apk"
-arch = "arm64-v8a"
-version = "11.47.0-beta.2"
+arch = "both"
+version = "auto"
 rv-brand = "ReVanced Piko"
 patches-source = "crimera/piko"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = "480dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# dpi = "480dpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Extended]
