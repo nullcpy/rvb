@@ -134,8 +134,32 @@ version = "auto"
 patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
+[Spotify]
+enabled = false 
+app-name = "Spotify"
+build-mode = "apk"
+arch = "all"
+version = "auto"
+patches-source = "ReVanced/revanced-patches"
+# uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
+
+[Twitter-Piko]
+enabled = true 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Piko"
+patches-source = "crimera/piko"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "480dpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
 [YouTube-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -147,7 +171,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -172,7 +196,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -184,7 +208,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music-Advanced]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
