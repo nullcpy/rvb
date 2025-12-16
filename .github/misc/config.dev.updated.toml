@@ -4,7 +4,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -15,7 +15,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [Music]
-enabled = true
+enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -26,7 +26,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Photos]
-enabled = true
+enabled = false
 app-name = "Photos"
 build-mode = "both"
 arch = "both"
@@ -85,7 +85,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [GoogleRecorder]
-enabled = true 
+enabled = false 
 app-name = "GoogleRecorder"
 build-mode = "both"
 arch = "arm64-v8a"
@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [ProtonVPN]
-enabled = true 
+enabled = false 
 app-name = "ProtonVPN"
 build-mode = "apk"
 arch = "all"
@@ -145,6 +145,19 @@ patches-source = "ReVanced/revanced-patches"
 # uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 # apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
+
+[Twitter-Piko]
+enabled = true 
+app-name = "Twitter"
+build-mode = "apk"
+arch = "both"
+version = "auto"
+rv-brand = "ReVanced Piko"
+patches-source = "crimera/piko"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "480dpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Extended]
 enabled = false
