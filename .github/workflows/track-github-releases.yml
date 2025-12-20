@@ -95,12 +95,15 @@ jobs:
             ASSETS=$(echo "$RESPONSE" | jq -c '.assets // []')
             if [ "$(echo "$ASSETS" | jq 'length')" -gt 0 ]; then
               MSG+="*Assets:*${NL}"
-              echo "$ASSETS" | jq -c '.[]' | while read -r asset; do
+              
+              # FIXED: Used process substitution < <(...) instead of pipe to keep MSG in scope
+              while read -r asset; do
                 NAME=$(echo "$asset" | jq -r '.name')
                 DL=$(echo "$asset" | jq -r '.browser_download_url')
                 ESC=$(printf "%s" "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
                 MSG+="[${ESC}](${DL})${NL}${NL}"
-              done
+              done < <(echo "$ASSETS" | jq -c '.[]')
+              
             else
               MSG+="No assets attached.${NL}"
             fi
@@ -127,7 +130,6 @@ jobs:
           skip_checkout: true
           file_pattern: .github/misc/repos.json
           commit_message: "Update tracked release versions"
-
 
   track-fiorenmas-apks:
     name: Track FiorenMas APK Updates
@@ -180,7 +182,6 @@ jobs:
           file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Initialize apk_timestamps.json"
 
-
       - name: Compare and Detect Changes
         id: compare
         run: |
@@ -207,7 +208,6 @@ jobs:
             echo "" > /tmp/apk_links.md
           fi
 
-
       - name: Commit Updated Timestamps
         if: steps.compare.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -217,13 +217,14 @@ jobs:
           file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Update apk timestamps"
 
-
       - name: Notify Telegram (New APK)
         if: steps.compare.outputs.changed == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
           NL=$'\n'
+          # NOTE: This array split is risky if filenames contain spaces. 
+          # Assuming standard APK names without spaces for now.
           LINKS=( $(grep -v '^$' /tmp/apk_links.md) )
 
           BASE_HEAD="*New APK Detected in FiorenMas Repo!*"
