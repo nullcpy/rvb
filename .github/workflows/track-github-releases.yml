@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
 
       - name: Ensure repos.json exists
         run: |
@@ -145,6 +148,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
+          ref: main
           fetch-depth: 1
 
       - name: Fetch APK Assets (FiorenMas Repo)
