@@ -93,13 +93,12 @@ jobs:
             URL=$(echo "$RESPONSE" | jq -r '.html_url')
             ESC_NAME=$(printf "%s" "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
 
-            MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}"
+            MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
 
             ASSETS=$(echo "$RESPONSE" | jq -c '.assets // []')
             if [ "$(echo "$ASSETS" | jq 'length')" -gt 0 ]; then
               MSG+="*Assets:*${NL}"
               
-              # FIXED: Used process substitution < <(...) instead of pipe to keep MSG in scope
               while read -r asset; do
                 NAME=$(echo "$asset" | jq -r '.name')
                 DL=$(echo "$asset" | jq -r '.browser_download_url')
