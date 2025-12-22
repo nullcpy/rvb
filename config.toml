@@ -104,7 +104,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [ProtonVPN]
-enabled = true 
+enabled = false
 app-name = "ProtonVPN"
 build-mode = "apk"
 arch = "all"
