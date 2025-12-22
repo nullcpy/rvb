@@ -25,7 +25,7 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Google-Recorder]
 enabled = true 
