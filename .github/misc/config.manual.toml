@@ -3,7 +3,7 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = true
+enabled = false
 build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -11,16 +11,16 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Google-Photos]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -29,7 +29,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Google-Recorder]
-enabled = true 
+enabled = false 
 build-mode = "both"
 arch = "arm64-v8a"
 version = "auto"
@@ -38,27 +38,27 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
 [Proton-Mail]
-enabled = true 
+enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Proton-VPN]
-enabled = true
+enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [Samsung-Radio]
-enabled = true 
+enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
-enabled = true
+enabled = false
 arch = "arm64-v8a"
 version = "auto"
 patches-source = "ReVanced/revanced-patches"
@@ -111,7 +111,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-LisoUseInAIKyrios]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "ReVanced-LisoUseInAIKyrios"
