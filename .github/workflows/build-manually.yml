@@ -58,6 +58,24 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
+      - name: Check Prerelease Status
+        id: check_prerelease
+        run: |
+          set -euo pipefail
+          if [ -f ".github/misc/config.manual.toml" ]; then
+            CONFIG=".github/misc/config.manual.toml"
+          else
+            CONFIG="config.toml"
+          fi
+          
+          if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
+            echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
+            echo "Status: Prerelease detected."
+          else
+            echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
+            echo "Status: Standard release."
+          fi
+
       - name: Upload to Release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -68,6 +86,7 @@ jobs:
           release_name: Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           overwrite: true
+          prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
 
       - name: Update Changelog and Magisk Update JSON
         id: update_config
