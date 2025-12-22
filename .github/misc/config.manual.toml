@@ -32,7 +32,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
@@ -42,7 +42,7 @@ enabled = true
 # version = "25.3.0"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
@@ -52,7 +52,7 @@ enabled = true
 # version = "10.86.0-release.0"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
@@ -62,7 +62,7 @@ enabled = true
 # version = "auto"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
@@ -115,7 +115,7 @@ apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcast
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
@@ -126,7 +126,7 @@ arch = "both"
 rv-brand = "ReVanced-Piko"
 patches-source = "crimera/piko"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "480dpi"
+dpi = " 120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
@@ -157,7 +157,7 @@ app-name = "Reddit"
 rv-brand = "ReVanced-Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
@@ -190,7 +190,7 @@ app-name = "Reddit"
 rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# dpi = "120-640dpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
