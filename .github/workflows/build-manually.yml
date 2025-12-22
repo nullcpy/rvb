@@ -70,10 +70,14 @@ jobs:
           
           if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
-            echo "Status: Prerelease detected."
+            echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
+            echo "Status: Prerelease (Thread 350)."
           else
             echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
-            echo "Status: Standard release."
+            echo "TG_THREAD_ID=262" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
+            echo "Status: Release (Thread 262)."
           fi
 
       - name: Upload to Release
@@ -126,16 +130,18 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-      
+       
       - name: Notify Telegram (Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_THREAD_ID: ${{ steps.check_prerelease.outputs.TG_THREAD_ID }}
+          TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
           TG_CHAT="@revanced_builder"
-          TG_THREAD_ID="262"
+          
           NL=$'\n'
           APKS=""
           MODULES=""
@@ -156,8 +162,8 @@ jobs:
 
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
 
-          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${NL}${NL}${BODY}${NL}${NL}"
-          
+          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
+           
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
@@ -190,3 +196,5 @@ jobs:
           delete_workflows: true
           workflows_keep_day: 30
           gh_token: ${{ secrets.GITHUB_TOKEN }}
+
+          
