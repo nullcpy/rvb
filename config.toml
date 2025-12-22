@@ -27,46 +27,8 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[Duolingo]
-enabled = false 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
-
-[Twitch]
-enabled = false 
-# arch = "all"
-# version = "25.3.0"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
-# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
-
-[Twitter]
-enabled = false 
-# arch = "all"
-# version = "10.86.0-release.0"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-
-[TikTok]
-enabled = false 
-# arch = "all"
-# version = "auto"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
-
 [Google-Recorder]
-enabled = false 
+enabled = true 
 build-mode = "both"
 arch = "arm64-v8a"
 version = "auto"
@@ -75,59 +37,33 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
 [Proton-Mail]
-enabled = false 
+enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Proton-VPN]
-enabled = false
+enabled = true
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [Samsung-Radio]
-enabled = false 
+enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
-enabled = false
+enabled = true
 arch = "arm64-v8a"
 version = "auto"
 patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
-
-[Spotify]
-enabled = false 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
-
-[Reddit]
-enabled = false
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-
-[Twitter-Piko]
-enabled = false 
-app-name = "Twitter"
-arch = "both"
-rv-brand = "ReVanced-Piko"
-patches-source = "crimera/piko"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = " 120-640dpi 480dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [YouTube-Extended]
 enabled = true
@@ -149,16 +85,6 @@ patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Reddit-Extended]
-enabled = false 
-app-name = "Reddit"
-rv-brand = "ReVanced-Extended"
-patches-source = "inotia00/revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [YouTube-Advanced]
 enabled = true
@@ -182,25 +108,6 @@ patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Reddit-Advanced]
-enabled = false 
-app-name = "Reddit"
-rv-brand = "ReVanced-Advanced"
-patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-
-[Spotify-Advanced]
-enabled = false 
-app-name = "Spotify"
-rv-brand = "ReVanced-Advanced"
-patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [YouTube-LisoUseInAIKyrios]
 enabled = true
