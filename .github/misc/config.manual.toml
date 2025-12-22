@@ -1,4 +1,5 @@
 parallel-jobs = 1
+patches-version = "dev"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
