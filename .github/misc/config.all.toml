@@ -126,7 +126,7 @@ arch = "both"
 rv-brand = "ReVanced-Piko"
 patches-source = "crimera/piko"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = " 120-640dpi 480dpi nodpi anydpi"
+dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
