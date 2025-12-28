@@ -59,7 +59,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 | [LisoUseInAIKyrios](https://github.com/lisouseinaikyrios/revanced-patches) | YouTube         | universal | `^youtube-revanced-lisouseinaikyrios-v[\d.]+-all\.apk$`                     |
 |                                                                            | YouTube Music   | arm64     | `^youtube-music-revanced-lisouseinaikyrios-v[\d.]+-arm64-v8a\.apk$`         |
 |                                                                            |                 | arm32     | `^youtube-music-revanced-lisouseinaikyrios-v[\d.]+-arm-v7a\.apk$`           |
-| [Crimera](https://github.com/crimera/piko)                                 | Twitter         | arm64     | `twitter-revanced-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm64-v8a\.apk`            |
+| [Piko](https://github.com/crimera/piko)                                    | Twitter         | arm64     | `twitter-revanced-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm64-v8a\.apk`            |
 |                                                                            |                 | arm32     | `twitter-revanced-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm-v7a\.apk`              |
 
 `universal` : For all devices. <br>
