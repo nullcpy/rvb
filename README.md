@@ -21,10 +21,14 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 3. In the **App source URL** box, enter one of the following:
 
    - **For ReVanced APKs:**  
-     `github.com/geologically/revanced-builder`
+     ```
+     github.com/geologically/revanced-builder
+     ```
 
    - **For MicroG (required for Google APKs):**  
-     `github.com/WSTxda/MicroG-RE`
+     ```
+     github.com/WSTxda/MicroG-RE
+     ```
 
 4. Scroll down to **Filter APKs by regular expression**.  
 5. Enter the appropriate regex from the table below for the app you want.  
