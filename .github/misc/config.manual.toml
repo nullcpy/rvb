@@ -134,3 +134,14 @@ cli-version = "v6.0.0-dev.6"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[Twitter-Piko]
+enabled = true 
+app-name = "Twitter"
+arch = "both"
+rv-brand = "ReVanced-Piko"
+patches-source = "crimera/piko"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi 480dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
