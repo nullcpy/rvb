@@ -4,6 +4,9 @@
 # ![ReVanced Builder Icon](./.github/assets/icon.png) ReVanced Builder
 **Automatically builds and publishes ReVanced APKs & Magisk/KernelSU Modules whenever new patches are released.**
 
+> [!Important]
+> **Please star the repo! 🙏🥺**
+
 ### 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
 Get notified instantly when new builds are released.
 
