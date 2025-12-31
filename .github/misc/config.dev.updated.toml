@@ -4,7 +4,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = true
+enabled = false
 build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -12,7 +12,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -21,7 +21,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Google-Photos]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -30,7 +30,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Google-Recorder]
-enabled = true 
+enabled = false 
 build-mode = "both"
 arch = "arm64-v8a"
 version = "auto"
@@ -46,7 +46,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 # archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Proton-VPN]
-enabled = true
+enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
@@ -89,7 +89,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -101,7 +101,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
