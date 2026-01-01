@@ -7,7 +7,7 @@ build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music]
 enabled = true
@@ -25,7 +25,7 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Google-Recorder]
 enabled = true 
@@ -41,7 +41,7 @@ enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Proton-VPN]
 enabled = true
@@ -54,7 +54,7 @@ enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom]
 enabled = false
@@ -73,7 +73,7 @@ rv-brand = "ReVanced-Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Extended]
 enabled = true
@@ -84,7 +84,7 @@ rv-brand = "ReVanced-Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Advanced]
 enabled = true
@@ -96,7 +96,7 @@ rv-brand = "ReVanced Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Advanced]
 enabled = true
@@ -107,7 +107,7 @@ rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-LisoUseInAIKyrios]
 enabled = true
@@ -118,7 +118,7 @@ cli-source = "LisoUseInAIKyrios/revanced-cli"
 patches-source = "LisoUseInAIKyrios/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-LisoUseInAIKyrios]
 enabled = false
