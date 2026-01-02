@@ -142,3 +142,22 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[YouTube-Morphe]
+enabled = true
+build-mode = "apk"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Music-Morphe]
+enabled = true
+build-mode = "apk"
+arch = "both"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
