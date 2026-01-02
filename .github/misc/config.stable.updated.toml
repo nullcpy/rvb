@@ -146,7 +146,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 [YouTube-Morphe]
 enabled = true
 build-mode = "apk"
-rv-brand = "Morphe"
+rv-brand = ""
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -157,7 +157,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 enabled = true
 build-mode = "apk"
 arch = "both"
-rv-brand = "Morphe"
+rv-brand = ""
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
