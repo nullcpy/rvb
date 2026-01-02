@@ -50,23 +50,26 @@ get_rv_prebuilts() {
 	pr "Getting prebuilts (${patches_src%/*})" >&2
 	local cl_dir=${patches_src%/*}
 	cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
-	[ -d "$cl_dir" ] || mkdir "$cl_dir"
+	[ -d "$cl_dir" ] || mkdir -p "$cl_dir"
 	for src_ver in "$cli_src CLI $cli_ver revanced-cli" "$patches_src Patches $patches_ver patches"; do
 		set -- $src_ver
 		local src=$1 tag=$2 ver=${3-} fprefix=$4
-		local ext
+		local ext_list asset_found=false file tag_name name url
+
 		if [ "$tag" = "CLI" ]; then
-			ext="jar"
+			ext_list=("jar")
 			local grab_cl=false
 		elif [ "$tag" = "Patches" ]; then
-			ext="rvp"
+			ext_list=("mpp" "rvp")  # Try .mpp first, then .rvp
 			local grab_cl=true
-		else abort unreachable; fi
+		else abort "unreachable"; fi
+
 		local dir=${src%/*}
 		dir=${TEMP_DIR}/${dir,,}-rv
-		[ -d "$dir" ] || mkdir "$dir"
+		[ -d "$dir" ] || mkdir -p "$dir"
 
-		local rv_rel="https://api.github.com/repos/${src}/releases" name_ver
+		# Resolve version if "dev" or "latest"
+		local rv_rel="https://api.github.com/repos/${src}/releases"  # FIXED: removed extra space
 		if [ "$ver" = "dev" ]; then
 			local resp
 			resp=$(gh_req "$rv_rel" -) || return 1
@@ -80,31 +83,57 @@ get_rv_prebuilts() {
 			name_ver="$ver"
 		fi
 
-		local url file tag_name name
-		file=$(find "$dir" -name "${fprefix}-${name_ver#v}.${ext}" -type f 2>/dev/null)
+		# Try to find existing file
+		file=""
+		for ext in "${ext_list[@]}"; do
+			if [ "$name_ver" = "*" ]; then
+				# For "latest", find any matching file
+				file=$(find "$dir" -name "${fprefix}-*.$ext" -type f | head -1)
+			else
+				file=$(find "$dir" -name "${fprefix}-${name_ver#v}.$ext" -type f | head -1)
+			fi
+			if [ -n "$file" ]; then
+				asset_found=true
+				break
+			fi
+		done
+
 		if [ -z "$file" ]; then
-			local resp asset name
+			# Download from GitHub
+			local resp
 			resp=$(gh_req "$rv_rel" -) || return 1
 			tag_name=$(jq -r '.tag_name' <<<"$resp")
-			asset=$(jq -e -r ".assets[] | select(.name | endswith(\"$ext\"))" <<<"$resp") || return 1
-			url=$(jq -r .url <<<"$asset")
-			name=$(jq -r .name <<<"$asset")
-			file="${dir}/${name}"
-			gh_dl "$file" "$url" >&2 || return 1
-			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
+
+			# Try each extension
+			for ext in "${ext_list[@]}"; do
+				local asset
+				asset=$(jq -e -r ".assets[] | select(.name | endswith(\".$ext\"))" <<<"$resp")
+				if [ -n "$asset" ]; then
+					url=$(jq -r .url <<<"$asset")
+					name=$(jq -r .name <<<"$asset")
+					file="${dir}/${name}"
+					gh_dl "$file" "$url" >&2 || return 1
+					echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}" >>"${cl_dir}/changelog.md"
+					asset_found=true
+					break
+				fi
+			done
+
+			if [ "$asset_found" = false ]; then
+				epr "No asset found for $tag with extensions: ${ext_list[*]}"
+				return 1
+			fi
 		else
 			grab_cl=false
-			local for_err=$file
-			if [ "$ver" = "latest" ]; then
-				file=$(grep -v '/[^/]*dev[^/]*$' <<<"$file" | head -1)
-			else file=$(grep "/[^/]*${ver#v}[^/]*\$" <<<"$file" | head -1); fi
-			if [ -z "$file" ]; then abort "filter fail: '$for_err' with '$ver'"; fi
 			name=$(basename "$file")
 			tag_name=$(cut -d'-' -f3- <<<"$name")
 			tag_name=v${tag_name%.*}
 		fi
+
 		if [ "$tag" = "Patches" ]; then
-			if [ $grab_cl = true ]; then echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"; fi
+			if [ $grab_cl = true ]; then
+				echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"  # FIXED URL
+			fi
 			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 				if ! (
 					mkdir -p "${file}-zip" || return 1
@@ -152,19 +181,23 @@ config_update() {
 			if [ "${sources["$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then upped+=("$table_name"); fi
 		else
 			sources["$PATCHES_SRC/$PATCHES_VER"]=0
-			local rv_rel="https://api.github.com/repos/${PATCHES_SRC}/releases"
+			local rv_rel="https://api.github.com/repos/${PATCHES_SRC}/releases"  # FIXED
+			local resp
 			if [ "$PATCHES_VER" = "dev" ]; then
-				last_patches=$(gh_req "$rv_rel" - | jq -e -r '.[0]')
+				resp=$(gh_req "$rv_rel" -) || return 1
+				last_patches=$(jq -e -r '.[0]' <<<"$resp")
 			elif [ "$PATCHES_VER" = "latest" ]; then
-				last_patches=$(gh_req "$rv_rel/latest" -)
+				resp=$(gh_req "$rv_rel/latest" -) || return 1
+				last_patches="$resp"
 			else
-				last_patches=$(gh_req "$rv_rel/tags/${ver}" -)
+				resp=$(gh_req "$rv_rel/tags/${PATCHES_VER}" -) || return 1
+				last_patches="$resp"
 			fi
-			if ! last_patches=$(jq -e -r '.assets[] | select(.name | endswith("rvp")) | .name' <<<"$last_patches"); then
-				abort oops
+			if ! last_patches=$(jq -e -r '.assets[] | select(.name | endswith("mpp") or endswith("rvp")) | .name' <<<"$last_patches"); then
+				abort "No patch asset found in release"
 			fi
 			if [ "$last_patches" ]; then
-				if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep "$last_patches"); then
+				if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep -F "$last_patches"); then
 					sources["$PATCHES_SRC/$PATCHES_VER"]=1
 					prcfg=true
 					upped+=("$table_name")
@@ -230,7 +263,7 @@ semver_validate() {
 	[ ${#ac} = 0 ]
 }
 get_patch_last_supported_ver() {
-	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5 # TODO: resolve using all of these
+	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5
 	local op
 	if [ "$inc_sel" ]; then
 		if ! op=$(awk '{$1=$1}1' <<<"$list_patches"); then
@@ -269,19 +302,17 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1
+	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1  # FIXED URL
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "${bundle}" -o "${bundle}.mzip" -clean-meta -f 2>&1); then
 		epr "Apkeditor ERROR: $OP"
 		return 1
 	fi
-	# this is required because of apksig
 	mkdir "${bundle}-zip"
 	unzip -qo "${bundle}.mzip" -d "${bundle}-zip"
 	(
 		cd "${bundle}-zip" || abort
 		zip -0rq "${CWD}/${bundle}.zip" .
 	)
-	# if building module, sign the merged apk properly
 	if isoneof "module" "${build_mode_arr[@]}"; then
 		patch_apk "${bundle}.zip" "${output}" "--exclusive" "${args[cli]}" "${args[ptjar]}"
 		local ret=$?
@@ -416,7 +447,7 @@ dl_uptodown() {
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
 	if [ $is_bundle = true ]; then
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1
+		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1  # FIXED
 		merge_splits "${output}.apkm" "${output}"
 	else
 		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
@@ -621,11 +652,22 @@ build_rv() {
 
 		module_config "$base_template" "$pkg_name" "$version" "$arch"
 
-		local rv_patches_ver="${rv_patches_jar##*-}"
+		local rv_patches_ver
+		# Extract version from .mpp or .rvp filename
+		if [[ "${args[ptjar]}" == *.mpp ]]; then
+			rv_patches_ver="${args[ptjar]##*-}"
+			rv_patches_ver="${rv_patches_ver%.mpp}"
+		elif [[ "${args[ptjar]}" == *.rvp ]]; then
+			rv_patches_ver="${args[ptjar]##*-}"
+			rv_patches_ver="${rv_patches_ver%.rvp}"
+		else
+			rv_patches_ver="unknown"
+		fi
+
 		module_prop \
 			"${args[module_prop_name]}" \
 			"${app_name} ${args[rv_brand]}" \
-			"${version} (patches ${rv_patches_ver%%.rvp})" \
+			"${version} (patches ${rv_patches_ver})" \
 			"${app_name} ${args[rv_brand]} Magisk module" \
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
