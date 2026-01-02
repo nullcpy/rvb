@@ -63,6 +63,9 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            | Spotify         |           | `^spotify-revanced-advanced-v[\d.]+-all\.apk$`                              |
 |                                                                            | YouTube Music   | arm64     | `^youtube-music-revanced-advanced-v[\d.]+-arm64-v8a\.apk$`                  |
 |                                                                            |                 | arm32     | `^youtube-music-revanced-advanced-v[\d.]+-arm-v7a\.apk$`                    |
+| [Morphe](https://github.com/MorpheApp/morphe-patches)                      | YouTube         | universal | `^youtube-morphe-v[\d.]+-all\.apk$`                                         |
+|                                                                            | YouTube Music   | arm64     | `^youtube-music-morphe-v[\d.]+-arm64-v8a\.apk$`                             |
+|                                                                            |                 | arm32     | `^youtube-music-morphe-v[\d.]+-arm-v7a\.apk$`                               |
 | [LisoUseInAIKyrios](https://github.com/lisouseinaikyrios/revanced-patches) | YouTube         | universal | `^youtube-revanced-lisouseinaikyrios-v[\d.]+-all\.apk$`                     |
 |                                                                            | YouTube Music   | arm64     | `^youtube-music-revanced-lisouseinaikyrios-v[\d.]+-arm64-v8a\.apk$`         |
 |                                                                            |                 | arm32     | `^youtube-music-revanced-lisouseinaikyrios-v[\d.]+-arm-v7a\.apk$`           |
