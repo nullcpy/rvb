@@ -1,7 +1,6 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 enable-magisk-update = false
-remove-rv-integrations-checks = true
 
 [YouTube]
 enabled = false
@@ -12,7 +11,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Morphe]
-enabled = true
+enabled = false
 build-mode = "apk"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
@@ -21,7 +20,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe]
-enabled = true
+enabled = false
 build-mode = "apk"
 arch = "both"
 patches-source = "MorpheApp/morphe-patches"
@@ -108,16 +107,17 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
-version = "auto"
-rv-brand = "ReVanced Advanced"
+rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
+integrations-source = "anddea/revanced-integrations"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Advanced]
 enabled = false
