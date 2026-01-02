@@ -1,4 +1,5 @@
 parallel-jobs = 1
+remove-rv-integrations-checks = true
 
 [YouTube]
 enabled = true
@@ -90,9 +91,9 @@ enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
-version = "auto"
-rv-brand = "ReVanced Advanced"
+rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
