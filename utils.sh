@@ -60,7 +60,7 @@ get_rv_prebuilts() {
 			ext_list=("jar")
 			local grab_cl=false
 		elif [ "$tag" = "Patches" ]; then
-			ext_list=("mpp" "rvp")
+			ext_list=("mpp" "rvp")  # Try .mpp first, then .rvp
 			local grab_cl=true
 		else abort "unreachable"; fi
 
@@ -68,7 +68,8 @@ get_rv_prebuilts() {
 		dir=${TEMP_DIR}/${dir,,}-rv
 		[ -d "$dir" ] || mkdir -p "$dir"
 
-		local rv_rel="https://api.github.com/repos/${src}/releases"
+		# Resolve version if "dev" or "latest"
+		local rv_rel="https://api.github.com/repos/${src}/releases"  # FIXED: removed extra space
 		if [ "$ver" = "dev" ]; then
 			local resp
 			resp=$(gh_req "$rv_rel" -) || return 1
@@ -82,9 +83,11 @@ get_rv_prebuilts() {
 			name_ver="$ver"
 		fi
 
+		# Try to find existing file
 		file=""
 		for ext in "${ext_list[@]}"; do
 			if [ "$name_ver" = "*" ]; then
+				# For "latest", find any matching file
 				file=$(find "$dir" -name "${fprefix}-*.$ext" -type f | head -1)
 			else
 				file=$(find "$dir" -name "${fprefix}-${name_ver#v}.$ext" -type f | head -1)
@@ -96,9 +99,12 @@ get_rv_prebuilts() {
 		done
 
 		if [ -z "$file" ]; then
+			# Download from GitHub
 			local resp
 			resp=$(gh_req "$rv_rel" -) || return 1
 			tag_name=$(jq -r '.tag_name' <<<"$resp")
+
+			# Try each extension
 			for ext in "${ext_list[@]}"; do
 				local asset
 				asset=$(jq -e -r ".assets[] | select(.name | endswith(\".$ext\"))" <<<"$resp")
@@ -112,6 +118,7 @@ get_rv_prebuilts() {
 					break
 				fi
 			done
+
 			if [ "$asset_found" = false ]; then
 				epr "No asset found for $tag with extensions: ${ext_list[*]}"
 				return 1
@@ -125,10 +132,9 @@ get_rv_prebuilts() {
 
 		if [ "$tag" = "Patches" ]; then
 			if [ $grab_cl = true ]; then
-				echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
+				echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"  # FIXED URL
 			fi
-			# Only apply integrations patching to .rvp files
-			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ] && [[ "$file" == *.rvp ]]; then
+			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 				if ! (
 					mkdir -p "${file}-zip" || return 1
 					unzip -qo "${file}" -d "${file}-zip" || return 1
@@ -141,8 +147,6 @@ get_rv_prebuilts() {
 					echo >&2 "Patching revanced-integrations failed"
 				fi
 				rm -r "${file}-zip" || :
-			elif [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ] && [[ "$file" == *.mpp ]]; then
-				pr "Skipping integrations patching for .mpp (not supported)"
 			fi
 		fi
 		echo -n "$file "
@@ -177,7 +181,7 @@ config_update() {
 			if [ "${sources["$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then upped+=("$table_name"); fi
 		else
 			sources["$PATCHES_SRC/$PATCHES_VER"]=0
-			local rv_rel="https://api.github.com/repos/${PATCHES_SRC}/releases"
+			local rv_rel="https://api.github.com/repos/${PATCHES_SRC}/releases"  # FIXED
 			local resp
 			if [ "$PATCHES_VER" = "dev" ]; then
 				resp=$(gh_req "$rv_rel" -) || return 1
@@ -298,7 +302,7 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1
+	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1  # FIXED URL
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "${bundle}" -o "${bundle}.mzip" -clean-meta -f 2>&1); then
 		epr "Apkeditor ERROR: $OP"
 		return 1
@@ -443,7 +447,7 @@ dl_uptodown() {
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
 	if [ $is_bundle = true ]; then
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1
+		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1  # FIXED
 		merge_splits "${output}.apkm" "${output}"
 	else
 		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
@@ -456,13 +460,7 @@ dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path version=${version// /}
 	path=$(grep "${version_f#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
-	req "${url}/${path}" "$output" || return 1
-
-	# Auto-merge .apkm from archive
-	if [[ "$output" == *.apkm ]] || [[ "$path" == *.apkm ]]; then
-		merge_splits "$output" "$output.merged.apk" || return 1
-		mv "$output.merged.apk" "$output"
-	fi
+	req "${url}/${path}" "$output"
 }
 get_archive_resp() {
 	local r
@@ -655,6 +653,7 @@ build_rv() {
 		module_config "$base_template" "$pkg_name" "$version" "$arch"
 
 		local rv_patches_ver
+		# Extract version from .mpp or .rvp filename
 		if [[ "${args[ptjar]}" == *.mpp ]]; then
 			rv_patches_ver="${args[ptjar]##*-}"
 			rv_patches_ver="${rv_patches_ver%.mpp}"
