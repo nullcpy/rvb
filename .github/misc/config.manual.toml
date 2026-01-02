@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 enable-magisk-update = false
 remove-rv-integrations-checks = true
 
@@ -10,6 +10,25 @@ patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Morphe]
+enabled = true
+build-mode = "apk"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Music-Morphe]
+enabled = true
+build-mode = "apk"
+arch = "both"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Music]
 enabled = false
@@ -136,7 +155,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Twitter-Piko]
-enabled = true 
+enabled = false 
 app-name = "Twitter"
 arch = "both"
 rv-brand = "ReVanced-Piko"
