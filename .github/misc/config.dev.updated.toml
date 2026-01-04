@@ -124,7 +124,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "apk"
 rv-brand = "Morphe"
@@ -135,7 +135,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "apk"
 arch = "both"
