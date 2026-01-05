@@ -84,4 +84,3 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 ### ⭐ Credits
 - All credit goes to the original ReVanced patch developers and maintainers.
-- Icon by [u/droppermc](https://www.reddit.com/user/droppermc) from [r/revancedapp](https://www.reddit.com/r/revancedapp/comments/1o908dm/designed_some_logos_for_revancedrevanced_yt_musiᴄ). 
