@@ -83,5 +83,5 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 - Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
 
 ### ⭐ Credits
-- All credit goes to the original ReVanced patch developers and maintainers.
-- Icon from [ReVanced](https://github.com/ReVanced) project. 
+- All credit goes to the original patch developers and maintainers.
+- Icon is from ReVanced project. 
