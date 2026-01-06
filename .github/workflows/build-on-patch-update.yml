@@ -459,7 +459,7 @@ jobs:
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          BIN_ID="rvbuilder-dev-${{ needs.check-patch.outputs.next_dev_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          BIN_ID="revanced-builder-dev-${{ needs.check-patch.outputs.next_dev_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
           FILEBIN_URL="https://filebin.net"
 
           # Bundle APKs into a single ZIP (if any exist)
@@ -698,7 +698,7 @@ jobs:
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          BIN_ID="rvbuilder-stable-${{ needs.check-patch.outputs.next_stable_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          BIN_ID="revanced-builder-stable-${{ needs.check-patch.outputs.next_stable_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
           FILEBIN_URL="https://filebin.net"
 
           # Step 1: Create a ZIP with all APKs (if any)
