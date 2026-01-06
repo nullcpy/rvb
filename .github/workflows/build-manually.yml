@@ -92,6 +92,57 @@ jobs:
           overwrite: true
           prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
 
+      - name: Upload ZIPs to Filebin
+        id: upload_filebin
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          BIN_ID="revanced-builder-manual-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          # Bundle APKs into a single ZIP (if any)
+          APK_COUNT=$(ls *.apk 2>/dev/null | wc -l)
+          if [ "$APK_COUNT" -gt 0 ]; then
+            echo "📦 Bundling $APK_COUNT APK(s) into apks-bundle.zip"
+            zip -q9 apks-bundle.zip *.apk
+          else
+            echo "⚠️ No APK files found — skipping APK bundle."
+          fi
+
+          echo "Uploading ZIP files to bin: $BIN_ID"
+
+          # Upload only .zip files
+          uploaded_any=false
+          for FILE in *.zip; do
+            [ -e "$FILE" ] || continue
+            if [ -f "$FILE" ]; then
+              echo "→ Uploading $FILE..."
+              if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$FILE" "$FILEBIN_URL/$BIN_ID/$FILE"; then
+                uploaded_any=true
+                echo "✓ $FILE uploaded"
+              else
+                echo "⚠️ Failed to upload $FILE (continuing...)"
+              fi
+            fi
+          done
+
+          # Lock bin if any upload succeeded
+          if [ "$uploaded_any" = true ]; then
+            echo "🔒 Locking bin as read-only..."
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "✅ Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
+          else
+            echo "❌ No ZIP files to upload — skipping Filebin."
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Update Changelog and Magisk Update JSON
         id: update_config
         run: |
@@ -136,6 +187,8 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: ${{ steps.check_prerelease.outputs.TG_THREAD_ID }}
           TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+          FILEBIN_SUCCESS: ${{ steps.upload_filebin.outputs.UPLOAD_SUCCESS }}
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
@@ -163,6 +216,11 @@ jobs:
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
 
           MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
+
+          # Only add Filebin link if upload succeeded
+          if [ "$FILEBIN_SUCCESS" = "true" ]; then
+            MSG+="[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
+          fi
            
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
@@ -171,14 +229,13 @@ jobs:
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
 
-          POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-            "$POST"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   cleanup:
     needs: build
