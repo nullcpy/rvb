@@ -2,7 +2,7 @@ name: Build on Patch Update
 
 on:
   schedule:
-    - cron: "20 */4 * * *"  # Every 4 hours
+    - cron: "20 */4 * * *" # Every 4 hours
   workflow_dispatch:
 
 concurrency:
@@ -453,6 +453,46 @@ jobs:
           prerelease: true
           overwrite: true
 
+      - name: Upload to Filebin (Dev)
+        id: upload_filebin_dev
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          BIN_ID="rvbuilder-dev-${{ needs.check-patch.outputs.next_dev_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          echo "Uploading files to bin: $BIN_ID"
+
+          # Track if at least one file uploaded successfully
+          uploaded_any=false
+
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "→ Uploading $FILE..."
+              if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$FILE" "$FILEBIN_URL/$BIN_ID/$FILE"; then
+                uploaded_any=true
+                echo "✓ $FILE uploaded"
+              else
+                echo "⚠️ Failed to upload $FILE (continuing...)"
+              fi
+            fi
+          done
+
+          # Only lock the bin if at least one file was uploaded
+          if [ "$uploaded_any" = true ]; then
+            echo "🔒 Locking bin as read-only..."
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "✅ Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+          else
+            echo "❌ No files uploaded — skipping bin lock."
+          fi
+
+          echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
+
       - name: Update Changelog and Magisk Update JSON (Dev)
         run: |
           set -euo pipefail
@@ -493,6 +533,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@revanced_builder"
           TG_THREAD_ID: "350"
+          FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
         run: |
           set -euo pipefail
           cd build || exit 1
@@ -512,7 +553,7 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ needs.check-patch.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
@@ -626,6 +667,46 @@ jobs:
           tag: ${{ needs.check-patch.outputs.next_stable_ver }}
           overwrite: true
 
+      - name: Upload to Filebin (Stable)
+        id: upload_filebin_stable
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          BIN_ID="rvbuilder-stable-${{ needs.check-patch.outputs.next_stable_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          echo "Uploading files to bin: $BIN_ID"
+
+          # Track if at least one file uploaded successfully
+          uploaded_any=false
+
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "→ Uploading $FILE..."
+              if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$FILE" "$FILEBIN_URL/$BIN_ID/$FILE"; then
+                uploaded_any=true
+                echo "✓ $FILE uploaded"
+              else
+                echo "⚠️ Failed to upload $FILE (continuing...)"
+              fi
+            fi
+          done
+
+          # Only lock the bin if at least one file was uploaded
+          if [ "$uploaded_any" = true ]; then
+            echo "🔒 Locking bin as read-only..."
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "✅ Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+          else
+            echo "❌ No files uploaded — skipping bin lock."
+          fi
+
+          echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
+
       - name: Update Changelog and Magisk Update JSON (Stable)
         run: |
           set -euo pipefail
@@ -666,6 +747,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@revanced_builder"
           TG_THREAD_ID: "262"
+          FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
         run: |
           set -euo pipefail
           cd build || exit 1
@@ -685,7 +767,7 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
-          MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
           fi
