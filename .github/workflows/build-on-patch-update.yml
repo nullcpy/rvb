@@ -488,6 +488,12 @@ jobs:
             fi
           done
 
+          # DELETE apks-bundle.zip AFTER upload (so it doesn't appear in Telegram)
+          if [ -f "apks-bundle.zip" ]; then
+            echo "🗑️ Removing apks-bundle.zip from local build dir"
+            rm -f apks-bundle.zip
+          fi
+          
           # Lock bin only if upload succeeded
           if [ "$uploaded_any" = true ]; then
             echo "🔒 Locking bin as read-only..."
@@ -728,6 +734,12 @@ jobs:
               fi
             fi
           done
+
+          # DELETE apks-bundle.zip AFTER upload (so it doesn't appear in Telegram)
+          if [ -f "apks-bundle.zip" ]; then
+            echo "🗑️ Removing apks-bundle.zip from local build dir"
+            rm -f apks-bundle.zip
+          fi
 
           # Step 3: Lock bin if any ZIP was uploaded
           if [ "$uploaded_any" = true ]; then
