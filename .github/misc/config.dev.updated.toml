@@ -89,7 +89,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 arch = "all"
@@ -101,7 +101,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Advanced]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -124,7 +124,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Morphe]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "Morphe"
@@ -135,7 +135,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe]
-enabled = true
+enabled = false
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
