@@ -165,7 +165,7 @@ jobs:
             echo "❌ No files uploaded to BuzzHeavier."
           fi
 
-      - name: Upload Full Archive to Filebin
+      - name: Upload to Filebin
         id: upload_filebin
         run: |
           set -euo pipefail
@@ -200,7 +200,7 @@ jobs:
             echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
           fi
 
-          # DELETE apks-bundle.zip AFTER upload (so it doesn't appear in Telegram)
+          # DELETE archive-$RELEASE_NUMBER.zip AFTER upload (so it doesn't appear in Telegram)
           if [ -f "$ARCHIVE_NAME" ]; then
             echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
             rm -f "$ARCHIVE_NAME"
