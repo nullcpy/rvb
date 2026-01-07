@@ -1,6 +1,9 @@
-# 🗃️ FiorenMas ReVanced Builds
+# 🗃️ [FiorenMas ReVanced Builds](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root)
+**Real-time repository that builds APKs with Revanced, Revanced Extended, and many more patches about 10 minutes after their release.**
+> [!NOTE] 
+> Beta versions mean using dev patches, not using beta apk files. Beta version have the same package name as Stable version, so installing them will overwrite Stable version.
 
-### 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
+## 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 
 1. Open the **Obtainium** app.  
@@ -15,11 +18,13 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 7. Enter the appropriate regex from the table below for the app you want.  
 8. Tap **Add** to begin downloading.
 
-### 🔎 Regex Patterns for Filtering APKs
+## 🔎 Regex Patterns for Filtering APKs
 
 <details>
-<summary><strong>🦘 Jump Table</strong></summary>
+<summary><strong><b>🦘 Jump Table</b></strong></summary>
 
+  <br>
+  
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
 | [YouTube](#youtube) | [YouTube Music](#youtube-music) | [Facebook](#facebook) |
@@ -37,7 +42,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 </details>
 
 
-#### YouTube
+### YouTube
 
 | Patch Variant                | Channel | Arch         | Download URL                                                                                                                                                | Regex Pattern                                                              |
 |------------------------------|---------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
@@ -97,7 +102,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Extended Android 5           | Stable  | x86_64       | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/youtube-x86_64-revanced-extended-android-5.apk)       | `^youtube-x86_64-revanced-extended-android-5\.apk$`                       |
 
 
-#### YouTube Music
+### YouTube Music
 
 | Patch Variant          | Channel | Arch         | Download URL                                                                                                                                              | Regex Pattern                                                                      |
 |------------------------|---------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -127,7 +132,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Extended (anddea)      | Beta    | x86_64       | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/youtube-music-beta-x86_64-anddea.apk)                         | `^youtube-music-beta-x86_64-anddea\.apk$`                                        |
 
 
-#### Facebook
+### Facebook
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                             |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -135,7 +140,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/facebook-arm64-v8a-beta-revanced.apk)                 | `^facebook-arm64-v8a-beta-revanced\.apk$`                                |
 
 
-#### Twitter X
+### Twitter X
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -145,7 +150,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Piko          | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/twitter-arm64-v8a-beta-piko.apk)                      | `^twitter-arm64-v8a-beta-piko\.apk$`                                         |
 
 
-#### Instagram
+### Instagram
 
 | Patch Variant          | Channel     | Arch        | Download URL                                                                                                                                      | Regex Pattern                                                                   |
 |------------------------|------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -156,7 +161,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Instafel (Clone)       | Stable      | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/instagram-clone-instafel.apk)                          | `^instagram-clone-instafel\.apk$`                                              |
 
 
-#### Threads
+### Threads
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -164,7 +169,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/threads-beta-arm64-v8a-revanced.apk)                  | `^threads-beta-arm64-v8a-revanced\.apk$`                                     |
 
 
-#### Google Photos
+### Google Photos
 
 | Patch Variant | Channel | Arch         | Download URL                                                                                                                                         | Regex Pattern                                                                        |
 |---------------|---------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -178,7 +183,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | x86_64       | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/gg-photos-x86_64-beta-revanced.apk)                       | `^gg-photos-x86_64-beta-revanced\.apk$`                                             |
 
 
-#### Messenger
+### Messenger
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -186,7 +191,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/messenger-arm64-v8a-beta-revanced.apk)                | `^messenger-arm64-v8a-beta-revanced\.apk$`                                   |
 
 
-#### Spotify
+### Spotify
 
 | Patch Variant     | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |-------------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -196,7 +201,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Extended (anddea) | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/spotjfy-beta-arm64-v8a-anddea.apk)                    | `^spotjfy-beta-arm64-v8a-anddea\.apk$`                                       |
 
 
-#### Telegram
+### Telegram
 
 | Patch Variant          | Channel     | Arch        | Download URL                                                                                                                                           | Regex Pattern                                                                          |
 |------------------------|------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -204,7 +209,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced Experiments   | Stable      | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/telegram-web-version-revanced-experiments.apk)              | `^telegram-web-version-revanced-experiments\.apk$`                                    |
 
 
-#### TikTok
+### TikTok
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -212,7 +217,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/tiktok-beta-revanced.apk)                             | `^tiktok-beta-revanced\.apk$`                                                |
 
 
-#### Twitch
+### Twitch
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -222,7 +227,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/twitch-arm64-v8a-beta-revanced.apk)                   | `^twitch-arm64-v8a-beta-revanced\.apk$`                                      |
 
 
-#### Reddit
+### Reddit
 
 | Patch Variant              | Channel | Arch        | Download URL                                                                                                                                      | Regex Pattern                                                                        |
 |----------------------------|---------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -234,7 +239,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Extended Arsclib (inotia00)| Stable  | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-arm64-v8a-revanced-extended-arsclib.apk)         | `^reddit-arm64-v8a-revanced-extended-arsclib\.apk$`                                |
 
 
-#### Lightroom
+### Lightroom
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -242,7 +247,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/lightroom-beta-revanced.apk)                          | `^lightroom-beta-revanced\.apk$`                                             |
 
 
-#### Tumblr
+### Tumblr
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -252,7 +257,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/tumblr-arm64-v8a-beta-revanced.apk)                   | `^tumblr-arm64-v8a-beta-revanced\.apk$`                                      |
 
 
-#### SoundCloud
+### SoundCloud
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -262,7 +267,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/soundcloud-arm64-v8a-beta-revanced.apk)               | `^soundcloud-arm64-v8a-beta-revanced\.apk$`                                  |
 
 
-#### Duolingo
+### Duolingo
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -270,7 +275,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/duolingo-beta-revanced.apk)                           | `^duolingo-beta-revanced\.apk$`                                              |
 
 
-#### Google News
+### Google News
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -278,7 +283,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/googlenews-beta-arm64-v8a-revanced.apk)               | `^googlenews-beta-arm64-v8a-revanced\.apk$`                                  |
 
 
-#### Photomath
+### Photomath
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -286,7 +291,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/photomath-beta-revanced.apk)                          | `^photomath-beta-revanced\.apk$`                                             |
 
 
-#### Proton Mail
+### Proton Mail
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -294,7 +299,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/protonmail-beta-revanced.apk)                         | `^protonmail-beta-revanced\.apk$`                                            |
 
 
-#### RAR
+### RAR
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -302,7 +307,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/rar-beta-revanced.apk)                                | `^rar-beta-revanced\.apk$`                                                   |
 
 
-#### Strava
+### Strava
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -310,7 +315,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/strava-beta-arm64-v8a-revanced.apk)                   | `^strava-beta-arm64-v8a-revanced\.apk$`                                      |
 
 
-#### Pixiv
+### Pixiv
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -318,7 +323,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/pixiv-beta-revanced.apk)                              | `^pixiv-beta-revanced\.apk$`                                                 |
 
 
-#### Bilbili Chinese
+### Bilibili Chinese
 
 | Patch Variant  | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |----------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -326,7 +331,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | BiliRoamingM   | Stable  | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/bilibili-arm64-v8a-BiliRoamingM.apk)                  | `^bilibili-arm64-v8a-BiliRoamingM\.apk$`                                     |
 
 
-#### Prime Video
+### Prime Video
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -334,7 +339,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/prime-video-beta-arm64-v8a-revanced.apk)              | `^prime-video-beta-arm64-v8a-revanced\.apk$`                                 |
 
 
-#### Viber
+### Viber
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -342,7 +347,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/viber-beta-revanced.apk)                              | `^viber-beta-revanced\.apk$`                                                 |
 
 
-#### Crunchyroll
+### Crunchyroll
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -350,28 +355,28 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | Revanced      | Beta    | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/crunchyroll-beta-revanced.apk)                        | `^crunchyroll-beta-revanced\.apk$`                                           |
 
 
-#### Solid Explorer
+### Solid Explorer
 
 | Patch Variant | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |---------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | scrazzz       | Stable  | arm64-v8a   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/solid-explorer-arm64-v8a-scrazzz.apk)                 | `^solid-explorer-arm64-v8a-scrazzz\.apk$`                                    |
 
 
-#### Nova Launcher
+### Nova Launcher
 
 | Patch Variant   | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |-----------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | indrastorms     | Stable  | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/nova-launcher-indrastorms.apk)                        | `^nova-launcher-indrastorms\.apk$`                                           |
 
 
-#### Tasker
+### Tasker
 
 | Patch Variant   | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |-----------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | indrastorms     | Stable  | universal   | [Download](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/tasker-indrastorms.apk)                               | `^tasker-indrastorms\.apk$`                                                  |
 
 
-#### FX File Explorer
+### FX File Explorer
 
 | Patch Variant   | Channel | Arch        | Download URL                                                                                                                                     | Regex Pattern                                                                 |
 |-----------------|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
