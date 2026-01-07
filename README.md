@@ -8,13 +8,13 @@
 > **Please star the repo! 🙏🥺**
 
 ### 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
-Get notified instantly when new builds are released.
+Get notified instantly when new builds are released and download easily.
 
-### 📦 [Download from GitHub Releases](https://github.com/geologically/revanced-builder/releases)
+### 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
 If you don’t see the app you want in the latest release, check the older ones.
 
 ### 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
-GitHub releases only contains recent 10 builds, for older builds look here.
+GitHub only retains recent 10 builds, for older builds look here.
 
 ### 🍀 [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
 Contains APKs of many more apps from different ReVanced patches.
