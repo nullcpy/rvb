@@ -4,14 +4,14 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [Proton-Mail]
-enabled = false 
+enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Samsung-Radio]
-enabled = false 
+enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
