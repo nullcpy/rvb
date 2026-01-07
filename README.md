@@ -7,19 +7,19 @@
 > [!Important]
 > **Please star the repo! 🙏🥺**
 
-### 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
+## 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
 Get notified instantly when new builds are released and download easily.
 
-### 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
+## 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
 If you don’t see the app you want in the latest release, check older ones.
 
-### 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
+## 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
 GitHub retains recent 20 builds, for older builds look here.
 
-### 🍀 [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
+## 🍀 [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
 Contains APKs of many more apps from different ReVanced patches.
 
-### 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
+## 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update ReVanced APKs.
 
 1. Open the **Obtainium** app.  
@@ -76,18 +76,18 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 `arm64`     : For most modern devices (after 2017).
 `arm32`     : For most older (before 2017) or low-end devices. <br>
 
-### 📝 Notes
+## 📝 Notes
 - Pre-release builds are built with dev patches.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk) is required for Google APKs to work properly.
 - All modules can be updated directly from Magisk and KSU.
 - If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
 - If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [build archive](https://t.me/revanced_builder/1139) topic on telegram.
 
-### ⁉️ Report
+## ⁉️ Report
 - Want a app? Request it in the [Telegram Group](https://t.me/rvbygeo).
 - Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
 
-### ⭐ Credits
+## ⭐ Credits
 - Icon is from [ReVanced](https://github.com/revanced). 
 - This repo is based on [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module).
 - All credit goes to the original patch developers and maintainers.
