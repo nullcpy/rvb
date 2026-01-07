@@ -107,30 +107,28 @@ jobs:
             exit 1
           fi
           AUTH="Authorization: Bearer $TOKEN"
-          PARENT_ID="qapeaw1yzy6m"  # revanced-builder folder ID
+          PARENT_ID="qapeaw1yzy6m"
 
           echo "✅ Using revanced-builder directory ID: $PARENT_ID"
           echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
 
-          # Fetch contents of revanced-builder
+          # ✅ CORRECT: No trailing spaces in URL
           PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
           EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
 
-          # If exists, DELETE it first
           if [ -n "$EXISTING_ID" ]; then
             echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
-            DELETE_RES=$(curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID")
-            # Wait a moment to avoid race condition (optional but safe)
+            # ✅ CORRECT URL
+            curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID" || true
             sleep 1
           fi
 
-          # Create new folder
           echo "📁 Creating fresh folder: $RELEASE_NUMBER"
           CREATE_RES=$(curl -sS -X POST \
             -H "$AUTH" \
             -H "Content-Type: application/json" \
             -d "{\"name\":\"$RELEASE_NUMBER\"}" \
-            "https://buzzheavier.com/api/fs/$PARENT_ID")
+            "https://buzzheavier.com/api/fs/$PARENT_ID")  # ✅ No space
 
           RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
           if [ -z "$RELEASE_DIR_ID" ]; then
@@ -139,20 +137,11 @@ jobs:
           fi
           echo "✅ New folder created with ID: $RELEASE_DIR_ID"
 
-          # Add note: "ReVanced Builder #134"
-          NOTE_TEXT="ReVanced Builder #$RELEASE_NUMBER"
-          echo "📝 Adding note: $NOTE_TEXT"
-          curl -sS -X PUT \
-            -H "$AUTH" \
-            -H "Content-Type: application/json" \
-            -d "{\"note\":\"$NOTE_TEXT\"}" \
-            "https://buzzheavier.com/api/fs/$RELEASE_DIR_ID" >/dev/null
-
-          # Upload all files
           SUCCESS_COUNT=0
           for FILE in *; do
             if [ -f "$FILE" ]; then
               echo "⬆️ Uploading $FILE..."
+              # ✅ CORRECT upload URL
               if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
                 SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
               else
@@ -161,9 +150,9 @@ jobs:
             fi
           done
 
-          # Output result
           if [ "$SUCCESS_COUNT" -gt 0 ]; then
-            PUBLIC_LINK="https://buzzheavier.com/f/$RELEASE_DIR_ID"
+            # ✅ CORRECT public link format (no /f/)
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
             echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
