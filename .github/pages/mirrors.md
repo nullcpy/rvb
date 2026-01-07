@@ -1,6 +1,10 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 140  
+🔗 [BuzzHeavier](https://buzzheavier.com/q98oafrtpbui)  
+
+
 ## Build No. 139 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/sounw5nfuoci)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-139-20791207334-1/archive-139.zip)  
