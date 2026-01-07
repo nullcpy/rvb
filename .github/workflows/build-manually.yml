@@ -216,6 +216,16 @@ jobs:
         run: |
           set -euo pipefail
 
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
           if [ -z "$RELEASE_NUM" ]; then
             echo "⚠️ No release number — skipping mirror update"
             exit 0
@@ -232,16 +242,6 @@ jobs:
             ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
           fi
           ENTRY+="\n"
-
-          MIRRORS_DIR=".github/pages"
-          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
-          mkdir -p "$MIRRORS_DIR"
-
-          if [ ! -f "$MIRRORS_FILE" ]; then
-            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
-            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
-            echo "" >> "$MIRRORS_FILE"
-          fi
 
           TEMP=$(mktemp)
           echo -e "$ENTRY" > "$TEMP"
