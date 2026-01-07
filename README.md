@@ -73,21 +73,21 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            |                 | arm32     | `twitter-revanced-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm-v7a\.apk`              |
 
 `universal` : For all devices. <br>
-`arm32`     : For most older (before 2017) or low-end devices. <br>
 `arm64`     : For most modern devices (after 2017).
+`arm32`     : For most older (before 2017) or low-end devices. <br>
 
 ### 📝 Notes
 - Pre-release builds are built with dev patches.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk) is required for Google APKs to work properly.
 - All modules can be updated directly from Magisk and KSU.
 - If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
-- If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [Build Archive](https://t.me/revanced_builder/1139) topic on telegram.
+- If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [build archive](https://t.me/revanced_builder/1139) topic on telegram.
 
 ### ⁉️ Report
 - Want a app? Request it in the [Telegram Group](https://t.me/rvbygeo).
 - Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
 
 ### ⭐ Credits
-- All credit goes to the original patch developers and maintainers.
-- This repo is based on [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module).
 - Icon is from [ReVanced](https://github.com/revanced). 
+- This repo is based on [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module).
+- All credit goes to the original patch developers and maintainers.
