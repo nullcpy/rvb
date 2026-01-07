@@ -107,29 +107,48 @@ jobs:
             exit 1
           fi
           AUTH="Authorization: Bearer $TOKEN"
-          PARENT_ID="qapeaw1yzy6m"
+          PARENT_ID="qapeaw1yzy6m"  # revanced-builder folder ID
 
           echo "✅ Using revanced-builder directory ID: $PARENT_ID"
-          echo "📁 Creating subfolder: $RELEASE_NUMBER"
+          echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
 
-          RELEASE_DIR_RES=$(curl -sS -X POST \
+          # Fetch contents of revanced-builder
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
+
+          # If exists, DELETE it first
+          if [ -n "$EXISTING_ID" ]; then
+            echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
+            DELETE_RES=$(curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID")
+            # Wait a moment to avoid race condition (optional but safe)
+            sleep 1
+          fi
+
+          # Create new folder
+          echo "📁 Creating fresh folder: $RELEASE_NUMBER"
+          CREATE_RES=$(curl -sS -X POST \
             -H "$AUTH" \
             -H "Content-Type: application/json" \
             -d "{\"name\":\"$RELEASE_NUMBER\"}" \
             "https://buzzheavier.com/api/fs/$PARENT_ID")
 
-          # ✅ FIX: Extract .data.id (not .id)
-          RELEASE_DIR_ID=$(echo "$RELEASE_DIR_RES" | jq -r '.data.id // empty')
-
-          if [ -z "$RELEASE_DIR_ID" ] || [ "$RELEASE_DIR_ID" = "null" ]; then
-            echo "❌ Failed to create release folder"
-            echo "API response: $RELEASE_DIR_RES"
+          RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ]; then
+            echo "❌ Failed to create folder. Response: $CREATE_RES"
             exit 1
           fi
+          echo "✅ New folder created with ID: $RELEASE_DIR_ID"
 
-          echo "✅ Release folder created with ID: $RELEASE_DIR_ID"
+          # Add note: "ReVanced Builder #134"
+          NOTE_TEXT="ReVanced Builder #$RELEASE_NUMBER"
+          echo "📝 Adding note: $NOTE_TEXT"
+          curl -sS -X PUT \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"note\":\"$NOTE_TEXT\"}" \
+            "https://buzzheavier.com/api/fs/$RELEASE_DIR_ID" >/dev/null
 
-          # Upload files
+          # Upload all files
           SUCCESS_COUNT=0
           for FILE in *; do
             if [ -f "$FILE" ]; then
@@ -142,14 +161,16 @@ jobs:
             fi
           done
 
+          # Output result
           if [ "$SUCCESS_COUNT" -gt 0 ]; then
             PUBLIC_LINK="https://buzzheavier.com/f/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Done. Mirror: $PUBLIC_LINK"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
           else
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded."
           fi
 
       - name: Upload ZIPs to Filebin
