@@ -206,6 +206,65 @@ jobs:
             rm -f "$ARCHIVE_NAME"
           fi
 
+      - name: Update Mirror Links
+        id: update_mirrors
+        env:
+          RELEASE_NUM: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          RELEASE_TYPE: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$RELEASE_NUM" ]; then
+            echo "⚠️ No release number — skipping mirror update"
+            exit 0
+          fi
+
+          ENTRY="## Build No. $RELEASE_NUM $RELEASE_TYPE  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
+          fi
+          ENTRY+="\n"
+
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          TEMP=$(mktemp)
+          echo -e "$ENTRY" > "$TEMP"
+          cat "$MIRRORS_FILE" >> "$TEMP"
+
+          {
+            head -n 3 "$TEMP"
+            awk '/^## Build No\./ { in_block=1; blocks++ } 
+                in_block && blocks <= 100 { print }
+                !/^## Build No\./ && in_block && blocks <= 100 { print }
+                !/^## Build No\./ && !in_block { next }
+                /^## Build No\./ && blocks > 100 { in_block=0; next }
+                !in_block { next }' "$TEMP"
+          } > "$MIRRORS_FILE"
+
+      - name: Commit Updated mirrors.md
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
+
       - name: Update Changelog and Magisk Update JSON
         id: update_config
         run: |
