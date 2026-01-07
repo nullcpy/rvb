@@ -453,61 +453,118 @@ jobs:
           prerelease: true
           overwrite: true
 
-      - name: Upload ZIPs to Filebin (Dev)
+      - name: Upload to BuzzHeavier (Dev)
+        id: upload_buzzheavier_dev
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_dev_ver }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          # Create full archive ONCE
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+          echo "📦 Creating full archive: $ARCHIVE_NAME"
+          zip -q9 "$ARCHIVE_NAME" *
+
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
+            exit 1
+          fi
+          AUTH="Authorization: Bearer $TOKEN"
+          PARENT_ID="qapeaw1yzy6m"
+
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
+          echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
+
+          # Fetch parent contents
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
+
+          if [ -n "$EXISTING_ID" ]; then
+            echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
+            curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID" || true
+            sleep 1
+          fi
+
+          echo "📁 Creating fresh folder: $RELEASE_NUMBER"
+          CREATE_RES=$(curl -sS -X POST \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"$RELEASE_NUMBER\"}" \
+            "https://buzzheavier.com/api/fs/$PARENT_ID")
+
+          RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ]; then
+            echo "❌ Failed to create folder. Response: $CREATE_RES"
+            exit 1
+          fi
+          echo "✅ Folder created with ID: $RELEASE_DIR_ID"
+
+          # Upload ALL files
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
+            fi
+          done
+
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files (including full archive). Mirror: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded to BuzzHeavier."
+          fi
+
+      - name: Upload to Filebin (Dev)
         id: upload_filebin_dev
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          BIN_ID="revanced-builder-dev-${{ needs.check-patch.outputs.next_dev_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          RELEASE_NUMBER="${{ needs.check-patch.outputs.next_dev_ver }}"
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+
+          # The archive was created in BuzzHeavier step
+          if [ ! -f "$ARCHIVE_NAME" ]; then
+            echo "❌ Expected archive $ARCHIVE_NAME not found!"
+            exit 1
+          fi
+
+          BIN_ID="revanced-builder-dev-${RELEASE_NUMBER}-${{ github.run_id }}-${{ github.run_attempt }}"
           FILEBIN_URL="https://filebin.net"
 
-          # Bundle APKs into a single ZIP (if any exist)
-          APK_COUNT=$(ls *.apk 2>/dev/null | wc -l)
-          if [ "$APK_COUNT" -gt 0 ]; then
-            echo "📦 Bundling $APK_COUNT APK(s) into apks-bundle.zip"
-            zip -q9 apks-bundle.zip *.apk
-          else
-            echo "⚠️ No APK files found — skipping APK bundle."
-          fi
-
-          echo "Uploading ZIP files to bin: $BIN_ID"
-
-          # Upload only .zip files (modules + apks-bundle.zip)
-          uploaded_any=false
-          for FILE in *.zip; do
-            [ -e "$FILE" ] || continue  # Skip if no .zip files
-            if [ -f "$FILE" ]; then
-              echo "→ Uploading $FILE..."
-              if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$FILE" "$FILEBIN_URL/$BIN_ID/$FILE"; then
-                uploaded_any=true
-                echo "✓ $FILE uploaded"
-              else
-                echo "⚠️ Failed to upload $FILE (continuing...)"
-              fi
-            fi
-          done
-
-          # DELETE apks-bundle.zip AFTER upload (so it doesn't appear in Telegram)
-          if [ -f "apks-bundle.zip" ]; then
-            echo "🗑️ Removing apks-bundle.zip from local build dir"
-            rm -f apks-bundle.zip
-          fi
-          
-          # Lock bin only if upload succeeded
-          if [ "$uploaded_any" = true ]; then
-            echo "🔒 Locking bin as read-only..."
+          echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
+          if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
+            echo "✅ Full archive uploaded to Filebin"
+            # Lock bin
             if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
-              echo "✅ Bin locked successfully."
+              echo "🔒 Bin locked successfully."
             else
               echo "⚠️ Failed to lock bin (not critical)."
             fi
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
           else
-            echo "❌ No ZIP files to upload — skipping Filebin."
+            echo "❌ Failed to upload full archive to Filebin."
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # DELETE archive-$RELEASE_NUMBER.zip AFTER upload (so it doesn't appear in Telegram)
+          if [ -f "$ARCHIVE_NAME" ]; then
+            echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
+            rm -f "$ARCHIVE_NAME"
           fi
 
       - name: Update Changelog and Magisk Update JSON (Dev)
@@ -552,6 +609,8 @@ jobs:
           TG_THREAD_ID: "350"
           FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_dev.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier_dev.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier_dev.outputs.UPLOAD_SUCCESS }}
         run: |
           set -euo pipefail
           cd build || exit 1
@@ -577,9 +636,16 @@ jobs:
 
           MSG="*Build No. ${{ needs.check-patch.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
 
-          # Only add Filebin mirror if upload succeeded
+          MIRRORS=""
+          if [ "$BUZZHEAVIER_SUCCESS" = "true" ]; then
+            MIRRORS+="[BuzzHeavier]($BUZZHEAVIER_LINK)${NL}"
+          fi
           if [ "$FILEBIN_SUCCESS" = "true" ]; then
-            MSG+="[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
+            MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
+          fi
+
+          if [ -n "$MIRRORS" ]; then
+            MSG+="*Mirrors:*${NL}${MIRRORS}${NL}"
           fi
 
           if [ "$HAS_MODULES" = true ]; then
@@ -589,7 +655,6 @@ jobs:
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
 
-          # Fixed Telegram URL (no space!)
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
@@ -698,63 +763,118 @@ jobs:
           tag: ${{ needs.check-patch.outputs.next_stable_ver }}
           overwrite: true
 
-      - name: Upload ZIPs to Filebin (Stable)
+      - name: Upload to BuzzHeavier (Stable)
+        id: upload_buzzheavier_stable
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_stable_ver }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          # Create full archive ONCE
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+          echo "📦 Creating full archive: $ARCHIVE_NAME"
+          zip -q9 "$ARCHIVE_NAME" *
+
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
+            exit 1
+          fi
+          AUTH="Authorization: Bearer $TOKEN"
+          PARENT_ID="qapeaw1yzy6m"
+
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
+          echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
+
+          # Fetch parent contents (NO TRAILING SPACES!)
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
+
+          if [ -n "$EXISTING_ID" ]; then
+            echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
+            curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID" || true
+            sleep 1
+          fi
+
+          echo "📁 Creating fresh folder: $RELEASE_NUMBER"
+          CREATE_RES=$(curl -sS -X POST \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"$RELEASE_NUMBER\"}" \
+            "https://buzzheavier.com/api/fs/$PARENT_ID")
+
+          RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ]; then
+            echo "❌ Failed to create folder. Response: $CREATE_RES"
+            exit 1
+          fi
+          echo "✅ Folder created with ID: $RELEASE_DIR_ID"
+
+          # Upload ALL files (including archive-XXX.zip)
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
+            fi
+          done
+
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files (including full archive). Mirror: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded to BuzzHeavier."
+          fi
+
+      - name: Upload to Filebin (Stable)
         id: upload_filebin_stable
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          BIN_ID="revanced-builder-stable-${{ needs.check-patch.outputs.next_stable_ver }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          RELEASE_NUMBER="${{ needs.check-patch.outputs.next_stable_ver }}"
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+
+          # The archive was already created by BuzzHeavier step — no need to recreate!
+          if [ ! -f "$ARCHIVE_NAME" ]; then
+            echo "❌ Expected archive $ARCHIVE_NAME not found!"
+            exit 1
+          fi
+
+          BIN_ID="revanced-builder-stable-${RELEASE_NUMBER}-${{ github.run_id }}-${{ github.run_attempt }}"
           FILEBIN_URL="https://filebin.net"
 
-          # Step 1: Create a ZIP with all APKs (if any)
-          APK_COUNT=$(ls *.apk 2>/dev/null | wc -l)
-          if [ "$APK_COUNT" -gt 0 ]; then
-            echo "📦 Bundling $APK_COUNT APK(s) into apks-bundle.zip"
-            zip -q9 apks-bundle.zip *.apk
-          else
-            echo "⚠️ No APK files found — skipping APK bundle."
-          fi
-
-          echo "Uploading ZIP files to bin: $BIN_ID"
-
-          # Step 2: Upload only .zip files (modules + apks-bundle.zip)
-          uploaded_any=false
-          for FILE in *.zip; do
-            # Handle case where no .zip files exist
-            [ -e "$FILE" ] || continue
-
-            if [ -f "$FILE" ]; then
-              echo "→ Uploading $FILE..."
-              if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$FILE" "$FILEBIN_URL/$BIN_ID/$FILE"; then
-                uploaded_any=true
-                echo "✓ $FILE uploaded"
-              else
-                echo "⚠️ Failed to upload $FILE (continuing...)"
-              fi
-            fi
-          done
-
-          # DELETE apks-bundle.zip AFTER upload (so it doesn't appear in Telegram)
-          if [ -f "apks-bundle.zip" ]; then
-            echo "🗑️ Removing apks-bundle.zip from local build dir"
-            rm -f apks-bundle.zip
-          fi
-
-          # Step 3: Lock bin if any ZIP was uploaded
-          if [ "$uploaded_any" = true ]; then
-            echo "🔒 Locking bin as read-only..."
+          echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
+          if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
+            echo "✅ Full archive uploaded to Filebin"
+            # Lock bin
             if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
-              echo "✅ Bin locked successfully."
+              echo "🔒 Bin locked successfully."
             else
               echo "⚠️ Failed to lock bin (not critical)."
             fi
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
           else
-            echo "❌ No ZIP files to upload — skipping Filebin."
+            echo "❌ Failed to upload full archive to Filebin."
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # DELETE archive-$RELEASE_NUMBER.zip AFTER upload (so it doesn't appear in Telegram)
+          if [ -f "$ARCHIVE_NAME" ]; then
+            echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
+            rm -f "$ARCHIVE_NAME"
           fi
 
       - name: Update Changelog and Magisk Update JSON (Stable)
@@ -799,6 +919,8 @@ jobs:
           TG_THREAD_ID: "262"
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_stable.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier_stable.outputs.UPLOAD_SUCCESS }}
         run: |
           set -euo pipefail
           cd build || exit 1
@@ -821,9 +943,16 @@ jobs:
 
           MSG="*Build No. ${{ needs.check-patch.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
 
-          # Only add Filebin link if upload succeeded
+          MIRRORS=""
+          if [ "$BUZZHEAVIER_SUCCESS" = "true" ]; then
+            MIRRORS+="[BuzzHeavier]($BUZZHEAVIER_LINK)${NL}"
+          fi
           if [ "$FILEBIN_SUCCESS" = "true" ]; then
-            MSG+="[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
+            MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
+          fi
+
+          if [ -n "$MIRRORS" ]; then
+            MSG+="*Mirrors:*${NL}${MIRRORS}${NL}"
           fi
 
           if [ "$HAS_MODULES" = true ]; then
@@ -833,7 +962,6 @@ jobs:
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
 
-          # Fix: remove space in Telegram URL
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
