@@ -92,6 +92,71 @@ jobs:
           overwrite: true
           prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
 
+      - name: Upload to BuzzHeavier
+        id: upload_buzzheavier
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+      
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          AUTH="Authorization: Bearer $TOKEN"
+          UPLOAD_URL="https://w.buzzheavier.com"
+      
+          # 1. Get root to confirm revanced-builder folder
+          echo "📡 Fetching root directory..."
+          ROOT_JSON=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs")
+      
+          # 2. Extract revanced-builder directory ID
+          PARENT_ID=$(echo "$ROOT_JSON" | jq -r '.children[] | select(.name == "revanced-builder" and .isDirectory == true) | .id // empty')
+          if [ -z "$PARENT_ID" ]; then
+            echo "❌ 'revanced-builder' folder not found in root!"
+            exit 1
+          fi
+          echo "✅ revanced-builder ID: $PARENT_ID"
+      
+          # 3. Create release-number subfolder inside revanced-builder
+          echo "📁 Creating subfolder: $RELEASE_NUMBER"
+          RELEASE_DIR_RES=$(curl -sS -X POST \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"$RELEASE_NUMBER\"}" \
+            "https://buzzheavier.com/api/fs/$PARENT_ID")
+      
+          RELEASE_DIR_ID=$(echo "$RELEASE_DIR_RES" | jq -r '.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ] || [ "$RELEASE_DIR_ID" = "null" ]; then
+            echo "❌ Failed to create release subfolder"
+            echo "Response: $RELEASE_DIR_RES"
+            exit 1
+          fi
+          echo "✅ Release folder ID: $RELEASE_DIR_ID"
+      
+          # 4. Upload all files to the new subfolder
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "$UPLOAD_URL/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
+            fi
+          done
+      
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/f/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Public link: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded successfully."
+          fi
+
       - name: Upload ZIPs to Filebin
         id: upload_filebin
         run: |
@@ -195,6 +260,8 @@ jobs:
           TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
           FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier.outputs.UPLOAD_SUCCESS }}
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
@@ -223,9 +290,16 @@ jobs:
 
           MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
 
-          # Only add Filebin link if upload succeeded
+          MIRRORS=""
+          if [ "$BUZZHEAVIER_SUCCESS" = "true" ]; then
+            MIRRORS+="[BuzzHeavier]($BUZZHEAVIER_LINK)${NL}"
+          fi
           if [ "$FILEBIN_SUCCESS" = "true" ]; then
-            MSG+="[Filebin Mirror]($FILEBIN_LINK)${NL}${NL}"
+            MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
+          fi
+      
+          if [ -n "$MIRRORS" ]; then
+            MSG+="*Mirrors:*${NL}${MIRRORS}${NL}${NL}"
           fi
            
           if [ "$HAS_MODULES" = true ]; then
