@@ -14,7 +14,7 @@ Get notified instantly when new builds are released and download easily.
 If you don’t see the app you want in the latest release, check older ones.
 
 ### 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
-GitHub only retains recent 20 builds, for older builds look here.
+GitHub retains recent 20 builds, for older builds look here.
 
 ### 🍀 [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
 Contains APKs of many more apps from different ReVanced patches.
