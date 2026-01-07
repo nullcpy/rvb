@@ -243,19 +243,19 @@ jobs:
           fi
           ENTRY+="\n"
 
-          TEMP=$(mktemp)
-          echo -e "$ENTRY" > "$TEMP"
-          cat "$MIRRORS_FILE" >> "$TEMP"
-
+          # Create new file with: header + new entry + old entries (limited to 99 to keep 100 total)
           {
-            head -n 3 "$TEMP"
-            awk '/^## Build No\./ { in_block=1; blocks++ } 
-                in_block && blocks <= 100 { print }
-                !/^## Build No\./ && in_block && blocks <= 100 { print }
-                !/^## Build No\./ && !in_block { next }
-                /^## Build No\./ && blocks > 100 { in_block=0; next }
-                !in_block { next }' "$TEMP"
-          } > "$MIRRORS_FILE"
+            # Keep header (first 3 lines)
+            head -n 3 "$MIRRORS_FILE"
+            # Add new entry
+            echo -e "$ENTRY"
+            # Add old entries (skip first 3 lines), keep only 99 blocks
+            tail -n +4 "$MIRRORS_FILE" | awk '/^## Build No\./ { 
+              if (block_count >= 99) { exit }
+              block_count++
+            }
+            block_count <= 99 { print }'
+          } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
 
       - name: Commit Updated mirrors.md
         uses: stefanzweifel/git-auto-commit-action@v7
