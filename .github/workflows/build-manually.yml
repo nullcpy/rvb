@@ -67,7 +67,7 @@ jobs:
           else
             CONFIG="config.toml"
           fi
-          
+
           if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
             echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
@@ -92,7 +92,7 @@ jobs:
           overwrite: true
           prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
 
-      - name: Upload to BuzzHeavier
+      - name: Upload Build Files to BuzzHeavier (revanced-builder)
         id: upload_buzzheavier
         env:
           BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
@@ -100,61 +100,58 @@ jobs:
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
-      
+
+          # 1. Sanitize token
           TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
-          AUTH="Authorization: Bearer $TOKEN"
-          UPLOAD_URL="https://w.buzzheavier.com"
-      
-          # 1. Get root to confirm revanced-builder folder
-          echo "📡 Fetching root directory..."
-          ROOT_JSON=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs")
-      
-          # 2. Extract revanced-builder directory ID
-          PARENT_ID=$(echo "$ROOT_JSON" | jq -r '.children[] | select(.name == "revanced-builder" and .isDirectory == true) | .id // empty')
-          if [ -z "$PARENT_ID" ]; then
-            echo "❌ 'revanced-builder' folder not found in root!"
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing or empty"
             exit 1
           fi
-          echo "✅ revanced-builder ID: $PARENT_ID"
-      
-          # 3. Create release-number subfolder inside revanced-builder
+          AUTH="Authorization: Bearer $TOKEN"
+
+          # 2. Known parent ID from your API response
+          PARENT_ID="qapeaw1yzy6m"
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
+
+          # 3. Create release subfolder (e.g., "133")
           echo "📁 Creating subfolder: $RELEASE_NUMBER"
           RELEASE_DIR_RES=$(curl -sS -X POST \
             -H "$AUTH" \
             -H "Content-Type: application/json" \
             -d "{\"name\":\"$RELEASE_NUMBER\"}" \
             "https://buzzheavier.com/api/fs/$PARENT_ID")
-      
+
           RELEASE_DIR_ID=$(echo "$RELEASE_DIR_RES" | jq -r '.id // empty')
           if [ -z "$RELEASE_DIR_ID" ] || [ "$RELEASE_DIR_ID" = "null" ]; then
-            echo "❌ Failed to create release subfolder"
-            echo "Response: $RELEASE_DIR_RES"
+            echo "❌ Failed to create release folder"
+            echo "API response: $RELEASE_DIR_RES"
             exit 1
           fi
-          echo "✅ Release folder ID: $RELEASE_DIR_ID"
-      
-          # 4. Upload all files to the new subfolder
+          echo "✅ Release folder created with ID: $RELEASE_DIR_ID"
+
+          # 4. Upload all files
           SUCCESS_COUNT=0
           for FILE in *; do
             if [ -f "$FILE" ]; then
               echo "⬆️ Uploading $FILE..."
-              if curl -# -T "$FILE" -H "$AUTH" "$UPLOAD_URL/$RELEASE_DIR_ID/$FILE"; then
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
                 SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
               else
                 echo "⚠️ Failed to upload $FILE"
               fi
             fi
           done
-      
+
+          # 5. Output results
           if [ "$SUCCESS_COUNT" -gt 0 ]; then
             PUBLIC_LINK="https://buzzheavier.com/f/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Uploaded $SUCCESS_COUNT files. Public link: $PUBLIC_LINK"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
           else
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
-            echo "❌ No files uploaded successfully."
+            echo "❌ No files uploaded."
           fi
 
       - name: Upload ZIPs to Filebin
@@ -252,7 +249,7 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-       
+
       - name: Notify Telegram (Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
@@ -267,7 +264,7 @@ jobs:
           cd build || { echo "build folder not found"; exit 1; }
 
           TG_CHAT="@revanced_builder"
-          
+
           NL=$'\n'
           APKS=""
           MODULES=""
@@ -297,7 +294,7 @@ jobs:
           if [ "$FILEBIN_SUCCESS" = "true" ]; then
             MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
           fi
-      
+
           if [ -n "$MIRRORS" ]; then
             MSG+="*Mirrors:*${NL}${MIRRORS}${NL}${NL}"
           fi
@@ -333,5 +330,3 @@ jobs:
           delete_workflows: true
           workflows_keep_day: 30
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-
-          
