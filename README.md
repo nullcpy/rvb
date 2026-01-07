@@ -78,8 +78,8 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 ### 📝 Notes
 - Pre-release builds are built with dev patches.
-- All modules can be updated directly from Magisk and KSU.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk) is required for Google APKs to work properly.
+- All modules can be updated directly from Magisk and KSU.
 - If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
 - If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [Build Archive](https://t.me/revanced_builder/1139) topic on telegram.
 
