@@ -567,6 +567,72 @@ jobs:
             rm -f "$ARCHIVE_NAME"
           fi
 
+      - name: Update Mirror Links (Dev)
+        id: update_mirrors_dev
+        env:
+          RELEASE_NUM: ${{ needs.check-patch.outputs.next_dev_ver }}
+          RELEASE_TYPE: "Pre-release"
+          BUZZ_LINK: ${{ steps.upload_buzzheavier_dev.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+
+          # Skip if no release number (shouldn't happen, but safe)
+          if [ -z "$RELEASE_NUM" ]; then
+            echo "⚠️ No release number — skipping mirror update"
+            exit 0
+          fi
+
+          # Create entry
+          ENTRY="## Build No. $RELEASE_NUM ($RELEASE_TYPE)  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
+          fi
+          ENTRY+="\n"
+
+          # Ensure directory and file exist
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# Mirror Links" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          # Prepend new entry
+          TEMP=$(mktemp)
+          echo -e "$ENTRY" > "$TEMP"
+          cat "$MIRRORS_FILE" >> "$TEMP"
+
+          # Keep only header + latest 100 build entries
+          {
+            # Keep first 3 lines (header)
+            head -n 3 "$TEMP"
+            # Extract build blocks (## Build No. ...), take first 100
+            awk '/^## Build No\./ { in_block=1; blocks++ } 
+                in_block && blocks <= 100 { print }
+                !/^## Build No\./ && in_block && blocks <= 100 { print }
+                !/^## Build No\./ && !in_block { next }
+                /^## Build No\./ && blocks > 100 { in_block=0; next }
+                !in_block { next }' "$TEMP"
+          } > "$MIRRORS_FILE"
+
+      - name: Commit Updated mirrors.md (Dev)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_dev_ver }}"
+
       - name: Update Changelog and Magisk Update JSON (Dev)
         run: |
           set -euo pipefail
@@ -876,6 +942,72 @@ jobs:
             echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
             rm -f "$ARCHIVE_NAME"
           fi
+
+      - name: Update Mirror Links (Stable)
+        id: update_mirrors_stable
+        env:
+          RELEASE_NUM: ${{ needs.check-patch.outputs.next_stable_ver }}
+          RELEASE_TYPE: "Release"
+          BUZZ_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+
+          # Skip if no release number (shouldn't happen, but safe)
+          if [ -z "$RELEASE_NUM" ]; then
+            echo "⚠️ No release number — skipping mirror update"
+            exit 0
+          fi
+
+          # Create entry
+          ENTRY="## Build No. $RELEASE_NUM ($RELEASE_TYPE)  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
+          fi
+          ENTRY+="\n"
+
+          # Ensure directory and file exist
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# Mirror Links" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          # Prepend new entry
+          TEMP=$(mktemp)
+          echo -e "$ENTRY" > "$TEMP"
+          cat "$MIRRORS_FILE" >> "$TEMP"
+
+          # Keep only header + latest 100 build entries
+          {
+            # Keep first 3 lines (header)
+            head -n 3 "$TEMP"
+            # Extract build blocks (## Build No. ...), take first 100
+            awk '/^## Build No\./ { in_block=1; blocks++ } 
+                in_block && blocks <= 100 { print }
+                !/^## Build No\./ && in_block && blocks <= 100 { print }
+                !/^## Build No\./ && !in_block { next }
+                /^## Build No\./ && blocks > 100 { in_block=0; next }
+                !in_block { next }' "$TEMP"
+          } > "$MIRRORS_FILE"
+
+      - name: Commit Updated mirrors.md (Stable)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_stable_ver }}"
 
       - name: Update Changelog and Magisk Update JSON (Stable)
         run: |
