@@ -11,7 +11,7 @@
 Get notified instantly when new builds are released and download easily.
 
 ### 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
-If you don’t see the app you want in the latest release, check the older ones.
+If you don’t see the app you want in the latest release, check older ones.
 
 ### 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
 GitHub only retains recent 20 builds, for older builds look here.
