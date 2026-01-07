@@ -321,7 +321,7 @@ jobs:
         with:
           delete_releases: true
           delete_tags: true
-          releases_keep_latest: 100
+          releases_keep_latest: 10
           delete_workflows: true
-          workflows_keep_day: 30
+          workflows_keep_day: 1
           gh_token: ${{ secrets.GITHUB_TOKEN }}
