@@ -84,4 +84,5 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 ### ⭐ Credits
 - All credit goes to the original patch developers and maintainers.
-- Icon is from ReVanced project. 
+- This repo is based on [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module).
+- Icon is from [ReVanced](https://github.com/revanced). 
