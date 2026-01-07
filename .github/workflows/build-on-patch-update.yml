@@ -602,7 +602,7 @@ jobs:
           mkdir -p "$MIRRORS_DIR"
 
           if [ ! -f "$MIRRORS_FILE" ]; then
-            echo "# Mirror Links" > "$MIRRORS_FILE"
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
             echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
             echo "" >> "$MIRRORS_FILE"
           fi
@@ -947,7 +947,6 @@ jobs:
         id: update_mirrors_stable
         env:
           RELEASE_NUM: ${{ needs.check-patch.outputs.next_stable_ver }}
-          RELEASE_TYPE: "Release"
           BUZZ_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
         run: |
@@ -960,7 +959,7 @@ jobs:
           fi
 
           # Create entry
-          ENTRY="## Build No. $RELEASE_NUM ($RELEASE_TYPE)  \n"
+          ENTRY="## Build No. $RELEASE_NUM  \n"
           if [ -n "$BUZZ_LINK" ]; then
             ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
           fi
@@ -978,7 +977,7 @@ jobs:
           mkdir -p "$MIRRORS_DIR"
 
           if [ ! -f "$MIRRORS_FILE" ]; then
-            echo "# Mirror Links" > "$MIRRORS_FILE"
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
             echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
             echo "" >> "$MIRRORS_FILE"
           fi
