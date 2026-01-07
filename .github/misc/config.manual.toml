@@ -3,26 +3,24 @@ patches-version = "latest"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[Proton-Mail]
-enabled = true 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-
-[Samsung-Radio]
-enabled = true 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
-
-[Lightroom]
+[YouTube-Extended]
 enabled = true
-arch = "arm64-v8a"
-version = "auto"
-patches-source = "ReVanced/revanced-patches"
-# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+app-name = "YouTube"
+build-mode = "both"
+rv-brand = "ReVanced-Extended"
+patches-source = "inotia00/revanced-patches"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Music-Extended]
+enabled = true
+app-name = "YouTube-Music"
+build-mode = "both"
+arch = "both"
+rv-brand = "ReVanced-Extended"
+patches-source = "inotia00/revanced-patches"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
