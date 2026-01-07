@@ -77,9 +77,11 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 `arm64`     : For most modern devices (after 2017).
 
 ### 📝 Notes
+- Pre-release builds are built with dev patches.
 - All modules can be updated directly from Magisk and KSU.
 - If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk) is required for Google APKs to work properly.
+- If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [Build Archive](https://t.me/revanced_builder/1139) topic on telegram.
 
 ### ⁉️ Report
 - Want a app? Request it in the [Telegram Group](https://t.me/rvbygeo).
