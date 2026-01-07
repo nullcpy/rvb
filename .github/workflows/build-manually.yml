@@ -101,35 +101,35 @@ jobs:
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          # 1. Sanitize token
           TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
           if [ -z "$TOKEN" ]; then
-            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing or empty"
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
             exit 1
           fi
           AUTH="Authorization: Bearer $TOKEN"
-
-          # 2. Known parent ID from your API response
           PARENT_ID="qapeaw1yzy6m"
-          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
 
-          # 3. Create release subfolder (e.g., "133")
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
           echo "📁 Creating subfolder: $RELEASE_NUMBER"
+
           RELEASE_DIR_RES=$(curl -sS -X POST \
             -H "$AUTH" \
             -H "Content-Type: application/json" \
             -d "{\"name\":\"$RELEASE_NUMBER\"}" \
             "https://buzzheavier.com/api/fs/$PARENT_ID")
 
-          RELEASE_DIR_ID=$(echo "$RELEASE_DIR_RES" | jq -r '.id // empty')
+          # ✅ FIX: Extract .data.id (not .id)
+          RELEASE_DIR_ID=$(echo "$RELEASE_DIR_RES" | jq -r '.data.id // empty')
+
           if [ -z "$RELEASE_DIR_ID" ] || [ "$RELEASE_DIR_ID" = "null" ]; then
             echo "❌ Failed to create release folder"
             echo "API response: $RELEASE_DIR_RES"
             exit 1
           fi
+
           echo "✅ Release folder created with ID: $RELEASE_DIR_ID"
 
-          # 4. Upload all files
+          # Upload files
           SUCCESS_COUNT=0
           for FILE in *; do
             if [ -f "$FILE" ]; then
@@ -142,16 +142,14 @@ jobs:
             fi
           done
 
-          # 5. Output results
           if [ "$SUCCESS_COUNT" -gt 0 ]; then
             PUBLIC_LINK="https://buzzheavier.com/f/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
+            echo "✅ Done. Mirror: $PUBLIC_LINK"
           else
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
-            echo "❌ No files uploaded."
           fi
 
       - name: Upload ZIPs to Filebin
