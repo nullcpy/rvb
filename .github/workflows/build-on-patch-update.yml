@@ -519,7 +519,7 @@ jobs:
             PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Uploaded $SUCCESS_COUNT files (including full archive). Mirror: $PUBLIC_LINK"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
           else
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
@@ -546,7 +546,7 @@ jobs:
 
           echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
           if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
-            echo "✅ Full archive uploaded to Filebin"
+            echo "✅ $ARCHIVE_NAME uploaded to Filebin"
             # Lock bin
             if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
               echo "🔒 Bin locked successfully."
@@ -554,9 +554,9 @@ jobs:
               echo "⚠️ Failed to lock bin (not critical)."
             fi
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
           else
-            echo "❌ Failed to upload full archive to Filebin."
+            echo "❌ Failed to upload $ARCHIVE_NAME to Filebin."
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
           fi
@@ -829,7 +829,7 @@ jobs:
             PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
             echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Uploaded $SUCCESS_COUNT files (including full archive). Mirror: $PUBLIC_LINK"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
           else
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
@@ -856,7 +856,7 @@ jobs:
 
           echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
           if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
-            echo "✅ Full archive uploaded to Filebin"
+            echo "✅ $ARCHIVE_NAME uploaded to Filebin"
             # Lock bin
             if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
               echo "🔒 Bin locked successfully."
@@ -864,9 +864,9 @@ jobs:
               echo "⚠️ Failed to lock bin (not critical)."
             fi
             echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
-            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
           else
-            echo "❌ Failed to upload full archive to Filebin."
+            echo "❌ Failed to upload $ARCHIVE_NAME to Filebin."
             echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
             echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
           fi
