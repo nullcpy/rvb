@@ -73,8 +73,8 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                            |                 | arm32     | `twitter-revanced-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm-v7a\.apk`              |
 
 `universal` : For all devices. <br>
-`arm64`     : For most modern devices (after 2017).
-`arm32`     : For most older (before 2017) or low-end devices. <br>
+`arm64`     : For most modern devices (after 2017). <br>
+`arm32`     : For most older (before 2017) or low-end devices.
 
 ## 📝 Notes
 - Pre-release builds are built with dev patches.
