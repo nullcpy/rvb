@@ -31,7 +31,6 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 enabled = true 
 build-mode = "both"
 arch = "arm64-v8a"
-version = "auto"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
@@ -59,11 +58,18 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.
 [Lightroom]
 enabled = false
 arch = "arm64-v8a"
-version = "auto"
 patches-source = "ReVanced/revanced-patches"
 # uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[Duolingo]
+enabled = false 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [YouTube-Extended]
 enabled = true
@@ -90,7 +96,6 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 enabled = true
 app-name = "YouTube"
 build-mode = "both"
-arch = "all"
 rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
