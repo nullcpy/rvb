@@ -25,12 +25,12 @@ Updated automatically. Only recent 100 builds retained.
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-138-20790741241-1/archive-138.zip)  
 
 
-## Build No. 136   
-🔗 [BuzzHeavier](https://buzzheavier.com/h573u0hsu71s)  
-🔗 [Filebin](https://filebin.net/revanced-builder-manual-136-20789214536-1/archive-136.zip)  
-
-
 ## Build No. 137 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/m9yqut8gze4u)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-137-20789917391-1/archive-137.zip)  
+
+
+## Build No. 136   
+🔗 [BuzzHeavier](https://buzzheavier.com/h573u0hsu71s)  
+🔗 [Filebin](https://filebin.net/revanced-builder-manual-136-20789214536-1/archive-136.zip)  
 
