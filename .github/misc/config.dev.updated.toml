@@ -4,7 +4,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [YouTube]
-enabled = true
+enabled = false
 build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -12,7 +12,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -21,7 +21,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Google-Photos]
-enabled = true
+enabled = false
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -30,10 +30,9 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [Google-Recorder]
-enabled = true 
+enabled = false 
 build-mode = "both"
 arch = "arm64-v8a"
-version = "auto"
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
@@ -46,7 +45,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Proton-VPN]
-enabled = true
+enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
@@ -61,11 +60,18 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.
 [Lightroom]
 enabled = false
 arch = "arm64-v8a"
-version = "auto"
 patches-source = "ReVanced/revanced-patches"
 # uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[Duolingo]
+enabled = false 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [YouTube-Extended]
 enabled = false
@@ -92,7 +98,6 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 enabled = false
 app-name = "YouTube"
 build-mode = "both"
-arch = "all"
 rv-brand = "ReVanced-Advanced"
 patches-source = "anddea/revanced-patches"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
