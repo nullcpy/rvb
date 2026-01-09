@@ -71,6 +71,16 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
+[Gboard]
+enabled = true
+build-mode = "both"
+arch = "both"
+patches-source = "jkennethcarino/privacy-revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+# archive-dlurl = ""
+
 [YouTube-Extended]
 enabled = true
 app-name = "YouTube"
@@ -171,3 +181,15 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[Reddit-Morphe-Extended]
+enabled = true 
+app-name = "Reddit"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
