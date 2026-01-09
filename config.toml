@@ -1,7 +1,7 @@
 parallel-jobs = 1
 remove-rv-integrations-checks = true
 
-[YouTube]
+[YouTube-ReVanced]
 enabled = true
 build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
@@ -9,7 +9,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-Music]
+[YouTube-Music-ReVanced]
 enabled = true
 build-mode = "both"
 arch = "both"
@@ -18,7 +18,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[Google-Photos]
+[Google-Photos-ReVanced]
 enabled = true
 build-mode = "both"
 arch = "both"
@@ -27,7 +27,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[Google-Recorder]
+[Google-Recorder-ReVanced]
 enabled = true 
 build-mode = "both"
 arch = "arm64-v8a"
@@ -35,27 +35,27 @@ patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
-[Proton-Mail]
+[Proton-Mail-ReVanced]
 enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
-[Proton-VPN]
+[Proton-VPN-ReVanced]
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
-[Samsung-Radio]
+[Samsung-Radio-ReVanced]
 enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
-[Lightroom]
+[Lightroom-ReVanced]
 enabled = false
 arch = "arm64-v8a"
 patches-source = "ReVanced/revanced-patches"
@@ -63,7 +63,7 @@ patches-source = "ReVanced/revanced-patches"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
-[Duolingo]
+[Duolingo-ReVanced]
 enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
@@ -71,8 +71,10 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
-[Gboard]
+[Gboard-ReVanced-Privacy]
 enabled = true
+app-name = "Gboard"
+rv-brand = "ReVanced-Privacy"
 build-mode = "both"
 arch = "both"
 patches-source = "jkennethcarino/privacy-revanced-patches"
@@ -81,7 +83,18 @@ uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 # archive-dlurl = ""
 
-[YouTube-Extended]
+[Reddit-ReVanced-Privacy]
+enabled = true 
+app-name = "Reddit"
+rv-brand = "ReVanced-Privacy"
+patches-source = "jkennethcarino/privacy-revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[YouTube-ReVanced-Extended]
 enabled = true
 app-name = "YouTube"
 build-mode = "both"
@@ -91,7 +104,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-Music-Extended]
+[YouTube-Music-ReVanced-Extended]
 enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
@@ -102,7 +115,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[YouTube-Advanced]
+[YouTube-ReVanced-Advanced]
 enabled = true
 app-name = "YouTube"
 build-mode = "both"
