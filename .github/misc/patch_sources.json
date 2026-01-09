@@ -1,15 +1,15 @@
 {
-  "Official": {
+  "ReVanced": {
     "repo": "ReVanced/revanced-patches",
     "stable": "v5.47.0",
     "prerelease": "v5.48.0-dev.9"
   },
-  "Extended": {
+  "ReVanced-Extended": {
     "repo": "inotia00/revanced-patches",
     "stable": "v5.14.1",
     "prerelease": "v5.14.1-dev.9"
   },
-  "Advanced": {
+  "ReVanced-Advanced": {
     "repo": "anddea/revanced-patches",
     "stable": "v3.15.0",
     "prerelease": "v3.15.0-dev.9"
@@ -19,9 +19,19 @@
     "stable": "v1.3.0",
     "prerelease": "v1.3.1-dev.1"
   },
+  "Morphe-Extended": {
+    "repo": "wchill/rvx-morphed",
+    "stable": "",
+    "prerelease": ""
+  },
   "Piko": {
     "repo": "crimera/piko",
     "stable": "v1.59.0",
     "prerelease": "v2.0.0-dev.20"
+  },
+  "ReVanced-Privacy": {
+    "repo": "jkennethcarino/privacy-revanced-patches",
+    "stable": "v1.3.0",
+    "prerelease": "v1.3.1-dev.1"
   }
 }
