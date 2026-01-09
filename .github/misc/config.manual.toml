@@ -1,35 +1,38 @@
 parallel-jobs = 1
-patches-version = "latest"
+patches-version = "dev"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[Proton-Mail]
-enabled = true 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-
-[Samsung-Radio]
-enabled = true 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
-
-[Lightroom]
+[YouTube-Morphe-Extended]
 enabled = true
-arch = "arm64-v8a"
-patches-source = "ReVanced/revanced-patches"
-# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+app-name = "YouTube"
+build-mode = "both"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[Duolingo]
+[YouTube-Music-Morphe-Extended]
+enabled = true
+app-name = "YouTube-Music"
+build-mode = "both"
+arch = "both"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[Reddit-Morphe-Extended]
 enabled = true 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+app-name = "Reddit"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
-
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
