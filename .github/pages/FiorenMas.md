@@ -18,7 +18,7 @@ https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 7. Enter the appropriate regex from the table below for the app you want.  
 8. Tap **Add** to begin downloading.
 
-## 🔎 Regex Patterns for Filtering APKs
+### 🔎 Regex Patterns for Filtering APKs
 
 <details>
 <summary><strong><b>🦘 Jump Table</b></strong></summary>
