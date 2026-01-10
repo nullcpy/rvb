@@ -3,6 +3,30 @@ patches-version = "dev"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
+[YouTube-Morphe-Extended]
+enabled = true
+app-name = "YouTube"
+build-mode = "both"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+cli-version = "dev"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Music-Morphe-Extended]
+enabled = false
+app-name = "YouTube-Music"
+build-mode = "both"
+arch = "both"
+rv-brand = "Morphe-Extended"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
 [Gboard-ReVanced-Privacy]
 enabled = false
 app-name = "Gboard"
@@ -27,7 +51,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Reddit-Morphe-Extended]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
