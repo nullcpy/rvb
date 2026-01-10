@@ -72,20 +72,8 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
-[Gboard-ReVanced-Privacy]
-enabled = true
-app-name = "Gboard"
-rv-brand = "ReVanced-Privacy"
-build-mode = "both"
-arch = "both"
-patches-source = "jkennethcarino/privacy-revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-# archive-dlurl = ""
-
 [Reddit-ReVanced-Privacy]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "ReVanced-Privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
@@ -151,7 +139,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "Morphe"
@@ -162,7 +150,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -173,37 +161,5 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[YouTube-Morphe-Extended]
-enabled = false
-app-name = "YouTube"
-build-mode = "both"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-Music-Morphe-Extended]
-enabled = false
-app-name = "YouTube-Music"
-build-mode = "both"
-arch = "both"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Reddit-Morphe-Extended]
-enabled = false 
-app-name = "Reddit"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
