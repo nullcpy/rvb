@@ -70,7 +70,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 | [Morphe](https://github.com/MorpheApp/morphe-patches)                          | YouTube         | universal | `^youtube-morphe-v[\d.]+-all\.apk$`                                         |
 |                                                                                | YouTube Music   | arm64     | `^youtube-music-morphe-v[\d.]+-arm64-v8a\.apk$`                             |
 |                                                                                |                 | arm32     | `^youtube-music-morphe-v[\d.]+-arm-v7a\.apk$`                               |
-| [Morphe Extended](https://github.com/wchill/rvx-morphed)                       | YouTube         | universal | `^youtube-morphe-extended-v[\d.]+-all\.apk$`                                |
+| [Morphe-Extended](https://github.com/wchill/rvx-morphed)                       | YouTube         | universal | `^youtube-morphe-extended-v[\d.]+-all\.apk$`                                |
 |                                                                                | YouTube Music   | arm64     | `^youtube-music-morphe-extended-v[\d.]+-arm64-v8a\.apk$`                    |
 |                                                                                |                 | arm32     | `^youtube-music-morphe-extended-v[\d.]+-arm-v7a\.apk$`                      |
 | [Piko](https://github.com/crimera/piko)                                        | Twitter         | arm64     | `twitter-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm64-v8a\.apk`                     |
