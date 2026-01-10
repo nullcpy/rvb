@@ -1,5 +1,4 @@
 parallel-jobs = 1
-# cli-version = "dev"
 patches-version = "dev"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
@@ -33,6 +32,7 @@ app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
+cli-version = "dev"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
