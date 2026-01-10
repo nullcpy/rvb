@@ -74,7 +74,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Gboard-ReVanced-Privacy]
-enabled = true
+enabled = false
 app-name = "Gboard"
 rv-brand = "ReVanced-Privacy"
 build-mode = "both"
@@ -86,7 +86,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 # archive-dlurl = ""
 
 [Reddit-ReVanced-Privacy]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "ReVanced-Privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
@@ -175,7 +175,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Morphe-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "Morphe-Extended"
@@ -186,7 +186,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -198,7 +198,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Reddit-Morphe-Extended]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
