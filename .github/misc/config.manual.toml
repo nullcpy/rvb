@@ -4,21 +4,21 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [Proton-Mail-ReVanced]
-enabled = true 
+enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [Samsung-Radio-ReVanced]
-enabled = true 
+enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [Lightroom-ReVanced]
-enabled = true
+enabled = false
 arch = "arm64-v8a"
 patches-source = "ReVanced/revanced-patches"
 # uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
@@ -26,10 +26,81 @@ patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [Duolingo-ReVanced]
-enabled = true 
+enabled = false 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
+[Twitch-ReVanced]
+enabled = true 
+version = "25.3.0"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[Twitter-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[TikTok-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+[Spotify-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
+
+[Reddit-ReVanced]
+enabled = true
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[Reddit-ReVanced-Extended]
+enabled = true 
+app-name = "Reddit"
+rv-brand = "ReVanced-Extended"
+patches-source = "inotia00/revanced-patches"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[Reddit-ReVanced-Advanced]
+enabled = true 
+app-name = "Reddit"
+rv-brand = "ReVanced-Advanced"
+patches-source = "anddea/revanced-patches"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[Spotify-ReVanced-Advanced]
+enabled = true 
+app-name = "Spotify"
+rv-brand = "ReVanced-Advanced"
+patches-source = "anddea/revanced-patches"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
