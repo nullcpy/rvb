@@ -6,15 +6,13 @@ remove-rv-integrations-checks = true
 [YouTube-Morphe-Extended]
 enabled = true
 app-name = "YouTube"
-version = "19.05.36"
 build-mode = "both"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-# cli-version = "dev"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe-Extended]
 enabled = false
@@ -26,7 +24,7 @@ patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [Gboard-ReVanced-Privacy]
 enabled = false
@@ -35,21 +33,17 @@ rv-brand = "ReVanced-Privacy"
 build-mode = "both"
 arch = "both"
 patches-source = "jkennethcarino/privacy-revanced-patches"
-# cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-# archive-dlurl = ""
 
 [Reddit-ReVanced-Privacy]
 enabled = false 
 app-name = "Reddit"
 rv-brand = "ReVanced-Privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
-# cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Reddit-Morphe-Extended]
 enabled = false 
@@ -57,8 +51,6 @@ app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-# cli-version = "dev"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
