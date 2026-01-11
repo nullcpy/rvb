@@ -3,55 +3,33 @@ patches-version = "latest"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[YouTube-Morphe-Extended]
+[Proton-Mail-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
+[Samsung-Radio-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
+
+[Lightroom-ReVanced]
 enabled = true
-app-name = "YouTube"
 arch = "arm64-v8a"
-build-mode = "both"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+patches-source = "ReVanced/revanced-patches"
+# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
-[YouTube-Music-Morphe-Extended]
-enabled = false
-app-name = "YouTube-Music"
-build-mode = "both"
-arch = "both"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Gboard-ReVanced-Privacy]
-enabled = false
-app-name = "Gboard"
-rv-brand = "ReVanced-Privacy"
-build-mode = "both"
-arch = "both"
-patches-source = "jkennethcarino/privacy-revanced-patches"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-
-[Reddit-ReVanced-Privacy]
-enabled = false 
-app-name = "Reddit"
-rv-brand = "ReVanced-Privacy"
-patches-source = "jkennethcarino/privacy-revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+[Duolingo-ReVanced]
+enabled = true 
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
-[Reddit-Morphe-Extended]
-enabled = false 
-app-name = "Reddit"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
