@@ -668,6 +668,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@revanced_builder"
+          TG_CHANNEL: "@rvbuild"
           TG_THREAD_ID: "350"
           FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_dev.outputs.UPLOAD_SUCCESS }}
@@ -717,12 +718,23 @@ jobs:
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
 
+          # Send to group
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+          sleep 2
+
+          # Send to channel
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   build-stable:
@@ -1039,6 +1051,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: "@revanced_builder"
+          TG_CHANNEL: "@rvbuild"
           TG_THREAD_ID: "262"
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_stable.outputs.UPLOAD_SUCCESS }}
@@ -1085,12 +1098,23 @@ jobs:
           MSG+="*APKs:*${APKS}"
           MSG=${MSG:0:9450}
 
+          # Send to group
           curl -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+          sleep 2
+
+          # Send to channel
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   cleanup:
