@@ -6,6 +6,7 @@ remove-rv-integrations-checks = true
 [YouTube-Morphe-Extended]
 enabled = true
 app-name = "YouTube"
+version = "19.05.36"
 build-mode = "both"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
@@ -16,7 +17,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -51,7 +52,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Reddit-Morphe-Extended]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
