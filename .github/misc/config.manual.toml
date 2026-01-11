@@ -6,6 +6,7 @@ remove-rv-integrations-checks = true
 [YouTube-Morphe-Extended]
 enabled = true
 app-name = "YouTube"
+arch = "arm64-v8a"
 build-mode = "both"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
