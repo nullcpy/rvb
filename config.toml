@@ -161,7 +161,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Music-Morphe-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
