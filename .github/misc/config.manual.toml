@@ -4,19 +4,19 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [YouTube-Morphe-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-cli-version = "dev"
+# cli-version = "dev"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -40,7 +40,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 # archive-dlurl = ""
 
 [Reddit-ReVanced-Privacy]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "ReVanced-Privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
@@ -51,12 +51,12 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [Reddit-Morphe-Extended]
-enabled = false 
+enabled = true 
 app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-cli-version = "dev"
+# cli-version = "dev"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
