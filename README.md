@@ -13,7 +13,7 @@ Get instant notifications when new builds are released and download them easily.
 ## 📢 [Join the Telegram Channel](https://t.me/rvbuild)
 For quick access to the latest download links via Telegram or your browser. [`t.me/s/rvbuild`](https://t.me/s/rvbuild)
 
-## 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
+## 📦 [Download from GitHub](./releases)
 If the app you need isn’t in the latest version, check older releases.
 
 ## 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
