@@ -3,31 +3,31 @@ patches-version = "latest"
 enable-magisk-update = true
 remove-rv-integrations-checks = true
 
-[YouTube-ReVanced-Extended]
+[youtube-rvx]
 enabled = true
-app-name = "YouTube"
+app-name = "youtube"
+rv-brand = "rvx"
 build-mode = "both"
-rv-brand = "ReVanced-Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-Music-ReVanced-Extended]
+[youtube-music-rvx]
 enabled = true
-app-name = "YouTube-Music"
+app-name = "youtube-music"
+rv-brand = "rvx"
 build-mode = "both"
 arch = "both"
-rv-brand = "ReVanced-Extended"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[Reddit-ReVanced-Extended]
+[reddit-rvx]
 enabled = true 
-app-name = "Reddit"
-rv-brand = "ReVanced-Extended"
+app-name = "reddit"
+rv-brand = "rvx"
 patches-source = "inotia00/revanced-patches"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
