@@ -169,8 +169,8 @@ if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 log "\n**Notes:**"
 log "• Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk), required for Google APKs."
 log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
-log "\n**GitHub:** [ReVanced Builder](https://github.com/geologically/revanced-builder)"
-log "**Telegram:** [ReVanced Builder](https://t.me/rvbuilder)\n"
+log "\n**GitHub:** [ReVanced Builder](https://github.com/nullcpy/rvb)"
+log "**Telegram:** [ReVanced Builder](https://t.me/rvb27)\n"
 log "$(cat "$TEMP_DIR"/*/changelog.md)"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
