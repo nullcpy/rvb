@@ -129,6 +129,8 @@ rv-brand = "jkennethcarino"
 build-mode = "both"
 arch = "both"
 patches-source = "jkennethcarino/privacy-revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+cli-version = "dev"
 uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 
