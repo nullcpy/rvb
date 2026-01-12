@@ -25,18 +25,6 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Determine Config File
-        id: config
-        run: |
-          set -euo pipefail
-          if [ -f ".github/configs/config.manual.toml" ]; then
-            echo "CONFIG_FILE=.github/configs/config.manual.toml" >> "$GITHUB_OUTPUT"
-            echo "Using manual config"
-          else
-            echo "CONFIG_FILE=config.toml" >> "$GITHUB_OUTPUT"
-            echo "Using default config"
-          fi
-
       - name: Get Next Version Code
         id: next_ver_code
         env:
@@ -50,7 +38,11 @@ jobs:
       - name: Build Modules and APKs
         run: |
           set -euo pipefail
-          ./build.sh "${{ steps.config.outputs.CONFIG_FILE }}"
+          if [ -f ".github/misc/config.manual.toml" ]; then
+            ./build.sh .github/misc/config.manual.toml
+          else
+            ./build.sh config.toml
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -70,16 +62,22 @@ jobs:
         id: check_prerelease
         run: |
           set -euo pipefail
-          CONFIG="${{ steps.config.outputs.CONFIG_FILE }}"
+          if [ -f ".github/misc/config.manual.toml" ]; then
+            CONFIG=".github/misc/config.manual.toml"
+          else
+            CONFIG="config.toml"
+          fi
 
           if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
+            echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
-            echo "Status: Prerelease"
+            echo "Status: Prerelease (Thread 350)."
           else
             echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
+            echo "TG_THREAD_ID=262" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
-            echo "Status: Stable Release"
+            echo "Status: Release (Thread 262)."
           fi
 
       - name: Upload to Release
@@ -99,11 +97,114 @@ jobs:
         env:
           BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          # Create full archive ONCE
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+          echo "📦 Creating full archive: $ARCHIVE_NAME"
+          zip -q9 "$ARCHIVE_NAME" *
+
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
+            exit 1
+          fi
+          AUTH="Authorization: Bearer $TOKEN"
+          PARENT_ID="qapeaw1yzy6m"
+
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
+          echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
+
+          # Fetch parent contents (NO TRAILING SPACES!)
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
+
+          if [ -n "$EXISTING_ID" ]; then
+            echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
+            curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID" || true
+            sleep 1
+          fi
+
+          echo "📁 Creating fresh folder: $RELEASE_NUMBER"
+          CREATE_RES=$(curl -sS -X POST \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"$RELEASE_NUMBER\"}" \
+            "https://buzzheavier.com/api/fs/$PARENT_ID")
+
+          RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ]; then
+            echo "❌ Failed to create folder. Response: $CREATE_RES"
+            exit 1
+          fi
+          echo "✅ Folder created with ID: $RELEASE_DIR_ID"
+
+          # Upload ALL files (including archive-XXX.zip)
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
+            fi
+          done
+
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded to BuzzHeavier."
+          fi
 
       - name: Upload to Filebin
         id: upload_filebin
-        run: .github/scripts/upload-filebin.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "manual" "${{ github.run_id }}" "${{ github.run_attempt }}"
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          RELEASE_NUMBER="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+
+          # The archive was already created by BuzzHeavier step — no need to recreate!
+          if [ ! -f "$ARCHIVE_NAME" ]; then
+            echo "❌ Expected archive $ARCHIVE_NAME not found!"
+            exit 1
+          fi
+
+          BIN_ID="revanced-builder-manual-${RELEASE_NUMBER}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
+          if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
+            echo "✅ $ARCHIVE_NAME uploaded to Filebin"
+            # Lock bin
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "🔒 Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
+          else
+            echo "❌ Failed to upload $ARCHIVE_NAME to Filebin."
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # DELETE archive-$RELEASE_NUMBER.zip AFTER upload (so it doesn't appear in Telegram)
+          if [ -f "$ARCHIVE_NAME" ]; then
+            echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
+            rm -f "$ARCHIVE_NAME"
+          fi
 
       - name: Update Mirror Links
         id: update_mirrors
@@ -112,7 +213,49 @@ jobs:
           RELEASE_TYPE: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
           BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
           FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
-        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "$RELEASE_TYPE" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+        run: |
+          set -euo pipefail
+
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          if [ -z "$RELEASE_NUM" ]; then
+            echo "⚠️ No release number — skipping mirror update"
+            exit 0
+          fi
+
+          ENTRY="## Build No. $RELEASE_NUM $RELEASE_TYPE  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
+          fi
+          ENTRY+="\n"
+
+          # Create new file with: header + new entry + old entries (limited to 99 to keep 100 total)
+          {
+            # Keep header (first 3 lines)
+            head -n 3 "$MIRRORS_FILE"
+            # Add new entry
+            echo -e "$ENTRY"
+            # Add old entries (skip first 3 lines), keep only 99 blocks
+            tail -n +4 "$MIRRORS_FILE" | awk '/^## Build No\./ { 
+              if (block_count >= 99) { exit }
+              block_count++
+            }
+            block_count <= 99 { print }'
+          } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
 
       - name: Commit Updated mirrors.md
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -124,7 +267,34 @@ jobs:
 
       - name: Update Changelog and Magisk Update JSON
         id: update_config
-        run: .github/scripts/update-changelog.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+        run: |
+          set -euo pipefail
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+
+          find . -name "*-update.json" | grep . || : >dummy-update.json
 
       - name: Commit Updated Build MD and Update JSON Files
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -137,7 +307,7 @@ jobs:
       - name: Notify Telegram (Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          IS_PRERELEASE: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
+          TG_THREAD_ID: ${{ steps.check_prerelease.outputs.TG_THREAD_ID }}
           TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
           FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin.outputs.UPLOAD_SUCCESS }}
@@ -145,15 +315,70 @@ jobs:
           BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier.outputs.UPLOAD_SUCCESS }}
         run: |
           set -euo pipefail
-          source .github/scripts/config.sh
-          
-          if [ "$IS_PRERELEASE" = "true" ]; then
-            THREAD_ID="$TG_THREAD_ID_PRERELEASE"
-          else
-            THREAD_ID="$TG_THREAD_ID_STABLE"
+          cd build || { echo "build folder not found"; exit 1; }
+
+          TG_CHAT="@revanced_builder"
+          TG_CHANNEL="@rvbuild"
+
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+
+          MSG="*Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
+
+          MIRRORS=""
+          if [ "$BUZZHEAVIER_SUCCESS" = "true" ]; then
+            MIRRORS+="[BuzzHeavier]($BUZZHEAVIER_LINK)${NL}"
           fi
-          
-          .github/scripts/notify-telegram.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "$TG_TOKEN" "$TG_CHAT" "$TG_CHANNEL" "$THREAD_ID" "$TITLE_SUFFIX" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$BUZZHEAVIER_LINK" "$BUZZHEAVIER_SUCCESS" "$FILEBIN_LINK" "$FILEBIN_SUCCESS"
+          if [ "$FILEBIN_SUCCESS" = "true" ]; then
+            MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
+          fi
+
+          if [ -n "$MIRRORS" ]; then
+            MSG+="*Mirrors:*${NL}${MIRRORS}${NL}"
+          fi
+           
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+
+          # Send to group
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+          sleep 2
+
+          # Send to channel
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
   cleanup:
     needs: build

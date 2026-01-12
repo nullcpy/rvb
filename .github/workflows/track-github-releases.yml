@@ -9,6 +9,10 @@ concurrency:
   group: track-updates
   cancel-in-progress: false
 
+env:
+  TG_CHAT: "@rvbuilder"
+  TG_THREAD_ID: "267"
+
 jobs:
   track-github-releases:
     name: Track GitHub Releases
@@ -27,10 +31,9 @@ jobs:
 
       - name: Ensure repos.json exists
         run: |
-          set -euo pipefail
-          mkdir -p .github/configs
-          if [ ! -f .github/configs/repos.json ]; then
-            echo "{}" > .github/configs/repos.json
+          mkdir -p .github/misc
+          if [ ! -f .github/misc/repos.json ]; then
+            echo "{}" > .github/misc/repos.json
           fi
 
       - name: Check releases and notify
@@ -39,39 +42,27 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
           set -euo pipefail
-          source .github/scripts/config.sh
-          
           NL=$'\n'
-          FILE=".github/configs/repos.json"
+          FILE=".github/misc/repos.json"
           UPDATED=false
 
           retry_curl() {
             local url="$1"
             local attempts=5
             local delay=2
-            local response=""
 
             for i in $(seq 1 $attempts); do
-              response=$(curl -sS -w '\n%{http_code}' \
+              RESPONSE=$(curl -sf \
                 -H "Accept: application/vnd.github+json" \
                 -H "Authorization: Bearer $GH_TOKEN" \
-                "$url" 2>&1)
-              
-              local http_code=$(echo "$response" | tail -n1)
-              local body=$(echo "$response" | sed '$d')
-              
-              if [ "$http_code" = "200" ]; then
-                echo "$body"
-                return 0
-              fi
-              
-              echo "⚠️  Attempt $i failed (HTTP $http_code). Retrying in $delay seconds..." >&2
+                "$url" 2>/dev/null) && break || true
+
+              echo "Curl attempt $i failed. Retrying in $delay seconds..."
               sleep $delay
               delay=$((delay * 2))
             done
 
-            echo "" # Return empty on failure
-            return 1
+            echo "$RESPONSE"
           }
 
           for repo in $(jq -r 'keys[]' "$FILE"); do
@@ -81,9 +72,8 @@ jobs:
 
             RESPONSE=$(retry_curl "https://api.github.com/repos/$repo/releases/latest")
 
-            # Validate JSON response
-            if [ -z "$RESPONSE" ] || ! echo "$RESPONSE" | jq empty 2>/dev/null; then
-              echo "⚠️  Invalid or empty response for $repo. Skipping."
+            if [ -z "$RESPONSE" ] || [ "$(echo "$RESPONSE" | jq 'type != "object"')" = "true" ]; then
+              echo "API returned empty or invalid JSON. Skipping."
               continue
             fi
 
@@ -93,15 +83,15 @@ jobs:
               continue
             fi
 
-            echo "✅ New release for $repo: $NEW_TAG"
+            echo "New release for $repo: $NEW_TAG"
 
             jq --arg r "$repo" --arg t "$NEW_TAG" '.[$r] = $t' "$FILE" > "$FILE.tmp"
             mv "$FILE.tmp" "$FILE"
             UPDATED=true
 
-            RELEASE_NAME=$(echo "$RESPONSE" | jq -r '.name // .tag_name')
+            NAME=$(echo "$RESPONSE" | jq -r '.name // .tag_name')
             URL=$(echo "$RESPONSE" | jq -r '.html_url')
-            ESC_NAME=$(printf "%s" "$RELEASE_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+            ESC_NAME=$(printf "%s" "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
 
             MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
 
@@ -109,24 +99,23 @@ jobs:
             if [ "$(echo "$ASSETS" | jq 'length')" -gt 0 ]; then
               MSG+="*Assets:*${NL}"
               
-              while IFS= read -r asset; do
-                ASSET_NAME=$(echo "$asset" | jq -r '.name')
+              while read -r asset; do
+                NAME=$(echo "$asset" | jq -r '.name')
                 DL=$(echo "$asset" | jq -r '.browser_download_url')
-                ESC_ASSET=$(printf "%s" "$ASSET_NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
-                MSG+="[${ESC_ASSET}](${DL})${NL}${NL}"
+                ESC=$(printf "%s" "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
+                MSG+="[${ESC}](${DL})${NL}${NL}"
               done < <(echo "$ASSETS" | jq -c '.[]')
               
             else
               MSG+="No assets attached.${NL}"
             fi
 
-            # Use MAX_MSG_LENGTH from config.sh
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
-              --data-urlencode "message_thread_id=${TG_THREAD_ID_GITHUB_RELEASES}" \
+              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
               --data-urlencode "parse_mode=Markdown" \
               --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${MSG:0:$MAX_MSG_LENGTH}" \
+              --data-urlencode "text=${MSG:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
 
             sleep 1
@@ -140,7 +129,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/configs/repos.json
+          file_pattern: .github/misc/repos.json
           commit_message: "Update tracked release versions"
 
   track-fiorenmas-apks:
@@ -162,35 +151,25 @@ jobs:
 
       - name: Fetch APK Assets (FiorenMas Repo)
         run: |
-          set -euo pipefail
-          mkdir -p .github/configs
-          
-          RESPONSE=$(curl -sS \
+          mkdir -p .github/misc
+          curl -s \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GH_TOKEN" \
-            "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all")
-          
-          # Validate response
-          if ! echo "$RESPONSE" | jq empty 2>/dev/null; then
-            echo "⚠️  Invalid JSON response from API"
-            echo '[]' > .github/configs/current_apks.json
-            exit 0
-          fi
-          
-          echo "$RESPONSE" | jq -r '
-            (.assets // [])
-            | map(select(.name | endswith(".apk")))
-            | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
-          ' > .github/configs/current_apks.json
+            "https://api.github.com/repos/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tags/all" \
+            | jq -r '
+              (.assets // [])
+              | map(select(.name | endswith(".apk")))
+              | map({ name: .name, updated_at: .updated_at, url: .browser_download_url })
+            ' \
+            > .github/misc/current_apks.json
 
       - name: Initialize Timestamp File if Missing
         id: init_file
         run: |
-          set -euo pipefail
-          FILE=".github/configs/apk_timestamps.json"
+          FILE=".github/misc/apk_timestamps.json"
           if [ ! -f "$FILE" ]; then
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' \
-              .github/configs/current_apks.json > "$FILE"
+              .github/misc/current_apks.json > "$FILE"
             echo "missing=true" >> "$GITHUB_OUTPUT"
           else
             echo "missing=false" >> "$GITHUB_OUTPUT"
@@ -202,15 +181,14 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/configs/apk_timestamps.json
+          file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Initialize apk_timestamps.json"
 
       - name: Compare and Detect Changes
         id: compare
         run: |
-          set -euo pipefail
-          CURRENT=".github/configs/current_apks.json"
-          STORED=".github/configs/apk_timestamps.json"
+          CURRENT=".github/misc/current_apks.json"
+          STORED=".github/misc/apk_timestamps.json"
 
           CHANGES=$(jq -nr \
             --argjson cur "$(cat $CURRENT)" \
@@ -238,7 +216,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/configs/apk_timestamps.json
+          file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Update apk timestamps"
 
       - name: Notify Telegram (New APK)
@@ -246,39 +224,37 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          set -euo pipefail
-          source .github/scripts/config.sh
-          
           NL=$'\n'
-          
-          # Use mapfile/readarray for safe array handling
-          mapfile -t LINKS < <(grep -v '^$' /tmp/apk_links.md)
+          # NOTE: This array split is risky if filenames contain spaces. 
+          # Assuming standard APK names without spaces for now.
+          LINKS=( $(grep -v '^$' /tmp/apk_links.md) )
 
           BASE_HEAD="*New APK Detected in FiorenMas Repo!*"
-          MAX=$MAX_MSG_LENGTH
+          BASE_FOOT=" "
+          MAX=4000
 
           current="$BASE_HEAD"
           msgs=()
 
           for L in "${LINKS[@]}"; do
-            test="$current$NL$NL$L"
+            test=$current$NL$NL$L
             if (( ${#test} <= MAX )); then
               current="$test"
             else
-              msgs+=("$current")
+              msgs+=("$current$BASE_FOOT")
               current="$BASE_HEAD$NL$NL$L"
             fi
           done
 
-          msgs+=("$current")
+          msgs+=("$current$BASE_FOOT")
 
           for m in "${msgs[@]}"; do
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
-              --data-urlencode "message_thread_id=${TG_THREAD_ID_GITHUB_RELEASES}" \
+              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
               --data-urlencode "parse_mode=Markdown" \
               --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${m:0:$MAX_MSG_LENGTH}" \
+              --data-urlencode "text=${m:0:9450}" \
               "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
             sleep 1
           done
