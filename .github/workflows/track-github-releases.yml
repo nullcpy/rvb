@@ -230,7 +230,6 @@ jobs:
           LINKS=( $(grep -v '^$' /tmp/apk_links.md) )
 
           BASE_HEAD="*New APK Detected in FiorenMas Repo!*"
-          BASE_FOOT=" "
           MAX=4000
 
           current="$BASE_HEAD"
@@ -241,12 +240,12 @@ jobs:
             if (( ${#test} <= MAX )); then
               current="$test"
             else
-              msgs+=("$current$BASE_FOOT")
+              msgs+=("$current")
               current="$BASE_HEAD$NL$NL$L"
             fi
           done
 
-          msgs+=("$current$BASE_FOOT")
+          msgs+=("$current")
 
           for m in "${msgs[@]}"; do
             curl -s -X POST \
