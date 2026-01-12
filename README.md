@@ -8,19 +8,19 @@
 > **Please star the repo! 🙏🥺**
 
 ## 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
-Get notified instantly when new builds are released and download easily.
+Get instant notifications when new builds are released and download them easily.
 
 ## 📢 [Join the Telegram Channel](https://t.me/rvbuild)
-If you just want the latest download links or access links from browsers. [`t.me/s/rvbuild`](https://t.me/s/rvbuild)
+For quick access to the latest download links via Telegram or your browser. [`t.me/s/rvbuild`](https://t.me/s/rvbuild)
 
 ## 📦 [Download from GitHub](https://github.com/geologically/revanced-builder/releases)
-If you don’t see the app you want in the latest release, check older ones.
+If the app you need isn’t in the latest version, check older releases.
 
 ## 🗃️ [Download from Mirrors](./.github/pages/mirrors.md)
-Click here if you have trouble downloading from GitHub.
+Use these links if GitHub is slow, blocked, or unreliable.
 
 ## 🍀 [Download FiorenMas Builds](./.github/pages/FiorenMas.md)
-Contains APKs of many more apps from different ReVanced patches.
+A collection of additional APKs built from various ReVanced patches.
 
 ## 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update ReVanced APKs.
