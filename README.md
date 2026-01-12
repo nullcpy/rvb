@@ -7,11 +7,11 @@
 > [!Important]
 > **Please star the repo! 🙏🥺**
 
-## 🗨️ [Join the Telegram Group](https://t.me/rvbuilder)
+## 🗨️ [Join the Telegram Group](https://t.me/rvb27)
 Get instant notifications when new builds are released and download them easily.
 
-## 📢 [Join the Telegram Channel](https://t.me/rvbuild)
-For quick access to the latest download links via Telegram or your browser. [`t.me/s/rvbuild`](https://t.me/s/rvbuild)
+## 📢 [Join the Telegram Channel](https://t.me/rvb28)
+For quick access to the latest download links via Telegram or your browser. [`t.me/s/rvb28`](https://t.me/s/rvb28)
 
 ## 📦 [Download from GitHub](../../releases)
 If the app you need isn’t in the latest version, check older releases.
@@ -40,7 +40,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
   ```
 
 4. Scroll down to **Filter APKs by regular expression**.  
-5. Enter the appropriate regex from the table below for the app you want.  
+5. Enter the regex from the table below for the app you want.  
 6. Tap **Add** to begin downloading.
 
 ### 🔎 Regex Patterns for Filtering APKs
@@ -80,20 +80,20 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 | [Piko](https://github.com/crimera/piko)                                        | Twitter         | arm64     | `twitter-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm64-v8a\.apk`                     |
 |                                                                                |                 | arm32     | `twitter-piko-v\d+\.\d+\.\d+-[a-z]+\.\d-arm-v7a\.apk`                       |
 
-`universal` : For all devices. <br>
-`arm64`     : For most modern devices (after 2017). <br>
-`arm32`     : For most older (before 2017) or low-end devices.
+`universal`: For all devices. <br>
+`arm64`: For most modern devices (after 2017). <br>
+`arm32`: For most older (before 2017) or low-end devices.
 
 ## 📝 Notes
-- Pre-release builds are built with dev patches.
+- Pre-release builds use dev patches.
 - [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk) is required for Google APKs to work properly.
 - All modules can be updated directly from Magisk and KSU.
-- If you want pre-release updates via Obtainium then turn on include prereleases in additional options.
-- If you want a app that is built from a rarely updated or discontinued patch, check [mirror](./.github/pages/mirrors.md) page or [build archive](https://t.me/revanced_builder/1139) topic on telegram.
+- For Obtainium pre-release updates, enable “Include prereleases” in additional options.
+- If you want an app built from a rarely updated or discontinued patch, check the [mirrors](./.github/pages/mirrors.md) page or the [build archive](https://t.me/revanced_builder/1139) topic on Telegram.
 
 ## ⁉️ Report
-- Want a app? Request it in the [Telegram Group](https://t.me/rvbygeo).
-- Found a bug? Report it in the [Telegram Group](https://t.me/rvbygeo).
+- Want an app? Request it in the [Telegram Group](https://t.me/rvb27).
+- Found a bug? Report it in the [Telegram Group](https://t.me/rvb27).
 
 ## ⭐ Credits
 - Icon is from [ReVanced](https://github.com/revanced). 
