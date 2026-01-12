@@ -122,17 +122,6 @@ patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
-[gboard-jkennethcarino]
-enabled = true
-app-name = "gboard"
-rv-brand = "jkennethcarino"
-build-mode = "both"
-arch = "both"
-patches-source = "jkennethcarino/privacy-revanced-patches"
-patches-version = "latest"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-
 [reddit-jkennethcarino]
 enabled = true 
 app-name = "reddit"
