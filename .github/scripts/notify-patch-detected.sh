@@ -33,10 +33,14 @@ fi
 MSG+="${NL}"
 
 CHANGES=$(jq -n --argjson old "$TAGS_OLD" --argjson new "$TAGS_NEW" --arg key "$VERSION_KEY" '
+  # Handle null/empty inputs
+  ($old // {}) as $old_tags |
+  ($new // {}) as $new_tags |
   [
     (
-      to_entries[] 
-      | select(.value[$key] != ($old[.key][$key] // ""))
+      $new_tags | to_entries[]
+      | select(.value != null and (.value | type) == "object")
+      | select(.value[$key] != ($old_tags[.key][$key] // ""))
       | "\(.key): \(.value[$key] // "none")"
     )
   ] 
