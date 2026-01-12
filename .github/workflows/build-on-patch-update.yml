@@ -375,7 +375,7 @@ jobs:
       - name: Notify Telegram (New Dev Patch)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@revanced_builder"
+          TG_CHAT: "@rvbuilder"
           TG_THREAD_ID: "345"
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
@@ -409,7 +409,7 @@ jobs:
             done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
-          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)"
           MSG=${MSG:0:9450}
 
           curl -X POST \
@@ -667,7 +667,7 @@ jobs:
       - name: Notify Telegram (Dev Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@revanced_builder"
+          TG_CHAT: "@rvbuilder"
           TG_CHANNEL: "@rvbuild"
           TG_THREAD_ID: "350"
           FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
@@ -760,7 +760,7 @@ jobs:
       - name: Notify Telegram (New Stable Patch)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@revanced_builder"
+          TG_CHAT: "@rvbuilder"
           TG_THREAD_ID: "345"
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
@@ -794,7 +794,7 @@ jobs:
             done < <(echo "$CHANGES" | jq -c '.[]')
           fi
 
-          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)${NL}${NL}@revanced\\_builder"
+          MSG+="${NL}[Triggering new build...](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)"
           MSG=${MSG:0:9450}
 
           curl -X POST \
@@ -1050,7 +1050,7 @@ jobs:
       - name: Notify Telegram (Stable Build Complete)
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: "@revanced_builder"
+          TG_CHAT: "@rvbuilder"
           TG_CHANNEL: "@rvbuild"
           TG_THREAD_ID: "262"
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
