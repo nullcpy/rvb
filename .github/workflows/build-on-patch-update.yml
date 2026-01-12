@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TG_CHAT: "@rvbuilder"
-  TG_CHANNEL: "@rvbuild"
+  TG_CHAT: "@rvb27"
+  TG_CHANNEL: "@rvb28"
 
 jobs:
   check-patch:
