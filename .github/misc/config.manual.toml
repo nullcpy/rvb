@@ -51,7 +51,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [TikTok-ReVanced]
-enabled = false 
+enabled = true 
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
