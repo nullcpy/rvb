@@ -36,7 +36,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 - **For MicroG (required for Google APKs):**  
   ```
-  https://github.com/WSTxda/MicroG-RE
+  https://github.com/MorpheApp/MicroG-RE
   ```
 
 4. Scroll down to **Filter APKs by regular expression**.  
