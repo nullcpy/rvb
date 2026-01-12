@@ -66,12 +66,12 @@ jobs:
         id: fetch_tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: .github/scripts/fetch-latest-tags.sh
+        run: bash .github/scripts/fetch-latest-tags.sh
 
       - name: Compare Latest vs Stored Tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
-        run: .github/scripts/compare-patch-tags.sh '' '${{ steps.fetch_tags.outputs.latest }}'
+        run: bash .github/scripts/compare-patch-tags.sh '' '${{ steps.fetch_tags.outputs.latest }}'
 
       - name: Commit Updated patch_sources.json
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
@@ -88,7 +88,7 @@ jobs:
         env:
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
-        run: .github/scripts/generate-patch-configs.sh "$TAGS_OLD" "$TAGS_NEW"
+        run: bash .github/scripts/generate-patch-configs.sh "$TAGS_OLD" "$TAGS_NEW"
 
       - name: Commit Updated Config (Stable)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE == '1'
@@ -160,7 +160,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
-        run: .github/scripts/notify-patch-detected.sh "dev" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
+        run: bash .github/scripts/notify-patch-detected.sh "dev" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
 
       - name: Build Modules and APKs (Dev)
         run: |
@@ -200,11 +200,11 @@ jobs:
         env:
           BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_dev_ver }}
-        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+        run: bash .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
 
       - name: Upload to Filebin (Dev)
         id: upload_filebin_dev
-        run: .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "dev" "${{ github.run_id }}" "${{ github.run_attempt }}"
+        run: bash .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "dev" "${{ github.run_id }}" "${{ github.run_attempt }}"
 
       - name: Update Mirror Links (Dev)
         id: update_mirrors_dev
@@ -213,7 +213,7 @@ jobs:
           RELEASE_TYPE: " (Pre-release)"
           BUZZ_LINK: ${{ steps.upload_buzzheavier_dev.outputs.BUZZHEAVIER_LINK }}
           FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
-        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "$RELEASE_TYPE" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+        run: bash .github/scripts/update-mirrors.sh "$RELEASE_NUM" "$RELEASE_TYPE" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
 
       - name: Commit Updated mirrors.md (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -224,7 +224,7 @@ jobs:
           commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_dev_ver }}"
 
       - name: Update Changelog and Magisk Update JSON (Dev)
-        run: .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+        run: bash .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
 
       - name: Commit Updated Build MD and Update JSON Files (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -271,7 +271,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
-        run: .github/scripts/notify-patch-detected.sh "stable" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
+        run: bash .github/scripts/notify-patch-detected.sh "stable" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
 
       - name: Build Modules and APKs (Stable)
         run: |
@@ -310,11 +310,11 @@ jobs:
         env:
           BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_stable_ver }}
-        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+        run: bash .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
 
       - name: Upload to Filebin (Stable)
         id: upload_filebin_stable
-        run: .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "stable" "${{ github.run_id }}" "${{ github.run_attempt }}"
+        run: bash .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "stable" "${{ github.run_id }}" "${{ github.run_attempt }}"
 
       - name: Update Mirror Links (Stable)
         id: update_mirrors_stable
@@ -322,7 +322,7 @@ jobs:
           RELEASE_NUM: ${{ needs.check-patch.outputs.next_stable_ver }}
           BUZZ_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
-        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+        run: bash .github/scripts/update-mirrors.sh "$RELEASE_NUM" "" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
 
       - name: Commit Updated mirrors.md (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -333,7 +333,7 @@ jobs:
           commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_stable_ver }}"
 
       - name: Update Changelog and Magisk Update JSON (Stable)
-        run: .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+        run: bash .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
 
       - name: Commit Updated Build MD and Update JSON Files (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
