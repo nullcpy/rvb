@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TG_CHAT: "@rvbuilder"
+  TG_CHAT: "@rvb27"
   TG_THREAD_ID: "267"
 
 jobs:
