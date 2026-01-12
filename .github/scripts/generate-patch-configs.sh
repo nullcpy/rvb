@@ -1,111 +1,103 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-# Generate build configuration files based on patch changes
-# Usage: generate-patch-configs.sh <tags_old_json> <tags_new_json>
-
-# Source shared config
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "$SCRIPT_DIR/config.sh" || { echo "❌ Failed to source config.sh"; exit 1; }
-
-# Validate required config variables
-if [ -z "${ACTIVE_STABLE_TXT:-}" ] || [ -z "${ACTIVE_PRERELEASE_TXT:-}" ] || [ -z "${CONFIG_STABLE_UPDATED:-}" ] || [ -z "${CONFIG_DEV_UPDATED:-}" ]; then
-  echo "❌ Required config variables not set"
+# Source config with validation
+if [[ ! -f .github/scripts/config.sh ]]; then
+  echo "❌ config.sh not found"
   exit 1
 fi
 
-TAGS_OLD="${1:?Old tags JSON required}"
-TAGS_NEW="${2:?New tags JSON required}"
+source .github/scripts/config.sh
 
-BASE_CONFIG="config.toml"
+# Validate required variables
+for var in CONFIG_STABLE CONFIG_DEV CONFIG_STABLE_UPDATED CONFIG_DEV_UPDATED ACTIVE_PRERELEASE_TXT ACTIVE_STABLE_TXT; do
+  if [[ -z "${!var}" ]]; then
+    echo "❌ Required variable $var not set in config.sh"
+    exit 1
+  fi
+done
 
-# Build ACTIVE repo lists:
-# For STABLE: repos where new.stable is non-empty AND changed vs old
-# For PRERELEASE: repos where new.prerelease is non-empty AND changed vs old
+# Ensure we're in repo root
+cd "$(git rev-parse --show-toplevel)"
 
-# active.stable.txt
-jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-  [ $new | to_entries[] | . as $e
-      | ($old[$e.key] // {}) as $o
-      | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-      | $e.value.repo
-  ] | .[]
-' > "$ACTIVE_STABLE_TXT" || true
-
-# active.prerelease.txt
-jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-  [ $new | to_entries[] | . as $e
-      | ($old[$e.key] // {}) as $o
-      | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
-      | $e.value.repo
-  ] | .[]
-' > "$ACTIVE_PRERELEASE_TXT" || true
-
+# Function to generate modified config
+# Arguments: input_config, active_repos_file, output_config
 generate_config() {
-  local mode="$1" # stable | dev
-  local out_file
-  if [ "$mode" = "stable" ]; then
-    out_file="$CONFIG_STABLE_UPDATED"
-  else
-    out_file="$CONFIG_DEV_UPDATED"
-  fi
-  cp "$BASE_CONFIG" "$out_file"
+  local input_config="$1"
+  local active_repos_file="$2"
+  local output_config="$3"
 
-  # Inject mode-specific global settings BEFORE patch toggling:
-  if [ "$mode" = "stable" ]; then
-    # Stable: magisk update enabled
-    {
-      echo 'enable-magisk-update = true'
-      cat "$out_file"
-    } > tmp_header
-    mv tmp_header "$out_file"
-  else
-    # Dev: patches-version + magisk update disabled
-    {
-      echo 'patches-version = "dev"'
-      echo 'enable-magisk-update = false'
-      cat "$out_file"
-    } > tmp_header
-    mv tmp_header "$out_file"
+  # Check if input config exists
+  if [[ ! -f "$input_config" ]]; then
+    echo "❌ Input config not found: $input_config"
+    return 1
   fi
 
-  # Now, for each active repo, enable all patches
-  local active_file
-  if [ "$mode" = "stable" ]; then
-    active_file="$ACTIVE_STABLE_TXT"
-  else
-    active_file="$ACTIVE_PRERELEASE_TXT"
-  fi
-  
-  if [ -f "$active_file" ]; then
-    while read -r repo; do
-      # Find the [[patches.<repo>]] section and set enabled = true for all patches
-      # Escape special characters in repo name for regex
-      escaped_repo=$(printf '%s\n' "$repo" | sed 's/[.\\[]/\\&/g')
-      awk -v repo="$escaped_repo" '
-        /^\[\[patches\./ {
-          if ($0 ~ "^\\[\\[patches\\." repo "\\]\\]$") {
-            in_section = 1
-          } else {
-            in_section = 0
-          }
-        }
-        in_section && /^enabled = / {
-          $0 = "enabled = true"
-        }
-        { print }
-      ' "$out_file" > tmp_patches
-      mv tmp_patches "$out_file"
-    done < "$active_file"
+  # Read active repos into an associative array
+  declare -A active_repos
+  if [[ -f "$active_repos_file" ]]; then
+    while IFS= read -r repo; do
+      [[ -n "$repo" ]] && active_repos["$repo"]=1
+    done < "$active_repos_file"
   fi
 
-  echo "✅ Generated config.$mode.updated.toml"
+  # Process config line by line
+  {
+    local current_section=""
+    local current_patches_source=""
+    local enabled_value="false"
+    
+    while IFS= read -r line; do
+      # Detect section header: [SectionName]
+      if [[ "$line" =~ ^\[[^[].*\]$ ]]; then
+        current_section="$line"
+        current_patches_source=""
+        enabled_value="false"
+        echo "$line"
+        continue
+      fi
+
+      # Extract patches-source value and track it
+      if [[ "$line" =~ ^patches-source[[:space:]]*= ]]; then
+        echo "$line"
+        # Extract the value between quotes: patches-source = "some/repo"
+        current_patches_source=$(echo "$line" | sed -n 's/^patches-source[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p')
+        # Determine if we should enable based on whether this repo is in active list
+        if [[ -n "$current_patches_source" && -n "${active_repos[$current_patches_source]}" ]]; then
+          enabled_value="true"
+        else
+          enabled_value="false"
+        fi
+        continue
+      fi
+
+      # Replace enabled field with the correct value
+      if [[ "$line" =~ ^enabled[[:space:]]*= ]]; then
+        echo "enabled = $enabled_value"
+        continue
+      fi
+
+      # Output all other lines as-is
+      echo "$line"
+    done < "$input_config"
+  } > "$output_config"
+
+  return 0
 }
 
-if [ -s "$ACTIVE_STABLE_TXT" ]; then
-  generate_config "stable"
+# Generate configs
+echo "📝 Generating stable config..."
+if ! generate_config "$CONFIG_STABLE" "$ACTIVE_STABLE_TXT" "$CONFIG_STABLE_UPDATED"; then
+  echo "❌ Failed to generate stable config"
+  exit 1
 fi
 
-if [ -s "$ACTIVE_PRERELEASE_TXT" ]; then
-  generate_config "dev"
+echo "📝 Generating dev config..."
+if ! generate_config "$CONFIG_DEV" "$ACTIVE_PRERELEASE_TXT" "$CONFIG_DEV_UPDATED"; then
+  echo "❌ Failed to generate dev config"
+  exit 1
 fi
+
+echo "✅ Config generation complete"
+echo "  Stable config:     $CONFIG_STABLE_UPDATED"
+echo "  Dev config:        $CONFIG_DEV_UPDATED"
