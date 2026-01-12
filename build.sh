@@ -167,7 +167,7 @@ rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
 log "\n**Notes:**"
-log "• Install [MicroG](https://github.com/WSTxda/MicroG-RE/releases/latest/download/microg-release.apk), required for Google APKs."
+log "• Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest/download/microg-release.apk), required for Google APKs."
 log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
 log "\n**GitHub:** [ReVanced Builder](https://github.com/nullcpy/rvb)"
 log "**Telegram:** [ReVanced Builder](https://t.me/rvb27)\n"
