@@ -7,7 +7,7 @@
 > [!Important]
 > **Please star the repo! 🙏🥺**
 
-## 🗨️ [Join the Telegram Group](https://t.me/rvbygeo)
+## 🗨️ [Join the Telegram Group](https://t.me/rvbuilder)
 Get instant notifications when new builds are released and download them easily.
 
 ## 📢 [Join the Telegram Channel](https://t.me/rvbuild)
