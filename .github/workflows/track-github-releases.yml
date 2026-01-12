@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TG_CHAT: "@revanced_builder"
+  TG_CHAT: "@rvbuilder"
   TG_THREAD_ID: "267"
 
 jobs:
@@ -231,7 +231,7 @@ jobs:
           LINKS=( $(grep -v '^$' /tmp/apk_links.md) )
 
           BASE_HEAD="*New APK Detected in FiorenMas Repo!*"
-          BASE_FOOT="$NL$NL@revanced\\_builder"
+          BASE_FOOT=" "
           MAX=4000
 
           current="$BASE_HEAD"
