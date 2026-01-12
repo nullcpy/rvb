@@ -110,7 +110,6 @@ jobs:
               MSG+="No assets attached.${NL}"
             fi
 
-            MSG+="@revanced\\_builder"
             curl -s -X POST \
               --data-urlencode "chat_id=${TG_CHAT}" \
               --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
