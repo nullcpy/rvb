@@ -1,0 +1,32 @@
+{
+  "ReVanced": {
+    "repo": "ReVanced/revanced-patches",
+    "stable": "v5.47.0",
+    "prerelease": "v5.48.0-dev.9"
+  },
+  "ReVanced-Advanced": {
+    "repo": "anddea/revanced-patches",
+    "stable": "v3.15.0",
+    "prerelease": "v3.15.0-dev.9"
+  },
+  "ReVanced-Privacy": {
+    "repo": "jkennethcarino/privacy-revanced-patches",
+    "stable": "v4.5.0",
+    "prerelease": "v4.6.0-dev.2"
+  },
+  "Morphe": {
+    "repo": "MorpheApp/morphe-patches",
+    "stable": "v1.3.2",
+    "prerelease": "v1.4.0-dev.2"
+  },
+  "Morphe-Extended": {
+    "repo": "wchill/rvx-morphed",
+    "stable": "v5.15.1",
+    "prerelease": "v5.15.0"
+  },
+  "Piko": {
+    "repo": "crimera/piko",
+    "stable": "v1.59.0",
+    "prerelease": "v2.0.0-dev.20"
+  }
+}
