@@ -1,0 +1,374 @@
+name: Build on Patch Update
+
+on:
+  schedule:
+    - cron: "20 */4 * * *" # Every 4 hours
+  workflow_dispatch:
+
+concurrency:
+  group: patch-build
+  cancel-in-progress: false
+
+jobs:
+  check-patch:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    outputs:
+      trigger_stable: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+      trigger_prerelease: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+      tags_old: ${{ steps.compare.outputs.tags_old }}
+      tags_new: ${{ steps.compare.outputs.tags_new }}
+      stable_config: ${{ steps.generate_configs.outputs.stable_config }}
+      dev_config: ${{ steps.generate_configs.outputs.dev_config }}
+      next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
+      next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Create .github/configs directory
+        run: mkdir -p .github/configs
+
+      - name: Ensure patch_sources.json exists
+        id: ensure_patch_sources
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/configs/patch_sources.json"
+
+          if [ ! -f "$PATCH_FILE" ]; then
+            cat > "$PATCH_FILE" << 'EOF'
+          {
+            "patch": { "repo": "", "stable": "", "prerelease": "" }
+          }
+          EOF
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit dummy patch_sources.json if created
+        if: steps.ensure_patch_sources.outputs.created == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/configs/patch_sources.json
+          commit_message: "Create dummy patch_sources.json"
+
+      # Only continue if patch_sources.json already existed (not just created)
+      - name: Fetch Latest Tags (from patch_sources.json)
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: fetch_tags
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: .github/scripts/fetch-latest-tags.sh
+
+      - name: Compare Latest vs Stored Tags
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: compare
+        run: .github/scripts/compare-patch-tags.sh '' '${{ steps.fetch_tags.outputs.latest }}'
+
+      - name: Commit Updated patch_sources.json
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/configs/patch_sources.json
+          commit_message: "Update patch_sources.json with latest patch versions"
+
+      - name: Generate Configs (Stable and Dev)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
+        id: generate_configs
+        env:
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
+        run: .github/scripts/generate-patch-configs.sh "$TAGS_OLD" "$TAGS_NEW"
+
+      - name: Commit Updated Config (Stable)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          file_pattern: .github/configs/config.stable.updated.toml
+          commit_message: "Update config.stable.updated.toml for new stable patches"
+
+      - name: Commit Updated Config (Dev)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          file_pattern: .github/configs/config.dev.updated.toml
+          commit_message: "Update config.dev.updated.toml for new dev patches"
+
+      - name: Generate Version Numbers (Stable and Dev)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
+        id: versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+
+          TRIGGER_STABLE=${{ steps.compare.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE=${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+
+          # If both builds are triggered, dev gets the next tag, stable gets the one after
+          if [ "$TRIGGER_STABLE" = "1" ] && [ "$TRIGGER_PRERELEASE" = "1" ]; then
+            NEXT_DEV=$((TAG + 1))
+            NEXT_STABLE=$((TAG + 2))
+          elif [ "$TRIGGER_STABLE" = "1" ]; then
+            NEXT_STABLE=$((TAG + 1))
+            NEXT_DEV=""
+          else
+            NEXT_DEV=$((TAG + 1))
+            NEXT_STABLE=""
+          fi
+
+          echo "next_stable_ver=${NEXT_STABLE}" >> "$GITHUB_OUTPUT"
+          echo "next_dev_ver=${NEXT_DEV}" >> "$GITHUB_OUTPUT"
+
+  build-dev:
+    needs: check-patch
+    if: needs.check-patch.outputs.trigger_prerelease == '1'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Notify Telegram (New Dev Patch)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
+          TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
+        run: .github/scripts/notify-patch-detected.sh "dev" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
+
+      - name: Build Modules and APKs (Dev)
+        run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+          ./build.sh .github/configs/config.dev.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_dev_ver }}
+
+      - name: Get Output (Dev)
+        id: get_output_dev
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to Release (Dev)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check-patch.outputs.next_dev_ver }}
+          tag: ${{ needs.check-patch.outputs.next_dev_ver }}
+          prerelease: true
+          overwrite: true
+
+      - name: Upload to BuzzHeavier (Dev)
+        id: upload_buzzheavier_dev
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_dev_ver }}
+        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+
+      - name: Upload to Filebin (Dev)
+        id: upload_filebin_dev
+        run: .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "dev" "${{ github.run_id }}" "${{ github.run_attempt }}"
+
+      - name: Update Mirror Links (Dev)
+        id: update_mirrors_dev
+        env:
+          RELEASE_NUM: ${{ needs.check-patch.outputs.next_dev_ver }}
+          RELEASE_TYPE: " (Pre-release)"
+          BUZZ_LINK: ${{ steps.upload_buzzheavier_dev.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
+        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "$RELEASE_TYPE" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated mirrors.md (Dev)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_dev_ver }}"
+
+      - name: Update Changelog and Magisk Update JSON (Dev)
+        run: .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated Build MD and Update JSON Files (Dev)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_dev_ver }}
+
+      - name: Notify Telegram (Dev Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
+          FILEBIN_SUCCESS: ${{ steps.upload_filebin_dev.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier_dev.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier_dev.outputs.UPLOAD_SUCCESS }}
+        run: |
+          set -euo pipefail
+          source .github/scripts/config.sh
+          .github/scripts/notify-telegram.sh "${{ needs.check-patch.outputs.next_dev_ver }}" "$TG_TOKEN" "$TG_CHAT" "$TG_CHANNEL" "$TG_THREAD_ID_PRERELEASE" " (Pre-release)" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$BUZZHEAVIER_LINK" "$BUZZHEAVIER_SUCCESS" "$FILEBIN_LINK" "$FILEBIN_SUCCESS"
+
+  build-stable:
+    needs: [check-patch, build-dev]
+    if: always() && needs.check-patch.outputs.trigger_stable == '1'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Notify Telegram (New Stable Patch)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
+          TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
+        run: .github/scripts/notify-patch-detected.sh "stable" "$TAGS_OLD" "$TAGS_NEW" "$GITHUB_REPOSITORY" "$TG_TOKEN"
+
+      - name: Build Modules and APKs (Stable)
+        run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+          ./build.sh .github/configs/config.stable.updated.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_stable_ver }}
+
+      - name: Get Output (Stable)
+        id: get_output_stable
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to Release (Stable)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check-patch.outputs.next_stable_ver }}
+          tag: ${{ needs.check-patch.outputs.next_stable_ver }}
+          overwrite: true
+
+      - name: Upload to BuzzHeavier (Stable)
+        id: upload_buzzheavier_stable
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_stable_ver }}
+        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+
+      - name: Upload to Filebin (Stable)
+        id: upload_filebin_stable
+        run: .github/scripts/upload-filebin.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "stable" "${{ github.run_id }}" "${{ github.run_attempt }}"
+
+      - name: Update Mirror Links (Stable)
+        id: update_mirrors_stable
+        env:
+          RELEASE_NUM: ${{ needs.check-patch.outputs.next_stable_ver }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
+        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated mirrors.md (Stable)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_stable_ver }}"
+
+      - name: Update Changelog and Magisk Update JSON (Stable)
+        run: .github/scripts/update-changelog.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated Build MD and Update JSON Files (Stable)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_stable_ver }}
+
+      - name: Notify Telegram (Stable Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
+          FILEBIN_SUCCESS: ${{ steps.upload_filebin_stable.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier_stable.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier_stable.outputs.UPLOAD_SUCCESS }}
+        run: |
+          set -euo pipefail
+          source .github/scripts/config.sh
+          .github/scripts/notify-telegram.sh "${{ needs.check-patch.outputs.next_stable_ver }}" "$TG_TOKEN" "$TG_CHAT" "$TG_CHANNEL" "$TG_THREAD_ID_STABLE" "" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$BUZZHEAVIER_LINK" "$BUZZHEAVIER_SUCCESS" "$FILEBIN_LINK" "$FILEBIN_SUCCESS"
+
+  cleanup:
+    needs: [check-patch, build-dev, build-stable]
+    if: always() && (needs.check-patch.outputs.trigger_prerelease == '1' || needs.check-patch.outputs.trigger_stable == '1')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 100
+          delete_workflows: true
+          workflows_keep_day: 30
+          gh_token: ${{ secrets.GITHUB_TOKEN }}

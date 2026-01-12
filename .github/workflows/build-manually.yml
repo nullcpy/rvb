@@ -1,0 +1,173 @@
+name: Build Manually
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: manual-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Determine Config File
+        id: config
+        run: |
+          set -euo pipefail
+          if [ -f ".github/configs/config.manual.toml" ]; then
+            echo "CONFIG_FILE=.github/configs/config.manual.toml" >> "$GITHUB_OUTPUT"
+            echo "Using manual config"
+          else
+            echo "CONFIG_FILE=config.toml" >> "$GITHUB_OUTPUT"
+            echo "Using default config"
+          fi
+
+      - name: Get Next Version Code
+        id: next_ver_code
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
+
+      - name: Build Modules and APKs
+        run: |
+          set -euo pipefail
+          ./build.sh "${{ steps.config.outputs.CONFIG_FILE }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+
+      - name: Get Output
+        id: get_output
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Check Prerelease Status
+        id: check_prerelease
+        run: |
+          set -euo pipefail
+          CONFIG="${{ steps.config.outputs.CONFIG_FILE }}"
+
+          if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
+            echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
+            echo "Status: Prerelease"
+          else
+            echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
+            echo "Status: Stable Release"
+          fi
+
+      - name: Upload to Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          overwrite: true
+          prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
+
+      - name: Upload to BuzzHeavier
+        id: upload_buzzheavier
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+        run: .github/scripts/upload-buzzheavier.sh "$RELEASE_NUMBER" "$BUZZHEAVIER_ACCOUNT_ID"
+
+      - name: Upload to Filebin
+        id: upload_filebin
+        run: .github/scripts/upload-filebin.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "manual" "${{ github.run_id }}" "${{ github.run_attempt }}"
+
+      - name: Update Mirror Links
+        id: update_mirrors
+        env:
+          RELEASE_NUM: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          RELEASE_TYPE: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+        run: .github/scripts/update-mirrors.sh "$RELEASE_NUM" "$RELEASE_TYPE" "$BUZZ_LINK" "$FILEBIN_LINK" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated mirrors.md
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
+
+      - name: Update Changelog and Magisk Update JSON
+        id: update_config
+        run: .github/scripts/update-changelog.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+
+      - name: Commit Updated Build MD and Update JSON Files
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+
+      - name: Notify Telegram (Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          IS_PRERELEASE: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}
+          TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+          FILEBIN_SUCCESS: ${{ steps.upload_filebin.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier.outputs.UPLOAD_SUCCESS }}
+        run: |
+          set -euo pipefail
+          source .github/scripts/config.sh
+          
+          if [ "$IS_PRERELEASE" = "true" ]; then
+            THREAD_ID="$TG_THREAD_ID_PRERELEASE"
+          else
+            THREAD_ID="$TG_THREAD_ID_STABLE"
+          fi
+          
+          .github/scripts/notify-telegram.sh "${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" "$TG_TOKEN" "$TG_CHAT" "$TG_CHANNEL" "$THREAD_ID" "$TITLE_SUFFIX" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$BUZZHEAVIER_LINK" "$BUZZHEAVIER_SUCCESS" "$FILEBIN_LINK" "$FILEBIN_SUCCESS"
+
+  cleanup:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 100
+          delete_workflows: true
+          workflows_keep_day: 30
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
