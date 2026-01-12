@@ -36,41 +36,11 @@ patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
-[Proton-Mail-ReVanced]
-enabled = false 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-
 [Proton-VPN-ReVanced]
 enabled = false
 patches-source = "ReVanced/revanced-patches"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-
-[Samsung-Radio-ReVanced]
-enabled = false 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
-
-[Lightroom-ReVanced]
-enabled = false
-arch = "arm64-v8a"
-patches-source = "ReVanced/revanced-patches"
-# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
-
-[Duolingo-ReVanced]
-enabled = false 
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [Reddit-ReVanced-Privacy]
 enabled = false 
@@ -83,27 +53,6 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[YouTube-ReVanced-Extended]
-enabled = false
-app-name = "YouTube"
-build-mode = "both"
-rv-brand = "ReVanced-Extended"
-patches-source = "inotia00/revanced-patches"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[YouTube-Music-ReVanced-Extended]
-enabled = false
-app-name = "YouTube-Music"
-build-mode = "both"
-arch = "both"
-rv-brand = "ReVanced-Extended"
-patches-source = "inotia00/revanced-patches"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
 [YouTube-ReVanced-Advanced]
 enabled = false
 app-name = "YouTube"
@@ -115,7 +64,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-Music-Advanced]
+[YouTube-Music-ReVanced-Advanced]
 enabled = false
 app-name = "YouTube-Music"
 build-mode = "both"
@@ -126,6 +75,26 @@ patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[Reddit-ReVanced-Advanced]
+enabled = false 
+app-name = "Reddit"
+rv-brand = "ReVanced-Advanced"
+patches-source = "anddea/revanced-patches"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[Spotify-ReVanced-Advanced]
+enabled = false 
+app-name = "Spotify"
+rv-brand = "ReVanced-Advanced"
+patches-source = "anddea/revanced-patches"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [Twitter-Piko]
 enabled = false 
@@ -139,7 +108,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [YouTube-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 rv-brand = "Morphe"
@@ -150,7 +119,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [YouTube-Music-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube-Music"
 build-mode = "both"
 arch = "both"
@@ -161,26 +130,12 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[YouTube-Music-Morphe-Extended]
-enabled = true
-app-name = "YouTube-Music"
-build-mode = "both"
-arch = "both"
-rv-brand = "Morphe-Extended"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-cli-version = "dev"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
 [Reddit-Morphe-Extended]
-enabled = true 
+enabled = false 
 app-name = "Reddit"
 rv-brand = "Morphe-Extended"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-cli-version = "dev"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
