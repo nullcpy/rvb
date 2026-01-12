@@ -317,8 +317,8 @@ jobs:
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          TG_CHAT="@revanced_builder"
-          TG_CHANNEL="@rvbuild"
+          TG_CHAT="@rvb27"
+          TG_CHANNEL="@rvb28"
 
           NL=$'\n'
           APKS=""
