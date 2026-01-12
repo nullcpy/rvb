@@ -58,38 +58,6 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-[YouTube-ReVanced-Advanced]
-enabled = true
-app-name = "YouTube"
-build-mode = "both"
-rv-brand = "ReVanced-Advanced"
-patches-source = "anddea/revanced-patches"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[YouTube-Music-ReVanced-Advanced]
-enabled = true
-app-name = "YouTube-Music"
-build-mode = "both"
-arch = "both"
-rv-brand = "ReVanced-Advanced"
-patches-source = "anddea/revanced-patches"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Reddit-ReVanced-Advanced]
-enabled = true 
-app-name = "Reddit"
-rv-brand = "ReVanced-Advanced"
-patches-source = "anddea/revanced-patches"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
 
