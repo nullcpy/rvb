@@ -11,7 +11,7 @@ Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
 3. In the **App source URL** box, enter one of the following
 
 ```  
-https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
+github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 ```
 
 6. Scroll down to **Filter APKs by regular expression**.  
