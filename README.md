@@ -89,7 +89,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 ## ⁉️ Report
 - Want an app? Request it in the [Telegram Group](https://t.me/rvb27).
-- Found a bug? Report it in the [Telegram Group](https://t.me/rvb27).
+- Found a bug? Report it in the [Telegram Group](https://t.me/rvb27) or open an [issue](https://github.com/nullcpy/rvb/issues).
 
 ## ⭐ Credits
 - Icon is from [ReVanced](https://github.com/revanced). 
