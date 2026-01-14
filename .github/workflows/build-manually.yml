@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: manual-build
+  group: patch-build
   cancel-in-progress: false
 
 jobs:
