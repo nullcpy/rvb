@@ -1,10 +1,10 @@
 parallel-jobs = 1
-patches-version = "dev"
-enable-magisk-update = false
+patches-version = "latest"
+enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [proton-mail-revanced]
-enabled = false
+enabled = true
 app-name = "proton-mail"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -13,7 +13,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [samsung-radio-revanced]
-enabled = false
+enabled = true
 app-name = "samsung-radio"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -22,7 +22,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [lightroom-revanced]
-enabled = false
+enabled = true
 app-name = "lightroom"
 rv-brand = "revanced"
 arch = "arm64-v8a"
@@ -32,7 +32,7 @@ patches-source = "ReVanced/revanced-patches"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [duolingo-revanced]
-enabled = false
+enabled = true
 app-name = "duolingo"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -42,7 +42,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
-enabled = false
+enabled = true
 app-name = "twitch"
 rv-brand = "revanced"
 version = "25.3.0"
@@ -53,7 +53,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
-enabled = false
+enabled = true
 app-name = "twitter"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -63,7 +63,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
-enabled = false
+enabled = true
 app-name = "tiktok"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -72,14 +72,5 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-[reddit-rvx-morphed]
-enabled = true 
-app-name = "reddit"
-rv-brand = "rvx-morphed"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
 
