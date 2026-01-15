@@ -1,0 +1,73 @@
+parallel-jobs = 1
+remove-rv-integrations-checks = true
+
+[proton-mail-revanced]
+enabled = true
+app-name = "proton-mail"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
+[samsung-radio-revanced]
+enabled = true
+app-name = "samsung-radio"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
+
+[lightroom-revanced]
+enabled = true
+app-name = "lightroom"
+rv-brand = "revanced"
+arch = "arm64-v8a"
+patches-source = "ReVanced/revanced-patches"
+# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[duolingo-revanced]
+enabled = true
+app-name = "duolingo"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
+[twitch-revanced]
+enabled = true
+app-name = "twitch"
+rv-brand = "revanced"
+version = "25.3.0"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[twitter-revanced]
+enabled = true
+app-name = "twitter"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[tiktok-revanced]
+enabled = true
+app-name = "tiktok"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+
