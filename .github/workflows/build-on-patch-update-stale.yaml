@@ -1,0 +1,603 @@
+name: Build on Patch Update (Stale)
+
+on:
+  schedule:
+    - cron: "20 20 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: patch-build
+  cancel-in-progress: false
+
+env:
+  TG_CHAT: "@rvb27"
+  TG_CHANNEL: "@rvb28"
+
+jobs:
+  check-patch:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    outputs:
+      trigger: ${{ steps.compare.outputs.TRIGGER }}
+      tags_old: ${{ steps.compare.outputs.tags_old }}
+      tags_new: ${{ steps.compare.outputs.tags_new }}
+      build_config: ${{ steps.generate_config.outputs.build_config }}
+      next_ver: ${{ steps.versions.outputs.next_ver }}
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Create .github/misc directory
+        run: mkdir -p .github/misc
+
+      - name: Ensure patch_sources_stale.json exists
+        id: ensure_patch_sources
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/misc/patch_sources_stale.json"
+
+          if [ ! -f "$PATCH_FILE" ]; then
+            cat > "$PATCH_FILE" << 'EOF'
+          {
+            "patch": { "repo": "", "stable": "" }
+          }
+          EOF
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit dummy patch_sources_stale.json if created
+        if: steps.ensure_patch_sources.outputs.created == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/patch_sources_stale.json
+          commit_message: "Create dummy patch_sources_stale.json"
+
+      - name: Fetch Latest Tags (from patch_sources_stale.json)
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: fetch_tags
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/misc/patch_sources_stale.json"
+
+          BASE_JSON=$(cat "$PATCH_FILE")
+          if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
+            DELIM="$(openssl rand -hex 8)"
+            echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+            echo "$BASE_JSON" >> "$GITHUB_OUTPUT"
+            echo "${DELIM}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          get_latest_tag() {
+            local repo=$1
+            # Fetch releases, exclude prereleases (stable only)
+            local resp status body
+            resp=$(curl -sS -w '%{http_code}' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$repo/releases" || true)
+
+            status="${resp: -3}"
+            body="${resp::-3}"
+
+            if [ "$status" != "200" ]; then echo ""; return 0; fi
+
+            printf '%s\n' "$body" | jq -r "
+              map(select(.prerelease == false and .tag_name != null and .tag_name != \"\")) |
+              sort_by(.published_at) |
+              reverse |
+              .[0].tag_name // \"\"
+            "
+          }
+
+          NEW_JSON="$BASE_JSON"
+
+          # Iterate sources and get stable tags only
+          while read -r id repo; do
+            stable=$(get_latest_tag "$repo")
+            NEW_JSON=$(jq \
+              --arg id "$id" \
+              --arg stable "$stable" \
+              '.[$id].stable = $stable' \
+              <<<"$NEW_JSON")
+          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo)"')
+
+          DELIM="$(openssl rand -hex 8)"
+          echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+
+      - name: Compare Latest vs Stored Tags
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: compare
+        run: |
+          set -euo pipefail
+
+          PATCH_FILE=".github/misc/patch_sources_stale.json"
+          OLD_JSON=$(cat "$PATCH_FILE")
+          NEW_JSON='${{ steps.fetch_tags.outputs.latest }}'
+
+          if [ -z "$NEW_JSON" ]; then NEW_JSON="{}"; fi
+
+          # Compute trigger for stable changes only
+          TRIGGER=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
+            [ $new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+            ] | if length > 0 then 1 else 0 end
+          ')
+
+          # Update file
+          echo "$NEW_JSON" > "$PATCH_FILE"
+          echo "TRIGGER=$TRIGGER" >> "$GITHUB_OUTPUT"
+
+          DELIM1="$(openssl rand -hex 8)"
+          echo "tags_old<<${DELIM1}" >> "$GITHUB_OUTPUT"
+          echo "$OLD_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM1}" >> "$GITHUB_OUTPUT"
+
+          DELIM2="$(openssl rand -hex 8)"
+          echo "tags_new<<${DELIM2}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM2}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit Updated patch_sources_stale.json
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/misc/patch_sources_stale.json
+          commit_message: "Update patch_sources_stale.json with latest versions"
+
+      - name: Generate Config (Stale)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER == '1'
+        id: generate_config
+        env:
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+
+          BASE_CONFIG=".github/misc/config.stale.toml"
+          OUT_CONFIG=".github/misc/config.stale.build.toml"
+          ACTIVE_FILE=".github/misc/active.stale.txt"
+          
+          # Create output file
+          cp "$BASE_CONFIG" "$OUT_CONFIG"
+
+          # 1. Identify which repos actually changed (Active list)
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
+                | ($old[$e.key] // {}) as $o
+                | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+                | $e.value.repo
+            ] | .[]
+          ' > "$ACTIVE_FILE" || true
+
+          # 2. Inject global settings for Stale (Enable Magisk Update)
+          {
+             echo 'enable-magisk-update = true'
+             cat "$OUT_CONFIG"
+          } > tmp_header && mv tmp_header "$OUT_CONFIG"
+
+          # 3. Filter TOML: Disable sources that are not in the Active list
+          awk -v active_file="$ACTIVE_FILE" '
+            BEGIN {
+              while ((getline repo < active_file) > 0) {
+                if (repo != "") active[repo] = 1
+              }
+              close(active_file)
+              section = ""
+              keep = 0
+            }
+            /^\[.*\]/ {
+              flush_section()
+              section = $0
+              delete lines
+              n = 0
+              lines[n++] = $0
+              keep = 0
+              next
+            }
+            {
+              lines[n++] = $0
+              if ($0 ~ /patches-source *= *"[^"]+"/) {
+                match($0, /patches-source *= *"([^"]+)"/, m)
+                src = m[1]
+                if (src in active) {
+                  keep = 1
+                }
+              }
+              next
+            }
+            END {
+              flush_section()
+            }
+            function flush_section() {
+              if (n == 0) return
+              for (i = 0; i < n; i++) {
+                line = lines[i]
+                if (!keep) {
+                  gsub(/enabled *= *true/, "enabled = false", line)
+                }
+                print line
+              }
+            }
+          ' "$OUT_CONFIG" > tmp && mv tmp "$OUT_CONFIG"
+
+          echo "build_config=${OUT_CONFIG}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit Updated Config (Stale)
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          file_pattern: .github/misc/config.stale.build.toml
+          commit_message: "Update config.stale.build.toml for new stale patches"
+
+      - name: Generate Version Numbers
+        if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER == '1'
+        id: versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          
+          # Simple increment for Stale
+          NEXT_VER=$((TAG + 1))
+          
+          echo "next_ver=${NEXT_VER}" >> "$GITHUB_OUTPUT"
+
+  build-stale:
+    needs: check-patch
+    if: needs.check-patch.outputs.trigger == '1'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Main)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java (Zulu 17)
+        uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Build Modules and APKs (Stale)
+        run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+          ./build.sh ${{ needs.check-patch.outputs.build_config }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ needs.check-patch.outputs.next_ver }}
+
+      - name: Get Output (Stale)
+        id: get_output_stale
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to Release (Stale)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_stale.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check-patch.outputs.next_ver }}
+          tag: ${{ needs.check-patch.outputs.next_ver }}
+          overwrite: true
+
+      - name: Upload to BuzzHeavier (Stale)
+        id: upload_buzzheavier_stale
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+          RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_ver }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          # Create full archive ONCE
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+          echo "📦 Creating full archive: $ARCHIVE_NAME"
+          zip -q9 "$ARCHIVE_NAME" *
+
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
+            exit 1
+          fi
+          AUTH="Authorization: Bearer $TOKEN"
+          PARENT_ID="qapeaw1yzy6m"
+
+          echo "✅ Using revanced-builder directory ID: $PARENT_ID"
+          echo "🔍 Checking if folder '$RELEASE_NUMBER' already exists..."
+
+          # Fetch parent contents (Original Robust Logic)
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          EXISTING_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$RELEASE_NUMBER\" and .isDirectory == true) | .id // empty")
+
+          if [ -n "$EXISTING_ID" ]; then
+            echo "🗑️ Deleting existing folder '$RELEASE_NUMBER' (ID: $EXISTING_ID)..."
+            curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$EXISTING_ID" || true
+            sleep 1
+          fi
+
+          echo "📁 Creating fresh folder: $RELEASE_NUMBER"
+          CREATE_RES=$(curl -sS -X POST \
+            -H "$AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"$RELEASE_NUMBER\"}" \
+            "https://buzzheavier.com/api/fs/$PARENT_ID")
+
+          RELEASE_DIR_ID=$(echo "$CREATE_RES" | jq -r '.data.id // empty')
+          if [ -z "$RELEASE_DIR_ID" ]; then
+            echo "❌ Failed to create folder. Response: $CREATE_RES"
+            exit 1
+          fi
+          echo "✅ Folder created with ID: $RELEASE_DIR_ID"
+
+          # Upload ALL files
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
+            fi
+          done
+
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded to BuzzHeavier."
+          fi
+
+      - name: Upload to Filebin (Stale)
+        id: upload_filebin_stale
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          RELEASE_NUMBER="${{ needs.check-patch.outputs.next_ver }}"
+          ARCHIVE_NAME="archive-$RELEASE_NUMBER.zip"
+
+          # The archive was already created by BuzzHeavier step
+          if [ ! -f "$ARCHIVE_NAME" ]; then
+            echo "❌ Expected archive $ARCHIVE_NAME not found!"
+            exit 1
+          fi
+
+          BIN_ID="revanced-stale-${RELEASE_NUMBER}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
+          if curl --connect-timeout 30 --max-time 300 --fail-with-body --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
+            echo "✅ $ARCHIVE_NAME uploaded to Filebin"
+            # Lock bin
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "🔒 Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
+          else
+            echo "❌ Failed to upload $ARCHIVE_NAME to Filebin."
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # DELETE archive-$RELEASE_NUMBER.zip AFTER upload
+          if [ -f "$ARCHIVE_NAME" ]; then
+            echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
+            rm -f "$ARCHIVE_NAME"
+          fi
+
+      - name: Update Mirror Links (Stale)
+        id: update_mirrors_stale
+        env:
+          RELEASE_NUM: ${{ needs.check-patch.outputs.next_ver }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier_stale.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin_stale.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# 🗃️ Mirrors" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          if [ -z "$RELEASE_NUM" ]; then
+            echo "⚠️ No release number — skipping mirror update"
+            exit 0
+          fi
+
+          ENTRY="## Build No. $RELEASE_NUM  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_NUM).  \n"
+          fi
+          ENTRY+="\n"
+
+          {
+            head -n 3 "$MIRRORS_FILE"
+            echo -e "$ENTRY"
+            tail -n +4 "$MIRRORS_FILE" | awk '/^## Build No\./ { 
+              if (block_count >= 99) { exit }
+              block_count++
+            }
+            block_count <= 99 { print }'
+          } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
+
+      - name: Commit Updated mirrors.md (Stale)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/mirrors.md
+          commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_ver }}"
+
+      - name: Update Changelog and Magisk Update JSON (Stale)
+        run: |
+          set -euo pipefail
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ needs.check-patch.outputs.next_ver }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *magisk*.zip; do
+            [ "$OUTPUT" = "*magisk*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_ver }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+          find . -name "*-update.json" | grep . || : >dummy-update.json
+
+      - name: Commit Updated Build MD and Update JSON Files (Stale)
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check-patch.outputs.next_ver }}
+
+      - name: Notify Telegram (Stale Build Complete)
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_THREAD_ID: "262" # Stable Thread
+          FILEBIN_LINK: ${{ steps.upload_filebin_stale.outputs.FILEBIN_LINK }}
+          FILEBIN_SUCCESS: ${{ steps.upload_filebin_stale.outputs.UPLOAD_SUCCESS }}
+          BUZZHEAVIER_LINK: ${{ steps.upload_buzzheavier_stale.outputs.BUZZHEAVIER_LINK }}
+          BUZZHEAVIER_SUCCESS: ${{ steps.upload_buzzheavier_stale.outputs.UPLOAD_SUCCESS }}
+        run: |
+          set -euo pipefail
+          cd build || exit 1
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check-patch.outputs.next_ver }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+
+          MSG="*Build No. ${{ needs.check-patch.outputs.next_ver }}*${NL}${NL}${BODY}${NL}${NL}"
+
+          MIRRORS=""
+          if [ "$BUZZHEAVIER_SUCCESS" = "true" ]; then
+            MIRRORS+="[BuzzHeavier]($BUZZHEAVIER_LINK)${NL}"
+          fi
+          if [ "$FILEBIN_SUCCESS" = "true" ]; then
+            MIRRORS+="[Filebin]($FILEBIN_LINK)${NL}"
+          fi
+
+          if [ -n "$MIRRORS" ]; then
+            MSG+="*Mirrors:*${NL}${MIRRORS}${NL}"
+          fi
+
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+
+          # Send to group
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+          sleep 2
+
+          # Send to channel
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+  cleanup:
+    needs: [check-patch, build-stale]
+    if: always() && needs.check-patch.outputs.trigger == '1'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 100
+          delete_workflows: true
+          workflows_keep_day: 30
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
