@@ -79,13 +79,17 @@ rv-brand = "rvx-morphed"
 build-mode = "both"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-excluded-patches = "'Overlay buttons', 'Change splash icons', 'Restore old seekbar thumbnails'"
+patcher-args = """\
+    --exclude "Overlay buttons" \
+    --exclude "Change splash icons" \
+    --exclude "Restore old seekbar thumbnails" \
+"""
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-rvx-morphed]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "rvx-morphed"
 build-mode = "both"
