@@ -80,9 +80,9 @@ build-mode = "both"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
 patcher-args = """\
-    --exclude "Overlay buttons" \
-    --exclude "Change splash icons" \
-    --exclude "Restore old seekbar thumbnails" \
+    -e "Overlay buttons" \
+    -e "Change splash icons" \
+    -e "Restore old seekbar thumbnails" \
 """
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
