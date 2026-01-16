@@ -529,15 +529,20 @@ jobs:
             echo "❌ No files uploaded to BuzzHeavier."
           fi
 
-          echo "🧹 Scanning for empty stale folders in parent directory..."          
+          echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          EMPTY_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\" and .size == 0) | .id")
+          
+          CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
-          for E_ID in $EMPTY_IDS; do
-             if [ -n "$E_ID" ]; then
-                echo "🗑️ Deleting empty folder ID: $E_ID"
-                curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$E_ID" || true
-             fi
+          for CID in $CANDIDATE_IDS; do
+            CHILD_INFO=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$CID")
+            
+            ITEM_COUNT=$(echo "$CHILD_INFO" | jq '.data.children // [] | length')
+
+            if [ "$ITEM_COUNT" -eq "0" ]; then
+               echo "🗑️ Folder ID $CID is EMPTY (stale). Deleting..."
+               curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$CID" || true
+            fi
           done
 
       - name: Upload to Filebin (Dev)
@@ -921,15 +926,20 @@ jobs:
             echo "❌ No files uploaded to BuzzHeavier."
           fi
 
-          echo "🧹 Scanning for empty stale folders in parent directory..."          
+          echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          EMPTY_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\" and .size == 0) | .id")
+          
+          CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
-          for E_ID in $EMPTY_IDS; do
-             if [ -n "$E_ID" ]; then
-                echo "🗑️ Deleting empty folder ID: $E_ID"
-                curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$E_ID" || true
-             fi
+          for CID in $CANDIDATE_IDS; do
+            CHILD_INFO=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$CID")
+            
+            ITEM_COUNT=$(echo "$CHILD_INFO" | jq '.data.children // [] | length')
+
+            if [ "$ITEM_COUNT" -eq "0" ]; then
+               echo "🗑️ Folder ID $CID is EMPTY (stale). Deleting..."
+               curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$CID" || true
+            fi
           done
 
       - name: Upload to Filebin (Stable)
