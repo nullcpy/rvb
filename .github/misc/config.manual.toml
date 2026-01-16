@@ -4,7 +4,7 @@ enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [proton-mail-revanced]
-enabled = true
+enabled = false
 app-name = "proton-mail"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -13,7 +13,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [samsung-radio-revanced]
-enabled = true
+enabled = false
 app-name = "samsung-radio"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -42,7 +42,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
-enabled = true
+enabled = false
 app-name = "twitch"
 rv-brand = "revanced"
 version = "25.3.0"
@@ -53,7 +53,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
-enabled = true
+enabled = false
 app-name = "twitter"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -63,7 +63,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
-enabled = true
+enabled = false
 app-name = "tiktok"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
