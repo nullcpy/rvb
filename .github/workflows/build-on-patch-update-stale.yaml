@@ -2,7 +2,7 @@ name: Build on Patch Update (Stale)
 
 on:
   schedule:
-    - cron: "20 20 * * *"
+    - cron: "20 9 * * *"
   workflow_dispatch:
 
 concurrency:
