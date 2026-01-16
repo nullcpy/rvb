@@ -119,7 +119,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -130,7 +130,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -142,7 +142,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-rvx-morphed]
-enabled = true 
+enabled = false 
 app-name = "reddit"
 rv-brand = "rvx-morphed"
 patches-source = "wchill/rvx-morphed"
