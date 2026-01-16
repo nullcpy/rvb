@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 173   
+🔗 [BuzzHeavier](https://buzzheavier.com/5w1urx6fphfs)  
+🔗 [Filebin](https://filebin.net/revanced-builder-manual-173-21073627383-1/archive-173.zip)  
+
+
 ## Build No. 172 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/rop32aod77gg)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-172-21072520166-1/archive-172.zip)  
