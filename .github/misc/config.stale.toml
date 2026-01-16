@@ -11,7 +11,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-e
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [samsung-radio-revanced]
-enabled = true
+enabled = false
 app-name = "samsung-radio"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
