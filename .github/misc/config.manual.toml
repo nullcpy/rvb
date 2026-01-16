@@ -85,7 +85,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-rvx-morphed]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "rvx-morphed"
 build-mode = "both"
