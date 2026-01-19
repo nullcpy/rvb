@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 179  
+🔗 [BuzzHeavier](https://buzzheavier.com/xlhm9r7n7z83)  
+🔗 [Filebin](https://filebin.net/revanced-stale-179-21132850164-1/archive-179.zip)  
+
+
 ## Build No. 178 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/zurr3ksu6gvz)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-178-21131028175-1/archive-178.zip)  
