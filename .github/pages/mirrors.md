@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 189  
+🔗 [BuzzHeavier](https://buzzheavier.com/8pzm71wvqnby)  
+🔗 [Filebin](https://filebin.net/revanced-builder-stable-189-21249784586-1/archive-189.zip)  
+
+
 ## Build No. 188 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/80qmhngxs6iz)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-188-21249784586-1/archive-188.zip)  
