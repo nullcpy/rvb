@@ -2,7 +2,7 @@
 
 
 # ![ReVanced Builder Icon](./.github/assets/icon.png) ReVanced & Morphe Builder
-**Automatically builds and publishes ReVanced APKs & Magisk/KernelSU Modules whenever new patches are released.**
+**Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new patches are released.**
 
 > [!Important]
 > **Please star the repo! 🙏🥺**
