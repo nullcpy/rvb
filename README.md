@@ -10,8 +10,8 @@
 ## 🗨️ [Join the Telegram Group](https://t.me/rvb27)
 Get instant notifications when new builds are released and download them easily.
 
-## 📢 [Join the Telegram Channel](https://t.me/rvb28)
-For quick access to the latest download links via Telegram or your browser. [`t.me/s/rvb28`](https://t.me/s/rvb28)
+## 📢 [Join the Telegram Channel](https://t.me/s/rvb28)
+For quick access to the latest download links via Telegram or your browser.
 
 ## 📦 [Download from GitHub](../../releases)
 If the app you need isn’t in the latest version, check older releases.
