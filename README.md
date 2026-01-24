@@ -1,7 +1,7 @@
 <div align="center"><a href="https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" alt="Support Palestine" style="width: 100%;"></a></div>
 
 
-# ![ReVanced Builder Icon](./.github/assets/icon.png) ReVanced Builder
+# ![ReVanced Builder Icon](./.github/assets/icon.png) ReVanced & Morphe Builder
 **Automatically builds and publishes ReVanced APKs & Magisk/KernelSU Modules whenever new patches are released.**
 
 > [!Important]
