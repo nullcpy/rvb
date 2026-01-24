@@ -1,8 +1,8 @@
 <div align="center"><a href="https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" alt="Support Palestine" style="width: 100%;"></a></div>
 
-<div align="left"><h1><img src="./.github/assets/icon.png">  <img src="./.github/assets/icon1.png"> ReVanced & Morphe Builder</h1></div>
+<div align="left"><h1><img src="./.github/assets/icon.png"><img src="./.github/assets/icon1.png"> ReVanced & Morphe Builder</h1></div>
 
-<p align="left"> <b>Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new patches are released.</b> </p>
+<p align="left"><b>Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new patches are released.</b></p>
 
 > [!Important]
 > **Please star the repo! 🙏🥺**
