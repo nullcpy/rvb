@@ -54,6 +54,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |                                                                                | Samsung Radio   |           | `^samsung-radio-revanced-v[\d.]+-all\.apk$`                                 |        |
 |                                                                                | Proton Mail     |           | `^proton-mail-revanced-v[\d.]+-all\.apk$`                                   |        |
 |                                                                                | Proton VPN      |           | `^proton-vpn-revanced-v[\d.]+-all\.apk$`                                    |        |
+|                                                                                | SoundCloud      |           | `^soundcloud-revanced-v[\d.]+-all\.apk$`                                    |        |
 |                                                                                | YouTube Music   | arm64     | `^youtube-music-revanced-v[\d.]+-arm64-v8a\.apk$`                           |        |
 |                                                                                |                 | arm32     | `^youtube-music-revanced-v[\d.]+-arm-v7a\.apk$`                             |        |
 |                                                                                | Google Photos   | arm64     | `^google-photos-revanced-v[\d.]+-arm64-v8a\.apk$`                           |        |
