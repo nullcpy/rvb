@@ -1,0 +1,25 @@
+name: Cleanup old releases and workflows
+
+on:
+  release:
+    types: [released]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 100
+          delete_workflows: true
+          workflows_keep_day: 1
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+
