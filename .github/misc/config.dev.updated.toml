@@ -108,7 +108,7 @@ apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcast
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-piko]
-enabled = false 
+enabled = true 
 app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
