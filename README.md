@@ -43,7 +43,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 5. Enter the regex from the table below for the app you want.  
 6. Tap **Add** to begin downloading.
 
-### 🔎 Regex Patterns for Filtering APKs (Relaxed + Arch-aware, no `-all`)
+### 🔎 Regex Patterns for Filtering APKs
 
 | Patch | App | Arch | Regex Pattern | Status |
 |------|-----|------|---------------|:------:|
