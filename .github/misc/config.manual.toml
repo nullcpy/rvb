@@ -72,5 +72,11 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-
+[soundcloud-revanced]
+enabled = true
+app-name = "soundcloud"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 
