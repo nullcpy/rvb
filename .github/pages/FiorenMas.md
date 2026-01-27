@@ -1,7 +1,10 @@
-# 🗃️ [FiorenMas ReVanced Builds](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root)
+# 🍀 [FiorenMas ReVanced Builds](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root)
 **Real-time repository that builds APKs with Revanced, Revanced Extended, and many more patches about 10 minutes after their release.**
 > [!NOTE] 
 > Beta versions mean using dev patches, not using beta apk files. Beta version have the same package name as Stable version, so installing them will overwrite Stable version.
+
+## 🗃️ [Download from Mirrors](./.github/pages/fiorenmas-mirrors.md)
+Use these links if GitHub is slow, blocked, unreliable, or requires downloading a specific daily build.
 
 ## 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
 Obtainium is the easiest way to install and update FiorenMas ReVanced APKs.
