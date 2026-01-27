@@ -404,9 +404,9 @@ jobs:
 
           esc_md () { printf "%s" "$1" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g'; }
 
-          HEADER="*Build ${DATE_UTC}*"
+          HEADER="*Build No. ${DATE_UTC}*"
 
-          MSG="$HEADER${NL}${NL}[Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)${NL}"
+          MSG="$HEADER${NL}${NL}*Download:*${NL}[Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)${NL}"
 
           if [ -n "${BUZZ_LINK:-}" ]; then
             MSG+="${NL}[BuzzHeavier]($BUZZ_LINK)${NL}"
