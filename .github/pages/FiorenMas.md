@@ -3,7 +3,7 @@
 > [!NOTE] 
 > Beta versions mean using dev patches, not using beta apk files. Beta version have the same package name as Stable version, so installing them will overwrite Stable version.
 
-## 🗃️ [Download from Mirrors](./.github/pages/fiorenmas-mirrors.md)
+## 🗃️ [Download from Mirrors](./fiorenmas-mirrors.md)
 Use these links if GitHub is slow, blocked, unreliable, or requires downloading a specific daily build.
 
 ## 📥 How to Install via [Obtainium](https://github.com/ImranR98/Obtainium)
