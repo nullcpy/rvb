@@ -404,22 +404,20 @@ jobs:
 
           esc_md () { printf "%s" "$1" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g'; }
 
-          HEADER="*Fiorenmas Build ${DATE_UTC}*"
+          HEADER="*Build ${DATE_UTC}*"
 
-          MSG="$HEADER${NL}${NL}*Download:*${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all).${NL}"
+          MSG="$HEADER${NL}${NL}[Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)${NL}"
 
           if [ -n "${BUZZ_LINK:-}" ]; then
-            MSG+="[BuzzHeavier]($BUZZ_LINK)${NL}"
+            MSG+="${NL}[BuzzHeavier]($BUZZ_LINK)${NL}"
           fi
           if [ -n "${FILEBIN_LINK:-}" ]; then
-            MSG+="[Filebin]($FILEBIN_LINK)${NL}"
+            MSG+="${NL}[Filebin]($FILEBIN_LINK)${NL}"
           fi
-
-          MSG+="${NL}[Download & update using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)"
 
           curl -s -X POST \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            --data-urlencode "message_thread_id=1410" \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG:0:9450}" \
