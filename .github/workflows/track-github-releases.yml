@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: track-updates
+  group: patch-build
   cancel-in-progress: false
 
 env:
@@ -93,11 +93,11 @@ jobs:
             URL=$(echo "$RESPONSE" | jq -r '.html_url')
             ESC_NAME=$(printf "%s" "$NAME" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g')
 
-            MSG="*New Release Detected!*${NL}${NL}*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
+            MSG="*${repo}*: [${ESC_NAME}](${URL})${NL}${NL}"
 
             ASSETS=$(echo "$RESPONSE" | jq -c '.assets // []')
             if [ "$(echo "$ASSETS" | jq 'length')" -gt 0 ]; then
-              MSG+="*Assets:*${NL}"
+              MSG+="*Download:*${NL}"
               
               while read -r asset; do
                 NAME=$(echo "$asset" | jq -r '.name')
@@ -107,7 +107,7 @@ jobs:
               done < <(echo "$ASSETS" | jq -c '.[]')
               
             else
-              MSG+="No assets attached.${NL}"
+              MSG+="Nothing to download.${NL}"
             fi
 
             curl -s -X POST \
@@ -409,13 +409,13 @@ jobs:
           MSG="$HEADER${NL}${NL}*Download:*${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all).${NL}"
 
           if [ -n "${BUZZ_LINK:-}" ]; then
-            MSG+="🔗 *BuzzHeavier:* ${BUZZ_LINK}${NL}"
+            MSG+="[BuzzHeavier]($BUZZ_LINK)${NL}"
           fi
           if [ -n "${FILEBIN_LINK:-}" ]; then
-            MSG+="🔗 *Filebin:* ${FILEBIN_LINK}${NL}"
+            MSG+="[Filebin]($FILEBIN_LINK)${NL}"
           fi
 
-          MSG+="${NL}[Download using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)"
+          MSG+="${NL}[Download & update using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)"
 
           curl -s -X POST \
             --data-urlencode "chat_id=${TG_CHAT}" \
