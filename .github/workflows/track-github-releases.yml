@@ -149,8 +149,20 @@ jobs:
           ref: main
           fetch-depth: 1
 
+      - name: Compute message date (UTC)
+        id: msg_date
+        run: |
+          set -euo pipefail
+          DATE_UTC="$(TZ=UTC date +'%Y-%m-%d')"
+          STAMP="$(TZ=UTC date +'%Y%m%d-%H%M')"
+          DATE_FOLDER="$(TZ=UTC date +'%Y%m%d')"
+          echo "DATE_UTC=$DATE_UTC" >> "$GITHUB_OUTPUT"
+          echo "STAMP=$STAMP" >> "$GITHUB_OUTPUT"
+          echo "DATE_FOLDER=$DATE_FOLDER" >> "$GITHUB_OUTPUT"
+
       - name: Fetch APK Assets (FiorenMas Repo)
         run: |
+          set -euo pipefail
           mkdir -p .github/misc
           curl -s \
             -H "Accept: application/vnd.github+json" \
@@ -166,6 +178,7 @@ jobs:
       - name: Initialize Timestamp File if Missing
         id: init_file
         run: |
+          set -euo pipefail
           FILE=".github/misc/apk_timestamps.json"
           if [ ! -f "$FILE" ]; then
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' \
@@ -187,27 +200,26 @@ jobs:
       - name: Compare and Detect Changes
         id: compare
         run: |
+          set -euo pipefail
           CURRENT=".github/misc/current_apks.json"
           STORED=".github/misc/apk_timestamps.json"
 
-          CHANGES=$(jq -nr \
-            --argjson cur "$(cat $CURRENT)" \
-            --argjson old "$(cat $STORED)" '
-            [$cur[] | select(.updated_at != ($old[.name] // ""))] |
-            if length == 0 then empty else
-              map("[\(.name)](\(.url))") | join("\n\n")
-            end
-          ')
+          # Save changed assets as JSON for later download
+          jq -nr \
+            --argjson cur "$(cat "$CURRENT")" \
+            --argjson old "$(cat "$STORED")" \
+            '
+            [$cur[] | select(.updated_at != ($old[.name] // ""))]
+            ' > /tmp/changed_apks.json
 
-          if [ -n "$CHANGES" ]; then
+          if [ "$(jq 'length' /tmp/changed_apks.json)" -gt 0 ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "$CHANGES" > /tmp/apk_links.md
 
+            # Update stored timestamps to current snapshot
             jq -s 'add // [] | reduce .[] as $a ({}; .[$a.name] = $a.updated_at)' \
               "$CURRENT" > "$STORED"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "" > /tmp/apk_links.md
           fi
 
       - name: Commit Updated Timestamps
@@ -219,41 +231,245 @@ jobs:
           file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Update apk timestamps"
 
-      - name: Notify Telegram (New APK)
+      - name: Download changed APKs
         if: steps.compare.outputs.changed == 'true'
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          NL=$'\n'
-          # NOTE: This array split is risky if filenames contain spaces. 
-          # Assuming standard APK names without spaces for now.
-          LINKS=( $(grep -v '^$' /tmp/apk_links.md) )
+          set -euo pipefail
+          mkdir -p build
 
-          BASE_HEAD="*New APK Detected in FiorenMas Repo!*"
-          MAX=4000
+          jq -r '.[] | @tsv' /tmp/changed_apks.json | while IFS=$'\t' read -r item; do
+            NAME="$(echo "$item" | cut -f1)"
+            UPDATED_AT="$(echo "$item" | cut -f2)"
+            URL="$(echo "$item" | cut -f3)"
 
-          current="$BASE_HEAD"
-          msgs=()
+            echo "⬇️ Downloading: $NAME ($UPDATED_AT)"
+            curl -L --fail --retry 5 --retry-delay 2 --connect-timeout 30 --max-time 600 \
+              -o "build/$NAME" "$URL"
+          done
 
-          for L in "${LINKS[@]}"; do
-            test=$current$NL$NL$L
-            if (( ${#test} <= MAX )); then
-              current="$test"
-            else
-              msgs+=("$current")
-              current="$BASE_HEAD$NL$NL$L"
+      - name: Create archive
+        if: steps.compare.outputs.changed == 'true'
+        id: make_archive
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          DATE_FOLDER="${{ steps.msg_date.outputs.DATE_FOLDER }}"
+          ARCHIVE_NAME="archive-${DATE_FOLDER}.zip"
+
+          echo "ARCHIVE_NAME=$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
+
+          echo "📦 Creating archive: $ARCHIVE_NAME"
+          zip -q9 "$ARCHIVE_NAME" ./*
+
+      - name: Upload to BuzzHeavier
+        if: steps.compare.outputs.changed == 'true'
+        id: upload_buzzheavier
+        env:
+          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          TOKEN=$(echo "$BUZZHEAVIER_ACCOUNT_ID" | xargs)
+          if [ -z "$TOKEN" ]; then
+            echo "❌ BUZZHEAVIER_ACCOUNT_ID secret is missing"
+            exit 1
+          fi
+          AUTH="Authorization: Bearer $TOKEN"
+
+          # Your parent folder ID (keep as-is or change)
+          PARENT_ID="cu7dlibbciic"
+          DATE_FOLDER="${{ steps.msg_date.outputs.DATE_FOLDER }}"
+
+          echo "✅ Using parent directory ID: $PARENT_ID"
+          echo "📁 Creating date folder: $DATE_FOLDER"
+
+          # Create or get date folder (e.g., 20260127)
+          PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          DATE_FOLDER_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$DATE_FOLDER\" and .isDirectory == true) | .id // empty")
+
+          if [ -z "$DATE_FOLDER_ID" ]; then
+            echo "📁 Date folder doesn't exist, creating: $DATE_FOLDER"
+            DATE_FOLDER_RES=$(curl -sS -X POST \
+              -H "$AUTH" \
+              -H "Content-Type: application/json" \
+              -d "{\"name\":\"$DATE_FOLDER\"}" \
+              "https://buzzheavier.com/api/fs/$PARENT_ID")
+            DATE_FOLDER_ID=$(echo "$DATE_FOLDER_RES" | jq -r '.data.id // empty')
+            if [ -z "$DATE_FOLDER_ID" ]; then
+              echo "❌ Failed to create date folder. Response: $DATE_FOLDER_RES"
+              exit 1
+            fi
+            echo "✅ Date folder created with ID: $DATE_FOLDER_ID"
+          else
+            echo "✅ Using existing date folder ID: $DATE_FOLDER_ID"
+          fi
+
+          # Now use DATE_FOLDER_ID as the upload destination
+          RELEASE_DIR_ID="$DATE_FOLDER_ID"
+
+          SUCCESS_COUNT=0
+          for FILE in *; do
+            if [ -f "$FILE" ]; then
+              echo "⬆️ Uploading $FILE..."
+              if curl -# -T "$FILE" -H "$AUTH" "https://w.buzzheavier.com/$RELEASE_DIR_ID/$FILE"; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+              else
+                echo "⚠️ Failed to upload $FILE"
+              fi
             fi
           done
 
-          msgs+=("$current")
+          if [ "$SUCCESS_COUNT" -gt 0 ]; then
+            PUBLIC_LINK="https://buzzheavier.com/$RELEASE_DIR_ID"
+            echo "BUZZHEAVIER_LINK=$PUBLIC_LINK" >> "$GITHUB_OUTPUT"
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Uploaded $SUCCESS_COUNT files. Mirror: $PUBLIC_LINK"
+          else
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "BUZZHEAVIER_LINK=" >> "$GITHUB_OUTPUT"
+            echo "❌ No files uploaded to BuzzHeavier."
+          fi
 
-          for m in "${msgs[@]}"; do
-            curl -s -X POST \
-              --data-urlencode "chat_id=${TG_CHAT}" \
-              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-              --data-urlencode "parse_mode=Markdown" \
-              --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${m:0:9450}" \
-              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
-            sleep 1
+          echo "🧹 Scanning for stale empty folders..."
+          CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
+          
+          CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
+
+          for CID in $CANDIDATE_IDS; do
+            CHILD_INFO=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$CID")
+            
+            ITEM_COUNT=$(echo "$CHILD_INFO" | jq '.data.children // [] | length')
+
+            if [ "$ITEM_COUNT" -eq "0" ]; then
+               echo "🗑️ Folder ID $CID is EMPTY (stale). Deleting..."
+               curl -sS -X DELETE -H "$AUTH" "https://buzzheavier.com/api/fs/$CID" || true
+            fi
           done
+
+      - name: Upload to Filebin
+        if: steps.compare.outputs.changed == 'true'
+        id: upload_filebin
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          DATE_FOLDER="${{ steps.msg_date.outputs.DATE_FOLDER }}"
+          ARCHIVE_NAME="${{ steps.make_archive.outputs.ARCHIVE_NAME }}"
+
+          if [ ! -f "$ARCHIVE_NAME" ]; then
+            echo "❌ Expected archive $ARCHIVE_NAME not found!"
+            exit 1
+          fi
+
+          BIN_ID="fiorenmas-${DATE_FOLDER}-${{ github.run_id }}-${{ github.run_attempt }}"
+          FILEBIN_URL="https://filebin.net"
+
+          echo "⬆️ Uploading $ARCHIVE_NAME to Filebin bin: $BIN_ID"
+          if curl --connect-timeout 30 --max-time 600 --fail-with-body \
+            --upload-file "$ARCHIVE_NAME" "$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME"; then
+            echo "✅ $ARCHIVE_NAME uploaded to Filebin"
+
+            if curl --connect-timeout 10 --max-time 30 --fail-with-body -X PUT "$FILEBIN_URL/$BIN_ID"; then
+              echo "🔒 Bin locked successfully."
+            else
+              echo "⚠️ Failed to lock bin (not critical)."
+            fi
+
+            echo "UPLOAD_SUCCESS=true" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=$FILEBIN_URL/$BIN_ID/$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
+          else
+            echo "❌ Failed to upload $ARCHIVE_NAME to Filebin."
+            echo "UPLOAD_SUCCESS=false" >> "$GITHUB_OUTPUT"
+            echo "FILEBIN_LINK=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Notify Telegram
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          DATE_UTC: ${{ steps.msg_date.outputs.DATE_UTC }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+          NL=$'\n'
+
+          esc_md () { printf "%s" "$1" | sed 's/_/\\_/g; s/\*/\\*/g; s/\[/\\[/g; s/\]/\\]/g'; }
+
+          HEADER="*Fiorenmas Build ${DATE_UTC}*"
+
+          MSG="$HEADER${NL}${NL}*Download:*${NL}${NL}"
+
+          if [ -n "${BUZZ_LINK:-}" ]; then
+            MSG+="🔗 *BuzzHeavier:* ${BUZZ_LINK}${NL}"
+          fi
+          if [ -n "${FILEBIN_LINK:-}" ]; then
+            MSG+="🔗 *Filebin:* ${FILEBIN_LINK}${NL}"
+          fi
+
+          MSG+="${NL}[Download using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)${NL}${NL}[Download from GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)"
+
+          curl -s -X POST \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG:0:9450}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" >/dev/null
+
+      - name: Update Mirror Links
+        if: steps.compare.outputs.changed == 'true'
+        id: update_mirrors
+        env:
+          DATE_UTC: ${{ steps.msg_date.outputs.DATE_UTC }}
+          BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
+          FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
+        run: |
+          set -euo pipefail
+
+          MIRRORS_DIR=".github/pages"
+          MIRRORS_FILE="$MIRRORS_DIR/fiorenmas-mirrors.md"
+          mkdir -p "$MIRRORS_DIR"
+
+          if [ ! -f "$MIRRORS_FILE" ]; then
+            echo "# 🗃️ FiorenMas Mirrors" > "$MIRRORS_FILE"
+            echo "Updated automatically. Only recent 100 builds retained." >> "$MIRRORS_FILE"
+            echo "" >> "$MIRRORS_FILE"
+          fi
+
+          if [ -z "$DATE_UTC" ]; then
+            echo "⚠️ No date available — skipping mirror update"
+            exit 0
+          fi
+
+          ENTRY="## Build $DATE_UTC  \n"
+          if [ -n "$BUZZ_LINK" ]; then
+            ENTRY+="🔗 [BuzzHeavier]($BUZZ_LINK)  \n"
+          fi
+          if [ -n "$FILEBIN_LINK" ]; then
+            ENTRY+="🔗 [Filebin]($FILEBIN_LINK)  \n"
+          fi
+          if [ -z "$BUZZ_LINK" ] && [ -z "$FILEBIN_LINK" ]; then
+            ENTRY+="⚠️ No mirrors available. Check [GitHub Release](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all).  \n"
+          fi
+          ENTRY+="\n"
+
+          {
+            # Keep header (first 3 lines)
+            head -n 3 "$MIRRORS_FILE"
+            # Add new entry
+            echo -e "$ENTRY"
+            # Add old entries (skip first 3 lines), keep only 99 blocks
+            tail -n +4 "$MIRRORS_FILE" | awk 'BEGIN { block_count=0 } /^## Build / { if (block_count >= 99) { exit } block_count++ } block_count <= 99 { print }'
+          } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
+
+      - name: Commit Updated fiorenmas-mirrors.md
+        if: steps.compare.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/pages/fiorenmas-mirrors.md
+          commit_message: "Update fiorenmas-mirrors.md for ${{ steps.msg_date.outputs.DATE_UTC }}"
