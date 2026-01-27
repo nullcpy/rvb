@@ -237,10 +237,7 @@ jobs:
           set -euo pipefail
           mkdir -p build
 
-          jq -r '.[] | @tsv' /tmp/changed_apks.json | while IFS=$'\t' read -r item; do
-            NAME="$(echo "$item" | cut -f1)"
-            UPDATED_AT="$(echo "$item" | cut -f2)"
-            URL="$(echo "$item" | cut -f3)"
+          jq -r '.[] | [.name, .updated_at, .url] | @tsv' /tmp/changed_apks.json | while IFS=$'\t' read -r NAME UPDATED_AT URL; do
 
             echo "⬇️ Downloading: $NAME ($UPDATED_AT)"
             curl -L --fail --retry 5 --retry-delay 2 --connect-timeout 30 --max-time 600 \
@@ -334,7 +331,7 @@ jobs:
 
           echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          
+
           CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
           for CID in $CANDIDATE_IDS; do
