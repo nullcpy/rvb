@@ -284,7 +284,16 @@ jobs:
 
           # Create or get date folder (e.g., 20260127)
           PARENT_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          DATE_FOLDER_ID=$(echo "$PARENT_CONTENTS" | jq -r ".data.children[] // [] | select(.name == \"$DATE_FOLDER\" and .isDirectory == true) | .id // empty")
+
+          # Guard against null/empty responses before iterating
+          if [ -z "$PARENT_CONTENTS" ] || [ "$(echo "$PARENT_CONTENTS" | jq -r '.data | type // ""')" != "object" ]; then
+            echo "❌ Failed to fetch parent contents for $PARENT_ID"
+            echo "Response: $PARENT_CONTENTS"
+            exit 1
+          fi
+
+          DATE_FOLDER_ID=$(echo "$PARENT_CONTENTS" | jq -r \
+            ".data.children // [] | map(select(.name == \"$DATE_FOLDER\" and .isDirectory == true)) | .[0].id // \"\"")
 
           if [ -z "$DATE_FOLDER_ID" ]; then
             echo "📁 Date folder doesn't exist, creating: $DATE_FOLDER"
@@ -397,7 +406,7 @@ jobs:
 
           HEADER="*Fiorenmas Build ${DATE_UTC}*"
 
-          MSG="$HEADER${NL}${NL}*Download:*${NL}${NL}"
+          MSG="$HEADER${NL}${NL}*Download:*${NL}${NL}[GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all).${NL}"
 
           if [ -n "${BUZZ_LINK:-}" ]; then
             MSG+="🔗 *BuzzHeavier:* ${BUZZ_LINK}${NL}"
@@ -406,7 +415,7 @@ jobs:
             MSG+="🔗 *Filebin:* ${FILEBIN_LINK}${NL}"
           fi
 
-          MSG+="${NL}[Download using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)${NL}${NL}[Download from GitHub](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/tag/all)"
+          MSG+="${NL}[Download using Obtainium](https://github.com/nullcpy/rvb/blob/main/.github/pages/FiorenMas.md)"
 
           curl -s -X POST \
             --data-urlencode "chat_id=${TG_CHAT}" \
