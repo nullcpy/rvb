@@ -1,5 +1,7 @@
-twitter-piko (arm64-v8a): 11.59.0-release.0  
-twitter-piko (arm-v7a): 11.59.0-release.0  
+reddit-morphe: 2026.04.0  
+youtube-morphe: 20.40.45  
+youtube-music-morphe (arm64-v8a): 8.40.54  
+youtube-music-morphe (arm-v7a): 8.40.54  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest/download/microg-release.apk), required for Google APKs.  
@@ -8,6 +10,9 @@ twitter-piko (arm-v7a): 11.59.0-release.0
 **GitHub:** [ReVanced Builder](https://github.com/nullcpy/rvb)  
 **Telegram:** [ReVanced Builder](https://t.me/rvb27)
   
-CLI: ReVanced/revanced-cli-5.0.1-all.jar  
-Patches: crimera/patches-2.0.0-dev.23.rvp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v2.0.0-dev.23)  
+CLI: MorpheApp/morphe-cli-1.1.0-all.jar  
+Patches: MorpheApp/patches-1.9.0-dev.8.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.9.0-dev.8)
+
+CLI: MorpheApp/morphe-cli-1.1.0-all.jar  
+CLI: MorpheApp/morphe-cli-1.1.0-all.jar    
