@@ -69,7 +69,8 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |  |  | arm32 | `^youtube-music-rvx.*-arm-v7a\.apk$` |  |
 | [anddea](https://github.com/anddea/revanced-patches) | YouTube | universal | `^youtube-anddea.*\.apk$` | ✅ |
 |  | Reddit | universal | `^reddit-anddea.*\.apk$` |  |
-|  | Spotify | universal | `^spotify-anddea.*\.apk$` |  |
+|  | Spotify | arm64 | `^spotify-anddea.*-arm64-v8a\.apk$` |  |
+|  |  | arm32 | `^spotify-anddea.*-arm-v7a\.apk$` |  |
 |  | YouTube Music | arm64 | `^youtube-music-anddea.*-arm64-v8a\.apk$` |  |
 |  |  | arm32 | `^youtube-music-anddea.*-arm-v7a\.apk$` |  |
 | [jkennethcarino](https://github.com/jkennethcarino/privacy-revanced-patches) | Reddit | universal | `^reddit-jkennethcarino.*\.apk$` | ✅ |
