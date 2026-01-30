@@ -1,82 +1,19 @@
 parallel-jobs = 1
-patches-version = "latest"
-enable-magisk-update = true
+patches-version = "dev"
+enable-magisk-update = false
 remove-rv-integrations-checks = true
 
-[proton-mail-revanced]
-enabled = false
-app-name = "proton-mail"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+[spotify-anddea]
+enabled = true 
+app-name = "spotify"
+rv-brand = "anddea"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+dpi = "120-640dpi 480dpi nodpi anydpi"
+apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
-[samsung-radio-revanced]
-enabled = false
-app-name = "samsung-radio"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
-[lightroom-revanced]
-enabled = false
-app-name = "lightroom"
-rv-brand = "revanced"
-arch = "arm64-v8a"
-patches-source = "ReVanced/revanced-patches"
-# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
-
-[duolingo-revanced]
-enabled = false
-app-name = "duolingo"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
-
-[twitch-revanced]
-enabled = false
-app-name = "twitch"
-rv-brand = "revanced"
-version = "25.3.0"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
-# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
-
-[twitter-revanced]
-enabled = false
-app-name = "twitter"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-
-[tiktok-revanced]
-enabled = false
-app-name = "tiktok"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
-
-[soundcloud-revanced]
-enabled = true
-app-name = "soundcloud"
-rv-brand = "revanced"
-patches-source = "ReVanced/revanced-patches"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 
