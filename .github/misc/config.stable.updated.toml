@@ -8,6 +8,7 @@ app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
 patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
@@ -19,6 +20,7 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
@@ -30,6 +32,7 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
 patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
@@ -41,6 +44,7 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "arm64-v8a"
 patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
@@ -49,6 +53,7 @@ enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
@@ -64,45 +69,50 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-anddea]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
 patches-source = "anddea/revanced-patches"
+cli-source = "inotia00/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
+cli-source = "inotia00/revanced-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-anddea]
-enabled = false 
+enabled = true 
 app-name = "reddit"
 rv-brand = "anddea"
 patches-source = "anddea/revanced-patches"
+cli-source = "inotia00/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [spotify-anddea]
-enabled = false 
+enabled = true 
 app-name = "spotify"
 rv-brand = "anddea"
+arch = "both"
 patches-source = "anddea/revanced-patches"
+cli-source = "inotia00/revanced-cli"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
+dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
@@ -112,13 +122,14 @@ app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
 patches-source = "crimera/piko"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -129,7 +140,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -139,6 +150,17 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[reddit-morphe]
+enabled = false
+app-name = "reddit"
+rv-brand = "morphe"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-rvx-morphed]
 enabled = false
@@ -164,7 +186,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-rvx-morphed]
-enabled = false 
+enabled = false
 app-name = "reddit"
 rv-brand = "rvx-morphed"
 patches-source = "wchill/rvx-morphed"
