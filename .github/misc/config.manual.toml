@@ -7,13 +7,11 @@ remove-rv-integrations-checks = true
 enabled = true
 app-name = "youtube"
 rv-brand = "anddea-nord"
-arch = "both"
 build-mode = "both"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#ECEFF4"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-dpi = "120-640dpi 480-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
