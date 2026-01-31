@@ -3,8 +3,20 @@ patches-version = "latest"
 enable-magisk-update = false
 remove-rv-integrations-checks = true
 
-[youtube-anddea-nord]
+[youtube-revanced]
 enabled = true
+app-name = "youtube"
+rv-brand = "revanced"
+build-mode = "apk"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#ECEFF4"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-anddea-nord]
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea-nord"
 build-mode = "apk"
