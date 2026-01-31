@@ -48,14 +48,14 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 | Patch | App | Arch | Regex Pattern | Download | Status |
 |------|-----|------|---------------|:------:|:------:|
 | [revanced](https://github.com/revanced/revanced-patches) | YouTube | universal | `^youtube-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) | ✅ |
-|  | Duolingo | universal | `^duolingo-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=duolingo-revanced&expanded=true) | |
-|  | TikTok | universal | `^tiktok-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=tiktok-revanced&expanded=true) | |
-|  | Twitch | universal | `^twitch-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=twitch-revanced&expanded=true) | |
-|  | Twitter | universal | `^twitter-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=twitter-revanced&expanded=true) | |
-|  | Samsung Radio | universal | `^samsung-radio-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=samsung-radio-revanced&expanded=true) | |
-|  | Proton Mail | universal | `^proton-mail-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=proton-mail-revanced&expanded=true) | |
-|  | Proton VPN | universal | `^proton-vpn-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=proton-vpn-revanced&expanded=true) | |
-|  | SoundCloud | universal | `^soundcloud-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=soundcloud-revanced&expanded=true) | |
+|  | Duolingo |  | `^duolingo-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=duolingo-revanced&expanded=true) | |
+|  | TikTok |  | `^tiktok-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=tiktok-revanced&expanded=true) | |
+|  | Twitch |  | `^twitch-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=twitch-revanced&expanded=true) | |
+|  | Twitter |  | `^twitter-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=twitter-revanced&expanded=true) | |
+|  | Samsung Radio |  | `^samsung-radio-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=samsung-radio-revanced&expanded=true) | |
+|  | Proton Mail |  | `^proton-mail-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=proton-mail-revanced&expanded=true) | |
+|  | Proton VPN |  | `^proton-vpn-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=proton-vpn-revanced&expanded=true) | |
+|  | SoundCloud |  | `^soundcloud-revanced.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=soundcloud-revanced&expanded=true) | |
 |  | YouTube Music | arm64 | `^youtube-music-revanced.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-revanced&expanded=true) | |
 |  |  | arm32 | `^youtube-music-revanced.*-arm-v7a\.apk$` |  |
 |  | Google Photos | arm64 | `^google-photos-revanced.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=google-photos-revanced&expanded=true) | |
@@ -66,17 +66,20 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |  | YouTube Music | arm64 | `^youtube-music-rvx.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx&expanded=true) | |
 |  |  | arm32 | `^youtube-music-rvx.*-arm-v7a\.apk$` |  |
 | [anddea](https://github.com/anddea/revanced-patches) | YouTube | universal | `^youtube-anddea.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea&expanded=true) | ✅ |
-|  | Reddit | universal | `^reddit-anddea.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-anddea&expanded=true) | |
+|  | YouTube (Nord Theme) | | `^youtube-anddea-nord.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) | |
+|  | Reddit |  | `^reddit-anddea.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-anddea&expanded=true) | |
 |  | Spotify | arm64 | `^spotify-anddea.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=spotify-anddea&expanded=true) | |
 |  |  | arm32 | `^spotify-anddea.*-arm-v7a\.apk$` |  |
 |  | YouTube Music | arm64 | `^youtube-music-anddea.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea&expanded=true) | |
 |  |  | arm32 | `^youtube-music-anddea.*-arm-v7a\.apk$` |  |
+|  | YouTube Music (Nord Theme) | arm64 | `^youtube-music-anddea-nord.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea-nord&expanded=true) | |
+|  |  | arm32 | `^youtube-music-anddea-nord.*-arm-v7a\.apk$` |  |
 | [jkennethcarino](https://github.com/jkennethcarino/privacy-revanced-patches) | Reddit | universal | `^reddit-jkennethcarino.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-jkennethcarino&expanded=true) | ✅ |
-| [morphe](https://github.com/MorpheApp/morphe-patches) | YouTube | universal | `^youtube-morphe.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-morphe&expanded=true) | ✅ |
+| [morphe](https://github.com/MorpheApp/morphe-patches) | YouTube |  | `^youtube-morphe.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-morphe&expanded=true) | ✅ |
 |  | YouTube Music | arm64 | `^youtube-music-morphe.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-morphe&expanded=true) | |
 |  |  | arm32 | `^youtube-music-morphe.*-arm-v7a\.apk$` |  |
 | [rvx-morphed](https://github.com/wchill/rvx-morphed) | YouTube | universal | `^youtube-rvx-morphed.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-rvx-morphed&expanded=true) | ✅ |
-|  | Reddit | universal | `^reddit-rvx-morphed.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-rvx-morphed&expanded=true) | |
+|  | Reddit |  | `^reddit-rvx-morphed.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-rvx-morphed&expanded=true) | |
 |  | YouTube Music | arm64 | `^youtube-music-rvx-morphed.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx-morphed&expanded=true) | |
 |  |  | arm32 | `^youtube-music-rvx-morphed.*-arm-v7a\.apk$` |  |
 | [piko](https://github.com/crimera/piko) | Twitter | arm64 | `^twitter-piko.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=twitter-piko&expanded=true) | ✅ |
