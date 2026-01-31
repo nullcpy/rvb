@@ -3,10 +3,10 @@ patches-version = "latest"
 enable-magisk-update = false
 remove-rv-integrations-checks = true
 
-[youtube-revanced]
+[youtube-revanced-nord]
 enabled = true
 app-name = "youtube"
-rv-brand = "revanced"
+rv-brand = "revanced-nord"
 build-mode = "apk"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
