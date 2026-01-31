@@ -66,7 +66,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |  | YouTube Music | arm64 | `^youtube-music-rvx.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx&expanded=true) | |
 |  |  | arm32 | `^youtube-music-rvx.*-arm-v7a\.apk$` |  |
 | [anddea](https://github.com/anddea/revanced-patches) | YouTube | universal | `^youtube-anddea.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea&expanded=true) | ✅ |
-|  | YouTube (Nord Theme) | | `^youtube-anddea-nord.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) | |
+|  | YouTube <br> (Nord Theme) | | `^youtube-anddea-nord.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) | |
 |  | Reddit |  | `^reddit-anddea.*\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=reddit-anddea&expanded=true) | |
 |  | Spotify | arm64 | `^spotify-anddea.*-arm64-v8a\.apk$` | [📥](https://github.com/nullcpy/rvb/releases?q=spotify-anddea&expanded=true) | |
 |  |  | arm32 | `^spotify-anddea.*-arm-v7a\.apk$` |  |
