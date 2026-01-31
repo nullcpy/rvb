@@ -10,13 +10,13 @@ rv-brand = "anddea-nord"
 build-mode = "apk"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF222222 -OlightThemeBackgroundColor=#FF999999"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-nord]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea-nord"
 build-mode = "apk"
