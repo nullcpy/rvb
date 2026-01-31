@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 220   
+🔗 [BuzzHeavier](https://buzzheavier.com/g1c710ubm3uv)  
+🔗 [Filebin](https://filebin.net/revanced-builder-manual-220-21543016505-1/archive-220.zip)  
+
+
 ## Build No. 219   
 🔗 [BuzzHeavier](https://buzzheavier.com/z9go7jmkr4ka)  
 🔗 [Filebin](https://filebin.net/revanced-builder-manual-219-21542935382-1/archive-219.zip)  
