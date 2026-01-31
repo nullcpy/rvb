@@ -3,19 +3,7 @@ patches-version = "latest"
 enable-magisk-update = false
 remove-rv-integrations-checks = true
 
-[youtube-revanced-nord]
-enabled = false
-app-name = "youtube"
-rv-brand = "revanced-nord"
-build-mode = "apk"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#ECEFF4"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-anddea-materialyou]
+[youtube-anddea-nord]
 enabled = true
 app-name = "youtube"
 rv-brand = "anddea-nord"
@@ -23,20 +11,20 @@ build-mode = "apk"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 included-patches = "'MaterialYou'"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-nord]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "anddea-nord"
 build-mode = "apk"
 arch = "both"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF222222"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
