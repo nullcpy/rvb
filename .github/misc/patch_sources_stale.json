@@ -1,6 +1,10 @@
 {
-  "ReVanced": {
-    "repo": "ReVanced/revanced-patches",
+  "revanced": {
+    "repo": "revanced/revanced-patches",
     "stable": "v5.48.0"
+  },
+  "anddea": {
+    "repo": "anddea/revanced-patches",
+    "stable": "v3.16.0"
   }
 }
