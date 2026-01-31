@@ -1,9 +1,6 @@
-reddit-anddea: 2025.12.1  
-spotify-anddea (arm64-v8a): 9.0.90.1229  
-spotify-anddea (arm-v7a): 9.0.90.1229  
-youtube-anddea: 20.05.46  
-youtube-music-anddea (arm64-v8a): 8.30.54  
-youtube-music-anddea (arm-v7a): 8.30.54  
+youtube-anddea-nord: 20.05.46  
+youtube-music-anddea-nord (arm64-v8a): 8.30.54  
+youtube-music-anddea-nord (arm-v7a): 8.30.54  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest/download/microg-release.apk), required for Google APKs.  
