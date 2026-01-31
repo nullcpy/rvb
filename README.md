@@ -47,7 +47,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>1️⃣ revanced</strong></summary>
 
-| [revanced](https://github.com/revanced/revanced-patches) ✅ |
+| [repo](https://github.com/revanced/revanced-patches) ✅ |
 |:------------------------------------------------------------|
 | <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) <br> *arm64+arm32:* `^youtube-revanced.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-revanced&expanded=true) <br> *arm64:* `^youtube-music-revanced.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-revanced.*-arm-v7a\.apk$` |
@@ -68,7 +68,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>2️⃣ rvx</strong></summary>
 
-| **[rvx](https://github.com/inotia00/revanced-patches) [❌](https://github.com/inotia00/ReVanced_Extended/issues/3334)** |
+| **[repo](https://github.com/inotia00/revanced-patches) [❌](https://github.com/inotia00/ReVanced_Extended/issues/3334)** |
 |:------------------------------------------------------------------------------------------------------------------------|
 | <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-rvx&expanded=true) <br> *arm64+arm32:* `^youtube-rvx.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx&expanded=true) <br> *arm64:* `^youtube-music-rvx.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-rvx.*-arm-v7a\.apk$` |
@@ -78,10 +78,10 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>3️⃣ anddea</strong></summary>
 
-| **[anddea](https://github.com/anddea/revanced-patches) ✅** |
+| **[repo](https://github.com/anddea/revanced-patches) ✅** |
 |:------------------------------------------------------------|
-| <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-anddea&expanded=true) <br> *arm64+arm32:* `^youtube-anddea.*\.apk$` <br><br> <b><u>Theme:</u></b> [Nord](https://imgur.com/fDB1I8R) [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) <br> *arm64+arm32:* `^youtube-anddea-nord.*\.apk$` |
-| <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea&expanded=true) <br> *arm64:* `^youtube-music-anddea.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea.*-arm-v7a\.apk$` <br><br> <b><u>Theme:</u></b> [Nord](https://imgur.com/BBFLnWr) [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea-nord&expanded=true) <br> *arm64:* `^youtube-music-anddea-nord.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea-nord.*-arm-v7a\.apk$` |
+| <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-anddea&expanded=true) <br> *arm64+arm32:* `^youtube-anddea.*\.apk$` <br><br> <b><u>Theme:</u></b> [Nord](https://imgur.com/fDB1I8R) [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) <br> *arm64+arm32:* `^youtube-anddea-nord.*\.apk$` <br><br> <b><u>Theme:</u></b> Catppuccin Mocha [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-mocha&expanded=true) <br> *arm64+arm32:* `^youtube-anddea-mocha.*\.apk$` |
+| <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea&expanded=true) <br> *arm64:* `^youtube-music-anddea.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea.*-arm-v7a\.apk$` <br><br> <b><u>Theme:</u></b> [Nord](https://imgur.com/BBFLnWr) [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea-nord&expanded=true) <br> *arm64:* `^youtube-music-anddea-nord.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea-nord.*-arm-v7a\.apk$` <br><br> <b><u>Theme:</u></b> Catppuccin Mocha [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea-mocha&expanded=true) <br> *arm64:* `^youtube-music-anddea-mocha.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea-mocha.*-arm-v7a\.apk$` |
 | <b><u>Reddit</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=reddit-anddea&expanded=true) <br> *arm64+arm32:* `^reddit-anddea.*\.apk$` |
 | <b><u>Spotify</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=spotify-anddea&expanded=true) <br> *arm64:* `^spotify-anddea.*-arm64-v8a\.apk$` <br> *arm32:* `^spotify-anddea.*-arm-v7a\.apk$` |
 
@@ -90,7 +90,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>4️⃣ jkennethcarino</strong></summary>
 
-| **[jkennethcarino](https://github.com/jkennethcarino/privacy-revanced-patches) ✅** |
+| **[repo](https://github.com/jkennethcarino/privacy-revanced-patches) ✅** |
 |:------------------------------------------------------------------------------------|
 | <b><u>Reddit</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=reddit-jkennethcarino&expanded=true) <br> *arm64+arm32:* `^reddit-jkennethcarino.*\.apk$` |
 
@@ -99,7 +99,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>5️⃣ morphe</strong></summary>
 
-| **[morphe](https://github.com/MorpheApp/morphe-patches) ✅** |
+| **[repo](https://github.com/MorpheApp/morphe-patches) ✅** |
 |:-------------------------------------------------------------|
 | <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-morphe&expanded=true) <br> *arm64+arm32:* `^youtube-morphe.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-morphe&expanded=true) <br> *arm64:* `^youtube-music-morphe.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-morphe.*-arm-v7a\.apk$` |
@@ -110,7 +110,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>6️⃣ rvx-morphed</strong></summary>
 
-| **[rvx-morphed](https://github.com/wchill/rvx-morphed) ✅** |
+| **[repo](https://github.com/wchill/rvx-morphed) ✅** |
 |:------------------------------------------------------------|
 | <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-rvx-morphed&expanded=true) <br> *arm64+arm32:* `^youtube-rvx-morphed.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx-morphed&expanded=true) <br> *arm64:* `^youtube-music-rvx-morphed.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-rvx-morphed.*-arm-v7a\.apk$` |
@@ -121,7 +121,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 <details>
 <summary><strong>7️⃣ piko</strong></summary>
 
-| **[piko](https://github.com/crimera/piko) ✅** |
+| **[repo](https://github.com/crimera/piko) ✅** |
 |:-----------------------------------------------|
 | <b><u>Twitter</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=twitter-piko&expanded=true) <br> *arm64:* `^twitter-piko.*-arm64-v8a\.apk$` <br> *arm32:* `^twitter-piko.*-arm-v7a\.apk$` |
 
