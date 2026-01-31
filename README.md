@@ -29,7 +29,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 2. Tap **Add app**.  
 3. In the **App source URL** box, enter one of the following:
 
-- **For ReVanced APKs:**  
+- **For ReVanced & Morphe APKs:**  
   ```
   github.com/nullcpy/rvb
   ```
