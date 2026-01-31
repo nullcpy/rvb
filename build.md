@@ -1,4 +1,4 @@
-youtube-anddea-nord: 20.05.46  
+youtube-revanced-nord: 20.14.43  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -7,6 +7,6 @@ youtube-anddea-nord: 20.05.46
 **GitHub:** [ReVanced Builder](https://github.com/nullcpy/rvb)  
 **Telegram:** [ReVanced Builder](https://t.me/rvb27)
   
-CLI: inotia00/revanced-cli-5.0.2-all.jar  
-Patches: anddea/patches-3.16.0.rvp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v3.16.0)  
+CLI: ReVanced/revanced-cli-5.0.1-all.jar  
+Patches: ReVanced/patches-5.48.0.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.48.0)  
