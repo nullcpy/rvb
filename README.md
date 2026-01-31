@@ -42,49 +42,95 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 4. Enter the regex from the table below for the app you want.  
 5. Tap **Add** to begin downloading.
 
-<details>
-<summary><strong><h3>🔎 Available APKs</h3></strong></summary>
+### 🔎 Available APKs
 
-| [revanced](https://github.com/revanced/revanced-patches) ✅ |
-|-------------------------------------------------------------|
-| <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) `^youtube-revanced.*\.apk$` |
+<details>
+<summary><strong>revanced</strong></summary>
+
+| [Patch Status:](https://github.com/revanced/revanced-patches) ✅ |
+|:------------------------------------------------------------|
+| <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) <br> *arm64+arm32:* `^youtube-revanced.*\.apk$` |
 | <b><u>YouTube Music</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-revanced&expanded=true) <br> *arm64:* `^youtube-music-revanced.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-revanced.*-arm-v7a\.apk$` |
 | <b><u>Google Photos</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=google-photos-revanced&expanded=true) <br> *arm64:* `^google-photos-revanced.*-arm64-v8a\.apk$` <br> *arm32:* `^google-photos-revanced.*-arm-v7a\.apk$` |
-| <b><u>Proton Mail</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=proton-mail-revanced&expanded=true) `^proton-mail-revanced.*\.apk$` |
-| <b><u>Proton VPN</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=proton-vpn-revanced&expanded=true) `^proton-vpn-revanced.*\.apk$` |
-| <b><u>Duolingo</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=duolingo-revanced&expanded=true) `^duolingo-revanced.*\.apk$` |
-| <b><u>Google Recorder</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=google-recorder-revanced&expanded=true) `^google-recorder-revanced.*-arm64-v8a\.apk$` |
-| <b><u>Adobe Lightroom</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=lightroom-revanced&expanded=true) `^lightroom-revanced.*-arm64-v8a\.apk$` |
-| <b><u>TikTok</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=tiktok-revanced&expanded=true) `^tiktok-revanced.*\.apk$` |
-| <b><u>SoundCloud</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=soundcloud-revanced&expanded=true) `^soundcloud-revanced.*\.apk$` |
-| <b><u>Twitch</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=twitch-revanced&expanded=true) `^twitch-revanced.*\.apk$` |
-| <b><u>Twitter</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=twitter-revanced&expanded=true) `^twitter-revanced.*\.apk$` |
-| <b><u>Samsung Radio</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=samsung-radio-revanced&expanded=true) `^samsung-radio-revanced.*\.apk$` |
-| **[rvx](https://github.com/inotia00/revanced-patches) [❌](https://github.com/inotia00/ReVanced_Extended/issues/3334)** | 
+| <b><u>Proton Mail</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=proton-mail-revanced&expanded=true) <br> *arm64+arm32:* `^proton-mail-revanced.*\.apk$` |
+| <b><u>Proton VPN</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=proton-vpn-revanced&expanded=true) <br> *arm64+arm32:* `^proton-vpn-revanced.*\.apk$` |
+| <b><u>Duolingo</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=duolingo-revanced&expanded=true) <br> *arm64+arm32:* `^duolingo-revanced.*\.apk$` |
+| <b><u>Google Recorder</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=google-recorder-revanced&expanded=true) <br> *arm64:* `^google-recorder-revanced.*-arm64-v8a\.apk$` |
+| <b><u>Adobe Lightroom</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=lightroom-revanced&expanded=true) <br> *arm64:* `^lightroom-revanced.*-arm64-v8a\.apk$` |
+| <b><u>TikTok</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=tiktok-revanced&expanded=true) <br> *arm64+arm32:* `^tiktok-revanced.*\.apk$` |
+| <b><u>SoundCloud</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=soundcloud-revanced&expanded=true) <br> *arm64+arm32:* `^soundcloud-revanced.*\.apk$` |
+| <b><u>Twitch</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=twitch-revanced&expanded=true) <br> *arm64+arm32:* `^twitch-revanced.*\.apk$` |
+| <b><u>Twitter</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=twitter-revanced&expanded=true) <br> *arm64+arm32:* `^twitter-revanced.*\.apk$` |
+| <b><u>Samsung Radio</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=samsung-radio-revanced&expanded=true) <br> *arm64+arm32:* `^samsung-radio-revanced.*\.apk$` |
+
+</details>
+
+<details>
+<summary><strong>rvx</strong></summary>
+
+| **[Patch Status:](https://github.com/inotia00/revanced-patches) [❌](https://github.com/inotia00/ReVanced_Extended/issues/3334)** |
+|:------------------------------------------------------------------------------------------------------------------------|
 | <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-rvx&expanded=true) `^youtube-rvx.*\.apk$` |
 | <b><u>YouTube Music</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx&expanded=true) <br> *arm64:* `^youtube-music-rvx.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-rvx.*-arm-v7a\.apk$` |
-| **[anddea](https://github.com/anddea/revanced-patches) ✅** |
+
+</details>
+
+<details>
+<summary><strong>anddea</strong></summary>
+
+| **[Patch Status:](https://github.com/anddea/revanced-patches) ✅** |
+|:------------------------------------------------------------|
 | <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea&expanded=true) `^youtube-anddea.*\.apk$` <br><br> **Theme:** [Nord](https://imgur.com/fDB1I8R) [📥](https://github.com/nullcpy/rvb/releases?q=youtube-anddea-nord&expanded=true) `^youtube-anddea-nord.*\.apk$` |
 | <b><u>YouTube Music</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea&expanded=true) <br> *arm64:* `^youtube-music-anddea.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea.*-arm-v7a\.apk$` <br><br> **Theme:** [Nord](https://imgur.com/BBFLnWr) [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-anddea-nord&expanded=true) <br> *arm64:* `^youtube-music-anddea-nord.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-anddea-nord.*-arm-v7a\.apk$` |
 | <b><u>Reddit</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=reddit-anddea&expanded=true) `^reddit-anddea.*\.apk$` |
 | <b><u>Spotify</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=spotify-anddea&expanded=true) <br> *arm64:* `^spotify-anddea.*-arm64-v8a\.apk$` <br> *arm32:* `^spotify-anddea.*-arm-v7a\.apk$` |
-| **[jkennethcarino](https://github.com/jkennethcarino/privacy-revanced-patches) ✅** |
+
+</details>
+
+<details>
+<summary><strong>jkennethcarino</strong></summary>
+
+| **[Patch Status:](https://github.com/jkennethcarino/privacy-revanced-patches) ✅** |
+|:------------------------------------------------------------------------------------|
 | <b><u>Reddit</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=reddit-jkennethcarino&expanded=true) `^reddit-jkennethcarino.*\.apk$` |
-| **[morphe](https://github.com/MorpheApp/morphe-patches) ✅** |
+
+</details>
+
+<details>
+<summary><strong>morphe</strong></summary>
+
+| **[Patch Status:](https://github.com/MorpheApp/morphe-patches) ✅** |
+|:-------------------------------------------------------------|
 | <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-morphe&expanded=true) `^youtube-morphe.*\.apk$` |
 | <b><u>YouTube Music</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-morphe&expanded=true) <br> *arm64:* `^youtube-music-morphe.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-morphe.*-arm-v7a\.apk$` |
 | <b><u>Reddit</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=reddit-morphe&expanded=true) <br> `^reddit-morphe.*\.apk$` |
-| **[rvx-morphed](https://github.com/wchill/rvx-morphed) ✅** |
+
+</details>
+
+<details>
+<summary><strong>rvx-morphed</strong></summary>
+
+| **[Patch Status:](https://github.com/wchill/rvx-morphed) ✅** |
+|:------------------------------------------------------------|
 | <b><u>YouTube</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-rvx-morphed&expanded=true) `^youtube-rvx-morphed.*\.apk$` |
 | <b><u>YouTube Music</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx-morphed&expanded=true) <br> *arm64:* `^youtube-music-rvx-morphed.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-rvx-morphed.*-arm-v7a\.apk$` |
 | <b><u>Reddit</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=reddit-rvx-morphed&expanded=true) <br> `^reddit-rvx-morphed.*\.apk$` |
-| **[piko](https://github.com/crimera/piko) ✅** |
+
+</details>
+
+<details>
+<summary><strong>piko</strong></summary>
+
+| **[Patch Status:](https://github.com/crimera/piko) ✅** |
+|:-----------------------------------------------|
 | <b><u>Twitter</u></b> [📥](https://github.com/nullcpy/rvb/releases?q=twitter-piko&expanded=true) <br> *arm64:* `^twitter-piko.*-arm64-v8a\.apk$` <br> *arm32:* `^twitter-piko.*-arm-v7a\.apk$` |
+
+</details>
+
+<br>
 
 `arm64`: For most modern devices (after 2017). <br>
 `arm32`: For most older (before 2017) or low-end devices.
-
-</details>
 
 ## 📝 Notes
 - Pre-release builds use dev patches.
