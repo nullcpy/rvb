@@ -164,7 +164,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-rvx-morphed]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "rvx-morphed"
 build-mode = "both"
@@ -175,7 +175,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-rvx-morphed]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "rvx-morphed"
 build-mode = "both"
@@ -187,7 +187,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-rvx-morphed]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "rvx-morphed"
 patches-source = "wchill/rvx-morphed"
