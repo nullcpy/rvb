@@ -40,7 +40,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
   ```
 
 4. Scroll down to **Filter APKs by regular expression**.
-5. Enter the regex from [📁 Available APKs & Modules](#-available-apks--modules) for the app you want.  
+5. Enter the regex from [available apks and modules](#-available-apks--modules) for the app you want.  
 6. Tap **Add** to begin downloading.
 
 ### 📁 Available APKs & Modules
