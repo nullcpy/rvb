@@ -185,7 +185,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-rvx-morphed]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "rvx-morphed"
 patches-source = "wchill/rvx-morphed"
