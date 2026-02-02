@@ -115,7 +115,6 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 |:------------------------------------------------------------|
 | <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-rvx-morphed&expanded=true) <br> *arm64+arm32:* `^youtube-rvx-morphed.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-rvx-morphed&expanded=true) <br> *arm64:* `^youtube-music-rvx-morphed.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-rvx-morphed.*-arm-v7a\.apk$` |
-| <b><u>Reddit</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=reddit-rvx-morphed&expanded=true) <br> *arm64+arm32:* `^reddit-rvx-morphed.*\.apk$` |
 
 </details>
 
