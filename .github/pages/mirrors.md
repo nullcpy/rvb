@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 234  
+🔗 [BuzzHeavier](https://buzzheavier.com/625erikfvlmz)  
+🔗 [Filebin](https://filebin.net/revanced-stale-234-21595549683-1/archive-234.zip)  
+
+
 ## Build No. 233   
 🔗 [BuzzHeavier](https://buzzheavier.com/fmpclb15gff8)  
 🔗 [Filebin](https://filebin.net/revanced-builder-manual-233-21593664975-1/archive-233.zip)  
