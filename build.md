@@ -10,8 +10,8 @@ youtube-music-morphe (arm-v7a): 8.40.54
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
 CLI: MorpheApp/morphe-cli-1.2.0-all.jar  
-Patches: MorpheApp/patches-1.11.0-dev.6.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.11.0-dev.6)
+Patches: MorpheApp/patches-1.11.0-dev.7.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.11.0-dev.7)
 
 CLI: MorpheApp/morphe-cli-1.2.0-all.jar  
 CLI: MorpheApp/morphe-cli-1.2.0-all.jar    
