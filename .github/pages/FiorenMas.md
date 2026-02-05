@@ -185,6 +185,9 @@ github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | **Beta** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-beta-revanced-extended.apk) universal: `^reddit-beta-revanced-extended\.apk$` <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-arm64-v8a-beta-revanced-extended.apk) arm64-v8a: `^reddit-arm64-v8a-beta-revanced-extended\.apk$` |
 | **[Extended Arsclib (inotia00)](https://github.com/inotia00/revanced-patches)** |
 | **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-revanced-extended-arsclib.apk) universal: `^reddit-revanced-extended-arsclib\.apk$` <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-arm64-v8a-revanced-extended-arsclib.apk) arm64-v8a: `^reddit-arm64-v8a-revanced-extended-arsclib\.apk$` |
+| **[Morphe](https://github.com/MorpheApp/morphe-patches)** |
+| **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-morphe.apk) universal: `^reddit-morphe\.apk$` |
+| **Beta** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/reddit-beta-morphe.apk) universal: `^reddit-beta-morphe\.apk$` |
 
 </details>
 
