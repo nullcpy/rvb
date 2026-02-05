@@ -262,6 +262,16 @@ github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 </details>
 
 <details>
+<summary><strong><b>Proton VPN</b></strong></summary>
+
+| [Revanced](https://github.com/ReVanced/revanced-patches) |
+|:------------------------------------------------------|
+| **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/protonvpn-revanced.apk) universal: `^protonvpn-revanced\.apk$` |
+| **Beta** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/protonvpn-beta-revanced.apk) universal: `^protonvpn-beta-revanced\.apk$` |
+
+</details>
+
+<details>
 <summary><strong><b>RAR</b></strong></summary>
 
 | [Revanced](https://github.com/ReVanced/revanced-patches) |
@@ -365,3 +375,25 @@ github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root
 | **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/fx-file-explorer-indrastorms.apk) universal: `^fx-file-explorer-indrastorms\.apk$` |
 
 </details>
+
+
+<details>
+<summary><strong><b>Disney +</b></strong></summary>
+
+| [Revanced](https://github.com/ReVanced/revanced-patches) |
+|:------------------------------------------------------|
+| **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/disney-revanced.apk) arm64-v8a: `^disney-revanced\.apk$` |
+| **Beta** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/disney-beta-revanced.apk) arm64-v8a: `^disney-beta-revanced\.apk$` |
+
+</details>
+
+<details>
+<summary><strong><b>My Fitness Pal</b></strong></summary>
+
+| [Revanced](https://github.com/ReVanced/revanced-patches) |
+|:------------------------------------------------------|
+| **Stable** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/MyFitnessPal-revanced.apk) universal: `^MyFitnessPal-revanced\.apk$` |
+| **Beta** <br> [📥](https://github.com/FiorenMas/Revanced-And-Revanced-Extended-Non-Root/releases/download/all/MyFitnessPal-beta-revanced.apk) universal: `^MyFitnessPal-beta-revanced\.apk$` |
+
+</details>
+
