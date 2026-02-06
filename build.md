@@ -1,5 +1,7 @@
-youtube-morphe-mocha: 20.40.45  
-youtube-morphe-nord: 20.40.45  
+reddit-morphe: 2026.03.0  
+youtube-morphe: 20.40.45  
+youtube-music-morphe (arm64-v8a): 8.40.54  
+youtube-music-morphe (arm-v7a): 8.40.54  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -11,4 +13,5 @@ CLI: MorpheApp/morphe-cli-1.3.0-all.jar 
 Patches: MorpheApp/patches-1.11.0.mpp  
 [Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.11.0)
 
+CLI: MorpheApp/morphe-cli-1.3.0-all.jar  
 CLI: MorpheApp/morphe-cli-1.3.0-all.jar    
