@@ -50,7 +50,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 | [repo](https://github.com/revanced/revanced-patches) ✅ |
 |:------------------------------------------------------------|
-| <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) <br> *arm64+arm32:* `^youtube-revanced.*\.apk$` |
+| <b><u>YouTube</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-revanced&expanded=true) <br> *arm64+arm32:* `^youtube-revanced.*\.apk$` <br><br> <b><u>Theme:</u></b> [Nord](https://imgur.com/fDB1I8R) [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-revanced-nord&expanded=true) <br> *arm64+arm32:* `^youtube-revanced-nord.*\.apk$` <br><br> <b><u>Theme:</u></b> Catppuccin Mocha [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-revanced-mocha&expanded=true) <br> *arm64+arm32:* `^youtube-revanced-mocha.*\.apk$` |
 | <b><u>YouTube Music</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=youtube-music-revanced&expanded=true) <br> *arm64:* `^youtube-music-revanced.*-arm64-v8a\.apk$` <br> *arm32:* `^youtube-music-revanced.*-arm-v7a\.apk$` |
 | <b><u>Google Photos</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=google-photos-revanced&expanded=true) <br> *arm64:* `^google-photos-revanced.*-arm64-v8a\.apk$` <br> *arm32:* `^google-photos-revanced.*-arm-v7a\.apk$` |
 | <b><u>Proton Mail</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=proton-mail-revanced&expanded=true) <br> *arm64+arm32:* `^proton-mail-revanced.*\.apk$` |
