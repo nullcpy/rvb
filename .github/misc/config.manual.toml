@@ -56,7 +56,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "apk"
@@ -68,7 +68,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe-nord]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe-nord"
 build-mode = "apk"
@@ -80,3 +80,14 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
+[youtube-morphe-exp]
+enabled = true
+app-name = "youtube"
+rv-brand = "morphe-exp"
+build-mode = "both"
+version = "latest"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
