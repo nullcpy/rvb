@@ -9,7 +9,7 @@ youtube-rvx-morphed: 20.05.46
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
 CLI: MorpheApp/morphe-cli-1.3.0-all.jar  
-Patches: wchill/patches-5.16.2-dev.1.mpp  
-[Changelog](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.2-dev.1)
+Patches: wchill/patches-5.16.2.mpp  
+[Changelog](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.2)
 
 CLI: MorpheApp/morphe-cli-1.3.0-all.jar    
