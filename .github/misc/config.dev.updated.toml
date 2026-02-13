@@ -70,7 +70,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-anddea]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -82,7 +82,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
@@ -95,7 +95,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-anddea]
-enabled = false 
+enabled = true 
 app-name = "reddit"
 rv-brand = "anddea"
 patches-source = "anddea/revanced-patches"
@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [spotify-anddea]
-enabled = false 
+enabled = true 
 app-name = "spotify"
 rv-brand = "anddea"
 arch = "both"
