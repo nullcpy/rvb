@@ -93,7 +93,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-anddea]
-enabled = true 
+enabled = false 
 app-name = "reddit"
 rv-brand = "anddea"
 patches-source = "anddea/revanced-patches"
