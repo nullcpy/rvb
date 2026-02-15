@@ -123,7 +123,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 
 | **[repo](https://github.com/crimera/piko) ✅** |
 |:-----------------------------------------------|
-| <b><u>Twitter</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=twitter-piko&expanded=true) <br> *arm64:* `^twitter-piko.*-arm64-v8a\.apk$` <br> *arm32:* `^twitter-piko.*-arm-v7a\.apk$` |
+| <b><u>Twitter</u></b> [🔎](https://github.com/nullcpy/rvb/releases?q=twitter-piko&expanded=true) <br> *arm64:* `^twitter-piko.*-arm64-v8a\.apk$` <br> *arm32:* `^twitter-piko.*-arm-v7a\.apk$` <br><br> <b><u>Theme:</u></b> Material You [🔎](https://github.com/nullcpy/rvb/releases?q=twitter-piko-materialu&expanded=true) <br> *arm64:* `^twitter-piko-materialu.*-arm64-v8a\.apk$` <br> *arm32:* `^twitter-piko-materialu.*-arm-v7a\.apk$` |
 
 </details>
 
