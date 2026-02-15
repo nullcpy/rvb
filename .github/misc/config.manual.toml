@@ -81,7 +81,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -91,3 +91,17 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[twitter-piko-materialu]
+enabled = true 
+app-name = "twitter"
+rv-brand = "piko-materialu"
+arch = "both"
+patches-source = "crimera/piko"
+included-patches = "'Bring back twitter' 'Dynamic color'"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi 480dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
