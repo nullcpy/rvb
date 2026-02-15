@@ -58,7 +58,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [reddit-jkennethcarino]
-enabled = false 
+enabled = true 
 app-name = "reddit"
 rv-brand = "jkennethcarino"
 patches-source = "jkennethcarino/privacy-revanced-patches"
@@ -74,7 +74,7 @@ app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
@@ -87,7 +87,7 @@ rv-brand = "anddea"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
@@ -98,7 +98,7 @@ enabled = false
 app-name = "reddit"
 rv-brand = "anddea"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
@@ -122,14 +122,14 @@ app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
 patches-source = "crimera/piko"
-cli-source = "ReVanced/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -140,7 +140,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -152,7 +152,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 patches-source = "MorpheApp/morphe-patches"
