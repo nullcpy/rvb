@@ -1,5 +1,5 @@
-twitter-piko (arm64-v8a): 11.65.0-release.5  
-twitter-piko (arm-v7a): 11.65.0-release.5  
+twitter-piko-materialu (arm64-v8a): 11.65.0-release.6  
+twitter-piko-materialu (arm-v7a): 11.65.0-release.6  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
