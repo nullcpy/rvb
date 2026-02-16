@@ -12,5 +12,5 @@ youtube-revanced: 20.14.43
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
 CLI: ReVanced/revanced-cli-5.0.1-all.jar  
-Patches: ReVanced/patches-5.50.1.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.1)  
+Patches: ReVanced/patches-5.50.3-dev.1.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.3-dev.1)  
