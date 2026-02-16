@@ -1,11 +1,7 @@
-duolingo-revanced: 6.54.5  
-lightroom-revanced: 9.3.0  
-proton-mail-revanced: 4.15.0  
-soundcloud-revanced: 2025.05.27-release  
-tiktok-revanced: 36.5.4  
-twitter-revanced: 10.86.0-release.0  
-youtube-revanced-mocha: 20.14.43  
-youtube-revanced-nord: 20.14.43  
+reddit-morphe: 2026.03.0  
+youtube-morphe: 20.40.45  
+youtube-music-morphe (arm64-v8a): 8.40.54  
+youtube-music-morphe (arm-v7a): 8.40.54  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -13,6 +9,9 @@ youtube-revanced-nord: 20.14.43
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: ReVanced/revanced-cli-5.0.1-all.jar  
-Patches: ReVanced/patches-5.50.2.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.2)  
+CLI: MorpheApp/morphe-cli-1.3.0-all.jar  
+Patches: MorpheApp/patches-1.14.0-dev.5.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.14.0-dev.5)
+
+CLI: MorpheApp/morphe-cli-1.3.0-all.jar  
+CLI: MorpheApp/morphe-cli-1.3.0-all.jar    
