@@ -3,7 +3,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [proton-mail-revanced]
-enabled = false
+enabled = true
 app-name = "proton-mail"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -23,7 +23,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [lightroom-revanced]
-enabled = false
+enabled = true
 app-name = "lightroom"
 rv-brand = "revanced"
 arch = "arm64-v8a"
@@ -34,7 +34,7 @@ cli-source = "ReVanced/revanced-cli"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [duolingo-revanced]
-enabled = false
+enabled = true
 app-name = "duolingo"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -45,7 +45,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
-enabled = false
+enabled = true
 app-name = "twitch"
 rv-brand = "revanced"
 version = "25.3.0"
@@ -57,7 +57,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
-enabled = false
+enabled = true
 app-name = "twitter"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -68,7 +68,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
-enabled = false
+enabled = true
 app-name = "tiktok"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -79,7 +79,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [soundcloud-revanced]
-enabled = false
+enabled = true
 app-name = "soundcloud"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -93,7 +93,7 @@ app-name = "youtube"
 rv-brand = "anddea-nord"
 build-mode = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -107,7 +107,7 @@ rv-brand = "anddea-nord"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
@@ -119,7 +119,7 @@ app-name = "youtube"
 rv-brand = "anddea-mocha"
 build-mode = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -133,14 +133,14 @@ rv-brand = "anddea-mocha"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
-cli-source = "inotia00/revanced-cli"
+cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "both"
@@ -152,7 +152,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-mocha"
 build-mode = "both"
@@ -164,7 +164,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-nord]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "revanced-nord"
 build-mode = "both"
@@ -176,7 +176,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-mocha]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "revanced-mocha"
 build-mode = "both"
@@ -188,7 +188,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -198,4 +198,17 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[twitter-piko-materialu]
+enabled = false 
+app-name = "twitter"
+rv-brand = "piko-materialu"
+arch = "both"
+patches-source = "crimera/piko"
+included-patches = "'Bring back twitter' 'Dynamic color'"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi 480dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
