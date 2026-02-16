@@ -1,9 +1,11 @@
-google-photos-revanced (arm64-v8a): 7.63.0.869312946  
-google-recorder-revanced: 4.2.20260118.867906508  
-proton-vpn-revanced: 5.15.70.0  
-youtube-music-revanced (arm64-v8a): 8.10.52  
-youtube-music-revanced (arm-v7a): 8.10.52  
-youtube-revanced: 20.14.43  
+duolingo-revanced: 6.54.5  
+lightroom-revanced: 9.3.0  
+proton-mail-revanced: 4.15.0  
+soundcloud-revanced: 2025.05.27-release  
+tiktok-revanced: 36.5.4  
+twitter-revanced: 10.86.0-release.0  
+youtube-revanced-mocha: 20.14.43  
+youtube-revanced-nord: 20.14.43  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
