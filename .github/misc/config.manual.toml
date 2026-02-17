@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
