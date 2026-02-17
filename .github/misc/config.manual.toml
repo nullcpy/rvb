@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [google-photos-revanced]
-enabled = false
+enabled = true
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
@@ -121,10 +121,9 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 enabled = true
 app-name = "reddit"
 rv-brand = "morphe"
-arch = "both"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi 240-480dpi nodpi anydpi"
+dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
