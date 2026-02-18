@@ -1,6 +1,6 @@
 parallel-jobs = 1
-patches-version = "v5.50.0-dev.7"
-enable-magisk-update = true
+patches-version = "dev"
+enable-magisk-update = false
 remove-rv-integrations-checks = true
 
 [youtube-anddea-nord]
@@ -106,7 +106,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
