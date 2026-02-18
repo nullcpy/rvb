@@ -1,6 +1,6 @@
 parallel-jobs = 1
 patches-version = "v5.50.0-dev.7"
-enable-magisk-update = false
+enable-magisk-update = true
 remove-rv-integrations-checks = true
 
 [youtube-anddea-nord]
@@ -118,7 +118,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 patches-source = "MorpheApp/morphe-patches"
