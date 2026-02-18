@@ -134,7 +134,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 - Pre-release builds use dev patches.
 - All modules can be updated directly from Magisk and KSU.
 - For Obtainium pre-release updates, enable “Include prereleases” in additional options.
-- [MicroG-RE](https://github.com/MorpheApp/MicroG-RE) is required for Google APKs to work properly. If you can't login with MicroG-RE then use old [MicroG](https://github.com/ReVanced/GmsCore/releases).
+- [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases) is required for Google APKs to work properly. If you can't login with MicroG-RE then use old [MicroG](https://github.com/ReVanced/GmsCore/releases).
 - If you want an app built from a rarely updated or discontinued patch, check the [mirrors](./.github/pages/mirrors.md) page or the [build archive](https://t.me/rvb27/1139) topic on Telegram.
 
 ## ⁉️ Report
