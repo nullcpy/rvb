@@ -70,7 +70,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-anddea]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -82,7 +82,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
@@ -118,7 +118,7 @@ apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcast
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-piko]
-enabled = false 
+enabled = true 
 app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
