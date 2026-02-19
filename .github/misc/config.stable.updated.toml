@@ -3,7 +3,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [youtube-revanced]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -14,7 +14,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -26,7 +26,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
@@ -35,10 +35,10 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = false 
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -49,7 +49,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
 [proton-vpn-revanced]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -129,7 +129,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -140,7 +140,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -152,7 +152,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "morphe"
 patches-source = "MorpheApp/morphe-patches"
@@ -160,7 +160,7 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-rvx-morphed]
 enabled = false
