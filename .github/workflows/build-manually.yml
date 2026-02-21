@@ -3,6 +3,10 @@ name: Build Manually
 on:
   workflow_dispatch:
 
+env:
+  BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+  TG_TOKEN: ${{ secrets.TG_TOKEN }}
+
 concurrency:
   group: patch-build
   cancel-in-progress: false
@@ -31,7 +35,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '$3 ~ /^[0-9]+$/ { print $3 }' | sort -nr | head -n1)
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
 
@@ -95,7 +99,6 @@ jobs:
       - name: Upload to BuzzHeavier
         id: upload_buzzheavier
         env:
-          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           set -euo pipefail
@@ -167,7 +170,7 @@ jobs:
 
           echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          
+
           CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
           for CID in $CANDIDATE_IDS; do
@@ -322,7 +325,6 @@ jobs:
 
       - name: Notify Telegram (Build Complete)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: ${{ steps.check_prerelease.outputs.TG_THREAD_ID }}
           TITLE_SUFFIX: ${{ steps.check_prerelease.outputs.TITLE_SUFFIX }}
           FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}

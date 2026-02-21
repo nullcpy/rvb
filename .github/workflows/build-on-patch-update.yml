@@ -12,6 +12,8 @@ concurrency:
 env:
   TG_CHAT: "@rvb27"
   TG_CHANNEL: "@rvb28"
+  BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+  TG_TOKEN: ${{ secrets.TG_TOKEN }}
 
 jobs:
   check-patch:
@@ -335,7 +337,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '$3 ~ /^[0-9]+$/ { print $3 }' | sort -nr | head -n1)
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
 
           TRIGGER_STABLE=${{ steps.compare.outputs.TRIGGER_STABLE }}
@@ -378,7 +380,6 @@ jobs:
 
       - name: Notify Telegram (New Dev Patch)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: "345"
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
@@ -459,7 +460,6 @@ jobs:
       - name: Upload to BuzzHeavier (Dev)
         id: upload_buzzheavier_dev
         env:
-          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_dev_ver }}
         run: |
           set -euo pipefail
@@ -531,7 +531,7 @@ jobs:
 
           echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          
+
           CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
           for CID in $CANDIDATE_IDS; do
@@ -685,7 +685,6 @@ jobs:
 
       - name: Notify Telegram (Dev Build Complete)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: "350"
           FILEBIN_LINK: ${{ steps.upload_filebin_dev.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_dev.outputs.UPLOAD_SUCCESS }}
@@ -776,7 +775,6 @@ jobs:
 
       - name: Notify Telegram (New Stable Patch)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: "345"
           TAGS_OLD: ${{ needs.check-patch.outputs.tags_old }}
           TAGS_NEW: ${{ needs.check-patch.outputs.tags_new }}
@@ -856,7 +854,6 @@ jobs:
       - name: Upload to BuzzHeavier (Stable)
         id: upload_buzzheavier_stable
         env:
-          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_stable_ver }}
         run: |
           set -euo pipefail
@@ -928,7 +925,7 @@ jobs:
 
           echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          
+
           CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
           for CID in $CANDIDATE_IDS; do
@@ -1081,7 +1078,6 @@ jobs:
 
       - name: Notify Telegram (Stable Build Complete)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: "262"
           FILEBIN_LINK: ${{ steps.upload_filebin_stable.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_stable.outputs.UPLOAD_SUCCESS }}

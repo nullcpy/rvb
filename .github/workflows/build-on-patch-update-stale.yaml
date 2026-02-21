@@ -12,6 +12,8 @@ concurrency:
 env:
   TG_CHAT: "@rvb27"
   TG_CHANNEL: "@rvb28"
+  BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+  TG_TOKEN: ${{ secrets.TG_TOKEN }}
 
 jobs:
   check-patch:
@@ -173,7 +175,7 @@ jobs:
           BASE_CONFIG=".github/misc/config.stale.toml"
           OUT_CONFIG=".github/misc/config.stale.build.toml"
           ACTIVE_FILE=".github/misc/active.stale.txt"
-          
+
           # Create output file
           cp "$BASE_CONFIG" "$OUT_CONFIG"
 
@@ -254,12 +256,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '{print $3}' | grep -E '^[0-9]+$' | sort -nr | head -n1)
+          TAG=$(gh release list --exclude-drafts -L 100 | awk -F '\t' '$3 ~ /^[0-9]+$/ { print $3 }' | sort -nr | head -n1)
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
-          
+
           # Simple increment for Stale
           NEXT_VER=$((TAG + 1))
-          
+
           echo "next_ver=${NEXT_VER}" >> "$GITHUB_OUTPUT"
 
   build-stale:
@@ -317,7 +319,6 @@ jobs:
       - name: Upload to BuzzHeavier (Stale)
         id: upload_buzzheavier_stale
         env:
-          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
           RELEASE_NUMBER: ${{ needs.check-patch.outputs.next_ver }}
         run: |
           set -euo pipefail
@@ -389,7 +390,7 @@ jobs:
 
           echo "🧹 Scanning for stale empty folders..."
           CLEANUP_CONTENTS=$(curl -sS -H "$AUTH" "https://buzzheavier.com/api/fs/$PARENT_ID")
-          
+
           CANDIDATE_IDS=$(echo "$CLEANUP_CONTENTS" | jq -r ".data.children[] // [] | select(.isDirectory == true and .id != \"$RELEASE_DIR_ID\") | .id")
 
           for CID in $CANDIDATE_IDS; do
@@ -534,7 +535,6 @@ jobs:
 
       - name: Notify Telegram (Stale Build Complete)
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: "262" # Stable Thread
           FILEBIN_LINK: ${{ steps.upload_filebin_stale.outputs.FILEBIN_LINK }}
           FILEBIN_SUCCESS: ${{ steps.upload_filebin_stale.outputs.UPLOAD_SUCCESS }}

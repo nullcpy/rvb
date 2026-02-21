@@ -12,6 +12,8 @@ concurrency:
 env:
   TG_CHAT: "@rvb27"
   TG_THREAD_ID: "267"
+  BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
+  TG_TOKEN: ${{ secrets.TG_TOKEN }}
 
 jobs:
   track-github-releases:
@@ -38,8 +40,6 @@ jobs:
 
       - name: Check releases and notify
         id: notify
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
           set -euo pipefail
           NL=$'\n'
@@ -262,8 +262,6 @@ jobs:
       - name: Upload to BuzzHeavier
         if: steps.compare.outputs.changed == 'true'
         id: upload_buzzheavier
-        env:
-          BUZZHEAVIER_ACCOUNT_ID: ${{ secrets.BUZZHEAVIER_ACCOUNT_ID }}
         run: |
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
@@ -394,7 +392,6 @@ jobs:
       - name: Notify Telegram
         if: steps.compare.outputs.changed == 'true'
         env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
           DATE_UTC: ${{ steps.msg_date.outputs.DATE_UTC }}
           BUZZ_LINK: ${{ steps.upload_buzzheavier.outputs.BUZZHEAVIER_LINK }}
           FILEBIN_LINK: ${{ steps.upload_filebin.outputs.FILEBIN_LINK }}
