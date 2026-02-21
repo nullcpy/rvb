@@ -25,7 +25,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
