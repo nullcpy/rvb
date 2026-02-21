@@ -1,6 +1,10 @@
-youtube-anddea: 20.05.46  
-youtube-music-anddea (arm64-v8a): 8.30.54  
-youtube-music-anddea (arm-v7a): 8.30.54  
+google-photos-revanced (arm64-v8a): 7.62.0.867732098  
+google-photos-revanced (arm-v7a): 7.62.0.867732098  
+google-recorder-revanced: 4.2.20260118.867906508  
+proton-vpn-revanced: 5.16.31.0  
+youtube-music-revanced (arm64-v8a): 8.10.52  
+youtube-music-revanced (arm-v7a): 8.10.52  
+youtube-revanced: 20.14.43  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -8,6 +12,6 @@ youtube-music-anddea (arm-v7a): 8.30.54
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: MorpheApp/morphe-cli-1.3.0-all.jar  
-Patches: anddea/patches-4.0.0-dev.5.mpp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.5)  
+CLI: ReVanced/revanced-cli-5.0.1-all.jar  
+Patches: ReVanced/patches-5.50.3-dev.3.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.3-dev.3)  
