@@ -28,7 +28,6 @@ patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-config.manual.toml repair
 [youtube-anddea-mocha]
 enabled = true
 app-name = "youtube"
