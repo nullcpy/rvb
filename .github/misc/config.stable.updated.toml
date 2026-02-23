@@ -3,7 +3,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = true
 
 [youtube-revanced]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -14,7 +14,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -38,7 +38,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [google-recorder-revanced]
-enabled = false 
+enabled = true 
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -49,7 +49,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 
 [proton-vpn-revanced]
-enabled = false
+enabled = true
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -129,7 +129,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -140,7 +140,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -152,7 +152,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 patches-source = "MorpheApp/morphe-patches"
