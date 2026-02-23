@@ -142,6 +142,6 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 - Found a bug? Report it in the [Telegram](https://t.me/rvb27) or open an [issue](https://github.com/nullcpy/rvb/issues).
 
 ## ⭐ Credits
-- Icon is from [ReVanced](https://github.com/revanced). 
+- Icons are from [ReVanced](https://github.com/revanced) and [MorpheApp](https://github.com/MorpheApp). 
 - This repo is based on [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module).
 - All credit goes to the original patch developers and maintainers.
