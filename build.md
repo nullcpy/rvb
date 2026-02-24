@@ -1,9 +1,8 @@
-reddit-morphe: 2026.04.0  
-twitter-piko (arm64-v8a): 11.67.0-release.0  
-twitter-piko (arm-v7a): 11.67.0-release.0  
-youtube-morphe: 20.40.45  
-youtube-music-morphe (arm64-v8a): 8.40.54  
-youtube-music-morphe (arm-v7a): 8.40.54  
+google-recorder-revanced: 4.2.20260118.867906508  
+proton-vpn-revanced: 5.16.31.0  
+youtube-music-revanced (arm64-v8a): 8.10.52  
+youtube-music-revanced (arm-v7a): 8.10.52  
+youtube-revanced: 20.14.43  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -11,9 +10,6 @@ youtube-music-morphe (arm-v7a): 8.40.54
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-Patches: crimera/patches-3.0.0-dev.5.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.0.0-dev.5)
-
-CLI: MorpheApp/morphe-cli-1.4.0-all.jar  
-Patches: MorpheApp/patches-1.15.0-dev.8.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.15.0-dev.8)  
+CLI: ReVanced/revanced-cli-5.0.1-all.jar  
+Patches: ReVanced/patches-5.50.3-dev.4.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.3-dev.4)  
