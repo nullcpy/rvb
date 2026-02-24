@@ -36,7 +36,7 @@ build-mode = "both"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-mocha]
