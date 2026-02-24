@@ -35,8 +35,6 @@ rv-brand = "anddea"
 build-mode = "both"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube/YouTube_19.05.36.apk"
 
 [youtube-music-anddea-mocha]
@@ -97,10 +95,8 @@ patches-source = "crimera/piko"
 included-patches = "'Dynamic color' 'MaterialYou'"
 cli-source = "inotia00/revanced-cli"
 patcher-args = "-e 'Bring back twitter'"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android/Twitter_10.21.0-release.0.apk"
 [google-photos-revanced]
 enabled = false
 app-name = "google-photos"
