@@ -1,7 +1,6 @@
-reddit-morphe: 2026.04.0  
-youtube-morphe: 20.40.45  
-youtube-music-morphe (arm64-v8a): 8.40.54  
-youtube-music-morphe (arm-v7a): 8.40.54  
+youtube-morphe-exp: 21.08.265  
+youtube-morphe-mocha: 20.40.45  
+youtube-morphe-nord: 20.40.45  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
