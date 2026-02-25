@@ -155,6 +155,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 enabled = true
 app-name = "reddit"
 rv-brand = "morphe"
+build-mode = "both"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
