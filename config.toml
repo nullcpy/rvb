@@ -45,7 +45,9 @@ arch = "arm64-v8a"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+dpi = "480-640dpi 120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
 enabled = true
