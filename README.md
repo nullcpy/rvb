@@ -46,7 +46,7 @@ Obtainium is the easiest way to install and update ReVanced APKs.
 ### 📁 Available APKs & Modules
 
 > [!Tip]
-> Tap/Click on 🔎, it'll take you to the download links!
+> Tap/Click on ► to see apps and on 🔎 to see the download links!
 
 <details>
 <summary><strong>1️⃣ revanced</strong></summary>
