@@ -1,8 +1,6 @@
 patches-version = "dev"
-cli-version = "dev"
 enable-magisk-update = false
 parallel-jobs = 1
-remove-rv-integrations-checks = true
 
 [youtube-revanced]
 enabled = false
