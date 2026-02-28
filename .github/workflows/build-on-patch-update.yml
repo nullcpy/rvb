@@ -239,7 +239,6 @@ jobs:
               # Dev: patches-version + magisk update disabled
               {
                 echo 'patches-version = "dev"'
-                echo 'cli-version = "dev"'
                 echo 'enable-magisk-update = false'
                 cat "$out_file"
               } > tmp_header
