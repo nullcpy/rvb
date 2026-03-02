@@ -128,7 +128,6 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-
 [wps-office-hoo-dles]
 enabled = true
 app-name = "wps-office"
@@ -137,5 +136,34 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
+
+[podcast-addict-hoo-dles]
+enabled = true
+app-name = "podcast-addict"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+
+[smart-launcher-hoo-dles]
+enabled = true
+app-name = "smart-launcher"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher"
+
+[proton-vpn-hoo-dles]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+
+
 
 
