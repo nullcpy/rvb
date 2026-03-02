@@ -139,7 +139,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office
 archive-dlurl = "https://archive.org/download/geologically/apks/cn.wps.moffice_eng"
 
 [podcast-addict-hoo-dles]
-enabled = true
+enabled = false
 app-name = "podcast-addict"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -159,7 +159,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launc
 archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [proton-vpn-hoo-dles]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
