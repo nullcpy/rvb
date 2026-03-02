@@ -136,6 +136,7 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
+archive-dlurl = "https://archive.org/download/geologically/apks/cn.wps.moffice"
 
 [podcast-addict-hoo-dles]
 enabled = true
@@ -145,6 +146,7 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [smart-launcher-hoo-dles]
 enabled = true
@@ -154,6 +156,7 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher"
+archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [proton-vpn-hoo-dles]
 enabled = true
@@ -163,7 +166,7 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 
 
