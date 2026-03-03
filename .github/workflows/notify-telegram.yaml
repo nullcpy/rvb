@@ -126,11 +126,10 @@ jobs:
           # Write to GitHub output safely
           # ---------------------------
           {
-            cat <<EOF
-            text<<EOF
-            $TEXT
-            EOF
-                      } >> $GITHUB_OUTPUT
+            echo "text<<EOF"
+            echo "$TEXT"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
 
       - name: Send to Telegram
         if: steps.build.outputs.text != ''
