@@ -273,6 +273,9 @@ jobs:
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated mirrors.md
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -312,6 +315,9 @@ jobs:
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated Build MD and Update JSON Files
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
