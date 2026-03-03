@@ -1,6 +1,5 @@
 enable-magisk-update = true
 parallel-jobs = 1
-remove-rv-integrations-checks = true
 
 [proton-mail-revanced]
 enabled = false
@@ -140,7 +139,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "both"
@@ -152,7 +151,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-mocha"
 build-mode = "both"
@@ -188,7 +187,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -211,4 +210,47 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[wps-office-hoo-dles]
+enabled = true
+app-name = "wps-office"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
+archive-dlurl = "https://archive.org/download/geologically/apks/cn.wps.moffice_eng"
+
+[podcast-addict-hoo-dles]
+enabled = true
+app-name = "podcast-addict"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
+
+[proton-vpn-hoo-dles]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
+[duolingo-hoo-dles]
+enabled = true
+app-name = "duolingo"
+rv-brand = "hoo-dles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
+
 
