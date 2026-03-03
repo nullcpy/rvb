@@ -496,9 +496,6 @@ jobs:
           skip_checkout: true
           file_pattern: .github/pages/mirrors.md
           commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_ver }}"
-
-      - name: Pull latest changes
-        run: git pull origin update --rebase
         
       - name: Update Changelog and Magisk Update JSON (Stale)
         run: |
