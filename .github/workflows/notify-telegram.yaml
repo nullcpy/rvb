@@ -18,6 +18,8 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
 
     env:
       TG_CHAT: "@rvb27"
@@ -160,3 +162,11 @@ jobs:
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage")
 
           echo "$RESPONSE" | jq -e '.ok == true' > /dev/null
+
+      - name: Clean up workflow run
+        if: always()
+        run: |
+          curl -X DELETE \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}"
