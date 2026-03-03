@@ -54,9 +54,6 @@ jobs:
           else
             echo "created=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit dummy patch_sources.json if created
         if: steps.ensure_patch_sources.outputs.created == 'true'
@@ -135,6 +132,9 @@ jobs:
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+
       - name: Compare Latest vs Stored Tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
@@ -182,9 +182,6 @@ jobs:
           echo "tags_new<<${DELIM2}" >> "$GITHUB_OUTPUT"
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM2}" >> "$GITHUB_OUTPUT"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated patch_sources.json
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
@@ -195,6 +192,9 @@ jobs:
           file_pattern: .github/misc/patch_sources.json
           commit_message: "Update patch_sources.json with latest patch versions"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Generate Configs (Stable and Dev)
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         id: generate_configs
@@ -316,9 +316,6 @@ jobs:
           if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
             generate_config "dev"
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Config (Stable)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE == '1'
@@ -327,9 +324,6 @@ jobs:
           branch: main
           file_pattern: .github/misc/config.stable.updated.toml
           commit_message: "Update config.stable.updated.toml for new stable patches"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Config (Dev)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_PRERELEASE == '1'
@@ -598,6 +592,9 @@ jobs:
             rm -f "$ARCHIVE_NAME"
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Update Mirror Links (Dev)
         id: update_mirrors_dev
         env:
@@ -651,9 +648,6 @@ jobs:
             }
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated mirrors.md (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -663,6 +657,9 @@ jobs:
           file_pattern: .github/pages/mirrors.md
           commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_dev_ver }}"
 
+      - name: Pull latest changes
+        run: git pull origin update --rebase
+        
       - name: Update Changelog and Magisk Update JSON (Dev)
         run: |
           set -euo pipefail
@@ -689,9 +686,6 @@ jobs:
           done
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Build MD and Update JSON Files (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -1001,6 +995,9 @@ jobs:
             rm -f "$ARCHIVE_NAME"
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Update Mirror Links (Stable)
         id: update_mirrors_stable
         env:
@@ -1053,9 +1050,6 @@ jobs:
             }
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated mirrors.md (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -1065,6 +1059,9 @@ jobs:
           file_pattern: .github/pages/mirrors.md
           commit_message: "Update mirrors.md for Build No. ${{ needs.check-patch.outputs.next_stable_ver }}"
 
+      - name: Pull latest changes
+        run: git pull origin update --rebase
+        
       - name: Update Changelog and Magisk Update JSON (Stable)
         run: |
           set -euo pipefail
@@ -1091,9 +1088,6 @@ jobs:
           done
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Build MD and Update JSON Files (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
