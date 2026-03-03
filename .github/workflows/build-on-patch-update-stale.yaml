@@ -117,9 +117,6 @@ jobs:
           echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Compare Latest vs Stored Tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
@@ -163,9 +160,6 @@ jobs:
           skip_checkout: true
           file_pattern: .github/misc/patch_sources_stale.json
           commit_message: "Update patch_sources_stale.json with latest versions"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Generate Config (Stale)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER == '1'
@@ -449,9 +443,6 @@ jobs:
             echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
             rm -f "$ARCHIVE_NAME"
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Update Mirror Links (Stale)
         id: update_mirrors_stale
