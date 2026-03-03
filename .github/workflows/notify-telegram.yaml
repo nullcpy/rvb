@@ -52,18 +52,12 @@ jobs:
             NAME_SAFE="$(printf '%s' "$NAME" | tr '`' "'")"
             BRANCH_SAFE="$(printf '%s' "$BRANCH" | tr '`' "'")"
             RUN_ID="${{ github.event.workflow_run.id }}"
-            COMMIT_MSG="${{ github.event.workflow_run.head_commit.message }}"
             URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
 
             TEXT="❌ *Workflow Failed*
             *Workflow:* \`${NAME_SAFE}\`
             *Branch:* \`${BRANCH_SAFE}\`
             *By:* \`${ACTOR_SAFE}\`
-
-            *Commit:*
-            \`\`\`
-            ${COMMIT_MSG}
-            \`\`\`
 
             🔗 [View Run](${URL})"
           fi
