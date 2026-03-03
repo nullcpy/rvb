@@ -37,9 +37,9 @@ jobs:
           TEXT=""
 
           # ---------------------------
-          # WORKFLOW FAILURE
+          # WORKFLOW FAILURE OR JOB FAILURE
           # ---------------------------
-          if [ "$EVENT" = "workflow_run" ] && [ "${{ github.event.workflow_run.conclusion }}" = "failure" ]; then
+          if [ "$EVENT" = "workflow_run" ] && [ "${{ github.event.workflow_run.conclusion }}" != "success" ] && [ "${{ github.event.workflow_run.conclusion }}" != "skipped" ]; then
             NAME="${{ github.event.workflow_run.name }}"
             BRANCH="${{ github.event.workflow_run.head_branch }}"
             RUN_ID="${{ github.event.workflow_run.id }}"
