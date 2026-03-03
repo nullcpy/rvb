@@ -1,4 +1,4 @@
-name: Notify Repo Activity
+name: Telegram Repo Activity
 
 on:
   workflow_run:
@@ -18,28 +18,23 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
 
     env:
       TG_CHAT: "@rvb27"
-      TG_THREAD_ID: "2111"
+      TG_THREAD_ID: "267"
       TG_TOKEN: ${{ secrets.TG_TOKEN }}
-      DEBOUNCE_FILE: ${{ github.workspace }}/push_cache.json
-      DEBOUNCE_INTERVAL: 60  # seconds
 
     steps:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Handle events
+      - name: Build message
         id: build
         run: |
           EVENT="${{ github.event_name }}"
           REPO="${{ github.repository }}"
           ACTOR="${{ github.actor }}"
           TEXT=""
-
-          mkdir -p "$(dirname "$DEBOUNCE_FILE")"
 
           # ---------------------------
           # WORKFLOW FAILURE
@@ -49,134 +44,93 @@ jobs:
             BRANCH="${{ github.event.workflow_run.head_branch }}"
             RUN_ID="${{ github.event.workflow_run.id }}"
             COMMIT_MSG="${{ github.event.workflow_run.head_commit.message }}"
-            RUN_URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
+            URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
 
             TEXT="❌ <b>Workflow Failed</b>
             <b>${NAME}</b>
             <b>Branch:</b> ${BRANCH}
             <b>By:</b> ${ACTOR}
-
+            
             <b>Commit:</b>
             <code>${COMMIT_MSG}</code>
-
-            🔗 ${RUN_URL}"
+            
+            🔗 <a href='${URL}'>View Run</a>"
                       fi
-
+            
                       # ---------------------------
-                      # PULL REQUEST
-                      # ---------------------------
-                      if [ "$EVENT" = "pull_request" ]; then
-                        TITLE="${{ github.event.pull_request.title }}"
-                        URL="${{ github.event.pull_request.html_url }}"
-                        ACTION="${{ github.event.action }}"
-
-                        if [ "${{ github.event.pull_request.merged }}" = "true" ]; then
-                          EMOJI="🟣"
-                          ACTION="merged"
-                        else
-                          EMOJI="🔀"
-                        fi
-
-                        TEXT="${EMOJI} <b>PR ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
-
-            🔗 ${URL}"
-                      fi
-
-                      # ---------------------------
-                      # ISSUES
-                      # ---------------------------
-                      if [ "$EVENT" = "issues" ]; then
-                        TITLE="${{ github.event.issue.title }}"
-                        URL="${{ github.event.issue.html_url }}"
-                        ACTION="${{ github.event.action }}"
-
-                        TEXT="🐞 <b>Issue ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
-
-            🔗 ${URL}"
-                      fi
-
-                      # ---------------------------
-                      # PUSH (Debounced)
+                      # PUSH (collapse if >5 commits)
                       # ---------------------------
                       if [ "$EVENT" = "push" ]; then
                         BRANCH="${{ github.ref_name }}"
                         COMPARE_URL="${{ github.event.compare }}"
-
-                        # Save push info to cache
-                        CURRENT_PUSH=$(jq -n \
-                          --arg actor "$ACTOR" \
-                          --arg branch "$BRANCH" \
-                          --arg compare_url "$COMPARE_URL" \
-                          --argjson commits "$(jq '.commits' "$GITHUB_EVENT_PATH")" \
-                          --arg time "$(date +%s)" \
-                          '{actor: $actor, branch: $branch, compare_url: $compare_url, commits: $commits, timestamp: $time}')
-
-                        # Append to existing cache
-                        if [ -f "$DEBOUNCE_FILE" ]; then
-                          CACHE=$(cat "$DEBOUNCE_FILE")
-                          UPDATED=$(jq --argjson new "$CURRENT_PUSH" '. += [$new]' <<< "$CACHE")
+            
+                        COUNT=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
+            
+                        if [ "$COUNT" -le 5 ]; then
+                          COMMITS=$(jq -r '.commits[] | "• \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
                         else
-                          UPDATED=[$CURRENT_PUSH]
-                        fi
-                        echo "$UPDATED" > "$DEBOUNCE_FILE"
-
-                        # Wait debounce interval
-                        echo "Waiting $DEBOUNCE_INTERVAL seconds to combine rapid pushes..."
-                        sleep $DEBOUNCE_INTERVAL
-
-                        # Reload and combine pushes within last interval
-                        NOW=$(date +%s)
-                        COMBINED=$(jq --arg now "$NOW" --argjson interval $DEBOUNCE_INTERVAL \
-                          '[.[] | select((($now|tonumber) - (.timestamp|tonumber)) <= $interval)]' "$DEBOUNCE_FILE")
-
-                        COUNT=$(jq 'length' <<< "$COMBINED")
-                        if [ "$COUNT" -gt 0 ]; then
-                          MSG="📦 <b>Push to $BRANCH</b>
-            <b>By:</b> $ACTOR
-            <b>Total pushes combined:</b> $COUNT
-
-            <b>Commits:</b>
-            "
-
-                          # Add commits, collapse if >5
-                          TOTAL_COMMITS=$(jq '[.[] | .commits[]] | length' <<< "$COMBINED")
-                          if [ "$TOTAL_COMMITS" -le 5 ]; then
-                            MSG+=$(jq -r '[.[] | .commits[] | "• \(.message | split("\n")[0]) — \(.author.name)"] | join("\n")' <<< "$COMBINED")
-                          else
-                            MSG+=$(jq -r '[.[] | .commits[] | "• \(.message | split("\n")[0])"] | .[0:5] | join("\n")' <<< "$COMBINED")
-                            MSG+="
+                          FIRST5=$(jq -r '.commits[0:5][] | "• \(.message | split("\n")[0])"' "$GITHUB_EVENT_PATH")
+                          COMMITS="${FIRST5}
             ...
-            (+$(($TOTAL_COMMITS - 5)) more commits)"
-                          fi
-
-                          # Include last compare URL
-                          LAST_URL=$(jq -r '.[-1].compare_url' <<< "$COMBINED")
-                          MSG+="
-
-            🔗 $LAST_URL"
-
-                          TEXT="$MSG"
-
-                          # Clear cache
-                          rm -f "$DEBOUNCE_FILE"
-                        else
-                          TEXT=""
+            (+$(($COUNT - 5)) more commits)"
                         fi
+            
+                        TEXT="📦 <b>Push to ${BRANCH}</b>
+            <b>By:</b> ${ACTOR}
+            <b>Total commits:</b> ${COUNT}
+            
+            <b>Commits:</b>
+            ${COMMITS}
+            
+            🔗 <a href='${COMPARE_URL}'>View Push</a>"
                       fi
 
+          # ---------------------------
+          # PULL REQUEST
+          # ---------------------------
+          if [ "$EVENT" = "pull_request" ]; then
+            TITLE="${{ github.event.pull_request.title }}"
+            URL="${{ github.event.pull_request.html_url }}"
+            ACTION="${{ github.event.action }}"
+
+            if [ "${{ github.event.pull_request.merged }}" = "true" ]; then
+              EMOJI="🟣"
+              ACTION="merged"
+            else
+              EMOJI="🔀"
+            fi
+
+            TEXT="${EMOJI} <b>PR ${ACTION}</b>
+            <b>${TITLE}</b>
+            <b>By:</b> ${ACTOR}
+            
+            🔗 <a href='${URL}'>View PR</a>"
+                      fi
+
+          # ---------------------------
+          # ISSUES
+          # ---------------------------
+          if [ "$EVENT" = "issues" ]; then
+            TITLE="${{ github.event.issue.title }}"
+            URL="${{ github.event.issue.html_url }}"
+            ACTION="${{ github.event.action }}"
+
+            TEXT="🐞 <b>Issue ${ACTION}</b>
+            <b>${TITLE}</b>
+            <b>By:</b> ${ACTOR}
+            
+            🔗 <a href='${URL}'>View Issue</a>"
+                      fi
+            
                       echo "text<<EOF" >> $GITHUB_OUTPUT
                       echo "$TEXT" >> $GITHUB_OUTPUT
                       echo "EOF" >> $GITHUB_OUTPUT
-
-                  - name: Send to Telegram
-                    if: steps.build.outputs.text != ''
-                    run: |
-                      curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-                        -d chat_id="${TG_CHAT}" \
-                        -d message_thread_id="${TG_THREAD_ID}" \
-                        -d parse_mode="HTML" \
-                        --data-urlencode "text=${{ steps.build.outputs.text }}"
+            
+          - name: Send to Telegram
+            if: steps.build.outputs.text != ''
+            run: |
+          curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+            -d chat_id="${TG_CHAT}" \
+            -d message_thread_id="${TG_THREAD_ID}" \
+            -d parse_mode="HTML" \
+            --data-urlencode "text=${{ steps.build.outputs.text }}"
