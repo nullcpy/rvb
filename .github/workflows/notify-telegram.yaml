@@ -120,11 +120,11 @@ jobs:
             <b>By:</b> ${ACTOR}
             
             🔗 <a href='${URL}'>View Issue</a>"
-                      fi
-            
-                      echo "text<<EOF" >> $GITHUB_OUTPUT
-                      echo "$TEXT" >> $GITHUB_OUTPUT
-                      echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+          echo "text<<EOF" >> $GITHUB_OUTPUT
+          echo "$TEXT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
             
           - name: Send to Telegram
             if: steps.build.outputs.text != ''
