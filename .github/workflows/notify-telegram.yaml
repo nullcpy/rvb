@@ -46,15 +46,15 @@ jobs:
             COMMIT_MSG="${{ github.event.workflow_run.head_commit.message }}"
             URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
 
-            TEXT="❌ <b>Workflow Failed</b>
-            <b>${NAME}</b>
-            <b>Branch:</b> ${BRANCH}
-            <b>By:</b> ${ACTOR}
+            TEXT="❌ *Workflow Failed*
+            *${NAME}*
+            *Branch:* ${BRANCH}
+            *By:* ${ACTOR}
 
-            <b>Commit:</b>
-            <code>${COMMIT_MSG}</code>
+            *Commit:*
+            \`${COMMIT_MSG}\`
 
-            🔗 <a href='${URL}'>View Run</a>"
+            🔗 [View Run](${URL})"
           fi
 
           # ---------------------------
@@ -75,14 +75,14 @@ jobs:
             (+$(($COUNT - 5)) more commits)"
             fi
 
-            TEXT="📦 <b>Push to ${BRANCH}</b>
-            <b>By:</b> ${ACTOR}
-            <b>Total commits:</b> ${COUNT}
+            TEXT="📦 *Push to ${BRANCH}*
+            *By:* ${ACTOR}
+            *Total commits:* ${COUNT}
 
-            <b>Commits:</b>
+            *Commits:*
             ${COMMITS}
 
-            🔗 <a href='${COMPARE_URL}'>View Push</a>"
+            🔗 [View Push](${COMPARE_URL})"
           fi
 
           # ---------------------------
@@ -100,11 +100,11 @@ jobs:
               EMOJI="🔀"
             fi
 
-            TEXT="${EMOJI} <b>PR ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
+            TEXT="${EMOJI} *PR ${ACTION}*
+            *${TITLE}*
+            *By:* ${ACTOR}
 
-            🔗 <a href='${URL}'>View PR</a>"
+            🔗 [View PR](${URL})"
             fi
 
           # ---------------------------
@@ -115,11 +115,11 @@ jobs:
             URL="${{ github.event.issue.html_url }}"
             ACTION="${{ github.event.action }}"
 
-            TEXT="🐞 <b>Issue ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
+            TEXT="🐞 *Issue ${ACTION}*
+            *${TITLE}*
+            *By:* ${ACTOR}
 
-            🔗 <a href='${URL}'>View Issue</a>"
+            🔗 [View Issue](${URL})"
           fi
 
           # ---------------------------
