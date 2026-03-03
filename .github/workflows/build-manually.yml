@@ -285,7 +285,7 @@ jobs:
           commit_message: "Update mirrors.md for Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
 
       - name: Pull latest changes
-        run: git pull origin main --rebase
+        run: git pull origin update --rebase
         
       - name: Update Changelog and Magisk Update JSON
         id: update_config
