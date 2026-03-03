@@ -55,35 +55,35 @@ jobs:
             <code>${COMMIT_MSG}</code>
             
             🔗 <a href='${URL}'>View Run</a>"
-                      fi
-            
-                      # ---------------------------
-                      # PUSH (collapse if >5 commits)
-                      # ---------------------------
-                      if [ "$EVENT" = "push" ]; then
-                        BRANCH="${{ github.ref_name }}"
-                        COMPARE_URL="${{ github.event.compare }}"
-            
-                        COUNT=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
-            
-                        if [ "$COUNT" -le 5 ]; then
-                          COMMITS=$(jq -r '.commits[] | "• \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
-                        else
-                          FIRST5=$(jq -r '.commits[0:5][] | "• \(.message | split("\n")[0])"' "$GITHUB_EVENT_PATH")
-                          COMMITS="${FIRST5}
-            ...
-            (+$(($COUNT - 5)) more commits)"
-                        fi
-            
-                        TEXT="📦 <b>Push to ${BRANCH}</b>
-            <b>By:</b> ${ACTOR}
-            <b>Total commits:</b> ${COUNT}
-            
-            <b>Commits:</b>
-            ${COMMITS}
-            
-            🔗 <a href='${COMPARE_URL}'>View Push</a>"
-                      fi
+          fi
+
+          # ---------------------------
+          # PUSH (collapse if >5 commits)
+          # ---------------------------
+          if [ "$EVENT" = "push" ]; then
+            BRANCH="${{ github.ref_name }}"
+            COMPARE_URL="${{ github.event.compare }}"
+
+            COUNT=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
+
+            if [ "$COUNT" -le 5 ]; then
+              COMMITS=$(jq -r '.commits[] | "• \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
+            else
+              FIRST5=$(jq -r '.commits[0:5][] | "• \(.message | split("\n")[0])"' "$GITHUB_EVENT_PATH")
+              COMMITS="${FIRST5}
+              ...
+              (+$(($COUNT - 5)) more commits)"
+                          fi
+              
+                          TEXT="📦 <b>Push to ${BRANCH}</b>
+              <b>By:</b> ${ACTOR}
+              <b>Total commits:</b> ${COUNT}
+              
+              <b>Commits:</b>
+              ${COMMITS}
+              
+              🔗 <a href='${COMPARE_URL}'>View Push</a>"
+          fi
 
           # ---------------------------
           # PULL REQUEST
@@ -105,7 +105,7 @@ jobs:
             <b>By:</b> ${ACTOR}
             
             🔗 <a href='${URL}'>View PR</a>"
-                      fi
+            fi
 
           # ---------------------------
           # ISSUES
@@ -122,13 +122,18 @@ jobs:
             🔗 <a href='${URL}'>View Issue</a>"
           fi
 
-          echo "text<<EOF" >> $GITHUB_OUTPUT
-          echo "$TEXT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-            
-          - name: Send to Telegram
-            if: steps.build.outputs.text != ''
-            run: |
+          # ---------------------------
+          # Write to GitHub output safely
+          # ---------------------------
+          {
+            echo text<<EOF
+            echo "$TEXT"
+            echo EOF
+          } >> $GITHUB_OUTPUT
+
+      - name: Send to Telegram
+        if: steps.build.outputs.text != ''
+        run: |
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
             -d chat_id="${TG_CHAT}" \
             -d message_thread_id="${TG_THREAD_ID}" \
