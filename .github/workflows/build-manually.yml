@@ -222,6 +222,9 @@ jobs:
             rm -f "$ARCHIVE_NAME"
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Update Mirror Links
         id: update_mirrors
         env:
@@ -272,9 +275,6 @@ jobs:
             }
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated mirrors.md
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -284,6 +284,9 @@ jobs:
           file_pattern: .github/pages/mirrors.md
           commit_message: "Update mirrors.md for Build No. ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Update Changelog and Magisk Update JSON
         id: update_config
         run: |
@@ -314,9 +317,6 @@ jobs:
           cd ..
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Build MD and Update JSON Files
         uses: stefanzweifel/git-auto-commit-action@v7
