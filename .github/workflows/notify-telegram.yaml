@@ -61,9 +61,9 @@ jobs:
             *By:* \`${ACTOR_SAFE}\`
 
             *Commit:*
-            ```
+            \`\`\`
             ${COMMIT_MSG}
-            ```
+            \`\`\`
 
             🔗 [View Run](${URL})"
           fi
@@ -93,9 +93,9 @@ jobs:
             *Total commits:* ${COUNT}
 
             *Commits:*
-            ```
+            \`\`\`
             ${COMMITS}
-            ```
+            \`\`\`
 
             🔗 [View Push](${COMPARE_URL})"
           fi
