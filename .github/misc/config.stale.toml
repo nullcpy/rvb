@@ -201,6 +201,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 enabled = true 
 app-name = "twitter"
 rv-brand = "piko-materialu"
+arch = "both"
 patches-source = "crimera/piko"
 included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-cli"
