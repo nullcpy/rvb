@@ -120,6 +120,7 @@ apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcast
 enabled = true 
 app-name = "twitter"
 rv-brand = "piko"
+arch = "both"
 build-mode = "both"
 patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
