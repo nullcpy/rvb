@@ -55,6 +55,9 @@ jobs:
             echo "created=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit dummy patch_sources.json if created
         if: steps.ensure_patch_sources.outputs.created == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -180,6 +183,9 @@ jobs:
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM2}" >> "$GITHUB_OUTPUT"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated patch_sources.json
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -311,6 +317,9 @@ jobs:
             generate_config "dev"
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated Config (Stable)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -319,6 +328,9 @@ jobs:
           file_pattern: .github/misc/config.stable.updated.toml
           commit_message: "Update config.stable.updated.toml for new stable patches"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated Config (Dev)
         if: steps.ensure_patch_sources.outputs.created == 'false' && steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -640,6 +652,9 @@ jobs:
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated mirrors.md (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -675,6 +690,9 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated Build MD and Update JSON Files (Dev)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -1036,6 +1054,9 @@ jobs:
             block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated mirrors.md (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
@@ -1071,6 +1092,9 @@ jobs:
           cd ..
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Commit Updated Build MD and Update JSON Files (Stable)
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
