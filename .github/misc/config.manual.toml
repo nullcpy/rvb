@@ -129,7 +129,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [wps-office-hoo-dles]
-enabled = false
+enabled = true
 app-name = "wps-office"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
