@@ -1,4 +1,4 @@
-name: Telegram Repo Activity
+name: Notify Repo Activity
 
 on:
   workflow_run:
@@ -134,7 +134,7 @@ jobs:
       - name: Send to Telegram
         if: steps.build.outputs.text != ''
         run: |
-          MSG=${{ steps.build.outputs.text }}
+          MSG="${{ steps.build.outputs.text }}"
           MSG=${MSG:0:9450}
 
           curl -X POST \
