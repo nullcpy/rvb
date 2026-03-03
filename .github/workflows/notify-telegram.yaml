@@ -47,14 +47,14 @@ jobs:
             URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
 
             TEXT="❌ <b>Workflow Failed</b>
-            <b>${NAME}</b>
-            <b>Branch:</b> ${BRANCH}
-            <b>By:</b> ${ACTOR}
-            
-            <b>Commit:</b>
-            <code>${COMMIT_MSG}</code>
-            
-            🔗 <a href='${URL}'>View Run</a>"
+<b>${NAME}</b>
+<b>Branch:</b> ${BRANCH}
+<b>By:</b> ${ACTOR}
+
+<b>Commit:</b>
+<code>${COMMIT_MSG}</code>
+
+🔗 <a href='${URL}'>View Run</a>"
           fi
 
           # ---------------------------
@@ -71,18 +71,18 @@ jobs:
             else
               FIRST5=$(jq -r '.commits[0:5][] | "• \(.message | split("\n")[0])"' "$GITHUB_EVENT_PATH")
               COMMITS="${FIRST5}
-              ...
-              (+$(($COUNT - 5)) more commits)"
-                          fi
-              
-                          TEXT="📦 <b>Push to ${BRANCH}</b>
-              <b>By:</b> ${ACTOR}
-              <b>Total commits:</b> ${COUNT}
-              
-              <b>Commits:</b>
-              ${COMMITS}
-              
-              🔗 <a href='${COMPARE_URL}'>View Push</a>"
+...
+(+$(($COUNT - 5)) more commits)"
+            fi
+
+            TEXT="📦 <b>Push to ${BRANCH}</b>
+<b>By:</b> ${ACTOR}
+<b>Total commits:</b> ${COUNT}
+
+<b>Commits:</b>
+${COMMITS}
+
+🔗 <a href='${COMPARE_URL}'>View Push</a>"
           fi
 
           # ---------------------------
@@ -101,10 +101,10 @@ jobs:
             fi
 
             TEXT="${EMOJI} <b>PR ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
-            
-            🔗 <a href='${URL}'>View PR</a>"
+<b>${TITLE}</b>
+<b>By:</b> ${ACTOR}
+
+🔗 <a href='${URL}'>View PR</a>"
             fi
 
           # ---------------------------
@@ -116,10 +116,10 @@ jobs:
             ACTION="${{ github.event.action }}"
 
             TEXT="🐞 <b>Issue ${ACTION}</b>
-            <b>${TITLE}</b>
-            <b>By:</b> ${ACTOR}
-            
-            🔗 <a href='${URL}'>View Issue</a>"
+<b>${TITLE}</b>
+<b>By:</b> ${ACTOR}
+
+🔗 <a href='${URL}'>View Issue</a>"
           fi
 
           # ---------------------------
