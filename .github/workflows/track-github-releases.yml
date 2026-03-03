@@ -35,9 +35,6 @@ jobs:
           if [ ! -f .github/misc/repos.json ]; then
             echo "{}" > .github/misc/repos.json
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Check releases and notify
         id: notify
@@ -199,9 +196,6 @@ jobs:
           skip_checkout: true
           file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Initialize apk_timestamps.json"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Compare and Detect Changes
         id: compare
@@ -474,9 +468,6 @@ jobs:
             # Add old entries (skip first 3 lines), keep only 99 blocks
             tail -n +4 "$MIRRORS_FILE" | awk 'BEGIN { block_count=0 } /^## Build / { if (block_count >= 99) { exit } block_count++ } block_count <= 99 { print }'
           } > "$MIRRORS_FILE.tmp" && mv "$MIRRORS_FILE.tmp" "$MIRRORS_FILE"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated fiorenmas-mirrors.md
         if: steps.compare.outputs.changed == 'true'
