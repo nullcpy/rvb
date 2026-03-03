@@ -36,6 +36,9 @@ jobs:
             echo "{}" > .github/misc/repos.json
           fi
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Check releases and notify
         id: notify
         env:
@@ -122,9 +125,6 @@ jobs:
           done
 
           echo "updated=$UPDATED" >> "$GITHUB_OUTPUT"
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit updated repos.json
         if: steps.notify.outputs.updated == 'true'
@@ -200,6 +200,9 @@ jobs:
           file_pattern: .github/misc/apk_timestamps.json
           commit_message: "Initialize apk_timestamps.json"
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Compare and Detect Changes
         id: compare
         run: |
@@ -224,9 +227,6 @@ jobs:
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Commit Updated Timestamps
         if: steps.compare.outputs.changed == 'true'
