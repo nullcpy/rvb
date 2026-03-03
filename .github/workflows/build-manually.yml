@@ -221,9 +221,6 @@ jobs:
             echo "🗑️ Removing $ARCHIVE_NAME from local build dir"
             rm -f "$ARCHIVE_NAME"
           fi
-
-      - name: Pull latest changes
-        run: git pull origin main --rebase
         
       - name: Update Mirror Links
         id: update_mirrors
