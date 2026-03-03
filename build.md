@@ -1,7 +1,7 @@
-duolingo-hoo-dles: 6.66.5  
-podcast-addict-hoo-dles: 2026.1  
-proton-vpn-hoo-dles: 5.16.14.0  
-wps-office-hoo-dles: 18.24  
+reddit-morphe: 2026.04.0  
+youtube-morphe: 20.40.45  
+youtube-music-morphe (arm64-v8a): 8.40.54  
+youtube-music-morphe (arm-v7a): 8.40.54  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
@@ -10,5 +10,5 @@ wps-office-hoo-dles: 18.24
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
 CLI: MorpheApp/morphe-cli-1.4.0-all.jar  
-Patches: hoo-dles/patches-1.10.2.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.10.2)  
+Patches: MorpheApp/patches-1.16.0.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.16.0)  
