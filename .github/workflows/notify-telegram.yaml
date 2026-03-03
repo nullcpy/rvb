@@ -150,10 +150,11 @@ jobs:
 
       - name: Send to Telegram
         if: steps.build.outputs.text != ''
+        env:
+          MSG: ${{ steps.build.outputs.text }}
         run: |
           set -euo pipefail
 
-          MSG="${{ steps.build.outputs.text }}"
           MSG=${MSG:0:9450}
 
           RESPONSE=$(curl -fsS -X POST \
