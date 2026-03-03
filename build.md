@@ -1,5 +1,7 @@
+duolingo-hoo-dles: 6.66.5  
 podcast-addict-hoo-dles: 2026.1  
 proton-vpn-hoo-dles: 5.16.14.0  
+wps-office-hoo-dles: 18.24  
 
 **Notes:**  
 • Install [MicroG](https://github.com/MorpheApp/MicroG-RE/releases/latest), required for Google APKs.  
