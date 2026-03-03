@@ -26,14 +26,21 @@ jobs:
 
     steps:
       - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
+        run: |
+          if ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y jq
+          fi
 
       - name: Build message
         id: build
         run: |
+          set -euo pipefail
+
           EVENT="${{ github.event_name }}"
           REPO="${{ github.repository }}"
           ACTOR="${{ github.actor }}"
+          ACTOR_SAFE="$(printf '%s' "$ACTOR" | sed "s/\\`/'/g")"
           TEXT=""
 
           # ---------------------------
@@ -42,17 +49,21 @@ jobs:
           if [ "$EVENT" = "workflow_run" ] && [ "${{ github.event.workflow_run.conclusion }}" != "success" ] && [ "${{ github.event.workflow_run.conclusion }}" != "skipped" ]; then
             NAME="${{ github.event.workflow_run.name }}"
             BRANCH="${{ github.event.workflow_run.head_branch }}"
+            NAME_SAFE="$(printf '%s' "$NAME" | sed "s/\\`/'/g")"
+            BRANCH_SAFE="$(printf '%s' "$BRANCH" | sed "s/\\`/'/g")"
             RUN_ID="${{ github.event.workflow_run.id }}"
             COMMIT_MSG="${{ github.event.workflow_run.head_commit.message }}"
             URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
 
             TEXT="❌ *Workflow Failed*
-            *${NAME}*
-            *Branch:* ${BRANCH}
-            *By:* ${ACTOR}
+            *Workflow:* \`${NAME_SAFE}\`
+            *Branch:* \`${BRANCH_SAFE}\`
+            *By:* \`${ACTOR_SAFE}\`
 
             *Commit:*
-            \`${COMMIT_MSG}\`
+            ```
+            ${COMMIT_MSG}
+            ```
 
             🔗 [View Run](${URL})"
           fi
@@ -62,25 +73,29 @@ jobs:
           # ---------------------------
           if [ "$EVENT" = "push" ]; then
             BRANCH="${{ github.ref_name }}"
+            BRANCH_SAFE="$(printf '%s' "$BRANCH" | sed "s/\\`/'/g")"
             COMPARE_URL="${{ github.event.compare }}"
 
             COUNT=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
 
             if [ "$COUNT" -le 5 ]; then
-              COMMITS=$(jq -r '.commits[] | "• \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
+              COMMITS=$(jq -r '.commits[] | "\(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
             else
-              FIRST5=$(jq -r '.commits[0:5][] | "• \(.message | split("\n")[0])"' "$GITHUB_EVENT_PATH")
+              FIRST5=$(jq -r '.commits[0:5][] | "\(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
               COMMITS="${FIRST5}
             ...
             (+$(($COUNT - 5)) more commits)"
             fi
 
             TEXT="📦 *Push to ${BRANCH}*
-            *By:* ${ACTOR}
+            *Branch:* \`${BRANCH_SAFE}\`
+            *By:* \`${ACTOR_SAFE}\`
             *Total commits:* ${COUNT}
 
             *Commits:*
+            ```
             ${COMMITS}
+            ```
 
             🔗 [View Push](${COMPARE_URL})"
           fi
@@ -90,6 +105,7 @@ jobs:
           # ---------------------------
           if [ "$EVENT" = "pull_request" ]; then
             TITLE="${{ github.event.pull_request.title }}"
+            TITLE_SAFE="$(printf '%s' "$TITLE" | sed "s/\\`/'/g")"
             URL="${{ github.event.pull_request.html_url }}"
             ACTION="${{ github.event.action }}"
 
@@ -101,8 +117,8 @@ jobs:
             fi
 
             TEXT="${EMOJI} *PR ${ACTION}*
-            *${TITLE}*
-            *By:* ${ACTOR}
+            \`${TITLE_SAFE}\`
+            *By:* \`${ACTOR_SAFE}\`
 
             🔗 [View PR](${URL})"
             fi
@@ -112,12 +128,13 @@ jobs:
           # ---------------------------
           if [ "$EVENT" = "issues" ]; then
             TITLE="${{ github.event.issue.title }}"
+            TITLE_SAFE="$(printf '%s' "$TITLE" | sed "s/\\`/'/g")"
             URL="${{ github.event.issue.html_url }}"
             ACTION="${{ github.event.action }}"
 
             TEXT="🐞 *Issue ${ACTION}*
-            *${TITLE}*
-            *By:* ${ACTOR}
+            \`${TITLE_SAFE}\`
+            *By:* \`${ACTOR_SAFE}\`
 
             🔗 [View Issue](${URL})"
           fi
@@ -134,13 +151,17 @@ jobs:
       - name: Send to Telegram
         if: steps.build.outputs.text != ''
         run: |
+          set -euo pipefail
+
           MSG="${{ steps.build.outputs.text }}"
           MSG=${MSG:0:9450}
 
-          curl -X POST \
+          RESPONSE=$(curl -fsS -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage")
+
+          echo "$RESPONSE" | jq -e '.ok == true' > /dev/null
