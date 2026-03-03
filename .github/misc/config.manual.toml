@@ -129,7 +129,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [wps-office-hoo-dles]
-enabled = true
+enabled = false
 app-name = "wps-office"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -149,7 +149,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [smart-launcher-hoo-dles]
-enabled = true
+enabled = false
 app-name = "smart-launcher"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
