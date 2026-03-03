@@ -1,7 +1,6 @@
 parallel-jobs = 1
 patches-version = "dev"
 enable-magisk-update = false
-remove-rv-integrations-checks = true
 
 [youtube-anddea-nord]
 enabled = false
