@@ -11,10 +11,6 @@ on:
   issues:
     types: [opened, closed]
 
-  push:
-    branches:
-      - main
-
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -62,38 +58,6 @@ jobs:
             *By:* \`${ACTOR_SAFE}\`
 
             🔗 [View Run](${URL})"
-          fi
-
-          # ---------------------------
-          # PUSH (collapse if >5 commits)
-          # ---------------------------
-          if [ "$EVENT" = "push" ]; then
-            BRANCH="${{ github.ref_name }}"
-            BRANCH_SAFE="$(printf '%s' "$BRANCH" | tr '`' "'")"
-            COMPARE_URL="${{ github.event.compare }}"
-
-            COUNT=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
-
-            if [ "$COUNT" -le 5 ]; then
-              COMMITS=$(jq -r '.commits[] | "\(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
-            else
-              FIRST5=$(jq -r '.commits[0:5][] | "\(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
-              COMMITS="${FIRST5}
-            ...
-            (+$(($COUNT - 5)) more commits)"
-            fi
-
-            TEXT="📦 *Push to ${BRANCH}*
-            *Branch:* \`${BRANCH_SAFE}\`
-            *By:* \`${ACTOR_SAFE}\`
-            *Total commits:* ${COUNT}
-
-            *Commits:*
-            \`\`\`
-            ${COMMITS}
-            \`\`\`
-
-            🔗 [View Push](${COMPARE_URL})"
           fi
 
           # ---------------------------
