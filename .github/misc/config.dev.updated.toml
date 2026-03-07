@@ -3,7 +3,7 @@ enable-magisk-update = false
 parallel-jobs = 1
 
 [youtube-revanced]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -14,7 +14,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -38,7 +38,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = false 
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -51,7 +51,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -191,7 +191,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [podcast-addict-hoo-dles]
-enabled = true
+enabled = false
 app-name = "podcast-addict"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -201,7 +201,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [proton-vpn-hoo-dles]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -211,7 +211,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [duolingo-hoo-dles]
-enabled = true
+enabled = false
 app-name = "duolingo"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
