@@ -1,7 +1,7 @@
 parallel-jobs = 1
 patches-version = "dev"
 enable-magisk-update = false
-remove-rv-integrations-checks = true
+remove-rv-integrations-checks = false
 
 [youtube-morphe]
 enabled = true
