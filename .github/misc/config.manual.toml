@@ -1,5 +1,6 @@
 parallel-jobs = 1
 patches-version = "dev"
+cli-version = "dev"
 enable-magisk-update = false
 
 [youtube-revanced]
@@ -60,7 +61,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [twitter-piko]
-enabled = true 
+enabled = false 
 app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
