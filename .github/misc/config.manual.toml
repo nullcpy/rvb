@@ -1,7 +1,6 @@
 parallel-jobs = 1
 patches-version = "dev"
 enable-magisk-update = false
-patcher-args = "--continue-on-error"
 
 [youtube-morphe]
 enabled = true
