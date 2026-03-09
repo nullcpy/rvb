@@ -2,37 +2,73 @@ parallel-jobs = 1
 patches-version = "dev"
 enable-magisk-update = false
 
-[youtube-morphe]
+[youtube-revanced]
 enabled = true
 app-name = "youtube"
-rv-brand = "morphe"
+rv-brand = "revanced"
 build-mode = "both"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[youtube-music-morphe]
+[youtube-music-revanced]
 enabled = true
 app-name = "youtube-music"
-rv-brand = "morphe"
+rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[reddit-morphe]
+[google-photos-revanced]
 enabled = true
-app-name = "reddit"
-rv-brand = "morphe"
+app-name = "google-photos"
+rv-brand = "revanced"
 build-mode = "both"
-patches-source = "MorpheApp/morphe-patches"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[google-recorder-revanced]
+enabled = true 
+app-name = "google-recorder"
+rv-brand = "revanced"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+dpi = "480-640dpi 120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
+[proton-vpn-revanced]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+
+[twitter-piko]
+enabled = true 
+app-name = "twitter"
+rv-brand = "piko"
+arch = "both"
+build-mode = "both"
+patches-source = "crimera/piko"
+patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+dpi = "120-640dpi 480dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
