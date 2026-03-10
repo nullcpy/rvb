@@ -132,7 +132,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -143,7 +143,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -155,7 +155,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 build-mode = "both"
@@ -190,7 +190,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [podcast-addict-hoo-dles]
-enabled = false
+enabled = true
 app-name = "podcast-addict"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -200,7 +200,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [proton-vpn-hoo-dles]
-enabled = false
+enabled = true
 app-name = "proton-vpn"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
@@ -210,7 +210,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [duolingo-hoo-dles]
-enabled = false
+enabled = true
 app-name = "duolingo"
 rv-brand = "hoo-dles"
 patches-source = "hoo-dles/morphe-patches"
