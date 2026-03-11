@@ -1,6 +1,11 @@
 # 🗃️ FiorenMas Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build 2026-03-11  
+🔗 [BuzzHeavier](https://buzzheavier.com/ibw90ppn76c7)  
+🔗 [Filebin](https://filebin.net/fiorenmas-20260311-22962107417-1/archive-20260311.zip)  
+
+
 ## Build 2026-03-10  
 🔗 [BuzzHeavier](https://buzzheavier.com/x4e35rkt4eza)  
 🔗 [Filebin](https://filebin.net/fiorenmas-20260310-22912430453-1/archive-20260310.zip)  
