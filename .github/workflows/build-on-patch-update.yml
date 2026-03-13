@@ -371,11 +371,11 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Setup Java (Zulu 17)
+      - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: "zulu"
-          java-version: "17"
+          java-version: "21"
 
       - name: Notify Telegram (New Dev Patch)
         env:
@@ -769,11 +769,11 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Setup Java (Zulu 17)
+      - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: "zulu"
-          java-version: "17"
+          java-version: "21"
 
       - name: Notify Telegram (New Stable Patch)
         env:
