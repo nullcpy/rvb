@@ -153,7 +153,7 @@ done
 # still enforces that at least one build must succeed.
 for pid in $(jobs -p); do
 	if ! wait "$pid"; then
-		log "Background build job with PID $pid failed."
+		epr "Background build job with PID $pid failed."
 	fi
 done
 rm -rf temp/tmp.*
