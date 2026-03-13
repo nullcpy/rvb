@@ -60,6 +60,17 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
+[messenger-revanced]
+enabled = true
+app-name = "messenger"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+dpi = "360-480dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
 [twitter-piko]
 enabled = false 
 app-name = "twitter"
