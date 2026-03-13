@@ -1,5 +1,12 @@
+google-photos-revanced (arm64-v8a): 7.62.0.867732098  
+google-photos-revanced (arm-v7a): 7.62.0.867732098  
+google-recorder-revanced: 4.2.20260118.867906508  
 messenger-revanced (arm64-v8a): 551.0.0.48.62  
 messenger-revanced (arm-v7a): 551.0.0.48.62  
+proton-vpn-revanced: 5.16.88.0  
+youtube-music-revanced (arm64-v8a): 8.40.54  
+youtube-music-revanced (arm-v7a): 8.40.54  
+youtube-revanced: 20.40.45  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +14,12 @@ messenger-revanced (arm-v7a): 551.0.0.48.62
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: ReVanced/revanced-cli-5.0.1-all.jar  
-Patches: ReVanced/patches-5.50.2.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.2)  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+Patches: ReVanced/patches-6.0.0-dev.24.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.0.0-dev.24)
+
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar    
