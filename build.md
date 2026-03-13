@@ -1,5 +1,5 @@
-instagram-revanced (arm64-v8a): 420.0.0.55.74  
-Background build job with PID 3233 failed.  
+google-photos-revanced (arm64-v8a): 7.67.0.881063292  
+google-photos-revanced (arm-v7a): 7.67.0.881063292  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +7,6 @@ Background build job with PID 3233 failed.
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
-Patches: ReVanced/patches-6.0.0-dev.24.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.0.0-dev.24)  
+CLI: ReVanced/revanced-cli-5.0.1-all.jar  
+Patches: ReVanced/patches-5.50.0-dev.7.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.0-dev.7)  
