@@ -163,7 +163,9 @@ log "\n**Notes:**"
 log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
 log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
 log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)\n"
-log "$(cat "$TEMP_DIR"/*/changelog.md)"
+changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
+changelog_merged=$(awk 'BEGIN{cli_seen=0} /^CLI: / {if (cli_seen) next; cli_seen=1} {print}' <<<"$changelog_merged")
+log "$changelog_merged"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
 if [ -n "$SKIPPED" ]; then
