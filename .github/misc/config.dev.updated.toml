@@ -1,4 +1,5 @@
 patches-version = "dev"
+cli-version = "dev"
 enable-magisk-update = false
 parallel-jobs = 1
 
@@ -59,6 +60,17 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
+[messenger-revanced]
+enabled = false
+app-name = "messenger"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
 [reddit-jkennethcarino]
 enabled = false 
 app-name = "reddit"
@@ -71,7 +83,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-anddea]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -83,7 +95,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
@@ -133,7 +145,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -144,7 +156,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -156,7 +168,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "morphe"
 build-mode = "both"
