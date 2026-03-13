@@ -1,7 +1,7 @@
 parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
-enable-magisk-update = false
+enable-magisk-update = true
 
 [google-photos-revanced]
 enabled = true
