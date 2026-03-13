@@ -251,6 +251,66 @@ semver_validate() {
 	local ac="${a//[.0-9]/}"
 	[ ${#ac} = 0 ]
 }
+
+run_cli_list_patches() {
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op err=""
+	if op=$(java -jar "$cli_jar" list-patches "$patches_jar" -f "$pkg_name" -v -p 2>&1); then
+		echo "$op"
+		return 0
+	fi
+	err+="$op"$'\n'
+	if op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
+		echo "$op"
+		return 0
+	fi
+	err+="$op"$'\n'
+	if op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" --filter-package-name "$pkg_name" --with-versions --with-packages 2>&1); then
+		echo "$op"
+		return 0
+	fi
+	err+="$op"
+	echo "$err"
+	return 1
+}
+
+run_cli_list_versions() {
+	local cli_jar=$1 patches_jar=$2 pkg_name=${3-} op err=""
+	if [ -n "$pkg_name" ]; then
+		if op=$(java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
+			echo "$op"
+			return 0
+		fi
+		err+="$op"$'\n'
+		if op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
+			echo "$op"
+			return 0
+		fi
+		err+="$op"$'\n'
+		if op=$(java -jar "$cli_jar" list-versions --filter-package-names "$pkg_name" "$patches_jar" 2>&1); then
+			echo "$op"
+			return 0
+		fi
+	else
+		if op=$(java -jar "$cli_jar" list-versions "$patches_jar" 2>&1); then
+			echo "$op"
+			return 0
+		fi
+		err+="$op"$'\n'
+		if op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -b 2>&1); then
+			echo "$op"
+			return 0
+		fi
+		err+="$op"$'\n'
+		if op=$(java -jar "$cli_jar" list-versions "$patches_jar" 2>&1); then
+			echo "$op"
+			return 0
+		fi
+	fi
+	err+="$op"
+	echo "$err"
+	return 1
+}
+
 get_patch_last_supported_ver() {
 	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5 # TODO: resolve using all of these
 	local op
@@ -271,17 +331,16 @@ get_patch_last_supported_ver() {
 			return
 		fi
 	fi
-	if ! op=$(java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
-			epr "Could not get versions list from $cli_jar"
-			return 1
-		fi
+	if ! op=$(run_cli_list_versions "$cli_jar" "$patches_jar" "$pkg_name"); then
+		epr "Could not get versions list from $cli_jar"
+		epr "$op"
+		return 1
 	fi
 	op=$(tail -n +3 <<<"$op" | awk '{$1=$1}1')
 	if [ "$op" = "Any" ]; then return; fi
 	pcount=$(head -1 <<<"$op") pcount=${pcount#*(} pcount=${pcount% *}
 	if [ -z "$pcount" ]; then
-		av_apps=$(java -jar "$cli_jar" list-versions "$patches_jar" 2>&1 | awk '/Package name:/ { printf "%s\x27%s\x27", sep, $NF; sep=", " } END { print "" }')
+		av_apps=$(run_cli_list_versions "$cli_jar" "$patches_jar" 2>/dev/null | awk '/Package name:/ { printf "%s\x27%s\x27", sep, $NF; sep=", " } END { print "" }')
 		abort "No patch versions found for '$pkg_name' in this patches source!\nAvailable applications found: $av_apps"
 	fi
 	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | get_highest_ver || return 1
@@ -578,11 +637,10 @@ build_rv() {
 		return 1
 	fi
 	local list_patches
-	if ! list_patches=$(java -jar "$cli_jar" list-patches "$patches_jar" -f "$pkg_name" -v -p 2>&1); then
-		if ! list_patches=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-			epr "Could not get patches list from $cli_jar"
-			return 1
-		fi
+	if ! list_patches=$(run_cli_list_patches "$cli_jar" "$patches_jar" "$pkg_name"); then
+		epr "Could not get patches list from $cli_jar"
+		epr "$list_patches"
+		return 1
 	fi
 
 	local get_latest_ver=false
