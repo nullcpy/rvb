@@ -1,6 +1,6 @@
 parallel-jobs = 1
 patches-version = "dev"
-# cli-version = "dev"
+cli-version = "dev"
 enable-magisk-update = false
 
 [youtube-revanced]
