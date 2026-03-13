@@ -4,7 +4,7 @@ cli-version = "dev"
 enable-magisk-update = false
 
 [youtube-revanced]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -15,7 +15,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -27,7 +27,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
@@ -39,7 +39,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = false 
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -52,7 +52,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -61,7 +61,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [messenger-revanced]
-enabled = true
+enabled = false
 app-name = "messenger"
 rv-brand = "revanced"
 arch = "both"
@@ -70,6 +70,19 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 dpi = "360-480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
+[instagram-revanced]
+enabled = true
+app-name = "instagram"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
+exclusive-patches = true
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
 
 [twitter-piko]
 enabled = false 
