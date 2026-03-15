@@ -8,12 +8,7 @@
     "repo": "anddea/revanced-patches",
     "stable": "v3.16.0",
     "prerelease": "v4.0.0-dev.7"
-  },
-  "jkennethcarino": {
-    "repo": "jkennethcarino/privacy-revanced-patches",
-    "stable": "v4.6.0",
-    "prerelease": "v4.6.0-dev.4"
-  },
+  }
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.18.0",
@@ -28,10 +23,5 @@
     "repo": "crimera/piko",
     "stable": "v2.0.0",
     "prerelease": "v3.0.0-dev.12"
-  },
-  "hoo-dles": {
-    "repo": "hoo-dles/morphe-patches",
-    "stable": "v1.13.0",
-    "prerelease": "v1.13.1-dev.1"
   }
 }
