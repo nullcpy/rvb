@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-magisk-update = true
 
@@ -12,6 +12,7 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 patches-version = "v5.50.0-dev.7"
 cli-source = "ReVanced/revanced-cli"
+cli-version = "v5.0.1"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
