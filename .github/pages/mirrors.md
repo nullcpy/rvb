@@ -1,6 +1,11 @@
 # 🗃️ Mirrors
 Updated automatically. Only recent 100 builds retained.
 
+## Build No. 377  
+🔗 [BuzzHeavier](https://buzzheavier.com/kzks8rls5u7m)  
+🔗 [Filebin](https://filebin.net/revanced-builder-stable-377-23118973606-1/archive-377.zip)  
+
+
 ## Build No. 376 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/gh2dh4c7e4ik)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-376-23118973606-1/archive-376.zip)  
@@ -493,10 +498,5 @@ Updated automatically. Only recent 100 builds retained.
 ## Build No. 274 (Pre-release)  
 🔗 [BuzzHeavier](https://buzzheavier.com/s9p7jdp79qld)  
 🔗 [Filebin](https://filebin.net/revanced-builder-dev-274-22018030776-1/archive-274.zip)  
-
-
-## Build No. 273 (Pre-release)  
-🔗 [BuzzHeavier](https://buzzheavier.com/opxvlqr9ajvf)  
-🔗 [Filebin](https://filebin.net/revanced-builder-dev-273-22014514174-1/archive-273.zip)  
 
 
