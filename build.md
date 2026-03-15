@@ -1,5 +1,6 @@
-google-photos-revanced (arm64-v8a): 7.66.0.881052163  
-google-photos-revanced (arm-v7a): 7.66.0.881052163  
+youtube-music-revanced (arm64-v8a): 8.40.54  
+youtube-music-revanced (arm-v7a): 8.40.54  
+youtube-revanced: 20.40.45  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +8,9 @@ google-photos-revanced (arm-v7a): 7.66.0.881052163
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: ReVanced/revanced-cli-5.0.1-all.jar  
-Patches: ReVanced/patches-5.50.0-dev.7.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.50.0-dev.7)  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+Patches: ReVanced/patches-6.0.1-dev.2.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.0.1-dev.2)
+
+Patches: ReVanced/patches-6.0.1-dev.3.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.0.1-dev.3)  
