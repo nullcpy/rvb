@@ -94,8 +94,8 @@ patches-source = "crimera/piko"
 patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = "120-640dpi 480dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# dpi = "120-640dpi 480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
