@@ -4,7 +4,7 @@ enable-magisk-update = false
 parallel-jobs = 1
 
 [youtube-revanced]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -15,7 +15,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -39,7 +39,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [youtube-anddea]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -51,7 +51,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
