@@ -85,7 +85,7 @@ apkmirror-durl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcast
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-piko]
-enabled = false 
+enabled = true 
 app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
@@ -99,7 +99,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -110,7 +110,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -122,7 +122,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 build-mode = "both"
