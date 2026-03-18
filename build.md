@@ -8,6 +8,6 @@ youtube-revanced: 20.40.45
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28)
   
-CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
-Patches: ReVanced/patches-6.1.0-dev.4.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.0-dev.4)  
+CLI: ReVanced/revanced-cli-6.0.0-all.jar  
+Patches: ReVanced/patches-6.1.0.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.0)  
