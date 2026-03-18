@@ -3,17 +3,33 @@ patches-version = "latest"
 # cli-version = "dev"
 enable-magisk-update = true
 
-[google-photos-revanced]
+[podcast-addict-hoodles]
 enabled = true
-app-name = "google-photos"
-rv-brand = "revanced"
-build-mode = "both"
-arch = "both"
-patches-source = "ReVanced/revanced-patches"
-patches-version = "v5.50.0-dev.7"
-cli-source = "ReVanced/revanced-cli"
-cli-version = "v5.0.1"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-dpi = "nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+app-name = "podcast-addict"
+rv-brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
+
+[proton-vpn-hoodles]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
+[duolingo-hoodles]
+enabled = true
+app-name = "duolingo"
+rv-brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
