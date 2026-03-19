@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 120
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 1
       matrix:
         include:
           - mode: dev
@@ -83,17 +83,6 @@ jobs:
         with:
           distribution: "zulu"
           java-version: "21"
-
-      - name: Cache Gradle
-        if: steps.params.outputs.enabled == 'true'
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', 'build.sh', 'config.toml') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
 
       - name: Update Config (From Update Branch)
         if: steps.params.outputs.enabled == 'true'
