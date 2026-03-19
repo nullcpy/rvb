@@ -56,32 +56,6 @@ jobs:
           file_pattern: .github/build/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
-      - name: Ensure patch_sources_stable.json exists
-        id: ensure_patch_sources_stable
-        run: |
-          set -euo pipefail
-          PATCH_FILE=".github/build/patch_sources_stable.json"
-
-          if [ ! -f "$PATCH_FILE" ]; then
-            cat > "$PATCH_FILE" << 'EOF'
-          {
-            "patch": { "repo": "", "stable": "" }
-          }
-          EOF
-            echo "created=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "created=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Commit dummy patch_sources_stable.json if created
-        if: steps.ensure_patch_sources_stable.outputs.created == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          branch: main
-          skip_checkout: true
-          file_pattern: .github/build/patch_sources_stable.json
-          commit_message: "Create dummy patch_sources_stable.json"
-
       - name: Fetch Latest Tags (from patch source files)
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: fetch_tags
@@ -89,11 +63,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          PATCH_FILE_MAIN=".github/build/patch_sources.json"
-          PATCH_FILE_STABLE=".github/build/patch_sources_stable.json"
+          PATCH_FILE=".github/build/patch_sources.json"
 
-          BASE_JSON=$(cat "$PATCH_FILE_MAIN")
-          BASE_JSON_STABLE=$(cat "$PATCH_FILE_STABLE")
+          BASE_JSON=$(cat "$PATCH_FILE")
 
           if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
             DELIM="$(openssl rand -hex 8)"
@@ -156,67 +128,18 @@ jobs:
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
 
-          get_latest_stable_tag() {
-            local repo=$1
-            local resp status body stable
-
-            resp=$(curl -sS -w '%{http_code}' \
-              -H "Authorization: Bearer $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/repos/$repo/releases" || true)
-
-            status="${resp: -3}"
-            body="${resp::-3}"
-
-            if [ "$status" != "200" ]; then
-              echo ""
-              return 0
-            fi
-
-            stable=$(printf '%s\n' "$body" | jq -r '
-              map(select(.prerelease == false and .tag_name != null and .tag_name != ""))
-              | sort_by(.published_at)
-              | reverse
-              | .[0].tag_name // ""
-            ')
-
-            echo "$stable"
-          }
-
-          NEW_JSON_STABLE="$BASE_JSON_STABLE"
-
-          while read -r id repo; do
-            stable=$(get_latest_stable_tag "$repo")
-            NEW_JSON_STABLE=$(jq \
-              --arg id "$id" \
-              --arg stable "$stable" \
-              '.[$id].stable = $stable' \
-              <<<"$NEW_JSON_STABLE")
-          done < <(echo "$BASE_JSON_STABLE" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo)"')
-
-          DELIM="$(openssl rand -hex 8)"
-          echo "latest_stable<<${DELIM}" >> "$GITHUB_OUTPUT"
-          echo "$NEW_JSON_STABLE" >> "$GITHUB_OUTPUT"
-          echo "${DELIM}" >> "$GITHUB_OUTPUT"
-
       - name: Compare Latest vs Stored Tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
         run: |
           set -euo pipefail
           PATCH_FILE=".github/build/patch_sources.json"
-          PATCH_FILE_STABLE=".github/build/patch_sources_stable.json"
 
           OLD_JSON=$(cat "$PATCH_FILE")
-          OLD_JSON_STABLE=$(cat "$PATCH_FILE_STABLE")
           NEW_JSON='${{ steps.fetch_tags.outputs.latest }}'
-          NEW_JSON_STABLE='${{ steps.fetch_tags.outputs.latest_stable }}'
 
           if [ -z "$NEW_JSON" ]; then
             NEW_JSON="{}"
-          fi
-          if [ -z "$NEW_JSON_STABLE" ]; then
-            NEW_JSON_STABLE="{}"
           fi
 
           TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
@@ -233,23 +156,10 @@ jobs:
             ] | if length > 0 then 1 else 0 end
           ')
 
-          TRIGGER_STABLE_EXTRA=$(jq -n --argjson old "$OLD_JSON_STABLE" --argjson new "$NEW_JSON_STABLE" '
-            [ $new | to_entries[] | . as $e
-              | ($old[$e.key] // {}) as $o
-              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-            ] | if length > 0 then 1 else 0 end
-          ')
-
-          if [ "$TRIGGER_STABLE" = "1" ] || [ "$TRIGGER_STABLE_EXTRA" = "1" ]; then
-            TRIGGER_STABLE=1
-          fi
-
           echo "$NEW_JSON" > "$PATCH_FILE"
-          echo "$NEW_JSON_STABLE" > "$PATCH_FILE_STABLE"
 
           echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
-          echo "TRIGGER_STABLE_EXTRA=$TRIGGER_STABLE_EXTRA" >> "$GITHUB_OUTPUT"
 
           DELIM1="$(openssl rand -hex 8)"
           echo "tags_old<<${DELIM1}" >> "$GITHUB_OUTPUT"
@@ -261,16 +171,6 @@ jobs:
           echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
           echo "${DELIM2}" >> "$GITHUB_OUTPUT"
 
-          DELIM3="$(openssl rand -hex 8)"
-          echo "tags_old_stable<<${DELIM3}" >> "$GITHUB_OUTPUT"
-          echo "$OLD_JSON_STABLE" >> "$GITHUB_OUTPUT"
-          echo "${DELIM3}" >> "$GITHUB_OUTPUT"
-
-          DELIM4="$(openssl rand -hex 8)"
-          echo "tags_new_stable<<${DELIM4}" >> "$GITHUB_OUTPUT"
-          echo "$NEW_JSON_STABLE" >> "$GITHUB_OUTPUT"
-          echo "${DELIM4}" >> "$GITHUB_OUTPUT"
-
       - name: Commit Updated patch_sources.json
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -280,53 +180,30 @@ jobs:
           file_pattern: .github/build/patch_sources.json
           commit_message: "Update patch_sources.json with latest patch versions"
 
-      - name: Commit Updated patch_sources_stable.json
-        if: steps.ensure_patch_sources_stable.outputs.created == 'false' && steps.compare.outputs.TRIGGER_STABLE_EXTRA == '1'
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          branch: main
-          skip_checkout: true
-          file_pattern: .github/build/patch_sources_stable.json
-          commit_message: "Update patch_sources_stable.json with latest stable patch versions"
-
       - name: Generate Configs (Stable and Dev)
         if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
         id: generate_configs
         env:
-          TAGS_OLD_MAIN: ${{ steps.compare.outputs.tags_old }}
-          TAGS_NEW_MAIN: ${{ steps.compare.outputs.tags_new }}
-          TAGS_OLD_STABLE: ${{ steps.compare.outputs.tags_old_stable }}
-          TAGS_NEW_STABLE: ${{ steps.compare.outputs.tags_new_stable }}
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
         run: |
           set -euo pipefail
           BASE_CONFIG="config.toml"
           BASE_CONFIG_STABLE=".github/build/config.stable.toml"
           BASE_CONFIG_DEV=".github/build/config.dev.toml"
 
-          [ -n "${TAGS_OLD_MAIN:-}" ] || TAGS_OLD_MAIN='{}'
-          [ -n "${TAGS_NEW_MAIN:-}" ] || TAGS_NEW_MAIN='{}'
-          [ -n "${TAGS_OLD_STABLE:-}" ] || TAGS_OLD_STABLE='{}'
-          [ -n "${TAGS_NEW_STABLE:-}" ] || TAGS_NEW_STABLE='{}'
+          [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
+          [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
 
-          jq -rn --argjson new "$TAGS_NEW_MAIN" --argjson old "$TAGS_OLD_MAIN" '
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
             [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
                 | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
                 | $e.value.repo
             ] | .[]
-          ' > .github/build/active.stable.main.txt || true
+          ' > .github/build/active.stable.txt || true
 
-          jq -rn --argjson new "$TAGS_NEW_STABLE" --argjson old "$TAGS_OLD_STABLE" '
-            [ $new | to_entries[] | . as $e
-                | ($old[$e.key] // {}) as $o
-                | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-                | $e.value.repo
-            ] | .[]
-          ' > .github/build/active.stable.extra.txt || true
-
-          cat .github/build/active.stable.main.txt .github/build/active.stable.extra.txt 2>/dev/null | sed '/^$/d' | sort -u > .github/build/active.stable.txt || true
-
-          jq -rn --argjson new "$TAGS_NEW_MAIN" --argjson old "$TAGS_OLD_MAIN" '
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
             [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
                 | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
