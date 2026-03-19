@@ -56,14 +56,6 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Prepare Workspace (Dev)
-        if: steps.params_dev.outputs.enabled == 'true'
-        run: |
-          set -euo pipefail
-          git checkout -f main
-          rm -rf build
-          rm -f config.updated.json build.dev.tmp
-
       - name: Update Config (Dev, From Update Branch)
         if: steps.params_dev.outputs.enabled == 'true'
         run: |
@@ -228,18 +220,11 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Prepare Workspace (Stable)
-        if: always() && steps.params_stable.outputs.enabled == 'true'
-        run: |
-          set -euo pipefail
-          git checkout -f main
-          rm -rf build
-          rm -f config.updated.json build.stable.tmp
-
       - name: Update Config (Stable, From Update Branch)
         if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
+          rm -f config.updated.json build.stable.tmp
           git checkout -f main
           if git checkout origin/update build.md 2>/dev/null; then
             UPDATE_CFG=$(./build.sh "${{ steps.params_stable.outputs.config_file }}" --config-update)
