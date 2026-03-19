@@ -361,6 +361,7 @@ jobs:
             if [ "$mode" = "stable" ]; then
               {
                 echo 'parallel-jobs = 1'
+                echo
                 cat "$out_file"
               } > tmp_header
               mv tmp_header "$out_file"
@@ -370,6 +371,7 @@ jobs:
                 echo 'patches-version = "dev"'
                 echo 'cli-version = "dev"'
                 echo 'enable-module-update = false'
+                echo
                 cat "$out_file"
               } > tmp_header
               mv tmp_header "$out_file"
