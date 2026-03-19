@@ -95,13 +95,28 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: Update Config (From Update Branch)
+        if: steps.params.outputs.enabled == 'true'
+        run: |
+          set -euo pipefail
+          if git checkout origin/update build.md; then
+            UPDATE_CFG=$(./build.sh "${{ steps.params.outputs.config_file }}" --config-update)
+            if [ "$UPDATE_CFG" ]; then
+              echo "$UPDATE_CFG" > config.updated.json
+            fi
+          fi
+
       - name: Build Modules and APKs
         if: steps.params.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           rm -rf build
           mkdir -p build
-          ./build.sh "${{ steps.params.outputs.config_file }}"
+          if [ -f "config.updated.json" ]; then
+            ./build.sh config.updated.json
+          else
+            ./build.sh "${{ steps.params.outputs.config_file }}"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
