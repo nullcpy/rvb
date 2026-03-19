@@ -295,30 +295,30 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[podcast-addict-hoodles]
+[podcast-addict-morphe]
 enabled = true
 app-name = "podcast-addict"
-rv-brand = "hoodles"
+rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
-[proton-vpn-hoodles]
+[proton-vpn-morphe]
 enabled = true
 app-name = "proton-vpn"
-rv-brand = "hoodles"
+rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
-[duolingo-hoodles]
+[duolingo-morphe]
 enabled = true
 app-name = "duolingo"
-rv-brand = "hoodles"
+rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
@@ -326,10 +326,10 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
-[reddit-jkennethcarino]
+[reddit-revanced-privacy]
 enabled = true 
 app-name = "reddit"
-rv-brand = "jkennethcarino"
+rv-brand = "revanced-privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
