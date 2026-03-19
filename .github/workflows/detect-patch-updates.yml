@@ -301,6 +301,7 @@ jobs:
           set -euo pipefail
           BASE_CONFIG="config.toml"
           BASE_CONFIG_STABLE=".github/build/config.stable.toml"
+          BASE_CONFIG_DEV=".github/build/config.dev.toml"
 
           [ -n "${TAGS_OLD_MAIN:-}" ] || TAGS_OLD_MAIN='{}'
           [ -n "${TAGS_NEW_MAIN:-}" ] || TAGS_NEW_MAIN='{}'
@@ -337,8 +338,22 @@ jobs:
             local mode="$1"
             local out_file=".github/build/config.$mode.updated.toml"
 
-            if [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
+            if [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
+              {
+                cat "$BASE_CONFIG"
+                echo
+                cat "$BASE_CONFIG_STABLE"
+              } > "$out_file"
+            elif [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
               cp "$BASE_CONFIG_STABLE" "$out_file"
+            elif [ "$mode" = "dev" ] && [ -f "$BASE_CONFIG" ] && [ -f "$BASE_CONFIG_DEV" ]; then
+              {
+                cat "$BASE_CONFIG"
+                echo
+                cat "$BASE_CONFIG_DEV"
+              } > "$out_file"
+            elif [ "$mode" = "dev" ] && [ -f "$BASE_CONFIG_DEV" ]; then
+              cp "$BASE_CONFIG_DEV" "$out_file"
             else
               cp "$BASE_CONFIG" "$out_file"
             fi
