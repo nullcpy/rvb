@@ -142,8 +142,8 @@ cli-source = "ReVanced/revanced-cli"
 included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
 
 [youtube-anddea-nord]
 enabled = true
