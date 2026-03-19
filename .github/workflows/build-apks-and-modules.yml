@@ -136,17 +136,15 @@ jobs:
         run: |
           set -euo pipefail
 
-          MODE_DIR="${{ matrix.mode }}"
           git checkout -f update || git switch --discard-changes --orphan update
-          mkdir -p "$MODE_DIR"
-          cp -f build.tmp "$MODE_DIR/build.md"
+          cp -f build.tmp build.md
 
           get_update_json() {
             echo "{
             \"version\": \"$1\",
             \"versionCode\": ${{ steps.params.outputs.version }},
             \"zipUrl\": \"$2\",
-            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/${MODE_DIR}/build.md\"
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
           }
 
@@ -159,11 +157,11 @@ jobs:
             VER=$(echo "$ZIP_S" | grep version=)
             VER="${VER##*=}"
             DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.params.outputs.version }}/${OUTPUT}"
-            get_update_json "$VER" "$DLURL" >"../$MODE_DIR/$UPDATE_JSON"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
           done
 
           cd ..
-          find "$MODE_DIR" -name "*-update.json" | grep . || : > "$MODE_DIR/dummy-update.json"
+          find . -maxdepth 1 -name "*-update.json" | grep . || : > dummy-update.json
 
       - name: Commit Updated Build MD and Update JSON Files
         if: steps.params.outputs.enabled == 'true'
@@ -171,7 +169,7 @@ jobs:
         with:
           branch: update
           skip_checkout: true
-          file_pattern: ${{ matrix.mode }}/build.md ${{ matrix.mode }}/*-update.json
+          file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.params.outputs.version }}
 
       - name: Notify Telegram (Build Complete)
