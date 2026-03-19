@@ -27,14 +27,14 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Create .github/misc directory
-        run: mkdir -p .github/misc
+      - name: Create .github/build directory
+        run: mkdir -p .github/build
 
       - name: Ensure patch_sources.json exists
         id: ensure_patch_sources
         run: |
           set -euo pipefail
-          PATCH_FILE=".github/misc/patch_sources.json"
+          PATCH_FILE=".github/build/patch_sources.json"
 
           if [ ! -f "$PATCH_FILE" ]; then
             cat > "$PATCH_FILE" << 'EOF'
@@ -53,14 +53,14 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/misc/patch_sources.json
+          file_pattern: .github/build/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
       - name: Ensure patch_sources_stable.json exists
         id: ensure_patch_sources_stable
         run: |
           set -euo pipefail
-          PATCH_FILE=".github/misc/patch_sources_stable.json"
+          PATCH_FILE=".github/build/patch_sources_stable.json"
 
           if [ ! -f "$PATCH_FILE" ]; then
             cat > "$PATCH_FILE" << 'EOF'
@@ -79,7 +79,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/misc/patch_sources_stable.json
+          file_pattern: .github/build/patch_sources_stable.json
           commit_message: "Create dummy patch_sources_stable.json"
 
       - name: Fetch Latest Tags (from patch source files)
@@ -89,8 +89,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          PATCH_FILE_MAIN=".github/misc/patch_sources.json"
-          PATCH_FILE_STABLE=".github/misc/patch_sources_stable.json"
+          PATCH_FILE_MAIN=".github/build/patch_sources.json"
+          PATCH_FILE_STABLE=".github/build/patch_sources_stable.json"
 
           BASE_JSON=$(cat "$PATCH_FILE_MAIN")
           BASE_JSON_STABLE=$(cat "$PATCH_FILE_STABLE")
@@ -204,8 +204,8 @@ jobs:
         id: compare
         run: |
           set -euo pipefail
-          PATCH_FILE=".github/misc/patch_sources.json"
-          PATCH_FILE_STABLE=".github/misc/patch_sources_stable.json"
+          PATCH_FILE=".github/build/patch_sources.json"
+          PATCH_FILE_STABLE=".github/build/patch_sources_stable.json"
 
           OLD_JSON=$(cat "$PATCH_FILE")
           OLD_JSON_STABLE=$(cat "$PATCH_FILE_STABLE")
@@ -277,7 +277,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/misc/patch_sources.json
+          file_pattern: .github/build/patch_sources.json
           commit_message: "Update patch_sources.json with latest patch versions"
 
       - name: Commit Updated patch_sources_stable.json
@@ -286,7 +286,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/misc/patch_sources_stable.json
+          file_pattern: .github/build/patch_sources_stable.json
           commit_message: "Update patch_sources_stable.json with latest stable patch versions"
 
       - name: Generate Configs (Stable and Dev)
@@ -300,7 +300,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE_CONFIG="config.toml"
-          BASE_CONFIG_STABLE=".github/misc/config.stable.toml"
+          BASE_CONFIG_STABLE=".github/build/config.stable.toml"
 
           [ -n "${TAGS_OLD_MAIN:-}" ] || TAGS_OLD_MAIN='{}'
           [ -n "${TAGS_NEW_MAIN:-}" ] || TAGS_NEW_MAIN='{}'
@@ -313,7 +313,7 @@ jobs:
                 | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
                 | $e.value.repo
             ] | .[]
-          ' > .github/misc/active.stable.main.txt || true
+          ' > .github/build/active.stable.main.txt || true
 
           jq -rn --argjson new "$TAGS_NEW_STABLE" --argjson old "$TAGS_OLD_STABLE" '
             [ $new | to_entries[] | . as $e
@@ -321,9 +321,9 @@ jobs:
                 | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
                 | $e.value.repo
             ] | .[]
-          ' > .github/misc/active.stable.extra.txt || true
+          ' > .github/build/active.stable.extra.txt || true
 
-          cat .github/misc/active.stable.main.txt .github/misc/active.stable.extra.txt 2>/dev/null | sed '/^$/d' | sort -u > .github/misc/active.stable.txt || true
+          cat .github/build/active.stable.main.txt .github/build/active.stable.extra.txt 2>/dev/null | sed '/^$/d' | sort -u > .github/build/active.stable.txt || true
 
           jq -rn --argjson new "$TAGS_NEW_MAIN" --argjson old "$TAGS_OLD_MAIN" '
             [ $new | to_entries[] | . as $e
@@ -331,11 +331,11 @@ jobs:
                 | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
                 | $e.value.repo
             ] | .[]
-          ' > .github/misc/active.prerelease.txt || true
+          ' > .github/build/active.prerelease.txt || true
 
           generate_config() {
             local mode="$1"
-            local out_file=".github/misc/config.$mode.updated.toml"
+            local out_file=".github/build/config.$mode.updated.toml"
 
             if [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
               cp "$BASE_CONFIG_STABLE" "$out_file"
@@ -361,9 +361,9 @@ jobs:
 
             local active_file
             if [ "$mode" = "stable" ]; then
-              active_file=".github/misc/active.stable.txt"
+              active_file=".github/build/active.stable.txt"
             else
-              active_file=".github/misc/active.prerelease.txt"
+              active_file=".github/build/active.prerelease.txt"
             fi
 
             touch "$active_file"
@@ -424,7 +424,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
-          file_pattern: .github/misc/config.stable.updated.toml .github/misc/config.dev.updated.toml
+          file_pattern: .github/build/config.stable.updated.toml .github/build/config.dev.updated.toml
           commit_message: "Update generated configs for changed patch sources"
 
       - name: Generate Version Numbers (Stable and Dev)
