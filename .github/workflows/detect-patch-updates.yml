@@ -360,12 +360,13 @@ jobs:
 
             if [ "$mode" = "stable" ]; then
               {
-                echo 'enable-module-update = true'
+                echo 'parallel-jobs = 1'
                 cat "$out_file"
               } > tmp_header
               mv tmp_header "$out_file"
             else
               {
+                echo 'parallel-jobs = 1'
                 echo 'patches-version = "dev"'
                 echo 'cli-version = "dev"'
                 echo 'enable-module-update = false'
