@@ -132,10 +132,10 @@ dpi = "120-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[youtube-rvx-morphed]
+[youtube-rvx]
 enabled = true
 app-name = "youtube"
-rv-brand = "rvx-morphed"
+rv-brand = "rvx"
 build-mode = "both"
 patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
@@ -143,10 +143,10 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[youtube-music-rvx-morphed]
+[youtube-music-rvx]
 enabled = true
 app-name = "youtube-music"
-rv-brand = "rvx-morphed"
+rv-brand = "rvx"
 build-mode = "both"
 arch = "both"
 patches-source = "wchill/rvx-morphed"
