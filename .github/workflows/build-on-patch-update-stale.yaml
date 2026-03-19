@@ -186,9 +186,9 @@ jobs:
             ] | .[]
           ' > "$ACTIVE_FILE" || true
 
-          # 2. Inject global settings for Stale (Enable Magisk Update)
+          # 2. Inject global settings for Stale (Enable Module Update)
           {
-             echo 'enable-magisk-update = true'
+             echo 'enable-module-update = true'
              cat "$OUT_CONFIG"
           } > tmp_header && mv tmp_header "$OUT_CONFIG"
 
