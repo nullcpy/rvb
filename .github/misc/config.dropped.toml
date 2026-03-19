@@ -1,6 +1,6 @@
 parallel-jobs = 1
 patches-version = "latest"
-enable-magisk-update = true
+enable-module-update = true
 remove-rv-integrations-checks = true
 
 [youtube-rvx]
