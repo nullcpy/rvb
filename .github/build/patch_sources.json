@@ -1,27 +1,27 @@
 {
   "revanced": {
     "repo": "ReVanced/revanced-patches",
-    "stable": "v6.0.0",
-    "prerelease": "v6.1.0-dev.3"
+    "stable": "v6.1.0",
+    "prerelease": "v6.1.0-dev.4"
   },
   "anddea": {
     "repo": "anddea/revanced-patches",
-    "stable": "v3.15.0",
-    "prerelease": "v4.0.0-dev.7"
+    "stable": "v3.16.0",
+    "prerelease": "v4.0.0-dev.8"
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
-    "stable": "v1.18.0",
-    "prerelease": "v1.20.0-dev.2"
+    "stable": "v1.19.0",
+    "prerelease": "v1.20.0-dev.3"
   },
   "rvx-morphed": {
     "repo": "wchill/rvx-morphed",
-    "stable": "v5.16.3",
-    "prerelease": "v5.16.4-dev.0"
+    "stable": "v5.16.4",
+    "prerelease": "v5.16.4-dev.1"
   },
   "piko": {
     "repo": "crimera/piko",
-    "stable": "v2.0.0",
-    "prerelease": "v3.0.0-dev.14"
+    "stable": "v3.0.0",
+    "prerelease": "v3.0.0-dev.15"
   }
 }
