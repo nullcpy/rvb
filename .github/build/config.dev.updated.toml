@@ -2,6 +2,7 @@ parallel-jobs = 1
 patches-version = "dev"
 cli-version = "dev"
 enable-module-update = false
+
 [youtube-revanced]
 enabled = true
 app-name = "youtube"

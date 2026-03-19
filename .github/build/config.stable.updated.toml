@@ -1,4 +1,6 @@
 parallel-jobs = 1
+enable-module-update = true
+
 [youtube-revanced]
 enabled = true
 app-name = "youtube"
