@@ -20,8 +20,8 @@ jobs:
         uses: ophub/delete-releases-workflows@main
         with:
           delete_releases: true
-          delete_tags: false
-          releases_keep_latest: 0
+          delete_tags: true
+          releases_keep_latest: 500
           delete_workflows: true
-          workflows_keep_day: 0
+          workflows_keep_day: 30
           gh_token: ${{ secrets.GITHUB_TOKEN }}
