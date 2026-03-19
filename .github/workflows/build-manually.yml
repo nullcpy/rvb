@@ -38,8 +38,8 @@ jobs:
       - name: Build Modules and APKs
         run: |
           set -euo pipefail
-          if [ -f ".github/misc/config.manual.toml" ]; then
-            ./build.sh .github/misc/config.manual.toml
+          if [ -f ".github/build/config.manual.toml" ]; then
+            ./build.sh .github/build/config.manual.toml
           else
             ./build.sh config.toml
           fi
@@ -62,8 +62,8 @@ jobs:
         id: check_prerelease
         run: |
           set -euo pipefail
-          if [ -f ".github/misc/config.manual.toml" ]; then
-            CONFIG=".github/misc/config.manual.toml"
+          if [ -f ".github/build/config.manual.toml" ]; then
+            CONFIG=".github/build/config.manual.toml"
           else
             CONFIG="config.toml"
           fi
