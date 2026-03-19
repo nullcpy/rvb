@@ -15,3 +15,114 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[youtube-anddea-nord]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea-nord"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-nord]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea-nord"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[youtube-anddea-mocha]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea-mocha"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-mocha]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea-mocha"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[reddit-revanced-privacy]
+enabled = true 
+app-name = "reddit"
+rv-brand = "revanced-privacy"
+patches-source = "jkennethcarino/privacy-revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[youtube-anddea]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[youtube-rvx]
+enabled = true
+app-name = "youtube"
+rv-brand = "rvx"
+build-mode = "both"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-rvx]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "rvx"
+build-mode = "both"
+arch = "both"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
