@@ -56,18 +56,6 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Update Config (Dev, From Update Branch)
-        if: steps.params_dev.outputs.enabled == 'true'
-        run: |
-          set -euo pipefail
-          git checkout -f main
-          if git checkout origin/update build.md 2>/dev/null; then
-            UPDATE_CFG=$(./build.sh "${{ steps.params_dev.outputs.config_file }}" --config-update)
-            if [ "$UPDATE_CFG" ]; then
-              echo "$UPDATE_CFG" > config.updated.json
-            fi
-          fi
-
       - name: Build Modules and APKs (Dev)
         id: build_dev
         if: steps.params_dev.outputs.enabled == 'true'
@@ -76,11 +64,7 @@ jobs:
           set -euo pipefail
           rm -rf build
           mkdir -p build
-          if [ -f "config.updated.json" ]; then
-            ./build.sh config.updated.json
-          else
-            ./build.sh "${{ steps.params_dev.outputs.config_file }}"
-          fi
+          ./build.sh "${{ steps.params_dev.outputs.config_file }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
@@ -220,38 +204,13 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Update Config (Stable, From Update Branch)
-        if: always() && steps.params_stable.outputs.enabled == 'true'
-        continue-on-error: true
-        timeout-minutes: 4
-        run: |
-          set -euo pipefail
-          rm -f config.updated.json build.stable.tmp
-          git checkout -f main
-          if git checkout origin/update build.md 2>/dev/null; then
-            echo "Running stable config-update..."
-            UPDATE_CFG=$(./build.sh "${{ steps.params_stable.outputs.config_file }}" --config-update)
-            if [ "$UPDATE_CFG" ]; then
-              echo "$UPDATE_CFG" > config.updated.json
-              echo "Stable config-update produced overrides."
-            else
-              echo "Stable config-update returned empty output; using base stable config."
-            fi
-          else
-            echo "Update branch build.md unavailable; using base stable config."
-          fi
-
       - name: Build Modules and APKs (Stable)
         if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           rm -rf build
           mkdir -p build
-          if [ -f "config.updated.json" ]; then
-            ./build.sh config.updated.json
-          else
-            ./build.sh "${{ steps.params_stable.outputs.config_file }}"
-          fi
+          ./build.sh "${{ steps.params_stable.outputs.config_file }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
