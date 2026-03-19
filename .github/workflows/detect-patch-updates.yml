@@ -2,12 +2,12 @@ name: Detect Patch Updates
 
 on:
   schedule:
-    - cron: "20 */4 * * *" # Every 4 hours
+    - cron: "20 */1 * * *" # Every 1 hours
   workflow_dispatch:
 
 concurrency:
-  group: patch-build
-  cancel-in-progress: true
+  group: patch-check
+  cancel-in-progress: false
 
 jobs:
   check-patch:
