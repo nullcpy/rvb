@@ -77,7 +77,9 @@ jobs:
           fi
 
       - name: Build Modules and APKs (Dev)
+        id: build_dev
         if: steps.params_dev.outputs.enabled == 'true'
+        continue-on-error: true
         run: |
           set -euo pipefail
           rm -rf build
@@ -93,7 +95,7 @@ jobs:
           NEXT_VER_CODE: ${{ steps.params_dev.outputs.version }}
 
       - name: Get Output (Dev)
-        if: steps.params_dev.outputs.enabled == 'true'
+        if: steps.params_dev.outputs.enabled == 'true' && steps.build_dev.outcome == 'success'
         id: get_output_dev
         run: |
           set -euo pipefail
@@ -104,7 +106,7 @@ jobs:
           cp -f build.md build.dev.tmp
 
       - name: Upload to Release (Dev)
-        if: steps.params_dev.outputs.enabled == 'true'
+        if: steps.params_dev.outputs.enabled == 'true' && steps.build_dev.outcome == 'success'
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
@@ -117,7 +119,7 @@ jobs:
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Dev)
-        if: steps.params_dev.outputs.enabled == 'true'
+        if: steps.params_dev.outputs.enabled == 'true' && steps.build_dev.outcome == 'success'
         run: |
           set -euo pipefail
 
@@ -149,7 +151,7 @@ jobs:
           find . -maxdepth 1 -name "*-update.json" | grep . || : > dummy-update.json
 
       - name: Commit Updated Build MD and Update JSON Files (Dev)
-        if: steps.params_dev.outputs.enabled == 'true'
+        if: steps.params_dev.outputs.enabled == 'true' && steps.build_dev.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
@@ -158,7 +160,7 @@ jobs:
           commit_message: Bump version ${{ steps.params_dev.outputs.version }}
 
       - name: Notify Telegram (Dev Build Complete)
-        if: steps.params_dev.outputs.enabled == 'true'
+        if: steps.params_dev.outputs.enabled == 'true' && steps.build_dev.outcome == 'success'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
@@ -213,6 +215,7 @@ jobs:
 
       - name: Resolve Stable Params
         id: params_stable
+        if: always()
         run: |
           set -euo pipefail
           if [ "${{ inputs.trigger_stable }}" = "1" ]; then
@@ -226,7 +229,7 @@ jobs:
           fi
 
       - name: Prepare Workspace (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           git checkout -f main
@@ -234,7 +237,7 @@ jobs:
           rm -f config.updated.json build.stable.tmp
 
       - name: Update Config (Stable, From Update Branch)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           git checkout -f main
@@ -246,7 +249,7 @@ jobs:
           fi
 
       - name: Build Modules and APKs (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           rm -rf build
@@ -262,7 +265,7 @@ jobs:
           NEXT_VER_CODE: ${{ steps.params_stable.outputs.version }}
 
       - name: Get Output (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         id: get_output_stable
         run: |
           set -euo pipefail
@@ -273,7 +276,7 @@ jobs:
           cp -f build.md build.stable.tmp
 
       - name: Upload to Release (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
@@ -286,7 +289,7 @@ jobs:
           overwrite: true
 
       - name: Update Changelog and Magisk Update JSON (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
 
@@ -318,7 +321,7 @@ jobs:
           find . -maxdepth 1 -name "*-update.json" | grep . || : > dummy-update.json
 
       - name: Commit Updated Build MD and Update JSON Files (Stable)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
@@ -327,7 +330,7 @@ jobs:
           commit_message: Bump version ${{ steps.params_stable.outputs.version }}
 
       - name: Notify Telegram (Stable Build Complete)
-        if: steps.params_stable.outputs.enabled == 'true'
+        if: always() && steps.params_stable.outputs.enabled == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
