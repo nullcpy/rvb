@@ -1,0 +1,27 @@
+name: Monthly Cleanup
+
+on:
+  schedule:
+    - cron: "20 3 1 * *" # 03:20 UTC on day 1 of every month
+  workflow_dispatch:
+
+concurrency:
+  group: monthly-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Delete Older Releases and Workflows
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_releases: true
+          delete_tags: true
+          releases_keep_latest: 200
+          delete_workflows: true
+          workflows_keep_day: 30
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
