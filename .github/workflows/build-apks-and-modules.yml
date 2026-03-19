@@ -49,7 +49,7 @@ jobs:
 
           if [ "${{ matrix.mode }}" = "dev" ] && [ "${{ inputs.trigger_prerelease }}" = "1" ]; then
             ENABLED="true"
-            CONFIG_FILE=".github/misc/config.dev.updated.toml"
+            CONFIG_FILE=".github/build/config.dev.updated.toml"
             VERSION="${{ inputs.next_dev_ver }}"
             PRERELEASE="true"
             THREAD_ID="350"
@@ -57,7 +57,7 @@ jobs:
 
           if [ "${{ matrix.mode }}" = "stable" ] && [ "${{ inputs.trigger_stable }}" = "1" ]; then
             ENABLED="true"
-            CONFIG_FILE=".github/misc/config.stable.updated.toml"
+            CONFIG_FILE=".github/build/config.stable.updated.toml"
             VERSION="${{ inputs.next_stable_ver }}"
             PRERELEASE="false"
             THREAD_ID="262"
