@@ -229,18 +229,18 @@ jobs:
 
             # Inject mode-specific global settings BEFORE patch toggling:
             if [ "$mode" = "stable" ]; then
-              # Stable: magisk update enabled
+              # Stable: module update enabled
               {
-                echo 'enable-magisk-update = true'
+                echo 'enable-module-update = true'
                 cat "$out_file"
               } > tmp_header
               mv tmp_header "$out_file"
             else
-              # Dev: patches-version + magisk update disabled
+              # Dev: patches-version + module update disabled
               {
                 echo 'patches-version = "dev"'
                 echo 'cli-version = "dev"'
-                echo 'enable-magisk-update = false'
+                echo 'enable-module-update = false'
                 cat "$out_file"
               } > tmp_header
               mv tmp_header "$out_file"
