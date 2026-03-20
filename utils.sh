@@ -544,11 +544,31 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path version=${version// /}
-	if ! path=$(grep "${version_f#v}-${arch// /}" <<<"$__ARCHIVE_RESP__"); then
+	while IFS= read -r p; do
+		case "$p" in
+			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks")
+				path="$p"
+				break
+				;;
+		esac
+	done <<<"$__ARCHIVE_RESP__"
+	if [ -z "$path" ]; then
 		epr "Version ${version} with arch ${arch} not found in archive"
 		return 1
 	fi
-	req "${url}/${path}" "$output"
+	case "${path##*.}" in
+		apk)
+			req "${url}/${path}" "$output"
+			;;
+		apkm|xapk|apks)
+			req "${url}/${path}" "${output}.${path##*.}" || return 1
+			merge_splits "${output}.${path##*.}" "${output}"
+			;;
+		*)
+			epr "Unsupported archive file type for ${path}"
+			return 1
+			;;
+	esac
 }
 get_archive_resp() {
 	local r err_file="${TEMP_DIR}/archive_err_$$.txt"
@@ -561,7 +581,7 @@ get_archive_resp() {
 	__ARCHIVE_RESP__=$(sed -n 's;^<a href="\(.*\)"[^"]*;\1;p' <<<"$r")
 	__ARCHIVE_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
 }
-get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\)\.apk//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- direct --------------------
@@ -693,7 +713,7 @@ build_rv() {
 		done
 		if [ ! -f "$stock_apk" ]; then return 1; fi
 	fi
-	if [ ! -f "${stock_apk}.apkm" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
+	if [ ! -f "${stock_apk}.apkm" ] && [ ! -f "${stock_apk}.xapk" ] && [ ! -f "${stock_apk}.apks" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
 		epr "$pkg_name not building, apk signature mismatch '$stock_apk': $OP"
 		return 1
 	fi
