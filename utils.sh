@@ -231,6 +231,22 @@ _req() {
 	fi
 }
 req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
+apkmirror_req() {
+	local ip="$1" op="$2" normalized_ip attempt max_attempts=3
+	normalized_ip=${ip/https:\/\/apkmirror.com/https://www.apkmirror.com}
+	normalized_ip=${normalized_ip/http:\/\/apkmirror.com/http://www.apkmirror.com}
+	for ((attempt = 1; attempt <= max_attempts; attempt++)); do
+		if _req "$normalized_ip" "$op" \
+			-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" \
+			-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+			-H "Accept-Language: en-US,en;q=0.9" \
+			-H "Referer: https://www.apkmirror.com/"; then
+			return 0
+		fi
+		[ "$attempt" -lt "$max_attempts" ] && sleep "$attempt"
+	done
+	return 1
+}
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
@@ -415,7 +431,7 @@ dl_apkmirror() {
 		apkmname=$($HTMLQ "h1.marginZero" --text <<<"$__APKMIRROR_RESP__")
 		apkmname="${apkmname,,}" apkmname="${apkmname// /-}" apkmname="${apkmname//[^a-z0-9-]/}"
 		url="${url}/${apkmname}-${version//./-}-release/"
-		resp=$(req "$url" -) || return 1
+		resp=$(apkmirror_req "$url" -) || return 1
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ "$node" ]; then
 			for current_dpi in $dpi; do
@@ -427,22 +443,22 @@ dl_apkmirror() {
 				done
 			done
 			[ -z "$dlurl" ] && return 1
-			resp=$(req "$dlurl" -)
+			resp=$(apkmirror_req "$dlurl" -)
 		fi
 		url=$(echo "$resp" | $HTMLQ --base https://www.apkmirror.com --attribute href "a.btn") || return 1
-		url=$(req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
+		url=$(apkmirror_req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
 	fi
 
 	if [ "$is_bundle" = true ]; then
-		req "$url" "${output}.apkm" || return 1
+		apkmirror_req "$url" "${output}.apkm" || return 1
 		merge_splits "${output}.apkm" "${output}"
 	else
-		req "$url" "${output}" || return 1
+		apkmirror_req "$url" "${output}" || return 1
 	fi
 }
 get_apkmirror_vers() {
 	local vers apkm_resp
-	apkm_resp=$(req "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" -)
+	apkm_resp=$(apkmirror_req "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" -)
 	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
 	if [ "$__AAV__" = false ]; then
 		local IFS=$'\n'
@@ -459,7 +475,7 @@ get_apkmirror_vers() {
 get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$__APKMIRROR_RESP__"; }
 get_apkmirror_resp() {
 	local err_file="${TEMP_DIR}/apkmirror_err_$$.txt"
-	if ! __APKMIRROR_RESP__=$(req "${1}" - 2>"$err_file"); then
+	if ! __APKMIRROR_RESP__=$(apkmirror_req "${1}" - 2>"$err_file"); then
 		epr "APKMirror request failed for ${1} (possible rate limiting/403): $(cat "$err_file")"
 		rm -f "$err_file"
 		return 1
