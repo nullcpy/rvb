@@ -70,3 +70,27 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
+[youtube-anddea]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
