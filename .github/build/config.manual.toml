@@ -94,3 +94,16 @@ patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[google-photos-revanced]
+enabled = true
+app-name = "google-photos"
+rv-brand = "revanced"
+build-mode = "both"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+cli-version = "latest"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
