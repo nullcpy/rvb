@@ -2,7 +2,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [youtube-revanced]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -13,7 +13,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -25,7 +25,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
@@ -34,10 +34,10 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [youtube-anddea]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -49,7 +49,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
@@ -85,7 +85,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-piko]
-enabled = true 
+enabled = false 
 app-name = "twitter"
 rv-brand = "piko"
 arch = "both"
@@ -134,7 +134,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [youtube-rvx]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "rvx"
 build-mode = "both"
@@ -145,7 +145,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-rvx]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "rvx"
 build-mode = "both"
@@ -160,7 +160,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 
 
 [proton-mail-revanced]
-enabled = true
+enabled = false
 app-name = "proton-mail"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -180,7 +180,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [lightroom-revanced]
-enabled = true
+enabled = false
 app-name = "lightroom"
 rv-brand = "revanced"
 arch = "arm64-v8a"
@@ -191,7 +191,7 @@ cli-source = "ReVanced/revanced-cli"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [duolingo-revanced]
-enabled = true
+enabled = false
 app-name = "duolingo"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -202,7 +202,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
-enabled = true
+enabled = false
 app-name = "twitch"
 rv-brand = "revanced"
 version = "25.3.0"
@@ -214,7 +214,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
-enabled = true
+enabled = false
 app-name = "twitter"
 rv-brand = "revanced"
 arch = "both"
@@ -226,7 +226,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
-enabled = true
+enabled = false
 app-name = "tiktok"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -237,7 +237,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [soundcloud-revanced]
-enabled = true
+enabled = false
 app-name = "soundcloud"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -246,7 +246,7 @@ uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = false 
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -259,7 +259,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
@@ -268,7 +268,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 
 [messenger-revanced]
-enabled = true
+enabled = false
 app-name = "messenger"
 rv-brand = "revanced"
 arch = "both"
@@ -279,7 +279,7 @@ uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
 
 [instagram-revanced]
-enabled = true
+enabled = false
 app-name = "instagram"
 rv-brand = "revanced"
 arch = "arm64-v8a"
@@ -292,7 +292,7 @@ dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
 
 [youtube-anddea-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea-nord"
 build-mode = "both"
@@ -305,7 +305,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-nord]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea-nord"
 build-mode = "both"
@@ -318,7 +318,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-anddea-mocha]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "anddea-mocha"
 build-mode = "both"
@@ -331,7 +331,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-mocha]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "anddea-mocha"
 build-mode = "both"
@@ -368,7 +368,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced-nord"
 build-mode = "both"
@@ -380,7 +380,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-mocha]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced-mocha"
 build-mode = "both"
@@ -417,7 +417,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [twitter-piko-materialu]
-enabled = true 
+enabled = false 
 app-name = "twitter"
 rv-brand = "piko-materialu"
 arch = "both"
@@ -443,7 +443,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [podcast-addict-morphe]
-enabled = true
+enabled = false
 app-name = "podcast-addict"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -453,7 +453,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [proton-vpn-morphe]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -463,7 +463,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [duolingo-morphe]
-enabled = true
+enabled = false
 app-name = "duolingo"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -474,7 +474,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [reddit-revanced-privacy]
-enabled = true 
+enabled = false 
 app-name = "reddit"
 rv-brand = "revanced-privacy"
 patches-source = "jkennethcarino/privacy-revanced-patches"
