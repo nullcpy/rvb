@@ -1,7 +1,6 @@
 parallel-jobs = 1
 patches-version = "latest"
 # cli-version = "dev"
-cli-version = "v1.4.0"
 enable-module-update = true
 
 [instagram-revanced]
@@ -15,85 +14,8 @@ cli-version = "latest"
 included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
-
-[youtube-anddea-nord]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea-nord"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-included-patches = "'MaterialYou'"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-anddea-nord]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "anddea-nord"
-build-mode = "both"
-arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[youtube-anddea-mocha]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea-mocha"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-included-patches = "'MaterialYou'"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-anddea-mocha]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "anddea-mocha"
-build-mode = "both"
-arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[youtube-anddea]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-anddea]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "anddea"
-build-mode = "both"
-arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
 enabled = true
