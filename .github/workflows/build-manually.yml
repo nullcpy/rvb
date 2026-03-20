@@ -13,10 +13,10 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Java (Zulu 21)
+      - name: Setup Java
         uses: actions/setup-java@v5
         with:
-          distribution: "zulu"
+          distribution: "temurin"
           java-version: "21"
 
       - name: Checkout
@@ -181,7 +181,7 @@ jobs:
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
-          sleep 2
+          sleep 1
 
           # Send to channel
           curl -X POST \
