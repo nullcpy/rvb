@@ -208,6 +208,7 @@ jobs:
         if: always() && steps.params_stable.outputs.enabled == 'true'
         run: |
           set -euo pipefail
+          git checkout -f main
           rm -rf build
           mkdir -p build
           ./build.sh "${{ steps.params_stable.outputs.config_file }}"
