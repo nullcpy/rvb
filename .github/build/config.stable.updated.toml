@@ -99,7 +99,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -110,7 +110,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -122,7 +122,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe"
 build-mode = "both"
@@ -282,14 +282,15 @@ uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 enabled = false
 app-name = "instagram"
 rv-brand = "revanced"
-arch = "arm64-v8a"
+arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [youtube-anddea-nord]
 enabled = false
@@ -344,7 +345,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "both"
@@ -356,7 +357,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-mocha"
 build-mode = "both"
@@ -392,7 +393,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -404,7 +405,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -430,7 +431,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [reddit-morphe-exp]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -443,7 +444,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [podcast-addict-morphe]
-enabled = false
+enabled = true
 app-name = "podcast-addict"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -453,7 +454,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [proton-vpn-morphe]
-enabled = false
+enabled = true
 app-name = "proton-vpn"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -463,7 +464,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [duolingo-morphe]
-enabled = false
+enabled = true
 app-name = "duolingo"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
