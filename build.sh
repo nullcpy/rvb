@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -uo pipefail
+set -euo pipefail
 shopt -s nullglob
 
 source utils.sh
@@ -55,10 +55,10 @@ for file in "$TEMP_DIR"/*/changelog.md; do
 done
 
 mkdir -p ${MODULE_TEMPLATE_DIR}/bin/arm64 ${MODULE_TEMPLATE_DIR}/bin/arm ${MODULE_TEMPLATE_DIR}/bin/x86 ${MODULE_TEMPLATE_DIR}/bin/x64
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-arm64-v8a" || abort "Failed to download cmpr-arm64-v8a"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-armeabi-v7a" || abort "Failed to download cmpr-armeabi-v7a"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86" || abort "Failed to download cmpr-x86"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64" || abort "Failed to download cmpr-x86_64"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-arm64-v8a"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-armeabi-v7a"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64"
 
 idx=0
 for table_name in $(toml_get_table_names); do
@@ -149,24 +149,14 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" &
 	fi
 done
-# Wait for all background build jobs individually so their exit codes are observed.
-# Failures are logged but do not stop the script; the "All builds failed" check below
-# still enforces that at least one build must succeed.
-for pid in $(jobs -p); do
-	if ! wait "$pid"; then
-		epr "Background build job with PID $pid failed."
-	fi
-done
+wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\n**Notes:**"
-log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
-log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
-log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)\n"
-changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
-changelog_merged=$(awk '/^CLI: / {if (seen[$0]++) next} {print}' <<<"$changelog_merged")
-log "$changelog_merged"
+log "\nInstall [Microg](https://github.com/ReVanced/GmsCore/releases) for non-root YouTube and YT Music APKs"
+log "Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach YouTube and YT Music modules from Play Store"
+log "\n[revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)\n"
+log "$(cat "$TEMP_DIR"/*/changelog.md)"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
 if [ -n "$SKIPPED" ]; then
