@@ -211,19 +211,28 @@ _req() {
 	local ip="$1" op="$2"
 	shift 2
 	if [ "$op" = - ]; then
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"; then
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time 120 --retry 0 --fail -s -S "$@" "$ip"; then
 			epr "Request failed: $ip"
 			return 1
 		fi
 	else
 		if [ -f "$op" ]; then return; fi
-		local dlp
+		local dlp wait_s=0
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
 		if [ -f "$dlp" ]; then
-			while [ -f "$dlp" ]; do sleep 1; done
+			while [ -f "$dlp" ]; do
+				sleep 1
+				wait_s=$((wait_s + 1))
+				if [ "$wait_s" -ge 180 ]; then
+					wpr "Stale tmp download lock detected. Removing '$dlp'"
+					rm -f "$dlp"
+					break
+				fi
+			done
 			return
 		fi
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time 180 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+			rm -f "$dlp"
 			epr "Request failed: $ip"
 			return 1
 		fi
@@ -296,10 +305,18 @@ apkmirror_req() {
 	fi
 
 	if [ -f "$op" ]; then return 0; fi
-	local dlp
+	local dlp wait_s=0
 	dlp="$(dirname "$op")/tmp.$(basename "$op")"
 	if [ -f "$dlp" ]; then
-		while [ -f "$dlp" ]; do sleep 1; done
+		while [ -f "$dlp" ]; do
+			sleep 1
+			wait_s=$((wait_s + 1))
+			if [ "$wait_s" -ge 180 ]; then
+				wpr "Stale tmp download lock detected. Removing '$dlp'"
+				rm -f "$dlp"
+				break
+			fi
+		done
 		return 0
 	fi
 
@@ -334,6 +351,7 @@ apkmirror_req() {
 				fi
 			fi
 		done
+		rm -f "$dlp"
 		sleep "$attempt"
 	done
 
