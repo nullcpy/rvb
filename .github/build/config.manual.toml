@@ -3,40 +3,13 @@ patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[instagram-revanced]
+[proton-vpn-morphe]
 enabled = true
-app-name = "instagram"
-rv-brand = "revanced"
-arch = "both"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
-exclusive-patches = true
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-
-[youtube-morphe]
-enabled = true
-app-name = "youtube"
+app-name = "proton-vpn"
 rv-brand = "morphe"
-build-mode = "both"
-patches-source = "MorpheApp/morphe-patches"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-morphe]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
