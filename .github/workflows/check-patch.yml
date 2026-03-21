@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     outputs:
-      trigger_stable: ${{ steps.compare.outputs.TRIGGER_STABLE }}
-      trigger_prerelease: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+      trigger_stable: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
+      trigger_prerelease: ${{ steps.effective_triggers.outputs.TRIGGER_PRERELEASE }}
       next_stable_ver: ${{ steps.versions.outputs.next_stable_ver }}
       next_dev_ver: ${{ steps.versions.outputs.next_dev_ver }}
     steps:
@@ -308,6 +308,50 @@ jobs:
             generate_config "dev"
           fi
 
+      - name: Resolve Effective Triggers (Require Enabled Apps)
+        id: effective_triggers
+        env:
+          CREATED: ${{ steps.ensure_patch_sources.outputs.created }}
+          RAW_TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+          RAW_TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+        run: |
+          set -euo pipefail
+
+          if [ "${CREATED:-false}" = "true" ]; then
+            echo "TRIGGER_STABLE=0" >> "$GITHUB_OUTPUT"
+            echo "TRIGGER_PRERELEASE=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          RAW_TRIGGER_STABLE=${RAW_TRIGGER_STABLE:-0}
+          RAW_TRIGGER_PRERELEASE=${RAW_TRIGGER_PRERELEASE:-0}
+
+          TRIGGER_STABLE=0
+          TRIGGER_PRERELEASE=0
+
+          if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
+            CFG=".github/build/config.stable.updated.toml"
+            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
+              TRIGGER_STABLE=1
+            else
+              echo "::notice::Skipping stable build trigger: no enabled apps in $CFG"
+            fi
+          fi
+
+          if [ "$RAW_TRIGGER_PRERELEASE" = "1" ]; then
+            CFG=".github/build/config.dev.updated.toml"
+            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
+              TRIGGER_PRERELEASE=1
+            else
+              echo "::notice::Skipping dev build trigger: no enabled apps in $CFG"
+            fi
+          fi
+
+          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
+          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+
       - name: Commit Updated patch sources and configs
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -318,12 +362,12 @@ jobs:
           commit_message: "Update patch sources and generated configs"
 
       - name: Generate Version Numbers (Stable and Dev)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        if: steps.effective_triggers.outputs.TRIGGER_STABLE == '1' || steps.effective_triggers.outputs.TRIGGER_PRERELEASE == '1'
         id: versions
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
-          TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+          TRIGGER_STABLE: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE: ${{ steps.effective_triggers.outputs.TRIGGER_PRERELEASE }}
         run: |
           set -euo pipefail
 
