@@ -232,19 +232,112 @@ _req() {
 }
 req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
 apkmirror_req() {
-	local ip="$1" op="$2" normalized_ip attempt max_attempts=3
+	local ip="$1" op="$2" normalized_ip attempt profile
 	normalized_ip=${ip/https:\/\/apkmirror.com/https://www.apkmirror.com}
 	normalized_ip=${normalized_ip/http:\/\/apkmirror.com/http://www.apkmirror.com}
-	for ((attempt = 1; attempt <= max_attempts; attempt++)); do
-		if _req "$normalized_ip" "$op" \
-			-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" \
-			-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
-			-H "Accept-Language: en-US,en;q=0.9" \
-			-H "Referer: https://www.apkmirror.com/"; then
-			return 0
-		fi
-		[ "$attempt" -lt "$max_attempts" ] && sleep "$attempt"
+	if [[ "$normalized_ip" == https://www.apkmirror.com/apk/* && "$normalized_ip" != */ && "$normalized_ip" != *\?* ]]; then
+		normalized_ip+="/"
+	fi
+
+	local -a curl_common=(
+		-L
+		-c "$TEMP_DIR/cookie.txt"
+		-b "$TEMP_DIR/cookie.txt"
+		--connect-timeout 8
+		--max-time 90
+		--retry 0
+		--fail
+		-s
+		-S
+	)
+
+	# Prime Cloudflare/session cookies once before hitting app/release pages.
+	curl "${curl_common[@]}" \
+		-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" \
+		-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+		-H "Accept-Language: en-US,en;q=0.9" \
+		-H "Referer: https://www.apkmirror.com/" \
+		"https://www.apkmirror.com/" >/dev/null 2>&1 || :
+
+	if [ "$op" = - ]; then
+		for ((attempt = 1; attempt <= 4; attempt++)); do
+			for profile in firefox chrome; do
+				if [ "$profile" = firefox ]; then
+					if curl "${curl_common[@]}" \
+						-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" \
+						-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+						-H "Accept-Language: en-US,en;q=0.9" \
+						-H "Referer: https://www.apkmirror.com/" \
+						"$normalized_ip"; then
+						return 0
+					fi
+				else
+					if curl "${curl_common[@]}" \
+						-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" \
+						-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+						-H "Accept-Language: en-US,en;q=0.9" \
+						-H "Cache-Control: no-cache" \
+						-H "Pragma: no-cache" \
+						-H "Upgrade-Insecure-Requests: 1" \
+						-H "Sec-Fetch-Dest: document" \
+						-H "Sec-Fetch-Mode: navigate" \
+						-H "Sec-Fetch-Site: same-origin" \
+						-H "Sec-Fetch-User: ?1" \
+						-H "Referer: https://www.apkmirror.com/" \
+						"$normalized_ip"; then
+						return 0
+					fi
+				fi
+			done
+			sleep "$attempt"
+		done
+		epr "Request failed: $normalized_ip"
+		return 1
+	fi
+
+	if [ -f "$op" ]; then return 0; fi
+	local dlp
+	dlp="$(dirname "$op")/tmp.$(basename "$op")"
+	if [ -f "$dlp" ]; then
+		while [ -f "$dlp" ]; do sleep 1; done
+		return 0
+	fi
+
+	for ((attempt = 1; attempt <= 4; attempt++)); do
+		for profile in firefox chrome; do
+			if [ "$profile" = firefox ]; then
+				if curl "${curl_common[@]}" \
+					-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" \
+					-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+					-H "Accept-Language: en-US,en;q=0.9" \
+					-H "Referer: https://www.apkmirror.com/" \
+					"$normalized_ip" -o "$dlp"; then
+					mv -f "$dlp" "$op"
+					return 0
+				fi
+			else
+				if curl "${curl_common[@]}" \
+					-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" \
+					-H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+					-H "Accept-Language: en-US,en;q=0.9" \
+					-H "Cache-Control: no-cache" \
+					-H "Pragma: no-cache" \
+					-H "Upgrade-Insecure-Requests: 1" \
+					-H "Sec-Fetch-Dest: document" \
+					-H "Sec-Fetch-Mode: navigate" \
+					-H "Sec-Fetch-Site: same-origin" \
+					-H "Sec-Fetch-User: ?1" \
+					-H "Referer: https://www.apkmirror.com/" \
+					"$normalized_ip" -o "$dlp"; then
+					mv -f "$dlp" "$op"
+					return 0
+				fi
+			fi
+		done
+		sleep "$attempt"
 	done
+
+	epr "Request failed: $normalized_ip"
 	return 1
 }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
