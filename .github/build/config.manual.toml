@@ -3,13 +3,13 @@ patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[proton-vpn-morphe]
+[all-in-one-calculator-morphe]
 enabled = true
-app-name = "proton-vpn"
+app-name = "all-in-one-calculator"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+uptodown-dlurl = "https://mindbox-all-in-one-calculator.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/allinonecalculator-com/all-in-one-calculator-free"
+# archive-dlurl = ""
 
