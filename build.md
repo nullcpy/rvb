@@ -1,8 +1,5 @@
-google-photos-revanced (arm64-v8a): 7.68.0.884121604  
-google-photos-revanced (arm-v7a): 7.68.0.884121604  
-youtube-music-revanced (arm64-v8a): 8.40.54  
-youtube-music-revanced (arm-v7a): 8.40.54  
-youtube-revanced: 20.40.45  
+duolingo-morphe: 6.66.5  
+podcast-addict-morphe: 2026.1  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -10,6 +7,6 @@ youtube-revanced: 20.40.45
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
-Patches: ReVanced/patches-6.1.1-dev.3.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.1-dev.3)  
+CLI: MorpheApp/morphe-cli-1.5.0-all.jar  
+Patches: hoo-dles/patches-1.14.1.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.14.1)  
