@@ -1,5 +1,4 @@
-duolingo-morphe: 6.66.5  
-podcast-addict-morphe: 2026.1  
+proton-vpn-morphe: 5.16.83.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
