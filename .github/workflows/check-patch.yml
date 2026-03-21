@@ -362,19 +362,6 @@ jobs:
         mode: [dev, stable]
 
     steps:
-      - name: Checkout (Main)
-        uses: actions/checkout@v6
-        with:
-          ref: main
-          fetch-depth: 0
-          submodules: true
-
-      - name: Setup Java
-        uses: actions/setup-java@v5
-        with:
-          distribution: "temurin"
-          java-version: "21"
-
       - name: Resolve Build Params
         id: params
         run: |
@@ -404,6 +391,21 @@ jobs:
               echo "enabled=false" >> "$GITHUB_OUTPUT"
             fi
           fi
+
+      - name: Checkout (Main)
+        if: steps.params.outputs.enabled == 'true'
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Java
+        if: steps.params.outputs.enabled == 'true'
+        uses: actions/setup-java@v5
+        with:
+          distribution: "temurin"
+          java-version: "21"
 
       - name: Build Modules and APKs
         if: steps.params.outputs.enabled == 'true'
