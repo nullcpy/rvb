@@ -33,6 +33,17 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
+[messenger-revanced]
+enabled = true
+app-name = "messenger"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
 [youtube-anddea]
 enabled = true
 app-name = "youtube"
