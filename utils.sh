@@ -559,7 +559,8 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 # -------------------- archive --------------------
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
-	local path version=${version// /}
+	local path=""
+	version=${version// /}
 	while IFS= read -r p; do
 		case "$p" in
 			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks")
