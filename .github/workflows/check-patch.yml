@@ -10,7 +10,7 @@ env:
   TG_CHANNEL: "@rvb28"
 
 concurrency:
-  group: patch-build
+  group: workflow-active
   cancel-in-progress: false
 
 jobs:
