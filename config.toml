@@ -92,10 +92,10 @@ dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
-[twitter-piko]
+[twitter-morphe]
 enabled = true 
 app-name = "twitter"
-rv-brand = "piko"
+rv-brand = "morphe"
 arch = "both"
 build-mode = "both"
 patches-source = "crimera/piko"
