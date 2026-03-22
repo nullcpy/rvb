@@ -1,9 +1,5 @@
-youtube-anddea-mocha: 20.05.46  
-youtube-anddea-nord: 20.05.46  
-youtube-music-anddea-mocha (arm64-v8a): 8.30.54  
-youtube-music-anddea-mocha (arm-v7a): 8.30.54  
-youtube-music-anddea-nord (arm64-v8a): 8.30.54  
-youtube-music-anddea-nord (arm-v7a): 8.30.54  
+soundcloud-revanced: 2025.05.27-release  
+Background build job with PID 3270 failed.  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -11,6 +7,6 @@ youtube-music-anddea-nord (arm-v7a): 8.30.54
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-CLI: MorpheApp/morphe-cli-1.6.0-dev.8-all.jar  
-Patches: anddea/patches-4.0.0-dev.8.mpp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.8)  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+Patches: ReVanced/patches-6.1.1-dev.3.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.1-dev.3)  
