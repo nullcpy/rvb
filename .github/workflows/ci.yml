@@ -1,0 +1,365 @@
+name: CI
+
+on:
+  schedule:
+    - cron: "20 */1 * * *" # Every 1 hours
+  workflow_dispatch:
+
+concurrency:
+  group: active
+  cancel-in-progress: false
+
+jobs:
+  check_patch:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      trigger_stable: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
+      trigger_prerelease: ${{ steps.effective_triggers.outputs.TRIGGER_PRERELEASE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Ensure patch_sources.json exists
+        id: ensure_patch_sources
+        run: |
+          set -euo pipefail
+          mkdir -p .github/build
+          PATCH_FILE=".github/build/patch_sources.json"
+
+          if [ ! -f "$PATCH_FILE" ]; then
+            cat > "$PATCH_FILE" << 'EOF'
+          {
+            "patch": { "repo": "", "stable": "", "prerelease": "" }
+          }
+          EOF
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit dummy patch_sources.json if created
+        if: steps.ensure_patch_sources.outputs.created == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/build/patch_sources.json
+          commit_message: "Create dummy patch_sources.json"
+
+      - name: Fetch latest tags
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: fetch_tags
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/build/patch_sources.json"
+          BASE_JSON=$(cat "$PATCH_FILE")
+
+          if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
+            DELIM="$(openssl rand -hex 8)"
+            echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+            echo "$BASE_JSON" >> "$GITHUB_OUTPUT"
+            echo "${DELIM}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          > updates.jsonl
+
+          while read -r id repo; do
+            tags_pair=$(gh api "repos/$repo/releases?per_page=100" --jq '
+              (map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "") as $stable |
+              (map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "") as $pre |
+              "\($stable)|\($pre)"
+            ' 2>/dev/null || echo "|")
+
+            stable="${tags_pair%%|*}"
+            pre="${tags_pair#*|}"
+
+            jq -n --arg id "$id" --arg stable "$stable" --arg pre "$pre" \
+              '{($id): {"stable": $stable, "prerelease": $pre}}' >> updates.jsonl
+
+          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo)"')
+
+          if [ -s updates.jsonl ]; then
+             NEW_JSON=$(jq -s --argjson base "$BASE_JSON" 'reduce .[] as $item ($base; . * $item)' updates.jsonl)
+          else
+             NEW_JSON="$BASE_JSON"
+          fi
+
+          DELIM="$(openssl rand -hex 8)"
+          echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+
+      - name: Compare latest vs stored tags
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: compare
+        run: |
+          set -euo pipefail
+          PATCH_FILE=".github/build/patch_sources.json"
+
+          OLD_JSON=$(cat "$PATCH_FILE")
+          NEW_JSON='${{ steps.fetch_tags.outputs.latest }}'
+
+          if [ -z "$NEW_JSON" ]; then
+            NEW_JSON="{}"
+          fi
+
+          TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
+            [ $new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+            ] | if length > 0 then 1 else 0 end
+          ')
+
+          TRIGGER_PRERELEASE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
+            [ $new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
+            ] | if length > 0 then 1 else 0 end
+          ')
+
+          echo "$NEW_JSON" > "$PATCH_FILE"
+
+          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
+          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+
+          DELIM1="$(openssl rand -hex 8)"
+          echo "tags_old<<${DELIM1}" >> "$GITHUB_OUTPUT"
+          echo "$OLD_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM1}" >> "$GITHUB_OUTPUT"
+
+          DELIM2="$(openssl rand -hex 8)"
+          echo "tags_new<<${DELIM2}" >> "$GITHUB_OUTPUT"
+          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
+          echo "${DELIM2}" >> "$GITHUB_OUTPUT"
+
+      - name: Generate configs
+        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        id: generate_configs
+        env:
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+          BASE_CONFIG="config.toml"
+          BASE_CONFIG_STABLE=".github/build/config.stable.toml"
+          BASE_CONFIG_DEV=".github/build/config.dev.toml"
+
+          [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
+          [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
+
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
+                | ($old[$e.key] // {}) as $o
+                | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
+                | $e.value.repo
+            ] | .[]
+          ' > .github/build/active.stable.txt || true
+
+          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
+                | ($old[$e.key] // {}) as $o
+                | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
+                | $e.value.repo
+            ] | .[]
+          ' > .github/build/active.prerelease.txt || true
+
+          generate_config() {
+            local mode="$1"
+            local out_file=".github/build/config.$mode.updated.toml"
+
+            if [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
+              {
+                cat "$BASE_CONFIG"
+                echo
+                cat "$BASE_CONFIG_STABLE"
+              } > "$out_file"
+            elif [ "$mode" = "stable" ] && [ -f "$BASE_CONFIG_STABLE" ]; then
+              cp "$BASE_CONFIG_STABLE" "$out_file"
+            elif [ "$mode" = "dev" ] && [ -f "$BASE_CONFIG" ] && [ -f "$BASE_CONFIG_DEV" ]; then
+              {
+                cat "$BASE_CONFIG"
+                echo
+                cat "$BASE_CONFIG_DEV"
+              } > "$out_file"
+            elif [ "$mode" = "dev" ] && [ -f "$BASE_CONFIG_DEV" ]; then
+              cp "$BASE_CONFIG_DEV" "$out_file"
+            else
+              cp "$BASE_CONFIG" "$out_file"
+            fi
+
+            if [ "$mode" = "stable" ]; then
+              {
+                echo 'parallel-jobs = 1'
+                echo 'enable-module-update = true'
+                echo
+                cat "$out_file"
+              } > tmp_header
+              mv tmp_header "$out_file"
+            else
+              {
+                echo 'parallel-jobs = 1'
+                echo 'patches-version = "dev"'
+                echo 'cli-version = "dev"'
+                echo 'enable-module-update = false'
+                echo
+                cat "$out_file"
+              } > tmp_header
+              mv tmp_header "$out_file"
+            fi
+
+            local active_file
+            if [ "$mode" = "stable" ]; then
+              active_file=".github/build/active.stable.txt"
+            else
+              active_file=".github/build/active.prerelease.txt"
+            fi
+
+            touch "$active_file"
+
+            awk -v active_file="$active_file" '
+              BEGIN {
+                while ((getline repo < active_file) > 0) {
+                  if (repo != "") active[repo] = 1
+                }
+                close(active_file)
+                keep = 0
+              }
+              /^\[.*\]/ {
+                flush_section()
+                delete lines
+                n = 0
+                lines[n++] = $0
+                keep = 0
+                next
+              }
+              {
+                lines[n++] = $0
+                if ($0 ~ /patches-source *= *"[^"]+"/) {
+                  match($0, /patches-source *= *"([^"]+)"/, m)
+                  src = m[1]
+                  if (src in active) {
+                    keep = 1
+                  }
+                }
+                next
+              }
+              END {
+                flush_section()
+              }
+              function flush_section() {
+                if (n == 0) return
+                for (i = 0; i < n; i++) {
+                  line = lines[i]
+                  if (!keep) {
+                    gsub(/enabled *= *true/, "enabled = false", line)
+                  }
+                  print line
+                }
+              }
+            ' "$out_file" > tmp && mv tmp "$out_file"
+
+            awk '
+              {
+                sub(/[[:space:]]+$/, "", $0)
+              }
+              $0 == "" {
+                blank++
+                if (blank > 1) next
+                print
+                next
+              }
+              {
+                blank = 0
+                print
+              }
+            ' "$out_file" > tmp && mv tmp "$out_file"
+          }
+
+          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
+            generate_config "stable"
+          fi
+
+          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
+            generate_config "dev"
+          fi
+
+      - name: Resolve effective triggers
+        id: effective_triggers
+        env:
+          CREATED: ${{ steps.ensure_patch_sources.outputs.created }}
+          RAW_TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+          RAW_TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+        run: |
+          set -euo pipefail
+          if [ "${CREATED:-false}" = "true" ]; then
+            echo "TRIGGER_STABLE=0" >> "$GITHUB_OUTPUT"
+            echo "TRIGGER_PRERELEASE=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          RAW_TRIGGER_STABLE=${RAW_TRIGGER_STABLE:-0}
+          RAW_TRIGGER_PRERELEASE=${RAW_TRIGGER_PRERELEASE:-0}
+
+          TRIGGER_STABLE=0
+          TRIGGER_PRERELEASE=0
+
+          if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
+            CFG=".github/build/config.stable.updated.toml"
+            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
+              TRIGGER_STABLE=1
+            else
+              echo "::notice::Skipping stable build trigger: no enabled apps in $CFG"
+            fi
+          fi
+
+          if [ "$RAW_TRIGGER_PRERELEASE" = "1" ]; then
+            CFG=".github/build/config.dev.updated.toml"
+            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
+              TRIGGER_PRERELEASE=1
+            else
+              echo "::notice::Skipping dev build trigger: no enabled apps in $CFG"
+            fi
+          fi
+
+          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
+          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+
+      - name: Commit updated patch sources and configs
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: .github/build/patch_sources.json .github/build/config.stable.updated.toml .github/build/config.dev.updated.toml
+          commit_message: "Update patch sources and generated configs"
+
+  build_dev:
+    needs: check_patch
+    if: needs.check_patch.outputs.trigger_prerelease == '1'
+    uses: ./.github/workflows/build.yml
+    with:
+      config_file: ".github/build/config.dev.updated.toml"
+    secrets: inherit 
+
+  build_stable:
+    needs: [check_patch, build_dev]
+    if: |
+      always() && 
+      needs.check_patch.outputs.trigger_stable == '1' && 
+      needs.check_patch.result == 'success' && 
+      needs.build_dev.result != 'cancelled'
+    uses: ./.github/workflows/build.yml
+    with:
+      config_file: ".github/build/config.stable.updated.toml"
+    secrets: inherit

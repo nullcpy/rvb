@@ -1,0 +1,195 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      config_file:
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      config_file:
+        description: "Path to config file"
+        required: false
+        type: string
+        default: ".github/build/config.manual.toml"
+
+concurrency:
+  group: active
+  cancel-in-progress: false
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Setup java
+        uses: actions/setup-java@v5
+        with:
+          distribution: "temurin"
+          java-version: "21"
+          cache: "gradle"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Resolve build context
+        id: context
+        run: |
+          set -euo pipefail
+          CONFIG="${{ inputs.config_file }}"
+          [ -z "$CONFIG" ] && CONFIG=".github/build/config.manual.toml"
+          [ ! -f "$CONFIG" ] && CONFIG="config.toml"
+          echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
+
+          if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
+            echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
+            echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
+          else
+            echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
+            echo "TG_THREAD_ID=262" >> "$GITHUB_OUTPUT"
+            echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Resolve version code
+        id: version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG=$( { gh release list --exclude-drafts -L 100 2>/dev/null || true; } | awk -F '\t' '$3 ~ /^[0-9]+$/ {print $3}' | sort -nr | head -n1 )
+          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
+          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
+
+      - name: Build modules and apks
+        run: |
+          set -euo pipefail
+          ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+
+      - name: Get output
+        id: get_output
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
+
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
+          tag: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          overwrite: true
+          prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
+
+      - name: Update changelog and module update files
+        run: |
+          set -euo pipefail
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.tmp build.md
+
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ steps.version.outputs.NEXT_VER_CODE }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *module*.zip; do
+            [ "$OUTPUT" = "*module*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.version.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+          cd ..
+
+      - name: Commit updated build and module update files
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}
+
+      - name: Notify telegram
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
+          TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
+        run: |
+          set -euo pipefail
+          cd build || { echo "build folder not found"; exit 1; }
+
+          TG_CHAT="@rvb27"
+          TG_CHANNEL="@rvb28"
+
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+
+          shopt -s nullglob
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.version.outputs.NEXT_VER_CODE }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+          shopt -u nullglob
+
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.tmp)"
+
+          MSG="*Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
+            
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+
+          curl -s -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
+
+          curl -s -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
+
+          wait
