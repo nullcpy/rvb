@@ -36,6 +36,17 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
+[messenger-revanced]
+enabled = false
+app-name = "messenger"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
 [youtube-anddea]
 enabled = false
 app-name = "youtube"
@@ -84,10 +95,10 @@ dpi = "120-640dpi 480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
-[twitter-piko]
+[twitter-morphe]
 enabled = false 
 app-name = "twitter"
-rv-brand = "piko"
+rv-brand = "morphe"
 arch = "both"
 build-mode = "both"
 patches-source = "crimera/piko"
@@ -99,7 +110,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [youtube-morphe]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe"
 build-mode = "both"
@@ -110,7 +121,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe"
 build-mode = "both"
@@ -122,7 +133,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "morphe"
 build-mode = "both"
@@ -266,17 +277,7 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-
-[messenger-revanced]
-enabled = false
-app-name = "messenger"
-rv-brand = "revanced"
-arch = "both"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [instagram-revanced]
 enabled = false
@@ -345,7 +346,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "both"
@@ -357,7 +358,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe-mocha"
 build-mode = "both"
@@ -393,7 +394,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -405,7 +406,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe-exp]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -417,21 +418,22 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[twitter-piko-materialu]
+[twitter-morphe-materialu]
 enabled = false 
 app-name = "twitter"
-rv-brand = "piko-materialu"
+rv-brand = "morphe-materialu"
 arch = "both"
 patches-source = "crimera/piko"
+patcher-args = "--continue-on-error"
 included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-dpi = "120-640dpi 480dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# dpi = "120-640dpi 480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [reddit-morphe-exp]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -444,7 +446,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [podcast-addict-morphe]
-enabled = true
+enabled = false
 app-name = "podcast-addict"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -454,7 +456,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addic
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [proton-vpn-morphe]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
@@ -464,7 +466,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [duolingo-morphe]
-enabled = true
+enabled = false
 app-name = "duolingo"
 rv-brand = "morphe"
 patches-source = "hoo-dles/morphe-patches"
