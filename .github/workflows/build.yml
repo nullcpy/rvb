@@ -14,6 +14,10 @@ on:
         type: string
         default: ".github/build/config.manual.toml"
 
+concurrency:
+  group: occupied
+  cancel-in-progress: false
+
 jobs:
   build:
     permissions:
