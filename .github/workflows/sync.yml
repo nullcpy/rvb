@@ -1,4 +1,4 @@
-name: Sync with Template
+name: Sync
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: workflow-active
+  group: active
   cancel-in-progress: false
 
 jobs:

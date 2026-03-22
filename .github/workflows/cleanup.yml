@@ -1,4 +1,4 @@
-name: Repo Cleanup
+name: Cleanup
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: workflow-active
+  group: active
   cancel-in-progress: false
 
 jobs:
