@@ -246,10 +246,10 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[twitter-piko-materialu]
+[twitter-morphe-materialu]
 enabled = true 
 app-name = "twitter"
-rv-brand = "piko-materialu"
+rv-brand = "morphe-materialu"
 arch = "both"
 patches-source = "crimera/piko"
 included-patches = "'Bring back twitter' 'Dynamic color'"
