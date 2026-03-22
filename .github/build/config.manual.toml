@@ -3,13 +3,30 @@ patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[all-in-one-calculator-morphe]
-enabled = true
-app-name = "all-in-one-calculator"
-rv-brand = "morphe"
-patches-source = "hoo-dles/morphe-patches"
+[twitter-morphe-materialu]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe-materialu"
+arch = "both"
+patches-source = "crimera/piko"
+included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://mindbox-all-in-one-calculator.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/allinonecalculator-com/all-in-one-calculator-free"
-# archive-dlurl = ""
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "120-640dpi 480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[twitter-morphe]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe"
+arch = "both"
+build-mode = "both"
+patches-source = "crimera/piko"
+patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "120-640dpi 480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
