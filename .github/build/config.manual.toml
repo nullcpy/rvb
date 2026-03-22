@@ -1,10 +1,10 @@
 parallel-jobs = 1
-patches-version = "latest"
-# cli-version = "dev"
-enable-module-update = true
+patches-version = "dev"
+cli-version = "dev"
+enable-module-update = false
 
 [twitter-morphe-materialu]
-enabled = true 
+enabled = false 
 app-name = "twitter"
 rv-brand = "morphe-materialu"
 arch = "both"
