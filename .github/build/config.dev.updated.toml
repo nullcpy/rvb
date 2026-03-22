@@ -75,7 +75,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-anddea]
-enabled = false 
+enabled = false
 app-name = "reddit"
 rv-brand = "anddea"
 patches-source = "anddea/revanced-patches"
@@ -86,7 +86,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [spotify-anddea]
-enabled = false 
+enabled = false
 app-name = "spotify"
 rv-brand = "anddea"
 arch = "both"
@@ -98,7 +98,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-morphe]
-enabled = false 
+enabled = false
 app-name = "twitter"
 rv-brand = "morphe"
 arch = "both"
@@ -168,6 +168,4 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-
 
