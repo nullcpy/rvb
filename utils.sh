@@ -51,6 +51,16 @@ abort() {
 }
 java() { env -i java "$@"; }
 
+run_with_timeout() {
+	local timeout_seconds="$1"
+	shift
+	if command -v timeout >/dev/null 2>&1; then
+		timeout --signal=TERM --kill-after=15 "${timeout_seconds}" "$@"
+	else
+		"$@"
+	fi
+}
+
 get_prebuilts() {
 	local cli_src=$1 cli_ver=$2 patches_src=$3 patches_ver=$4
 	pr "Getting prebuilts (${patches_src%/*})" >&2
@@ -128,11 +138,14 @@ get_prebuilts() {
 			if [ $grab_cl = true ]; then echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"; fi
 			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 				local extensions_ext
-				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" | grep -o "shared\..*") extensions_ext="${extensions_ext#*.}"
-				if ! (
+				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" 2>/dev/null | grep -o "shared\..*" || :)
+				extensions_ext="${extensions_ext#*.}"
+				if [ -z "$extensions_ext" ]; then
+					wpr "Skipping revanced-integrations check patch for ${file}: extensions/shared.* not found"
+				elif ! (
 					mkdir -p "${file}-zip" || return 1
 					unzip -qo "${file}" -d "${file}-zip" || return 1
-					java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
+					run_with_timeout "${JAVA_QUERY_TIMEOUT:-300}" java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
 					mv -f "${file}-zip/extensions/shared-patched.${extensions_ext}" "${file}-zip/extensions/shared.${extensions_ext}" || return 1
 					rm "${file}" || return 1
 					cd "${file}-zip" || abort
@@ -299,8 +312,9 @@ get_patch_last_supported_ver() {
 
 patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	if ! op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
+	local query_timeout="${JAVA_QUERY_TIMEOUT:-300}"
+	if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
+		if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
 			epr "Could not list versions $cli_jar: '$op'"
 			return 1
 		fi
@@ -309,8 +323,9 @@ patches_list_versions() {
 }
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	if ! op=$(java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
+	local query_timeout="${JAVA_QUERY_TIMEOUT:-300}"
+	if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
+		if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
