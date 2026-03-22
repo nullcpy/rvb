@@ -210,8 +210,10 @@ config_update() {
 _req() {
 	local ip="$1" op="$2"
 	shift 2
+	local curl_max_time="${CURL_MAX_TIME:-600}"
+	local lock_wait_timeout="${DL_LOCK_WAIT_TIMEOUT:-300}"
 	if [ "$op" = - ]; then
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"; then
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip"; then
 			epr "Request failed: $ip"
 			return 1
 		fi
@@ -220,10 +222,23 @@ _req() {
 		local dlp
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
 		if [ -f "$dlp" ]; then
-			while [ -f "$dlp" ]; do sleep 1; done
-			return
+			local waited=0
+			while [ -f "$dlp" ]; do
+				if ((waited >= lock_wait_timeout)); then
+					epr "Timed out waiting for download lock '$dlp'"
+					return 1
+				fi
+				sleep 1
+				waited=$((waited + 1))
+			done
+			if [ -f "$op" ]; then
+				return
+			fi
+			epr "Download lock released but output file missing: $op"
+			return 1
 		fi
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+			rm -f "$dlp"
 			epr "Request failed: $ip"
 			return 1
 		fi
