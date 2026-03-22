@@ -3,56 +3,127 @@ patches-version = "dev"
 cli-version = "dev"
 enable-module-update = false
 
-[youtube-anddea-nord]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea-nord"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-included-patches = "'MaterialYou'"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+[proton-mail-revanced]
+enabled = false
+app-name = "proton-mail"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
-[youtube-music-anddea-nord]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "anddea-nord"
-build-mode = "both"
+[samsung-radio-revanced]
+enabled = false
+app-name = "samsung-radio"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
+
+[lightroom-revanced]
+enabled = false
+app-name = "lightroom"
+rv-brand = "revanced"
+arch = "arm64-v8a"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[duolingo-revanced]
+enabled = false
+app-name = "duolingo"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
+[twitch-revanced]
+enabled = false
+app-name = "twitch"
+rv-brand = "revanced"
+version = "25.3.0"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[twitter-revanced]
+enabled = false
+app-name = "twitter"
+rv-brand = "revanced"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
-[youtube-anddea-mocha]
+[tiktok-revanced]
 enabled = true
-app-name = "youtube"
-rv-brand = "anddea-mocha"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-included-patches = "'MaterialYou'"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+app-name = "tiktok"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-[youtube-music-anddea-mocha]
+[soundcloud-revanced]
 enabled = true
-app-name = "youtube-music"
-rv-brand = "anddea-mocha"
+app-name = "soundcloud"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+
+[google-recorder-revanced]
+enabled = false 
+app-name = "google-recorder"
+rv-brand = "revanced"
 build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+dpi = "480-640dpi 120-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
+[proton-vpn-revanced]
+enabled = false
+app-name = "proton-vpn"
+rv-brand = "revanced"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
+[instagram-revanced]
+enabled = false
+app-name = "instagram"
+rv-brand = "revanced"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
+exclusive-patches = true
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 
