@@ -460,7 +460,7 @@ jobs:
           ./build.sh "${{ steps.params.outputs.config_file }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.params.outputs.version }}
 
       - name: Get Output
