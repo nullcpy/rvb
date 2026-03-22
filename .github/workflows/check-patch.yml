@@ -416,45 +416,9 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    strategy:
-      fail-fast: false
-      max-parallel: 1
-      matrix:
-        mode: [dev, stable]
 
     steps:
-      - name: Resolve Build Params
-        id: params
-        run: |
-          set -euo pipefail
-          if [ "${{ matrix.mode }}" = "dev" ]; then
-            if [ "${{ needs.check.outputs.trigger_prerelease }}" = "1" ]; then
-              echo "enabled=true" >> "$GITHUB_OUTPUT"
-              echo "config_file=.github/build/config.dev.updated.toml" >> "$GITHUB_OUTPUT"
-              echo "version=${{ needs.check.outputs.next_dev_ver }}" >> "$GITHUB_OUTPUT"
-              echo "prerelease=true" >> "$GITHUB_OUTPUT"
-              echo "thread_id=350" >> "$GITHUB_OUTPUT"
-              echo "title_suffix= (Pre-release)" >> "$GITHUB_OUTPUT"
-              echo "tmp_file=build.dev.tmp" >> "$GITHUB_OUTPUT"
-            else
-              echo "enabled=false" >> "$GITHUB_OUTPUT"
-            fi
-          else
-            if [ "${{ needs.check.outputs.trigger_stable }}" = "1" ]; then
-              echo "enabled=true" >> "$GITHUB_OUTPUT"
-              echo "config_file=.github/build/config.stable.updated.toml" >> "$GITHUB_OUTPUT"
-              echo "version=${{ needs.check.outputs.next_stable_ver }}" >> "$GITHUB_OUTPUT"
-              echo "prerelease=false" >> "$GITHUB_OUTPUT"
-              echo "thread_id=262" >> "$GITHUB_OUTPUT"
-              echo "title_suffix=" >> "$GITHUB_OUTPUT"
-              echo "tmp_file=build.stable.tmp" >> "$GITHUB_OUTPUT"
-            else
-              echo "enabled=false" >> "$GITHUB_OUTPUT"
-            fi
-          fi
-
       - name: Checkout (Main)
-        if: steps.params.outputs.enabled == 'true'
         uses: actions/checkout@v6
         with:
           ref: main
@@ -462,60 +426,60 @@ jobs:
           submodules: true
 
       - name: Setup Java
-        if: steps.params.outputs.enabled == 'true'
         uses: actions/setup-java@v5
         with:
           distribution: "temurin"
           java-version: "21"
 
-      - name: Build Modules and APKs
-        if: steps.params.outputs.enabled == 'true'
+      - name: Build Modules and APKs (Dev)
+        if: needs.check.outputs.trigger_prerelease == '1'
         run: |
           set -euo pipefail
+          git checkout -f main
           rm -rf build
           mkdir -p build
-          ./build.sh "${{ steps.params.outputs.config_file }}"
+          ./build.sh ".github/build/config.dev.updated.toml"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          NEXT_VER_CODE: ${{ steps.params.outputs.version }}
+          NEXT_VER_CODE: ${{ needs.check.outputs.next_dev_ver }}
 
-      - name: Get Output
-        id: get_output
-        if: steps.params.outputs.enabled == 'true'
+      - name: Get Output (Dev)
+        id: get_output_dev
+        if: needs.check.outputs.trigger_prerelease == '1'
         run: |
           set -euo pipefail
           DELIM="$(openssl rand -hex 8)"
           echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
           cat build.md >> "$GITHUB_OUTPUT"
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
-          cp -f build.md "${{ steps.params.outputs.tmp_file }}"
+          cp -f build.md build.dev.tmp
 
-      - name: Upload to Release
-        if: steps.params.outputs.enabled == 'true'
+      - name: Upload to Release (Dev)
+        if: needs.check.outputs.trigger_prerelease == '1'
         uses: svenstaro/upload-release-action@v2
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          body: ${{ steps.get_output_dev.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*
           file_glob: true
-          release_name: Build No. ${{ steps.params.outputs.version }}
-          tag: ${{ steps.params.outputs.version }}
-          prerelease: ${{ steps.params.outputs.prerelease }}
+          release_name: Build No. ${{ needs.check.outputs.next_dev_ver }}
+          tag: ${{ needs.check.outputs.next_dev_ver }}
+          prerelease: true
           overwrite: true
 
-      - name: Update Changelog and Magisk Update JSON
-        if: steps.params.outputs.enabled == 'true'
+      - name: Update Changelog and Magisk Update JSON (Dev)
+        if: needs.check.outputs.trigger_prerelease == '1'
         run: |
           set -euo pipefail
 
           git checkout -f update || git switch --discard-changes --orphan update
-          cp -f "${{ steps.params.outputs.tmp_file }}" build.md
+          cp -f build.dev.tmp build.md
 
           get_update_json() {
             echo "{
             \"version\": \"$1\",
-            \"versionCode\": ${{ steps.params.outputs.version }},
+            \"versionCode\": ${{ needs.check.outputs.next_dev_ver }},
             \"zipUrl\": \"$2\",
             \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
           }"
@@ -529,24 +493,24 @@ jobs:
             UPDATE_JSON="${UPDATE_JSON##*/}"
             VER=$(echo "$ZIP_S" | grep version=)
             VER="${VER##*=}"
-            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.params.outputs.version }}/${OUTPUT}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check.outputs.next_dev_ver }}/${OUTPUT}"
             get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
           done
 
           cd ..
           find . -maxdepth 1 -name "*-update.json" | grep . || : > dummy-update.json
 
-      - name: Commit Updated Build MD and Update JSON Files
-        if: steps.params.outputs.enabled == 'true'
+      - name: Commit Updated Build MD and Update JSON Files (Dev)
+        if: needs.check.outputs.trigger_prerelease == '1'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
           skip_checkout: true
           file_pattern: build.md *-update.json
-          commit_message: Bump version ${{ steps.params.outputs.version }}
+          commit_message: Bump version ${{ needs.check.outputs.next_dev_ver }}
 
-      - name: Notify Telegram (Build Complete)
-        if: steps.params.outputs.enabled == 'true'
+      - name: Notify Telegram (Build Complete Dev)
+        if: needs.check.outputs.trigger_prerelease == '1'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
@@ -559,7 +523,7 @@ jobs:
           HAS_MODULES=false
 
           for OUTPUT in *; do
-            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.params.outputs.version }}/${OUTPUT}"
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check.outputs.next_dev_ver }}/${OUTPUT}"
             if [[ $OUTPUT = *.apk ]]; then
               APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
             elif [[ $OUTPUT = *.zip ]]; then
@@ -571,9 +535,9 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
 
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../${{ steps.params.outputs.tmp_file }})"
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.dev.tmp)"
 
-          MSG="*Build No. ${{ steps.params.outputs.version }}*${{ steps.params.outputs.title_suffix }}${NL}${NL}${BODY}${NL}${NL}"
+          MSG="*Build No. ${{ needs.check.outputs.next_dev_ver }}* (Pre-release)${NL}${NL}${BODY}${NL}${NL}"
 
           if [ "$HAS_MODULES" = true ]; then
             MSG+="*Modules:*${MODULES}${NL}${NL}"
@@ -587,7 +551,139 @@ jobs:
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT}" \
-            --data-urlencode "message_thread_id=${{ steps.params.outputs.thread_id }}" \
+            --data-urlencode "message_thread_id=350" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+          sleep 1
+
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHANNEL}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+
+      - name: Build Modules and APKs (Stable)
+        if: needs.check.outputs.trigger_stable == '1'
+        run: |
+          set -euo pipefail
+          git checkout -f main
+          rm -rf build
+          mkdir -p build
+          ./build.sh ".github/build/config.stable.updated.toml"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          NEXT_VER_CODE: ${{ needs.check.outputs.next_stable_ver }}
+
+      - name: Get Output (Stable)
+        id: get_output_stable
+        if: needs.check.outputs.trigger_stable == '1'
+        run: |
+          set -euo pipefail
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.stable.tmp
+
+      - name: Upload to Release (Stable)
+        if: needs.check.outputs.trigger_stable == '1'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          body: ${{ steps.get_output_stable.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          release_name: Build No. ${{ needs.check.outputs.next_stable_ver }}
+          tag: ${{ needs.check.outputs.next_stable_ver }}
+          prerelease: false
+          overwrite: true
+
+      - name: Update Changelog and Magisk Update JSON (Stable)
+        if: needs.check.outputs.trigger_stable == '1'
+        run: |
+          set -euo pipefail
+
+          git checkout -f update || git switch --discard-changes --orphan update
+          cp -f build.stable.tmp build.md
+
+          get_update_json() {
+            echo "{
+            \"version\": \"$1\",
+            \"versionCode\": ${{ needs.check.outputs.next_stable_ver }},
+            \"zipUrl\": \"$2\",
+            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+          }"
+          }
+
+          cd build || { echo "build folder not found"; exit 1; }
+          for OUTPUT in *module*.zip; do
+            [ "$OUTPUT" = "*module*.zip" ] && continue
+            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
+            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
+            UPDATE_JSON="${UPDATE_JSON##*/}"
+            VER=$(echo "$ZIP_S" | grep version=)
+            VER="${VER##*=}"
+            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check.outputs.next_stable_ver }}/${OUTPUT}"
+            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
+          done
+
+          cd ..
+          find . -maxdepth 1 -name "*-update.json" | grep . || : > dummy-update.json
+
+      - name: Commit Updated Build MD and Update JSON Files (Stable)
+        if: needs.check.outputs.trigger_stable == '1'
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: update
+          skip_checkout: true
+          file_pattern: build.md *-update.json
+          commit_message: Bump version ${{ needs.check.outputs.next_stable_ver }}
+
+      - name: Notify Telegram (Build Complete Stable)
+        if: needs.check.outputs.trigger_stable == '1'
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd build || exit 1
+
+          NL=$'\n'
+          APKS=""
+          MODULES=""
+          HAS_MODULES=false
+
+          for OUTPUT in *; do
+            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ needs.check.outputs.next_stable_ver }}/${OUTPUT}"
+            if [[ $OUTPUT = *.apk ]]; then
+              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+            elif [[ $OUTPUT = *.zip ]]; then
+              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+              HAS_MODULES=true
+            fi
+          done
+
+          MODULES=${MODULES#"$NL"}
+          APKS=${APKS#"$NL"}
+
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.stable.tmp)"
+
+          MSG="*Build No. ${{ needs.check.outputs.next_stable_ver }}*${NL}${NL}${BODY}${NL}${NL}"
+
+          if [ "$HAS_MODULES" = true ]; then
+            MSG+="*Modules:*${MODULES}${NL}${NL}"
+          fi
+
+          MSG+="*APKs:*${APKS}"
+          MSG=${MSG:0:9450}
+
+          curl -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "message_thread_id=262" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 
           sleep 1
