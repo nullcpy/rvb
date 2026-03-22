@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: template-sync
+  group: workflow-active
   cancel-in-progress: false
 
 jobs:
