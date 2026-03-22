@@ -3,31 +3,56 @@ patches-version = "dev"
 cli-version = "dev"
 enable-module-update = false
 
-[twitter-morphe-materialu]
-enabled = false 
-app-name = "twitter"
-rv-brand = "morphe-materialu"
-arch = "both"
-patches-source = "crimera/piko"
-patcher-args = "--continue-on-error"
-included-patches = "'Bring back twitter' 'Dynamic color'"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi 480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-
-[twitter-morphe]
-enabled = true 
-app-name = "twitter"
-rv-brand = "morphe"
-arch = "both"
+[youtube-anddea-nord]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea-nord"
 build-mode = "both"
-patches-source = "crimera/piko"
-patcher-args = "--continue-on-error"
+patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi 480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-nord]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea-nord"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[youtube-anddea-mocha]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea-mocha"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-mocha]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "anddea-mocha"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-cli"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
 
