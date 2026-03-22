@@ -298,6 +298,23 @@ jobs:
                 }
               }
             ' "$out_file" > tmp && mv tmp "$out_file"
+
+            # Keep generated TOML compact and predictable.
+            awk '
+              {
+                sub(/[[:space:]]+$/, "", $0)
+              }
+              $0 == "" {
+                blank++
+                if (blank > 1) next
+                print
+                next
+              }
+              {
+                blank = 0
+                print
+              }
+            ' "$out_file" > tmp && mv tmp "$out_file"
           }
 
           if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
