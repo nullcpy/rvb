@@ -2,7 +2,7 @@ name: Sync
 
 on:
   schedule:
-    - cron: "20 18 * * *"
+    - cron: "20 16 * * *" # 04:20 PM UTC everyday
   workflow_dispatch:
 
 concurrency:
