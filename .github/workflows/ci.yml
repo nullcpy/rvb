@@ -257,6 +257,44 @@ jobs:
           echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
 
+      - name: Notify telegram
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.effective_triggers.outputs.TRIGGER_STABLE == '1' || steps.effective_triggers.outputs.TRIGGER_PRERELEASE == '1')
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
+          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
+        run: |
+          set -euo pipefail
+          
+          [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
+          [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
+          
+          MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+            [ $new | to_entries[] | . as $e
+              | ($old[$e.key] // {}) as $o
+              | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")))
+              | "📦 *[\($e.value.repo)](https://github.com/\($e.value.repo))*" +
+                (if ($e.value.stable != "" and $e.value.stable != ($o.stable // "")) then "\n  ╰ *Stable:* [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" else "" end) +
+                (if ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then "\n  ╰ *Pre-release:* [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" else "" end)
+            ] | join("\n\n")
+          ')
+          
+          if [ -z "$MSG_BODY" ]; then
+            echo "::notice::No actual updates to format for Telegram."
+            exit 0
+          fi
+          
+          NL=$'\n'
+          FULL_MSG="*🚨 New Patches Detected!*${NL}${NL}${MSG_BODY}"
+          
+          curl -s -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${FULL_MSG}" \
+            --data-urlencode "chat_id=@rvb27" \
+            --data-urlencode "message_thread_id=2747" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" > /dev/null
+
       - name: Commit updated patch sources and configs
         if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         uses: stefanzweifel/git-auto-commit-action@v7

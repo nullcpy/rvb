@@ -230,9 +230,6 @@ jobs:
           set -euo pipefail
           cd build || { echo "build folder not found"; exit 1; }
 
-          TG_CHAT="@rvb27"
-          TG_CHANNEL="@rvb28"
-
           NL=$'\n'
           APKS=""
           MODULES=""
@@ -268,7 +265,7 @@ jobs:
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "chat_id=@rvb27" \
             --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
 
@@ -276,7 +273,7 @@ jobs:
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=${TG_CHANNEL}" \
+            --data-urlencode "chat_id=@rvb28" \
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
 
           wait
