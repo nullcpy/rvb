@@ -248,6 +248,16 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
+  "threads-revanced": {
+    "enabled": false,
+    "app-name": "threads",
+    "rv-brand": "revanced",
+    "arch": "both",
+    "patches-source": "ReVanced/revanced-patches",
+    "cli-source": "ReVanced/revanced-cli",
+    "uptodown-dlurl": "https://threads.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+  },
   "youtube-anddea-nord": {
     "enabled": false,
     "app-name": "youtube",
