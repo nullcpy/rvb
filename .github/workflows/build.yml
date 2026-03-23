@@ -9,13 +9,18 @@ on:
   workflow_dispatch:
     inputs:
       config_file:
-        description: "Path to config file"
-        required: false
-        type: string
+        description: "Select the config file to use"
+        required: true
+        type: choice
         default: ".github/build/config.manual.toml"
+        options:
+          - ".github/build/config.manual.toml"
+          - ".github/build/config.dev.updated.json"
+          - ".github/build/config.stable.updated.json"
+          - "config.toml"
 
 concurrency:
-  group: occupied
+  group: build
   cancel-in-progress: false
 
 jobs:
@@ -30,6 +35,7 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "21"
+          cache: "gradle"
 
       - name: Checkout
         uses: actions/checkout@v6
@@ -42,11 +48,17 @@ jobs:
         run: |
           set -euo pipefail
           CONFIG="${{ inputs.config_file }}"
-          [ -z "$CONFIG" ] && CONFIG=".github/build/config.manual.toml"
+          
           [ ! -f "$CONFIG" ] && CONFIG="config.toml"
+          
+          if [[ "$CONFIG" == *.toml ]]; then
+            yq -o=json '.' "$CONFIG" > "${CONFIG%.toml}.json"
+            CONFIG="${CONFIG%.toml}.json"
+          fi
+          
           echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
 
-          if grep -Fq 'patches-version = "dev"' "$CONFIG"; then
+          if [ "$(jq -r '."patches-version" // empty' "$CONFIG")" = "dev" ]; then
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
             echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
