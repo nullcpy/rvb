@@ -2,7 +2,7 @@ name: Cleanup
 
 on:
   schedule:
-    - cron: "20 3 1 * *" # 03:20 UTC on day 1 of every month
+    - cron: "20 4 1 * *" # 04:20 AM UTC on day 1 of every month
   workflow_dispatch:
 
 concurrency:

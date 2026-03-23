@@ -2,7 +2,7 @@ name: CI
 
 on:
   schedule:
-    - cron: "20 */4 * * *" # Every 4 hours
+    - cron: "20 2,6,10,14,18,22 * * *" # Every 4 hours
   workflow_dispatch:
 
 concurrency:
