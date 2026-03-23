@@ -183,13 +183,14 @@ jobs:
             fi
 
             jq --slurpfile active active.stable.json '
+              { "parallel-jobs": 1, "enable-module-update": true } +
               map_values(
                 if type == "object" then
                   . as $app |
                   (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase) as $src |
                   if ($active[0] | index($src)) then $app else ($app | .enabled = false) end
                 else . end
-              ) + { "parallel-jobs": 1, "enable-module-update": true }
+              )
             ' config.stable.json > .github/build/config.stable.updated.json
           fi
 
@@ -202,13 +203,14 @@ jobs:
             fi
 
             jq --slurpfile active active.prerelease.json '
+              { "parallel-jobs": 1, "patches-version": "dev", "cli-version": "dev", "enable-module-update": false } +
               map_values(
                 if type == "object" then
                   . as $app |
                   (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase) as $src |
                   if ($active[0] | index($src)) then $app else ($app | .enabled = false) end
                 else . end
-              ) + { "parallel-jobs": 1, "patches-version": "dev", "cli-version": "dev", "enable-module-update": false }
+              )
             ' config.dev.json > .github/build/config.dev.updated.json
           fi
 
