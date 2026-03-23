@@ -1,6 +1,5 @@
-podcast-addict-morphe: 2026.1  
-proton-vpn-morphe: 5.16.83.0  
-duolingo-morphe: 6.66.5  
+instagram-revanced (arm64-v8a): 421.0.0.51.66  
+instagram-revanced (arm-v7a): 421.0.0.51.66  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,6 +7,6 @@ duolingo-morphe: 6.66.5
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-CLI: MorpheApp/morphe-cli-1.6.2-all.jar  
-Patches: hoo-dles/patches-1.14.1.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.14.1)  
+CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
+Patches: ReVanced/patches-6.1.1-dev.4.rvp  
+[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.1-dev.4)  
