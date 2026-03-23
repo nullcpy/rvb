@@ -44,7 +44,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -55,7 +55,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -126,7 +126,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "youtube-rvx": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "rvx",
     "build-mode": "both",
@@ -136,7 +136,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-rvx": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "rvx",
     "build-mode": "both",

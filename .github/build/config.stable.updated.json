@@ -70,8 +70,7 @@
     "rv-brand": "anddea",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi"
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "spotify-anddea": {
     "enabled": false,
@@ -80,11 +79,10 @@
     "arch": "both",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "inotia00/revanced-cli",
-    "uptodown-dlurl": "https://spotify.en.uptodown.com/android",
-    "dpi": "120-640dpi 480dpi nodpi anydpi"
+    "uptodown-dlurl": "https://spotify.en.uptodown.com/android"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "arch": "both",
@@ -123,7 +121,6 @@
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "youtube-rvx": {
@@ -181,7 +178,6 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
   },
   "twitch-revanced": {
@@ -192,7 +188,6 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/tv.twitch.android.app"
   },
   "twitter-revanced": {
@@ -211,7 +206,6 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "soundcloud-revanced": {
@@ -231,7 +225,6 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://opnemer.en.uptodown.com/android",
-    "dpi": "480-640dpi 120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "proton-vpn-revanced": {
@@ -369,7 +362,7 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android"
   },
   "twitter-morphe-materialu": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "arch": "both",
@@ -387,11 +380,10 @@
     "version": "latest",
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi"
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -400,7 +392,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -409,22 +401,12 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
-  },
-  "reddit-revanced-privacy": {
-    "enabled": false,
-    "app-name": "reddit",
-    "rv-brand": "revanced-privacy",
-    "patches-source": "jkennethcarino/privacy-revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi"
   }
 }
