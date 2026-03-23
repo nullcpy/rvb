@@ -135,7 +135,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "youtube-rvx": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "rvx",
     "build-mode": "both",
@@ -146,7 +146,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-rvx": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "rvx",
     "build-mode": "both",
@@ -418,7 +418,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -428,7 +428,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -438,7 +438,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
