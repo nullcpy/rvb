@@ -44,7 +44,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -55,7 +55,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
