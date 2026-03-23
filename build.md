@@ -1,4 +1,6 @@
-reddit-morphe: 2026.04.0  
+youtube-rvx: 20.05.46  
+youtube-music-rvx (arm64-v8a): 8.30.54  
+youtube-music-rvx (arm-v7a): 8.30.54  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -6,6 +8,6 @@ reddit-morphe: 2026.04.0
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-CLI: MorpheApp/morphe-cli-1.6.2-all.jar  
-Patches: MorpheApp/patches-1.22.0-dev.1.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0-dev.1)  
+CLI: MorpheApp/morphe-cli-1.6.3-dev.1-all.jar  
+Patches: wchill/patches-5.16.4-dev.1.mpp  
+[Changelog](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.4-dev.1)  
