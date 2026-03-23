@@ -51,16 +51,6 @@ abort() {
 }
 java() { env -i java "$@"; }
 
-run_with_timeout() {
-	local timeout_seconds="$1"
-	shift
-	if command -v timeout >/dev/null 2>&1; then
-		timeout --signal=TERM --kill-after=15 "${timeout_seconds}" "$@"
-	else
-		"$@"
-	fi
-}
-
 get_prebuilts() {
 	local cli_src=$1 cli_ver=$2 patches_src=$3 patches_ver=$4
 	pr "Getting prebuilts (${patches_src%/*})" >&2
@@ -138,14 +128,11 @@ get_prebuilts() {
 			if [ $grab_cl = true ]; then echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"; fi
 			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 				local extensions_ext
-				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" 2>/dev/null | grep -o "shared\..*" || :)
-				extensions_ext="${extensions_ext#*.}"
-				if [ -z "$extensions_ext" ]; then
-					wpr "Skipping revanced-integrations check patch for ${file}: extensions/shared.* not found"
-				elif ! (
+				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" | grep -o "shared\..*") extensions_ext="${extensions_ext#*.}"
+				if ! (
 					mkdir -p "${file}-zip" || return 1
 					unzip -qo "${file}" -d "${file}-zip" || return 1
-					run_with_timeout "${JAVA_QUERY_TIMEOUT:-300}" java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
+					java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
 					mv -f "${file}-zip/extensions/shared-patched.${extensions_ext}" "${file}-zip/extensions/shared.${extensions_ext}" || return 1
 					rm "${file}" || return 1
 					cd "${file}-zip" || abort
@@ -223,48 +210,24 @@ config_update() {
 _req() {
 	local ip="$1" op="$2"
 	shift 2
-	local curl_max_time="${CURL_MAX_TIME:-600}"
-	local lock_wait_timeout="${DL_LOCK_WAIT_TIMEOUT:-300}"
-	
-	# Anti-Hang Logic
-	local curl_args=(-L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --max-time "$curl_max_time" --retry 3 --retry-delay 2 --speed-time 20 --speed-limit 1024 --fail -s -S)
-
 	if [ "$op" = - ]; then
-		if ! curl "${curl_args[@]}" "$@" "$ip"; then
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"; then
 			epr "Request failed: $ip"
 			return 1
 		fi
 	else
-		if [ -f "$op" ]; then return 0; fi
-		local dlp="$(dirname "$op")/tmp.$(basename "$op")"
-		local lockdir="$(dirname "$op")/lock.$(basename "$op")"
-
-		if mkdir "$lockdir" 2>/dev/null; then
-			if ! curl "${curl_args[@]}" "$@" "$ip" -o "$dlp"; then
-				rm -f "$dlp"
-				rmdir "$lockdir"
-				epr "Request failed: $ip"
-				return 1
-			fi
-			mv -f "$dlp" "$op"
-			rmdir "$lockdir"
-		else
-			local waited=0
-			while [ -d "$lockdir" ]; do
-				if ((waited >= lock_wait_timeout)); then
-					epr "Timed out waiting for download lock '$lockdir'. Breaking lock..."
-					rmdir "$lockdir" 2>/dev/null || : # Break the stale lock
-					return 1
-				fi
-				sleep 1
-				waited=$((waited + 1))
-			done
-			if [ -f "$op" ]; then
-				return 0
-			fi
-			epr "Download lock released but output file missing: $op"
+		if [ -f "$op" ]; then return; fi
+		local dlp
+		dlp="$(dirname "$op")/tmp.$(basename "$op")"
+		if [ -f "$dlp" ]; then
+			while [ -f "$dlp" ]; do sleep 1; done
+			return
+		fi
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+			epr "Request failed: $ip"
 			return 1
 		fi
+		mv -f "$dlp" "$op"
 	fi
 }
 req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
@@ -290,7 +253,7 @@ semver_validate() {
 	[ ${#ac} = 0 ]
 }
 get_patch_last_supported_ver() {
-	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5
+	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5 # TODO: resolve using all of these
 	local op
 	if [ "$inc_sel" ]; then
 		if ! op=$(awk '{$1=$1}1' <<<"$list_patches"); then
@@ -321,9 +284,8 @@ get_patch_last_supported_ver() {
 
 patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	local query_timeout="${JAVA_QUERY_TIMEOUT:-300}"
-	if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
-		if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
+	if ! op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
+		if ! op=$(java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
 			epr "Could not list versions $cli_jar: '$op'"
 			return 1
 		fi
@@ -332,9 +294,8 @@ patches_list_versions() {
 }
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	local query_timeout="${JAVA_QUERY_TIMEOUT:-300}"
-	if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-		if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
+	if ! op=$(java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
+		if ! op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
@@ -447,30 +408,14 @@ get_apkmirror_vers() {
 }
 get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$__APKMIRROR_RESP__"; }
 get_apkmirror_resp() {
-	local err_file="${TEMP_DIR}/apkmirror_err_$$.txt"
-	if ! __APKMIRROR_RESP__=$(req "${1}" - 2>"$err_file"); then
-		epr "APKMirror request failed for ${1} (possible rate limiting/403): $(cat "$err_file")"
-		rm -f "$err_file"
-		return 1
-	fi
-	rm -f "$err_file"
+	__APKMIRROR_RESP__=$(req "${1}" -) || return 1
 	__APKMIRROR_CAT__="${1##*/}"
 }
 
 # -------------------- uptodown --------------------
 get_uptodown_resp() {
-	local err_file="${TEMP_DIR}/uptodown_err_$$.txt"
-	if ! __UPTODOWN_RESP__=$(req "${1}/versions" - 2>"$err_file"); then
-		epr "Uptodown request failed for ${1}: $(cat "$err_file")"
-		rm -f "$err_file"
-		return 1
-	fi
-	if ! __UPTODOWN_RESP_PKG__=$(req "${1}/download" - 2>"$err_file"); then
-		epr "Uptodown download page request failed for ${1}: $(cat "$err_file")"
-		rm -f "$err_file"
-		return 1
-	fi
-	rm -f "$err_file"
+	__UPTODOWN_RESP__=$(req "${1}/versions" -) || return 1
+	__UPTODOWN_RESP_PKG__=$(req "${1}/download" -) || return 1
 }
 get_uptodown_vers() { $HTMLQ --text ".version" <<<"$__UPTODOWN_RESP__"; }
 dl_uptodown() {
@@ -533,44 +478,16 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path version=${version// /}
-	while IFS= read -r p; do
-		case "$p" in
-			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks")
-				path="$p"
-				break
-				;;
-		esac
-	done <<<"$__ARCHIVE_RESP__"
-	if [ -z "$path" ]; then
-		epr "Version ${version} with arch ${arch} not found in archive"
-		return 1
-	fi
-	case "${path##*.}" in
-		apk)
-			req "${url}/${path}" "$output"
-			;;
-		apkm|xapk|apks)
-			req "${url}/${path}" "${output}.${path##*.}" || return 1
-			merge_splits "${output}.${path##*.}" "${output}"
-			;;
-		*)
-			epr "Unsupported archive file type for ${path}"
-			return 1
-			;;
-	esac
+	path=$(grep "${version_f#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
+	req "${url}/${path}" "$output"
 }
 get_archive_resp() {
-	local r err_file="${TEMP_DIR}/archive_err_$$.txt"
-	if ! r=$(req "$1" - 2>"$err_file") || [ -z "$r" ]; then
-		epr "Archive request failed for ${1}: $(cat "$err_file")"
-		rm -f "$err_file"
-		return 1
-	fi
-	rm -f "$err_file"
-	__ARCHIVE_RESP__=$(sed -n 's;^<a href="\(.*\)"[^"]*;\1;p' <<<"$r")
+	local r
+	r=$(req "$1" -)
+	if [ -z "$r" ]; then return 1; else __ARCHIVE_RESP__=$(sed -n 's;^<a href="\(.*\)"[^"]*;\1;p' <<<"$r"); fi
 	__ARCHIVE_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
 }
-get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\)\.apk//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- direct --------------------
@@ -612,8 +529,6 @@ check_sig() {
 }
 
 build_rv() {
-	(
-	set +e
 	eval "declare -A args=${1#*=}"
 	local version="" pkg_name=""
 	local mode_arg=${args[build_mode]} version_mode=${args[version]}
@@ -644,7 +559,7 @@ build_rv() {
 	done
 	if [ -z "$pkg_name" ]; then
 		epr "empty pkg name, not building ${table}."
-		return 1
+		return 0
 	fi
 	local list_patches
 	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name") || return 1
@@ -652,8 +567,8 @@ build_rv() {
 	if [ "$version_mode" = auto ]; then
 		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
 			"${args[included_patches]}" "${args[excluded_patches]}" "${args[exclusive_patches]}"); then
-			epr "ERROR: Failed to get patch version for ${table}. Skipping..."
-			return 1
+			epr "get_patch_last_supported_ver failed '$list_patches'"
+			return
 		elif [ -z "$version" ]; then get_latest_ver=true; fi
 	elif isoneof "$version_mode" latest beta; then
 		get_latest_ver=true
@@ -669,7 +584,7 @@ build_rv() {
 	fi
 	if [ -z "$version" ]; then
 		epr "empty version, not building ${table}."
-		return 1
+		return 0
 	fi
 
 	if [ "$mode_arg" = module ]; then
@@ -700,12 +615,13 @@ build_rv() {
 			fi
 			break
 		done
-		if [ ! -f "$stock_apk" ]; then return 1; fi
+		if [ ! -f "$stock_apk" ]; then return 0; fi
 	fi
-	if [ ! -f "${stock_apk}.apkm" ] && [ ! -f "${stock_apk}.xapk" ] && [ ! -f "${stock_apk}.apks" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
+	if [ ! -f "${stock_apk}.apkm" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
 		epr "$pkg_name not building, apk signature mismatch '$stock_apk': $OP"
-		return 1
+		return 0
 	fi
+	log "${table}: ${version}"
 
 	local microg_patch
 	microg_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" || :) microg_patch=${microg_patch#*: }
@@ -754,7 +670,7 @@ build_rv() {
 		if [ "${NORB:-}" != true ] || [ ! -f "$patched_apk" ]; then
 			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
 				epr "Building '${table}' failed!"
-				return 1
+				return 0
 			fi
 		fi
 		rm "$stock_apk_to_patch"
@@ -789,11 +705,6 @@ build_rv() {
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
 	done
-	log "${table}: ${version}"
-	) || {
-		epr "Build process for an app exited with error, continuing with next app..."
-		return 1
-	}
 }
 
 list_args() { tr -d '\t\r' <<<"$1" | tr -s ' ' | sed 's/" "/"\n"/g' | sed 's/\([^"]\)"\([^"]\)/\1'\''\2/g' | grep -v '^$' || :; }

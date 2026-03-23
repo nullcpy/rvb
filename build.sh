@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-set -uo pipefail
+set -euo pipefail
 shopt -s nullglob
 
 source utils.sh
-# Export the build function so background subshells can find it
-export -f build_rv
 
 trap "abort" INT
 
@@ -37,7 +35,6 @@ DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="ReVanced/rev
 DEF_RV_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV_BRAND="ReVanced"
 DEF_DPI_LIST=$(toml_get "$main_config_t" dpi) || DEF_DPI_LIST="nodpi anydpi"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
-rm -rf "$TEMP_DIR"/*/tmp.* "$TEMP_DIR"/tmp.* "$TEMP_DIR"/*/lock.* "$TEMP_DIR"/lock.* 2>/dev/null || :
 
 if [ "${2-}" = "--config-update" ]; then
 	config_update
@@ -58,13 +55,10 @@ for file in "$TEMP_DIR"/*/changelog.md; do
 done
 
 mkdir -p ${MODULE_TEMPLATE_DIR}/bin/arm64 ${MODULE_TEMPLATE_DIR}/bin/arm ${MODULE_TEMPLATE_DIR}/bin/x86 ${MODULE_TEMPLATE_DIR}/bin/x64
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-arm64-v8a" || abort "Failed to download cmpr-arm64-v8a"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-armeabi-v7a" || abort "Failed to download cmpr-armeabi-v7a"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86" || abort "Failed to download cmpr-x86"
-gh_dl "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64" || abort "Failed to download cmpr-x86_64"
-
-# Pre-download APKEditor to prevent parallel download race conditions
-gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.7/APKEditor-1.4.7.jar" || abort "Failed to download APKEditor"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-arm64-v8a"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-armeabi-v7a"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86"
+gh_dl "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64"
 
 idx=0
 for table_name in $(toml_get_table_names); do
@@ -74,7 +68,7 @@ for table_name in $(toml_get_table_names); do
 	vtf "$enabled" "enabled"
 	if [ "$enabled" = false ]; then continue; fi
 	if ((idx >= PARALLEL_JOBS)); then
-		wait -n || true
+		wait -n
 		idx=$((idx - 1))
 	fi
 
@@ -113,7 +107,6 @@ for table_name in $(toml_get_table_names); do
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%download}
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%/}
 			app_args[dl_from]=${dl_from}
-			break # Added to lock in the chosen download source
 		else
 			app_args[${dl_from}_dlurl]=""
 		fi
@@ -136,18 +129,15 @@ for table_name in $(toml_get_table_names); do
 		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
 		idx=$((idx + 1))
-		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
-		
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
 		if ((idx >= PARALLEL_JOBS)); then
-			wait -n || true
+			wait -n
 			idx=$((idx - 1))
 		fi
 		idx=$((idx + 1))
-		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
@@ -156,36 +146,17 @@ for table_name in $(toml_get_table_names); do
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
 		idx=$((idx + 1))
-		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
 	fi
 done
-
-for pid in $(jobs -p); do
-	if ! wait "$pid"; then
-		epr "Background build job with PID $pid failed."
-	fi
-done
+wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\n**Notes:**"
-log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
-log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
-log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)\n"
-changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
-changelog_merged=$(awk '
-{
-	line=$0
-	if (line ~ /^CLI: /) {
-		key=line
-		sub(/\r$/, "", key)
-		gsub(/[[:space:]]+$/, "", key)
-		if (seen[key]++) next
-	}
-	print line
-}' <<<"$changelog_merged")
-log "$changelog_merged"
+log "\nInstall [Microg](https://github.com/ReVanced/GmsCore/releases) for non-root YouTube and YT Music APKs"
+log "Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach YouTube and YT Music modules from Play Store"
+log "\n[revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)\n"
+log "$(cat "$TEMP_DIR"/*/changelog.md)"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
 if [ -n "$SKIPPED" ]; then
