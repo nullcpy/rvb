@@ -121,6 +121,16 @@ uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
+[threads-revanced]
+enabled = true
+app-name = "threads"
+rv-brand = "revanced"
+arch = "both"
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://threads.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+
 [youtube-anddea-nord]
 enabled = true
 app-name = "youtube"
