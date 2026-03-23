@@ -4,7 +4,7 @@ cli-version = "dev"
 enable-module-update = false
 
 [instagram-revanced]
-enabled = true
+enabled = false
 app-name = "instagram"
 rv-brand = "revanced"
 arch = "both"
