@@ -65,7 +65,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
-enabled = true
+enabled = false
 app-name = "tiktok"
 rv-brand = "revanced"
 patches-source = "ReVanced/revanced-patches"
