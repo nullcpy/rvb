@@ -60,6 +60,7 @@ gh_dl "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releas
 gh_dl "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86" || abort "Failed to download cmpr-x86"
 gh_dl "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64" || abort "Failed to download cmpr-x86_64"
 
+# Pre-download APKEditor to prevent parallel download race conditions
 gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.7/APKEditor-1.4.7.jar" || abort "Failed to download APKEditor"
 
 idx=0
@@ -69,7 +70,11 @@ for table_name in $(toml_get_table_names); do
 	enabled=$(toml_get "$t" enabled) || enabled=true
 	vtf "$enabled" "enabled"
 	if [ "$enabled" = false ]; then continue; fi
-	
+	if ((idx >= PARALLEL_JOBS)); then
+		wait -n || true
+		idx=$((idx - 1))
+	fi
+
 	declare -A app_args
 	patches_src=$(toml_get "$t" patches-source) || patches_src=$DEF_PATCHES_SRC
 	patches_ver=$(toml_get "$t" patches-version) || patches_ver=$DEF_PATCHES_VER
@@ -85,7 +90,9 @@ for table_name in $(toml_get_table_names); do
 	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]=$DEF_RV_BRAND
 
 	app_args[excluded_patches]=$(toml_get "$t" excluded-patches) || app_args[excluded_patches]=""
+	if [ -n "${app_args[excluded_patches]}" ] && [[ ${app_args[excluded_patches]} != *'"'* ]]; then abort "patch names inside excluded-patches must be quoted"; fi
 	app_args[included_patches]=$(toml_get "$t" included-patches) || app_args[included_patches]=""
+	if [ -n "${app_args[included_patches]}" ] && [[ ${app_args[included_patches]} != *'"'* ]]; then abort "patch names inside included-patches must be quoted"; fi
 	app_args[exclusive_patches]=$(toml_get "$t" exclusive-patches) && vtf "${app_args[exclusive_patches]}" "exclusive-patches" || app_args[exclusive_patches]=false
 	app_args[version]=$(toml_get "$t" version) || app_args[version]="auto"
 	app_args[app_name]=$(toml_get "$t" app-name) || app_args[app_name]=$table_name
@@ -108,48 +115,52 @@ for table_name in $(toml_get_table_names); do
 			app_args[${dl_from}_dlurl]=""
 		fi
 	done
-	if [ -z "${app_args[dl_from]-}" ]; then abort "ERROR: no download URL option set for '$table_name'."; fi
+	if [ -z "${app_args[dl_from]-}" ]; then abort "ERROR: no 'apkmirror-dlurl', 'uptodown-dlurl' or 'archive-dlurl' option was set for '$table_name'."; fi
 	app_args[arch]=$(toml_get "$t" arch) || app_args[arch]="all"
+	if ! isoneof "${app_args[arch]}" "both" "all" "arm64-v8a" "arm-v7a" "x86_64" "x86"; then
+		abort "wrong arch '${app_args[arch]}' for '$table_name'"
+	fi
+
 	app_args[include_stock]=$(toml_get "$t" include-stock) || app_args[include_stock]=true && vtf "${app_args[include_stock]}" "include-stock"
 	app_args[dpi]=$(toml_get "$t" dpi) || app_args[dpi]="$DEF_DPI_LIST"
-	
 	table_name_f=${table_name,,}
 	table_name_f=${table_name_f// /-}
 	app_args[module_prop_name]=$(toml_get "$t" module-prop-name) || app_args[module_prop_name]="${table_name_f}-jhc"
 
-	if [ "${app_args[arch]}" = "both" ]; then
+	if [ "${app_args[arch]}" = both ]; then
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
 		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
-		
-		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
 		idx=$((idx + 1))
-		build "$(declare -p app_args)" &
-
+		build_rv "$(declare -p app_args)" &
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
-
-		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
+		if ((idx >= PARALLEL_JOBS)); then
+			wait -n || true
+			idx=$((idx - 1))
+		fi
 		idx=$((idx + 1))
-		build "$(declare -p app_args)" &
+		build_rv "$(declare -p app_args)" &
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
 		elif [ "${app_args[arch]}" = "arm-v7a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
-		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
 		idx=$((idx + 1))
-		build "$(declare -p app_args)" &
+		build_rv "$(declare -p app_args)" &
 	fi
 done
-
+# Wait for all background build jobs individually so their exit codes are observed.
+# Failures are logged but do not stop the script; the "All builds failed" check below
+# still enforces that at least one build must succeed.
 for pid in $(jobs -p); do
-	wait "$pid" || epr "Background build job with PID $pid failed."
+	if ! wait "$pid"; then
+		epr "Background build job with PID $pid failed."
+	fi
 done
-
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
@@ -157,12 +168,24 @@ log "\n**Notes:**"
 log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
 log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
 log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)\n"
-
 changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
-changelog_merged=$(awk '{line=$0; if (line ~ /^CLI: /) {key=line; sub(/\r$/, "", key); gsub(/[[:space:]]+$/, "", key); if (seen[key]++) next} print line}' <<<"$changelog_merged")
+changelog_merged=$(awk '
+{
+	line=$0
+	if (line ~ /^CLI: /) {
+		key=line
+		sub(/\r$/, "", key)
+		gsub(/[[:space:]]+$/, "", key)
+		if (seen[key]++) next
+	}
+	print line
+}' <<<"$changelog_merged")
 log "$changelog_merged"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
-[ -n "$SKIPPED" ] && log "\nSkipped:\n$SKIPPED"
+if [ -n "$SKIPPED" ]; then
+	log "\nSkipped:"
+	log "$SKIPPED"
+fi
 
 pr "Done"
