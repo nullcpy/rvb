@@ -17,7 +17,6 @@ on:
           - ".github/build/config.manual.toml"
           - ".github/build/config.dev.updated.json"
           - ".github/build/config.stable.updated.json"
-          - "config.toml"
 
 concurrency:
   group: build
@@ -47,17 +46,15 @@ jobs:
         run: |
           set -euo pipefail
           CONFIG="${{ inputs.config_file }}"
-          
-          [ ! -f "$CONFIG" ] && CONFIG="config.toml"
-          
-          if [[ "$CONFIG" == *.toml ]]; then
-            yq -o=json '.' "$CONFIG" > "${CONFIG%.toml}.json"
-            CONFIG="${CONFIG%.toml}.json"
+
+          if [ ! -f "$CONFIG" ]; then
+            echo "::error::Config file not found: $CONFIG"
+            exit 1
           fi
           
           echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
 
-          if [ "$(jq -r '."patches-version" // empty' "$CONFIG")" = "dev" ]; then
+          if [ "$(yq '."patches-version"' "$CONFIG")" = "dev" ]; then
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
             echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
