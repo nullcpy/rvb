@@ -1,5 +1,5 @@
-instagram-revanced (arm64-v8a): 421.0.0.51.66  
-instagram-revanced (arm-v7a): 421.0.0.51.66  
+threads-revanced (arm64-v8a): 382.0.0.51.85  
+threads-revanced (arm-v7a): 382.0.0.51.85  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
