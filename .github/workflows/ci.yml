@@ -285,7 +285,7 @@ jobs:
           fi
           
           NL=$'\n'
-          FULL_MSG="*🚨 New Patches Detected!*${NL}${NL}${MSG_BODY}"
+          FULL_MSG="*🚨 New Patch(es) Detected!*${NL}${NL}${MSG_BODY}"
           
           curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
