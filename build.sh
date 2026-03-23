@@ -110,6 +110,7 @@ for table_name in $(toml_get_table_names); do
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%download}
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%/}
 			app_args[dl_from]=${dl_from}
+			break # Found a link, lock it in
 		else
 			app_args[${dl_from}_dlurl]=""
 		fi
@@ -152,9 +153,7 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" &
 	fi
 done
-# Wait for all background build jobs individually so their exit codes are observed.
-# Failures are logged but do not stop the script; the "All builds failed" check below
-# still enforces that at least one build must succeed.
+
 for pid in $(jobs -p); do
 	if ! wait "$pid"; then
 		epr "Background build job with PID $pid failed."
