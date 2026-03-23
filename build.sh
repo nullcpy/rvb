@@ -117,7 +117,6 @@ for table_name in $(toml_get_table_names); do
 	table_name_f=${table_name_f// /-}
 	app_args[module_prop_name]=$(toml_get "$t" module-prop-name) || app_args[module_prop_name]="${table_name_f}-jhc"
 
-	# Subshell background execution to fix function scope
 	if [ "${app_args[arch]}" = "both" ]; then
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
@@ -126,7 +125,7 @@ for table_name in $(toml_get_table_names); do
 		
 		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
 		idx=$((idx + 1))
-		( source utils.sh; build_rv "$(declare -p app_args)" ) &
+		build_app "$(declare -p app_args)" &
 
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
@@ -134,7 +133,7 @@ for table_name in $(toml_get_table_names); do
 
 		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
 		idx=$((idx + 1))
-		( source utils.sh; build_rv "$(declare -p app_args)" ) &
+		build_app "$(declare -p app_args)" &
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
@@ -143,7 +142,7 @@ for table_name in $(toml_get_table_names); do
 		fi
 		if ((idx >= PARALLEL_JOBS)); then wait -n || true; idx=$((idx - 1)); fi
 		idx=$((idx + 1))
-		( source utils.sh; build_rv "$(declare -p app_args)" ) &
+		build_app "$(declare -p app_args)" &
 	fi
 done
 
