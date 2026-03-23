@@ -47,7 +47,8 @@ wpr() {
 abort() {
 	epr "ABORT: ${1-}"
 	rm -rf ./${TEMP_DIR}/*tmp.* ./${TEMP_DIR}/*/*tmp.* ./${TEMP_DIR}/*-temporary-files
-	kill -n 9 0
+	kill -TERM 0 2>/dev/null || :
+	exit 1
 }
 java() { env -i java "$@"; }
 
@@ -226,36 +227,41 @@ _req() {
 	local curl_max_time="${CURL_MAX_TIME:-600}"
 	local lock_wait_timeout="${DL_LOCK_WAIT_TIMEOUT:-300}"
 	if [ "$op" = - ]; then
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip"; then
+		if ! curl -L --compressed -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip"; then
 			epr "Request failed: $ip"
 			return 1
 		fi
 	else
-		if [ -f "$op" ]; then return; fi
+		if [ -f "$op" ]; then return 0; fi
 		local dlp
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
-		if [ -f "$dlp" ]; then
+		local lockdir="$(dirname "$op")/lock.$(basename "$op")"
+
+		if mkdir "$lockdir" 2>/dev/null; then
+			if ! curl -L --compressed -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+				rm -f "$dlp"
+				rmdir "$lockdir"
+				epr "Request failed: $ip"
+				return 1
+			fi
+			mv -f "$dlp" "$op"
+			rmdir "$lockdir"
+		else
 			local waited=0
-			while [ -f "$dlp" ]; do
+			while [ -d "$lockdir" ]; do
 				if ((waited >= lock_wait_timeout)); then
-					epr "Timed out waiting for download lock '$dlp'"
+					epr "Timed out waiting for download lock '$lockdir'"
 					return 1
 				fi
 				sleep 1
 				waited=$((waited + 1))
 			done
 			if [ -f "$op" ]; then
-				return
+				return 0
 			fi
 			epr "Download lock released but output file missing: $op"
 			return 1
 		fi
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
-			rm -f "$dlp"
-			epr "Request failed: $ip"
-			return 1
-		fi
-		mv -f "$dlp" "$op"
 	fi
 }
 req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
@@ -321,16 +327,29 @@ patches_list_versions() {
 	fi
 	echo "$op"
 }
+
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
 	local query_timeout="${JAVA_QUERY_TIMEOUT:-300}"
-	if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-		if ! op=$(run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
-			epr "Could not get patches list $cli_jar: '$op'"
-			return 1
-		fi
+	local cache_file="${patches_jar}.cache.txt"
 
+	if [ ! -f "$cache_file" ]; then
+		if ! run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches -p "$patches_jar" --with-versions --with-packages > "$cache_file" 2>&1; then
+			run_with_timeout "$query_timeout" java -jar "$cli_jar" list-patches --patches "$patches_jar" --with-versions --with-packages > "$cache_file" 2>&1 || {
+				epr "Could not generate patches cache."
+				rm -f "$cache_file"
+				return 1
+			}
+		fi
 	fi
+
+	op=$(awk -v pkg="$pkg_name" '
+		/^INFO:/ { next }
+		/^Patch:/ { print_patch=0 }
+		$0 ~ "Package:.*"pkg { print_patch=1 }
+		print_patch { print }
+	' "$cache_file")
+	
 	echo "$op"
 }
 
@@ -344,7 +363,6 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.7/APKEditor-1.4.7.jar" >/dev/null || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "${bundle}" -o "${bundle}.mzip" -clean-meta -f 2>&1); then
 		epr "Apkeditor ERROR: $OP"
 		return 1
@@ -600,191 +618,6 @@ check_sig() {
 		echo "$pkg_name signature: ${sig}"
 		grep -qFx "$sig $pkg_name" sig.txt
 	fi
-}
-
-build_rv() {
-	(
-	set +e
-	eval "declare -A args=${1#*=}"
-	local version="" pkg_name=""
-	local mode_arg=${args[build_mode]} version_mode=${args[version]}
-	local app_name=${args[app_name]}
-	local app_name_l=${app_name,,}
-	app_name_l=${app_name_l// /-}
-	local table=${args[table]}
-	local dl_from=${args[dl_from]}
-	local arch=${args[arch]}
-	local arch_f="${arch// /}"
-
-	local p_patcher_args=()
-	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
-	if [ "${args[included_patches]}" ]; then p_patcher_args+=("$(join_args "${args[included_patches]}" -e)"); fi
-	[ "${args[exclusive_patches]}" = true ] && p_patcher_args+=("--exclusive")
-
-	local tried_dl=()
-	for dl_p in archive apkmirror uptodown; do
-		if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-		if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}" || ! pkg_name=$(get_"${dl_p}"_pkg_name); then
-			args[${dl_p}_dlurl]=""
-			epr "ERROR: Could not find ${table} in ${dl_p}"
-			continue
-		fi
-		tried_dl+=("$dl_p")
-		dl_from=$dl_p
-		break
-	done
-	if [ -z "$pkg_name" ]; then
-		epr "empty pkg name, not building ${table}."
-		return 1
-	fi
-	local list_patches
-	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name") || return 1
-	local get_latest_ver=false
-	if [ "$version_mode" = auto ]; then
-		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-			"${args[included_patches]}" "${args[excluded_patches]}" "${args[exclusive_patches]}"); then
-			epr "ERROR: Failed to get patch version for ${table}. Skipping..."
-			return 1
-		elif [ -z "$version" ]; then get_latest_ver=true; fi
-	elif isoneof "$version_mode" latest beta; then
-		get_latest_ver=true
-		p_patcher_args+=("-f")
-	else
-		version=$version_mode
-		p_patcher_args+=("-f")
-	fi
-	if [ $get_latest_ver = true ]; then
-		if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
-		pkgvers=$(get_"${dl_from}"_vers)
-		version=$(get_highest_ver <<<"$pkgvers") || version=$(head -1 <<<"$pkgvers")
-	fi
-	if [ -z "$version" ]; then
-		epr "empty version, not building ${table}."
-		return 1
-	fi
-
-	if [ "$mode_arg" = module ]; then
-		build_mode_arr=(module)
-	elif [ "$mode_arg" = apk ]; then
-		build_mode_arr=(apk)
-	elif [ "$mode_arg" = both ]; then
-		build_mode_arr=(apk module)
-	fi
-
-	pr "Choosing version '${version}' for ${table}"
-	local version_f=${version// /}
-	version_f=${version_f#v}
-	local stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
-	if [ ! -f "$stock_apk" ]; then
-		for dl_p in archive apkmirror uptodown; do
-			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-			pr "Downloading '${table}' from '${dl_p}'"
-			if ! isoneof $dl_p "${tried_dl[@]}"; then
-				if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
-					epr "ERROR: Could not get '${table}' from '${dl_p}'"
-					continue
-				fi
-			fi
-			if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
-				epr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
-				continue
-			fi
-			break
-		done
-		if [ ! -f "$stock_apk" ]; then return 1; fi
-	fi
-	if [ ! -f "${stock_apk}.apkm" ] && [ ! -f "${stock_apk}.xapk" ] && [ ! -f "${stock_apk}.apks" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
-		epr "$pkg_name not building, apk signature mismatch '$stock_apk': $OP"
-		return 1
-	fi
-
-	local microg_patch
-	microg_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" || :) microg_patch=${microg_patch#*: }
-	if [ -n "$microg_patch" ] && [[ ${p_patcher_args[*]} =~ $microg_patch ]]; then
-		wpr "You cant include/exclude microg patch as that's done by rvmm builder automatically."
-		p_patcher_args=("${p_patcher_args[@]//-[ei] ${microg_patch}/}")
-	fi
-
-	local patcher_args patched_apk build_mode
-	local rv_brand_f=${args[rv_brand],,}
-	rv_brand_f=${rv_brand_f// /-}
-	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
-	for build_mode in "${build_mode_arr[@]}"; do
-		patcher_args=("${p_patcher_args[@]}")
-		pr "Building '${table}' in '$build_mode' mode"
-		if [ -n "$microg_patch" ]; then
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
-		else
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
-		fi
-		if [ -n "$microg_patch" ]; then
-			if [ "$build_mode" = apk ]; then
-				patcher_args+=("-e \"${microg_patch}\"")
-			elif [ "$build_mode" = module ]; then
-				patcher_args+=("-d \"${microg_patch}\"")
-			fi
-		fi
-
-		local stock_apk_to_patch="${stock_apk}.stripped.apk"
-		cp -f "$stock_apk" "$stock_apk_to_patch"
-		if [ "$build_mode" = module ]; then
-			zip -d "$stock_apk_to_patch" "lib/*" >/dev/null 2>&1 || :
-		else
-			if [ "$arch" = "arm64-v8a" ]; then
-				zip -d "$stock_apk_to_patch" "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" >/dev/null 2>&1 || :
-			elif [ "$arch" = "arm-v7a" ]; then
-				zip -d "$stock_apk_to_patch" "lib/arm64-v8a/*" "lib/x86_64/*" "lib/x86/*" >/dev/null 2>&1 || :
-			elif [ "$arch" = "x86" ]; then
-				zip -d "$stock_apk_to_patch" "lib/arm64-v8a/*" "lib/x86_64/*" "lib/armeabi-v7a/*" >/dev/null 2>&1 || :
-			elif [ "$arch" = "x86_64" ]; then
-				zip -d "$stock_apk_to_patch" "lib/arm64-v8a/*" "lib/armeabi-v7a/*" "lib/x86/*" >/dev/null 2>&1 || :
-			else
-				zip -d "$stock_apk_to_patch" "lib/x86_64/*" "lib/x86/*" >/dev/null 2>&1 || :
-			fi
-		fi
-		if [ "${NORB:-}" != true ] || [ ! -f "$patched_apk" ]; then
-			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
-				epr "Building '${table}' failed!"
-				return 1
-			fi
-		fi
-		rm "$stock_apk_to_patch"
-		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
-			mv -f "$patched_apk" "$apk_output"
-			pr "Built ${table} (non-root): '${apk_output}'"
-			continue
-		fi
-		local base_template
-		base_template=$(mktemp -d -p "$TEMP_DIR")
-		cp -a $MODULE_TEMPLATE_DIR/. "$base_template"
-		local upj="${table,,}-update.json"
-
-		module_config "$base_template" "$pkg_name" "$version" "$arch"
-
-		local patches_ver="${patches_jar##*-}"
-		module_prop \
-			"${args[module_prop_name]}" \
-			"${app_name} ${args[rv_brand]}" \
-			"${version} (patches ${patches_ver})" \
-			"${app_name} ${args[rv_brand]} module" \
-			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
-			"$base_template"
-
-		local module_output="${app_name_l}-${rv_brand_f}-module-v${version_f}-${arch_f}.zip"
-		pr "Packing module ${table}"
-		cp -f "$patched_apk" "${base_template}/base.apk"
-		if [ "${args[include_stock]}" = true ]; then cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"; fi
-		pushd >/dev/null "$base_template" || abort "Module template dir not found"
-		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
-		popd >/dev/null || :
-		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
-	done
-	log "${table}: ${version}"
-	) || {
-		epr "Build process for an app exited with error, continuing with next app..."
-		return 1
-	}
 }
 
 list_args() { tr -d '\t\r' <<<"$1" | tr -s ' ' | sed 's/" "/"\n"/g' | sed 's/\([^"]\)"\([^"]\)/\1'\''\2/g' | grep -v '^$' || :; }
