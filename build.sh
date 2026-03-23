@@ -4,7 +4,7 @@ set -uo pipefail
 shopt -s nullglob
 
 source utils.sh
-# Export the build function so background jobs (&) can find it
+# Export the build function so background subshells can find it
 export -f build_rv
 
 trap "abort" INT
@@ -112,7 +112,7 @@ for table_name in $(toml_get_table_names); do
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%download}
 			app_args[${dl_from}_dlurl]=${app_args[${dl_from}_dlurl]%/}
 			app_args[dl_from]=${dl_from}
-			break
+			break # Added to lock in the chosen download source
 		else
 			app_args[${dl_from}_dlurl]=""
 		fi
@@ -135,7 +135,9 @@ for table_name in $(toml_get_table_names); do
 		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
 		idx=$((idx + 1))
+		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
+		
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
@@ -144,6 +146,7 @@ for table_name in $(toml_get_table_names); do
 			idx=$((idx - 1))
 		fi
 		idx=$((idx + 1))
+		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
@@ -152,6 +155,7 @@ for table_name in $(toml_get_table_names); do
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
 		idx=$((idx + 1))
+		pr "Launching background build for ${app_args[table]}..."
 		build_rv "$(declare -p app_args)" &
 	fi
 done
