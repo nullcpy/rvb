@@ -225,8 +225,12 @@ _req() {
 	shift 2
 	local curl_max_time="${CURL_MAX_TIME:-600}"
 	local lock_wait_timeout="${DL_LOCK_WAIT_TIMEOUT:-300}"
+	
+	# Added Anti-Hang Logic for unstable servers like archive.org
+	local curl_args=(-L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --max-time "$curl_max_time" --retry 3 --retry-delay 2 --speed-time 20 --speed-limit 1024 --fail -s -S)
+
 	if [ "$op" = - ]; then
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip"; then
+		if ! curl "${curl_args[@]}" "$@" "$ip"; then
 			epr "Request failed: $ip"
 			return 1
 		fi
@@ -250,7 +254,7 @@ _req() {
 			epr "Download lock released but output file missing: $op"
 			return 1
 		fi
-		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --max-time "$curl_max_time" --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+		if ! curl "${curl_args[@]}" "$@" "$ip" -o "$dlp"; then
 			rm -f "$dlp"
 			epr "Request failed: $ip"
 			return 1
@@ -281,7 +285,7 @@ semver_validate() {
 	[ ${#ac} = 0 ]
 }
 get_patch_last_supported_ver() {
-	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5 # TODO: resolve using all of these
+	local list_patches=$1 pkg_name=$2 inc_sel=$3 _exc_sel=$4 _exclusive=$5
 	local op
 	if [ "$inc_sel" ]; then
 		if ! op=$(awk '{$1=$1}1' <<<"$list_patches"); then
