@@ -72,8 +72,7 @@
     "rv-brand": "anddea",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi"
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "spotify-anddea": {
     "enabled": false,
@@ -82,8 +81,7 @@
     "arch": "both",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "inotia00/revanced-cli",
-    "uptodown-dlurl": "https://spotify.en.uptodown.com/android",
-    "dpi": "120-640dpi 480dpi nodpi anydpi"
+    "uptodown-dlurl": "https://spotify.en.uptodown.com/android"
   },
   "twitter-morphe": {
     "enabled": false,
@@ -97,7 +95,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -107,7 +105,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -118,18 +116,17 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
-    "dpi": "120-640dpi nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "youtube-rvx": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "rvx",
     "build-mode": "both",
@@ -139,7 +136,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-rvx": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "rvx",
     "build-mode": "both",
