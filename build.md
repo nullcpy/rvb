@@ -1,5 +1,6 @@
-threads-revanced (arm64-v8a): 382.0.0.51.85  
-threads-revanced (arm-v7a): 382.0.0.51.85  
+podcast-addict-morphe: 2026.1  
+proton-vpn-morphe: 5.16.83.0  
+duolingo-morphe: 6.66.5  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +8,6 @@ threads-revanced (arm-v7a): 382.0.0.51.85
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-dev.2-all.jar  
-Patches: ReVanced/patches-6.1.1-dev.4.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.1-dev.4)  
+CLI: MorpheApp/morphe-cli-1.6.2-all.jar  
+Patches: hoo-dles/patches-1.15.0.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.15.0)  
