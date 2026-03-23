@@ -125,7 +125,42 @@ jobs:
 
           pr "Done"
           EOF
-                    
+
+          cat << 'EOF' >> utils.sh
+          
+          dl_archive() {
+          	local url=$1 version=$2 output=$3 arch=$4
+          	local path version=${version// /}
+          	while IFS= read -r p; do
+          		case "$p" in
+          			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks")
+          				path="$p"
+          				break
+          				;;
+          		esac
+          	done <<<"$__ARCHIVE_RESP__"
+          	if [ -z "$path" ]; then
+          		epr "Version ${version} with arch ${arch} not found in archive"
+          		return 1
+          	fi
+          	case "${path##*.}" in
+          		apk)
+          			req "${url}/${path}" "$output"
+          			;;
+          		apkm|xapk|apks)
+          			req "${url}/${path}" "${output}.${path##*.}" || return 1
+          			merge_splits "${output}.${path##*.}" "${output}"
+          			;;
+          		*)
+          			epr "Unsupported archive file type for ${path}"
+          			return 1
+          			;;
+          	esac
+          }
+
+          get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
+          EOF
+
           ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
 
       - name: Get output
