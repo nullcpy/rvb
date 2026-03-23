@@ -37,6 +37,7 @@ DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="ReVanced/rev
 DEF_RV_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV_BRAND="ReVanced"
 DEF_DPI_LIST=$(toml_get "$main_config_t" dpi) || DEF_DPI_LIST="nodpi anydpi"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
+rm -rf "$TEMP_DIR"/*/tmp.* "$TEMP_DIR"/tmp.* "$TEMP_DIR"/*/lock.* "$TEMP_DIR"/lock.* 2>/dev/null || :
 
 if [ "${2-}" = "--config-update" ]; then
 	config_update
