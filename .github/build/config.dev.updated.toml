@@ -98,7 +98,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.spotify.music"
 
 [twitter-morphe]
-enabled = true
+enabled = false
 app-name = "twitter"
 rv-brand = "morphe"
 arch = "both"
