@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: active
+  group: ci
   cancel-in-progress: false
 
 jobs:
