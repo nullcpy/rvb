@@ -35,7 +35,6 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "21"
-          cache: "gradle"
 
       - name: Checkout
         uses: actions/checkout@v6
