@@ -226,7 +226,7 @@ _req() {
 	local curl_max_time="${CURL_MAX_TIME:-600}"
 	local lock_wait_timeout="${DL_LOCK_WAIT_TIMEOUT:-300}"
 	
-	# Added Anti-Hang Logic for unstable servers like archive.org
+	# Anti-Hang Logic
 	local curl_args=(-L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --max-time "$curl_max_time" --retry 3 --retry-delay 2 --speed-time 20 --speed-limit 1024 --fail -s -S)
 
 	if [ "$op" = - ]; then
@@ -235,31 +235,36 @@ _req() {
 			return 1
 		fi
 	else
-		if [ -f "$op" ]; then return; fi
-		local dlp
-		dlp="$(dirname "$op")/tmp.$(basename "$op")"
-		if [ -f "$dlp" ]; then
+		if [ -f "$op" ]; then return 0; fi
+		local dlp="$(dirname "$op")/tmp.$(basename "$op")"
+		local lockdir="$(dirname "$op")/lock.$(basename "$op")"
+
+		if mkdir "$lockdir" 2>/dev/null; then
+			if ! curl "${curl_args[@]}" "$@" "$ip" -o "$dlp"; then
+				rm -f "$dlp"
+				rmdir "$lockdir"
+				epr "Request failed: $ip"
+				return 1
+			fi
+			mv -f "$dlp" "$op"
+			rmdir "$lockdir"
+		else
 			local waited=0
-			while [ -f "$dlp" ]; do
+			while [ -d "$lockdir" ]; do
 				if ((waited >= lock_wait_timeout)); then
-					epr "Timed out waiting for download lock '$dlp'"
+					epr "Timed out waiting for download lock '$lockdir'. Breaking lock..."
+					rmdir "$lockdir" 2>/dev/null || : # Break the stale lock
 					return 1
 				fi
 				sleep 1
 				waited=$((waited + 1))
 			done
 			if [ -f "$op" ]; then
-				return
+				return 0
 			fi
 			epr "Download lock released but output file missing: $op"
 			return 1
 		fi
-		if ! curl "${curl_args[@]}" "$@" "$ip" -o "$dlp"; then
-			rm -f "$dlp"
-			epr "Request failed: $ip"
-			return 1
-		fi
-		mv -f "$dlp" "$op"
 	fi
 }
 req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
