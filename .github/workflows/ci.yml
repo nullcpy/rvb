@@ -2,7 +2,7 @@ name: CI
 
 on:
   schedule:
-    - cron: "20 */1 * * *" # Every 1 hours
+    - cron: "20 */4 * * *" # Every 4 hours
   workflow_dispatch:
 
 concurrency:
@@ -228,12 +228,12 @@ jobs:
             awk -v active_file="$active_file" '
               BEGIN {
                 while ((getline repo < active_file) > 0) {
-                  if (repo != "") active[repo] = 1
+                  if (repo != "") active[tolower(repo)] = 1
                 }
                 close(active_file)
                 keep = 0
               }
-              /^\[.*\]/ {
+              /^[[:space:]]*\[.*\]/ {
                 flush_section()
                 delete lines
                 n = 0
@@ -245,7 +245,7 @@ jobs:
                 lines[n++] = $0
                 if ($0 ~ /patches-source *= *"[^"]+"/) {
                   match($0, /patches-source *= *"([^"]+)"/, m)
-                  src = m[1]
+                  src = tolower(m[1])
                   if (src in active) {
                     keep = 1
                   }
@@ -314,7 +314,8 @@ jobs:
 
           if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
             CFG=".github/build/config.stable.updated.toml"
-            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            # Hardened case-insensitive regex to ignore Windows line endings and catch all variations
+            ENABLED_COUNT=$(grep -Eci '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true' "$CFG" || true)
             if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
               TRIGGER_STABLE=1
             else
@@ -324,7 +325,7 @@ jobs:
 
           if [ "$RAW_TRIGGER_PRERELEASE" = "1" ]; then
             CFG=".github/build/config.dev.updated.toml"
-            ENABLED_COUNT=$(grep -Ec '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true([[:space:]]*#.*)?$' "$CFG" || true)
+            ENABLED_COUNT=$(grep -Eci '^[[:space:]]*enabled[[:space:]]*=[[:space:]]*true' "$CFG" || true)
             if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
               TRIGGER_PRERELEASE=1
             else
