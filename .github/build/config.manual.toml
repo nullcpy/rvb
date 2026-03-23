@@ -3,13 +3,13 @@ patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = false
 
-[reddit-revanced-privacy]
-enabled = true 
+[reddit-morphe]
+enabled = true
 app-name = "reddit"
-rv-brand = "revanced-privacy"
-patches-source = "jkennethcarino/privacy-revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-cli-version = "v5.0.0"
+rv-brand = "morphe"
+# build-mode = "both"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # dpi = "120-640dpi nodpi anydpi"
 # apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
