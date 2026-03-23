@@ -273,7 +273,7 @@ jobs:
             [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")))
-              | "📦 *[\($e.value.repo)](https://github.com/\($e.value.repo))*" +
+              | "📦 [\($e.value.repo)](https://github.com/\($e.value.repo))" +
                 (if ($e.value.stable != "" and $e.value.stable != ($o.stable // "")) then "\n  ╰ *Stable:* [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" else "" end) +
                 (if ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then "\n  ╰ *Pre-release:* [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" else "" end)
             ] | join("\n\n")
