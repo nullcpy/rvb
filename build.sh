@@ -4,6 +4,8 @@ set -uo pipefail
 shopt -s nullglob
 
 source utils.sh
+# Export the build function so background jobs (&) can find it
+export -f build_rv
 
 trap "abort" INT
 
@@ -153,9 +155,7 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" &
 	fi
 done
-# Wait for all background build jobs individually so their exit codes are observed.
-# Failures are logged but do not stop the script; the "All builds failed" check below
-# still enforces that at least one build must succeed.
+
 for pid in $(jobs -p); do
 	if ! wait "$pid"; then
 		epr "Background build job with PID $pid failed."
