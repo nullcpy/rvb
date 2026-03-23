@@ -1,4 +1,6 @@
 {
+  "parallel-jobs": 1,
+  "enable-module-update": true,
   "youtube-revanced": {
     "enabled": false,
     "app-name": "youtube",
@@ -457,7 +459,5 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "dpi": "120-640dpi nodpi anydpi",
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit"
-  },
-  "parallel-jobs": 1,
-  "enable-module-update": true
+  }
 }
