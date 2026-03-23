@@ -258,7 +258,7 @@ jobs:
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: Notify telegram
-        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.effective_triggers.outputs.TRIGGER_STABLE == '1' || steps.effective_triggers.outputs.TRIGGER_PRERELEASE == '1')
+        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1')
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
