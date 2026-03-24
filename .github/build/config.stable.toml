@@ -108,7 +108,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [instagram-revanced]
-enabled = true
+enabled = false
 app-name = "instagram"
 rv-brand = "revanced"
 arch = "both"
