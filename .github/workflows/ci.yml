@@ -75,29 +75,24 @@ jobs:
           while read -r id repo enabled enabledStable enabledDev; do
             if [ "$enabled" == "false" ]; then continue; fi
 
-            # Capture both stdout and stderr to handle API failures gracefully
             api_response=$(gh api "repos/$repo/releases?per_page=100" 2>&1 || true)
 
             if echo "$api_response" | grep -qi '"message".*Repository access blocked'; then
-              # Extract the exact DMCA notice URL from the GitHub API
-              block_url=$(echo "$api_response" | jq -r '.block.html_url // ""' 2>/dev/null || echo "")
-              jq -n --arg id "$id" --arg url "$block_url" '{($id): {"blocked": true, "block_url": $url}}' >> updates.jsonl
+              jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
             elif echo "$api_response" | jq -e 'type == "array"' >/dev/null 2>&1; then
-              # ALWAYS extract tags so Telegram gets notified
               stable=$(echo "$api_response" | jq -r '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
               pre=$(echo "$api_response" | jq -r '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
 
               jq -n --arg id "$id" --arg stable "$stable" --arg pre "$pre" \
-                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": false, "block_url": ""}}' >> updates.jsonl
+                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": false}}' >> updates.jsonl
             else
               echo "::warning::API error or rate limit for $repo. Retaining previous state."
               old_stable=$(echo "$BASE_JSON" | jq -r ".\"$id\".stable // \"\"")
               old_pre=$(echo "$BASE_JSON" | jq -r ".\"$id\".prerelease // \"\"")
               old_blocked=$(echo "$BASE_JSON" | jq -r ".\"$id\".blocked // false")
-              old_block_url=$(echo "$BASE_JSON" | jq -r ".\"$id\".block_url // \"\"")
               
-              jq -n --arg id "$id" --arg stable "$old_stable" --arg pre "$old_pre" --argjson blocked "$old_blocked" --arg url "$old_block_url" \
-                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": $blocked, "block_url": $url}}' >> updates.jsonl
+              jq -n --arg id "$id" --arg stable "$old_stable" --arg pre "$old_pre" --argjson blocked "$old_blocked" \
+                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": $blocked}}' >> updates.jsonl
             fi
 
           done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo) \(if .value.enabled == false then false else true end) \(if .value.enabledStable == false then false else true end) \(if .value.enabledDev == false then false else true end)"')
@@ -179,7 +174,6 @@ jobs:
           [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
           [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
 
-          # We filter out disabled repos HERE so they never trigger an active build list
           jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
             [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
@@ -189,7 +183,6 @@ jobs:
             ]
           ' > active.stable.json
 
-          # We filter out disabled repos HERE so they never trigger an active build list
           jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
             [ $new | to_entries[] | . as $e
                 | ($old[$e.key] // {}) as $o
@@ -209,7 +202,6 @@ jobs:
               cp base.json config.stable.json
             fi
 
-            # Forces global parameters to the top of the JSON file
             jq --slurpfile active active.stable.json '
               { "parallel-jobs": 1, "enable-module-update": true } as $force |
               ($force + . + $force) |
@@ -231,7 +223,6 @@ jobs:
               cp base.json config.dev.json
             fi
 
-            # Forces global parameters to the top of the JSON file
             jq --slurpfile active active.prerelease.json '
               { "parallel-jobs": 1, "patches-version": "dev", "cli-version": "dev", "enable-module-update": false } as $force |
               ($force + . + $force) |
@@ -305,7 +296,7 @@ jobs:
               | ($old[$e.key] // {}) as $o
               | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) or ($e.value.blocked == true and $o.blocked != true))
               | "📦 [\($e.value.repo)](https://github.com/\($e.value.repo))" +
-                (if ($e.value.blocked == true and $o.blocked != true) then "\n  ╰ 🚫 *Repository access blocked* " + (if ($e.value.block_url != null and $e.value.block_url != "") then "[(Read DMCA Notice)](\($e.value.block_url))" else "(DMCA/Takedown)" end) else "" end) +
+                (if ($e.value.blocked == true and $o.blocked != true) then "\n  ╰ 🚫 *Repository access blocked.*" else "" end) +
                 (if ($e.value.blocked != true and $e.value.stable != "" and $e.value.stable != ($o.stable // "")) then "\n  ╰ Stable: [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" else "" end) +
                 (if ($e.value.blocked != true and $e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then "\n  ╰ Pre-release: [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" else "" end)
             ] | join("\n\n")
