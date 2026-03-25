@@ -3,22 +3,30 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[soundcloud-morphe]
+[rar-morphe]
 enabled = true
-app-name = "soundcloud"
+app-name = "rar"
 rv-brand = "morphe"
 patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
 
-[proton-mail-morphe]
+[icon-pack-studio-morphe]
 enabled = true
-app-name = "proton-mail"
+app-name = "icon-pack-studio"
 rv-brand = "morphe"
 patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+uptodown-dlurl = "https://icon-pack-studio.en.uptodown.com/android"
+
+[microsoft-lens-morphe]
+enabled = true
+app-name = "microsoft-lens"
+rv-brand = "morphe"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+
+
+
 
