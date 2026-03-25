@@ -9,5 +9,5 @@ youtube-music-anddea (arm-v7a): 8.30.54
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/s/rvb28) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.6.3-dev.2-all.jar  
-Patches: anddea/patches-4.0.0-dev.11.mpp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.11)  
+Patches: anddea/patches-4.0.0-dev.12.mpp  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.12)  
