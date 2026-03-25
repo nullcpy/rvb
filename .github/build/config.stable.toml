@@ -131,6 +131,25 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
+[soundcloud-morphe]
+enabled = true
+app-name = "soundcloud"
+rv-brand = "morphe"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+
+[proton-mail-morphe]
+enabled = true
+app-name = "proton-mail"
+rv-brand = "morphe"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
 [youtube-anddea-nord]
 enabled = true
 app-name = "youtube"
