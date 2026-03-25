@@ -1,44 +1,16 @@
 parallel-jobs = 1
-# patches-version = "dev"
-# cli-version = "dev"
-enable-module-update = true
+patches-version = "dev"
+cli-version = "dev"
+enable-module-update = false
 
-[icon-pack-studio-morphe]
-enabled = false
-app-name = "icon-pack-studio"
-rv-brand = "morphe"
-patches-source = "RookieEnough/De-ReVanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://icon-pack-studio.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.iconpackstudio"
-
-[smart-launcher-morphe]
+[youtube-anddea]
 enabled = true
-app-name = "smart-launcher"
-rv-brand = "morphe"
-patches-source = "hoo-dles/morphe-patches"
+app-name = "youtube"
+rv-brand = "anddea"
+build-mode = "both"
+patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
-
-[icon-packer-morphe]
-enabled = true
-app-name = "icon-packer"
-rv-brand = "morphe"
-patches-source = "hoo-dles/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
-
-[google-news-morphe]
-enabled = false
-app-name = "google-news"
-rv-brand = "morphe"
-arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
-patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
-
-
-
-
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
