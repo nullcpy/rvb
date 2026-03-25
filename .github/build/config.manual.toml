@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [icon-pack-studio-morphe]
-enabled = true
+enabled = false
 app-name = "icon-pack-studio"
 rv-brand = "morphe"
 patches-source = "RookieEnough/De-ReVanced"
@@ -30,7 +30,7 @@ cli-source = "MorpheApp/morphe-cli"
 archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
 
 [google-news-morphe]
-enabled = true
+enabled = false
 app-name = "google-news"
 rv-brand = "morphe"
 arch = "both"
