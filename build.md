@@ -1,5 +1,7 @@
-proton-mail-morphe: 4.15.0  
-soundcloud-morphe: 2025.05.27-release  
+microsoft-lens-morphe (arm64-v8a): 16.0.19628.20008  
+microsoft-lens-morphe (arm-v7a): 16.0.19628.20008  
+rar-morphe (arm64-v8a): 7.20.build131  
+rar-morphe (arm-v7a): 7.20.build131  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
