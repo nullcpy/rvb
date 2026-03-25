@@ -2,12 +2,7 @@
   "revanced": {
     "repo": "ReVanced/revanced-patches",
     "stable": "v6.1.0",
-    "prerelease": "v6.1.1-dev.4",
-    "blocked": true,
-    "block_url": "https://github.com/github/dmca/blob/master/2026/03/2026-03-12-morpheapp.md"
-  },
-  "de-revanced": {
-    "repo": "RookieEnough/De-ReVanced"
+    "prerelease": "v6.1.1-dev.4"
   },
   "anddea": {
     "repo": "anddea/revanced-patches",
