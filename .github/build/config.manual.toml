@@ -33,6 +33,7 @@ app-name = "google-news"
 rv-brand = "morphe"
 arch = "both"
 patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
 
