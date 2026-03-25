@@ -2,35 +2,44 @@
   "revanced": {
     "repo": "ReVanced/revanced-patches",
     "stable": "v6.1.0",
-    "prerelease": "v6.1.1-dev.4"
+    "prerelease": "v6.1.1-dev.4",
+    "blocked": true
   },
   "derv": {
-    "repo": "RookieEnough/De-ReVanced"
+    "repo": "RookieEnough/De-ReVanced",
+    "stable": "v1.0.1",
+    "prerelease": "",
+    "blocked": false
   },
   "anddea": {
     "repo": "anddea/revanced-patches",
     "stable": "v3.16.0",
-    "prerelease": "v4.0.0-dev.10"
+    "prerelease": "v4.0.0-dev.10",
+    "blocked": false
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.21.1",
-    "prerelease": "v1.22.0-dev.5"
+    "prerelease": "v1.22.0-dev.5",
+    "blocked": false
   },
   "rvx": {
     "repo": "wchill/rvx-morphed",
     "stable": "v5.16.4",
-    "prerelease": "v5.16.4-dev.1"
+    "prerelease": "v5.16.4-dev.1",
+    "blocked": false
   },
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.0.0",
-    "prerelease": "v3.1.0-dev.1"
+    "prerelease": "v3.1.0-dev.1",
+    "blocked": false
   },
   "hoodles": {
     "enabledDev": false,
     "repo": "hoo-dles/morphe-patches",
     "stable": "v1.15.0",
-    "prerelease": "v1.15.0-dev.2"
+    "prerelease": "v1.15.0-dev.2",
+    "blocked": false
   }
 }
