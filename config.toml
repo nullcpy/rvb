@@ -44,29 +44,6 @@ uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
 
-[google-photos-morphe]
-enabled = true
-app-name = "google-photos"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
-
-[messenger-morphe]
-enabled = true
-app-name = "messenger"
-rv-brand = "morphe"
-arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
-
 [youtube-anddea]
 enabled = true
 app-name = "youtube"
@@ -164,29 +141,6 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[youtube-rvx]
-enabled = true
-app-name = "youtube"
-rv-brand = "rvx"
-build-mode = "both"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-rvx]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "rvx"
-build-mode = "both"
-arch = "both"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
 [podcast-addict-morphe]
 enabled = true
 app-name = "podcast-addict"
@@ -217,4 +171,70 @@ uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 # dpi = "120-640dpi nodpi anydpi"
 # apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
+[rar-morphe]
+enabled = true
+app-name = "rar"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+
+[microsoft-lens-morphe]
+enabled = true
+app-name = "microsoft-lens"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+
+[google-photos-morphe]
+enabled = true
+app-name = "google-photos"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[messenger-morphe]
+enabled = true
+app-name = "messenger"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
+[youtube-rvx]
+enabled = true
+app-name = "youtube"
+rv-brand = "rvx"
+build-mode = "both"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-rvx]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "rvx"
+build-mode = "both"
+arch = "both"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+
 
