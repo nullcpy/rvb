@@ -150,6 +150,34 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
+[rar-morphe]
+enabled = true
+app-name = "rar"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+
+[microsoft-lens-morphe]
+enabled = true
+app-name = "microsoft-lens"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+
+[google-news-morphe]
+enabled = false
+app-name = "google-news"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
+
 [youtube-anddea-nord]
 enabled = true
 app-name = "youtube"
