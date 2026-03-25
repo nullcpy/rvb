@@ -1,28 +1,55 @@
 parallel-jobs = 1
-patches-version = "dev"
-cli-version = "dev"
-enable-module-update = false
+# patches-version = "dev"
+# cli-version = "dev"
+enable-module-update = true
 
-[instagram-revanced]
-enabled = false
-app-name = "instagram"
-rv-brand = "revanced"
-arch = "both"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
-exclusive-patches = true
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-
-[threads-revanced]
+[youtube-derv]
 enabled = true
-app-name = "threads"
-rv-brand = "revanced"
+app-name = "youtube"
+rv-brand = "derv"
+build-mode = "both"
+patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "-u"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-derv]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "derv"
+build-mode = "both"
 arch = "both"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://threads.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "-u"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[google-photos-derv]
+enabled = true
+app-name = "google-photos"
+rv-brand = "derv"
+build-mode = "both"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "-u"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[messenger-derv]
+enabled = true
+app-name = "messenger"
+rv-brand = "derv"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "-u"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
