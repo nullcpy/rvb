@@ -328,7 +328,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/build/
+          file_pattern: .github/build/*.json
           commit_message: "Update patch sources and generated configs"
 
   build_dev:
