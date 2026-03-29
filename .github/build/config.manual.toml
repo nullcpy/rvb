@@ -1,16 +1,31 @@
 parallel-jobs = 1
-patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = false
 
-[youtube-anddea]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
+[twitter-morphe-materialu]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe-materialu"
+arch = "both"
+patches-source = "crimera/piko"
+patcher-args = "--continue-on-error"
+included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+# dpi = "120-640dpi 480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
+[reddit-morphe-exp]
+enabled = true
+app-name = "reddit"
+rv-brand = "morphe-exp"
+build-mode = "apk"
+version = "latest"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
