@@ -1,3 +1,13 @@
+youtube-morphe: 20.45.36  
+youtube-music-morphe (arm64-v8a): 8.44.54  
+youtube-music-morphe (arm-v7a): 8.44.54  
+reddit-morphe: 2026.04.0  
+podcast-addict-morphe: 2026.1  
+proton-vpn-morphe: 5.16.83.0  
+duolingo-morphe: 6.66.5  
+icon-packer-morphe: 1.21.0-release  
+youtube-morphe-nord: 20.45.36  
+youtube-morphe-mocha: 20.45.36  
 youtube-morphe-exp: 21.13.163  
 youtube-music-morphe-exp (arm64-v8a): 9.12.51  
 youtube-music-morphe-exp (arm-v7a): 9.12.51  
