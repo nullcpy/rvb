@@ -23,6 +23,6 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
-          source_repo_path: j-hc/revanced-magisk-module
+          source_repo_path: peternmuller/revanced-morphe-builder
 
           
