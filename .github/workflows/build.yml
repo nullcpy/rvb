@@ -95,7 +95,7 @@ jobs:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
         run: |
           set -euo pipefail
-          sed -i '/Install \[Microg\]/,$d' build.sh
+          sed -i '/Install \[ReVanced GmsCore\]/,$d' build.sh
           
           cat << 'EOF' >> build.sh
           log "\n**Notes:**"
