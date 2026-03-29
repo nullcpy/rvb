@@ -1,6 +1,6 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
-RVPATH=/data/adb/rvhc/${MODDIR##*/}.apk
+RVPATH=/data/adb/rvpnm/${MODDIR##*/}.apk
 . "$MODDIR/config"
 
 err() {
