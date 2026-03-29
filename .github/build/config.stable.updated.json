@@ -82,7 +82,7 @@
     "uptodown-dlurl": "https://spotify.en.uptodown.com/android"
   },
   "twitter-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "arch": "both",
@@ -93,7 +93,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -103,7 +103,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -114,7 +114,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -124,7 +124,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "podcast-addict-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -133,7 +133,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "proton-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -142,7 +142,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "duolingo-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -170,7 +170,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "icon-packer-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -406,7 +406,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-nord",
     "build-mode": "both",
@@ -417,7 +417,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-mocha",
     "build-mode": "both",
@@ -450,7 +450,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -460,7 +460,7 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android"
   },
   "youtube-music-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -471,7 +471,7 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android"
   },
   "twitter-morphe-materialu": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "arch": "both",
@@ -482,7 +482,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "reddit-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
