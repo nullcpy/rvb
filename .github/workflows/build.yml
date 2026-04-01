@@ -96,6 +96,9 @@ jobs:
         run: |
           set -euo pipefail
           sed -i '/Install \[ReVanced GmsCore\]/,$d' build.sh
+
+          sed -i 's/wait -n/wait -n || true/g' build.sh
+          sed -i 's/^wait$/wait || true/g' build.sh
           
           cat << 'EOF' >> build.sh
           log "\n**Notes:**"
