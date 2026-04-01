@@ -182,7 +182,7 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 
 [google-news-morphe]
-enabled = false
+enabled = true
 app-name = "google-news"
 rv-brand = "morphe"
 arch = "both"
