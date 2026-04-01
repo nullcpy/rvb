@@ -131,6 +131,16 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
+[threads-morphe]
+enabled = true
+app-name = "threads"
+rv-brand = "morphe"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://threads.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+
 [soundcloud-morphe]
 enabled = true
 app-name = "soundcloud"
