@@ -150,6 +150,19 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
+[google-recorder-morphe]
+enabled = true 
+app-name = "google-recorder"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+# dpi = "480-640dpi 120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
 [rar-morphe]
 enabled = true
 app-name = "rar"
