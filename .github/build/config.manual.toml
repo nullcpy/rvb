@@ -1,27 +1,17 @@
 parallel-jobs = 1
-# patches-version = "dev"
-# cli-version = "dev"
+patches-version = "dev"
+cli-version = "dev"
 enable-module-update = true
 
-[google-photos-morphe]
+[instagram-morphe]
 enabled = true
-app-name = "google-photos"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
-
-[messenger-morphe]
-enabled = true
-app-name = "messenger"
+app-name = "instagram"
 rv-brand = "morphe"
 arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
+patches-source = "crimera/piko"
+patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
