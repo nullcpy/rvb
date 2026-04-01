@@ -92,8 +92,8 @@ get_prebuilts() {
 		if [ -z "$file" ]; then
 			local resp asset name
 			resp=$(gh_req "$rv_rel" -) || return 1
-			tag_name=$(jq -r '.tag_name' <<<"$resp")
-			matches=$(jq -e '.assets | map(select(.name | (endswith("asc") or endswith("json")) | not))' <<<"$resp")
+			tag_name=$(jq -r '.tag_name' <<<"$resp") || return 1
+			matches=$(jq -e '.assets | map(select(.name | (endswith("asc") or endswith("json")) | not))' <<<"$resp") || return 1
 			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
 				local matches_new
 				matches_new=$(jq -e -r 'map(select(.name | contains("-dev") | not))' <<<"$matches")
@@ -228,7 +228,7 @@ _req() {
 		mv -f "$dlp" "$op"
 	fi
 }
-req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
+req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
@@ -271,7 +271,7 @@ get_patch_last_supported_ver() {
 		fi
 	fi
 	op=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name") || return 1
-	op=$(tail -n +3 <<<"$op" | awk '{$1=$1}1')
+	op=$(sed -n '/(.* patch.*/,$p' <<<"$op" | awk '{$1=$1}1')
 	if [ "$op" = "Any" ]; then return; fi
 	pcount=$(head -1 <<<"$op") pcount=${pcount#*(} pcount=${pcount% *}
 	if [ -z "$pcount" ]; then
@@ -729,9 +729,9 @@ MODULE_ARCH=$ma" >"$1/config"
 module_prop() {
 	echo "id=${1}
 name=${2}
-version=v${3}
+version=${3}
 versionCode=${NEXT_VER_CODE}
-author=j-hc
+author=peternmuller
 description=${4}" >"${6}/module.prop"
 
 	if [ "$ENABLE_MODULE_UPDATE" = true ]; then echo "updateJson=${5}" >>"${6}/module.prop"; fi
