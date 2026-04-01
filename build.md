@@ -10,5 +10,5 @@ icon-packer-morphe: 1.21.0-release
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/s/rvb28) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.6.3-all.jar  
-Patches: hoo-dles/patches-1.17.0.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.17.0)  
+Patches: hoo-dles/patches-1.18.0.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.18.0)  
