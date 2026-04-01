@@ -124,7 +124,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -133,7 +133,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -142,7 +142,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -151,7 +151,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -161,7 +161,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "messenger-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "messenger",
     "rv-brand": "morphe",
     "arch": "both",
@@ -170,7 +170,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "icon-packer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
     "patches-source": "hoo-dles/morphe-patches",
@@ -313,7 +313,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "threads-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "threads",
     "rv-brand": "morphe",
     "arch": "both",
@@ -323,7 +323,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "soundcloud-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "soundcloud",
     "rv-brand": "morphe",
     "patches-source": "RookieEnough/De-ReVanced",
@@ -331,7 +331,7 @@
     "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-mail",
     "rv-brand": "morphe",
     "patches-source": "RookieEnough/De-ReVanced",
@@ -340,7 +340,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "google-recorder-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-recorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -351,7 +351,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "rar-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rar",
     "rv-brand": "morphe",
     "arch": "both",
@@ -360,7 +360,7 @@
     "uptodown-dlurl": "https://rar-for-android.en.uptodown.com/android"
   },
   "microsoft-lens-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "arch": "both",
@@ -369,7 +369,7 @@
     "uptodown-dlurl": "https://office-lens.en.uptodown.com/android"
   },
   "google-news-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-news",
     "rv-brand": "morphe",
     "arch": "both",
