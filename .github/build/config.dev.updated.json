@@ -84,7 +84,7 @@
     "uptodown-dlurl": "https://spotify.en.uptodown.com/android"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "arch": "both",
@@ -153,7 +153,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -163,7 +163,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "messenger-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "messenger",
     "rv-brand": "morphe",
     "arch": "both",
