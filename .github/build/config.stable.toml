@@ -454,3 +454,15 @@ build-mode = "apk"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
+
+[photomath-morphe]
+enabled = true
+app-name = "photomath"
+rv-brand = "morphe"
+build-mode = "apk"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+
+
+
