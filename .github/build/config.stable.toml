@@ -379,3 +379,12 @@ uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
 
+[gboard-morphe]
+enabled = true
+app-name = "gboard"
+rv-brand = "morphe"
+arch = "arm64-v8a"
+patches-source = "jkennethcarino/adobo"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+
