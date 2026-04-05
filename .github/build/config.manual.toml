@@ -1,18 +1,59 @@
 parallel-jobs = 1
-patches-version = "dev"
-cli-version = "dev"
+# patches-version = "dev"
+# cli-version = "dev"
 enable-module-update = false
 
-[twitter-morphe]
+[instagram-morphe]
 enabled = true 
-app-name = "twitter"
+app-name = "instagram"
+rv-brand = "morphe"
+patches-source = "crimera/piko"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+
+[messenger-morphe]
+enabled = true
+app-name = "messenger"
 rv-brand = "morphe"
 arch = "both"
-build-mode = "both"
-patches-source = "crimera/piko"
-patcher-args = "--continue-on-error"
+version = "552.0.0.44.65"
+patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi 480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+
+[wps-office-morphe]
+enabled = true
+app-name = "wps-office"
+rv-brand = "morphe"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+version = "18.12.1"
+uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
+
+[cricbuzz-morphe]
+enabled = true
+app-name = "cricbuzz"
+rv-brand = "morphe"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
+
+[wallcraft-morphe]
+enabled = true
+app-name = "wallcraft"
+rv-brand = "morphe"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://wallpaperscraft.en.uptodown.com/android"
+
+[solid-explorer-morphe]
+enabled = true
+app-name = "solid-explorer"
+rv-brand = "morphe"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
+
+
