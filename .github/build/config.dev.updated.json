@@ -38,6 +38,7 @@
     "enabled": false,
     "app-name": "messenger",
     "rv-brand": "revanced",
+    "build-mode": "apk",
     "arch": "both",
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
@@ -70,6 +71,7 @@
     "enabled": false,
     "app-name": "reddit",
     "rv-brand": "anddea",
+    "build-mode": "apk",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
@@ -78,13 +80,14 @@
     "enabled": false,
     "app-name": "spotify",
     "rv-brand": "anddea",
+    "build-mode": "apk",
     "arch": "both",
     "patches-source": "anddea/revanced-patches",
     "cli-source": "inotia00/revanced-cli",
     "uptodown-dlurl": "https://spotify.en.uptodown.com/android"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "arch": "both",
@@ -95,7 +98,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -105,7 +108,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -116,7 +119,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -129,6 +132,7 @@
     "enabled": false,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
+    "build-mode": "apk",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://podcast-addict.en.uptodown.com/android",
@@ -138,6 +142,7 @@
     "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
+    "build-mode": "apk",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://protonvpn.en.uptodown.com/android",
@@ -147,6 +152,7 @@
     "enabled": false,
     "app-name": "duolingo",
     "rv-brand": "morphe",
+    "build-mode": "apk",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
@@ -162,19 +168,11 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
-  "messenger-morphe": {
-    "enabled": false,
-    "app-name": "messenger",
-    "rv-brand": "morphe",
-    "arch": "both",
-    "patches-source": "RookieEnough/De-ReVanced",
-    "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
-  },
   "icon-packer-morphe": {
     "enabled": false,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
+    "build-mode": "apk",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"

@@ -20,7 +20,7 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.22.0",
-    "prerelease": "v1.23.0-dev.5",
+    "prerelease": "v1.23.0-dev.6",
     "blocked": false
   },
   "rvx": {
@@ -44,12 +44,16 @@
   },
   "adobo": {
     "enabledDev": false,
-    "repo": "jkennethcarino/adobo"
+    "repo": "jkennethcarino/adobo",
+    "stable": "v1.0.0",
+    "prerelease": "v1.1.0-dev.6",
+    "blocked": false
   },
   "rvexp": {
     "enabledDev": false,
-    "repo": "Aunali321/ReVancedExperiments"
+    "repo": "Aunali321/ReVancedExperiments",
+    "stable": "v2.0.0",
+    "prerelease": "v2.0.0-dev.1",
+    "blocked": false
   }
 }
-
-
