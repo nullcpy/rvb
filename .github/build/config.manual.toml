@@ -1,7 +1,7 @@
 parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
 [messenger-morphe]
 enabled = true
