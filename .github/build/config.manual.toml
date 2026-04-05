@@ -1,51 +1,16 @@
 parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = true
+enable-module-update = false
 
-[messenger-morphe]
+[photomath-morphe]
 enabled = true
-app-name = "messenger"
+app-name = "photomath"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
-version = "552.0.0.44.65"
 patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
+uptodown-dlurl = "https://photomath.en.uptodown.com/android"
 
-[youtube-anddea]
-enabled = true
-app-name = "youtube"
-rv-brand = "anddea"
-build-mode = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-cli"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[youtube-rvx]
-enabled = true
-app-name = "youtube"
-rv-brand = "rvx"
-build-mode = "both"
-patches-source = "wchill/rvx-morphed"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-morphe]
-enabled = true
-app-name = "youtube"
-rv-brand = "morphe"
-build-mode = "both"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
