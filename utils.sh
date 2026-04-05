@@ -6,6 +6,8 @@ TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
 DL_SRCS=("direct" "archive" "apkmirror" "uptodown")
+BUILD_JSON_FILE="build.json"
+PATCH_OUTPUT=""
 
 if [ "${GITHUB_TOKEN-}" ]; then GH_HEADER="Authorization: token ${GITHUB_TOKEN}"; else GH_HEADER=; fi
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
@@ -112,7 +114,9 @@ get_prebuilts() {
 			name=$(jq -r .name <<<"$asset")
 			file="${dir}/${name}"
 			gh_dl "$file" "$url" >&2 || return 1
+			if [ "$tag" = "Patches" ]; then
 			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
+			fi
 		else
 			grab_cl=false
 			local for_err=$file
@@ -228,7 +232,7 @@ _req() {
 		mv -f "$dlp" "$op"
 	fi
 }
-req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0"; }
+req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
@@ -275,7 +279,7 @@ get_patch_last_supported_ver() {
 	if [ "$op" = "Any" ]; then return; fi
 	pcount=$(head -1 <<<"$op") pcount=${pcount#*(} pcount=${pcount% *}
 	if [ -z "$pcount" ]; then
-		abort "No patches found for '$pkg_name' in patches '$patches_jar'"
+		return
 	fi
 	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | get_highest_ver || return 1
 }
@@ -504,7 +508,7 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5
 	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -o '$patched_apk' -p '$patches_jar' --keystore=ks.keystore \
---keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
+--keystore-entry-password=ReVanced --keystore-password=ReVanced --signer=ReVanced --keystore-entry-alias=ReVanced $patcher_args"
 
 	# TODO: remove this later
 	local cli_name
@@ -513,7 +517,10 @@ patch_apk() {
 
 	if [ "$OS" = Android ]; then cmd+=" --custom-aapt2-binary='${AAPT2}'"; fi
 	pr "$cmd"
-	if eval "$cmd"; then [ -f "$patched_apk" ]; else
+	PATCH_OUTPUT=$(eval "$cmd" 2>&1)
+	local ret=$?
+	echo "$PATCH_OUTPUT"
+	if [ $ret -eq 0 ]; then [ -f "$patched_apk" ]; else
 		rm "$patched_apk" 2>/dev/null || :
 		return 1
 	fi
@@ -527,6 +534,20 @@ check_sig() {
 		echo "$pkg_name signature: ${sig}"
 		grep -qFx "$sig $pkg_name" sig.txt
 	fi
+}
+
+write_build_info() {
+	local key=$1 variant=$2 name=$3 version=$4 patches=$5 changelog=$6
+	jq --arg key "$key" \
+		--arg variant "$variant" \
+		--arg name "$name" \
+		--arg version "$version" \
+		--arg patches "$patches" \
+		--arg changelog "$changelog" \
+		--argjson applied "$(echo "$PATCH_OUTPUT" | grep -oP 'INFO: "\K[^"]+(?=" succeeded)' | jq -R -s -c 'split("\n") | map(select(length > 0))')" \
+		'if has($key) then .[$key].variants = (.[$key].variants + [$variant] | unique) else .[$key] = {variants: [$variant], name: $name, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
+		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
+	log "${key} (${variant}): ${version}"
 }
 
 build_rv() {
@@ -626,7 +647,6 @@ build_rv() {
 		epr "Not building $table, apk signature mismatch '$stock_apk': $OP"
 		return 0
 	fi
-	log "${table}: ${version}"
 
 	local microg_patch
 	microg_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" || :) microg_patch=${microg_patch#*: }
@@ -638,6 +658,8 @@ build_rv() {
 	local patcher_args patched_apk build_mode
 	local rv_brand_f=${args[rv_brand],,}
 	rv_brand_f=${rv_brand_f// /-}
+	local patches_ref="${args[patches_ref]}"
+	local changelog_url="${args[changelog_url]}"
 	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
 	for build_mode in "${build_mode_arr[@]}"; do
 		patcher_args=("${p_patcher_args[@]}")
@@ -683,6 +705,7 @@ build_rv() {
 			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
 			mv -f "$patched_apk" "$apk_output"
 			pr "Built ${table} (non-root): '${apk_output}'"
+			write_build_info "${table% (*}" "${arch_f}.apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
 			continue
 		fi
 		local base_template
@@ -709,6 +732,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
+		write_build_info "${table% (*}" "${arch_f}.zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
 	done
 }
 
@@ -729,9 +753,9 @@ MODULE_ARCH=$ma" >"$1/config"
 module_prop() {
 	echo "id=${1}
 name=${2}
-version=${3}
+version=v${3}
 versionCode=${NEXT_VER_CODE}
-author=peternmuller
+author=j-hc
 description=${4}" >"${6}/module.prop"
 
 	if [ "$ENABLE_MODULE_UPDATE" = true ]; then echo "updateJson=${5}" >>"${6}/module.prop"; fi
