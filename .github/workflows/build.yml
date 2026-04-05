@@ -98,6 +98,11 @@ jobs:
           
           sed -i '/log "\\n"/,$d' build.sh
 
+          sed -i 's/keystore-entry-password=ReVanced/keystore-entry-password=123456789/g' utils.sh
+          sed -i 's/keystore-password=ReVanced/keystore-password=123456789/g' utils.sh
+          sed -i 's/signer=ReVanced/signer=jhc/g' utils.sh
+          sed -i 's/keystore-entry-alias=ReVanced/keystore-entry-alias=jhc/g' utils.sh
+
           sed -i 's/wait -n/wait -n || true/g' build.sh
           
           cat << 'EOF' >> build.sh
