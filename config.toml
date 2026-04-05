@@ -184,17 +184,6 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[messenger-morphe]
-enabled = true
-app-name = "messenger"
-rv-brand = "morphe"
-arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
-
 [icon-packer-morphe]
 enabled = true
 app-name = "icon-packer"
