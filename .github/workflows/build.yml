@@ -87,7 +87,7 @@ jobs:
           TAG=$( { gh release list --exclude-drafts -L 100 2>/dev/null || true; } | awk -F '\t' '$3 ~ /^[0-9]+$/ {print $3}' | sort -nr | head -n1 )
           if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
-
+      
       - name: Build modules and apks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -95,16 +95,16 @@ jobs:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
         run: |
           set -euo pipefail
-          sed -i '/Install \[ReVanced GmsCore\]/,$d' build.sh
+          
+          sed -i '/log "\\n"/,$d' build.sh
 
           sed -i 's/wait -n/wait -n || true/g' build.sh
-          sed -i 's/^wait$/wait || true/g' build.sh
           
           cat << 'EOF' >> build.sh
           log "\n**Notes:**"
           log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
           log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
-          log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/s/rvb28) | [Website](https://nullcpy.github.io)\n"
+          log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)\n"
           
           changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
           changelog_merged=$(awk '
