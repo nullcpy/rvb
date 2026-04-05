@@ -41,5 +41,15 @@
     "stable": "v1.19.0",
     "prerelease": "v1.20.0-dev.2",
     "blocked": false
+  },
+  "adobo": {
+    "enabledDev": false,
+    "repo": "jkennethcarino/adobo"
+  },
+  "rvexp": {
+    "enabledDev": false,
+    "repo": "Aunali321/ReVancedExperiments"
   }
 }
+
+
