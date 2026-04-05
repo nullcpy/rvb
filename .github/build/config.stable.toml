@@ -397,8 +397,7 @@ version = "552.0.0.44.65"
 patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
 
 [gboard-morphe]
 enabled = true
