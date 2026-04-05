@@ -353,7 +353,29 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
+[telegram-revanced-gplay]
+enabled = true 
+app-name = "telegram"
+rv-brand = "revanced-gplay"
+patches-source = "Aunali321/ReVancedExperiments"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
 
+[telegram-revanced-foss]
+enabled = true 
+app-name = "telegram"
+rv-brand = "revanced-foss"
+patches-source = "Aunali321/ReVancedExperiments"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 
-
+[messenger-morphe]
+enabled = true
+app-name = "messenger"
+rv-brand = "morphe"
+arch = "both"
+version = "552.0.0.44.65"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# dpi = "360-480dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
 
