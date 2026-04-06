@@ -178,6 +178,18 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
+      - name: Update readme with applied patch list and download links
+        run: |
+          python3 update-readme.py ${{ steps.version.outputs.NEXT_VER_CODE }}
+
+      - name: Commit updated readme
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: main
+          skip_checkout: true
+          file_pattern: README.md
+          commit_message: "docs: auto-update README links and patch list [skip ci]"
+
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
