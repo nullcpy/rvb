@@ -37,20 +37,29 @@ pmex() {
 	return $RET
 }
 
-if ! pmex path "$PKG_NAME" >&2; then
-	if pmex install-existing "$PKG_NAME" >&2; then
-		pmex uninstall-system-updates "$PKG_NAME"
+if pmex path "$PKG_NAME" >&2; then
+	pmex uninstall-system-updates "$PKG_NAME" >/dev/null 2>&1
+else
+	if pmex install-existing "$PKG_NAME" >/dev/null 2>&1; then
+		pmex uninstall-system-updates "$PKG_NAME" >/dev/null 2>&1
 	fi
 fi
 
-IS_SYS=false
 INS=true
 if BASEPATH=$(pmex path "$PKG_NAME"); then
 	echo >&2 "'$BASEPATH'"
 	BASEPATH=${BASEPATH##*:} BASEPATH=${BASEPATH%/*}
 	if [ "${BASEPATH:1:4}" != data ]; then
-		ui_print "* $PKG_NAME is a system app."
-		IS_SYS=true
+		ui_print "* Detected $PKG_NAME as a system app"
+		SCNM="/data/adb/post-fs-data.d/$PKG_NAME-uninstall.sh"
+		mkdir -p /data/adb/post-fs-data.d
+		echo "mount -t tmpfs none $BASEPATH" >"$SCNM"
+		chmod +x "$SCNM"
+		ui_print "* Created the uninstall script."
+		ui_print ""
+		ui_print "* Reboot and reflash the module!"
+
+		abort
 	elif [ ! -f "$MODPATH/$PKG_NAME.apk" ]; then
 		ui_print "* Stock $PKG_NAME APK was not found"
 		VERSION=$(dumpsys package "$PKG_NAME" 2>&1 | grep -m1 versionName) VERSION="${VERSION#*=}"
@@ -96,33 +105,15 @@ install() {
 		if ! op=$(pmex install-commit "$SES"); then
 			ui_print "$op"
 			if echo "$op" | grep -q -e INSTALL_FAILED_VERSION_DOWNGRADE -e INSTALL_FAILED_UPDATE_INCOMPATIBLE; then
-				ui_print "* Handling install error"
-				pmex uninstall-system-updates "$PKG_NAME"
-				if BASEPATH=$(pmex path "$PKG_NAME"); then
-					BASEPATH=${BASEPATH##*:} BASEPATH=${BASEPATH%/*}
-					if [ "${BASEPATH:1:4}" != data ]; then IS_SYS=true; fi
-				fi
-				if [ "$IS_SYS" = true ]; then
-					SCNM="/data/adb/post-fs-data.d/$PKG_NAME-uninstall.sh"
-					mkdir -p /data/adb/post-fs-data.d
-					echo "mount -t tmpfs none $BASEPATH" >"$SCNM"
-					chmod +x "$SCNM"
-					ui_print "* Created the uninstall script."
-					ui_print ""
-					ui_print "* Reboot and reflash the module!"
-					install_err=" "
-					break
-				else
-					ui_print "* Uninstalling..."
-					if ! op=$(pmex uninstall -k --user 0 "$PKG_NAME"); then
-						ui_print "$op"
-						if [ $IT = 2 ]; then
-							install_err="ERROR: pm uninstall failed."
-							break
-						fi
+				ui_print "* Uninstalling..."
+				if ! op=$(pmex uninstall -k --user 0 "$PKG_NAME"); then
+					ui_print "$op"
+					if [ $IT = 2 ]; then
+						install_err="ERROR: pm uninstall failed."
+						break
 					fi
-					continue
 				fi
+				continue
 			fi
 			ui_print "ERROR: install-commit failed"
 			install_err="$op"
