@@ -81,7 +81,7 @@ install() {
 	settings put global package_verifier_enable 0
 	SZ=$(stat -c "%s" "$MODPATH/$PKG_NAME.apk")
 	for IT in 1 2; do
-		if ! SES=$(pmex install-create --user 0 -i com.android.vending -r -d -S "$SZ"); then
+		if ! SES=$(pmex install-create --user 0 -i com.android.vending -r -S "$SZ"); then
 			ui_print "ERROR: install-create failed"
 			install_err="$SES"
 			break
@@ -104,14 +104,8 @@ install() {
 				fi
 				if [ "$IS_SYS" = true ]; then
 					SCNM="/data/adb/post-fs-data.d/$PKG_NAME-uninstall.sh"
-					if [ -f "$SCNM" ]; then
-						ui_print "* Remove the old module. Reboot and reflash!"
-						ui_print ""
-						install_err=" "
-						break
-					fi
-					mkdir -p /data/adb/rvhc/empty /data/adb/post-fs-data.d
-					echo "mount -o bind /data/adb/rvhc/empty $BASEPATH" >"$SCNM"
+					mkdir -p /data/adb/post-fs-data.d
+					echo "mount -t tmpfs none $BASEPATH" >"$SCNM"
 					chmod +x "$SCNM"
 					ui_print "* Created the uninstall script."
 					ui_print ""
@@ -145,8 +139,7 @@ install() {
 	settings put global verifier_verify_adb_installs "$VERIF1"
 	settings put global package_verifier_enable "$VERIF2"
 	if [ "$install_err" ]; then
-		ui_print "$install_err"
-		abort "ERROR: disable the module, reboot, install $PKG_NAME manually and reflash again"
+		abort "$install_err"
 	fi
 }
 if [ $INS = true ] && ! install; then abort; fi
