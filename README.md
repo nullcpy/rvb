@@ -886,7 +886,7 @@
 
 ---
 
-### 💖 Credits & Acknowledgements
+## 💖 Credits & Acknowledgements
 
 This automated builder would not be possible without the incredible work and dedication of the open-source Android community. A massive thank you to:
 
