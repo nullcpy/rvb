@@ -40,10 +40,10 @@
 
 <details>
   <summary id="youtube-morphe">
-    <b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat">
+    <b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat">
   </summary>
   
-  [arm64-v8a.apk](../../releases/download/v0/youtube-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-module-v0.0.0-arm-v7a.zip)
+  [arm64-v8a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 
   <blockquote>
   (Changelog will be generated here)
@@ -170,10 +170,10 @@
 
 <details>
   <summary id="youtube-music-morphe">
-    <b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat">
+    <b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat">
   </summary>
   
-  [arm64-v8a.apk](../../releases/download/v0/youtube-music-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-morphe-module-v0.0.0-arm-v7a.zip)
+  [arm64-v8a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 
   <blockquote>
   (Changelog will be generated here)
