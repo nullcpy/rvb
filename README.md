@@ -264,11 +264,79 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.13.163-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-morphe-exp-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-exp-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-exp-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-exp-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/86)<br>
+Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+- Alternative thumbnails
+- Ambient mode
+- Bypass URL redirects
+- Bypass image region restrictions
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music actions
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
@@ -565,11 +633,37 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v9.12.51-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-morphe-exp-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-morphe-exp-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-morphe-exp-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-morphe-exp-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/86)<br>
+Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+- Bypass certificate checks
+- Change header
+- Change miniplayer color
+- Change start page
+- Check watch history domain name resolution
+- Custom branding
+- Disable DRC audio
+- Disable QUIC protocol
+- Enable debugging
+- Enable exclusive audio playback
+- Enable forced miniplayer
+- Force original audio
+- GmsCore support
+- Hide 'Get Music Premium'
+- Hide buttons
+- Hide category bar
+- Hide music video ads
+- Miniplayer previous and next buttons
+- Navigation bar
+- Permanent repeat
+- Remove background playback restrictions
+- Sanitize sharing links
+- Spoof video streams
+- Theme
 </blockquote>
 </details>
 
