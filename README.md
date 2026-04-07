@@ -535,7 +535,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitch-revanced"><img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=Twitch&logoColor=white&style=flat"></summary>
+<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=Twitch&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
