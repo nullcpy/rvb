@@ -41,11 +41,11 @@
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/81/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/youtube-morphe-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/81)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -95,9 +95,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 - Open system share sheet
 - Open videos fullscreen
 - Override YouTube Music actions
-- Play all
 - Playback speed
-- Reload video
 - Remove background playback restrictions
 - Remove viewer discretion dialog
 - Return YouTube Dislike
@@ -107,29 +105,161 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 - SponsorBlock
 - Spoof app version
 - Spoof device dimensions
-- Spoof video streams
 - Swipe controls
 - Theme
 - Video ads
 - Video quality
+- Reload video
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-morphe-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-nord-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
+- Alternative thumbnails
+- Ambient mode
+- Bypass URL redirects
+- Bypass image region restrictions
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music actions
+- Playback speed
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
+- Reload video
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-morphe-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-mocha-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
+- Alternative thumbnails
+- Ambient mode
+- Bypass URL redirects
+- Bypass image region restrictions
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music actions
+- Playback speed
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
+- Reload video
 </blockquote>
 </details>
 
@@ -145,29 +275,223 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Alternative thumbnails
+- Ambient mode control
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change player flyout menu toggles
+- Change share sheet
+- Change start page
+- Custom Shorts action buttons
+- Custom double tap length
+- Description components
+- Disable QUIC protocol
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Disable haptic feedback
+- Disable layout updates
+- Disable resuming Miniplayer on startup
+- Disable resuming Shorts on startup
+- Disable sign in to TV popup
+- Disable splash animation
+- Enable debug logging
+- Enable gradient loading screen
+- Force player buttons background
+- Fullscreen components
+- GmsCore support
+- Hide accessibility controls dialog
+- Hide action buttons
+- Hide ads
+- Hide comments components
+- Hide feed components
+- Hide feed flyout menu
+- Hide layout components
+- Hide player buttons
+- Hide player flyout menu
+- Hook YouTube Music actions
+- Hook download actions
+- Miniplayer
+- Navigation bar components
+- Open links externally
+- Overlay buttons
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- Seekbar components
+- Set transcript cookies
+- Shorts components
+- Snack bar components
+- SponsorBlock
+- Spoof app version
+- Spoof watch history
+- Swipe controls
+- Theme
+- Toolbar components
+- Translations for YouTube
+- Video playback
+- Voice Over Translation
+- Visual preferences icons for YouTube
+- Reload video
+- Settings for YouTube
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-anddea-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-nord-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Alternative thumbnails
+- Ambient mode control
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change player flyout menu toggles
+- Change share sheet
+- Change start page
+- Custom Shorts action buttons
+- Custom double tap length
+- Description components
+- Disable QUIC protocol
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Disable haptic feedback
+- Disable layout updates
+- Disable resuming Miniplayer on startup
+- Disable resuming Shorts on startup
+- Disable sign in to TV popup
+- Disable splash animation
+- Enable debug logging
+- Enable gradient loading screen
+- Force player buttons background
+- Fullscreen components
+- GmsCore support
+- Hide accessibility controls dialog
+- Hide action buttons
+- Hide ads
+- Hide comments components
+- Hide feed components
+- Hide feed flyout menu
+- Hide layout components
+- Hide player buttons
+- Hide player flyout menu
+- Hook YouTube Music actions
+- Hook download actions
+- MaterialYou
+- Miniplayer
+- Navigation bar components
+- Open links externally
+- Overlay buttons
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- Seekbar components
+- Set transcript cookies
+- Shorts components
+- Snack bar components
+- SponsorBlock
+- Spoof app version
+- Spoof watch history
+- Swipe controls
+- Theme
+- Toolbar components
+- Translations for YouTube
+- Video playback
+- Voice Over Translation
+- Visual preferences icons for YouTube
+- Reload video
+- Settings for YouTube
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-anddea-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-mocha-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Alternative thumbnails
+- Ambient mode control
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change player flyout menu toggles
+- Change share sheet
+- Change start page
+- Custom Shorts action buttons
+- Custom double tap length
+- Description components
+- Disable QUIC protocol
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Disable haptic feedback
+- Disable layout updates
+- Disable resuming Miniplayer on startup
+- Disable resuming Shorts on startup
+- Disable sign in to TV popup
+- Disable splash animation
+- Enable debug logging
+- Enable gradient loading screen
+- Force player buttons background
+- Fullscreen components
+- GmsCore support
+- Hide accessibility controls dialog
+- Hide action buttons
+- Hide ads
+- Hide comments components
+- Hide feed components
+- Hide feed flyout menu
+- Hide layout components
+- Hide player buttons
+- Hide player flyout menu
+- Hook YouTube Music actions
+- Hook download actions
+- MaterialYou
+- Miniplayer
+- Navigation bar components
+- Open links externally
+- Overlay buttons
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- Seekbar components
+- Set transcript cookies
+- Shorts components
+- Snack bar components
+- SponsorBlock
+- Spoof app version
+- Spoof watch history
+- Swipe controls
+- Theme
+- Toolbar components
+- Translations for YouTube
+- Video playback
+- Voice Over Translation
+- Visual preferences icons for YouTube
+- Reload video
+- Settings for YouTube
 </blockquote>
 </details>
 
@@ -209,11 +533,11 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/81/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/81)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -236,7 +560,6 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 - Permanent repeat
 - Remove background playback restrictions
 - Sanitize sharing links
-- Spoof video streams
 - Theme
 </blockquote>
 </details>
@@ -253,29 +576,134 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Bitrate default value
+- Bypass image region restrictions
+- Certificate spoof
+- Change share sheet
+- Change start page
+- Dark theme
+- Disable Cairo splash animation
+- Disable QUIC protocol
+- Disable dislike redirection
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Enable landscape mode
+- Flyout menu components
+- GmsCore support
+- Hide account components
+- Hide action bar components
+- Hide ads
+- Hide layout components
+- Navigation bar components
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Restore old style library shelf
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- SponsorBlock
+- Spoof app version for lyrics
+- Translations for YouTube Music
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube Music
+- Settings for YouTube Music
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=youtube-music&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=2E3440&logo=youtube-music&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-nord-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Bitrate default value
+- Bypass image region restrictions
+- Certificate spoof
+- Change share sheet
+- Change start page
+- Dark theme
+- Disable Cairo splash animation
+- Disable QUIC protocol
+- Disable dislike redirection
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Enable landscape mode
+- Flyout menu components
+- GmsCore support
+- Hide account components
+- Hide action bar components
+- Hide ads
+- Hide layout components
+- Navigation bar components
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Restore old style library shelf
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- SponsorBlock
+- Spoof app version for lyrics
+- Translations for YouTube Music
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube Music
+- Settings for YouTube Music
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=youtube-music&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=1E1E2E&logo=youtube-music&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-mocha-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Bitrate default value
+- Bypass image region restrictions
+- Certificate spoof
+- Change share sheet
+- Change start page
+- Dark theme
+- Disable Cairo splash animation
+- Disable QUIC protocol
+- Disable dislike redirection
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Enable landscape mode
+- Flyout menu components
+- GmsCore support
+- Hide account components
+- Hide action bar components
+- Hide ads
+- Hide layout components
+- Navigation bar components
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Restore old style library shelf
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- SponsorBlock
+- Spoof app version for lyrics
+- Translations for YouTube Music
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube Music
+- Settings for YouTube Music
 </blockquote>
 </details>
 
@@ -402,11 +830,11 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/81/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/81)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Trending Today shelf
@@ -449,11 +877,14 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="threads-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
+<summary id="threads-morphe">&emsp;<img src="https://img.shields.io/badge/version-v382.0.0.51.85-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/threads-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/threads-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/threads-morphe-v382.0.0.51.85-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/threads-morphe-v382.0.0.51.85-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide ads
 </blockquote>
 </details>
 
@@ -501,11 +932,18 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="messenger-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
+<summary id="messenger-morphe">&emsp;<img src="https://img.shields.io/badge/version-v552.0.0.44.65-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/messenger-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/messenger-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/messenger-morphe-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/messenger-morphe-v552.0.0.44.65-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Disable typing indicator
+- Hide Facebook button
+- Hide inbox ads
+- Hide inbox subtabs
+- Remove Meta AI
 </blockquote>
 </details>
 
@@ -527,20 +965,36 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
 
 <details>
-<summary id="telegram-revanced-gplay"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-revanced-gplay"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/telegram-revanced-gplay-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/telegram-revanced-gplay-v12.6.3-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+- Bypass Integrity
+- Disable Auto Update
+- Download Speed Boost
+- Hide sponsored ads
+- Hide typing indicator
+- Unlock Pro
 </blockquote>
 </details>
 
 <details>
-<summary id="telegram-revanced-foss"><b>FOSS</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-revanced-foss"><b>FOSS</b>&emsp;<img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/telegram-revanced-foss-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/telegram-revanced-foss-v12.6.3-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+- Bypass Integrity
+- Disable Auto Update
+- Download Speed Boost
+- Hide sponsored ads
+- Hide typing indicator
+- Unlock Pro
 </blockquote>
 </details>
 
@@ -551,11 +1005,15 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.70.0.893169212-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/google-photos-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/84/google-photos-morphe-v7.70.0.893169212-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/google-photos-morphe-v7.70.0.893169212-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/google-photos-morphe-module-v7.70.0.893169212-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/google-photos-morphe-module-v7.70.0.893169212-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- GmsCore support
+- Spoof features
 </blockquote>
 </details>
 
@@ -577,11 +1035,16 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2025.05.27.release-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/soundcloud-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/soundcloud-morphe-v2025.05.27-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/soundcloud-morphe-v2025.05.27-release-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Disable telemetry
+- Enable offline sync
+- Hide ads
 </blockquote>
 </details>
 
@@ -620,10 +1083,10 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 <details>
 <summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2026.4-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/podcast-addict-morphe-v2026.4-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/podcast-addict-morphe-v2026.4-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Enable Premium
 - MicroG integration
@@ -637,11 +1100,15 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="proton-mail-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
+<summary id="proton-mail-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.15.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/proton-mail-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-mail-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/proton-mail-morphe-v4.15.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/proton-mail-morphe-v4.15.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Remove 'Sent from' signature
+- Remove free accounts limit
 </blockquote>
 </details>
 
@@ -665,10 +1132,10 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.16.83.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Remove delay
 - Unlock custom DNS
@@ -694,11 +1161,14 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="google-recorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
+<summary id="google-recorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.2.20260118.867906508-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/google-recorder-morphe-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-recorder-morphe-module-v0.0.0-arm64-v8a.zip)
+[arm64-v8a.apk](../../releases/download/84/google-recorder-morphe-v4.2.20260118.867906508-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/84/google-recorder-morphe-module-v4.2.20260118.867906508-arm64-v8a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Remove device restrictions
 </blockquote>
 </details>
 
@@ -741,11 +1211,14 @@ Patches: [jkennethcarino/patches-1.1.0-dev.6.mpp](https://github.com/jkennethcar
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="rar-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF6B00&logo=rar&logoColor=white&style=flat"></summary>
+<summary id="rar-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.20.build131-gray?labelColor=FF6B00&logo=rar&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/rar-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/rar-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/rar-morphe-v7.20.build131-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/rar-morphe-v7.20.build131-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide purchase reminder
 </blockquote>
 </details>
 
@@ -756,11 +1229,14 @@ Patches: [jkennethcarino/patches-1.1.0-dev.6.mpp](https://github.com/jkennethcar
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=D83B01&logo=microsoft&logoColor=white&style=flat"></summary>
+<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=microsoft&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/microsoft-lens-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/microsoft-lens-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide OneDrive migration
 </blockquote>
 </details>
 
@@ -773,10 +1249,10 @@ Patches: [jkennethcarino/patches-1.1.0-dev.6.mpp](https://github.com/jkennethcar
 <details>
 <summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=wpsoffice&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/wps-office-morphe-v18.12.1-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/wps-office-morphe-v18.12.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Disable anti-tamper
 - Enable Pro
@@ -792,10 +1268,10 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=solidexplorer&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Enable Pro
 - MicroG integration
@@ -809,11 +1285,15 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.108.0.644447823-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/google-news-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-news-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Enable CustomTabs
+- GmsCore support
 </blockquote>
 </details>
 
@@ -826,10 +1306,10 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="icon-packer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v1.21.0.release-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Unlock premium features
 </blockquote>
@@ -859,10 +1339,10 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.66.5-gray?labelColor=4DC730&logo=Duolingo&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/duolingo-morphe-v6.66.5-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/duolingo-morphe-v6.66.5-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/duolingo-morphe-v6.66.5-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/duolingo-morphe-v6.66.5-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Disable Login Integrity
 - Enable Premium
@@ -887,11 +1367,16 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=DA2323&logo=google&logoColor=white&style=flat"></summary>
+<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/photomath-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/photomath-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide update popup
+- Spoof device ID
+- Unlock plus
 </blockquote>
 </details>
 
@@ -902,11 +1387,14 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=009270&logo=Cricbuzz&logoColor=white&style=flat"></summary>
+<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=Cricbuzz&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/cricbuzz-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/cricbuzz-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide ads
 </blockquote>
 </details>
 
@@ -919,10 +1407,10 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=wallpaper&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/82/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/82/wallcraft-morphe-v3.61.01-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/wallcraft-morphe-v3.61.01-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/82)<br>
+[Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0)
 - Enable Premium
 </blockquote>
