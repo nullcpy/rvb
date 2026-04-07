@@ -282,7 +282,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="youtube-music-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
