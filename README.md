@@ -42,7 +42,6 @@
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -52,7 +51,6 @@
 <summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-morphe-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-nord-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -62,7 +60,6 @@
 <summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-morphe-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-mocha-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -72,7 +69,6 @@
 <summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-morphe-exp-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-morphe-exp-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-morphe-exp-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-morphe-exp-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -84,7 +80,6 @@
 <summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -94,7 +89,6 @@
 <summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-anddea-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-nord-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -104,7 +98,6 @@
 <summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-anddea-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-anddea-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-anddea-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-anddea-mocha-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -116,7 +109,6 @@
 <summary id="youtube-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -126,7 +118,6 @@
 <summary id="youtube-revanced-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -136,7 +127,6 @@
 <summary id="youtube-revanced-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -152,7 +142,6 @@
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -162,7 +151,6 @@
 <summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-morphe-exp-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-morphe-exp-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-morphe-exp-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-morphe-exp-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -174,7 +162,6 @@
 <summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -184,7 +171,6 @@
 <summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=youtube-music&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-nord-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -194,7 +180,6 @@
 <summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=youtube-music&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-anddea-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-anddea-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-anddea-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-anddea-mocha-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -206,7 +191,6 @@
 <summary id="youtube-music-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -222,7 +206,6 @@
 <summary id="twitter-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -232,7 +215,6 @@
 <summary id="twitter-morphe-materialu"><b>Material You Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-morphe-materialu-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-morphe-materialu-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -244,7 +226,6 @@
 <summary id="twitter-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -260,7 +241,6 @@
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -270,7 +250,6 @@
 <summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/reddit-morphe-exp-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-morphe-exp-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/reddit-morphe-exp-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/reddit-morphe-exp-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -282,7 +261,6 @@
 <summary id="reddit-anddea">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -298,7 +276,6 @@
 <summary id="threads-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/threads-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/threads-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -310,7 +287,6 @@
 <summary id="threads-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -326,7 +302,6 @@
 <summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E4405F&logo=Instagram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/instagram-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/instagram-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -338,7 +313,6 @@
 <summary id="instagram-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E4405F&logo=Instagram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -354,7 +328,6 @@
 <summary id="messenger-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/messenger-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/messenger-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -366,7 +339,6 @@
 <summary id="messenger-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -382,7 +354,6 @@
 <summary id="telegram-revanced-gplay"><b>Google Play Version</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -392,7 +363,6 @@
 <summary id="telegram-revanced-foss"><b>FOSS Version</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -408,7 +378,6 @@
 <summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-photos-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-morphe-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -420,7 +389,6 @@
 <summary id="google-photos-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm-v7a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -436,7 +404,6 @@
 <summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/soundcloud-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -448,7 +415,6 @@
 <summary id="soundcloud-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -464,7 +430,6 @@
 <summary id="twitch-revanced"><img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=Twitch&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -480,7 +445,6 @@
 <summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/podcast-addict-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/podcast-addict-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -496,7 +460,6 @@
 <summary id="proton-mail-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/proton-mail-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-mail-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -508,7 +471,6 @@
 <summary id="proton-mail-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -524,7 +486,6 @@
 <summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/proton-vpn-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-vpn-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -536,7 +497,6 @@
 <summary id="proton-vpn-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -552,7 +512,6 @@
 <summary id="google-recorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-recorder-morphe-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-recorder-morphe-module-v0.0.0-arm64-v8a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -564,7 +523,6 @@
 <summary id="google-recorder-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-recorder-revanced-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-recorder-revanced-module-v0.0.0-arm64-v8a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -580,7 +538,6 @@
 <summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=Google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/gboard-morphe-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/gboard-morphe-module-v0.0.0-arm64-v8a.zip)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -596,7 +553,6 @@
 <summary id="rar-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF6B00&logo=rar&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/rar-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/rar-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -612,7 +568,6 @@
 <summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=D83B01&logo=microsoft&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/microsoft-lens-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/microsoft-lens-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -628,7 +583,6 @@
 <summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=C03426&logo=wpsoffice&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/wps-office-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/wps-office-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -644,7 +598,6 @@
 <summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1976D2&logo=solidexplorer&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/solid-explorer-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/solid-explorer-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -660,7 +613,6 @@
 <summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-news-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-news-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -676,7 +628,6 @@
 <summary id="icon-packer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/icon-packer-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/icon-packer-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -692,7 +643,6 @@
 <summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=adobe-lightroom&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/lightroom-revanced-v0.0.0-arm64-v8a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -708,7 +658,6 @@
 <summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4DC730&logo=Duolingo&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/duolingo-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/duolingo-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -720,7 +669,6 @@
 <summary id="duolingo-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4DC730&logo=Duolingo&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -736,7 +684,6 @@
 <summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=DA2323&logo=google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/photomath-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/photomath-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -752,7 +699,6 @@
 <summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=009270&logo=Cricbuzz&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/cricbuzz-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/cricbuzz-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -768,7 +714,6 @@
 <summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E88E5&logo=wallpaper&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/wallcraft-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/wallcraft-morphe-v0.0.0-arm-v7a.apk)
-
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -784,5 +729,6 @@ This automated builder would not be possible without the incredible work and ded
 * **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-ReVanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
 
 *If you enjoy using these builds, please consider starring their upstream repositories and supporting the original patch developers!*
+
 
 
