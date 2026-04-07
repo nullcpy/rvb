@@ -41,9 +41,77 @@
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-morphe-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/81/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/81)<br>
+Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+- Alternative thumbnails
+- Ambient mode
+- Bypass URL redirects
+- Bypass image region restrictions
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music actions
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
@@ -141,9 +209,35 @@
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/78/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/78/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/81/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/81)<br>
+Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+- Bypass certificate checks
+- Change header
+- Change miniplayer color
+- Change start page
+- Check watch history domain name resolution
+- Custom branding
+- Disable DRC audio
+- Disable QUIC protocol
+- Enable debugging
+- Enable exclusive audio playback
+- Enable forced miniplayer
+- Force original audio
+- GmsCore support
+- Hide 'Get Music Premium'
+- Hide buttons
+- Hide category bar
+- Hide music video ads
+- Miniplayer previous and next buttons
+- Navigation bar
+- Permanent repeat
+- Remove background playback restrictions
+- Sanitize sharing links
+- Spoof video streams
+- Theme
 </blockquote>
 </details>
 
@@ -240,9 +334,23 @@
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/81/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/81/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/81/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/81/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/81)<br>
+Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+- Disable modern home
+- Disable screenshot popup
+- Hide Trending Today shelf
+- Hide ads
+- Hide navigation buttons
+- Hide recommended communities shelf
+- Hide sidebar components
+- Open links directly
+- Remove subreddit dialog
+- Sanitize sharing links
+- Show view count
+- Spoof signature
 </blockquote>
 </details>
 
