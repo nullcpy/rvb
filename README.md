@@ -366,7 +366,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="reddit-anddea">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -459,7 +459,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
 
 <details>
-<summary id="telegram-revanced-gplay"><b>Google Play Version</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-revanced-gplay"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-gplay-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -468,7 +468,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="telegram-revanced-foss"><b>FOSS Version</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-revanced-foss"><b>FOSS</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/telegram-revanced-foss-v0.0.0-arm-v7a.apk)
 <blockquote>
