@@ -297,7 +297,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -306,7 +306,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="twitter-morphe-materialu"><b>Material You Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-morphe-materialu-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-morphe-materialu-v0.0.0-arm-v7a.apk)
 <blockquote>
