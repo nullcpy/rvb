@@ -68,7 +68,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "arch": "both",
@@ -120,7 +120,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "gboard-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
