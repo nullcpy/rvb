@@ -7,46 +7,45 @@
   },
   "derevanced": {
     "repo": "RookieEnough/De-ReVanced",
-    "stable": "v1.0.3",
+    "stable": "",
     "prerelease": "v1.0.3-dev.1",
     "blocked": false
   },
   "anddea": {
     "repo": "anddea/revanced-patches",
-    "stable": "v4.0.0",
+    "stable": "",
     "prerelease": "v4.0.0-dev.13",
     "blocked": false
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
-    "stable": "v1.22.0",
+    "stable": "",
     "prerelease": "v1.23.0-dev.8",
     "blocked": false
   },
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.1.0",
-    "prerelease": "v3.2.0-dev.3",
+    "prerelease": "",
     "blocked": false
   },
   "hoodles": {
     "enabledDev": false,
     "repo": "hoo-dles/morphe-patches",
-    "stable": "v1.21.0",
+    "stable": "",
     "prerelease": "v1.21.0-dev.2",
     "blocked": false
   },
   "adobo": {
-    "enabledDev": false,
     "repo": "jkennethcarino/adobo",
     "stable": "v1.0.0",
-    "prerelease": "v1.1.0-dev.6",
+    "prerelease": "",
     "blocked": false
   },
   "rvexp": {
     "enabledDev": false,
     "repo": "Aunali321/ReVancedExperiments",
-    "stable": "v2.0.0",
+    "stable": "",
     "prerelease": "v2.0.0-dev.1",
     "blocked": false
   }
