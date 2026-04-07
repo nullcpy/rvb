@@ -517,7 +517,7 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5
 	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -o '$patched_apk' -p '$patches_jar' --keystore=ks.keystore \
---keystore-entry-password=ReVanced --keystore-password=ReVanced --signer=ReVanced --keystore-entry-alias=ReVanced $patcher_args"
+--keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
 
 	# TODO: remove this later
 	local cli_name
@@ -546,9 +546,9 @@ check_sig() {
 }
 
 write_build_info() {
-	local key=$1 variant=$2 name=$3 version=$4 patches=$5 changelog=$6
+	local key=$1 arch=$2 ext=$3 name=$4 version=$5 patches=$6 changelog=$7
 	jq --arg key "$key" \
-		--arg variant "$variant" \
+		--arg variant "${arch}${ext}" \
 		--arg name "$name" \
 		--arg version "$version" \
 		--arg patches "$patches" \
@@ -556,7 +556,9 @@ write_build_info() {
 		--argjson applied "$(echo "$PATCH_OUTPUT" | grep -oP 'INFO: "\K[^"]+(?=" succeeded)' | jq -R -s -c 'split("\n") | map(select(length > 0))')" \
 		'if has($key) then .[$key].variants = (.[$key].variants + [$variant] | unique) else .[$key] = {variants: [$variant], name: $name, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
 		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
-	log "${key} (${variant}): ${version}"
+	if [ "$ext" = ".apk" ] || [ "$mode_arg" = module ]; then
+		log "${key} (${arch}): ${version}"
+	fi
 }
 
 build_rv() {
@@ -714,7 +716,7 @@ build_rv() {
 			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
 			mv -f "$patched_apk" "$apk_output"
 			pr "Built ${table} (non-root): '${apk_output}'"
-			write_build_info "${table% (*}" "${arch_f}.apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
+			write_build_info "${table% (*}" "${arch_f}" ".apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
 			continue
 		fi
 		local base_template
@@ -741,7 +743,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
-		write_build_info "${table% (*}" "${arch_f}.zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
+		write_build_info "${table% (*}" "${arch_f}" ".zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
 	done
 }
 
