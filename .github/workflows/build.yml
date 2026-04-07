@@ -95,8 +95,6 @@ jobs:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
         run: |
           set -euo pipefail
-
-          sed -i 's/log "${key} (${variant}): ${version}"/grep -q "${key} (${variant%.*}): ${version}" build.md || log "${key} (${variant%.*}): ${version}"/g' utils.sh
           
           sed -i '/log "\\n"/,$d' build.sh
 
