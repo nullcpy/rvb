@@ -296,10 +296,10 @@
 
 <details>
   <summary id="reddit-morphe">
-    <b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat">
+    <b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat">
   </summary>
   
-  [arm64-v8a.apk](../../releases/download/v0/reddit-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/reddit-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/reddit-morphe-module-v0.0.0-arm-v7a.zip)
+  [arm64-v8a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/79/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/79/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 
   <blockquote>
   (Changelog will be generated here)
