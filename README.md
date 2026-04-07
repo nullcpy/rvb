@@ -506,7 +506,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 
 ### [SoundCloud](https://play.google.com/store/apps/details?id=com.soundcloud.android)
 
-#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
 <summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
