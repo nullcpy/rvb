@@ -1,7 +1,5 @@
-youtube-morphe (arm64-v8a): 20.45.36  
-youtube-morphe (arm-v7a): 20.45.36  
-youtube-music-morphe (arm64-v8a): 8.44.54  
-youtube-music-morphe (arm-v7a): 8.44.54  
+reddit-morphe (arm64-v8a): 2026.04.0  
+reddit-morphe (arm-v7a): 2026.04.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
