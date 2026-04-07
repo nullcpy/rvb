@@ -178,7 +178,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Update readme with applied patch list and download links
+      - name: Update readme with download links
         run: |
           python3 update-readme.py ${{ steps.version.outputs.NEXT_VER_CODE }}
 
