@@ -297,11 +297,79 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/twitter-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/83/twitter-morphe-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/83/twitter-morphe-v11.79.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/83/twitter-morphe-module-v11.79.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/83/twitter-morphe-module-v11.79.0-release.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/83)<br>
+Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.3)
+- Add ability to copy media link
+- Change app icon
+- Change version code
+- Clear tracking params
+- Control video auto scroll
+- Custom download folder
+- Custom emoji font
+- Custom font
+- Custom sharing domain
+- Customise post font size
+- Customize Inline action Bar items
+- Customize Navigation Bar items
+- Customize default reply sorting
+- Customize explore tabs
+- Customize notification tabs
+- Customize profile tabs
+- Customize search suggestions
+- Customize search tab items
+- Customize side bar items
+- Customize timeline top bar
+- Delete from database
+- Disable auto timeline scroll on launch
+- Disable chirp font
+- Download patch
+- Enable PiP mode automatically
+- Enable Undo Posts
+- Enable debug menu for posts
+- Enable force HD videos
+- Force enable translate
+- Handle custom twitter links
+- Hide Banner
+- Hide Community Notes
+- Hide FAB
+- Hide FAB Menu Buttons
+- Hide Live Threads
+- Hide Recommended Users
+- Hide badges from navigation bar icons
+- Hide bookmark icon in timeline
+- Hide community badges
+- Hide followed by context
+- Hide hidden replies
+- Hide immersive player
+- Hide nudge button
+- Hide post metrics
+- Hide promote button
+- Hide recommendation items
+- Hook feature flag
+- Import/Export login token
+- Legacy share links
+- Log server response
+- Native downloader
+- Native reader mode
+- Native translator
+- No shortened URL
+- Pause search suggestions
+- Remove Ads
+- Remove premium upsell
+- Remove search suggestions
+- Remove view count
+- Round off numbers
+- Selectable Text
+- Share Tweet as Image
+- Show changelogs
+- Show poll results
+- Show post source label
+- Show sensitive media
 </blockquote>
 </details>
 
@@ -652,11 +720,17 @@ Patches: [hoo-dles/patches-1.21.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=Google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.0.12.880768217.release.arm64.v8a-gray?labelColor=4285F4&logo=Google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/gboard-morphe-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/gboard-morphe-module-v0.0.0-arm64-v8a.zip)
+[arm64-v8a.apk](../../releases/download/83/gboard-morphe-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/83/gboard-morphe-module-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/83)<br>
+Patches: [jkennethcarino/patches-1.1.0-dev.6.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.0-dev.6)
+- Always-incognito mode
+- Enable OCR feature
+- Enable Undo feature
+- Enable clipboard in incognito
 </blockquote>
 </details>
 
