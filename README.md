@@ -442,11 +442,15 @@
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
+<summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2026.4-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/podcast-addict-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/podcast-addict-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/80/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/80/podcast-addict-morphe-v2026.4-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-07](../../releases/tag/80)<br>
+Patches: [hoo-dles/patches-1.21.0-dev.2.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.21.0-dev.2)
+- Enable Premium
+- MicroG integration
 </blockquote>
 </details>
 
