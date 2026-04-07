@@ -1,16 +1,18 @@
 parallel-jobs = 1
-# patches-version = "dev"
-# cli-version = "dev"
+patches-version = "dev"
+cli-version = "dev"
 enable-module-update = false
 
-[photomath-morphe]
+[podcast-addict-morphe]
 enabled = true
-app-name = "photomath"
+app-name = "podcast-addict"
 rv-brand = "morphe"
 build-mode = "apk"
-patches-source = "RookieEnough/De-ReVanced"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 
 
