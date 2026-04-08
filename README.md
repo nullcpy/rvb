@@ -824,11 +824,11 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/83/twitter-morphe-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/83/twitter-morphe-v11.79.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/83/twitter-morphe-module-v11.79.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/83/twitter-morphe-module-v11.79.0-release.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/89/twitter-morphe-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/89/twitter-morphe-v11.79.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/89/twitter-morphe-module-v11.79.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/89/twitter-morphe-module-v11.79.0-release.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/83)<br>
-Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.3)
+[Release 2026-04-08](../../releases/tag/89)<br>
+Patches: [crimera/patches-3.2.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.4)
 - Add ability to copy media link
 - Change app icon
 - Change version code
