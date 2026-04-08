@@ -43,7 +43,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -54,7 +54,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -77,7 +77,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -87,7 +87,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -98,7 +98,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -108,7 +108,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -253,7 +253,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "threads-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "threads",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -264,7 +264,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "soundcloud-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "soundcloud",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -273,7 +273,7 @@
     "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-mail",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -283,7 +283,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "google-recorder-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-recorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -294,7 +294,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "rar-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rar",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -304,7 +304,7 @@
     "uptodown-dlurl": "https://rar-for-android.en.uptodown.com/android"
   },
   "microsoft-lens-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -314,7 +314,7 @@
     "uptodown-dlurl": "https://office-lens.en.uptodown.com/android"
   },
   "google-news-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-news",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -325,7 +325,7 @@
     "uptodown-dlurl": "https://google-play-newsstand.en.uptodown.com/android"
   },
   "youtube-anddea-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -337,7 +337,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -349,7 +349,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-anddea-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -361,7 +361,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -373,7 +373,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-nord",
     "build-mode": "both",
@@ -384,7 +384,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-mocha",
     "build-mode": "both",
@@ -417,7 +417,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -427,7 +427,7 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android"
   },
   "youtube-music-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -450,7 +450,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "reddit-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -460,7 +460,7 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "telegram-revanced-gplay": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "revanced-gplay",
     "build-mode": "apk",
@@ -468,7 +468,7 @@
     "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android"
   },
   "telegram-revanced-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "revanced-foss",
     "build-mode": "apk",
@@ -476,7 +476,7 @@
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
   },
   "messenger-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "messenger",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -503,6 +503,7 @@
     "rv-brand": "morphe",
     "build-mode": "apk",
     "patches-source": "crimera/piko",
+    "patcher-args": "--continue-on-error",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
@@ -517,7 +518,7 @@
     "uptodown-dlurl": "https://wps-office.en.uptodown.com/android"
   },
   "cricbuzz-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "cricbuzz",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -544,7 +545,7 @@
     "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android"
   },
   "photomath-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "photomath",
     "rv-brand": "morphe",
     "build-mode": "apk",
