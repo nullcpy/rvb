@@ -41,11 +41,11 @@
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/92/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/92/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/92/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/92/youtube-morphe-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/92)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.11)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -118,11 +118,11 @@ Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morp
 <details>
 <summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-morphe-nord-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-morphe-nord-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-morphe-nord-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-morphe-nord-module-v20.45.36-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
-Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -172,7 +172,9 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Open system share sheet
 - Open videos fullscreen
 - Override YouTube Music actions
+- Play all
 - Playback speed
+- Reload video
 - Remove background playback restrictions
 - Remove viewer discretion dialog
 - Return YouTube Dislike
@@ -182,22 +184,22 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 - SponsorBlock
 - Spoof app version
 - Spoof device dimensions
+- Spoof video streams
 - Swipe controls
 - Theme
 - Video ads
 - Video quality
-- Reload video
 </blockquote>
 </details>
 
 <details>
 <summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-morphe-mocha-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-morphe-mocha-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-morphe-mocha-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-morphe-mocha-module-v20.45.36-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
-Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -247,7 +249,9 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Open system share sheet
 - Open videos fullscreen
 - Override YouTube Music actions
+- Play all
 - Playback speed
+- Reload video
 - Remove background playback restrictions
 - Remove viewer discretion dialog
 - Return YouTube Dislike
@@ -257,22 +261,22 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 - SponsorBlock
 - Spoof app version
 - Spoof device dimensions
+- Spoof video streams
 - Swipe controls
 - Theme
 - Video ads
 - Video quality
-- Reload video
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.13.163-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.14.484-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-morphe-exp-v21.14.484-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-morphe-exp-v21.14.484-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-morphe-exp-module-v21.14.484-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-morphe-exp-module-v21.14.484-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/86)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -603,11 +607,11 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/92/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/92/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/92/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/92/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/92)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.11)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -636,13 +640,13 @@ Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v9.12.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v9.13.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/youtube-music-morphe-exp-v9.13.51-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-music-morphe-exp-module-v9.13.51-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/86)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -997,11 +1001,11 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/92/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/92/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/92/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/92/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/92)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.11)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Trending Today shelf
@@ -1018,13 +1022,13 @@ Patches: [MorpheApp/patches-1.23.0-dev.11.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.11.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.14.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/85/reddit-morphe-exp-v2026.11.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/reddit-morphe-exp-v2026.11.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/85/reddit-morphe-exp-module-v2026.11.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/85/reddit-morphe-exp-module-v2026.11.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/93/reddit-morphe-exp-v2026.14.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/reddit-morphe-exp-v2026.14.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/reddit-morphe-exp-module-v2026.14.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/reddit-morphe-exp-module-v2026.14.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/85)<br>
-Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0-dev.8)
+[Release 2026-04-09](../../releases/tag/93)<br>
+Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Trending Today shelf
@@ -1033,6 +1037,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 - Hide recommended communities shelf
 - Hide sidebar components
 - Open links directly
+- Remove subreddit dialog
 - Sanitize sharing links
 - Show view count
 - Spoof signature
