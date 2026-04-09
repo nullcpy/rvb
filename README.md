@@ -572,7 +572,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -581,7 +581,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -590,7 +590,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -811,7 +811,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -984,7 +984,7 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1046,7 +1046,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
   
 [arm64-v8a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1075,7 +1075,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1126,7 +1126,7 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
   
 [arm64-v8a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1159,7 +1159,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1229,7 +1229,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1260,7 +1260,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1275,7 +1275,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1324,7 +1324,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1355,7 +1355,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 [arm64-v8a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1384,7 +1384,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
   
 [arm64-v8a.apk](../../releases/download/v0/google-recorder-revanced-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-recorder-revanced-module-v0.0.0-arm64-v8a.zip)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1531,7 +1531,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 [arm64-v8a.apk](../../releases/download/v0/lightroom-revanced-v0.0.0-arm64-v8a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
@@ -1561,7 +1561,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 [arm64-v8a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+(Applied Patches)
 </blockquote>
 </details>
 
