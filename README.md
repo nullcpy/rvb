@@ -41,11 +41,11 @@
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/93/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-morphe-module-v20.45.36-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/94/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/94/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/94/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/94/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/93)<br>
-Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
+[Release 2026-04-09](../../releases/tag/94)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.1)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -607,11 +607,11 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/93/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/94/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/94/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/94/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/94/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/93)<br>
-Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
+[Release 2026-04-09](../../releases/tag/94)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -1001,11 +1001,11 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/93/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/93/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/93/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/93/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/94/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/94/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/94/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/94/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/93)<br>
-Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.23.0)
+[Release 2026-04-09](../../releases/tag/94)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.1)
 - Disable modern home
 - Disable screenshot popup
 - Hide Trending Today shelf
