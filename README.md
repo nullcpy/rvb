@@ -39,7 +39,7 @@
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/90/youtube-morphe-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/90/youtube-morphe-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/90/youtube-morphe-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/90/youtube-morphe-module-v20.45.36-arm-v7a.zip)
 <blockquote>
@@ -116,7 +116,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.10.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-nord-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-nord-module-v20.45.36-arm-v7a.zip)
 <blockquote>
@@ -191,7 +191,7 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.45.36-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-morphe-mocha-v20.45.36-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-morphe-mocha-module-v20.45.36-arm-v7a.zip)
 <blockquote>
@@ -266,7 +266,7 @@ Patches: [MorpheApp/patches-1.22.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.13.163-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.13.163-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-morphe-exp-v21.13.163-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-morphe-exp-module-v21.13.163-arm-v7a.zip)
 <blockquote>
@@ -345,7 +345,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm-v7a.zip)
 <blockquote>
@@ -418,7 +418,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm-v7a.zip)
 <blockquote>
@@ -492,7 +492,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm-v7a.zip)
 <blockquote>
@@ -568,7 +568,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="youtube-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=YouTube&logoColor=white&style=flat"></summary>
+<summary id="youtube-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -577,7 +577,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-revanced-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=YouTube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-revanced-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -586,7 +586,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-revanced-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=YouTube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-revanced-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -601,7 +601,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.44.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/90/youtube-music-morphe-v8.44.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/90/youtube-music-morphe-v8.44.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/90/youtube-music-morphe-module-v8.44.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/90/youtube-music-morphe-module-v8.44.54-arm-v7a.zip)
 <blockquote>
@@ -636,7 +636,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.10.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v9.12.51-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v9.12.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/86/youtube-music-morphe-exp-v9.12.51-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/86/youtube-music-morphe-exp-module-v9.12.51-arm-v7a.zip)
 <blockquote>
@@ -673,7 +673,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
 <blockquote>
@@ -717,7 +717,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=2E3440&logo=youtube-music&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=2E3440&logo=youtubemusic&logoColor=88C0D0&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm-v7a.zip)
 <blockquote>
@@ -761,7 +761,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=1E1E2E&logo=youtube-music&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=1E1E2E&logo=youtubemusic&logoColor=F5E0DC&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm-v7a.zip)
 <blockquote>
@@ -807,7 +807,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="youtube-music-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube-music&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -822,7 +822,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/91/twitter-morphe-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/91/twitter-morphe-v11.79.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/91/twitter-morphe-module-v11.79.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/91/twitter-morphe-module-v11.79.0-release.0-arm-v7a.zip)
 <blockquote>
@@ -899,7 +899,7 @@ Patches: [crimera/patches-3.2.0-dev.5.mpp](https://github.com/crimera/piko/relea
 </details>
 
 <details>
-<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/85/twitter-morphe-materialu-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/twitter-morphe-materialu-v11.79.0-release.0-arm-v7a.apk)
 <blockquote>
@@ -980,7 +980,7 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitter-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=X&logoColor=white&style=flat"></summary>
+<summary id="twitter-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -995,7 +995,7 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/90/reddit-morphe-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/90/reddit-morphe-v2026.04.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/90/reddit-morphe-module-v2026.04.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/90/reddit-morphe-module-v2026.04.0-arm-v7a.zip)
 <blockquote>
@@ -1018,7 +1018,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.10.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.11.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.11.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/85/reddit-morphe-exp-v2026.11.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/reddit-morphe-exp-v2026.11.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/85/reddit-morphe-exp-module-v2026.11.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/85/reddit-morphe-exp-module-v2026.11.0-arm-v7a.zip)
 <blockquote>
@@ -1042,7 +1042,7 @@ Patches: [MorpheApp/patches-1.23.0-dev.8.mpp](https://github.com/MorpheApp/morph
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=Reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1086,7 +1086,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=Instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/85/instagram-morphe-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/instagram-morphe-v423.0.0.47.66-arm-v7a.apk)
 <blockquote>
@@ -1122,7 +1122,7 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="instagram-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E4405F&logo=Instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1210,7 +1210,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.70.0.893169212-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.70.0.893169212-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/google-photos-morphe-v7.70.0.893169212-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/google-photos-morphe-v7.70.0.893169212-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/google-photos-morphe-module-v7.70.0.893169212-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/google-photos-morphe-module-v7.70.0.893169212-arm-v7a.zip)
 <blockquote>
@@ -1225,7 +1225,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=google-photos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm-v7a.zip)
 <blockquote>
@@ -1240,7 +1240,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2025.05.27.release-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2025.05.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/soundcloud-morphe-v2025.05.27-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/soundcloud-morphe-v2025.05.27-release-arm-v7a.apk)
 <blockquote>
@@ -1256,7 +1256,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="soundcloud-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=SoundCloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1271,7 +1271,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=Twitch&logoColor=white&style=flat"></summary>
+<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1395,7 +1395,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.0.12.880768217.release.arm64.v8a-gray?labelColor=4285F4&logo=Google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.0.12.880768217.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/83/gboard-morphe-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/83/gboard-morphe-module-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.zip)
 <blockquote>
@@ -1434,7 +1434,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=microsoft&logoColor=white&style=flat"></summary>
+<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=microsoftlens&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm-v7a.apk)
 <blockquote>
@@ -1490,7 +1490,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.108.0.644447823-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.108.0.644447823-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm-v7a.apk)
 <blockquote>
@@ -1527,7 +1527,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=adobe-lightroom&logoColor=white&style=flat"></summary>
+<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=adobelightroom&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/lightroom-revanced-v0.0.0-arm64-v8a.apk)
 <blockquote>
@@ -1542,7 +1542,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.66.5-gray?labelColor=4DC730&logo=Duolingo&logoColor=white&style=flat"></summary>
+<summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.66.5-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/87/duolingo-morphe-v6.66.5-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/duolingo-morphe-v6.66.5-arm-v7a.apk)
 <blockquote>
@@ -1557,7 +1557,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="duolingo-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4DC730&logo=Duolingo&logoColor=white&style=flat"></summary>
+<summary id="duolingo-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1572,7 +1572,7 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=google&logoColor=white&style=flat"></summary>
+<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=photomath&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm-v7a.apk)
 <blockquote>
@@ -1592,7 +1592,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=Cricbuzz&logoColor=white&style=flat"></summary>
+<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=cricbuzz&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm-v7a.apk)
 <blockquote>
@@ -1610,7 +1610,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=wallpaper&logoColor=white&style=flat"></summary>
+<summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=wallcraft&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/87/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/wallcraft-morphe-v3.61.01-arm-v7a.apk)
 <blockquote>
