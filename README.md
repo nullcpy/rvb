@@ -826,13 +826,13 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.80.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/91/twitter-morphe-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/91/twitter-morphe-v11.79.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/91/twitter-morphe-module-v11.79.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/91/twitter-morphe-module-v11.79.0-release.0-arm-v7a.zip)
+[arm64-v8a.apk](../../releases/download/97/twitter-morphe-v11.80.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/97/twitter-morphe-v11.80.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/97/twitter-morphe-module-v11.80.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/97/twitter-morphe-module-v11.80.0-release.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-09](../../releases/tag/91)<br>
-Patches: [crimera/patches-3.2.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.5)
+[Release 2026-04-10](../../releases/tag/97)<br>
+Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
 - Add ability to copy media link
 - Change app icon
 - Change version code
@@ -903,13 +903,13 @@ Patches: [crimera/patches-3.2.0-dev.5.mpp](https://github.com/crimera/piko/relea
 </details>
 
 <details>
-<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<img src="https://img.shields.io/badge/version-v11.79.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<img src="https://img.shields.io/badge/version-v11.80.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/85/twitter-morphe-materialu-v11.79.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/twitter-morphe-materialu-v11.79.0-release.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/97/twitter-morphe-materialu-v11.80.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/97/twitter-morphe-materialu-v11.80.0-release.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/85)<br>
-Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.3)
+[Release 2026-04-10](../../releases/tag/97)<br>
+Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
 - Add ability to copy media link
 - Bring back twitter
 - Change app icon
@@ -1093,11 +1093,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/85/instagram-morphe-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/85/instagram-morphe-v423.0.0.47.66-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/97/instagram-morphe-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/97/instagram-morphe-v423.0.0.47.66-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/85)<br>
-Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0-dev.3)
+[Release 2026-04-10](../../releases/tag/97)<br>
+Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
 - Add settings
 - Change version code
 - Customise story timestamp
@@ -1110,13 +1110,17 @@ Patches: [crimera/patches-3.2.0-dev.3.mpp](https://github.com/crimera/piko/relea
 - Disable story flipping
 - Download media
 - Follow back indicator
+- Hide group creation button on sharesheet
+- Hide navigation buttons
+- Hide reshare button
 - Hide stories tray
 - Hide suggested content
+- Improve image viewing
 - Limit feed to following profiles
+- Make ephemeral media permanent
 - Open links externally
 - Remove build expired popup
 - Sanitize share links
-- Unlimited replays on ephemeral media
 - Unlock developer options
 - View live anonymously
 - View stories anonymously
