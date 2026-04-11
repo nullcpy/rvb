@@ -48,5 +48,10 @@
     "stable": "v2.0.0",
     "prerelease": "v2.0.0-dev.1",
     "blocked": false
+  },
+  "brosssh": {
+    "repo": "brosssh/morphe-patches",
+    "stable": "v2.3.0",
+    "prerelease": "v2.3.0-dev.1"
   }
 }
