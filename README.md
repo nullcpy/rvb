@@ -1059,7 +1059,7 @@ Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 ---
 
-### [Threads](https://play.google.com/store/apps/details?id=com.instagram.barcelona)
+### [Threads](https://play.google.com/store/apps/details?id=com..barcelona)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
@@ -1090,11 +1090,33 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 ### [Instagram](https://play.google.com/store/apps/details?id=com.instagram.android)
 
-#### [Morphe (Piko)](https://github.com/crimera/piko)
+#### [Morphe (Brosssh)](https://github.com/brosssh/morphe-patches)
 
 <details>
 <summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v424.0.0.49.64-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
+[arm64-v8a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm-v7a.apk)
+<blockquote>
+
+[Release 2026-04-11](../../releases/tag/99)<br>
+Patches: [brosssh/patches-2.3.1-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.3.1-dev.1)
+- Bypass signature check
+- Disable Reels scrolling
+- Hide ads
+- Hide explore feed
+- Hide navigation buttons
+- Hide reshare button
+- Hide suggested content
+- Limit feed to following profiles
+- Remove build expired popup
+</blockquote>
+</details>
+
+#### [Morphe (Piko)](https://github.com/crimera/piko)
+
+<details>
+<summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v424.0.0.49.64-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+
 [arm64-v8a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm-v7a.apk)
 <blockquote>
 
