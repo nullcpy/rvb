@@ -141,7 +141,15 @@ patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 
-
+[instagram-morphe]
+enabled = true 
+app-name = "instagram"
+rv-brand = "morphe"
+build-mode = "apk"
+patches-source = "brosssh/morphe-patches"
+patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
 
 
