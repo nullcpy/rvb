@@ -1,17 +1,18 @@
 parallel-jobs = 1
-patches-version = "dev"
-cli-version = "dev"
+# patches-version = "dev"
+# cli-version = "dev"
 enable-module-update = false
 
-[instagram-morphe]
+[instagram-morphe-piko]
 enabled = true 
 app-name = "instagram"
-rv-brand = "morphe"
+rv-brand = "morphe-piko"
 build-mode = "apk"
-patches-source = "brosssh/morphe-patches"
+patches-source = "crimera/piko"
 patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+
 
 
 
