@@ -1093,40 +1093,22 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v424.0.0.49.64-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/97/instagram-morphe-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/97/instagram-morphe-v423.0.0.47.66-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/99/instagram-morphe-v424.0.0.49.64-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-10](../../releases/tag/97)<br>
-Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
-- Add settings
-- Change version code
-- Customise story timestamp
-- Disable ads
-- Disable analytics
-- Disable comments
-- Disable discover people
-- Disable explore
-- Disable stories
-- Disable story flipping
-- Download media
-- Follow back indicator
-- Hide group creation button on sharesheet
+[Release 2026-04-11](../../releases/tag/99)<br>
+Patches: [brosssh/patches-2.3.1-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.3.1-dev.1)
+- Bypass signature check
+- Disable Reels scrolling
+- Hide ads
+- Hide explore feed
 - Hide navigation buttons
 - Hide reshare button
-- Hide stories tray
 - Hide suggested content
-- Improve image viewing
 - Limit feed to following profiles
-- Make ephemeral media permanent
-- Open links externally
 - Remove build expired popup
-- Sanitize share links
-- Unlock developer options
-- View live anonymously
-- View stories anonymously
-- View story mentions
 </blockquote>
 </details>
 
