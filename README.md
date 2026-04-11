@@ -1216,7 +1216,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 ### [Google Photos](https://play.google.com/store/apps/details?id=com.google.android.apps.photos)
 
-#### [Morphe](https://github.com/MorpheApp/morphe-patches)
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
 <summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.70.0.893169212-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
