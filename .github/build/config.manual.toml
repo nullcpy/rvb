@@ -3,16 +3,16 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = false
 
-[instagram-morphe-piko]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
+[reddit-anddea]
+enabled = true
+app-name = "reddit"
+rv-brand = "anddea"
 build-mode = "apk"
-patches-source = "crimera/piko"
-patcher-args = "--continue-on-error"
+arch = "both"
+patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
 
