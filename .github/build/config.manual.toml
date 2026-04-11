@@ -3,32 +3,15 @@ patches-version = "dev"
 cli-version = "dev"
 enable-module-update = false
 
-[youtube-morphe-exp]
-enabled = true
-app-name = "youtube"
-rv-brand = "morphe-exp"
-build-mode = "both"
-version = "v21.13.163"
-patches-source = "MorpheApp/morphe-patches"
+[instagram-morphe]
+enabled = true 
+app-name = "instagram"
+rv-brand = "morphe"
+build-mode = "apk"
+patches-source = "brosssh/morphe-patches"
 patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[youtube-music-morphe-exp]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "morphe-exp"
-build-mode = "both"
-version = "v9.12.51"
-arch = "both"
-patches-source = "MorpheApp/morphe-patches"
-patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
 
 
