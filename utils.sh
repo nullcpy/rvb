@@ -547,18 +547,21 @@ check_sig() {
 
 write_build_info() {
 	local key=$1 arch=$2 ext=$3 name=$4 version=$5 patches=$6 changelog=$7
+	if [ "$ext" = ".apk" ] || [ "$mode_arg" = module ]; then
+		log "${key} (${arch}): ${version}"
+	fi
+	local arch_orig="${args[arch]// /}"
+	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
 	jq --arg key "$key" \
-		--arg variant "${arch}${ext}" \
+		--arg ext "$ext" \
+		--arg arch "$arch" \
 		--arg name "$name" \
 		--arg version "$version" \
 		--arg patches "$patches" \
 		--arg changelog "$changelog" \
 		--argjson applied "$(echo "$PATCH_OUTPUT" | grep -oP 'INFO: "\K[^"]+(?=" succeeded)' | jq -R -s -c 'split("\n") | map(select(length > 0))')" \
-		'if has($key) then .[$key].variants = (.[$key].variants + [$variant] | unique) else .[$key] = {variants: [$variant], name: $name, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
+		'if has($key) then .[$key].exts = (.[$key].exts + [$ext] | unique) else .[$key] = {exts: [$ext], name: $name, arch: $arch, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
 		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
-	if [ "$ext" = ".apk" ] || [ "$mode_arg" = module ]; then
-		log "${key} (${arch}): ${version}"
-	fi
 }
 
 build_rv() {
@@ -572,6 +575,8 @@ build_rv() {
 	local dl_from=${args[dl_from]}
 	local arch=${args[arch]}
 	local arch_f="${arch// /}"
+	local arch_list=("$arch_f")
+	[ "$arch_f" = "auto" ] && arch_list=("all" "arm64-v8a" "arm-v7a")
 
 	local p_patcher_args=()
 	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
@@ -632,6 +637,8 @@ build_rv() {
 	pr "Choosing version '${version}' for ${table}"
 	local version_f=${version// /}
 	version_f=${version_f#v}
+	for arch in "${arch_list[@]}"; do
+		arch_f="${arch// /}"
 	local stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
 	if [ ! -f "$stock_apk" ]; then
 		for dl_p in "${DL_SRCS[@]}"; do
@@ -649,11 +656,10 @@ build_rv() {
 			fi
 			break
 		done
-		if [ ! -f "$stock_apk" ]; then
-			epr "Stock apk not found ($stock_apk)"
-			return 0
-		fi
 	fi
+	if [ -f "$stock_apk" ]; then break; fi
+	done
+	if [ ! -f "$stock_apk" ]; then return 0; fi
 	if [ ! -f "${stock_apk}.apkm" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
 		epr "Not building $table, apk signature mismatch '$stock_apk': $OP"
 		return 0
