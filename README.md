@@ -1049,11 +1049,26 @@ Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2025.12.1-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/reddit-anddea-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/102/reddit-anddea-v2025.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/102/reddit-anddea-v2025.12.1-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-11](../../releases/tag/102)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+- Disable screenshot popup
+- Hide Recently Visited shelf
+- Hide Trending Today shelf
+- Hide ads
+- Hide navigation buttons
+- Hide recommended communities shelf
+- Open links directly
+- Open links externally
+- Premium icon
+- Remove subreddit dialog
+- Sanitize sharing links
+- Settings for Reddit
+- Translations for Reddit
 </blockquote>
 </details>
 
