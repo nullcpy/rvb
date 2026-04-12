@@ -1,5 +1,9 @@
-facebook-morphe (arm64-v8a): 490.0.0.63.82  
-facebook-morphe (arm-v7a): 490.0.0.63.82  
+youtube-morphe (arm64-v8a): 20.47.62  
+youtube-morphe (arm-v7a): 20.47.62  
+youtube-music-morphe (arm64-v8a): 8.47.56  
+youtube-music-morphe (arm-v7a): 8.47.56  
+reddit-morphe (arm64-v8a): 2026.04.0  
+reddit-morphe (arm-v7a): 2026.04.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +11,5 @@ facebook-morphe (arm-v7a): 490.0.0.63.82
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-Patches: RookieEnough/patches-1.0.3.mpp  
-[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)  
+Patches: MorpheApp/patches-1.24.0-dev.6.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.6)  
