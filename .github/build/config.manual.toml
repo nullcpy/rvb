@@ -3,16 +3,18 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[gboard-morphe]
+[reddit-morphe-adobo]
 enabled = true
-app-name = "gboard"
+app-name = "reddit"
 rv-brand = "morphe"
-build-mode = "both"
+build-mode = "apk"
 arch = "both"
 patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
 
