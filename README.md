@@ -1198,23 +1198,6 @@ Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/ta
 
 ---
 
-### [Facebook](https://play.google.com/store/apps/details?id=com.facebook.katana)
-
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
-
-<details>
-<summary id="facebook-morphe">&emsp;<img src="https://img.shields.io/badge/version-v490.0.0.63.82-gray?labelColor=1877F2&logo=facebook&logoColor=white&style=flat"></summary>
-  
-[arm64-v8a.apk](../../releases/download/107/facebook-morphe-v490.0.0.63.82-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/107/facebook-morphe-v490.0.0.63.82-arm-v7a.apk)
-<blockquote>
-
-[Release 2026-04-12](../../releases/tag/107)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
-</blockquote>
-</details>
-
----
-
 ### [Messenger](https://play.google.com/store/apps/details?id=com.facebook.orca)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
