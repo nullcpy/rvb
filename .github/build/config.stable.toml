@@ -538,7 +538,18 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-
+[reddit-morphe-adobo]
+enabled = true
+app-name = "reddit"
+rv-brand = "morphe-adobo"
+build-mode = "apk"
+arch = "both"
+patches-source = "jkennethcarino/adobo"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
 
