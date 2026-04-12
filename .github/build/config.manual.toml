@@ -10,11 +10,12 @@ rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "RookieEnough/De-ReVanced"
+patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://facebook.en.uptodown.com/android"
 # dpi = "120-640dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
 
 
 
