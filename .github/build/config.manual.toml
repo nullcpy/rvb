@@ -3,18 +3,18 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[reddit-morphe-adobo]
+[facebook-morphe]
 enabled = true
-app-name = "reddit"
-rv-brand = "morphe-adobo"
+app-name = "facebook"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "jkennethcarino/adobo"
+patches-source = "RookieEnough/De-ReVanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
 # dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
 
