@@ -6,7 +6,7 @@ enable-module-update = true
 [reddit-morphe-adobo]
 enabled = true
 app-name = "reddit"
-rv-brand = "morphe"
+rv-brand = "morphe-adobo"
 build-mode = "apk"
 arch = "both"
 patches-source = "jkennethcarino/adobo"
