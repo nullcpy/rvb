@@ -1049,9 +1049,9 @@ Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.11.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.15.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/104/reddit-morphe-v2026.11.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/104/reddit-morphe-v2026.11.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/104/reddit-morphe-adobo-v2026.15.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/104/reddit-morphe-adobo-v2026.15.0-arm-v7a.apk)
 <blockquote>
 
 [Release 2026-04-12](../../releases/tag/104)<br>
