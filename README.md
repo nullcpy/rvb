@@ -1049,27 +1049,18 @@ Patches: [MorpheApp/patches-1.23.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.04.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.11.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/98/reddit-morphe-adobo-v2026.04.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/98/reddit-morphe-adobo-v2026.04.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/104/reddit-morphe-v2026.11.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/104/reddit-morphe-v2026.11.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-11](../../releases/tag/98)<br>
-Patches: [MorpheApp/patches-1.24.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.5)
-- Disable modern home
-- Disable screenshot popup
-- Hide Ask button
-- Hide Trending Today shelf
-- Hide ads
-- Hide navigation buttons
-- Hide recommended communities shelf
-- Hide sidebar components
-- Open links directly
-- Open links externally
-- Remove subreddit dialog
-- Sanitize sharing links
-- Show view count
-- Spoof signature
+[Release 2026-04-12](../../releases/tag/104)<br>
+Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.0)
+- Disable screenshot banner
+- Hide post view counts
+- Open external links directly
+- Remove ads and telemetry
+- Sanitize share links
 </blockquote>
 </details>
 
