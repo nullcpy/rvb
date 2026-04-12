@@ -1,18 +1,18 @@
 parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[reddit-anddea]
+[gboard-morphe]
 enabled = true
-app-name = "reddit"
-rv-brand = "anddea"
-build-mode = "apk"
+app-name = "gboard"
+rv-brand = "morphe"
+build-mode = "both"
 arch = "both"
-patches-source = "anddea/revanced-patches"
+patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
 
 
