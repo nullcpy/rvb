@@ -1445,7 +1445,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.0.12.880768217.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/83/gboard-morphe-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/83/gboard-morphe-module-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.zip)
+[arm64-v8a.apk](../../releases/download/83/gboard-morphe-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/83/gboard-morphe-v17.0.12.880768217-release-arm64-v8a-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/83/gboard-morphe-module-v17.0.12.880768217-release-arm64-v8a-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/83/gboard-morphe-module-v17.0.12.880768217-release-arm64-v8a-arm-v7a.zip)
 <blockquote>
 
 [Release 2026-04-07](../../releases/tag/83)<br>
