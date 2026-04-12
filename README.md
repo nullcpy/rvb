@@ -1198,6 +1198,28 @@ Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/ta
 
 ---
 
+### [Facebook](https://play.google.com/store/apps/details?id=com.facebook.katana)
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="facebook-morphe">&emsp;<img src="https://img.shields.io/badge/version-v552.0.0.44.65-gray?labelColor=1877F2&logo=facebook&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/84/messenger-morphe-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/messenger-morphe-v552.0.0.44.65-arm-v7a.apk)
+<blockquote>
+
+[Release 2026-04-07](../../releases/tag/84)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Disable typing indicator
+- Hide Facebook button
+- Hide inbox ads
+- Hide inbox subtabs
+- Remove Meta AI
+</blockquote>
+</details>
+
+---
+
 ### [Messenger](https://play.google.com/store/apps/details?id=com.facebook.orca)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
