@@ -1354,11 +1354,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2026.4-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/podcast-addict-morphe-v2026.4-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/podcast-addict-morphe-v2026.4-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Enable Premium
 - MicroG integration
 </blockquote>
@@ -1403,11 +1403,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.16.83.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Remove delay
 - Unlock custom DNS
 - Unlock split tunneling
@@ -1520,11 +1520,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=wpsoffice&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/wps-office-morphe-v18.12.1-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/wps-office-morphe-v18.12.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Disable anti-tamper
 - Enable Pro
 </blockquote>
@@ -1539,11 +1539,11 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=solidexplorer&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Enable Pro
 - MicroG integration
 </blockquote>
@@ -1577,11 +1577,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="icon-packer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v1.21.0.release-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Unlock premium features
 </blockquote>
 </details>
@@ -1608,13 +1608,13 @@ Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.66.5-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
+<summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.74.4-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/duolingo-morphe-v6.66.5-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/duolingo-morphe-v6.66.5-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/duolingo-morphe-v6.74.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/duolingo-morphe-v6.74.4-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Disable Login Integrity
 - Enable Premium
 </blockquote>
@@ -1678,11 +1678,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=wallcraft&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/87/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/87/wallcraft-morphe-v3.61.01-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/106/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/106/wallcraft-morphe-v3.61.01-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-08](../../releases/tag/87)<br>
-Patches: [hoo-dles/patches-1.22.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.22.0)
+[Release 2026-04-12](../../releases/tag/106)<br>
+Patches: [hoo-dles/patches-1.23.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.23.0)
 - Enable Premium
 </blockquote>
 </details>
