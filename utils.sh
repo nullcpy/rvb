@@ -5,7 +5,7 @@ CWD=$(pwd)
 TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
-DL_SRCS=("direct" "archive" "apkmirror" "uptodown")
+DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown")
 BUILD_JSON_FILE="build.json"
 PATCH_OUTPUT=""
 
@@ -504,6 +504,33 @@ get_archive_resp() {
 get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\)\.apk//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
+# -------------------- github --------------------
+dl_github() {
+	local version=$2 output=$3 arch=$4
+	local path version=${version// /}
+	path=$(grep "${version#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
+	if [[ "$path" == *.apkm ]]; then
+		req "$__GITHUB_URL__/$path" "$output.apkm" || return 1
+		merge_splits "$output.apkm" "$output"
+	else
+		req "$__GITHUB_URL__/$path" "$output"
+	fi
+}
+get_github_resp() {
+	local repo tag resp
+	repo=$(cut -d/ -f4-5 <<<"$1")
+	tag=${1%/}
+	tag=${tag##*/}
+	resp=$(gh_req "https://api.github.com/repos/${repo}/releases/tags/${tag}" -) || return 1
+	__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | endswith(".apk") or endswith(".apkm")) | .name' <<<"$resp")
+	if [ -z "$__ARCHIVE_RESP__" ]; then return 1; fi
+	__ARCHIVE_PKG_NAME__=$(head -1 <<<"$__ARCHIVE_RESP__" | cut -d- -f1)
+	if [ -z "$__ARCHIVE_PKG_NAME__" ]; then return 1; fi
+	__GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+}
+get_github_vers() { get_archive_vers; }
+get_github_pkg_name() { get_archive_pkg_name; }
+
 # -------------------- direct --------------------
 dl_direct() {
 	local url=$1 version=${2// /-} output=$3 arch=$4 _dpi=$5
@@ -651,7 +678,7 @@ build_rv() {
 				fi
 			fi
 			if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
-				epr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+				pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
 				continue
 			fi
 			break
@@ -659,7 +686,10 @@ build_rv() {
 	fi
 	if [ -f "$stock_apk" ]; then break; fi
 	done
-	if [ ! -f "$stock_apk" ]; then return 0; fi
+	if [ ! -f "$stock_apk" ]; then
+		epr "ERROR: Could not download '${table}'"
+		return 0
+	fi
 	if [ ! -f "${stock_apk}.apkm" ] && ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
 		epr "Not building $table, apk signature mismatch '$stock_apk': $OP"
 		return 0
