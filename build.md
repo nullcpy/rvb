@@ -7,5 +7,5 @@ instagram-morphe (arm-v7a): 424.0.0.49.64
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group Chat](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-Patches: brosssh/patches-2.4.0-dev.2.mpp  
-[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.4.0-dev.2)  
+Patches: brosssh/patches-2.4.0-dev.3.mpp  
+[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.4.0-dev.3)  
