@@ -57,6 +57,8 @@ exclusive-patches = false                                  # exclude all patches
 
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+# github release tag url. downloads apk assets from that release.
+github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.some.app"
 # direct download url. the url must have point to an apk file with name format shown in this example
 direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 
