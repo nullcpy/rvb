@@ -1611,9 +1611,9 @@ Patches: [hoo-dles/patches-1.24.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="adobe-photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=adobephotoshop&logoColor=white&style=flat"></summary>
+<summary id="photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=adobephotoshop&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/116/adobe-photoshop-mix-morphe-v2.6.346-arm64-v8a.apk)
+[arm64-v8a.apk](../../releases/download/116/photoshop-mix-morphe-v2.6.346-arm64-v8a.apk)
 <blockquote>
 
 [Release 2026-04-17](../../releases/tag/116)<br>
