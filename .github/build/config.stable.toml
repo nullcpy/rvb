@@ -34,7 +34,7 @@ cli-source = "ReVanced/revanced-cli"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
-[adobe-photoshop-mix-morphe]
+[photoshop-mix-morphe]
 enabled = true
 app-name = "adobe-photoshop-mix"
 rv-brand = "morphe"
