@@ -1,3 +1,5 @@
+# Copyright (c) 2026 nvbangg (github.com/nvbangg)
+
 import re
 import sys
 import json
