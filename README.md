@@ -1626,7 +1626,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 ### [Truecaller](https://play.google.com/store/apps/details?id=com.truecaller)
 
-#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.12.5-gray?labelColor=31A8FF&logo=truecaller&logoColor=white&style=flat"></summary>
