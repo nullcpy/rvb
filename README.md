@@ -1629,15 +1629,16 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.12.5-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/123/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/123/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/123/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/123/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/117)<br>
-Patches: [binarymend/patches-1.2.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.2.0)
-- Disable Telemetry
-- Remove Ads
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/123)<br>
+Patches: [Paresh-Maheshwari/patches-1.7.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.7.0)
+- Hide Assistant tab
+- Hide Scams tab
+- Truecaller Premium
 </blockquote>
 </details>
 
