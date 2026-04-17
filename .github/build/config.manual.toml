@@ -3,19 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[facebook-morphe]
+[photoshop-mix-morphe]
 enabled = true
-app-name = "facebook"
+app-name = "photoshop-mix"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "RookieEnough/De-ReVanced"
-patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 
 
