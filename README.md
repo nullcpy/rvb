@@ -1736,11 +1736,14 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="document-scanner-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
+<summary id="document-scanner-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/0/document-scanner-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/0/document-scanner-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/122/document-scanner-morphe-v6.8.18-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/122/document-scanner-morphe-v6.8.18-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/122)<br>
+Patches: [Paresh-Maheshwari/patches-1.7.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.7.0)
+- Doc Scanner Premium
 </blockquote>
 </details>
 
@@ -1751,11 +1754,13 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.5-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/0/macrodroid-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/0/macrodroid-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/122/macrodroid-morphe-v5.63.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/122/macrodroid-morphe-v5.63.5-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/122)<br>
+Patches: [Paresh-Maheshwari/patches-1.7.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.7.0)
 </blockquote>
 </details>
 
