@@ -450,9 +450,10 @@ rv-brand = "morphe-piko"
 build-mode = "apk"
 arch = "both"
 patches-source = "crimera/piko"
-patcher-args = "--continue-on-error"
+# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [wps-office-morphe]
 enabled = true
