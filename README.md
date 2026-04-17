@@ -1669,6 +1669,21 @@ Patches: [hoo-dles/patches-1.24.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Pinterest](https://play.google.com/store/apps/details?id=com.pinterest)
+
+#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+
+<details>
+<summary id="pinterest-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/pinterest-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/pinterest-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Applied Patches)
+</blockquote>
+</details>
+
+---
+
 ### [Photomath](https://play.google.com/store/apps/details?id=com.microblink.photomath)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
