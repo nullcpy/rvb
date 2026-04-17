@@ -1,0 +1,60 @@
+name: Telegram Notifications
+
+on:
+  issues:
+    types: [opened, closed, reopened]
+  pull_request:
+    types: [opened, closed, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification to Telegram
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: "@rvb27"
+          TG_THREAD_ID: "3031"
+        run: |
+          set -euo pipefail
+
+          EVENT_NAME="${{ github.event_name }}"
+          ACTOR="${{ github.actor }}"
+          ACTOR_URL="https://github.com/${ACTOR}"
+          REPO="${{ github.repository }}"
+          REPO_NAME="${REPO#*/}"
+          REPO_URL="https://github.com/${REPO}"
+          ACTION="${{ github.event.action }}"
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            PR_NUM="${{ github.event.pull_request.number }}"
+            PR_URL="${{ github.event.pull_request.html_url }}"
+            TITLE="${{ github.event.pull_request.title }}"
+            COMMITS="${{ github.event.pull_request.commits }}"
+            FILES="${{ github.event.pull_request.changed_files }}"
+            ADD="${{ github.event.pull_request.additions }}"
+            DEL="${{ github.event.pull_request.deletions }}"
+
+            COMMIT_STR="commits"
+            if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
+
+            MSG="[${ACTOR}](${ACTOR_URL}) wants to merge ${COMMITS} ${COMMIT_STR} into [${REPO_NAME}](${REPO_URL}) at [#${PR_NUM}](${PR_URL})%0A%0A"
+            MSG+="*Title:* \`${TITLE}\`%0A"
+            MSG+="*Files Changed:* ${FILES} with +${ADD} -${DEL}"
+
+          else
+            ISSUE_NUM="${{ github.event.issue.number }}"
+            ISSUE_URL="${{ github.event.issue.html_url }}"
+            TITLE="${{ github.event.issue.title }}"
+
+            MSG="[${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) at [#${ISSUE_NUM}](${ISSUE_URL})%0A%0A"
+            MSG+="*Title:* \`${TITLE}\`"
+          fi
+
+          curl -s -X POST \
+            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${MSG}" \
+            --data-urlencode "chat_id=${TG_CHAT_ID}" \
+            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
