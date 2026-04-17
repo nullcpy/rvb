@@ -453,7 +453,7 @@ patches-source = "crimera/piko"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [wps-office-morphe]
 enabled = true
@@ -587,4 +587,28 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
+
+[document-scanner-morphe]
+enabled = true 
+app-name = "document-scanner"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
+[macrodroid-morphe]
+enabled = true 
+app-name = "macrodroid-scanner"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
