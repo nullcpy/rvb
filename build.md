@@ -1,4 +1,5 @@
-instagram-morphe-piko (arm64-v8a): 423.0.0.47.66  
+instagram-morphe-piko (arm64-v8a): 424.0.0.49.64  
+instagram-morphe-piko (arm-v7a): 424.0.0.49.64  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
