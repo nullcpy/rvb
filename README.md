@@ -1629,11 +1629,15 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
-<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=truecaller&logoColor=white&style=flat"></summary>
+<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.12.5-gray?labelColor=31A8FF&logo=truecaller&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/truecaller-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/114/truecaller-morphe-v6.74.4-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/truecaller-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/truecaller-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/117)<br>
+Patches: [binarymend/patches-1.2.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.2.0)
+- Disable Telemetry
+- Remove Ads
 </blockquote>
 </details>
 
@@ -1674,11 +1678,16 @@ Patches: [hoo-dles/patches-1.24.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
-<summary id="pinterest-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
+<summary id="pinterest-morphe">&emsp;<img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/pinterest-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/pinterest-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/117/pinterest-morphe-v14.11.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/117/pinterest-morphe-v14.11.0-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/117)<br>
+Patches: [binarymend/patches-1.2.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.2.0)
+- Disable Bugsnag Telemetry
+- Disable General Telemetry
+- Remove Promoted Pins
 </blockquote>
 </details>
 
