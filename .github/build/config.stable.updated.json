@@ -533,7 +533,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.orca"
   },
   "duolingo-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -550,12 +550,11 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "crimera/piko",
-    "patcher-args": "--continue-on-error",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "wps-office-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "wps-office",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -576,7 +575,7 @@
     "uptodown-dlurl": "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
   },
   "wallcraft-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "wallcraft",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -586,7 +585,7 @@
     "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android"
   },
   "solid-explorer-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "solid-explorer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -606,7 +605,7 @@
     "uptodown-dlurl": "https://photomath.en.uptodown.com/android"
   },
   "icon-packer-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -616,7 +615,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -627,7 +626,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "proton-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -659,12 +658,12 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
-    "patches-source": "binarymend/morphe-patches",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
@@ -678,5 +677,25 @@
     "patches-source": "binarymend/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
+  },
+  "document-scanner-morphe": {
+    "enabled": true,
+    "app-name": "document-scanner",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android"
+  },
+  "macrodroid-morphe": {
+    "enabled": true,
+    "app-name": "macrodroid",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   }
 }

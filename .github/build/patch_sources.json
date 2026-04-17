@@ -20,7 +20,7 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.23.0",
-    "prerelease": "v1.24.0-dev.9",
+    "prerelease": "v1.24.0-dev.10",
     "blocked": false
   },
   "piko": {
@@ -63,7 +63,8 @@
   },
   "paresh": {
     "repo": "Paresh-Maheshwari/paresh-patches",
-    "stable": "",
-    "prerelease": ""
-  }  
+    "stable": "v1.7.0",
+    "prerelease": "v1.4.0-dev.31",
+    "blocked": false
+  }
 }
