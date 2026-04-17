@@ -3,32 +3,15 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[truecaller-morphe]
-enabled = true
-app-name = "truecaller"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "binarymend/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
-
-[pinterest-morphe]
-enabled = true
-app-name = "pinterest"
-rv-brand = "morphe"
+[instagram-morphe-piko]
+enabled = true 
+app-name = "instagram"
+rv-brand = "morphe-piko"
 build-mode = "apk"
-arch = "both"
-patches-source = "binarymend/morphe-patches"
+arch = "all"
+patches-source = "crimera/piko"
+# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
-
-
-
-
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
 
