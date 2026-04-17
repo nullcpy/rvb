@@ -1631,7 +1631,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=truecaller&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/truecaller-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/114/duolingo-morphe-v6.74.4-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm-v7a.zip)
+[all.apk](../../releases/download/v0/truecaller-morphe-v0.0.0-all.apk) • [all.zip](../../releases/download/v0/truecaller-morphe-v0.0.0-all.zip)
 <blockquote>
 (Applied Patches)
 </blockquote>
