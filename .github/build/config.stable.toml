@@ -602,7 +602,7 @@ uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
 
 [macrodroid-morphe]
 enabled = true 
-app-name = "macrodroid-scanner"
+app-name = "macrodroid"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
