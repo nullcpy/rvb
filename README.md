@@ -1613,7 +1613,7 @@ Patches: [hoo-dles/patches-1.24.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="adobe-photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=adobephotoshop&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/116/adobe-photoshop-mix-morphe-v2.6.346-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/114/adobe-photoshop-mix-morphe-v6.74.4-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/116/adobe-photoshop-mix-morphe-v2.6.346-arm64-v8a.apk)
 <blockquote>
 
 [Release 2026-04-17](../../releases/tag/116)<br>
