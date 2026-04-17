@@ -5,7 +5,7 @@ enable-module-update = true
 
 [photoshop-mix-morphe]
 enabled = true
-app-name = "adobe-photoshop-mix"
+app-name = "photoshop-mix"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "arm64-v8a"
