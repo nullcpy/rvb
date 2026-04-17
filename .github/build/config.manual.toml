@@ -11,9 +11,9 @@ build-mode = "both"
 arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-# uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
 
 

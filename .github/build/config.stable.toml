@@ -563,7 +563,17 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-
+[truecaller-morphe]
+enabled = true
+app-name = "truecaller"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "binarymend/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
 
 
