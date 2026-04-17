@@ -1153,10 +1153,10 @@ Patches: [brosssh/patches-2.5.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 <details>
 <summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](../../releases/download/100/instagram-morphe-piko-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/100/instagram-morphe-piko-v423.0.0.47.66-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/119/instagram-morphe-piko-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/100/instagram-morphe-piko-v423.0.0.47.66-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-11](../../releases/tag/100)<br>
+[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/119)<br>
 Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
 - Add settings
 - Change version code
