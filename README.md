@@ -1606,6 +1606,21 @@ Patches: [hoo-dles/patches-1.24.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Adobe Photoshop Mix](https://play.google.com/store/apps/details?id=com.adobe.psmobile)
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="adobe-photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=adobephotoshop&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/114/adobe-photoshop-mix-morphe-v6.74.4-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/114/adobe-photoshop-mix-morphe-v6.74.4-arm-v7a.apk)
+<blockquote>
+(Applied Patches)
+</blockquote>
+</details>
+
+---
+
 ### [Duolingo](https://play.google.com/store/apps/details?id=com.duolingo)
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)

@@ -3,9 +3,9 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[photoshop-mix-morphe]
+[adobe-photoshop-mix-morphe]
 enabled = true
-app-name = "photoshop-mix"
+app-name = "adobe-photoshop-mix"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
