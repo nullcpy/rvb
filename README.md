@@ -1485,7 +1485,7 @@ Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="rar-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.20.build131-gray?labelColor=FF6B00&logo=rar&logoColor=white&style=flat"></summary>
+<summary id="rar-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.20.build131-gray?labelColor=FF6B00&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/rar-morphe-v7.20.build131-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/rar-morphe-v7.20.build131-arm-v7a.apk)
 <blockquote>
@@ -1503,7 +1503,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=microsoftlens&logoColor=white&style=flat"></summary>
+<summary id="microsoft-lens-morphe">&emsp;<img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/microsoft-lens-morphe-v16.0.19628.20008-arm-v7a.apk)
 <blockquote>
@@ -1521,7 +1521,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=wpsoffice&logoColor=white&style=flat"></summary>
+<summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/wps-office-morphe-v18.12.1-arm-v7a.apk)
 <blockquote>
@@ -1540,7 +1540,7 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=solidexplorer&logoColor=white&style=flat"></summary>
+<summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
 <blockquote>
@@ -1596,7 +1596,7 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=adobelightroom&logoColor=white&style=flat"></summary>
+<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/v0/lightroom-revanced-v0.0.0-arm64-v8a.apk)
 <blockquote>
@@ -1611,7 +1611,7 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=adobephotoshop&logoColor=white&style=flat"></summary>
+<summary id="photoshop-mix-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/116/photoshop-mix-morphe-v2.6.346-arm64-v8a.apk)
 <blockquote>
@@ -1629,7 +1629,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.12.5-gray?labelColor=31A8FF&logo=truecaller&logoColor=white&style=flat"></summary>
+<summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.12.5-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-v26.12.5-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/117/truecaller-morphe-module-v26.12.5-arm-v7a.zip)
 <blockquote>
@@ -1698,7 +1698,7 @@ Patches: [binarymend/patches-1.2.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=photomath&logoColor=white&style=flat"></summary>
+<summary id="photomath-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/photomath-morphe-v8.47.1-arm-v7a.apk)
 <blockquote>
@@ -1718,7 +1718,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=cricbuzz&logoColor=white&style=flat"></summary>
+<summary id="cricbuzz-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/cricbuzz-morphe-v6.24.01-arm-v7a.apk)
 <blockquote>
@@ -1731,12 +1731,42 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 ---
 
+### [Document Scanner](https://play.google.com/store/apps/details?id=com.cv.docscanner)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="document-scanner-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/0/document-scanner-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/0/document-scanner-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/0/macrodroid-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/0/macrodroid-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Wallcraft](https://play.google.com/store/apps/details?id=com.wallpaperscraft.wallpaper)
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=wallcraft&logoColor=white&style=flat"></summary>
+<summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/wallcraft-morphe-v3.61.01-arm-v7a.apk)
 <blockquote>
