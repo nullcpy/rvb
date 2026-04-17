@@ -33,7 +33,7 @@
     "enabledDev": false,
     "repo": "hoo-dles/morphe-patches",
     "stable": "v1.24.0",
-    "prerelease": "v1.24.0-dev.1",
+    "prerelease": "v1.25.0-dev.2",
     "blocked": false
   },
   "adobo": {
@@ -57,7 +57,8 @@
   },
   "binarymend": {
     "repo": "binarymend/morphe-patches",
-    "stable": "",
-    "prerelease": ""
+    "stable": "v1.2.0",
+    "prerelease": "v1.2.0-dev.3",
+    "blocked": false
   }
 }
