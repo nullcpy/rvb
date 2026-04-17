@@ -3,9 +3,10 @@ import sys
 import json
 import datetime
 
-if len(sys.argv) < 2:
+if len(sys.argv) <= 2:
     sys.exit(0)
 tag = sys.argv[1]
+repo_url = f"https://github.com/{sys.argv[2]}"
 
 with open("build.json", encoding="utf-8") as f:
     build_data = json.load(f)
@@ -31,7 +32,9 @@ for key, info in build_data.items():
     for match in reversed(matches):
         old_details = match.group(0)
         new_details = re.sub(
-            r'(src="[^"]*?-v)\d[^"]*?(-gray\?)', rf"\g<1>{badge_version}\g<2>", old_details
+            r'(src="[^"]*?-v)\d[^"]*?(-gray\?)',
+            rf"\g<1>{badge_version}\g<2>",
+            old_details,
         )
 
         for ext in exts:
@@ -42,10 +45,12 @@ for key, info in build_data.items():
             else:
                 new_file = f"{name}-module-v{link_version}-{arch}{ext}"
 
-            link_pattern = (
-                rf'((?:\.\./)*releases/download/)[^\s)"\'<>]*{re.escape(ext)}'
+            link_pattern = rf'(?:https://github\.com/[^/\s)"\'<>]+/[^/\s)"\'<>]+/|(?:\.\./)+)releases/download/[^\s)"\'<>]*{re.escape(ext)}'
+            new_details = re.sub(
+                link_pattern,
+                f"{repo_url}/releases/download/{tag}/{new_file}",
+                new_details,
             )
-            new_details = re.sub(link_pattern, rf"\g<1>{tag}/{new_file}", new_details)
 
         current_date = datetime.datetime.now().strftime("%Y-%m-%d")
         patches = info.get("patches", "")
@@ -55,9 +60,7 @@ for key, info in build_data.items():
         else:
             patches_line = f"Patches: {patches}"
 
-        new_content = (
-            f"\n\n[Release {current_date}](../../releases/tag/{tag})<br>\n{patches_line}"
-        )
+        new_content = f"\n\n[Release {current_date}]({repo_url}/releases/tag/{tag})<br>\n{patches_line}"
         if info.get("applied_patches"):
             for patch in info["applied_patches"]:
                 if patch.strip():
