@@ -1681,11 +1681,11 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="pinterest-morphe">&emsp;<img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/117/pinterest-morphe-v14.11.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/117/pinterest-morphe-v14.11.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/125/pinterest-morphe-v14.11.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/125/pinterest-morphe-v14.11.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/117)<br>
-Patches: [binarymend/patches-1.2.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.2.0)
+[Release 2026-04-18](https://github.com/nullcpy/rvb/releases/tag/125)<br>
+Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.0)
 - Disable Bugsnag Telemetry
 - Disable General Telemetry
 - Remove Promoted Pins
