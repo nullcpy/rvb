@@ -26,6 +26,9 @@ jobs:
           REPO_URL="https://github.com/${REPO}"
           ACTION="${{ github.event.action }}"
           
+          # Capitalize the first letter of the action (e.g., "opened" -> "Opened")
+          ACTION_CAP="${ACTION^}" 
+          
           # Use actual bash newlines so urlencode handles them properly
           NL=$'\n'
 
@@ -41,17 +44,23 @@ jobs:
             COMMIT_STR="commits"
             if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="[${ACTOR}](${ACTOR_URL}) wants to merge ${COMMITS} ${COMMIT_STR} into [${REPO_NAME}](${REPO_URL}) at [#${PR_NUM}](${PR_URL})${NL}${NL}"
-            MSG+="*Title:* \`${TITLE}\`${NL}"
-            MSG+="*Files Changed:* ${FILES} with +${ADD} -${DEL}"
+            MSG="🔀 *Pull Request ${ACTION_CAP}*${NL}${NL}"
+            MSG+="👤 [${ACTOR}](${ACTOR_URL}) wants to merge *${COMMITS} ${COMMIT_STR}* into [${REPO_NAME}](${REPO_URL}) ([#${PR_NUM}](${PR_URL}))${NL}"
+            MSG+="📝 *Title:* \`${TITLE}\`${NL}"
+            MSG+="📁 *Changes:* ${FILES} files (+${ADD}, -${DEL})"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
             ISSUE_URL="${{ github.event.issue.html_url }}"
             TITLE="${{ github.event.issue.title }}"
+            
+            # Use a checkmark if the issue is closed, otherwise a bug emoji
+            EMOJI="🐛"
+            if [ "$ACTION" = "closed" ]; then EMOJI="✅"; fi
 
-            MSG="[${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) at [#${ISSUE_NUM}](${ISSUE_URL})${NL}${NL}"
-            MSG+="*Title:* \`${TITLE}\`"
+            MSG="${EMOJI} *Issue ${ACTION_CAP}*${NL}${NL}"
+            MSG+="👤 [${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) ([#${ISSUE_NUM}](${ISSUE_URL}))${NL}"
+            MSG+="📝 *Title:* \`${TITLE}\`"
           fi
 
           curl -s -X POST \
