@@ -25,6 +25,9 @@ jobs:
           REPO_NAME="${REPO#*/}"
           REPO_URL="https://github.com/${REPO}"
           ACTION="${{ github.event.action }}"
+          
+          # Use actual bash newlines so urlencode handles them properly
+          NL=$'\n'
 
           if [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
@@ -38,8 +41,8 @@ jobs:
             COMMIT_STR="commits"
             if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="[${ACTOR}](${ACTOR_URL}) wants to merge ${COMMITS} ${COMMIT_STR} into [${REPO_NAME}](${REPO_URL}) at [#${PR_NUM}](${PR_URL})%0A%0A"
-            MSG+="*Title:* \`${TITLE}\`%0A"
+            MSG="[${ACTOR}](${ACTOR_URL}) wants to merge ${COMMITS} ${COMMIT_STR} into [${REPO_NAME}](${REPO_URL}) at [#${PR_NUM}](${PR_URL})${NL}${NL}"
+            MSG+="*Title:* \`${TITLE}\`${NL}"
             MSG+="*Files Changed:* ${FILES} with +${ADD} -${DEL}"
 
           else
@@ -47,7 +50,7 @@ jobs:
             ISSUE_URL="${{ github.event.issue.html_url }}"
             TITLE="${{ github.event.issue.title }}"
 
-            MSG="[${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) at [#${ISSUE_NUM}](${ISSUE_URL})%0A%0A"
+            MSG="[${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) at [#${ISSUE_NUM}](${ISSUE_URL})${NL}${NL}"
             MSG+="*Title:* \`${TITLE}\`"
           fi
 
