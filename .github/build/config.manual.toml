@@ -5,7 +5,7 @@ enable-module-update = true
 patches-source = "Raudrobot/revanced-patches"
 
 [proton-mail-revanced]
-enabled = true
+enabled = false
 app-name = "proton-mail"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -27,7 +27,7 @@ uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [lightroom-revanced]
-enabled = true
+enabled = false
 app-name = "lightroom"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -48,10 +48,10 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # dpi = "120-640dpi nodpi anydpi"
 # apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
-archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [soundcloud-revanced]
-enabled = true
+enabled = false
 app-name = "soundcloud"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -61,7 +61,7 @@ uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = false
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -73,7 +73,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
-enabled = true
+enabled = false
 app-name = "proton-vpn"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -84,7 +84,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [youtube-revanced]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -95,7 +95,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -106,7 +106,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-revanced]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
@@ -122,6 +122,7 @@ app-name = "messenger"
 rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
+version = "552.0.0.44.65"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
