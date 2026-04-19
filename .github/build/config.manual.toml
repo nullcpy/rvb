@@ -42,7 +42,7 @@ enabled = true
 app-name = "twitch"
 rv-brand = "revanced"
 build-mode = "apk"
-arch = "both"
+# arch = "both"
 version = "25.3.0"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
@@ -117,7 +117,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [messenger-revanced]
-enabled = true
+enabled = false
 app-name = "messenger"
 rv-brand = "revanced"
 build-mode = "apk"
