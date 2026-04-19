@@ -2,15 +2,91 @@ parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
+patches-source = "Raudrobot/revanced-patches"
 
-[truecaller-morphe]
+[proton-mail-revanced]
 enabled = true
-app-name = "truecaller"
-rv-brand = "morphe"
-build-mode = "both"
+app-name = "proton-mail"
+rv-brand = "revanced"
+build-mode = "apk"
 arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
+[samsung-radio-revanced]
+enabled = false
+app-name = "samsung-radio"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "both"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
+
+[lightroom-revanced]
+enabled = true
+app-name = "lightroom"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "arm64-v8a"
+
+cli-source = "ReVanced/revanced-cli"
+# uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[twitch-revanced]
+enabled = true
+app-name = "twitch"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "both"
+version = "25.3.0"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[soundcloud-revanced]
+enabled = true
+app-name = "soundcloud"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "both"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+
+[google-recorder-revanced]
+enabled = true 
+app-name = "google-recorder"
+rv-brand = "revanced"
+build-mode = "both"
+arch = "arm64-v8a"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+# dpi = "480-640dpi 120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
+[proton-vpn-revanced]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "both"
+
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
