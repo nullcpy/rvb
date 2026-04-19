@@ -41,11 +41,11 @@
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/124/youtube-morphe-v20.47.62-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/124/youtube-morphe-v20.47.62-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/124/youtube-morphe-module-v20.47.62-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/124/youtube-morphe-module-v20.47.62-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/128/youtube-morphe-v20.47.62-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/128/youtube-morphe-v20.47.62-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/128/youtube-morphe-module-v20.47.62-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/128/youtube-morphe-module-v20.47.62-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-18](https://github.com/nullcpy/rvb/releases/tag/124)<br>
-Patches: [MorpheApp/patches-1.24.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.11)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/128)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.12.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.12)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -793,11 +793,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.47.56-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/124/youtube-music-morphe-v8.47.56-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/124/youtube-music-morphe-v8.47.56-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/124/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/124/youtube-music-morphe-module-v8.47.56-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/128/youtube-music-morphe-v8.47.56-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/128/youtube-music-morphe-v8.47.56-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/128/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/128/youtube-music-morphe-module-v8.47.56-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-18](https://github.com/nullcpy/rvb/releases/tag/124)<br>
-Patches: [MorpheApp/patches-1.24.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.11)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/128)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.12.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.12)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -811,7 +811,7 @@ Patches: [MorpheApp/patches-1.24.0-dev.11.mpp](https://github.com/MorpheApp/morp
 - Enable forced miniplayer
 - Force original audio
 - GmsCore support
-- Hide 'Get Music Premium'
+- Hide ads
 - Hide buttons
 - Hide category bar
 - Hide music video ads
@@ -1216,11 +1216,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/124/reddit-morphe-v2026.10.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/124/reddit-morphe-v2026.10.0-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/124/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/124/reddit-morphe-module-v2026.10.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/128/reddit-morphe-v2026.10.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/128/reddit-morphe-v2026.10.0-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/128/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/128/reddit-morphe-module-v2026.10.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-18](https://github.com/nullcpy/rvb/releases/tag/124)<br>
-Patches: [MorpheApp/patches-1.24.0-dev.11.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.11)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/128)<br>
+Patches: [MorpheApp/patches-1.24.0-dev.13.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.13)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
