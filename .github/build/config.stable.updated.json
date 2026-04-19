@@ -658,7 +658,7 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -669,7 +669,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "pinterest-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "pinterest",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -679,7 +679,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -689,7 +689,7 @@
     "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android"
   },
   "macrodroid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "apk",
