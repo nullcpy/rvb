@@ -2,6 +2,7 @@ parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
+cli-source = "ReVanced/revanced-cli"
 patches-source = "Raudrobot/revanced-patches"
 
 [messenger-revanced]
@@ -11,7 +12,6 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 version = "552.0.0.44.65"
-cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
