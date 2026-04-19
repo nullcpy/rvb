@@ -1540,11 +1540,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="podcast-addict-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2026.4-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/podcast-addict-morphe-v2026.4-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/podcast-addict-morphe-v2026.4-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/podcast-addict-morphe-v2026.4-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Enable Premium
 - MicroG integration
 </blockquote>
@@ -1593,11 +1593,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.16.83.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Remove delay
 - Unlock custom DNS
 - Unlock split tunneling
@@ -1717,11 +1717,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="wps-office-morphe">&emsp;<img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/wps-office-morphe-v18.12.1-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/wps-office-morphe-v18.12.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/wps-office-morphe-v18.12.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Disable anti-tamper
 - Enable Pro
 </blockquote>
@@ -1736,11 +1736,11 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="solid-explorer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/solid-explorer-morphe-v3.4.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Enable Pro
 - MicroG integration
 </blockquote>
@@ -1774,11 +1774,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="icon-packer-morphe">&emsp;<img src="https://img.shields.io/badge/version-v1.21.0.release-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/icon-packer-morphe-v1.21.0-release-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Unlock premium features
 </blockquote>
 </details>
@@ -1830,11 +1830,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/129/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/129/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/129/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/129/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/132/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/132/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/129)<br>
-Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.8.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [Paresh-Maheshwari/patches-1.9.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.9.0)
 - Hide Assistant tab
 - Hide Scams tab
 - Truecaller Premium
@@ -1850,11 +1850,11 @@ Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshw
 <details>
 <summary id="duolingo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.74.4-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/duolingo-morphe-v6.74.4-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/duolingo-morphe-v6.74.4-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/duolingo-morphe-v6.74.4-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/duolingo-morphe-v6.74.4-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Disable Login Integrity
 - Enable Premium
 </blockquote>
@@ -1942,11 +1942,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="document-scanner-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/129/document-scanner-morphe-v6.8.18-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/129/document-scanner-morphe-v6.8.18-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/document-scanner-morphe-v6.8.18-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/document-scanner-morphe-v6.8.18-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/129)<br>
-Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.8.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [Paresh-Maheshwari/patches-1.9.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.9.0)
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -1960,11 +1960,11 @@ Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshw
 <details>
 <summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.6-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/129/macrodroid-morphe-v5.63.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/129/macrodroid-morphe-v5.63.6-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/macrodroid-morphe-v5.63.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/macrodroid-morphe-v5.63.6-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/129)<br>
-Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.8.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [Paresh-Maheshwari/patches-1.9.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.9.0)
 </blockquote>
 </details>
 
@@ -1977,11 +1977,11 @@ Patches: [Paresh-Maheshwari/patches-1.8.0.mpp](https://github.com/Paresh-Maheshw
 <details>
 <summary id="wallcraft-morphe">&emsp;<img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/118/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/118/wallcraft-morphe-v3.61.01-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/132/wallcraft-morphe-v3.61.01-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/132/wallcraft-morphe-v3.61.01-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/118)<br>
-Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/132)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 - Enable Premium
 </blockquote>
 </details>
