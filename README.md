@@ -1438,11 +1438,19 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
+<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v16.9.1-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitch-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/128/twitch-revanced-v16.9.1-all.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/128/twitch-revanced-v16.9.1-all.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/128)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Auto claim channel points
+- Block audio ads
+- Block embedded ads
+- Block video ads
+- Show deleted messages
+- Settings
 </blockquote>
 </details>
 
