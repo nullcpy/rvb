@@ -1,11 +1,23 @@
-twitter-morphe (arm64-v8a): 11.83.0-release.1  
-twitter-morphe (arm-v7a): 11.83.0-release.1  
-youtube-morphe (arm64-v8a): 20.47.62  
-youtube-morphe (arm-v7a): 20.47.62  
-youtube-music-morphe (arm64-v8a): 8.47.56  
-youtube-music-morphe (arm-v7a): 8.47.56  
-reddit-morphe (arm64-v8a): 2026.10.0  
-reddit-morphe (arm-v7a): 2026.10.0  
+duolingo-morphe (arm64-v8a): 6.74.4  
+duolingo-morphe (arm-v7a): 6.74.4  
+wps-office-morphe (arm64-v8a): 18.12.1  
+wps-office-morphe (arm-v7a): 18.12.1  
+wallcraft-morphe (arm64-v8a): 3.61.01  
+wallcraft-morphe (arm-v7a): 3.61.01  
+solid-explorer-morphe (arm64-v8a): 3.4.1  
+solid-explorer-morphe (arm-v7a): 3.4.1  
+icon-packer-morphe (arm64-v8a): 1.21.0-release  
+icon-packer-morphe (arm-v7a): 1.21.0-release  
+podcast-addict-morphe (arm64-v8a): 2026.4  
+podcast-addict-morphe (arm-v7a): 2026.4  
+proton-vpn-morphe (arm64-v8a): 5.16.83.0  
+proton-vpn-morphe (arm-v7a): 5.16.83.0  
+truecaller-morphe (arm64-v8a): 26.10.6  
+truecaller-morphe (arm-v7a): 26.10.6  
+document-scanner-morphe (arm64-v8a): 6.8.18  
+document-scanner-morphe (arm-v7a): 6.8.18  
+macrodroid-morphe (arm64-v8a): 5.63.6  
+macrodroid-morphe (arm-v7a): 5.63.6  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -13,8 +25,8 @@ reddit-morphe (arm-v7a): 2026.10.0
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Channel](https://t.me/rvb28) | [Website](https://nullcpy.github.io)
   
-Patches: crimera/patches-3.3.0-dev.1.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.1)
+Patches: hoo-dles/patches-1.26.0.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 
-Patches: MorpheApp/patches-1.24.0-dev.14.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0-dev.14)  
+Patches: Paresh-Maheshwari/patches-1.9.0.mpp  
+[Changelog](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.9.0)  
