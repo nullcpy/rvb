@@ -5,7 +5,7 @@ enable-module-update = true
 patches-source = "Raudrobot/revanced-patches"
 
 [messenger-revanced]
-enabled = false
+enabled = true
 app-name = "messenger"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -15,4 +15,4 @@ cli-source = "ReVanced/revanced-cli"
 # uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
-archive-durl = "https://archive.org/download/geologically/apks/com.facebook.orca/"
+# archive-durl = "https://archive.org/download/geologically/apks/com.facebook.orca/"
