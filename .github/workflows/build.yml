@@ -17,6 +17,7 @@ on:
           - ".github/build/config.manual.toml"
           - ".github/build/config.dev.updated.json"
           - ".github/build/config.stable.updated.json"
+          - ".github/build/config.revanced.toml"
 
 concurrency:
   group: build
