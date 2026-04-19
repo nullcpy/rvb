@@ -160,6 +160,19 @@ version = "552.0.0.44.65"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 # dpi = "360-480dpi nodpi anydpi"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca/"
 
+[instagram-revanced]
+enabled = true
+app-name = "instagram"
+rv-brand = "revanced"
+build-mode = "apk"
+arch = "both"
+included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
+exclusive-patches = true
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 
