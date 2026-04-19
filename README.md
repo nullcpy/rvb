@@ -643,20 +643,144 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 </details>
 
 <details>
-<summary id="youtube-revanced-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-revanced-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.40.45-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-nord-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-nord-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-nord-v20.40.45-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-nord-v20.40.45-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-nord-module-v20.40.45-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-nord-module-v20.40.45-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Add more double tap to seek length options
+- Alternative thumbnails
+- Announcements
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom player overlay opacity
+- Disable auto captions
+- Disable double tap actions
+- Disable fullscreen ambient mode
+- Disable haptic feedback
+- Disable player popup panels
+- Disable resuming Shorts on startup
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Downloads
+- Enable debugging
+- Exit fullscreen
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu items
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open videos fullscreen
+- Pause on audio interrupt
+- Playback speed
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
+- Custom branding
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-revanced-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-revanced-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.40.45-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-mocha-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-mocha-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-mocha-v20.40.45-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-mocha-v20.40.45-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-mocha-module-v20.40.45-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-mocha-module-v20.40.45-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Add more double tap to seek length options
+- Alternative thumbnails
+- Announcements
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom player overlay opacity
+- Disable auto captions
+- Disable double tap actions
+- Disable fullscreen ambient mode
+- Disable haptic feedback
+- Disable player popup panels
+- Disable resuming Shorts on startup
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Downloads
+- Enable debugging
+- Exit fullscreen
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu items
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open videos fullscreen
+- Pause on audio interrupt
+- Playback speed
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
+- Custom branding
 </blockquote>
 </details>
 
@@ -1068,11 +1192,18 @@ Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/ta
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitter-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v10.86.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/twitter-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/twitter-revanced-v10.86.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/twitter-revanced-v10.86.0-release.0-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Dynamic color
+- Hide ads
+- Hide recommended users
+- Sanitize sharing links
+- Unlock downloads
 </blockquote>
 </details>
 
@@ -1195,11 +1326,14 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="threads-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
+<summary id="threads-revanced">&emsp;<img src="https://img.shields.io/badge/version-v382.0.0.51.85-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/threads-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/threads-revanced-v382.0.0.51.85-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/threads-revanced-v382.0.0.51.85-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Hide ads
 </blockquote>
 </details>
 
@@ -1309,10 +1443,10 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="messenger-revanced">&emsp;<img src="https://img.shields.io/badge/version-v552.0.0.44.65-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/127/messenger-revanced-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v557.0.0.53.76-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v557.0.0.53.76-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/127)<br>
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Hide Facebook button
 - Hide inbox ads
@@ -1438,12 +1572,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v16.9.1-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
+<summary id="twitch-revanced">&emsp;<img src="https://img.shields.io/badge/version-v25.3.0-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/128/twitch-revanced-v16.9.1-all.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/128/twitch-revanced-v16.9.1-all.apk)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/128)<br>
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Auto claim channel points
 - Block audio ads
@@ -1786,11 +1920,15 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="duolingo-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
+<summary id="duolingo-revanced">&emsp;<img src="https://img.shields.io/badge/version-v6.54.5-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/duolingo-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/duolingo-revanced-v6.54.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/duolingo-revanced-v6.54.5-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Disable ads
+- Skip energy recharge ads
 </blockquote>
 </details>
 
