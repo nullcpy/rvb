@@ -1408,11 +1408,18 @@ Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/ta
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="instagram-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-revanced">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/instagram-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/127/instagram-revanced-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/127/instagram-revanced-v423.0.0.47.66-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/127)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Disable analytics
+- Enable developer menu
+- Hide ads
+- Open links externally
+- Sanitize sharing links
 </blockquote>
 </details>
 
@@ -1443,10 +1450,10 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="messenger-revanced">&emsp;<img src="https://img.shields.io/badge/version-v552.0.0.44.65-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v557.0.0.53.76-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/127/messenger-revanced-v552.0.0.44.65-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/127/messenger-revanced-v552.0.0.44.65-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/127)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Hide Facebook button
 - Hide inbox ads
