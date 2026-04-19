@@ -20,19 +20,19 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.23.0",
-    "prerelease": "v1.24.0-dev.12",
+    "prerelease": "v1.24.0-dev.14",
     "blocked": false
   },
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.2.0",
-    "prerelease": "v3.2.0-dev.5",
+    "prerelease": "v3.3.0-dev.1",
     "blocked": false
   },
   "hoodles": {
     "enabledDev": false,
     "repo": "hoo-dles/morphe-patches",
-    "stable": "v1.25.0",
+    "stable": "v1.26.0",
     "prerelease": "v1.26.0-dev.1",
     "blocked": false
   },
@@ -63,8 +63,8 @@
   },
   "paresh": {
     "repo": "Paresh-Maheshwari/paresh-patches",
-    "stable": "v1.8.0",
-    "prerelease": "v1.4.0-dev.32",
+    "stable": "v1.9.0",
+    "prerelease": "v1.4.0-dev.33",
     "blocked": false
   }
 }
