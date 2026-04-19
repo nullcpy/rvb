@@ -572,11 +572,73 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="youtube-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-revanced"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.40.45-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-revanced-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-v20.40.45-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-v20.40.45-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-module-v20.40.45-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-revanced-module-v20.40.45-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Add more double tap to seek length options
+- Alternative thumbnails
+- Announcements
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom player overlay opacity
+- Disable auto captions
+- Disable double tap actions
+- Disable fullscreen ambient mode
+- Disable haptic feedback
+- Disable player popup panels
+- Disable resuming Shorts on startup
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Downloads
+- Enable debugging
+- Exit fullscreen
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu items
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open links externally
+- Open videos fullscreen
+- Pause on audio interrupt
+- Playback speed
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
+- Custom branding
 </blockquote>
 </details>
 
@@ -812,11 +874,32 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="youtube-music-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-revanced"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v8.40.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-revanced-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-music-revanced-v8.40.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/youtube-music-revanced-v8.40.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-music-revanced-module-v8.40.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/126/youtube-music-revanced-module-v8.40.54-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Change miniplayer color
+- Check watch history domain name resolution
+- Enable debugging
+- Enable exclusive audio playback
+- Force original audio
+- GmsCore support
+- Hide 'Get Music Premium'
+- Hide buttons
+- Hide category bar
+- Hide layout components
+- Hide music video ads
+- Navigation bar
+- Permanent repeat
+- Remove background playback restrictions
+- Sanitize sharing links
+- Spoof video streams
+- Theme
+- Unlock Android Auto Media Browser
+- Custom branding
 </blockquote>
 </details>
 
@@ -1224,11 +1307,16 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="messenger-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
+<summary id="messenger-revanced">&emsp;<img src="https://img.shields.io/badge/version-v557.0.0.53.76-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/messenger-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v557.0.0.53.76-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/messenger-revanced-v557.0.0.53.76-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Hide Facebook button
+- Hide inbox subtabs
+- Remove Meta AI
 </blockquote>
 </details>
 
@@ -1294,11 +1382,15 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<img src="https://img.shields.io/badge/version-v7.72.0.900772179-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/google-photos-revanced-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/google-photos-revanced-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/google-photos-revanced-v7.72.0.900772179-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/google-photos-revanced-v7.72.0.900772179-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/google-photos-revanced-module-v7.72.0.900772179-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/126/google-photos-revanced-module-v7.72.0.900772179-arm-v7a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- GmsCore support
+- Spoof features
 </blockquote>
 </details>
 
@@ -1325,11 +1417,16 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="soundcloud-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-revanced">&emsp;<img src="https://img.shields.io/badge/version-v2025.05.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/soundcloud-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/soundcloud-revanced-v2025.05.27-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/soundcloud-revanced-v2025.05.27-release-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Disable telemetry
+- Enable offline sync
+- Hide ads
 </blockquote>
 </details>
 
@@ -1389,11 +1486,15 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="proton-mail-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
+<summary id="proton-mail-revanced">&emsp;<img src="https://img.shields.io/badge/version-v4.15.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-mail-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/proton-mail-revanced-v4.15.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/proton-mail-revanced-v4.15.0-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Remove 'Sent from' signature
+- Remove free accounts limit
 </blockquote>
 </details>
 
@@ -1420,11 +1521,15 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="proton-vpn-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
+<summary id="proton-vpn-revanced">&emsp;<img src="https://img.shields.io/badge/version-v5.17.14.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/proton-vpn-revanced-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/proton-vpn-revanced-v5.17.14.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/126/proton-vpn-revanced-v5.17.14.0-arm-v7a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Remove delay
+- Unlock split tunneling
 </blockquote>
 </details>
 
@@ -1449,11 +1554,14 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-recorder-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
+<summary id="google-recorder-revanced">&emsp;<img src="https://img.shields.io/badge/version-v4.2.20260118.867906508-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/google-recorder-revanced-v0.0.0-arm64-v8a.apk) • [arm64-v8a.zip](../../releases/download/v0/google-recorder-revanced-module-v0.0.0-arm64-v8a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/google-recorder-revanced-v4.2.20260118.867906508-arm64-v8a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/126/google-recorder-revanced-module-v4.2.20260118.867906508-arm64-v8a.zip)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Remove device restrictions
 </blockquote>
 </details>
 
@@ -1596,11 +1704,16 @@ Patches: [hoo-dles/patches-1.25.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="lightroom-revanced">&emsp;<img src="https://img.shields.io/badge/version-v9.3.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/lightroom-revanced-v0.0.0-arm64-v8a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/126/lightroom-revanced-v9.3.0-arm64-v8a.apk)
 <blockquote>
-(Applied Patches)
+
+[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/126)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Disable mandatory login
+- Disable version check
+- Unlock Premium
 </blockquote>
 </details>
 
