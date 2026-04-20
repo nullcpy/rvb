@@ -1897,6 +1897,66 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 
 ---
 
+### [Smart Launcher 6](https://play.google.com/store/apps/details?id=ginlemon.flowerfree)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [Merriam-Webster Dictionary](https://play.google.com/store/apps/details?id=com.merriamwebster)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="merriam-webster-dictionary-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=B30000&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/merriam-webster-dictionary-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/merriam-webster-dictionary-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [Tumblr](https://play.google.com/store/apps/details?id=com.tumblr)
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="tumblr-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/tumblr-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/tumblr-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [Viber](https://play.google.com/store/apps/details?id=com.viber.voip)
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="viber-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/viber-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/viber-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Photomath](https://play.google.com/store/apps/details?id=com.microblink.photomath)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
