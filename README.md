@@ -1917,11 +1917,15 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="pandora-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
+<summary id="pandora-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2602.1-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/pandora-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/pandora-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/facebook-morphe-v2602.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/facebook-morphe-v2602.1-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
+- Disable ads
+- Unlimited skips
 </blockquote>
 </details>
 
@@ -1932,11 +1936,15 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
+<summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.6build002patch1-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
   
-[all.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-all.apk) • [all.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-all.zip)
+[all.apk](https://github.com/nullcpy/rvb/releases/download/134/smart-launcher-6-morphe-v6.6build002patch1-all.apk) • [all.zip](https://github.com/nullcpy/rvb/releases/download/134/smart-launcher-6-morphe-module-v6.6build002patch1-all.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
+- Disable signature check
+- Enable Pro
 </blockquote>
 </details>
 
@@ -1947,11 +1955,14 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="merriam-webster-dictionary-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=B30000&logo=android&logoColor=white&style=flat"></summary>
+<summary id="merriam-webster-dictionary-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.5.0-gray?labelColor=B30000&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/merriam-webster-dictionary-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/merriam-webster-dictionary-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/merriam-webster-dictionary-morphe-v5.5.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/merriam-webster-dictionary-morphe-v5.5.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
+- Enable Premium
 </blockquote>
 </details>
 
@@ -1962,11 +1973,19 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="tumblr-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
+<summary id="tumblr-morphe">&emsp;<img src="https://img.shields.io/badge/version-v44.1.0.111-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/tumblr-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/tumblr-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/tumblr-morphe-v44.1.0.111-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/tumblr-morphe-v44.1.0.111-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Disable Ad-Free Banner
+- Disable Tumblr TV
+- Disable blog notification reminder
+- Disable dashboard ads
+- Disable gift message popup
+- Disable in-app update
 </blockquote>
 </details>
 
@@ -1977,11 +1996,14 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="viber-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
+<summary id="viber-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.1.2.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/viber-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/viber-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide Ads
 </blockquote>
 </details>
 
