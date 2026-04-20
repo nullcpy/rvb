@@ -612,3 +612,48 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
+[smart-launcher-6-morphe]
+enabled = true 
+app-name = "smart-launcher-6"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+version = "6.6 build 002 patch 1"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
+
+[merriam-webster-dictionary-morphe]
+enabled = true 
+app-name = "merriam-webster-dictionary"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+version = "5.5.0" 
+patches-source = "hoo-dles/morphe-patches"
+uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
+
+[tumblr-morphe]
+enabled = true 
+app-name = "tumblr"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+
+[viber-morphe]
+enabled = true 
+app-name = "viber"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+# github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.viber.voip"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
+
+
+
