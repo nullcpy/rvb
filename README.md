@@ -1282,11 +1282,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="instagram-morphe">&emsp;<img src="https://img.shields.io/badge/version-v424.0.0.49.64-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/112/instagram-morphe-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/112/instagram-morphe-v424.0.0.49.64-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/133/instagram-morphe-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/133/instagram-morphe-v424.0.0.49.64-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-14](../../releases/tag/112)<br>
-Patches: [brosssh/patches-2.5.0-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.5.0-dev.1)
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/133)<br>
+Patches: [brosssh/patches-2.5.0-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.5.0-dev.2)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
