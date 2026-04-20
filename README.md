@@ -1897,6 +1897,36 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 
 ---
 
+### [Facebook](https://play.google.com/store/apps/details?id=com.facebook.katana)
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="facebook-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=1877F2&logo=facebook&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/facebook-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/facebook-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [Pandora](https://play.google.com/store/apps/details?id=com.pandora.android)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="pandora-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/pandora-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/pandora-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Smart Launcher 6](https://play.google.com/store/apps/details?id=ginlemon.flowerfree)
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)

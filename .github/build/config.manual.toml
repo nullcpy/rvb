@@ -46,5 +46,24 @@ patches-source = "RookieEnough/De-ReVanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
+[facebook-morphe]
+enabled = true 
+app-name = "facebook"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+# github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.facebook.katana"
+uptodown-durl = "https://facebook.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
 
-
+[pandora-morphe]
+enabled = true 
+app-name = "facebook"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
+# github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.pandora.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
