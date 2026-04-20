@@ -1934,7 +1934,7 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm-v7a.zip)
+[all.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-all.apk) • [all.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-all.zip)
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
