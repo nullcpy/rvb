@@ -1938,7 +1938,7 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.6build002patch1-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
   
-[all.apk](https://github.com/nullcpy/rvb/releases/download/134/smart-launcher-6-morphe-v6.6build002patch1-all.apk) • [all.zip](https://github.com/nullcpy/rvb/releases/download/134/smart-launcher-6-morphe-module-v6.6build002patch1-all.zip)
+[arm64-v8a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-arm-v7a.zip)
 <blockquote>
 
 [Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>

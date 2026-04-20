@@ -16,7 +16,7 @@ uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [merriam-webster-dictionary-morphe]
-enabled = true 
+enabled = false 
 app-name = "merriam-webster-dictionary"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -27,7 +27,7 @@ uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
 
 [tumblr-morphe]
-enabled = true 
+enabled = false 
 app-name = "tumblr"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -36,7 +36,7 @@ patches-source = "RookieEnough/De-ReVanced"
 uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
 
 [viber-morphe]
-enabled = true 
+enabled = false 
 app-name = "viber"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -58,7 +58,7 @@ uptodown-durl = "https://facebook.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
 
 [pandora-morphe]
-enabled = true 
+enabled = false 
 app-name = "facebook"
 rv-brand = "morphe"
 build-mode = "apk"
