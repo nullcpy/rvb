@@ -17,9 +17,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/github-script@v7
+      - uses: actions/checkout@v4  
+      - uses: actions/github-script@v7  
         with:
           script: |
             const fs = require('node:fs');
@@ -30,14 +29,14 @@ jobs:
             md = md.replace(/\.\.\/\.\.\/releases\//g, `${repoUrl}/releases/`);
             md = md.replace(/\.\//g, `${repoUrl}/blob/${process.env.GITHUB_REF_NAME}/`);
 
-            // Render markdown to HTML
+            // Render markdown
             const { data: body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
             });
 
-            // Inject proper HTML5 structure + GitHub's markdown CSS
+            // Inject proper HTML structure + GitHub styling
             const html = `<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -61,8 +60,8 @@ jobs:
             fs.mkdirSync('public', { recursive: true });
             fs.writeFileSync('public/index.html', html, 'utf8');
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v5  
+      - uses: actions/upload-pages-artifact@v3  
         with:
           path: public
 
@@ -74,4 +73,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4  
