@@ -1934,6 +1934,36 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [XRecorder](https://play.google.com/store/apps/details?id=video.other.screenrecorder)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="xrecorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF6600&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/xrecorder-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xrecorder-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/xrecorder-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/xrecorder-morphe-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
+### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/macrodroid-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/macrodroid-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/macrodroid-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/macrodroid-morphe-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Merriam-Webster Dictionary](https://play.google.com/store/apps/details?id=com.merriamwebster)
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
@@ -2044,23 +2074,6 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 [Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
 Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
 - Doc Scanner Premium
-</blockquote>
-</details>
-
----
-
-### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
-
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
-
-<details>
-<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.6-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
-
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/135/macrodroid-morphe-v5.63.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/135/macrodroid-morphe-v5.63.6-arm-v7a.apk)
-<blockquote>
-
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
-Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
 </blockquote>
 </details>
 
