@@ -4,6 +4,10 @@ name: Deploy Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
 
 permissions:
   contents: read
