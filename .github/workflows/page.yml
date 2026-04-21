@@ -10,7 +10,7 @@ on:
       - 'README.md'
 
 concurrency:
-  group: page
+  group: ci
   cancel-in-progress: false
 
 permissions:
