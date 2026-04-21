@@ -1,0 +1,81 @@
+# Copyright (c) 2026 nvbangg (github.com/nvbangg)
+
+name: Deploy Pages
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [build]
+    types:
+      - completed
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('node:fs');
+            const md = fs.readFileSync('README.md', 'utf8');
+            const { data: body } = await github.rest.markdown.render({
+              text: md,
+              mode: 'gfm',
+              context: process.env.GITHUB_REPOSITORY
+            });
+            const html = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <meta name="color-scheme" content="light dark">
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css">
+              <style>
+                body, .markdown-body {
+                  box-sizing: border-box;
+                  min-width: 200px;
+                  max-width: 980px;
+                  margin: 0 auto;
+                  padding: 45px;
+                  background: var(--color-canvas-default);
+                  color: var(--color-fg-default);
+                }
+                @media (max-width: 767px) {
+                  body, .markdown-body {
+                    padding: 15px;
+                  }
+                }
+              </style>
+            </head>
+            <body>
+              <article class="markdown-body">
+                ${body}
+              </article>
+            </body>
+            </html>`;
+            fs.mkdirSync('public', { recursive: true });
+            fs.writeFileSync('public/index.html', html, 'utf8');
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
