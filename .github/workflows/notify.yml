@@ -6,9 +6,14 @@ on:
   pull_request:
     types: [opened, closed, reopened]
 
+concurrency:
+  group: notify
+  cancel-in-progress: false
+
 jobs:
   notify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Send Notification to Telegram
         env:

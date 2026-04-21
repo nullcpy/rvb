@@ -15,6 +15,7 @@ jobs:
     permissions:
       contents: write
       actions: write
+    timeout-minutes: 10
     steps:
       - name: Delete Older Releases and Workflows
         uses: ophub/delete-releases-workflows@main

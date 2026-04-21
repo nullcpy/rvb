@@ -9,6 +9,10 @@ on:
     paths:
       - 'README.md'
 
+concurrency:
+  group: ci
+  cancel-in-progress: false
+
 permissions:
   contents: read
   pages: write
@@ -17,6 +21,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
 
