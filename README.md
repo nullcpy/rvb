@@ -282,12 +282,12 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.16.242-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<img src="https://img.shields.io/badge/version-v21.16.240-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/135/youtube-morphe-exp-v21.16.242-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/135/youtube-morphe-exp-v21.16.242-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/135/youtube-morphe-exp-module-v21.16.242-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/135/youtube-morphe-exp-module-v21.16.242-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/140/youtube-morphe-exp-v21.16.240-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/140/youtube-morphe-exp-v21.16.240-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/140/youtube-morphe-exp-module-v21.16.240-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/140/youtube-morphe-exp-module-v21.16.240-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/140)<br>
 Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
 - Alternative thumbnails
 - Ambient mode
