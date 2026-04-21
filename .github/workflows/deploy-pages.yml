@@ -1,5 +1,4 @@
 # Copyright (c) 2026 nvbangg (github.com/nvbangg)
-
 name: Deploy Pages
 
 on:
@@ -18,41 +17,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
-      - uses: actions/github-script@v9
+      - uses: actions/github-script@v7
         with:
           script: |
             const fs = require('node:fs');
-            const md = fs.readFileSync('README.md', 'utf8');
+            let md = fs.readFileSync('README.md', 'utf8');
+
+            // Fix relative GitHub links to absolute URLs
+            const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
+            md = md.replace(/\.\.\/\.\.\/releases\//g, `${repoUrl}/releases/`);
+            md = md.replace(/\.\//g, `${repoUrl}/blob/${process.env.GITHUB_REF_NAME}/`);
+
+            // Render markdown to HTML
             const { data: body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
             });
-            const html = `
-            <!DOCTYPE html>
+
+            // Inject proper HTML5 structure + GitHub's markdown CSS
+            const html = `<!DOCTYPE html>
             <html lang="en">
             <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta name="color-scheme" content="light dark">
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css">
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>${process.env.GITHUB_REPOSITORY} Downloads</title>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
               <style>
-                body, .markdown-body {
-                  box-sizing: border-box;
-                  min-width: 200px;
-                  max-width: 980px;
-                  margin: 0 auto;
-                  padding: 45px;
-                  background: var(--color-canvas-default);
-                  color: var(--color-fg-default);
-                }
-                @media (max-width: 767px) {
-                  body, .markdown-body {
-                    padding: 15px;
-                  }
-                }
+                .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+                @media (max-width: 767px) { .markdown-body { padding: 15px; } }
+                img { max-width: 100%; height: auto; }
               </style>
             </head>
             <body>
@@ -61,12 +57,12 @@ jobs:
               </article>
             </body>
             </html>`;
+
             fs.mkdirSync('public', { recursive: true });
             fs.writeFileSync('public/index.html', html, 'utf8');
 
-      - uses: actions/configure-pages@v6
-
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
@@ -78,4 +74,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
