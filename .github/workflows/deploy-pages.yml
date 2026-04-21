@@ -1,4 +1,5 @@
 # Copyright (c) 2026 nvbangg (github.com/nvbangg)
+
 name: Deploy Pages
 
 on:
@@ -28,27 +29,41 @@ jobs:
             // Fix relative GitHub links to absolute URLs
             const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
             md = md.replace(/\.\.\/\.\.\/releases\//g, `${repoUrl}/releases/`);
-            md = md.replace(/\.\//g, `${repoUrl}/blob/${process.env.GITHUB_REF_NAME}/`);
+            md = md.replace(/\]\(\.\//g, `](${repoUrl}/blob/${process.env.GITHUB_REF_NAME}/`);
+            md = md.replace(/\[Group\]\(https:\/\/t.me\/rvb27\)/g, '[Group](https://t.me/rvb27)');
+            md = md.replace(/\[Channel\]\(https:\/\/t.me\/s\/rvb28\)/g, '[Channel](https://t.me/s/rvb28)');
 
-            // Render markdown to HTML
+            // Render markdown
             const { data: body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
             });
 
-            // Inject proper HTML5 structure + GitHub's markdown CSS
+            // Complete HTML with GitHub markdown CSS
             const html = `<!DOCTYPE html>
             <html lang="en">
             <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>${process.env.GITHUB_REPOSITORY} Downloads</title>
+              <title>ReVanced & Morphe Builder - Downloads</title>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
               <style>
-                .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
-                @media (max-width: 767px) { .markdown-body { padding: 15px; } }
-                img { max-width: 100%; height: auto; }
+                body { margin: 0; padding: 0; background: #0d1117; }
+                .markdown-body { 
+                  box-sizing: border-box; 
+                  min-width: 200px; 
+                  max-width: 980px; 
+                  margin: 0 auto; 
+                  padding: 45px;
+                  background: #0d1117;
+                  color: #c9d1d9;
+                }
+                .markdown-body a { color: #58a6ff; }
+                .markdown-body img { max-width: 100%; height: auto; }
+                @media (max-width: 767px) { 
+                  .markdown-body { padding: 15px; } 
+                }
               </style>
             </head>
             <body>
