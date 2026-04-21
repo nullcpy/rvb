@@ -26,12 +26,12 @@ jobs:
             const fs = require('node:fs');
             let md = fs.readFileSync('README.md', 'utf8');
 
-            // Fix relative GitHub links to absolute URLs
-            const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
-            md = md.replace(/\.\.\/\.\.\/releases\//g, `${repoUrl}/releases/`);
-            md = md.replace(/\]\(\.\//g, `](${repoUrl}/blob/${process.env.GITHUB_REF_NAME}/`);
-            md = md.replace(/\[Group\]\(https:\/\/t.me\/rvb27\)/g, '[Group](https://t.me/rvb27)');
-            md = md.replace(/\[Channel\]\(https:\/\/t.me\/s\/rvb28\)/g, '[Channel](https://t.me/s/rvb28)');
+            // Fix image paths to use absolute URLs
+            const repoUrl = `https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_REF_NAME}`;
+            md = md.replace(/\.\.\/releases\/download\//g, `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/`);
+            md = md.replace(/\.\.\/releases\/tag\//g, `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/tag/`);
+            md = md.replace(/\.\/\.github\/assets\//g, `${repoUrl}/.github/assets/`);
+            md = md.replace(/https:\/\/raw\.githubusercontent\.com\/Safouene1/g, 'https://raw.githubusercontent.com/Safouene1');
 
             // Render markdown
             const { data: body } = await github.rest.markdown.render({
@@ -40,7 +40,7 @@ jobs:
               context: process.env.GITHUB_REPOSITORY
             });
 
-            // Complete HTML with GitHub markdown CSS
+            // Complete HTML with proper structure and styling
             const html = `<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -49,20 +49,48 @@ jobs:
               <title>ReVanced & Morphe Builder - Downloads</title>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
               <style>
-                body { margin: 0; padding: 0; background: #0d1117; }
-                .markdown-body { 
-                  box-sizing: border-box; 
-                  min-width: 200px; 
-                  max-width: 980px; 
-                  margin: 0 auto; 
+                * {
+                  box-sizing: border-box;
+                }
+                body {
+                  margin: 0;
+                  padding: 20px;
+                  background: #0d1117;
+                  min-height: 100vh;
+                }
+                .markdown-body {
+                  max-width: 1200px;
+                  margin: 0 auto;
                   padding: 45px;
                   background: #0d1117;
                   color: #c9d1d9;
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
                 }
-                .markdown-body a { color: #58a6ff; }
-                .markdown-body img { max-width: 100%; height: auto; }
-                @media (max-width: 767px) { 
-                  .markdown-body { padding: 15px; } 
+                .markdown-body img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                }
+                .markdown-body a {
+                  color: #58a6ff;
+                  word-break: break-word;
+                }
+                .markdown-body table {
+                  display: block;
+                  width: 100%;
+                  overflow: auto;
+                }
+                .markdown-body code {
+                  word-break: break-word;
+                }
+                @media (max-width: 768px) {
+                  body {
+                    padding: 10px;
+                  }
+                  .markdown-body {
+                    padding: 20px 15px;
+                  }
                 }
               </style>
             </head>
