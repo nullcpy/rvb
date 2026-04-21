@@ -1990,7 +1990,7 @@ Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Mahesh
 
 <details>
 <summary id="merriam-webster-dictionary-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.5.0-gray?labelColor=B30000&logo=android&logoColor=white&style=flat"></summary>
-  
+
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/merriam-webster-dictionary-morphe-v5.5.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/merriam-webster-dictionary-morphe-v5.5.0-arm-v7a.apk)
 <blockquote>
 
@@ -2008,7 +2008,7 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <details>
 <summary id="tumblr-morphe">&emsp;<img src="https://img.shields.io/badge/version-v44.1.0.111-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
-  
+
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/tumblr-morphe-v44.1.0.111-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/tumblr-morphe-v44.1.0.111-arm-v7a.apk)
 <blockquote>
 
@@ -2031,7 +2031,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 <details>
 <summary id="viber-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.1.2.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
-  
+
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm-v7a.apk)
 <blockquote>
 
