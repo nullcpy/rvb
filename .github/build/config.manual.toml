@@ -3,14 +3,15 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[smart-launcher-6-morphe]
-enabled = true 
-app-name = "smart-launcher-6"
-rv-brand = "morphe"
+[youtube-morphe-exp]
+enabled = true
+app-name = "youtube"
+rv-brand = "morphe-exp"
 build-mode = "both"
-arch = "all"
-version = "6.6 build 002 patch 1"
-patches-source = "hoo-dles/morphe-patches"
+arch = "both"
+version = "21.16.240"
+patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
