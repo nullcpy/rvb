@@ -18,61 +18,40 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const fs = require('node:fs');
-            let md = fs.readFileSync('README.md', 'utf8');
-
-            // Fix image paths to use absolute URLs
-            const repoUrl = `https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_REF_NAME}`;
-            md = md.replace(/\.\.\/releases\/download\//g, `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/`);
-            md = md.replace(/\.\.\/releases\/tag\//g, `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/tag/`);
-            md = md.replace(/\.\/\.github\/assets\//g, `${repoUrl}/.github/assets/`);
-
-            // Render markdown
-            const {  body } = await github.rest.markdown.render({
+            const md = fs.readFileSync('README.md', 'utf8');
+            const { data: body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
             });
-
-            // Complete HTML with GitHub markdown CSS
-            const html = `<!DOCTYPE html>
+            const html = `
+            <!DOCTYPE html>
             <html lang="en">
             <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>ReVanced & Morphe Builder - Downloads</title>
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <meta name="color-scheme" content="light dark">
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css">
               <style>
-                * { box-sizing: border-box; }
-                body {
-                  margin: 0;
-                  padding: 20px;
-                  background: #0d1117;
-                  min-height: 100vh;
-                }
-                .markdown-body {
-                  max-width: 1200px;
+                body, .markdown-body {
+                  box-sizing: border-box;
+                  min-width: 200px;
+                  max-width: 980px;
                   margin: 0 auto;
                   padding: 45px;
-                  background: #0d1117;
-                  color: #c9d1d9;
-                  word-wrap: break-word;
-                  overflow-wrap: break-word;
+                  background: var(--color-canvas-default);
+                  color: var(--color-fg-default);
                 }
-                .markdown-body img {
-                  max-width: 100%;
-                  height: auto;
-                  display: block;
-                }
-                .markdown-body a { color: #58a6ff; }
-                @media (max-width: 768px) {
-                  body { padding: 10px; }
-                  .markdown-body { padding: 20px 15px; }
+                @media (max-width: 767px) {
+                  body, .markdown-body {
+                    padding: 15px;
+                  }
                 }
               </style>
             </head>
@@ -82,12 +61,12 @@ jobs:
               </article>
             </body>
             </html>`;
-
             fs.mkdirSync('public', { recursive: true });
             fs.writeFileSync('public/index.html', html, 'utf8');
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: public
 
@@ -96,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
