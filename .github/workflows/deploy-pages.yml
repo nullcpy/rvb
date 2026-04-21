@@ -25,7 +25,7 @@ jobs:
           script: |
             const fs = require('node:fs');
             const md = fs.readFileSync('README.md', 'utf8');
-            const { data: body } = await github.rest.markdown.render({
+            const {  body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
