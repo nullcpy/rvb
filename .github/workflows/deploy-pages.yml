@@ -4,10 +4,6 @@ name: Deploy Pages
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: [build]
-    types:
-      - completed
 
 permissions:
   contents: read
@@ -25,7 +21,7 @@ jobs:
           script: |
             const fs = require('node:fs');
             const md = fs.readFileSync('README.md', 'utf8');
-            const {  body } = await github.rest.markdown.render({
+            const { data: body } = await github.rest.markdown.render({
               text: md,
               mode: 'gfm',
               context: process.env.GITHUB_REPOSITORY
@@ -75,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
