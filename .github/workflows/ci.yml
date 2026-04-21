@@ -329,7 +329,7 @@ jobs:
           branch: main
           skip_checkout: true
           file_pattern: .github/build/*.json
-          commit_message: "Update patch sources and generated configs"
+          commit_message: "Update patch sources and generated configs [skip ci]"
 
   build_dev:
     needs: check_patch
@@ -364,3 +364,12 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "Authorization: token ${{ secrets.WEBSITE_DISPATCH_TOKEN }}" \
           -d '{"event_type": "update-catalog-cache"}'
+
+  trigger_deploy_pages:
+    needs: [build_dev, build_stable]
+    if: |
+      always() &&
+      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
+    uses: ./.github/workflows/page.yml
+
+
