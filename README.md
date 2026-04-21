@@ -1939,11 +1939,13 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="xrecorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF6600&logo=android&logoColor=white&style=flat"></summary>
+<summary id="xrecorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.5.2-gray?labelColor=FF6600&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/xrecorder-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xrecorder-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/xrecorder-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/xrecorder-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-v2.5.2-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-v2.5.2-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-module-v2.5.2-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-module-v2.5.2-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/136)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
 </blockquote>
 </details>
 
@@ -1954,11 +1956,13 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.6-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/macrodroid-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/macrodroid-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/macrodroid-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/macrodroid-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-v5.63.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-v5.63.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-module-v5.63.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-module-v5.63.6-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/136)<br>
+Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
 </blockquote>
 </details>
 
