@@ -1,5 +1,9 @@
-instagram-morphe (arm64-v8a): 424.0.0.49.64  
-instagram-morphe (arm-v7a): 424.0.0.49.64  
+truecaller-morphe (arm64-v8a): 26.10.6  
+truecaller-morphe (arm-v7a): 26.10.6  
+document-scanner-morphe (arm64-v8a): 6.8.18  
+document-scanner-morphe (arm-v7a): 6.8.18  
+macrodroid-morphe (arm64-v8a): 5.63.8  
+macrodroid-morphe (arm-v7a): 5.63.8  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +11,5 @@ instagram-morphe (arm-v7a): 424.0.0.49.64
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: brosssh/patches-2.5.0.mpp  
-[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.5.0)  
+Patches: Paresh-Maheshwari/patches-1.11.0.mpp  
+[Changelog](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)  
