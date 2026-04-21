@@ -370,6 +370,13 @@ jobs:
     if: |
       always() &&
       (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
-    uses: ./.github/workflows/page.yml
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Trigger Deploy Pages Workflow
+        run: gh workflow run page.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
