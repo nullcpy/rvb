@@ -1924,11 +1924,15 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
+<summary id="smart-launcher-6-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.6build002patch1-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
 
-[all.apk](../../releases/download/v0/smart-launcher-6-morphe-v0.0.0-all.apk) • [all.zip](../../releases/download/v0/smart-launcher-6-morphe-module-v0.0.0-all.zip)
+[all.apk](https://github.com/nullcpy/rvb/releases/download/137/smart-launcher-6-morphe-v6.6build002patch1-all.apk) • [all.zip](https://github.com/nullcpy/rvb/releases/download/137/smart-launcher-6-morphe-module-v6.6build002patch1-all.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/137)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
+- Disable signature check
+- Enable Pro
 </blockquote>
 </details>
 
