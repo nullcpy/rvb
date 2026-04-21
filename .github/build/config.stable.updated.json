@@ -79,7 +79,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -90,7 +90,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -101,7 +101,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -133,7 +133,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "instagram-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -410,7 +410,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-nord",
     "build-mode": "both",
@@ -422,7 +422,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-mocha",
     "build-mode": "both",
@@ -458,7 +458,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -469,7 +469,7 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android"
   },
   "youtube-music-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -492,7 +492,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "reddit-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -658,7 +658,7 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -679,7 +679,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -689,10 +689,10 @@
     "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
-    "build-mode": "apk",
+    "build-mode": "both",
     "arch": "both",
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "cli-source": "MorpheApp/morphe-cli",
@@ -740,16 +740,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
-  "facebook-morphe": {
-    "enabled": false,
-    "app-name": "facebook",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "RookieEnough/De-ReVanced",
-    "uptodown-durl": "https://facebook.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.katana"
-  },
   "pandora-morphe": {
     "enabled": false,
     "app-name": "facebook",
@@ -759,5 +749,15 @@
     "patches-source": "hoo-dles/morphe-patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts/",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
+  },
+  "xrecorder-morphe": {
+    "enabled": false,
+    "app-name": "xrecorder",
+    "rv-brand": "morphe",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "hoo-dles/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
   }
 }
