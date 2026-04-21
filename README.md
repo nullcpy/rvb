@@ -1845,11 +1845,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/135/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/135/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/135/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/135/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
-Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/139)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 - Hide Assistant tab
 - Hide Scams tab
 - Truecaller Premium
@@ -1972,13 +1972,13 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.6-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.8-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-v5.63.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-v5.63.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-module-v5.63.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/136/macrodroid-morphe-module-v5.63.6-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-v5.63.8-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-v5.63.8-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-module-v5.63.8-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-module-v5.63.8-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/136)<br>
-Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/139)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 </blockquote>
 </details>
 
@@ -2088,11 +2088,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="document-scanner-morphe">&emsp;<img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/135/document-scanner-morphe-v6.8.18-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/135/document-scanner-morphe-v6.8.18-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/139/document-scanner-morphe-v6.8.18-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/139/document-scanner-morphe-v6.8.18-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
-Patches: [Paresh-Maheshwari/patches-1.10.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.10.0)
+[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/139)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 - Doc Scanner Premium
 </blockquote>
 </details>
