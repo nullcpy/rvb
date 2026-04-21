@@ -14,7 +14,7 @@
 
 Building, testing, and maintaining these automated workflows takes a significant amount of time. If this builder has saved you time or made your life easier, any support is hugely appreciated!
 
-* **[❤️ Donate](https://fahim-ahmed05.github.io/donate)** if you can.
+* **❤️ [Donate](https://fahim-ahmed05.github.io/donate)** if you can.
 * **⭐ Star this repository** (This is a huge help!)
 * **📢 Share the project** with others who might find it useful.
 
