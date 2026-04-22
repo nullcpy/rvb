@@ -375,7 +375,7 @@ jobs:
       actions: write
     steps:
       - name: Trigger Deploy Pages Workflow
-        run: gh workflow run page.yml --ref main
+        run: gh workflow run deploy-pages.yml --ref main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
