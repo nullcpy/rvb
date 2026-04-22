@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ci
-  cancel-in-progress: false
+  group: clean
+  cancel-in-progress: true
 
 jobs:
   cleanup:
