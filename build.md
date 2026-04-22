@@ -1,5 +1,5 @@
-youtube-morphe-exp (arm64-v8a): 21.16.240  
-youtube-morphe-exp (arm-v7a): 21.16.240  
+adguard-morphe (arm64-v8a): 4.12.81  
+adguard-morphe (arm-v7a): 4.12.81  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +7,5 @@ youtube-morphe-exp (arm-v7a): 21.16.240
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: MorpheApp/patches-1.24.0.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)  
+Patches: hoo-dles/patches-1.26.0.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)  
