@@ -335,37 +335,45 @@ Patches: [brosssh/patches-2.5.0.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v424.0.0.49.64-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/141/instagram-morphe-piko-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-17](https://github.com/nullcpy/rvb/releases/tag/120)<br>
-Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
+[Release 2026-04-22](https://github.com/nullcpy/rvb/releases/tag/141)<br>
+Patches: [crimera/patches-3.3.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.1)
 - Add settings
 - Change version code
+- Copy comment
 - Customise story timestamp
+- Disable Reels scrolling
 - Disable ads
 - Disable analytics
 - Disable comments
 - Disable discover people
 - Disable explore
+- Disable screenshot detection
 - Disable stories
 - Disable story flipping
+- Disable typing status
 - Download media
 - Follow back indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
+- Hide notes tray
 - Hide reshare button
 - Hide stories tray
 - Hide suggested content
 - Improve image viewing
 - Limit feed to following profiles
 - Make ephemeral media permanent
+- More options on profile
 - Open links externally
 - Remove build expired popup
+- Remove empty bottom space
 - Sanitize share links
 - Unlock developer options
+- View DMs anonymously
 - View live anonymously
 - View stories anonymously
 - View story mentions
