@@ -1,16 +1,16 @@
 parallel-jobs = 1
-# patches-version = "dev"
-# cli-version = "dev"
-enable-module-update = true
+patches-version = "dev"
+cli-version = "dev"
+enable-module-update = false
 
-[adguard-morphe]
-enabled = true
-app-name = "adguard"
-rv-brand = "morphe"
-build-mode = "both"
+[instagram-morphe-piko]
+enabled = true 
+app-name = "instagram"
+rv-brand = "morphe-piko"
+build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "crimera/piko"
+# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
