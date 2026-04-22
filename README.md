@@ -1258,6 +1258,21 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 
 ---
 
+### [AdGuard](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="adguard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
+
+[arm64-v8a.apk](../../releases/download/v0/adguard-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/adguard-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/adguard-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/adguard-morphe-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Threads](https://play.google.com/store/apps/details?id=com..barcelona)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
