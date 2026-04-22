@@ -1263,11 +1263,14 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="adguard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
+<summary id="adguard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](../../releases/download/v0/adguard-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/adguard-morphe-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/adguard-morphe-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/adguard-morphe-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/140/adguard-morphe-v4.12.81-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/140/adguard-morphe-v4.12.81-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/140/adguard-morphe-module-v4.12.81-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/140/adguard-morphe-module-v4.12.81-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-22](https://github.com/nullcpy/rvb/releases/tag/140)<br>
+Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.26.0)
+- Enable Premium
 </blockquote>
 </details>
 
