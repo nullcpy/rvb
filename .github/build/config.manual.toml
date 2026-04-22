@@ -3,15 +3,14 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[youtube-morphe-exp]
+[adguard-morphe]
 enabled = true
-app-name = "youtube"
-rv-brand = "morphe-exp"
+app-name = "adguard"
+rv-brand = "morphe"
 build-mode = "both"
 arch = "both"
-version = "21.16.240"
-patches-source = "MorpheApp/morphe-patches"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
