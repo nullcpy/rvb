@@ -677,5 +677,18 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
+[adguard-morphe]
+enabled = true
+app-name = "adguard"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+
 
 
