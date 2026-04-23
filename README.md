@@ -335,14 +335,15 @@ Patches: [brosssh/patches-2.5.0.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/141/instagram-morphe-piko-v423.0.0.47.66-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/147/instagram-morphe-piko-v426.0.0.37.68-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-22](https://github.com/nullcpy/rvb/releases/tag/141)<br>
-Patches: [crimera/patches-3.3.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.1)
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/147)<br>
+Patches: [crimera/patches-3.3.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.2)
 - Add settings
+- Amoled theme
 - Change version code
 - Copy comment
 - Customise story timestamp
@@ -352,10 +353,12 @@ Patches: [crimera/patches-3.3.0-dev.1.mpp](https://github.com/crimera/piko/relea
 - Disable comments
 - Disable discover people
 - Disable explore
+- Disable highlights
 - Disable screenshot detection
 - Disable stories
 - Disable story flipping
 - Disable typing status
+- Disable video autoplay
 - Download media
 - Follow back indicator
 - Hide group creation button on sharesheet
@@ -372,6 +375,7 @@ Patches: [crimera/patches-3.3.0-dev.1.mpp](https://github.com/crimera/piko/relea
 - Remove build expired popup
 - Remove empty bottom space
 - Sanitize share links
+- Stories audio autoplay
 - Unlock developer options
 - View DMs anonymously
 - View live anonymously
@@ -1035,15 +1039,79 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.83.0.release.1-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v11.81.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/131/twitter-morphe-v11.83.0-release.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/131/twitter-morphe-v11.83.0-release.1-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/131/twitter-morphe-module-v11.83.0-release.1-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/131/twitter-morphe-module-v11.83.0-release.1-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-v11.81.0-release.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-v11.81.0-release.0-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-module-v11.81.0-release.0-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-module-v11.81.0-release.0-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/131)<br>
-Patches: [crimera/patches-3.3.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.1)
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/147)<br>
+Patches: [crimera/patches-3.3.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.2)
+- Add ability to copy media link
+- Change app icon
 - Change version code
+- Clear tracking params
+- Control video auto scroll
+- Custom download folder
+- Custom emoji font
+- Custom font
+- Custom sharing domain
+- Customise post font size
+- Customize Inline action Bar items
+- Customize Navigation Bar items
+- Customize default reply sorting
+- Customize explore tabs
+- Customize notification tabs
+- Customize profile tabs
+- Customize search suggestions
+- Customize search tab items
+- Customize side bar items
+- Customize timeline top bar
+- Delete from database
+- Disable auto timeline scroll on launch
+- Disable chirp font
+- Download patch
+- Enable PiP mode automatically
+- Enable Undo Posts
+- Enable debug menu for posts
+- Enable force HD videos
+- Force enable translate
 - Handle custom twitter links
+- Hide Banner
+- Hide Community Notes
+- Hide FAB
+- Hide FAB Menu Buttons
+- Hide Live Threads
+- Hide Recommended Users
+- Hide badges from navigation bar icons
+- Hide bookmark icon in timeline
+- Hide community badges
+- Hide followed by context
+- Hide hidden replies
+- Hide immersive player
+- Hide nudge button
+- Hide post metrics
+- Hide promote button
+- Hide recommendation items
+- Hook feature flag
+- Import/Export login token
+- Legacy share links
+- Log server response
+- Native downloader
+- Native reader mode
+- Native translator
+- No shortened URL
+- Pause search suggestions
+- Remove Ads
+- Remove premium upsell
+- Remove search suggestions
+- Remove view count
+- Round off numbers
+- Selectable Text
+- Share Tweet as Image
+- Show changelogs
+- Show poll results
+- Show post source label
+- Show sensitive media
 </blockquote>
 </details>
 
