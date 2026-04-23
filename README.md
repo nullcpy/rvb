@@ -1917,11 +1917,74 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [ReVanced Extended (wchill)](https://github.com/wchill/rvx-morphed)
 
 <details>
-<summary id="youtube-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-rvx-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-rvx-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-rvx-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-rvx-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/143/youtube-rvx-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/143/youtube-rvx-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/143/youtube-rvx-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/143/youtube-rvx-module-v20.05.46-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/143)<br>
+Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.4)
+- Alternative thumbnails
+- Ambient mode control
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change live ring click action
+- Change player flyout menu toggles
+- Change share sheet
+- Change start page
+- Custom Shorts action buttons
+- Custom branding icon for YouTube
+- Custom branding name for YouTube
+- Custom double tap length
+- Description components
+- Disable QUIC protocol
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Disable haptic feedback
+- Disable layout updates
+- Disable resuming Miniplayer on startup
+- Disable resuming Shorts on startup
+- Disable sign in to TV popup
+- Disable splash animation
+- Enable debug logging
+- Enable gradient loading screen
+- Fullscreen components
+- GmsCore support
+- Hide accessibility controls dialog
+- Hide action buttons
+- Hide ads
+- Hide comments components
+- Hide feed components
+- Hide feed flyout menu
+- Hide layout components
+- Hide player buttons
+- Hide player flyout menu
+- Hook YouTube Music actions
+- Hook download actions
+- Miniplayer
+- Navigation bar components
+- Open links externally
+- Overlay buttons
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Seekbar components
+- Set Transcript Cookies
+- Shorts components
+- Snack bar components
+- SponsorBlock
+- Spoof app version
+- Swipe controls
+- Theme
+- Toolbar components
+- Translations for YouTube
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube
+- Settings for YouTube
 </blockquote>
 </details>
 
@@ -2172,11 +2235,47 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [ReVanced Extended (wchill)](https://github.com/wchill/rvx-morphed)
 
 <details>
-<summary id="youtube-music-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/youtube-music-rvx-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-rvx-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-rvx-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-rvx-module-v0.0.0-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/143/youtube-music-rvx-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/143/youtube-music-rvx-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/143/youtube-music-rvx-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/143/youtube-music-rvx-module-v8.30.54-arm-v7a.zip)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/143)<br>
+Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.4)
+- Bitrate default value
+- Bypass image region restrictions
+- Certificate spoof
+- Change share sheet
+- Change start page
+- Custom branding icon for YouTube Music
+- Custom branding name for YouTube Music
+- Dark theme
+- Disable Cairo splash animation
+- Disable QUIC protocol
+- Disable dislike redirection
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Enable landscape mode
+- Flyout menu components
+- GmsCore support
+- Hide account components
+- Hide action bar components
+- Hide ads
+- Hide layout components
+- Navigation bar components
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Restore old style library shelf
+- Return YouTube Dislike
+- Sanitize sharing links
+- SponsorBlock
+- Spoof app version for lyrics
+- Translations for YouTube Music
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube Music
+- Settings for YouTube Music
 </blockquote>
 </details>
 
