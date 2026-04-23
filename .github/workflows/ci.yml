@@ -379,4 +379,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  trigger_cleanup:
+    needs: [build_dev, build_stable]
+    if: |
+      always() &&
+      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
+    uses: ./.github/workflows/cleanup.yml
+    secrets: inherit 
 
