@@ -73,10 +73,12 @@ jobs:
             echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
             echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
+            echo "ARCHIVE_TAG=beta" >> "$GITHUB_OUTPUT"
           else
             echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
             echo "TG_THREAD_ID=262" >> "$GITHUB_OUTPUT"
             echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
+            echo "ARCHIVE_TAG=stable" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Resolve version code
@@ -188,6 +190,15 @@ jobs:
           skip_checkout: true
           file_pattern: README.md
           commit_message: "Update README for Build No. ${{ steps.version.outputs.NEXT_VER_CODE }} [skip ci]"
+
+      - name: Upload to release (Archive)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/*
+          file_glob: true
+          tag: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          overwrite: true
 
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
