@@ -1,16 +1,28 @@
 parallel-jobs = 1
-patches-version = "dev"
-cli-version = "dev"
-enable-module-update = false
+# patches-version = "dev"
+# cli-version = "dev"
+enable-module-update = true
 
-[instagram-morphe-piko]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
-build-mode = "apk"
+[youtube-rvx]
+enabled = true
+app-name = "youtube"
+rv-brand = "rvx"
+build-mode = "both"
 arch = "both"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
+patches-source = "wchill/rvx-morphed"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-rvx]
+enabled = true
+app-name = "youtube-music"
+rv-brand = "rvx"
+build-mode = "both"
+arch = "both"
+patches-source = "wchill/rvx-morphed"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
