@@ -226,12 +226,12 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.72.0.900772179-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<img src="https://img.shields.io/badge/version-v7.73.0.902316009-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/130/google-photos-morphe-v7.72.0.900772179-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/130/google-photos-morphe-v7.72.0.900772179-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/130/google-photos-morphe-module-v7.72.0.900772179-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/130/google-photos-morphe-module-v7.72.0.900772179-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/146/google-photos-morphe-v7.73.0.902316009-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/146/google-photos-morphe-v7.73.0.902316009-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/146/google-photos-morphe-module-v7.73.0.902316009-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/146/google-photos-morphe-module-v7.73.0.902316009-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-19](https://github.com/nullcpy/rvb/releases/tag/130)<br>
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/146)<br>
 Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
 - GmsCore support
 - Spoof features
