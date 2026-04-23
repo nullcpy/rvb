@@ -1914,6 +1914,17 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 </blockquote>
 </details>
 
+#### [ReVanced Extended (wchill)](https://github.com/wchill/rvx-morphed)
+
+<details>
+<summary id="youtube-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/youtube-rvx-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-rvx-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-rvx-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-rvx-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
 ---
 
 ### [YouTube Music](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
@@ -2155,6 +2166,17 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 - Theme
 - Unlock Android Auto Media Browser
 - Custom branding
+</blockquote>
+</details>
+
+#### [ReVanced Extended (wchill)](https://github.com/wchill/rvx-morphed)
+
+<details>
+<summary id="youtube-music-rvx"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/youtube-music-rvx-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/youtube-music-rvx-v0.0.0-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/v0/youtube-music-rvx-module-v0.0.0-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/v0/youtube-music-rvx-module-v0.0.0-arm-v7a.zip)
+<blockquote>
+(Changelog will be generated here)
 </blockquote>
 </details>
 
