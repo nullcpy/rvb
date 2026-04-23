@@ -1,8 +1,6 @@
 name: Cleanup
 
 on:
-  schedule:
-    - cron: "20 4 1 * *" # 04:20 AM UTC on day 1 of every month
   workflow_dispatch:
 
 concurrency:
