@@ -1481,10 +1481,10 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-module-v20.05.46-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/145/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/145/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/145/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/145/youtube-anddea-module-v20.05.46-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Alternative thumbnails
 - Ambient mode control
@@ -2071,10 +2071,10 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/145/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/145/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/145/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/145/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Bitrate default value
 - Bypass image region restrictions
