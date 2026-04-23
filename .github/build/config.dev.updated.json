@@ -76,7 +76,7 @@
     "build-mode": "both",
     "arch": "both",
     "patches-source": "crimera/piko",
-    "patcher-args": "--continue-on-error",
+    "version": "11.81.0-release.0",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
@@ -141,7 +141,6 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "brosssh/morphe-patches",
-    "patcher-args": "--continue-on-error",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
