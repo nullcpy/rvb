@@ -199,6 +199,7 @@ jobs:
           file_glob: true
           tag: ${{ steps.context.outputs.ARCHIVE_TAG }}
           overwrite: true
+          make_latest: false
 
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
