@@ -539,9 +539,9 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
-<summary id="moon-plus-reader-morphe">&emsp;<img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
+<summary id="moonplus-reader-morphe">&emsp;<img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/moon-plus-reader-morphe-v10.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/moon-plus-reader-morphe-v10.5-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/moonplus-reader-morphe-v10.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/moonplus-reader-morphe-v10.5-arm-v7a.apk)
 <blockquote>
 
 [Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
