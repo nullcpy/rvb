@@ -1,17 +1,17 @@
 parallel-jobs = 1
-# patches-version = "dev"
-# cli-version = "dev"
-enable-module-update = true
+patches-version = "dev"
+cli-version = "dev"
+enable-module-update = false
 
-[xodo-morphe]
+[fing-morphe]
 enabled = true
-app-name = "xodo"
+app-name = "fing"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "Paresh-Maheshwari/paresh-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://xodo-docs.en.uptodown.com/android"
+uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
