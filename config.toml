@@ -170,3 +170,48 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
+[macrodroid-morphe]
+enabled = true 
+app-name = "macrodroid"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
+[truecaller-morphe]
+enabled = true
+app-name = "truecaller"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
+[fing-morphe]
+enabled = true
+app-name = "fing"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[telegram-morphe]
+enabled = true 
+app-name = "telegram"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+
