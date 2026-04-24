@@ -677,6 +677,64 @@ uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
+[moonplus-reader-morphe]
+enabled = true
+app-name = "moonplus-reader"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "binarymend/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
+[symfonium-morphe]
+enabled = true
+app-name = "symfonium"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "binarymend/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
+
+[calcnote-morphe]
+enabled = true
+app-name = "calcnote"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "binarymend/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[eyecon-morphe]
+enabled = true
+app-name = "eyecon"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[ticktick-morphe]
+enabled = true
+app-name = "ticktick"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 
