@@ -468,10 +468,10 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="macrodroid-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.63.8-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-v5.63.8-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-v5.63.8-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-module-v5.63.8-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/139/macrodroid-morphe-module-v5.63.8-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/152/macrodroid-morphe-v5.63.8-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/152/macrodroid-morphe-v5.63.8-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/152/macrodroid-morphe-module-v5.63.8-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/152/macrodroid-morphe-module-v5.63.8-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/139)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/152)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 </blockquote>
 </details>
@@ -922,17 +922,11 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="telegram-morphe-foss"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/telegram-morphe-foss-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/telegram-morphe-foss-v12.6.3-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/152/telegram-morphe-foss-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/152/telegram-morphe-foss-v12.6.3-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
-Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
-- Bypass Integrity
-- Disable Auto Update
-- Download Speed Boost
-- Hide sponsored ads
-- Hide typing indicator
-- Unlock Pro
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/152)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 </blockquote>
 </details>
 
@@ -1031,10 +1025,10 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="truecaller-morphe">&emsp;<img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/139/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/152/truecaller-morphe-v26.10.6-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/152/truecaller-morphe-v26.10.6-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/152/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/152/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/139)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/152)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 - Hide Assistant tab
 - Hide Scams tab
