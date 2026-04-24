@@ -690,14 +690,15 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.16.83.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
+<summary id="proton-vpn-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/153/proton-vpn-morphe-v5.16.83.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/153/proton-vpn-morphe-v5.16.83.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/155/proton-vpn-morphe-v5.17.72.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/155/proton-vpn-morphe-v5.17.72.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/155)<br>
+Patches: [hoo-dles/patches-1.28.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0-dev.1)
 - Remove delay
+- Unlock LAN connections
 - Unlock custom DNS
 - Unlock split tunneling
 </blockquote>
