@@ -70,13 +70,12 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
     "patches-source": "crimera/piko",
-    "version": "11.81.0-release.0",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
@@ -145,7 +144,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "instagram-morphe-piko": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "apk",
