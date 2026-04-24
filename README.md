@@ -1311,11 +1311,15 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=fafcfe&logo=android&logoColor=orange&style=flat"></summary>
+<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v10.13.0-gray?labelColor=fafcfe&logo=android&logoColor=orange&style=flat"></summary>
 
-[arm64-v8a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/150/xodo-morphe-v10.13.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/150/xodo-morphe-v10.13.0-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/150)<br>
+Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+- Disable signature check
+- Enable Pro
 </blockquote>
 </details>
 
