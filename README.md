@@ -580,10 +580,10 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="pandora-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2602.1-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/153/facebook-morphe-v2602.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/153/facebook-morphe-v2602.1-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/154/pandora-morphe-v2602.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/154/pandora-morphe-v2602.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/154)<br>
 Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
 - Disable ads
 - Unlimited skips
