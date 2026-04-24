@@ -199,7 +199,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-e"></a>
-### [Eyecon](https://play.google.com/store/apps/details?id=com.eyecon.global)
+### [Eyecon Caller ID & Spam Block](https://play.google.com/store/apps/details?id=com.eyecon.global)
 
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
