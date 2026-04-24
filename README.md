@@ -1311,7 +1311,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=e1ffff&logo=android&logoColor=orange&style=flat"></summary>
+<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=fafcfe&logo=android&logoColor=orange&style=flat"></summary>
 
 [arm64-v8a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm-v7a.apk)
 <blockquote>
