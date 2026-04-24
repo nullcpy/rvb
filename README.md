@@ -1306,6 +1306,21 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
+### [Xodo PDF Reader & Editor](https://play.google.com/store/apps/details?id=com.xodo.pdf.reader)
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=F44336&logo=android&logoColor=white&style=flat"></summary>
+
+[arm64-v8a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [XRecorder](https://play.google.com/store/apps/details?id=video.other.screenrecorder)
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
