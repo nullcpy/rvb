@@ -27,18 +27,6 @@ uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[symphonium-morphe]
-enabled = true
-app-name = "symphonium"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "binarymend/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
-
 [calcnote-morphe]
 enabled = true
 app-name = "calcnote"
