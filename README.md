@@ -920,9 +920,9 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="telegram-morphe"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-morphe-foss"><b>Google Play</b>&emsp;<img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/telegram-morphe-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/telegram-morphe-v12.6.3-arm-v7a.apk)
+[arm64-v8a.apk](../../releases/download/84/telegram-morphe-foss-v12.6.3-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/telegram-morphe-foss-v12.6.3-arm-v7a.apk)
 <blockquote>
 
 [Release 2026-04-07](../../releases/tag/84)<br>

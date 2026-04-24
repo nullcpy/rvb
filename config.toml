@@ -206,10 +206,10 @@ uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[telegram-morphe]
+[telegram-morphe-foss]
 enabled = true 
 app-name = "telegram"
-rv-brand = "morphe"
+rv-brand = "morphe-foss"
 build-mode = "apk"
 arch = "both"
 patches-source = "Paresh-Maheshwari/paresh-patches"
