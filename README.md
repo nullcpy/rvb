@@ -223,14 +223,14 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="fing-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.2026.04.05.1300-gray?labelColor=377bfd&logo=android&logoColor=white&style=flat"></summary>
+<summary id="fing-morphe">&emsp;<img src="https://img.shields.io/badge/version-v12.11.9-gray?labelColor=377bfd&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/fing-morphe-v4.2026.04.05.1300-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/fing-morphe-v4.2026.04.05.1300-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/151/fing-morphe-v12.11.9-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/151/fing-morphe-v12.11.9-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/151)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
-- Eyecon Premium
+- Fing Premium
 </blockquote>
 </details>
 
