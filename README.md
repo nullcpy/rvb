@@ -1311,7 +1311,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=e1ffff&logo=android&logoColor=white&style=flat"></summary>
+<summary id="xodo-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=e1ffff&logo=android&logoColor=orange&style=flat"></summary>
 
 [arm64-v8a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/xodo-morphe-v0.0.0-arm-v7a.apk)
 <blockquote>
@@ -1326,7 +1326,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="xrecorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.5.2-gray?labelColor=FF6600&logo=android&logoColor=orange&style=flat"></summary>
+<summary id="xrecorder-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.5.2-gray?labelColor=FF6600&logo=android&logoColor=black&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-v2.5.2-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-v2.5.2-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-module-v2.5.2-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/136/xrecorder-morphe-module-v2.5.2-arm-v7a.zip)
 <blockquote>
