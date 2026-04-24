@@ -201,11 +201,14 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="eyecon-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00BCD4&logo=android&logoColor=white&style=flat"></summary>
+<summary id="eyecon-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.2026.04.05.1300-gray?labelColor=00BCD4&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/eyecon-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/eyecon-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/eyecon-morphe-v4.2026.04.05.1300-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/eyecon-morphe-v4.2026.04.05.1300-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
+- Eyecon Premium
 </blockquote>
 </details>
 
@@ -533,11 +536,15 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
-<summary id="moon-plus-reader-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
+<summary id="moon-plus-reader-morphe">&emsp;<img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/moon-plus-reader-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/moon-plus-reader-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/moon-plus-reader-morphe-v10.5-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/moon-plus-reader-morphe-v10.5-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
+Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.0)
+- Make UI look like Pro
+- Unlock Moon+ Reader Pro
 </blockquote>
 </details>
 
@@ -960,11 +967,14 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="ticktick-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=5C6BC0&logo=android&logoColor=white&style=flat"></summary>
+<summary id="ticktick-morphe">&emsp;<img src="https://img.shields.io/badge/version-v8.0.6.1-gray?labelColor=5C6BC0&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/ticktick-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/ticktick-morphe-v0.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/ticktick-morphe-v8.0.6.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/ticktick-morphe-v8.0.6.1-arm-v7a.apk)
 <blockquote>
-(Changelog will be generated here)
+
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
+- TickTick Premium
 </blockquote>
 </details>
 
