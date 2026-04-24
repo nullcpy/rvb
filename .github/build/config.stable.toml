@@ -552,18 +552,6 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[truecaller-morphe]
-enabled = true
-app-name = "truecaller"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
-
 [pinterest-morphe]
 enabled = true
 app-name = "pinterest"
@@ -586,18 +574,6 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-
-[macrodroid-morphe]
-enabled = true 
-app-name = "macrodroid"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-# patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [smart-launcher-6-morphe]
