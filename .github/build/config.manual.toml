@@ -15,27 +15,27 @@ uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[symphonium-morphe]
+[symfonium-morphe]
 enabled = true
-app-name = "symphonium"
+app-name = "symfonium"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "all"
+arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
 
 [calcnote-morphe]
 enabled = true
 app-name = "calcnote"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "all"
+arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
+uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
