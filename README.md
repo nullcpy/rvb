@@ -116,10 +116,10 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="calcnote-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.25.107-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/149/calcnote-morphe-v2.25.107-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/149/calcnote-morphe-v2.25.107-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/calcnote-morphe-v2.25.107-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/calcnote-morphe-v2.25.107-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/149)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
 Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.0)
 - Unlock CalcNote Pro
 </blockquote>
@@ -884,10 +884,10 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="symfonium-morphe">&emsp;<img src="https://img.shields.io/badge/version-v14.0.0-gray?labelColor=FF5722&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/149/symfonium-morphe-v14.0.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/149/symfonium-morphe-v14.0.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/symfonium-morphe-v14.0.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/symfonium-morphe-v14.0.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/149)<br>
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
 Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.0)
 - Unlock Symfonium
 </blockquote>
