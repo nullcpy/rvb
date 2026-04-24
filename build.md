@@ -1,5 +1,5 @@
-xodo-morphe (arm64-v8a): 10.13.0  
-xodo-morphe (arm-v7a): 10.13.0  
+fing-morphe (arm64-v8a): 12.11.9  
+fing-morphe (arm-v7a): 12.11.9  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +7,5 @@ xodo-morphe (arm-v7a): 10.13.0
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: hoo-dles/patches-1.27.0.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)  
+Patches: Paresh-Maheshwari/patches-1.11.0.mpp  
+[Changelog](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)  
