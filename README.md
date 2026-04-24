@@ -47,7 +47,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; E &bull; F &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; N &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-d">E</a> &bull; F &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; N &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -109,6 +109,21 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 ---
 
 <a id="apps-c"></a>
+### [CalcNote](https://play.google.com/store/apps/details?id=com.appumstudios.calcnote)
+
+#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+
+<details>
+<summary id="calcnote-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
+
+[arm64-v8a.apk](../../releases/download/v0/calcnote-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/calcnote-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 ### [Cricbuzz](https://play.google.com/store/apps/details?id=com.cricbuzz.android)
 
 #### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
@@ -175,6 +190,22 @@ Patches: [hoo-dles/patches-1.26.0.mpp](https://github.com/hoo-dles/morphe-patche
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Disable ads
 - Skip energy recharge ads
+</blockquote>
+</details>
+
+---
+
+<a id="apps-e"></a>
+### [Eyecon](https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="eyecon-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=00BCD4&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/eyecon-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/eyecon-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
 </blockquote>
 </details>
 
@@ -492,6 +523,21 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 [Release 2026-04-07](../../releases/tag/84)<br>
 Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
 - Hide OneDrive migration
+</blockquote>
+</details>
+
+---
+
+### [Moon+ Reader](https://moon-reader.en.uptodown.com/android)
+
+#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+
+<details>
+<summary id="moon-plus-reader-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/moon-plus-reader-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/moon-plus-reader-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
 </blockquote>
 </details>
 
@@ -821,6 +867,21 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
+### [Symfonium](https://symfonium.en.uptodown.com/android)
+
+#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+
+<details>
+<summary id="symphonium-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5722&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/symphonium-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/symphonium-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
+</blockquote>
+</details>
+
+---
+
 <a id="apps-t"></a>
 ### [Telegram](https://play.google.com/store/apps/details?id=org.telegram.messenger)
 
@@ -889,6 +950,21 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 [Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Hide ads
+</blockquote>
+</details>
+
+---
+
+### [TickTick](https://ticktick.en.uptodown.com/android)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="ticktick-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=5C6BC0&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/v0/ticktick-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/ticktick-morphe-v0.0.0-arm-v7a.apk)
+<blockquote>
+(Changelog will be generated here)
 </blockquote>
 </details>
 
