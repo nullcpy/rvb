@@ -116,7 +116,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="calcnote-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
 
-[arm64-v8a.apk](../../releases/download/v0/calcnote-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/calcnote-morphe-v0.0.0-arm-v7a.apk)
+[all.apk](../../releases/download/v0/calcnote-morphe-v0.0.0-all.apk)
 <blockquote>
 (Changelog will be generated here)
 </blockquote>
@@ -881,7 +881,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="symphonium-morphe">&emsp;<img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=FF5722&logo=android&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/v0/symphonium-morphe-v0.0.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/v0/symphonium-morphe-v0.0.0-arm-v7a.apk)
+[all.apk](../../releases/download/v0/symphonium-morphe-v0.0.0-all.apk)
 <blockquote>
 (Changelog will be generated here)
 </blockquote>

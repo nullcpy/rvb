@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [moon-plus-reader-morphe]
-enabled = true
+enabled = false
 app-name = "moon-plus-reader"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -20,7 +20,7 @@ enabled = true
 app-name = "symphonium"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
+arch = "all"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
@@ -32,7 +32,7 @@ enabled = true
 app-name = "calcnote"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
+arch = "all"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
@@ -40,7 +40,7 @@ uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [eyecon-morphe]
-enabled = true
+enabled = false
 app-name = "eyecon"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -52,7 +52,7 @@ uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/an
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [ticktick-morphe]
-enabled = true
+enabled = false
 app-name = "ticktick"
 rv-brand = "morphe"
 build-mode = "apk"
