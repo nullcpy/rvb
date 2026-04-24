@@ -1,39 +1,17 @@
 parallel-jobs = 1
-patches-version = "dev"
-cli-version = "dev"
+# patches-version = "dev"
+# cli-version = "dev"
 enable-module-update = false
 
-[macrodroid-morphe]
+[pandora-morphe]
 enabled = true 
-app-name = "macrodroid"
+app-name = "pandora"
 rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-# patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-
-[truecaller-morphe]
-enabled = true
-app-name = "truecaller"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
-
-[telegram-morphe-foss]
-enabled = true 
-app-name = "telegram"
-rv-brand = "morphe-foss"
 build-mode = "apk"
 arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+patches-source = "hoo-dles/morphe-patches"
+# github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.pandora.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
 
 
