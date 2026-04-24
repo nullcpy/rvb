@@ -47,7 +47,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-d">E</a> &bull; F &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; N &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; N &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -199,7 +199,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-e"></a>
-### [Eyecon](https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android)
+### [Eyecon](https://play.google.com/store/apps/details?id=com.eyecon.global)
 
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
@@ -207,6 +207,25 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <summary id="eyecon-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.2026.04.05.1300-gray?labelColor=00BCD4&logo=android&logoColor=white&style=flat"></summary>
   
 [arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/eyecon-morphe-v4.2026.04.05.1300-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/eyecon-morphe-v4.2026.04.05.1300-arm-v7a.apk)
+<blockquote>
+
+[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
+Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
+- Eyecon Premium
+</blockquote>
+</details>
+
+---
+
+<a id="apps-f"></a>
+### [Fing - Network Tools](https://play.google.com/store/apps/details/Fing_Ferramentas_de_rede?id=com.overlook.android.fing)
+
+#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="fing-morphe">&emsp;<img src="https://img.shields.io/badge/version-v4.2026.04.05.1300-gray?labelColor=377bfd&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/148/fing-morphe-v4.2026.04.05.1300-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/148/fing-morphe-v4.2026.04.05.1300-arm-v7a.apk)
 <blockquote>
 
 [Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/148)<br>
@@ -534,7 +553,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 ---
 
-### [Moon+ Reader](https://moon-reader.en.uptodown.com/android)
+### [Moon+ Reader](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader)
 
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
@@ -877,7 +896,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
-### [Symfonium](https://symfonium.en.uptodown.com/android)
+### [Symfonium](https://play.google.com/store/apps/details?id=app.symfonik.music.player)
 
 #### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
@@ -968,7 +987,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
-### [TickTick](https://ticktick.en.uptodown.com/android)
+### [TickTick](https://play.google.com/store/apps/details?id=com.ticktick.task)
 
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
