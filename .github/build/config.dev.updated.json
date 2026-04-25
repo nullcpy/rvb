@@ -45,7 +45,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -57,7 +57,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -122,7 +122,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "gboard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
