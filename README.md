@@ -281,15 +281,16 @@ Patches: [jkennethcarino/patches-1.1.1-dev.2.mpp](https://github.com/jkennethcar
 #### [Morphe (patched-up)](https://github.com/docbt/patched-up)
 
 <details>
-<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.108.0.644447823-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
+<summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.156.0.892791979-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/google-news-morphe-v5.108.0.644447823-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/161/google-news-morphe-v5.156.0.892791979-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/161/google-news-morphe-v5.156.0.892791979-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/161)<br>
+Patches: [docbt/patches-1.7.0.mpp](https://github.com/docbt/patched-up/releases/tag/v1.7.0)
 - Enable CustomTabs
 - GmsCore support
+- Change package name
 </blockquote>
 </details>
 
