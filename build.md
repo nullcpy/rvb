@@ -1,5 +1,11 @@
-reddit-morphe-adobo (arm64-v8a): 2026.17.0  
-reddit-morphe-adobo (arm-v7a): 2026.17.0  
+macrodroid-morphe (arm64-v8a): 5.63.9  
+macrodroid-morphe (arm-v7a): 5.63.9  
+truecaller-morphe (arm64-v8a): 26.10.6  
+truecaller-morphe (arm-v7a): 26.10.6  
+fing-morphe (arm64-v8a): 12.11.9  
+fing-morphe (arm-v7a): 12.11.9  
+telegram-morphe-foss (arm64-v8a): 12.6.3  
+telegram-morphe-foss (arm-v7a): 12.6.3  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +13,5 @@ reddit-morphe-adobo (arm-v7a): 2026.17.0
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: jkennethcarino/patches-1.1.1-dev.2.mpp  
-[Changelog](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.1-dev.2)  
+Patches: Paresh-Maheshwari/patches-1.11.0.mpp  
+[Changelog](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)  
