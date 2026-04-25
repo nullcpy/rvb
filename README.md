@@ -262,11 +262,11 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.1.5.887912998.release-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-v17.1.5.887912998-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-v17.1.5.887912998-release-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-module-v17.1.5.887912998-release-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-module-v17.1.5.887912998-release-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/160/gboard-morphe-v17.1.5.887912998-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/160/gboard-morphe-v17.1.5.887912998-release-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/160/gboard-morphe-module-v17.1.5.887912998-release-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/160/gboard-morphe-module-v17.1.5.887912998-release-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/159)<br>
-Patches: [jkennethcarino/patches-1.1.1-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.1-dev.1)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/160)<br>
+Patches: [jkennethcarino/patches-1.1.1-dev.2.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.1-dev.2)
 - Always-incognito mode
 - Enable OCR feature
 - Enable Undo feature
@@ -797,27 +797,13 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (patcheddit)](https://github.com/wchill/patcheddit)
 
 <details>
-<summary id="reddit-morphe-patcheddit"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-patcheddit"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.15.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-patcheddit-v2026.10.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-patcheddit-v2026.10.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/160/reddit-morphe-patcheddit-v2026.15.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/160/reddit-morphe-patcheddit-v2026.15.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/156)<br>
-Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.3)
-- Disable modern home
-- Disable screenshot popup
-- Hide Ask button
-- Hide Trending Today shelf
-- Hide ads
-- Hide navigation buttons
-- Hide recommended communities shelf
-- Hide sidebar components
-- Open links directly
-- Open links externally
-- Remove subreddit dialog
-- Sanitize sharing links
-- Show view count
-- Spoof signature
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/160)<br>
+Patches: [wchill/patches-1.4.1-dev.1.mpp](https://github.com/wchill/patcheddit/releases/tag/v1.4.1-dev.1)
 </blockquote>
 </details>
 
