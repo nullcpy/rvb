@@ -1,9 +1,10 @@
 name: Update Website
 
 on:
+  workflow_call:
   workflow_dispatch:
   workflow_run:
-    workflows: ["CI", "Build"] 
+    workflows: ["Build"] 
     types:
       - completed
 
