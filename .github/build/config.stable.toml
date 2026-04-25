@@ -346,7 +346,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -359,7 +359,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe-exp]
-enabled = true
+enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -387,7 +387,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [reddit-morphe-exp]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "morphe-exp"
 build-mode = "both"
