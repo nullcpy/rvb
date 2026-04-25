@@ -108,6 +108,24 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 ---
 
+### [Autosync](https://play.google.com/store/apps/details?id=com.ttxapps.autosync)
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
+
+<details>
+<summary id="autosync-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](../../releases/download/116/autosync-morphe-v2.6.346-arm64-v8a.apk) • [arm64-v8a.apk](../../releases/download/116/autosync-morphe-v2.6.346-arm-v7a.apk)
+<blockquote>
+
+[Release 2026-04-17](../../releases/tag/116)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Bypass login
+</blockquote>
+</details>
+
+---
+
 <a id="apps-c"></a>
 ### [CalcNote](https://play.google.com/store/apps/details?id=com.appumstudios.calcnote)
 
@@ -260,7 +278,7 @@ Patches: [jkennethcarino/patches-1.1.1-dev.1.mpp](https://github.com/jkennethcar
 
 ### [Google News](https://play.google.com/store/apps/details?id=com.google.android.apps.magazines)
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (patched-up)](https://github.com/docbt/patched-up)
 
 <details>
 <summary id="google-news-morphe">&emsp;<img src="https://img.shields.io/badge/version-v5.108.0.644447823-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
@@ -759,6 +777,33 @@ Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morph
 
 [Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
 Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+- Disable modern home
+- Disable screenshot popup
+- Hide Ask button
+- Hide Trending Today shelf
+- Hide ads
+- Hide navigation buttons
+- Hide recommended communities shelf
+- Hide sidebar components
+- Open links directly
+- Open links externally
+- Remove subreddit dialog
+- Sanitize sharing links
+- Show view count
+- Spoof signature
+</blockquote>
+</details>
+
+#### [Morphe (patcheddit)](https://github.com/wchill/patcheddit)
+
+<details>
+<summary id="reddit-morphe-patcheddit"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+  
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-patcheddit-v2026.10.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-patcheddit-v2026.10.0-arm-v7a.apk)
+<blockquote>
+
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/156)<br>
+Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.3)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button

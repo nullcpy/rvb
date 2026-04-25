@@ -234,7 +234,7 @@ app-name = "google-news"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "RookieEnough/De-ReVanced"
+patches-source = "docbt/patched-up"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
@@ -700,5 +700,7 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+
 
 
