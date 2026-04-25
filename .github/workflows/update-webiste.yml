@@ -1,0 +1,26 @@
+name: Trigger Website Update
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["CI", "Build"] 
+    types:
+      - completed
+
+concurrency:
+  group: website
+  cancel-in-progress: true
+
+jobs:
+  dispatch_update:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    timeout-minutes: 10
+    steps:
+      - name: Dispatch Website Cache Update
+        run: |
+          curl -X POST https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token ${{ secrets.WEBSITE_DISPATCH_TOKEN }}" \
+          -d '{"event_type": "update-catalog-cache"}'
+
