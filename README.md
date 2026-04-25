@@ -799,10 +799,10 @@ Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/ad
 <details>
 <summary id="reddit-anddea"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2025.12.1-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/102/reddit-anddea-v2025.12.1-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/102/reddit-anddea-v2025.12.1-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/reddit-anddea-v2025.12.1-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/reddit-anddea-v2025.12.1-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-11](../../releases/tag/102)<br>
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Disable screenshot popup
 - Hide Recently Visited shelf
@@ -1694,11 +1694,11 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/157/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/157/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/157/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/157/youtube-anddea-module-v20.05.46-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-module-v20.05.46-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/157)<br>
-Patches: [anddea/patches-4.0.0-dev.13.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.13)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -1767,10 +1767,10 @@ Patches: [anddea/patches-4.0.0-dev.13.mpp](https://github.com/anddea/revanced-pa
 <details>
 <summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-nord-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-nord-module-v20.05.46-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-nord-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-nord-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-nord-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-nord-module-v20.05.46-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Alternative thumbnails
 - Ambient mode control
@@ -1841,10 +1841,10 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-anddea-mocha-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-anddea-mocha-module-v20.05.46-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-mocha-v20.05.46-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-mocha-v20.05.46-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-mocha-module-v20.05.46-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-anddea-mocha-module-v20.05.46-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Alternative thumbnails
 - Ambient mode control
@@ -2284,11 +2284,11 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/157/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/157/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/157/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/157/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-module-v8.30.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/157)<br>
-Patches: [anddea/patches-4.0.0-dev.13.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0-dev.13)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
+Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -2328,10 +2328,10 @@ Patches: [anddea/patches-4.0.0-dev.13.mpp](https://github.com/anddea/revanced-pa
 <details>
 <summary id="youtube-music-anddea-nord"><b>Nord Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=2E3440&logo=youtubemusic&logoColor=88C0D0&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-nord-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-nord-module-v8.30.54-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-nord-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-nord-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-nord-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-nord-module-v8.30.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Bitrate default value
 - Bypass image region restrictions
@@ -2372,10 +2372,10 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="youtube-music-anddea-mocha"><b>Mocha Theme</b>&emsp;<img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=1E1E2E&logo=youtubemusic&logoColor=F5E0DC&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/84/youtube-music-anddea-mocha-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/84/youtube-music-anddea-mocha-module-v8.30.54-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-mocha-v8.30.54-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-mocha-v8.30.54-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-mocha-module-v8.30.54-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/158/youtube-music-anddea-mocha-module-v8.30.54-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-07](../../releases/tag/84)<br>
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/158)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
 - Bitrate default value
 - Bypass image region restrictions
