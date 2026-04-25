@@ -3,7 +3,7 @@ name: Cleanup
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["CI", "Build Modules"]
+    workflows: ["CI", "Build"]
     types:
       - completed
 
