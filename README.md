@@ -84,7 +84,7 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - Disable mandatory login
 - Disable version check
-- Unlock Premium
+- Unlock Premium 
 </blockquote>
 </details>
 
