@@ -113,7 +113,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="autosync-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=f2f2f0&logo=android&logoColor=cyan&style=flat"></summary>
+<summary id="autosync-morphe">&emsp;<img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=f2f2f0&logo=android&logoColor=green&style=flat"></summary>
   
 [arm64-v8a.apk](../../releases/download/116/autosync-morphe-v2.6.346-arm64-v8a.apk) • [arm64-v8a.apk](../../releases/download/116/autosync-morphe-v2.6.346-arm-v7a.apk)
 <blockquote>
