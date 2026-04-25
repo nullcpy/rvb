@@ -3,16 +3,17 @@ patches-version = "dev"
 cli-version = "dev"
 enable-module-update = false
 
-[proton-vpn-morphe]
+[reddit-morphe-patcheddit]
 enabled = true
-app-name = "proton-vpn"
-rv-brand = "morphe"
+app-name = "reddit"
+rv-brand = "morphe-patcheddit"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "wchill/patcheddit"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 
