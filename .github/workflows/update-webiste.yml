@@ -1,4 +1,4 @@
-name: Trigger Website Update
+name: Update Website
 
 on:
   workflow_dispatch:
