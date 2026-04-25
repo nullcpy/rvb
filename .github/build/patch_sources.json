@@ -66,5 +66,20 @@
     "stable": "v1.11.0",
     "prerelease": "v1.4.0-dev.36",
     "blocked": false
+  },
+  "docbt": {
+    "repo": "docbt/patched-up",
+    "stable": "",
+    "prerelease": "v1.3.1-dev.2"
+  },
+  "patcheddit": {
+    "repo": "wchill/patcheddit",
+    "stable": "v1.4.0",
+    "prerelease": ""
+  },
+  "BholeyKaBhakt": {
+    "repo": "BholeyKaBhakt/revanced-patches-xtra",
+    "stable": "v1.6.0",
+    "prerelease": ""
   }
 }
