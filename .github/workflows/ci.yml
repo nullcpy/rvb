@@ -224,7 +224,7 @@ jobs:
             fi
 
             jq --slurpfile active active.prerelease.json '
-              { "parallel-jobs": 1, "patches-version": "dev", "cli-version": "dev", "enable-module-update": false } as $force |
+              { "parallel-jobs": 1, "patches-version": "dev", "enable-module-update": false } as $force |
               ($force + . + $force) |
               map_values(
                 if type == "object" then
