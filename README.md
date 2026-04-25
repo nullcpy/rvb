@@ -809,13 +809,13 @@ Patches: [wchill/patches-1.4.1-dev.1.mpp](https://github.com/wchill/patcheddit/r
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.15.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<img src="https://img.shields.io/badge/version-v2026.17.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/104/reddit-morphe-adobo-v2026.15.0-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/104/reddit-morphe-adobo-v2026.15.0-arm-v7a.apk)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/162/reddit-morphe-adobo-v2026.17.0-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/162/reddit-morphe-adobo-v2026.17.0-arm-v7a.apk)
 <blockquote>
 
-[Release 2026-04-12](../../releases/tag/104)<br>
-Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.0)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/162)<br>
+Patches: [jkennethcarino/patches-1.1.1-dev.2.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.1-dev.2)
 - Disable screenshot banner
 - Hide post view counts
 - Open external links directly
