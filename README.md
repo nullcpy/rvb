@@ -244,11 +244,11 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="gboard-morphe">&emsp;<img src="https://img.shields.io/badge/version-v17.1.5.887912998.release-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
-[arm64-v8a.apk](../../releases/download/103/gboard-morphe-v17.1.5.887912998-release-arm64-v8a.apk) • [arm-v7a.apk](../../releases/download/103/gboard-morphe-v17.1.5.887912998-release-arm-v7a.apk) • [arm64-v8a.zip](../../releases/download/103/gboard-morphe-module-v17.1.5.887912998-release-arm64-v8a.zip) • [arm-v7a.zip](../../releases/download/103/gboard-morphe-module-v17.1.5.887912998-release-arm-v7a.zip)
+[arm64-v8a.apk](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-v17.1.5.887912998-release-arm64-v8a.apk) • [arm-v7a.apk](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-v17.1.5.887912998-release-arm-v7a.apk) • [arm64-v8a.zip](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-module-v17.1.5.887912998-release-arm64-v8a.zip) • [arm-v7a.zip](https://github.com/nullcpy/rvb/releases/download/159/gboard-morphe-module-v17.1.5.887912998-release-arm-v7a.zip)
 <blockquote>
 
-[Release 2026-04-12](../../releases/tag/103)<br>
-Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.0)
+[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/159)<br>
+Patches: [jkennethcarino/patches-1.1.1-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.1-dev.1)
 - Always-incognito mode
 - Enable OCR feature
 - Enable Undo feature
