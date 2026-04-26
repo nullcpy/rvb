@@ -375,5 +375,12 @@ jobs:
     uses: ./.github/workflows/cleanup.yml
     secrets: inherit 
 
+  trigger_notify_failure:
+    needs: [check_patch, build_dev, build_stable]
+    if: failure()
+    uses: ./.github/workflows/notify.yml
+    with:
+      workflow_name: "CI"
+    secrets: inherit
 
 
