@@ -76,7 +76,8 @@
     "arch": "both",
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
+    "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "youtube-morphe": {
     "enabled": false,
