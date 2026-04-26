@@ -72,11 +72,11 @@ Thank you to everyone who helps keep this project alive!
 <details>
 <summary id="adguard-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
 
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/adguard-morphe-v4.12.81-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/adguard-morphe-v4.12.81-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/adguard-morphe-module-v4.12.81-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/adguard-morphe-module-v4.12.81-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.adguard.android.contentblocker%22%2C%20%22name%22%3A%20%22AdGuard%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eadguard-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/adguard-morphe-v4.12.81-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/adguard-morphe-v4.12.81-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/adguard-morphe-module-v4.12.81-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/adguard-morphe-module-v4.12.81-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.adguard.android.contentblocker%22%2C%20%22name%22%3A%20%22AdGuard%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eadguard-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Premium
 </blockquote>
 </details>
@@ -218,11 +218,11 @@ Patches: [Paresh-Maheshwari/patches-1.12.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="duolingo-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.74.4-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/duolingo-morphe-v6.74.4-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/duolingo-morphe-v6.74.4-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.duolingo%22%2C%20%22name%22%3A%20%22Duolingo%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eduolingo-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/duolingo-morphe-v6.74.4-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/duolingo-morphe-v6.74.4-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.duolingo%22%2C%20%22name%22%3A%20%22Duolingo%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eduolingo-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Disable Login Integrity
 - Enable Premium
 </blockquote>
@@ -413,11 +413,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="icon-packer-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.21.0.release-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/icon-packer-morphe-v1.21.0-release-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22cn.ommiao.iconpacker%22%2C%20%22name%22%3A%20%22Icon%20Packer%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eicon-packer-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/icon-packer-morphe-v1.21.0-release-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/icon-packer-morphe-v1.21.0-release-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22cn.ommiao.iconpacker%22%2C%20%22name%22%3A%20%22Icon%20Packer%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eicon-packer-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Unlock premium features
 </blockquote>
 </details>
@@ -556,11 +556,11 @@ Patches: [Paresh-Maheshwari/patches-1.12.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="merriam-webster-dictionary-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.5.0-gray?labelColor=B30000&logo=android&logoColor=white&style=flat"></summary>
 
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/merriam-webster-dictionary-morphe-v5.5.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/merriam-webster-dictionary-morphe-v5.5.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.merriamwebster%22%2C%20%22name%22%3A%20%22Merriam%20Webster%20Dictionary%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Emerriam-webster-dictionary-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/merriam-webster-dictionary-morphe-v5.5.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/merriam-webster-dictionary-morphe-v5.5.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.merriamwebster%22%2C%20%22name%22%3A%20%22Merriam%20Webster%20Dictionary%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Emerriam-webster-dictionary-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Premium
 </blockquote>
 </details>
@@ -659,11 +659,11 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="pandora-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2602.1-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/154/pandora-morphe-v2602.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/154/pandora-morphe-v2602.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.pandora.android%22%2C%20%22name%22%3A%20%22Pandora%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Epandora-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/pandora-morphe-v2602.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/pandora-morphe-v2602.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.pandora.android%22%2C%20%22name%22%3A%20%22Pandora%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Epandora-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/154)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Disable ads
 - Unlimited skips
 </blockquote>
@@ -724,11 +724,11 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="podcast-addict-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.4-gray?labelColor=FF9800&logo=podcastaddict&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/podcast-addict-morphe-v2026.4-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/podcast-addict-morphe-v2026.4-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.bambuna.podcastaddict%22%2C%20%22name%22%3A%20%22Podcast%20Addict%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Epodcast-addict-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/podcast-addict-morphe-v2026.4-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/podcast-addict-morphe-v2026.4-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.bambuna.podcastaddict%22%2C%20%22name%22%3A%20%22Podcast%20Addict%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Epodcast-addict-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Premium
 - MicroG integration
 </blockquote>
@@ -781,11 +781,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="proton-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/155/proton-vpn-morphe-v5.17.72.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/155/proton-vpn-morphe-v5.17.72.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ch.protonvpn.android%22%2C%20%22name%22%3A%20%22Proton%20VPN%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eproton-vpn-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/proton-vpn-morphe-v5.17.72.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/proton-vpn-morphe-v5.17.72.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ch.protonvpn.android%22%2C%20%22name%22%3A%20%22Proton%20VPN%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eproton-vpn-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/155)<br>
-Patches: [hoo-dles/patches-1.28.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0-dev.1)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
@@ -936,11 +936,11 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 <details>
 <summary id="smart-launcher-6-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.6build002patch1-gray?labelColor=0F1419&logo=android&logoColor=white&style=flat"></summary>
 
-[![all.apk](https://img.shields.io/static/v1?label=Download&message=all.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/smart-launcher-6-morphe-v6.6build002patch1-all.apk) [![all.zip](https://img.shields.io/static/v1?label=Download&message=all.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/smart-launcher-6-morphe-module-v6.6build002patch1-all.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ginlemon.flowerfree%22%2C%20%22name%22%3A%20%22Smart%20Launcher%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Esmart-launcher-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![all.apk](https://img.shields.io/static/v1?label=Download&message=all.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/smart-launcher-6-morphe-v6.6build002patch1-all.apk) [![all.zip](https://img.shields.io/static/v1?label=Download&message=all.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/smart-launcher-6-morphe-module-v6.6build002patch1-all.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ginlemon.flowerfree%22%2C%20%22name%22%3A%20%22Smart%20Launcher%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Esmart-launcher-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Disable signature check
 - Enable Pro
 </blockquote>
@@ -957,11 +957,11 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="solid-explorer-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.4.1-gray?labelColor=1976D2&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/solid-explorer-morphe-v3.4.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22pl.solidexplorer2%22%2C%20%22name%22%3A%20%22Solid%20Explorer%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Esolid-explorer-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/solid-explorer-morphe-v3.4.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/solid-explorer-morphe-v3.4.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22pl.solidexplorer2%22%2C%20%22name%22%3A%20%22Solid%20Explorer%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Esolid-explorer-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Pro
 - MicroG integration
 </blockquote>
@@ -1240,11 +1240,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="wallcraft-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.61.01-gray?labelColor=1E88E5&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/wallcraft-morphe-v3.61.01-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/wallcraft-morphe-v3.61.01-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.wallpaperscraft.wallpaper%22%2C%20%22name%22%3A%20%22Wallcraft%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ewallcraft-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/wallcraft-morphe-v3.61.01-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/wallcraft-morphe-v3.61.01-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.wallpaperscraft.wallpaper%22%2C%20%22name%22%3A%20%22Wallcraft%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ewallcraft-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Premium
 </blockquote>
 </details>
@@ -1278,11 +1278,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 <details>
 <summary id="wps-office-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v18.12.1-gray?labelColor=C03426&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/wps-office-morphe-v18.12.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/wps-office-morphe-v18.12.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22cn.wps.moffice_eng%22%2C%20%22name%22%3A%20%22WPS%20Office%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ewps-office-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/wps-office-morphe-v18.12.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/wps-office-morphe-v18.12.1-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22cn.wps.moffice_eng%22%2C%20%22name%22%3A%20%22WPS%20Office%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ewps-office-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Disable anti-tamper
 - Enable Pro
 </blockquote>
@@ -1503,11 +1503,11 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="xrecorder-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.5.1.1-gray?labelColor=FF6600&logo=android&logoColor=black&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/xrecorder-morphe-v2.5.1.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/xrecorder-morphe-v2.5.1.1-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/xrecorder-morphe-module-v2.5.1.1-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/153/xrecorder-morphe-module-v2.5.1.1-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22video.other.screenrecorder%22%2C%20%22name%22%3A%20%22XRecorder%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Exrecorder-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/xrecorder-morphe-v2.5.1.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/xrecorder-morphe-v2.5.1.1-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/xrecorder-morphe-module-v2.5.1.1-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/xrecorder-morphe-module-v2.5.1.1-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22video.other.screenrecorder%22%2C%20%22name%22%3A%20%22XRecorder%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Exrecorder-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/153)<br>
-Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
+Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
 - Enable Pro
 </blockquote>
 </details>
