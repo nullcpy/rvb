@@ -47,7 +47,9 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-### MicroG
+### [MicroG](https://github.com/microg)
+
+`com.google.android.gms` `app.morphe.android.gms` `app.revanced.android.gms`
 
 > [!IMPORTANT]
 > Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.
