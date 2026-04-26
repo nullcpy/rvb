@@ -251,11 +251,11 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="fing-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.11.9-gray?labelColor=377bfd&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/fing-morphe-v12.11.9-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/fing-morphe-v12.11.9-arm-v7a.apk)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/fing-morphe-v12.11.9-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/fing-morphe-v12.11.9-arm-v7a.apk)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.overlook.android.fing.fing_morphe%22%2C%22name%22%3A%22Fing%20-%20Network%20Tools%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Efing-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/163)<br>
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 - Fing Premium
 </blockquote>
@@ -506,11 +506,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.63.9-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/macrodroid-morphe-v5.63.9-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/macrodroid-morphe-v5.63.9-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/163/macrodroid-morphe-module-v5.63.9-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/163/macrodroid-morphe-module-v5.63.9-arm-v7a.zip)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/macrodroid-morphe-v5.63.9-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/macrodroid-morphe-v5.63.9-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/macrodroid-morphe-module-v5.63.9-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/macrodroid-morphe-module-v5.63.9-arm-v7a.zip)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.arlosoft.macrodroid.macrodroid_morphe%22%2C%22name%22%3A%22MacroDroid%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Emacrodroid-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/163)<br>
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 </blockquote>
 </details>
@@ -781,12 +781,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-v2026.10.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-v2026.10.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/reddit-morphe-module-v2026.10.0-arm-v7a.zip)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/reddit-morphe-v2026.10.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/reddit-morphe-v2026.10.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/reddit-morphe-module-v2026.10.0-arm-v7a.zip)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.reddit.frontpage.reddit_morphe%22%2C%22name%22%3A%22Reddit%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ereddit-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/156)<br>
-Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.3)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
+Patches: [MorpheApp/patches-1.25.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.4)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -998,11 +998,11 @@ Patches: [binarymend/patches-1.3.0.mpp](https://github.com/binarymend/morphe-pat
 <details>
 <summary id="telegram-morphe-foss"><b>FOSS</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.6.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/telegram-morphe-foss-v12.6.3-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/telegram-morphe-foss-v12.6.3-arm-v7a.apk)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/telegram-morphe-foss-v12.6.3-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/telegram-morphe-foss-v12.6.3-arm-v7a.apk)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22org.telegram.messenger.telegram_morphe_foss%22%2C%22name%22%3A%22Telegram%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etelegram-morphe-foss-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/163)<br>
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 </blockquote>
 </details>
@@ -1107,11 +1107,11 @@ Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Mahesh
 <details>
 <summary id="truecaller-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/truecaller-morphe-v26.10.6-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/163/truecaller-morphe-v26.10.6-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/163/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/163/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/truecaller-morphe-v26.10.6-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/truecaller-morphe-v26.10.6-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/truecaller-morphe-module-v26.10.6-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/truecaller-morphe-module-v26.10.6-arm-v7a.zip)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.truecaller.truecaller_morphe%22%2C%22name%22%3A%22Truecaller%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etruecaller-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/163)<br>
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
 Patches: [Paresh-Maheshwari/patches-1.11.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.11.0)
 - Hide Assistant tab
 - Hide Scams tab
@@ -1477,12 +1477,12 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/youtube-morphe-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/youtube-morphe-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/youtube-morphe-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/youtube-morphe-module-v20.47.62-arm-v7a.zip)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/youtube-morphe-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/youtube-morphe-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/youtube-morphe-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/youtube-morphe-module-v20.47.62-arm-v7a.zip)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.google.android.youtube.youtube_morphe%22%2C%22name%22%3A%22YouTube%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/156)<br>
-Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.3)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
+Patches: [MorpheApp/patches-1.25.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.4)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2314,12 +2314,12 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.56-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/youtube-music-morphe-v8.47.56-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/156/youtube-music-morphe-v8.47.56-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/156/youtube-music-morphe-module-v8.47.56-arm-v7a.zip)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/youtube-music-morphe-v8.47.56-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/165/youtube-music-morphe-v8.47.56-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat)](https://github.com/nullcpy/rvb/releases/download/165/youtube-music-morphe-module-v8.47.56-arm-v7a.zip)
 [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.google.android.apps.youtube.music.youtube_music_morphe%22%2C%22name%22%3A%22YouTube%20Music%22%2C%22author%22%3A%22nullcpy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fnullcpy%2Frvb%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-music-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-25](https://github.com/nullcpy/rvb/releases/tag/156)<br>
-Patches: [MorpheApp/patches-1.25.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.3)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/165)<br>
+Patches: [MorpheApp/patches-1.25.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.4)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
