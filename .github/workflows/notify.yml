@@ -5,10 +5,11 @@ on:
     types: [opened, closed, reopened]
   pull_request:
     types: [opened, closed, reopened]
-  workflow_run:
-    workflows: ["CI", "Build"]
-    types:
-      - completed
+  workflow_call:
+    inputs:
+      workflow_name:
+        required: false
+        type: string
 
 concurrency:
   group: notify
@@ -16,7 +17,6 @@ concurrency:
 
 jobs:
   notify:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -42,7 +42,16 @@ jobs:
           # Use actual bash newlines so urlencode handles them properly
           NL=$'\n'
 
-          if [ "$EVENT_NAME" = "pull_request" ]; then
+          WF_NAME="${{ inputs.workflow_name }}"
+
+          if [ -n "$WF_NAME" ]; then
+            WF_URL="${GITHUB_SERVER_URL}/${REPO}/actions/runs/${GITHUB_RUN_ID}"
+
+            MSG="🚨 *Workflow Failed*${NL}${NL}"
+            MSG+="*Workflow:* [${WF_NAME}](${WF_URL}) in [${REPO_NAME}](${REPO_URL})${NL}"
+            MSG+="👤 *Actor:* [${ACTOR}](${ACTOR_URL})"
+
+          elif [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
             PR_URL="${{ github.event.pull_request.html_url }}"
             TITLE="${{ github.event.pull_request.title }}"
@@ -58,16 +67,6 @@ jobs:
             MSG+="👤 [${ACTOR}](${ACTOR_URL}) wants to merge *${COMMITS} ${COMMIT_STR}* into [${REPO_NAME}](${REPO_URL}) ([#${PR_NUM}](${PR_URL}))${NL}"
             MSG+="📝 *Title:* \`${TITLE}\`${NL}"
             MSG+="📁 *Changes:* ${FILES} files (+${ADD}, -${DEL})"
-
-          elif [ "$EVENT_NAME" = "workflow_run" ]; then
-            WF_NAME="${{ github.event.workflow_run.name }}"
-            WF_URL="${{ github.event.workflow_run.html_url }}"
-            WF_COMMIT=$(jq -r '.workflow_run.head_commit.message // empty' "$GITHUB_EVENT_PATH" | head -n 1)
-
-            MSG="🚨 *Workflow Failed*${NL}${NL}"
-            MSG+="*Workflow:* [${WF_NAME}](${WF_URL}) in [${REPO_NAME}](${REPO_URL})${NL}"
-            MSG+="👤 *Actor:* [${ACTOR}](${ACTOR_URL})${NL}"
-            MSG+="📝 *Commit:* \`${WF_COMMIT}\`"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
