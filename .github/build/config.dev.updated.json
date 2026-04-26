@@ -79,7 +79,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -90,7 +90,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -101,7 +101,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -153,7 +153,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -163,7 +163,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -174,7 +174,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -184,7 +184,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
