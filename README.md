@@ -132,12 +132,16 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="autosync-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=f2f2f0&logo=android&logoColor=green&style=flat"></summary>
+<summary id="autosync-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.10-gray?labelColor=f2f2f0&logo=android&logoColor=green&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](../../releases/download/0/autosync-morphe-v0-arm64-v8a.apk) [![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](../../releases/download/0/autosync-morphe-v0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.ttxapps.autosync%22%2C%20%22name%22%3A%20%22Autosync%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eautosync-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/167/autosync-morphe-v7.5.10-arm64-v8a.apk) [![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/167/autosync-morphe-v7.5.10-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.ttxapps.autosync%22%2C%20%22name%22%3A%20%22Autosync%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eautosync-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-(Applied Patches will be here)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/167)<br>
+Patches: [BholeyKaBhakt/patches.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/vpatches)
+- Disable PairIP License Check
+- Force Stable Integrity State (Critical)
+- Purchase All Items
 </blockquote>
 </details>
 
