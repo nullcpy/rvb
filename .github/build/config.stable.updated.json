@@ -152,7 +152,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -162,7 +162,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -173,7 +173,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -183,7 +183,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -214,7 +214,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "autosync-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "autosync",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -725,7 +725,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -838,7 +838,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "eyecon-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -848,7 +848,7 @@
     "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
   },
   "ticktick-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
