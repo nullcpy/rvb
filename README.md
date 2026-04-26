@@ -457,15 +457,17 @@ Patches: [brosssh/patches-2.5.0.mpp](https://github.com/brosssh/morphe-patches/r
 <details>
 <summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/instagram-morphe-piko-v426.0.0.37.68-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.instagram.android%22%2C%20%22name%22%3A%20%22Instagram%20Morphe%20Piko%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Einstagram-morphe-piko-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/168/instagram-morphe-piko-v426.0.0.37.68-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/120/instagram-morphe-piko-v424.0.0.49.64-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.instagram.android%22%2C%20%22name%22%3A%20%22Instagram%20Morphe%20Piko%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Einstagram-morphe-piko-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/147)<br>
-Patches: [crimera/patches-3.3.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.2)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/168)<br>
+Patches: [crimera/patches-3.3.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.3)
 - Add settings
 - Amoled theme
+- Change like animation
 - Change version code
 - Copy comment
+- Customise story ring size
 - Customise story timestamp
 - Disable Reels scrolling
 - Disable ads
@@ -496,6 +498,7 @@ Patches: [crimera/patches-3.3.0-dev.2.mpp](https://github.com/crimera/piko/relea
 - Remove empty bottom space
 - Sanitize share links
 - Stories audio autoplay
+- Unlock Plus benefits
 - Unlock developer options
 - View DMs anonymously
 - View live anonymously
@@ -1295,13 +1298,13 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.81.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.82.0.beta.1-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-v11.81.0-release.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-v11.81.0-release.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-module-v11.81.0-release.0-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-module-v11.81.0-release.0-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.twitter.android%22%2C%20%22name%22%3A%20%22Twitter%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etwitter-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/168/twitter-morphe-v11.82.0-beta.1-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-v11.81.0-release.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/168/twitter-morphe-module-v11.82.0-beta.1-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/147/twitter-morphe-module-v11.81.0-release.0-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.twitter.android%22%2C%20%22name%22%3A%20%22Twitter%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etwitter-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/147)<br>
-Patches: [crimera/patches-3.3.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.2)
+[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/168)<br>
+Patches: [crimera/patches-3.3.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.3)
 - Add ability to copy media link
 - Change app icon
 - Change version code
