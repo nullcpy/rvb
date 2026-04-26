@@ -54,7 +54,7 @@ Thank you to everyone who helps keep this project alive!
 > [!IMPORTANT]
 > Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.
 
-&emsp;[![Morphe](https://img.shields.io/github/v/release/MorpheApp/MicroG-RE?label=Morphe)](https://github.com/MorpheApp/MicroG-RE/releases/latest) [![ReVanced](https://img.shields.io/github/v/release/ReVanced/GmsCore?label=ReVanced)](https://github.com/ReVanced/GmsCore/releases/latest)
+&emsp;[![Morphe](https://img.shields.io/github/v/release/MorpheApp/MicroG-RE?label=Morphe&style=flat&logo=monster&logoColor=white)](https://github.com/MorpheApp/MicroG-RE/releases/latest) [![ReVanced](https://img.shields.io/github/v/release/ReVanced/GmsCore?label=ReVanced&style=flat&logo=revanced&logoColor=white)](https://github.com/ReVanced/GmsCore/releases/latest)
 
 ---
 
