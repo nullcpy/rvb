@@ -47,6 +47,15 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
+### MicroG
+
+> [!IMPORTANT]
+> Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.
+
+[![Morphe](https://img.shields.io/github/v/release/MorpheApp/MicroG-RE?label=Morphe)](https://github.com/MorpheApp/MicroG-RE/releases) [![ReVanced](https://img.shields.io/github/v/release/ReVanced/GmsCore?label=ReVanced)](https://github.com/ReVanced/GmsCore/releases)
+
+---
+
 <p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; N &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
