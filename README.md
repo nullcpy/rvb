@@ -49,7 +49,7 @@ Thank you to everyone who helps keep this project alive!
 
 ### 📦 Archive
 
-> These two releases serves as a permanent, continuously updated vault.
+> These two releases serve as a permanent, continuously updated vault.
 
 &emsp;[![Stable](https://img.shields.io/badge/Stable-Builds-gray?labelColor=21a378&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/badge/Beta-Builds-gray?labelColor=3ba1fc&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
 
