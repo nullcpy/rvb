@@ -351,14 +351,6 @@ jobs:
       config_file: ".github/build/config.stable.updated.json"
     secrets: inherit 
 
-  trigger_website_update:
-    needs: [build_dev, build_stable]
-    if: |
-      always() &&
-      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
-    uses: ./.github/workflows/update-website.yml
-    secrets: inherit
-
   trigger_deploy_pages:
     needs: [build_dev, build_stable]
     if: |
@@ -373,7 +365,15 @@ jobs:
       always() &&
       (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
     uses: ./.github/workflows/cleanup.yml
-    secrets: inherit 
+    secrets: inherit
+
+  trigger_website_update:
+    needs: [build_dev, build_stable, trigger_cleanup]
+    if: |
+      always() &&
+      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
+    uses: ./.github/workflows/update-website.yml
+    secrets: inherit
 
   trigger_notify_failure:
     needs: [check_patch, build_dev, build_stable]
