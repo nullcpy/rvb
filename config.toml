@@ -213,7 +213,8 @@ rv-brand = "morphe-foss"
 build-mode = "apk"
 arch = "both"
 patches-source = "Paresh-Maheshwari/paresh-patches"
-uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 
 [proton-vpn-morphe]
 enabled = true
