@@ -3,19 +3,6 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[truecaller-morphe]
-enabled = true
-app-name = "truecaller"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-included-patches = "'Hide Premium tab' 'Hide Premium from settings'"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
-
 [telegram-morphe-foss]
 enabled = true 
 app-name = "telegram"
@@ -23,7 +10,7 @@ rv-brand = "morphe-foss"
 build-mode = "apk"
 arch = "both"
 patches-source = "Paresh-Maheshwari/paresh-patches"
-included-patches = "'Download speed boost'"
+# included-patches = "'Download speed boost'"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 
