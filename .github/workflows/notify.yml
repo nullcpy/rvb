@@ -28,6 +28,9 @@ jobs:
         run: |
           set -euo pipefail
 
+          # Escape special HTML characters in dynamic/user-generated content
+          esc() { printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
+
           EVENT_NAME="${{ github.event_name }}"
           ACTOR="${{ github.actor }}"
           ACTOR_URL="https://github.com/${ACTOR}"
@@ -35,55 +38,69 @@ jobs:
           REPO_NAME="${REPO#*/}"
           REPO_URL="https://github.com/${REPO}"
           ACTION="${{ github.event.action }}"
-          
-          # Capitalize the first letter of the action (e.g., "opened" -> "Opened")
-          ACTION_CAP="${ACTION^}" 
-          
-          # Use actual bash newlines so urlencode handles them properly
+          ACTION_CAP="${ACTION^}"
+          TIMESTAMP="$(date -u '+%Y-%m-%d %H:%M UTC')"
           NL=$'\n'
+          DIV="━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
           WF_NAME="${{ inputs.workflow_name }}"
 
           if [ -n "$WF_NAME" ]; then
             WF_URL="${GITHUB_SERVER_URL}/${REPO}/actions/runs/${GITHUB_RUN_ID}"
+            RUN_NUM="${GITHUB_RUN_NUMBER}"
+            BRANCH="$(esc "${{ github.ref_name }}")"
+            ACTOR_ESC="$(esc "${ACTOR}")"
 
-            MSG="🚨 *Workflow Failed*${NL}${NL}"
-            MSG+="*Workflow:* [${WF_NAME}](${WF_URL}) in [${REPO_NAME}](${REPO_URL})${NL}"
-            MSG+="👤 *Actor:* [${ACTOR}](${ACTOR_URL})"
+            MSG="🔴  <b>Build Failure</b>  |  <code>${REPO_NAME}</code>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="📋  <b>Workflow:</b>  <a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a>${NL}"
+            MSG+="🌿  <b>Branch:</b>  <code>${BRANCH}</code>${NL}"
+            MSG+="👤  <b>Triggered by:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="🕐  ${TIMESTAMP}"
 
           elif [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
             PR_URL="${{ github.event.pull_request.html_url }}"
-            TITLE="${{ github.event.pull_request.title }}"
+            TITLE="$(esc "${{ github.event.pull_request.title }}")"
             COMMITS="${{ github.event.pull_request.commits }}"
             FILES="${{ github.event.pull_request.changed_files }}"
             ADD="${{ github.event.pull_request.additions }}"
             DEL="${{ github.event.pull_request.deletions }}"
+            BASE="$(esc "${{ github.event.pull_request.base.ref }}")"
+            HEAD="$(esc "${{ github.event.pull_request.head.ref }}")"
+            ACTOR_ESC="$(esc "${ACTOR}")"
 
-            COMMIT_STR="commits"
-            if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
+            if [ "$ACTION" = "opened" ]; then PR_ICON="🟢"; elif [ "$ACTION" = "closed" ]; then PR_ICON="🔴"; else PR_ICON="🟡"; fi
+            COMMIT_STR="commits"; if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="🔀 *Pull Request ${ACTION_CAP}*${NL}${NL}"
-            MSG+="👤 [${ACTOR}](${ACTOR_URL}) wants to merge *${COMMITS} ${COMMIT_STR}* into [${REPO_NAME}](${REPO_URL}) ([#${PR_NUM}](${PR_URL}))${NL}"
-            MSG+="📝 *Title:* \`${TITLE}\`${NL}"
-            MSG+="📁 *Changes:* ${FILES} files (+${ADD}, -${DEL})"
+            MSG="${PR_ICON}  <b>Pull Request ${ACTION_CAP}</b>  |  <code>${REPO_NAME}</code>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="📌  <b><a href=\"${PR_URL}\">#${PR_NUM} — ${TITLE}</a></b>${NL}"
+            MSG+="🔀  <code>${HEAD}</code> → <code>${BASE}</code>${NL}"
+            MSG+="📦  <b>${COMMITS} ${COMMIT_STR}</b>  ·  ${FILES} files changed  ·  +${ADD} / -${DEL}${NL}"
+            MSG+="👤  <b>Author:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="🕐  ${TIMESTAMP}"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
             ISSUE_URL="${{ github.event.issue.html_url }}"
-            TITLE="${{ github.event.issue.title }}"
-            
-            # Use a checkmark if the issue is closed, otherwise a bug emoji
-            EMOJI="🐛"
-            if [ "$ACTION" = "closed" ]; then EMOJI="✅"; fi
+            TITLE="$(esc "${{ github.event.issue.title }}")"
+            ACTOR_ESC="$(esc "${ACTOR}")"
 
-            MSG="${EMOJI} *Issue ${ACTION_CAP}*${NL}${NL}"
-            MSG+="👤 [${ACTOR}](${ACTOR_URL}) ${ACTION} an issue in [${REPO_NAME}](${REPO_URL}) ([#${ISSUE_NUM}](${ISSUE_URL}))${NL}"
-            MSG+="📝 *Title:* \`${TITLE}\`"
+            if [ "$ACTION" = "closed" ]; then ISSUE_ICON="✅"; STATUS="Closed"; elif [ "$ACTION" = "reopened" ]; then ISSUE_ICON="🔄"; STATUS="Reopened"; else ISSUE_ICON="🐛"; STATUS="Opened"; fi
+
+            MSG="${ISSUE_ICON}  <b>Issue ${STATUS}</b>  |  <code>${REPO_NAME}</code>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="📌  <b><a href=\"${ISSUE_URL}\">#${ISSUE_NUM} — ${TITLE}</a></b>${NL}"
+            MSG+="👤  <b>Author:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
+            MSG+="${DIV}${NL}"
+            MSG+="🕐  ${TIMESTAMP}"
           fi
 
           curl -s -X POST \
-            --data-urlencode "parse_mode=Markdown" \
+            --data-urlencode "parse_mode=HTML" \
             --data-urlencode "disable_web_page_preview=true" \
             --data-urlencode "text=${MSG}" \
             --data-urlencode "chat_id=${TG_CHAT_ID}" \
