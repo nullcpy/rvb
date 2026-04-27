@@ -39,9 +39,7 @@ jobs:
           REPO_URL="https://github.com/${REPO}"
           ACTION="${{ github.event.action }}"
           ACTION_CAP="${ACTION^}"
-          TIMESTAMP="$(date -u '+%Y-%m-%d %H:%M UTC')"
           NL=$'\n'
-          DIV="━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
           WF_NAME="${{ inputs.workflow_name }}"
 
@@ -51,13 +49,11 @@ jobs:
             BRANCH="$(esc "${{ github.ref_name }}")"
             ACTOR_ESC="$(esc "${ACTOR}")"
 
-            MSG="🔴  <b>Build Failure</b>  |  <code>${REPO_NAME}</code>${NL}"
-            MSG+="${DIV}${NL}"
+            MSG="🔴  <b>Build Failure</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG+="${NL}"
             MSG+="📋  <b>Workflow:</b>  <a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a>${NL}"
             MSG+="🌿  <b>Branch:</b>  <code>${BRANCH}</code>${NL}"
-            MSG+="👤  <b>Triggered by:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
-            MSG+="${DIV}${NL}"
-            MSG+="🕐  ${TIMESTAMP}"
+            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
 
           elif [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
@@ -74,14 +70,12 @@ jobs:
             if [ "$ACTION" = "opened" ]; then PR_ICON="🟢"; elif [ "$ACTION" = "closed" ]; then PR_ICON="🔴"; else PR_ICON="🟡"; fi
             COMMIT_STR="commits"; if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="${PR_ICON}  <b>Pull Request ${ACTION_CAP}</b>  |  <code>${REPO_NAME}</code>${NL}"
-            MSG+="${DIV}${NL}"
+            MSG="${PR_ICON}  <b>Pull Request ${ACTION_CAP}</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG+="${NL}"
             MSG+="📌  <b><a href=\"${PR_URL}\">#${PR_NUM} — ${TITLE}</a></b>${NL}"
             MSG+="🔀  <code>${HEAD}</code> → <code>${BASE}</code>${NL}"
             MSG+="📦  <b>${COMMITS} ${COMMIT_STR}</b>  ·  ${FILES} files changed  ·  +${ADD} / -${DEL}${NL}"
-            MSG+="👤  <b>Author:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
-            MSG+="${DIV}${NL}"
-            MSG+="🕐  ${TIMESTAMP}"
+            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
@@ -91,12 +85,10 @@ jobs:
 
             if [ "$ACTION" = "closed" ]; then ISSUE_ICON="✅"; STATUS="Closed"; elif [ "$ACTION" = "reopened" ]; then ISSUE_ICON="🔄"; STATUS="Reopened"; else ISSUE_ICON="🐛"; STATUS="Opened"; fi
 
-            MSG="${ISSUE_ICON}  <b>Issue ${STATUS}</b>  |  <code>${REPO_NAME}</code>${NL}"
-            MSG+="${DIV}${NL}"
+            MSG="${ISSUE_ICON}  <b>Issue ${STATUS}</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG+="${NL}"
             MSG+="📌  <b><a href=\"${ISSUE_URL}\">#${ISSUE_NUM} — ${TITLE}</a></b>${NL}"
-            MSG+="👤  <b>Author:</b>  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}"
-            MSG+="${DIV}${NL}"
-            MSG+="🕐  ${TIMESTAMP}"
+            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
           fi
 
           curl -s -X POST \
