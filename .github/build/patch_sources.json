@@ -38,15 +38,15 @@
   },
   "adobo": {
     "repo": "jkennethcarino/adobo",
-    "stable": "",
-    "prerelease": "",
+    "stable": "v1.1.0",
+    "prerelease": "v1.1.1-dev.2",
     "blocked": false
   },
   "rvexp": {
     "enabledDev": false,
     "repo": "Aunali321/ReVancedExperiments",
-    "stable": "",
-    "prerelease": "",
+    "stable": "v2.0.0",
+    "prerelease": "v2.0.0-dev.1",
     "blocked": false
   },
   "brosssh": {
@@ -57,7 +57,7 @@
   },
   "binarymend": {
     "repo": "binarymend/morphe-patches",
-    "stable": "v1.3.0",
+    "stable": "v1.3.1",
     "prerelease": "v1.3.1-dev.1",
     "blocked": false
   },
