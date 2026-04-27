@@ -1,21 +1,29 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[twitter-morphe]
+[truecaller-morphe]
 enabled = true
-app-name = "twitter"
+app-name = "truecaller"
 rv-brand = "morphe"
 build-mode = "both"
 arch = "both"
-patches-source = "crimera/piko"
-# version = "11.81.0-release.0"
-# patcher-args = "--continue-on-error"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+included-patches = "'Hide Premium tab' 'Hide Premium from settings'"
 cli-source = "MorpheApp/morphe-cli"
-# uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi 480dpi nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
+[telegram-morphe-foss]
+enabled = true 
+app-name = "telegram"
+rv-brand = "morphe-foss"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+included-patches = "'Download speed boost'"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
 
