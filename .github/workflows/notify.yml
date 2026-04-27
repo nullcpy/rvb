@@ -48,12 +48,13 @@ jobs:
             RUN_NUM="${GITHUB_RUN_NUMBER}"
             BRANCH="$(esc "${{ github.ref_name }}")"
             ACTOR_ESC="$(esc "${ACTOR}")"
+            REPO_ESC="$(esc "${REPO_NAME}")"
 
-            MSG="🔴  <b>Build Failure</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG="🔴 <b>Workflow Failure</b> · <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}"
             MSG+="${NL}"
-            MSG+="📋  <b>Workflow:</b>  <a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a>${NL}"
-            MSG+="🌿  <b>Branch:</b>  <code>${BRANCH}</code>${NL}"
-            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
+            MSG+="<a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a>${NL}"
+            MSG+="Branch: <code>${BRANCH}</code>${NL}"
+            MSG+="<a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
 
           elif [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
@@ -66,29 +67,31 @@ jobs:
             BASE="$(esc "${{ github.event.pull_request.base.ref }}")"
             HEAD="$(esc "${{ github.event.pull_request.head.ref }}")"
             ACTOR_ESC="$(esc "${ACTOR}")"
+            REPO_ESC="$(esc "${REPO_NAME}")"
 
             if [ "$ACTION" = "opened" ]; then PR_ICON="🟢"; elif [ "$ACTION" = "closed" ]; then PR_ICON="🔴"; else PR_ICON="🟡"; fi
             COMMIT_STR="commits"; if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="${PR_ICON}  <b>Pull Request ${ACTION_CAP}</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG="${PR_ICON} <b>Pull Request ${ACTION_CAP}</b> · <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}"
             MSG+="${NL}"
-            MSG+="📌  <b><a href=\"${PR_URL}\">#${PR_NUM} — ${TITLE}</a></b>${NL}"
-            MSG+="🔀  <code>${HEAD}</code> → <code>${BASE}</code>${NL}"
-            MSG+="📦  <b>${COMMITS} ${COMMIT_STR}</b>  ·  ${FILES} files changed  ·  +${ADD} / -${DEL}${NL}"
-            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
+            MSG+="<a href=\"${PR_URL}\"><b>#${PR_NUM} — ${TITLE}</b></a>${NL}"
+            MSG+="<code>${HEAD}</code> → <code>${BASE}</code>${NL}"
+            MSG+="${COMMITS} ${COMMIT_STR} · ${FILES} files · +${ADD}/-${DEL}${NL}"
+            MSG+="<a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
             ISSUE_URL="${{ github.event.issue.html_url }}"
             TITLE="$(esc "${{ github.event.issue.title }}")"
             ACTOR_ESC="$(esc "${ACTOR}")"
+            REPO_ESC="$(esc "${REPO_NAME}")"
 
             if [ "$ACTION" = "closed" ]; then ISSUE_ICON="✅"; STATUS="Closed"; elif [ "$ACTION" = "reopened" ]; then ISSUE_ICON="🔄"; STATUS="Reopened"; else ISSUE_ICON="🐛"; STATUS="Opened"; fi
 
-            MSG="${ISSUE_ICON}  <b>Issue ${STATUS}</b>  |  <b>${REPO_NAME}</b>${NL}"
+            MSG="${ISSUE_ICON} <b>Issue ${STATUS}</b> · <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}"
             MSG+="${NL}"
-            MSG+="📌  <b><a href=\"${ISSUE_URL}\">#${ISSUE_NUM} — ${TITLE}</a></b>${NL}"
-            MSG+="👤  <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
+            MSG+="<a href=\"${ISSUE_URL}\"><b>#${ISSUE_NUM} — ${TITLE}</b></a>${NL}"
+            MSG+="<a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>"
           fi
 
           curl -s -X POST \
