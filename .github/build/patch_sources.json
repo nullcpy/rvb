@@ -20,7 +20,7 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.24.0",
-    "prerelease": "v1.25.0-dev.5",
+    "prerelease": "v1.25.0-dev.6",
     "blocked": false
   },
   "piko": {
@@ -38,15 +38,15 @@
   },
   "adobo": {
     "repo": "jkennethcarino/adobo",
-    "stable": "v1.1.0",
-    "prerelease": "v1.1.1-dev.2",
+    "stable": "",
+    "prerelease": "",
     "blocked": false
   },
   "rvexp": {
     "enabledDev": false,
     "repo": "Aunali321/ReVancedExperiments",
-    "stable": "v2.0.0",
-    "prerelease": "v2.0.0-dev.1",
+    "stable": "",
+    "prerelease": "",
     "blocked": false
   },
   "brosssh": {
