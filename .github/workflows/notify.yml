@@ -50,9 +50,9 @@ jobs:
             ACTOR_ESC="$(esc "${ACTOR}")"
             REPO_ESC="$(esc "${REPO_NAME}")"
 
-            MSG="🔴 <a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a> failed in <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}${NL}"
-            MSG+="Branch: <code>${BRANCH}</code> · triggered by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a>${NL}${NL}"
-            MSG+="<a href=\"${WF_URL}\">View run →</a>"
+            MSG="<b>🔴 <a href=\"${WF_URL}\">$(esc "${WF_NAME}") #${RUN_NUM}</a> failed in <a href=\"${REPO_URL}\">${REPO_ESC}</a></b>${NL}${NL}"
+            MSG+="<b>Branch: <code>${BRANCH}</code> · triggered by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a></b>${NL}${NL}"
+            MSG+="<b>🔗 <a href=\"${WF_URL}\">View run →</a></b>"
 
           elif [ "$EVENT_NAME" = "pull_request" ]; then
             PR_NUM="${{ github.event.pull_request.number }}"
@@ -70,10 +70,10 @@ jobs:
             if [ "$ACTION" = "opened" ]; then PR_ICON="🟢"; elif [ "$ACTION" = "closed" ]; then PR_ICON="🔴"; else PR_ICON="🟡"; fi
             COMMIT_STR="commits"; if [ "$COMMITS" = "1" ]; then COMMIT_STR="commit"; fi
 
-            MSG="${PR_ICON} <a href=\"${PR_URL}\">Pull request #${PR_NUM}</a> ${ACTION} by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a> in <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}${NL}"
+            MSG="<b>${PR_ICON} <a href=\"${PR_URL}\">Pull request #${PR_NUM}</a> ${ACTION} by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a> in <a href=\"${REPO_URL}\">${REPO_ESC}</a></b>${NL}${NL}"
             MSG+="<b>${TITLE}</b>${NL}${NL}"
             MSG+="<code>${HEAD}</code> → <code>${BASE}</code> · ${COMMITS} ${COMMIT_STR} · ${FILES} files · +${ADD}/-${DEL}${NL}${NL}"
-            MSG+="<a href=\"${PR_URL}\">View pull request →</a>"
+            MSG+="<b>🔗<a href=\"${PR_URL}\">View pull request →</a></b>"
 
           else
             ISSUE_NUM="${{ github.event.issue.number }}"
@@ -84,9 +84,9 @@ jobs:
 
             if [ "$ACTION" = "closed" ]; then ISSUE_ICON="✅"; elif [ "$ACTION" = "reopened" ]; then ISSUE_ICON="🔄"; else ISSUE_ICON="🐛"; fi
 
-            MSG="${ISSUE_ICON} <a href=\"${ISSUE_URL}\">Issue #${ISSUE_NUM}</a> ${ACTION} by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a> in <a href=\"${REPO_URL}\">${REPO_ESC}</a>${NL}${NL}"
-            MSG+="<b>${TITLE}</b>${NL}${NL}"
-            MSG+="<a href=\"${ISSUE_URL}\">View issue →</a>"
+            MSG="<b>${ISSUE_ICON} <a href=\"${ISSUE_URL}\">Issue #${ISSUE_NUM}</a> ${ACTION} by <a href=\"${ACTOR_URL}\">${ACTOR_ESC}</a> in <a href=\"${REPO_URL}\">${REPO_ESC}</a></b>${NL}${NL}"
+            MSG+="<b>📝 ${TITLE}</b>${NL}${NL}"
+            MSG+="<b>🔗 <a href=\"${ISSUE_URL}\">View issue →</a></b>"
           fi
 
           curl -s -X POST \
