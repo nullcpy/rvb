@@ -79,7 +79,7 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -90,7 +90,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -101,7 +101,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -122,7 +122,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "gboard-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -226,7 +226,7 @@
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
   },
   "reddit-morphe-adobo": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
