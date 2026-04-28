@@ -9,14 +9,14 @@ app-name = "google-photos"
 rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
-patches-source = "ReVanced/revanced-patches"
+patches-source = "Raudrobot/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [google-photos-morphe]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "morphe"
 build-mode = "both"
