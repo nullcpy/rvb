@@ -1253,25 +1253,6 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-v"></a>
-### [Viber](https://play.google.com/store/apps/details?id=com.viber.voip)
-
-`com.viber.voip`
-
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
-
-<details>
-<summary id="viber-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.1.2.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
-
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.viber.voip%22%2C%20%22name%22%3A%20%22Viber%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eviber-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
-<blockquote>
-
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
-- Hide Ads
-</blockquote>
-</details>
-
----
 
 ### [Ventusky](https://play.google.com/store/apps/details?id=cz.ackee.ventusky)
 
@@ -1288,6 +1269,26 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 [Release 2026-04-30](https://github.com/nullcpy/rvb/releases/tag/185)<br>
 Patches: [hoo-dles/patches-1.29.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.29.0-dev.1)
 - Enable Premium
+</blockquote>
+</details>
+
+---
+
+### [Viber](https://play.google.com/store/apps/details?id=com.viber.voip)
+
+`com.viber.voip`
+
+#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+
+<details>
+<summary id="viber-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.1.2.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
+
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/134/viber-morphe-v26.1.2.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.viber.voip%22%2C%20%22name%22%3A%20%22Viber%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eviber-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+<blockquote>
+
+[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+- Hide Ads
 </blockquote>
 </details>
 
