@@ -30,6 +30,7 @@
     "blocked": false
   },
   "hoodles": {
+    "enabledDev": false,
     "repo": "hoo-dles/morphe-patches",
     "stable": "v1.28.0",
     "prerelease": "v1.29.0-dev.2",
