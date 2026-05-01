@@ -282,13 +282,15 @@ Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Mahesh
 #### [Morphe (meta-patches)](https://github.com/MeridianFresco/morphe-meta-patches)
 
 <details>
-<summary id="facebook-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=1877F2&logo=facebook&logoColor=white&style=flat"></summary>
+<summary id="facebook-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v490.0.0.63.82-gray?labelColor=1877F2&logo=facebook&logoColor=white&style=flat"></summary>
 
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/0/facebook-morphe-v0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/0/facebook-morphe-v0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.facebook.katana%22%2C%20%22name%22%3A%20%22Facebook%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Efacebook-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/190/facebook-morphe-v490.0.0.63.82-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/190/facebook-morphe-v490.0.0.63.82-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.facebook.katana%22%2C%20%22name%22%3A%20%22Facebook%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Efacebook-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 0](https://github.com/nullcpy/rvb/releases/tag/0)<br>
-Patches: [MeridianFresco/morphe-meta-patches](https://github.com/MeridianFresco/morphe-meta-patches/releases/latest)
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/190)<br>
+Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/morphe-meta-patches/releases/tag/v1.0.0)
+- Hide 'Sponsored Stories'
+- Hide story ads
 </blockquote>
 </details>
 
