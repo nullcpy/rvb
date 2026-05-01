@@ -3,14 +3,13 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[messenger-morphe]
+[facebook-morphe]
 enabled = true
-app-name = "messenger"
+app-name = "facebook"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-version = "552.0.0.44.65"
-patches-source = "RookieEnough/De-ReVanced"
+patches-source = "MeridianFresco/morphe-meta-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
