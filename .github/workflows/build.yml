@@ -286,22 +286,43 @@ jobs:
           fi
 
           MSG+="*APKs:*${APKS}"
-          MSG=${MSG:0:9450}
 
-          curl -s -X POST \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "disable_web_page_preview=true" \
-            --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=@rvb27" \
-            --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
+          # Split MSG into ≤9450-char chunks on line boundaries (never breaks URLs)
+          TG_LIMIT=9450
+          CHUNK=""
+          send_chunk() {
+            local text="$1"
+            curl -s -X POST \
+              --data-urlencode "parse_mode=Markdown" \
+              --data-urlencode "disable_web_page_preview=true" \
+              --data-urlencode "text=${text}" \
+              --data-urlencode "chat_id=@rvb27" \
+              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+            curl -s -X POST \
+              --data-urlencode "parse_mode=Markdown" \
+              --data-urlencode "disable_web_page_preview=true" \
+              --data-urlencode "text=${text}" \
+              --data-urlencode "chat_id=@rvb28" \
+              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+          }
 
-          curl -s -X POST \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "disable_web_page_preview=true" \
-            --data-urlencode "text=${MSG}" \
-            --data-urlencode "chat_id=@rvb28" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" &
+          while IFS= read -r LINE; do
+            # +1 for the newline we'll re-add between lines
+            CANDIDATE="${CHUNK:+${CHUNK}${NL}}${LINE}"
+            if [ "${#CANDIDATE}" -le "$TG_LIMIT" ]; then
+              CHUNK="$CANDIDATE"
+            else
+              # Flush current chunk and start a new one with this line
+              if [ -n "$CHUNK" ]; then
+                send_chunk "$CHUNK"
+              fi
+              CHUNK="$LINE"
+            fi
+          done <<< "$MSG"
 
-          wait
+          # Send any remaining content
+          if [ -n "$CHUNK" ]; then
+            send_chunk "$CHUNK"
+          fi
 
