@@ -810,11 +810,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="proton-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/proton-vpn-morphe-v5.17.72.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/169/proton-vpn-morphe-v5.17.72.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ch.protonvpn.android%22%2C%20%22name%22%3A%20%22Proton%20VPN%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eproton-vpn-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/186/proton-vpn-morphe-v5.17.72.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/186/proton-vpn-morphe-v5.17.72.0-arm-v7a.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22ch.protonvpn.android%22%2C%20%22name%22%3A%20%22Proton%20VPN%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eproton-vpn-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-04-26](https://github.com/nullcpy/rvb/releases/tag/169)<br>
-Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/186)<br>
+Patches: [hoo-dles/patches-1.29.0-dev.2.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.29.0-dev.2)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
