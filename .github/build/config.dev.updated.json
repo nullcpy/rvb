@@ -122,7 +122,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "gboard-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -226,7 +226,7 @@
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
   },
   "reddit-morphe-adobo": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
