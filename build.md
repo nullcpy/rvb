@@ -1,13 +1,7 @@
-youtube-morphe (arm64-v8a): 20.47.62  
-youtube-morphe (arm-v7a): 20.47.62  
-youtube-music-morphe (arm64-v8a): 8.47.56  
-youtube-music-morphe (arm-v7a): 8.47.56  
-reddit-morphe (arm64-v8a): 2026.10.0  
-reddit-morphe (arm-v7a): 2026.10.0  
-youtube-morphe-nord (arm64-v8a): 20.47.62  
-youtube-morphe-nord (arm-v7a): 20.47.62  
-youtube-morphe-mocha (arm64-v8a): 20.47.62  
-youtube-morphe-mocha (arm-v7a): 20.47.62  
+gboard-morphe (arm64-v8a): 17.1.5.887912998-release  
+gboard-morphe (arm-v7a): 17.1.5.887912998-release  
+reddit-morphe-adobo (arm64-v8a): 2026.17.0  
+reddit-morphe-adobo (arm-v7a): 2026.17.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -15,5 +9,5 @@ youtube-morphe-mocha (arm-v7a): 20.47.62
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: MorpheApp/patches-1.25.0.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)  
+Patches: jkennethcarino/patches-1.2.0-dev.1.mpp  
+[Changelog](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.1)  
