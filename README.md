@@ -869,11 +869,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <details>
 <summary id="reddit-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/reddit-morphe-v2026.10.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/reddit-morphe-v2026.10.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/reddit-morphe-module-v2026.10.0-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.reddit.frontpage%22%2C%20%22name%22%3A%20%22Reddit%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ereddit-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/reddit-morphe-v2026.10.0-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/reddit-morphe-v2026.10.0-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/reddit-morphe-module-v2026.10.0-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/reddit-morphe-module-v2026.10.0-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.reddit.frontpage%22%2C%20%22name%22%3A%20%22Reddit%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ereddit-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1608,11 +1608,11 @@ Patches: [hoo-dles/patches-1.28.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="youtube-morphe"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1655,6 +1655,7 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Hide timestamp
 - Hide video action buttons
 - Loop video
+- Media notification controls
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
@@ -1685,11 +1686,11 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-morphe-nord"><b>Nord Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-nord-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-nord-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-nord-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-nord-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Nord%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-nord-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-nord-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-nord-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-nord-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-nord-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Nord%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-nord-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1732,6 +1733,7 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Hide timestamp
 - Hide video action buttons
 - Loop video
+- Media notification controls
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
@@ -1762,11 +1764,11 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 <details>
 <summary id="youtube-morphe-mocha"><b>Mocha Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-mocha-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-mocha-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-mocha-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-morphe-mocha-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Mocha%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-mocha-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-mocha-v20.47.62-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-mocha-v20.47.62-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-mocha-module-v20.47.62-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-morphe-mocha-module-v20.47.62-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Mocha%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-mocha-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1809,6 +1811,7 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Hide timestamp
 - Hide video action buttons
 - Loop video
+- Media notification controls
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
@@ -2436,11 +2439,11 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 <details>
 <summary id="youtube-music-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.56-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
-[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-music-morphe-v8.47.56-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-music-morphe-v8.47.56-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/189/youtube-music-morphe-module-v8.47.56-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.apps.youtube.music%22%2C%20%22name%22%3A%20%22YouTube%20Music%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-music-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+[![arm64-v8a.apk](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-music-morphe-v8.47.56-arm64-v8a.apk) [![arm-v7a.apk](https://img.shields.io/static/v1?label=Download&message=arm-v7a.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-music-morphe-v8.47.56-arm-v7a.apk) [![arm64-v8a.zip](https://img.shields.io/static/v1?label=Download&message=arm64-v8a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-music-morphe-module-v8.47.56-arm64-v8a.zip) [![arm-v7a.zip](https://img.shields.io/static/v1?label=Download&message=arm-v7a.zip&color=5B4B8A&style=flat&logo=magisk&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/191/youtube-music-morphe-module-v8.47.56-arm-v7a.zip) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.apps.youtube.music%22%2C%20%22name%22%3A%20%22YouTube%20Music%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-music-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
