@@ -9,5 +9,5 @@ twitter-morphe-materialu (arm-v7a): 11.81.0-release.0
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: crimera/patches-3.2.0.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.2.0)  
+Patches: crimera/patches-3.3.0-dev.3.mpp  
+[Changelog](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.3)  
