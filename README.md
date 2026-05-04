@@ -1160,7 +1160,7 @@ Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Mahesh
 
 ---
 
-### [Trakt](https://play.google.com/store/apps/details?id=tv.trakt.trakt)
+### [trakt.TV](https://play.google.com/store/apps/details?id=tv.trakt.trakt)
 
 `tv.trakt.trakt`
 
