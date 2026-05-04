@@ -10,6 +10,7 @@ rv-brand = "revanced-gplay"
 build-mode = "apk"
 arch = "both"
 patches-source = "Aunali321/ReVancedExperiments"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
 
 [telegram-revanced-foss]
@@ -19,5 +20,6 @@ rv-brand = "revanced-foss"
 build-mode = "apk"
 arch = "both"
 patches-source = "Aunali321/ReVancedExperiments"
+cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 
