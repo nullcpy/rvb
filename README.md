@@ -315,7 +315,7 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
 Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
 - Fing Premium
 </blockquote>
@@ -594,7 +594,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
 Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
 </blockquote>
 </details>
@@ -1139,7 +1139,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
 Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
 - Anti-delete messages
 - Anti-disappearing media
@@ -1285,7 +1285,7 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
 Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
 - Disable telemetry
 - Disable update check
