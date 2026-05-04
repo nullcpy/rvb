@@ -86,9 +86,15 @@
     "blocked": false
   },
   "meta": {
-    "repo": "MeridianFresco/morphe-meta-patches"
+    "repo": "MeridianFresco/morphe-meta-patches",
+    "stable": "v1.0.0",
+    "prerelease": "",
+    "blocked": false
   },
   "pixel": {
-    "repo": "PixelPusher247/morphe-patches"
+    "repo": "PixelPusher247/morphe-patches",
+    "stable": "v1.3.0",
+    "prerelease": "",
+    "blocked": false
   }
 }
