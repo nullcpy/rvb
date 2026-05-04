@@ -4,9 +4,9 @@
 
 <p align="center"><b>Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new patches are released.</b></p>
 
-<p align="center"><a href="https://t.me/rvb27">Group</a> | <a href="https://nullcpy.github.io/">Download</a> | <a href="https://t.me/s/rvb28">Channel</a> | <a href="https://fahim-ahmed05.github.io/donate">Donate</a></p>
+<p align="center"><a href="https://t.me/rvb27"><img src="https://img.shields.io/badge/Group-26A5E4?style=flat&logo=telegram&logoColor=white"></a> <a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/Download-21a378?style=flat&logo=googlechrome&logoColor=white"></a> <a href="https://t.me/s/rvb28"><img src="https://img.shields.io/badge/Channel-26A5E4?style=flat&logo=telegram&logoColor=white"></a> <a href="https://fahim-ahmed05.github.io/donate"><img src="https://img.shields.io/badge/Donate-ea4335?style=flat&logo=ko-fi&logoColor=white"></p>
 
-<p align="center"><b>Please star the repo! 🙏🥺</b></p>
+<p align="center"><a href="https://github.com/nullcpy/rvb"><img src="https://img.shields.io/github/stars/nullcpy/rvb?style=social"></a></p>
 
 ---
 
@@ -46,7 +46,7 @@ Thank you to everyone who helps keep this project alive!
 
 > These two releases act as a permanent, continuously updated vault, ensuring downloads remain reliably available without interruption.
 
-&emsp;[![Stable](https://img.shields.io/badge/Stable-Builds-gray?labelColor=21a378&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/badge/Beta-Builds-gray?labelColor=3ba1fc&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
+&emsp;[![Stable](https://img.shields.io/badge/Stable-Builds-gray?labelColor=21a378&logo=github&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/badge/Beta-Builds-gray?labelColor=3ba1fc&logo=github&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
 
 ---
 
