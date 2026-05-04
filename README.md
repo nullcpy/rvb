@@ -26,8 +26,6 @@ Thank you to everyone who helps keep this project alive!
 >
 > **Please read before downloading from this page!**
 > 
-> The direct links in this page always point to the absolute latest automated builds. Please note that **not all supported apps are present here**. Because this repository builds using both **Stable** and **Beta** patches, the links below may occasionally download beta versions. **I strongly advise against downloading from this page**. Additionally, since only the 18 most recent update builds are retained, some links may no longer work.
-> 
 > 🌐 **[Visit Download Website (Highly Recommended)](https://nullcpy.github.io/)**
 >
 > For the best experience, please download from the website. It features:
