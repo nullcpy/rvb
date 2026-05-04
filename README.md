@@ -1932,14 +1932,14 @@ Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.16.240-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.18.163-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Exp%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-exp-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-04-21](https://github.com/nullcpy/rvb/releases/tag/140)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
+Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.2)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1982,6 +1982,7 @@ Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Hide timestamp
 - Hide video action buttons
 - Loop video
+- Media notification controls
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
@@ -2574,14 +2575,14 @@ Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.15.50-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.17.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.apps.youtube.music%22%2C%20%22name%22%3A%20%22YouTube%20Music%20Morphe%20Exp%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-music-morphe-exp-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
+Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.2)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
