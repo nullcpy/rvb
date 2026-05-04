@@ -1,15 +1,15 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[facebook-morphe]
+[imdb-morphe]
 enabled = true
-app-name = "facebook"
+app-name = "imdb"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
-patches-source = "MeridianFresco/morphe-meta-patches"
+arch = "all"
+patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+# archive-dlurl = ""
