@@ -712,4 +712,17 @@ uptodown-dlurl = "https://ventusky-weather-maps-and-radar.en.uptodown.com/androi
 # apkmirror-dlurl = "https://apkmirror.com/apk/infinicode-studio-s-r-o/ventusky/"
 archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
 
+[facebook-morphe]
+enabled = true
+app-name = "facebook"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "MeridianFresco/morphe-meta-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+
+
+
 
