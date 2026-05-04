@@ -2582,7 +2582,7 @@ Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morph
 <blockquote>
 
 [Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.2)
+Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
