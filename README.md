@@ -46,7 +46,7 @@ Thank you to everyone who helps keep this project alive!
 
 > These two releases act as a permanent, continuously updated vault, ensuring downloads remain reliably available without interruption.
 
-&emsp;[![Stable](https://img.shields.io/badge/Stable-Builds-gray?labelColor=21a378&logo=github&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/badge/Beta-Builds-gray?labelColor=3ba1fc&logo=github&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
+&emsp;[![Stable](https://img.shields.io/github/downloads/nullcpy/rvb/stable/total?label=Stable&labelColor=7b52ab&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/github/downloads/nullcpy/rvb/beta/total?label=Beta&labelColor=b33939&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
 
 ---
 
@@ -57,7 +57,7 @@ Thank you to everyone who helps keep this project alive!
 > [!IMPORTANT]
 > Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.
 
-&emsp;[![Morphe](https://img.shields.io/github/v/release/MorpheApp/MicroG-RE?label=Morphe&style=flat&logo=monster&logoColor=white)](https://github.com/MorpheApp/MicroG-RE/releases/latest) [![ReVanced](https://img.shields.io/github/v/release/ReVanced/GmsCore?label=ReVanced&style=flat&logo=revanced&logoColor=white)](https://github.com/ReVanced/GmsCore/releases/latest)
+&emsp;[![Morphe](https://img.shields.io/github/v/release/MorpheApp/MicroG-RE?label=Morphe&labelColor=1082c2&color=gray&style=flat&logo=monster&logoColor=white)](https://github.com/MorpheApp/MicroG-RE/releases/latest) [![ReVanced](https://img.shields.io/github/v/release/ReVanced/GmsCore?label=ReVanced&labelColor=de763d&color=gray&style=flat&logo=revanced&logoColor=white)](https://github.com/ReVanced/GmsCore/releases/latest)
 
 ---
 
