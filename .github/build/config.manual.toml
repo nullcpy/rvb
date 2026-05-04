@@ -3,14 +3,21 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[imdb-morphe]
-enabled = true
-app-name = "imdb"
-rv-brand = "morphe"
+[telegram-revanced-gplay]
+enabled = true 
+app-name = "telegram"
+rv-brand = "revanced-gplay"
 build-mode = "apk"
-arch = "all"
-patches-source = "jkennethcarino/adobo"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
-# archive-dlurl = ""
+arch = "both"
+patches-source = "Aunali321/ReVancedExperiments"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+
+[telegram-revanced-foss]
+enabled = true 
+app-name = "telegram"
+rv-brand = "revanced-foss"
+build-mode = "apk"
+arch = "both"
+patches-source = "Aunali321/ReVancedExperiments"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 
