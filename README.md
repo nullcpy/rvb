@@ -451,6 +451,26 @@ Patches: [hoo-dles/patches-1.29.0.mpp](https://github.com/hoo-dles/morphe-patche
 </blockquote>
 </details>
 
+
+---
+
+### [IMDb](https://play.google.com/store/apps/details?id=com.imdb.mobile)
+
+`com.imdb.mobile`
+
+#### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
+
+<details>
+<summary id="imdb-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=f5c518&logo=imdb&logoColor=black&style=flat"></summary>
+
+[![all.apk](https://img.shields.io/static/v1?label=Download&message=all.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/0/imdb-morphe-v0-all.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.imdb.mobile%22%2C%20%22name%22%3A%20%22IMDb%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eimdb-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+<blockquote>
+
+[Release 0](https://github.com/nullcpy/rvb/releases/tag/0)<br>
+Patches: [jkennethcarino/patches](https://github.com/jkennethcarino/adobo/releases/latest)
+</blockquote>
+</details>
+
 ---
 
 ### [Instagram](https://play.google.com/store/apps/details?id=com.instagram.android)
@@ -1191,6 +1211,26 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 [Release 2026-04-29](https://github.com/nullcpy/rvb/releases/tag/182)<br>
 Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
 - TickTick Premium
+</blockquote>
+</details>
+
+
+---
+
+### [Trakt](https://play.google.com/store/apps/details?id=tv.trakt.trakt)
+
+`tv.trakt.trakt`
+
+#### [Morphe (PixelPusher247)](https://github.com/PixelPusher247/morphe-patches)
+
+<details>
+<summary id="trakt-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
+
+[![all.apk](https://img.shields.io/static/v1?label=Download&message=all.apk&color=0A84FF&style=flat&logo=android&logoColor=white)](https://github.com/nullcpy/rvb/releases/download/0/trakt-morphe-v0-all.apk) [![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22tv.trakt.trakt%22%2C%20%22name%22%3A%20%22Trakt%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etrakt-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+<blockquote>
+
+[Release 0](https://github.com/nullcpy/rvb/releases/tag/0)<br>
+Patches: [PixelPusher247/morphe-patches](https://github.com/PixelPusher247/morphe-patches/releases/latest)
 </blockquote>
 </details>
 
