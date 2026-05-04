@@ -23,10 +23,8 @@ Thank you to everyone who helps keep this project alive!
 ---
 
 > [!IMPORTANT]
->
-> **Please read before downloading from this page!**
 > 
-> 🌐 **[Visit Download Website (Highly Recommended)](https://nullcpy.github.io/)**
+> 🌐 **[Visit Download Website](https://nullcpy.github.io/)**
 >
 > For the best experience, please download from the website. It features:
 > * 📱 **The complete list of every supported app.**
