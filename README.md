@@ -46,7 +46,7 @@ Thank you to everyone who helps keep this project alive!
 
 > These two releases act as a permanent, continuously updated vault, ensuring downloads remain reliably available without interruption.
 
-&emsp;[![Stable](https://img.shields.io/github/downloads/nullcpy/rvb/stable/total?label=Stable&labelColor=7b52ab&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/github/downloads/nullcpy/rvb/beta/total?label=Beta&labelColor=b33939&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
+&emsp;[![Stable](https://img.shields.io/github/downloads/nullcpy/rvb/stable/total?label=Stable&labelColor=7b52ab&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/stable) [![Beta](https://img.shields.io/github/downloads-pre/nullcpy/rvb/beta/total?label=Beta&labelColor=b33939&color=gray&logo=github&logoColor=white&style=flat)](https://github.com/nullcpy/rvb/releases/tag/beta)
 
 ---
 
