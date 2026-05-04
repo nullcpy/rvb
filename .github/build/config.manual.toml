@@ -3,23 +3,26 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[telegram-revanced-gplay]
+[instagram-morphe]
 enabled = true 
-app-name = "telegram"
-rv-brand = "revanced-gplay"
+app-name = "instagram"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "Aunali321/ReVancedExperiments"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+patches-source = "brosssh/morphe-patches"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
-[telegram-revanced-foss]
+[instagram-morphe-piko]
 enabled = true 
-app-name = "telegram"
-rv-brand = "revanced-foss"
+app-name = "instagram"
+rv-brand = "morphe-piko"
 build-mode = "apk"
 arch = "both"
-patches-source = "Aunali321/ReVancedExperiments"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+patches-source = "crimera/piko"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
