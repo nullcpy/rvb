@@ -22,7 +22,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-> [!IMPORTANT]
+> [!NOTE]
 > 
 > 🌐 **[Visit Download Website](https://nullcpy.github.io/)**
 >
@@ -31,8 +31,7 @@ Thank you to everyone who helps keep this project alive!
 > * 📦 Clear separation between **Stable**, **Beta** and **Variant** builds.
 > * 🏷️ Beautifully organized version numbers and download tracking.
 > * 🔄 Step-by-step instructions on how to set up automatic updates using **Obtainium**.
-
-> [!NOTE]
+> 
 >
 > **🤖 Fully Automated Builds**
 >
