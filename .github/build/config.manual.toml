@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
@@ -21,8 +21,8 @@ enabled = true
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
+version = "21.17.480"
 arch = "both"
-version = "21.18.163"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
