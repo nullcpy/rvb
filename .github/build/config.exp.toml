@@ -1,4 +1,7 @@
-21.18.163
+parallel-jobs = 1
+patches-version = "dev"
+# cli-version = "dev"
+enable-module-update = true
 
 [youtube-morphe-exp]
 enabled = false
@@ -6,7 +9,7 @@ app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
 arch = "both"
-version = "latest"
+version = "21.18.163"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -18,7 +21,7 @@ enabled = false
 app-name = "youtube-music"
 rv-brand = "morphe-exp"
 build-mode = "both"
-version = "latest"
+version = "9.17.51"
 arch = "both"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
