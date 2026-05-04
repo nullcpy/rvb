@@ -1,5 +1,5 @@
-youtube-music-morphe-exp (arm64-v8a): 9.17.51  
-youtube-music-morphe-exp (arm-v7a): 9.17.51  
+youtube-morphe-exp (arm64-v8a): 21.17.480  
+youtube-morphe-exp (arm-v7a): 21.17.480  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
