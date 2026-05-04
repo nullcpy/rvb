@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
@@ -10,6 +10,7 @@ rv-brand = "morphe-exp"
 build-mode = "both"
 arch = "both"
 version = "21.18.163"
+patches-version = "dev"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -24,7 +25,6 @@ build-mode = "both"
 version = "9.17.51"
 arch = "both"
 patches-source = "MorpheApp/morphe-patches"
-patches-version = "latest"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
