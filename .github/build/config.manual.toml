@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [youtube-music-morphe-exp]
-enabled = false
+enabled = true
 app-name = "youtube-music"
 rv-brand = "morphe-exp"
 build-mode = "both"
@@ -18,7 +18,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-exp]
-enabled = false
+enabled = true
 app-name = "youtube"
 rv-brand = "morphe-exp"
 build-mode = "both"
