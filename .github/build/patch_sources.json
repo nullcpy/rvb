@@ -79,10 +79,16 @@
     "prerelease": "v1.4.1-dev.1",
     "blocked": false
   },
-  "BholeyKaBhakt": {
+  "rvxtra": {
     "repo": "BholeyKaBhakt/revanced-patches-xtra",
     "stable": "v2.0.0",
     "prerelease": "v2.0.0-dev.1",
     "blocked": false
+  },
+  "meta": {
+    "repo": "MeridianFresco/morphe-meta-patches"
+  },
+  "pixel": {
+    "repo": "PixelPusher247/morphe-patches"
   }
 }
