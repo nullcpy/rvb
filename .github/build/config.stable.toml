@@ -734,5 +734,15 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 # archive-dlurl = ""
 
+[imdb-morphe]
+enabled = true
+app-name = "imdb"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "jkennethcarino/adobo"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+# archive-dlurl = ""
 
 
