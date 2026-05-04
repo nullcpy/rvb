@@ -1,29 +1,31 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[instagram-morphe]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe"
-build-mode = "apk"
+[youtube-morphe-exp]
+enabled = false
+app-name = "youtube"
+rv-brand = "morphe-exp"
+build-mode = "both"
 arch = "both"
-patches-source = "brosssh/morphe-patches"
-# patcher-args = "--continue-on-error"
+version = "21.18.163"
+patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[instagram-morphe-piko]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
-build-mode = "apk"
+[youtube-music-morphe-exp]
+enabled = false
+app-name = "youtube-music"
+rv-brand = "morphe-exp"
+build-mode = "both"
+version = "9.17.51"
 arch = "both"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
+patches-source = "MorpheApp/morphe-patches"
+patches-version = "latest"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
