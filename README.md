@@ -211,8 +211,8 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -271,8 +271,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - Eyecon Premium
 </blockquote>
 </details>
@@ -315,8 +315,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - Fing Premium
 </blockquote>
 </details>
@@ -607,15 +607,14 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.63.13-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.arlosoft.macrodroid%22%2C%20%22name%22%3A%20%22MacroDroid%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Emacrodroid-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
-- MacroDroid Premium
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 </blockquote>
 </details>
 
@@ -932,8 +931,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/206)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.4)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1159,8 +1158,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1262,8 +1261,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.ticktick.task%22%2C%20%22name%22%3A%20%22TickTick%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eticktick-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 \n<blockquote>
 
-[Release 2026-04-29](https://github.com/nullcpy/rvb/releases/tag/182)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - TickTick Premium
 </blockquote>
 </details>
@@ -1305,8 +1304,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
 - Disable telemetry
 - Disable update check
 - Hide Assistant tab
@@ -1722,8 +1721,8 @@ Patches: [hoo-dles/patches-1.29.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/206)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.4)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1801,8 +1800,8 @@ Patches: [MorpheApp/patches-1.26.0-dev.4.mpp](https://github.com/MorpheApp/morph
 
 <blockquote>
 
-[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
-Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1880,8 +1879,8 @@ Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 <blockquote>
 
-[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/191)<br>
-Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1953,14 +1952,14 @@ Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.17.480-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.18.164-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.google.android.youtube%22%2C%20%22name%22%3A%20%22YouTube%20Morphe%20Exp%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eyoutube-morphe-exp-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/204)<br>
-Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2565,8 +2564,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/206)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.4)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2602,8 +2601,8 @@ Patches: [MorpheApp/patches-1.26.0-dev.4.mpp](https://github.com/MorpheApp/morph
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [MorpheApp/patches-1.25.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
+Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
