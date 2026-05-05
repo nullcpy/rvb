@@ -18,4 +18,4 @@ assignees: ''
 ### Acknowledgement
 
 - [ ] I have searched the existing app requests and believe that this is not a duplicate.
-- [ ] This app or patch is not already built by this builder.
+- [ ] This app or app with this patch is not already built by this builder.
