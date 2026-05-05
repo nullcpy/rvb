@@ -913,8 +913,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-05-03](https://github.com/nullcpy/rvb/releases/tag/198)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.2)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/205)<br>
+Patches: [MorpheApp/patches-1.26.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.3)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2546,8 +2546,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 
 <blockquote>
 
-[Release 2026-05-03](https://github.com/nullcpy/rvb/releases/tag/198)<br>
-Patches: [MorpheApp/patches-1.26.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.2)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/205)<br>
+Patches: [MorpheApp/patches-1.26.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0-dev.3)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
