@@ -521,38 +521,57 @@ Patches: [brosssh/patches-2.6.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.instagram.android%22%2C%20%22name%22%3A%20%22Instagram%20Morphe%20Piko%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Einstagram-morphe-piko-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/202)<br>
-Patches: [crimera/patches-3.2.0.mpp](https://github.com/crimera/piko/releases/tag/v3.2.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/208)<br>
+Patches: [crimera/patches-3.3.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.4)
 - Add settings
+- Amoled theme
+- Change like animation
 - Change version code
+- Copy comment
+- Customise story ring size
 - Customise story timestamp
+- Disable Reels scrolling
 - Disable ads
 - Disable analytics
 - Disable comments
 - Disable discover people
+- Disable double tap like
 - Disable explore
+- Disable highlights
+- Disable screenshot detection
 - Disable stories
 - Disable story flipping
+- Disable typing status
+- Disable video autoplay
 - Download media
+- Enable whitehat settings
 - Follow back indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
+- Hide notes tray
 - Hide reshare button
 - Hide stories tray
 - Hide suggested content
 - Improve image viewing
 - Limit feed to following profiles
 - Make ephemeral media permanent
+- More options on post
+- More options on profile
 - Open links externally
 - Remove build expired popup
+- Remove empty bottom space
 - Sanitize share links
+- Stories audio autoplay
+- Unlock Plus benefits
 - Unlock developer options
+- Unlock employee options
+- View DMs anonymously
 - View live anonymously
 - View stories anonymously
 - View story mentions
