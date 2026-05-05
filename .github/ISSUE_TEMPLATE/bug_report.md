@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Bug report
+name: 🐞 Bug report
+about: Report a bug or an issue.
 title: ''
 labels: 'bug'
 assignees: ''

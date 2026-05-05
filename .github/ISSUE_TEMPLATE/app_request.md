@@ -1,6 +1,6 @@
 ---
-name: App request
-about: App request
+name: 📱 App request
+about: Request a new app to be added to the builder.
 title: ''
 labels: 'app_request'
 assignees: ''
@@ -8,15 +8,15 @@ assignees: ''
 ---
 
 ### App details
-**App name:**
+**App name:** 
 
-**Play store link:**
+**Play store link:** 
 
-**Uptodown link:**
+**Uptodown link:** 
 
-**Apkmirror link:**
+**Apkmirror link:** 
 
-**Patch repo link:**
+**Patch repo link:** 
 
 ### Acknowledgement
 - [ ] I have searched the existing app requests and believe that this is not a duplicate.
