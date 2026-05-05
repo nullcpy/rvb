@@ -22,7 +22,7 @@ jobs:
         with:
           delete_releases: true
           delete_tags: true
-          releases_keep_latest: 98
+          releases_keep_latest: 198
           delete_workflows: true
           workflows_keep_day: 30
           releases_keep_keyword: stable/beta
