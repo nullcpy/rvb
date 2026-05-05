@@ -79,7 +79,10 @@ get_prebuilts() {
 		if [ "$ver" = "dev" ]; then
 			local resp
 			resp=$(gh_req "$rv_rel" -) || return 1
-			ver=$(jq -e -r '.[] | .tag_name' <<<"$resp" | get_highest_ver) || return 1
+			ver=$(jq -e -r 'map(select(.prerelease == true)) | .[0].tag_name' <<<"$resp") || return 1
+			if [ -z "$ver" ] || [ "$ver" = "null" ]; then
+				ver=$(jq -e -r '.[] | .tag_name' <<<"$resp" | get_highest_ver) || return 1
+			fi
 		fi
 		if [ "$ver" = "latest" ]; then
 			rv_rel+="/latest"
