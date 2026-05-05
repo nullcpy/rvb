@@ -315,8 +315,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
 - Fing Premium
 </blockquote>
 </details>
@@ -588,14 +588,15 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.63.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.arlosoft.macrodroid%22%2C%20%22name%22%3A%20%22MacroDroid%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Emacrodroid-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
+- MacroDroid Premium
 </blockquote>
 </details>
 
@@ -1139,8 +1140,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1285,11 +1286,12 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/203)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.15.0)
+[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/204)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.43.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.4.0-dev.43)
 - Disable telemetry
 - Disable update check
 - Hide Assistant tab
+- Hide Family Protection button
 - Hide Premium from settings
 - Hide Premium tab
 - Hide Scams tab
