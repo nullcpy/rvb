@@ -52,7 +52,7 @@ excluded-patches = """\
   """
 
 included-patches = "'Some Patch'"                          # whitespace seperated list of non-default patches to include. default: ""
-include-stock = "merged"                                   # 'merged', 'split' or 'disable'. default: merged
+include-stock = true                                       # includes stock apk in the module. default: true
 exclusive-patches = false                                  # exclude all patches by default. default: false
 
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
