@@ -2,12 +2,14 @@
 name: Bug report
 about: Bug report
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
 
-**DO NOT REPORT REVANCED STUFF IN THIS REPO**  
-if you delete these lines and proceed to report revanced stuff like **patch bugs** or **patch requests**, you will be **blocked** from this repo
+### Bug description
 
-Use issues only to report bugs of the rvmm builder or the modules
+
+### Acknowledgement
+- [ ] I have searched the existing issues and believe that this is not a duplicate.
+- [ ] This bug is not related to ReVanced, Morphe or any other patch.
