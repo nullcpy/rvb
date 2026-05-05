@@ -286,22 +286,17 @@ get_patch_last_supported_ver() {
 }
 
 patches_list_versions() {
-	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op cmd
-	local cmd_base="java -jar '$cli_jar' list-versions"
-
-	# TODO: remove this later
-	local cli_name
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
+	local cli_name extra_args=()
 	cli_name=$(basename "$cli_jar")
-	if [ "${cli_name::8}" = revanced ]; then cmd_base+=" -b"; fi
+	if [ "${cli_name::8}" = revanced ]; then extra_args+=("-b"); fi
 
-	cmd="${cmd_base} --patches='$patches_jar' -f '$pkg_name'"
-	if op=$(eval "$cmd" 2>&1); then
+	if op=$(java -jar "$cli_jar" list-versions "${extra_args[@]}" --patches="$patches_jar" -f "$pkg_name" 2>&1); then
 		echo "$op"
 		return
 	fi
 
-	cmd="${cmd_base} '$patches_jar' -f '$pkg_name'"
-	if op=$(eval "$cmd" 2>&1); then
+	if op=$(java -jar "$cli_jar" list-versions "${extra_args[@]}" "$patches_jar" -f "$pkg_name" 2>&1); then
 		echo "$op"
 		return
 	fi
@@ -312,7 +307,7 @@ patches_list_versions() {
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
 	if ! op=$(java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
+		if ! op=$(java -jar "$cli_jar" list-patches --patches="$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
