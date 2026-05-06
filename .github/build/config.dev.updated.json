@@ -69,17 +69,41 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
+    "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
+  },
+  "twitter-morphe-materialu": {
+    "enabled": false,
+    "app-name": "twitter",
+    "rv-brand": "morphe-materialu",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "crimera/piko",
+    "included-patches": "'Bring back twitter' 'Dynamic color'",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
+  },
+  "instagram-morphe-piko": {
+    "enabled": false,
+    "app-name": "instagram",
+    "rv-brand": "morphe-piko",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "crimera/piko",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -90,7 +114,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -101,7 +125,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -139,17 +163,6 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "brosssh/morphe-patches",
-    "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
-  },
-  "instagram-morphe-piko": {
-    "enabled": true,
-    "app-name": "instagram",
-    "rv-brand": "morphe-piko",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
