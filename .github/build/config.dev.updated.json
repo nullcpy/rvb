@@ -69,7 +69,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -144,7 +144,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "instagram-morphe-piko": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "apk",
