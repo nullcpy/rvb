@@ -353,8 +353,14 @@ jobs:
     uses: ./.github/workflows/deploy-pages.yml
     secrets: inherit
 
-  trigger_website_update:
+  trigger_cleanup:
     needs: [ build_dev, build_stable ]
+    if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
+    uses: ./.github/workflows/cleanup.yml
+    secrets: inherit
+
+  trigger_website_update:
+    needs: [ build_dev, build_stable, trigger_cleanup ]
     if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
     uses: ./.github/workflows/update-website.yml
     secrets: inherit
