@@ -25,5 +25,3 @@ jobs:
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           source_repo_path: nvbangg/revanced-morphe-builder
-
-          
