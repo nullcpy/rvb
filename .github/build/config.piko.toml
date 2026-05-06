@@ -13,6 +13,7 @@ arch = "both"
 patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [twitter-morphe-materialu]
 enabled = true 
@@ -25,6 +26,7 @@ patches-source = "crimera/piko"
 included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [instagram-morphe-piko]
 enabled = true 
@@ -32,7 +34,7 @@ app-name = "instagram"
 rv-brand = "morphe-piko"
 build-mode = "apk"
 arch = "both"
-# version = "300.0.0-release.0"
+# version = "426.0.0.37.68"
 patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
