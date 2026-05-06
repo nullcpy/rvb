@@ -11,7 +11,6 @@ concurrency:
 jobs:
   dispatch_update:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     timeout-minutes: 10
     steps:
       - name: Dispatch Website Cache Update
@@ -20,4 +19,3 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "Authorization: token ${{ secrets.WEBSITE_DISPATCH_TOKEN }}" \
           -d '{"event_type": "update-catalog-cache"}'
-
