@@ -106,7 +106,7 @@ for table_name in $(toml_get_table_names); do
 		if ! isoneof "${app_args[build_mode]}" both apk module; then
 			abort "ERROR: build-mode '${app_args[build_mode]}' is not a valid option for '${table_name}': only 'both', 'apk' or 'module' is allowed"
 		fi
-	} || app_args[build_mode]=both
+	} || app_args[build_mode]=apk
 	app_args[include_stock]=$(toml_get "$t" include-stock) && {
 		if ! isoneof "${app_args[include_stock]}" disable merged split; then
 			abort "ERROR: include-stock '${app_args[include_stock]}' is not a valid option for '${table_name}': only 'disable', 'merged' or 'split' is allowed"
