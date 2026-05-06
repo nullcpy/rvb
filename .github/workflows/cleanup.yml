@@ -3,8 +3,6 @@ name: Cleanup
 on:
   workflow_call:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *" # Run on the 1st of every month at 00:00 UTC
 
 concurrency:
   group: clean
@@ -24,14 +22,8 @@ jobs:
         with:
           delete_releases: true
           delete_tags: true
-          releases_keep_latest: 198
+          releases_keep_latest: 98
           delete_workflows: true
-          workflows_keep_day: 30
+          workflows_keep_day: 3
           releases_keep_keyword: stable/beta
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-
-  trigger_website_update:
-    needs: [ cleanup ]
-    if: needs.cleanup.result == 'success'
-    uses: ./.github/workflows/update-website.yml
-    secrets: inherit
