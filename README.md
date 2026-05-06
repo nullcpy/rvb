@@ -549,8 +549,8 @@ Patches: [brosssh/patches-2.6.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/211)<br>
-Patches: [crimera/patches-3.3.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.5)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
 - Add settings
 - Amoled theme
 - Change like animation
@@ -953,8 +953,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
-Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [MorpheApp/patches-1.26.1-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.1-dev.3)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1515,8 +1515,8 @@ Patches: [hoo-dles/patches-1.29.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/211)<br>
-Patches: [crimera/patches-3.3.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.5)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
 - Add ability to copy media link
 - Change app icon
 - Change version code
@@ -1593,8 +1593,8 @@ Patches: [crimera/patches-3.3.0-dev.5.mpp](https://github.com/crimera/piko/relea
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/211)<br>
-Patches: [crimera/patches-3.3.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.5)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
 - Add ability to copy media link
 - Bring back twitter
 - Change app icon
@@ -1744,8 +1744,8 @@ Patches: [hoo-dles/patches-1.29.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/212)<br>
-Patches: [MorpheApp/patches-1.26.1-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.1-dev.2)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [MorpheApp/patches-1.26.1-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.1-dev.3)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2587,8 +2587,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/212)<br>
-Patches: [MorpheApp/patches-1.26.1-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.1-dev.2)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
+Patches: [MorpheApp/patches-1.26.1-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.1-dev.3)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
