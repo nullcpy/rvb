@@ -176,6 +176,27 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 ---
 
+### [CamScanner](https://play.google.com/store/apps/details?id=com.intsig.camscanner)
+
+`com.intsig.camscanner`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="camscanner-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.62.5-gray?labelColor=00a48a&logo=android&logoColor=white&style=flat"></summary>
+
+&emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.intsig.camscanner%22%2C%20%22name%22%3A%20%22CamScanner%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ecamscanner-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+
+<blockquote>
+
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/210)<br>
+Patches: [hoo-dles/patches-1.29.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.29.0)
+- Enable Premium
+</blockquote>
+</details>
+
+---
+
 ### [Cricbuzz](https://play.google.com/store/apps/details?id=com.cricbuzz.android)
 
 `com.cricbuzz.android`
@@ -1259,7 +1280,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <summary id="ticktick-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.0.6.1-gray?labelColor=5C6BC0&logo=android&logoColor=white&style=flat"></summary>
   
 &emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.ticktick.task%22%2C%20%22name%22%3A%20%22TickTick%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eticktick-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
-\n<blockquote>
+
+<blockquote>
 
 [Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
 Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Maheshwari/paresh-patches/releases/tag/v1.16.0)
