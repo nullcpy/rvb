@@ -3,17 +3,17 @@ patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[camscanner-morphe]
-enabled = true
-app-name = "camscanner"
+[instagram-morphe]
+enabled = true 
+app-name = "instagram"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+arch = "all"
+patches-source = "brosssh/morphe-patches"
+# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.intsig.camscanner"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 
 
