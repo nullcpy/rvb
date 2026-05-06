@@ -1,4 +1,4 @@
-instagram-morphe-piko (arm64-v8a): 426.0.0.37.68  
+twitter-morphe (arm64-v8a): 11.82.0-beta.1  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
