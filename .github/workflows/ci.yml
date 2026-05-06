@@ -160,7 +160,7 @@ jobs:
           echo "${DELIM2}" >> "$GITHUB_OUTPUT"
 
       - name: Generate configs (JSON)
-        if: steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1'
+        if: ${{ steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' }}
         id: generate_configs
         env:
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
@@ -280,17 +280,17 @@ jobs:
           echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: Notify telegram
-        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1')
+        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
         run: |
           set -euo pipefail
-          
+
           [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
           [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
-          
+
           MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
             [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
@@ -301,19 +301,19 @@ jobs:
                 (if ($e.value.blocked != true and $e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then "\n  ╰ Pre-release: [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" else "" end)
             ] | join("\n\n")
           ')
-          
+
           if [ -z "$MSG_BODY" ]; then
             echo "::notice::No actual updates to format for Telegram."
             exit 0
           fi
-          
+
           NL=$'\n'
           if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "0" ] && [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "0" ]; then
             FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${MSG_BODY}"
           else
             FULL_MSG="*🚨 New Patch(es) Detected!*${NL}${NL}${MSG_BODY}"
           fi
-          
+
           curl -s -X POST \
             --data-urlencode "parse_mode=Markdown" \
             --data-urlencode "disable_web_page_preview=true" \
@@ -323,7 +323,7 @@ jobs:
             "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" > /dev/null
 
       - name: Commit updated patch sources and configs
-        if: steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1')
+        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
@@ -333,54 +333,36 @@ jobs:
 
   build_dev:
     needs: check_patch
-    if: needs.check_patch.outputs.trigger_prerelease == '1'
+    if: ${{ needs.check_patch.outputs.trigger_prerelease == '1' }}
     uses: ./.github/workflows/build.yml
     with:
       config_file: ".github/build/config.dev.updated.json"
-    secrets: inherit 
+    secrets: inherit
 
   build_stable:
-    needs: [check_patch, build_dev]
-    if: |
-      always() && 
-      needs.check_patch.outputs.trigger_stable == '1' && 
-      needs.check_patch.result == 'success' && 
-      needs.build_dev.result != 'cancelled'
+    needs: [ check_patch, build_dev ]
+    if: ${{ always() && needs.check_patch.outputs.trigger_stable == '1' && needs.check_patch.result == 'success' && needs.build_dev.result != 'cancelled' }}
     uses: ./.github/workflows/build.yml
     with:
       config_file: ".github/build/config.stable.updated.json"
-    secrets: inherit 
+    secrets: inherit
 
   trigger_deploy_pages:
-    needs: [build_dev, build_stable]
-    if: |
-      always() &&
-      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
+    needs: [ build_dev, build_stable ]
+    if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
     uses: ./.github/workflows/deploy-pages.yml
     secrets: inherit
 
-  trigger_cleanup:
-    needs: [build_dev, build_stable]
-    if: |
-      always() &&
-      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
-    uses: ./.github/workflows/cleanup.yml
-    secrets: inherit
-
   trigger_website_update:
-    needs: [build_dev, build_stable, trigger_cleanup]
-    if: |
-      always() &&
-      (needs.build_dev.result == 'success' || needs.build_stable.result == 'success')
+    needs: [ build_dev, build_stable ]
+    if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
     uses: ./.github/workflows/update-website.yml
     secrets: inherit
 
   trigger_notify_failure:
-    needs: [check_patch, build_dev, build_stable]
-    if: failure()
+    needs: [ check_patch, build_dev, build_stable ]
+    if: ${{ failure() }}
     uses: ./.github/workflows/notify.yml
     with:
       workflow_name: "CI"
     secrets: inherit
-
-
