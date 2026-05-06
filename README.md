@@ -549,8 +549,8 @@ Patches: [brosssh/patches-2.6.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/208)<br>
-Patches: [crimera/patches-3.3.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.4)
+[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/211)<br>
+Patches: [crimera/patches-3.3.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.5)
 - Add settings
 - Amoled theme
 - Change like animation
