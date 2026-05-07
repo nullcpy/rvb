@@ -189,8 +189,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/210)<br>
-Patches: [hoo-dles/patches-1.30.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.30.0-dev.1)
+[Release 2026-05-07](https://github.com/nullcpy/rvb/releases/tag/217)<br>
+Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.30.0)
 - Disable telemetry
 - Enable Premium
 </blockquote>
