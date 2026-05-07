@@ -1,5 +1,5 @@
-camscanner-morphe (arm64-v8a): 7.15.5.2604080000  
-camscanner-morphe (arm-v7a): 7.15.5.2604080000  
+soundcloud-morphe (arm64-v8a): 2026.04.27-release  
+soundcloud-morphe (arm-v7a): 2026.04.27-release  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
