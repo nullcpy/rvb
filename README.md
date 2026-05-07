@@ -1109,7 +1109,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.soundcloud.android`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
 <summary id="soundcloud-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
