@@ -1,5 +1,5 @@
 ---
-name: 🐞 Bug report
+name: 🐞 Bug
 about: Report a bug or an issue related to the builder.
 title: 'bug: '
 labels: ['bug']

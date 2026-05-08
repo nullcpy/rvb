@@ -1,5 +1,5 @@
 ---
-name: 🌐 Website issue
+name: 🌐 Website
 about: Report a bug or an issue related to the website.
 title: 'website: '
 labels: ['website']
