@@ -1,6 +1,6 @@
 ---
-name: ⭐ Request
-about: Request a new app or a patch to be built.
+name: 📱 Request app
+about: Request a new app to be built.
 title: 'request: '
 labels: ['request']
 assignees: ''
