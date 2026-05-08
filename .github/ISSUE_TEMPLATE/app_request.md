@@ -1,5 +1,5 @@
 ---
-name: ⭐ App/Patch request
+name: ⭐ Request
 about: Request a new app or a patch to be built.
 title: 'request: '
 labels: ['request']
