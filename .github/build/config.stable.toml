@@ -372,7 +372,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe-exp]
-enabled = false
+enabled = true
 app-name = "reddit"
 rv-brand = "morphe-exp"
 build-mode = "both"
