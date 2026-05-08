@@ -1,8 +1,8 @@
 ---
 name: 🐞 Bug report
-about: Report a bug or an issue.
-title: ''
-labels: 'bug'
+about: Report a bug or an issue related to the builder.
+title: 'bug: '
+labels: ['bug']
 assignees: ''
 
 ---
