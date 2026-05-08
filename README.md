@@ -10,7 +10,7 @@
 
 ---
 
-<p align="center"><a href="https://github.com/nullcpy/rvb/issues"><img src="https://img.shields.io/badge/Issues-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/pulls"><img src="https://img.shields.io/badge/Pull%20Requests-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/discussions"><img src="https://img.shields.io/badge/Discussions-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/actions"><img src="https://img.shields.io/badge/Actions-000000?style=flat&logo=github&logoColor=white"></a></p>
+<p align="center"><a href="https://github.com/nullcpy/rvb/issues"><img src="https://img.shields.io/badge/Issues-2f2f2f?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/pulls"><img src="https://img.shields.io/badge/Pull%20Requests-2f2f2f?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/discussions"><img src="https://img.shields.io/badge/Discussions-2f2f2f?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/actions"><img src="https://img.shields.io/badge/Actions-2f2f2f?style=flat&logo=github&logoColor=white"></a></p>
 
 ---
 
