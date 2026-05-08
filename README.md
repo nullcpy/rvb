@@ -10,6 +10,10 @@
 
 ---
 
+<p align="center"><a href="https://github.com/nullcpy/rvb/issues"><img src="https://img.shields.io/badge/Issues-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/pulls"><img src="https://img.shields.io/badge/Pull%20Requests-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/discussions"><img src="https://img.shields.io/badge/Discussions-000000?style=flat&logo=github&logoColor=white"></a> <a href="https://github.com/nullcpy/rvb/actions"><img src="https://img.shields.io/badge/Actions-000000?style=flat&logo=github&logoColor=white"></a></p>
+
+---
+
 ## 🤝 Support the Project
 
 Building, testing, and maintaining these automated workflows takes a significant amount of time. If this builder has saved you time or made your life easier, any support is hugely appreciated!
