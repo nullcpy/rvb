@@ -553,9 +553,10 @@ Patches: [brosssh/patches-2.6.0.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
-Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
+[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
+Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
 - Add settings
+- Allow user network certificate
 - Amoled theme
 - Change like animation
 - Change version code
@@ -576,7 +577,6 @@ Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/relea
 - Disable typing status
 - Disable video autoplay
 - Download media
-- Enable whitehat settings
 - Follow back indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
@@ -1518,8 +1518,8 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
-Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
+[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
+Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
 - Add ability to copy media link
 - Change app icon
 - Change version code
@@ -1596,8 +1596,8 @@ Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/relea
 
 <blockquote>
 
-[Release 2026-05-06](https://github.com/nullcpy/rvb/releases/tag/213)<br>
-Patches: [crimera/patches-3.3.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.6)
+[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
+Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
 - Add ability to copy media link
 - Bring back twitter
 - Change app icon
