@@ -3,16 +3,18 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[soundcloud-morphe]
+[tiktok-morphe]
 enabled = true
-app-name = "soundcloud"
+app-name = "tiktok"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 
 
