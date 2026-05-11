@@ -553,8 +553,8 @@ Patches: [brosssh/patches-2.6.1.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
-Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
+[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/231)<br>
+Patches: [crimera/patches-3.3.0-dev.8.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.8)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -1544,8 +1544,8 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
-Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
+[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/231)<br>
+Patches: [crimera/patches-3.3.0-dev.8.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.8)
 - Add ability to copy media link
 - Change app icon
 - Change version code
@@ -1622,8 +1622,8 @@ Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/relea
 
 <blockquote>
 
-[Release 2026-05-09](https://github.com/nullcpy/rvb/releases/tag/220)<br>
-Patches: [crimera/patches-3.3.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.7)
+[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/231)<br>
+Patches: [crimera/patches-3.3.0-dev.8.mpp](https://github.com/crimera/piko/releases/tag/v3.3.0-dev.8)
 - Add ability to copy media link
 - Bring back twitter
 - Change app icon
