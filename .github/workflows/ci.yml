@@ -310,14 +310,20 @@ jobs:
           [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
           [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
 
-          MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
+          PATCH_SOURCES_JSON=$(cat .github/build/patch_sources.json || echo '{}')
+          MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson patches "$PATCH_SOURCES_JSON" '
             [ $new | to_entries[] | . as $e
               | ($old[$e.key] // {}) as $o
               | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) or ($e.value.blocked == true and $o.blocked != true))
-              | "📦 [\($e.value.repo)](https://github.com/\($e.value.repo))" +
+              | ($patches[$e.key].host // "github") as $host
+              | ($host == "gitlab") as $is_gitlab
+              | ($is_gitlab | if . then "https://gitlab.com/" else "https://github.com/" end) as $base
+              | "📦 [\($e.value.repo)](\($base)\($e.value.repo))" +
                 (if ($e.value.blocked == true and $o.blocked != true) then "\n  ╰ 🚫 Repository access blocked." else "" end) +
-                (if ($e.value.blocked != true and $e.value.stable != "" and $e.value.stable != ($o.stable // "")) then "\n  ╰ Stable: [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" else "" end) +
-                (if ($e.value.blocked != true and $e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then "\n  ╰ Pre-release: [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" else "" end)
+                (if ($e.value.blocked != true and $e.value.stable != "" and $e.value.stable != ($o.stable // "")) then \n                  if $is_gitlab then "\n  ╰ Stable: [\($e.value.stable)](https://gitlab.com/\($e.value.repo)/-/releases/\($e.value.stable))" else "\n  ╰ Stable: [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" end
+                else "" end) +
+                (if ($e.value.blocked != true and $e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then \n                  if $is_gitlab then "\n  ╰ Pre-release: [\($e.value.prerelease)](https://gitlab.com/\($e.value.repo)/-/releases/\($e.value.prerelease))" else "\n  ╰ Pre-release: [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" end
+                else "" end)
             ] | join("\n\n")
           ')
 
