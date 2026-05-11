@@ -1293,6 +1293,27 @@ Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Mahesh
 </blockquote>
 </details>
 
+---
+
+### [TikTok](https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically)
+
+`com.zhiliaoapp.musically`
+
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
+
+<details>
+<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v39.2.0-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
+  
+&emsp;&emsp;[![Obtainium](https://img.shields.io/badge/Add_to-Obtainium-4500FF?logo=obtainium)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A//app/%7B%22id%22%3A%20%22com.zhiliaoapp.musically%22%2C%20%22name%22%3A%20%22TikTok%20Morphe%22%2C%20%22author%22%3A%20%22nullcpy%22%2C%20%22url%22%3A%20%22https%3A//github.com/nullcpy/rvb%22%2C%20%22additionalSettings%22%3A%20%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Etiktok-morphe-v%3F%5C%5C%5C%5Cd.%2A%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)
+
+<blockquote>
+
+[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/latest)<br>
+Patches: [RookieEnough/patches-1.0.0.mpp](https://github.com/RookieEnough/De-Vanced/releases/latest)
+- Ad Removal
+- Video Downloads
+</blockquote>
+</details>
 
 ---
 
