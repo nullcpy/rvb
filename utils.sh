@@ -81,8 +81,8 @@ source_release_tag_api() {
 source_release_assets_json() {
 	local host=${1,,}
 	case "$host" in
-		github) jq -e '[.assets[]? | select(.name | endswith(".apk") or endswith(".apkm"))]' ;;
-		gitlab) jq -e '[.assets.links[]? | select(.name | endswith(".apk") or endswith(".apkm"))]' ;;
+		github) jq -e '[.assets[]? | select(.name | (endswith("asc") or endswith("json")) | not)]' ;;
+		gitlab) jq -e '[.assets.links[]? | select(.name | (endswith("asc") or endswith("json")) | not)]' ;;
 		*) return 1 ;;
 	esac
 }
