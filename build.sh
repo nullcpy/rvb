@@ -32,7 +32,9 @@ REMOVE_RV_INTEGRATIONS_CHECKS=$(toml_get "$main_config_t" remove-rv-integrations
 DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER="latest"
 DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER="latest"
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="MorpheApp/morphe-patches"
+DEF_PATCHES_SRC_HOST=$(toml_get "$main_config_t" patches-source-host) || DEF_PATCHES_SRC_HOST="github"
 DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="MorpheApp/morphe-cli"
+DEF_CLI_SRC_HOST=$(toml_get "$main_config_t" cli-source-host) || DEF_CLI_SRC_HOST="github"
 DEF_RV_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV_BRAND="ReVanced"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
 
@@ -74,11 +76,15 @@ for table_name in $(toml_get_table_names); do
 
 	declare -A app_args
 	patches_src=$(toml_get "$t" patches-source) || patches_src=$DEF_PATCHES_SRC
+	patches_src_host=$(toml_get "$t" patches-source-host) || patches_src_host=$DEF_PATCHES_SRC_HOST
 	patches_ver=$(toml_get "$t" patches-version) || patches_ver=$DEF_PATCHES_VER
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
+	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
+	if ! isoneof "$patches_src_host" github gitlab; then abort "ERROR: patches-source-host '$patches_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+	if ! isoneof "$cli_src_host" github gitlab; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
 
-	if ! PREBUILTS="$(get_prebuilts "$cli_src" "$cli_ver" "$patches_src" "$patches_ver")"; then
+	if ! PREBUILTS="$(get_prebuilts "$cli_src_host" "$cli_src" "$cli_ver" "$patches_src_host" "$patches_src" "$patches_ver")"; then
 		epr "Could not get prebuilts"
 		continue
 	fi
@@ -90,7 +96,11 @@ for table_name in $(toml_get_table_names); do
 	patches_ver=${patches_ver%.*}
 	app_args[patches_src]=$patches_src
 	app_args[patches_ref]="${patches_src%%/*}/${patches_file}"
-	app_args[changelog_url]="https://github.com/${patches_src}/releases/tag/v${patches_ver#v}"
+	if [ "$patches_src_host" = github ]; then
+		app_args[changelog_url]="https://github.com/${patches_src}/releases/tag/v${patches_ver#v}"
+	else
+		app_args[changelog_url]="https://gitlab.com/${patches_src}/-/releases/${patches_ver}"
+	fi
 	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="${patches_src%%/*}"
 
 	app_args[excluded_patches]=$(toml_get "$t" excluded-patches) || app_args[excluded_patches]=""

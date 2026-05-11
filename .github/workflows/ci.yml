@@ -62,6 +62,12 @@ jobs:
           PATCH_FILE=".github/build/patch_sources.json"
           BASE_JSON=$(cat "$PATCH_FILE")
 
+          fetch_gitlab_releases() {
+            local repo=$1 encoded_repo
+            encoded_repo=$(jq -nr --arg v "$repo" '$v | @uri')
+            curl -sS -L -w '\n%{http_code}' "https://gitlab.com/api/v4/projects/${encoded_repo}/releases?per_page=100"
+          }
+
           if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
             DELIM="$(openssl rand -hex 8)"
             echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
@@ -72,16 +78,29 @@ jobs:
 
           > updates.jsonl
 
-          while read -r id repo enabled enabledStable enabledDev; do
+          while read -r id repo host enabled enabledStable enabledDev; do
             if [ "$enabled" == "false" ]; then continue; fi
 
-            api_response=$(gh api "repos/$repo/releases?per_page=100" 2>&1 || true)
+            if [ "$host" = "gitlab" ]; then
+              api_response=$(fetch_gitlab_releases "$repo" 2>&1 || true)
+              api_http_code=$(printf '%s\n' "$api_response" | tail -n1)
+              api_response=$(printf '%s\n' "$api_response" | sed '$d')
+            else
+              api_response=$(gh api "repos/$repo/releases?per_page=100" 2>&1 || true)
+            fi
 
             if echo "$api_response" | grep -qi '"message".*Repository access blocked'; then
               jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
+            elif [ "$host" = "gitlab" ] && { [ "$api_http_code" = "403" ] || [ "$api_http_code" = "404" ]; }; then
+              jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
             elif echo "$api_response" | jq -e 'type == "array"' >/dev/null 2>&1; then
-              stable=$(echo "$api_response" | jq -r '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
-              pre=$(echo "$api_response" | jq -r '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
+              if [ "$host" = "gitlab" ]; then
+                stable=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "")) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
+                pre=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
+              else
+                stable=$(echo "$api_response" | jq -r '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
+                pre=$(echo "$api_response" | jq -r '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
+              fi
 
               jq -n --arg id "$id" --arg stable "$stable" --arg pre "$pre" \
                 '{($id): {"stable": $stable, "prerelease": $pre, "blocked": false}}' >> updates.jsonl
@@ -95,7 +114,7 @@ jobs:
                 '{($id): {"stable": $stable, "prerelease": $pre, "blocked": $blocked}}' >> updates.jsonl
             fi
 
-          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo) \(if .value.enabled == false then false else true end) \(if .value.enabledStable == false then false else true end) \(if .value.enabledDev == false then false else true end)"')
+          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo) \((.value.host // "github") | ascii_downcase) \(if .value.enabled == false then false else true end) \(if .value.enabledStable == false then false else true end) \(if .value.enabledDev == false then false else true end)"')
 
           if [ -s updates.jsonl ]; then
              NEW_JSON=$(jq -s --argjson base "$BASE_JSON" 'reduce .[] as $item ($base; . * $item)' updates.jsonl)
@@ -340,7 +359,7 @@ jobs:
     secrets: inherit
 
   build_stable:
-    needs: [ check_patch, build_dev ]
+    needs: [check_patch, build_dev]
     if: ${{ always() && needs.check_patch.outputs.trigger_stable == '1' && needs.check_patch.result == 'success' && needs.build_dev.result != 'cancelled' }}
     uses: ./.github/workflows/build.yml
     with:
@@ -348,19 +367,19 @@ jobs:
     secrets: inherit
 
   trigger_cleanup:
-    needs: [ build_dev, build_stable ]
+    needs: [build_dev, build_stable]
     if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
     uses: ./.github/workflows/cleanup.yml
     secrets: inherit
 
   trigger_website_update:
-    needs: [ build_dev, build_stable, trigger_cleanup ]
+    needs: [build_dev, build_stable, trigger_cleanup]
     if: ${{ always() && (needs.build_dev.result == 'success' || needs.build_stable.result == 'success') }}
     uses: ./.github/workflows/update-website.yml
     secrets: inherit
 
   trigger_notify_failure:
-    needs: [ check_patch, build_dev, build_stable ]
+    needs: [check_patch, build_dev, build_stable]
     if: ${{ failure() }}
     uses: ./.github/workflows/notify.yml
     with:

@@ -56,16 +56,79 @@ abort() {
 }
 java() { env -i java --enable-native-access=ALL-UNNAMED "$@"; }
 
+source_release_api_base() {
+	local host=${1,,} src=$2 encoded
+	case "$host" in
+		github) echo "https://api.github.com/repos/${src}/releases" ;;
+		gitlab)
+			encoded=$(jq -nr --arg v "$src" '$v | @uri')
+			echo "https://gitlab.com/api/v4/projects/${encoded}/releases"
+			;;
+		*) return 1 ;;
+	esac
+}
+
+source_release_tag_api() {
+	local host=${1,,} src=$2 tag=$3 base
+	base=$(source_release_api_base "$host" "$src") || return 1
+	case "$host" in
+		github) echo "${base}/tags/${tag}" ;;
+		gitlab) echo "${base}/${tag}" ;;
+		*) return 1 ;;
+	esac
+}
+
+source_release_assets_json() {
+	local host=${1,,}
+	case "$host" in
+		github) jq -e '[.assets[]? | select(.name | endswith(".apk") or endswith(".apkm"))]' ;;
+		gitlab) jq -e '[.assets.links[]? | select(.name | endswith(".apk") or endswith(".apkm"))]' ;;
+		*) return 1 ;;
+	esac
+}
+
+source_release_asset_url() {
+	local host=${1,,}
+	case "$host" in
+		github) jq -r '.url' ;;
+		gitlab) jq -r '.direct_asset_url // .url' ;;
+		*) return 1 ;;
+	esac
+}
+
+source_release_pick_from_list() {
+	local host=${1,,} mode=$2
+	case "$host" in
+		github)
+			if [ "$mode" = dev ]; then
+				jq -e -c 'map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
+			else
+				jq -e -c 'map(select(.prerelease != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
+			fi
+			;;
+		gitlab)
+			if [ "$mode" = dev ]; then
+				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
+			else
+				jq -e -c 'map(select(.tag_name != null and .tag_name != "")) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
+			fi
+			;;
+		*) return 1 ;;
+	esac
+}
+
 get_prebuilts() {
-	local cli_src=$1 cli_ver=$2 patches_src=$3 patches_ver=$4
+	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host=$4 patches_src=$5 patches_ver=$6
 	pr "Getting prebuilts (${patches_src%/*})" >&2
 	local cl_dir=${patches_src%/*}
 	cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
 	[ -d "$cl_dir" ] || mkdir "$cl_dir"
 
-	for src_ver in "$cli_src CLI $cli_ver cli" "$patches_src Patches $patches_ver patches"; do
+	for src_ver in "$cli_host $cli_src CLI $cli_ver cli" "$patches_host $patches_src Patches $patches_ver patches"; do
 		set -- $src_ver
-		local src=$1 tag=$2 ver=${3-} fprefix=$4
+		local host=$1 src=$2 tag=$3 ver=${4-} fprefix=$5
+		host=${host,,}
+		if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
 
 		if [ "$tag" = "CLI" ]; then
 			local grab_cl=false
@@ -77,35 +140,29 @@ get_prebuilts() {
 		dir=${TEMP_DIR}/${dir,,}-rv
 		[ -d "$dir" ] || mkdir "$dir"
 
-		local rv_rel="https://api.github.com/repos/${src}/releases" name_ver
+		local rv_rel release resp tag_name matches asset name url
+		rv_rel=$(source_release_api_base "$host" "$src") || return 1
 		if [ "$ver" = "dev" ]; then
-			local resp
-			resp=$(gh_req "$rv_rel" -) || return 1
-			ver=$(jq -e -r 'map(select(.prerelease == true)) | .[0].tag_name' <<<"$resp") || return 1
+			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+			ver=$(source_release_pick_from_list "$host" dev <<<"$resp" | jq -r '.tag_name') || true
 			if [ -z "$ver" ] || [ "$ver" = "null" ]; then
-				ver=$(jq -e -r '.[] | .tag_name' <<<"$resp" | get_highest_ver) || return 1
+				ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
 			fi
 		fi
 		if [ "$ver" = "latest" ]; then
-			rv_rel+="/latest"
-			name_ver="*"
+			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+			release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
 		else
-			rv_rel+="/tags/${ver}"
-			name_ver="$ver"
+			rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
+			release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 		fi
+		tag_name=$(jq -r '.tag_name' <<<"$release") || return 1
+		name_ver=$tag_name
 
-		local url file tag_name matches
-		file=$(find "$dir" -name "*${fprefix}-${name_ver#v}.*" -type f 2>/dev/null)
-		if [ "$ver" = "latest" ]; then
-			file=$(grep -v '/[^/]*dev[^/]*$' <<<"$file" | head -1)
-		else
-			file=$(grep "/[^/]*${ver#v}[^/]*\$" <<<"$file" | head -1)
-		fi
+		local file
+		file=$(find "$dir" -name "*${fprefix}-${name_ver#v}.*" -type f 2>/dev/null | head -1)
 		if [ -z "$file" ]; then
-			local resp asset name
-			resp=$(gh_req "$rv_rel" -) || return 1
-			tag_name=$(jq -r '.tag_name' <<<"$resp") || return 1
-			matches=$(jq -e '.assets | map(select(.name | (endswith("asc") or endswith("json")) | not))' <<<"$resp") || return 1
+			matches=$(source_release_assets_json "$host" <<<"$release") || return 1
 			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
 				local matches_new
 				matches_new=$(jq -e -r 'map(select(.name | contains("-dev") | not))' <<<"$matches")
@@ -120,10 +177,14 @@ get_prebuilts() {
 				wpr "More than 1 asset was found for this release. Falling back to the first one found..."
 			fi
 			asset=$(jq -r ".[0]" <<<"$matches")
-			url=$(jq -r .url <<<"$asset")
+			url=$(source_release_asset_url "$host" <<<"$asset")
 			name=$(jq -r .name <<<"$asset")
 			file="${dir}/${name}"
-			gh_dl "$file" "$url" >&2 || return 1
+			if [ "$host" = github ]; then
+				gh_dl "$file" "$url" >&2 || return 1
+			else
+				_req "$url" "$file" -H "Accept: application/octet-stream" >&2 || return 1
+			fi
 			if [ "$tag" = "Patches" ]; then
 			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
 			fi
@@ -135,7 +196,13 @@ get_prebuilts() {
 		fi
 
 		if [ "$tag" = "Patches" ]; then
-			if [ "$grab_cl" = true ]; then echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"; fi
+			if [ "$grab_cl" = true ]; then
+				if [ "$host" = github ]; then
+					echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
+				else
+					echo -e "[Changelog](https://gitlab.com/${src}/-/releases/${tag_name})\n" >>"${cl_dir}/changelog.md"
+				fi
+			fi
 			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 				local extensions_ext
 				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" | grep -o "shared\..*") extensions_ext="${extensions_ext#*.}"
@@ -180,25 +247,30 @@ config_update() {
 		enabled=$(toml_get "$t" enabled) || enabled=true
 		if [ "$enabled" = "false" ]; then continue; fi
 		PATCHES_SRC=$(toml_get "$t" patches-source) || PATCHES_SRC=$DEF_PATCHES_SRC
+		PATCHES_HOST=$(toml_get "$t" patches-source-host) || PATCHES_HOST=$DEF_PATCHES_SRC_HOST
 		PATCHES_VER=$(toml_get "$t" patches-version) || PATCHES_VER=$DEF_PATCHES_VER
-		if [[ -v sources["$PATCHES_SRC/$PATCHES_VER"] ]]; then
-			if [ "${sources["$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then upped+=("$table_name"); fi
+		if [[ -v sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"] ]]; then
+			if [ "${sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then upped+=("$table_name"); fi
 		else
-			sources["$PATCHES_SRC/$PATCHES_VER"]=0
-			local rv_rel="https://api.github.com/repos/${PATCHES_SRC}/releases"
+			sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=0
+			local rv_rel resp last_patches
+			rv_rel=$(source_release_api_base "$PATCHES_HOST" "$PATCHES_SRC") || continue
 			if [ "$PATCHES_VER" = "dev" ]; then
-				last_patches=$(gh_req "$rv_rel" - | jq -e -r '.[0]') || continue
+				resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
+				last_patches=$(source_release_pick_from_list "$PATCHES_HOST" dev <<<"$resp") || continue
 			elif [ "$PATCHES_VER" = "latest" ]; then
-				last_patches=$(gh_req "$rv_rel/latest" -) || continue
+				resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
+				last_patches=$(source_release_pick_from_list "$PATCHES_HOST" latest <<<"$resp") || continue
 			else
-				last_patches=$(gh_req "$rv_rel/tags/${ver}" -) || continue
+				rv_rel=$(source_release_tag_api "$PATCHES_HOST" "$PATCHES_SRC" "$PATCHES_VER") || continue
+				last_patches=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || continue
 			fi
-			if ! last_patches=$(jq -e -r '.assets[] | select(.name | (endswith("asc") or endswith("json")) | not) | .name' <<<"$last_patches"); then
+			if ! last_patches=$(source_release_assets_json "$PATCHES_HOST" <<<"$last_patches" | jq -e -r '.[0].name'); then
 				abort "config_update error: '$last_patches'"
 			fi
 			if [ "$last_patches" ]; then
 				if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep -m1 "$last_patches"); then
-					sources["$PATCHES_SRC/$PATCHES_VER"]=1
+					sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=1
 					prcfg=true
 					upped+=("$table_name")
 				else
