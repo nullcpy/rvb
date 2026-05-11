@@ -148,7 +148,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/232)<br>
 Patches: [BholeyKaBhakt/patches.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/vpatches)
 - Disable PairIP License Check
 - Force Stable Integrity State (Critical)
