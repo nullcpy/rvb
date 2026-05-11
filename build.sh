@@ -99,7 +99,7 @@ for table_name in $(toml_get_table_names); do
 	if [ "$patches_src_host" = github ]; then
 		app_args[changelog_url]="https://github.com/${patches_src}/releases/tag/v${patches_ver#v}"
 	else
-		app_args[changelog_url]="https://gitlab.com/${patches_src}/-/releases/${patches_ver}"
+		app_args[changelog_url]="https://gitlab.com/${patches_src}/-/releases/v${patches_ver#v}"
 	fi
 	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="${patches_src%%/*}"
 

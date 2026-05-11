@@ -238,7 +238,7 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Van
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -298,7 +298,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - Eyecon Premium
 </blockquote>
 </details>
@@ -342,7 +342,7 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - Fing Premium
 </blockquote>
 </details>
@@ -640,7 +640,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 </blockquote>
 </details>
 
@@ -1184,7 +1184,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1288,7 +1288,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - TickTick Premium
 </blockquote>
 </details>
@@ -1357,7 +1357,7 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 <blockquote>
 
 [Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/227)<br>
-Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/1.15.2)
+Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.15.2)
 - Disable telemetry
 - Disable update check
 - Hide Assistant tab
