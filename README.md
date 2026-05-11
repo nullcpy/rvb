@@ -118,7 +118,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 `com.adobe.psmobile`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="photoshop-mix-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.6.346-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
@@ -128,7 +128,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Bypass login
 </blockquote>
 </details>
@@ -206,7 +206,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.cricbuzz.android`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="cricbuzz-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=android&logoColor=white&style=flat"></summary>
@@ -216,7 +216,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide ads
 </blockquote>
 </details>
@@ -401,7 +401,7 @@ Patches: [docbt/patches-1.7.0.mpp](https://github.com/docbt/patched-up/releases/
 
 `com.google.android.apps.photos`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.74.0.906046556-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
@@ -411,7 +411,7 @@ Patches: [docbt/patches-1.7.0.mpp](https://github.com/docbt/patched-up/releases/
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - GmsCore support
 - Spoof features
 </blockquote>
@@ -439,7 +439,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 `com.google.android.apps.recorder`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="google-recorder-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.2.20260118.867906508-gray?labelColor=F44336&logo=google&logoColor=white&style=flat"></summary>
@@ -449,7 +449,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Remove device restrictions
 </blockquote>
 </details>
@@ -671,7 +671,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.facebook.orca`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="messenger-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v552.0.0.44.65-gray?labelColor=00B2FF&logo=messenger&logoColor=white&style=flat"></summary>
@@ -681,7 +681,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Disable typing indicator
 - Hide Facebook button
 - Hide inbox ads
@@ -713,7 +713,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 `com.microsoft.office.officelens`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="microsoft-lens-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v16.0.19628.20008-gray?labelColor=D83B01&logo=android&logoColor=white&style=flat"></summary>
@@ -723,7 +723,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide OneDrive migration
 </blockquote>
 </details>
@@ -801,7 +801,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.microblink.photomath`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="photomath-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=DA2323&logo=android&logoColor=white&style=flat"></summary>
@@ -811,7 +811,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide update popup
 - Spoof device ID
 - Unlock plus
@@ -869,7 +869,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `ch.protonmail.android`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="proton-mail-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.15.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
@@ -879,7 +879,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Remove 'Sent from' signature
 - Remove free accounts limit
 </blockquote>
@@ -1242,7 +1242,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 `com.instagram.barcelona`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="threads-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v382.0.0.51.85-gray?labelColor=000000&logo=threads&logoColor=white&style=flat"></summary>
@@ -1252,7 +1252,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide ads
 </blockquote>
 </details>
@@ -1370,7 +1370,7 @@ Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Mahesh
 
 `com.tumblr`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="tumblr-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v44.1.0.111-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
@@ -1380,7 +1380,7 @@ Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://github.com/Paresh-Mahesh
 <blockquote>
 
 [Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Disable Ad-Free Banner
 - Disable Tumblr TV
 - Disable blog notification reminder
@@ -1445,7 +1445,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.viber.voip`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="viber-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.1.2.0-gray?labelColor=665CAC&logo=viber&logoColor=white&style=flat"></summary>
@@ -1455,7 +1455,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide Ads
 </blockquote>
 </details>
@@ -1487,7 +1487,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 `com.rarlab.rar`
 
-#### [Morphe (De-ReVanced)](https://github.com/RookieEnough/De-ReVanced)
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
 <summary id="rar-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.20.build131-gray?labelColor=FF6B00&logo=android&logoColor=white&style=flat"></summary>
@@ -1497,7 +1497,7 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
 <blockquote>
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
 - Hide purchase reminder
 </blockquote>
 </details>
@@ -2904,7 +2904,7 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 This automated builder would not be possible without the incredible work and dedication of the open-source Android community. A massive thank you to:
 
 * **[nvbangg](https://github.com/nvbangg/revanced-morphe-builder)** and **[j-hc](https://github.com/j-hc)** for their phenomenal foundational build scripts, CI/CD pipelines, and automation logic that power the core of this repository. 
-* **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-ReVanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
+* **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-Vanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
 
 *If you enjoy using these builds, please consider starring their upstream repositories and supporting the original patch developers!*
 
