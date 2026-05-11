@@ -2908,7 +2908,7 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 
 This automated builder would not be possible without the incredible work and dedication of the open-source Android community. A massive thank you to:
 
-* **[nvbangg](https://github.com/nvbangg/revanced-morphe-builder)** and **[j-hc](https://github.com/j-hc)** for their phenomenal foundational build scripts, CI/CD pipelines, and automation logic that power the core of this repository. 
+* **[peternmuller](https://github.com/peternmuller)**, **[nvbangg](https://github.com/nvbangg/revanced-morphe-builder)**, and **[j-hc](https://github.com/j-hc)** for their phenomenal foundational build scripts, CI/CD pipelines, and automation logic that power the core of this repository. 
 * **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-Vanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
 
 *If you enjoy using these builds, please consider starring their upstream repositories and supporting the original patch developers!*
