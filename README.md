@@ -72,7 +72,7 @@ Thank you to everyone who helps keep this project alive!
 <a id="apps-a"></a>
 ### [AdGuard](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker)
 
-`com.adguard.android.contentblocker`
+`com.adguard.android`
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
