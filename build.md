@@ -1,9 +1,3 @@
-youtube-morphe (arm64-v8a): 20.47.62  
-youtube-morphe (arm-v7a): 20.47.62  
-youtube-music-morphe (arm64-v8a): 8.47.56  
-youtube-music-morphe (arm-v7a): 8.47.56  
-reddit-morphe (arm64-v8a): 2026.10.0  
-reddit-morphe (arm-v7a): 2026.10.0  
 autosync-morphe (arm64-v8a): 7.5.10  
 autosync-morphe (arm-v7a): 7.5.10  
 
@@ -13,8 +7,5 @@ autosync-morphe (arm-v7a): 7.5.10
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-Patches: BholeyKaBhakt/patches-2.0.3-dev.1.mpp  
-[Changelog](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.3-dev.1)
-
-Patches: MorpheApp/patches-1.27.0-dev.6.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0-dev.6)  
+Patches: BholeyKaBhakt/patches-2.0.3.mpp  
+[Changelog](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.3)  
