@@ -1738,9 +1738,9 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
-### [XRecorder](https://play.google.com/store/apps/details?id=video.other.screenrecorder)
+### [XRecorder](https://play.google.com/store/apps/details?id=videoeditor.videorecorder.screenrecorder)
 
-`video.other.screenrecorder`
+`videoeditor.videorecorder.screenrecorder`
 
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
