@@ -3,29 +3,16 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[tiktok-morphe]
+[youtube-morphe-exp]
 enabled = true
-app-name = "tiktok"
-rv-brand = "morphe"
-build-mode = "apk"
+app-name = "youtube"
+rv-brand = "morphe-exp"
+build-mode = "both"
 arch = "both"
-patches-source = "RookieEnough/De-Vanced"
+version = "21.19.280"
+patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
-
-[tiktok-revanced]
-enabled = true
-app-name = "tiktok"
-rv-brand = "revanced"
-build-mode = "apk"
-arch = "both"
-patches-source = "Raudrobot/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
