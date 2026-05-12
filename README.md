@@ -877,8 +877,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/235)<br>
-Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0-dev.6)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -897,12 +897,12 @@ Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.16.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.19.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/135)<br>
-Patches: [MorpheApp/patches-1.24.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.24.0)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1631,8 +1631,8 @@ Patches: [hoo-dles/patches-1.30.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/235)<br>
-Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0-dev.6)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1710,8 +1710,8 @@ Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
-Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1758,6 +1758,7 @@ Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
+- Open channel of live avatar
 - Open links externally
 - Open system share sheet
 - Open videos fullscreen
@@ -1769,6 +1770,7 @@ Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Remove viewer discretion dialog
 - Return YouTube Dislike
 - Sanitize sharing links
+- Save to watch later
 - Seekbar
 - Shorts autoplay
 - SponsorBlock
@@ -1787,8 +1789,8 @@ Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
-Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1835,6 +1837,7 @@ Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Miniplayer
 - Navigation bar
 - Open Shorts in regular player
+- Open channel of live avatar
 - Open links externally
 - Open system share sheet
 - Open videos fullscreen
@@ -1846,6 +1849,7 @@ Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Remove viewer discretion dialog
 - Return YouTube Dislike
 - Sanitize sharing links
+- Save to watch later
 - Seekbar
 - Shorts autoplay
 - SponsorBlock
@@ -2454,8 +2458,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/235)<br>
-Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0-dev.6)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2485,12 +2489,12 @@ Patches: [MorpheApp/patches-1.27.0-dev.6.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.17.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.18.50-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-05](https://github.com/nullcpy/rvb/releases/tag/209)<br>
-Patches: [MorpheApp/patches-1.26.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.26.0)
+[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/237)<br>
+Patches: [MorpheApp/patches-1.27.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.27.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
