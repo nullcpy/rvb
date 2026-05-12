@@ -54,9 +54,9 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-### [MicroG](https://github.com/microg)
+### [MicroG](https://github.com/microg/GmsCore/wiki)
 
-`com.google.android.gms` `app.morphe.android.gms` `app.revanced.android.gms`
+`com.google.android.gms`
 
 > [!IMPORTANT]
 > Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.
@@ -70,7 +70,7 @@ Thank you to everyone who helps keep this project alive!
 ---
 
 <a id="apps-a"></a>
-### [AdGuard](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker)
+### [AdGuard](https://adguard.com/en/adguard-android/overview.html)
 
 `com.adguard.android`
 
