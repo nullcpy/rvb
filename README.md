@@ -121,8 +121,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Bypass login
 </blockquote>
 </details>
@@ -201,8 +201,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide ads
 </blockquote>
 </details>
@@ -412,8 +412,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Remove device restrictions
 </blockquote>
 </details>
@@ -626,8 +626,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Disable typing indicator
 - Hide Facebook button
 - Hide inbox ads
@@ -664,8 +664,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide OneDrive migration
 </blockquote>
 </details>
@@ -763,8 +763,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide update popup
 - Spoof device ID
 - Unlock plus
@@ -825,8 +825,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Remove 'Sent from' signature
 - Remove free accounts limit
 </blockquote>
@@ -1165,8 +1165,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide ads
 </blockquote>
 </details>
@@ -1212,18 +1212,21 @@ Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.8.3-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
+<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.6.2-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/223)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Disable login requirement
 - Downloads
+- Enable Open Debug
 - Feed filter
 - Fix Google login
+- Playback speed
 - Remember clear display
 - Sanitize sharing links
+- Settings
 - Show seekbar
 </blockquote>
 </details>
@@ -1282,12 +1285,12 @@ Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="tumblr-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v44.1.0.111-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
+<summary id="tumblr-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v44.5.0.108-gray?labelColor=36465D&logo=tumblr&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-04-20](https://github.com/nullcpy/rvb/releases/tag/134)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Disable Ad-Free Banner
 - Disable Tumblr TV
 - Disable blog notification reminder
@@ -1355,8 +1358,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide Ads
 </blockquote>
 </details>
@@ -1393,8 +1396,8 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.3)
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 - Hide purchase reminder
 </blockquote>
 </details>
