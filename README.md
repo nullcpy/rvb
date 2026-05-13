@@ -693,6 +693,25 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 ---
 
 <a id="apps-n"></a>
+### [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)
+
+`bitpit.launcher`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="niagara-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-auto-gray?labelColor=00A3FF&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release Latest](https://github.com/nullcpy/rvb/releases/tag/latest)<br>
+Patches: [hoo-dles/morphe-patches](https://github.com/hoo-dles/morphe-patches/releases/latest)
+- Uses default Morphe patch set
+</blockquote>
+</details>
+
+---
+
 ### [Nova Launcher](https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher)
 
 `com.teslacoilsw.launcher`

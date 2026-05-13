@@ -3,28 +3,14 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[youtube-morphe-exp]
+[niagara-launcher-morphe]
 enabled = true
-app-name = "youtube"
-rv-brand = "morphe-exp"
+app-name = "niagara-launcher"
+rv-brand = "morphe"
 build-mode = "both"
 arch = "both"
-version = "21.19.280"
-patches-source = "MorpheApp/morphe-patches"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
 
-[youtube-music-morphe-exp]
-enabled = true
-app-name = "youtube-music"
-rv-brand = "morphe-exp"
-build-mode = "both"
-version = "9.18.50"
-arch = "both"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
