@@ -1047,8 +1047,9 @@ Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/240)<br>
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/241)<br>
 Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.31.0)
+- AMOLED dark theme
 - Disable telemetry
 - Enable SoundCloud Go+
 </blockquote>
