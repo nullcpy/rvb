@@ -3,14 +3,15 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[niagara-launcher-morphe]
+[soundcloud-morphe]
 enabled = true
-app-name = "niagara-launcher"
+app-name = "soundcloud"
 rv-brand = "morphe"
-build-mode = "both"
+build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
+included-patches = "'AMOLED dark theme'"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 
