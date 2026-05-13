@@ -704,9 +704,9 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release Latest](https://github.com/nullcpy/rvb/releases/tag/latest)<br>
-Patches: [hoo-dles/morphe-patches](https://github.com/hoo-dles/morphe-patches/releases/latest)
-- Uses default Morphe patch set
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/239)<br>
+Patches: [hoo-dles/patches-1.31.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.31.0)
+- Enable Niagara Pro
 </blockquote>
 </details>
 
