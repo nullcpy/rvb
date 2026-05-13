@@ -700,7 +700,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="niagara-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-auto-gray?labelColor=00A3FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="niagara-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=00A3FF&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
