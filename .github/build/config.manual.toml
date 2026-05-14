@@ -3,15 +3,24 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[soundcloud-morphe]
+[kwgt-revanced]
 enabled = true
-app-name = "soundcloud"
-rv-brand = "morphe"
+app-name = "kwgt"
+rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
-included-patches = "'AMOLED dark theme'"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+patches-source = "Aunali321/ReVancedExperiments"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://kustom-widget.en.uptodown.com/android"
 
+[instagram-revanced-exp]
+enabled = true
+app-name = "instagram"
+rv-brand = "revanced-exp"
+build-mode = "apk"
+arch = "both"
+patches-source = "Aunali321/ReVancedExperiments"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"

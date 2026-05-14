@@ -65,7 +65,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; J &bull; <a href="#apps-k">K</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -572,6 +572,41 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 - Hide ads
 - Open links externally
 - Sanitize sharing links
+</blockquote>
+</details>
+
+#### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
+
+<details>
+<summary id="instagram-revanced-exp">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
+Patches: [Aunali321/patches-6.1.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v6.1.0)
+- Disable analytics
+- Enable developer menu
+- Hide ads
+- Open links externally
+- Sanitize sharing links
+</blockquote>
+</details>
+
+---
+
+<a id="apps-k"></a>
+### [Kustom Widget](https://play.google.com/store/apps/details?id=org.kustom.widget)
+
+`org.kustom.widget`
+
+#### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
+
+<details>
+<summary id="kwgt-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+Applied patches
 </blockquote>
 </details>
 
