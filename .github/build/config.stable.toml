@@ -772,4 +772,16 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
 
+[instagram-revanced-exp]
+enabled = true
+app-name = "instagram"
+rv-brand = "revanced-exp"
+build-mode = "apk"
+arch = "both"
+patches-source = "Aunali321/ReVancedExperiments"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
 
