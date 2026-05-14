@@ -578,17 +578,17 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
 
 <details>
-<summary id="instagram-revanced-exp">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v423.0.0.47.66-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-revanced-exp">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
-Patches: [Aunali321/patches-6.1.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v6.1.0)
-- Disable analytics
-- Enable developer menu
-- Hide ads
-- Open links externally
-- Sanitize sharing links
+[Release 2026-05-14](https://github.com/nullcpy/rvb/releases/tag/245)<br>
+Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+- Disable signature check
+- Enable Developer Menu
+- Hide Ads
+- Max Media Quality
+- Selectable Bio
 </blockquote>
 </details>
 
