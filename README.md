@@ -595,7 +595,7 @@ Patches: [Aunali321/patches-6.1.0.rvp](https://github.com/Aunali321/ReVancedExpe
 ---
 
 <a id="apps-k"></a>
-### [Kustom Widget](https://play.google.com/store/apps/details?id=org.kustom.widget)
+### [Kustom Widget Maker](https://play.google.com/store/apps/details?id=org.kustom.widget)
 
 `org.kustom.widget`
 
