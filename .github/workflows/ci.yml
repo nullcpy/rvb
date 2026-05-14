@@ -89,7 +89,7 @@ jobs:
               api_response=$(gh api "repos/$repo/releases?per_page=100" 2>&1 || true)
             fi
 
-            if echo "$api_response" | grep -qi '"message".*Repository access blocked'; then
+            if [ "$host" = "github" ] && echo "$api_response" | grep -qiE '"message".*(Repository access blocked|Not Found)'; then
               jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
             elif [ "$host" = "gitlab" ] && { [ "$api_http_code" = "403" ] || [ "$api_http_code" = "404" ]; }; then
               jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
