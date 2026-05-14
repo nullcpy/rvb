@@ -3,13 +3,5 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[kwgt-revanced]
-enabled = true
-app-name = "kwgt"
-rv-brand = "revanced"
-build-mode = "apk"
-arch = "both"
-patches-source = "Aunali321/ReVancedExperiments"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://kustom-widget.en.uptodown.com/android"
+
 
