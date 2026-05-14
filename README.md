@@ -65,7 +65,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; J &bull; <a href="#apps-k">K</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; H &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -589,24 +589,6 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 - Hide Ads
 - Max Media Quality
 - Selectable Bio
-</blockquote>
-</details>
-
----
-
-<a id="apps-k"></a>
-### [Kustom Widget Maker](https://play.google.com/store/apps/details?id=org.kustom.widget)
-
-`org.kustom.widget`
-
-#### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
-
-<details>
-<summary id="kwgt-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
-
-<blockquote>
-
-Applied patches
 </blockquote>
 </details>
 
