@@ -157,7 +157,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "instagram-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -213,7 +213,7 @@
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
