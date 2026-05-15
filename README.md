@@ -324,6 +324,25 @@ Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Mahesh
 ---
 
 <a id="apps-g"></a>
+### [GitHub](https://play.google.com/store/apps/details?id=com.github.android)
+
+`com.github.android`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="github-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.0.0-gray?labelColor=181717&logo=github&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release Latest](https://github.com/nullcpy/rvb/releases/tag/latest)<br>
+Patches: [hoo-dles/morphe-patches](https://github.com/hoo-dles/morphe-patches/releases/latest)
+- Uses current hoo-dles patch set
+</blockquote>
+</details>
+
+---
+
 ### [Google Keyboard (Gboard)](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)
 
 `com.google.android.inputmethod.latin`

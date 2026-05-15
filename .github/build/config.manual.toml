@@ -1,7 +1,17 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-
+[github-morphe]
+enabled = true
+app-name = "github"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
+patches-version = "dev"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://github-android.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
 
