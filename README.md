@@ -331,7 +331,7 @@ Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="github-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.212.0-gray?labelColor=181717&logo=github&logoColor=white&style=flat"></summary>
+<summary id="github-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.255.0-gray?labelColor=181717&logo=github&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
