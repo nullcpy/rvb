@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "latest"
+# patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
@@ -9,11 +9,7 @@ app-name = "github"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-version = "1.255.0"
 patches-source = "hoo-dles/morphe-patches"
-include-patches = "AMOLED dark theme"
-patches-version = "dev"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://github-android.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
 

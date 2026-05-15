@@ -331,12 +331,12 @@ Patches: [Paresh-Maheshwari/patches-1.15.2.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="github-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.255.0-gray?labelColor=181717&logo=github&logoColor=white&style=flat"></summary>
+<summary id="github-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=181717&logo=github&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-15](https://github.com/nullcpy/rvb/releases/tag/250)<br>
-Patches: [hoo-dles/patches-1.32.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.32.0-dev.1)
+[Release 0](https://github.com/nullcpy/rvb/releases/tag/0)<br>
+Patches: [hoo-dles/patches-0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v0)
 </blockquote>
 </details>
 
