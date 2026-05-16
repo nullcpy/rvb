@@ -194,24 +194,22 @@ jobs:
           commit_message: "Update README for Build No. ${{ steps.version.outputs.NEXT_VER_CODE }} [skip ci]"
 
       - name: Upload to release (Archive)
-        uses: svenstaro/upload-release-action@v2
+        uses: softprops/action-gh-release@v3
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*
-          file_glob: true
-          tag: ${{ steps.context.outputs.ARCHIVE_TAG }}
-          overwrite: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ./build/*
+          tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          overwrite_files: true
 
       - name: Upload to release
-        uses: svenstaro/upload-release-action@v2
+        uses: softprops/action-gh-release@v3
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*
-          file_glob: true
-          release_name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          overwrite: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ./build/*
+          name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
+          tag_name: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          overwrite_files: true
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
       - name: Update changelog and module update files
