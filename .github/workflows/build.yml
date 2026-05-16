@@ -22,7 +22,7 @@ on:
           - ".github/build/config.piko.toml"
 
 concurrency:
-  group: ci
+  group: build
   cancel-in-progress: false
 
 jobs:
