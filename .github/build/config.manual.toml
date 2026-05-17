@@ -1,17 +1,31 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[github-morphe]
-enabled = true
-app-name = "github"
+[twitter-morphe]
+enabled = true 
+app-name = "twitter"
 rv-brand = "morphe"
-build-mode = "apk"
+build-mode = "both"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
-included-patches = "'AMOLED dark theme'"
+# version = "11.81.0-release.0"
+patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://github-android.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
 
+[twitter-morphe-materialu]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe-materialu"
+build-mode = "both"
+arch = "both"
+# version = "11.81.0-release.0"
+patches-source = "crimera/piko"
+included-patches = "'Bring back twitter' 'Dynamic color'"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
