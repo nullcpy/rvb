@@ -185,9 +185,7 @@ get_prebuilts() {
 			else
 				_req "$url" "$file" -H "Accept: application/octet-stream" >&2 || return 1
 			fi
-			if [ "$tag" = "Patches" ]; then
 			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
-			fi
 		else
 			grab_cl=false
 			name=$(basename "$file")
