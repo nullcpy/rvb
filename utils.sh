@@ -571,36 +571,6 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 # -------------------- archive --------------------
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
-	local path output_m version=${version// /}
-
-	if [ -f "${output}.apkm" ]; then
-		merge_splits "${output}.apkm" "$output"
-		return 0
-	fi
-
-	path=$(grep -m1 "${version_f#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
-	if [ "${path##*.}" = "apkm" ]; then
-		output_m="${output}.apkm"
-	else
-		output_m=$output
-	fi
-	req "${url}/${path}" "$output_m" || return 1
-	if [ "${path##*.}" = "apkm" ]; then
-		merge_splits "$output_m" "$output"
-	fi
-}
-get_archive_resp() {
-	local r
-	r=$(req "$1" -)
-	if [ -z "$r" ]; then return 1; else __ARCHIVE_RESP__=$(sed -n 's;^<a href="\(.*\)"[^"]*;\1;p' <<<"$r"); fi
-	__ARCHIVE_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
-}
-get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\)\.apk//g' <<<"$__ARCHIVE_RESP__"; }
-get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
-
-# -------------------- github --------------------
-dl_github() {
-	local url=$1 version=$2 output=$3 arch=$4
 	local path="" version_f=${version// /}
 	while IFS= read -r p; do
 		case "$p" in
@@ -611,7 +581,7 @@ dl_github() {
 		esac
 	done <<<"$__ARCHIVE_RESP__"
 	if [ -z "$path" ]; then
-		epr "Version ${version} with arch ${arch} not found in github"
+		epr "Version ${version} with arch ${arch} not found in archive"
 		return 1
 	fi
 	case "${path##*.}" in
@@ -620,28 +590,88 @@ dl_github() {
 			;;
 		apkm|xapk|apks)
 			req "${url}/${path}" "${output}.${path##*.}" || return 1
-			merge_splits "${output}.${path##*.}" "$output"
+			merge_splits "${output}.${path##*.}" "${output}"
 			;;
 		*)
-			epr "Unsupported github file type for ${path}"
+			epr "Unsupported archive file type for ${path}"
 			return 1
 			;;
 	esac
 }
-get_github_resp() {
-	local repo tag resp
-	repo=$(cut -d/ -f4-5 <<<"$1")
-	tag=${1%/}
-	tag=${tag##*/}
-	resp=$(gh_req "https://api.github.com/repos/${repo}/releases/tags/${tag}" -) || return 1
-	__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | endswith(".apk") or endswith(".apkm")) | .name' <<<"$resp")
-	if [ -z "$__ARCHIVE_RESP__" ]; then return 1; fi
-	__ARCHIVE_PKG_NAME__=$(head -1 <<<"$__ARCHIVE_RESP__" | cut -d- -f1)
-	if [ -z "$__ARCHIVE_PKG_NAME__" ]; then return 1; fi
-	__GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+get_archive_resp() {
+	local r
+	r=$(req "$1" -)
+	if [ -z "$r" ]; then return 1; else __ARCHIVE_RESP__=$(sed -n 's;^<a href="\(.*\)"[^"]*;\1;p' <<<"$r"); fi
+	__ARCHIVE_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
 }
-get_github_vers() { get_archive_vers; }
-get_github_pkg_name() { get_archive_pkg_name; }
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
+
+# -------------------- github --------------------
+dl_github() {
+    local url=$1 version=$2 output=$3 arch=$4
+    local path="" version_f=${version// /}
+    
+    # Matches the exact file selection logic from dl_archive
+    while IFS= read -r p; do
+        case "$p" in
+            *"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks"|*"${version_f#v}-all.apk"|*"${version_f#v}-all.apkm"|*"${version_f#v}-all.xapk"|*"${version_f#v}-all.apks")
+                path="$p"
+                break
+                ;;
+        esac
+    done <<<"$__ARCHIVE_RESP__"
+    
+    if [ -z "$path" ]; then
+        epr "Version ${version} with arch ${arch} not found in github"
+        return 1
+    fi
+    
+    local ext="${path##*.}"
+    case "$ext" in
+        apk)
+            req "${url}/${path}" "$output"
+            ;;
+        apkm|xapk|apks)
+            req "${url}/${path}" "${output}.${ext}" || return 1
+            merge_splits "${output}.${ext}" "$output"
+            ;;
+        *)
+            epr "Unsupported github file type for ${path}"
+            return 1
+            ;;
+    esac
+}
+
+get_github_resp() {
+    local repo tag resp
+    
+    repo=$(cut -d/ -f4-5 <<<"$1")
+    tag=${1%/}
+    tag=${tag##*/}
+    
+    resp=$(gh_req "https://api.github.com/repos/${repo}/releases/tags/${tag}" -) || return 1
+    
+    # Extract only supported file extensions
+    __ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
+    if [ -z "$__ARCHIVE_RESP__" ]; then return 1; fi
+    
+    # Grab the package name exactly like how get_archive_vers isolates the version
+    __ARCHIVE_PKG_NAME__=$(get_github_pkg_name)
+    if [ -z "$__ARCHIVE_PKG_NAME__" ]; then return 1; fi
+    
+    __GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+}
+
+# Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
+get_github_vers() {
+    sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
+}
+
+# Extracts package name by stripping everything from the first hyphen '-' onwards
+get_github_pkg_name() {
+    sed 's/-.*//' <<<"$__ARCHIVE_RESP__" | head -n 1
+}
 
 # -------------------- direct --------------------
 dl_direct() {

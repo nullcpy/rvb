@@ -70,7 +70,7 @@ for table_name in $(toml_get_table_names); do
 	vtf "$enabled" "enabled"
 	if [ "$enabled" = false ]; then continue; fi
 	if ((idx >= PARALLEL_JOBS)); then
-		wait -n
+		wait -n || true
 		idx=$((idx - 1))
 	fi
 
@@ -156,7 +156,7 @@ for table_name in $(toml_get_table_names); do
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
 		if ((idx >= PARALLEL_JOBS)); then
-			wait -n
+			wait -n || true
 			idx=$((idx - 1))
 		fi
 		idx=$((idx + 1))
@@ -175,8 +175,24 @@ wait
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\n"
-log "$(cat "$TEMP_DIR"/*/changelog.md)"
+log "\n**Notes:**"
+log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
+log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
+log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)\n"
+
+changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
+changelog_merged=$(awk '
+{
+	line=$0
+	if (line ~ /^CLI: /) {
+		key=line
+		sub(/\r$/, "", key)
+		gsub(/[[:space:]]+$/, "", key)
+		if (seen[key]++) next
+	}
+	print line
+}' <<<"$changelog_merged")
+log "$changelog_merged"
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
 if [ -n "$SKIPPED" ]; then
