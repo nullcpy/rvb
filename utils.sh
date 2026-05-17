@@ -600,15 +600,33 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
 dl_github() {
-	local version=$2 output=$3 arch=$4
-	local path version=${version// /}
-	path=$(grep "${version#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
-	if [[ "$path" == *.apkm ]]; then
-		req "$__GITHUB_URL__/$path" "$output.apkm" || return 1
-		merge_splits "$output.apkm" "$output"
-	else
-		req "$__GITHUB_URL__/$path" "$output"
+	local url=$1 version=$2 output=$3 arch=$4
+	local path="" version_f=${version// /}
+	while IFS= read -r p; do
+		case "$p" in
+			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks"|*"${version_f#v}-all.apk"|*"${version_f#v}-all.apkm"|*"${version_f#v}-all.xapk"|*"${version_f#v}-all.apks")
+				path="$p"
+				break
+				;;
+		esac
+	done <<<"$__ARCHIVE_RESP__"
+	if [ -z "$path" ]; then
+		epr "Version ${version} with arch ${arch} not found in github"
+		return 1
 	fi
+	case "${path##*.}" in
+		apk)
+			req "${url}/${path}" "$output"
+			;;
+		apkm|xapk|apks)
+			req "${url}/${path}" "${output}.${path##*.}" || return 1
+			merge_splits "${output}.${path##*.}" "$output"
+			;;
+		*)
+			epr "Unsupported github file type for ${path}"
+			return 1
+			;;
+	esac
 }
 get_github_resp() {
 	local repo tag resp
