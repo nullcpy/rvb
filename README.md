@@ -197,12 +197,14 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (joganubaid)](https://github.com/joganubaid/cryptomator-morphe-patches)
 
 <details>
-<summary id="cryptomator-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
+<summary id="cryptomator-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.12.3.apk-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-Patches: [joganubaid/cryptomator-morphe-patches](https://github.com/joganubaid/cryptomator-morphe-patches)
-
+[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/262)<br>
+Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomator-morphe-patches/releases/tag/v1.1.0)
+- Check License No-Op
+- License Bypass
 </blockquote>
 </details>
 
