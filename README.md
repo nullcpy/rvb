@@ -190,19 +190,18 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
-### [Cryptomator](https://cryptomator.org/android)
+### [Cryptomator](https://play.google.com/store/apps/details?id=org.cryptomator)
 
 `org.cryptomator`
 
 #### [Morphe (joganubaid)](https://github.com/joganubaid/cryptomator-morphe-patches)
 
 <details>
-<summary id="cryptomator-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v?-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
+<summary id="cryptomator-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=607D8B&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-Patches: [joganubaid/cryptomator-morphe-patches](https://github.com/joganubaid/cryptomator-morphe-patches)<br>
-Direct download: https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk
+Patches: [joganubaid/cryptomator-morphe-patches](https://github.com/joganubaid/cryptomator-morphe-patches)
 
 </blockquote>
 </details>
