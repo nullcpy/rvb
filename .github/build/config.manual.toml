@@ -12,7 +12,7 @@ arch = "both"
 # version = "11.81.0-release.0"
 patches-source = "joganubaid/cryptomator-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 # github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
 
