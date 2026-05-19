@@ -796,5 +796,13 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://github-android.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
 
-
+[cryptomator-morphe]
+enabled = true 
+app-name = "cryptomator"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "joganubaid/cryptomator-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 
