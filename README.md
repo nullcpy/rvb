@@ -1710,8 +1710,8 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-18](https://github.com/nullcpy/rvb/releases/tag/259)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.1)
+[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/263)<br>
+Patches: [MorpheApp/patches-1.29.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.2)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2539,8 +2539,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-18](https://github.com/nullcpy/rvb/releases/tag/259)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.1)
+[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/263)<br>
+Patches: [MorpheApp/patches-1.29.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.2)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
