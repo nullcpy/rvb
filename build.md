@@ -1,5 +1,7 @@
-cryptomator-morphe (arm64-v8a): 1.12.3.apk  
-cryptomator-morphe (arm-v7a): 1.12.3.apk  
+youtube-morphe (arm64-v8a): 20.47.62  
+youtube-morphe (arm-v7a): 20.47.62  
+youtube-music-morphe (arm64-v8a): 8.47.56  
+youtube-music-morphe (arm-v7a): 8.47.56  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +10,5 @@ cryptomator-morphe (arm-v7a): 1.12.3.apk
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.8.1-all.jar  
-Patches: joganubaid/patches-1.1.0.mpp  
-[Changelog](https://github.com/joganubaid/cryptomator-morphe-patches/releases/tag/v1.1.0)  
+Patches: MorpheApp/patches-1.29.0-dev.2.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.2)  
