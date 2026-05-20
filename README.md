@@ -129,6 +129,27 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 ---
 
+### [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)
+
+`com.llamalab.automate`
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
+
+<details>
+<summary id="automate-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.10-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/267)<br>
+Patches: [BholeyKaBhakt/patches-2.0.4.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4)
+- Disable PairIP License Check
+- Force Stable Integrity State (Critical)
+- Purchase All Items
+</blockquote>
+</details>
+
+---
+
 ### [Autosync](https://play.google.com/store/apps/details?id=com.ttxapps.autosync)
 
 `com.ttxapps.autosync`
@@ -1124,6 +1145,27 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 - Disable telemetry
 - Enable offline sync
 - Hide ads
+</blockquote>
+</details>
+
+---
+
+### [Speedtest](https://play.google.com/store/apps/details?id=org.zwanoo.android.speedtest)
+
+`org.zwanoo.android.speedtest`
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
+
+<details>
+<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.10-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/267)<br>
+Patches: [BholeyKaBhakt/patches-2.0.4.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4)
+- Disable PairIP License Check
+- Force Stable Integrity State (Critical)
+- Purchase All Items
 </blockquote>
 </details>
 

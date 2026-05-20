@@ -3,28 +3,25 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[cryptomator-morphe]
+[automate-morphe]
 enabled = true 
-app-name = "cryptomator"
+app-name = "automate"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "joganubaid/cryptomator-morphe-patches"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
 cli-source = "MorpheApp/morphe-cli"
-direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-# github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
+uptodown-dlurl = "https://automate-beta.en.uptodown.com/android"
 
-[twitter-morphe-materialu]
-enabled = false 
-app-name = "twitter"
-rv-brand = "morphe-materialu"
-build-mode = "both"
+[speedtest-morphe]
+enabled = true 
+app-name = "speedtest"
+rv-brand = "morphe"
+build-mode = "apk"
 arch = "both"
-# version = "11.81.0-release.0"
-patches-source = "crimera/piko"
-included-patches = "'Bring back twitter' 'Dynamic color'"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
+uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
+
+
+
