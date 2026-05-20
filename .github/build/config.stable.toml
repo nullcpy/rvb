@@ -806,3 +806,35 @@ patches-source = "joganubaid/cryptomator-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 
+[automate-morphe]
+enabled = true 
+app-name = "automate"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://automate-beta.en.uptodown.com/android"
+
+[speedtest-morphe]
+enabled = true 
+app-name = "speedtest"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
+
+[autosync-morphe]
+enabled = true
+app-name = "autosync"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://autosync.en.uptodown.com/android"
+
+
