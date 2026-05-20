@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
-Patches: [BholeyKaBhakt/patches-2.0.4-dev.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4-dev.1)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/267)<br>
+Patches: [BholeyKaBhakt/patches-2.0.4.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4)
 - Disable PairIP License Check
 - Force Stable Integrity State (Critical)
 - Purchase All Items
