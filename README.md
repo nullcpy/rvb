@@ -413,12 +413,13 @@ Patches: [docbt/patches-1.8.0.mpp](https://github.com/docbt/patched-up/releases/
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.75.0.911466973-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.77.0.916869048-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/224)<br>
-Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.3)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/264)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
+- Fix selected account persistence
 - GmsCore support
 - Spoof features
 </blockquote>
@@ -427,11 +428,11 @@ Patches: [RookieEnough/patches-1.0.3.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.75.0.911466973-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.77.0.916869048-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-11](https://github.com/nullcpy/rvb/releases/tag/224)<br>
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/264)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - GmsCore support
 - Spoof features
