@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-05-12](https://github.com/nullcpy/rvb/releases/tag/236)<br>
-Patches: [BholeyKaBhakt/patches-2.0.3.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.3)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
+Patches: [BholeyKaBhakt/patches-2.0.4-dev.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4-dev.1)
 - Disable PairIP License Check
 - Force Stable Integrity State (Critical)
 - Purchase All Items
@@ -953,8 +953,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-18](https://github.com/nullcpy/rvb/releases/tag/259)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.1)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
+Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1711,8 +1711,8 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/263)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.2)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
+Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2540,8 +2540,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/263)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.2)
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
+Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
