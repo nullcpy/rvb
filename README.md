@@ -136,15 +136,13 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="automate-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.10-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="automate-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/267)<br>
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/268)<br>
 Patches: [BholeyKaBhakt/patches-2.0.4.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4)
-- Disable PairIP License Check
-- Force Stable Integrity State (Critical)
-- Purchase All Items
+- Bypass Blocks Limit
 </blockquote>
 </details>
 
@@ -1157,15 +1155,14 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.10-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
+<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.3-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/267)<br>
+[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/268)<br>
 Patches: [BholeyKaBhakt/patches-2.0.4.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.0.4)
-- Disable PairIP License Check
-- Force Stable Integrity State (Critical)
-- Purchase All Items
+- AdFree Account
+- Disable Logging(analytics)
 </blockquote>
 </details>
 
