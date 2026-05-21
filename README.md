@@ -1072,7 +1072,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 ---
 
 <a id="apps-s"></a>
-### [SD Maid SE](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
+### [SD Maid 2/SE](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 
 `eu.darken.sdmse`
 
