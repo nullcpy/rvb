@@ -253,7 +253,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 `com.cv.docscanner`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="document-scanner-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=1A73E8&logo=android&logoColor=white&style=flat"></summary>
@@ -307,7 +307,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 `com.eyecon.global`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="eyecon-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.2026.04.05.1300-gray?labelColor=00BCD4&logo=android&logoColor=white&style=flat"></summary>
@@ -347,7 +347,7 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 
 `com.overlook.android.fing`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="fing-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.11.9-gray?labelColor=377bfd&logo=android&logoColor=white&style=flat"></summary>
@@ -658,7 +658,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 `com.arlosoft.macrodroid`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
@@ -1113,6 +1113,23 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [SD Maid SE](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
+
+`eu.darken.sdmse`
+
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="sdmaid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=3DDC84&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+applied patches will be here
+</blockquote>
+</details>
+
+---
+
 ### [SoundCloud](https://play.google.com/store/apps/details?id=com.soundcloud.android)
 
 `com.soundcloud.android`
@@ -1193,7 +1210,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 `org.telegram.messenger` `org.telegram.messenger.web`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="telegram-morphe-foss"><b>FOSS</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.6.4-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
@@ -1287,7 +1304,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 `com.ticktick.task`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="ticktick-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.0.6.1-gray?labelColor=5C6BC0&logo=android&logoColor=white&style=flat"></summary>
@@ -1353,7 +1370,7 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 
 `com.truecaller`
 
-#### [Morphe (paresh-patches)](https://github.com/Paresh-Maheshwari/paresh-patches)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="truecaller-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
