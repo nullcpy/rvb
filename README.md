@@ -972,8 +972,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -996,8 +996,8 @@ Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-05-17](https://github.com/nullcpy/rvb/releases/tag/257)<br>
-Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1750,8 +1750,8 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1829,8 +1829,8 @@ Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-05-17](https://github.com/nullcpy/rvb/releases/tag/257)<br>
-Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1908,8 +1908,8 @@ Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-17](https://github.com/nullcpy/rvb/releases/tag/257)<br>
-Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1983,12 +1983,12 @@ Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.19.287-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.19.288-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-17](https://github.com/nullcpy/rvb/releases/tag/257)<br>
-Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2579,8 +2579,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-20](https://github.com/nullcpy/rvb/releases/tag/266)<br>
-Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0-dev.3)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2614,8 +2614,8 @@ Patches: [MorpheApp/patches-1.29.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-05-17](https://github.com/nullcpy/rvb/releases/tag/257)<br>
-Patches: [MorpheApp/patches-1.28.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.28.0)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
+Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
