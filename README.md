@@ -260,8 +260,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -314,8 +314,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - Eyecon Premium
 </blockquote>
 </details>
@@ -354,8 +354,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - Fing Premium
 </blockquote>
 </details>
@@ -661,13 +661,12 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.63.15-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
-- MacroDroid Premium
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 </blockquote>
 </details>
 
@@ -1219,8 +1218,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1313,8 +1312,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - TickTick Premium
 </blockquote>
 </details>
@@ -1379,17 +1378,15 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/271)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
 - Disable telemetry
 - Disable update check
-- GMS sign-in bypass
 - Hide Assistant tab
 - Hide Family Protection button
 - Hide Premium from settings
 - Hide Premium tab
 - Hide Scams tab
-- Neutralize third-party SDKs
 - Truecaller Premium
 </blockquote>
 </details>
