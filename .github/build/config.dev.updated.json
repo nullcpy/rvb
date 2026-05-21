@@ -103,7 +103,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -114,7 +114,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -125,7 +125,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -168,7 +168,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "macrodroid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -179,7 +179,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -191,7 +191,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -202,7 +202,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -233,16 +233,6 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-  },
-  "autosync-morphe": {
-    "enabled": true,
-    "app-name": "autosync",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
-    "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
   },
   "reddit-morphe-adobo": {
     "enabled": false,
