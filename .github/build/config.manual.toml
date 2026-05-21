@@ -3,18 +3,6 @@ patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[sdmaid-morphe]
-enabled = true 
-app-name = "sdmaid"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
-
 [speedtest-morphe]
 enabled = false 
 app-name = "speedtest"
