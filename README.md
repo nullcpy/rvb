@@ -1120,11 +1120,13 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="sdmaid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=3DDC84&logo=android&logoColor=white&style=flat"></summary>
+<summary id="sdmaid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.7.3.rc0-gray?labelColor=3DDC84&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-applied patches will be here
+[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/272)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
+- Unlock Pro
 </blockquote>
 </details>
 
