@@ -1,20 +1,21 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[automate-morphe]
+[sdmaid-morphe]
 enabled = true 
-app-name = "automate"
+app-name = "sdmaid"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://automate-beta.en.uptodown.com/android"
+uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
 
 [speedtest-morphe]
-enabled = true 
+enabled = false 
 app-name = "speedtest"
 rv-brand = "morphe"
 build-mode = "apk"
