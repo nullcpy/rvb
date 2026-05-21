@@ -13,6 +13,7 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
 
 [speedtest-morphe]
 enabled = false 
