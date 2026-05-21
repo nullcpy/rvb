@@ -180,10 +180,10 @@ get_prebuilts() {
 			url=$(source_release_asset_url "$host" <<<"$asset")
 			name=$(jq -r .name <<<"$asset")
 			file="${dir}/${name}"
-			pr "Getting '$file' from '$url'"
 			if [ "$host" = github ]; then
 				gh_dl "$file" "$url" >&2 || return 1
 			else
+				pr "Getting '$file' from '$url'"
 				_req "$url" "$file" -H "Accept: application/octet-stream" >&2 || return 1
 			fi
 			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
