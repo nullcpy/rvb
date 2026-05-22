@@ -972,8 +972,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
-Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
+Patches: [MorpheApp/patches-1.29.1-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.1-dev.2)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1769,8 +1769,8 @@ Patches: [hoo-dles/patches-1.32.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
-Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
+Patches: [MorpheApp/patches-1.29.1-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.1-dev.2)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2087,8 +2087,8 @@ Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-15](https://github.com/nullcpy/rvb/releases/tag/251)<br>
-Patches: [anddea/patches-4.0.1-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.1-dev.1)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
+Patches: [anddea/patches-4.1.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.1)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2670,8 +2670,8 @@ Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-15](https://github.com/nullcpy/rvb/releases/tag/251)<br>
-Patches: [anddea/patches-4.0.1-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.1-dev.1)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
+Patches: [anddea/patches-4.1.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.1)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
