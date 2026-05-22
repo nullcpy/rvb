@@ -354,8 +354,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
 - Fing Premium
 </blockquote>
 </details>
@@ -566,8 +566,8 @@ Patches: [brosssh/patches-2.6.2-dev.2.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/261)<br>
-Patches: [crimera/patches-3.4.0.mpp](https://github.com/crimera/piko/releases/tag/v3.4.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [crimera/patches-3.4.1-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.4.1-dev.1)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -661,12 +661,13 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.63.15-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
+<summary id="macrodroid-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=34495E&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
+- MacroDroid Premium
 </blockquote>
 </details>
 
@@ -935,8 +936,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-18](https://github.com/nullcpy/rvb/releases/tag/260)<br>
-Patches: [hoo-dles/patches-1.32.1-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.32.1-dev.1)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [hoo-dles/patches-1.33.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.33.0-dev.1)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
@@ -1218,8 +1219,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1378,15 +1379,17 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
+[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
+Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
 - Disable telemetry
 - Disable update check
+- GMS sign-in bypass
 - Hide Assistant tab
 - Hide Family Protection button
 - Hide Premium from settings
 - Hide Premium tab
 - Hide Scams tab
+- Neutralize third-party SDKs
 - Truecaller Premium
 </blockquote>
 </details>
