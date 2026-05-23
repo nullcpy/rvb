@@ -354,8 +354,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
 - Fing Premium
 </blockquote>
 </details>
@@ -665,8 +665,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
 - MacroDroid Premium
 </blockquote>
 </details>
@@ -969,12 +969,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="reddit-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.10.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.14.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
-Patches: [MorpheApp/patches-1.29.1-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.1-dev.2)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [MorpheApp/patches-1.30.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.1)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1219,8 +1219,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1379,8 +1379,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.5.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.5)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
 - Disable telemetry
 - Disable update check
 - GMS sign-in bypass
@@ -2601,8 +2601,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/269)<br>
-Patches: [MorpheApp/patches-1.29.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.29.0)
+[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/278)<br>
+Patches: [MorpheApp/patches-1.30.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
