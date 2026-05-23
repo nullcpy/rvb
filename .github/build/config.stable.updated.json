@@ -167,7 +167,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -178,7 +178,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -190,7 +190,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -201,7 +201,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -212,7 +212,7 @@
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -397,7 +397,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "soundcloud-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "soundcloud",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -623,7 +623,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.orca"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -634,7 +634,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
   },
   "wps-office-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "wps-office",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -655,7 +655,7 @@
     "uptodown-dlurl": "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
   },
   "wallcraft-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "wallcraft",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -665,7 +665,7 @@
     "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android"
   },
   "solid-explorer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "solid-explorer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -685,7 +685,7 @@
     "uptodown-dlurl": "https://photomath.en.uptodown.com/android"
   },
   "icon-packer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -695,7 +695,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -727,7 +727,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -738,7 +738,7 @@
     "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android"
   },
   "smart-launcher-6-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "smart-launcher-6",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -750,7 +750,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
   },
   "merriam-webster-dictionary-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "merriam-webster-dictionary",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -780,7 +780,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
   "pandora-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "pandora",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -790,7 +790,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
   },
   "xrecorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "xrecorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -800,7 +800,7 @@
     "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
   },
   "adguard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adguard",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -841,7 +841,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "eyecon-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -852,7 +852,7 @@
     "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
   },
   "ticktick-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -863,7 +863,7 @@
     "uptodown-dlurl": "https://ticktick.en.uptodown.com/android"
   },
   "nova-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "nova-launcher",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -874,7 +874,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
   },
   "ventusky-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ventusky",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -916,7 +916,7 @@
     "uptodown-dlurl": "https://imdb-cine-tv.en.uptodown.com/android"
   },
   "camscanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "camscanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -938,7 +938,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "niagara-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "niagara-launcher",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -959,7 +959,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "github-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "github",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1009,5 +1009,17 @@
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
+  },
+  "sdmaid-morphe": {
+    "enabled": false,
+    "app-name": "sdmaid",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "patches-source-host": "gitlab",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/eu.darken.sdmse"
   }
 }
