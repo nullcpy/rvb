@@ -505,7 +505,7 @@ uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [reddit-anddea]
-enabled = true
+enabled = false
 app-name = "reddit"
 rv-brand = "anddea"
 build-mode = "apk"
