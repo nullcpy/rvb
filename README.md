@@ -354,8 +354,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/279)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
+[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
 - Fing Premium
 </blockquote>
 </details>
@@ -665,8 +665,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/279)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
+[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
 - MacroDroid Premium
 </blockquote>
 </details>
@@ -1219,8 +1219,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/279)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
+[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1379,8 +1379,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-23](https://github.com/nullcpy/rvb/releases/tag/279)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.1)
+[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
 - Disable telemetry
 - Disable update check
 - GMS sign-in bypass
