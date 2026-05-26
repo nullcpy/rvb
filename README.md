@@ -973,8 +973,22 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-25](https://github.com/nullcpy/rvb/releases/tag/282)<br>
-Patches: [MorpheApp/patches-1.30.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.3)
+[Release 2026-05-26](https://github.com/nullcpy/rvb/releases/tag/283)<br>
+Patches: [MorpheApp/patches-1.30.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.4)
+- Disable modern home
+- Disable screenshot popup
+- Hide Ask button
+- Hide Trending Today shelf
+- Hide ads
+- Hide navigation buttons
+- Hide recommended communities shelf
+- Hide sidebar components
+- Open links directly
+- Open links externally
+- Remove subreddit dialog
+- Sanitize sharing links
+- Show view count
+- Spoof signature
 </blockquote>
 </details>
 
@@ -1754,12 +1768,81 @@ Patches: [hoo-dles/patches-1.33.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="youtube-morphe"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.47.62-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.51.39-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-25](https://github.com/nullcpy/rvb/releases/tag/282)<br>
-Patches: [MorpheApp/patches-1.30.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.3)
+[Release 2026-05-26](https://github.com/nullcpy/rvb/releases/tag/283)<br>
+Patches: [MorpheApp/patches-1.30.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.4)
+- Alternative thumbnails
+- Ambient mode
+- Bypass URL redirects
+- Bypass image region restrictions
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video URL
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Media notification controls
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open channel of live avatar
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music buttons
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Save to watch later
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
@@ -2518,8 +2601,33 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-05-25](https://github.com/nullcpy/rvb/releases/tag/282)<br>
-Patches: [MorpheApp/patches-1.30.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.3)
+[Release 2026-05-26](https://github.com/nullcpy/rvb/releases/tag/283)<br>
+Patches: [MorpheApp/patches-1.30.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0-dev.4)
+- Bypass certificate checks
+- Change header
+- Change miniplayer color
+- Change start page
+- Check watch history domain name resolution
+- Custom branding
+- Disable DRC audio
+- Disable QUIC protocol
+- Enable debugging
+- Enable exclusive audio playback
+- Enable forced miniplayer
+- Force original audio
+- GmsCore support
+- Hide ads
+- Hide buttons
+- Hide category bar
+- Hide music video ads
+- Miniplayer previous and next buttons
+- Navigation bar
+- Permanent repeat
+- Remove background playback restrictions
+- Sanitize sharing links
+- Spoof video streams
+- Theme
+- Track crossfade
 </blockquote>
 </details>
 
