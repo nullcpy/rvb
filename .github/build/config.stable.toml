@@ -848,3 +848,19 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
+
+[proton-vpn-morphe-paresh]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "morphe-paresh"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
+
+
