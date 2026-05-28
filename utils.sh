@@ -394,11 +394,6 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
-	if ! unzip -tq "$bundle" >/dev/null 2>&1; then
-		epr "Downloaded bundle is not a valid zip archive: $bundle"
-		rm -f "$bundle" 2>/dev/null || :
-		return 1
-	fi
 	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.9/APKEditor-1.4.9.jar" >/dev/null || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
 		epr "APKEditor error: $OP"
@@ -615,6 +610,7 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 dl_github() {
     local url=$1 version=$2 output=$3 arch=$4
     local path="" version_f=${version// /}
+	local base_url=${__GITHUB_URL__:-$url}
     
     # Matches the exact file selection logic from dl_archive
     while IFS= read -r p; do
@@ -634,14 +630,11 @@ dl_github() {
     local ext="${path##*.}"
     case "$ext" in
         apk)
-			pr "Downloading from '${url}/${path}'"
-            req "${url}/${path}" "$output"
+            req "${base_url}/${path}" "$output"
             ;;
         apkm|xapk|apks)
 			local bundle="${output}.${ext}"
-			pr "Downloading from '${url}/${path}'"
-			req "${url}/${path}" "$bundle" || return 1
-			pr "Downloaded bundle size: $(wc -c < "$bundle") bytes"
+			req "${base_url}/${path}" "$bundle" || return 1
 			merge_splits "$bundle" "$output"
             ;;
         *)
