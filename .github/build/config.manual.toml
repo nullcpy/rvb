@@ -1,17 +1,17 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[speedtest-morphe]
-enabled = false 
-app-name = "speedtest"
-rv-brand = "morphe"
+[proton-vpn-morphe-paresh]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "morphe-paresh"
 build-mode = "apk"
 arch = "both"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
-
-
-
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
