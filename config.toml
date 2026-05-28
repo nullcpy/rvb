@@ -113,6 +113,7 @@ patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
 
 [youtube-morphe]
 enabled = true
