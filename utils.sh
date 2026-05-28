@@ -634,11 +634,15 @@ dl_github() {
     local ext="${path##*.}"
     case "$ext" in
         apk)
+			pr "Downloading from '${url}/${path}'"
             req "${url}/${path}" "$output"
             ;;
         apkm|xapk|apks)
-            req "${url}/${path}" "${output}.${ext}" || return 1
-            merge_splits "${output}.${ext}" "$output"
+			local bundle="${output}.${ext}"
+			pr "Downloading from '${url}/${path}'"
+			req "${url}/${path}" "$bundle" || return 1
+			pr "Downloaded bundle size: $(wc -c < "$bundle") bytes"
+			merge_splits "$bundle" "$output"
             ;;
         *)
             epr "Unsupported github file type for ${path}"
