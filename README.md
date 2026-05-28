@@ -539,12 +539,12 @@ Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (Brosssh)](https://github.com/brosssh/morphe-patches)
 
 <details>
-<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v430.0.0.53.80-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-14](https://github.com/nullcpy/rvb/releases/tag/247)<br>
-Patches: [brosssh/patches-2.6.2-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.6.2-dev.2)
+[Release 2026-05-28](https://github.com/nullcpy/rvb/releases/tag/292)<br>
+Patches: [brosssh/patches-2.6.2-dev.3.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.6.2-dev.3)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
