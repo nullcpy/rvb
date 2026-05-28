@@ -1,5 +1,5 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
@@ -15,3 +15,4 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
