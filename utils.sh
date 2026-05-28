@@ -394,6 +394,11 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
+	if ! unzip -tq "$bundle" >/dev/null 2>&1; then
+		epr "Downloaded bundle is not a valid zip archive: $bundle"
+		rm -f "$bundle" 2>/dev/null || :
+		return 1
+	fi
 	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.7/APKEditor-1.4.7.jar" >/dev/null || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
 		epr "APKEditor error: $OP"
