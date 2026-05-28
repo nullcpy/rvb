@@ -945,22 +945,6 @@ Patches: [hoo-dles/patches-1.34.0-dev.1.mpp](https://github.com/hoo-dles/morphe-
 </blockquote>
 </details>
 
-#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
-
-<details>
-<summary id="proton-vpn-morphe-paresh">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
-  
-<blockquote>
-
-[Release 2026-05-28](https://github.com/nullcpy/rvb/releases/tag/287)<br>
-Patches: [hoo-dles/patches-1.34.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0-dev.1)
-- Remove delay
-- Unlock LAN connections
-- Unlock custom DNS
-- Unlock split tunneling
-</blockquote>
-</details>
-
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
