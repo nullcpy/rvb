@@ -952,12 +952,10 @@ Patches: [hoo-dles/patches-1.34.0-dev.1.mpp](https://github.com/hoo-dles/morphe-
   
 <blockquote>
 
-[Release 2026-05-28](https://github.com/nullcpy/rvb/releases/tag/287)<br>
-Patches: [hoo-dles/patches-1.34.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0-dev.1)
-- Remove delay
-- Unlock LAN connections
-- Unlock custom DNS
-- Unlock split tunneling
+[Release 2026-05-28](https://github.com/nullcpy/rvb/releases/tag/288)<br>
+Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
+- Disable telemetry
+- Proton VPN Premium
 </blockquote>
 </details>
 
