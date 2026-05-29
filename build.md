@@ -1,5 +1,5 @@
-proton-vpn-morphe (arm64-v8a): 5.17.72.0  
-proton-vpn-morphe (arm-v7a): 5.17.72.0  
+showly-morphe (arm64-v8a): 3.70.0  
+showly-morphe (arm-v7a): 3.70.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
