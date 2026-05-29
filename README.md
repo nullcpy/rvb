@@ -936,8 +936,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/293)<br>
-Patches: [hoo-dles/patches-1.34.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0)
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/294)<br>
+Patches: [hoo-dles/patches-1.35.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.35.0-dev.1)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
