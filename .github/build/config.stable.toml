@@ -863,4 +863,15 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
 
+[showly-morphe]
+enabled = true
+app-name = "showly"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
+patches-version = "dev"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
+
 
