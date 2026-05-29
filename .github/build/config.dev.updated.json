@@ -45,7 +45,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -57,7 +57,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -169,7 +169,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "macrodroid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -180,7 +180,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -192,7 +192,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -203,7 +203,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -214,7 +214,7 @@
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
   },
   "proton-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",

@@ -103,7 +103,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -114,7 +114,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -125,7 +125,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -168,7 +168,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "macrodroid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -179,7 +179,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -191,7 +191,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -202,7 +202,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -511,7 +511,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-nord",
     "build-mode": "both",
@@ -523,7 +523,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-mocha",
     "build-mode": "both",
@@ -559,7 +559,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -570,7 +570,7 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android"
   },
   "youtube-music-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -581,7 +581,7 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android"
   },
   "reddit-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -728,7 +728,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -842,7 +842,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "eyecon-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -853,7 +853,7 @@
     "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
   },
   "ticktick-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1012,7 +1012,7 @@
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
   },
   "sdmaid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "sdmaid",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1024,7 +1024,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/eu.darken.sdmse"
   },
   "proton-vpn-morphe-paresh": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe-paresh",
     "build-mode": "apk",
