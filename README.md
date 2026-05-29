@@ -1113,14 +1113,13 @@ Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-M
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="showly-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.6build002patch1-gray?labelColor=ec483b&logo=android&logoColor=white&style=flat"></summary>
+<summary id="showly-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.70.0-gray?labelColor=ec483b&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/293)<br>
-Patches: [hoo-dles/patches-1.34.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0)
-- Disable signature check
-- Enable Pro
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/295)<br>
+Patches: [hoo-dles/patches-1.35.0-dev.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.35.0-dev.1)
+- Enable Premium
 </blockquote>
 </details>
 
