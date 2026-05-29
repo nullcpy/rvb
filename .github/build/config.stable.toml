@@ -870,7 +870,6 @@ rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
-patches-version = "dev"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 
