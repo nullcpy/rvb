@@ -354,9 +354,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
-- Fing Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
 </blockquote>
 </details>
 
@@ -665,9 +664,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
-- MacroDroid Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
 </blockquote>
 </details>
 
@@ -1224,18 +1222,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
-- Anti-delete messages
-- Anti-disappearing media
-- Bypass channel restrictions
-- Bypass content restrictions
-- Bypass integrity
-- Disable auto update
-- Download speed boost
-- Hide typing indicator
-- Remove ads
-- Telegram Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
 </blockquote>
 </details>
 
@@ -1384,18 +1372,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-24](https://github.com/nullcpy/rvb/releases/tag/280)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.2.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.2)
-- Disable telemetry
-- Disable update check
-- GMS sign-in bypass
-- Hide Assistant tab
-- Hide Family Protection button
-- Hide Premium from settings
-- Hide Premium tab
-- Hide Scams tab
-- Neutralize third-party SDKs
-- Truecaller Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
 </blockquote>
 </details>
 
@@ -1815,74 +1793,12 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-anddea"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.51.39-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
-Patches: [anddea/patches-4.1.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.1)
-- Alternative thumbnails
-- Ambient mode control
-- Bypass URL redirects
-- Bypass image region restrictions
-- Change form factor
-- Change player flyout menu toggles
-- Change share sheet
-- Change start page
-- Custom Shorts action buttons
-- Custom double tap length
-- Description components
-- Disable QUIC protocol
-- Disable forced auto audio tracks
-- Disable forced auto captions
-- Disable haptic feedback
-- Disable layout updates
-- Disable resuming Miniplayer on startup
-- Disable resuming Shorts on startup
-- Disable sign in to TV popup
-- Disable splash animation
-- Enable debug logging
-- Enable gradient loading screen
-- Force player buttons background
-- Fullscreen components
-- GmsCore support
-- Hide accessibility controls dialog
-- Hide action buttons
-- Hide ads
-- Hide comments components
-- Hide feed components
-- Hide feed flyout menu
-- Hide layout components
-- Hide player buttons
-- Hide player flyout menu
-- Hook YouTube Music actions
-- Hook download actions
-- Miniplayer
-- Navigation bar components
-- Open links externally
-- Overlay buttons
-- Player components
-- Remove background playback restrictions
-- Remove viewer discretion dialog
-- Return YouTube Dislike
-- Return YouTube Username
-- Sanitize sharing links
-- Seekbar components
-- Set transcript cookies
-- Shorts components
-- Snack bar components
-- SponsorBlock
-- Spoof app version
-- Spoof watch history
-- Swipe controls
-- Theme
-- Toolbar components
-- Translations for YouTube
-- Video playback
-- Voice Over Translation
-- Visual preferences icons for YouTube
-- Reload video
-- Settings for YouTube
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [anddea/patches-4.1.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.2)
 </blockquote>
 </details>
 
@@ -2352,41 +2268,8 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/274)<br>
-Patches: [anddea/patches-4.1.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.1)
-- Bitrate default value
-- Bypass image region restrictions
-- Certificate spoof
-- Change share sheet
-- Change start page
-- Dark theme
-- Disable Cairo splash animation
-- Disable QUIC protocol
-- Disable dislike redirection
-- Disable forced auto audio tracks
-- Disable forced auto captions
-- Enable landscape mode
-- Flyout menu components
-- GmsCore support
-- Hide account components
-- Hide action bar components
-- Hide ads
-- Hide layout components
-- Navigation bar components
-- Player components
-- Remove background playback restrictions
-- Remove viewer discretion dialog
-- Restore old style library shelf
-- Return YouTube Dislike
-- Return YouTube Username
-- Sanitize sharing links
-- SponsorBlock
-- Spoof app version for lyrics
-- Translations for YouTube Music
-- Video playback
-- Watch history
-- Visual preferences icons for YouTube Music
-- Settings for YouTube Music
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
+Patches: [anddea/patches-4.1.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.2)
 </blockquote>
 </details>
 
