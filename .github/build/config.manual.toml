@@ -1,18 +1,18 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[proton-vpn-morphe-paresh]
+[showly-morphe]
 enabled = true
-app-name = "proton-vpn"
-rv-brand = "morphe-paresh"
+app-name = "showly"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
+patches-source = "hoo-dles/morphe-patches"
+patches-version = "dev"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+# github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
