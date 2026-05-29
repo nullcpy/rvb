@@ -260,9 +260,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
-- Doc Scanner Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -314,9 +313,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
-- Eyecon Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -354,8 +352,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -664,8 +662,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -950,10 +948,8 @@ Patches: [hoo-dles/patches-1.35.0-dev.1.mpp](https://github.com/hoo-dles/morphe-
   
 <blockquote>
 
-[Release 2026-05-28](https://github.com/nullcpy/rvb/releases/tag/288)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
-- Disable telemetry
-- Proton VPN Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -1068,9 +1064,8 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/272)<br>
-Patches: [Paresh-Maheshwari/patches-1.4.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.4.0-dev.4)
-- Unlock Pro
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -1222,8 +1217,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -1306,9 +1301,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-21](https://github.com/nullcpy/rvb/releases/tag/273)<br>
-Patches: [Paresh-Maheshwari/patches-1.16.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.16.0)
-- TickTick Premium
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
@@ -1372,8 +1366,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0-dev.3)
+[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
+Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
 </blockquote>
 </details>
 
