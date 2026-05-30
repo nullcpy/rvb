@@ -69,12 +69,17 @@ for key, info in build_data.items():
                     new_content += f"\n- {patch.strip()}"
 
         new_blockquote = f"<blockquote>{new_content}\n</blockquote>"
-        new_details = re.sub(
-            r"<blockquote>\s*\n.*?\n</blockquote>",
-            new_blockquote,
-            new_details,
-            flags=re.DOTALL,
-        )
+        # Replace existing blockquote if present, otherwise insert before the closing </details>
+        blockquote_pattern = r"<blockquote>.*?</blockquote>"
+        if re.search(blockquote_pattern, new_details, flags=re.DOTALL):
+            new_details = re.sub(
+                blockquote_pattern, new_blockquote, new_details, flags=re.DOTALL
+            )
+        else:
+            # ensure we insert the blockquote just before the closing details tag
+            new_details = new_details.replace(
+                "</details>", f"{new_blockquote}\n</details>"
+            )
 
         readme = readme[: match.start()] + new_details + readme[match.end() :]
     print(f"✓ {key} v{version} → release/{tag}")
