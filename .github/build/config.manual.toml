@@ -1,18 +1,17 @@
 parallel-jobs = 1
-patches-version = "latest"
-# cli-version = "dev"
-enable-module-update = true
-
-[showly-morphe]
-enabled = true
-app-name = "showly"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "hoo-dles/morphe-patches"
 patches-version = "dev"
+# cli-version = "dev"
+enable-module-update = false
+
+[youtube-anddea]
+enabled = true
+app-name = "youtube"
+rv-brand = "anddea"
+build-mode = "both"
+arch = "both"
+patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
-# github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
+# patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
