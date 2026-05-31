@@ -664,8 +664,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-31](https://github.com/nullcpy/rvb/releases/tag/303)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0-dev.3.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0-dev.3)
+[Release 2026-05-31](https://github.com/nullcpy/rvb/releases/tag/304)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0-dev.4.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0-dev.4)
 - MacroDroid Premium
 </blockquote>
 </details>
