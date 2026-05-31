@@ -559,12 +559,12 @@ Patches: [brosssh/patches-2.6.2.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v430.0.0.53.80-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-22](https://github.com/nullcpy/rvb/releases/tag/275)<br>
-Patches: [crimera/patches-3.4.1-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.4.1-dev.1)
+[Release 2026-05-31](https://github.com/nullcpy/rvb/releases/tag/302)<br>
+Patches: [crimera/patches-3.5.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.4)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -587,6 +587,7 @@ Patches: [crimera/patches-3.4.1-dev.1.mpp](https://github.com/crimera/piko/relea
 - Disable typing status
 - Disable video autoplay
 - Download media
+- Download voice message
 - Follow back indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
@@ -607,6 +608,7 @@ Patches: [crimera/patches-3.4.1-dev.1.mpp](https://github.com/crimera/piko/relea
 - Unlock Plus benefits
 - Unlock developer options
 - Unlock employee options
+- Validate links
 - View DMs anonymously
 - View live anonymously
 - View stories anonymously
@@ -662,8 +664,9 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
+[Release 2026-05-31](https://github.com/nullcpy/rvb/releases/tag/302)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0-dev.1.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0-dev.1)
+- MacroDroid Premium
 </blockquote>
 </details>
 
