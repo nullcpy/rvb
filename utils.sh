@@ -723,6 +723,11 @@ write_build_info() {
 	fi
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
+	# extract applied patches supporting both old and new morphe-cli output formats
+	# old: INFO: "Patch Name" succeeded
+	# new: INFO: Applied: Patch Name
+	local applied_json
+	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || echo '[]')
 	jq --arg key "$key" \
 		--arg ext "$ext" \
 		--arg arch "$arch" \
@@ -730,11 +735,6 @@ write_build_info() {
 		--arg version "$version" \
 		--arg patches "$patches" \
 		--arg changelog "$changelog" \
-		# extract applied patches supporting both old and new morphe-cli output formats
-		# old: INFO: "Patch Name" succeeded
-		# new: INFO: Applied: Patch Name
-		local applied_json
-		applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: "')[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || echo '[]')
 		--argjson applied "$applied_json" \
 		'if has($key) then .[$key].exts = (.[$key].exts + [$ext] | unique) else .[$key] = {exts: [$ext], name: $name, arch: $arch, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
 		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
