@@ -20,7 +20,7 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.30.0",
-    "prerelease": "v1.31.0-dev.1",
+    "prerelease": "v1.31.0-dev.2",
     "blocked": false
   },
   "piko": {
@@ -63,7 +63,7 @@
     "repo": "Paresh-Maheshwari/paresh-patches",
     "host": "gitlab",
     "stable": "v1.17.0",
-    "prerelease": "v1.18.0-dev.1",
+    "prerelease": "v1.18.0-dev.3",
     "blocked": false
   },
   "docbt": {
@@ -101,6 +101,6 @@
     "repo": "joganubaid/cryptomator-morphe-patches",
     "stable": "v1.1.0",
     "prerelease": "",
-    "blocked": false
+    "blocked": true
   }
 }
