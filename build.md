@@ -1,5 +1,7 @@
-macrodroid-morphe (arm64-v8a): 5.62.11  
-macrodroid-morphe (arm-v7a): 5.62.11  
+youtube-anddea (arm64-v8a): 20.51.39  
+youtube-anddea (arm-v7a): 20.51.39  
+youtube-music-anddea (arm64-v8a): 8.30.54  
+youtube-music-anddea (arm-v7a): 8.30.54  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +10,5 @@ macrodroid-morphe (arm-v7a): 5.62.11
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.0-all.jar  
-Patches: Paresh-Maheshwari/patches-1.18.0-dev.4.mpp  
-[Changelog](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0-dev.4)  
+Patches: anddea/patches-4.1.0-dev.3.mpp  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.3)  
