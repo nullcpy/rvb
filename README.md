@@ -1877,8 +1877,69 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-30](https://github.com/nullcpy/rvb/releases/tag/299)<br>
-Patches: [anddea/patches-4.1.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.2)
+[Release 2026-06-01](https://github.com/nullcpy/rvb/releases/tag/305)<br>
+Patches: [anddea/patches-4.1.0-dev.3.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.3)
+- Alternative thumbnails
+- Ambient mode control
+- Bypass URL redirects
+- Bypass image region restrictions
+- Change form factor
+- Change player flyout menu toggles
+- Change share sheet
+- Change start page
+- Custom Shorts action buttons
+- Custom double tap length
+- Description components
+- Disable QUIC protocol
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Disable haptic feedback
+- Disable layout updates
+- Disable resuming Miniplayer on startup
+- Disable resuming Shorts on startup
+- Disable sign in to TV popup
+- Disable splash animation
+- Enable debug logging
+- Enable gradient loading screen
+- Force player buttons background
+- Fullscreen components
+- GmsCore support
+- Hide action buttons
+- Hide ads
+- Hide comments components
+- Hide feed components
+- Hide feed flyout menu
+- Hide layout components
+- Hide player buttons
+- Hide player flyout menu
+- Hook YouTube Music actions
+- Hook download actions
+- Miniplayer
+- Navigation bar components
+- Open links externally
+- Overlay buttons
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- Seekbar components
+- Set transcript cookies
+- Shorts components
+- Snack bar components
+- SponsorBlock
+- Spoof app version
+- Spoof watch history
+- Swipe controls
+- Theme
+- Toolbar components
+- Translations for YouTube
+- Video playback
+- Voice Over Translation
+- Visual preferences icons for YouTube
+- Reload video
+- Settings for YouTube
 </blockquote>
 </details>
 
@@ -2373,8 +2434,41 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/297)<br>
-Patches: [anddea/patches-4.1.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.2)
+[Release 2026-06-01](https://github.com/nullcpy/rvb/releases/tag/305)<br>
+Patches: [anddea/patches-4.1.0-dev.3.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.3)
+- Bitrate default value
+- Bypass image region restrictions
+- Certificate spoof
+- Change share sheet
+- Change start page
+- Dark theme
+- Disable Cairo splash animation
+- Disable QUIC protocol
+- Disable dislike redirection
+- Disable forced auto audio tracks
+- Disable forced auto captions
+- Enable landscape mode
+- Flyout menu components
+- GmsCore support
+- Hide account components
+- Hide action bar components
+- Hide ads
+- Hide layout components
+- Navigation bar components
+- Player components
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Restore old style library shelf
+- Return YouTube Dislike
+- Return YouTube Username
+- Sanitize sharing links
+- SponsorBlock
+- Spoof app version for lyrics
+- Translations for YouTube Music
+- Video playback
+- Watch history
+- Visual preferences icons for YouTube Music
+- Settings for YouTube Music
 </blockquote>
 </details>
 
