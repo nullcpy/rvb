@@ -1332,12 +1332,12 @@ Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.6.2-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
+<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.8.3-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
-Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+[Release 2026-06-02](https://github.com/nullcpy/rvb/releases/tag/306)<br>
+Patches: [icysymmetra/patches-0.1.5.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.1.5)
 - Disable login requirement
 - Downloads
 - Enable Open Debug
@@ -1345,6 +1345,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 - Fix Google login
 - Playback speed
 - Remember clear display
+- SIM spoof
 - Sanitize sharing links
 - Settings
 - Show seekbar
