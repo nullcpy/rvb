@@ -1329,7 +1329,7 @@ Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 `com.zhiliaoapp.musically`
 
-#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
+#### [Morphe (icysymmetra)](https://github.com/icysymmetra/tiktok-patches-for-morphe)
 
 <details>
 <summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.8.3-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
