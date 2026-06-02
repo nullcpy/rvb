@@ -1013,18 +1013,6 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
 </blockquote>
 </details>
 
-#### [Morphe (patcheddit)](https://github.com/wchill/patcheddit)
-
-<details>
-<summary id="reddit-morphe-patcheddit"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.15.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
-  
-<blockquote>
-
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [wchill/patches-1.4.0.mpp](https://github.com/wchill/patcheddit/releases/tag/v1.4.0)
-</blockquote>
-</details>
-
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
