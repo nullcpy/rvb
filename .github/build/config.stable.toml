@@ -959,4 +959,20 @@ cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
+[macrodroid-morphe]
+enabled = true 
+app-name = "macrodroid"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
+
+
+
 
