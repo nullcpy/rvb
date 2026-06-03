@@ -1,9 +1,4 @@
-youtube-morphe (arm64-v8a): 20.51.39  
-youtube-morphe (arm-v7a): 20.51.39  
-youtube-music-morphe (arm64-v8a): 8.51.51  
-youtube-music-morphe (arm-v7a): 8.51.51  
-reddit-morphe (arm64-v8a): 2026.14.0  
-reddit-morphe (arm-v7a): 2026.14.0  
+hellochinese-morphe (arm64-v8a): 7.10.20  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -12,5 +7,5 @@ reddit-morphe (arm-v7a): 2026.14.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.0-all.jar  
-Patches: MorpheApp/patches-1.31.0-dev.4.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.4)  
+Patches: hoo-dles/patches-1.34.0.mpp  
+[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0)  
