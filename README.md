@@ -984,8 +984,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-02](https://github.com/nullcpy/rvb/releases/tag/307)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.3)
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/309)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.4)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1755,8 +1755,8 @@ Patches: [hoo-dles/patches-1.34.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-02](https://github.com/nullcpy/rvb/releases/tag/307)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.3)
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/309)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.4)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -2372,12 +2372,12 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 #### [Morphe](https://github.com/MorpheApp/morphe-patches)
 
 <details>
-<summary id="youtube-music-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.56-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.51.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-02](https://github.com/nullcpy/rvb/releases/tag/307)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.3)
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/309)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.4)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
