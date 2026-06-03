@@ -497,10 +497,13 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="hellochinese-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=4DC730&logo=android&logoColor=white&style=flat"></summary>
+<summary id="hellochinese-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.10.20-gray?labelColor=4DC730&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/310)<br>
+Patches: [hoo-dles/patches-1.34.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.34.0)
+- Enable Premium
 </blockquote>
 </details>
 
