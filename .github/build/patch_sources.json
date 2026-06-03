@@ -49,7 +49,7 @@
   },
   "brosssh": {
     "repo": "brosssh/morphe-patches",
-    "stable": "v2.6.2",
+    "stable": "v2.6.3",
     "prerelease": "v2.6.3-dev.1",
     "blocked": false
   },
@@ -62,8 +62,8 @@
   "paresh": {
     "repo": "Paresh-Maheshwari/paresh-patches",
     "host": "gitlab",
-    "stable": "v1.17.0",
-    "prerelease": "v1.18.0-dev.4",
+    "stable": "v1.18.0",
+    "prerelease": "v1.18.1-dev.1",
     "blocked": false
   },
   "docbt": {
