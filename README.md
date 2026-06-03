@@ -489,6 +489,23 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
+<a id="apps-h"></a>
+### [HelloChinese](https://play.google.com/store/apps/details?id=com.hellochinese)
+
+`com.hellochinese`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="hellochinese-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0-gray?labelColor=4DC730&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+</blockquote>
+</details>
+
+---
+
 <a id="apps-i"></a>
 ### [Icon Packer](https://play.google.com/store/apps/details?id=cn.ommiao.iconpacker)
 
