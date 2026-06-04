@@ -493,7 +493,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-h"></a>
-### [HelloChinese](https://play.google.com/store/apps/details?id=com.hellochinese)
+### [HelloChinese: Learn Chinese](https://play.google.com/store/apps/details?id=com.hellochinese)
 
 `com.hellochinese`
 
