@@ -1,16 +1,19 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[hellochinese-morphe]
+[tiktok-morphe]
 enabled = true
-app-name = "hellochinese"
+app-name = "tiktok"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "arm64-v8a"
-patches-source = "hoo-dles/morphe-patches"
+arch = "both"
+patches-source = "icysymmetra/tiktok-patches-for-morphe"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-# archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+# dpi = "120-640dpi nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+
