@@ -1,5 +1,7 @@
-tiktok-morphe (arm64-v8a): 43.8.3  
-tiktok-morphe (arm-v7a): 43.8.3  
+google-photos-morphe (arm64-v8a): 7.79.0.924379438  
+google-photos-morphe (arm-v7a): 7.79.0.924379438  
+google-photos-revanced (arm64-v8a): 7.79.0.924379438  
+google-photos-revanced (arm-v7a): 7.79.0.924379438  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +9,10 @@ tiktok-morphe (arm-v7a): 43.8.3
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
+CLI: ReVanced/revanced-cli-6.0.0-all.jar  
+Patches: Raudrobot/patches-6.1.0.rvp  
+[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
+
 CLI: MorpheApp/morphe-cli-1.9.0-all.jar  
-Patches: icysymmetra/patches-0.2.0-dev.1.mpp  
-[Changelog](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0-dev.1)  
+Patches: RookieEnough/patches-1.0.4.mpp  
+[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
