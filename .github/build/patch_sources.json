@@ -73,6 +73,7 @@
     "blocked": false
   },
   "patcheddit": {
+    "enabled": false,
     "repo": "wchill/patcheddit",
     "stable": "v1.4.0",
     "prerelease": "v1.4.1-dev.1",
