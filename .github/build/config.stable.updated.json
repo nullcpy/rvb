@@ -146,7 +146,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "instagram-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -155,6 +155,17 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
+  },
+  "tiktok-morphe": {
+    "enabled": true,
+    "app-name": "tiktok",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "icysymmetra/tiktok-patches-for-morphe",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "proton-mail-revanced": {
     "enabled": false,
@@ -640,7 +651,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -754,7 +765,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "eyecon-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -765,7 +776,7 @@
     "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
   },
   "ticktick-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -838,17 +849,6 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://camscanner-pdf-creator.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.intsig.camscanner"
-  },
-  "tiktok-morphe": {
-    "enabled": false,
-    "app-name": "tiktok",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "icysymmetra/tiktok-patches-for-morphe",
-    "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "niagara-launcher-morphe": {
     "enabled": false,
@@ -924,7 +924,7 @@
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
   },
   "sdmaid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "sdmaid",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -936,7 +936,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/eu.darken.sdmse"
   },
   "proton-vpn-morphe-paresh": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe-paresh",
     "build-mode": "apk",
@@ -959,7 +959,7 @@
     "uptodown-dlurl": "https://showly-2-0.en.uptodown.com/android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -971,7 +971,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -982,7 +982,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "telegram-morphe-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -1025,7 +1025,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
