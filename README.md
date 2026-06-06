@@ -1359,8 +1359,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-05](https://github.com/nullcpy/rvb/releases/tag/314)<br>
-Patches: [icysymmetra/patches-0.2.0-dev.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0-dev.1)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/319)<br>
+Patches: [icysymmetra/patches-0.2.0.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0)
 - Disable login requirement
 - Downloads
 - Enable Open Debug
