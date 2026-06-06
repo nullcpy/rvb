@@ -45,7 +45,7 @@
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -57,7 +57,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -69,7 +69,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -80,7 +80,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "twitter-morphe-materialu": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
@@ -92,7 +92,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "instagram-morphe-piko": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "apk",
@@ -104,7 +104,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -115,7 +115,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -126,7 +126,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
