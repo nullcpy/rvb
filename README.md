@@ -1007,8 +1007,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-05](https://github.com/nullcpy/rvb/releases/tag/316)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.6)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/318)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.7)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1800,8 +1800,8 @@ Patches: [hoo-dles/patches-1.34.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-05](https://github.com/nullcpy/rvb/releases/tag/316)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.6)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/318)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.7)
 - Alternative thumbnails
 - Ambient mode
 - Bypass URL redirects
@@ -1911,8 +1911,8 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-04](https://github.com/nullcpy/rvb/releases/tag/313)<br>
-Patches: [anddea/patches-4.1.0-dev.4.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.4)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/318)<br>
+Patches: [anddea/patches-4.1.0-dev.5.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.5)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2421,8 +2421,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-05](https://github.com/nullcpy/rvb/releases/tag/316)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.6)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/318)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.7)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2468,8 +2468,8 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-04](https://github.com/nullcpy/rvb/releases/tag/313)<br>
-Patches: [anddea/patches-4.1.0-dev.4.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.4)
+[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/318)<br>
+Patches: [anddea/patches-4.1.0-dev.5.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.5)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
