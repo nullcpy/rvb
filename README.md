@@ -1039,12 +1039,14 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.17.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.23.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-02](https://github.com/nullcpy/rvb/releases/tag/192)<br>
-Patches: [jkennethcarino/patches-1.2.0-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.1)
+[Release 2026-06-07](https://github.com/nullcpy/rvb/releases/tag/321)<br>
+Patches: [jkennethcarino/patches-1.2.0-dev.3.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.3)
+- Disable home feed swipe
+- Disable post detail swipe
 - Disable screenshot banner
 - Hide post view counts
 - Open external links directly
