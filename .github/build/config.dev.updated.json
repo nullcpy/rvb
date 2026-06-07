@@ -104,7 +104,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -115,7 +115,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -126,7 +126,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -167,5 +167,15 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+  },
+  "reddit-morphe-adobo": {
+    "enabled": false,
+    "app-name": "reddit",
+    "rv-brand": "morphe-adobo",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "jkennethcarino/adobo",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
   }
 }
