@@ -586,8 +586,8 @@ Patches: [brosssh/patches-2.6.3.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-06-05](https://github.com/nullcpy/rvb/releases/tag/317)<br>
-Patches: [crimera/patches-3.5.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.5)
+[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/323)<br>
+Patches: [crimera/patches-3.5.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.6)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -627,6 +627,7 @@ Patches: [crimera/patches-3.5.0-dev.5.mpp](https://github.com/crimera/piko/relea
 - Remove build expired popup
 - Remove empty bottom space
 - Sanitize share links
+- Save media comment
 - Stories audio autoplay
 - Unlock Plus benefits
 - Unlock developer options
