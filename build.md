@@ -1,9 +1,5 @@
-automate-morphe (arm64-v8a): 1.51.1  
-automate-morphe (arm-v7a): 1.51.1  
-speedtest-morphe (arm64-v8a): 7.0.3  
-speedtest-morphe (arm-v7a): 7.0.3  
-autosync-morphe (arm64-v8a): 7.5.10  
-autosync-morphe (arm-v7a): 7.5.10  
+instagram-morphe (arm64-v8a): 430.0.0.53.80  
+instagram-morphe (arm-v7a): 430.0.0.53.80  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -12,5 +8,5 @@ autosync-morphe (arm-v7a): 7.5.10
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: BholeyKaBhakt/patches-2.3.1.mpp  
-[Changelog](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.3.1)  
+Patches: brosssh/patches-2.6.4-dev.1.mpp  
+[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.6.4-dev.1)  
