@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/324)<br>
-Patches: [BholeyKaBhakt/patches-2.1.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.1.0)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
+Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.1.0.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/324)<br>
-Patches: [BholeyKaBhakt/patches-2.1.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.1.0)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
+Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
 - Disable PairIP License Check
 - Force Stable Integrity State (Critical)
 - Purchase All Items
@@ -1205,12 +1205,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.4-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
+<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.3-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/324)<br>
-Patches: [BholeyKaBhakt/patches-2.1.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.1.0)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
+Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
