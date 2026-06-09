@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
-Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/327)<br>
+Patches: [BholeyKaBhakt/patches-2.3.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.3.1)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,10 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
-Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
-- Disable PairIP License Check
-- Force Stable Integrity State (Critical)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/327)<br>
+Patches: [BholeyKaBhakt/patches-2.3.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.3.1)
 - Purchase All Items
 </blockquote>
 </details>
@@ -1209,8 +1207,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/326)<br>
-Patches: [BholeyKaBhakt/patches-2.2.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.2.1)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/327)<br>
+Patches: [BholeyKaBhakt/patches-2.3.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.3.1)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
