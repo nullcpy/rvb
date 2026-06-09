@@ -1008,8 +1008,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/322)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.9.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.9)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/325)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.10)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1803,18 +1803,18 @@ Patches: [hoo-dles/patches-1.35.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/322)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.9.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.9)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/325)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.10)
 - Alternative thumbnails
 - Ambient mode
-- Bypass URL redirects
 - Bypass image region restrictions
+- Bypass link redirects
 - Captions
 - Change form factor
 - Change header
 - Change start page
 - Check watch history domain name resolution
-- Copy video URL
+- Copy video link
 - Custom branding
 - Custom player overlay opacity
 - Disable DRC audio
@@ -2424,8 +2424,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/322)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.9.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.9)
+[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/325)<br>
+Patches: [MorpheApp/patches-1.31.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.10)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
