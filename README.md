@@ -234,13 +234,14 @@ Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomato
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="cricbuzz-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=android&logoColor=white&style=flat"></summary>
+<summary id="cricbuzz-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v16.02.05-gray?labelColor=009270&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
-Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
-- Hide ads
+[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+- Cricbuzz Disable Ads
+- Cricbuzz Premium
 </blockquote>
 </details>
 
@@ -681,15 +682,13 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="lumina-wallpapers-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=fbcf2e&logo=android&logoColor=white&style=flat"></summary>
+<summary id="lumina-wallpapers-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.0.2.3-gray?labelColor=fbcf2e&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-- Disable Bugsnag Telemetry
-- Disable General Telemetry
-- Remove Promoted Pins
+[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+- Lumina Premium
 </blockquote>
 </details>
 
@@ -920,15 +919,22 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="plus-messenger-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=009688&logo=android&logoColor=white&style=flat"></summary>
+<summary id="plus-messenger-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.7.3.0-gray?labelColor=009688&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-- Disable Bugsnag Telemetry
-- Disable General Telemetry
-- Remove Promoted Pins
+[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+- Anti-delete messages
+- Anti-disappearing media
+- Anti-screenshot notification
+- Bypass channel restrictions
+- Bypass integrity
+- Disable analytics
+- Disable auto update
+- Hide typing indicator
+- Plus Premium
+- Remove ads
 </blockquote>
 </details>
 
