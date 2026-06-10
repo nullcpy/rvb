@@ -674,6 +674,27 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 ---
 
+### [Lumina Wallpapers](https://play.google.com/store/apps/details?id=com.lumina.wallpapers)
+
+`com.lumina.wallpapers`
+
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="lumina-wallpapers-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=fbcf2e&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Disable Bugsnag Telemetry
+- Disable General Telemetry
+- Remove Promoted Pins
+</blockquote>
+</details>
+
+---
+
 <a id="apps-m"></a>
 ### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
 
@@ -879,6 +900,27 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <details>
 <summary id="pinterest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Disable Bugsnag Telemetry
+- Disable General Telemetry
+- Remove Promoted Pins
+</blockquote>
+</details>
+
+---
+
+### [Plus Messenger](https://play.google.com/store/apps/details?id=org.telegram.plus)
+
+`org.telegram.plus`
+
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="plus-messenger-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=009688&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
