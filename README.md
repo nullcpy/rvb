@@ -231,7 +231,7 @@ Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomato
 
 `com.cricbuzz.android`
 
-#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
 <summary id="cricbuzz-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.24.01-gray?labelColor=009270&logo=android&logoColor=white&style=flat"></summary>
