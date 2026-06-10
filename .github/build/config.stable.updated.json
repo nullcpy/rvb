@@ -907,7 +907,7 @@
     "enabled": true,
     "app-name": "automate",
     "rv-brand": "morphe",
-    "build-mode": "apk",
+    "build-mode": "both",
     "arch": "both",
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
