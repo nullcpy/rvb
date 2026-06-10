@@ -453,6 +453,28 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
 
+[plus-messenger-morphe]
+enabled = true
+app-name = "plus-messenger"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
+
+[lumina-walls-morphe]
+enabled = true
+app-name = "lumina-walls"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
+
 [wallcraft-morphe]
 enabled = true
 app-name = "wallcraft"
