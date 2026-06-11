@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/331)<br>
-Patches: [BholeyKaBhakt/patches-2.5.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.5.0)
+[Release 2026-06-11](https://github.com/nullcpy/rvb/releases/tag/333)<br>
+Patches: [BholeyKaBhakt/patches-2.6.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.0)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.5.0.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/331)<br>
-Patches: [BholeyKaBhakt/patches-2.5.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.5.0)
+[Release 2026-06-11](https://github.com/nullcpy/rvb/releases/tag/333)<br>
+Patches: [BholeyKaBhakt/patches-2.6.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.0)
 - Purchase All Items
 </blockquote>
 </details>
@@ -1255,8 +1255,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/331)<br>
-Patches: [BholeyKaBhakt/patches-2.5.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.5.0)
+[Release 2026-06-11](https://github.com/nullcpy/rvb/releases/tag/333)<br>
+Patches: [BholeyKaBhakt/patches-2.6.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.0)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
