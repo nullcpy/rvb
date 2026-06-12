@@ -1090,10 +1090,11 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/336)<br>
-Patches: [jkennethcarino/patches-1.2.0-dev.4.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.4)
+[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/338)<br>
+Patches: [jkennethcarino/patches-1.2.0-dev.5.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.5)
 - Colorize comment indent lines
 - Disable home feed swipe
+- Disable home screen redirect
 - Disable post detail swipe
 - Disable screenshot banner
 - Hide post view counts
