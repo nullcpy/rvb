@@ -2729,7 +2729,7 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/344)<br>
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/345)<br>
 Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
 - Bypass certificate checks
 - Change header
