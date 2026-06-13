@@ -10,6 +10,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-revanced": {
@@ -21,6 +23,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
@@ -31,7 +35,9 @@
     "arch": "both",
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "dpi": "nodpi anydpi"
   },
   "messenger-revanced": {
     "enabled": false,
@@ -41,7 +47,9 @@
     "arch": "both",
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android"
+    "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/messenger",
+    "dpi": "nodpi anydpi"
   },
   "youtube-anddea": {
     "enabled": false,
@@ -53,6 +61,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
@@ -65,6 +75,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
@@ -76,6 +88,8 @@
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "twitter-morphe-materialu": {
@@ -88,6 +102,8 @@
     "included-patches": "'Bring back twitter' 'Dynamic color'",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "instagram-morphe-piko": {
@@ -99,11 +115,13 @@
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -111,10 +129,12 @@
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -122,10 +142,12 @@
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -133,6 +155,8 @@
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
@@ -143,7 +167,9 @@
     "arch": "both",
     "patches-source": "RookieEnough/De-ReVanced",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "dpi": "nodpi anydpi"
   },
   "instagram-morphe": {
     "enabled": false,
@@ -154,6 +180,8 @@
     "patches-source": "brosssh/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "tiktok-morphe": {
@@ -165,6 +193,8 @@
     "patches-source": "icysymmetra/tiktok-patches-for-morphe",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "reddit-morphe-adobo": {
@@ -175,7 +205,10 @@
     "arch": "both",
     "patches-source": "jkennethcarino/adobo",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
+    "dpi": "nodpi anydpi",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "proton-mail-revanced": {
     "enabled": false,
@@ -186,18 +219,9 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://protonmail.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
-  },
-  "samsung-radio-revanced": {
-    "enabled": false,
-    "app-name": "samsung-radio",
-    "rv-brand": "revanced",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "ReVanced/revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://samsung-radio.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
   },
   "lightroom-revanced": {
     "enabled": false,
@@ -217,7 +241,9 @@
     "arch": "arm64-v8a",
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://adobe-photoshop-mix.en.uptodown.com/android"
+    "uptodown-dlurl": "https://adobe-photoshop-mix.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/adobe/lightroom/",
+    "dpi": "nodpi anydpi"
   },
   "duolingo-revanced": {
     "enabled": false,
@@ -228,6 +254,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/duolingo/duolingo-duolingo",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
   },
   "twitch-revanced": {
@@ -240,6 +268,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/twitch-interactive-inc/twitch",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/tv.twitch.android.app"
   },
   "twitter-revanced": {
@@ -250,7 +280,9 @@
     "arch": "both",
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://twitter.en.uptodown.com/android"
+    "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
+    "dpi": "nodpi anydpi"
   },
   "tiktok-revanced": {
     "enabled": false,
@@ -261,6 +293,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "soundcloud-revanced": {
@@ -271,7 +305,9 @@
     "arch": "both",
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android"
+    "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
+    "dpi": "nodpi anydpi"
   },
   "google-recorder-revanced": {
     "enabled": false,
@@ -282,6 +318,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://opnemer.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/google-recorder/",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "proton-vpn-revanced": {
@@ -293,6 +331,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://protonvpn.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "instagram-revanced": {
@@ -306,6 +346,8 @@
     "included-patches": "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'",
     "exclusive-patches": true,
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "threads-revanced": {
@@ -317,6 +359,8 @@
     "patches-source": "ReVanced/revanced-patches",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://threads.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "threads-morphe": {
@@ -328,6 +372,8 @@
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://threads.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "soundcloud-morphe": {
@@ -339,7 +385,9 @@
     "patches-source": "hoo-dles/morphe-patches",
     "included-patches": "'AMOLED dark theme'",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android"
+    "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
+    "dpi": "nodpi anydpi"
   },
   "proton-mail-morphe": {
     "enabled": false,
@@ -350,6 +398,8 @@
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://protonmail.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "google-recorder-morphe": {
@@ -361,6 +411,8 @@
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://opnemer.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/google-recorder/",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "rar-morphe": {
@@ -371,7 +423,9 @@
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://rar-for-android.en.uptodown.com/android"
+    "uptodown-dlurl": "https://rar-for-android.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/rar-lab/rar-for-android",
+    "dpi": "nodpi anydpi"
   },
   "microsoft-lens-morphe": {
     "enabled": false,
@@ -381,7 +435,9 @@
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://office-lens.en.uptodown.com/android"
+    "uptodown-dlurl": "https://office-lens.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
+    "dpi": "nodpi anydpi"
   },
   "google-news-morphe": {
     "enabled": false,
@@ -391,7 +447,9 @@
     "arch": "both",
     "patches-source": "docbt/patched-up",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://google-play-newsstand.en.uptodown.com/android"
+    "uptodown-dlurl": "https://google-play-newsstand.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/google-news/",
+    "dpi": "nodpi anydpi"
   },
   "youtube-anddea-nord": {
     "enabled": false,
@@ -404,6 +462,8 @@
     "included-patches": "'MaterialYou'",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-nord": {
@@ -416,6 +476,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-anddea-mocha": {
@@ -429,6 +491,8 @@
     "included-patches": "'MaterialYou'",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-mocha": {
@@ -441,10 +505,12 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-nord": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-nord",
     "build-mode": "both",
@@ -453,10 +519,12 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-mocha": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-mocha",
     "build-mode": "both",
@@ -465,6 +533,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-revanced-nord": {
@@ -477,6 +547,8 @@
     "cli-source": "ReVanced/revanced-cli",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-revanced-mocha": {
@@ -489,10 +561,12 @@
     "cli-source": "ReVanced/revanced-cli",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -500,10 +574,12 @@
     "version": "latest",
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://youtube.en.uptodown.com/android"
+    "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
+    "dpi": "nodpi anydpi"
   },
   "youtube-music-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -511,10 +587,12 @@
     "arch": "both",
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android"
+    "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
+    "dpi": "nodpi anydpi"
   },
   "reddit-morphe-exp": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -522,7 +600,9 @@
     "version": "latest",
     "patches-source": "MorpheApp/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android"
+    "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
+    "dpi": "nodpi anydpi"
   },
   "telegram-revanced-gplay": {
     "enabled": false,
@@ -532,7 +612,9 @@
     "arch": "both",
     "patches-source": "Aunali321/ReVancedExperiments",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android"
+    "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram",
+    "dpi": "nodpi anydpi"
   },
   "telegram-revanced-foss": {
     "enabled": false,
@@ -542,7 +624,9 @@
     "arch": "both",
     "patches-source": "Aunali321/ReVancedExperiments",
     "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
+    "uptodown-dlurl": "https://telegram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version",
+    "dpi": "nodpi anydpi"
   },
   "messenger-morphe": {
     "enabled": false,
@@ -554,6 +638,8 @@
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/messenger",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.orca"
   },
   "duolingo-morphe": {
@@ -565,7 +651,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.duolingo"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo",
+    "dpi": "nodpi anydpi"
   },
   "wps-office-morphe": {
     "enabled": false,
@@ -576,7 +663,9 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "version": "18.12.1",
-    "uptodown-dlurl": "https://wps-office.en.uptodown.com/android"
+    "uptodown-dlurl": "https://wps-office.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf",
+    "dpi": "nodpi anydpi"
   },
   "cricbuzz-morphe": {
     "enabled": false,
@@ -587,7 +676,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
+    "uptodown-dlurl": "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news",
+    "dpi": "nodpi anydpi"
   },
   "plus-messenger-morphe": {
     "enabled": false,
@@ -598,7 +689,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://telegram-plus.en.uptodown.com/android"
+    "uptodown-dlurl": "https://telegram-plus.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/rafalense/plus-messenger",
+    "dpi": "nodpi anydpi"
   },
   "lumina-wallpapers-morphe": {
     "enabled": false,
@@ -619,7 +712,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android"
+    "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds",
+    "dpi": "nodpi anydpi"
   },
   "solid-explorer-morphe": {
     "enabled": false,
@@ -629,7 +724,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android"
+    "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
+    "dpi": "nodpi anydpi"
   },
   "photomath-morphe": {
     "enabled": false,
@@ -639,7 +736,9 @@
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://photomath.en.uptodown.com/android"
+    "uptodown-dlurl": "https://photomath.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
+    "dpi": "nodpi anydpi"
   },
   "icon-packer-morphe": {
     "enabled": false,
@@ -649,6 +748,8 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
+    "apkpure-dlurl": "https://apkpure.com/icon-packer/cn.ommiao.iconpacker",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
@@ -660,6 +761,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://podcast-addict.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "reddit-anddea": {
@@ -671,6 +774,8 @@
     "patches-source": "anddea/revanced-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/redditinc/reddit/",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "pinterest-morphe": {
@@ -681,7 +786,9 @@
     "arch": "both",
     "patches-source": "binarymend/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
+    "uptodown-dlurl": "https://pinterest.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration",
+    "dpi": "nodpi anydpi"
   },
   "document-scanner-morphe": {
     "enabled": false,
@@ -692,7 +799,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android"
+    "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator",
+    "dpi": "nodpi anydpi"
   },
   "smart-launcher-6-morphe": {
     "enabled": false,
@@ -704,6 +813,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://smart-launcher.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
   },
   "merriam-webster-dictionary-morphe": {
@@ -715,6 +826,8 @@
     "version": "5.5.0",
     "patches-source": "hoo-dles/morphe-patches",
     "uptodown-dlurl": "https://merriam-webster-dictionary.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.merriamwebster"
   },
   "tumblr-morphe": {
@@ -724,7 +837,9 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
-    "uptodown-dlurl": "https://tumblr.en.uptodown.com/android"
+    "uptodown-dlurl": "https://tumblr.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tumblr-inc/tumblr",
+    "dpi": "nodpi anydpi"
   },
   "viber-morphe": {
     "enabled": false,
@@ -733,7 +848,8 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
   "pandora-morphe": {
@@ -743,7 +859,8 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts/",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
   },
   "xrecorder-morphe": {
@@ -754,7 +871,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
+    "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder",
+    "dpi": "nodpi anydpi"
   },
   "adguard-morphe": {
     "enabled": false,
@@ -764,7 +883,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://adguard-for-android.en.uptodown.com/android"
+    "uptodown-dlurl": "https://adguard-for-android.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/adguard-software-limited/adguard",
+    "dpi": "nodpi anydpi"
   },
   "moonplus-reader-morphe": {
     "enabled": false,
@@ -774,7 +895,9 @@
     "arch": "both",
     "patches-source": "binarymend/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://moon-reader.en.uptodown.com/android"
+    "uptodown-dlurl": "https://moon-reader.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/moon/moon-reader",
+    "dpi": "nodpi anydpi"
   },
   "symfonium-morphe": {
     "enabled": false,
@@ -785,6 +908,8 @@
     "patches-source": "binarymend/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://symfonium.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/app.symfonik.music.player"
   },
   "calcnote-morphe": {
@@ -795,7 +920,9 @@
     "arch": "both",
     "patches-source": "binarymend/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
+    "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator",
+    "dpi": "nodpi anydpi"
   },
   "eyecon-morphe": {
     "enabled": false,
@@ -806,7 +933,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
+    "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block",
+    "dpi": "nodpi anydpi"
   },
   "ticktick-morphe": {
     "enabled": false,
@@ -817,7 +946,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://ticktick.en.uptodown.com/android"
+    "uptodown-dlurl": "https://ticktick.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner",
+    "dpi": "nodpi anydpi"
   },
   "nova-launcher-morphe": {
     "enabled": false,
@@ -828,6 +959,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://nova-launcher.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
   },
   "ventusky-morphe": {
@@ -839,6 +972,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://ventusky-weather-maps-and-radar.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
   },
   "facebook-morphe": {
@@ -850,7 +985,8 @@
     "patches-source": "MeridianFresco/morphe-meta-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.katana"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
+    "dpi": "nodpi anydpi"
   },
   "trakt-morphe": {
     "enabled": false,
@@ -860,7 +996,9 @@
     "arch": "all",
     "patches-source": "PixelPusher247/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://trakt.en.uptodown.com/android"
+    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
+    "dpi": "nodpi anydpi"
   },
   "imdb-morphe": {
     "enabled": false,
@@ -870,7 +1008,9 @@
     "arch": "all",
     "patches-source": "jkennethcarino/adobo",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://imdb-cine-tv.en.uptodown.com/android"
+    "uptodown-dlurl": "https://imdb-cine-tv.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/imdb/imdb-imdb",
+    "dpi": "nodpi anydpi"
   },
   "camscanner-morphe": {
     "enabled": false,
@@ -881,7 +1021,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://camscanner-pdf-creator.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.intsig.camscanner"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator",
+    "dpi": "nodpi anydpi"
   },
   "niagara-launcher-morphe": {
     "enabled": false,
@@ -891,7 +1032,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://niagara-launcher.en.uptodown.com/android"
+    "uptodown-dlurl": "https://niagara-launcher.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean",
+    "dpi": "nodpi anydpi"
   },
   "instagram-revanced-exp": {
     "enabled": false,
@@ -902,6 +1045,8 @@
     "patches-source": "Aunali321/ReVancedExperiments",
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "github-morphe": {
@@ -914,7 +1059,8 @@
     "included-patches": "'AMOLED dark theme'",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://github-android.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.github.android"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/github/github-2",
+    "dpi": "nodpi anydpi"
   },
   "cryptomator-morphe": {
     "enabled": false,
@@ -927,34 +1073,40 @@
     "direct-dlurl": "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
   },
   "automate-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "automate",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://automate-beta.en.uptodown.com/android"
+    "uptodown-dlurl": "https://automate-beta.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/llamalab/automate-llamalab",
+    "dpi": "nodpi anydpi"
   },
   "speedtest-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "speedtest",
     "rv-brand": "morphe",
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://speedtest-net-mobile.en.uptodown.com/android"
+    "uptodown-dlurl": "https://speedtest-net-mobile.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
+    "dpi": "nodpi anydpi"
   },
   "autosync-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "autosync",
     "rv-brand": "morphe",
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://autosync.en.uptodown.com/android"
+    "uptodown-dlurl": "https://autosync.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/metactrl/autosync-universal-cloud-sync-and-backup",
+    "dpi": "nodpi anydpi"
   },
   "sdmaid-morphe": {
     "enabled": false,
@@ -966,7 +1118,8 @@
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/eu.darken.sdmse"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner",
+    "dpi": "nodpi anydpi"
   },
   "proton-vpn-morphe-paresh": {
     "enabled": false,
@@ -978,6 +1131,8 @@
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://protonvpn.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
@@ -989,7 +1144,9 @@
     "arch": "both",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://showly-2-0.en.uptodown.com/android"
+    "uptodown-dlurl": "https://showly-2-0.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
+    "dpi": "nodpi anydpi"
   },
   "truecaller-morphe": {
     "enabled": false,
@@ -1001,6 +1158,8 @@
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
@@ -1012,7 +1171,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
+    "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/fing-limited/fing-network-tools",
+    "dpi": "nodpi anydpi"
   },
   "telegram-morphe-foss": {
     "enabled": false,
@@ -1023,7 +1184,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://telegram.en.uptodown.com/android"
+    "uptodown-dlurl": "https://telegram.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version",
+    "dpi": "nodpi anydpi"
   },
   "proton-vpn-morphe": {
     "enabled": false,
@@ -1034,6 +1197,8 @@
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://protonvpn.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "gboard-morphe": {
@@ -1045,6 +1210,8 @@
     "patches-source": "jkennethcarino/adobo",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
+    "dpi": "nodpi anydpi",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "macrodroid-morphe": {
@@ -1056,7 +1223,9 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
+    "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2",
+    "dpi": "nodpi anydpi"
   },
   "hellochinese-morphe": {
     "enabled": false,
@@ -1066,6 +1235,20 @@
     "arch": "arm64-v8a",
     "patches-source": "hoo-dles/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://hellochinese.en.uptodown.com/android"
+    "uptodown-dlurl": "https://hellochinese.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese",
+    "dpi": "nodpi anydpi"
+  },
+  "inshorts-morphe": {
+    "enabled": true,
+    "app-name": "inshorts",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://inshorts.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2/",
+    "dpi": "nodpi anydpi"
   }
 }
