@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/339)<br>
-Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.1)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
+Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/339)<br>
-Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.1)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
+Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
 - Purchase All Items
 </blockquote>
 </details>
@@ -686,8 +686,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/345)<br>
-Patches: [BholeyKaBhakt/patches-2.7.0-dev.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0-dev.1)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
+Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -1291,8 +1291,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/339)<br>
-Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.1)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
+Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
