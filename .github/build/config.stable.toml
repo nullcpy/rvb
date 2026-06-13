@@ -7,20 +7,9 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-
-[samsung-radio-revanced]
-enabled = false
-app-name = "samsung-radio"
-rv-brand = "revanced"
-build-mode = "apk"
-arch = "both"
-patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
-uptodown-dlurl = "https://samsung-radio.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/samsung-electronics-co-ltd/samsung-radio/"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.sec.android.app.fm"
 
 [lightroom-revanced]
 enabled = true
@@ -43,7 +32,8 @@ arch = "arm64-v8a"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [duolingo-revanced]
@@ -55,8 +45,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
@@ -69,8 +59,8 @@ version = "25.3.0"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
@@ -82,8 +72,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
@@ -95,8 +85,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [soundcloud-revanced]
@@ -108,7 +98,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+dpi = "nodpi anydpi"
 
 [google-recorder-revanced]
 enabled = true 
@@ -119,8 +110,8 @@ arch = "arm64-v8a"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
-# dpi = "480-640dpi 120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
@@ -132,7 +123,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [instagram-revanced]
@@ -146,8 +138,8 @@ cli-source = "ReVanced/revanced-cli"
 included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [threads-revanced]
@@ -159,6 +151,8 @@ arch = "both"
 patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
 [threads-morphe]
@@ -170,6 +164,8 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
 [soundcloud-morphe]
@@ -182,7 +178,8 @@ patches-source = "hoo-dles/morphe-patches"
 included-patches = "'AMOLED dark theme'"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+dpi = "nodpi anydpi"
 
 [proton-mail-morphe]
 enabled = true
@@ -193,7 +190,8 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [google-recorder-morphe]
@@ -205,8 +203,8 @@ arch = "arm64-v8a"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
-# dpi = "480-640dpi 120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [rar-morphe]
@@ -218,6 +216,8 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
+dpi = "nodpi anydpi"
 
 [microsoft-lens-morphe]
 enabled = true
@@ -228,6 +228,8 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
+dpi = "nodpi anydpi"
 
 [google-news-morphe]
 enabled = true
@@ -239,6 +241,8 @@ patches-source = "docbt/patched-up"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
+dpi = "nodpi anydpi"
 
 [youtube-anddea-nord]
 enabled = true
@@ -251,7 +255,8 @@ cli-source = "MorpheApp/morphe-cli"
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-nord]
@@ -264,7 +269,8 @@ patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-anddea-mocha]
@@ -278,7 +284,8 @@ cli-source = "MorpheApp/morphe-cli"
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-anddea-mocha]
@@ -291,7 +298,8 @@ patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-morphe-nord]
@@ -304,7 +312,8 @@ patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
@@ -317,7 +326,8 @@ patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-nord]
@@ -330,7 +340,8 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-mocha]
@@ -343,7 +354,8 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-exp]
@@ -356,7 +368,8 @@ version = "latest"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-morphe-exp]
@@ -369,7 +382,8 @@ arch = "both"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [reddit-morphe-exp]
@@ -382,8 +396,8 @@ version = "latest"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [telegram-revanced-gplay]
@@ -395,6 +409,8 @@ arch = "both"
 patches-source = "Aunali321/ReVancedExperiments"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
+dpi = "nodpi anydpi"
 
 [telegram-revanced-foss]
 enabled = true 
@@ -405,6 +421,9 @@ arch = "both"
 patches-source = "Aunali321/ReVancedExperiments"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/org.telegram.messenger"
 
 [messenger-morphe]
 enabled = true
@@ -416,6 +435,8 @@ version = "552.0.0.44.65"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
 
 [duolingo-morphe]
@@ -427,9 +448,9 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [wps-office-morphe]
 enabled = true
@@ -441,6 +462,9 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 version = "18.12.1"
 uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [cricbuzz-morphe]
 enabled = true
@@ -452,6 +476,9 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [plus-messenger-morphe]
 enabled = true
@@ -463,6 +490,9 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rafalense/plus-messenger"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [lumina-wallpapers-morphe]
 enabled = true
@@ -474,6 +504,9 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/99-dots-team/lumina-wallpapers-4k-backgrounds"
+# dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [wallcraft-morphe]
 enabled = true
@@ -484,6 +517,9 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://wallpaperscraft.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [solid-explorer-morphe]
 enabled = true
@@ -494,6 +530,9 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [photomath-morphe]
 enabled = true
@@ -504,6 +543,9 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
+dpi = "nodpi anydpi"
+# archive-dlurl = ""
 
 [icon-packer-morphe]
 enabled = true
@@ -513,6 +555,8 @@ build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
+apkpure-dlurl = "https://apkpure.com/icon-packer/cn.ommiao.iconpacker"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
 
 [podcast-addict-morphe]
@@ -524,7 +568,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [reddit-anddea]
@@ -536,6 +581,8 @@ arch = "both"
 patches-source = "anddea/revanced-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [pinterest-morphe]
@@ -547,7 +594,8 @@ arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
 
 [document-scanner-morphe]
@@ -561,6 +609,8 @@ patches-source-host = "gitlab"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [smart-launcher-6-morphe]
@@ -573,6 +623,8 @@ version = "6.6 build 002 patch 1"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [merriam-webster-dictionary-morphe]
@@ -584,6 +636,8 @@ arch = "both"
 version = "5.5.0" 
 patches-source = "hoo-dles/morphe-patches"
 uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
 
 [tumblr-morphe]
@@ -594,6 +648,9 @@ build-mode = "apk"
 arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
 
 [viber-morphe]
 enabled = true 
@@ -603,7 +660,8 @@ build-mode = "apk"
 arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 # github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.viber.voip"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
 [pandora-morphe]
@@ -614,7 +672,8 @@ build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 # github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.pandora.android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
 
 [xrecorder-morphe]
@@ -626,6 +685,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [adguard-morphe]
@@ -637,7 +698,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [moonplus-reader-morphe]
@@ -649,7 +711,8 @@ arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/moon/moon-reader"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [symfonium-morphe]
@@ -661,7 +724,8 @@ arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
 
 [calcnote-morphe]
@@ -673,7 +737,8 @@ arch = "both"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [eyecon-morphe]
@@ -686,7 +751,8 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [ticktick-morphe]
@@ -699,7 +765,8 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [nova-launcher-morphe]
@@ -711,7 +778,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/teslacoilsw/nova-launcher/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
 
 [ventusky-morphe]
@@ -723,7 +791,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://ventusky-weather-maps-and-radar.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/infinicode-studio-s-r-o/ventusky/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
 
 [facebook-morphe]
@@ -735,7 +804,9 @@ arch = "both"
 patches-source = "MeridianFresco/morphe-meta-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
 
 [trakt-morphe]
 enabled = true
@@ -746,6 +817,8 @@ arch = "all"
 patches-source = "PixelPusher247/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+dpi = "nodpi anydpi"
 # archive-dlurl = ""
 
 [imdb-morphe]
@@ -757,6 +830,8 @@ arch = "all"
 patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
+dpi = "nodpi anydpi"
 # archive-dlurl = ""
 
 [camscanner-morphe]
@@ -768,8 +843,9 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.intsig.camscanner"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.intsig.camscanner"
 
 [niagara-launcher-morphe]
 enabled = true
@@ -780,6 +856,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
 
 [instagram-revanced-exp]
@@ -791,7 +869,8 @@ arch = "both"
 patches-source = "Aunali321/ReVancedExperiments"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [github-morphe]
@@ -804,7 +883,9 @@ patches-source = "hoo-dles/morphe-patches"
 included-patches = "'AMOLED dark theme'"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://github-android.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/github/github-2"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
 
 [cryptomator-morphe]
 enabled = true 
@@ -825,6 +906,8 @@ arch = "both"
 patches-source = "BholeyKaBhakt/revanced-patches-xtra"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://automate-beta.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/llamalab/automate-llamalab"
+dpi = "nodpi anydpi"
 
 [speedtest-morphe]
 enabled = true 
@@ -835,6 +918,8 @@ arch = "both"
 patches-source = "BholeyKaBhakt/revanced-patches-xtra"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ookla/speedtest"
+dpi = "nodpi anydpi"
 
 [autosync-morphe]
 enabled = true
@@ -846,6 +931,8 @@ patches-source = "BholeyKaBhakt/revanced-patches-xtra"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://autosync.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/metactrl/autosync-universal-cloud-sync-and-backup"
+dpi = "nodpi anydpi"
 
 [sdmaid-morphe]
 enabled = true 
@@ -857,7 +944,9 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
 
 [proton-vpn-morphe-paresh]
 enabled = true
@@ -869,7 +958,8 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
 
@@ -882,6 +972,9 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.showly"
 
 [truecaller-morphe]
 enabled = true
@@ -893,7 +986,8 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
 [fing-morphe]
@@ -906,7 +1000,8 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [telegram-morphe-foss]
@@ -919,6 +1014,9 @@ patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/org.telegram.messenger"
 
 [proton-vpn-morphe]
 enabled = true
@@ -929,7 +1027,8 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [gboard-morphe]
@@ -941,6 +1040,8 @@ arch = "both"
 patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
 [macrodroid-morphe]
@@ -954,6 +1055,8 @@ patches-source-host = "gitlab"
 # patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [hellochinese-morphe]
@@ -965,6 +1068,8 @@ arch = "arm64-v8a"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese"
+dpi = "nodpi anydpi"
 
 
 
