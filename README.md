@@ -2725,12 +2725,38 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.21.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.22.53-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/296)<br>
-Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/344)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+- Bypass certificate checks
+- Change header
+- Change miniplayer color
+- Change start page
+- Check watch history domain name resolution
+- Custom branding
+- Disable DRC audio
+- Disable QUIC protocol
+- Enable debugging
+- Enable exclusive audio playback
+- Enable forced miniplayer
+- Enable swipe to dismiss miniplayer
+- Force original audio
+- GmsCore support
+- Hide ads
+- Hide buttons
+- Hide category bar
+- Hide music video ads
+- Miniplayer previous and next buttons
+- Navigation bar
+- Permanent repeat
+- Remove background playback restrictions
+- Sanitize sharing links
+- Spoof video streams
+- Theme
+- Track crossfade
 </blockquote>
 </details>
 
