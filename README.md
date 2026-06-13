@@ -675,6 +675,26 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 ---
 
+### [Inshorts](https://play.google.com/store/apps/details?id=com.nis.app)
+
+`com.nis.app`
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
+
+<details>
+<summary id="inshorts-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.3-gray?labelColor=f44336&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/339)<br>
+Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.1)
+- AdFree Account
+- Disable Logging(analytics)
+</blockquote>
+</details>
+
+---
+
 ### [Lumina Wallpapers](https://play.google.com/store/apps/details?id=com.lumina.wallpapers)
 
 `com.lumina.wallpapers`
