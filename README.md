@@ -682,14 +682,14 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="inshorts-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.3-gray?labelColor=f44336&logo=android&logoColor=white&style=flat"></summary>
+<summary id="inshorts-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.12.15-gray?labelColor=f44336&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/339)<br>
-Patches: [BholeyKaBhakt/patches-2.6.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.6.1)
-- AdFree Account
-- Disable Logging(analytics)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/345)<br>
+Patches: [BholeyKaBhakt/patches-2.7.0-dev.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0-dev.1)
+- Remove Ads
+- Skip Login
 </blockquote>
 </details>
 
