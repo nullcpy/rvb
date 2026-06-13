@@ -12,7 +12,8 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [lightroom-revanced]
@@ -22,7 +23,8 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "arm64-v8a"
 # uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [duolingo-revanced]
@@ -32,8 +34,8 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
@@ -44,8 +46,8 @@ build-mode = "apk"
 arch = "both"
 version = "25.3.0"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
@@ -55,9 +57,9 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# dpi = "120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+dpi = "nodpi anydpi"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [soundcloud-revanced]
 enabled = true
@@ -66,7 +68,9 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.soundcloud.android"
 
 [google-recorder-revanced]
 enabled = true 
@@ -75,8 +79,8 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "arm64-v8a"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
-# dpi = "480-640dpi 120-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
@@ -86,7 +90,8 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [threads-revanced]
@@ -96,6 +101,8 @@ rv-brand = "revanced"
 build-mode = "apk"
 arch = "both"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
 [youtube-revanced]
@@ -105,7 +112,8 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-music-revanced]
@@ -115,7 +123,8 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [youtube-revanced-nord]
@@ -126,7 +135,8 @@ build-mode = "both"
 arch = "both"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-mocha]
@@ -137,7 +147,8 @@ build-mode = "both"
 arch = "both"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [google-photos-revanced]
@@ -147,7 +158,8 @@ rv-brand = "revanced"
 build-mode = "both"
 arch = "both"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-# apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [messenger-revanced]
@@ -158,8 +170,8 @@ build-mode = "apk"
 arch = "both"
 version = "552.0.0.44.65"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# dpi = "360-480dpi nodpi anydpi"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca/"
 
 [instagram-revanced]
@@ -171,8 +183,8 @@ arch = "both"
 included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu' 'Disable analytics' 'Open links externally' 'Remove build expired popup' 'Sanitize sharing links'"
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# dpi = "160-480dpi 320dpi 480dpi 480-640dpi nodpi anydpi"
-# apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 
