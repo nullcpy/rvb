@@ -1,39 +1,16 @@
 parallel-jobs = 1
 # patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[cricbuzz-morphe]
+[youtube-music-morphe-exp]
 enabled = true
-app-name = "cricbuzz"
-rv-brand = "morphe"
-build-mode = "apk"
+app-name = "youtube-music"
+rv-brand = "morphe-exp"
+build-mode = "both"
+version = "9.22.53"
 arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
+patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
-
-[plus-messenger-morphe]
-enabled = true
-app-name = "plus-messenger"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
-
-[lumina-wallpapers-morphe]
-enabled = true
-app-name = "lumina-wallpapers"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
-
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
