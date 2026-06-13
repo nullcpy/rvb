@@ -1054,8 +1054,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/336)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.13.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.13)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1074,12 +1074,26 @@ Patches: [MorpheApp/patches-1.31.0-dev.13.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.21.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.23.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/296)<br>
-Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+- Disable modern home
+- Disable screenshot popup
+- Hide Ask button
+- Hide Trending Today shelf
+- Hide ads
+- Hide navigation buttons
+- Hide recommended communities shelf
+- Hide sidebar components
+- Open links directly
+- Open links externally
+- Remove subreddit dialog
+- Sanitize sharing links
+- Show view count
+- Spoof signature
 </blockquote>
 </details>
 
@@ -1851,8 +1865,8 @@ Patches: [hoo-dles/patches-1.35.1.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/336)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.13.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.13)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -1930,8 +1944,77 @@ Patches: [MorpheApp/patches-1.31.0-dev.13.mpp](https://github.com/MorpheApp/morp
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/296)<br>
-Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+- Alternative thumbnails
+- Ambient mode
+- Bypass image region restrictions
+- Bypass link redirects
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video link
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Media notification controls
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open channel of live avatar
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music buttons
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Save to watch later
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
@@ -1940,18 +2023,156 @@ Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/296)<br>
-Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+- Alternative thumbnails
+- Ambient mode
+- Bypass image region restrictions
+- Bypass link redirects
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video link
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Media notification controls
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open channel of live avatar
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music buttons
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Save to watch later
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.22.164-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.24.363-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/296)<br>
-Patches: [MorpheApp/patches-1.30.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.30.0)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+- Alternative thumbnails
+- Ambient mode
+- Bypass image region restrictions
+- Bypass link redirects
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video link
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Media notification controls
+- Miniplayer
+- Navigation bar
+- Open Shorts in regular player
+- Open channel of live avatar
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music buttons
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Save to watch later
+- Seekbar
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video ads
+- Video quality
 </blockquote>
 </details>
 
@@ -2472,8 +2693,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/336)<br>
-Patches: [MorpheApp/patches-1.31.0-dev.13.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.13)
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
+Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
