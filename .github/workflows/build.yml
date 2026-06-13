@@ -31,6 +31,11 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    services:
+      flaresolverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
     steps:
       - name: Setup java
         uses: actions/setup-java@v5
