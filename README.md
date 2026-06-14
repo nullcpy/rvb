@@ -584,8 +584,8 @@ Patches: [brosssh/patches-2.6.4-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-08](https://github.com/nullcpy/rvb/releases/tag/323)<br>
-Patches: [crimera/patches-3.5.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.6)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/350)<br>
+Patches: [crimera/patches-3.5.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.7)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -609,6 +609,7 @@ Patches: [crimera/patches-3.5.0-dev.6.mpp](https://github.com/crimera/piko/relea
 - Disable video autoplay
 - Download media
 - Download voice message
+- External downloader
 - Follow back indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
@@ -1123,8 +1124,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/348)<br>
-Patches: [jkennethcarino/patches-1.2.0-dev.8.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.8)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/350)<br>
+Patches: [jkennethcarino/patches-1.2.0-dev.9.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.9)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
