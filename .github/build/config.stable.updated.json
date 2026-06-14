@@ -198,7 +198,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "reddit-morphe-adobo": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
@@ -1001,7 +1001,7 @@
     "dpi": "nodpi anydpi"
   },
   "imdb-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "imdb",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1202,7 +1202,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonvpn.android"
   },
   "gboard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
