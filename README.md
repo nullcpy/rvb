@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
-Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [BholeyKaBhakt/patches-2.8.2.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.2)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
-Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [BholeyKaBhakt/patches-2.8.2.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.2)
 - Purchase All Items
 </blockquote>
 </details>
@@ -391,11 +391,10 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-05-03](https://github.com/nullcpy/rvb/releases/tag/197)<br>
-Patches: [jkennethcarino/patches-1.2.0-dev.2.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.2)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
 - Always-incognito mode
 - Enable OCR feature
-- Enable Undo feature
 - Enable clipboard in incognito
 </blockquote>
 </details>
@@ -538,12 +537,12 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="imdb-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.2.9.109290300-gray?labelColor=f5c518&logo=imdb&logoColor=black&style=flat"></summary>
+<summary id="imdb-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.3.2-gray?labelColor=f5c518&logo=imdb&logoColor=black&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/199)<br>
-Patches: [jkennethcarino/patches-1.1.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.1.0)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
 - Remove IMDb's ads, trackers, and analytics
 </blockquote>
 </details>
@@ -686,8 +685,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
-Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [BholeyKaBhakt/patches-2.8.2.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.2)
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -1124,8 +1123,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/350)<br>
-Patches: [jkennethcarino/patches-1.2.0-dev.9.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0-dev.9)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
@@ -1289,8 +1288,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
-Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [BholeyKaBhakt/patches-2.8.2.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.2)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
