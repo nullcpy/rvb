@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
-Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
+Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
-Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
+Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
 - Purchase All Items
 </blockquote>
 </details>
@@ -685,8 +685,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
-Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
+Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -1284,12 +1284,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.3-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
+<summary id="speedtest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.0.4-gray?labelColor=242639&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/346)<br>
-Patches: [BholeyKaBhakt/patches-2.7.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.7.0)
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/349)<br>
+Patches: [BholeyKaBhakt/patches-2.8.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.8.1)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
