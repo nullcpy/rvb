@@ -560,8 +560,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-09](https://github.com/nullcpy/rvb/releases/tag/328)<br>
-Patches: [brosssh/patches-2.6.4-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.6.4-dev.1)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
+Patches: [brosssh/patches-2.7.0-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.1)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -1441,19 +1441,24 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-06](https://github.com/nullcpy/rvb/releases/tag/319)<br>
-Patches: [icysymmetra/patches-0.2.0.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
+Patches: [icysymmetra/patches-0.2.0-dev.2.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0-dev.2)
+- Copy comments without username
+- Custom offline videos limit
 - Disable login requirement
 - Downloads
 - Enable Open Debug
 - Feed filter
+- Feed tab navigation
 - Fix Google login
+- Follow diagnostics
 - Playback speed
 - Remember clear display
 - SIM spoof
 - Sanitize sharing links
 - Settings
 - Show seekbar
+- Translate comments
 </blockquote>
 </details>
 
@@ -2201,8 +2206,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/342)<br>
-Patches: [anddea/patches-4.1.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.8)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
+Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.9)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2785,8 +2790,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/342)<br>
-Patches: [anddea/patches-4.1.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.8)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
+Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.9)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
