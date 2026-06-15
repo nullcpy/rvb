@@ -1073,8 +1073,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/352)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.1)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1882,8 +1882,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/352)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.1)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -1900,6 +1900,7 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Disable QUIC protocol
 - Disable Shorts resuming on startup
 - Disable double tap actions
+- Disable fullscreen gestures
 - Disable haptic feedback
 - Disable layout updates
 - Disable player popup panels
@@ -2710,8 +2711,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/352)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
