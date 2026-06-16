@@ -52,7 +52,7 @@
     "dpi": "nodpi anydpi"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -66,7 +66,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -80,7 +80,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -93,7 +93,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "twitter-morphe-materialu": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
@@ -107,7 +107,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "instagram-morphe-piko": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "apk",
@@ -452,7 +452,7 @@
     "dpi": "nodpi anydpi"
   },
   "youtube-anddea-nord": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -467,7 +467,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-nord": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -481,7 +481,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "youtube-anddea-mocha": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -496,7 +496,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea-mocha": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -1248,7 +1248,7 @@
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://inshorts.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2/",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
     "dpi": "nodpi anydpi"
   }
 }
