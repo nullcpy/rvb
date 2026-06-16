@@ -3,5 +3,15 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-
+[ufo-vpn-morphe]
+enabled = true 
+app-name = "ufo-vpn"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://com-ufovpn-connect-velnet.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/britto-app-centers/ufo-vpn-fastest-secure-proxy"
+dpi = "nodpi anydpi"
 

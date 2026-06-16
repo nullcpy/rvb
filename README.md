@@ -65,7 +65,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; <a href="#apps-u">U</a> &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -1554,6 +1554,28 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 - Block video ads
 - Show deleted messages
 - Settings
+</blockquote>
+</details>
+
+---
+
+<a id="apps-u"></a>
+
+### [UFO VPN](https://play.google.com/store/apps/details?id=com.ufovpn.connect.velnet)
+
+`com.ufovpn.connect.velnet`
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
+
+<details>
+<summary id="ufo-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v53.1-gray?labelColor=10aa4b&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+<blockquote>
+
+[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
+Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+- Enable Premium
 </blockquote>
 </details>
 
