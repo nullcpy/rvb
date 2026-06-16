@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
-Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [BholeyKaBhakt/patches-2.10.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.1)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/rev
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
-Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [BholeyKaBhakt/patches-2.10.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.1)
 - Purchase All Items
 </blockquote>
 </details>
@@ -583,8 +583,8 @@ Patches: [brosssh/patches-2.7.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/355)<br>
-Patches: [crimera/patches-3.5.0-dev.8.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0-dev.8)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [crimera/patches-3.5.0.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -685,8 +685,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
-Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [BholeyKaBhakt/patches-2.10.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.1)
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -1288,8 +1288,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
-Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [BholeyKaBhakt/patches-2.10.1.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.1)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
@@ -2206,8 +2206,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
-Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.9)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2273,12 +2273,12 @@ Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-pat
 </details>
 
 <details>
-<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
+<summary id="youtube-anddea-nord"><b>Nord Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.51.39-gray?labelColor=2E3440&logo=youtube&logoColor=88C0D0&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2304,7 +2304,6 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 - Force player buttons background
 - Fullscreen components
 - GmsCore support
-- Hide accessibility controls dialog
 - Hide action buttons
 - Hide ads
 - Hide comments components
@@ -2346,12 +2345,12 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 </details>
 
 <details>
-<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.05.46-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
+<summary id="youtube-anddea-mocha"><b>Mocha Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v20.51.39-gray?labelColor=1E1E2E&logo=youtube&logoColor=F5E0DC&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2377,7 +2376,6 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 - Force player buttons background
 - Fullscreen components
 - GmsCore support
-- Hide accessibility controls dialog
 - Hide action buttons
 - Hide ads
 - Hide comments components
@@ -2790,8 +2788,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
-Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0-dev.9)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -2833,8 +2831,8 @@ Patches: [anddea/patches-4.1.0-dev.9.mpp](https://github.com/anddea/revanced-pat
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -2876,8 +2874,8 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
+Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
