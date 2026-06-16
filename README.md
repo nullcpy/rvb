@@ -1571,7 +1571,6 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 <summary id="ufo-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v53.1-gray?labelColor=10aa4b&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
-<blockquote>
 
 [Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
 Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
