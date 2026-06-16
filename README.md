@@ -140,8 +140,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/353)<br>
-Patches: [BholeyKaBhakt/patches-2.9.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.9.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
+Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -159,8 +159,8 @@ Patches: [BholeyKaBhakt/patches-2.9.0.mpp](https://github.com/BholeyKaBhakt/reva
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/353)<br>
-Patches: [BholeyKaBhakt/patches-2.9.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.9.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
+Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
 - Purchase All Items
 </blockquote>
 </details>
@@ -681,12 +681,12 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/revanced-patches-xtra)
 
 <details>
-<summary id="inshorts-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.12.15-gray?labelColor=f44336&logo=android&logoColor=white&style=flat"></summary>
+<summary id="inshorts-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.12.18-gray?labelColor=f44336&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/353)<br>
-Patches: [BholeyKaBhakt/patches-2.9.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.9.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
+Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -1288,8 +1288,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/353)<br>
-Patches: [BholeyKaBhakt/patches-2.9.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.9.0)
+[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/356)<br>
+Patches: [BholeyKaBhakt/patches-2.10.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.10.0)
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
