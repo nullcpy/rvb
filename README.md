@@ -560,8 +560,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
-Patches: [brosssh/patches-2.7.0-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.1)
+[Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/361)<br>
+Patches: [brosssh/patches-2.7.0-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.2)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -583,8 +583,8 @@ Patches: [brosssh/patches-2.7.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
-Patches: [crimera/patches-3.5.0.mpp](https://github.com/crimera/piko/releases/tag/v3.5.0)
+[Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/361)<br>
+Patches: [crimera/patches-3.5.1-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.5.1-dev.1)
 - Add settings
 - Allow user network certificate
 - Amoled theme
