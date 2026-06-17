@@ -1441,8 +1441,9 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-15](https://github.com/nullcpy/rvb/releases/tag/354)<br>
-Patches: [icysymmetra/patches-0.2.0-dev.2.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.2.0-dev.2)
+[Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/362)<br>
+Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.3.1)
+- Auto Translate comments
 - Copy comments without username
 - Custom offline videos limit
 - Disable login requirement
@@ -1451,14 +1452,12 @@ Patches: [icysymmetra/patches-0.2.0-dev.2.mpp](https://github.com/icysymmetra/ti
 - Feed filter
 - Feed tab navigation
 - Fix Google login
-- Follow diagnostics
 - Playback speed
 - Remember clear display
 - SIM spoof
 - Sanitize sharing links
 - Settings
 - Show seekbar
-- Translate comments
 </blockquote>
 </details>
 
