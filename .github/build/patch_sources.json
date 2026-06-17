@@ -26,7 +26,7 @@
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.5.0",
-    "prerelease": "v3.5.0-dev.8",
+    "prerelease": "v3.5.1-dev.1",
     "blocked": false
   },
   "hoodles": {
@@ -50,7 +50,7 @@
   "brosssh": {
     "repo": "brosssh/morphe-patches",
     "stable": "v2.6.3",
-    "prerelease": "v2.7.0-dev.1",
+    "prerelease": "v2.7.0-dev.2",
     "blocked": false
   },
   "binarymend": {
@@ -106,7 +106,7 @@
   },
   "tiktok": {
     "repo": "icysymmetra/tiktok-patches-for-morphe",
-    "stable": "v0.2.0",
+    "stable": "v0.3.1",
     "prerelease": "v0.2.0-dev.2",
     "blocked": false
   }

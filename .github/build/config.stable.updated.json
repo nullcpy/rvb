@@ -185,7 +185,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1073,7 +1073,7 @@
     "direct-dlurl": "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
   },
   "automate-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "automate",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1085,7 +1085,7 @@
     "dpi": "nodpi anydpi"
   },
   "speedtest-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "speedtest",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1097,7 +1097,7 @@
     "dpi": "nodpi anydpi"
   },
   "autosync-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "autosync",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1240,7 +1240,7 @@
     "dpi": "nodpi anydpi"
   },
   "inshorts-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "inshorts",
     "rv-brand": "morphe",
     "build-mode": "apk",
