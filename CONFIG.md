@@ -74,7 +74,7 @@ arch = "arm64-v8a"                                         # 'auto', 'arm64-v8a'
 ## Multiple Patch Sources
 
 You can pass multiple patch bundles to the CLI by specifying `patches-source` as a quoted list (same format as `excluded-patches`).
-The CLI merges all bundles into one pool — `included-patches`, `excluded-patches`, and `patcher-args` apply globally across all sources.
+When using multiple sources, the CLI merges the patch bundles. However, please see the **Current Limitations** below regarding `included-patches` and `excluded-patches`.
 
 ```toml
 # single-line format
