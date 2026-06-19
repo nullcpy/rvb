@@ -84,10 +84,10 @@ for table_name in $(toml_get_table_names); do
 	if ! isoneof "$cli_src_host" github gitlab; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
 
 	# Parse patch sources: may be a single string or multiline (quoted list)
-	local IFS=$'\n'
-	local p_srcs=($(list_args "$patches_src" | tr -d \"\')); [ ${#p_srcs[@]} -eq 0 ] && p_srcs=("$patches_src")
-	local p_hosts=($(list_args "$patches_src_host" | tr -d \"\')); [ ${#p_hosts[@]} -eq 0 ] && p_hosts=("$patches_src_host")
-	local p_vers=($(list_args "$patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$patches_ver")
+	IFS=$'\n'
+	p_srcs=($(list_args "$patches_src" | tr -d \"\')); [ ${#p_srcs[@]} -eq 0 ] && p_srcs=("$patches_src")
+	p_hosts=($(list_args "$patches_src_host" | tr -d \"\')); [ ${#p_hosts[@]} -eq 0 ] && p_hosts=("$patches_src_host")
+	p_vers=($(list_args "$patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$patches_ver")
 	unset IFS
 	for h in "${p_hosts[@]}"; do
 		if ! isoneof "$h" github gitlab; then abort "ERROR: patches-source-host '$h' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
@@ -102,18 +102,16 @@ for table_name in $(toml_get_table_names); do
 	app_args[ptjar]=$patches_jar_all
 
 	# Build aggregated patches_ref and changelog_url from all sources
-	local patches_ref_all="" changelog_url_all=""
+	patches_ref_all="" changelog_url_all=""
 	for i in "${!p_srcs[@]}"; do
-		local psrc="${p_srcs[$i]}"
-		local phost="${p_hosts[$i]:-${p_hosts[0]}}"
-		local pver="${p_vers[$i]:-${p_vers[0]}}"
+		psrc="${p_srcs[$i]}"
+		phost="${p_hosts[$i]:-${p_hosts[0]}}"
 		# Find the downloaded jar for this source to get actual version from filename
-		local pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
-		local pfile
+		pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
 		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' 2>/dev/null | sort | tail -1)
 		if [ -n "$pfile" ]; then
-			local pfilename=${pfile##*/}
-			local pver_actual=${pfilename#*-}; pver_actual=${pver_actual%.*}
+			pfilename=${pfile##*/}
+			pver_actual=${pfilename#*-}; pver_actual=${pver_actual%.*}
 			patches_ref_all+="${psrc%%/*}/${pfilename} "
 			if [ "$phost" = github ]; then
 				changelog_url_all+="https://github.com/${psrc}/releases/tag/v${pver_actual#v} "
