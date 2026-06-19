@@ -57,8 +57,17 @@ for key, info in build_data.items():
         current_date = datetime.datetime.now().strftime("%Y-%m-%d")
         patches = info.get("patches", "")
         changelog_url = info.get("changlog", "")
-        if patches and changelog_url:
-            patches_line = f"Patches: [{patches}]({changelog_url})"
+        # Support multiple space-separated patch refs and changelog URLs
+        patch_parts = patches.split() if patches else []
+        url_parts = changelog_url.split() if changelog_url else []
+        if patch_parts and url_parts:
+            linked = [
+                f"[{p}]({u})"
+                for p, u in zip(patch_parts, url_parts)
+            ]
+            patches_line = "Patches: " + ", ".join(linked)
+        elif patch_parts:
+            patches_line = "Patches: " + " ".join(patch_parts)
         else:
             patches_line = f"Patches: {patches}"
 
