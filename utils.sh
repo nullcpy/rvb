@@ -118,28 +118,100 @@ source_release_pick_from_list() {
 }
 
 get_prebuilts() {
-	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host=$4 patches_src=$5 patches_ver=$6
-	pr "Getting prebuilts (${patches_src%/*})" >&2
-	local cl_dir=${patches_src%/*}
+	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host_list=$4 patches_src_list=$5 patches_ver_list=$6
+	
+	local first_patch_src
+	first_patch_src=$(list_args "$patches_src_list" | tr -d \"\' | head -n 1)
+	pr "Getting prebuilts (${first_patch_src%/*})" >&2
+
+	local cl_dir=${first_patch_src%/*}
 	cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
 	[ -d "$cl_dir" ] || mkdir "$cl_dir"
 
-	for src_ver in "$cli_host $cli_src CLI $cli_ver cli" "$patches_host $patches_src Patches $patches_ver patches"; do
-		set -- $src_ver
-		local host=$1 src=$2 tag=$3 ver=${4-} fprefix=$5
+	local host=$cli_host src=$cli_src tag="CLI" ver=${cli_ver} fprefix="cli"
+	host=${host,,}
+	if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
+
+	local grab_cl=false
+	local dir=${src%/*}
+	dir=${TEMP_DIR}/${dir,,}-rv
+	[ -d "$dir" ] || mkdir "$dir"
+
+	local rv_rel release resp tag_name matches asset name url
+	rv_rel=$(source_release_api_base "$host" "$src") || return 1
+	if [ "$ver" = "dev" ]; then
+		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+		ver=$(source_release_pick_from_list "$host" dev <<<"$resp" | jq -r '.tag_name') || true
+		if [ -z "$ver" ] || [ "$ver" = "null" ]; then
+			ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
+		fi
+	fi
+	if [ "$ver" = "latest" ]; then
+		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+		release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
+	else
+		rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
+		release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
+	fi
+	tag_name=$(jq -r '.tag_name' <<<"$release") || return 1
+	name_ver=$tag_name
+
+	local file
+	file=$(find "$dir" -name "*${fprefix}-${name_ver#v}.*" -type f 2>/dev/null | head -1)
+	if [ -z "$file" ]; then
+		matches=$(source_release_assets_json "$host" <<<"$release") || return 1
+		if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
+			local matches_new
+			matches_new=$(jq -e -r 'map(select(.name | contains("-dev") | not))' <<<"$matches")
+			if [ "$(jq 'length' <<<"$matches_new")" -eq 1 ]; then
+				matches=$matches_new
+			fi
+		fi
+		if [ "$(jq 'length' <<<"$matches")" -eq 0 ]; then
+			epr "No asset was found"
+			return 1
+		elif [ "$(jq 'length' <<<"$matches")" -ne 1 ]; then
+			wpr "More than 1 asset was found for this release. Falling back to the first one found..."
+		fi
+		asset=$(jq -r ".[0]" <<<"$matches")
+		url=$(source_release_asset_url "$host" <<<"$asset")
+		name=$(jq -r .name <<<"$asset")
+		file="${dir}/${name}"
+		if [ "$host" = github ]; then
+			gh_dl "$file" "$url" >&2 || return 1
+		else
+			pr "Getting '$file' from '$url'"
+			_req "$url" "$file" -H "Accept: application/octet-stream" >&2 || return 1
+		fi
+		echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
+	else
+		grab_cl=false
+		name=$(basename "$file")
+		tag_name=$(cut -d'-' -f3- <<<"$name")
+		tag_name=v${tag_name%.*}
+	fi
+
+	echo -n "$file "
+
+	local IFS=$'\n'
+	local p_srcs=($(list_args "$patches_src_list" | tr -d \"\'))
+	local p_hosts=($(list_args "$patches_host_list" | tr -d \"\'))
+	local p_vers=($(list_args "$patches_ver_list" | tr -d \"\'))
+	unset IFS
+	for i in "${!p_srcs[@]}"; do
+		local host="${p_hosts[$i]:-${p_hosts[0]}}"
+		local src="${p_srcs[$i]}"
+		local ver="${p_vers[$i]:-${p_vers[0]}}"
+		
 		host=${host,,}
 		if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
-
-		if [ "$tag" = "CLI" ]; then
-			local grab_cl=false
-		elif [ "$tag" = "Patches" ]; then
-			local grab_cl=true
-		else abort unreachable; fi
-
+		local tag="Patches" fprefix="patches"
+		local grab_cl=true
+		
 		local dir=${src%/*}
 		dir=${TEMP_DIR}/${dir,,}-rv
 		[ -d "$dir" ] || mkdir "$dir"
-
+		
 		local rv_rel release resp tag_name matches asset name url
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
 		if [ "$ver" = "dev" ]; then
@@ -194,31 +266,30 @@ get_prebuilts() {
 			tag_name=v${tag_name%.*}
 		fi
 
-		if [ "$tag" = "Patches" ]; then
-			if [ "$grab_cl" = true ]; then
-				if [ "$host" = github ]; then
-					echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
-				else
-					echo -e "[Changelog](https://gitlab.com/${src}/-/releases/${tag_name})\n" >>"${cl_dir}/changelog.md"
-				fi
-			fi
-			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
-				local extensions_ext
-				extensions_ext=$(unzip -l "${file}" "extensions/shared.*" | grep -o "shared\..*") extensions_ext="${extensions_ext#*.}"
-				if ! (
-					mkdir -p "${file}-zip" || return 1
-					unzip -qo "${file}" -d "${file}-zip" || return 1
-					java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
-					mv -f "${file}-zip/extensions/shared-patched.${extensions_ext}" "${file}-zip/extensions/shared.${extensions_ext}" || return 1
-					rm "${file}" || return 1
-					cd "${file}-zip" || abort
-					zip -0rq "${CWD}/${file}" . || return 1
-				) >&2; then
-					echo >&2 "Patching revanced-integrations failed"
-				fi
-				rm -r "${file}-zip" || :
+		if [ "$grab_cl" = true ]; then
+			if [ "$host" = github ]; then
+				echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
+			else
+				echo -e "[Changelog](https://gitlab.com/${src}/-/releases/${tag_name})\n" >>"${cl_dir}/changelog.md"
 			fi
 		fi
+		if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
+			local extensions_ext
+			extensions_ext=$(unzip -l "${file}" "extensions/shared.*" | grep -o "shared\..*") extensions_ext="${extensions_ext#*.}"
+			if ! (
+				mkdir -p "${file}-zip" || return 1
+				unzip -qo "${file}" -d "${file}-zip" || return 1
+				java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.${extensions_ext}" "${file}-zip/extensions/shared-patched.${extensions_ext}" || return 1
+				mv -f "${file}-zip/extensions/shared-patched.${extensions_ext}" "${file}-zip/extensions/shared.${extensions_ext}" || return 1
+				rm "${file}" || return 1
+				cd "${file}-zip" || abort
+				zip -0rq "${CWD}/${file}" . || return 1
+			) >&2; then
+				echo >&2 "Patching revanced-integrations failed"
+			fi
+			rm -r "${file}-zip" || :
+		fi
+		
 		echo -n "$file "
 	done
 	echo
@@ -245,38 +316,51 @@ config_update() {
 		t=$(toml_get_table "$table_name")
 		enabled=$(toml_get "$t" enabled) || enabled=true
 		if [ "$enabled" = "false" ]; then continue; fi
-		PATCHES_SRC=$(toml_get "$t" patches-source) || PATCHES_SRC=$DEF_PATCHES_SRC
-		PATCHES_HOST=$(toml_get "$t" patches-source-host) || PATCHES_HOST=$DEF_PATCHES_SRC_HOST
-		PATCHES_VER=$(toml_get "$t" patches-version) || PATCHES_VER=$DEF_PATCHES_VER
-		if [[ -v sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"] ]]; then
-			if [ "${sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then upped+=("$table_name"); fi
-		else
-			sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=0
-			local rv_rel resp last_patches
-			rv_rel=$(source_release_api_base "$PATCHES_HOST" "$PATCHES_SRC") || continue
-			if [ "$PATCHES_VER" = "dev" ]; then
-				resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
-				last_patches=$(source_release_pick_from_list "$PATCHES_HOST" dev <<<"$resp") || continue
-			elif [ "$PATCHES_VER" = "latest" ]; then
-				resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
-				last_patches=$(source_release_pick_from_list "$PATCHES_HOST" latest <<<"$resp") || continue
+		local raw_patches_src raw_patches_host raw_patches_ver
+		raw_patches_src=$(toml_get "$t" patches-source) || raw_patches_src=$DEF_PATCHES_SRC
+		raw_patches_host=$(toml_get "$t" patches-source-host) || raw_patches_host=$DEF_PATCHES_SRC_HOST
+		raw_patches_ver=$(toml_get "$t" patches-version) || raw_patches_ver=$DEF_PATCHES_VER
+		local IFS=$'\n'
+		local p_srcs=($(list_args "$raw_patches_src" | tr -d \"\')); [ ${#p_srcs[@]} -eq 0 ] && p_srcs=("$raw_patches_src")
+		local p_hosts=($(list_args "$raw_patches_host" | tr -d \"\')); [ ${#p_hosts[@]} -eq 0 ] && p_hosts=("$raw_patches_host")
+		local p_vers=($(list_args "$raw_patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$raw_patches_ver")
+		unset IFS
+		local table_updated=false
+		for i in "${!p_srcs[@]}"; do
+			local PATCHES_SRC="${p_srcs[$i]}"
+			local PATCHES_HOST="${p_hosts[$i]:-${p_hosts[0]}}"
+			local PATCHES_VER="${p_vers[$i]:-${p_vers[0]}}"
+			if [[ -v sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"] ]]; then
+				if [ "${sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then table_updated=true; fi
 			else
-				rv_rel=$(source_release_tag_api "$PATCHES_HOST" "$PATCHES_SRC" "$PATCHES_VER") || continue
-				last_patches=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || continue
-			fi
-			if ! last_patches=$(source_release_assets_json "$PATCHES_HOST" <<<"$last_patches" | jq -e -r '.[0].name'); then
-				abort "config_update error: '$last_patches'"
-			fi
-			if [ "$last_patches" ]; then
-				if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep -m1 "$last_patches"); then
-					sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=1
-					prcfg=true
-					upped+=("$table_name")
+				sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=0
+				local rv_rel resp last_patches
+				rv_rel=$(source_release_api_base "$PATCHES_HOST" "$PATCHES_SRC") || continue
+				if [ "$PATCHES_VER" = "dev" ]; then
+					resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
+					last_patches=$(source_release_pick_from_list "$PATCHES_HOST" dev <<<"$resp") || continue
+				elif [ "$PATCHES_VER" = "latest" ]; then
+					resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
+					last_patches=$(source_release_pick_from_list "$PATCHES_HOST" latest <<<"$resp") || continue
 				else
-					echo "$OP" >>"$TEMP_DIR"/skipped
+					rv_rel=$(source_release_tag_api "$PATCHES_HOST" "$PATCHES_SRC" "$PATCHES_VER") || continue
+					last_patches=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || continue
+				fi
+				if ! last_patches=$(source_release_assets_json "$PATCHES_HOST" <<<"$last_patches" | jq -e -r '.[0].name'); then
+					abort "config_update error: '$last_patches'"
+				fi
+				if [ "$last_patches" ]; then
+					if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep -m1 "$last_patches"); then
+						sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=1
+						prcfg=true
+						table_updated=true
+					else
+						echo "$OP" >>"$TEMP_DIR"/skipped
+					fi
 				fi
 			fi
-		fi
+		done
+		[ "$table_updated" = true ] && upped+=("$table_name")
 	done
 	if [ "$prcfg" = true ]; then
 		local query=""
@@ -362,9 +446,15 @@ get_patch_last_supported_ver() {
 
 patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	if ! op=$(java -jar "$cli_jar" list-versions -p "$patches_jar" -f "$pkg_name" -b 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-versions --patches="$patches_jar" -f "$pkg_name" 2>&1); then
-			if ! op=$(java -jar "$cli_jar" list-versions "$patches_jar" -f "$pkg_name" 2>&1); then
+	# Build -p <jar> args for each jar in space-separated patches_jar
+	local IFS=$'\n'
+	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
+	unset IFS
+	local p_args=""
+	for j in "${p_jars[@]}"; do p_args+="-p '$j' "; done
+	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args -f "'$pkg_name'" -b 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args -f "'$pkg_name'" 2>&1); then
+			if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" 2>&1); then
 				epr "Could not list versions $cli_jar: '$op'"
 				return 1
 			fi
@@ -374,8 +464,14 @@ patches_list_versions() {
 }
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	if ! op=$(java -jar "$cli_jar" list-patches -p "$patches_jar" --filter-package-name "$pkg_name" --versions --packages -b 2>&1); then
-		if ! op=$(java -jar "$cli_jar" list-patches --patches "$patches_jar" -f "$pkg_name" --with-versions --with-packages 2>&1); then
+	# Build -p <jar> args for each jar in space-separated patches_jar
+	local IFS=$'\n'
+	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
+	unset IFS
+	local p_args=""
+	for j in "${p_jars[@]}"; do p_args+="-p '$j' "; done
+	if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches --patches $p_args -f "'$pkg_name'" --with-versions --with-packages 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
@@ -996,7 +1092,13 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5
 	local tmp_dir="${CWD}/${patched_apk}-temporary-files"
-	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -t '$tmp_dir' -o '$patched_apk' -p '$patches_jar' --keystore=ks.keystore \
+	# Build -p <jar> args for each jar in space-separated patches_jar list
+	local IFS=$'\n'
+	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
+	unset IFS
+	local p_args=""
+	for j in "${p_jars[@]}"; do p_args+=" -p '$j'"; done
+	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -t '$tmp_dir' -o '$patched_apk'${p_args} --keystore=ks.keystore \
 --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
 
 	# TODO: remove this later
