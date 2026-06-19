@@ -450,18 +450,21 @@ patches_list_versions() {
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
-	local p_args_short="" p_args_long=""
+	local p_args_short="" p_args_long="" p_args_bp=""
 	for j in "${p_jars[@]}"; do
 		p_args_short+="-p '$j' "
 		p_args_long+="--patches '$j' "
+		p_args_bp+="-bp '$j' "
 	done
-	# morphe-cli: list-versions takes patch file as positional arg(s)
+	# Try morphe-cli (--patches), then revanced-cli (-bp), then legacy forms
 	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" -b 2>&1); then
-			if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" 2>&1); then
-				if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" 2>&1); then
-					epr "Could not list versions $cli_jar: '$op'"
-					return 1
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_bp -f "'$pkg_name'" -b 2>&1); then
+			if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" -b 2>&1); then
+				if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" 2>&1); then
+					if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" 2>&1); then
+						epr "Could not list versions $cli_jar: '$op'"
+						return 1
+					fi
 				fi
 			fi
 		fi
@@ -474,18 +477,21 @@ patches_list() {
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
-	local p_args_short="" p_args_long="" p_args_pos=""
+	local p_args_short="" p_args_long="" p_args_bp="" p_args_pos=""
 	for j in "${p_jars[@]}"; do
 		p_args_short+="-p '$j' "
 		p_args_long+="--patches '$j' "
+		p_args_bp+="-bp '$j' "
 		p_args_pos+="'$j' "
 	done
-	# morphe-cli: list-patches takes patch file(s) as positional args
+	# Try morphe-cli positional, then --patches, then revanced-cli -bp, then legacy -p
 	if ! op=$(eval java -jar "'$cli_jar'" list-patches --with-packages --with-versions $p_args_pos --filter-package-name "'$pkg_name'" 2>&1); then
 		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long --filter-package-name "'$pkg_name'" --with-versions --with-packages 2>&1); then
-			if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_short --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
-				epr "Could not get patches list $cli_jar: '$op'"
-				return 1
+			if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_bp --packages --versions --options -f "'$pkg_name'" -b 2>&1); then
+				if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_short --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
+					epr "Could not get patches list $cli_jar: '$op'"
+					return 1
+				fi
 			fi
 		fi
 	fi
@@ -1104,18 +1110,25 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5
 	local tmp_dir="${CWD}/${patched_apk}-temporary-files"
-	# Build --patches <jar> args for each jar in space-separated patches_jar list (morphe-cli style)
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
-	local p_args=""
-	for j in "${p_jars[@]}"; do p_args+=" --patches '$j'"; done
+
+	# Detect CLI type: revanced-cli uses '-bp <jar>', morphe-cli uses '--patches <jar>'
+	local cli_name
+	cli_name=$(basename "$cli_jar")
+	local p_flag p_args=""
+	if [ "${cli_name::8}" = revanced ]; then
+		p_flag="-bp"
+	else
+		p_flag="--patches"
+	fi
+	for j in "${p_jars[@]}"; do p_args+=" $p_flag '$j'"; done
+
 	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -t '$tmp_dir' -o '$patched_apk'${p_args} --keystore=ks.keystore \
 --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
 
-	# TODO: remove this later
-	local cli_name
-	cli_name=$(basename "$cli_jar")
+	# TODO: remove this later — revanced-cli needs -b to bypass build provenance checks
 	if [ "${cli_name::8}" = revanced ]; then cmd+=" -b"; fi
 
 	if [ "$OS" = Android ]; then cmd+=" --custom-aapt2-binary='${AAPT2}'"; fi
@@ -1128,6 +1141,7 @@ patch_apk() {
 		return 1
 	fi
 }
+
 
 check_sig() {
 	local file=$1 pkg_name=$2
