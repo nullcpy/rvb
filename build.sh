@@ -81,27 +81,51 @@ for table_name in $(toml_get_table_names); do
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
-	if ! isoneof "$patches_src_host" github gitlab; then abort "ERROR: patches-source-host '$patches_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
 	if ! isoneof "$cli_src_host" github gitlab; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+
+	# Parse patch sources: may be a single string or multiline (quoted list)
+	local IFS=$'\n'
+	local p_srcs=($(list_args "$patches_src" | tr -d \"\')); [ ${#p_srcs[@]} -eq 0 ] && p_srcs=("$patches_src")
+	local p_hosts=($(list_args "$patches_src_host" | tr -d \"\')); [ ${#p_hosts[@]} -eq 0 ] && p_hosts=("$patches_src_host")
+	local p_vers=($(list_args "$patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$patches_ver")
+	unset IFS
+	for h in "${p_hosts[@]}"; do
+		if ! isoneof "$h" github gitlab; then abort "ERROR: patches-source-host '$h' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+	done
 
 	if ! PREBUILTS="$(get_prebuilts "$cli_src_host" "$cli_src" "$cli_ver" "$patches_src_host" "$patches_src" "$patches_ver")"; then
 		epr "Could not get prebuilts"
 		continue
 	fi
-	read -r cli_jar patches_jar <<<"$PREBUILTS"
+	read -r cli_jar patches_jar_all <<< "$PREBUILTS"
 	app_args[cli]=$cli_jar
-	app_args[ptjar]=$patches_jar
-	patches_file=${patches_jar##*/}
-	patches_ver=${patches_file#*-}
-	patches_ver=${patches_ver%.*}
-	app_args[patches_src]=$patches_src
-	app_args[patches_ref]="${patches_src%%/*}/${patches_file}"
-	if [ "$patches_src_host" = github ]; then
-		app_args[changelog_url]="https://github.com/${patches_src}/releases/tag/v${patches_ver#v}"
-	else
-		app_args[changelog_url]="https://gitlab.com/${patches_src}/-/releases/v${patches_ver#v}"
-	fi
-	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="${patches_src%%/*}"
+	app_args[ptjar]=$patches_jar_all
+
+	# Build aggregated patches_ref and changelog_url from all sources
+	local patches_ref_all="" changelog_url_all=""
+	for i in "${!p_srcs[@]}"; do
+		local psrc="${p_srcs[$i]}"
+		local phost="${p_hosts[$i]:-${p_hosts[0]}}"
+		local pver="${p_vers[$i]:-${p_vers[0]}}"
+		# Find the downloaded jar for this source to get actual version from filename
+		local pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
+		local pfile
+		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' 2>/dev/null | sort | tail -1)
+		if [ -n "$pfile" ]; then
+			local pfilename=${pfile##*/}
+			local pver_actual=${pfilename#*-}; pver_actual=${pver_actual%.*}
+			patches_ref_all+="${psrc%%/*}/${pfilename} "
+			if [ "$phost" = github ]; then
+				changelog_url_all+="https://github.com/${psrc}/releases/tag/v${pver_actual#v} "
+			else
+				changelog_url_all+="https://gitlab.com/${psrc}/-/releases/v${pver_actual#v} "
+			fi
+		fi
+	done
+	app_args[patches_src]=${p_srcs[0]}
+	app_args[patches_ref]="${patches_ref_all% }"
+	app_args[changelog_url]="${changelog_url_all% }"
+	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="${p_srcs[0]%%/*}"
 
 	app_args[excluded_patches]=$(toml_get "$t" excluded-patches) || app_args[excluded_patches]=""
 	if [ -n "${app_args[excluded_patches]}" ] && [[ ${app_args[excluded_patches]} != *'"'* ]]; then abort "patch names inside excluded-patches must be quoted"; fi
