@@ -70,3 +70,29 @@ module-prop-name = "some-app-module"                       # module prop name.
 dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. default: nodpi
 arch = "arm64-v8a"                                         # 'auto', 'arm64-v8a', 'arm-v7a', 'all', 'both'. 'both' downloads both arm64-v8a and arm-v7a. 'auto' tries all → arm64-v8a → arm-v7a, using the first available. default: auto
 ```
+
+## Multiple Patch Sources
+
+You can pass multiple patch bundles to the CLI by specifying `patches-source` as a quoted list (same format as `excluded-patches`).
+The CLI merges all bundles into one pool — `included-patches`, `excluded-patches`, and `patcher-args` apply globally across all sources.
+
+```toml
+# single-line format
+patches-source = "'MorpheApp/morphe-patches' 'other/patches'"
+
+# multiline format
+patches-source = """\
+  'MorpheApp/morphe-patches' \
+  'other/patches' \
+  """
+
+# If all sources are on the same host, a single string applies to all:
+patches-source-host = "github"
+
+# If sources span different hosts, provide one value per source in order:
+patches-source-host = "'github' 'gitlab'"
+
+# Same rule applies to patches-version:
+patches-version = "latest"                        # applies to all sources
+patches-version = "'latest' 'v1.2.3'"             # per-source versions
+```
