@@ -3,5 +3,35 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
+[twitter-morphe]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "'inotia00/x-shim' 'crimera/piko'"
+patches-source-host = "'gitlab' 'github'"
+# version = "11.81.0-release.0"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+dpi = "nodpi anydpi"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
+[twitter-morphe-materialu]
+enabled = true 
+app-name = "twitter"
+rv-brand = "morphe-materialu"
+build-mode = "both"
+arch = "both"
+patches-source = "'inotia00/x-shim' 'crimera/piko'"
+patches-source-host = "'gitlab' 'github'"
+# patcher-args = "--continue-on-error"
+included-patches = "'Bring back twitter' 'Dynamic color'"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+dpi = "nodpi anydpi"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
