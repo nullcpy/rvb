@@ -96,3 +96,8 @@ patches-source-host = "'github' 'gitlab'"
 patches-version = "latest"                        # applies to all sources
 patches-version = "'latest' 'v1.2.3'"             # per-source versions
 ```
+
+> [!WARNING]
+> **Current Limitations**: 
+> Due to how the underlying CLIs handle arguments, `included-patches` and `excluded-patches` currently only apply to the **last** patch bundle in your `patches-source` list. 
+> Per-bundle selective inclusion/exclusion (e.g. including one patch from the first bundle, and excluding another from the second) is not currently supported in this config format. If you use multiple sources, it is recommended to apply all patches from the preceding bundles.
