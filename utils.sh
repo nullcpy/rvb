@@ -446,14 +446,17 @@ get_patch_last_supported_ver() {
 
 patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	# Build -p <jar> args for each jar in space-separated patches_jar
+	# Build -p <jar> and --patches <jar> arg strings for each jar
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
-	local p_args=""
-	for j in "${p_jars[@]}"; do p_args+="-p '$j' "; done
-	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args -f "'$pkg_name'" -b 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args -f "'$pkg_name'" 2>&1); then
+	local p_args_short="" p_args_long=""
+	for j in "${p_jars[@]}"; do
+		p_args_short+="-p '$j' "
+		p_args_long+="--patches '$j' "
+	done
+	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" -b 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" 2>&1); then
 			if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" 2>&1); then
 				epr "Could not list versions $cli_jar: '$op'"
 				return 1
@@ -464,14 +467,17 @@ patches_list_versions() {
 }
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	# Build -p <jar> args for each jar in space-separated patches_jar
+	# Build -p <jar> and --patches <jar> arg strings for each jar
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
-	local p_args=""
-	for j in "${p_jars[@]}"; do p_args+="-p '$j' "; done
-	if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-patches --patches $p_args -f "'$pkg_name'" --with-versions --with-packages 2>&1); then
+	local p_args_short="" p_args_long=""
+	for j in "${p_jars[@]}"; do
+		p_args_short+="-p '$j' "
+		p_args_long+="--patches '$j' "
+	done
+	if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_short --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long -f "'$pkg_name'" --with-versions --with-packages 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
