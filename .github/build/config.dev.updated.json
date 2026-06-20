@@ -124,7 +124,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -137,7 +137,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -150,7 +150,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -175,7 +175,7 @@
     "dpi": "nodpi anydpi"
   },
   "instagram-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -201,7 +201,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "reddit-morphe-adobo": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
