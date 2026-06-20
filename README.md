@@ -560,8 +560,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/361)<br>
-Patches: [brosssh/patches-2.7.0-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.2)
+[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/370)<br>
+Patches: [brosssh/patches-2.7.0-dev.3.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.3)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -1119,12 +1119,12 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.15.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.25.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
-Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
+[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/370)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.1)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
