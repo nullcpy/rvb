@@ -80,12 +80,13 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
-    "patches-source": "crimera/piko",
+    "patches-source": "'inotia00/x-shim' 'crimera/piko'",
+    "patches-source-host": "'gitlab' 'github'",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
@@ -93,12 +94,13 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "twitter-morphe-materialu": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
     "arch": "both",
-    "patches-source": "crimera/piko",
+    "patches-source": "'inotia00/x-shim' 'crimera/piko'",
+    "patches-source-host": "'gitlab' 'github'",
     "included-patches": "'Bring back twitter' 'Dynamic color'",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
@@ -107,7 +109,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "instagram-morphe-piko": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "apk",
@@ -440,7 +442,7 @@
     "dpi": "nodpi anydpi"
   },
   "google-news-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-news",
     "rv-brand": "morphe",
     "build-mode": "apk",
