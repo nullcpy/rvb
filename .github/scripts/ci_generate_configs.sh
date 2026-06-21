@@ -41,7 +41,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ]; then
     map_values(
       if type == "object" then
         . as $app |
-        (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\u0027\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
+        (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"'\''\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
         if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
       else . end
     )
@@ -62,7 +62,7 @@ if [ "${TRIGGER_PRERELEASE:-0}" = "1" ]; then
     map_values(
       if type == "object" then
         . as $app |
-        (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\u0027\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
+        (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"'\''\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
         if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
       else . end
     )
