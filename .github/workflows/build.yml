@@ -12,14 +12,14 @@ on:
         description: "Select the config file to use"
         required: true
         type: choice
-        default: ".github/build/config.manual.toml"
+        default: ".github/configs/config.manual.toml"
         options:
-          - ".github/build/config.manual.toml"
-          - ".github/build/config.dev.updated.json"
-          - ".github/build/config.stable.updated.json"
-          - ".github/build/config.photos.toml"
-          - ".github/build/config.revanced.toml"
-          - ".github/build/config.piko.toml"
+          - ".github/configs/config.manual.toml"
+          - ".github/configs/config.dev.updated.json"
+          - ".github/configs/config.stable.updated.json"
+          - ".github/configs/config.photos.toml"
+          - ".github/configs/config.revanced.toml"
+          - ".github/configs/config.piko.toml"
 
 concurrency:
   group: build
@@ -52,51 +52,13 @@ jobs:
 
       - name: Resolve build context
         id: context
-        run: |
-          set -euo pipefail
-          CONFIG="${{ inputs.config_file }}"
-
-          if [ ! -f "$CONFIG" ]; then
-            echo "::error::Config file not found: $CONFIG"
-            exit 1
-          fi
-
-          echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
-
-          IS_DEV=false
-          if [[ "$CONFIG" == *"dev"* ]]; then
-            IS_DEV=true
-          elif [[ "$CONFIG" == *.json ]]; then
-            if [ "$(jq -r '."patches-version" // empty' "$CONFIG")" = "dev" ]; then
-              IS_DEV=true
-            fi
-          elif [[ "$CONFIG" == *.toml ]]; then
-            if awk '/^\[/ {exit} {print}' "$CONFIG" | grep -qE '^[[:space:]]*patches-version[[:space:]]*=[[:space:]]*"?dev"?'; then
-              IS_DEV=true
-            fi
-          fi
-
-          if [ "$IS_DEV" = true ]; then
-            echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
-            echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
-            echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
-            echo "ARCHIVE_TAG=beta" >> "$GITHUB_OUTPUT"
-          else
-            echo "IS_PRERELEASE=false" >> "$GITHUB_OUTPUT"
-            echo "TG_THREAD_ID=262" >> "$GITHUB_OUTPUT"
-            echo "TITLE_SUFFIX=" >> "$GITHUB_OUTPUT"
-            echo "ARCHIVE_TAG=stable" >> "$GITHUB_OUTPUT"
-          fi
+        run: bash .github/scripts/build_resolve_context.sh "${{ inputs.config_file }}"
 
       - name: Resolve version code
         id: version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          TAG=$( { gh release list --exclude-drafts -L 100 2>/dev/null || true; } | awk -F '\t' '$3 ~ /^[0-9]+$/ {print $3}' | sort -nr | head -n1 )
-          if [ -z "$TAG" ] || ! [[ "$TAG" =~ ^[0-9]+$ ]]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> "$GITHUB_OUTPUT"
+        run: bash .github/scripts/build_resolve_version.sh
 
       - name: Build modules and apks
         env:
@@ -109,13 +71,7 @@ jobs:
 
       - name: Get output
         id: get_output
-        run: |
-          set -euo pipefail
-          DELIM="$(openssl rand -hex 8)"
-          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
-          cat build.md >> "$GITHUB_OUTPUT"
-          echo "${DELIM}" >> "$GITHUB_OUTPUT"
-          cp -f build.md build.tmp
+        run: bash .github/scripts/build_get_output.sh
 
       - name: Update readme
         run: |
@@ -149,32 +105,11 @@ jobs:
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
       - name: Update changelog and module update files
-        run: |
-          set -euo pipefail
-          git checkout -f update || git switch --discard-changes --orphan update
-          cp -f build.tmp build.md
-
-          get_update_json() {
-            echo "{
-            \"version\": \"$1\",
-            \"versionCode\": ${{ steps.version.outputs.NEXT_VER_CODE }},
-            \"zipUrl\": \"$2\",
-            \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
-          }"
-          }
-
-          cd build || { echo "build folder not found"; exit 1; }
-          for OUTPUT in *module*.zip; do
-            [ "$OUTPUT" = "*module*.zip" ] && continue
-            ZIP_S=$(unzip -p "$OUTPUT" module.prop)
-            if ! UPDATE_JSON=$(echo "$ZIP_S" | grep updateJson); then continue; fi
-            UPDATE_JSON="${UPDATE_JSON##*/}"
-            VER=$(echo "$ZIP_S" | grep version=)
-            VER="${VER##*=}"
-            DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.version.outputs.NEXT_VER_CODE }}/${OUTPUT}"
-            get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
-          done
-          cd ..
+        env:
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_update_changelog.sh
 
       - name: Commit updated build and module update files
         uses: stefanzweifel/git-auto-commit-action@v7
@@ -189,75 +124,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
           TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
-        run: |
-          set -euo pipefail
-          cd build || { echo "build folder not found"; exit 1; }
-
-          NL=$'\n'
-          APKS=""
-          MODULES=""
-          HAS_MODULES=false
-
-          shopt -s nullglob
-          for OUTPUT in *; do
-            DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ steps.version.outputs.NEXT_VER_CODE }}/${OUTPUT}"
-            if [[ $OUTPUT = *.apk ]]; then
-              APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
-            elif [[ $OUTPUT = *.zip ]]; then
-              MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
-              HAS_MODULES=true
-            fi
-          done
-          shopt -u nullglob
-
-          MODULES=${MODULES#"$NL"}
-          APKS=${APKS#"$NL"}
-
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.tmp)"
-
-          MSG="*Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
-            
-          if [ "$HAS_MODULES" = true ]; then
-            MSG+="*Modules:*${MODULES}${NL}${NL}"
-          fi
-
-          MSG+="*APKs:*${APKS}"
-
-          # Split MSG into ≤4096-char chunks on line boundaries (never breaks URLs)
-          TG_LIMIT=4096
-          CHUNK=""
-          send_chunk() {
-            local text="$1"
-            curl -s -X POST \
-              --data-urlencode "parse_mode=Markdown" \
-              --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${text}" \
-              --data-urlencode "chat_id=@rvb27" \
-              --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
-              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-            curl -s -X POST \
-              --data-urlencode "parse_mode=Markdown" \
-              --data-urlencode "disable_web_page_preview=true" \
-              --data-urlencode "text=${text}" \
-              --data-urlencode "chat_id=@rvb28" \
-              "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
-          }
-
-          while IFS= read -r LINE; do
-            # +1 for the newline we'll re-add between lines
-            CANDIDATE="${CHUNK:+${CHUNK}${NL}}${LINE}"
-            if [ "${#CANDIDATE}" -le "$TG_LIMIT" ]; then
-              CHUNK="$CANDIDATE"
-            else
-              # Flush current chunk and start a new one with this line
-              if [ -n "$CHUNK" ]; then
-                send_chunk "$CHUNK"
-              fi
-              CHUNK="$LINE"
-            fi
-          done <<< "$MSG"
-
-          # Send any remaining content
-          if [ -n "$CHUNK" ]; then
-            send_chunk "$CHUNK"
-          fi
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_notify_telegram.sh

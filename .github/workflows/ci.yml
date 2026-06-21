@@ -27,21 +27,7 @@ jobs:
 
       - name: Ensure patch_sources.json exists
         id: ensure_patch_sources
-        run: |
-          set -euo pipefail
-          mkdir -p .github/build
-          PATCH_FILE=".github/build/patch_sources.json"
-
-          if [ ! -f "$PATCH_FILE" ]; then
-            cat > "$PATCH_FILE" << 'EOF'
-          {
-            "dummy_patch": { "enabled": false, "repo": "" }
-          }
-          EOF
-            echo "created=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "created=false" >> "$GITHUB_OUTPUT"
-          fi
+        run: bash .github/scripts/ci_ensure_patch_sources.sh
 
       - name: Commit dummy patch_sources.json if created
         if: steps.ensure_patch_sources.outputs.created == 'true'
@@ -49,7 +35,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/build/patch_sources.json
+          file_pattern: .github/configs/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
       - name: Fetch latest tags
@@ -57,126 +43,14 @@ jobs:
         id: fetch_tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          PATCH_FILE=".github/build/patch_sources.json"
-          BASE_JSON=$(cat "$PATCH_FILE")
-
-          fetch_gitlab_releases() {
-            local repo=$1 encoded_repo
-            encoded_repo=$(jq -nr --arg v "$repo" '$v | @uri')
-            curl -sS -L -w '\n%{http_code}' "https://gitlab.com/api/v4/projects/${encoded_repo}/releases?per_page=100"
-          }
-
-          if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
-            DELIM="$(openssl rand -hex 8)"
-            echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
-            echo "$BASE_JSON" >> "$GITHUB_OUTPUT"
-            echo "${DELIM}" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          > updates.jsonl
-
-          while read -r id repo host enabled enabledStable enabledDev; do
-            if [ "$enabled" == "false" ]; then continue; fi
-
-            if [ "$host" = "gitlab" ]; then
-              api_response=$(fetch_gitlab_releases "$repo" 2>&1 || true)
-              api_http_code=$(printf '%s\n' "$api_response" | tail -n1)
-              api_response=$(printf '%s\n' "$api_response" | sed '$d')
-            else
-              api_response=$(gh api "repos/$repo/releases?per_page=100" 2>&1 || true)
-            fi
-
-            if [ "$host" = "github" ] && echo "$api_response" | grep -qiE '"message".*(Repository access blocked|Not Found)'; then
-              jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
-            elif [ "$host" = "gitlab" ] && { [ "$api_http_code" = "403" ] || [ "$api_http_code" = "404" ]; }; then
-              jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
-            elif echo "$api_response" | jq -e 'type == "array"' >/dev/null 2>&1; then
-              if [ "$host" = "gitlab" ]; then
-                stable=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
-                pre=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
-              else
-                stable=$(echo "$api_response" | jq -r '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
-                pre=$(echo "$api_response" | jq -r '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
-              fi
-
-              jq -n --arg id "$id" --arg stable "$stable" --arg pre "$pre" \
-                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": false}}' >> updates.jsonl
-            else
-              echo "::warning::API error or rate limit for $repo. Retaining previous state."
-              old_stable=$(echo "$BASE_JSON" | jq -r ".\"$id\".stable // \"\"")
-              old_pre=$(echo "$BASE_JSON" | jq -r ".\"$id\".prerelease // \"\"")
-              old_blocked=$(echo "$BASE_JSON" | jq -r ".\"$id\".blocked // false")
-              
-              jq -n --arg id "$id" --arg stable "$old_stable" --arg pre "$old_pre" --argjson blocked "$old_blocked" \
-                '{($id): {"stable": $stable, "prerelease": $pre, "blocked": $blocked}}' >> updates.jsonl
-            fi
-
-          done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo) \((.value.host // "github") | ascii_downcase) \(if .value.enabled == false then false else true end) \(if .value.enabledStable == false then false else true end) \(if .value.enabledDev == false then false else true end)"')
-
-          if [ -s updates.jsonl ]; then
-             NEW_JSON=$(jq -s --argjson base "$BASE_JSON" 'reduce .[] as $item ($base; . * $item)' updates.jsonl)
-          else
-             NEW_JSON="$BASE_JSON"
-          fi
-
-          DELIM="$(openssl rand -hex 8)"
-          echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
-          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
-          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+        run: bash .github/scripts/ci_fetch_tags.sh
 
       - name: Compare latest vs stored tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
-        run: |
-          set -euo pipefail
-          PATCH_FILE=".github/build/patch_sources.json"
-
-          OLD_JSON=$(cat "$PATCH_FILE")
-          NEW_JSON='${{ steps.fetch_tags.outputs.latest }}'
-
-          if [ -z "$NEW_JSON" ]; then
-            NEW_JSON="{}"
-          fi
-
-          TRIGGER_STABLE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
-            [ $new | to_entries[] | . as $e
-              | ($old[$e.key] // {}) as $o
-              | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-            ] | if length > 0 then 1 else 0 end
-          ')
-
-          TRIGGER_PRERELEASE=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
-            [ $new | to_entries[] | . as $e
-              | ($old[$e.key] // {}) as $o
-              | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
-            ] | if length > 0 then 1 else 0 end
-          ')
-
-          TRIGGER_BLOCKED=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
-            [ $new | to_entries[] | . as $e
-              | ($old[$e.key] // {}) as $o
-              | select($e.value.blocked == true and $o.blocked != true)
-            ] | if length > 0 then 1 else 0 end
-          ')
-
-          echo "$NEW_JSON" > "$PATCH_FILE"
-
-          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
-          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
-          echo "TRIGGER_BLOCKED=$TRIGGER_BLOCKED" >> "$GITHUB_OUTPUT"
-
-          DELIM1="$(openssl rand -hex 8)"
-          echo "tags_old<<${DELIM1}" >> "$GITHUB_OUTPUT"
-          echo "$OLD_JSON" >> "$GITHUB_OUTPUT"
-          echo "${DELIM1}" >> "$GITHUB_OUTPUT"
-
-          DELIM2="$(openssl rand -hex 8)"
-          echo "tags_new<<${DELIM2}" >> "$GITHUB_OUTPUT"
-          echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
-          echo "${DELIM2}" >> "$GITHUB_OUTPUT"
+        env:
+          LATEST_TAGS: ${{ steps.fetch_tags.outputs.latest }}
+        run: bash .github/scripts/ci_compare_tags.sh
 
       - name: Generate configs (JSON)
         if: ${{ steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' }}
@@ -184,76 +58,9 @@ jobs:
         env:
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
-        run: |
-          set -euo pipefail
-          BASE_CONFIG="config.toml"
-          BASE_CONFIG_STABLE=".github/build/config.stable.toml"
-          BASE_CONFIG_DEV=".github/build/config.dev.toml"
-
-          [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
-          [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
-
-          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-            [ $new | to_entries[] | . as $e
-                | ($old[$e.key] // {}) as $o
-                | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-                | select($e.value.enabled != false and $e.value.enabledStable != false)
-                | $e.value.repo | ascii_downcase
-            ]
-          ' > active.stable.json
-
-          jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-            [ $new | to_entries[] | . as $e
-                | ($old[$e.key] // {}) as $o
-                | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
-                | select($e.value.enabled != false and $e.value.enabledDev != false)
-                | $e.value.repo | ascii_downcase
-            ]
-          ' > active.prerelease.json
-
-          yq -o=json '.' "$BASE_CONFIG" > base.json
-
-          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "1" ]; then
-            if [ -f "$BASE_CONFIG_STABLE" ]; then
-              yq -o=json '.' "$BASE_CONFIG_STABLE" > stable_overrides.json
-              jq -s '.[0] * .[1]' base.json stable_overrides.json > config.stable.json
-            else
-              cp base.json config.stable.json
-            fi
-
-            jq --slurpfile active active.stable.json '
-              { "parallel-jobs": 1, "enable-module-update": true } as $force |
-              ($force + . + $force) |
-              map_values(
-                if type == "object" then
-                  . as $app |
-                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\u0027\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
-                  if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
-                else . end
-              )
-            ' config.stable.json > .github/build/config.stable.updated.json
-          fi
-
-          if [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "1" ]; then
-            if [ -f "$BASE_CONFIG_DEV" ]; then
-              yq -o=json '.' "$BASE_CONFIG_DEV" > dev_overrides.json
-              jq -s '.[0] * .[1]' base.json dev_overrides.json > config.dev.json
-            else
-              cp base.json config.dev.json
-            fi
-
-            jq --slurpfile active active.prerelease.json '
-              { "parallel-jobs": 1, "patches-version": "dev", "enable-module-update": false } as $force |
-              ($force + . + $force) |
-              map_values(
-                if type == "object" then
-                  . as $app |
-                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\u0027\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
-                  if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
-                else . end
-              )
-            ' config.dev.json > .github/build/config.dev.updated.json
-          fi
+          TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+        run: bash .github/scripts/ci_generate_configs.sh
 
       - name: Resolve effective triggers
         id: effective_triggers
@@ -261,42 +68,7 @@ jobs:
           CREATED: ${{ steps.ensure_patch_sources.outputs.created }}
           RAW_TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           RAW_TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
-        run: |
-          set -euo pipefail
-          if [ "${CREATED:-false}" = "true" ]; then
-            echo "TRIGGER_STABLE=0" >> "$GITHUB_OUTPUT"
-            echo "TRIGGER_PRERELEASE=0" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          RAW_TRIGGER_STABLE=${RAW_TRIGGER_STABLE:-0}
-          RAW_TRIGGER_PRERELEASE=${RAW_TRIGGER_PRERELEASE:-0}
-
-          TRIGGER_STABLE=0
-          TRIGGER_PRERELEASE=0
-
-          if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
-            CFG=".github/build/config.stable.updated.json"
-            ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
-            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
-              TRIGGER_STABLE=1
-            else
-              echo "::notice::Skipping stable build trigger: no enabled apps in $CFG"
-            fi
-          fi
-
-          if [ "$RAW_TRIGGER_PRERELEASE" = "1" ]; then
-            CFG=".github/build/config.dev.updated.json"
-            ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
-            if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
-              TRIGGER_PRERELEASE=1
-            else
-              echo "::notice::Skipping dev build trigger: no enabled apps in $CFG"
-            fi
-          fi
-
-          echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
-          echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
+        run: bash .github/scripts/ci_resolve_triggers.sh
 
       - name: Notify telegram
         if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
@@ -304,50 +76,9 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
-        run: |
-          set -euo pipefail
-
-          [ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
-          [ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
-
-          PATCH_SOURCES_JSON=$(cat .github/build/patch_sources.json || echo '{}')
-          MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson patches "$PATCH_SOURCES_JSON" '
-            [ $new | to_entries[] | . as $e
-              | ($old[$e.key] // {}) as $o
-              | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) or ($e.value.blocked == true and $o.blocked != true))
-              | ($patches[$e.key].host // "github") as $host
-              | ($host == "gitlab") as $is_gitlab
-              | ($is_gitlab | if . then "https://gitlab.com/" else "https://github.com/" end) as $base
-              | "📦 [\($e.value.repo)](\($base)\($e.value.repo))" +
-                (if ($e.value.blocked == true and $o.blocked != true) then "\n  ╰ 🚫 Repository access blocked." else "" end) +
-                (if ($e.value.blocked != true and $e.value.stable != "" and $e.value.stable != ($o.stable // "")) then
-                  (if $is_gitlab then "\n  ╰ Stable: [\($e.value.stable)](https://gitlab.com/\($e.value.repo)/-/releases/\($e.value.stable))" else "\n  ╰ Stable: [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" end)
-                else "" end) +
-                (if ($e.value.blocked != true and $e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // "")) then
-                  (if $is_gitlab then "\n  ╰ Pre-release: [\($e.value.prerelease)](https://gitlab.com/\($e.value.repo)/-/releases/\($e.value.prerelease))" else "\n  ╰ Pre-release: [\($e.value.prerelease)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.prerelease))" end)
-                else "" end)
-            ] | join("\n\n")
-          ')
-
-          if [ -z "$MSG_BODY" ]; then
-            echo "::notice::No actual updates to format for Telegram."
-            exit 0
-          fi
-
-          NL=$'\n'
-          if [ "${{ steps.compare.outputs.TRIGGER_STABLE }}" = "0" ] && [ "${{ steps.compare.outputs.TRIGGER_PRERELEASE }}" = "0" ]; then
-            FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${MSG_BODY}"
-          else
-            FULL_MSG="*🚨 New Patch(es) Detected!*${NL}${NL}${MSG_BODY}"
-          fi
-
-          curl -s -X POST \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "disable_web_page_preview=true" \
-            --data-urlencode "text=${FULL_MSG}" \
-            --data-urlencode "chat_id=@rvb27" \
-            --data-urlencode "message_thread_id=2747" \
-            "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" > /dev/null
+          TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
+          TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+        run: bash .github/scripts/ci_notify_telegram.sh
 
       - name: Commit updated patch sources and configs
         if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
@@ -355,7 +86,7 @@ jobs:
         with:
           branch: main
           skip_checkout: true
-          file_pattern: .github/build/*.json
+          file_pattern: .github/configs/*.json
           commit_message: "Update patch sources and generated configs [skip ci]"
 
   build_dev:
@@ -363,7 +94,7 @@ jobs:
     if: ${{ needs.check_patch.outputs.trigger_prerelease == '1' }}
     uses: ./.github/workflows/build.yml
     with:
-      config_file: ".github/build/config.dev.updated.json"
+      config_file: ".github/configs/config.dev.updated.json"
     secrets: inherit
 
   build_stable:
@@ -371,7 +102,7 @@ jobs:
     if: ${{ always() && needs.check_patch.outputs.trigger_stable == '1' && needs.check_patch.result == 'success' && needs.build_dev.result != 'cancelled' }}
     uses: ./.github/workflows/build.yml
     with:
-      config_file: ".github/build/config.stable.updated.json"
+      config_file: ".github/configs/config.stable.updated.json"
     secrets: inherit
 
   trigger_cleanup:
