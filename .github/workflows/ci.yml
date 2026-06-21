@@ -227,8 +227,8 @@ jobs:
               map_values(
                 if type == "object" then
                   . as $app |
-                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase) as $src |
-                  if ($active[0] | index($src)) then $app else ($app | .enabled = false) end
+                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\'\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
+                  if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
                 else . end
               )
             ' config.stable.json > .github/build/config.stable.updated.json
@@ -248,8 +248,8 @@ jobs:
               map_values(
                 if type == "object" then
                   . as $app |
-                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase) as $src |
-                  if ($active[0] | index($src)) then $app else ($app | .enabled = false) end
+                  (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"\\'\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
+                  if (($srcs - $active[0]) != $srcs) then $app else ($app | .enabled = false) end
                 else . end
               )
             ' config.dev.json > .github/build/config.dev.updated.json
