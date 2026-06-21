@@ -560,8 +560,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/378)<br>
-Patches: [brosssh/patches-2.7.0-dev.4.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.4)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/379)<br>
+Patches: [brosssh/patches-2.7.0.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
