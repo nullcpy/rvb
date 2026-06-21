@@ -112,6 +112,9 @@
   },
   "x-shim": {
     "repo": "inotia00/x-shim",
-    "host": "gitlab"
+    "host": "gitlab",
+    "stable": "v1.6.2",
+    "prerelease": "",
+    "blocked": false
   }
 }
