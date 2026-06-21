@@ -1121,10 +1121,10 @@ patch_apk() {
 	done
 
 	local base_cmd="java -jar '$cli_jar' patch '$stock_input' --purge -t '$tmp_dir' -o '$patched_apk' --keystore=ks.keystore \
---keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
+--keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc"
 
-	local cmd_long="${base_cmd}${p_args_long}"
-	local cmd_short="${base_cmd}${p_args_short}"
+	local cmd_long="${base_cmd}${p_args_long} $patcher_args"
+	local cmd_short="${base_cmd}${p_args_short} $patcher_args"
 
 	# TODO: remove this later — revanced-cli needs -b to bypass build provenance checks
 	local cli_name=$(basename "$cli_jar")
