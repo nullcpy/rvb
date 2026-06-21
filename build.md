@@ -1,8 +1,3 @@
-twitter-morphe (arm64-v8a): 12.0.0-release.0  
-twitter-morphe (arm-v7a): 12.0.0-release.0  
-twitter-morphe-materialu (arm64-v8a): 12.0.0-release.0  
-twitter-morphe-materialu (arm-v7a): 12.0.0-release.0  
-instagram-morphe-piko (arm64-v8a): 430.0.0.53.80  
 instagram-morphe (arm64-v8a): 430.0.0.53.80  
 instagram-morphe (arm-v7a): 430.0.0.53.80  
 
@@ -13,11 +8,5 @@ instagram-morphe (arm-v7a): 430.0.0.53.80
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: brosssh/patches-2.7.0-dev.4.mpp  
-[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0-dev.4)
-
-Patches: inotia00/patches-1.6.2.mpp  
-[Changelog](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.2)
-
-Patches: crimera/patches-3.7.0-dev.2.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.2)  
+Patches: brosssh/patches-2.7.0.mpp  
+[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0)  
