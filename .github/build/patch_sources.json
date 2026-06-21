@@ -109,5 +109,9 @@
     "stable": "v0.3.1",
     "prerelease": "v0.2.0-dev.2",
     "blocked": false
+  },
+  "x-shim": {
+    "repo": "inotia00/x-shim",
+    "host": "gitlab"
   }
 }
