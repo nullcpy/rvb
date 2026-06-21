@@ -583,8 +583,8 @@ Patches: [brosssh/patches-2.7.0.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/378)<br>
-Patches: [crimera/patches-3.7.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.2)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/380)<br>
+Patches: [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -1667,8 +1667,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/378)<br>
-Patches: [inotia00/patches-1.6.2.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.2), [crimera/patches-3.7.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.2)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/380)<br>
+Patches: [inotia00/patches-1.6.2.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.2), [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1747,8 +1747,8 @@ Patches: [inotia00/patches-1.6.2.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/378)<br>
-Patches: [inotia00/patches-1.6.2.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.2), [crimera/patches-3.7.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.2)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/380)<br>
+Patches: [inotia00/patches-1.6.2.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.2), [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
