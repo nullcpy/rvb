@@ -433,7 +433,7 @@ Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/372)<br>
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/373)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
 - Fix selected account persistence
 - GmsCore support
@@ -444,11 +444,11 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.80.0.929302933-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.81.0.932521513-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-12](https://github.com/nullcpy/rvb/releases/tag/337)<br>
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/373)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
 - GmsCore support
 - Spoof features
