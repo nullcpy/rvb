@@ -1073,8 +1073,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/369)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.4)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1894,8 +1894,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/369)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.4)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2721,8 +2721,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/369)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.4)
+[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
