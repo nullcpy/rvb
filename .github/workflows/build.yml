@@ -104,6 +104,16 @@ jobs:
           overwrite_files: true
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
+      - name: Notify telegram
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
+          TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_notify_telegram.sh
+
       - name: Update changelog and module update files
         env:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
@@ -118,13 +128,3 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}
-
-      - name: Notify telegram
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
-          TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
-          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: bash .github/scripts/build_notify_telegram.sh
