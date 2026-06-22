@@ -560,8 +560,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/379)<br>
-Patches: [brosssh/patches-2.7.0.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.7.0)
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
+Patches: [brosssh/patches-2.8.0-dev.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0-dev.1)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -1073,8 +1073,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1894,8 +1894,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2721,8 +2721,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/371)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.5)
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
+Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
