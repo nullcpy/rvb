@@ -174,7 +174,7 @@
     "dpi": "nodpi anydpi"
   },
   "instagram-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1075,7 +1075,7 @@
     "direct-dlurl": "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
   },
   "automate-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "automate",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1087,7 +1087,7 @@
     "dpi": "nodpi anydpi"
   },
   "speedtest-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "speedtest",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1099,7 +1099,7 @@
     "dpi": "nodpi anydpi"
   },
   "autosync-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "autosync",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1242,7 +1242,7 @@
     "dpi": "nodpi anydpi"
   },
   "inshorts-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "inshorts",
     "rv-brand": "morphe",
     "build-mode": "apk",
