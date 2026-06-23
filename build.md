@@ -7,5 +7,5 @@ instagram-morphe-piko (arm64-v8a): 430.0.0.53.80
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: crimera/patches-3.6.0.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.6.0)  
+Patches: crimera/patches-3.7.0-dev.3.mpp  
+[Changelog](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)  
