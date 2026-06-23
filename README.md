@@ -583,8 +583,8 @@ Patches: [brosssh/patches-2.8.0-dev.1.mpp](https://github.com/brosssh/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/384)<br>
-Patches: [crimera/patches-3.6.0.mpp](https://github.com/crimera/piko/releases/tag/v3.6.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/385)<br>
+Patches: [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)
 - Add settings
 - Allow user network certificate
 - Amoled theme
