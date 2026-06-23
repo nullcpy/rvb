@@ -1073,8 +1073,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1093,12 +1093,12 @@ Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.23.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.25.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1894,8 +1894,8 @@ Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -1974,8 +1974,8 @@ Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -1992,6 +1992,7 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Disable QUIC protocol
 - Disable Shorts resuming on startup
 - Disable double tap actions
+- Disable fullscreen gestures
 - Disable haptic feedback
 - Disable layout updates
 - Disable player popup panels
@@ -2053,8 +2054,8 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2071,6 +2072,7 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Disable QUIC protocol
 - Disable Shorts resuming on startup
 - Disable double tap actions
+- Disable fullscreen gestures
 - Disable haptic feedback
 - Disable layout updates
 - Disable player popup panels
@@ -2128,12 +2130,12 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.24.363-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.25.523.SECONDARY-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/343)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2150,6 +2152,7 @@ Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Disable QUIC protocol
 - Disable Shorts resuming on startup
 - Disable double tap actions
+- Disable fullscreen gestures
 - Disable haptic feedback
 - Disable layout updates
 - Disable player popup panels
@@ -2721,8 +2724,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/381)<br>
-Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0-dev.7)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2753,12 +2756,12 @@ Patches: [MorpheApp/patches-1.32.0-dev.7.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.22.53-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.24.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/345)<br>
-Patches: [MorpheApp/patches-1.31.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
