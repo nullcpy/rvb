@@ -81,8 +81,8 @@ Thank you to everyone who helps keep this project alive!
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -198,8 +198,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Disable telemetry
 - Enable Premium
 </blockquote>
@@ -274,12 +274,12 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="duolingo-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.82.3-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
+<summary id="duolingo-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.84.4-gray?labelColor=4DC730&logo=duolingo&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -372,8 +372,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - AMOLED dark theme
 </blockquote>
 </details>
@@ -501,8 +501,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -521,8 +521,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Unlock premium features
 </blockquote>
 </details>
@@ -744,8 +744,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -841,8 +841,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Niagara Pro
 </blockquote>
 </details>
@@ -860,8 +860,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Prime
 </blockquote>
 </details>
@@ -876,12 +876,12 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="pandora-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2602.1-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
+<summary id="pandora-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2606.1-gray?labelColor=3668FF&logo=pandora&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Disable ads
 - Unlimited skips
 </blockquote>
@@ -970,8 +970,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 - MicroG integration
 </blockquote>
@@ -1024,8 +1024,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
@@ -1193,8 +1193,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -1212,8 +1212,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Disable signature check
 - Enable Pro
 </blockquote>
@@ -1232,8 +1232,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Pro
 - MicroG integration
 </blockquote>
@@ -1252,8 +1252,8 @@ Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - AMOLED dark theme
 - Disable telemetry
 - Enable SoundCloud Go+
@@ -1571,8 +1571,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -1610,8 +1610,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Premium
 </blockquote>
 </details>
@@ -1646,8 +1646,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Disable anti-tamper
 - Enable Pro
 </blockquote>
@@ -1874,8 +1874,8 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-13](https://github.com/nullcpy/rvb/releases/tag/347)<br>
-Patches: [hoo-dles/patches-1.36.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/383)<br>
+Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.36.1)
 - Enable Pro
 </blockquote>
 </details>
