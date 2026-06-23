@@ -113,7 +113,7 @@
     "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
-    "build-mode": "apk",
+    "build-mode": "both",
     "arch": "both",
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-cli",
@@ -175,7 +175,7 @@
     "dpi": "nodpi anydpi"
   },
   "instagram-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
