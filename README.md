@@ -1686,8 +1686,8 @@ Patches: [hoo-dles/patches-1.36.1.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/389)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.4)
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1766,8 +1766,8 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/389)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.4)
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
