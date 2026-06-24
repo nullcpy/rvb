@@ -119,6 +119,9 @@
     "blocked": false
   },
   "hoomans": {
-    "repo": "arandomhooman/hoomans-morphe-patches"
+    "repo": "arandomhooman/hoomans-morphe-patches",
+    "stable": "v1.30.0",
+    "prerelease": "v1.19.0",
+    "blocked": false
   }
 }
