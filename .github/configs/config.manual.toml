@@ -1,20 +1,17 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[instagram-morphe-piko]
+[rumble-morphe]
 enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
-build-mode = "both"
+app-name = "rumble"
+rv-brand = "morphe"
+build-mode = "apk"
 arch = "both"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
+patches-source = "arandomhooman/hoomans-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
 dpi = "nodpi anydpi"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
 
