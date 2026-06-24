@@ -1169,13 +1169,13 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="rumble-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.7.3.rc0-gray?labelColor=83c442&logo=android&logoColor=white&style=flat"></summary>
+<summary id="rumble-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.14.5-gray?labelColor=83c442&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-- Unlock Pro
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/388)<br>
+Patches: [arandomhooman/patches-1.30.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.30.0)
+- Unlock Premium
 </blockquote>
 </details>
 
