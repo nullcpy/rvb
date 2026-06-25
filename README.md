@@ -175,18 +175,13 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="battery-guru-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v25.3.0-gray?labelColor=2c7f87&logo=android&logoColor=white&style=flat"></summary>
+<summary id="battery-guru-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.4.8.1-gray?labelColor=2c7f87&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
-- Auto claim channel points
-- Block audio ads
-- Block embedded ads
-- Block video ads
-- Show deleted messages
-- Settings
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
+Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+- Unlock PRO
 </blockquote>
 </details>
 
@@ -861,14 +856,13 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="money-manager-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=ef4643&logo=android&logoColor=white&style=flat"></summary>
+<summary id="money-manager-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.11.1GF-gray?labelColor=ef4643&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-- Make UI look like Pro
-- Unlock Moon+ Reader Pro
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
+Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+- Unlock Premium
 </blockquote>
 </details>
 
