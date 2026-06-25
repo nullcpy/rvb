@@ -1578,18 +1578,16 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="twitch-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v25.3.0-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
+<summary id="twitch-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v29.9.1-gray?labelColor=9146FF&logo=twitch&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/392)<br>
+Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
 - Auto claim channel points
-- Block audio ads
-- Block embedded ads
-- Block video ads
+- Block live ads
+- Hide display ads
 - Show deleted messages
-- Settings
 </blockquote>
 </details>
 
