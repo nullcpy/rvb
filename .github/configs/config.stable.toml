@@ -1095,5 +1095,20 @@ uptodown-dlurl = "https://rumble.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
 dpi = "nodpi anydpi"
 
+[twitch-morphe]
+enabled = true
+app-name = "twitch"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+
+
 
 
