@@ -578,12 +578,12 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (Brosssh)](https://github.com/brosssh/morphe-patches)
 
 <details>
-<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v430.0.0.53.80-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v435.0.0.37.76-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/395)<br>
-Patches: [brosssh/patches-2.8.0-dev.3.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0-dev.3)
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/396)<br>
+Patches: [brosssh/patches-2.8.1-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1-dev.2)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -1743,8 +1743,8 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/396)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.7)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1823,8 +1823,8 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
+[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/396)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.7)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
