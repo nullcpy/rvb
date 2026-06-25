@@ -65,7 +65,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; B &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; <a href="#apps-b">B</a> &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -162,6 +162,31 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 [Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
 Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
 - Purchase All Items
+</blockquote>
+</details>
+
+---
+
+<a id="apps-b"></a>
+### [Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)
+
+`com.paget96.batteryguru`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="battery-guru-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v25.3.0-gray?labelColor=2c7f87&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+- Auto claim channel points
+- Block audio ads
+- Block embedded ads
+- Block video ads
+- Show deleted messages
+- Settings
 </blockquote>
 </details>
 
@@ -817,6 +842,26 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <details>
 <summary id="moonplus-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=4285F4&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Make UI look like Pro
+- Unlock Moon+ Reader Pro
+</blockquote>
+</details>
+
+---
+
+### [Money Manager](https://play.google.com/store/apps/details?id=com.realbyteapps.moneymanagerfree)
+
+`com.realbyteapps.moneymanagerfree`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="money-manager-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.5-gray?labelColor=ef4643&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
