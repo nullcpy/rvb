@@ -1,5 +1,7 @@
-twitch-morphe (arm64-v8a): 29.9.1  
-twitch-morphe (arm-v7a): 29.9.1  
+battery-guru-morphe (arm64-v8a): 2.4.8.1  
+battery-guru-morphe (arm-v7a): 2.4.8.1  
+money-manager-morphe (arm64-v8a): 4.11.1GF  
+money-manager-morphe (arm-v7a): 4.11.1GF  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
