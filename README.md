@@ -2462,9 +2462,8 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
-Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/402)<br>
+Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.1)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3053,9 +3052,8 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
-Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/402)<br>
+Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.1)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
