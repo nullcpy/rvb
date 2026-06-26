@@ -89,6 +89,19 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 </blockquote>
 </details>
 
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="adguard-morphe-nightly">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
+Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+- Enable Premium
+</blockquote>
+</details>
+
 ---
 
 ### [Adobe Lightroom](https://play.google.com/store/apps/details?id=com.adobe.lrmobile)

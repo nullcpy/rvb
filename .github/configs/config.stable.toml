@@ -702,6 +702,19 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguar
 dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
+[adguard-morphe-nightly]
+enabled = true
+app-name = "adguard"
+rv-brand = "morphe-nightly"
+build-mode = "both"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
+dpi = "nodpi anydpi"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [moonplus-reader-morphe]
 enabled = true
 app-name = "moonplus-reader"
