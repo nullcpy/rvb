@@ -184,7 +184,8 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
     "dpi": "nodpi anydpi",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
     "enabled": false,
@@ -890,7 +891,7 @@
     "dpi": "nodpi anydpi"
   },
   "adguard-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1266,7 +1267,7 @@
     "dpi": "nodpi anydpi"
   },
   "rumble-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1278,7 +1279,7 @@
     "dpi": "nodpi anydpi"
   },
   "twitch-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1290,7 +1291,7 @@
     "dpi": "nodpi anydpi"
   },
   "battery-guru-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1302,7 +1303,7 @@
     "dpi": "nodpi anydpi"
   },
   "money-manager-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1314,7 +1315,7 @@
     "dpi": "nodpi anydpi"
   },
   "waze-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1326,8 +1327,8 @@
     "dpi": "nodpi anydpi"
   },
   "warp-morphe": {
-    "enabled": true,
-    "app-name": "warp-manager",
+    "enabled": false,
+    "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
     "arch": "both",
