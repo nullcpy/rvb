@@ -95,14 +95,13 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="adguard-morphe-nightly">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
+<summary id="adguard-morphe-nightly">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.14.68-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
-Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
-
-- Enable Premium
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
+Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+- Unlock Lifetime Premium
 </blockquote>
 </details>
 
@@ -262,15 +261,13 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="warp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.15.5.2604080000-gray?labelColor=f1a830&logo=android&logoColor=white&style=flat"></summary>
+<summary id="warp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.38.7-gray?labelColor=f1a830&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
-Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
-
-- Disable telemetry
-- Enable Premium
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
+Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+- Spoof WARP+ Unlimited UI
 </blockquote>
 </details>
 
@@ -1831,14 +1828,23 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="waze-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=33ccff&logo=adguard&logoColor=white&style=flat"></summary>
+<summary id="waze-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.19.0.2-gray?labelColor=33ccff&logo=adguard&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
-Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
-
-- Enable Premium
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
+Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+- Alert Distances
+- AutoZoom
+- Disable Ads
+- Disable Advil Ad Requests
+- Map Skin (Vitamin C)
+- Navigation & Map
+- Popup Suppression
+- Radar Sound (Any Speed)
+- Report Speed Limit
+- Speed Limit Sign
+- Uncensored Radar / Camera Display
 </blockquote>
 </details>
 
