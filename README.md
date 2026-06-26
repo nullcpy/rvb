@@ -645,13 +645,12 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (Brosssh)](https://github.com/brosssh/morphe-patches)
 
 <details>
-<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v430.0.0.53.80-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v435.0.0.37.76-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/386)<br>
-Patches: [brosssh/patches-2.8.0-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0-dev.2)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/400)<br>
+Patches: [brosssh/patches-2.8.1-dev.4.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1-dev.4)
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -1210,9 +1209,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/400)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.2)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2137,9 +2135,8 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/400)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.2)
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2211,6 +2208,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Theme
 - Video ads
 - Video quality
+- Voice over translation
 </blockquote>
 </details>
 
@@ -2979,9 +2977,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/400)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.2)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
