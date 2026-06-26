@@ -3,28 +3,28 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[battery-guru-morphe]
+[waze-morphe]
 enabled = true
-app-name = "battery-guru"
+app-name = "waze"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "arandomhooman/hoomans-morphe-patches"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://battery-guru.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/"
+uptodown-dlurl = "https://waze.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/waze/waze-gps-maps-traffic-alerts-live-navigation"
 dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
-[money-manager-morphe]
+[warp-morphe]
 enabled = true
-app-name = "money-manager"
+app-name = "warp-manager"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "arandomhooman/hoomans-morphe-patches"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
+uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
 dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"

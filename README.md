@@ -20,31 +20,32 @@
 
 Building, testing, and maintaining these automated workflows takes a significant amount of time. If this builder has saved you time or made your life easier, any support is hugely appreciated!
 
-* **❤️ [Donate](https://fahim-ahmed05.github.io/donate)** if you can.
-* **⭐ Star this repository** (This is a huge help!)
-* **📢 Share the project** with others who might find it useful.
+- **❤️ [Donate](https://fahim-ahmed05.github.io/donate)** if you can.
+- **⭐ Star this repository** (This is a huge help!)
+- **📢 Share the project** with others who might find it useful.
 
 Thank you to everyone who helps keep this project alive!
 
 ---
 
 > [!NOTE]
-> 
+>
 > 🌐 **[Visit Download Website](https://nullcpy.github.io/)**
 >
 > For the best experience, please download from the website. It features:
-> * 📱 **The complete list of every supported app.**
-> * 📦 Clear separation between **Stable**, **Beta** and **Variant** builds.
-> * 🏷️ Beautifully organized version numbers and download tracking.
-> * 🔄 Step-by-step instructions on how to set up automatic updates using **Obtainium** and easy **Add to Obtainium** button.
-> 
+>
+> - 📱 **The complete list of every supported app.**
+> - 📦 Clear separation between **Stable**, **Beta** and **Variant** builds.
+> - 🏷️ Beautifully organized version numbers and download tracking.
+> - 🔄 Step-by-step instructions on how to set up automatic updates using **Obtainium** and easy **Add to Obtainium** button.
 >
 > **🤖 Fully Automated Builds**
 >
 > All APKs and modules in this repository are 100% automated. If you need help, please direct your feedback to the right place:
-> * 🧩 **Patch Issues:** If a specific feature/mod is broken (e.g., ads are showing), please open an issue in the **respective patch developer's repository**.
-> * 🛠️ **Builder Issues:** If an app fails to build, or the download links are broken, **[open an Issue here on GitHub](https://github.com/nullcpy/rvb/issues/new/choose)** or **[send a message in our Telegram Group](https://t.me/rvb27/306)**.
-> * 💬 **General Help & Requests:** Need help installing, or want to request a new app? **[Send a message in our Telegram Group](https://t.me/rvb27/306)** or **[open an Issue here on GitHub](https://github.com/nullcpy/rvb/issues/new/choose)** or **[open a discussion here on GitHub](https://github.com/nullcpy/rvb/discussions/new?category=general)**.
+>
+> - 🧩 **Patch Issues:** If a specific feature/mod is broken (e.g., ads are showing), please open an issue in the **respective patch developer's repository**.
+> - 🛠️ **Builder Issues:** If an app fails to build, or the download links are broken, **[open an Issue here on GitHub](https://github.com/nullcpy/rvb/issues/new/choose)** or **[send a message in our Telegram Group](https://t.me/rvb27/306)**.
+> - 💬 **General Help & Requests:** Need help installing, or want to request a new app? **[Send a message in our Telegram Group](https://t.me/rvb27/306)** or **[open an Issue here on GitHub](https://github.com/nullcpy/rvb/issues/new/choose)** or **[open a discussion here on GitHub](https://github.com/nullcpy/rvb/discussions/new?category=general)**.
 
 ---
 
@@ -72,6 +73,7 @@ Thank you to everyone who helps keep this project alive!
 ---
 
 <a id="apps-a"></a>
+
 ### [AdGuard](https://adguard.com/en/adguard-android/overview.html)
 
 `com.adguard.android`
@@ -85,6 +87,7 @@ Thank you to everyone who helps keep this project alive!
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -98,6 +101,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -117,6 +121,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Disable mandatory login
 - Disable version check
 - Unlock Premium
@@ -138,6 +143,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Bypass login
 </blockquote>
 </details>
@@ -157,6 +163,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
 Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
 - Bypass Blocks Limit
 </blockquote>
 </details>
@@ -176,6 +183,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 
 [Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
 Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
 - Purchase All Items
 </blockquote>
 </details>
@@ -183,6 +191,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 ---
 
 <a id="apps-b"></a>
+
 ### [Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)
 
 `com.paget96.batteryguru`
@@ -196,6 +205,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 
 [Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
 Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+
 - Unlock PRO
 </blockquote>
 </details>
@@ -203,6 +213,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 ---
 
 <a id="apps-c"></a>
+
 ### [CalcNote](https://play.google.com/store/apps/details?id=com.appumstudios.calcnote)
 
 `com.appumstudios.calcnote`
@@ -216,6 +227,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+
 - Unlock CalcNote Pro
 </blockquote>
 </details>
@@ -235,6 +247,28 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
+- Disable telemetry
+- Enable Premium
+</blockquote>
+</details>
+
+---
+
+### [Cloudflare WARP](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone)
+
+`com.cloudflare.onedotonedotonedotone`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="warp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.15.5.2604080000-gray?labelColor=f1a830&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
+Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Disable telemetry
 - Enable Premium
 </blockquote>
@@ -255,6 +289,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-19](https://github.com/nullcpy/rvb/releases/tag/262)<br>
 Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomator-morphe-patches/releases/tag/v1.1.0)
+
 - Check License No-Op
 - License Bypass
 </blockquote>
@@ -275,6 +310,7 @@ Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomato
 
 [Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Cricbuzz Disable Ads
 - Cricbuzz Premium
 </blockquote>
@@ -283,6 +319,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 ---
 
 <a id="apps-d"></a>
+
 ### [Document Scanner](https://play.google.com/store/apps/details?id=com.cv.docscanner)
 
 `com.cv.docscanner`
@@ -296,6 +333,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -315,6 +353,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -328,6 +367,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Disable ads
 - Skip energy recharge ads
 </blockquote>
@@ -336,6 +376,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-e"></a>
+
 ### [Eyecon Caller ID & Spam Block](https://play.google.com/store/apps/details?id=com.eyecon.global)
 
 `com.eyecon.global`
@@ -349,6 +390,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Eyecon Premium
 </blockquote>
 </details>
@@ -356,6 +398,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 ---
 
 <a id="apps-f"></a>
+
 ### [Facebook](https://play.google.com/store/apps/details?id=com.facebook.katana)
 
 `com.facebook.katana`
@@ -369,6 +412,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
 Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/morphe-meta-patches/releases/tag/v1.0.0)
+
 - Hide 'Sponsored Stories'
 - Hide story ads
 </blockquote>
@@ -389,6 +433,7 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Fing Premium
 </blockquote>
 </details>
@@ -396,6 +441,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 ---
 
 <a id="apps-g"></a>
+
 ### [GitHub](https://play.google.com/store/apps/details?id=com.github.android)
 
 `com.github.android`
@@ -409,6 +455,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - AMOLED dark theme
 </blockquote>
 </details>
@@ -428,6 +475,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
 Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
+
 - Always-incognito mode
 - Enable OCR feature
 - Enable clipboard in incognito
@@ -449,6 +497,7 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 [Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/368)<br>
 Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/tag/v1.9.0)
+
 - Enable CustomTabs
 - GmsCore support
 - Change package name
@@ -470,6 +519,7 @@ Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/
 
 [Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/373)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
+
 - Fix selected account persistence
 - GmsCore support
 - Spoof features
@@ -485,6 +535,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
 
 [Release 2026-06-21](https://github.com/nullcpy/rvb/releases/tag/373)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - GmsCore support
 - Spoof features
 </blockquote>
@@ -505,6 +556,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Remove device restrictions
 </blockquote>
 </details>
@@ -518,6 +570,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Remove device restrictions
 </blockquote>
 </details>
@@ -525,6 +578,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-h"></a>
+
 ### [HelloChinese: Learn Chinese](https://play.google.com/store/apps/details?id=com.hellochinese)
 
 `com.hellochinese`
@@ -538,6 +592,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -545,6 +600,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 ---
 
 <a id="apps-i"></a>
+
 ### [Icon Packer](https://play.google.com/store/apps/details?id=cn.ommiao.iconpacker)
 
 `cn.ommiao.iconpacker`
@@ -558,10 +614,10 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Unlock premium features
 </blockquote>
 </details>
-
 
 ---
 
@@ -578,6 +634,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
 Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
+
 - Remove IMDb's ads, trackers, and analytics
 </blockquote>
 </details>
@@ -595,8 +652,9 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/397)<br>
-Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/386)<br>
+Patches: [brosssh/patches-2.8.0-dev.2.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0-dev.2)
+
 - Bypass signature check
 - Disable Reels scrolling
 - Disable story auto flipping
@@ -620,6 +678,7 @@ Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/r
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/385)<br>
 Patches: [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.3)
+
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -682,6 +741,7 @@ Patches: [crimera/patches-3.7.0-dev.3.mpp](https://github.com/crimera/piko/relea
 
 [Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Disable analytics
 - Enable developer menu
 - Hide ads
@@ -699,6 +759,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-14](https://github.com/nullcpy/rvb/releases/tag/245)<br>
 Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+
 - Disable signature check
 - Enable Developer Menu
 - Hide Ads
@@ -722,6 +783,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 [Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
 Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
 - Remove Ads
 - Skip Login
 </blockquote>
@@ -742,6 +804,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 
 [Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Lumina Premium
 </blockquote>
 </details>
@@ -749,6 +812,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 ---
 
 <a id="apps-m"></a>
+
 ### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
 
 `com.arlosoft.macrodroid`
@@ -762,6 +826,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - MacroDroid Premium
 </blockquote>
 </details>
@@ -781,6 +846,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -800,6 +866,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Disable typing indicator
 - Hide Facebook button
 - Hide inbox ads
@@ -817,6 +884,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Hide Facebook button
 - Hide inbox subtabs
 - Remove Meta AI
@@ -838,6 +906,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Hide OneDrive migration
 </blockquote>
 </details>
@@ -857,6 +926,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+
 - Make UI look like Pro
 - Unlock Moon+ Reader Pro
 </blockquote>
@@ -877,6 +947,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 [Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
 Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+
 - Unlock Premium
 </blockquote>
 </details>
@@ -884,6 +955,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 ---
 
 <a id="apps-n"></a>
+
 ### [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)
 
 `bitpit.launcher`
@@ -897,6 +969,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Niagara Pro
 </blockquote>
 </details>
@@ -916,6 +989,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Prime
 </blockquote>
 </details>
@@ -923,6 +997,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 ---
 
 <a id="apps-p"></a>
+
 ### [Pandora](https://play.google.com/store/apps/details?id=com.pandora.android)
 
 `com.pandora.android`
@@ -936,6 +1011,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Disable ads
 - Unlimited skips
 </blockquote>
@@ -956,6 +1032,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Hide update popup
 - Spoof device ID
 - Unlock plus
@@ -977,6 +1054,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+
 - Disable Bugsnag Telemetry
 - Disable General Telemetry
 - Remove Promoted Pins
@@ -998,6 +1076,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 [Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Anti-delete messages
 - Anti-disappearing media
 - Anti-screenshot notification
@@ -1026,6 +1105,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 - MicroG integration
 </blockquote>
@@ -1046,6 +1126,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Remove 'Sent from' signature
 - Remove free accounts limit
 </blockquote>
@@ -1060,6 +1141,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Remove 'Sent from' signature
 - Remove free accounts limit
 </blockquote>
@@ -1080,6 +1162,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
@@ -1096,6 +1179,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
 Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
+
 </blockquote>
 </details>
 
@@ -1108,6 +1192,7 @@ Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Remove delay
 - Unlock split tunneling
 </blockquote>
@@ -1116,6 +1201,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-r"></a>
+
 ### [Reddit](https://play.google.com/store/apps/details?id=com.reddit.frontpage)
 
 `com.reddit.frontpage`
@@ -1127,8 +1213,9 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/394)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.1)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1153,6 +1240,7 @@ Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morph
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
 Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1179,6 +1267,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 [Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/370)<br>
 Patches: [jkennethcarino/patches-1.3.0-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.1)
+
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
@@ -1198,6 +1287,7 @@ Patches: [jkennethcarino/patches-1.3.0-dev.1.mpp](https://github.com/jkennethcar
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.0.0)
+
 - Disable screenshot popup
 - Hide Recently Visited shelf
 - Hide Trending Today shelf
@@ -1229,6 +1319,7 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+
 - Unlock Premium
 </blockquote>
 </details>
@@ -1236,6 +1327,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 ---
 
 <a id="apps-s"></a>
+
 ### [SD Maid 2/SE](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 
 `eu.darken.sdmse`
@@ -1249,6 +1341,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Unlock Pro
 </blockquote>
 </details>
@@ -1268,6 +1361,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -1287,6 +1381,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Disable signature check
 - Enable Pro
 </blockquote>
@@ -1307,6 +1402,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Pro
 - MicroG integration
 </blockquote>
@@ -1327,6 +1423,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - AMOLED dark theme
 - Disable telemetry
 - Enable SoundCloud Go+
@@ -1342,6 +1439,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Disable telemetry
 - Enable offline sync
 - Hide ads
@@ -1363,6 +1461,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
 Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
 - AdFree Account
 - Disable Logging(analytics)
 </blockquote>
@@ -1383,6 +1482,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+
 - Unlock Symfonium
 </blockquote>
 </details>
@@ -1390,6 +1490,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 ---
 
 <a id="apps-t"></a>
+
 ### [Telegram](https://play.google.com/store/apps/details?id=org.telegram.messenger)
 
 `org.telegram.messenger` `org.telegram.messenger.web`
@@ -1403,6 +1504,7 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1425,6 +1527,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/201)<br>
 Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+
 - Bypass Integrity
 - Disable Auto Update
 - Download Speed Boost
@@ -1441,6 +1544,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 [Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/201)<br>
 Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExperiments/releases/tag/v2.0.0)
+
 - Bypass Integrity
 - Disable Auto Update
 - Download Speed Boost
@@ -1465,6 +1569,7 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Hide ads
 </blockquote>
 </details>
@@ -1478,6 +1583,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Hide ads
 </blockquote>
 </details>
@@ -1497,6 +1603,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - TickTick Premium
 </blockquote>
 </details>
@@ -1516,6 +1623,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/362)<br>
 Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.3.1)
+
 - Auto Translate comments
 - Copy comments without username
 - Custom offline videos limit
@@ -1549,6 +1657,7 @@ Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-p
 
 [Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
 Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/morphe-patches/releases/tag/v1.3.0)
+
 - Hide VIP banner
 </blockquote>
 </details>
@@ -1568,6 +1677,7 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 
 [Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
 Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
 - Disable telemetry
 - Disable update check
 - GMS sign-in bypass
@@ -1596,6 +1706,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Disable Ad-Free Banner
 - Disable Tumblr TV
 - Disable blog notification reminder
@@ -1620,6 +1731,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Auto claim channel points
 - Block audio ads
 - Block embedded ads
@@ -1638,6 +1750,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/392)<br>
 Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
+
 - Auto claim channel points
 - Block live ads
 - Hide display ads
@@ -1662,6 +1775,7 @@ Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoo
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
@@ -1681,6 +1795,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Hide Ads
 </blockquote>
 </details>
@@ -1688,6 +1803,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 ---
 
 <a id="apps-w"></a>
+
 ### [Wallcraft](https://play.google.com/store/apps/details?id=com.wallpaperscraft.wallpaper)
 
 `com.wallpaperscraft.wallpaper`
@@ -1701,11 +1817,33 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Premium
 </blockquote>
 </details>
 
 ---
+
+### [Waze](https://play.google.com/store/apps/details?id=com.waze)
+
+`com.waze`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="waze-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=33ccff&logo=adguard&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
+Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
+- Enable Premium
+</blockquote>
+</details>
+
+---
+
 ### [WinRAR](https://play.google.com/store/apps/details?id=com.rarlab.rar)
 
 `com.rarlab.rar`
@@ -1719,11 +1857,13 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
 - Hide purchase reminder
 </blockquote>
 </details>
 
 ---
+
 ### [WPS Office](https://play.google.com/store/apps/details?id=cn.wps.moffice_eng)
 
 `cn.wps.moffice_eng`
@@ -1737,6 +1877,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Disable anti-tamper
 - Enable Pro
 </blockquote>
@@ -1745,6 +1886,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 ---
 
 <a id="apps-x"></a>
+
 ### [X / Twitter](https://play.google.com/store/apps/details?id=com.twitter.android)
 
 `com.twitter.android`
@@ -1756,8 +1898,9 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/396)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.7)
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
+
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1836,8 +1979,9 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/396)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.7)
+[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/390)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.5)
+
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1922,6 +2066,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 
 [Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/145)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Dynamic color
 - Hide ads
 - Hide recommended users
@@ -1945,6 +2090,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-04-24](https://github.com/nullcpy/rvb/releases/tag/150)<br>
 Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.27.0)
+
 - Disable signature check
 - Enable Pro
 </blockquote>
@@ -1965,6 +2111,7 @@ Patches: [hoo-dles/patches-1.27.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 [Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
 Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.37.0)
+
 - Enable Pro
 </blockquote>
 </details>
@@ -1972,6 +2119,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 ---
 
 <a id="apps-y"></a>
+
 ### [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube)
 
 `com.google.android.youtube`
@@ -1983,8 +2131,9 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/394)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.1)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2066,6 +2215,7 @@ Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morph
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
 Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2146,6 +2296,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
 Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2226,6 +2377,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
 Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2308,6 +2460,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2379,6 +2532,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2451,6 +2605,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2525,6 +2680,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Add more double tap to seek length options
 - Alternative thumbnails
 - Announcements
@@ -2595,6 +2751,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Add more double tap to seek length options
 - Alternative thumbnails
 - Announcements
@@ -2665,6 +2822,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Add more double tap to seek length options
 - Alternative thumbnails
 - Announcements
@@ -2737,6 +2895,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/143)<br>
 Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.4)
+
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -2814,8 +2973,9 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/394)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.1)
+[Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
+Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2853,6 +3013,7 @@ Patches: [MorpheApp/patches-1.33.0-dev.1.mpp](https://github.com/MorpheApp/morph
 
 [Release 2026-06-23](https://github.com/nullcpy/rvb/releases/tag/387)<br>
 Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2891,6 +3052,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -2934,6 +3096,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -2977,6 +3140,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-06-16](https://github.com/nullcpy/rvb/releases/tag/357)<br>
 Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.1.0)
+
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3022,6 +3186,7 @@ Patches: [anddea/patches-4.1.0.mpp](https://github.com/anddea/revanced-patches/r
 
 [Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
 - Change miniplayer color
 - Check watch history domain name resolution
 - Enable debugging
@@ -3053,6 +3218,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 [Release 2026-04-23](https://github.com/nullcpy/rvb/releases/tag/143)<br>
 Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/releases/tag/v5.16.4)
+
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3096,8 +3262,7 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
 
 This automated builder would not be possible without the incredible work and dedication of the open-source Android community. A massive thank you to:
 
-* **[peternmuller](https://github.com/peternmuller)**, **[nvbangg](https://github.com/nvbangg/revanced-morphe-builder)**, and **[j-hc](https://github.com/j-hc)** for their phenomenal foundational build scripts, CI/CD pipelines, and automation logic that power the core of this repository. 
-* **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-Vanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
+- **[peternmuller](https://github.com/peternmuller)**, **[nvbangg](https://github.com/nvbangg/revanced-morphe-builder)**, and **[j-hc](https://github.com/j-hc)** for their phenomenal foundational build scripts, CI/CD pipelines, and automation logic that power the core of this repository.
+- **The Patch Maintainers:** Huge appreciation to the development teams behind **ReVanced**, **MorpheApp**, **Anddea**, **RVX**, **Piko**, **De-Vanced**, and all the other independent developers who spend countless hours reverse-engineering, updating, and keeping these patches alive for everyone.
 
-*If you enjoy using these builds, please consider starring their upstream repositories and supporting the original patch developers!*
-
+_If you enjoy using these builds, please consider starring their upstream repositories and supporting the original patch developers!_
