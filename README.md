@@ -649,7 +649,7 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/400)<br>
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/401)<br>
 Patches: [brosssh/patches-2.8.1-dev.4.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1-dev.4)
 - Bypass signature check
 - Disable Reels scrolling
