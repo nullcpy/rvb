@@ -1,5 +1,7 @@
-instagram-morphe (arm64-v8a): 435.0.0.37.76  
-instagram-morphe (arm-v7a): 435.0.0.37.76  
+youtube-anddea (arm64-v8a): 20.51.39  
+youtube-anddea (arm-v7a): 20.51.39  
+youtube-music-anddea (arm64-v8a): 8.30.54  
+youtube-music-anddea (arm-v7a): 8.30.54  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +10,5 @@ instagram-morphe (arm-v7a): 435.0.0.37.76
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: brosssh/patches-2.8.1-dev.4.mpp  
-[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1-dev.4)  
+Patches: anddea/patches-4.2.0-dev.1.mpp  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.1)  
