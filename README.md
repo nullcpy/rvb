@@ -265,7 +265,7 @@ Patches: [hoo-dles/patches-1.37.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/399)<br>
 Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
 - Spoof WARP+ Unlimited UI
 </blockquote>
