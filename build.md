@@ -1,7 +1,11 @@
-twitter-morphe (arm64-v8a): 12.2.0-release.0  
-twitter-morphe (arm-v7a): 12.2.0-release.0  
-twitter-morphe-materialu (arm64-v8a): 12.2.0-release.0  
-twitter-morphe-materialu (arm-v7a): 12.2.0-release.0  
+rumble-morphe (arm64-v8a): 3.14.5  
+rumble-morphe (arm-v7a): 3.14.5  
+twitch-morphe (arm64-v8a): 29.9.1  
+twitch-morphe (arm-v7a): 29.9.1  
+battery-guru-morphe (arm64-v8a): 2.4.8.1  
+battery-guru-morphe (arm-v7a): 2.4.8.1  
+money-manager-morphe (arm64-v8a): 4.11.1GF  
+money-manager-morphe (arm-v7a): 4.11.1GF  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -10,8 +14,5 @@ twitter-morphe-materialu (arm-v7a): 12.2.0-release.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: inotia00/patches-1.6.3.mpp  
-[Changelog](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3)
-
-Patches: crimera/patches-3.7.0-dev.9.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.7.0-dev.9)  
+Patches: arandomhooman/patches-1.31.1.mpp  
+[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.1)  
