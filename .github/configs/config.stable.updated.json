@@ -174,7 +174,7 @@
     "dpi": "nodpi anydpi"
   },
   "instagram-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -889,6 +889,18 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/adguard-software-limited/adguard",
     "dpi": "nodpi anydpi"
   },
+  "adguard-morphe-nightly": {
+    "enabled": true,
+    "app-name": "adguard",
+    "rv-brand": "morphe-nightly",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://adguard-for-android.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/adguard-software-limited/adguard",
+    "dpi": "nodpi anydpi"
+  },
   "moonplus-reader-morphe": {
     "enabled": false,
     "app-name": "moonplus-reader",
@@ -1299,6 +1311,30 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://money-manager.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget",
+    "dpi": "nodpi anydpi"
+  },
+  "waze-morphe": {
+    "enabled": true,
+    "app-name": "waze",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://waze.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/waze/waze-gps-maps-traffic-alerts-live-navigation",
+    "dpi": "nodpi anydpi"
+  },
+  "warp-morphe": {
+    "enabled": true,
+    "app-name": "warp-manager",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://1-1-1-1.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet",
     "dpi": "nodpi anydpi"
   }
 }
