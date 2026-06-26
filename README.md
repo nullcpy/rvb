@@ -202,9 +202,8 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
-Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/405)<br>
+Patches: [arandomhooman/patches-1.31.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.1)
 - Unlock PRO
 </blockquote>
 </details>
@@ -939,9 +938,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/393)<br>
-Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/405)<br>
+Patches: [arandomhooman/patches-1.31.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1309,9 +1307,8 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 <blockquote>
 
-[Release 2026-06-24](https://github.com/nullcpy/rvb/releases/tag/391)<br>
-Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/405)<br>
+Patches: [arandomhooman/patches-1.31.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1740,9 +1737,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-25](https://github.com/nullcpy/rvb/releases/tag/392)<br>
-Patches: [arandomhooman/patches-1.31.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.0)
-
+[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/405)<br>
+Patches: [arandomhooman/patches-1.31.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.1)
 - Auto claim channel points
 - Block live ads
 - Hide display ads
