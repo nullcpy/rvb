@@ -1162,7 +1162,7 @@ dpi = "nodpi anydpi"
 
 [warp-morphe]
 enabled = true
-app-name = "warp-manager"
+app-name = "warp"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
