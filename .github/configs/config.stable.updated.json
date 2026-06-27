@@ -80,7 +80,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -94,7 +94,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "twitter-morphe-materialu": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
@@ -109,7 +109,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
   },
   "instagram-morphe-piko": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "both",
@@ -380,7 +380,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "soundcloud-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "soundcloud",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -646,7 +646,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.facebook.orca"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "duolingo",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -658,7 +658,7 @@
     "dpi": "nodpi anydpi"
   },
   "wps-office-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "wps-office",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -708,7 +708,7 @@
     "uptodown-dlurl": "https://lumina-walls.en.uptodown.com/android"
   },
   "wallcraft-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "wallcraft",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -720,7 +720,7 @@
     "dpi": "nodpi anydpi"
   },
   "solid-explorer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "solid-explorer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -744,7 +744,7 @@
     "dpi": "nodpi anydpi"
   },
   "icon-packer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "icon-packer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -756,7 +756,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -807,7 +807,7 @@
     "dpi": "nodpi anydpi"
   },
   "smart-launcher-6-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "smart-launcher-6",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -821,7 +821,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
   },
   "merriam-webster-dictionary-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "merriam-webster-dictionary",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -856,7 +856,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
   "pandora-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "pandora",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -867,7 +867,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
   },
   "xrecorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "xrecorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -879,7 +879,7 @@
     "dpi": "nodpi anydpi"
   },
   "adguard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adguard",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -966,7 +966,7 @@
     "dpi": "nodpi anydpi"
   },
   "nova-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "nova-launcher",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -979,7 +979,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
   },
   "ventusky-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ventusky",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1028,7 +1028,7 @@
     "dpi": "nodpi anydpi"
   },
   "camscanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "camscanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1040,7 +1040,7 @@
     "dpi": "nodpi anydpi"
   },
   "niagara-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "niagara-launcher",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1065,7 +1065,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "github-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "github",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1152,7 +1152,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
   "showly-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "showly",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1204,7 +1204,7 @@
     "dpi": "nodpi anydpi"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1243,7 +1243,7 @@
     "dpi": "nodpi anydpi"
   },
   "hellochinese-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hellochinese",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1267,7 +1267,7 @@
     "dpi": "nodpi anydpi"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1279,7 +1279,7 @@
     "dpi": "nodpi anydpi"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1291,7 +1291,7 @@
     "dpi": "nodpi anydpi"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1303,7 +1303,7 @@
     "dpi": "nodpi anydpi"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
