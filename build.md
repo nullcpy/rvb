@@ -1,11 +1,4 @@
-rumble-morphe (arm64-v8a): 3.14.5  
-rumble-morphe (arm-v7a): 3.14.5  
-twitch-morphe (arm64-v8a): 29.9.1  
-twitch-morphe (arm-v7a): 29.9.1  
-battery-guru-morphe (arm64-v8a): 2.4.8.1  
-battery-guru-morphe (arm-v7a): 2.4.8.1  
-money-manager-morphe (arm64-v8a): 4.11.1GF  
-money-manager-morphe (arm-v7a): 4.11.1GF  
+instagram-morphe-piko (arm64-v8a): 430.0.0.53.80  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -14,5 +7,5 @@ money-manager-morphe (arm-v7a): 4.11.1GF
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: arandomhooman/patches-1.31.3.mpp  
-[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.31.3)  
+Patches: crimera/patches-3.6.0.mpp  
+[Changelog](https://github.com/crimera/piko/releases/tag/v3.6.0)  
