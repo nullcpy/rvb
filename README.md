@@ -1192,15 +1192,15 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/412)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
-- Hide Trending Today shelf
+- Hide Trending shelves
 - Hide ads
+- Hide communities shelf
 - Hide navigation buttons
-- Hide recommended communities shelf
 - Hide sidebar components
 - Open links directly
 - Open links externally
@@ -2105,8 +2105,9 @@ Patches: [hoo-dles/patches-1.38.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/412)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
+- Add to queue
 - Alternative thumbnails
 - Ambient mode
 - Bypass image region restrictions
@@ -2153,6 +2154,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Media notification controls
 - Miniplayer
 - Navigation bar
+- Network proxy
 - Open Shorts in regular player
 - Open channel of live avatar
 - Open links externally
@@ -2177,6 +2179,7 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Theme
 - Video ads
 - Video quality
+- Voice over translation
 </blockquote>
 </details>
 
@@ -2943,8 +2946,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/412)<br>
-Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -2965,9 +2968,11 @@ Patches: [MorpheApp/patches-1.32.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Hide music video ads
 - Miniplayer previous and next buttons
 - Navigation bar
+- Network proxy
 - Permanent repeat
 - Remove background playback restrictions
 - Sanitize sharing links
+- Scrobbling
 - Spoof video streams
 - Theme
 - Track crossfade
