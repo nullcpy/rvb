@@ -3,18 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[instagram-morphe-piko]
+[acalendar-morphe]
 enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
-build-mode = "both"
+app-name = "acalendar"
+rv-brand = "morphe"
+build-mode = "apk"
 arch = "all"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
+patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
 dpi = "nodpi anydpi"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
+apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+
+
 
