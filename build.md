@@ -1,7 +1,4 @@
-google-photos-morphe (arm64-v8a): 7.82.0.937646388  
-google-photos-morphe (arm-v7a): 7.82.0.937646388  
-google-photos-revanced (arm64-v8a): 7.82.0.937646388  
-google-photos-revanced (arm-v7a): 7.82.0.937646388  
+instagram-morphe-piko (all): 435.0.0.37.76  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -9,10 +6,6 @@ google-photos-revanced (arm-v7a): 7.82.0.937646388
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-all.jar  
-Patches: Raudrobot/patches-6.1.0.rvp  
-[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
-
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: RookieEnough/patches-1.0.4.mpp  
-[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
+Patches: crimera/patches-3.7.0.mpp  
+[Changelog](https://github.com/crimera/piko/releases/tag/v3.7.0)  
