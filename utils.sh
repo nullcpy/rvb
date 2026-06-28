@@ -1388,14 +1388,14 @@ build_rv() {
 		cp -a $MODULE_TEMPLATE_DIR/. "$base_template"
 		local upj="${table,,}-update.json"
 
-		module_config "$base_template" "$pkg_name" "$version" "$arch"
+		module_config "$base_template" "$pkg_name" "$version_f" "$arch"
 
 		local patches_ver
 		patches_ver="${patches_jar%% *}"; patches_ver="${patches_ver##*-}"
 		module_prop \
 			"${args[module_prop_name]}" \
 			"${app_name} ${args[rv_brand]}" \
-			"${version} (patches ${patches_ver})" \
+			"${version_f} (patches ${patches_ver})" \
 			"${app_name} ${args[rv_brand]} module" \
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
