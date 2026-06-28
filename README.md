@@ -663,7 +663,7 @@ Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/413)<br>
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/415)<br>
 Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
 - Add settings
 - Allow user network certificate
