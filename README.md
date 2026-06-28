@@ -81,13 +81,13 @@ Thank you to everyone who helps keep this project alive!
 ### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
-<summary id="acalendar-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=0268a5&logo=android&logoColor=white&style=flat"></summary>
+<summary id="acalendar-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=0268a5&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-27](https://github.com/nullcpy/rvb/releases/tag/409)<br>
-Patches: [hoo-dles/patches-1.38.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.0)
-- Enable Premium
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/417)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Unlock aCalendar+
 </blockquote>
 </details>
 
