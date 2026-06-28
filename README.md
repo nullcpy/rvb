@@ -660,12 +660,12 @@ Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v430.0.0.53.80-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v435.0.0.37.76-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-27](https://github.com/nullcpy/rvb/releases/tag/407)<br>
-Patches: [crimera/patches-3.6.0.mpp](https://github.com/crimera/piko/releases/tag/v3.6.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/410)<br>
+Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -690,7 +690,7 @@ Patches: [crimera/patches-3.6.0.mpp](https://github.com/crimera/piko/releases/ta
 - Download media
 - Download voice message
 - External downloader
-- Follow back indicator
+- Friendship status indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
 - Hide notes tray
