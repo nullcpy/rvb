@@ -78,7 +78,7 @@ Thank you to everyone who helps keep this project alive!
 
 `org.withouthat.acalendar`
 
-### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
+#### [Morphe (binarymend)](https://github.com/binarymend/morphe-patches)
 
 <details>
 <summary id="acalendar-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=0268a5&logo=android&logoColor=white&style=flat"></summary>
