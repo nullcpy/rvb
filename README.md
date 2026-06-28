@@ -682,8 +682,8 @@ Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/415)<br>
-Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [crimera/patches-3.8.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.2)
 - Add settings
 - Allow user network certificate
 - Amoled theme
@@ -1211,8 +1211,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.5)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1894,8 +1894,8 @@ Patches: [hoo-dles/patches-1.38.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-27](https://github.com/nullcpy/rvb/releases/tag/409)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.8.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.2)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1908,6 +1908,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Custom download folder
 - Custom emoji font
 - Custom font
+- Custom share menu
 - Custom sharing domain
 - Customise post font size
 - Customize Inline action Bar items
@@ -1966,6 +1967,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Show poll results
 - Show post source label
 - Show sensitive media
+- Support external downloader
 </blockquote>
 </details>
 
@@ -1974,8 +1976,8 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-27](https://github.com/nullcpy/rvb/releases/tag/409)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.8.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.2)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -1989,6 +1991,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Custom download folder
 - Custom emoji font
 - Custom font
+- Custom share menu
 - Custom sharing domain
 - Customise post font size
 - Customize Inline action Bar items
@@ -2048,6 +2051,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Show poll results
 - Show post source label
 - Show sensitive media
+- Support external downloader
 </blockquote>
 </details>
 
@@ -2124,8 +2128,8 @@ Patches: [hoo-dles/patches-1.38.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.5)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2965,8 +2969,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/416)<br>
-Patches: [MorpheApp/patches-1.33.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.4)
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
+Patches: [MorpheApp/patches-1.33.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.5)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
