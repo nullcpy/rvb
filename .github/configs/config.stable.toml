@@ -102,7 +102,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundclou
 dpi = "nodpi anydpi"
 
 [google-recorder-revanced]
-enabled = true 
+enabled = true
 app-name = "google-recorder"
 rv-brand = "revanced"
 build-mode = "both"
@@ -195,7 +195,7 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [google-recorder-morphe]
-enabled = true 
+enabled = true
 app-name = "google-recorder"
 rv-brand = "morphe"
 build-mode = "both"
@@ -401,7 +401,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
 [telegram-revanced-gplay]
-enabled = true 
+enabled = true
 app-name = "telegram"
 rv-brand = "revanced-gplay"
 build-mode = "apk"
@@ -413,7 +413,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
 dpi = "nodpi anydpi"
 
 [telegram-revanced-foss]
-enabled = true 
+enabled = true
 app-name = "telegram"
 rv-brand = "revanced-foss"
 build-mode = "apk"
@@ -599,7 +599,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
 
 [document-scanner-morphe]
-enabled = true 
+enabled = true
 app-name = "document-scanner"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -614,7 +614,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [smart-launcher-6-morphe]
-enabled = true 
+enabled = true
 app-name = "smart-launcher-6"
 rv-brand = "morphe"
 build-mode = "both"
@@ -628,12 +628,12 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [merriam-webster-dictionary-morphe]
-enabled = true 
+enabled = true
 app-name = "merriam-webster-dictionary"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-version = "5.5.0" 
+version = "5.5.0"
 patches-source = "hoo-dles/morphe-patches"
 uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster"
@@ -641,7 +641,7 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
 
 [tumblr-morphe]
-enabled = true 
+enabled = true
 app-name = "tumblr"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -653,7 +653,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
 
 [viber-morphe]
-enabled = true 
+enabled = true
 app-name = "viber"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -665,7 +665,7 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
 [pandora-morphe]
-enabled = true 
+enabled = true
 app-name = "pandora"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -677,7 +677,7 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
 
 [xrecorder-morphe]
-enabled = true 
+enabled = true
 app-name = "xrecorder"
 rv-brand = "morphe"
 build-mode = "both"
@@ -901,7 +901,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
 
 [cryptomator-morphe]
-enabled = true 
+enabled = true
 app-name = "cryptomator"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -911,7 +911,7 @@ cli-source = "MorpheApp/morphe-cli"
 direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 
 [automate-morphe]
-enabled = true 
+enabled = true
 app-name = "automate"
 rv-brand = "morphe"
 build-mode = "both"
@@ -923,7 +923,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/llamalab/automate-llamalab"
 dpi = "nodpi anydpi"
 
 [speedtest-morphe]
-enabled = true 
+enabled = true
 app-name = "speedtest"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -948,7 +948,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/metactrl/autosync-universal-clo
 dpi = "nodpi anydpi"
 
 [sdmaid-morphe]
-enabled = true 
+enabled = true
 app-name = "sdmaid"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -1018,7 +1018,7 @@ dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [telegram-morphe-foss]
-enabled = true 
+enabled = true
 app-name = "telegram"
 rv-brand = "morphe-foss"
 build-mode = "apk"
@@ -1058,7 +1058,7 @@ dpi = "nodpi anydpi"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
 [macrodroid-morphe]
-enabled = true 
+enabled = true
 app-name = "macrodroid"
 rv-brand = "morphe"
 build-mode = "both"
@@ -1085,7 +1085,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mand
 dpi = "nodpi anydpi"
 
 [inshorts-morphe]
-enabled = true 
+enabled = true
 app-name = "inshorts"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -1097,7 +1097,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/inshorts-formerly-news-in-short
 dpi = "nodpi anydpi"
 
 [rumble-morphe]
-enabled = true 
+enabled = true
 app-name = "rumble"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -1172,5 +1172,18 @@ uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
 dpi = "nodpi anydpi"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+
+[acalendar-morphe]
+enabled = true
+app-name = "acalendar"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "binarymend/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
+dpi = "nodpi anydpi"
+apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
 
 
