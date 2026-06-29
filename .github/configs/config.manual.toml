@@ -3,18 +3,19 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[komoot-morphe]
+[peacock-morphe-androidtv]
 enabled = true 
-app-name = "komoot"
-rv-brand = "morphe"
+app-name = "peacock"
+rv-brand = "morphe-androidtv"
 build-mode = "apk"
-arch = "both"
-patches-source = "brosssh/morphe-patches"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps"
-uptodown-dlurl = "https://komoot.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
+# apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
+apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
+
 
 
 
