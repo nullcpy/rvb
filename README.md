@@ -1106,14 +1106,13 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="peacock-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
+<summary id="peacock-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.6.100-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/426)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+- Skip ads
 </blockquote>
 </details>
 
