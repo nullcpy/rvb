@@ -1110,7 +1110,7 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/426)<br>
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/427)<br>
 Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 - Skip ads
 </blockquote>
