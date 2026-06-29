@@ -167,6 +167,25 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 ---
 
+### [AT4K Launcher](https://play.google.com/store/apps/details?id=com.overdevs.at4k)
+
+`com.overdevs.at4k`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="at4k-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=93b297&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/417)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Unlock aCalendar+
+</blockquote>
+</details>
+
+---
+
 ### [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)
 
 `com.llamalab.automate`
@@ -1107,6 +1126,25 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
 - Enable Premium
 - MicroG integration
+</blockquote>
+</details>
+
+---
+
+### [Poweramp](https://play.google.com/store/apps/details?id=com.maxmpz.audioplayer)
+
+`com.maxmpz.audioplayer`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="poweramp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=0d2639&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/417)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+- Unlock aCalendar+
 </blockquote>
 </details>
 
