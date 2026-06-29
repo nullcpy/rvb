@@ -174,13 +174,13 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="at4k-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=93b297&logo=android&logoColor=white&style=flat"></summary>
+<summary id="at4k-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.99-gray?labelColor=93b297&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/417)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-- Unlock aCalendar+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/421)<br>
+Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.34.1)
+- Unlock Premium
 </blockquote>
 </details>
 
