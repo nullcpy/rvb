@@ -20,6 +20,7 @@ on:
           - ".github/configs/config.photos.toml"
           - ".github/configs/config.revanced.toml"
           - ".github/configs/config.piko.toml"
+          - ".github/configs/config.androidtv.toml"
 
 concurrency:
   group: build
