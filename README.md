@@ -352,6 +352,26 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <a id="apps-d"></a>
 
+### [Disney+](https://play.google.com/store/apps/details?id=com.disney.disneyplus)
+
+`com.disney.disneyplus`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="disneyplus-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
+</blockquote>
+</details>
+
+---
+
 ### [Document Scanner](https://play.google.com/store/apps/details?id=com.cv.docscanner)
 
 `com.cv.docscanner`
@@ -606,6 +626,26 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 ---
 
 <a id="apps-h"></a>
+
+### [HBO Max](https://play.google.com/store/apps/details?id=com.wbd.hbomax)
+
+`com.wbd.hbomax`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="hbomax-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=141b25&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
+</blockquote>
+</details>
+
+---
 
 ### [HelloChinese: Learn Chinese](https://play.google.com/store/apps/details?id=com.hellochinese)
 
@@ -1033,6 +1073,26 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
 - Disable ads
 - Unlimited skips
+</blockquote>
+</details>
+
+---
+
+### [Peacock](https://play.google.com/store/apps/details?id=com.peacocktv.peacockandroid)
+
+`com.peacocktv.peacockandroid`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="peacock-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
 </blockquote>
 </details>
 
@@ -1722,6 +1782,26 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 ---
 
+### [Tubi](https://play.google.com/store/apps/details?id=com.tubitv)
+
+`com.tubitv`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="tubi-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
+</blockquote>
+</details>
+
+---
+
 ### [Tumblr](https://play.google.com/store/apps/details?id=com.tumblr)
 
 `com.tumblr`
@@ -1824,6 +1904,26 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
 
 - Hide Ads
+</blockquote>
+</details>
+
+---
+
+### [ViX](https://play.google.com/store/apps/details?id=com.univision.prendetv)
+
+`com.univision.prendetv`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="vix-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
 </blockquote>
 </details>
 
