@@ -663,6 +663,24 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Hola VPN](https://play.google.com/store/apps/details?id=org.hola.play)
+
+`org.hola.play`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="hola-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=ff6401&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+</blockquote>
+</details>
+
+---
+
 <a id="apps-i"></a>
 
 ### [Icon Packer](https://play.google.com/store/apps/details?id=cn.ommiao.iconpacker)
