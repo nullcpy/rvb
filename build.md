@@ -1,9 +1,16 @@
-youtube-morphe (arm64-v8a): 20.51.39  
-youtube-morphe (arm-v7a): 20.51.39  
-youtube-music-morphe (arm64-v8a): 9.15.51  
-youtube-music-morphe (arm-v7a): 9.15.51  
-reddit-morphe (arm64-v8a): 2026.14.0  
-reddit-morphe (arm-v7a): 2026.14.0  
+rumble-morphe (arm64-v8a): 3.14.5  
+rumble-morphe (arm-v7a): 3.14.5  
+twitch-morphe (arm64-v8a): 29.9.1  
+twitch-morphe (arm-v7a): 29.9.1  
+money-manager-morphe (arm64-v8a): 4.11.1GF  
+money-manager-morphe (arm-v7a): 4.11.1GF  
+poweramp-morphe (all): build-1025-bundle-play  
+at4k-launcher-morphe (all): 0.99  
+disneyplus-morphe-androidtv (all): 26.6.0+rc5-2026.04.21  
+prime-video-morphe-androidtv (all): 6.23.23+v15.5.0.70-armv7a  
+hbomax-morphe-androidtv (all): 7.5.0.73  
+tubi-morphe-androidtv (all): 10.20.5000  
+vix-morphe-androidtv (all): 4.46.0_tv  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -12,5 +19,23 @@ reddit-morphe (arm-v7a): 2026.14.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: MorpheApp/patches-1.33.0-dev.7.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.7)  
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: ajstrick81/patches-1.6.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.7.0)
+
+Patches: arandomhooman/patches-1.34.1.mpp  
+[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.34.1)  
