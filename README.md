@@ -178,7 +178,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/423)<br>
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
 Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.34.1)
 - Unlock Premium
 </blockquote>
@@ -359,14 +359,13 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="disneyplus-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+<summary id="disneyplus-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.6.0+rc5.2026.04.21-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+- Disney+ Android TV
 </blockquote>
 </details>
 
@@ -634,14 +633,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="hbomax-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=141b25&logo=android&logoColor=white&style=flat"></summary>
+<summary id="hbomax-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=141b25&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 </blockquote>
 </details>
 
@@ -1110,7 +1107,7 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/427)<br>
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
 Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 - Skip ads
 </blockquote>
@@ -1237,14 +1234,16 @@ Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoo
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="prime-video-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
+<summary id="prime-video-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.23.23+v15.5.0.70.armv7a-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+- Disable auto-updates
+- Override certificate pinning
+- Prime Video extension
+- Skip ads
 </blockquote>
 </details>
 
@@ -1829,14 +1828,13 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="tubi-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
+<summary id="tubi-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.20.5000-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+- Skip ads
 </blockquote>
 </details>
 
@@ -1956,14 +1954,14 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="vix-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+<summary id="vix-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.46.0_tv-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+- Override certificate pinning
+- Skip ads
 </blockquote>
 </details>
 
