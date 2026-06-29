@@ -117,8 +117,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
-Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/431)<br>
+Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
 - Unlock Lifetime Premium
 </blockquote>
 </details>
@@ -300,8 +300,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/399)<br>
-Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/431)<br>
+Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
 - Spoof WARP+ Unlimited UI
 </blockquote>
 </details>
@@ -674,8 +674,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/429)<br>
-Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/431)<br>
+Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -2018,8 +2018,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/398)<br>
-Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/431)<br>
+Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
 - Alert Distances
 - AutoZoom
 - Disable Ads
