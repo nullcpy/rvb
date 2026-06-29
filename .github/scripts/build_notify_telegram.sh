@@ -11,9 +11,9 @@ shopt -s nullglob
 for OUTPUT in *; do
   DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/$NEXT_VER_CODE/${OUTPUT}"
   if [[ $OUTPUT = *.apk ]]; then
-    APKS+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+    APKS+="${NL}${NL}<a href=\"${DL_URL}\">${OUTPUT}</a>"
   elif [[ $OUTPUT = *.zip ]]; then
-    MODULES+="${NL}${NL}[${OUTPUT}](${DL_URL})"
+    MODULES+="${NL}${NL}<a href=\"${DL_URL}\">${OUTPUT}</a>"
     HAS_MODULES=true
   fi
 done
@@ -22,15 +22,16 @@ shopt -u nullglob
 MODULES=${MODULES#"$NL"}
 APKS=${APKS#"$NL"}
 
-BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.tmp)"
+BODY="$(sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g; s/^\* /↪ /g; s/^- /↪ /g; s/### //g; s/###//g; /^==/d; s/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g; s/`\([^`]*\)`/<code>\1<\/code>/g;' ../build.tmp)"
 
-MSG="*Build No. $NEXT_VER_CODE*${TITLE_SUFFIX}${NL}${NL}${BODY}${NL}${NL}"
+TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g')"
+MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}${NL}${NL}"
   
 if [ "$HAS_MODULES" = true ]; then
-  MSG+="*Modules:*${MODULES}${NL}${NL}"
+  MSG+="<b>Modules:</b>${MODULES}${NL}${NL}"
 fi
 
-MSG+="*APKs:*${APKS}"
+MSG+="<b>APKs:</b>${APKS}"
 
 # Split MSG into ≤4096-char chunks on line boundaries (never breaks URLs)
 TG_LIMIT=4096
@@ -38,14 +39,14 @@ CHUNK=""
 send_chunk() {
   local text="$1"
   curl -s -X POST \
-    --data-urlencode "parse_mode=Markdown" \
+    --data-urlencode "parse_mode=HTML" \
     --data-urlencode "disable_web_page_preview=true" \
     --data-urlencode "text=${text}" \
     --data-urlencode "chat_id=@rvb27" \
     --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
     "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
   curl -s -X POST \
-    --data-urlencode "parse_mode=Markdown" \
+    --data-urlencode "parse_mode=HTML" \
     --data-urlencode "disable_web_page_preview=true" \
     --data-urlencode "text=${text}" \
     --data-urlencode "chat_id=@rvb28" \
