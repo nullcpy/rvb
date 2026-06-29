@@ -3,17 +3,28 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[acalendar-morphe]
+[at4k-launcher-morphe]
 enabled = true 
-app-name = "acalendar"
+app-name = "at4k-launcher"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "all"
-patches-source = "binarymend/morphe-patches"
+patches-source = "arandomhooman/hoomans-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
 dpi = "nodpi anydpi"
-apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
+apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 
 
-
+[poweramp-morphe]
+enabled = true 
+app-name = "poweramp"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
