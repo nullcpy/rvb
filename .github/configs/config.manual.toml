@@ -25,9 +25,9 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
 
-[hbo-max-morphe-androidtv]
+[hbomax-morphe-androidtv]
 enabled = true 
-app-name = "hbo-max"
+app-name = "hbomax"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
 arch = "all"
