@@ -1138,13 +1138,13 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="poweramp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=0d2639&logo=android&logoColor=white&style=flat"></summary>
+<summary id="poweramp-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-vbuild.1025.bundle.play-gray?labelColor=0d2639&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/417)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-- Unlock aCalendar+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/420)<br>
+Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.34.1)
+- Unlock Premium
 </blockquote>
 </details>
 
