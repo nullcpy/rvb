@@ -863,14 +863,13 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 #### [Morphe (brosssh)](https://github.com/brosssh/morphe-patches)
 
 <details>
-<summary id="komoot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=4f6814&logo=android&logoColor=white&style=flat"></summary>
+<summary id="komoot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2025.38.2-gray?labelColor=4f6814&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
-- Doc Scanner Premium
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/425)<br>
+Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.0)
+- Unlock Premium features
 </blockquote>
 </details>
 
