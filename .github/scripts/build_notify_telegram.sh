@@ -22,7 +22,7 @@ shopt -u nullglob
 MODULES=${MODULES#"$NL"}
 APKS=${APKS#"$NL"}
 
-BODY="$(sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g; s/^\* /↪ /g; s/^- /↪ /g; s/### //g; s/###//g; /^==/d; s/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g; s/`\([^`]*\)`/<code>\1<\/code>/g;' ../build.tmp)"
+BODY="$(sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g; s/^\* /↪ /g; s/^- /↪ /g; s/### //g; s/###//g; /^==/d; s/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g; s/`\([^`]*\)`/<code>\1<\/code>/g; s/\[\([^]]*\)\](\([^)]*\))/<a href="\2">\1<\/a>/g;' ../build.tmp)"
 
 TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g')"
 MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}${NL}${NL}"
