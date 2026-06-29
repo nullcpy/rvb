@@ -670,12 +670,13 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="hola-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=ff6401&logo=android&logoColor=white&style=flat"></summary>
+<summary id="hola-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-vAARCH64_1.248.400-gray?labelColor=ff6401&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
-Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/429)<br>
+Patches: [rushiranpise/patches-1.7.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.7.0)
+- Unlock Premium
 </blockquote>
 </details>
 
