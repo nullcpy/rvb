@@ -20,7 +20,7 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.32.0",
-    "prerelease": "v1.33.0-dev.5",
+    "prerelease": "v1.33.0-dev.7",
     "blocked": false
   },
   "piko": {
@@ -120,7 +120,7 @@
   },
   "hoomans": {
     "repo": "arandomhooman/hoomans-morphe-patches",
-    "stable": "v1.34.0",
+    "stable": "v1.34.1",
     "prerelease": "v1.19.0",
     "blocked": false
   },
@@ -131,6 +131,9 @@
     "blocked": false
   },
   "androidtv": {
-    "repo": "ajstrick81/morphe-androidtv-patches"
+    "repo": "ajstrick81/morphe-androidtv-patches",
+    "stable": "v1.7.0",
+    "prerelease": "v1.5.7-dev.3",
+    "blocked": false
   }
 }
