@@ -891,7 +891,7 @@
     "dpi": "nodpi anydpi"
   },
   "adguard-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1267,7 +1267,7 @@
     "dpi": "nodpi anydpi"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1279,7 +1279,7 @@
     "dpi": "nodpi anydpi"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1291,7 +1291,7 @@
     "dpi": "nodpi anydpi"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1303,7 +1303,7 @@
     "dpi": "nodpi anydpi"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1315,7 +1315,7 @@
     "dpi": "nodpi anydpi"
   },
   "waze-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1327,7 +1327,7 @@
     "dpi": "nodpi anydpi"
   },
   "warp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1351,7 +1351,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "poweramp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "poweramp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1362,7 +1362,7 @@
     "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android"
   },
   "at4k-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1454,7 +1454,7 @@
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
   "hola-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
