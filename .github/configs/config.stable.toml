@@ -1213,4 +1213,72 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-
 apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 # apkcombo-dlurl = "https://apkcombo.com/at4k-launcher/com.overdevs.at4k"
 
+[disneyplus-morphe-androidtv]
+enabled = true 
+app-name = "disneyplus"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
+
+[prime-video-morphe-androidtv]
+enabled = true 
+app-name = "prime-video"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
+
+[hbomax-morphe-androidtv]
+enabled = true 
+app-name = "hbomax"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
+
+[peacock-morphe-androidtv]
+enabled = true 
+app-name = "peacock"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
+
+[tubi-morphe-androidtv]
+enabled = true 
+app-name = "tubi"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
+
+[vix-morphe-androidtv]
+enabled = true 
+app-name = "vix"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
+
+
+
 
