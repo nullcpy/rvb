@@ -129,5 +129,8 @@
     "stable": "v1.7.0",
     "prerelease": "v1.8.0-dev.2",
     "blocked": false
+  },
+  "androidtv": {
+    "repo": "ajstrick81/morphe-androidtv-patches"
   }
 }
