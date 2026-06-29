@@ -68,7 +68,7 @@ Thank you to everyone who helps keep this project alive!
 
 ---
 
-<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; <a href="#apps-b">B</a> &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; K &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
+<p align="center"><b>Jump to:</b> <a href="#apps-a">A</a> &bull; <a href="#apps-b">B</a> &bull; <a href="#apps-c">C</a> &bull; <a href="#apps-d">D</a> &bull; <a href="#apps-e">E</a> &bull; <a href="#apps-f">F</a> &bull; <a href="#apps-g">G</a> &bull; <a href="#apps-h">H</a> &bull; <a href="#apps-i">I</a> &bull; J &bull; <a href="#apps-k">K</a> &bull; L &bull; <a href="#apps-m">M</a> &bull; <a href="#apps-n">N</a> &bull; O &bull; <a href="#apps-p">P</a> &bull; Q &bull; <a href="#apps-r">R</a> &bull; <a href="#apps-s">S</a> &bull; <a href="#apps-t">T</a> &bull; U &bull; <a href="#apps-v">V</a> &bull; <a href="#apps-w">W</a> &bull; <a href="#apps-x">X</a> &bull; <a href="#apps-y">Y</a> &bull; Z</p>
 
 ---
 
@@ -854,6 +854,28 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 </details>
 
 ---
+<a id="apps-k"></a>
+
+### [komoot - hike, bike & run](https://play.google.com/store/apps/details?id=de.komoot.android)
+
+`de.komoot.android`
+
+#### [Morphe (brosssh)](https://github.com/brosssh/morphe-patches)
+
+<details>
+<summary id="komoot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=4f6814&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
+</blockquote>
+</details>
+
+---
+<a id="apps-l"></a>
 
 ### [Lumina Wallpapers](https://play.google.com/store/apps/details?id=com.lumina.wallpapers)
 
@@ -1217,7 +1239,7 @@ Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoo
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="prime-video-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
+<summary id="prime-video-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
