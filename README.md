@@ -359,7 +359,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="disneyplus-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+<summary id="disneyplus-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
@@ -634,7 +634,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="hbomax-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=141b25&logo=android&logoColor=white&style=flat"></summary>
+<summary id="hbomax-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=141b25&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
@@ -1085,7 +1085,7 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="peacock-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
+<summary id="peacock-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
@@ -1205,6 +1205,26 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 [Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/423)<br>
 Patches: [arandomhooman/patches-1.34.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.34.1)
 - Unlock Premium
+</blockquote>
+</details>
+
+---
+
+### [Prime Video](https://play.google.com/store/apps/details?id=com.amazon.amazonvideo.livingroom)
+
+`com.amazon.amazonvideo.livingroom`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="prime-video-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=181818&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- Doc Scanner Premium
 </blockquote>
 </details>
 
@@ -1789,7 +1809,7 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="tubi-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
+<summary id="tubi-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
@@ -1916,7 +1936,7 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="vix-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
+<summary id="vix-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.8.18-gray?labelColor=0a7b8d&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
