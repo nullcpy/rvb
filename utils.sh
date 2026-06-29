@@ -1290,6 +1290,21 @@ build_rv() {
 				pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
 				continue
 			fi
+			if ! unzip -t "$stock_apk" >/dev/null 2>&1; then
+				epr "ERROR: Downloaded file from ${dl_p} is not a valid zip archive (Cloudflare block or bad file)!"
+				rm -f "$stock_apk"
+				continue
+			fi
+			if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
+				pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as XAPK/APKS..."
+				mv "$stock_apk" "${stock_apk}.xapk"
+				if ! _apkpure_install_xapk "${stock_apk}.xapk" "$stock_apk"; then
+					epr "ERROR: Failed to extract XAPK/APKS"
+					rm -f "${stock_apk}.xapk" "$stock_apk"
+					continue
+				fi
+				rm -f "${stock_apk}.xapk"
+			fi
 			break
 		done
 	fi
