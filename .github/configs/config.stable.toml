@@ -1256,6 +1256,7 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
+apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
 
 [tubi-morphe-androidtv]
 enabled = true 
