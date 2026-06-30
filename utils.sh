@@ -1328,12 +1328,27 @@ build_rv() {
 				aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
 			fi
 			if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
-				local downloaded_pkg
-				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | awk -F" " '/package/ {print $2}' | awk -F"'" '/name=/ {print $2}')
+				local downloaded_pkg downloaded_ver
+				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1)
+				downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1)
+				
 				if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
 					epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
 					rm -f "$stock_apk"
 					continue
+				fi
+
+				if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" || "$dl_p" == "archive" ]]; then
+					if [ "$version" != "$downloaded_ver" ]; then
+						pr "Updating version from '${version}' to '${downloaded_ver}' based on APK info"
+						version="$downloaded_ver"
+						version_f=${version// /}
+						version_f=${version_f#v}
+						
+						local new_stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
+						mv "$stock_apk" "$new_stock_apk"
+						stock_apk="$new_stock_apk"
+					fi
 				fi
 			fi
 
