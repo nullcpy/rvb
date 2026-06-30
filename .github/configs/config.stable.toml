@@ -1331,4 +1331,33 @@ dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/reviva-softworks-ltd/snorelab-record-your-snoring"
 uptodown-dlurl = "https://snorelab-record-your-snoring.en.uptodown.com/android"
 
+[vpnify-morphe]
+enabled = true 
+app-name = "vpnify"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/android-patches-xtra"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy"
+# uptodown-dlurl = "https://vpnify.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
+apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+
+[projectivy-launcher-morphe]
+enabled = true 
+app-name = "projectivy-launcher"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/spocky/projectivy-launcher-android-tv"
+# uptodown-dlurl = "https://projectivy-launcher.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
+apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+
+
 
