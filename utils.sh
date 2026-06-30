@@ -853,7 +853,7 @@ get_apkcombo_resp() {
 	__APKCOMBO_PKG__="${url##*/}"
 	__APKCOMBO_BASE_URL__="$url"
 	local html=""
-	_fs_get "https://apkcombo.com/search/${__APKCOMBO_PKG__}/download" || return 1
+	_fs_get "${__APKCOMBO_BASE_URL__}/download" || return 1
 	__APKCOMBO_RESP__="$html"
 }
 get_apkcombo_vers() {
@@ -865,9 +865,9 @@ dl_apkcombo() {
 	local html="" dl_url final_url checkin page_url page compact_page
 
 	if [ -n "$version" ]; then
-		page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${version}-apk"
+		page_url="${__APKCOMBO_BASE_URL__}/download/phone-${version}-apk"
 	else
-		page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/apk"
+		page_url="${__APKCOMBO_BASE_URL__}/download/apk"
 	fi
 
 	_fs_get "$page_url" "https://apkcombo.com/" || return 1
