@@ -2118,12 +2118,12 @@ Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="windscribe-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=031732&logo=android&logoColor=white&style=flat"></summary>
+<summary id="windscribe-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.1.2274-gray?labelColor=031732&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
-Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/434)<br>
+Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
 </blockquote>
 </details>
 
