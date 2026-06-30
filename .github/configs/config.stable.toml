@@ -1305,3 +1305,30 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
 apkpure-dlurl = "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
+
+[ninja-vpn-morphe]
+enabled = true 
+app-name = "ninja-vpn"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+uptodown-dlurl = "https://ninja-vpn.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+
+[snorelab-morphe]
+enabled = true 
+app-name = "snorelab"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/reviva-softworks-ltd/snorelab-record-your-snoring"
+uptodown-dlurl = "https://snorelab-record-your-snoring.en.uptodown.com/android"
+
+
