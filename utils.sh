@@ -507,6 +507,11 @@ isoneof() {
 
 merge_splits() {
 	local bundle=$1 output=$2
+	if unzip -l "$bundle" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
+		pr "Downloaded bundle is actually a standard APK. Bypassing merge."
+		mv -f "$bundle" "$output"
+		return 0
+	fi
 	pr "Merging splits"
 	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.9/APKEditor-1.4.9.jar" >/dev/null || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
