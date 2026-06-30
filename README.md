@@ -2122,8 +2122,9 @@ Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe
 
 <blockquote>
 
-[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/434)<br>
+[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/435)<br>
 Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.8.1)
+- Unlock Premium
 </blockquote>
 </details>
 
