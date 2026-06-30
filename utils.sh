@@ -1119,8 +1119,8 @@ dl_direct() {
 	local url=$1 version=${2// /-} output=$3 arch=$4 _dpi=$5
 	req "$url" "${output}" || return 1
 }
-get_direct_vers() { cut -d- -f2 <<<"$__DIRECT_APKNAME__"; }
-get_direct_pkg_name() { cut -d- -f1 <<<"$__DIRECT_APKNAME__"; }
+get_direct_vers() { cut -d- -f2 <<<"$__DIRECT_APKNAME__" | sed 's/\.\(apk\|xapk\|apks\|apkm\)$//'; }
+get_direct_pkg_name() { cut -d- -f1 <<<"$__DIRECT_APKNAME__" | sed 's/\.\(apk\|xapk\|apks\|apkm\)$//'; }
 get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 # --------------------------------------------------
 
