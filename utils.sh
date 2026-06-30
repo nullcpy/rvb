@@ -1338,7 +1338,7 @@ build_rv() {
 					continue
 				fi
 
-				if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" || "$dl_p" == "archive" ]]; then
+				if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" ]]; then
 					if [ "$version" != "$downloaded_ver" ]; then
 						pr "Updating version from '${version}' to '${downloaded_ver}' based on APK info"
 						version="$downloaded_ver"
