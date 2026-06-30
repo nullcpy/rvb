@@ -1074,6 +1074,24 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Ninja VPN](https://play.google.com/store/apps/details?id=app.ninjavpn.android)
+
+`app.ninjavpn.android`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="ninja-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=fcee21&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+</blockquote>
+</details>
+
+---
+
 ### [Nova Launcher](https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher)
 
 `com.teslacoilsw.launcher`
@@ -1263,6 +1281,24 @@ Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-and
 - Override certificate pinning
 - Prime Video extension
 - Skip ads
+</blockquote>
+</details>
+
+---
+
+### [Projectivy Launcher](https://play.google.com/store/apps/details?id=com.spocky.projengmenu)
+
+`com.spocky.projengmenu`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="projectivy-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=f08029&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 </blockquote>
 </details>
 
@@ -1533,6 +1569,24 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
 - Disable signature check
 - Enable Pro
+</blockquote>
+</details>
+
+---
+
+### [SnoreLab](https://play.google.com/store/apps/details?id=com.snorelab.app)
+
+`com.snorelab.app`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="snorelab-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=1a5694&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 </blockquote>
 </details>
 
@@ -1986,6 +2040,24 @@ Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-and
 
 ---
 
+### [VPNify](https://play.google.com/store/apps/details?id=com.vpn.free.hotspot.secure.vpnify)
+
+`com.vpn.free.hotspot.secure.vpnify`
+
+#### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/android-patches-xtra)
+
+<details>
+<summary id="vpnify-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=050a38&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+</blockquote>
+</details>
+
+---
+
 <a id="apps-w"></a>
 
 ### [Wallcraft](https://play.google.com/store/apps/details?id=com.wallpaperscraft.wallpaper)
@@ -2031,6 +2103,24 @@ Patches: [rushiranpise/patches-1.8.1.mpp](https://github.com/rushiranpise/morphe
 - Report Speed Limit
 - Speed Limit Sign
 - Uncensored Radar / Camera Display
+</blockquote>
+</details>
+
+---
+
+### [Windscribe VPN](https://play.google.com/store/apps/details?id=com.windscribe.vpn)
+
+`com.windscribe.vpn`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="windscribe-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=031732&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
+Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
 </blockquote>
 </details>
 
