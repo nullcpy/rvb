@@ -1,6 +1,6 @@
-ninja-vpn-morphe (arm64-v8a): 1.4.6  
-ninja-vpn-morphe (arm-v7a): 1.4.6  
-snorelab-morphe (all): 2.24.03  
+projectivy-launcher-morphe (all): 4.70  
+vpnify-morphe (arm64-v8a): 2.2.9  
+vpnify-morphe (arm-v7a): 2.2.9  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
