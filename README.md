@@ -1294,12 +1294,13 @@ Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-and
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="projectivy-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=f08029&logo=android&logoColor=white&style=flat"></summary>
+<summary id="projectivy-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.70-gray?labelColor=f08029&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
-Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/434)<br>
+Patches: [arandomhooman/patches-1.36.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.36.0)
+- Unlock Premium
 </blockquote>
 </details>
 
@@ -2048,12 +2049,13 @@ Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-and
 #### [Morphe (BholeyKaBhakt)](https://github.com/BholeyKaBhakt/android-patches-xtra)
 
 <details>
-<summary id="vpnify-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.5.0.73-gray?labelColor=050a38&logo=android&logoColor=white&style=flat"></summary>
+<summary id="vpnify-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.2.9-gray?labelColor=050a38&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
-Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
+[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/434)<br>
+Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/android-patches-xtra/releases/tag/v2.12.0)
+- Unlock Premium
 </blockquote>
 </details>
 
