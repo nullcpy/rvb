@@ -865,21 +865,33 @@ dl_apkcombo() {
 	local html="" dl_url final_url checkin page_url page compact_page
 
 	if [ -n "$version" ]; then
-		page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${version}-apk"
+		local sfxs=("apk" "xapk" "apks")
 	else
-		page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/apk"
+		local sfxs=("apk")
 	fi
 
-	_fs_get "$page_url" "https://apkcombo.com/" || return 1
-	page="$html"
-	compact_page=$(tr '\n' ' ' <<<"$page")
+	for sfx in "${sfxs[@]}"; do
+		if [ -n "$version" ]; then
+			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${version}-${sfx}"
+		else
+			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/apk"
+		fi
 
-	dl_url=$(echo "$page" | grep -oP '(?<=a href=")https://download\.apkcombo\.com/[^"]+' | head -1) || true
-	[ -z "$dl_url" ] && dl_url=$(echo "$page" | grep -oP '(?<=a href=")/r2[^"]+' | head -1) || true
-	[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '"download_url"\s*:\s*"\K[^"]+' | head -1 | sed 's#\\/#/#g') || true
-	[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '"url"\s*:\s*"\Khttps://download\.apkcombo\.com/[^"]+' | head -1 | sed 's#\\/#/#g') || true
-	[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP 'https://download\.apkcombo\.com/[^"'"'"' <>]+' | head -1 | sed 's#\\/#/#g') || true
-	[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '/r2\?u=[^"'"'"' <>]+' | head -1 | sed 's#\\/#/#g') || true
+		_fs_get "$page_url" "https://apkcombo.com/" || continue
+		page="$html"
+		compact_page=$(tr '\n' ' ' <<<"$page")
+
+		dl_url=$(echo "$page" | grep -oP '(?<=a href=")https://download\.apkcombo\.com/[^"]+' | head -1) || true
+		[ -z "$dl_url" ] && dl_url=$(echo "$page" | grep -oP '(?<=a href=")/r2[^"]+' | head -1) || true
+		[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '"download_url"\s*:\s*"\K[^"]+' | head -1 | sed 's#\\/#/#g') || true
+		[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '"url"\s*:\s*"\Khttps://download\.apkcombo\.com/[^"]+' | head -1 | sed 's#\\/#/#g') || true
+		[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP 'https://download\.apkcombo\.com/[^"'"'"' <>]+' | head -1 | sed 's#\\/#/#g') || true
+		[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '/r2\?u=[^"'"'"' <>]+' | head -1 | sed 's#\\/#/#g') || true
+
+		if [ -n "$dl_url" ]; then
+			break
+		fi
+	done
 
 	[ -z "$dl_url" ] && { epr "Could not find APK link on APKCombo"; return 1; }
 	[[ "$dl_url" != http* ]] && dl_url="https://apkcombo.com${dl_url}"
