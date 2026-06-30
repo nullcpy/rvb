@@ -14,6 +14,7 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
 uptodown-dlurl = "https://windscribe.uptodown.com/android"
+apkcomb-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
 
 [vpnify-morphe]
 enabled = true 
@@ -26,6 +27,8 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy"
 uptodown-dlurl = "https://vpnify.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
+apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
 
 [projectivy-launcher-morphe]
 enabled = true 
