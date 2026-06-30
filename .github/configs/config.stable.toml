@@ -1359,5 +1359,17 @@ dpi = "nodpi anydpi"
 apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
 apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
 
-
+[windscribe-vpn-morphe]
+enabled = true 
+app-name = "windscribe-vpn"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
+uptodown-dlurl = "https://windscribe.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
 
