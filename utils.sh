@@ -1330,7 +1330,7 @@ build_rv() {
 			if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
 				local downloaded_pkg
 				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | awk -F" " '/package/ {print $2}' | awk -F"'" '/name=/ {print $2}')
-				if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ]; then
+				if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
 					epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
 					rm -f "$stock_apk"
 					continue
