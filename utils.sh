@@ -1310,6 +1310,21 @@ build_rv() {
 				fi
 				rm -f "${stock_apk}.xapk"
 			fi
+
+			local aapt_cmd="aapt"
+			if ! command -v aapt >/dev/null 2>&1 && [ -n "${ANDROID_SDK_ROOT:-}" ]; then
+				aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
+			fi
+			if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
+				local downloaded_pkg
+				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | awk -F" " '/package/ {print $2}' | awk -F"'" '/name=/ {print $2}')
+				if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ]; then
+					epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
+					rm -f "$stock_apk"
+					continue
+				fi
+			fi
+
 			break
 		done
 	fi

@@ -14,7 +14,7 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
 uptodown-dlurl = "https://windscribe.uptodown.com/android"
-apkcomb-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
+apkcombo-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
 
 [vpnify-morphe]
 enabled = true 
