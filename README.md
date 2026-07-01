@@ -359,13 +359,12 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Xposed (revenge-mod)](https://github.com/revenge-mod/revenge-xposed)
 
 <details>
-<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.6.0+rc5.2026.04.21-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
+<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v334.11.Stable-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/428)<br>
-Patches: [ajstrick81/patches-1.6.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.6.0)
-- Disney+ Android TV
+[Release 2026-07-01](https://github.com/nullcpy/rvb/releases/tag/438)<br>
+Patches: 
 </blockquote>
 </details>
 
