@@ -178,8 +178,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-06-30](https://github.com/nullcpy/rvb/releases/tag/432)<br>
-Patches: [arandomhooman/patches-1.36.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.36.0)
+[Release 2026-07-01](https://github.com/nullcpy/rvb/releases/tag/439)<br>
+Patches: [arandomhooman/patches-1.37.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.37.0)
 - Unlock Premium
 </blockquote>
 </details>
