@@ -1159,7 +1159,7 @@ patch_apk() {
 		for j in "${p_jars[@]}"; do
 			p_args_modules+=" -m '$j'"
 		done
-		local cmd="java -jar '$cli_jar' '$stock_input' -o '$patched_apk' $p_args_modules $patcher_args -k ks-p12.keystore 123456789 jhc 123456789"
+		local cmd="java -jar '$cli_jar' '$stock_input' -o '$patched_apk' $p_args_modules $patcher_args"
 		pr "$cmd"
 		PATCH_OUTPUT=$(eval "$cmd" 2>&1)
 		local ret=$?
