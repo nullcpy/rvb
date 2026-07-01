@@ -363,8 +363,8 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-07-01](https://github.com/nullcpy/rvb/releases/tag/438)<br>
-Patches: 
+[Release 2026-07-01](https://github.com/nullcpy/rvb/releases/tag/440)<br>
+Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1410)
 </blockquote>
 </details>
 
