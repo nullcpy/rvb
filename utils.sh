@@ -1379,9 +1379,15 @@ build_rv() {
 			fi
 			if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
 				local downloaded_pkg downloaded_ver
-				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1)
-				downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1)
+				downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
+				downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
 				
+				if [ -z "$downloaded_pkg" ]; then
+					epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
+					rm -f "$stock_apk"
+					continue
+				fi
+
 				if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
 					epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
 					rm -f "$stock_apk"
