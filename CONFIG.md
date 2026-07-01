@@ -108,16 +108,11 @@ You can natively inject Xposed modules into an app using `7723mod/NPatch` or `LS
 
 ```toml
 [Discord]
-# Use NPatch as the CLI
-cli-source = "7723mod/NPatch"
+cli-source = "7723mod/NPatch"                            # Use NPatch as the CLI
 cli-version = "latest"
-
-# Provide the Xposed module as the patches bundle
-patches-source = "revenge-mod/revenge-xposed"
+patches-source = "revenge-mod/revenge-xposed"            # Provide the Xposed module as the patches bundle
 patches-version = "latest"
-
-# 'auto' does not work for Xposed modules since they don't list supported versions
-version = "latest" 
+version = "auto"                                         # 'auto' safely falls back to 'latest' since modules don't list supported versions
 arch = "auto"
 github-dlurl = "https://github.com/discord/releases/..." # Or apkmirror, etc.
 ```
