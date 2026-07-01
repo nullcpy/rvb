@@ -1164,11 +1164,12 @@ patch_apk() {
 		PATCH_OUTPUT=$(eval "$cmd" 2>&1)
 		local ret=$?
 		echo "$PATCH_OUTPUT"
-		if [ $ret -eq 0 ]; then [ -f "$patched_apk" ]; else
+		if [ $ret -eq 0 ] && [ -f "$patched_apk" ]; then
+			return 0
+		else
 			rm "$patched_apk" 2>/dev/null || :
 			return 1
 		fi
-		return 0
 	fi
 
 	local p_args_long="" p_args_short=""
@@ -1208,7 +1209,9 @@ patch_apk() {
 	fi
 
 	echo "$PATCH_OUTPUT"
-	if [ $ret -eq 0 ]; then [ -f "$patched_apk" ]; else
+	if [ $ret -eq 0 ] && [ -f "$patched_apk" ]; then
+		return 0
+	else
 		rm "$patched_apk" 2>/dev/null || :
 		return 1
 	fi
