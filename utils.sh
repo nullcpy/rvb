@@ -587,7 +587,7 @@ get_apkmirror_vers() {
 	local vers apkm_resp html=""
 	_fs_get "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" || return 1
 	apkm_resp="$html"
-	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
+	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | sed 's/ - .*//g' | awk '{$1=$1}1')
 	if [ "$__AAV__" = false ]; then
 		local IFS=$'\n'
 		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers")
