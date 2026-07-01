@@ -587,7 +587,7 @@ get_apkmirror_vers() {
 	local vers apkm_resp html=""
 	_fs_get "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" || return 1
 	apkm_resp="$html"
-	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | sed 's/ - .*//g' | awk '{$1=$1}1')
+	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
 	if [ "$__AAV__" = false ]; then
 		local IFS=$'\n'
 		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers")
@@ -667,11 +667,15 @@ dl_apkmirror() {
 		fi
 	fi
 
+	local search_version="${version//./-}"
+	search_version="${search_version//---/-}"
+	search_version="${search_version,,}"
+
 	if [ -z "$release_url" ]; then
 		local apkmname
 		apkmname=$($HTMLQ "h1.marginZero" --text <<<"$__APKMIRROR_RESP__")
 		apkmname="${apkmname,,}" apkmname="${apkmname// /-}" apkmname="${apkmname//[^a-z0-9-]/}"
-		release_url="${url%/}/${apkmname}-${version//./-}-release/"
+		release_url="${url%/}/${apkmname}-${search_version}-release/"
 		_fs_get "$release_url" || true
 		resp="$html"
 		if [[ "$resp" == *"Page Not Found"* ]] || [[ "$resp" == *"404 Whoops"* ]] || [ -z "$resp" ]; then
@@ -686,7 +690,7 @@ dl_apkmirror() {
 			local page_url="$list_url"
 			[[ $page_num -gt 1 ]] && page_url="${list_url%%\?*}/page/$page_num/?${list_url#*\?}"
 			_fs_get "$page_url" || return 1
-			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"${version//./-}"'[^"]*release[^"]*' | head -1) || true
+			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"$search_version"'[^"]*release[^"]*' | head -1) || true
 			if [ -n "$version_href" ]; then
 				release_url="$base_url$version_href"
 				_fs_get "$release_url" || return 1
