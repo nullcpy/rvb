@@ -1,4 +1,9 @@
-discord-xposed (all): 334.11-Stable  
+youtube-morphe (arm64-v8a): 20.51.39  
+youtube-morphe (arm-v7a): 20.51.39  
+youtube-music-morphe (arm64-v8a): 9.15.51  
+youtube-music-morphe (arm-v7a): 9.15.51  
+reddit-morphe (arm64-v8a): 2026.14.0  
+reddit-morphe (arm-v7a): 2026.14.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -6,6 +11,6 @@ discord-xposed (all): 334.11-Stable
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: 7723mod/jar-v1.0.5-639-release.jar  
-Patches: revenge-mod/app-release.apk  
-[Changelog](https://github.com/revenge-mod/revenge-xposed/releases/tag/1410)  
+CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
+Patches: MorpheApp/patches-1.33.0-dev.9.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0-dev.9)  
