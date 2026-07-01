@@ -242,6 +242,13 @@ get_prebuilts() {
 					matches=$matches_new
 				fi
 			fi
+			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
+				local matches_new
+				matches_new=$(jq -e -r 'map(select(.name | contains("debug") | not))' <<<"$matches")
+				if [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
+					matches=$matches_new
+				fi
+			fi
 			if [ "$(jq 'length' <<<"$matches")" -eq 0 ]; then
 				epr "No asset was found"
 				return 1
@@ -472,6 +479,11 @@ patches_list_versions() {
 }
 patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
+	local cli_dir_name=$(basename "$(dirname "$cli_jar")")
+	if [[ "$cli_dir_name" == *"npatch"* ]] || [[ "$cli_dir_name" == *"lspatch"* ]]; then
+		echo "Name: xposed-module-dummy"
+		return 0
+	fi
 	# Build arg strings for each jar in space-separated patches_jar
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
@@ -1130,6 +1142,24 @@ patch_apk() {
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
+
+	local cli_dir_name=$(basename "$(dirname "$cli_jar")")
+	if [[ "$cli_dir_name" == *"npatch"* ]] || [[ "$cli_dir_name" == *"lspatch"* ]]; then
+		local p_args_modules=""
+		for j in "${p_jars[@]}"; do
+			p_args_modules+=" -m '$j'"
+		done
+		local cmd="java -jar '$cli_jar' '$stock_input' -o '$patched_apk' $p_args_modules $patcher_args"
+		pr "$cmd"
+		PATCH_OUTPUT=$(eval "$cmd" 2>&1)
+		local ret=$?
+		echo "$PATCH_OUTPUT"
+		if [ $ret -eq 0 ]; then [ -f "$patched_apk" ]; else
+			rm "$patched_apk" 2>/dev/null || :
+			return 1
+		fi
+		return 0
+	fi
 
 	local p_args_long="" p_args_short=""
 	for j in "${p_jars[@]}"; do

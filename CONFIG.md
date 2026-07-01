@@ -101,3 +101,25 @@ patches-version = "'latest' 'v1.2.3'"             # per-source versions
 > **Current Limitations**: 
 > Due to how the underlying CLIs handle arguments, `included-patches` and `excluded-patches` currently only apply to the **last** patch bundle in your `patches-source` list. 
 > Per-bundle selective inclusion/exclusion (e.g. including one patch from the first bundle, and excluding another from the second) is not currently supported in this config format. If you use multiple sources, it is recommended to apply all patches from the preceding bundles.
+
+## Xposed Modules (NPatch / LSPatch)
+
+You can natively inject Xposed modules into an app using `7723mod/NPatch` or `LSPatch` directly from your config. Simply set the `cli-source` to the NPatch repository and the `patches-source` to the Xposed module repository.
+
+```toml
+[Discord]
+# Use NPatch as the CLI
+cli-source = "7723mod/NPatch"
+cli-version = "latest"
+
+# Provide the Xposed module as the patches bundle
+patches-source = "revenge-mod/revenge-xposed"
+patches-version = "latest"
+
+# 'auto' does not work for Xposed modules since they don't list supported versions
+version = "latest" 
+arch = "auto"
+github-dlurl = "https://github.com/discord/releases/..." # Or apkmirror, etc.
+```
+
+When the script detects `npatch` or `lspatch` in the CLI source, it will automatically bypass ReVanced CLI arguments and execute the correct injection command. You can also pass extra options to NPatch using `patcher-args = "-l 2"`.
