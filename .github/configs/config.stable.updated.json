@@ -1464,5 +1464,80 @@
     "dpi": "nodpi anydpi",
     "uptodown-dlurl": "https://holavpn.en.uptodown.com/android",
     "apkpure-dlurl": "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
+  },
+  "ninja-vpn-morphe": {
+    "enabled": false,
+    "app-name": "ninja-vpn",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkpure-dlurl": "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android",
+    "uptodown-dlurl": "https://ninja-vpn.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+  },
+  "snorelab-morphe": {
+    "enabled": true,
+    "app-name": "snorelab",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "all",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/reviva-softworks-ltd/snorelab-record-your-snoring",
+    "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
+  },
+  "vpnify-morphe": {
+    "enabled": false,
+    "app-name": "vpnify",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "BholeyKaBhakt/android-patches-xtra",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
+    "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+  },
+  "projectivy-launcher-morphe": {
+    "enabled": true,
+    "app-name": "projectivy-launcher",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "all",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkpure-dlurl": "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu",
+    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+  },
+  "windscribe-vpn-morphe": {
+    "enabled": false,
+    "app-name": "windscribe-vpn",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "all",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/windscribe/windscribe-vpn",
+    "uptodown-dlurl": "https://windscribe.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/windscribe/com.windscribe.vpn",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
+  },
+  "discord-xposed": {
+    "enabled": true,
+    "app-name": "discord",
+    "rv-brand": "xposed",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "revenge-mod/revenge-xposed",
+    "cli-source": "7723mod/NPatch",
+    "dpi": "nodpi anydpi",
+    "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord/"
   }
 }

@@ -120,7 +120,7 @@
   },
   "hoomans": {
     "repo": "arandomhooman/hoomans-morphe-patches",
-    "stable": "v1.36.0",
+    "stable": "v1.37.0",
     "prerelease": "v1.19.0",
     "blocked": false
   },
@@ -137,6 +137,9 @@
     "blocked": false
   },
   "revenge": {
-    "repo": "revenge-mod/revenge-xposed"
+    "repo": "revenge-mod/revenge-xposed",
+    "stable": "1410",
+    "prerelease": "",
+    "blocked": false
   }
 }
