@@ -478,9 +478,9 @@ patches_list_versions() {
 	echo "$op"
 }
 patches_list() {
-	local cli_jar=$1 patches_jar=$2 pkg_name=$3 op
-	local cli_dir_name=$(basename "$(dirname "$cli_jar")")
-	if [[ "$cli_dir_name" == *"npatch"* ]] || [[ "$cli_dir_name" == *"lspatch"* ]]; then
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 op
+	local cli_source_l="${cli_source,,}"
+	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
 		echo "Name: xposed-module-dummy"
 		return 0
 	fi
@@ -1137,14 +1137,14 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 # --------------------------------------------------
 
 patch_apk() {
-	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5
+	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5 cli_source=$6
 	local tmp_dir="${CWD}/${patched_apk}-temporary-files"
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
 
-	local cli_dir_name=$(basename "$(dirname "$cli_jar")")
-	if [[ "$cli_dir_name" == *"npatch"* ]] || [[ "$cli_dir_name" == *"lspatch"* ]]; then
+	local cli_source_l="${cli_source,,}"
+	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
 		local p_args_modules=""
 		for j in "${p_jars[@]}"; do
 			p_args_modules+=" -m '$j'"
@@ -1284,7 +1284,7 @@ build_rv() {
 	fi
 	pr "Package name of '${table}' is '$pkg_name'"
 	local list_patches
-	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name") || return 1
+	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
 	local get_latest_ver=false
 	if [ "$version_mode" = auto ]; then
 		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
@@ -1458,7 +1458,7 @@ build_rv() {
 
 		local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
 		if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
-			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
+			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}" "${args[cli_source]}"; then
 				epr "Building '${table}' failed!"
 				return 0
 			fi

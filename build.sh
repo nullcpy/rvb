@@ -100,6 +100,7 @@ for table_name in $(toml_get_table_names); do
 	read -r cli_jar patches_jar_all <<< "$PREBUILTS"
 	app_args[cli]=$cli_jar
 	app_args[ptjar]=$patches_jar_all
+	app_args[cli_source]=$cli_src
 
 	# Build aggregated patches_ref and changelog_url from all sources
 	patches_ref_all="" changelog_url_all=""
