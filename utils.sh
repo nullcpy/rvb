@@ -1159,17 +1159,24 @@ patch_apk() {
 		for j in "${p_jars[@]}"; do
 			p_args_modules+=" -m '$j'"
 		done
-		local cmd="java -jar '$cli_jar' '$stock_input' -o '$patched_apk' $p_args_modules $patcher_args"
+		mkdir -p "$tmp_dir"
+		local cmd="java -jar '$cli_jar' '$stock_input' -o '$tmp_dir' $p_args_modules $patcher_args"
 		pr "$cmd"
 		PATCH_OUTPUT=$(eval "$cmd" 2>&1)
 		local ret=$?
 		echo "$PATCH_OUTPUT"
-		if [ $ret -eq 0 ] && [ -f "$patched_apk" ]; then
-			return 0
-		else
-			rm "$patched_apk" 2>/dev/null || :
-			return 1
+		if [ $ret -eq 0 ]; then
+			local npatch_out
+			npatch_out=$(find "$tmp_dir" -type f -name "*.apk" | head -n 1)
+			if [ -n "$npatch_out" ] && [ -f "$npatch_out" ]; then
+				mv "$npatch_out" "$patched_apk"
+				rm -rf "$tmp_dir"
+				return 0
+			fi
 		fi
+		rm "$patched_apk" 2>/dev/null || :
+		rm -rf "$tmp_dir"
+		return 1
 	fi
 
 	local p_args_long="" p_args_short=""
