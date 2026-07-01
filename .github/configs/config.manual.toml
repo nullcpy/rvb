@@ -3,18 +3,18 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[discord-xposed]
+[at4k-launcher-morphe]
 enabled = true 
-app-name = "discord"
-rv-brand = "xposed"
+app-name = "at4k-launcher"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "all"
-patches-source = "revenge-mod/revenge-xposed"
-cli-source = "7723mod/NPatch"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-uptodown-dlurl = "https://discord-chat-for-gamers.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
+apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
+# apkcombo-dlurl = "https://apkcombo.com/at4k-launcher/com.overdevs.at4k"
 
 
 
