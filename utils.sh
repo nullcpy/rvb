@@ -54,7 +54,7 @@ abort() {
 	kill -9 -- -$$ 2>/dev/null
 	exit 1
 }
-java() { env -i java --enable-native-access=ALL-UNNAMED "$@"; }
+java() { env -i PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" java --enable-native-access=ALL-UNNAMED "$@"; }
 
 source_release_api_base() {
 	local host=${1,,} src=$2 encoded
