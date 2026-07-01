@@ -269,9 +269,9 @@ get_prebuilts() {
 		else
 			grab_cl=false
 			name=$(basename "$file")
-			tag_name=$(cut -d'-' -f3- <<<"$name")
-			tag_name=v${tag_name%.*}
 		fi
+
+		echo "$tag_name" > "${dir}/tag_name.txt"
 
 		if [ "$grab_cl" = true ]; then
 			if [ "$host" = github ]; then

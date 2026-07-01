@@ -107,17 +107,24 @@ for table_name in $(toml_get_table_names); do
 	for i in "${!p_srcs[@]}"; do
 		psrc="${p_srcs[$i]}"
 		phost="${p_hosts[$i]:-${p_hosts[0]}}"
-		# Find the downloaded jar for this source to get actual version from filename
+		# Find the downloaded jar/apk for this source to get actual version
 		pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
-		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' 2>/dev/null | sort | tail -1)
+		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' -o -name '*.apk' 2>/dev/null | sort | tail -1)
 		if [ -n "$pfile" ]; then
 			pfilename=${pfile##*/}
-			pver_actual=${pfilename#*-}; pver_actual=${pver_actual%.*}
+			
+			if [ -f "${pdir}/tag_name.txt" ]; then
+				ptag=$(cat "${pdir}/tag_name.txt")
+			else
+				pver_actual=${pfilename#*-}; pver_actual=${pver_actual%.*}
+				ptag="v${pver_actual#v}"
+			fi
+			
 			patches_ref_all+="${psrc%%/*}/${pfilename} "
 			if [ "$phost" = github ]; then
-				changelog_url_all+="https://github.com/${psrc}/releases/tag/v${pver_actual#v} "
+				changelog_url_all+="https://github.com/${psrc}/releases/tag/${ptag} "
 			else
-				changelog_url_all+="https://gitlab.com/${psrc}/-/releases/v${pver_actual#v} "
+				changelog_url_all+="https://gitlab.com/${psrc}/-/releases/${ptag} "
 			fi
 		fi
 	done
