@@ -51,12 +51,17 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Install Bouncy Castle for BKS Keystore
-        run: bash .github/scripts/build_install_bouncy_castle.sh
-
       - name: Resolve build context
         id: context
         run: bash .github/scripts/build_resolve_context.sh "${{ inputs.config_file }}"
+
+      - name: Install Bouncy Castle for BKS Keystore
+        run: |
+          if grep -iqE "cli-source.*(npatch|lspatch)" "${{ steps.context.outputs.CONFIG_FILE }}"; then
+            bash .github/scripts/build_install_bouncy_castle.sh
+          else
+            echo "Skipping Bouncy Castle installation (no Xposed modules found in config)."
+          fi
 
       - name: Resolve version code
         id: version
