@@ -1529,7 +1529,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "discord-xposed": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "discord",
     "rv-brand": "xposed",
     "build-mode": "apk",
