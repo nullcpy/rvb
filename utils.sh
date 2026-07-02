@@ -618,15 +618,22 @@ apkmirror_search() {
 	fi
 
 	for ((n = 1; n < 40; n++)); do
-		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" -r "span:nth-child(n+3)" <<<"$resp")
+		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" <<<"$resp")
 		if [ -z "$node" ]; then break; fi
-		emptyCheck=$($HTMLQ -t -w "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node" | xargs)
-		if [ -z "$emptyCheck" ]; then break; fi
-		app_table=$($HTMLQ --text --ignore-whitespace <<<"$node")
-		if [ "$(sed -n 3p <<<"$app_table")" != "$apk_bundle" ]; then continue; fi
-		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
-		if isoneof "$(sed -n 6p <<<"$app_table")" "${appdpi[@]}" &&
-			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
+		
+		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
+		if [ -z "$dlurl" ]; then break; fi
+
+		local node_apk_bundle node_arch node_dpi
+		node_apk_bundle=$($HTMLQ "div.table-cell:nth-child(1) span.apkm-badge:first-of-type" --text <<<"$node" | xargs)
+		[ -z "$node_apk_bundle" ] && node_apk_bundle="APK"
+
+		node_arch=$($HTMLQ "div.table-cell:nth-child(2)" --text <<<"$node" | xargs)
+		node_dpi=$($HTMLQ "div.table-cell:nth-child(4)" --text <<<"$node" | xargs)
+
+		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
+
+		if isoneof "$node_dpi" "${appdpi[@]}" && isoneof "$node_arch" "${apparch[@]}"; then
 			echo "$dlurl"
 			return 0
 		fi
