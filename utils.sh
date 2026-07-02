@@ -664,8 +664,10 @@ dl_apkmirror() {
 	fi
 
 	local search_version="${version//./-}"
-	search_version="${search_version//---/-}"
+	search_version="${search_version//_/-}"
 	search_version="${search_version,,}"
+	search_version="${search_version//[^a-z0-9-]/}"
+	search_version="${search_version//---/-}"
 
 	if [ -z "$release_url" ]; then
 		local apkmname
