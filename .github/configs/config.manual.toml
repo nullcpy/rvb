@@ -3,18 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[prime-video-morphe-androidtv]
+[myfitnesspal-morphe]
 enabled = true 
-app-name = "prime-video"
-rv-brand = "morphe-androidtv"
+app-name = "myfitnesspal"
+rv-brand = "morphe"
 build-mode = "apk"
-arch = "arm-v7a"
-included-patches = "'Clone Prime Video'"
-patches-source = "ajstrick81/morphe-androidtv-patches"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-dpi = "nodpi anydpi 320dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
-
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
+uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
 
 
 
