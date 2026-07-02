@@ -932,6 +932,26 @@ Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <a id="apps-m"></a>
 
+### [MyFitnessPal](https://play.google.com/store/apps/details?id=com.myfitnesspal.android)
+
+`com.myfitnesspal.android`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="myfitnesspal-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.62.11-gray?labelColor=0066ee&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- MacroDroid Premium
+</blockquote>
+</details>
+
+---
+
 ### [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)
 
 `com.arlosoft.macrodroid`
