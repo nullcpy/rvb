@@ -613,8 +613,12 @@ apkmirror_search() {
 	fi
 
 	local appdpi=("nodpi" "anydpi")
+	local match_any_dpi=false
 	if [ "$dpi" ]; then
 		appdpi+=($dpi)
+		if isoneof "auto" "${appdpi[@]}"; then
+			match_any_dpi=true
+		fi
 	fi
 
 	for ((n = 1; n < 40; n++)); do
@@ -633,7 +637,7 @@ apkmirror_search() {
 
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
-		if isoneof "$node_dpi" "${appdpi[@]}" && isoneof "$node_arch" "${apparch[@]}"; then
+		if { [ "$match_any_dpi" = true ] || isoneof "$node_dpi" "${appdpi[@]}"; } && isoneof "$node_arch" "${apparch[@]}"; then
 			echo "$dlurl"
 			return 0
 		fi
