@@ -621,6 +621,8 @@ apkmirror_search() {
 		fi
 	fi
 
+	local best_fallback_url=""
+
 	for ((n = 1; n < 40; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" <<<"$resp")
 		if [ -z "$node" ]; then break; fi
@@ -637,11 +639,20 @@ apkmirror_search() {
 
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
-		if { [ "$match_any_dpi" = true ] || isoneof "$node_dpi" "${appdpi[@]}"; } && isoneof "$node_arch" "${apparch[@]}"; then
-			echo "$dlurl"
-			return 0
+		if isoneof "$node_arch" "${apparch[@]}"; then
+			if isoneof "$node_dpi" "${appdpi[@]}"; then
+				echo "$dlurl"
+				return 0
+			elif [ "$match_any_dpi" = true ] && [ -z "$best_fallback_url" ]; then
+				best_fallback_url="$dlurl"
+			fi
 		fi
 	done
+
+	if [ -n "$best_fallback_url" ]; then
+		echo "$best_fallback_url"
+		return 0
+	fi
 	return 1
 }
 
