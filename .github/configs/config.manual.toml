@@ -3,18 +3,18 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[discord-xposed]
+[prime-video-morphe-androidtv]
 enabled = true 
-app-name = "discord"
-rv-brand = "xposed"
+app-name = "prime-video"
+rv-brand = "morphe-androidtv"
 build-mode = "apk"
 arch = "all"
-patches-source = "revenge-mod/revenge-xposed"
-cli-source = "7723mod/NPatch"
+included-patches = "'Clone Prime Video'"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-uptodown-dlurl = "https://discord-chat-for-gamers.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
+
 
 
 
