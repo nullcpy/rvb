@@ -1294,12 +1294,13 @@ Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoo
 
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/444)<br>
 Patches: [ajstrick81/patches-1.7.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.8.0)
 - Disable auto-updates
 - Override certificate pinning
 - Prime Video extension
 - Skip ads
+- Clone Prime Video
 </blockquote>
 </details>
 
