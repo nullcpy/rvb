@@ -1385,3 +1385,15 @@ cli-source = "7723mod/NPatch"
 dpi = "nodpi anydpi"
 uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
+
+[myfitnesspal-morphe]
+enabled = true 
+app-name = "myfitnesspal"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "hoo-dles/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
+uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
