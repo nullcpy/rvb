@@ -631,10 +631,6 @@ apkmirror_search() {
 			return 0
 		fi
 	done
-	if [ "$n" -eq 2 ] && [ "$dlurl" ]; then
-		echo "$dlurl"
-		return 0
-	fi
 	return 1
 }
 
