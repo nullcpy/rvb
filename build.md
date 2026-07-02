@@ -1,4 +1,4 @@
-prime-video-morphe-androidtv (all): 6.23.23+v15.5.0.70-armv7a  
+prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
