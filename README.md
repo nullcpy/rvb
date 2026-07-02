@@ -178,8 +178,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1082,8 +1082,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1294,8 +1294,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1336,8 +1336,8 @@ Patches: [ajstrick81/patches-1.7.0.mpp](https://github.com/ajstrick81/morphe-and
 
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1545,8 +1545,8 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1625,8 +1625,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 </blockquote>
 </details>
 
@@ -2008,8 +2008,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/443)<br>
-Patches: [arandomhooman/patches-1.39.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.39.0)
+[Release 2026-07-02](https://github.com/nullcpy/rvb/releases/tag/448)<br>
+Patches: [arandomhooman/patches-1.40.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.40.0)
 - Auto claim channel points
 - Block live ads
 - Hide display ads
