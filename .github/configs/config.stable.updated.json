@@ -1374,7 +1374,7 @@
     "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1385,18 +1385,19 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
-    "arch": "all",
+    "arch": "arm-v7a",
+    "included-patches": "'Clone Prime Video'",
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "cli-source": "MorpheApp/morphe-cli",
-    "dpi": "nodpi anydpi",
+    "dpi": "nodpi anydpi 320dpi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1407,7 +1408,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1419,7 +1420,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1430,7 +1431,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1539,5 +1540,17 @@
     "dpi": "nodpi anydpi",
     "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord/"
+  },
+  "myfitnesspal-morphe": {
+    "enabled": false,
+    "app-name": "myfitnesspal",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "hoo-dles/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
+    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
   }
 }
