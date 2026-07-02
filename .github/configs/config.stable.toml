@@ -1229,10 +1229,11 @@ enabled = true
 app-name = "prime-video"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
-arch = "all"
+arch = "arm-v7a"
+included-patches = "'Clone Prime Video'"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-cli"
-dpi = "nodpi anydpi"
+dpi = "nodpi anydpi 320dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
 
 [hbomax-morphe-androidtv]
