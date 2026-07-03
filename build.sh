@@ -214,11 +214,20 @@ changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
 changelog_merged=$(awk '
 {
 	line=$0
-	if (line ~ /^CLI: /) {
+	if (line ~ /^(CLI|Patches): /) {
 		key=line
 		sub(/\r$/, "", key)
 		gsub(/[[:space:]]+$/, "", key)
-		if (seen[key]++) next
+		if (seen[key]++) {
+			skip_changelog = 1
+			next
+		}
+		skip_changelog = 0
+	} else if (skip_changelog) {
+		if (line ~ /^\[Changelog\]/ || line == "" || line == "\r") {
+			next
+		}
+		skip_changelog = 0
 	}
 	print line
 }' <<<"$changelog_merged")
