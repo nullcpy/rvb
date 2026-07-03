@@ -2794,8 +2794,8 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/402)<br>
-Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.1)
+[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/451)<br>
+Patches: [anddea/patches-4.2.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.2)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3384,12 +3384,12 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [ReVanced Advanced (Anddea)](https://github.com/anddea/revanced-patches)
 
 <details>
-<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.30.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-anddea"><b>Default Theme</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.15.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-26](https://github.com/nullcpy/rvb/releases/tag/402)<br>
-Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.1)
+[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/451)<br>
+Patches: [anddea/patches-4.2.0-dev.2.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.2)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3401,6 +3401,7 @@ Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-pat
 - Disable dislike redirection
 - Disable forced auto audio tracks
 - Disable forced auto captions
+- Enable debug logging
 - Enable landscape mode
 - Flyout menu components
 - GmsCore support
@@ -3418,6 +3419,7 @@ Patches: [anddea/patches-4.2.0-dev.1.mpp](https://github.com/anddea/revanced-pat
 - Sanitize sharing links
 - SponsorBlock
 - Spoof app version for lyrics
+- Track crossfade
 - Translations for YouTube Music
 - Video playback
 - Watch history
