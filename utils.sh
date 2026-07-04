@@ -1485,7 +1485,9 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = module ]; then
-			patcher_args+=("--mount")
+			if ! java -jar "$cli_jar" patch --help 2>&1 | grep -q -- "--install"; then
+				patcher_args+=("--mount")
+			fi
 		fi
 
 		local stock_apk_to_patch="${stock_apk}.stripped.apk"
