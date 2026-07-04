@@ -1,5 +1,5 @@
-google-photos-revanced (arm64-v8a): 7.82.0.937646388  
-google-photos-revanced (arm-v7a): 7.82.0.937646388  
+terabox-morphe (arm64-v8a): 4.20.1  
+terabox-morphe (arm-v7a): 4.20.1  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +7,6 @@ google-photos-revanced (arm-v7a): 7.82.0.937646388
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-all.jar  
-Patches: Raudrobot/patches-6.1.0.rvp  
-[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)  
+CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
+Patches: rushiranpise/patches-1.9.1.mpp  
+[Changelog](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.9.1)  
