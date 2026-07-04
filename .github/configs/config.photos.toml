@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [google-photos-morphe]
-enabled = true
+enabled = false
 app-name = "google-photos"
 rv-brand = "morphe"
 build-mode = "both"
