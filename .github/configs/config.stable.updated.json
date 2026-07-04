@@ -891,7 +891,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "adguard-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1267,7 +1267,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1279,7 +1279,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1291,7 +1291,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1303,7 +1303,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1315,7 +1315,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "waze-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1327,7 +1327,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "warp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1351,7 +1351,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "poweramp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "poweramp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1362,7 +1362,7 @@
     "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android"
   },
   "at4k-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1374,7 +1374,7 @@
     "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1385,7 +1385,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1397,7 +1397,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1408,7 +1408,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
   },
   "peacock-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1420,7 +1420,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1431,7 +1431,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
   },
   "vix-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -1455,7 +1455,7 @@
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
   "hola-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1467,7 +1467,7 @@
     "apkpure-dlurl": "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
   },
   "ninja-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1480,7 +1480,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
   },
   "snorelab-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "snorelab",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1504,7 +1504,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
   },
   "projectivy-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1516,7 +1516,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
   },
   "windscribe-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1552,5 +1552,17 @@
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
     "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+  },
+  "terabox-morphe": {
+    "enabled": false,
+    "app-name": "terabox",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi auto",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup",
+    "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
   }
 }
