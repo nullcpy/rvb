@@ -1,5 +1,3 @@
-google-photos-morphe (arm64-v8a): 7.82.0.937646388  
-google-photos-morphe (arm-v7a): 7.82.0.937646388  
 google-photos-revanced (arm64-v8a): 7.82.0.937646388  
 google-photos-revanced (arm-v7a): 7.82.0.937646388  
 
@@ -11,8 +9,4 @@ google-photos-revanced (arm-v7a): 7.82.0.937646388
   
 CLI: ReVanced/revanced-cli-6.0.0-all.jar  
 Patches: Raudrobot/patches-6.1.0.rvp  
-[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
-
-CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: RookieEnough/patches-1.0.4.mpp  
-[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
+[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)  
