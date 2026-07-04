@@ -1,5 +1,8 @@
-terabox-morphe (arm64-v8a): 4.20.1  
-terabox-morphe (arm-v7a): 4.20.1  
+disneyplus-morphe-androidtv (all): 26.6.0+rc5-2026.04.21  
+prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
+hbomax-morphe-androidtv (all): 7.5.0.73  
+peacock-morphe-androidtv (all): 7.6.100  
+tubi-morphe-androidtv (all): 10.20.5000  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +11,5 @@ terabox-morphe (arm-v7a): 4.20.1
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: rushiranpise/patches-1.9.1.mpp  
-[Changelog](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.9.1)  
+Patches: ajstrick81/patches-1.10.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.10.0)  
