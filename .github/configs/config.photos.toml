@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [google-photos-morphe]
-enabled = false
+enabled = true
 app-name = "google-photos"
 rv-brand = "morphe"
 build-mode = "both"
@@ -20,7 +20,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 enabled = true
 app-name = "google-photos"
 rv-brand = "revanced"
-build-mode = "module"
+build-mode = "both"
 arch = "both"
 patches-source = "Raudrobot/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
