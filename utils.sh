@@ -1485,7 +1485,7 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = module ]; then
-			if ! java -jar "$cli_jar" patch --help 2>&1 | grep -q -- "--install"; then
+			if [[ "${args[cli_source],,}" != *"revanced-cli"* ]]; then
 				patcher_args+=("--mount")
 			fi
 		fi
