@@ -1800,6 +1800,26 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 ---
 
+### [TeraBox](https://play.google.com/store/apps/details?id=com.dubox.drive)
+
+`com.dubox.drive`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="terabox-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.0.6.1-gray?labelColor=226df6&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
+Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
+
+- TickTick Premium
+</blockquote>
+</details>
+
+---
+
 ### [Threads](https://play.google.com/store/apps/details?id=com..barcelona)
 
 `com.instagram.barcelona`

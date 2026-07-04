@@ -3,17 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[myfitnesspal-morphe]
+[terabox-morphe]
 enabled = true 
-app-name = "myfitnesspal"
+app-name = "terabox"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
-dpi = "nodpi anydpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
-uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
+uptodown-dlurl = "https://terabox.en.uptodown.com/android"
 
 
 

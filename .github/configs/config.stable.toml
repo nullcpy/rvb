@@ -1397,3 +1397,18 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
 uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+
+[terabox-morphe]
+enabled = true 
+app-name = "terabox"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
+uptodown-dlurl = "https://terabox.en.uptodown.com/android"
+
+
+
