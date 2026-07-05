@@ -988,8 +988,10 @@ PYC
 
 # -------------------- uptodown --------------------
 get_uptodown_resp() {
-	__UPTODOWN_RESP__=$(req "${1}/versions" -) || return 1
-	__UPTODOWN_RESP_PKG__=$(req "${1}/download" -) || return 1
+	_fs_get "${1}/versions" || return 1
+	__UPTODOWN_RESP__="$html"
+	_fs_get "${1}/download" || return 1
+	__UPTODOWN_RESP_PKG__="$html"
 }
 get_uptodown_vers() { $HTMLQ --text ".version" <<<"$__UPTODOWN_RESP__"; }
 dl_uptodown() {
@@ -1006,7 +1008,8 @@ dl_uptodown() {
 	local versionURL=""
 	local is_bundle=false
 	for i in {1..20}; do
-		resp=$(req "${uptodown_dlurl}/apps/${data_code}/versions/${i}" -)
+		_fs_get "${uptodown_dlurl}/apps/${data_code}/versions/${i}" || continue
+		resp="$html"
 		if ! op=$(jq -e -r ".data | map(select(.version == \"${version}\")) | .[0]" <<<"$resp" 2>/dev/null); then
 			continue
 		fi
@@ -1015,12 +1018,14 @@ dl_uptodown() {
 	done
 	if [ -z "$versionURL" ]; then return 1; fi
 	versionURL=$(jq -e -r '.url + "/" + .extraURL + "/" + (.versionID | tostring)' <<<"$versionURL")
-	resp=$(req "$versionURL" -) || return 1
+	_fs_get "$versionURL" || return 1
+	resp="$html"
 
 	local data_version files node_arch="" data_file_id node_class
 	data_version=$($HTMLQ '.button.variants' --attribute data-version <<<"$resp") || return 1
 	if [ "$data_version" ]; then
-		files=$(req "${uptodown_dlurl%/*}/app/${data_code}/version/${data_version}/files" - | jq -e -r .content) || return 1
+		_fs_get "${uptodown_dlurl%/*}/app/${data_code}/version/${data_version}/files" || return 1
+		files=$(jq -e -r .content <<<"$html" 2>/dev/null) || return 1
 		for ((n = 1; n < 12; n += 1)); do
 			node_class=$($HTMLQ -w -t ".content > :nth-child($n)" --attribute class <<<"$files") || return 1
 			if [ "$node_class" != "variant" ]; then
@@ -1033,18 +1038,29 @@ dl_uptodown() {
 			file_type=$($HTMLQ -w -t ".content > :nth-child($n) > .v-file > span" <<<"$files") || return 1
 			if [ "$file_type" = "xapk" ]; then is_bundle=true; else is_bundle=false; fi
 			data_file_id=$($HTMLQ ".content > :nth-child($n) > .v-report" --attribute data-file-id <<<"$files") || return 1
-			resp=$(req "${uptodown_dlurl}/download/${data_file_id}-x" -)
+			_fs_get "${uptodown_dlurl}/download/${data_file_id}-x" || return 1
+			resp="$html"
 			break
 		done
 		if [ $n -eq 12 ]; then return 1; fi
 	fi
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
+	
+	local cookie_args=()
+	[ -n "${FS_COOKIES:-}" ] && cookie_args=(--header "Cookie: $FS_COOKIES")
+
 	if [ $is_bundle = true ]; then
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1
+		wget -nv -O "${output}.apkm" \
+			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
+			"${cookie_args[@]}" \
+			"https://dw.uptodown.com/dwn/${data_url}" || return 1
 		merge_splits "${output}.apkm" "${output}"
 	else
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
+		wget -nv -O "${output}" \
+			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
+			"${cookie_args[@]}" \
+			"https://dw.uptodown.com/dwn/${data_url}" || return 1
 	fi
 }
 get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)" <<<"$__UPTODOWN_RESP_PKG__"; }
