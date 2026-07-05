@@ -630,7 +630,7 @@ apkmirror_search() {
 		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
 		if [ -z "$dlurl" ]; then continue; fi
 
-		echo "[DEBUG] Evaluated variant dlurl: $dlurl"
+		echo "[DEBUG] Evaluated variant dlurl: $dlurl" >&2
 		
 		local node_apk_bundle node_arch node_dpi
 		node_apk_bundle=$($HTMLQ "div.table-cell:nth-child(1) span.apkm-badge:first-of-type" --text <<<"$node" | xargs)
@@ -759,19 +759,18 @@ dl_apkmirror() {
 			local search_list_url="https://www.apkmirror.com/?post_type=app_release&searchtype=apk&s=${__APKMIRROR_CAT__}+${version}"
 			_fs_get "$search_list_url" || true
 			if [ -n "$html" ] && [ "$html" != "null" ]; then
-				local html_flat=$(echo "$html" | tr -d '\n\r')
-				local html_split="${html_flat//<\/a>/<\/a>
-}"
-				local all_links=$(echo "$html_split" | grep -oP 'href="\K/apk/[^"]+')
+				local search_links
+				search_links=$($HTMLQ --attribute href "div.appRow h5 a" <<<"$html")
 				
-				version_href=$(echo "$all_links" | grep -F "$search_version-release" | head -1) || true
+				# Try to find exact version match first to be safe, otherwise fallback to top result
+				version_href=$(echo "$search_links" | grep -F "$search_version-release" | head -1) || true
 				if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
-					version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
+					version_href=$(echo "$search_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
 				fi
 				
-				# Search query is exact, so the first release result is the best match if strict regexes fail
+				# Search query is exact, so the top search result is the best match if strict regexes fail
 				if [ -z "$version_href" ]; then
-					version_href=$(echo "$all_links" | grep -E -- "-release/?$" | head -1) || true
+					version_href=$(echo "$search_links" | head -1) || true
 				fi
 
 				if [ -n "$version_href" ]; then
