@@ -712,6 +712,7 @@ dl_apkmirror() {
 			local page_url="$list_url"
 			[[ $page_num -gt 1 ]] && page_url="${list_url%%\?*}/page/$page_num/?${list_url#*\?}"
 			_fs_get "$page_url" || return 1
+			echo "[DEBUG] APKMirror HTML length: ${#html}, Preview: ${html:0:150}"
 			
 			local html_flat=$(echo "$html" | tr -d '\n\r')
 			local html_split="${html_flat//<\/a>/<\/a>
