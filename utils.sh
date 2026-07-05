@@ -682,6 +682,16 @@ dl_apkmirror() {
 	fi
 	local clean_search_version="${clean_version//./-}"
 
+	local short_version="" short_search_version=""
+	if [[ "$clean_version" == *.*.*.* ]]; then
+		short_version=$(echo "$clean_version" | cut -d. -f1-3)
+	elif [[ "$clean_version" == *.*.* ]]; then
+		short_version=$(echo "$clean_version" | cut -d. -f1-2)
+	fi
+	if [ -n "$short_version" ]; then
+		short_search_version="${short_version//./-}"
+	fi
+
 	local resp release_url=""
 
 	if [ -n "${__APKMIRROR_EXAMPLE_URL__:-}" ]; then
@@ -748,6 +758,11 @@ dl_apkmirror() {
 			# 4. Clean URL match
 			if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
 				version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
+			fi
+
+			# 5. Safe Short URL match (for grouped versions)
+			if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
+				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[0-9]+)?-release/?$" | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
