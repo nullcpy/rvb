@@ -713,14 +713,18 @@ dl_apkmirror() {
 			[[ $page_num -gt 1 ]] && page_url="${list_url%%\?*}/page/$page_num/?${list_url#*\?}"
 			_fs_get "$page_url" || return 1
 			
+			local html_flat=$(echo "$html" | tr -d '\n\r')
+			local html_split="${html_flat//<\/a>/<\/a>
+}"
+
 			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"$search_version"'[^"]*release[^"]*' | head -1) || true
 			
 			if [ -z "$version_href" ]; then
-				version_href=$(echo "$html" | tr -d '\n' | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>(?:(?!</a>).)*?\b'"${version//./\\.}"'\b)' | head -1) || true
+				version_href=$(echo "$html_split" | grep -F "$version" | grep -oP 'href="\K[^"]+' | head -1) || true
 			fi
 			
 			if [ -z "$version_href" ] && [ -n "$clean_version" ] && [ "$clean_version" != "$version" ]; then
-				version_href=$(echo "$html" | tr -d '\n' | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>(?:(?!</a>).)*?\b'"${clean_version//./\\.}"'\b)' | head -1) || true
+				version_href=$(echo "$html_split" | grep -F "$clean_version" | grep -oP 'href="\K[^"]+' | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
