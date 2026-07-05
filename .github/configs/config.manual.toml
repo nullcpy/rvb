@@ -16,7 +16,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
 uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
 
 [prime-video-morphe]
-enabled = true 
+enabled = false 
 app-name = "prime-video"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -40,7 +40,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
 uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
 
 [inshot-morphe]
-enabled = true 
+enabled = false 
 app-name = "inshot"
 rv-brand = "morphe"
 build-mode = "apk"
