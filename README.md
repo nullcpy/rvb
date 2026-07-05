@@ -126,6 +126,28 @@ Patches: [rushiranpise/patches-1.9.1.mpp](https://github.com/rushiranpise/morphe
 
 ---
 
+### [Adobe Acrobat](https://play.google.com/store/apps/details?id=com.adobe.reader)
+
+`com.adobe.reader`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="adobe-acrobat-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=b30b00&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
+
+- Disable mandatory login
+- Disable version check
+- Unlock Premium
+</blockquote>
+</details>
+
+---
+
 ### [Adobe Lightroom](https://play.google.com/store/apps/details?id=com.adobe.lrmobile)
 
 `com.adobe.lrmobile`
@@ -531,6 +553,25 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Goodreads](https://play.google.com/store/apps/details?id=com.goodreads)
+
+`com.goodreads`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="goodreads-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.255.0-gray?labelColor=ebe2d7&logo=github&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-29](https://github.com/nullcpy/rvb/releases/tag/419)<br>
+Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
+- AMOLED dark theme
+</blockquote>
+</details>
+
+---
+
 ### [Google Keyboard (Gboard)](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)
 
 `com.google.android.inputmethod.latin`
@@ -870,6 +911,27 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 
 ---
 
+### [Inshot](https://play.google.com/store/apps/details?id=com.camerasideas.instashot)
+
+`com.camerasideas.instashot`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="inshot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.12.18-gray?labelColor=ff523f&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
+Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
+- Remove Ads
+- Skip Login
+</blockquote>
+</details>
+
+---
+
 ### [Inshorts](https://play.google.com/store/apps/details?id=com.nis.app)
 
 `com.nis.app`
@@ -1194,6 +1256,28 @@ Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-an
 
 ---
 
+### [PlutoTV](https://play.google.com/store/apps/details?id=tv.pluto.android)
+
+`tv.pluto.android`
+
+#### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
+
+<details>
+<summary id="plutotv-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=fff200&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+
+- Hide update popup
+- Spoof device ID
+- Unlock plus
+</blockquote>
+</details>
+
+---
+
 ### [Photomath](https://play.google.com/store/apps/details?id=com.microblink.photomath)
 
 `com.microblink.photomath`
@@ -1306,9 +1390,26 @@ Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoo
 
 ---
 
-### [Prime Video](https://play.google.com/store/apps/details?id=com.amazon.amazonvideo.livingroom)
+### [Prime Video](https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient)
 
-`com.amazon.amazonvideo.livingroom`
+`com.amazon.avod.thirdpartyclient` `com.amazon.amazonvideo.livingroom`
+
+#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+
+<details>
+<summary id="prime-video-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.23.23+v15.5.0.70.armv7a-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-07-04](https://github.com/nullcpy/rvb/releases/tag/456)<br>
+Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.10.0)
+- Disable auto-updates
+- Override certificate pinning
+- Prime Video extension
+- Skip ads
+- Clone Prime Video
+</blockquote>
+</details>
 
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
@@ -1904,6 +2005,26 @@ Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-p
 - Sanitize sharing links
 - Settings
 - Show seekbar
+</blockquote>
+</details>
+
+---
+
+### [Todoist](https://play.google.com/store/apps/details?id=com.todoist)
+
+`com.todoist`
+
+#### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
+
+<details>
+<summary id="todoist-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.7.0-gray?labelColor=d83c2c&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
+Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/morphe-patches/releases/tag/v1.3.0)
+
+- Hide VIP banner
 </blockquote>
 </details>
 
