@@ -677,15 +677,6 @@ dl_apkmirror() {
 
 	local clean_version="${version//[^0-9.]/}"
 	local clean_search_version="${clean_version//./-}"
-	local short_version="" short_search_version=""
-	if [[ "$clean_version" == *.*.*.* ]]; then
-		short_version=$(echo "$clean_version" | cut -d. -f1-3)
-	elif [[ "$clean_version" == *.*.* ]]; then
-		short_version=$(echo "$clean_version" | cut -d. -f1-2)
-	fi
-	if [ -n "$short_version" ]; then
-		short_search_version="${short_version//./-}"
-	fi
 
 	local resp release_url=""
 
@@ -755,16 +746,6 @@ dl_apkmirror() {
 				version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
 			fi
 
-			# 5. Short text match (for grouped versions)
-			if [ -z "$version_href" ] && [ -n "$short_version" ] && [ "$short_version" != "$clean_version" ]; then
-				version_href=$(echo "$html_split" | grep -F "$short_version" | grep -oP 'href="\K[^"]+' | head -1) || true
-			fi
-
-			# 6. Short URL match
-			if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
-				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[a-z0-9]+)*-release" | head -1) || true
-			fi
-
 			if [ -n "$version_href" ]; then
 				release_url="$base_url$version_href"
 				_fs_get "$release_url" || return 1
@@ -784,20 +765,13 @@ dl_apkmirror() {
 				local all_links=$(echo "$html_split" | grep -oP 'href="\K/apk/[^"]+')
 				
 				version_href=$(echo "$all_links" | grep -F "$search_version-release" | head -1) || true
-				if [ -z "$version_href" ]; then
-					version_href=$(echo "$html_split" | grep -F "$version" | grep -oP 'href="\K[^"]+' | head -1) || true
-				fi
-				if [ -z "$version_href" ] && [ -n "$clean_version" ] && [ "$clean_version" != "$version" ]; then
-					version_href=$(echo "$html_split" | grep -F "$clean_version" | grep -oP 'href="\K[^"]+' | head -1) || true
-				fi
 				if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
 					version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
 				fi
-				if [ -z "$version_href" ] && [ -n "$short_version" ] && [ "$short_version" != "$clean_version" ]; then
-					version_href=$(echo "$html_split" | grep -F "$short_version" | grep -oP 'href="\K[^"]+' | head -1) || true
-				fi
-				if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
-					version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[a-z0-9]+)*-release" | head -1) || true
+				
+				# Search query is exact, so the first release result is the best match if strict regexes fail
+				if [ -z "$version_href" ]; then
+					version_href=$(echo "$all_links" | grep -E -- "-release/?$" | head -1) || true
 				fi
 
 				if [ -n "$version_href" ]; then
