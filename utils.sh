@@ -774,8 +774,10 @@ dl_apkmirror() {
 			local search_list_url="https://www.apkmirror.com/?post_type=app_release&searchtype=apk&s=${__APKMIRROR_CAT__}+${version}"
 			_fs_get "$search_list_url" || true
 			if [ -n "$html" ] && [ "$html" != "null" ]; then
-				local search_links
-				search_links=$($HTMLQ --attribute href "div.appRow h5 a" <<<"$html")
+				local search_links=""
+				if [[ "$html" != *"No results found matching your query"* ]]; then
+					search_links=$($HTMLQ --attribute href "div.appRow h5 a" <<<"$html")
+				fi
 				
 				# Try to find exact version match first to be safe, otherwise fallback to top result
 				version_href=$(echo "$search_links" | grep -F "$search_version-release" | head -1) || true
