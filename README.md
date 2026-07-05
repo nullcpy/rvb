@@ -2359,8 +2359,8 @@ Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.8.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.2)
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260005)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.3)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2416,6 +2416,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Import/Export login token
 - Legacy share links
 - Log server response
+- More information on profile
 - Native downloader
 - Native reader mode
 - Native translator
@@ -2441,8 +2442,8 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-06-28](https://github.com/nullcpy/rvb/releases/tag/418)<br>
-Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.6.3), [crimera/patches-3.8.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.2)
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260005)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.3)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2500,6 +2501,7 @@ Patches: [inotia00/patches-1.6.3.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 - Import/Export login token
 - Legacy share links
 - Log server response
+- More information on profile
 - Native downloader
 - Native reader mode
 - Native translator
