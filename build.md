@@ -1,7 +1,4 @@
-inshot-morphe (arm64-v8a): 2.214.1539  
-inshot-morphe (arm-v7a): 2.214.1539  
-prime-video-morphe (arm64-v8a): 3.0.452.1047  
-prime-video-morphe (arm-v7a): 3.0.452.1047  
+plutotv-morphe-androidtv (all): 5.66.0-leanback  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -14,7 +11,4 @@ Patches: ajstrick81/patches-1.10.0.mpp
 [Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.10.0)
 
 Patches: arandomhooman/patches-1.42.0.mpp  
-[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
-
-Patches: hoo-dles/patches-1.38.1.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)  
+[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)  
