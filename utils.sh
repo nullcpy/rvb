@@ -747,7 +747,7 @@ dl_apkmirror() {
 
 			# 4. Clean URL match
 			if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
-				version_href=$(echo "$all_links" | grep -F "$clean_search_version-release" | head -1) || true
+				version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
 			fi
 
 			# 5. Short text match (for grouped versions)
@@ -757,7 +757,7 @@ dl_apkmirror() {
 
 			# 6. Short URL match
 			if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
-				version_href=$(echo "$all_links" | grep -F "$short_search_version-release" | head -1) || true
+				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[a-z0-9]+)*-release" | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
@@ -767,6 +767,42 @@ dl_apkmirror() {
 				break
 			fi
 		done
+		
+		# Fallback to direct search if not found on first 5 pages
+		if [ -z "$release_url" ]; then
+			local search_list_url="https://www.apkmirror.com/?post_type=app_release&searchtype=apk&s=${__APKMIRROR_CAT__}+${version}"
+			_fs_get "$search_list_url" || true
+			if [ -n "$html" ] && [ "$html" != "null" ]; then
+				local html_flat=$(echo "$html" | tr -d '\n\r')
+				local html_split="${html_flat//<\/a>/<\/a>
+}"
+				local all_links=$(echo "$html_split" | grep -oP 'href="\K/apk/[^"]+')
+				
+				version_href=$(echo "$all_links" | grep -F "$search_version-release" | head -1) || true
+				if [ -z "$version_href" ]; then
+					version_href=$(echo "$html_split" | grep -F "$version" | grep -oP 'href="\K[^"]+' | head -1) || true
+				fi
+				if [ -z "$version_href" ] && [ -n "$clean_version" ] && [ "$clean_version" != "$version" ]; then
+					version_href=$(echo "$html_split" | grep -F "$clean_version" | grep -oP 'href="\K[^"]+' | head -1) || true
+				fi
+				if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
+					version_href=$(echo "$all_links" | grep -E "${clean_search_version}(-[a-z0-9]+)*-release" | head -1) || true
+				fi
+				if [ -z "$version_href" ] && [ -n "$short_version" ] && [ "$short_version" != "$clean_version" ]; then
+					version_href=$(echo "$html_split" | grep -F "$short_version" | grep -oP 'href="\K[^"]+' | head -1) || true
+				fi
+				if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
+					version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[a-z0-9]+)*-release" | head -1) || true
+				fi
+
+				if [ -n "$version_href" ]; then
+					release_url="$base_url$version_href"
+					_fs_get "$release_url" || return 1
+					resp="$html"
+				fi
+			fi
+		fi
+
 		if [ -z "$release_url" ]; then
 			epr "Could not find version $version on APKMirror"
 			return 1
