@@ -716,11 +716,11 @@ dl_apkmirror() {
 			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"$search_version"'[^"]*release[^"]*' | head -1) || true
 			
 			if [ -z "$version_href" ]; then
-				version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>.*?\b'"${version//./\\.}"'\b)' | head -1) || true
+				version_href=$(echo "$html" | tr -d '\n' | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>(?:(?!</a>).)*?\b'"${version//./\\.}"'\b)' | head -1) || true
 			fi
 			
 			if [ -z "$version_href" ] && [ -n "$clean_version" ] && [ "$clean_version" != "$version" ]; then
-				version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>.*?\b'"${clean_version//./\\.}"'\b)' | head -1) || true
+				version_href=$(echo "$html" | tr -d '\n' | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>(?:(?!</a>).)*?\b'"${clean_version//./\\.}"'\b)' | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
