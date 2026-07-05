@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [plutotv-morphe-androidtv]
-enabled = true 
+enabled = false 
 app-name = "plutotv"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
