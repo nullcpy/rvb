@@ -36,7 +36,7 @@ arch = "both"
 patches-source = "arandomhooman/hoomans-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat-reader-edit-pdf"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
 uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
 
 [inshot-morphe]

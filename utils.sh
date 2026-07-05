@@ -718,11 +718,11 @@ dl_apkmirror() {
 	fi
 
 	if [ -z "$release_url" ]; then
-		local list_url="https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}"
+		local list_url="${url%/}"
 		local version_href=""
 		for page_num in $(seq 1 5); do
-			local page_url="$list_url"
-			[[ $page_num -gt 1 ]] && page_url="${list_url%%\?*}/page/$page_num/?${list_url#*\?}"
+			local page_url="$list_url/"
+			[[ $page_num -gt 1 ]] && page_url="$list_url/page/$page_num/"
 			_fs_get "$page_url" || return 1
 			echo "[DEBUG] APKMirror HTML length: ${#html}, Preview: ${html:0:150}"
 			
