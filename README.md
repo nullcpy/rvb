@@ -133,16 +133,13 @@ Patches: [rushiranpise/patches-1.9.1.mpp](https://github.com/rushiranpise/morphe
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="adobe-acrobat-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.9.6-gray?labelColor=b30b00&logo=android&logoColor=white&style=flat"></summary>
+<summary id="adobe-acrobat-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.5.0.45958-gray?labelColor=b30b00&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
-
-- Disable mandatory login
-- Disable version check
-- Unlock Premium
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260003)<br>
+Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+- Unlock Pro
 </blockquote>
 </details>
 
@@ -2012,14 +2009,13 @@ Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-p
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="todoist-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.7.0-gray?labelColor=d83c2c&logo=android&logoColor=white&style=flat"></summary>
+<summary id="todoist-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12190-gray?labelColor=d83c2c&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
-Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/morphe-patches/releases/tag/v1.3.0)
-
-- Hide VIP banner
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260003)<br>
+Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+- Unlock Pro
 </blockquote>
 </details>
 
