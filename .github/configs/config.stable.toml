@@ -1479,9 +1479,9 @@ arch = "both"
 patches-source = "arandomhooman/hoomans-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
-uptodown-dlurl = "https://todoist.en.uptodown.com/android"
-
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
+# uptodown-dlurl = "https://todoist.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
 
 
 
