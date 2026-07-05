@@ -1261,16 +1261,15 @@ Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-an
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="plutotv-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v8.47.1-gray?labelColor=fff200&logo=android&logoColor=white&style=flat"></summary>
+<summary id="plutotv-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.66.0.leanback-gray?labelColor=fff200&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-13](https://github.com/nullcpy/rvb/releases/tag/242)<br>
-Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
-
-- Hide update popup
-- Spoof device ID
-- Unlock plus
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260002)<br>
+Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.10.0)
+- Disable auto-updates
+- Override certificate pinning
+- Skip ads
 </blockquote>
 </details>
 
