@@ -676,6 +676,10 @@ dl_apkmirror() {
 	if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
 
 	local clean_version="${version//[^0-9.]/}"
+	if [[ "${__APKMIRROR_CAT__:-}" == *"todoist"* ]] && [[ "$clean_version" =~ ^([0-9]{1,2})([0-9]{2})([0-9])$ ]]; then
+		# Transform 12190 -> 12.19.0
+		clean_version="${BASH_REMATCH[1]}.${BASH_REMATCH[2]}.${BASH_REMATCH[3]}"
+	fi
 	local clean_search_version="${clean_version//./-}"
 
 	local resp release_url=""
