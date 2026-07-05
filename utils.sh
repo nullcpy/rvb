@@ -604,7 +604,7 @@ get_apkmirror_vers() {
 get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$__APKMIRROR_RESP__"; }
 
 apkmirror_search() {
-	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5"
+	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6"
 	local dlurl="" node app_table emptyCheck
 
 	local apparch=('universal' 'noarch' 'arm64-v8a + armeabi-v7a')
@@ -641,9 +641,10 @@ apkmirror_search() {
 
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
-		if [ -n "$clean_search_version" ] && [[ "$dlurl" != *"$clean_search_version"* ]]; then
-			
-			continue
+		if [ -n "$clean_search_version" ]; then
+			if [[ "$dlurl" != *"$clean_search_version"* ]] && [[ "$dlurl" != *"$search_version"* ]]; then
+				continue
+			fi
 		fi
 
 		if isoneof "$node_arch" "${apparch[@]}"; then
@@ -808,7 +809,7 @@ dl_apkmirror() {
 	node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 	if [ "$node" ]; then
 		for type in APK BUNDLE; do
-			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type" "$clean_search_version"); then
+			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type" "$clean_search_version" "$search_version"); then
 				[ "$type" = "BUNDLE" ] && is_bundle=true || is_bundle=false
 				break
 			fi
