@@ -604,7 +604,7 @@ get_apkmirror_vers() {
 get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$__APKMIRROR_RESP__"; }
 
 apkmirror_search() {
-	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4"
+	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5"
 	local dlurl="" node app_table emptyCheck
 
 	local apparch=('universal' 'noarch' 'arm64-v8a + armeabi-v7a')
@@ -639,6 +639,8 @@ apkmirror_search() {
 
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
+		if [ -n "$clean_search_version" ] && [[ "$dlurl" != *"$clean_search_version"* ]]; then continue; fi
+
 		if isoneof "$node_arch" "${apparch[@]}"; then
 			if isoneof "$node_dpi" "${appdpi[@]}"; then
 				echo "$dlurl"
@@ -667,6 +669,18 @@ dl_apkmirror() {
 	fi
 
 	if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
+
+	local clean_version="${version//[^0-9.]/}"
+	local clean_search_version="${clean_version//./-}"
+	local short_version="" short_search_version=""
+	if [[ "$clean_version" == *.*.*.* ]]; then
+		short_version=$(echo "$clean_version" | cut -d. -f1-3)
+	elif [[ "$clean_version" == *.*.* ]]; then
+		short_version=$(echo "$clean_version" | cut -d. -f1-2)
+	fi
+	if [ -n "$short_version" ]; then
+		short_search_version="${short_version//./-}"
+	fi
 
 	local resp release_url=""
 
@@ -703,8 +717,6 @@ dl_apkmirror() {
 		fi
 	fi
 
-	local clean_version="${version//[^0-9.]/}"
-
 	if [ -z "$release_url" ]; then
 		local list_url="https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}"
 		local version_href=""
@@ -718,14 +730,34 @@ dl_apkmirror() {
 			local html_split="${html_flat//<\/a>/<\/a>
 }"
 
-			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"$search_version"'[^"]*release[^"]*' | head -1) || true
+			local all_links=$(echo "$html_split" | grep -oP 'href="\K/apk/[^"]+')
 			
+			# 1. Exact URL match (strict)
+			version_href=$(echo "$all_links" | grep -F "$search_version-release" | head -1) || true
+			
+			# 2. Exact text match
 			if [ -z "$version_href" ]; then
 				version_href=$(echo "$html_split" | grep -F "$version" | grep -oP 'href="\K[^"]+' | head -1) || true
 			fi
 			
+			# 3. Clean text match
 			if [ -z "$version_href" ] && [ -n "$clean_version" ] && [ "$clean_version" != "$version" ]; then
 				version_href=$(echo "$html_split" | grep -F "$clean_version" | grep -oP 'href="\K[^"]+' | head -1) || true
+			fi
+
+			# 4. Clean URL match
+			if [ -z "$version_href" ] && [ -n "$clean_search_version" ]; then
+				version_href=$(echo "$all_links" | grep -F "$clean_search_version-release" | head -1) || true
+			fi
+
+			# 5. Short text match (for grouped versions)
+			if [ -z "$version_href" ] && [ -n "$short_version" ] && [ "$short_version" != "$clean_version" ]; then
+				version_href=$(echo "$html_split" | grep -F "$short_version" | grep -oP 'href="\K[^"]+' | head -1) || true
+			fi
+
+			# 6. Short URL match
+			if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
+				version_href=$(echo "$all_links" | grep -F "$short_search_version-release" | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
@@ -745,7 +777,7 @@ dl_apkmirror() {
 	node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 	if [ "$node" ]; then
 		for type in APK BUNDLE; do
-			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type"); then
+			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type" "$clean_search_version"); then
 				[ "$type" = "BUNDLE" ] && is_bundle=true || is_bundle=false
 				break
 			fi
