@@ -3,18 +3,64 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[terabox-morphe]
+[plutotv-morphe-androidtv]
 enabled = true 
-app-name = "terabox"
+app-name = "plutotv"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
+uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
+
+[prime-video-morphe]
+enabled = true 
+app-name = "prime-video"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
+patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
-uptodown-dlurl = "https://terabox.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video"
+uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
 
+[adobe-acrobat-morphe]
+enabled = true 
+app-name = "adobe-acrobat"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
+uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
 
+[inshot-morphe]
+enabled = true 
+app-name = "inshot"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor"
+uptodown-dlurl = "https://inshot-editor.en.uptodown.com/android"
+
+[todoist-morphe]
+enabled = true 
+app-name = "todoist"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
+uptodown-dlurl = "https://todoist.en.uptodown.com/android"
 
 
