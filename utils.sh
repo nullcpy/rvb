@@ -630,7 +630,7 @@ apkmirror_search() {
 		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
 		if [ -z "$dlurl" ]; then continue; fi
 
-		echo "[DEBUG] Evaluated variant dlurl: $dlurl" >&2
+		
 		
 		local node_apk_bundle node_arch node_dpi
 		node_apk_bundle=$($HTMLQ "div.table-cell:nth-child(1) span.apkm-badge:first-of-type" --text <<<"$node" | xargs)
@@ -642,7 +642,7 @@ apkmirror_search() {
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
 		if [ -n "$clean_search_version" ] && [[ "$dlurl" != *"$clean_search_version"* ]]; then
-			echo "[DEBUG] Rejected variant because it does not contain clean_search_version ($clean_search_version)" >&2
+			
 			continue
 		fi
 
@@ -730,7 +730,7 @@ dl_apkmirror() {
 			local page_url="$list_url/"
 			[[ $page_num -gt 1 ]] && page_url="$list_url/page/$page_num/"
 			_fs_get "$page_url" || return 1
-			echo "[DEBUG] APKMirror HTML length: ${#html}, Preview: ${html:0:150}"
+			
 			
 			local html_flat=$(echo "$html" | tr -d '\n\r')
 			local html_split="${html_flat//<\/a>/<\/a>
@@ -814,10 +814,10 @@ dl_apkmirror() {
 			fi
 		done
 		if [ -z "$dlurl" ]; then return 1; fi
-		echo "[DEBUG] Fetching dlurl: $dlurl"
+		
 		_fs_get "$dlurl" || return 1
 		resp="$html"
-		echo "[DEBUG] Variant page HTML length: ${#resp}"
+		
 	fi
 
 	local all_dl_btns btn_url
