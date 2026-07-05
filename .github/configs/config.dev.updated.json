@@ -81,7 +81,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -91,11 +91,10 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
+    "dpi": "nodpi anydpi auto"
   },
   "twitter-morphe-materialu": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
@@ -106,11 +105,10 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.twitter.android"
+    "dpi": "nodpi anydpi auto"
   },
   "instagram-morphe-piko": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "both",
@@ -119,9 +117,7 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
+    "dpi": "nodpi anydpi auto"
   },
   "youtube-morphe": {
     "enabled": false,
@@ -202,7 +198,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
   },
   "reddit-morphe-adobo": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
