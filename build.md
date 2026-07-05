@@ -1,4 +1,5 @@
-instagram-morphe-piko (all): 435.0.0.37.76  
+reddit-morphe-adobo (arm64-v8a): 2026.25.0  
+reddit-morphe-adobo (arm-v7a): 2026.25.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +8,5 @@ instagram-morphe-piko (all): 435.0.0.37.76
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: crimera/patches-3.7.0.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.7.0)  
+Patches: jkennethcarino/patches-1.3.0-dev.2.mpp  
+[Changelog](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.2)  
