@@ -1590,9 +1590,8 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/370)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.1.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.1)
-
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260007)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.2.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.2)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
