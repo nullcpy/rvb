@@ -642,7 +642,7 @@ apkmirror_search() {
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
 		if [ -n "$clean_search_version" ] && [[ "$dlurl" != *"$clean_search_version"* ]]; then
-			echo "[DEBUG] Rejected variant because it does not contain clean_search_version ($clean_search_version)"
+			echo "[DEBUG] Rejected variant because it does not contain clean_search_version ($clean_search_version)" >&2
 			continue
 		fi
 
@@ -758,7 +758,7 @@ dl_apkmirror() {
 
 			# 5. Safe Short URL match (for grouped versions)
 			if [ -z "$version_href" ] && [ -n "$short_search_version" ] && [ "$short_search_version" != "$clean_search_version" ]; then
-				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[0-9]+)?-release/?$" | head -1) || true
+				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[0-9])?-release/?$" | head -1) || true
 			fi
 
 			if [ -n "$version_href" ]; then
