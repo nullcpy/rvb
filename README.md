@@ -918,15 +918,13 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
 #### [Morphe (hoomans-patches)](https://github.com/arandomhooman/hoomans-morphe-patches)
 
 <details>
-<summary id="inshot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.12.18-gray?labelColor=ff523f&logo=android&logoColor=white&style=flat"></summary>
+<summary id="inshot-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2.214.1539-gray?labelColor=ff523f&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Remove Ads
-- Skip Login
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260001)<br>
+Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+- Unlock Pro
 </blockquote>
 </details>
 
@@ -1397,17 +1395,15 @@ Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoo
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="prime-video-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.23.23+v15.5.0.70.armv7a-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
+<summary id="prime-video-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.0.452.1047-gray?labelColor=0578ff&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-04](https://github.com/nullcpy/rvb/releases/tag/456)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.10.0)
-- Disable auto-updates
-- Override certificate pinning
-- Prime Video extension
+[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260001)<br>
+Patches: [hoo-dles/patches-1.38.1.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
+- Enable speed control
+- Rename shared permissions
 - Skip ads
-- Clone Prime Video
 </blockquote>
 </details>
 
