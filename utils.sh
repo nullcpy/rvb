@@ -711,6 +711,9 @@ dl_apkmirror() {
 			[[ $page_num -gt 1 ]] && page_url="${list_url%%\?*}/page/$page_num/?${list_url#*\?}"
 			_fs_get "$page_url" || return 1
 			version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*'"$search_version"'[^"]*release[^"]*' | head -1) || true
+			if [ -z "$version_href" ]; then
+				version_href=$(echo "$html" | grep -oP 'href="\K/apk/[^"]*release/?(?="[^>]*>.*?\b'"${version//./\\.}"'\b)' | head -1) || true
+			fi
 			if [ -n "$version_href" ]; then
 				release_url="$base_url$version_href"
 				_fs_get "$release_url" || return 1
