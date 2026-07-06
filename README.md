@@ -117,8 +117,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Unlock Lifetime Premium
 </blockquote>
@@ -320,8 +320,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Spoof WARP+ Unlimited UI
 </blockquote>
@@ -732,8 +732,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -1182,8 +1182,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-04](https://github.com/nullcpy/rvb/releases/tag/452)<br>
-Patches: [rushiranpise/patches-1.9.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.9.1)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -1905,8 +1905,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Unlock VIP
 </blockquote>
@@ -2263,12 +2263,12 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="waze-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.21.0.0-gray?labelColor=33ccff&logo=adguard&logoColor=white&style=flat"></summary>
+<summary id="waze-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.19.0.2-gray?labelColor=33ccff&logo=adguard&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - Alert Distances
 - AutoZoom
 - Disable Ads
@@ -2293,12 +2293,12 @@ Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="windscribe-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.1.2284-gray?labelColor=031732&logo=android&logoColor=white&style=flat"></summary>
+<summary id="windscribe-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.1.2274-gray?labelColor=031732&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260009)<br>
-Patches: [rushiranpise/patches-1.10.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.0)
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
