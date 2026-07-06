@@ -1,0 +1,40 @@
+#!/bin/bash
+set -euo pipefail
+
+CURRENT_VERSIONS=".github/configs/app_versions.json"
+FETCHED_VERSIONS=".github/configs/app_versions.fetched.json"
+ACTIVE_APPS="active_apps.json"
+
+[ -f "$CURRENT_VERSIONS" ] || echo '{}' > "$CURRENT_VERSIONS"
+[ -f "$FETCHED_VERSIONS" ] || echo '{}' > "$FETCHED_VERSIONS"
+[ -f "$ACTIVE_APPS" ] || echo '[]' > "$ACTIVE_APPS"
+
+TRIGGER_APP_UPDATE=0
+
+# Compare fetched versions with current versions
+APPS=$(jq -r 'keys[]' "$FETCHED_VERSIONS")
+for app in $APPS; do
+    new_ver=$(jq -r ".\"$app\"" "$FETCHED_VERSIONS")
+    old_ver=$(jq -r ".\"$app\" // empty" "$CURRENT_VERSIONS")
+    
+    if [ "$new_ver" != "$old_ver" ] && [ -n "$new_ver" ]; then
+        echo "Update detected for $app: $old_ver -> $new_ver"
+        TRIGGER_APP_UPDATE=1
+        
+        # Add to active_apps.json
+        jq --arg app "$app" '. + [$app] | unique' "$ACTIVE_APPS" > tmp.json && mv tmp.json "$ACTIVE_APPS"
+        
+        # Update current versions
+        jq --arg app "$app" --arg ver "$new_ver" '.[$app] = $ver' "$CURRENT_VERSIONS" > tmp.json && mv tmp.json "$CURRENT_VERSIONS"
+    fi
+done
+
+if [ "$TRIGGER_APP_UPDATE" = "1" ]; then
+    echo "Updates were found!"
+else
+    echo "No app updates found."
+fi
+
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+    echo "TRIGGER_APP_UPDATE=$TRIGGER_APP_UPDATE" >> "$GITHUB_OUTPUT"
+fi
