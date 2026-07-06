@@ -25,7 +25,7 @@ MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson 
 
 APP_UPDATES_JSON=$(cat app_updates.json 2>/dev/null || echo '{}')
 APP_UPDATES_MSG=$(jq -r --argjson updates "$APP_UPDATES_JSON" '
-  [ $updates | to_entries[] | . as $e | "📱 \($e.key)\n  ╰ Update: \($e.value.old) ➔ \($e.value.new)" ] | join("\n\n")
+  [ $updates | to_entries[] | . as $e | "📱 \($e.key)\n  ╰ Version: \($e.value.new)" ] | join("\n\n")
 ' <<<"{}")
 
 if [ -z "$MSG_BODY" ] && [ -z "$APP_UPDATES_MSG" ]; then
@@ -34,26 +34,30 @@ if [ -z "$MSG_BODY" ] && [ -z "$APP_UPDATES_MSG" ]; then
 fi
 
 NL=$'\n'
-COMBINED_MSG=""
-[ -n "$MSG_BODY" ] && COMBINED_MSG="${MSG_BODY}"
-if [ -n "$APP_UPDATES_MSG" ]; then
-  [ -n "$COMBINED_MSG" ] && COMBINED_MSG="${COMBINED_MSG}${NL}${NL}---${NL}${NL}"
-  COMBINED_MSG="${COMBINED_MSG}${APP_UPDATES_MSG}"
+FULL_MSG=""
+
+if [ -n "$MSG_BODY" ]; then
+  if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_PRERELEASE:-0}" = "1" ]; then
+    FULL_MSG="*🚨 New Patch(es) Detected!*${NL}${NL}${MSG_BODY}"
+  else
+    FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${MSG_BODY}"
+  fi
 fi
 
-if [ "${TRIGGER_STABLE:-0}" = "0" ] && [ "${TRIGGER_PRERELEASE:-0}" = "0" ] && [ "${TRIGGER_APP_UPDATE:-0}" = "0" ]; then
-  FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${COMBINED_MSG}"
-else
-  FULL_MSG="*🚨 New Update(s) Detected!*${NL}${NL}${COMBINED_MSG}"
-  
-  if [ "${EFFECTIVE_STABLE:-0}" = "1" ] || [ "${EFFECTIVE_PRERELEASE:-0}" = "1" ]; then
-    if [ -n "${GITHUB_REPOSITORY:-}" ] && [ -n "${GITHUB_RUN_ID:-}" ]; then
-      ACTION_URL="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-      FULL_MSG="${FULL_MSG}${NL}${NL}⚙️ [View Build Action](${ACTION_URL})"
-    fi
-  else
-    FULL_MSG="${FULL_MSG}${NL}${NL}ℹ️ _No apps are enabled for this update. Build skipped._"
+if [ -n "$APP_UPDATES_MSG" ]; then
+  if [ -n "$FULL_MSG" ]; then
+    FULL_MSG="${FULL_MSG}${NL}${NL}"
   fi
+  FULL_MSG="${FULL_MSG}*🚨 New Version(s) Detected!*${NL}${NL}${APP_UPDATES_MSG}"
+fi
+
+if [ "${EFFECTIVE_STABLE:-0}" = "1" ] || [ "${EFFECTIVE_PRERELEASE:-0}" = "1" ]; then
+  if [ -n "${GITHUB_REPOSITORY:-}" ] && [ -n "${GITHUB_RUN_ID:-}" ]; then
+    ACTION_URL="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+    FULL_MSG="${FULL_MSG}${NL}${NL}⚙️ [View Build Action](${ACTION_URL})"
+  fi
+else
+  FULL_MSG="${FULL_MSG}${NL}${NL}ℹ️ _No apps are enabled for this update. Build skipped._"
 fi
 
 curl -s -X POST \
