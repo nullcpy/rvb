@@ -1035,7 +1035,7 @@ query=urllib.parse.parse_qsl(parts.query, keep_blank_values=True)
 encoded=urllib.parse.urlunsplit((
     parts.scheme,
     parts.netloc,
-    parts.path,
+    urllib.parse.quote(parts.path, safe='/'),
     urllib.parse.urlencode(query, doseq=True, safe='/:_-.'),
     parts.fragment,
 ))
