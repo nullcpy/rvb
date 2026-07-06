@@ -8,11 +8,12 @@ fi
 
 RAW_TRIGGER_STABLE=${RAW_TRIGGER_STABLE:-0}
 RAW_TRIGGER_PRERELEASE=${RAW_TRIGGER_PRERELEASE:-0}
+RAW_TRIGGER_APP_UPDATE=${RAW_TRIGGER_APP_UPDATE:-0}
 
 TRIGGER_STABLE=0
 TRIGGER_PRERELEASE=0
 
-if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
+if [ "$RAW_TRIGGER_STABLE" = "1" ] || [ "$RAW_TRIGGER_APP_UPDATE" = "1" ]; then
   CFG=".github/configs/config.stable.updated.json"
   ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
   if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
@@ -22,7 +23,7 @@ if [ "$RAW_TRIGGER_STABLE" = "1" ]; then
   fi
 fi
 
-if [ "$RAW_TRIGGER_PRERELEASE" = "1" ]; then
+if [ "$RAW_TRIGGER_PRERELEASE" = "1" ] || [ "$RAW_TRIGGER_APP_UPDATE" = "1" ]; then
   CFG=".github/configs/config.dev.updated.json"
   ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
   if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then

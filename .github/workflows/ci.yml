@@ -52,36 +52,48 @@ jobs:
           LATEST_TAGS: ${{ steps.fetch_tags.outputs.latest }}
         run: bash .github/scripts/ci_compare_tags.sh
 
+      - name: Fetch App Versions
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        run: bash .github/scripts/ci_fetch_app_versions.sh
+        
+      - name: Compare App Versions
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: compare_apps
+        run: bash .github/scripts/ci_compare_app_versions.sh
+
       - name: Generate configs (JSON)
-        if: ${{ steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' }}
+        if: ${{ steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
         id: generate_configs
         env:
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
           TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+          TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE }}
         run: bash .github/scripts/ci_generate_configs.sh
 
       - name: Resolve effective triggers
         id: effective_triggers
         env:
           CREATED: ${{ steps.ensure_patch_sources.outputs.created }}
-          RAW_TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
-          RAW_TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+          RAW_TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE || '0' }}
+          RAW_TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE || '0' }}
+          RAW_TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE || '0' }}
         run: bash .github/scripts/ci_resolve_triggers.sh
 
       - name: Notify telegram
-        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
+        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1') }}
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
           TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
           TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
+          TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE }}
         run: bash .github/scripts/ci_notify_telegram.sh
 
       - name: Commit updated patch sources and configs
-        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1') }}
+        if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1') }}
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
