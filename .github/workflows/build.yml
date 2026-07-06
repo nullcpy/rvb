@@ -17,10 +17,6 @@ on:
           - ".github/configs/config.manual.toml"
           - ".github/configs/config.dev.updated.json"
           - ".github/configs/config.stable.updated.json"
-          - ".github/configs/config.photos.toml"
-          - ".github/configs/config.revanced.toml"
-          - ".github/configs/config.piko.toml"
-          - ".github/configs/config.androidtv.toml"
 
 concurrency:
   group: build
