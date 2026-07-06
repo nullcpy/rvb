@@ -17,8 +17,8 @@ echo '{}' > "$APP_UPDATES_FILE"
 TRIGGER_APP_UPDATE=0
 
 # Compare fetched versions with current versions
-GROUPS=$(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
-for group in $GROUPS; do
+while IFS= read -r group; do
+    if [ -z "$group" ]; then continue; fi
     new_ver=$(echo "$FETCHED_APP_VERSIONS" | jq -r ".\"$group\"")
     old_ver=$(jq -r ".\"$group\".version // empty" "$CURRENT_VERSIONS")
     
@@ -30,7 +30,7 @@ for group in $GROUPS; do
         fi
     fi
     
-    if [ "$new_ver" != "$old_ver" ] && [ -n "$new_ver" ]; then
+    if [ "$new_ver" != "$old_ver" ] && [ "$new_ver" != "null" ] && [ -n "$new_ver" ]; then
         echo "Update detected for $group: $old_ver -> $new_ver"
         TRIGGER_APP_UPDATE=1
         
@@ -52,7 +52,7 @@ for group in $GROUPS; do
             end
         ' "$CURRENT_VERSIONS" > tmp.json && mv tmp.json "$CURRENT_VERSIONS"
     fi
-done
+done < <(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 
 if [ "$TRIGGER_APP_UPDATE" = "1" ]; then
     echo "Updates were found!"
