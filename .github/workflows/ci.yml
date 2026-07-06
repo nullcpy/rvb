@@ -59,11 +59,14 @@ jobs:
 
       - name: Fetch App Versions
         if: steps.ensure_patch_sources.outputs.created == 'false'
+        id: fetch_app_versions
         run: bash .github/scripts/ci_fetch_app_versions.sh
         
       - name: Compare App Versions
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare_apps
+        env:
+          FETCHED_APP_VERSIONS: ${{ steps.fetch_app_versions.outputs.fetched }}
         run: bash .github/scripts/ci_compare_app_versions.sh
 
       - name: Generate configs (JSON)

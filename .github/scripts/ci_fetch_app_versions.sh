@@ -20,8 +20,7 @@ fi
 yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $CONFIG_FILES > temp_all_configs.json
 
 [ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json
-echo "{}" > .github/configs/app_versions.fetched.json
-
+> fetched_app_versions.jsonl
 CHECK_ONLY_LISTED=$(jq -r '."_check_only_listed" // false' .github/configs/app_versions.json)
 
 if [ "$CHECK_ONLY_LISTED" = "true" ]; then
@@ -58,7 +57,7 @@ for app in $APPS; do
     
     if [ -n "$latest_ver" ]; then
         echo "Latest version for $app is $latest_ver"
-        jq --arg app "$app" --arg ver "$latest_ver" '.[$app] = $ver' .github/configs/app_versions.fetched.json > tmp.json && mv tmp.json .github/configs/app_versions.fetched.json
+        jq -n --arg app "$app" --arg ver "$latest_ver" '{($app): $ver}' >> fetched_app_versions.jsonl
     else
         echo "Could not find latest version for $app"
     fi
@@ -67,4 +66,15 @@ for app in $APPS; do
     sleep 2
 done
 
-rm -f temp_all_configs.json
+if [ -s fetched_app_versions.jsonl ]; then
+    FETCHED_JSON=$(jq -s 'reduce .[] as $item ({}; . * $item)' fetched_app_versions.jsonl)
+else
+    FETCHED_JSON="{}"
+fi
+
+DELIM="$(openssl rand -hex 8)"
+echo "fetched<<${DELIM}" >> "$GITHUB_OUTPUT"
+echo "$FETCHED_JSON" >> "$GITHUB_OUTPUT"
+echo "${DELIM}" >> "$GITHUB_OUTPUT"
+
+rm -f temp_all_configs.json fetched_app_versions.jsonl

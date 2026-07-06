@@ -2,11 +2,13 @@
 set -euo pipefail
 
 CURRENT_VERSIONS=".github/configs/app_versions.json"
-FETCHED_VERSIONS=".github/configs/app_versions.fetched.json"
 ACTIVE_APPS="active_apps.json"
 
 [ -f "$CURRENT_VERSIONS" ] || echo '{}' > "$CURRENT_VERSIONS"
-[ -f "$FETCHED_VERSIONS" ] || echo '{}' > "$FETCHED_VERSIONS"
+
+if [ -z "${FETCHED_APP_VERSIONS:-}" ]; then
+    FETCHED_APP_VERSIONS="{}"
+fi
 [ -f "$ACTIVE_APPS" ] || echo '[]' > "$ACTIVE_APPS"
 
 APP_UPDATES_FILE="app_updates.json"
@@ -15,9 +17,9 @@ echo '{}' > "$APP_UPDATES_FILE"
 TRIGGER_APP_UPDATE=0
 
 # Compare fetched versions with current versions
-APPS=$(jq -r 'keys[]' "$FETCHED_VERSIONS")
+APPS=$(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 for app in $APPS; do
-    new_ver=$(jq -r ".\"$app\"" "$FETCHED_VERSIONS")
+    new_ver=$(echo "$FETCHED_APP_VERSIONS" | jq -r ".\"$app\"")
     old_ver=$(jq -r ".\"$app\" // empty" "$CURRENT_VERSIONS")
     
     if [ "$new_ver" != "$old_ver" ] && [ -n "$new_ver" ]; then
