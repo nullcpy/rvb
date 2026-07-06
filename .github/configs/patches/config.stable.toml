@@ -60,20 +60,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiki
 uptodown-dlurl = "https://komoot.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
 
-[vpnify-morphe]
-enabled = true 
-app-name = "vpnify"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "BholeyKaBhakt/android-patches-xtra"
-cli-source = "MorpheApp/morphe-cli"
-dpi = "nodpi anydpi auto"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy"
-# uptodown-dlurl = "https://vpnify.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
-apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
-
 [discord-xposed]
 enabled = true 
 app-name = "discord"
