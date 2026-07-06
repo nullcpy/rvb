@@ -997,7 +997,8 @@ dl_apkcombo() {
 
 	for sfx in "${sfxs[@]}"; do
 		if [ -n "$version" ]; then
-			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${version}-${sfx}"
+			local safe_version="${version// /-}"
+			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${safe_version}-${sfx}"
 		else
 			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/apk"
 		fi
