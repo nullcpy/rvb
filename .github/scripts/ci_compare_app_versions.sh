@@ -9,6 +9,9 @@ ACTIVE_APPS="active_apps.json"
 [ -f "$FETCHED_VERSIONS" ] || echo '{}' > "$FETCHED_VERSIONS"
 [ -f "$ACTIVE_APPS" ] || echo '[]' > "$ACTIVE_APPS"
 
+APP_UPDATES_FILE="app_updates.json"
+echo '{}' > "$APP_UPDATES_FILE"
+
 TRIGGER_APP_UPDATE=0
 
 # Compare fetched versions with current versions
@@ -23,6 +26,9 @@ for app in $APPS; do
         
         # Add to active_apps.json
         jq --arg app "$app" '. + [$app] | unique' "$ACTIVE_APPS" > tmp.json && mv tmp.json "$ACTIVE_APPS"
+        
+        # Add to app_updates.json for Telegram notification
+        jq --arg app "$app" --arg old "${old_ver:-unknown}" --arg new "$new_ver" '.[$app] = {old: $old, new: $new}' "$APP_UPDATES_FILE" > tmp.json && mv tmp.json "$APP_UPDATES_FILE"
         
         # Update current versions
         jq --arg app "$app" --arg ver "$new_ver" '.[$app] = $ver' "$CURRENT_VERSIONS" > tmp.json && mv tmp.json "$CURRENT_VERSIONS"

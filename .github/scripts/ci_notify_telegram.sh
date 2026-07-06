@@ -23,16 +23,28 @@ MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson 
   ] | join("\n\n")
 ')
 
-if [ -z "$MSG_BODY" ]; then
+APP_UPDATES_JSON=$(cat app_updates.json 2>/dev/null || echo '{}')
+APP_UPDATES_MSG=$(jq -r --argjson updates "$APP_UPDATES_JSON" '
+  [ $updates | to_entries[] | . as $e | "📱 \($e.key)\n  ╰ Update: \($e.value.old) ➔ \($e.value.new)" ] | join("\n\n")
+' <<<"{}")
+
+if [ -z "$MSG_BODY" ] && [ -z "$APP_UPDATES_MSG" ]; then
   echo "::notice::No actual updates to format for Telegram."
   exit 0
 fi
 
 NL=$'\n'
-if [ "${TRIGGER_STABLE:-0}" = "0" ] && [ "${TRIGGER_PRERELEASE:-0}" = "0" ]; then
-  FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${MSG_BODY}"
+COMBINED_MSG=""
+[ -n "$MSG_BODY" ] && COMBINED_MSG="${MSG_BODY}"
+if [ -n "$APP_UPDATES_MSG" ]; then
+  [ -n "$COMBINED_MSG" ] && COMBINED_MSG="${COMBINED_MSG}${NL}${NL}---${NL}${NL}"
+  COMBINED_MSG="${COMBINED_MSG}${APP_UPDATES_MSG}"
+fi
+
+if [ "${TRIGGER_STABLE:-0}" = "0" ] && [ "${TRIGGER_PRERELEASE:-0}" = "0" ] && [ "${TRIGGER_APP_UPDATE:-0}" = "0" ]; then
+  FULL_MSG="*⚠️ Repository Status Update!*${NL}${NL}${COMBINED_MSG}"
 else
-  FULL_MSG="*🚨 New Patch(es) Detected!*${NL}${NL}${MSG_BODY}"
+  FULL_MSG="*🚨 New Update(s) Detected!*${NL}${NL}${COMBINED_MSG}"
 fi
 
 curl -s -X POST \
