@@ -1,0 +1,145 @@
+[rumble-morphe]
+enabled = true
+app-name = "rumble"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
+dpi = "nodpi anydpi auto"
+
+[twitch-morphe]
+enabled = true
+app-name = "twitch"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[battery-guru-morphe]
+enabled = true
+app-name = "battery-guru"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://battery-guru.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[money-manager-morphe]
+enabled = true
+app-name = "money-manager"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
+[poweramp-morphe]
+enabled = true 
+app-name = "poweramp"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+# apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+# apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
+[at4k-launcher-morphe]
+enabled = true 
+app-name = "at4k-launcher"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
+apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
+# apkcombo-dlurl = "https://apkcombo.com/at4k-launcher/com.overdevs.at4k"
+
+[snorelab-morphe]
+enabled = true 
+app-name = "snorelab"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/reviva-softworks-ltd/snorelab-record-your-snoring"
+uptodown-dlurl = "https://snorelab-record-your-snoring.en.uptodown.com/android"
+
+[projectivy-launcher-morphe]
+enabled = true 
+app-name = "projectivy-launcher"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/spocky/projectivy-launcher-android-tv"
+# uptodown-dlurl = "https://projectivy-launcher.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
+apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+
+[adobe-acrobat-morphe]
+enabled = true 
+app-name = "adobe-acrobat"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
+uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
+
+[inshot-morphe]
+enabled = true 
+app-name = "inshot"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor"
+uptodown-dlurl = "https://inshot-editor.en.uptodown.com/android"
+
+[todoist-morphe]
+enabled = true 
+app-name = "todoist"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
+# uptodown-dlurl = "https://todoist.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+
+
+
+
+

@@ -1,0 +1,171 @@
+[cricbuzz-morphe]
+enabled = true
+app-name = "cricbuzz"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[plus-messenger-morphe]
+enabled = true
+app-name = "plus-messenger"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rafalense/plus-messenger"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[lumina-wallpapers-morphe]
+enabled = true
+app-name = "lumina-wallpapers"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/99-dots-team/lumina-wallpapers-4k-backgrounds"
+# dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[document-scanner-morphe]
+enabled = true
+app-name = "document-scanner"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
+[eyecon-morphe]
+enabled = true
+app-name = "eyecon"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[ticktick-morphe]
+enabled = true
+app-name = "ticktick"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[sdmaid-morphe]
+enabled = true
+app-name = "sdmaid"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
+
+[proton-vpn-morphe-paresh]
+enabled = true
+app-name = "proton-vpn"
+rv-brand = "morphe-paresh"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
+
+[truecaller-morphe]
+enabled = true
+app-name = "truecaller"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
+[fing-morphe]
+enabled = true
+app-name = "fing"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[telegram-morphe-foss]
+enabled = true
+app-name = "telegram"
+rv-brand = "morphe-foss"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/org.telegram.messenger"
+
+[macrodroid-morphe]
+enabled = true
+app-name = "macrodroid"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
