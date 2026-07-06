@@ -31,6 +31,8 @@ else
     APPS=$(jq -r 'to_entries | map(select(.value.enabled == true)) | .[].key' temp_all_configs.json)
 fi
 
+declare -A cached_versions
+
 for app in $APPS; do
     echo "Checking version for $app..."
     
@@ -41,18 +43,29 @@ for app in $APPS; do
     fi
     
     latest_ver=""
-    if [[ "$dlurl" == *"uptodown"* ]]; then
-        get_uptodown_resp "$dlurl" || { echo "Failed uptodown resp for $app"; continue; }
-        vers=$(get_uptodown_vers) || { echo "Failed uptodown vers for $app"; continue; }
-        latest_ver=$(echo "$vers" | get_highest_ver) || true
-    elif [[ "$dlurl" == *"apkmirror"* ]]; then
-        get_apkmirror_resp "$dlurl" || { echo "Failed apkmirror resp for $app"; continue; }
-        vers=$(get_apkmirror_vers) || { echo "Failed apkmirror vers for $app"; continue; }
-        latest_ver=$(echo "$vers" | get_highest_ver) || true
-    elif [[ "$dlurl" == *"archive"* ]]; then
-        get_archive_resp "$dlurl" || { echo "Failed archive resp for $app"; continue; }
-        vers=$(get_archive_vers) || { echo "Failed archive vers for $app"; continue; }
-        latest_ver=$(echo "$vers" | get_highest_ver) || true
+    if [ -n "${cached_versions[$dlurl]:-}" ]; then
+        latest_ver="${cached_versions[$dlurl]}"
+        echo "Reusing cached version for $app: $latest_ver"
+    else
+        if [[ "$dlurl" == *"uptodown"* ]]; then
+            get_uptodown_resp "$dlurl" || { echo "Failed uptodown resp for $app"; continue; }
+            vers=$(get_uptodown_vers) || { echo "Failed uptodown vers for $app"; continue; }
+            latest_ver=$(echo "$vers" | get_highest_ver) || true
+        elif [[ "$dlurl" == *"apkmirror"* ]]; then
+            get_apkmirror_resp "$dlurl" || { echo "Failed apkmirror resp for $app"; continue; }
+            vers=$(get_apkmirror_vers) || { echo "Failed apkmirror vers for $app"; continue; }
+            latest_ver=$(echo "$vers" | get_highest_ver) || true
+        elif [[ "$dlurl" == *"archive"* ]]; then
+            get_archive_resp "$dlurl" || { echo "Failed archive resp for $app"; continue; }
+            vers=$(get_archive_vers) || { echo "Failed archive vers for $app"; continue; }
+            latest_ver=$(echo "$vers" | get_highest_ver) || true
+        fi
+        
+        if [ -n "$latest_ver" ]; then
+            cached_versions[$dlurl]="$latest_ver"
+        fi
+        # Sleep to avoid rate limiting only if we actually fetched
+        sleep 2
     fi
     
     if [ -n "$latest_ver" ]; then
@@ -61,9 +74,6 @@ for app in $APPS; do
     else
         echo "Could not find latest version for $app"
     fi
-    
-    # Sleep to avoid rate limiting
-    sleep 2
 done
 
 if [ -s fetched_app_versions.jsonl ]; then
