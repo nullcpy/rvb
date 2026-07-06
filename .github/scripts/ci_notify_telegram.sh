@@ -54,10 +54,10 @@ fi
 if [ "${EFFECTIVE_STABLE:-0}" = "1" ] || [ "${EFFECTIVE_PRERELEASE:-0}" = "1" ]; then
   if [ -n "${GITHUB_REPOSITORY:-}" ] && [ -n "${GITHUB_RUN_ID:-}" ]; then
     ACTION_URL="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-    FULL_MSG="${FULL_MSG}${NL}${NL}⚙️ [View Build Action](${ACTION_URL})"
+    FULL_MSG="${FULL_MSG}${NL}${NL}⚙️ [View Build in Action](${ACTION_URL})"
   fi
 else
-  FULL_MSG="${FULL_MSG}${NL}${NL}ℹ️ _No apps are enabled for this update. Build skipped._"
+  FULL_MSG="${FULL_MSG}${NL}${NL}ℹ️ _No apps are enabled. Build skipped._"
 fi
 
 curl -s -X POST \
