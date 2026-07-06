@@ -22,7 +22,15 @@ yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $CONFIG_FILES > temp_al
 [ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json
 echo "{}" > .github/configs/app_versions.fetched.json
 
-APPS=$(jq -r 'to_entries | map(select(.value.enabled == true)) | .[].key' temp_all_configs.json)
+CHECK_ONLY_LISTED=$(jq -r '."_check_only_listed" // false' .github/configs/app_versions.json)
+
+if [ "$CHECK_ONLY_LISTED" = "true" ]; then
+    APPS=$(jq -r --argjson allowed "$(jq 'keys | map(select(startswith("_") | not))' .github/configs/app_versions.json)" '
+        to_entries | map(select(.value.enabled == true and ($allowed | index(.key)))) | .[].key
+    ' temp_all_configs.json)
+else
+    APPS=$(jq -r 'to_entries | map(select(.value.enabled == true)) | .[].key' temp_all_configs.json)
+fi
 
 for app in $APPS; do
     echo "Checking version for $app..."
