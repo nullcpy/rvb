@@ -262,6 +262,18 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
     "dpi": "nodpi anydpi auto"
   },
+  "vpnify-morphe": {
+    "enabled": false,
+    "app-name": "vpnify",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "BholeyKaBhakt/android-patches-xtra",
+    "cli-source": "MorpheApp/morphe-cli",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
+    "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+  },
   "pinterest-morphe": {
     "enabled": false,
     "app-name": "pinterest",
@@ -382,20 +394,8 @@
     "uptodown-dlurl": "https://komoot.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
-  "vpnify-morphe": {
-    "enabled": false,
-    "app-name": "vpnify",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "BholeyKaBhakt/android-patches-xtra",
-    "cli-source": "MorpheApp/morphe-cli",
-    "dpi": "nodpi anydpi auto",
-    "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
-    "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
-  },
   "discord-xposed": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "discord",
     "rv-brand": "xposed",
     "build-mode": "apk",
@@ -433,7 +433,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -563,7 +563,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
