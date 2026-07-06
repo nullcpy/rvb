@@ -1,0 +1,127 @@
+[photoshop-mix-morphe]
+enabled = true
+app-name = "photoshop-mix"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "arm64-v8a"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[threads-morphe]
+enabled = true
+app-name = "threads"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+
+[proton-mail-morphe]
+enabled = true
+app-name = "proton-mail"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
+[google-recorder-morphe]
+enabled = true
+app-name = "google-recorder"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
+[rar-morphe]
+enabled = true
+app-name = "rar"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
+dpi = "nodpi anydpi auto"
+
+[microsoft-lens-morphe]
+enabled = true
+app-name = "microsoft-lens"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
+dpi = "nodpi anydpi auto"
+
+[messenger-morphe]
+enabled = true
+app-name = "messenger"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+version = "552.0.0.44.65"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
+
+[photomath-morphe]
+enabled = true
+app-name = "photomath"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[tumblr-morphe]
+enabled = true
+app-name = "tumblr"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
+
+[viber-morphe]
+enabled = true
+app-name = "viber"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+# github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.viber.voip"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
+

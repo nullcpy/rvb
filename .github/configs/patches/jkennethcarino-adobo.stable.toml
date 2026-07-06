@@ -1,0 +1,26 @@
+[imdb-morphe]
+enabled = true
+app-name = "imdb"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "all"
+patches-source = "jkennethcarino/adobo"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[gboard-morphe]
+enabled = true
+app-name = "gboard"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "jkennethcarino/adobo"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+
