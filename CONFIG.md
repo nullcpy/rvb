@@ -118,3 +118,25 @@ github-dlurl = "https://github.com/discord/releases/..." # Or apkmirror, etc.
 ```
 
 When the script detects `npatch` or `lspatch` in the CLI source, it will automatically bypass ReVanced CLI arguments and execute the correct injection command. You can also pass extra options to NPatch using `patcher-args = "-l 2"`.
+
+## Modular Configuration Directory
+
+All configurations are now stored in the `.github/configs/patches/` directory for better maintainability.
+
+- `config.toml`: Contains the global settings and base configurations.
+- `*.stable.toml`: Configurations specifically merged into the `stable` build.
+- `*.dev.toml`: Configurations specifically merged into the `dev` (pre-release) build.
+
+Any configuration file in `.github/configs/patches/` that does **not** contain `stable` or `dev` in its filename is automatically included in **both** builds.
+
+To add a new app, simply create or update a `.toml` file in `.github/configs/patches/`.
+
+## Automatic App Version Checking
+
+The CI workflow automatically detects when a new version of an app is released on APKMirror, Uptodown, or Archive.org.
+
+### How it Works
+1. **Version Fetching**: During the CI run, it reads all enabled apps from the `.github/configs/patches/*.toml` configurations and queries the URLs (`uptodown-dlurl`, `apkmirror-dlurl`, etc.).
+2. **Comparison**: It checks the newly fetched versions against the currently stored versions in `.github/configs/app_versions.json`.
+3. **Triggering**: If a new version is detected, the app is added to a temporary `active_apps.json` list, and the CI is triggered to build it.
+4. **Tracking File**: App versions are permanently tracked and committed to `.github/configs/app_versions.json`.
