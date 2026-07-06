@@ -624,7 +624,7 @@ Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/
   
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260010)<br>
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260013)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
 - Fix selected account persistence
 - GmsCore support
@@ -639,8 +639,9 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
   
 <blockquote>
 
-[Release 2026-07-04](https://github.com/nullcpy/rvb/releases/tag/454)<br>
+[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260013)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
+- GmsCore support
 - Spoof features
 </blockquote>
 </details>
