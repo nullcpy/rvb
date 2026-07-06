@@ -109,7 +109,7 @@ jobs:
           branch: main
           skip_checkout: true
           file_pattern: .github/configs/*.json
-          commit_message: "Update patch sources and generated configs [skip ci]"
+          commit_message: "Update patch sources, app versions and generated configs [skip ci]"
 
   build_dev:
     needs: check_patch
