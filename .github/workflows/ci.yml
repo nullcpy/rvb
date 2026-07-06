@@ -95,6 +95,8 @@ jobs:
           TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
           TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE }}
+          EFFECTIVE_STABLE: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
+          EFFECTIVE_PRERELEASE: ${{ steps.effective_triggers.outputs.TRIGGER_PRERELEASE }}
         run: bash .github/scripts/ci_notify_telegram.sh
 
       - name: Commit updated patch sources and configs
