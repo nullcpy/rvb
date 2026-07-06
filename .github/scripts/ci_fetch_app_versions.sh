@@ -24,17 +24,32 @@ yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $CONFIG_FILES > temp_al
 CHECK_ONLY_LISTED=$(jq -r '."_check_only_listed" // false' .github/configs/app_versions.json)
 
 if [ "$CHECK_ONLY_LISTED" = "true" ]; then
-    APPS=$(jq -r --argjson allowed "$(jq 'keys | map(select(startswith("_") | not))' .github/configs/app_versions.json)" '
-        to_entries | map(select(.value.enabled == true and (.key as $k | $allowed | index($k)))) | .[].key
-    ' temp_all_configs.json)
+    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' .github/configs/app_versions.json > check_list.txt
 else
-    APPS=$(jq -r 'to_entries | map(select(.value.enabled == true)) | .[].key' temp_all_configs.json)
+    # All enabled apps
+    ENABLED_APPS=$(jq -r 'to_entries | map(select(.value.enabled == true)) | .[].key' temp_all_configs.json)
+    
+    # Get all grouped apps to exclude them
+    GROUPED_APPS=$(jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[].value.keys[]?' .github/configs/app_versions.json 2>/dev/null || echo "")
+    
+    > check_list.txt
+    
+    # Add groups first
+    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' .github/configs/app_versions.json >> check_list.txt
+    
+    # Add non-grouped enabled apps
+    for app in $ENABLED_APPS; do
+        if ! echo "$GROUPED_APPS" | grep -qx "$app"; then
+            echo "$app|$app" >> check_list.txt
+        fi
+    done
 fi
 
 declare -A cached_versions
 
-for app in $APPS; do
-    echo "Checking version for $app..."
+while IFS='|' read -r group app; do
+    if [ -z "$group" ] || [ -z "$app" ]; then continue; fi
+    echo "Checking version for $group ($app)..."
     
     uptodown_url=$(jq -r ".\"$app\".\"uptodown-dlurl\" // empty" temp_all_configs.json)
     apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" temp_all_configs.json)
@@ -87,12 +102,12 @@ for app in $APPS; do
     done
     
     if [ -n "$latest_ver" ]; then
-        echo "Latest version for $app is $latest_ver"
-        jq -n --arg app "$app" --arg ver "$latest_ver" '{($app): $ver}' >> fetched_app_versions.jsonl
+        echo "Latest version for $group is $latest_ver"
+        jq -n --arg grp "$group" --arg ver "$latest_ver" '{($grp): $ver}' >> fetched_app_versions.jsonl
     else
-        echo "Could not find latest version for $app"
+        echo "Could not find latest version for $group"
     fi
-done
+done < check_list.txt
 
 if [ -s fetched_app_versions.jsonl ]; then
     FETCHED_JSON=$(jq -s 'reduce .[] as $item ({}; . * $item)' fetched_app_versions.jsonl)
@@ -105,4 +120,4 @@ echo "fetched<<${DELIM}" >> "$GITHUB_OUTPUT"
 echo "$FETCHED_JSON" >> "$GITHUB_OUTPUT"
 echo "${DELIM}" >> "$GITHUB_OUTPUT"
 
-rm -f temp_all_configs.json fetched_app_versions.jsonl
+rm -f temp_all_configs.json fetched_app_versions.jsonl check_list.txt
