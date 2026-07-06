@@ -40,14 +40,12 @@ for app in $APPS; do
     apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" temp_all_configs.json)
     apkpure_url=$(jq -r ".\"$app\".\"apkpure-dlurl\" // empty" temp_all_configs.json)
     apkcombo_url=$(jq -r ".\"$app\".\"apkcombo-dlurl\" // empty" temp_all_configs.json)
-    archive_url=$(jq -r ".\"$app\".\"archive-dlurl\" // empty" temp_all_configs.json)
 
     dlurls=()
     [ -n "$uptodown_url" ] && dlurls+=("$uptodown_url")
     [ -n "$apkmirror_url" ] && dlurls+=("$apkmirror_url")
     [ -n "$apkpure_url" ] && dlurls+=("$apkpure_url")
     [ -n "$apkcombo_url" ] && dlurls+=("$apkcombo_url")
-    [ -n "$archive_url" ] && dlurls+=("$archive_url")
 
     if [ ${#dlurls[@]} -eq 0 ]; then
         echo "No dlurl for $app, skipping"
@@ -76,10 +74,6 @@ for app in $APPS; do
             elif [[ "$dlurl" == *"apkcombo"* ]]; then
                 get_apkcombo_resp "$dlurl" || { echo "Failed apkcombo resp for $app"; continue; }
                 vers=$(get_apkcombo_vers) || { echo "Failed apkcombo vers for $app"; continue; }
-                latest_ver=$(echo "$vers" | get_highest_ver) || true
-            elif [[ "$dlurl" == *"archive"* ]]; then
-                get_archive_resp "$dlurl" || { echo "Failed archive resp for $app"; continue; }
-                vers=$(get_archive_vers) || { echo "Failed archive vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             fi
             
