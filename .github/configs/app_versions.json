@@ -1,6 +1,16 @@
 {
   "_check_only_listed": true,
-  "discord-xposed": "335.11 - Stable",
-  "google-photos-revanced": "7.82.0.937646388",
-  "google-photos-morphe": "7.82.0.937646388"
+  "Discord": {
+    "keys": [
+      "discord-xposed"
+    ],
+    "version": "335.11 - Stable"
+  },
+  "Google Photos": {
+    "keys": [
+      "google-photos-revanced",
+      "google-photos-morphe"
+    ],
+    "version": ""
+  }
 }
