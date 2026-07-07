@@ -361,9 +361,8 @@ Patches: [joganubaid/patches-1.1.0.mpp](https://github.com/joganubaid/cryptomato
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Cricbuzz Disable Ads
 - Cricbuzz Premium
 </blockquote>
@@ -421,9 +420,8 @@ Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-an
 
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Doc Scanner Premium
 </blockquote>
 </details>
@@ -477,9 +475,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Eyecon Premium
 </blockquote>
 </details>
@@ -520,9 +517,8 @@ Patches: [MeridianFresco/patches-1.0.0.mpp](https://github.com/MeridianFresco/mo
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Fing Premium
 </blockquote>
 </details>
@@ -981,9 +977,8 @@ Patches: [brosssh/patches-2.8.0.mpp](https://github.com/brosssh/morphe-patches/r
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Lumina Premium
 </blockquote>
 </details>
@@ -1022,9 +1017,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - MacroDroid Premium
 </blockquote>
 </details>
@@ -1328,9 +1322,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-06-10](https://github.com/nullcpy/rvb/releases/tag/332)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Anti-delete messages
 - Anti-disappearing media
 - Anti-screenshot notification
@@ -1501,13 +1494,14 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="proton-vpn-morphe-paresh">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
+<summary id="proton-vpn-morphe-paresh">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.19.16.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-29](https://github.com/nullcpy/rvb/releases/tag/298)<br>
-Patches: [Paresh-Maheshwari/patches-1.17.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.17.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
+- Disable telemetry
+- Proton VPN Premium
 </blockquote>
 </details>
 
@@ -1663,9 +1657,8 @@ Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoo
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Unlock Pro
 </blockquote>
 </details>
@@ -1836,13 +1829,12 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="telegram-morphe-foss"><b>FOSS</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.6.4-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
+<summary id="telegram-morphe-foss"><b>FOSS</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.8.3-gray?labelColor=2CA5E0&logo=telegram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Anti-delete messages
 - Anti-disappearing media
 - Bypass channel restrictions
@@ -1959,9 +1951,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - TickTick Premium
 </blockquote>
 </details>
@@ -2052,9 +2043,8 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
   
 <blockquote>
 
-[Release 2026-06-03](https://github.com/nullcpy/rvb/releases/tag/311)<br>
-Patches: [Paresh-Maheshwari/patches-1.18.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.18.0)
-
+[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
 - Disable telemetry
 - Disable update check
 - GMS sign-in bypass
