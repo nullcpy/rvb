@@ -1097,7 +1097,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "cricbuzz-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "cricbuzz",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1110,7 +1110,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "plus-messenger-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "plus-messenger",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1123,7 +1123,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "lumina-wallpapers-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "lumina-wallpapers",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1134,7 +1134,7 @@
     "uptodown-dlurl": "https://lumina-walls.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1147,7 +1147,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "eyecon-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1160,7 +1160,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "ticktick-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1173,7 +1173,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "sdmaid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "sdmaid",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1186,7 +1186,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "proton-vpn-morphe-paresh": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "proton-vpn",
     "rv-brand": "morphe-paresh",
     "build-mode": "apk",
@@ -1201,7 +1201,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
   "truecaller-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1215,7 +1215,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1228,7 +1228,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "telegram-morphe-foss": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -1241,7 +1241,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "macrodroid-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1423,7 +1423,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "adguard-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1435,7 +1435,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "waze-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1447,7 +1447,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "warp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1459,7 +1459,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1471,7 +1471,7 @@
     "apkpure-dlurl": "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
   },
   "ninja-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1484,7 +1484,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
   },
   "windscribe-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1498,7 +1498,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "terabox",
     "rv-brand": "morphe",
     "build-mode": "apk",
