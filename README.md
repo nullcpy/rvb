@@ -1013,22 +1013,13 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (bufferk)](https://github.com/bufferk/morphe-patches)
 
 <details>
-<summary id="medium-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
+<summary id="medium-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.5.1302097-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
-Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
-- Disable telemetry
-- Disable update check
-- GMS sign-in bypass
-- Hide Assistant tab
-- Hide Family Protection button
-- Hide Premium from settings
-- Hide Premium tab
-- Hide Scams tab
-- Neutralize third-party SDKs
-- Truecaller Premium
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
+Patches: [bufferk/patches-1.6.11.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.6.12)
+- Freedium
 </blockquote>
 </details>
 
@@ -2061,14 +2052,13 @@ Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/mo
 #### [Morphe (IMXEren)](https://github.com/IMXEren/mix-patches)
 
 <details>
-<summary id="trakt-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.7.0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
+<summary id="trakt-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.13.0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
-Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/morphe-patches/releases/tag/v1.3.0)
-
-- Hide VIP banner
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
+Patches: [IMXEren/patches-1.4.0.mpp](https://github.com/IMXEren/mix-patches/releases/tag/v1.4.0)
+- Unlock pro
 </blockquote>
 </details>
 
@@ -2107,18 +2097,15 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-07-07](https://github.com/nullcpy/rvb/releases/tag/260017)<br>
-Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
-- Disable telemetry
-- Disable update check
-- GMS sign-in bypass
-- Hide Assistant tab
-- Hide Family Protection button
-- Hide Premium from settings
-- Hide Premium tab
-- Hide Scams tab
-- Neutralize third-party SDKs
-- Truecaller Premium
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
+Patches: [bufferk/patches-1.6.11.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.6.12)
+- Disable analytics
+- Enable premium features
+- Hide 'Get Premium' banners
+- Hide ads
+- Hide premium upgrade prompts
+- Mock premium
+- Remove Premium UI
 </blockquote>
 </details>
 
