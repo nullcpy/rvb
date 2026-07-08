@@ -336,7 +336,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "truecaller-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe-alt",
     "build-mode": "both",
@@ -349,10 +349,10 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "Medium-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "Medium",
     "rv-brand": "morphe",
-    "build-mode": "both",
+    "build-mode": "apk",
     "arch": "both",
     "patches-source": "bufferk/morphe-patches",
     "cli-source": "MorpheApp/morphe-cli",
@@ -388,18 +388,6 @@
     "enabled": false,
     "app-name": "trakt",
     "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "all",
-    "patches-source": "PixelPusher247/morphe-patches",
-    "cli-source": "MorpheApp/morphe-cli",
-    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
-    "dpi": "nodpi anydpi auto"
-  },
-  "trakt-morphe-alt": {
-    "enabled": true,
-    "app-name": "trakt",
-    "rv-brand": "morphe-alt",
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "IMXEren/mix-patches",
@@ -470,7 +458,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -600,7 +588,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
