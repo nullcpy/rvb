@@ -1013,7 +1013,7 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (bufferk)](https://github.com/bufferk/morphe-patches)
 
 <details>
-<summary id="medium-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="medium-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v26.10.6-gray?labelColor=000000&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
