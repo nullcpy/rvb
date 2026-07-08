@@ -143,9 +143,15 @@
     "blocked": false
   },
   "bufferk": {
-    "repo": "bufferk/morphe-patches"
+    "repo": "bufferk/morphe-patches",
+    "stable": "v1.6.12",
+    "prerelease": "v1.6.15-dev.6",
+    "blocked": false
   },
   "IMXEren": {
-    "repo": "IMXEren/mix-patches"
+    "repo": "IMXEren/mix-patches",
+    "stable": "v1.4.0",
+    "prerelease": "v1.4.0-dev.1",
+    "blocked": false
   }
 }

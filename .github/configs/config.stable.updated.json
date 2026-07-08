@@ -335,6 +335,31 @@
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
+  "truecaller-morphe-alt": {
+    "enabled": true,
+    "app-name": "truecaller",
+    "rv-brand": "morphe-alt",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "bufferk/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
+  },
+  "Medium-morphe": {
+    "enabled": true,
+    "app-name": "Medium",
+    "rv-brand": "morphe",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "bufferk/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://medium.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/a-medium-corporation/medium",
+    "dpi": "nodpi anydpi auto"
+  },
   "google-news-morphe": {
     "enabled": false,
     "app-name": "google-news",
@@ -366,6 +391,18 @@
     "build-mode": "apk",
     "arch": "all",
     "patches-source": "PixelPusher247/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
+    "dpi": "nodpi anydpi auto"
+  },
+  "trakt-morphe-alt": {
+    "enabled": true,
+    "app-name": "trakt",
+    "rv-brand": "morphe-alt",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "IMXEren/mix-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
@@ -1097,7 +1134,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "cricbuzz-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "cricbuzz",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1110,7 +1147,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "plus-messenger-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "plus-messenger",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1123,7 +1160,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "lumina-wallpapers-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "lumina-wallpapers",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1134,7 +1171,7 @@
     "uptodown-dlurl": "https://lumina-walls.en.uptodown.com/android"
   },
   "document-scanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1147,7 +1184,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "eyecon-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1160,7 +1197,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "ticktick-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1173,7 +1210,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "sdmaid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "sdmaid",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1186,7 +1223,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "proton-vpn-morphe-paresh": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "proton-vpn",
     "rv-brand": "morphe-paresh",
     "build-mode": "apk",
@@ -1201,7 +1238,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
   "truecaller-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1215,7 +1252,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "fing-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1228,7 +1265,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "telegram-morphe-foss": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -1241,7 +1278,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "macrodroid-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
