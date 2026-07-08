@@ -1554,7 +1554,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260020)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260021)<br>
 Patches: [MorpheApp/patches-1.34.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.4)
 - Disable modern home
 - Disable screenshot popup
@@ -2622,7 +2622,7 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260020)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260021)<br>
 Patches: [MorpheApp/patches-1.34.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.4)
 - Add to queue
 - Alternative thumbnails
@@ -3470,7 +3470,7 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260020)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260021)<br>
 Patches: [MorpheApp/patches-1.34.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.4)
 - Bypass certificate checks
 - Change header
