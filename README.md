@@ -616,11 +616,11 @@ Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.82.0.937646388-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.83.0.943371825-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260013)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260022)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
 - Fix selected account persistence
 - GmsCore support
@@ -631,11 +631,11 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.82.0.937646388-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.83.0.943371825-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260013)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260022)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
 - GmsCore support
 - Spoof features
