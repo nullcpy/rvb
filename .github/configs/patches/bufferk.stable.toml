@@ -1,0 +1,25 @@
+[truecaller-morphe-alt]
+enabled = true
+app-name = "truecaller"
+rv-brand = "morphe-alt"
+build-mode = "both"
+arch = "both"
+patches-source = "bufferk/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
+[Medium-morphe]
+enabled = true
+app-name = "Medium"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "bufferk/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://medium.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
+dpi = "nodpi anydpi auto"
+
