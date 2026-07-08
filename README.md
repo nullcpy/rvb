@@ -2035,24 +2035,10 @@ Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoo
 
 `tv.trakt.trakt`
 
-#### [Morphe (PixelPusher247)](https://github.com/PixelPusher247/morphe-patches)
-
-<details>
-<summary id="trakt-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.7.0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
-
-<blockquote>
-
-[Release 2026-05-04](https://github.com/nullcpy/rvb/releases/tag/200)<br>
-Patches: [PixelPusher247/patches-1.3.0.mpp](https://github.com/PixelPusher247/morphe-patches/releases/tag/v1.3.0)
-
-- Hide VIP banner
-</blockquote>
-</details>
-
 #### [Morphe (IMXEren)](https://github.com/IMXEren/mix-patches)
 
 <details>
-<summary id="trakt-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.13.0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
+<summary id="trakt-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.13.0-gray?labelColor=ed1c24&logo=trakt&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
