@@ -2042,7 +2042,7 @@ Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoo
 
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
+[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260019)<br>
 Patches: [IMXEren/patches-1.4.0.mpp](https://github.com/IMXEren/mix-patches/releases/tag/v1.4.0)
 - Unlock pro
 </blockquote>
