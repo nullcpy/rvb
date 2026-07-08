@@ -3,16 +3,16 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[discord-xposed]
-enabled = true 
-app-name = "discord"
-rv-brand = "xposed"
+[trakt-morphe]
+enabled = true
+app-name = "trakt"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "revenge-mod/revenge-xposed"
-cli-source = "7723mod/NPatch"
+patches-source = "IMXEren/mix-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
 dpi = "nodpi anydpi auto"
-uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+# archive-dlurl = ""
 
