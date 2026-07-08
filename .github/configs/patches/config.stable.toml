@@ -29,19 +29,6 @@ enabled = true
 app-name = "trakt"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "all"
-patches-source = "PixelPusher247/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://trakt.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-
-[trakt-morphe-alt]
-enabled = true
-app-name = "trakt"
-rv-brand = "morphe-alt"
-build-mode = "apk"
 arch = "both"
 patches-source = "IMXEren/mix-patches"
 cli-source = "MorpheApp/morphe-cli"
