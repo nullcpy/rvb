@@ -46,7 +46,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
   ' config.stable.json > .github/configs/config.stable.updated.json
 fi
 
-if [ "${TRIGGER_PRERELEASE:-0}" = "1" ]; then
+if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
   DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*stable*.toml" | sort)
   if [ -n "$DEV_CONFIGS" ]; then
     # shellcheck disable=SC2086
