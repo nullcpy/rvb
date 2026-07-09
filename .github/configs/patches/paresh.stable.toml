@@ -169,3 +169,21 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-auto
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
+[mxplayer-morphe]
+enabled = true
+app-name = "mxplayer"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/mx-player"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+
+
+
+

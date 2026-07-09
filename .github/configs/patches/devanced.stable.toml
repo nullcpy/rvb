@@ -125,3 +125,15 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
+[pixiv-morphe]
+enabled = true
+app-name = "pixiv"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "github.com/RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""

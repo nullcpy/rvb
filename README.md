@@ -1222,6 +1222,26 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [MX Player](https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad)
+
+`com.mxtech.videoplayer.ad`
+
+#### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
+
+<details>
+<summary id="mxplayer-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=3c8cf0&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
+Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
+- Bypass Blocks Limit
+</blockquote>
+</details>
+
+---
+
 <a id="apps-n"></a>
 
 ### [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)
@@ -1375,6 +1395,28 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <details>
 <summary id="pinterest-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=E60023&logo=pinterest&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
+Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
+
+- Disable Bugsnag Telemetry
+- Disable General Telemetry
+- Remove Promoted Pins
+</blockquote>
+</details>
+
+---
+
+### [pixiv](https://play.google.com/store/apps/details?id=jp.pxv.android)
+
+`jp.pxv.android`
+
+#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
+
+<details>
+<summary id="pixiv-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=0096fa&logo=pinterest&logoColor=white&style=flat"></summary>
   
 <blockquote>
 

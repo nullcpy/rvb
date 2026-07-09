@@ -3,67 +3,32 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[all-document-reader-morphe]
+[mxplayer-morphe]
 enabled = true
-app-name = "all-document-reader"
+app-name = "mxplayer"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://all-documents-reader.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/bucket-of-apps/all-documents-reader-documents-viewer"
+uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/mx-player"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
-[accuweather-morphe]
+[pixiv-morphe]
 enabled = true
-app-name = "accuweather"
+app-name = "pixiv"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
+patches-source = "github.com/RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
-[canva-morphe]
-enabled = true
-app-name = "canva"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://canva.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/canva/canva"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
 
-[the-weather-channel-morphe]
-enabled = true
-app-name = "the-weather-channel"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://the-weather-channel.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
 
-[beta-maniac-morphe]
-enabled = true
-app-name = "beta-maniac"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://beta-maniac.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
