@@ -368,26 +368,6 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
-### [Canva](https://play.google.com/store/apps/details?id=com.canva.editor)
-
-`com.canva.editor`
-
-#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
-
-<details>
-<summary id="canva-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=5854e3&logo=android&logoColor=white&style=flat"></summary>
-  
-<blockquote>
-
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
-</blockquote>
-</details>
-
----
-
 ### [Cloudflare WARP](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone)
 
 `com.cloudflare.onedotonedotonedotone`
