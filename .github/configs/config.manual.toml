@@ -4,7 +4,7 @@ parallel-jobs = 1
 enable-module-update = true
 
 [mxplayer-morphe]
-enabled = true
+enabled = false
 app-name = "mxplayer"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -22,7 +22,7 @@ enabled = true
 app-name = "pixiv"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
+arch = "all"
 patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
@@ -36,6 +36,7 @@ app-name = "microsoft-edge"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
+version = "148.0.3967.97"
 patches-source = "quantavil/edge-morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
