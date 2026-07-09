@@ -1671,8 +1671,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260024)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.5)
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
+Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260024)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.5)
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
+Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3606,8 +3606,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260024)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.5)
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
+Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3628,6 +3628,7 @@ Patches: [MorpheApp/patches-1.34.0-dev.5.mpp](https://github.com/MorpheApp/morph
 - Hide filter bar
 - Hide flyout menu components
 - Hide layout components
+- Hide music action buttons
 - Miniplayer previous and next buttons
 - Navigation bar
 - Network proxy
