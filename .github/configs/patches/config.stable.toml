@@ -72,3 +72,15 @@ dpi = "nodpi anydpi auto"
 uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
 
+[microsoft-edge-morphe]
+enabled = true
+app-name = "microsoft-edge"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "quantavil/edge-morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
