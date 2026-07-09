@@ -1143,6 +1143,25 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 ---
 
+### [Microsoft Edge](https://play.google.com/store/apps/details?id=com.microsoft.emmx)
+
+`com.microsoft.emmx`
+
+#### [Morphe (edge-patches)](https://github.com/quantavil/edge-morphe-patches)
+
+<details>
+<summary id="microsoft-edge-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.93.4-gray?labelColor=32c7c7&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260026)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
+- MX Player Pro License
+</blockquote>
+</details>
+
+---
+
 ### [Microsoft Lens](https://office-lens.en.uptodown.com/android)
 
 `com.microsoft.office.officelens`
