@@ -1150,12 +1150,14 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (edge-patches)](https://github.com/quantavil/edge-morphe-patches)
 
 <details>
-<summary id="microsoft-edge-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v149.0.4022.105-gray?labelColor=32c7c7&logo=android&logoColor=white&style=flat"></summary>
+<summary id="microsoft-edge-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v149.0.4022.53-gray?labelColor=32c7c7&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
 [Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260026)<br>
-Patches: [quantavil/edge_patched.apk](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.32.0)
+Patches: [quantavil/patches-1.32.0.mpp](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.32.0)
+- Copilot feature toggle
+- Telemetry elimination
 </blockquote>
 </details>
 
@@ -1433,16 +1435,13 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="pixiv-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v14.11.0-gray?labelColor=0096fa&logo=pinterest&logoColor=white&style=flat"></summary>
+<summary id="pixiv-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v6.141.1-gray?labelColor=0096fa&logo=pinterest&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-patches/releases/tag/v1.3.1)
-
-- Disable Bugsnag Telemetry
-- Disable General Telemetry
-- Remove Promoted Pins
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260026)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.0.4)
+- Hide ads
 </blockquote>
 </details>
 
