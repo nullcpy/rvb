@@ -19,6 +19,7 @@ jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
       | ($old[$e.key] // {}) as $o
       | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
       | select($e.value.enabled != false and $e.value.enabledDev != false)
+      | select(($e.value.pre_date // "") > ($e.value.stable_date // ""))
       | $e.value.repo | ascii_downcase
   ]
 ' > active.prerelease.json
@@ -55,7 +56,7 @@ if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] 
     echo "{}" > config.dev.json
   fi
 
-  jq --slurpfile active active.prerelease.json --slurpfile activeApps active_apps.json '
+  jq --slurpfile active active.prerelease.json --slurpfile activeApps active_apps.json --argjson tags "$TAGS_NEW" '
     { "parallel-jobs": 1, "patches-version": "dev", "enable-module-update": false } as $force |
     ($force + . + $force) |
     with_entries(
@@ -63,7 +64,18 @@ if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] 
         .key as $k |
         .value as $app |
         (($app["patches-source"] // "ReVanced/revanced-patches") | ascii_downcase | gsub("[\"'\''\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
-        if (($srcs - $active[0]) != $srcs) or ($activeApps[0] | index($k)) then . else (.value.enabled = false) end
+        
+        # Check if the app has any source where pre_date > stable_date
+        (
+          $srcs | map(
+            . as $src |
+            ($tags | to_entries | map(select((.value.repo | ascii_downcase) == $src)) | .[0].value) as $t |
+            if $t == null then false
+            else ($t.pre_date // "") > ($t.stable_date // "") end
+          ) | any
+        ) as $has_valid_dev |
+
+        if (($srcs - $active[0]) != $srcs) or (($activeApps[0] | index($k)) and $has_valid_dev) then . else (.value.enabled = false) end
       else . end
     )
   ' config.dev.json > .github/configs/config.dev.updated.json
