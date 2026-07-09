@@ -1,6 +1,7 @@
-microsoft-edge-morphe (arm64-v8a): 149.0.4022.105  
-microsoft-edge-morphe (arm-v7a): 149.0.4022.105  
-mxplayer-morphe (all): 1.93.4  
+microsoft-edge-morphe (arm64-v8a): 149.0.4022.53  
+microsoft-edge-morphe (arm-v7a): 149.0.4022.53  
+pixiv-morphe (arm64-v8a): 6.141.1  
+pixiv-morphe (arm-v7a): 6.141.1  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -9,10 +10,7 @@ mxplayer-morphe (all): 1.93.4
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: Paresh-Maheshwari/patches-1.19.0.mpp  
-[Changelog](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
-
-Patches: quantavil/edge_patched.apk  
+Patches: quantavil/patches-1.32.0.mpp  
 [Changelog](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.32.0)
 
 Patches: RookieEnough/patches-1.0.4.mpp  
