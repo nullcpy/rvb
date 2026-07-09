@@ -194,14 +194,14 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="accuweather-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=f05514&logo=android&logoColor=white&style=flat"></summary>
+<summary id="accuweather-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.1.11.1.rc-gray?labelColor=f05514&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260025)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
+- GmsCore support (MicroG)
+- Unlock Premium+
 </blockquote>
 </details>
 
@@ -214,14 +214,13 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="all-document-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=2e7d32&logo=android&logoColor=white&style=flat"></summary>
+<summary id="all-document-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.2.6-gray?labelColor=2e7d32&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260025)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
+- GmsCore support (MicroG)
 </blockquote>
 </details>
 
@@ -314,14 +313,14 @@ Patches: [arandomhooman/patches-1.34.0.mpp](https://github.com/arandomhooman/hoo
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="beta-maniac-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=1a73e8&logo=android&logoColor=white&style=flat"></summary>
+<summary id="beta-maniac-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.9.4-gray?labelColor=1a73e8&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260025)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
+- GmsCore support (MicroG)
+- Unlock Premium
 </blockquote>
 </details>
 
@@ -2012,14 +2011,14 @@ Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="the-weather-channel-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=003399&logo=android&logoColor=white&style=flat"></summary>
+<summary id="the-weather-channel-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v16.10.1-gray?labelColor=003399&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260025)<br>
+Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
+- GmsCore support (MicroG)
+- Unlock Premium
 </blockquote>
 </details>
 
