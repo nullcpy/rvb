@@ -3,9 +3,9 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[all-documents-reader-morphe]
+[all-document-reader-morphe]
 enabled = true
-app-name = "all-documents-reader"
+app-name = "all-document-reader"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
@@ -13,6 +13,19 @@ patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 uptodown-dlurl = "https://all-documents-reader.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/bucket-of-apps/all-documents-reader-documents-viewer"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+
+[accuweather-morphe]
+enabled = true
+app-name = "accuweather"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 

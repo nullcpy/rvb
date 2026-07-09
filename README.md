@@ -187,6 +187,46 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 ---
 
+### [AccuWeather](https://play.google.com/store/apps/details?id=com.accuweather.android)
+
+`com.accuweather.android`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="accuweather-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=f05514&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
+Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
+- Bypass Blocks Limit
+</blockquote>
+</details>
+
+---
+
+### [All Document Reader](https://play.google.com/store/apps/details?id=alldocumentreader.office.viewer.filereader.pdfviewer)
+
+`alldocumentreader.office.viewer.filereader.pdfviewer`
+
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="all-document-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=2e7d32&logo=android&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
+Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
+
+- Bypass Blocks Limit
+</blockquote>
+</details>
+
+---
+
 ### [AT4K Launcher](https://play.google.com/store/apps/details?id=com.overdevs.at4k)
 
 `com.overdevs.at4k`
