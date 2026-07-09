@@ -431,6 +431,18 @@
     "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord/"
   },
+  "microsoft-edge-morphe": {
+    "enabled": true,
+    "app-name": "microsoft-edge",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "quantavil/edge-morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge",
+    "dpi": "nodpi anydpi auto"
+  },
   "youtube-revanced": {
     "enabled": false,
     "app-name": "youtube",
@@ -458,7 +470,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -588,7 +600,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1278,6 +1290,19 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2",
     "dpi": "nodpi anydpi auto"
   },
+  "mxplayer-morphe": {
+    "enabled": false,
+    "app-name": "mxplayer",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "all",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "patches-source-host": "gitlab",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://mx-player.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro",
+    "dpi": "nodpi anydpi auto"
+  },
   "proton-mail-revanced": {
     "enabled": false,
     "app-name": "proton-mail",
@@ -1533,5 +1558,52 @@
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup",
     "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
+  },
+  "all-document-reader-morphe": {
+    "enabled": false,
+    "app-name": "all-document-reader",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://all-documents-reader.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/bucket-of-apps/all-documents-reader-documents-viewer",
+    "dpi": "nodpi anydpi auto"
+  },
+  "accuweather-morphe": {
+    "enabled": false,
+    "app-name": "accuweather",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://accuweather.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/accuweather/accuweather",
+    "dpi": "nodpi anydpi auto"
+  },
+  "the-weather-channel-morphe": {
+    "enabled": false,
+    "app-name": "the-weather-channel",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://the-weather-channel.en.uptodown.com/android",
+    "dpi": "nodpi anydpi auto"
+  },
+  "beta-maniac-morphe": {
+    "enabled": false,
+    "app-name": "beta-maniac",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-cli",
+    "uptodown-dlurl": "https://beta-maniac.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2",
+    "dpi": "nodpi anydpi auto"
   }
 }

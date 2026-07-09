@@ -24,10 +24,10 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.33.0",
-    "prerelease": "v1.34.0-dev.5",
+    "prerelease": "v1.34.0-dev.7",
     "blocked": false,
     "stable_date": "2026-07-03T06:10:52Z",
-    "pre_date": "2026-07-09T09:54:22Z"
+    "pre_date": "2026-07-09T16:25:42Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -197,6 +197,11 @@
     "pre_date": "2026-06-26T23:16:51Z"
   },
   "quantavil": {
-    "repo": "quantavil/edge-morphe-patches"
+    "repo": "quantavil/edge-morphe-patches",
+    "stable": "v1.32.0",
+    "stable_date": "2026-06-11T08:29:13Z",
+    "prerelease": "",
+    "pre_date": "",
+    "blocked": false
   }
 }
