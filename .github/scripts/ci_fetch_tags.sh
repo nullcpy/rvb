@@ -36,23 +36,35 @@ while read -r id repo host enabled enabledStable enabledDev; do
     jq -n --arg id "$id" '{($id): {"blocked": true}}' >> updates.jsonl
   elif echo "$api_response" | jq -e 'type == "array"' >/dev/null 2>&1; then
     if [ "$host" = "gitlab" ]; then
-      stable=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
-      pre=$(echo "$api_response" | jq -r '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0].tag_name // "")')
+      stable_obj=$(echo "$api_response" | jq -c '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty)')
+      pre_obj=$(echo "$api_response" | jq -c '(map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty)')
+      
+      stable=$(echo "$stable_obj" | jq -r '.tag_name // ""')
+      stable_date=$(echo "$stable_obj" | jq -r '.released_at // .created_at // ""')
+      pre=$(echo "$pre_obj" | jq -r '.tag_name // ""')
+      pre_date=$(echo "$pre_obj" | jq -r '.released_at // .created_at // ""')
     else
-      stable=$(echo "$api_response" | jq -r '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
-      pre=$(echo "$api_response" | jq -r '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0].tag_name // "")')
+      stable_obj=$(echo "$api_response" | jq -c '(map(select(.prerelease == false and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0] // empty)')
+      pre_obj=$(echo "$api_response" | jq -c '(map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at) | reverse | .[0] // empty)')
+
+      stable=$(echo "$stable_obj" | jq -r '.tag_name // ""')
+      stable_date=$(echo "$stable_obj" | jq -r '.published_at // ""')
+      pre=$(echo "$pre_obj" | jq -r '.tag_name // ""')
+      pre_date=$(echo "$pre_obj" | jq -r '.published_at // ""')
     fi
 
-    jq -n --arg id "$id" --arg stable "$stable" --arg pre "$pre" \
-      '{($id): {"stable": $stable, "prerelease": $pre, "blocked": false}}' >> updates.jsonl
+    jq -n --arg id "$id" --arg stable "$stable" --arg stable_date "$stable_date" --arg pre "$pre" --arg pre_date "$pre_date" \
+      '{($id): {"stable": $stable, "stable_date": $stable_date, "prerelease": $pre, "pre_date": $pre_date, "blocked": false}}' >> updates.jsonl
   else
     echo "::warning::API error or rate limit for $repo. Retaining previous state."
     old_stable=$(echo "$BASE_JSON" | jq -r ".\"$id\".stable // \"\"")
+    old_stable_date=$(echo "$BASE_JSON" | jq -r ".\"$id\".stable_date // \"\"")
     old_pre=$(echo "$BASE_JSON" | jq -r ".\"$id\".prerelease // \"\"")
+    old_pre_date=$(echo "$BASE_JSON" | jq -r ".\"$id\".pre_date // \"\"")
     old_blocked=$(echo "$BASE_JSON" | jq -r ".\"$id\".blocked // false")
     
-    jq -n --arg id "$id" --arg stable "$old_stable" --arg pre "$old_pre" --argjson blocked "$old_blocked" \
-      '{($id): {"stable": $stable, "prerelease": $pre, "blocked": $blocked}}' >> updates.jsonl
+    jq -n --arg id "$id" --arg stable "$old_stable" --arg stable_date "$old_stable_date" --arg pre "$old_pre" --arg pre_date "$old_pre_date" --argjson blocked "$old_blocked" \
+      '{($id): {"stable": $stable, "stable_date": $stable_date, "prerelease": $pre, "pre_date": $pre_date, "blocked": $blocked}}' >> updates.jsonl
   fi
 
 done < <(echo "$BASE_JSON" | jq -r 'to_entries[] | select(.value.repo != "") | "\(.key) \(.value.repo) \((.value.host // "github") | ascii_downcase) \(if .value.enabled == false then false else true end) \(if .value.enabledStable == false then false else true end) \(if .value.enabledDev == false then false else true end)"')
