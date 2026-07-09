@@ -1229,14 +1229,13 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (paresh-patches)](https://gitlab.com/Paresh-Maheshwari/paresh-patches)
 
 <details>
-<summary id="mxplayer-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.51.1-gray?labelColor=3c8cf0&logo=android&logoColor=white&style=flat"></summary>
+<summary id="mxplayer-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.93.4-gray?labelColor=3c8cf0&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-22](https://github.com/nullcpy/rvb/releases/tag/382)<br>
-Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0)
-
-- Bypass Blocks Limit
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260026)<br>
+Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.19.0)
+- MX Player Pro License
 </blockquote>
 </details>
 
