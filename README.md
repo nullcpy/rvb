@@ -1154,7 +1154,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260026)<br>
+[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260028)<br>
 Patches: [quantavil/patches-1.32.0.mpp](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.32.0)
 - Copilot feature toggle
 - Telemetry elimination
