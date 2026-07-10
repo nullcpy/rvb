@@ -1289,12 +1289,12 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="ninja-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.4.6-gray?labelColor=fcee21&logo=android&logoColor=white&style=flat"></summary>
+<summary id="ninja-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.4.7-gray?labelColor=fcee21&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-06](https://github.com/nullcpy/rvb/releases/tag/260015)<br>
-Patches: [rushiranpise/patches-1.10.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.10.1)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260033)<br>
+Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
