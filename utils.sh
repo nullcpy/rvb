@@ -5,7 +5,7 @@ CWD=$(pwd)
 TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
-DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo")
+DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo" "playstore")
 BUILD_JSON_FILE="build.json"
 PATCH_OUTPUT=""
 
@@ -896,7 +896,7 @@ get_apkpure_resp() {
 	__APKPURE_BASE_URL__="$url"
 	__APKPURE_PKG__=$(echo "$url" | grep -oP '[a-zA-Z][a-zA-Z0-9]*(\.[a-zA-Z][a-zA-Z0-9]*){1,}' | tail -1)
 	local html=""
-	_fs_get "${url}/download" || return 1
+	_fs_get "${url}/downloading/" || return 1
 	__APKPURE_RESP__="$html"
 }
 
@@ -915,9 +915,9 @@ dl_apkpure() {
 
 	local dl_page_url
 	if [ -n "$version" ]; then
-		dl_page_url="${__APKPURE_BASE_URL__}/download/${version}"
+		dl_page_url="${__APKPURE_BASE_URL__}/downloading/${version}"
 	else
-		dl_page_url="${__APKPURE_BASE_URL__}/download"
+		dl_page_url="${__APKPURE_BASE_URL__}/downloading/"
 	fi
 
 	_fs_get "$dl_page_url" || return 1
@@ -1087,6 +1087,28 @@ PYC
 		_apkpure_install_xapk "$output" "${output}.extracted" || return 1
 		mv "${output}.extracted" "$output"
 	fi
+}
+# -------------------- playstore --------------------
+install_python_deps() {
+	if ! python3 -c "import requests, google.protobuf" &>/dev/null; then
+		wpr "Installing python dependencies for Play Store downloader..."
+		python3 -m pip install --user protobuf requests 2>/dev/null || python3 -m pip install --user --break-system-packages protobuf requests 2>/dev/null
+	fi
+}
+
+get_playstore_resp() {
+	local url=$1
+	url="${url%/}"
+	__PLAYSTORE_PKG__="${url##*/}"
+	install_python_deps
+	__PLAYSTORE_RESP__=$(python3 scripts/ggplay_dl/ggplay_dl.py "$__PLAYSTORE_PKG__" --info) || return 1
+}
+get_playstore_vers() { echo "$__PLAYSTORE_RESP__" | jq -r '.versionString // empty'; }
+get_playstore_pkg_name() { echo "$__PLAYSTORE_PKG__"; }
+dl_playstore() {
+	local url=$1 version=$2 output=$3 arch=$4 _dpi=$5
+	install_python_deps
+	python3 scripts/ggplay_dl/ggplay_dl.py "$__PLAYSTORE_PKG__" "$output" || return 1
 }
 
 # -------------------- uptodown --------------------
