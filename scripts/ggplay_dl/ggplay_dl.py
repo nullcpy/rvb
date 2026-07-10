@@ -387,6 +387,7 @@ class GooglePlaySession:
                         import re
                         impersonate_target = "chrome"
                         if fs_ua:
+                            headers["User-Agent"] = fs_ua
                             match = re.search(r"(?:Headless)?Chrome/(\d+)", fs_ua)
                             if match:
                                 major = int(match.group(1))
