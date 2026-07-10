@@ -382,6 +382,8 @@ class GooglePlaySession:
                 cookies, fs_ua = self._fs_get_cookies()
                 if cookies:
                     print(f"[+] Got {len(cookies)} cookies from FlareSolverr", file=sys.stderr)
+                    if fs_ua:
+                        headers["User-Agent"] = fs_ua
                     resp = self.session.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30)
         resp.raise_for_status()
         return resp.json()
