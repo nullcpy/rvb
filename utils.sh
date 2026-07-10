@@ -896,7 +896,7 @@ get_apkpure_resp() {
 	__APKPURE_BASE_URL__="$url"
 	__APKPURE_PKG__=$(echo "$url" | grep -oP '[a-zA-Z][a-zA-Z0-9]*(\.[a-zA-Z][a-zA-Z0-9]*){1,}' | tail -1)
 	local html=""
-	_fs_get "${url}/download/" || return 1
+	_fs_get "${url}/download" || return 1
 	__APKPURE_RESP__="$html"
 }
 
