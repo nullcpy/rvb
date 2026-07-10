@@ -60,7 +60,7 @@ patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
-uptodown-dlurl = "https://ninja-vpn.uptodown.com/android"
+# uptodown-dlurl = "https://ninja-vpn.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
 
 [windscribe-vpn-morphe]
