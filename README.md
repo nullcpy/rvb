@@ -1671,8 +1671,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1691,12 +1691,12 @@ Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.26.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.27.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/449)<br>
-Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2841,8 +2841,8 @@ Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/449)<br>
-Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2913,7 +2913,6 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Spoof video streams
 - Swipe controls
 - Theme
-- Video ads
 - Video quality
 - Voice over translation
 </blockquote>
@@ -2924,8 +2923,8 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/449)<br>
-Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2996,7 +2995,6 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Spoof video streams
 - Swipe controls
 - Theme
-- Video ads
 - Video quality
 - Voice over translation
 </blockquote>
@@ -3007,8 +3005,8 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/449)<br>
-Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3079,7 +3077,6 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Spoof video streams
 - Swipe controls
 - Theme
-- Video ads
 - Video quality
 - Voice over translation
 </blockquote>
@@ -3606,8 +3603,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260027)<br>
-Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0-dev.7)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3644,12 +3641,12 @@ Patches: [MorpheApp/patches-1.34.0-dev.7.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.26.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.26.55-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-03](https://github.com/nullcpy/rvb/releases/tag/449)<br>
-Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
+Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3658,6 +3655,7 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Custom branding
 - Disable DRC audio
 - Disable QUIC protocol
+- Downloads
 - Enable debugging
 - Enable exclusive audio playback
 - Enable forced miniplayer
@@ -3666,8 +3664,10 @@ Patches: [MorpheApp/patches-1.33.0.mpp](https://github.com/MorpheApp/morphe-patc
 - GmsCore support
 - Hide ads
 - Hide buttons
-- Hide category bar
-- Hide music video ads
+- Hide filter bar
+- Hide flyout menu components
+- Hide layout components
+- Hide music action buttons
 - Miniplayer previous and next buttons
 - Navigation bar
 - Network proxy
