@@ -1090,9 +1090,9 @@ PYC
 }
 # -------------------- playstore --------------------
 install_python_deps() {
-	if ! python3 -c "import requests, google.protobuf" &>/dev/null; then
+	if ! python3 -c "import requests, google.protobuf, curl_cffi" &>/dev/null; then
 		wpr "Installing python dependencies for Play Store downloader..."
-		python3 -m pip install --user protobuf requests 2>/dev/null || python3 -m pip install --user --break-system-packages protobuf requests 2>/dev/null
+		python3 -m pip install --user protobuf requests curl-cffi 2>/dev/null || python3 -m pip install --user --break-system-packages protobuf requests curl-cffi 2>/dev/null
 	fi
 }
 
