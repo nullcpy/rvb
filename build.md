@@ -1,5 +1,4 @@
-discord-xposed (arm64-v8a): 323.12-Stable  
-discord-xposed (arm-v7a): 323.12-Stable  
+ninja-vpn-morphe (arm64-v8a): 1.4.7  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +6,6 @@ discord-xposed (arm-v7a): 323.12-Stable
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: 7723mod/jar-v1.0.5-639-release.jar  
-Patches: revenge-mod/app-release.apk  
-[Changelog](https://github.com/revenge-mod/revenge-xposed/releases/tag/1410)  
+CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
+Patches: rushiranpise/patches-1.11.0.mpp  
+[Changelog](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)  
