@@ -382,23 +382,23 @@ class GooglePlaySession:
                 cookies, fs_ua = self._fs_get_cookies()
                 if cookies:
                     print(f"[+] Got {len(cookies)} cookies from FlareSolverr", file=sys.stderr)
-                    if fs_ua:
-                        headers["User-Agent"] = fs_ua
-                    
                     try:
                         from curl_cffi import requests as cffi_requests
                         import re
                         impersonate_target = "chrome"
                         if fs_ua:
-                            match = re.search(r"Chrome/(\d+)", fs_ua)
+                            match = re.search(r"(?:Headless)?Chrome/(\d+)", fs_ua)
                             if match:
-                                major = match.group(1)
-                                target = f"chrome{major}"
-                                if hasattr(cffi_requests.BrowserType, target):
-                                    impersonate_target = target
+                                major = int(match.group(1))
+                                supported = [int(n[6:]) for n in cffi_requests.BrowserType._member_names_ if n.startswith("chrome") and n[6:].isdigit()]
+                                if supported:
+                                    closest = min(supported, key=lambda x: abs(x - major))
+                                    impersonate_target = f"chrome{closest}"
                         print(f"[+] Using curl_cffi with impersonate={impersonate_target} for TLS impersonation...", file=sys.stderr)
                         resp = cffi_requests.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30, impersonate=impersonate_target)
                     except ImportError:
+                        if fs_ua:
+                            headers["User-Agent"] = fs_ua
                         print("[-] curl_cffi not installed, using standard requests (may fail due to TLS fingerprint)", file=sys.stderr)
                         resp = self.session.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30)
         resp.raise_for_status()
