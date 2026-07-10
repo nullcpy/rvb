@@ -891,11 +891,12 @@ dl_apkmirror() {
 get_apkpure_resp() {
 	local url=$1
 	url="${url%/downloading*}"
+	url="${url%/download*}"
 	url="${url%/}"
 	__APKPURE_BASE_URL__="$url"
 	__APKPURE_PKG__=$(echo "$url" | grep -oP '[a-zA-Z][a-zA-Z0-9]*(\.[a-zA-Z][a-zA-Z0-9]*){1,}' | tail -1)
 	local html=""
-	_fs_get "${url}/downloading/" || return 1
+	_fs_get "${url}/download/" || return 1
 	__APKPURE_RESP__="$html"
 }
 
@@ -914,9 +915,9 @@ dl_apkpure() {
 
 	local dl_page_url
 	if [ -n "$version" ]; then
-		dl_page_url="${__APKPURE_BASE_URL__}/downloading/${version}"
+		dl_page_url="${__APKPURE_BASE_URL__}/download/${version}"
 	else
-		dl_page_url="${__APKPURE_BASE_URL__}/downloading"
+		dl_page_url="${__APKPURE_BASE_URL__}/download"
 	fi
 
 	_fs_get "$dl_page_url" || return 1
