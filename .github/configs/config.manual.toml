@@ -3,44 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[mxplayer-morphe]
-enabled = false
-app-name = "mxplayer"
-rv-brand = "morphe"
+[discord-xposed]
+enabled = true 
+app-name = "discord"
+rv-brand = "xposed"
 build-mode = "apk"
 arch = "all"
-patches-source = "Paresh-Maheshwari/paresh-patches"
-patches-source-host = "gitlab"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro"
+version = "332.12 - Stable"
+patches-source = "revenge-mod/revenge-xposed"
+cli-source = "7723mod/NPatch"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-
-[pixiv-morphe]
-enabled = true
-app-name = "pixiv"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "RookieEnough/De-Vanced"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
-dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
-# archive-dlurl = ""
-
-[microsoft-edge-morphe]
-enabled = true
-app-name = "microsoft-edge"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "quantavil/edge-morphe-patches"
-cli-source = "MorpheApp/morphe-cli"
-uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord/"
 
