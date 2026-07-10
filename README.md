@@ -442,7 +442,7 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260031)<br>
+[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260033)<br>
 Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1410)
 </blockquote>
 </details>
