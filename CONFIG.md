@@ -61,8 +61,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/some-app/com.some.app"
 apkcombo-dlurl = "https://apkcombo.com/some-app/com.some.app"
-# playstore download source (only requires the app package name)
-playstore-dlurl = "com.some.app"
 # github release tag url. downloads apk assets from that release.
 github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.some.app"
 # direct download url. the url must have point to an apk file with name format shown in this example

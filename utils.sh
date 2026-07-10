@@ -5,7 +5,7 @@ CWD=$(pwd)
 TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
-DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo" "playstore")
+DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo")
 BUILD_JSON_FILE="build.json"
 PATCH_OUTPUT=""
 
@@ -1088,28 +1088,7 @@ PYC
 		mv "${output}.extracted" "$output"
 	fi
 }
-# -------------------- playstore --------------------
-install_python_deps() {
-	if ! python3 -c "import requests, google.protobuf, curl_cffi" &>/dev/null; then
-		wpr "Installing python dependencies for Play Store downloader..."
-		python3 -m pip install --user protobuf requests curl-cffi 2>/dev/null || python3 -m pip install --user --break-system-packages protobuf requests curl-cffi 2>/dev/null
-	fi
-}
 
-get_playstore_resp() {
-	local url=$1
-	url="${url%/}"
-	__PLAYSTORE_PKG__="${url##*/}"
-	install_python_deps
-	__PLAYSTORE_RESP__=$(python3 scripts/ggplay_dl/ggplay_dl.py "$__PLAYSTORE_PKG__" --info) || return 1
-}
-get_playstore_vers() { echo "$__PLAYSTORE_RESP__" | jq -r '.versionString // empty'; }
-get_playstore_pkg_name() { echo "$__PLAYSTORE_PKG__"; }
-dl_playstore() {
-	local url=$1 version=$2 output=$3 arch=$4 _dpi=$5
-	install_python_deps
-	python3 scripts/ggplay_dl/ggplay_dl.py "$__PLAYSTORE_PKG__" "$output" || return 1
-}
 
 # -------------------- uptodown --------------------
 get_uptodown_resp() {
