@@ -387,8 +387,17 @@ class GooglePlaySession:
                     
                     try:
                         from curl_cffi import requests as cffi_requests
-                        print("[+] Using curl_cffi for TLS impersonation...", file=sys.stderr)
-                        resp = cffi_requests.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30, impersonate="chrome")
+                        import re
+                        impersonate_target = "chrome"
+                        if fs_ua:
+                            match = re.search(r"Chrome/(\d+)", fs_ua)
+                            if match:
+                                major = match.group(1)
+                                target = f"chrome{major}"
+                                if hasattr(cffi_requests.BrowserType, target):
+                                    impersonate_target = target
+                        print(f"[+] Using curl_cffi with impersonate={impersonate_target} for TLS impersonation...", file=sys.stderr)
+                        resp = cffi_requests.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30, impersonate=impersonate_target)
                     except ImportError:
                         print("[-] curl_cffi not installed, using standard requests (may fail due to TLS fingerprint)", file=sys.stderr)
                         resp = self.session.post(url, json=json_data, headers=headers, cookies=cookies, proxies=proxies, timeout=30)
