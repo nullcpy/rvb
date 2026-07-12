@@ -3,27 +3,19 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[plutotv-morphe-androidtv]
+[instagram-morphe-piko]
 enabled = true 
-app-name = "plutotv"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
+app-name = "instagram"
+rv-brand = "morphe-piko"
+build-mode = "both"
 arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
+patches-source = "crimera/piko"
+# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
-uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
-
-[tubi-morphe-androidtv]
-enabled = true 
-app-name = "tubi"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-cli"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+# github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
+apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
