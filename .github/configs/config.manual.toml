@@ -3,13 +3,27 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[ninja-vpn-morphe]
+[plutotv-morphe-androidtv]
 enabled = true 
-app-name = "ninja-vpn"
-rv-brand = "morphe"
+app-name = "plutotv"
+rv-brand = "morphe-androidtv"
 build-mode = "apk"
-arch = "arm64-v8a"
-patches-source = "rushiranpise/morphe-patches"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
+uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
+
+[tubi-morphe-androidtv]
+enabled = true 
+app-name = "tubi"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-cli"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
