@@ -1,8 +1,5 @@
-disneyplus-morphe-androidtv (all): 26.6.0+rc5-2026.04.21  
-prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
-hbomax-morphe-androidtv (all): 7.5.1.2  
-peacock-morphe-androidtv (all): 7.6.100  
-vix-morphe-androidtv (all): 4.46.0_tv  
+plutotv-morphe-androidtv (all): 5.66.0-leanback  
+tubi-morphe-androidtv (all): 10.20.5000  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
