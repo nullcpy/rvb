@@ -1,7 +1,8 @@
-youtube-anddea (arm64-v8a): 20.51.39  
-youtube-anddea (arm-v7a): 20.51.39  
-youtube-music-anddea (arm64-v8a): 9.15.51  
-youtube-music-anddea (arm-v7a): 9.15.51  
+disneyplus-morphe-androidtv (all): 26.6.0+rc5-2026.04.21  
+prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
+hbomax-morphe-androidtv (all): 7.5.1.2  
+peacock-morphe-androidtv (all): 7.6.100  
+vix-morphe-androidtv (all): 4.46.0_tv  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -10,5 +11,5 @@ youtube-music-anddea (arm-v7a): 9.15.51
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
-Patches: anddea/patches-4.2.0-dev.4.mpp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.4)  
+Patches: ajstrick81/patches-1.10.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)  
