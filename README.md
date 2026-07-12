@@ -1671,8 +1671,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
-Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.1)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2519,12 +2519,12 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.2.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.7.1.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260005)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.3)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.4)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2602,12 +2602,12 @@ Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 </details>
 
 <details>
-<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.2.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.7.1.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260005)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.3.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.3)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.4)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
-Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.1)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3603,8 +3603,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
-Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3634,6 +3634,7 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Sanitize sharing links
 - Scrobbling
 - SponsorBlock
+- Spoof app version
 - Spoof video streams
 - Theme
 - Track crossfade
