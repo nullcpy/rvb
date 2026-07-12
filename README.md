@@ -117,8 +117,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Lifetime Premium
 </blockquote>
@@ -198,8 +198,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Premium+
 </blockquote>
@@ -218,8 +218,8 @@ Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 </blockquote>
 </details>
@@ -237,8 +237,8 @@ Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morph
 
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -317,8 +317,8 @@ Patches: [arandomhooman/patches-1.34.0.mpp](https://github.com/arandomhooman/hoo
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -379,8 +379,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Spoof WARP+ Unlimited UI
 </blockquote>
@@ -750,8 +750,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260036)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 </blockquote>
 </details>
 
@@ -787,8 +787,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -975,8 +975,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260001)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.43.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.43.0)
 - Unlock Pro
 </blockquote>
 </details>
@@ -1215,8 +1215,8 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1354,8 +1354,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260036)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 - Disable auto-updates
 - Skip ads
 </blockquote>
@@ -1374,8 +1374,8 @@ Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-an
   
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260037)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 - Disable auto-updates
 - Override certificate pinning
 - Skip ads
@@ -1506,8 +1506,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1540,8 +1540,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260036)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 - Disable auto-updates
 - Override certificate pinning
 - Prime Video extension
@@ -1772,8 +1772,8 @@ Patches: [anddea/patches-4.0.0.mpp](https://github.com/anddea/revanced-patches/r
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 - Unlock Premium
 </blockquote>
 </details>
@@ -1851,8 +1851,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 </blockquote>
 </details>
 
@@ -2033,8 +2033,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock VIP
 </blockquote>
@@ -2053,8 +2053,8 @@ Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -2245,8 +2245,8 @@ Patches: [bufferk/patches-1.6.11.mpp](https://github.com/bufferk/morphe-patches/
 
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260037)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 - Skip ads
 </blockquote>
 </details>
@@ -2308,8 +2308,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/457)<br>
-Patches: [arandomhooman/patches-1.42.0.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [arandomhooman/patches-1.42.1.mpp](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.42.1)
 - Auto claim channel points
 - Block live ads
 - Hide display ads
@@ -2371,8 +2371,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260036)<br>
-Patches: [ajstrick81/patches-1.10.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [ajstrick81/patches-1.11.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.0)
 - Override certificate pinning
 - Skip ads
 </blockquote>
@@ -2431,8 +2431,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - Alert Distances
 - AutoZoom
 - Disable Ads
@@ -2461,8 +2461,8 @@ Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morph
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260029)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260040)<br>
+Patches: [rushiranpise/patches-1.12.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.12.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
