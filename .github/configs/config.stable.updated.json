@@ -81,7 +81,8 @@
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "cli-source": "MorpheApp/morphe-cli",
     "dpi": "nodpi anydpi auto",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
     "enabled": true,
@@ -104,7 +105,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv",
-    "uptodown-dlurl": "https://pluto-tv.en.uptodown.com/android"
+    "uptodown-dlurl": "https://pluto-tv.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
   },
   "youtube-anddea-nord": {
     "enabled": false,
@@ -558,7 +560,8 @@
     "cli-source": "MorpheApp/morphe-cli",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
     "enabled": false,
@@ -937,7 +940,7 @@
     "uptodown-dlurl": "https://goodreads.en.uptodown.com/android"
   },
   "rumble-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -949,7 +952,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "twitch-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -961,7 +964,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "battery-guru-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -973,7 +976,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "money-manager-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -985,7 +988,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "poweramp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "poweramp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -996,7 +999,7 @@
     "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android"
   },
   "at4k-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1008,7 +1011,7 @@
     "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "snorelab",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1020,7 +1023,7 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1032,7 +1035,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
   },
   "adobe-acrobat-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1044,7 +1047,7 @@
     "uptodown-dlurl": "https://adobe-reader.en.uptodown.com/android"
   },
   "inshot-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "inshot",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1056,7 +1059,7 @@
     "uptodown-dlurl": "https://inshot-editor.en.uptodown.com/android"
   },
   "todoist-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "todoist",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1473,7 +1476,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "adguard-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1485,7 +1488,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "waze-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1497,7 +1500,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "warp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1509,7 +1512,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1521,7 +1524,7 @@
     "apkpure-dlurl": "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
   },
   "ninja-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1533,7 +1536,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
   },
   "windscribe-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1547,7 +1550,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "terabox",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1559,7 +1562,7 @@
     "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
   },
   "all-document-reader-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "all-document-reader",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1571,7 +1574,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "accuweather-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "accuweather",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1583,7 +1586,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "the-weather-channel-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "the-weather-channel",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1594,7 +1597,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "beta-maniac-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "beta-maniac",
     "rv-brand": "morphe",
     "build-mode": "apk",
