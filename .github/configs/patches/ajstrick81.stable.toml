@@ -55,6 +55,7 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
 
 [vix-morphe-androidtv]
 enabled = true 
@@ -78,4 +79,5 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
 uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
 
