@@ -101,6 +101,7 @@ dpi = "nodpi anydpi auto"
 # uptodown-dlurl = "https://projectivy-launcher.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
 apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
 
 [adobe-acrobat-morphe]
 enabled = true 
@@ -113,6 +114,7 @@ cli-source = "MorpheApp/morphe-cli"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
 uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
 
 [inshot-morphe]
 enabled = true 
