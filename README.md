@@ -1671,8 +1671,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260042)<br>
-Patches: [MorpheApp/patches-1.35.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.2)
+[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260043)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.3)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -1721,8 +1721,8 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260039)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.4.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.4)
+[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260043)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.5.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.5)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.38.2.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260042)<br>
-Patches: [MorpheApp/patches-1.35.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.2)
+[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260043)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.3)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3603,8 +3603,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260042)<br>
-Patches: [MorpheApp/patches-1.35.0-dev.2.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.2)
+[Release 2026-07-13](https://github.com/nullcpy/rvb/releases/tag/260043)<br>
+Patches: [MorpheApp/patches-1.35.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.3)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
