@@ -1309,7 +1309,7 @@ patch_apk() {
 		p_args_short+=" -p '$j'"
 	done
 
-	local base_cmd="java -jar '$cli_jar' patch '$stock_input' --purge -t '$tmp_dir' -o '$patched_apk' --keystore=ks.keystore \
+	local base_cmd="java -jar '$cli_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=ks.keystore \
 --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc"
 
 	local cmd_long="${base_cmd}${p_args_long} $patcher_args"
