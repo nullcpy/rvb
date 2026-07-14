@@ -1,7 +1,7 @@
-google-photos-morphe (arm64-v8a): 7.83.0.943371825  
-google-photos-morphe (arm-v7a): 7.83.0.943371825  
-google-photos-revanced (arm64-v8a): 7.83.0.943371825  
-google-photos-revanced (arm-v7a): 7.83.0.943371825  
+youtube-anddea (arm64-v8a): 20.51.39  
+youtube-anddea (arm-v7a): 20.51.39  
+youtube-music-anddea (arm64-v8a): 9.15.51  
+youtube-music-anddea (arm-v7a): 9.15.51  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -9,10 +9,6 @@ google-photos-revanced (arm-v7a): 7.83.0.943371825
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-all.jar  
-Patches: Raudrobot/patches-6.1.0.rvp  
-[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
-
-CLI: MorpheApp/morphe-cli-1.10.0-all.jar  
-Patches: RookieEnough/patches-1.0.4.mpp  
-[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
+CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
+Patches: anddea/patches-4.2.0-dev.5.mpp  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.5)  
