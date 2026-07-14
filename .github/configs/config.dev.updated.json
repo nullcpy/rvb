@@ -1,4 +1,5 @@
 {
+  "parallel-jobs": 1,
   "patches-version": "dev",
   "enable-module-update": false,
   "youtube-revanced": {
@@ -52,7 +53,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -66,7 +67,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
