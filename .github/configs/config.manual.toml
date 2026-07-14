@@ -1,21 +1,34 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[instagram-morphe-piko]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
+[google-photos-revanced]
+enabled = true
+app-name = "google-photos"
+rv-brand = "revanced"
 build-mode = "both"
-arch = "all"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-cli"
-# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+arch = "both"
+patches-source = "Raudrobot/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
-# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
-# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+[google-photos-morphe]
+enabled = true
+app-name = "google-photos"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "RookieEnough/De-ReVanced"
+cli-source = "MorpheApp/morphe-cli"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
+
+
+
