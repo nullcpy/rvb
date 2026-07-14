@@ -1,5 +1,4 @@
 {
-  "parallel-jobs": 1,
   "enable-module-update": true,
   "imdb-morphe": {
     "enabled": false,
@@ -472,7 +471,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -603,7 +602,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -940,7 +939,7 @@
     "uptodown-dlurl": "https://goodreads.en.uptodown.com/android"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -952,7 +951,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -964,7 +963,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -976,7 +975,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -988,7 +987,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "poweramp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "poweramp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -999,7 +998,7 @@
     "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android"
   },
   "at4k-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1011,7 +1010,7 @@
     "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "snorelab",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1023,7 +1022,7 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1032,10 +1031,11 @@
     "cli-source": "MorpheApp/morphe-cli",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu",
-    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1044,10 +1044,11 @@
     "cli-source": "MorpheApp/morphe-cli",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/adobe/adobe-acrobat",
-    "uptodown-dlurl": "https://adobe-reader.en.uptodown.com/android"
+    "uptodown-dlurl": "https://adobe-reader.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
   },
   "inshot-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "inshot",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1059,7 +1060,7 @@
     "uptodown-dlurl": "https://inshot-editor.en.uptodown.com/android"
   },
   "todoist-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "todoist",
     "rv-brand": "morphe",
     "build-mode": "apk",
