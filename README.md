@@ -1721,11 +1721,12 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-14](https://github.com/nullcpy/rvb/releases/tag/260048)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.8.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.8)
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260052)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.9.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.9)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
+- Hide community menu badge
 - Hide post view counts
 - Open external links directly
 - Remove ads and telemetry
@@ -3089,8 +3090,8 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-14](https://github.com/nullcpy/rvb/releases/tag/260046)<br>
-Patches: [anddea/patches-4.2.0-dev.5.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.5)
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260052)<br>
+Patches: [anddea/patches-4.2.0-dev.6.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.6)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3692,8 +3693,8 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-14](https://github.com/nullcpy/rvb/releases/tag/260046)<br>
-Patches: [anddea/patches-4.2.0-dev.5.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.5)
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260052)<br>
+Patches: [anddea/patches-4.2.0-dev.6.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.6)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
