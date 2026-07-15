@@ -1,7 +1,9 @@
-google-photos-revanced (arm64-v8a): 7.84.0.947289513  
-google-photos-revanced (arm-v7a): 7.84.0.947289513  
-google-photos-morphe (arm64-v8a): 7.84.0.947289513  
-google-photos-morphe (arm-v7a): 7.84.0.947289513  
+prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
+hbomax-morphe-androidtv (all): 7.5.1.2  
+peacock-morphe-androidtv (all): 7.6.100  
+tubi-morphe-androidtv (all): 10.20.5000  
+vix-morphe-androidtv (all): 4.46.0_tv  
+plutotv-morphe-androidtv (all): 5.66.0-leanback  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -9,10 +11,6 @@ google-photos-morphe (arm-v7a): 7.84.0.947289513
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: ReVanced/revanced-cli-6.0.0-all.jar  
-Patches: Raudrobot/patches-6.1.0.rvp  
-[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
-
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: RookieEnough/patches-1.0.4.mpp  
-[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
+Patches: ajstrick81/patches-1.12.0.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.1)  
