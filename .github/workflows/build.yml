@@ -29,10 +29,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     services:
-      flaresolverr:
-        image: ghcr.io/flaresolverr/flaresolverr:latest
+      redis:
+        image: redis:alpine
+        ports:
+          - 6379:6379
+      trawl:
+        image: ghcr.io/germondai/trawl:latest
         ports:
           - 8191:8191
+        env:
+          REDIS_URL: redis://redis:6379
+        options: --shm-size=1gb
     steps:
       - name: Setup java
         uses: actions/setup-java@v5
