@@ -518,7 +518,7 @@ patches_list() {
 		p_args_long+="--patches '$j' "
 		p_args_pos+="'$j' "
 	done
-	# Try positional (morphe-cli), then --patches with/without -b, then -p
+	# Try positional (morphe-desktop), then --patches with/without -b, then -p
 	if ! op=$(eval java -jar "'$cli_jar'" list-patches --with-packages --with-versions $p_args_pos --filter-package-name "'$pkg_name'" 2>&1); then
 		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long --packages --versions --options -f "'$pkg_name'" -b 2>&1); then
 			if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long --filter-package-name "'$pkg_name'" --with-versions --with-packages 2>&1); then
@@ -1366,7 +1366,7 @@ write_build_info() {
 	fi
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
-	# extract applied patches supporting both old and new morphe-cli output formats
+	# extract applied patches supporting both old and new morphe-desktop output formats
 	# old: INFO: "Patch Name" succeeded
 	# new: INFO: Applied: Patch Name
 	local applied_json

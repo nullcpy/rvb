@@ -23,7 +23,7 @@ dpi = "nodpi anydpi 120-640dpi"      # dpi packages to be searched in order. def
 
 patches-source = "revanced/revanced-patches" # where to fetch patches bundle from. default: "MorpheApp/morphe-patches"
 patches-source-host = "github"               # source host for patches: "github" or "gitlab". default: "github"
-cli-source = "ReVanced/revanced-cli"             # where to fetch cli from. default: "MorpheApp/morphe-cli"
+cli-source = "ReVanced/revanced-cli"             # where to fetch cli from. default: "MorpheApp/morphe-desktop"
 cli-source-host = "github"                       # source host for cli: "github" or "gitlab". default: "github"
 # options like cli-source can also set per app
 rv-brand = "ReVanced Extended" # rebrand from 'ReVanced' to something different. default: patches-source owner
