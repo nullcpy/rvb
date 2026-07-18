@@ -1,5 +1,7 @@
-google-news-morphe (arm64-v8a): 5.163.0.947799485  
-google-news-morphe (arm-v7a): 5.163.0.947799485  
+google-photos-revanced (arm64-v8a): 7.84.0.949657053  
+google-photos-revanced (arm-v7a): 7.84.0.949657053  
+google-photos-morphe (arm64-v8a): 7.84.0.949657053  
+google-photos-morphe (arm-v7a): 7.84.0.949657053  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +9,10 @@ google-news-morphe (arm-v7a): 5.163.0.947799485
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
+CLI: ReVanced/revanced-cli-6.0.0-all.jar  
+Patches: Raudrobot/patches-6.1.0.rvp  
+[Changelog](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
+
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: docbt/patches-1.10.0.mpp  
-[Changelog](https://github.com/docbt/patched-up/releases/tag/v1.10.0)  
+Patches: RookieEnough/patches-1.0.4.mpp  
+[Changelog](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)  
