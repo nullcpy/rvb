@@ -1716,12 +1716,12 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.28.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.29.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260052)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.9.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.9)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260062)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.11.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.11)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
