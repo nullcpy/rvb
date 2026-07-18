@@ -1075,8 +1075,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
-Patches: [bufferk/patches-1.6.11.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.6.12)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260061)<br>
+Patches: [bufferk/patches-1.7.1.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.7.1)
 - Freedium
 </blockquote>
 </details>
@@ -2220,8 +2220,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-07-08](https://github.com/nullcpy/rvb/releases/tag/260018)<br>
-Patches: [bufferk/patches-1.6.11.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.6.12)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260061)<br>
+Patches: [bufferk/patches-1.7.1.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.7.1)
 - Disable analytics
 - Enable premium features
 - Hide 'Get Premium' banners
