@@ -1,7 +1,5 @@
-truecaller-morphe-alt (arm64-v8a): 26.10.6  
-truecaller-morphe-alt (arm-v7a): 26.10.6  
-Medium-morphe (arm64-v8a): 4.5.1302097  
-Medium-morphe (arm-v7a): 4.5.1302097  
+reddit-morphe-adobo (arm64-v8a): 2026.29.0  
+reddit-morphe-adobo (arm-v7a): 2026.29.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -10,5 +8,5 @@ Medium-morphe (arm-v7a): 4.5.1302097
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: bufferk/patches-1.7.1.mpp  
-[Changelog](https://github.com/bufferk/morphe-patches/releases/tag/v1.7.1)  
+Patches: jkennethcarino/patches-1.3.0-dev.11.mpp  
+[Changelog](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.11)  
