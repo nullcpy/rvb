@@ -1670,8 +1670,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260060)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.1)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260060)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.1)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3603,13 +3603,14 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260060)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
 - Change start page
 - Check watch history domain name resolution
+- Crossfade
 - Custom branding
 - Disable DRC audio
 - Disable QUIC protocol
@@ -3633,13 +3634,13 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Remember repeat state
 - Remember shuffle state
 - Remove background playback restrictions
+- Return YouTube Dislike
 - Sanitize sharing links
 - Scrobbling
 - SponsorBlock
 - Spoof app version
 - Spoof video streams
 - Theme
-- Track crossfade
 </blockquote>
 </details>
 
