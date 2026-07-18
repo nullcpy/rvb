@@ -338,7 +338,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "truecaller-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "truecaller",
     "rv-brand": "morphe-alt",
     "build-mode": "both",
@@ -351,7 +351,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "Medium-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "Medium",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -472,7 +472,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -603,7 +603,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
