@@ -363,7 +363,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "google-news-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-news",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -472,7 +472,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -603,7 +603,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
