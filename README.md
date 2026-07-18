@@ -653,13 +653,12 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (patched-up)](https://github.com/docbt/patched-up)
 
 <details>
-<summary id="google-news-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.161.0.931240252-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
+<summary id="google-news-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.163.0.947799485-gray?labelColor=4285F4&logo=googlenews&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-20](https://github.com/nullcpy/rvb/releases/tag/368)<br>
-Patches: [docbt/patches-1.9.0.mpp](https://github.com/docbt/patched-up/releases/tag/v1.9.0)
-
+[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260058)<br>
+Patches: [docbt/patches-1.10.0.mpp](https://github.com/docbt/patched-up/releases/tag/v1.10.0)
 - Enable CustomTabs
 - GmsCore support
 - Change package name
