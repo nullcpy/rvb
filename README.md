@@ -1670,8 +1670,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260066)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.3)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260067)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.4)
 - Disable modern home
 - Disable screenshot popup
 - Hide Ask button
@@ -2523,8 +2523,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.4)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260067)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.5)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2606,8 +2606,8 @@ Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/relea
   
 <blockquote>
 
-[Release 2026-07-12](https://github.com/nullcpy/rvb/releases/tag/260038)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.4.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.4)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260067)<br>
+Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0-dev.5.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0-dev.5)
 - Abstract shim layer
 - Abstract shim layer for method
 - Abstract shim layer for native library
@@ -2759,8 +2759,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260066)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.3)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260067)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.4)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3603,8 +3603,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260066)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.3)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260067)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.4.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.4)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
