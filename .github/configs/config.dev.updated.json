@@ -131,7 +131,8 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
     "enabled": true,
@@ -157,7 +158,8 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "google-photos-morphe": {
     "enabled": false,
