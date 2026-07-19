@@ -117,8 +117,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Lifetime Premium
 </blockquote>
@@ -198,8 +198,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Premium+
 </blockquote>
@@ -218,8 +218,8 @@ Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 </blockquote>
 </details>
@@ -317,8 +317,8 @@ Patches: [arandomhooman/patches-1.34.0.mpp](https://github.com/arandomhooman/hoo
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -379,8 +379,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Spoof WARP+ Unlimited UI
 </blockquote>
@@ -786,8 +786,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -1149,12 +1149,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (edge-patches)](https://github.com/quantavil/edge-morphe-patches)
 
 <details>
-<summary id="microsoft-edge-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v149.0.4022.53-gray?labelColor=32c7c7&logo=android&logoColor=white&style=flat"></summary>
+<summary id="microsoft-edge-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v150.0.4078.81-gray?labelColor=32c7c7&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-09](https://github.com/nullcpy/rvb/releases/tag/260028)<br>
-Patches: [quantavil/patches-1.32.0.mpp](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.32.0)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [quantavil/patches-1.33.0.mpp](https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.33.0)
 - Copilot feature toggle
 - Telemetry elimination
 </blockquote>
@@ -2033,8 +2033,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock VIP
 </blockquote>
@@ -2053,8 +2053,8 @@ Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -2431,8 +2431,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - Alert Distances
 - AutoZoom
 - Disable Ads
@@ -2461,8 +2461,8 @@ Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morph
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [rushiranpise/patches-1.13.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.13.1)
+[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
+Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
