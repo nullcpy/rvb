@@ -1,9 +1,8 @@
-youtube-morphe (arm64-v8a): 21.04.223  
-youtube-morphe (arm-v7a): 21.04.223  
-youtube-music-morphe (arm64-v8a): 9.15.51  
-youtube-music-morphe (arm-v7a): 9.15.51  
-reddit-morphe (arm64-v8a): 2026.14.0  
-reddit-morphe (arm-v7a): 2026.14.0  
+prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
+hbomax-morphe-androidtv (all): 7.7.0.78  
+peacock-morphe-androidtv (all): 7.6.100  
+vix-morphe-androidtv (all): 4.46.0_tv  
+plutotv-morphe-androidtv (all): 5.66.0-leanback  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -12,5 +11,5 @@ reddit-morphe (arm-v7a): 2026.14.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: MorpheApp/patches-1.36.0-dev.5.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.5)  
+Patches: ajstrick81/patches-1.12.3.mpp  
+[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.13.0)  
