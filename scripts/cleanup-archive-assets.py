@@ -36,7 +36,8 @@ def cleanup_release(tag):
     # e.g. google-photos-morphe-v7.84.0.949657053-arm-v7a.apk
     # e.g. youtube-revanced-v19.16.39-all.apk
     # e.g. youtube-revanced-v19.16.39-module.zip
-    pattern = re.compile(r'^(.*?)-(v?\d.*?)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
+    # e.g. hola-vpn-morphe-vAARCH64_1.248.400-arm64-v8a.apk
+    pattern = re.compile(r'^(.*)-([^-]+)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
     
     groups = {}
     
@@ -56,8 +57,8 @@ def cleanup_release(tag):
             print(f"Warning: Asset {name} does not match expected pattern, skipping.")
             
     for key, group_assets in groups.items():
-        # Sort by createdAt descending (newest first)
-        group_assets.sort(key=lambda x: x['createdAt'], reverse=True)
+        # Sort by created_at descending (newest first)
+        group_assets.sort(key=lambda x: x['created_at'], reverse=True)
         
         keep_count = 2
         to_keep = group_assets[:keep_count]
@@ -66,10 +67,10 @@ def cleanup_release(tag):
         if to_delete:
             print(f"\nGroup: {key}")
             for a in to_keep:
-                print(f"  Keeping: {a['name']} ({a['createdAt']})")
+                print(f"  Keeping: {a['name']} ({a['created_at']})")
                 
             for a in to_delete:
-                print(f"  Deleting: {a['name']} ({a['createdAt']})")
+                print(f"  Deleting: {a['name']} ({a['created_at']})")
                 cmd = f'gh api -X DELETE repos/{repo}/releases/assets/{a["id"]}'
                 run_cmd(cmd)
 
