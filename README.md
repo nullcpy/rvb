@@ -1670,8 +1670,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-20](https://github.com/nullcpy/rvb/releases/tag/260069)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.5)
+[Release 2026-07-21](https://github.com/nullcpy/rvb/releases/tag/260073)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.7)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -2761,8 +2761,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-20](https://github.com/nullcpy/rvb/releases/tag/260069)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.5)
+[Release 2026-07-21](https://github.com/nullcpy/rvb/releases/tag/260073)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.7)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2826,6 +2826,7 @@ Patches: [MorpheApp/patches-1.36.0-dev.5.mpp](https://github.com/MorpheApp/morph
 - Sanitize sharing links
 - Save to watch later
 - Seekbar
+- Settings menu filter
 - Shorts autoplay
 - SponsorBlock
 - Spoof app version
@@ -3605,8 +3606,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-20](https://github.com/nullcpy/rvb/releases/tag/260069)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.5.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.5)
+[Release 2026-07-21](https://github.com/nullcpy/rvb/releases/tag/260073)<br>
+Patches: [MorpheApp/patches-1.36.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.7)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3639,6 +3640,7 @@ Patches: [MorpheApp/patches-1.36.0-dev.5.mpp](https://github.com/MorpheApp/morph
 - Return YouTube Dislike
 - Sanitize sharing links
 - Scrobbling
+- Settings menu filter
 - SponsorBlock
 - Spoof app version
 - Spoof video streams
