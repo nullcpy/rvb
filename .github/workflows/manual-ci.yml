@@ -4,10 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       config_file:
-        description: "Path to the config file (e.g. .github/configs/config.manual.toml)"
+        description: "Select the config file to use"
         required: true
-        type: string
+        type: choice
         default: ".github/configs/config.manual.toml"
+        options:
+          - ".github/configs/config.manual.toml"
+          - ".github/configs/config.dev.updated.json"
+          - ".github/configs/config.stable.updated.json"
 
 concurrency:
   group: ci
