@@ -3,8 +3,7 @@ set -euo pipefail
 
 # List of app prefixes to exclude from archive releases
 EXCLUDED_APPS=(
-  "google-photos-revanced"
-  "google-photos-morphe"
+  # Add any new apps you want to exclude to this list in the future
 )
 
 echo "Removing frequently updated apps from the build directory before archive upload..."
