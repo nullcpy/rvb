@@ -22,7 +22,9 @@ def cleanup_release(tag):
     
     # regex to match app_name, version, architecture/type, and extension
     # e.g. google-photos-morphe-v7.84.0.949657053-arm-v7a.apk
-    pattern = re.compile(r'^(.*?)-(v?\d.*?)-(arm64-v8a|arm-v7a|universal|module|x86|x86_64)\.(apk|zip)$')
+    # e.g. youtube-revanced-v19.16.39-all.apk
+    # e.g. youtube-revanced-v19.16.39-module.zip
+    pattern = re.compile(r'^(.*?)-(v?\d.*?)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
     
     groups = {}
     repo = os.environ.get("GITHUB_REPOSITORY")
