@@ -13,12 +13,24 @@ def run_cmd(cmd):
 
 def cleanup_release(tag):
     print(f"\n--- Fetching assets for release: {tag} ---")
-    output = run_cmd(f"gh release view {tag} --json assets")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    
+    # Get the release ID first
+    output = run_cmd(f"gh api repos/{repo}/releases/tags/{tag} --jq .id")
     if not output:
         return
+    release_id = output.strip()
     
-    data = json.loads(output)
-    assets = data.get("assets", [])
+    # Fetch all assets with pagination to ensure we get all 600+ files
+    output = run_cmd(f"gh api --paginate repos/{repo}/releases/{release_id}/assets")
+    if not output:
+        return
+        
+    try:
+        assets = json.loads(output)
+    except Exception as e:
+        print(f"Failed to parse JSON: {e}")
+        return
     
     # regex to match app_name, version, architecture/type, and extension
     # e.g. google-photos-morphe-v7.84.0.949657053-arm-v7a.apk
@@ -27,7 +39,6 @@ def cleanup_release(tag):
     pattern = re.compile(r'^(.*?)-(v?\d.*?)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
     
     groups = {}
-    repo = os.environ.get("GITHUB_REPOSITORY")
     
     for asset in assets:
         name = asset['name']
