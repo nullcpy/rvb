@@ -1,8 +1,17 @@
-prime-video-morphe-androidtv (arm-v7a): 6.23.23+v15.5.0.70-armv7a  
-hbomax-morphe-androidtv (all): 7.7.0.78  
-peacock-morphe-androidtv (all): 7.6.100  
-vix-morphe-androidtv (all): 4.46.0_tv  
-plutotv-morphe-androidtv (all): 5.66.0-leanback  
+rumble-morphe (arm64-v8a): 3.14.5  
+rumble-morphe (arm-v7a): 3.14.5  
+twitch-morphe (arm64-v8a): 29.9.1  
+twitch-morphe (arm-v7a): 29.9.1  
+money-manager-morphe (arm64-v8a): 4.11.1GF  
+money-manager-morphe (arm-v7a): 4.11.1GF  
+poweramp-morphe (all): build-1025-bundle-play  
+at4k-launcher-morphe (all): 0.99  
+snorelab-morphe (all): 2.24.03  
+projectivy-launcher-morphe (all): 4.70  
+adobe-acrobat-morphe (arm64-v8a): 26.5.0.45958  
+adobe-acrobat-morphe (arm-v7a): 26.5.0.45958  
+inshot-morphe (arm64-v8a): 2.214.1539  
+inshot-morphe (arm-v7a): 2.214.1539  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -11,5 +20,5 @@ plutotv-morphe-androidtv (all): 5.66.0-leanback
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: ajstrick81/patches-1.12.3.mpp  
-[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.13.0)  
+Patches: arandomhooman/patches-1.43.1.mpp  
+[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.43.1)  
