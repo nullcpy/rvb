@@ -16,6 +16,9 @@ jobs:
       actions: write
     timeout-minutes: 10
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Delete Older Releases and Workflows
         uses: ophub/delete-releases-workflows@main
         with:
@@ -26,3 +29,8 @@ jobs:
           workflows_keep_day: 3
           releases_keep_keyword: stable/beta
           gh_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cleanup Archive Release Assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/cleanup-archive-assets.py
