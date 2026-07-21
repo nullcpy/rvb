@@ -97,14 +97,6 @@ jobs:
           file_pattern: README.md
           commit_message: "Update README for Build No. ${{ steps.version.outputs.NEXT_VER_CODE }} [skip ci]"
 
-      - name: Upload to release (Archive)
-        uses: softprops/action-gh-release@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: ./build/*
-          tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
-          overwrite_files: true
-
       - name: Upload to release
         uses: softprops/action-gh-release@v3
         with:
@@ -140,3 +132,17 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}
+
+      - name: Remove frequently updated apps
+        run: |
+          git checkout main
+          bash .github/scripts/build_exclude_from_archive.sh
+
+      - name: Upload to release (Archive)
+        uses: softprops/action-gh-release@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ./build/*
+          tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          overwrite_files: true
+          target_commitish: main
