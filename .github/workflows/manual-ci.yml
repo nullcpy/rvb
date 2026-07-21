@@ -1,0 +1,41 @@
+name: Manual CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      config_file:
+        description: "Path to the config file (e.g. .github/configs/config.manual.toml)"
+        required: true
+        type: string
+        default: ".github/configs/config.manual.toml"
+
+concurrency:
+  group: ci
+  cancel-in-progress: false
+
+jobs:
+  build_manual:
+    uses: ./.github/workflows/build.yml
+    with:
+      config_file: ${{ inputs.config_file }}
+    secrets: inherit
+
+  trigger_cleanup:
+    needs: [build_manual]
+    if: ${{ always() && needs.build_manual.result == 'success' }}
+    uses: ./.github/workflows/cleanup.yml
+    secrets: inherit
+
+  trigger_website_update:
+    needs: [build_manual, trigger_cleanup]
+    if: ${{ always() && needs.build_manual.result == 'success' }}
+    uses: ./.github/workflows/update-website.yml
+    secrets: inherit
+
+  trigger_notify_failure:
+    needs: [build_manual]
+    if: ${{ failure() }}
+    uses: ./.github/workflows/notify.yml
+    with:
+      workflow_name: "Manual CI"
+    secrets: inherit
