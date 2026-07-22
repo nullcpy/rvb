@@ -37,7 +37,8 @@ def cleanup_release(tag):
     # e.g. youtube-revanced-v19.16.39-all.apk
     # e.g. youtube-revanced-v19.16.39-module.zip
     # e.g. hola-vpn-morphe-vAARCH64_1.248.400-arm64-v8a.apk
-    pattern = re.compile(r'^(.*)-([^-]+)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
+    # e.g. discord-xposed-v338.13-Stable-arm64-v8a.apk
+    pattern = re.compile(r'^(.*?)-((?:[vV]?[0-9]|[vV][A-Z]).*?)-(arm64-v8a|arm-v7a|universal|all|module|x86|x86_64)\.(apk|zip)$')
     
     groups = {}
     
