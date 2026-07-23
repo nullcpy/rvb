@@ -117,8 +117,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Lifetime Premium
 </blockquote>
@@ -198,8 +198,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Premium+
 </blockquote>
@@ -214,12 +214,12 @@ Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="all-document-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.5.9-gray?labelColor=2e7d32&logo=android&logoColor=white&style=flat"></summary>
+<summary id="all-document-reader-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.6.4-gray?labelColor=2e7d32&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 </blockquote>
 </details>
@@ -317,8 +317,8 @@ Patches: [arandomhooman/patches-1.34.0.mpp](https://github.com/arandomhooman/hoo
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -398,8 +398,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Spoof WARP+ Unlimited UI
 </blockquote>
@@ -693,11 +693,11 @@ Patches: [docbt/patches-1.10.0.mpp](https://github.com/docbt/patched-up/releases
 #### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
 
 <details>
-<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.84.0.949657053-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.85.0.952162352-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-21](https://github.com/nullcpy/rvb/releases/tag/260072)<br>
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
 Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
 - Fix selected account persistence
 - GmsCore support
@@ -708,11 +708,11 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
-<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.84.0.949657053-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+<summary id="google-photos-revanced">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.85.0.952162352-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-21](https://github.com/nullcpy/rvb/releases/tag/260072)<br>
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
 - GmsCore support
 - Spoof features
@@ -805,8 +805,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -1689,8 +1689,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-22](https://github.com/nullcpy/rvb/releases/tag/260078)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.10)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1711,14 +1711,16 @@ Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.28.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.29.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
+- Custom font
 - Disable modern home
 - Disable screenshot popup
+- Force system font
 - Hide Ask button
 - Hide Trending shelves
 - Hide ads
@@ -2054,8 +2056,8 @@ Patches: [Aunali321/patches-2.0.0.rvp](https://github.com/Aunali321/ReVancedExpe
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock VIP
 </blockquote>
@@ -2070,12 +2072,12 @@ Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="the-weather-channel-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v16.13.0-gray?labelColor=003399&logo=android&logoColor=white&style=flat"></summary>
+<summary id="the-weather-channel-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v16.14.1-gray?labelColor=003399&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -2452,12 +2454,13 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - Alert Distances
 - AutoZoom
 - Disable Ads
 - Disable Advil Ad Requests
+- Enlarged Speedometer
 - GmsCore support (MicroG)
 - Map Skin (Vitamin C)
 - Navigation & Map
@@ -2482,8 +2485,8 @@ Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morph
 
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [rushiranpise/patches-1.15.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -2780,8 +2783,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-22](https://github.com/nullcpy/rvb/releases/tag/260078)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.10)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2863,8 +2866,8 @@ Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morp
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2928,6 +2931,7 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Sanitize sharing links
 - Save to watch later
 - Seekbar
+- Settings menu filter
 - Shorts autoplay
 - SponsorBlock
 - Spoof app version
@@ -2945,8 +2949,8 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3010,6 +3014,7 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Sanitize sharing links
 - Save to watch later
 - Seekbar
+- Settings menu filter
 - Shorts autoplay
 - SponsorBlock
 - Spoof app version
@@ -3023,12 +3028,12 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.26.364.SECONDARY-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.29.366.SECONDARY-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260032)<br>
-Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.34.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3092,6 +3097,7 @@ Patches: [MorpheApp/patches-1.34.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Sanitize sharing links
 - Save to watch later
 - Seekbar
+- Settings menu filter
 - Shorts autoplay
 - SponsorBlock
 - Spoof app version
@@ -3625,8 +3631,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-22](https://github.com/nullcpy/rvb/releases/tag/260078)<br>
-Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.10)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3668,17 +3674,18 @@ Patches: [MorpheApp/patches-1.36.0-dev.10.mpp](https://github.com/MorpheApp/morp
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.26.55-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.28.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
 - Change start page
 - Check watch history domain name resolution
+- Crossfade
 - Custom branding
 - Disable DRC audio
 - Disable QUIC protocol
@@ -3702,13 +3709,14 @@ Patches: [MorpheApp/patches-1.35.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Remember repeat state
 - Remember shuffle state
 - Remove background playback restrictions
+- Return YouTube Dislike
 - Sanitize sharing links
 - Scrobbling
+- Settings menu filter
 - SponsorBlock
 - Spoof app version
 - Spoof video streams
 - Theme
-- Track crossfade
 </blockquote>
 </details>
 
