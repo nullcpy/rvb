@@ -20,5 +20,5 @@ inshot-morphe (arm-v7a): 2.214.1539
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.11.0-all.jar  
-Patches: arandomhooman/patches-1.43.2.mpp  
-[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.43.2)  
+Patches: arandomhooman/patches-1.43.4.mpp  
+[Changelog](https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.43.4)  
