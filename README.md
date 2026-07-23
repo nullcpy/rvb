@@ -333,7 +333,7 @@ Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (bufferk)](https://github.com/bufferk/morphe-patches)
 
 <details>
-<summary id="brave-browser-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.9.4-gray?labelColor=ff3901&logo=android&logoColor=white&style=flat"></summary>
+<summary id="brave-browser-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.9.4-gray?labelColor=ff3901&logo=brave&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
