@@ -333,14 +333,13 @@ Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (bufferk)](https://github.com/bufferk/morphe-patches)
 
 <details>
-<summary id="brave-browser-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v0.9.4-gray?labelColor=ff3901&logo=brave&logoColor=white&style=flat"></summary>
+<summary id="brave-browser-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.92.140-gray?labelColor=ff3901&logo=brave&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-19](https://github.com/nullcpy/rvb/releases/tag/260068)<br>
-Patches: [rushiranpise/patches-1.14.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.14.0)
-- GmsCore support (MicroG)
-- Unlock Premium
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260081)<br>
+Patches: [bufferk/patches-1.8.0.mpp](https://github.com/bufferk/morphe-patches/releases/tag/v1.8.0)
+- Brave Origin
 </blockquote>
 </details>
 
