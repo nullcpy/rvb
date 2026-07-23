@@ -11,9 +11,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/tr
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
-[Medium-morphe]
+[medium-morphe]
 enabled = true
-app-name = "Medium"
+app-name = "medium"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
@@ -21,5 +21,17 @@ patches-source = "bufferk/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://medium.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
+dpi = "nodpi anydpi auto"
+
+[brave-browser-morphe]
+enabled = true
+app-name = "brave-browser"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "bufferk/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
 dpi = "nodpi anydpi auto"
 

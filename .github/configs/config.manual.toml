@@ -3,16 +3,16 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[discord-xposed]
-enabled = true 
-app-name = "discord"
-rv-brand = "xposed"
+[brave-browser-morphe]
+enabled = true
+app-name = "brave-browser"
+rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "revenge-mod/revenge-xposed"
-cli-source = "7723mod/NPatch"
+patches-source = "bufferk/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.discord"
-
 
 
