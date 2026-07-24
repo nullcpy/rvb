@@ -3,16 +3,17 @@ parallel-jobs = 1
 # cli-version = "dev"
 enable-module-update = true
 
-[brave-browser-morphe]
-enabled = true
-app-name = "brave-browser"
+[ninja-vpn-morphe]
+enabled = true 
+app-name = "ninja-vpn"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "bufferk/morphe-patches"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
 dpi = "nodpi anydpi auto"
-
+apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+# uptodown-dlurl = "https://ninja-vpn.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
 
