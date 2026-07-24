@@ -1311,8 +1311,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-07-10](https://github.com/nullcpy/rvb/releases/tag/260033)<br>
-Patches: [rushiranpise/patches-1.11.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.11.0)
+[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260086)<br>
+Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
