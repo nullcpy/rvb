@@ -3117,8 +3117,8 @@ Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260056)<br>
-Patches: [anddea/patches-4.2.0-dev.7.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.7)
+[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260089)<br>
+Patches: [anddea/patches-4.2.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.8)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3166,10 +3166,12 @@ Patches: [anddea/patches-4.2.0-dev.7.mpp](https://github.com/anddea/revanced-pat
 - Sanitize sharing links
 - Seekbar components
 - Set transcript cookies
+- Settings menu filter
 - Shorts components
 - Snack bar components
 - SponsorBlock
 - Spoof app version
+- Spoof video streams
 - Spoof watch history
 - Swipe controls
 - Theme
@@ -3727,8 +3729,8 @@ Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260056)<br>
-Patches: [anddea/patches-4.2.0-dev.7.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.7)
+[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260089)<br>
+Patches: [anddea/patches-4.2.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.8)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3756,8 +3758,10 @@ Patches: [anddea/patches-4.2.0-dev.7.mpp](https://github.com/anddea/revanced-pat
 - Return YouTube Dislike
 - Return YouTube Username
 - Sanitize sharing links
+- Settings menu filter
 - SponsorBlock
 - Spoof app version for lyrics
+- Spoof video streams
 - Track crossfade
 - Translations for YouTube Music
 - Video playback
