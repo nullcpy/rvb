@@ -1020,11 +1020,14 @@ get_apkcombo_resp() {
 	url="${url%/}"
 	__APKCOMBO_PKG__="${url##*/}"
 	__APKCOMBO_BASE_URL__="$url"
-	local html=""
-	html=$(req "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" - 2>/dev/null) || true
-	if [ -z "$html" ] || echo "$html" | grep -qi 'cloudflare'; then
-		_fs_get "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" || return 1
+	local page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
+	local eff_url
+	eff_url=$(curl -s -o /dev/null -w "%{url_effective}" -L -H "User-Agent: Mozilla/5.0" "$page_url") || true
+	if [ -n "$eff_url" ] && [ "$eff_url" != "$page_url" ]; then
+		page_url="$eff_url"
 	fi
+	local html=""
+	_fs_get "$page_url" || return 1
 	__APKCOMBO_RESP__="$html"
 }
 get_apkcombo_vers() {
@@ -1049,10 +1052,13 @@ dl_apkcombo() {
 			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
 		fi
 
-		html=$(req "$page_url" - 2>/dev/null) || true
-		if [ -z "$html" ] || echo "$html" | grep -qi 'cloudflare'; then
-			_fs_get "$page_url" "https://apkcombo.com/" || continue
+		local eff_url
+		eff_url=$(curl -s -o /dev/null -w "%{url_effective}" -L -H "User-Agent: Mozilla/5.0" "$page_url") || true
+		if [ -n "$eff_url" ] && [ "$eff_url" != "$page_url" ]; then
+			page_url="$eff_url"
 		fi
+
+		_fs_get "$page_url" "https://apkcombo.com/" || continue
 		
 		page="$html"
 		compact_page=$(tr '\n' ' ' <<<"$page")
