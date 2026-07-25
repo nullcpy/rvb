@@ -471,30 +471,29 @@ get_patch_last_supported_ver() {
 }
 
 get_patch_exp_ver() {
-	local patches_jar=$1 pkg_name=$2
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4
+	local list_stable list_all
+
+	list_stable=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source" "") || return 1
+	list_all=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source" "-x") || return 1
+
+	list_stable=$(sed -n '/Most common compatible versions:/,$p' <<<"$list_stable" | sed '1d' | awk '{print $1}')
+	list_all=$(sed -n '/Most common compatible versions:/,$p' <<<"$list_all" | sed '1d' | awk '{print $1}')
+
 	local exp_versions=""
-	local IFS=$'\n'
-	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	unset IFS
-	for j in "${p_jars[@]}"; do
-		if [ -f "$j" ]; then
-			local parsed
-			parsed=$(unzip -p "$j" patches.json 2>/dev/null | jq -r --arg pkg "$pkg_name" '
-				.[]? | .compatiblePackages[]? | select(.name == $pkg) | .versions[]? |
-				select(type == "object" and .isExperimental == true) | .version
-			' 2>/dev/null)
-			if [ "$parsed" ]; then
-				exp_versions+="${parsed}"$'\n'
-			fi
+	for ver in $list_all; do
+		if [ -n "$ver" ] && ! echo "$list_stable" | grep -qFx "$ver"; then
+			exp_versions+="$ver"$'\n'
 		fi
 	done
+
 	if [ -n "$exp_versions" ]; then
 		get_highest_ver <<<"$exp_versions"
 	fi
 }
 
 patches_list_versions() {
-	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 op
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 extra_args=$5 op
 	local cli_source_l="${cli_source,,}"
 	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
 		echo ""
@@ -511,11 +510,11 @@ patches_list_versions() {
 		p_args_long+="--patches '$j' "
 	done
 	# Try long form (--patches) with and without -b, then short form (-p)
-	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" -b 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" 2>&1); then
-			if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" -b 2>&1); then
-				if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" 2>&1); then
-					if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" 2>&1); then
+	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" $extra_args -b 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" $extra_args 2>&1); then
+			if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" $extra_args -b 2>&1); then
+				if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" $extra_args 2>&1); then
+					if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" $extra_args 2>&1); then
 						epr "Could not list versions $cli_jar: '$op'"
 						return 1
 					fi
@@ -1461,7 +1460,7 @@ build_rv() {
 			return
 		elif [ -z "$version" ]; then get_latest_ver=true; fi
 	elif [ "$version_mode" = exp ]; then
-		if ! version=$(get_patch_exp_ver "$patches_jar" "$pkg_name"); then
+		if ! version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
 			epr "get_patch_exp_ver failed"
 		fi
 		if [ -z "$version" ]; then
