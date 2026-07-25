@@ -600,7 +600,6 @@ _fs_get() {
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
 		if [ -z "$response" ]; then
-			wpr "FlareSolverr is unreachable (is trawl running?). Breaking retry loop."
 			break
 		fi
 		status=$(echo "$response" | jq -r '.status // empty')
