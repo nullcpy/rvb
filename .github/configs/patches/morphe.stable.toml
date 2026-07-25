@@ -28,17 +28,5 @@ dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
 
-[reddit-morphe-exp]
-enabled = true
-app-name = "reddit"
-rv-brand = "morphe-exp"
-build-mode = "both"
-arch = "both"
-version = "latest"
-patches-source = "MorpheApp/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
 
