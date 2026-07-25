@@ -3028,12 +3028,85 @@ Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.29.368-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.29.366-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
 [Release 2026-07-25](https://github.com/nullcpy/rvb/releases/tag/260091)<br>
 Patches: [MorpheApp/patches-1.36.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)
+- Add to queue
+- Alternative thumbnails
+- Ambient mode
+- Bypass image region restrictions
+- Bypass link redirects
+- Captions
+- Change form factor
+- Change header
+- Change start page
+- Check watch history domain name resolution
+- Copy video link
+- Custom branding
+- Custom player overlay opacity
+- Disable DRC audio
+- Disable QUIC protocol
+- Disable Shorts resuming on startup
+- Disable double tap actions
+- Disable fullscreen gestures
+- Disable haptic feedback
+- Disable layout updates
+- Disable player popup panels
+- Disable rolling number animations
+- Disable sign in to TV popup
+- Disable video codecs
+- Double tap to seek
+- Downloads
+- Enable debugging
+- Exit fullscreen mode
+- Force original audio
+- GmsCore support
+- Hide Shorts components
+- Hide ads
+- Hide autoplay preview
+- Hide end screen cards
+- Hide end screen suggested video
+- Hide info cards
+- Hide layout components
+- Hide player flyout menu components
+- Hide player overlay buttons
+- Hide related video overlay
+- Hide related videos
+- Hide timestamp
+- Hide video action buttons
+- Loop video
+- Media notification controls
+- Miniplayer
+- Navigation bar
+- Network proxy
+- Open Shorts in regular player
+- Open channel of live avatar
+- Open links externally
+- Open system share sheet
+- Open videos fullscreen
+- Override YouTube Music buttons
+- Play all
+- Playback speed
+- Reload video
+- Remove background playback restrictions
+- Remove viewer discretion dialog
+- Return YouTube Dislike
+- Sanitize sharing links
+- Save to watch later
+- Seekbar
+- Settings menu filter
+- Shorts autoplay
+- SponsorBlock
+- Spoof app version
+- Spoof device dimensions
+- Spoof video streams
+- Swipe controls
+- Theme
+- Video quality
+- Voice over translation
 </blockquote>
 </details>
 
