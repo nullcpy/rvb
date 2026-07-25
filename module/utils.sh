@@ -42,17 +42,17 @@ get_mounts() {
 
 mount_rv() {
 	if [ ! -d "${1}/lib" ]; then
-		err "mount failed. Dont report this, consider using rvmm-zygisk-mount"
+		err "Your installation got broken. Dont report this, consider using rvmm-zygisk-mount."
 		return 1
 	fi
 	VERSION=$(get_app_version)
 	if [ "$VERSION" != "$PKG_VER" ] && [ "$VERSION" ]; then
-		err "version mismatch (installed:${VERSION}, module:$PKG_VER)"
+		err "version mismatch (installed:$VERSION, module:$PKG_VER)"
 		return 1
 	fi
 	umount_all
-	if ! chcon u:object_r:apk_data_file:s0 "$RVPATH"; then
-		err "apk not found"
+	if ! OP=$(chcon u:object_r:apk_data_file:s0 "$RVPATH" 2>&1); then
+		err "Error chcon: '$OP'"
 		return 1
 	fi
 	mount -o bind "$RVPATH" "${1}/base.apk"
@@ -61,7 +61,10 @@ mount_rv() {
 	return 0
 }
 
-mount_nosleep() {
-	if ! BASEPATH=$(get_basepath); then return 1; fi
+mount_rv_now() {
+	if ! BASEPATH=$(get_basepath); then
+		err "app not installed: '$BASEPATH'"
+		return 1
+	fi
 	mount_rv "$BASEPATH"
 }
