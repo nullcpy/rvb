@@ -471,23 +471,14 @@ get_patch_last_supported_ver() {
 }
 
 get_patch_exp_ver() {
-	local patches_jar=$1 pkg_name=$2
+	local list_patches=$1 pkg_name=$2
 	local exp_versions=""
-	local IFS=$'\n'
-	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	unset IFS
-	for j in "${p_jars[@]}"; do
-		if [ -f "$j" ]; then
-			local parsed
-			parsed=$(unzip -p "$j" patches.json 2>/dev/null | jq -r --arg pkg "$pkg_name" '
-				.[]? | .compatiblePackages[]? | select(.name == $pkg) | .versions[]? |
-				select(type == "object" and .isExperimental == true) | .version
-			' 2>/dev/null)
-			if [ "$parsed" ]; then
-				exp_versions+="${parsed}"$'\n'
-			fi
-		fi
-	done
+
+	exp_versions=$(jq -r --arg pkg "$pkg_name" '
+		.[]? | .compatiblePackages[]? | select(.name == $pkg) | .versions[]? |
+		select(type == "object" and .isExperimental == true) | .version
+	' <<<"$list_patches" 2>/dev/null)
+
 	if [ -n "$exp_versions" ]; then
 		get_highest_ver <<<"$exp_versions"
 	fi
@@ -1461,7 +1452,7 @@ build_rv() {
 			return
 		elif [ -z "$version" ]; then get_latest_ver=true; fi
 	elif [ "$version_mode" = exp ]; then
-		if ! version=$(get_patch_exp_ver "$patches_jar" "$pkg_name"); then
+		if ! version=$(get_patch_exp_ver "$list_patches" "$pkg_name"); then
 			epr "get_patch_exp_ver failed"
 		fi
 		if [ -z "$version" ]; then
