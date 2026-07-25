@@ -591,12 +591,6 @@ _fs_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=5 attempt
 	local fs_url="${FLARESOLVERR_URL:-http://localhost:8191}/v1"
-	
-	local eff_url
-	eff_url=$(curl -s -o /dev/null -w "%{url_effective}" -L -H "User-Agent: Mozilla/5.0" "$url") || true
-	if [ -n "$eff_url" ] && [ "$eff_url" != "$url" ]; then
-		url="$eff_url"
-	fi
 
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
