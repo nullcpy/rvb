@@ -53,7 +53,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "youtube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -64,10 +64,11 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -78,7 +79,8 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "twitter-morphe": {
     "enabled": false,
@@ -121,7 +123,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -135,7 +137,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -145,10 +147,11 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
