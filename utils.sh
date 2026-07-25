@@ -599,9 +599,6 @@ _fs_get() {
 		response=$(curl -s -X POST "$fs_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
-		if [ -z "$response" ]; then
-			break
-		fi
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
@@ -1072,7 +1069,7 @@ dl_apkcombo() {
 	dl_url=$(echo "$dl_url" | sed 's/\\u0026/\&/g; s/&amp;/\&/g')
 
 	if [[ "$dl_url" == https://apkcombo.com/r2\?u=* ]]; then
-		final_url=$(python3 - <<'PYC' "$dl_url"
+		final_url=$(python - <<'PYC' "$dl_url"
 import sys, urllib.parse
 u=sys.argv[1]
 q=urllib.parse.urlparse(u).query
