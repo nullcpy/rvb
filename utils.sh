@@ -599,6 +599,10 @@ _fs_get() {
 		response=$(curl -s -X POST "$fs_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
+		if [ -z "$response" ]; then
+			wpr "FlareSolverr is unreachable (is trawl running?). Breaking retry loop."
+			break
+		fi
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
@@ -1020,12 +1024,7 @@ get_apkcombo_resp() {
 	url="${url%/}"
 	__APKCOMBO_PKG__="${url##*/}"
 	__APKCOMBO_BASE_URL__="$url"
-	local page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
-	local eff_url
-	eff_url=$(curl -s -o /dev/null -w "%{url_effective}" -L -H "User-Agent: Mozilla/5.0" "$page_url") || true
-	if [ -n "$eff_url" ] && [ "$eff_url" != "$page_url" ]; then
-		page_url="$eff_url"
-	fi
+	local page_url="${__APKCOMBO_BASE_URL__}/download/apk"
 	local html=""
 	_fs_get "$page_url" || return 1
 	__APKCOMBO_RESP__="$html"
@@ -1047,15 +1046,9 @@ dl_apkcombo() {
 	for sfx in "${sfxs[@]}"; do
 		if [ -n "$version" ]; then
 			local safe_version="${version// /-}"
-			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/phone-${safe_version}-${sfx}"
+			page_url="${__APKCOMBO_BASE_URL__}/download/phone-${safe_version}-${sfx}"
 		else
-			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
-		fi
-
-		local eff_url
-		eff_url=$(curl -s -o /dev/null -w "%{url_effective}" -L -H "User-Agent: Mozilla/5.0" "$page_url") || true
-		if [ -n "$eff_url" ] && [ "$eff_url" != "$page_url" ]; then
-			page_url="$eff_url"
+			page_url="${__APKCOMBO_BASE_URL__}/download/apk"
 		fi
 
 		_fs_get "$page_url" "https://apkcombo.com/" || continue
