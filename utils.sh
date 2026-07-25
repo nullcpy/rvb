@@ -703,7 +703,7 @@ _unqueued_cf_get() {
 _cf_get() {
 	local lock=$TEMP_DIR/cf_get.lock
 	exec 200>"$lock"
-	command -v flock >/dev/null && flock -x 200
+	flock -x 200
 	trap 'exec 200>&-' RETURN EXIT INT TERM
 	_unqueued_cf_get "$@"
 }
