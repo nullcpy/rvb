@@ -1020,7 +1020,7 @@ get_apkcombo_resp() {
 	__APKCOMBO_PKG__="${url##*/}"
 	__APKCOMBO_BASE_URL__="$url"
 	local html=""
-	_fs_get "https://apkcombo.com/search/${__APKCOMBO_PKG__}/download" || return 1
+	_fs_get "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" || return 1
 	__APKCOMBO_RESP__="$html"
 }
 get_apkcombo_vers() {
@@ -1040,9 +1040,9 @@ dl_apkcombo() {
 	for sfx in "${sfxs[@]}"; do
 		if [ -n "$version" ]; then
 			local safe_version="${version// /-}"
-			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/phone-${safe_version}-${sfx}"
+			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/phone-${safe_version}-${sfx}"
 		else
-			page_url="https://apkcombo.com/search/${__APKCOMBO_PKG__}/download/apk"
+			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
 		fi
 
 		_fs_get "$page_url" "https://apkcombo.com/" || continue
