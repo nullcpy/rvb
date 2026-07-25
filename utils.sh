@@ -1027,7 +1027,10 @@ get_apkcombo_resp() {
 	__APKCOMBO_PKG__="${url##*/}"
 	__APKCOMBO_BASE_URL__="$url"
 	local html=""
-	_fs_get "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" || return 1
+	html=$(req "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" - 2>/dev/null) || true
+	if [ -z "$html" ] || echo "$html" | grep -qi 'cloudflare'; then
+		_fs_get "https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk" || return 1
+	fi
 	__APKCOMBO_RESP__="$html"
 }
 get_apkcombo_vers() {
@@ -1052,7 +1055,11 @@ dl_apkcombo() {
 			page_url="https://apkcombo.com/app/${__APKCOMBO_PKG__}/download/apk"
 		fi
 
-		_fs_get "$page_url" "https://apkcombo.com/" || continue
+		html=$(req "$page_url" - 2>/dev/null) || true
+		if [ -z "$html" ] || echo "$html" | grep -qi 'cloudflare'; then
+			_fs_get "$page_url" "https://apkcombo.com/" || continue
+		fi
+		
 		page="$html"
 		compact_page=$(tr '\n' ' ' <<<"$page")
 
