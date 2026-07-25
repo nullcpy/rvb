@@ -171,8 +171,8 @@ if [ "$KSU" ]; then
 		if ! OP=$("${MODPATH:?}/bin/$ARCH/ksu_profile" "$UID" "$PKG_NAME" 2>&1); then
 			ui_print "  $OP"
 			ui_print "* Because you are using a fork of KernelSU, "
-			ui_print "  you need to go to your root manager app and"
-			ui_print "  disable 'Unmount modules' for $PKG_NAME"
+			ui_print "  * you need to go to your root manager app and"
+			ui_print "    disable 'Unmount modules' for $PKG_NAME"
 		fi
 	else
 		ui_print "ERROR: UID could not be found for $PKG_NAME"
@@ -180,6 +180,7 @@ if [ "$KSU" ]; then
 fi
 
 rm -rf "${MODPATH:?}/bin" "$MODPATH/stock/"
+cp -f "$MODPATH/module.prop" "$MODPATH/module.prop.orig"
 
 ui_print "* Done. No need to reboot."
 ui_print "  by j-hc (github.com/j-hc)"

@@ -4,7 +4,6 @@ export MODDIR
 . "$MODDIR/utils.sh"
 
 err() {
-	[ ! -f "$MODDIR/err" ] && cp "$MODDIR/module.prop" "$MODDIR/err"
 	sed -i "s|^description=.*|description=⚠️ Needs reflash: '${1}'|" "$MODDIR/module.prop"
 }
 
@@ -27,6 +26,6 @@ run() {
 	mount_rv "$BASEPATH"
 }
 
-if [ ! -f "$MODDIR/disabled_by_webui" ]; then
+if [ ! -f "$MODDIR/disabled_by_action" ]; then
 	run
 fi

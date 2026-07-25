@@ -3,6 +3,10 @@
 RVPATH=/data/adb/rvhc/${MODDIR##*/}.apk
 . "$MODDIR/config"
 
+ch_desc() {
+	sed -i "s|^description=.*|description=${1}|" "$MODDIR/module.prop"
+}
+
 if su -M -c true >/dev/null 2>/dev/null; then
 	alias mm='su -M -c'
 else alias mm='nsenter -t1 -m'; fi
@@ -57,7 +61,7 @@ mount_rv() {
 	fi
 	mount -o bind "$RVPATH" "${1}/base.apk"
 	am force-stop "$PKG_NAME"
-	[ -f "$MODDIR/err" ] && mv -f "$MODDIR/err" "$MODDIR/module.prop"
+	cp -f "$MODDIR/module.prop.orig" "$MODDIR/module.prop"
 	return 0
 }
 
