@@ -54,13 +54,7 @@ abort() {
 	kill -9 -- -$$ 2>/dev/null
 	exit 1
 }
-java() {
-	if [ "${JAVA_HOME_21_X64-}" ]; then
-		env -i JAVA_HOME="$JAVA_HOME_21_X64" PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" "$JAVA_HOME_21_X64"/bin/java --enable-native-access=ALL-UNNAMED "$@"
-	else
-		env -i PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" java --enable-native-access=ALL-UNNAMED "$@"
-	fi
-}
+java() { env -i PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" java --enable-native-access=ALL-UNNAMED "$@"; }
 
 source_release_api_base() {
 	local host=${1,,} src=$2 encoded
