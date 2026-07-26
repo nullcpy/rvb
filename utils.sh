@@ -714,7 +714,8 @@ get_apkmirror_resp() {
 	local html=""
 	_cf_get "${1}" || return 1
 	__APKMIRROR_RESP__="$html"
-	__APKMIRROR_CAT__="${1##*/}"
+	local clean_url="${1%/}"
+	__APKMIRROR_CAT__="${clean_url##*/}"
 	set +u
 	__APKMIRROR_EXAMPLE_URL__="${args[apkmirror_example_url]:-}" 
 	set -u
