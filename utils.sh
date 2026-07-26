@@ -587,18 +587,12 @@ merge_splits() {
 	return 0
 }
 
-_cf_get() {
-	local lock=$TEMP_DIR/cf_get.lock
-	exec 200>"$lock"
-	flock -x 200
-	trap 'exec 200>&-' RETURN EXIT INT TERM
-
+_fs_8191_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
 	local fs_url="${FLARESOLVERR_URL:-http://localhost:8191}/v1"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
-	
 	for attempt in $(seq 1 $max_retries); do
 		local response status
 		response=$(curl -s -X POST "$fs_url" \
@@ -612,16 +606,106 @@ _cf_get() {
 			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
 			return 0
 		fi
-		wpr "FlareSolverr attempt $attempt/$max_retries failed for: $url"
+		wpr "FlareSolverr:8191 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
 	done
-	
-	wpr "FlareSolverr failed after $max_retries attempts: $url — falling back to direct request"
-	
+	wpr "FlareSolverr:8191 failed after $max_retries attempts: $url — falling back"
+	return 1
+}
+      
+_fs_8192_get() {
+	local url=$1 referer=${2:-}
+	local max_retries=4 attempt
+	local fs_url="${FLARESOLVERR_URL:-http://localhost:8192}/v1"
+	local extra_headers=""
+	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
+	for attempt in $(seq 1 $max_retries); do
+		local response status
+		response=$(curl -s -X POST "$fs_url" \
+			-H 'Content-Type: application/json' \
+			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":20000${extra_headers}}") || true
+		status=$(echo "$response" | jq -r '.status // empty')
+		if [[ "$status" == "ok" ]]; then
+			html=$(echo "$response" | jq -r '.solution.response // empty')
+			export FS_COOKIES
+			FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+			return 0
+		fi
+		wpr "FlareSolverr:8192 attempt $attempt/$max_retries failed for: $url"
+		sleep 5
+	done
+	wpr "FlareSolverr:8192 failed after $max_retries attempts: $url — falling back"
+	return 1
+}
+_cfb_get() {
+	local url=$1 referer=${2:-}
+	local max_retries=4
+	local attempt
+    
+	for attempt in $(seq 1 $max_retries); do
+		local response_file
+		rm -f $TEMP_DIR/cfb_response_headers.txt
+		response_file=$(mktemp)
+		local http_code
+		http_code=$(curl -s -o "$response_file" -w '%{http_code}' \
+			-D $TEMP_DIR/cfb_response_headers.txt \
+			-G --data-urlencode "url=$url"\
+			--max-time 30 \
+			"http://localhost:8000/html")
+		if [[ "$http_code" == "200" ]]; then
+			html=$(cat "$response_file")
+			if [[ -n "$html" ]]; then
+				export FS_COOKIES
+				FS_COOKIES=$(grep -i '^x-cf-bypasser-cookies:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
+				local cfb_ua
+				cfb_ua=$(grep -i '^x-cf-bypasser-user-agent:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
+				[[ -n "$cfb_ua" ]] && user_agent="$cfb_ua"
+				rm -f "$response_file" $TEMP_DIR/cfb_response_headers.txt
+				return 0
+			fi
+		fi
+	done
+	wpr "CloudflareBypassForScraping failed after $max_retries attempts: $url"
+	return 1
+}
+_fallback_get(){
+	local url=$1
 	html=$(req "$url" -) || return 1
 	FS_COOKIES=""
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
-	return 0
+
+}
+_FFS8191_FAILED=0
+_CFB_FAILED=0
+_FFS8192_FAILED=0
+_unqueued_cf_get() {
+	if [[ "$_CFB_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true ]]; then
+		_cfb_get "$@" && return 0
+		_CFB_FAILED=1
+	fi
+	if [[ "$_FFS8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true ]]; then
+		_fs_8191_get "$@" && return 0
+		_FFS8191_FAILED=1
+    fi
+	if [[ "$_FFS8192_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
+		_fs_8192_get "$@" && return 0
+		_FFS8192_FAILED=1
+	fi
+	if [[ "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
+    	wpr "All bypass solvers failed for: $1 — falling back to direct request"
+	else
+		wpr "No bypass solvers enabled, falling back to direct request for: $1"
+	fi
+	_fallback_get "$@" && return 0
+	epr "All methods failed for: $1"
+}
+_cf_get() {
+	local lock=$TEMP_DIR/cf_get.lock
+	exec 200>"$lock"
+	flock -x 200
+	trap 'exec 200>&-' RETURN EXIT INT TERM
+	_unqueued_cf_get "$@"
 }
 
 # -------------------- apkmirror --------------------
