@@ -587,12 +587,18 @@ merge_splits() {
 	return 0
 }
 
-_fs_8191_get() {
+_cf_get() {
+	local lock=$TEMP_DIR/cf_get.lock
+	exec 200>"$lock"
+	flock -x 200
+	trap 'exec 200>&-' RETURN EXIT INT TERM
+
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
 	local fs_url="${FLARESOLVERR_URL:-http://localhost:8191}/v1"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
+	
 	for attempt in $(seq 1 $max_retries); do
 		local response status
 		response=$(curl -s -X POST "$fs_url" \
@@ -606,36 +612,16 @@ _fs_8191_get() {
 			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
 			return 0
 		fi
-		wpr "FlareSolverr:8191 attempt $attempt/$max_retries failed for: $url"
+		wpr "FlareSolverr attempt $attempt/$max_retries failed for: $url"
 		sleep 5
 	done
-	wpr "FlareSolverr:8191 failed after $max_retries attempts: $url — falling back"
-	return 1
-}
-      
-_fallback_get(){
-	local url=$1
+	
+	wpr "FlareSolverr failed after $max_retries attempts: $url — falling back to direct request"
+	
 	html=$(req "$url" -) || return 1
 	FS_COOKIES=""
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
-
-}
-_FFS8191_FAILED=0
-_unqueued_cf_get() {
-	if [[ "$_FFS8191_FAILED" -eq 0 ]]; then
-		_fs_8191_get "$@" && return 0
-		_FFS8191_FAILED=1
-    fi
-	wpr "Bypass solver failed for: $1 — falling back to direct request"
-	_fallback_get "$@" && return 0
-	epr "All methods failed for: $1"
-}
-_cf_get() {
-	local lock=$TEMP_DIR/cf_get.lock
-	exec 200>"$lock"
-	flock -x 200
-	trap 'exec 200>&-' RETURN EXIT INT TERM
-	_unqueued_cf_get "$@"
+	return 0
 }
 
 # -------------------- apkmirror --------------------
