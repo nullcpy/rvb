@@ -2149,24 +2149,30 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-06-17](https://github.com/nullcpy/rvb/releases/tag/362)<br>
-Patches: [icysymmetra/patches-0.3.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.3.1)
-
-- Auto Translate comments
+[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260093)<br>
+Patches: [icysymmetra/patches-0.4.0-dev.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.4.0-dev.1)
+- Always show publish date
 - Copy comments without username
 - Custom offline videos limit
 - Disable login requirement
 - Downloads
 - Enable Open Debug
+- Feature Gate Lab
 - Feed filter
 - Feed tab navigation
 - Fix Google login
+- Hide CAPTCHA popups
+- Hide floating promotions
+- Hold-and-slide 2x lock
+- Open external links directly
 - Playback speed
 - Remember clear display
 - SIM spoof
 - Sanitize sharing links
 - Settings
 - Show seekbar
+- Translate comments
+- Disable screen capture detection
 </blockquote>
 </details>
 
