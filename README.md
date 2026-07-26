@@ -705,6 +705,21 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
 </blockquote>
 </details>
 
+#### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
+
+<details>
+<summary id="google-photos-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.85.0.952162352-gray?labelColor=FBBC04&logo=googlephotos&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
+Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
+- Fix selected account persistence
+- GmsCore support
+- Spoof features
+</blockquote>
+</details>
+
 #### [ReVanced](https://github.com/revanced/revanced-patches)
 
 <details>
