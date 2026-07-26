@@ -1607,11 +1607,26 @@ build_rv() {
 		fi
 	fi
 
-	local microg_patch
-	microg_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" || :) microg_patch=${microg_patch#*: }
-	if [ -n "$microg_patch" ] && [[ ${p_patcher_args[*]} =~ $microg_patch ]]; then
-		wpr "You cant include/exclude microg patch as that's done by rvmm builder automatically."
-		p_patcher_args=("${p_patcher_args[@]//-[ei] ${microg_patch}/}")
+	local microg_patches=()
+	local IFS=$'
+'
+	for p in $(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" | sed 's/^Name: //' || :); do
+		microg_patches+=("$p")
+	done
+	unset IFS
+	if [ ${#microg_patches[@]} -gt 0 ]; then
+		local found=false
+		for p in "${microg_patches[@]}"; do
+			if [[ "${p_patcher_args[*]}" == *"$p"* ]]; then
+				found=true
+				p_patcher_args=("${p_patcher_args[@]//-[ei] \'$p\'/}")
+				p_patcher_args=("${p_patcher_args[@]//-[ei] \"$p\"/}")
+				p_patcher_args=("${p_patcher_args[@]//-[ei] $p/}")
+			fi
+		done
+		if [ "$found" = true ]; then
+			wpr "You cant include/exclude microg patch as that's done by rvmm builder automatically."
+		fi
 	fi
 
 	local patcher_args patched_apk build_mode
@@ -1623,17 +1638,19 @@ build_rv() {
 	for build_mode in "${build_mode_arr[@]}"; do
 		patcher_args=("${p_patcher_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
-		if [ -n "$microg_patch" ]; then
+		if [ ${#microg_patches[@]} -gt 0 ]; then
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
 		else
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
 		fi
-		if [ -n "$microg_patch" ]; then
-			if [ "$build_mode" = apk ]; then
-				patcher_args+=("-e \"${microg_patch}\"")
-			elif [ "$build_mode" = module ]; then
-				patcher_args+=("-d \"${microg_patch}\"")
-			fi
+		if [ ${#microg_patches[@]} -gt 0 ]; then
+			for p in "${microg_patches[@]}"; do
+				if [ "$build_mode" = apk ]; then
+					patcher_args+=("-e \"$p\"")
+				elif [ "$build_mode" = module ]; then
+					patcher_args+=("-d \"$p\"")
+				fi
+			done
 		fi
 		if [ "$build_mode" = module ]; then
 			if [[ "${args[cli_source],,}" != *"revanced-cli"* ]]; then
