@@ -701,6 +701,7 @@ _unqueued_cf_get() {
 	epr "All methods failed for: $1"
 }
 _cf_get() {
+	mkdir -p "$TEMP_DIR"
 	local lock=$TEMP_DIR/cf_get.lock
 	exec 200>"$lock"
 	flock -x 200
@@ -724,7 +725,7 @@ get_apkmirror_vers() {
 	_cf_get "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" || return 1
 	apkm_resp="$html"
 	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
-	if [ "$__AAV__" = false ]; then
+	if [ "${__AAV__:-false}" = false ]; then
 		local IFS=$'\n'
 		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers")
 		local v r_vers=()
