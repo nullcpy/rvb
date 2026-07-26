@@ -613,31 +613,6 @@ _fs_8191_get() {
 	return 1
 }
       
-_fs_8192_get() {
-	local url=$1 referer=${2:-}
-	local max_retries=4 attempt
-	local fs_url="${FLARESOLVERR_URL:-http://localhost:8192}/v1"
-	local extra_headers=""
-	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
-	for attempt in $(seq 1 $max_retries); do
-		local response status
-		response=$(curl -s -X POST "$fs_url" \
-			-H 'Content-Type: application/json' \
-			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":20000${extra_headers}}") || true
-		status=$(echo "$response" | jq -r '.status // empty')
-		if [[ "$status" == "ok" ]]; then
-			html=$(echo "$response" | jq -r '.solution.response // empty')
-			export FS_COOKIES
-			FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
-			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
-			return 0
-		fi
-		wpr "FlareSolverr:8192 attempt $attempt/$max_retries failed for: $url"
-		sleep 5
-	done
-	wpr "FlareSolverr:8192 failed after $max_retries attempts: $url — falling back"
-	return 1
-}
 _fallback_get(){
 	local url=$1
 	html=$(req "$url" -) || return 1
@@ -646,21 +621,12 @@ _fallback_get(){
 
 }
 _FFS8191_FAILED=0
-_FFS8192_FAILED=0
 _unqueued_cf_get() {
-	if [[ "$_FFS8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true ]]; then
+	if [[ "$_FFS8191_FAILED" -eq 0 ]]; then
 		_fs_8191_get "$@" && return 0
 		_FFS8191_FAILED=1
     fi
-	if [[ "$_FFS8192_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
-		_fs_8192_get "$@" && return 0
-		_FFS8192_FAILED=1
-	fi
-	if [[ "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
-    	wpr "All bypass solvers failed for: $1 — falling back to direct request"
-	else
-		wpr "No bypass solvers enabled, falling back to direct request for: $1"
-	fi
+	wpr "Bypass solver failed for: $1 — falling back to direct request"
 	_fallback_get "$@" && return 0
 	epr "All methods failed for: $1"
 }

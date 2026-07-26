@@ -15,8 +15,6 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      CF_BYPASS_SOLVER_FS_8191_ENABLED: "true"
     services:
       redis:
         image: redis:alpine

@@ -77,7 +77,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          CF_BYPASS_SOLVER_FS_8191_ENABLED: "true"
         run: |
           set -euo pipefail
           ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
