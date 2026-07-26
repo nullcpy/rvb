@@ -712,8 +712,13 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260094)<br>
+[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260095)<br>
 Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
+- AMOLED dark theme
+- Change package name
+- Enable DCIM folders backup control
+- Fix DCIM folder classification
+- GmsCore support
 </blockquote>
 </details>
 
