@@ -40,10 +40,6 @@ jobs:
         env:
           REDIS_URL: redis://redis:6379
         options: --shm-size=1gb
-      cloudflarebypassforscraping:
-        image: ghcr.io/sarperavci/cloudflarebypassforscraping:latest
-        ports:
-         - 8000:8000
     steps:
       - name: Setup java
         uses: actions/setup-java@v5
@@ -82,7 +78,6 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           CF_BYPASS_SOLVER_FS_8191_ENABLED: "true"
-          CF_BYPASS_SOLVER_CFB_ENABLED: "true"
         run: |
           set -euo pipefail
           ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
