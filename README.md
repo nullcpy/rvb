@@ -712,11 +712,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReV
   
 <blockquote>
 
-[Release 2026-07-23](https://github.com/nullcpy/rvb/releases/tag/260083)<br>
-Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-ReVanced/releases/tag/v1.0.4)
-- Fix selected account persistence
-- GmsCore support
-- Spoof features
+[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260094)<br>
+Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
 </blockquote>
 </details>
 
