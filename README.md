@@ -903,15 +903,14 @@ Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v435.0.0.37.76-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-morphe-piko">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v439.0.0.37.89-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-05](https://github.com/nullcpy/rvb/releases/tag/260006)<br>
-Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/tag/v3.7.0)
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
+Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
 - Add settings
 - Allow user network certificate
-- Amoled theme
 - Change like animation
 - Change version code
 - Copy comment
@@ -925,14 +924,17 @@ Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/ta
 - Disable double tap like
 - Disable explore
 - Disable highlights
+- Disable onboarding permission prompts
 - Disable screenshot detection
 - Disable stories
 - Disable story flipping
+- Disable swipe to create
 - Disable typing status
 - Disable video autoplay
 - Download media
 - Download voice message
 - External downloader
+- Filter stories
 - Friendship status indicator
 - Hide group creation button on sharesheet
 - Hide navigation buttons
@@ -943,6 +945,7 @@ Patches: [crimera/patches-3.7.0.mpp](https://github.com/crimera/piko/releases/ta
 - Improve image viewing
 - Limit feed to following profiles
 - Make ephemeral media permanent
+- Mark chat as read manually
 - More options on post
 - More options on profile
 - Open links externally
@@ -2567,15 +2570,12 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Piko)](https://github.com/crimera/piko)
 
 <details>
-<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.7.1.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.11.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260088)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0)
-- Abstract shim layer
-- Abstract shim layer for method
-- Abstract shim layer for native library
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
+Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Change app icon
@@ -2650,15 +2650,12 @@ Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/relea
 </details>
 
 <details>
-<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.7.1.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
+<summary id="twitter-morphe-materialu"><b>Material You</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v12.11.0.release.0-gray?labelColor=0F1419&logo=x&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260088)<br>
-Patches: [inotia00/patches-1.7.0.mpp](https://gitlab.com/inotia00/x-shim/-/releases/v1.7.0), [crimera/patches-3.8.0.mpp](https://github.com/crimera/piko/releases/tag/v3.8.0)
-- Abstract shim layer
-- Abstract shim layer for method
-- Abstract shim layer for native library
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
+Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Bring back twitter
