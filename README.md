@@ -907,8 +907,8 @@ Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
-Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260102)<br>
+Patches: [crimera/patches-3.9.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.2)
 - Add settings
 - Allow user network certificate
 - Change like animation
@@ -2574,8 +2574,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
-Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260102)<br>
+Patches: [crimera/patches-3.9.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.2)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Change app icon
@@ -2654,8 +2654,8 @@ Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/relea
   
 <blockquote>
 
-[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260101)<br>
-Patches: [crimera/patches-3.9.0-dev.1.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.1)
+[Release 2026-07-27](https://github.com/nullcpy/rvb/releases/tag/260102)<br>
+Patches: [crimera/patches-3.9.0-dev.2.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.2)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Bring back twitter
