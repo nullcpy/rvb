@@ -224,8 +224,10 @@
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
   },
   "twitter-morphe-materialu": {
     "enabled": true,
@@ -238,14 +240,16 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
   },
   "instagram-morphe-piko": {
     "enabled": true,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "both",
-    "arch": "all",
+    "arch": "arm64-v8a",
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
