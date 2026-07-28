@@ -27,7 +27,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -38,7 +38,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -50,7 +50,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -61,7 +61,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
   },
   "peacock-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -73,7 +73,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -85,7 +85,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -96,7 +96,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -446,7 +446,6 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "dpi": "nodpi anydpi auto",
-    "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord/",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers/"
   },
@@ -569,7 +568,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1301,8 +1300,10 @@
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
   },
   "twitter-morphe-materialu": {
     "enabled": false,
@@ -1315,14 +1316,16 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter/",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
   },
   "instagram-morphe-piko": {
     "enabled": false,
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "both",
-    "arch": "all",
+    "arch": "arm64-v8a",
     "patches-source": "crimera/piko",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
