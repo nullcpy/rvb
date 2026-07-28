@@ -1,56 +1,32 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-# enable-module-update = true
+enable-module-update = true
 
-[twitter-morphe]
-enabled = true 
-app-name = "twitter"
+[moviebox-morphe]
+enabled = true
+app-name = "moviebox"
 rv-brand = "morphe"
-build-mode = "both"
+build-mode = "apk"
 arch = "both"
-patches-source = "crimera/piko"
-# patches-source = "'inotia00/x-shim' 'crimera/piko'"
-# patches-source-host = "'gitlab' 'github'"
-# version = "11.81.0-release.0"
-# patcher-args = "--continue-on-error"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
+uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
+# apkmirror-dlurl = ""
+# dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
 
-[twitter-morphe-materialu]
-enabled = true 
-app-name = "twitter"
-rv-brand = "morphe-materialu"
-build-mode = "both"
+[moviebox-morphe-androidtv]
+enabled = true
+app-name = "moviebox"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
 arch = "both"
-patches-source = "crimera/piko"
-# patches-source-host = "'gitlab' 'github'"
-# patcher-args = "--continue-on-error"
-included-patches = "'Bring back twitter' 'Dynamic color'"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
-apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.twitter.android"
-
-[instagram-morphe-piko]
-enabled = true 
-app-name = "instagram"
-rv-brand = "morphe-piko"
-build-mode = "both"
-arch = "both"
-patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
+# uptodown-dlurl = ""
+# apkmirror-dlurl = ""
+# dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
