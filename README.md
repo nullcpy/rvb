@@ -1413,8 +1413,8 @@ Patches: [ajstrick81/patches-1.13.0.mpp](https://github.com/ajstrick81/morphe-an
   
 <blockquote>
 
-[Release 2026-07-22](https://github.com/nullcpy/rvb/releases/tag/260074)<br>
-Patches: [ajstrick81/patches-1.13.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.14.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260103)<br>
+Patches: [ajstrick81/patches-1.14.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.15.0)
 - Disable auto-updates
 - Override certificate pinning
 - Skip ads
@@ -2291,12 +2291,12 @@ Patches: [bufferk/patches-1.8.0.mpp](https://github.com/bufferk/morphe-patches/r
 #### [Morphe (Android TV)](https://github.com/ajstrick81/morphe-androidtv-patches)
 
 <details>
-<summary id="tubi-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.20.5000-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
+<summary id="tubi-morphe-androidtv">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v10.28.5000-gray?labelColor=5301ac&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-18](https://github.com/nullcpy/rvb/releases/tag/260063)<br>
-Patches: [ajstrick81/patches-1.12.2.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.12.3)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260103)<br>
+Patches: [ajstrick81/patches-1.14.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.15.0)
 - Skip ads
 </blockquote>
 </details>
@@ -2421,8 +2421,8 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-07-22](https://github.com/nullcpy/rvb/releases/tag/260074)<br>
-Patches: [ajstrick81/patches-1.13.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.14.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260103)<br>
+Patches: [ajstrick81/patches-1.14.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.15.0)
 - Override certificate pinning
 - Skip ads
 </blockquote>
