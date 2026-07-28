@@ -1,32 +1,20 @@
 parallel-jobs = 1
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = true
+enable-module-update = false
 
-[moviebox-morphe]
+[youtube-morphe-exp]
 enabled = true
-app-name = "moviebox"
-rv-brand = "morphe"
-build-mode = "apk"
+app-name = "youtube"
+rv-brand = "morphe-exp"
+build-mode = "both"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
+version = "exp"
+patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
-# apkmirror-dlurl = ""
-# dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
-
-[moviebox-morphe-androidtv]
-enabled = true
-app-name = "moviebox"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-# uptodown-dlurl = ""
-# apkmirror-dlurl = ""
-# dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
+apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
