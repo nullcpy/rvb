@@ -1742,8 +1742,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
+Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1768,8 +1768,8 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
+Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -2836,8 +2836,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
+Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3686,8 +3686,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
+Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3729,12 +3729,12 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.28.51-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
+<summary id="youtube-music-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.29.54-gray?labelColor=FF0000&logo=youtubemusic&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
+Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
