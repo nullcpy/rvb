@@ -1669,6 +1669,30 @@ build_rv() {
 				fi
 			fi
 
+			local sig_op
+			local sig_ok=true
+			if [ -f "${stock_apk}.apkm" ]; then
+				rm -rf "${stock_apk}-zip" || :
+				unzip -j "${stock_apk}.apkm" -d "${stock_apk}-zip" >/dev/null
+				for a in "${stock_apk}"-zip/*.apk; do
+					if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
+						epr "Signature mismatch on $a: $sig_op. Rejecting download from $dl_p..."
+						sig_ok=false
+						break
+					fi
+				done
+				rm -rf "${stock_apk}-zip" || :
+			else
+				if ! sig_op=$(check_sig "$stock_apk" "$pkg_name" 2>&1); then
+					epr "Signature mismatch on $stock_apk: $sig_op. Rejecting download from $dl_p..."
+					sig_ok=false
+				fi
+			fi
+			if [ "$sig_ok" = false ]; then
+				rm -f "$stock_apk" "${stock_apk}.apkm"
+				continue
+			fi
+
 			break
 		done
 	fi
