@@ -601,10 +601,12 @@ _fs_8191_get() {
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
-			export FS_COOKIES
-			FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
-			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
-			return 0
+			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* ]]; then
+				export FS_COOKIES
+				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+				return 0
+			fi
 		fi
 		wpr "FlareSolverr:8191 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
@@ -627,10 +629,12 @@ _fs_8192_get() {
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
-			export FS_COOKIES
-			FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
-			user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
-			return 0
+			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* ]]; then
+				export FS_COOKIES
+				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+				return 0
+			fi
 		fi
 		wpr "FlareSolverr:8192 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
@@ -1536,7 +1540,7 @@ build_rv() {
 	else
 		for dl_p in "${DL_SRCS[@]}"; do
 			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}" || ! pkg_name=$(get_"${dl_p}"_pkg_name); then
+			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}" || ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
 				args[${dl_p}_dlurl]=""
 				epr "ERROR: Could not find ${table} in ${dl_p}"
 				continue
