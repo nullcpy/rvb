@@ -457,11 +457,11 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Xposed (revenge-mod)](https://github.com/revenge-mod/revenge-xposed)
 
 <details>
-<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v338.13.Stable-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
+<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v339.11.Stable-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260099)<br>
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260107)<br>
 Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1502)
 </blockquote>
 </details>
@@ -2202,8 +2202,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260100)<br>
-Patches: [icysymmetra/patches-0.4.0.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.4.0)
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260107)<br>
+Patches: [icysymmetra/patches-0.4.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.4.1)
 - Always show publish date
 - Copy comments without username
 - Custom offline videos limit
