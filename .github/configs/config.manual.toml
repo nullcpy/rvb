@@ -22,7 +22,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.andro
 [soundcloud-morphe-alt]
 enabled = true
 app-name = "soundcloud"
-rv-brand = "morphe"
+rv-brand = "morphe-alt"
 build-mode = "apk"
 arch = "both"
 patches-source = "kondratjev/morphe-patches"
