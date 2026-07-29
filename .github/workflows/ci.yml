@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      CF_BYPASS_SOLVER_BYPARR_ENABLED: "true"
       CF_BYPASS_SOLVER_TRAWL_8191_ENABLED: "true"
       CF_BYPASS_SOLVER_CFB_ENABLED: "true"
     services:
@@ -24,10 +23,6 @@ jobs:
         image: redis:alpine
         ports:
           - 6379:6379
-      byparr:
-        image: ghcr.io/thephaseless/byparr:latest
-        ports:
-          - 8193:8191
       trawl:
         image: ghcr.io/germondai/trawl:latest
         ports:
