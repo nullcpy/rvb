@@ -407,6 +407,27 @@ Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morph
 
 ---
 
+### [Calorie Counter](https://play.google.com/store/apps/details?id=com.fatsecret.android)
+
+`com.fatsecret.android`
+
+#### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
+
+<details>
+<summary id="calorie-counter-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=00bb2a&logo=soundcloud&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
+Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+- AMOLED dark theme
+- Disable telemetry
+- Enable SoundCloud Go
+</blockquote>
+</details>
+
+---
+
 ### [Cryptomator](https://play.google.com/store/apps/details?id=org.cryptomator)
 
 `org.cryptomator`
@@ -1963,6 +1984,21 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 <details>
 <summary id="soundcloud-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
   
+<blockquote>
+
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
+Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+- AMOLED dark theme
+- Disable telemetry
+- Enable SoundCloud Go
+</blockquote>
+</details>
+
+#### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
+
+<details>
+<summary id="soundcloud-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
+
 <blockquote>
 
 [Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
