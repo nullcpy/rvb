@@ -590,21 +590,21 @@ merge_splits() {
 _trawl_8191_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
-	local solver_url="${TRAWL_URL:-http://localhost:8191}/v1"
+	local solver_url="${TRAWL_URL:-http://localhost:8191}/scrape"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
 		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
-			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
-		status=$(echo "$response" | jq -r '.status // empty')
-		if [[ "$status" == "ok" ]]; then
-			html=$(echo "$response" | jq -r '.solution.response // empty')
+			-d "{\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
+		status=$(echo "$response" | jq -r '.statusCode // empty')
+		if [[ "$status" == "200" ]]; then
+			html=$(echo "$response" | jq -r '.html // empty')
 			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
 				export CF_COOKIES
-				CF_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
-				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+				CF_COOKIES=$(echo "$response" | jq -r '[.cookies[] | .name + "=" + .value] | join("; ")')
+				user_agent=$(echo "$response" | jq -r '.userAgent // empty')
 				return 0
 			fi
 		fi
@@ -618,21 +618,21 @@ _trawl_8191_get() {
 _trawl_8192_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
-	local solver_url="${TRAWL_URL:-http://localhost:8192}/v1"
+	local solver_url="${TRAWL_URL:-http://localhost:8192}/scrape"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
 		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
-			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
-		status=$(echo "$response" | jq -r '.status // empty')
-		if [[ "$status" == "ok" ]]; then
-			html=$(echo "$response" | jq -r '.solution.response // empty')
+			-d "{\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
+		status=$(echo "$response" | jq -r '.statusCode // empty')
+		if [[ "$status" == "200" ]]; then
+			html=$(echo "$response" | jq -r '.html // empty')
 			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
 				export CF_COOKIES
-				CF_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
-				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+				CF_COOKIES=$(echo "$response" | jq -r '[.cookies[] | .name + "=" + .value] | join("; ")')
+				user_agent=$(echo "$response" | jq -r '.userAgent // empty')
 				return 0
 			fi
 		fi
