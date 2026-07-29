@@ -40,10 +40,10 @@
   "hoodles": {
     "repo": "hoo-dles/morphe-patches",
     "stable": "v1.39.0",
-    "prerelease": "v1.40.0-dev.4",
+    "prerelease": "v1.40.0-dev.5",
     "blocked": false,
     "stable_date": "2026-07-15T16:13:49Z",
-    "pre_date": "2026-07-25T03:38:32Z"
+    "pre_date": "2026-07-29T16:44:56Z"
   },
   "adobo": {
     "repo": "jkennethcarino/adobo",
@@ -174,10 +174,10 @@
   },
   "revenge": {
     "repo": "revenge-mod/revenge-xposed",
-    "stable": "1502",
+    "stable": "1503",
     "prerelease": "",
     "blocked": false,
-    "stable_date": "2026-07-26T09:29:00Z",
+    "stable_date": "2026-07-29T15:36:44Z",
     "pre_date": ""
   },
   "bufferk": {
@@ -208,8 +208,8 @@
     "repo": "kondratjev/morphe-patches",
     "stable": "v1.17.0",
     "stable_date": "2026-07-05T13:34:07Z",
-    "prerelease": "v1.17.0-dev.1",
-    "pre_date": "2026-07-05T13:27:55Z",
+    "prerelease": "v1.18.0-dev.1",
+    "pre_date": "2026-07-29T14:47:52Z",
     "blocked": false
   }
 }
