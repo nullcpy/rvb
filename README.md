@@ -1776,7 +1776,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260110)<br>
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260113)<br>
 Patches: [MorpheApp/patches-1.38.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.1)
 - Custom font
 - Disable modern home
@@ -1802,8 +1802,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.1.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
-Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260113)<br>
+Patches: [MorpheApp/patches-1.38.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.1)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -3784,8 +3784,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.1.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260106)<br>
-Patches: [MorpheApp/patches-1.37.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1)
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260113)<br>
+Patches: [MorpheApp/patches-1.38.0-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
