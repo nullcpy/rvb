@@ -1,4 +1,5 @@
 {
+  "patches-version": "latest",
   "enable-module-update": true,
   "imdb-morphe": {
     "enabled": false,
@@ -437,7 +438,7 @@
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
   "discord-xposed": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "discord",
     "rv-brand": "xposed",
     "build-mode": "apk",
@@ -445,6 +446,7 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "dpi": "nodpi anydpi auto",
+    "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord/",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers/"
   },
@@ -1010,7 +1012,7 @@
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
   },
   "calorie-counter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "calorie-counter",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1021,12 +1023,13 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android",
-    "apkcombo-dlurl": "https://apkcombo.com/fatsecret/com.fatsecret.android"
+    "apkcombo-dlurl": "https://apkcombo.com/fatsecret/com.fatsecret.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
   },
   "soundcloud-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "soundcloud",
-    "rv-brand": "morphe",
+    "rv-brand": "morphe-alt",
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "kondratjev/morphe-patches",
@@ -1035,7 +1038,8 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android",
-    "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
+    "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"
   },
   "youtube-morphe-nord": {
     "enabled": false,
