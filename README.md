@@ -170,16 +170,13 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="lightroom-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.3.0-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
+<summary id="lightroom-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.4.5-gray?labelColor=31A8FF&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-05-01](https://github.com/nullcpy/rvb/releases/tag/189)<br>
-Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/v6.1.0)
-
-- Disable mandatory login
-- Disable version check
-- Unlock Premium
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260112)<br>
+Patches: [hoo-dles/patches-1.40.0-dev.5.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.40.0-dev.5)
+- Unlock premium features
 </blockquote>
 </details>
 
