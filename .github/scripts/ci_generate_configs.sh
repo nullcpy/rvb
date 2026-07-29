@@ -34,7 +34,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
   fi
 
   jq --slurpfile active active.stable.json --slurpfile activeApps active_apps.json '
-    { "enable-module-update": true } as $force |
+    { "patches-version": "latest", "enable-module-update": true } as $force |
     ($force + . + $force) |
     with_entries(
       if .value | type == "object" then
