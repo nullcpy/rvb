@@ -587,79 +587,79 @@ merge_splits() {
 	return 0
 }
 
-_fs_8191_get() {
+_trawl_8191_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
-	local fs_url="${FLARESOLVERR_URL:-http://localhost:8191}/v1"
+	local solver_url="${TRAWL_URL:-http://localhost:8191}/v1"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
-		response=$(curl -s -X POST "$fs_url" \
+		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
 			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-				export FS_COOKIES
-				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				export CF_COOKIES
+				CF_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
 				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
 				return 0
 			fi
 		fi
-		wpr "FlareSolverr:8191 attempt $attempt/$max_retries failed for: $url"
+		wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
 	done
-	wpr "FlareSolverr:8191 failed after $max_retries attempts: $url — falling back"
+	wpr "Trawl:8191 failed after $max_retries attempts: $url — falling back"
 	return 1
 }
       
-_fs_8192_get() {
+_trawl_8192_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
-	local fs_url="${FLARESOLVERR_URL:-http://localhost:8192}/v1"
+	local solver_url="${TRAWL_URL:-http://localhost:8192}/v1"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
-		response=$(curl -s -X POST "$fs_url" \
+		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
 			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-				export FS_COOKIES
-				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				export CF_COOKIES
+				CF_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
 				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
 				return 0
 			fi
 		fi
-		wpr "FlareSolverr:8192 attempt $attempt/$max_retries failed for: $url"
+		wpr "Trawl:8192 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
 	done
-	wpr "FlareSolverr:8192 failed after $max_retries attempts: $url — falling back"
+	wpr "Trawl:8192 failed after $max_retries attempts: $url — falling back"
 	return 1
 }
 
 _byparr_8193_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4 attempt
-	local fs_url="${FLARESOLVERR_URL:-http://localhost:8193}/v1"
+	local solver_url="${TRAWL_URL:-http://localhost:8193}/v1"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
-		response=$(curl -s -X POST "$fs_url" \
+		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
 		status=$(echo "$response" | jq -r '.status // empty')
 		if [[ "$status" == "ok" ]]; then
 			html=$(echo "$response" | jq -r '.solution.response // empty')
 			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-				export FS_COOKIES
-				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				export CF_COOKIES
+				CF_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
 				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
 				return 0
 			fi
@@ -689,8 +689,8 @@ _cfb_get() {
 		if [[ "$http_code" == "200" ]]; then
 			html=$(cat "$response_file")
 			if [[ -n "$html" ]]; then
-				export FS_COOKIES
-				FS_COOKIES=$(grep -i '^x-cf-bypasser-cookies:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
+				export CF_COOKIES
+				CF_COOKIES=$(grep -i '^x-cf-bypasser-cookies:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
 				local cfb_ua
 				cfb_ua=$(grep -i '^x-cf-bypasser-user-agent:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
 				[[ -n "$cfb_ua" ]] && user_agent="$cfb_ua"
@@ -705,14 +705,14 @@ _cfb_get() {
 _fallback_get(){
 	local url=$1
 	html=$(req "$url" -) || return 1
-	FS_COOKIES=""
+	CF_COOKIES=""
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
 
 }
 _BYPARR_FAILED=0
-_FFS8191_FAILED=0
+_TRAWL8191_FAILED=0
 _CFB_FAILED=0
-_FFS8192_FAILED=0
+_TRAWL8192_FAILED=0
 _unqueued_cf_get() {
 	if [[ "$_BYPARR_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_BYPARR_ENABLED:-false}" == true ]]; then
 		_byparr_8193_get "$@" && return 0
@@ -722,15 +722,15 @@ _unqueued_cf_get() {
 		_cfb_get "$@" && return 0
 		_CFB_FAILED=1
 	fi
-	if [[ "$_FFS8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true ]]; then
-		_fs_8191_get "$@" && return 0
-		_FFS8191_FAILED=1
+	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
+		_trawl_8191_get "$@" && return 0
+		_TRAWL8191_FAILED=1
     fi
-	if [[ "$_FFS8192_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
-		_fs_8192_get "$@" && return 0
-		_FFS8192_FAILED=1
+	if [[ "$_TRAWL8192_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8192_ENABLED:-false}" == true ]]; then
+		_trawl_8192_get "$@" && return 0
+		_TRAWL8192_FAILED=1
 	fi
-	if [[ "${CF_BYPASS_SOLVER_BYPARR_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
+	if [[ "${CF_BYPASS_SOLVER_BYPARR_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_TRAWL_8192_ENABLED:-false}" == true ]]; then
 		epr "All bypass solvers failed for: $1"
 		return 1
 	else
@@ -1026,7 +1026,7 @@ dl_apkmirror() {
 
 	pr "Downloading APK: $final_url"
 	local cookie_args=()
-	[ -n "${FS_COOKIES:-}" ] && cookie_args=(--header "Cookie: $FS_COOKIES")
+	[ -n "${CF_COOKIES:-}" ] && cookie_args=(--header "Cookie: $CF_COOKIES")
 	local referer_url="$base_url$btn_url"
 	[[ "$btn_url" == http* ]] && referer_url="$btn_url"
 
@@ -1106,7 +1106,7 @@ dl_apkpure() {
 
 	pr "Downloading from APKPure: $download_url"
 	local cookie_header=()
-	[ -n "${FS_COOKIES:-}" ] && cookie_header=(-H "Cookie: $FS_COOKIES")
+	[ -n "${CF_COOKIES:-}" ] && cookie_header=(-H "Cookie: $CF_COOKIES")
 
 	local is_bundle=false
 	echo "$download_url" | grep -qi 'xapk' && is_bundle=true
