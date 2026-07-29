@@ -1659,6 +1659,9 @@ build_rv() {
 			fi
 			if [ "$missing_arch" = false ]; then
 				cp -f "$common_apk" "$stock_apk"
+				if [ -f "${common_apk}.apkm" ]; then
+					cp -f "${common_apk}.apkm" "${stock_apk}.apkm"
+				fi
 			fi
 		fi
 		if [ ! -f "$stock_apk" ]; then
