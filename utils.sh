@@ -1763,6 +1763,9 @@ build_rv() {
 			if [ -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
 				if ! unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/" || (unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/arm64-v8a/" && unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"); then
 					cp -f "$stock_apk" "$common_apk"
+					if [ -f "${stock_apk}.apkm" ]; then
+						cp -f "${stock_apk}.apkm" "${common_apk}.apkm"
+					fi
 				fi
 			fi
 		fi
