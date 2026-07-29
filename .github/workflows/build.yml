@@ -33,6 +33,10 @@ jobs:
         image: redis:alpine
         ports:
           - 6379:6379
+      byparr:
+        image: ghcr.io/thephaseless/byparr:latest
+        ports:
+          - 8193:8191
       trawl:
         image: ghcr.io/germondai/trawl:latest
         ports:
@@ -81,6 +85,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          CF_BYPASS_SOLVER_BYPARR_ENABLED: "true"
           CF_BYPASS_SOLVER_FS_8191_ENABLED: "true"
           CF_BYPASS_SOLVER_CFB_ENABLED: "true"
         run: |

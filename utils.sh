@@ -642,6 +642,35 @@ _fs_8192_get() {
 	wpr "FlareSolverr:8192 failed after $max_retries attempts: $url — falling back"
 	return 1
 }
+
+_byparr_8193_get() {
+	local url=$1 referer=${2:-}
+	local max_retries=4 attempt
+	local fs_url="${FLARESOLVERR_URL:-http://localhost:8193}/v1"
+	local extra_headers=""
+	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
+	for attempt in $(seq 1 $max_retries); do
+		local response status
+		response=$(curl -s -X POST "$fs_url" \
+			-H 'Content-Type: application/json' \
+			-d "{\"cmd\":\"request.get\",\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
+		status=$(echo "$response" | jq -r '.status // empty')
+		if [[ "$status" == "ok" ]]; then
+			html=$(echo "$response" | jq -r '.solution.response // empty')
+			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
+				export FS_COOKIES
+				FS_COOKIES=$(echo "$response" | jq -r '[.solution.cookies[] | .name + "=" + .value] | join("; ")')
+				user_agent=$(echo "$response" | jq -r '.solution.userAgent // empty')
+				return 0
+			fi
+		fi
+		wpr "Byparr:8193 attempt $attempt/$max_retries failed for: $url"
+		sleep 5
+	done
+	wpr "Byparr:8193 failed after $max_retries attempts: $url — falling back"
+	return 1
+}
+
 _cfb_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=4
@@ -680,10 +709,15 @@ _fallback_get(){
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
 
 }
+_BYPARR_FAILED=0
 _FFS8191_FAILED=0
 _CFB_FAILED=0
 _FFS8192_FAILED=0
 _unqueued_cf_get() {
+	if [[ "$_BYPARR_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_BYPARR_ENABLED:-false}" == true ]]; then
+		_byparr_8193_get "$@" && return 0
+		_BYPARR_FAILED=1
+	fi
 	if [[ "$_CFB_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true ]]; then
 		_cfb_get "$@" && return 0
 		_CFB_FAILED=1
@@ -696,7 +730,7 @@ _unqueued_cf_get() {
 		_fs_8192_get "$@" && return 0
 		_FFS8192_FAILED=1
 	fi
-	if [[ "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
+	if [[ "${CF_BYPASS_SOLVER_BYPARR_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
 		epr "All bypass solvers failed for: $1"
 		return 1
 	else
