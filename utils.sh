@@ -552,26 +552,25 @@ _patches_list_versions() {
 		return 0
 	fi
 
-	# Build arg strings for each jar in space-separated patches_jar
-	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	unset IFS
-	local p_args_short="" p_args_long=""
-	for j in "${p_jars[@]}"; do
-		p_args_short+="-p '$j' "
-		p_args_long+="--patches '$j' "
-	done
-	# Try long form (--patches) with and without -b, then short form (-p)
-	if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" $extra_args -b 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_long -f "'$pkg_name'" $extra_args 2>&1); then
-			if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" $extra_args -b 2>&1); then
-				if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_short -f "'$pkg_name'" $extra_args 2>&1); then
-					if ! op=$(eval java -jar "'$cli_jar'" list-versions $(echo "$patches_jar" | awk '{print $1}') -f "'$pkg_name'" $extra_args 2>&1); then
-						epr "Could not list versions $cli_jar: '$op'"
-						return 1
-					fi
-				fi
-			fi
+	
+	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+		local p_args_morphe=""
+		for j in "${p_jars[@]}"; do
+			p_args_morphe+="--patches '$j' "
+		done
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_morphe -f "'$pkg_name'" $extra_args 2>&1); then
+			epr "Could not list versions $cli_jar: '$op'"
+			return 1
+		fi
+	else
+		local p_args_revanced=""
+		for j in "${p_jars[@]}"; do
+			p_args_revanced+="-p '$j' "
+		done
+		if ! op=$(eval java -jar "'$cli_jar'" list-versions -b $p_args_revanced -f "'$pkg_name'" $extra_args 2>&1); then
+			epr "Could not list versions $cli_jar: '$op'"
+			return 1
 		fi
 	fi
 	echo "$op"
@@ -595,27 +594,24 @@ _patches_list() {
 		echo "Name: xposed-module-dummy"
 		return 0
 	fi
-	# Build arg strings for each jar in space-separated patches_jar
-	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	unset IFS
-	local p_args_short="" p_args_long="" p_args_pos=""
-	for j in "${p_jars[@]}"; do
-		p_args_short+="-p '$j' "
-		p_args_long+="--patches '$j' "
-		p_args_pos+="'$j' "
-	done
-	# Try positional (morphe-desktop), then --patches with/without -b, then -p
-	if ! op=$(eval java -jar "'$cli_jar'" list-patches --with-packages --with-versions $p_args_pos --filter-package-name "'$pkg_name'" 2>&1); then
-		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long --packages --versions --options -f "'$pkg_name'" -b 2>&1); then
-			if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_long --filter-package-name "'$pkg_name'" --with-versions --with-packages 2>&1); then
-				if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_short --packages --versions --options -f "'$pkg_name'" -b 2>&1); then
-					if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_short --filter-package-name "'$pkg_name'" --versions --packages -b 2>&1); then
-						epr "Could not get patches list $cli_jar: '$op'"
-						return 1
-					fi
-				fi
-			fi
+	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+		local p_args_morphe=""
+		for j in "${p_jars[@]}"; do
+			p_args_morphe+="--patches '$j' "
+		done
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_morphe -f "'$pkg_name'" --with-versions --with-packages 2>&1); then
+			epr "Could not get patches list $cli_jar: '$op'"
+			return 1
+		fi
+	else
+		local p_args_revanced=""
+		for j in "${p_jars[@]}"; do
+			p_args_revanced+="-p '$j' "
+		done
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches -b $p_args_revanced --packages --versions --options -f "'$pkg_name'" 2>&1); then
+			epr "Could not get patches list $cli_jar: '$op'"
+			return 1
 		fi
 	fi
 	echo "$op"
