@@ -414,15 +414,15 @@ Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
 
 <details>
-<summary id="calorie-counter-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=00bb2a&logo=soundcloud&logoColor=white&style=flat"></summary>
+<summary id="calorie-counter-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.6.0.1-gray?labelColor=00bb2a&logo=soundcloud&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
-- AMOLED dark theme
-- Disable telemetry
-- Enable SoundCloud Go
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260108)<br>
+Patches: [kondratjev/patches-1.17.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.17.0)
+- Disable community tab
+- Disable force update dialog
+- Unlock Premium
 </blockquote>
 </details>
 
@@ -1997,15 +1997,15 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
 
 <details>
-<summary id="soundcloud-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.04.27.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.06.25.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
-- AMOLED dark theme
-- Disable telemetry
-- Enable SoundCloud Go
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260108)<br>
+Patches: [kondratjev/patches-1.17.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.17.0)
+- Disable analytics
+- Disable consent popup
+- Enable SoundCloud Go+
 </blockquote>
 </details>
 
