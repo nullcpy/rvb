@@ -12,6 +12,7 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android"
 apkcombo-dlurl = "https://apkcombo.com/fatsecret/com.fatsecret.android"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
 
 [soundcloud-morphe-alt]
 enabled = true
@@ -27,3 +28,4 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
 apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"

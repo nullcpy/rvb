@@ -1,20 +1,36 @@
 parallel-jobs = 1
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[youtube-morphe-exp]
+[calorie-counter-morphe]
 enabled = true
-app-name = "youtube"
-rv-brand = "morphe-exp"
-build-mode = "both"
+app-name = "calorie-counter"
+rv-brand = "morphe"
+build-mode = "apk"
 arch = "both"
-version = "exp"
-patches-source = "MorpheApp/morphe-patches"
+patches-source = "kondratjev/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://fatsecret-calorie-counter.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
-apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
+apkpure-dlurl = "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android"
+apkcombo-dlurl = "https://apkcombo.com/fatsecret/com.fatsecret.android"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
+
+[soundcloud-morphe-alt]
+enabled = true
+app-name = "soundcloud"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "kondratjev/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
+apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"
