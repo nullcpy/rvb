@@ -696,13 +696,15 @@ _unqueued_cf_get() {
 		_fs_8192_get "$@" && return 0
 		_FFS8192_FAILED=1
 	fi
-	if [[ "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
-    	wpr "All bypass solvers failed for: $1 — falling back to direct request"
+	if [[ "${CF_BYPASS_SOLVER_FS_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_FS_8192_ENABLED:-false}" == true ]]; then
+		epr "All bypass solvers failed for: $1"
+		return 1
 	else
 		wpr "No bypass solvers enabled, falling back to direct request for: $1"
+		_fallback_get "$@" && return 0
 	fi
-	_fallback_get "$@" && return 0
 	epr "All methods failed for: $1"
+	return 1
 }
 _cf_get() {
 	mkdir -p "$TEMP_DIR"
