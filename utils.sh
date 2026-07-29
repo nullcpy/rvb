@@ -678,34 +678,7 @@ _trawl_8191_get() {
 	wpr "Trawl:8191 failed after $max_retries attempts: $url — falling back"
 	return 1
 }
-      
-_trawl_8192_get() {
-	local url=$1 referer=${2:-}
-	local max_retries=4 attempt
-	local solver_url="${TRAWL_URL:-http://localhost:8192}/scrape"
-	local extra_headers=""
-	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
-	for attempt in $(seq 1 $max_retries); do
-		local response status
-		response=$(curl -s -X POST "$solver_url" \
-			-H 'Content-Type: application/json' \
-			-d "{\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
-		status=$(echo "$response" | jq -r '.statusCode // empty')
-		if [[ "$status" == "200" ]]; then
-			html=$(echo "$response" | jq -r '.html // empty')
-			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-				export CF_COOKIES
-				CF_COOKIES=$(echo "$response" | jq -r '[.cookies[] | .name + "=" + .value] | join("; ")')
-				user_agent=$(echo "$response" | jq -r '.userAgent // empty')
-				return 0
-			fi
-		fi
-		wpr "Trawl:8192 attempt $attempt/$max_retries failed for: $url"
-		sleep 5
-	done
-	wpr "Trawl:8192 failed after $max_retries attempts: $url — falling back"
-	return 1
-}
+
 
 
 _cfb_get() {
@@ -748,21 +721,16 @@ _fallback_get(){
 }
 _TRAWL8191_FAILED=0
 _CFB_FAILED=0
-_TRAWL8192_FAILED=0
 _unqueued_cf_get() {
 	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
 		_trawl_8191_get "$@" && return 0
 		_TRAWL8191_FAILED=1
     fi
-	if [[ "$_TRAWL8192_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8192_ENABLED:-false}" == true ]]; then
-		_trawl_8192_get "$@" && return 0
-		_TRAWL8192_FAILED=1
-	fi
 	if [[ "$_CFB_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true ]]; then
 		_cfb_get "$@" && return 0
 		_CFB_FAILED=1
 	fi
-	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_TRAWL_8192_ENABLED:-false}" == true ]]; then
+	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true ]]; then
 		epr "All bypass solvers failed for: $1"
 		return 1
 	else
