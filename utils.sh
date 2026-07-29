@@ -56,7 +56,6 @@ abort() {
 	epr "ABORT: ${1-}"
 	rm -rf ./${TEMP_DIR}/*tmp.* ./${TEMP_DIR}/*/*tmp.* ./${TEMP_DIR}/*-temporary-files ./${TEMP_DIR}/*.apk-temporary-files ./*-temporary-files
 	trap - SIGTERM SIGINT EXIT
-	kill -9 -- -$$ 2>/dev/null
 	exit 1
 }
 java() { env -i PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" java --enable-native-access=ALL-UNNAMED "$@"; }
@@ -169,15 +168,17 @@ _get_prebuilts() {
 	rv_rel=$(source_release_api_base "$host" "$src") || return 1
 	if [ "$ver" = "dev" ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-		ver=$(source_release_pick_from_list "$host" dev <<<"$resp" | jq -r '.tag_name') || true
+		release=$(source_release_pick_from_list "$host" dev <<<"$resp") || true
+		ver=$(jq -r '.tag_name' <<<"$release") || true
 		if [ -z "$ver" ] || [ "$ver" = "null" ]; then
 			ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
+			release="" # Clear release if we had to fallback to get_highest_ver
 		fi
 	fi
 	if [ "$ver" = "latest" ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 		release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
-	else
+	elif [ -z "${release:-}" ]; then
 		rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
 		release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 	fi
@@ -251,15 +252,17 @@ _get_prebuilts() {
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
 		if [ "$ver" = "dev" ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-			ver=$(source_release_pick_from_list "$host" dev <<<"$resp" | jq -r '.tag_name') || true
+			release=$(source_release_pick_from_list "$host" dev <<<"$resp") || true
+			ver=$(jq -r '.tag_name' <<<"$release") || true
 			if [ -z "$ver" ] || [ "$ver" = "null" ]; then
 				ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
+				release="" # Clear release if we had to fallback to get_highest_ver
 			fi
 		fi
 		if [ "$ver" = "latest" ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 			release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
-		else
+		elif [ -z "${release:-}" ]; then
 			rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
 			release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 		fi
@@ -433,8 +436,12 @@ _req() {
 		if [ -f "$op" ]; then return; fi
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
 		if [ -f "$dlp" ]; then
-			while [ -f "$dlp" ]; do sleep 1; done
-			return
+			local wait_c=0
+			while [ -f "$dlp" ] && [ $wait_c -lt 300 ]; do 
+				sleep 1
+				wait_c=$((wait_c+1))
+			done
+			if [ -f "$op" ]; then return 0; fi
 		fi
 	fi
 	if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 --fail -s -S "$@" "$ip" -o "$dlp"; then
@@ -655,7 +662,7 @@ _trawl_8191_get() {
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
-		response=$(curl -s -X POST "$solver_url" \
+		response=$(curl -m 90 -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"url\":\"$url\",\"maxTimeout\":60000,\"skipHttp\":true${extra_headers}}") || true
 		status=$(echo "$response" | jq -r '.statusCode // empty')
