@@ -482,8 +482,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260109)<br>
-Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1502)
+[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260111)<br>
+Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1503)
 </blockquote>
 </details>
 
