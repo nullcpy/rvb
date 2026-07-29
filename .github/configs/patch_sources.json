@@ -204,7 +204,12 @@
     "pre_date": "",
     "blocked": false
   },
-    "kondratjev": {
-    "repo": "kondratjev/morphe-patches"
+  "kondratjev": {
+    "repo": "kondratjev/morphe-patches",
+    "stable": "v1.17.0",
+    "stable_date": "2026-07-05T13:34:07Z",
+    "prerelease": "v1.17.0-dev.1",
+    "pre_date": "2026-07-05T13:27:55Z",
+    "blocked": false
   }
 }

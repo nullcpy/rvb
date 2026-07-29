@@ -438,7 +438,7 @@
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
   "discord-xposed": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "discord",
     "rv-brand": "xposed",
     "build-mode": "apk",
@@ -568,7 +568,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1010,6 +1010,34 @@
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
   },
+  "calorie-counter-morphe": {
+    "enabled": true,
+    "app-name": "calorie-counter",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "kondratjev/morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://fatsecret-calorie-counter.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android",
+    "apkcombo-dlurl": "https://apkcombo.com/fatsecret/com.fatsecret.android"
+  },
+  "soundcloud-morphe-alt": {
+    "enabled": true,
+    "app-name": "soundcloud",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "kondratjev/morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://soundcloud.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android",
+    "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
+  },
   "youtube-morphe-nord": {
     "enabled": false,
     "app-name": "youtube",
@@ -1079,7 +1107,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube",
+    "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
+    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-music-morphe-exp": {
     "enabled": false,
@@ -1092,7 +1124,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music",
+    "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
+    "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "reddit-morphe-exp": {
     "enabled": false,
