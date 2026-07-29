@@ -661,7 +661,7 @@ _trawl_8191_get() {
 		local response status
 		response=$(curl -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
-			-d "{\"url\":\"$url\",\"maxTimeout\":60000${extra_headers}}") || true
+			-d "{\"url\":\"$url\",\"maxTimeout\":60000,\"skipHttp\":true${extra_headers}}") || true
 		status=$(echo "$response" | jq -r '.statusCode // empty')
 		if [[ "$status" == "200" ]]; then
 			html=$(echo "$response" | jq -r '.html // empty')
@@ -722,14 +722,14 @@ _fallback_get(){
 _TRAWL8191_FAILED=0
 _CFB_FAILED=0
 _unqueued_cf_get() {
-	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
-		_trawl_8191_get "$@" && return 0
-		_TRAWL8191_FAILED=1
-    fi
 	if [[ "$_CFB_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true ]]; then
 		_cfb_get "$@" && return 0
 		_CFB_FAILED=1
 	fi
+	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
+		_trawl_8191_get "$@" && return 0
+		_TRAWL8191_FAILED=1
+    fi
 	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true ]]; then
 		epr "All bypass solvers failed for: $1"
 		return 1
