@@ -122,6 +122,17 @@ source_release_pick_from_list() {
 	esac
 }
 
+get_apkeditor() {
+	if [ -f "$TEMP_DIR/apkeditor.jar" ]; then return 0; fi
+	local api_resp dl_url
+	api_resp=$(gh_req "https://api.github.com/repos/REAndroid/APKEditor/releases/latest" -) || true
+	dl_url=$(echo "$api_resp" | jq -r '.assets[]? | select(.name | endswith(".jar")) | .browser_download_url' | head -1) || true
+	if [ -z "$dl_url" ] || [ "$dl_url" = "null" ]; then
+		dl_url="https://github.com/REAndroid/APKEditor/releases/download/V1.4.9/APKEditor-1.4.9.jar"
+	fi
+	gh_dl "$TEMP_DIR/apkeditor.jar" "$dl_url" >/dev/null || return 1
+}
+
 get_prebuilts() {
 	local cache_key="${1}_${2}_${3}_${4}_${5}_${6}"
 	if [ -n "${__PREBUILTS_CACHE__["$cache_key"]:-}" ]; then
@@ -625,7 +636,7 @@ merge_splits() {
 		return 0
 	fi
 	pr "Merging splits"
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.9/APKEditor-1.4.9.jar" >/dev/null || return 1
+	get_apkeditor || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
 		epr "APKEditor error: $OP"
 		return 1
@@ -1188,7 +1199,7 @@ _apkpure_install_xapk() {
 		epr "Downloaded XAPK is not a valid zip (Cloudflare block?): $xapk"
 		return 1
 	fi
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.9/APKEditor-1.4.9.jar" >/dev/null || return 1
+	get_apkeditor || return 1
 	if unzip -l "$xapk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*base\.apk$'; then
 		pr "Extracting base.apk from XAPK"
 		unzip -p "$xapk" base.apk > "$output" || return 1
@@ -1781,13 +1792,21 @@ build_rv() {
 				if [ -f "${stock_apk}.apkm" ]; then
 					rm -rf "${stock_apk}-zip" || :
 					unzip -j "${stock_apk}.apkm" -d "${stock_apk}-zip" >/dev/null
-					for a in "${stock_apk}"-zip/*.apk; do
-						if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
-							epr "Signature mismatch on $a: $sig_op. Rejecting download from $dl_p..."
+					if [ -f "${stock_apk}-zip/base.apk" ]; then
+						if ! sig_op=$(check_sig "${stock_apk}-zip/base.apk" "$pkg_name" 2>&1); then
+							epr "Signature mismatch on base.apk: $sig_op. Rejecting download from $dl_p..."
 							sig_ok=false
-							break
 						fi
-					done
+					else
+						for a in "${stock_apk}"-zip/*.apk; do
+							if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
+								epr "Signature mismatch on $a: $sig_op. Rejecting download from $dl_p..."
+								sig_ok=false
+								break
+							fi
+							break # Only check one APK if no base.apk
+						done
+					fi
 					rm -rf "${stock_apk}-zip" || :
 				else
 					if ! sig_op=$(check_sig "$stock_apk" "$pkg_name" 2>&1); then
@@ -1819,12 +1838,20 @@ build_rv() {
 	if [ -f "${stock_apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
 		unzip -j "${stock_apk}.apkm" -d "${stock_apk}-zip" >/dev/null
-		for a in "${stock_apk}"-zip/*.apk; do
-			if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
-				epr "Not building $table, apk signature mismatch '$a': $sig_op"
+		if [ -f "${stock_apk}-zip/base.apk" ]; then
+			if ! sig_op=$(check_sig "${stock_apk}-zip/base.apk" "$pkg_name" 2>&1); then
+				epr "Not building $table, apk signature mismatch 'base.apk': $sig_op"
 				return 0
 			fi
-		done
+		else
+			for a in "${stock_apk}"-zip/*.apk; do
+				if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
+					epr "Not building $table, apk signature mismatch '$a': $sig_op"
+					return 0
+				fi
+				break # Only check one APK if no base.apk
+			done
+		fi
 		rm -rf "${stock_apk}-zip" || :
 	else
 		if ! sig_op=$(check_sig "$stock_apk" "$pkg_name" 2>&1); then
