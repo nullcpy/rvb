@@ -31,8 +31,8 @@ arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.stream"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
 
 [peacock-morphe-androidtv]
 enabled = true 

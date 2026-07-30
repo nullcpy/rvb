@@ -2,19 +2,6 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[prime-video-morphe-androidtv]
-enabled = true 
-app-name = "prime-video"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "arm-v7a"
-included-patches = "'Clone Prime Video'"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi 320dpi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
-
 [hbomax-morphe-androidtv]
 enabled = true 
 app-name = "hbomax"
@@ -24,44 +11,5 @@ arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.stream"
-
-[peacock-morphe-androidtv]
-enabled = true 
-app-name = "peacock"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
-# apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
-apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
-
-[tubi-morphe-androidtv]
-enabled = true 
-app-name = "tubi"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
-
-[vix-morphe-androidtv]
-enabled = true 
-app-name = "vix"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
 
