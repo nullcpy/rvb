@@ -616,7 +616,7 @@ _patches_list() {
 		for j in "${p_jars[@]}"; do
 			p_args_revanced+="-p '$j' "
 		done
-		if ! op=$(eval java -jar "'$cli_jar'" list-patches -b $p_args_revanced --packages --versions --options -f "'$pkg_name'" 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches -b $p_args_revanced --packages --versions --options --filter-package-name="'$pkg_name'" 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
