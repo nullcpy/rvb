@@ -32,6 +32,7 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/max-stream-hbo-tv-movies-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.stream"
 
 [peacock-morphe-androidtv]
 enabled = true 
@@ -45,6 +46,7 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
 # apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
 apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
 
 [tubi-morphe-androidtv]
 enabled = true 
@@ -68,6 +70,7 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
 
 [plutotv-morphe-androidtv]
 enabled = true 
