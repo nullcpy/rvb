@@ -820,8 +820,9 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260118)<br>
+[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260119)<br>
 Patches: [ajstrick81/patches-1.15.0.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.16.0)
+- HBO Max - Disable Ads
 </blockquote>
 </details>
 
