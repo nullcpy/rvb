@@ -1440,6 +1440,7 @@ get_direct_resp() { __DIRECT_APKNAME__=$(awk -F/ '{print $NF}' <<<"$1"); }
 
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 cli_jar=$4 patches_jar=$5 cli_source=$6
+	local per_bundle_ed="${7:-}"
 	local tmp_dir="${CWD}/${patched_apk}-temporary-files"
 	local IFS=$'\n'
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
@@ -1471,17 +1472,35 @@ patch_apk() {
 		return 1
 	fi
 
-	local p_args_long="" p_args_short=""
-	for j in "${p_jars[@]}"; do
-		p_args_long+=" --patches '$j'"
-		p_args_short+=" -p '$j'"
-	done
-
 	local base_cmd="java -jar '$cli_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=ks.keystore \
 --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc"
 
-	local cmd_long="${base_cmd}${p_args_long} $patcher_args"
-	local cmd_short="${base_cmd}${p_args_short} $patcher_args"
+	local -a ed_parts=()
+	if [ -n "$per_bundle_ed" ]; then
+		local IFS='|'
+		read -ra ed_parts <<< "$per_bundle_ed"
+		unset IFS
+	fi
+
+	local p_args_long="" p_args_short=""
+	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+		for ((i=0; i<${#p_jars[@]}; i++)); do
+			local j="${p_jars[$i]}"
+			local ed="${ed_parts[$i]:-}"
+			p_args_long+=" --patches '$j'${ed}"
+			p_args_short+=" -p '$j'${ed}"
+		done
+		local cmd_long="${base_cmd}${p_args_long} $patcher_args"
+		local cmd_short="${base_cmd}${p_args_short} $patcher_args"
+	else
+		for j in "${p_jars[@]}"; do
+			p_args_long+=" --patches '$j'"
+			p_args_short+=" -p '$j'"
+		done
+		local all_ed="${ed_parts[*]}"
+		local cmd_long="${base_cmd}${p_args_long} ${all_ed} $patcher_args"
+		local cmd_short="${base_cmd}${p_args_short} ${all_ed} $patcher_args"
+	fi
 
 	# TODO: remove this later — revanced-cli needs -b to bypass build provenance checks
 	local cli_name=$(basename "$cli_jar")
@@ -1568,10 +1587,42 @@ build_rv() {
 	local arch_list=("$arch_f")
 	[ "$arch_f" = "auto" ] && arch_list=("all" "arm64-v8a" "arm-v7a")
 
+	local IFS=$'\n'
+	local p_jars_arr=($(echo "${args[ptjar]}" | tr ' ' '\n' | grep -v '^$'))
+	unset IFS
+	local n_bundles=${#p_jars_arr[@]}
+
+	local -a per_bundle_ed_args=()
+	local exc_str="${args[excluded_patches]}"
+	local inc_str="${args[included_patches]}"
+
+	if [[ "$exc_str" == *"|"* ]] || [[ "$inc_str" == *"|"* ]]; then
+		local -a exc_parts=() inc_parts=()
+		IFS='|' read -ra exc_parts <<< "$exc_str"
+		IFS='|' read -ra inc_parts <<< "$inc_str"
+		
+		for ((bi=0; bi<n_bundles; bi++)); do
+			local bundle_ed=""
+			local bp_exc="${exc_parts[$bi]:-}"
+			local bp_inc="${inc_parts[$bi]:-}"
+			bp_exc=$(echo "$bp_exc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+			bp_inc=$(echo "$bp_inc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+			if [ -n "$bp_exc" ]; then bundle_ed+=" $(join_args "$bp_exc" -d)"; fi
+			if [ -n "$bp_inc" ]; then bundle_ed+=" $(join_args "$bp_inc" -e)"; fi
+			[ "${args[exclusive_patches]}" = true ] && bundle_ed+=" --exclusive"
+			per_bundle_ed_args+=("$bundle_ed")
+		done
+	else
+		local global_ed=""
+		if [ -n "$exc_str" ]; then global_ed+=" $(join_args "$exc_str" -d)"; fi
+		if [ -n "$inc_str" ]; then global_ed+=" $(join_args "$inc_str" -e)"; fi
+		[ "${args[exclusive_patches]}" = true ] && global_ed+=" --exclusive"
+		for ((bi=0; bi<n_bundles; bi++)); do
+			per_bundle_ed_args+=("$global_ed")
+		done
+	fi
+
 	local p_patcher_args=()
-	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
-	if [ "${args[included_patches]}" ]; then p_patcher_args+=("$(join_args "${args[included_patches]}" -e)"); fi
-	[ "${args[exclusive_patches]}" = true ] && p_patcher_args+=("--exclusive")
 
 	local tried_dl=()
 	if [ "${args[pkg_name]}" ]; then
@@ -1835,6 +1886,7 @@ build_rv() {
 	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
 	for build_mode in "${build_mode_arr[@]}"; do
 		patcher_args=("${p_patcher_args[@]}")
+		local -a cur_per_bundle_ed_args=("${per_bundle_ed_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
 		if [ ${#microg_patches[@]} -gt 0 ]; then
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
@@ -1843,11 +1895,15 @@ build_rv() {
 		fi
 		if [ ${#microg_patches[@]} -gt 0 ]; then
 			for p in "${microg_patches[@]}"; do
+				local mg_arg=""
 				if [ "$build_mode" = apk ]; then
-					patcher_args+=("-e \"$p\"")
+					mg_arg=" -e \"$p\""
 				elif [ "$build_mode" = module ]; then
-					patcher_args+=("-d \"$p\"")
+					mg_arg=" -d \"$p\""
 				fi
+				for ((bi=0; bi<n_bundles; bi++)); do
+					cur_per_bundle_ed_args[$bi]+="$mg_arg"
+				done
 			done
 		fi
 		if [ "$build_mode" = module ]; then
@@ -1870,9 +1926,15 @@ build_rv() {
 			zip -d "$stock_apk_to_patch" "lib/x86_64/*" "lib/x86/*" >/dev/null 2>&1 || :
 		fi
 
+		local per_bundle_ed_joined=""
+		for ((bi=0; bi<n_bundles; bi++)); do
+			[ $bi -gt 0 ] && per_bundle_ed_joined+="|"
+			per_bundle_ed_joined+="${cur_per_bundle_ed_args[$bi]}"
+		done
+
 		local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
 		if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
-			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}" "${args[cli_source]}"; then
+			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}" "${args[cli_source]}" "$per_bundle_ed_joined"; then
 				epr "Building '${table}' failed!"
 				return 0
 			fi

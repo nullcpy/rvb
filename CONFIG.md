@@ -97,10 +97,15 @@ patches-version = "latest"                        # applies to all sources
 patches-version = "'latest' 'v1.2.3'"             # per-source versions
 ```
 
-> [!WARNING]
-> **Current Limitations**: 
-> Due to how the underlying CLIs handle arguments, `included-patches` and `excluded-patches` currently only apply to the **last** patch bundle in your `patches-source` list. 
-> Per-bundle selective inclusion/exclusion (e.g. including one patch from the first bundle, and excluding another from the second) is not currently supported in this config format. If you use multiple sources, it is recommended to apply all patches from the preceding bundles.
+> [!TIP]
+> **Per-bundle patch selection**: When using multiple sources, separate patch lists 
+> with `|` to control each bundle independently:
+> ```toml
+> patches-source = "'MorpheApp/morphe-patches' 'other/patches'"
+> excluded-patches = "'Patch A' | 'Patch B'"    # Patch A from bundle 1, Patch B from bundle 2
+> included-patches = "'' | 'Patch X'"           # nothing from bundle 1, Patch X from bundle 2
+> ```
+> Without `|`, the same list applies to all bundles (backward compatible).
 
 ## Xposed Modules (NPatch / LSPatch)
 
