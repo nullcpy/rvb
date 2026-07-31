@@ -3224,8 +3224,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260089)<br>
-Patches: [anddea/patches-4.2.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.8)
+[Release 2026-07-31](https://github.com/nullcpy/rvb/releases/tag/260121)<br>
+Patches: [anddea/patches-4.2.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.9)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3286,6 +3286,7 @@ Patches: [anddea/patches-4.2.0-dev.8.mpp](https://github.com/anddea/revanced-pat
 - Translations for YouTube
 - Video playback
 - Voice Over Translation
+- Wide search bar
 - Visual preferences icons for YouTube
 - Reload video
 - Settings for YouTube
@@ -3836,8 +3837,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-24](https://github.com/nullcpy/rvb/releases/tag/260089)<br>
-Patches: [anddea/patches-4.2.0-dev.8.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.8)
+[Release 2026-07-31](https://github.com/nullcpy/rvb/releases/tag/260121)<br>
+Patches: [anddea/patches-4.2.0-dev.9.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.9)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
