@@ -1779,8 +1779,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1805,8 +1805,8 @@ Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -2888,8 +2888,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3136,12 +3136,12 @@ Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patc
 </details>
 
 <details>
-<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.29.366-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
+<summary id="youtube-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.31.523-gray?labelColor=FF0000&logo=youtube&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3743,8 +3743,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3790,8 +3790,8 @@ Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
-Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260125)<br>
+Patches: [MorpheApp/patches-1.38.1-dev.1.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.1-dev.1)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
