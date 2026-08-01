@@ -1679,29 +1679,68 @@ build_rv() {
 	local p_patcher_args=()
 
 	local tried_dl=()
+	local list_patches=""
+
 	if [ "${args[pkg_name]}" ]; then
 		pkg_name="${args[pkg_name]}"
 	else
-		for dl_p in "${DL_SRCS[@]}"; do
-			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}" || ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
-				args[${dl_p}_dlurl]=""
-				epr "ERROR: Could not find ${table} in ${dl_p}"
-				continue
-			fi
-			tried_dl+=("$dl_p")
-			dl_from=$dl_p
-			break
-		done
+		if [ -n "${args[github_dlurl]}" ] && [[ "${args[github_dlurl]}" == *"releases/tag/"* ]]; then
+			local tmp="${args[github_dlurl]%/}"
+			pkg_name="${tmp##*/}"
+		elif [ -n "${args[archive_dlurl]}" ] && [[ "${args[archive_dlurl]}" == *"apks/"* ]]; then
+			local tmp="${args[archive_dlurl]%/}"
+			pkg_name="${tmp##*/}"
+		fi
 	fi
 
-	if [ -z "$pkg_name" ]; then
-		epr "empty pkg name, not building ${table}."
+	# If we found pkg_name locally, check patches now to skip unsupported apps early
+	if [ -n "$pkg_name" ]; then
+		pr "Package name of '${table}' is '$pkg_name' (extracted)"
+		
+		# We don't abort immediately on failure because the extracted pkg_name might be a version tag (e.g. v1.0.0)
+		if ! list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || [ ${#list_patches} -lt 10 ]; then
+			if [[ "$pkg_name" == *"."*"."* ]] || [ -n "${args[pkg_name]}" ]; then
+				# If explicitly set in config, or highly likely a real package name, we trust it and abort.
+				epr "No patches found for '$pkg_name'. Skipping app."
+				return 0
+			else
+				wpr "Extracted '$pkg_name' yielded no patches. Falling back to HTTP scraping..."
+				pkg_name=""
+				list_patches=""
+			fi
+		fi
+	fi
+
+	# Establish dl_from and fetch required HTML responses
+	for dl_p in "${DL_SRCS[@]}"; do
+		if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+		if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
+			args[${dl_p}_dlurl]=""
+			epr "ERROR: Could not get response for ${table} in ${dl_p}"
+			continue
+		fi
+		
+		# If pkg_name is still empty (e.g. only apkmirror was provided), scrape it now
+		if [ -z "$pkg_name" ]; then
+			if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
+				args[${dl_p}_dlurl]=""
+				epr "ERROR: Could not find pkg_name for ${table} in ${dl_p}"
+				continue
+			fi
+			pr "Package name of '${table}' is '$pkg_name'"
+			
+			list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+		fi
+		
+		tried_dl+=("$dl_p")
+		dl_from=$dl_p
+		break
+	done
+
+	if [ -z "$dl_from" ]; then
+		epr "ERROR: No valid download source found for ${table}."
 		return 0
 	fi
-	pr "Package name of '${table}' is '$pkg_name'"
-	local list_patches
-	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
 	local get_latest_ver=false
 	if [ "$version_mode" = auto ]; then
 		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
