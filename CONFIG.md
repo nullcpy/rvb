@@ -32,7 +32,6 @@ cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "l
 
 [Some-App]
 app-name = "SomeApp" # if set, release name becomes SomeApp instead of Some-App. default is same as table name, which is 'Some-App' here.
-pkg-name = "com.some.app" # optional: explicitly set package name to skip extraction/scraping.
 enabled = true       # whether to build the app. default: true
 build-mode = "both"  # 'both', 'apk' or 'module'. default: apk
 
