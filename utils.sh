@@ -1727,9 +1727,12 @@ build_rv() {
 	pr "Package name of '${table}' is '$pkg_name'"
 	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
 	
-	if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
-		epr "No app-specific patches found for '$pkg_name'. Skipping completely."
-		return 0
+	local cli_source_l="${args[cli_source],,}"
+	if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]]; then
+		if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+			epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+			return 0
+		fi
 	fi
 
 	local get_latest_ver=false
