@@ -1712,7 +1712,7 @@ build_rv() {
 	elif [ "$version_mode" = exp ]; then
 		local cli_source_l="${args[cli_source],,}"
 		if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
-			wpr "ReVanced CLI does not support experimental mode. Skipping '$pkg_name'."
+			wpr "ReVanced CLI does not support experimental versions."
 			return 0
 		fi
 		if ! version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
