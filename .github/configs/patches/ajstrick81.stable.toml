@@ -8,6 +8,7 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
 
 [prime-video-morphe-androidtv]
 enabled = true 
