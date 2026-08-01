@@ -1710,12 +1710,17 @@ build_rv() {
 			return
 		elif [ -z "$version" ]; then get_latest_ver=true; fi
 	elif [ "$version_mode" = exp ]; then
+		local cli_source_l="${args[cli_source],,}"
+		if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+			wpr "ReVanced CLI does not support experimental mode. Skipping '$pkg_name'."
+			return 0
+		fi
 		if ! version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
 			epr "get_patch_exp_ver failed"
 		fi
 		if [ -z "$version" ]; then
-			wpr "No exp version found for '$pkg_name', falling back to latest."
-			get_latest_ver=true
+			epr "No exp version found for '$pkg_name', skipping."
+			return 0
 		fi
 	elif isoneof "$version_mode" latest beta; then
 		get_latest_ver=true
