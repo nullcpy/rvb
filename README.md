@@ -1779,8 +1779,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1805,8 +1805,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -2888,8 +2888,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -2972,8 +2972,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3047,6 +3047,7 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Theme
 - Video quality
 - Voice over translation
+- Wide search bar
 </blockquote>
 </details>
 
@@ -3055,8 +3056,8 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-26](https://github.com/nullcpy/rvb/releases/tag/260096)<br>
-Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3130,6 +3131,7 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
 - Theme
 - Video quality
 - Voice over translation
+- Wide search bar
 </blockquote>
 </details>
 
@@ -3138,8 +3140,8 @@ Patches: [MorpheApp/patches-1.37.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3741,8 +3743,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3788,8 +3790,8 @@ Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-07-30](https://github.com/nullcpy/rvb/releases/tag/260120)<br>
-Patches: [MorpheApp/patches-1.38.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.3)
+[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260124)<br>
+Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
