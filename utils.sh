@@ -1726,12 +1726,18 @@ build_rv() {
 
 	pr "Package name of '${table}' is '$pkg_name'"
 	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+	
+	if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+		epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+		return 0
+	fi
+
 	local get_latest_ver=false
 	if [ "$version_mode" = auto ]; then
 		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
 			"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
-			epr "get_patch_last_supported_ver failed '$list_patches'"
-			return
+			epr "get_patch_last_supported_ver failed for '$pkg_name'"
+			return 0
 		elif [ -z "$version" ]; then get_latest_ver=true; fi
 	elif [ "$version_mode" = exp ]; then
 		local cli_source_l="${args[cli_source],,}"
