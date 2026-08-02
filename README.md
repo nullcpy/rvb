@@ -700,16 +700,34 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 #### [Morphe (Gboard-patches)](https://github.com/jasonwu1994/Gboard-patches)
 
 <details>
-<summary id="gboard-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.1.5.887912998.release-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.7.7.932364120.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
-Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
-
-- Always-incognito mode
-- Enable OCR feature
-- Enable clipboard in incognito
+[Release 2026-08-02](https://github.com/nullcpy/rvb/releases/tag/260128)<br>
+Patches: [jasonwu1994/patches-2.4.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.4.0)
+- AI Writing Tools
+- Add Gboard Signature Bypass
+- Advanced Voice Typing
+- Clipboard Enhancements
+- Custom Symbols
+- Developer options
+- Emojis, stickers & GIFs Tab Order
+- Enable Inline Autofill Suggestions
+- English QWERTY Up-Flick Uppercase
+- Grammar Checker
+- Inline Suggestions
+- Key Shape Selection
+- Latin Globe Key Ignore Interval
+- Long-Press Editing Shortcuts
+- Package Rename
+- Settings Homepage Override
+- Swipeable Custom Top Row
+- Use Bluetooth Microphone
+- Web Clipboard
+- Zhuyin Bottom Row Key Sizes
+- Zhuyin Quick Traditional/Simplified Toggle
+- Zhuyin Slide Input
 </blockquote>
 </details>
 
