@@ -133,6 +133,20 @@
     "dpi": "nodpi anydpi auto",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
+  "gboard-morphe-alt": {
+    "enabled": false,
+    "app-name": "gboard",
+    "rv-brand": "morphe-alt",
+    "build-mode": "both",
+    "arch": "arm64-v8a",
+    "patches-source": "jasonwu1994/Gboard-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+  },
   "youtube-morphe": {
     "enabled": false,
     "app-name": "youtube",
