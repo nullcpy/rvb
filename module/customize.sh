@@ -40,10 +40,11 @@ if BASEPATH=$(get_basepath); then
 		mkdir -p /data/adb/post-fs-data.d
 		echo "mount -t tmpfs none $BASEPATH" >"$SCNM"
 		chmod +x "$SCNM"
+		ui_print ""
 		ui_print "* Created the uninstall script."
 		ui_print ""
-		ui_print "* Reboot and reflash the module!"
-		abort
+		ui_print "* Reflash after a reboot to complete installation."
+		exit 0
 	fi
 
 	VERSION=$(get_app_version)
