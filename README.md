@@ -704,7 +704,7 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
   
 <blockquote>
 
-[Release 2026-08-02](https://github.com/nullcpy/rvb/releases/tag/260128)<br>
+[Release 2026-08-02](https://github.com/nullcpy/rvb/releases/tag/260129)<br>
 Patches: [jasonwu1994/patches-2.4.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.4.0)
 - AI Writing Tools
 - Add Gboard Signature Bypass
