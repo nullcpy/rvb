@@ -697,6 +697,22 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
 </blockquote>
 </details>
 
+#### [Morphe (Gboard-patches)](https://github.com/jasonwu1994/Gboard-patches)
+
+<details>
+<summary id="gboard-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.1.5.887912998.release-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
+
+- Always-incognito mode
+- Enable OCR feature
+- Enable clipboard in incognito
+</blockquote>
+</details>
+
 ---
 
 ### [Google News](https://play.google.com/store/apps/details?id=com.google.android.apps.magazines)

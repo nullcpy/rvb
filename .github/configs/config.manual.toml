@@ -2,14 +2,17 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[hbomax-morphe-androidtv]
-enabled = true 
-app-name = "hbomax"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
+[gboard-morphe-alt]
+enabled = true
+app-name = "gboard"
+rv-brand = "morphe-alt"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "jasonwu1994/Gboard-patches"
 cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
 
