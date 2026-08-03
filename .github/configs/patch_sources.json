@@ -32,10 +32,10 @@
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.8.0",
-    "prerelease": "v3.9.0-dev.2",
+    "prerelease": "v3.9.0-dev.3",
     "blocked": false,
     "stable_date": "2026-07-24T16:32:23Z",
-    "pre_date": "2026-07-27T18:28:09Z"
+    "pre_date": "2026-08-03T04:48:35Z"
   },
   "hoodles": {
     "repo": "hoo-dles/morphe-patches",
@@ -221,6 +221,11 @@
     "blocked": false
   },
   "instafel": {
-    "repo": "instafel/pc-rel"
+    "repo": "instafel/pc-rel",
+    "stable": "4c4e41d-4.7.0",
+    "stable_date": "2026-07-30T22:32:38Z",
+    "prerelease": "",
+    "pre_date": "",
+    "blocked": false
   }
 }

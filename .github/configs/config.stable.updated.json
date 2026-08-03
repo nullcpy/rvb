@@ -596,10 +596,11 @@
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "gboard-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe-alt",
     "build-mode": "both",
@@ -1041,6 +1042,30 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+  },
+  "instagram-instafel": {
+    "enabled": true,
+    "app-name": "instagram",
+    "rv-brand": "instafel",
+    "build-mode": "apk",
+    "arch": "both",
+    "cli-source": "instafel/p-rel",
+    "patches-source": "instafel/pc-rel",
+    "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "480dpi nodpi anydpi auto"
+  },
+  "instagram-instafel-clone": {
+    "enabled": true,
+    "app-name": "instagram",
+    "rv-brand": "instafel-clone",
+    "build-mode": "apk",
+    "arch": "both",
+    "cli-source": "instafel/p-rel",
+    "patches-source": "instafel/pc-rel",
+    "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
+    "dpi": "480dpi nodpi anydpi auto"
   },
   "calorie-counter-morphe": {
     "enabled": false,
