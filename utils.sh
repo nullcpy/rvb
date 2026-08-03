@@ -1564,18 +1564,19 @@ patch_apk() {
 		init_op=$(eval "$init_cmd" 2>&1)
 		pr "$init_op"
 
-		local stock_name
-		stock_name=$(basename "$stock_input")
 		local wdir=""
-		if [ -d "${stock_name}_wdir" ]; then
-			wdir="${stock_name}_wdir"
-		elif [ -d "${stock_input}_wdir" ]; then
-			wdir="${stock_input}_wdir"
-		else
-			wdir=$(find . -maxdepth 2 -type d -name "*_wdir*" 2>/dev/null | head -n 1)
+		local proj_file
+		proj_file=$(find . "$rel_tmp_dir" -maxdepth 3 -type f -name "project.json" 2>/dev/null | head -n 1)
+		if [ -n "$proj_file" ]; then
+			wdir=$(dirname "$proj_file")
 			wdir="${wdir#./}"
 		fi
-		[ -z "$wdir" ] && wdir="${stock_input}_wdir"
+
+		if [ -z "$wdir" ] || [ ! -d "$wdir" ]; then
+			epr "Instafel init failed to create project working directory for '$stock_input'."
+			rm -rf "$rel_tmp_dir" 2>/dev/null || :
+			return 1
+		fi
 
 		local patches_to_run=""
 		if [ -n "$per_bundle_ed" ]; then
