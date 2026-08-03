@@ -1599,7 +1599,7 @@ patch_apk() {
 		PATCH_OUTPUT+=$'\n'"$build_op"
 
 		local built_apk
-		built_apk=$(find "$wdir" "$rel_tmp_dir" . -maxdepth 3 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | head -n 1)
+		built_apk=$(find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | head -n 1)
 		if [ -n "$built_apk" ] && [ -f "$built_apk" ]; then
 			mv "$built_apk" "$patched_apk"
 			rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
