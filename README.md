@@ -1057,26 +1057,22 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Instafel](https://github.com/mamiiblt/instafel)
 
 <details>
-<summary id="instagram-instafel"><b>Unclone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-instafel"><b>Unclone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v440.1.0.46.86-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260104)<br>
-Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
-- GmsCore support (MicroG)
-- Unlock VIP
+[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260133)<br>
+Patches: 
 </blockquote>
 </details>
 
 <details>
-<summary id="instagram-instafel-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-instafel-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v440.1.0.46.86-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260104)<br>
-Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
-- GmsCore support (MicroG)
-- Unlock VIP
+[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260133)<br>
+Patches: 
 </blockquote>
 </details>
 
