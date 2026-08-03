@@ -704,11 +704,12 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
   
 <blockquote>
 
-[Release 2026-08-02](https://github.com/nullcpy/rvb/releases/tag/260129)<br>
-Patches: [jasonwu1994/patches-2.4.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.4.0)
+[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260131)<br>
+Patches: [jasonwu1994/patches-2.5.0-dev.1.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.5.0-dev.1)
 - AI Writing Tools
 - Add Gboard Signature Bypass
 - Advanced Voice Typing
+- Clipboard Custom Character Limit
 - Clipboard Enhancements
 - Custom Symbols
 - Developer options
