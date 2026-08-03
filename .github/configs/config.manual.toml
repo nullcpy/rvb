@@ -5,31 +5,32 @@ enable-module-update = true
 [instagram-instafel]
 enabled = true
 app-name = "instagram"
-rv-brand = "Instafel"
+rv-brand = "instafel"
 build-mode = "apk"
-arch = "arm64-v8a"
+arch = "both"
 cli-source = "instafel/p-rel"
 patches-source = "instafel/pc-rel"
 included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 dpi = "480dpi nodpi anydpi auto"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
-apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
 
 [instagram-instafel-clone]
 enabled = true
 app-name = "instagram"
-rv-brand = "Instafel-clone"
+rv-brand = "instafel-clone"
 build-mode = "apk"
-arch = "arm64-v8a"
+arch = "both"
 cli-source = "instafel/p-rel"
 patches-source = "instafel/pc-rel"
 included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 dpi = "480dpi nodpi anydpi auto"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
-apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
-
+# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
 
