@@ -124,6 +124,19 @@ github-dlurl = "https://github.com/discord/releases/..." # Or apkmirror, etc.
 
 When the script detects `npatch` or `lspatch` in the CLI source, it will automatically bypass ReVanced CLI arguments and execute the correct injection command. You can also pass extra options to NPatch using `patcher-args = "-l 2"`.
 
+## Instafel Patcher (Instagram Alpha)
+
+You can natively build Instagram Alpha using the Instafel Patcher engine (`instafel/p-rel`) and Patcher Core (`instafel/pc-rel`).
+
+```toml
+[instagram-instafel]
+cli-source = "instafel/p-rel"                            # Use Instafel Patcher CLI
+cli-version = "latest"
+patches-source = "instafel/pc-rel"                       # Provide Instafel Patcher Core
+patches-version = "latest"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'instafel'"
+```
+
 ## Modular Configuration Directory
 
 All configurations are now stored in the `.github/configs/patches/` directory for better maintainability.

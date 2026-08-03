@@ -192,6 +192,13 @@ _get_prebuilts() {
 		matches=$(source_release_assets_json "$host" <<<"$release") || return 1
 		if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
 			local matches_new
+			matches_new=$(jq -e -r 'map(select(.name | test("\\.(jar|zip)$"; "i")))' <<<"$matches" 2>/dev/null) || true
+			if [ -n "$matches_new" ] && [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
+				matches=$matches_new
+			fi
+		fi
+		if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
+			local matches_new
 			matches_new=$(jq -e -r 'map(select(.name | contains("-dev") | not))' <<<"$matches")
 			if [ "$(jq 'length' <<<"$matches_new")" -eq 1 ]; then
 				matches=$matches_new
@@ -555,7 +562,7 @@ patches_list_versions() {
 _patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 extra_args=${5:-} op
 	local cli_source_l="${cli_source,,}"
-	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
+	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]] || [[ "$cli_source_l" == *"instafel"* ]]; then
 		echo ""
 		return 0
 	fi
@@ -603,6 +610,20 @@ _patches_list() {
 		return 0
 	fi
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
+	if [[ "$cli_source_l" == *"instafel"* ]]; then
+		local cli_dir
+		cli_dir=$(dirname "$cli_jar")
+		for j in "${p_jars[@]}"; do
+			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+		done
+		if ! op=$(eval java -jar "'$cli_jar'" list 2>&1); then
+			epr "Could not get patches list $cli_jar: '$op'"
+			return 1
+		fi
+		echo "$op"
+		return 0
+	fi
 	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
 		local p_args_morphe=""
 		for j in "${p_jars[@]}"; do
@@ -1524,6 +1545,61 @@ patch_apk() {
 		rm "$patched_apk" 2>/dev/null || :
 		rm -rf "$tmp_dir"
 		return 1
+	fi
+
+	if [[ "$cli_source_l" == *"instafel"* ]]; then
+		mkdir -p "$tmp_dir"
+		local cli_dir
+		cli_dir=$(dirname "$cli_jar")
+		for j in "${p_jars[@]}"; do
+			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			cp "$j" "$tmp_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+		done
+
+		local wdir="$tmp_dir/instafel_wdir"
+		local init_cmd="java -jar '$cli_jar' init '$stock_input'"
+		pr "$init_cmd"
+		local init_op
+		init_op=$(eval "$init_cmd" 2>&1)
+		pr "$init_op"
+
+		if [ ! -d "$wdir" ]; then
+			wdir=$(find "$tmp_dir" -maxdepth 2 -type d -name "*instagram*" -o -name "*wdir*" -o -name "*patcher*" | head -n 1)
+			[ -z "$wdir" ] && wdir=$(find . -maxdepth 2 -type d -name "*instagram*" | head -n 1)
+		fi
+
+		local patches_to_run=""
+		if [ -n "$per_bundle_ed" ]; then
+			patches_to_run=$(echo "$per_bundle_ed" | tr -d "'-")
+		fi
+		if [ -z "$patches_to_run" ]; then
+			patches_to_run="unlock_developer_options remove_snooze_warning remove_ads instafel"
+		fi
+
+		local run_cmd="java -jar '$cli_jar' run '${wdir:-instafel_wdir}' $patches_to_run"
+		pr "$run_cmd"
+		PATCH_OUTPUT=$(eval "$run_cmd" 2>&1)
+		echo "$PATCH_OUTPUT"
+
+		local build_cmd="java -jar '$cli_jar' build '${wdir:-instafel_wdir}'"
+		pr "$build_cmd"
+		local build_op
+		build_op=$(eval "$build_cmd" 2>&1)
+		echo "$build_op"
+		PATCH_OUTPUT+=$'\n'"$build_op"
+
+		local built_apk
+		built_apk=$(find "$tmp_dir" "$wdir" . -maxdepth 3 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | head -n 1)
+		if [ -n "$built_apk" ] && [ -f "$built_apk" ]; then
+			mv "$built_apk" "$patched_apk"
+			rm -rf "$tmp_dir" 2>/dev/null || :
+			return 0
+		else
+			rm "$patched_apk" 2>/dev/null || :
+			rm -rf "$tmp_dir" 2>/dev/null || :
+			return 1
+		fi
 	fi
 
 	local base_cmd="java -jar '$cli_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=ks.keystore \
