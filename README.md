@@ -1053,6 +1053,32 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 </blockquote>
 </details>
 
+#### [Instafel](https://github.com/mamiiblt/instafel)
+
+<details>
+<summary id="instagram-instafel"><b>Unclone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260104)<br>
+Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
+- GmsCore support (MicroG)
+- Unlock VIP
+</blockquote>
+</details>
+
+<details>
+<summary id="instagram-instafel-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v426.0.0.37.68-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+  
+<blockquote>
+
+[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260104)<br>
+Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
+- GmsCore support (MicroG)
+- Unlock VIP
+</blockquote>
+</details>
+
 #### [ReVanced (ReVancedExperiments)](https://github.com/Aunali321/ReVancedExperiments)
 
 <details>
