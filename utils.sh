@@ -1695,9 +1695,9 @@ write_build_info() {
 	# extract applied patches supporting revanced, morphe-desktop, and instafel output formats
 	# revanced: INFO: "Patch Name" succeeded
 	# morphe:   INFO: Applied: Patch Name
-	# instafel: ---------------------------\nPatch Name
+	# instafel: I: Patch 'Patch Name' loaded
 	local applied_json
-	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=---------------------------\n)[^\r\n]+' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
+	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=I: Patch \x27)[^\x27]+(?=\x27 loaded)' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
 	[[ "$applied_json" != \[* ]] && applied_json='[]'
 	jq --arg key "$key" \
 		--arg ext "$ext" \
