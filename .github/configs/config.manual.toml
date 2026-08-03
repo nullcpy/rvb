@@ -2,17 +2,18 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[gboard-morphe-alt]
+[instagram-instafel]
 enabled = true
-app-name = "gboard"
-rv-brand = "morphe-alt"
-build-mode = "both"
+app-name = "instagram"
+rv-brand = "Instafel"
+build-mode = "apk"
 arch = "arm64-v8a"
-patches-source = "jasonwu1994/Gboard-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+cli-source = "instafel/p-rel"
+patches-source = "instafel/pc-rel"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "480dpi nodpi anydpi auto"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
 
