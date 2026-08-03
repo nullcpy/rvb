@@ -1692,11 +1692,12 @@ write_build_info() {
 	fi
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
-	# extract applied patches supporting both old and new morphe-desktop output formats
-	# old: INFO: "Patch Name" succeeded
-	# new: INFO: Applied: Patch Name
+	# extract applied patches supporting revanced, morphe-desktop, and instafel output formats
+	# revanced: INFO: "Patch Name" succeeded
+	# morphe:   INFO: Applied: Patch Name
+	# instafel: ---------------------------\nPatch Name
 	local applied_json
-	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
+	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=---------------------------\n)[^\r\n]+' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
 	[[ "$applied_json" != \[* ]] && applied_json='[]'
 	jq --arg key "$key" \
 		--arg ext "$ext" \
