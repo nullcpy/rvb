@@ -10,6 +10,7 @@ uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
 
 [waze-morphe]
 enabled = true
