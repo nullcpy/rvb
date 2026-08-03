@@ -1564,12 +1564,18 @@ patch_apk() {
 		init_op=$(eval "$init_cmd" 2>&1)
 		pr "$init_op"
 
-		local wdir
-		wdir=$(find . "$rel_tmp_dir" -maxdepth 2 -type d \( -name "*wdir*" -o -name "*instagram*" -o -name "*patcher*" \) 2>/dev/null | grep -v '^\.$' | head -n 1)
-		if [ -z "$wdir" ]; then
+		local stock_name
+		stock_name=$(basename "$stock_input")
+		local wdir=""
+		if [ -d "${stock_name}_wdir" ]; then
+			wdir="${stock_name}_wdir"
+		elif [ -d "${stock_input}_wdir" ]; then
 			wdir="${stock_input}_wdir"
+		else
+			wdir=$(find . -maxdepth 2 -type d -name "*_wdir*" 2>/dev/null | head -n 1)
+			wdir="${wdir#./}"
 		fi
-		wdir="${wdir#./}"
+		[ -z "$wdir" ] && wdir="${stock_input}_wdir"
 
 		local patches_to_run=""
 		if [ -n "$per_bundle_ed" ]; then
