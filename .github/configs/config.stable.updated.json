@@ -600,7 +600,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "gboard-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe-alt",
     "build-mode": "both",
@@ -1044,7 +1044,7 @@
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
   },
   "instagram-instafel": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "instafel",
     "build-mode": "apk",
@@ -1056,7 +1056,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
     "build-mode": "apk",
