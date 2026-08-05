@@ -492,11 +492,11 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Xposed (revenge-mod)](https://github.com/revenge-mod/revenge-xposed)
 
 <details>
-<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v339.11.Stable-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
+<summary id="discord-xposed">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v340.13.Stable-gray?labelColor=5865f2&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-08-01](https://github.com/nullcpy/rvb/releases/tag/260126)<br>
+[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260142)<br>
 Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1601)
 </blockquote>
 </details>
