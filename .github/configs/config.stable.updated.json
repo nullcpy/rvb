@@ -443,7 +443,7 @@
     "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
   },
   "discord-xposed": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "discord",
     "rv-brand": "xposed",
     "build-mode": "apk",
