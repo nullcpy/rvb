@@ -493,7 +493,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "google-photos-revanced": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -547,7 +547,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1044,7 +1044,7 @@
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "instafel",
     "build-mode": "apk",
@@ -1056,7 +1056,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
     "build-mode": "apk",
