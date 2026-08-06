@@ -1857,8 +1857,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1879,12 +1879,12 @@ Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morph
 </details>
 
 <details>
-<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.30.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-exp"><b>Experimental</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.31.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -2964,8 +2964,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3217,8 +3217,8 @@ Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3304,8 +3304,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260135)<br>
-Patches: [anddea/patches-4.2.0-dev.11.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.11)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.12)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3314,6 +3314,7 @@ Patches: [anddea/patches-4.2.0-dev.11.mpp](https://github.com/anddea/revanced-pa
 - Change player flyout menu toggles
 - Change share sheet
 - Change start page
+- Custom DPI
 - Custom Shorts action buttons
 - Custom double tap length
 - Description components
@@ -3345,6 +3346,7 @@ Patches: [anddea/patches-4.2.0-dev.11.mpp](https://github.com/anddea/revanced-pa
 - Navigation bar components
 - Open links externally
 - Overlay buttons
+- Playback in feeds
 - Player components
 - Remove background playback restrictions
 - Remove viewer discretion dialog
@@ -3921,8 +3923,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260135)<br>
-Patches: [anddea/patches-4.2.0-dev.11.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.11)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
+Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.12)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3954,6 +3956,7 @@ Patches: [anddea/patches-4.2.0-dev.11.mpp](https://github.com/anddea/revanced-pa
 - SponsorBlock
 - Spoof app version for lyrics
 - Spoof video streams
+- Third-party lyrics
 - Track crossfade
 - Translations for YouTube Music
 - Video playback
