@@ -1999,9 +1999,10 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
-- Enable Premium
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260146)<br>
+Patches: [hxreborn/patches-1.3.0.mpp](https://github.com/hxreborn/morphe-patches/releases/tag/v1.3.0)
+- AMOLED dark theme
+- Unlock premium
 </blockquote>
 </details>
 
