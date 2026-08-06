@@ -1857,8 +1857,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1883,8 +1883,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Custom font
 - Disable modern home
 - Disable screenshot popup
@@ -1907,12 +1907,12 @@ Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morph
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.30.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.31.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.16.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.16)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [jkennethcarino/patches-1.3.0-dev.17.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.17)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
@@ -2964,8 +2964,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3217,8 +3217,8 @@ Patches: [MorpheApp/patches-1.38.0.mpp](https://github.com/MorpheApp/morphe-patc
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.7.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.7)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Add to queue
 - Alternative thumbnails
 - Ambient mode
@@ -3823,8 +3823,8 @@ Patches: [wchill/patches-5.16.4.mpp](https://github.com/wchill/rvx-morphed/relea
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
@@ -3872,8 +3872,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260143)<br>
-Patches: [MorpheApp/patches-1.39.0-dev.6.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
+Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8)
 - Bypass certificate checks
 - Change header
 - Change miniplayer color
