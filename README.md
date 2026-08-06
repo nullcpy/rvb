@@ -1758,7 +1758,7 @@ Patches: [arandomhooman/patches-1.43.4.mpp](https://github.com/arandomhooman/hoo
 
 `ch.protonmail.android`
 
-#### [Morphe (De-Vanced)](https://github.com/RookieEnough/De-Vanced)
+#### [Morphe (hxreborn)](https://github.com/hxreborn/morphe-patches)
 
 <details>
 <summary id="proton-mail-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.15.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
@@ -1992,7 +1992,7 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 `com.michaldrabik.showly2`
 
-#### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
+#### [Morphe (hxreborn)](https://github.com/hxreborn/morphe-patches)
 
 <details>
 <summary id="showly-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v3.70.0-gray?labelColor=ec483b&logo=android&logoColor=white&style=flat"></summary>

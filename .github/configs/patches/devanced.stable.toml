@@ -24,19 +24,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
-[proton-mail-morphe]
-enabled = true
-app-name = "proton-mail"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "RookieEnough/De-Vanced"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-
 [google-recorder-morphe]
 enabled = true
 app-name = "google-recorder"
