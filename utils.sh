@@ -1528,7 +1528,7 @@ patch_apk() {
 			p_args_modules+=" -m '$j'"
 		done
 		mkdir -p "$tmp_dir"
-		local cmd="java -jar '$cli_jar' '$stock_input' -o '$tmp_dir' $p_args_modules $patcher_args"
+		local cmd="java -jar '$cli_jar' -o '$tmp_dir' $p_args_modules $patcher_args '$stock_input'"
 		pr "$cmd"
 		PATCH_OUTPUT=$(eval "$cmd" 2>&1)
 		local ret=$?
@@ -2085,7 +2085,8 @@ build_rv() {
 			done
 		fi
 		if [ "$build_mode" = module ]; then
-			if [[ "${args[cli_source],,}" != *"revanced-cli"* ]]; then
+			local cli_src_lower="${args[cli_source],,}"
+			if [[ "$cli_src_lower" != *"revanced-cli"* ]] && [[ "$cli_src_lower" != *"npatch"* ]] && [[ "$cli_src_lower" != *"lspatch"* ]] && [[ "$cli_src_lower" != *"instafel"* ]]; then
 				patcher_args+=("--mount")
 			fi
 		fi
