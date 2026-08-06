@@ -1761,14 +1761,18 @@ Patches: [arandomhooman/patches-1.43.4.mpp](https://github.com/arandomhooman/hoo
 #### [Morphe (hxreborn)](https://github.com/hxreborn/morphe-patches)
 
 <details>
-<summary id="proton-mail-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.15.0-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
+<summary id="proton-mail-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.10.4-gray?labelColor=6A4DFF&logo=protonmail&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260144)<br>
-Patches: [RookieEnough/patches-1.1.0.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.1.0)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260147)<br>
+Patches: [hxreborn/patches-1.3.0.mpp](https://github.com/hxreborn/morphe-patches/releases/tag/v1.3.0)
+- AMOLED dark theme
+- Hide upgrade upselling
 - Remove 'Sent from' signature
 - Remove free accounts limit
+- Spoof signature
+- Unlock custom time picker
 </blockquote>
 </details>
 
