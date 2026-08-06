@@ -2,19 +2,15 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[proton-mail-morphe]
-enabled = true
-app-name = "proton-mail"
-rv-brand = "morphe"
+[discord-xposed]
+enabled = true 
+app-name = "discord"
+rv-brand = "xposed"
 build-mode = "apk"
-arch = "both"
-patches-source = "hxreborn/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
-apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.android"
-
+arch = "all"
+patches-source = "revenge-mod/revenge-xposed"
+cli-source = "7723mod/NPatch"
+# dpi = "nodpi anydpi auto"
+# uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
