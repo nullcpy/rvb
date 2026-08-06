@@ -705,8 +705,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
   
 <blockquote>
 
-[Release 2026-08-04](https://github.com/nullcpy/rvb/releases/tag/260138)<br>
-Patches: [jasonwu1994/patches-2.5.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.5.0)
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260145)<br>
+Patches: [jasonwu1994/patches-2.6.0-dev.1.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.6.0-dev.1)
 - AI Writing Tools
 - Add Gboard Signature Bypass
 - Advanced Voice Typing
