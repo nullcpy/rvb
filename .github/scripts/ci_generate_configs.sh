@@ -25,7 +25,7 @@ jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
 ' > active.prerelease.json
 
 if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
-  STABLE_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*dev*.toml" | sort)
+  STABLE_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.dev.toml" | sort)
   if [ -n "$STABLE_CONFIGS" ]; then
     # shellcheck disable=SC2086
     yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $STABLE_CONFIGS > config.stable.json
@@ -48,7 +48,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
 fi
 
 if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
-  DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*stable*.toml" | sort)
+  DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.stable.toml" | sort)
   if [ -n "$DEV_CONFIGS" ]; then
     # shellcheck disable=SC2086
     yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $DEV_CONFIGS > config.dev.json
