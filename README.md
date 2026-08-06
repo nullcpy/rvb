@@ -496,7 +496,7 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260150)<br>
+[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260151)<br>
 Patches: [revenge-mod/app-release.apk](https://github.com/revenge-mod/revenge-xposed/releases/tag/1601)
 </blockquote>
 </details>
