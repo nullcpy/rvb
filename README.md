@@ -3304,8 +3304,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.12)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260158)<br>
+Patches: [anddea/patches-4.2.0-dev.13.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.13)
 - Alternative thumbnails
 - Ambient mode control
 - Bypass URL redirects
@@ -3319,7 +3319,6 @@ Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-pa
 - Custom double tap length
 - Description components
 - Disable QUIC protocol
-- Disable forced auto audio tracks
 - Disable forced auto captions
 - Disable haptic feedback
 - Disable layout updates
@@ -3329,6 +3328,7 @@ Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-pa
 - Disable splash animation
 - Enable debug logging
 - Enable gradient loading screen
+- Force original audio
 - Force player buttons background
 - Fullscreen components
 - GmsCore support
@@ -3923,8 +3923,8 @@ Patches: [MorpheApp/patches-1.39.0-dev.8.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260153)<br>
-Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.12)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260158)<br>
+Patches: [anddea/patches-4.2.0-dev.13.mpp](https://github.com/anddea/revanced-patches/releases/tag/v4.2.0-dev.13)
 - Bitrate default value
 - Bypass image region restrictions
 - Certificate spoof
@@ -3934,11 +3934,11 @@ Patches: [anddea/patches-4.2.0-dev.12.mpp](https://github.com/anddea/revanced-pa
 - Disable Cairo splash animation
 - Disable QUIC protocol
 - Disable dislike redirection
-- Disable forced auto audio tracks
 - Disable forced auto captions
 - Enable debug logging
 - Enable landscape mode
 - Flyout menu components
+- Force original audio
 - GmsCore support
 - Hide account components
 - Hide action bar components
