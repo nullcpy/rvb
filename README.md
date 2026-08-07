@@ -882,6 +882,25 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 ---
 
+### [Hermit — Lite Apps Browser](https://play.google.com/store/apps/details?id=com.chimbori.hermitcrab)
+
+`com.chimbori.hermitcrab`
+
+#### [Morphe (kiraio-moe)](https://github.com/kiraio-moe/Lain-Patches)
+
+<details>
+<summary id="hermit-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.10.20-gray?labelColor=de2f3b&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
+Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+- Enable Premium
+</blockquote>
+</details>
+
+---
+
 ### [Hola VPN](https://play.google.com/store/apps/details?id=org.hola.play)
 
 `org.hola.play`
@@ -1153,6 +1172,7 @@ Patches: [BholeyKaBhakt/patches-2.12.0.mpp](https://github.com/BholeyKaBhakt/rev
 </details>
 
 ---
+
 <a id="apps-k"></a>
 
 ### [komoot - hike, bike & run](https://play.google.com/store/apps/details?id=de.komoot.android)
@@ -1173,6 +1193,26 @@ Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/r
 </details>
 
 ---
+
+### [KineStop: Car sickness aid](https://play.google.com/store/apps/details?id=com.urbandroid.kinestop)
+
+`com.urbandroid.kinestop`
+
+#### [Morphe (shaun-the-sheep-patches)](https://github.com/shaun-the-sheep-patches/morphe-patches)
+
+<details>
+<summary id="kinestop-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.26.7-gray?labelColor=3c99ee&logo=android&logoColor=white&style=flat"></summary>
+
+<blockquote>
+
+[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
+Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1)
+- Unlock Premium features
+</blockquote>
+</details>
+
+---
+
 <a id="apps-l"></a>
 
 ### [Lumina Wallpapers](https://play.google.com/store/apps/details?id=com.lumina.wallpapers)
