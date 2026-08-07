@@ -2,19 +2,6 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[kinestop-morphe]
-enabled = true
-app-name = "kinestop"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "shaun-the-sheep-patches/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
-apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
-
 [hermit-morphe]
 enabled = true
 app-name = "hermit"
@@ -28,5 +15,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-brows
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
 apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
 
 
