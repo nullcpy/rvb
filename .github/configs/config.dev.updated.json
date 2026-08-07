@@ -52,7 +52,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "youtube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -67,7 +67,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",

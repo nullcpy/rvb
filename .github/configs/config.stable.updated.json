@@ -114,7 +114,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
   },
   "youtube-anddea-nord": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -130,7 +130,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-anddea-nord": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea-nord",
     "build-mode": "both",
@@ -145,7 +145,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "youtube-anddea-mocha": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -161,7 +161,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-anddea-mocha": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea-mocha",
     "build-mode": "both",
@@ -468,7 +468,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "kinestop-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "kinestop",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -481,7 +481,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
   },
   "hermit-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hermit",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -492,7 +492,8 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab",
-    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
   },
   "youtube-revanced": {
     "enabled": false,
@@ -545,7 +546,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -560,7 +561,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -1241,7 +1242,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "calorie-counter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "calorie-counter",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1256,7 +1257,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
   },
   "soundcloud-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "soundcloud",
     "rv-brand": "morphe-alt",
     "build-mode": "apk",
