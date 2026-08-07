@@ -27,7 +27,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -39,7 +39,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -52,7 +52,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -64,7 +64,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -77,7 +77,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -89,7 +89,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -101,7 +101,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -467,6 +467,33 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge",
     "dpi": "nodpi anydpi auto"
   },
+  "kinestop-morphe": {
+    "enabled": true,
+    "app-name": "kinestop",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "shaun-the-sheep-patches/morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop",
+    "apkcombo-dlurl": "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+  },
+  "hermit-morphe": {
+    "enabled": true,
+    "app-name": "hermit",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "kiraio-moe/Lain-Patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://hermit.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab",
+    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+  },
   "youtube-revanced": {
     "enabled": false,
     "app-name": "youtube",
@@ -601,7 +628,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "gboard-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "gboard",
     "rv-brand": "morphe-alt",
     "build-mode": "both",
@@ -1214,7 +1241,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "calorie-counter-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "calorie-counter",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1229,7 +1256,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
   },
   "soundcloud-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "soundcloud",
     "rv-brand": "morphe-alt",
     "build-mode": "apk",

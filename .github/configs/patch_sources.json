@@ -16,18 +16,18 @@
   "anddea": {
     "repo": "anddea/revanced-patches",
     "stable": "v4.1.0",
-    "prerelease": "v4.2.0-dev.13",
+    "prerelease": "v4.2.0-dev.14",
     "blocked": false,
     "stable_date": "2026-06-16T15:37:39Z",
-    "pre_date": "2026-08-07T06:28:16Z"
+    "pre_date": "2026-08-07T12:05:23Z"
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.38.0",
-    "prerelease": "v1.39.0-dev.8",
+    "prerelease": "v1.39.0-dev.9",
     "blocked": false,
     "stable_date": "2026-08-01T07:07:41Z",
-    "pre_date": "2026-08-06T11:45:55Z"
+    "pre_date": "2026-08-07T10:40:19Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -206,10 +206,10 @@
   },
   "kondratjev": {
     "repo": "kondratjev/morphe-patches",
-    "stable": "v1.17.0",
-    "stable_date": "2026-07-05T13:34:07Z",
-    "prerelease": "v1.18.0-dev.3",
-    "pre_date": "2026-08-01T23:38:58Z",
+    "stable": "v1.19.0",
+    "stable_date": "2026-08-07T12:27:23Z",
+    "prerelease": "v1.19.0-dev.1",
+    "pre_date": "2026-08-07T12:17:35Z",
     "blocked": false
   },
   "gboard": {
@@ -237,9 +237,19 @@
     "blocked": false
   },
   "kiraio": {
-    "repo": "kiraio-moe/Lain-Patches"
+    "repo": "kiraio-moe/Lain-Patches",
+    "stable": "v1.3.0",
+    "stable_date": "2026-07-12T15:14:45Z",
+    "prerelease": "v1.4.0-dev.2",
+    "pre_date": "2026-07-18T01:49:32Z",
+    "blocked": false
   },
   "shaun": {
-    "repo": "shaun-the-sheep-patches/morphe-patches"
+    "repo": "shaun-the-sheep-patches/morphe-patches",
+    "stable": "v1.1.0",
+    "stable_date": "2026-07-07T18:52:06Z",
+    "prerelease": "v1.2.0-dev.1",
+    "pre_date": "2026-07-12T08:51:41Z",
+    "blocked": false
   }
 }
