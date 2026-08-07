@@ -86,3 +86,30 @@ uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+
+[kinestop-morphe]
+enabled = true
+app-name = "kinestop"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "shaun-the-sheep-patches/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+
+[hermit-morphe]
+enabled = true
+app-name = "hermit"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "kiraio-moe/Lain-Patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://hermit.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
+apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
