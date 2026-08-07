@@ -100,12 +100,12 @@ Patches: [binarymend/patches-1.3.1.mpp](https://github.com/binarymend/morphe-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="adguard-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.12.81-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
+<summary id="adguard-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v4.13.1-gray?labelColor=68BC71&logo=adguard&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260156)<br>
+Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.40.0)
 - Enable Premium
 </blockquote>
 </details>
@@ -552,8 +552,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260156)<br>
+Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.40.0)
 - Enable Premium
 </blockquote>
 </details>
@@ -1491,12 +1491,12 @@ Patches: [rushiranpise/patches-1.16.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="nova-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v81042-gray?labelColor=FF6B00&logo=android&logoColor=white&style=flat"></summary>
+<summary id="nova-launcher-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v88600-gray?labelColor=FF6B00&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260156)<br>
+Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.40.0)
 - Enable Prime
 </blockquote>
 </details>
@@ -1800,12 +1800,12 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Morphe (hoo-dles)](https://github.com/hoo-dles/morphe-patches)
 
 <details>
-<summary id="proton-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.17.72.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
+<summary id="proton-vpn-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.19.43.0-gray?labelColor=6D4AFF&logo=protonvpn&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260156)<br>
+Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.40.0)
 - Remove delay
 - Unlock LAN connections
 - Unlock custom DNS
