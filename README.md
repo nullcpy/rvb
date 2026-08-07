@@ -428,12 +428,12 @@ Patches: [rushiranpise/patches-1.16.0.mpp](https://github.com/rushiranpise/morph
 #### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
 
 <details>
-<summary id="calorie-counter-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.6.0.1-gray?labelColor=00bb2a&logo=soundcloud&logoColor=white&style=flat"></summary>
+<summary id="calorie-counter-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v11.7.0.1-gray?labelColor=00bb2a&logo=soundcloud&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260108)<br>
-Patches: [kondratjev/patches-1.17.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.17.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260160)<br>
+Patches: [kondratjev/patches-1.19.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.19.0)
 - Disable community tab
 - Disable force update dialog
 - Unlock Premium
@@ -1201,13 +1201,13 @@ Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/r
 #### [Morphe (shaun-the-sheep-patches)](https://github.com/shaun-the-sheep-patches/morphe-patches)
 
 <details>
-<summary id="kinestop-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.26.7-gray?labelColor=3c99ee&logo=android&logoColor=white&style=flat"></summary>
+<summary id="kinestop-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v5.1-gray?labelColor=3c99ee&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-16](https://github.com/nullcpy/rvb/releases/tag/260054)<br>
-Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.1)
-- Unlock Premium features
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260160)<br>
+Patches: [shaun-the-sheep-patches/patches-1.1.0.mpp](https://github.com/shaun-the-sheep-patches/morphe-patches/releases/tag/v1.1.0)
+- Unlock Premium
 </blockquote>
 </details>
 
@@ -2132,15 +2132,15 @@ Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (kondratjev)](https://github.com/kondratjev/morphe-patches)
 
 <details>
-<summary id="soundcloud-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.06.25.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
+<summary id="soundcloud-morphe-alt">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.07.23.release-gray?labelColor=FF5500&logo=soundcloud&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-29](https://github.com/nullcpy/rvb/releases/tag/260108)<br>
-Patches: [kondratjev/patches-1.17.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.17.0)
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260160)<br>
+Patches: [kondratjev/patches-1.19.0.mpp](https://github.com/kondratjev/morphe-patches/releases/tag/v1.19.0)
 - Disable analytics
 - Disable consent popup
-- Enable SoundCloud Go+
+- Enable SoundCloud Go
 </blockquote>
 </details>
 
