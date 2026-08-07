@@ -889,13 +889,13 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (kiraio-moe)](https://github.com/kiraio-moe/Lain-Patches)
 
 <details>
-<summary id="hermit-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v7.10.20-gray?labelColor=de2f3b&logo=android&logoColor=white&style=flat"></summary>
+<summary id="hermit-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v31.6.1-gray?labelColor=de2f3b&logo=android&logoColor=white&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-07-15](https://github.com/nullcpy/rvb/releases/tag/260053)<br>
-Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.39.0)
-- Enable Premium
+[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260161)<br>
+Patches: [kiraio-moe/patches-1.3.0.mpp](https://github.com/kiraio-moe/Lain-Patches/releases/tag/v1.3.0)
+- Unlock Premium
 </blockquote>
 </details>
 
