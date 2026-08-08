@@ -685,53 +685,79 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Gboard-patches)](https://github.com/jasonwu1994/Gboard-patches)
 
 <details>
-<summary id="gboard-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.7.7.932364120.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-04](https://github.com/nullcpy/rvb/releases/tag/260139)<br>
-Patches: 
-- Unlock Developer Options
-- Remove Snooze Warning
-- Remove Ads
-- AMOLED Theme
-- Get Generation Info
-- Copy Instafel Sources
-- Add Initialize Instafel
-- Change Home Long Click
-- Add App Trigger
+[Release 2026-08-08](https://github.com/nullcpy/rvb/releases/tag/260167)<br>
+Patches: [jasonwu1994/patches-2.6.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.6.0)
+- AI Writing Tools
+- Add Gboard Signature Bypass
+- Advanced Voice Typing
+- Clipboard Custom Character Limit
+- Clipboard Enhancements
+- Custom Symbols
+- Developer options
+- Emojis, stickers & GIFs Tab Order
+- Enable Inline Autofill Suggestions
+- English QWERTY Up-Flick Uppercase
+- Grammar Checker
+- Inline Suggestions
+- Key Shape Selection
+- Latin Globe Key Ignore Interval
+- Long-Press Editing Shortcuts
+- Settings Homepage Override
+- Swipeable Custom Top Row
+- Use Bluetooth Microphone
+- Web Clipboard
+- Zhuyin Bottom Row Key Sizes
+- Zhuyin Quick Traditional/Simplified Toggle
+- Zhuyin Slide Input
 </blockquote>
 </details>
 
 <details>
-<summary id="gboard-morphe-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.7.7.932364120.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-04](https://github.com/nullcpy/rvb/releases/tag/260139)<br>
-Patches: 
-- Unlock Developer Options
-- Remove Snooze Warning
-- Remove Ads
-- AMOLED Theme
-- Get Generation Info
-- Copy Instafel Sources
-- Add Initialize Instafel
-- Change Home Long Click
-- Add App Trigger
+[Release 2026-08-08](https://github.com/nullcpy/rvb/releases/tag/260167)<br>
+Patches: [jasonwu1994/patches-2.6.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.6.0)
+- AI Writing Tools
+- Add Gboard Signature Bypass
+- Advanced Voice Typing
+- Clipboard Custom Character Limit
+- Clipboard Enhancements
+- Custom Symbols
+- Developer options
+- Emojis, stickers & GIFs Tab Order
+- Enable Inline Autofill Suggestions
+- English QWERTY Up-Flick Uppercase
+- Grammar Checker
+- Inline Suggestions
+- Key Shape Selection
+- Latin Globe Key Ignore Interval
+- Long-Press Editing Shortcuts
+- Package Rename
+- Settings Homepage Override
+- Swipeable Custom Top Row
+- Use Bluetooth Microphone
+- Web Clipboard
+- Zhuyin Bottom Row Key Sizes
+- Zhuyin Quick Traditional/Simplified Toggle
+- Zhuyin Slide Input
 </blockquote>
 </details>
 
 #### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="gboard-morphe-adobo">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.1.5.887912998.release-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe-adobo">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v17.7.7.932364120.release.arm64.v8a-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
+[Release 2026-08-08](https://github.com/nullcpy/rvb/releases/tag/260167)<br>
 Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
-
 - Always-incognito mode
 - Enable OCR feature
 - Enable clipboard in incognito
