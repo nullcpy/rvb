@@ -685,7 +685,7 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (Gboard-patches)](https://github.com/jasonwu1994/Gboard-patches)
 
 <details>
-<summary id="gboard-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=4285F4&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="gboard-morphe"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=4285F4&logo=google&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
