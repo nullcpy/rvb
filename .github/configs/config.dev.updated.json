@@ -134,11 +134,26 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
-  "gboard-morphe-alt": {
+  "gboard-morphe": {
     "enabled": false,
     "app-name": "gboard",
-    "rv-brand": "morphe-alt",
+    "rv-brand": "morphe",
     "build-mode": "both",
+    "arch": "arm64-v8a",
+    "patches-source": "jasonwu1994/Gboard-patches",
+    "excluded-patches": "'Package Rename'",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+  },
+  "gboard-morphe-clone": {
+    "enabled": false,
+    "app-name": "gboard",
+    "rv-brand": "morphe-clone",
+    "build-mode": "apk",
     "arch": "arm64-v8a",
     "patches-source": "jasonwu1994/Gboard-patches",
     "cli-source": "MorpheApp/morphe-desktop",
@@ -173,7 +188,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -187,7 +202,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -201,7 +216,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -218,7 +233,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-music-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -235,7 +250,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "reddit-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -249,7 +264,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
