@@ -705,8 +705,8 @@ Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/ad
   
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [jasonwu1994/patches-2.6.0.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.6.0)
+[Release 2026-08-08](https://github.com/nullcpy/rvb/releases/tag/260164)<br>
+Patches: [jasonwu1994/patches-2.7.0-dev.1.mpp](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v2.7.0-dev.1)
 - AI Writing Tools
 - Add Gboard Signature Bypass
 - Advanced Voice Typing
@@ -716,6 +716,7 @@ Patches: [jasonwu1994/patches-2.6.0.mpp](https://github.com/jasonwu1994/Gboard-p
 - Developer options
 - Emojis, stickers & GIFs Tab Order
 - Enable Inline Autofill Suggestions
+- Enable OCR / Scan Text
 - English QWERTY Up-Flick Uppercase
 - Grammar Checker
 - Inline Suggestions
