@@ -2,19 +2,33 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[hermit-morphe]
+[gboard-morphe]
 enabled = true
-app-name = "hermit"
+app-name = "gboard"
 rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "kiraio-moe/Lain-Patches"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "jasonwu1994/Gboard-patches"
+excluded-patches = "'Package Rename'"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://hermit.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
-apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+
+[gboard-morphe-clone]
+enabled = true
+app-name = "gboard"
+rv-brand = "morphe-clone"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "jasonwu1994/Gboard-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
 
 
