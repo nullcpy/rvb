@@ -28,7 +28,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -40,7 +40,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -53,7 +53,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -65,7 +65,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -78,7 +78,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -90,7 +90,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -102,7 +102,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -603,7 +603,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
