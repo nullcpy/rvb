@@ -1,49 +1,20 @@
-# patches-version = "dev"
+patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = true
+enable-module-update = false
 
-[gboard-morphe]
+[reddit-morphe-adobo]
 enabled = true
-app-name = "gboard"
-rv-brand = "morphe"
-build-mode = "both"
-arch = "arm64-v8a"
-patches-source = "jasonwu1994/Gboard-patches"
-excluded-patches = "'Package Rename'"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-
-[gboard-morphe-clone]
-enabled = true
-app-name = "gboard"
-rv-brand = "morphe-clone"
-build-mode = "apk"
-arch = "arm64-v8a"
-patches-source = "jasonwu1994/Gboard-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-
-[gboard-morphe-adobo]
-enabled = true
-app-name = "gboard"
+app-name = "reddit"
 rv-brand = "morphe-adobo"
-build-mode = "both"
+build-mode = "apk"
 arch = "both"
 patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
 
 
 
