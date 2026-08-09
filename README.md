@@ -888,8 +888,8 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - HBO Max - Disable Ads
 </blockquote>
 </details>
@@ -1609,8 +1609,8 @@ Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - Disable auto-updates
 - Skip ads
 </blockquote>
@@ -1629,8 +1629,8 @@ Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-an
   
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - Disable auto-updates
 - Override certificate pinning
 - Skip ads
@@ -1794,8 +1794,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
 
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - Bundle native ad-strip hook
 - Disable auto-updates
 - Load native ad-strip hook
@@ -2401,32 +2401,38 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
 #### [Morphe (icysymmetra)](https://github.com/icysymmetra/tiktok-patches-for-morphe)
 
 <details>
-<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v43.8.3-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
+<summary id="tiktok-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v46.2.3-gray?labelColor=000000&logo=tiktok&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260107)<br>
-Patches: [icysymmetra/patches-0.4.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.4.1)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [icysymmetra/patches-0.5.0.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.5.0)
 - Always show publish date
 - Copy comments without username
 - Custom offline videos limit
 - Disable login requirement
+- Disable long-press quick share
 - Downloads
-- Enable Open Debug
+- Enable Live search
+- Enable non-personalized search
 - Feature Gate Lab
 - Feed filter
 - Feed tab navigation
 - Fix Google login
 - Hide CAPTCHA popups
 - Hide floating promotions
+- Hide quick comment reactions
 - Hold-and-slide 2x lock
 - Open external links directly
 - Playback speed
 - Remember clear display
+- Resume videos after scrolling
 - SIM spoof
 - Sanitize sharing links
 - Settings
 - Show seekbar
+- Show seekbar thumbnail
+- Stop video looping
 - Translate comments
 - Disable screen capture detection
 </blockquote>
@@ -2530,8 +2536,8 @@ Patches: [bufferk/patches-1.8.0.mpp](https://github.com/bufferk/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - Skip ads
 </blockquote>
 </details>
@@ -2654,8 +2660,8 @@ Patches: [RookieEnough/patches-1.1.0.mpp](https://github.com/RookieEnough/De-Van
 
 <blockquote>
 
-[Release 2026-08-07](https://github.com/nullcpy/rvb/releases/tag/260157)<br>
-Patches: [ajstrick81/patches-1.18.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.19.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260171)<br>
+Patches: [ajstrick81/patches-1.21.1.mpp](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.22.0)
 - Override certificate pinning
 - Skip ads
 </blockquote>
