@@ -714,11 +714,9 @@ _fallback_get(){
 	CF_COOKIES=""
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
 }
-_TRAWL8191_FAILED=0
 _unqueued_cf_get() {
-	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
+	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
 		_trawl_8191_get "$@" && return 0
-		_TRAWL8191_FAILED=1
 	else
 		_fallback_get "$@" && return 0
 	fi
