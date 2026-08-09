@@ -114,6 +114,13 @@ jobs:
           overwrite_files: true
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
+      - name: Upload build.json to numbered release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ steps.version.outputs.NEXT_VER_CODE }} build.json \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
       - name: Notify telegram
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
