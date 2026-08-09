@@ -707,17 +707,19 @@ _trawl_8191_get() {
 
 _fallback_get(){
 	local url=$1
-	html=$(req "$url" -) || return 1
+	html=$(curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 -s -f "$url" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0") || return 1
+	if [[ "$html" == *"Attention Required!"* || "$html" == *"Just a moment..."* || "$html" == *"Please Wait... | Cloudflare"* || "$html" == *"Verify you are human"* ]]; then
+		return 1
+	fi
 	CF_COOKIES=""
 	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
-
 }
 _TRAWL8191_FAILED=0
 _unqueued_cf_get() {
 	_fallback_get "$@" && return 0
 
 	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
-		wpr "Direct request failed, attempting trawl for: $1"
+		pr "Direct request failed, attempting trawl for: $1"
 		_trawl_8191_get "$@" && return 0
 		_TRAWL8191_FAILED=1
 	fi
