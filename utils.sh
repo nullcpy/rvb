@@ -705,38 +705,6 @@ _trawl_8191_get() {
 }
 
 
-
-_cfb_get() {
-	local url=$1 referer=${2:-}
-	local max_retries=4
-	local attempt
-    
-	for attempt in $(seq 1 $max_retries); do
-		local response_file
-		rm -f $TEMP_DIR/cfb_response_headers.txt
-		response_file=$(mktemp)
-		local http_code
-		http_code=$(curl -s -o "$response_file" -w '%{http_code}' \
-			-D $TEMP_DIR/cfb_response_headers.txt \
-			-G --data-urlencode "url=$url"\
-			--max-time 30 \
-			"http://localhost:8000/html")
-		if [[ "$http_code" == "200" ]]; then
-			html=$(cat "$response_file")
-			if [[ -n "$html" ]]; then
-				export CF_COOKIES
-				CF_COOKIES=$(grep -i '^x-cf-bypasser-cookies:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
-				local cfb_ua
-				cfb_ua=$(grep -i '^x-cf-bypasser-user-agent:' $TEMP_DIR/cfb_response_headers.txt 2>/dev/null | cut -d':' -f2- | xargs)
-				[[ -n "$cfb_ua" ]] && user_agent="$cfb_ua"
-				rm -f "$response_file" $TEMP_DIR/cfb_response_headers.txt
-				return 0
-			fi
-		fi
-	done
-	wpr "CloudflareBypassForScraping failed after $max_retries attempts: $url"
-	return 1
-}
 _fallback_get(){
 	local url=$1
 	html=$(req "$url" -) || return 1
@@ -745,23 +713,15 @@ _fallback_get(){
 
 }
 _TRAWL8191_FAILED=0
-_CFB_FAILED=0
 _unqueued_cf_get() {
-	if [[ "$_CFB_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true ]]; then
-		_cfb_get "$@" && return 0
-		_CFB_FAILED=1
-	fi
+	_fallback_get "$@" && return 0
+
 	if [[ "$_TRAWL8191_FAILED" -eq 0 && "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
+		wpr "Direct request failed, attempting trawl for: $1"
 		_trawl_8191_get "$@" && return 0
 		_TRAWL8191_FAILED=1
-    fi
-	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CFB_ENABLED:-false}" == true || "${CF_BYPASS_SOLVER_CLOUDFLAREBYPASSFORSCRAPING_ENABLED:-false}" == true ]]; then
-		epr "All bypass solvers failed for: $1"
-		return 1
-	else
-		wpr "No bypass solvers enabled, falling back to direct request for: $1"
-		_fallback_get "$@" && return 0
 	fi
+
 	epr "All methods failed for: $1"
 	return 1
 }
