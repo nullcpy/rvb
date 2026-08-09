@@ -758,8 +758,8 @@ Patches: [jasonwu1994/patches-2.7.0.mpp](https://github.com/jasonwu1994/Gboard-p
   
 <blockquote>
 
-[Release 2026-08-08](https://github.com/nullcpy/rvb/releases/tag/260167)<br>
-Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260173)<br>
+Patches: [jkennethcarino/patches-1.3.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0)
 - Always-incognito mode
 - Enable OCR feature
 - Enable clipboard in incognito
@@ -982,13 +982,12 @@ Patches: [hoo-dles/patches-1.40.0.mpp](https://github.com/hoo-dles/morphe-patche
 #### [Morphe (adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="imdb-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.3.2-gray?labelColor=f5c518&logo=imdb&logoColor=black&style=flat"></summary>
+<summary id="imdb-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v9.3.4-gray?labelColor=f5c518&logo=imdb&logoColor=black&style=flat"></summary>
 
 <blockquote>
 
-[Release 2026-06-14](https://github.com/nullcpy/rvb/releases/tag/351)<br>
-Patches: [jkennethcarino/patches-1.2.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.2.0)
-
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260173)<br>
+Patches: [jkennethcarino/patches-1.3.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0)
 - Remove IMDb's ads, trackers, and analytics
 </blockquote>
 </details>
@@ -1980,12 +1979,12 @@ Patches: [MorpheApp/patches-1.39.1.mpp](https://github.com/MorpheApp/morphe-patc
 #### [Morphe (Adobo)](https://github.com/jkennethcarino/adobo)
 
 <details>
-<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.31.0-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
+<summary id="reddit-morphe-adobo"><b>Default</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v2026.31.1-gray?labelColor=FF4500&logo=reddit&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260154)<br>
-Patches: [jkennethcarino/patches-1.3.0-dev.17.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0-dev.17)
+[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260173)<br>
+Patches: [jkennethcarino/patches-1.3.0.mpp](https://github.com/jkennethcarino/adobo/releases/tag/v1.3.0)
 - Colorize comment indent lines
 - Disable home screen redirect
 - Disable screenshot banner
