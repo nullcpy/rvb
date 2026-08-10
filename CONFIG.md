@@ -51,9 +51,9 @@ patcher-args = """\
 excluded-patches = """\
   'Some Patch' \
   'Some Other Patch' \
-  """
+  """                                                      # whitespace seperated list of patches to exclude. When mixing multiple `patches-source` bundles, you can use `|` to separate the patches for each bundle. To skip a bundle, leave the side empty (e.g. `" | 'Patch for second bundle'"`).
 
-included-patches = "'Some Patch'"                          # whitespace seperated list of non-default patches to include. default: ""
+included-patches = "'Some Patch'"                          # whitespace seperated list of non-default patches to include. default: "". When mixing multiple `patches-source` bundles, you can use `|` to separate the patches for each bundle. To skip a bundle, leave the side empty (e.g. `" | 'Patch for second bundle'"`).
 include-stock = "merged"                                   # 'merged', 'split' or 'disable'. default: merged
 exclusive-patches = false                                  # exclude all patches by default. Accepts `true`, `false`, or a string of patch sources (e.g. `"'jkennethcarino/adobo'"`). default: false
 
