@@ -13,22 +13,8 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/imdb/imdb-imdb",
     "dpi": "nodpi anydpi auto"
   },
-  "gboard-morphe-adobo": {
-    "enabled": false,
-    "app-name": "gboard",
-    "rv-brand": "morphe-adobo",
-    "build-mode": "both",
-    "arch": "arm64-v8a",
-    "patches-source": "jkennethcarino/adobo",
-    "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-  },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -40,7 +26,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -53,7 +39,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -65,7 +51,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -78,7 +64,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -90,7 +76,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -102,7 +88,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -603,7 +589,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -636,8 +622,10 @@
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "arm64-v8a",
-    "patches-source": "jasonwu1994/Gboard-patches",
-    "excluded-patches": "'Package Rename'",
+    "patches-source": "'jasonwu1994/Gboard-patches' 'jkennethcarino/adobo'",
+    "included-patches": " | 'Enable clipboard in incognito' 'Enable voice typing in incognito'",
+    "exclusive-patches": "'jkennethcarino/adobo'",
+    "excluded-patches": "'Package Rename' | ",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
@@ -651,7 +639,9 @@
     "rv-brand": "morphe-clone",
     "build-mode": "apk",
     "arch": "arm64-v8a",
-    "patches-source": "jasonwu1994/Gboard-patches",
+    "patches-source": "'jasonwu1994/Gboard-patches' 'jkennethcarino/adobo'",
+    "included-patches": " | 'Enable clipboard in incognito' 'Enable voice typing in incognito'",
+    "exclusive-patches": "'jkennethcarino/adobo'",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
@@ -1235,7 +1225,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "instagram-instafel": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "instafel",
     "build-mode": "apk",
@@ -1244,10 +1234,13 @@
     "patches-source": "instafel/pc-rel",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "480dpi nodpi anydpi auto"
+    "dpi": "480dpi nodpi anydpi auto",
+    "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/instagram-app/com.instagram.android",
+    "apkcombo-dlurl": "https://apkcombo.com/instagram/com.instagram.android"
   },
   "instagram-instafel-clone": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
     "build-mode": "apk",
@@ -1256,7 +1249,10 @@
     "patches-source": "instafel/pc-rel",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "480dpi nodpi anydpi auto"
+    "dpi": "480dpi nodpi anydpi auto",
+    "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/instagram-app/com.instagram.android",
+    "apkcombo-dlurl": "https://apkcombo.com/instagram/com.instagram.android"
   },
   "calorie-counter-morphe": {
     "enabled": false,
