@@ -1734,6 +1734,7 @@ build_rv() {
 					mapfile -t all_patches < <(echo "$all_patches_op" | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
 					
 					local -a current_bp_inc=()
+					bp_inc=$(echo "$bp_inc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 					if [ -n "$bp_inc" ]; then
 						while IFS= read -r p; do
 							[ -n "$p" ] && current_bp_inc+=("$p")
