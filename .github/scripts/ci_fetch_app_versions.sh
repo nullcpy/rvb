@@ -99,7 +99,7 @@ while IFS='|' read -r group app; do
             if [ -n "$latest_ver" ]; then
                 cached_versions[$dlurl]="$latest_ver"
                 # Sleep to avoid rate limiting only if we actually fetched
-                sleep 2
+                sleep $((RANDOM % 5 + 3))
                 break
             fi
         fi
