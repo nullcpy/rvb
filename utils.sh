@@ -1026,7 +1026,7 @@ dl_apkmirror() {
 	[[ "$btn_url" == http* ]] && referer_url="$btn_url"
 
 	if [ "$is_bundle" = true ]; then
-		wget2 -nv -O "${output}.apkm" \
+		wget -nv -O "${output}.apkm" \
 			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
 			--referer="$referer_url" \
 			"${cookie_args[@]}" \
@@ -1038,7 +1038,7 @@ dl_apkmirror() {
 		fi
 		merge_splits "${output}.apkm" "${output}"
 	else
-		wget2 -nv -O "${output}" \
+		wget -nv -O "${output}" \
 			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
 			--referer="$referer_url" \
 			"${cookie_args[@]}" \
