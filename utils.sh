@@ -1675,7 +1675,7 @@ write_build_info() {
 
 build_rv() {
 	eval "declare -A args=${1#*=}"
-	local version="" pkg_name=""
+	local version="${args[version]:-}" pkg_name="${args[pkg_name]:-}"
 	local cli_jar="${args[cli]}"
 	local patches_jar="${args[ptjar]}"
 	local mode_arg=${args[build_mode]} version_mode=${args[version]}
@@ -1732,12 +1732,6 @@ build_rv() {
 				if all_patches_op=$(patches_list "$cli_jar" "${p_jars_arr[$bi]}" "$pkg_name" "${args[cli_source]}"); then
 					local all_patches=()
 					mapfile -t all_patches < <(echo "$all_patches_op" | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
-					
-					echo "DEBUG: all_patches contains ${#all_patches[@]} items"
-					if [ ${#all_patches[@]} -eq 0 ]; then
-						echo "DEBUG: all_patches_op head:"
-						echo "$all_patches_op" | head -n 20
-					fi
 					
 					local new_bp_exc="$bp_exc"
 					local -a current_bp_inc=()
