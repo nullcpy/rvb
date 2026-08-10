@@ -507,11 +507,14 @@ _get_patch_last_supported_ver() {
 		while IFS= read -r line; do
 			line="${line:1:${#line}-2}"
 			ver=$(sed -n "/^Name: $line\$/,/^\$/p" <<<"$op" | sed -n "/^Compatible versions:\$/,/^\$/p" | tail -n +2)
-			vers=${ver}${NL}
+			vers="${vers}${ver}${NL}"
 		done <<<"$(list_args "$inc_sel")"
 		vers=$(awk '{$1=$1}1' <<<"$vers")
-		if [ "$vers" ]; then
-			get_highest_ver <<<"$vers"
+		if [ -n "$vers" ]; then
+			echo "$vers" | tr ' ' '\n' | sort | uniq -c | sort -k1,1nr | awk '
+				NR==1 { max=$1; print $2; next }
+				$1==max { print $2 }
+			' | get_highest_ver
 			return
 		fi
 	fi
@@ -1690,6 +1693,7 @@ build_rv() {
 	local p_jars_arr=($(echo "${args[ptjar]}" | tr ' ' '\n' | grep -v '^$'))
 	unset IFS
 	local n_bundles=${#p_jars_arr[@]}
+	local -a p_srcs_arr=(${args[patches_sources_all]:-})
 
 	local -a per_bundle_ed_args=()
 	local exc_str="${args[excluded_patches]}"
@@ -1708,16 +1712,48 @@ build_rv() {
 			bp_inc=$(echo "$bp_inc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 			if [ -n "$bp_exc" ]; then bundle_ed+=" $(join_args "$bp_exc" -d)"; fi
 			if [ -n "$bp_inc" ]; then bundle_ed+=" $(join_args "$bp_inc" -e)"; fi
-			[ "${args[exclusive_patches]}" = true ] && bundle_ed+=" --exclusive"
+
+			local is_exclusive=false
+			if [ "${args[exclusive_patches]}" = "true" ]; then
+				is_exclusive=true
+			elif [ "${args[exclusive_patches]}" != "false" ] && [ -n "${args[exclusive_patches]}" ]; then
+				local current_src="${p_srcs_arr[$bi]:-}"
+				local -a exc_srcs=($(list_args "${args[exclusive_patches]}" | tr -d \"\'))
+				[ ${#exc_srcs[@]} -eq 0 ] && exc_srcs=("${args[exclusive_patches]}")
+				for esrc in "${exc_srcs[@]}"; do
+					if [ "$esrc" = "$current_src" ]; then
+						is_exclusive=true
+						break
+					fi
+				done
+			fi
+			[ "$is_exclusive" = true ] && bundle_ed+=" --exclusive"
+
 			per_bundle_ed_args+=("$bundle_ed")
 		done
 	else
 		local global_ed=""
 		if [ -n "$exc_str" ]; then global_ed+=" $(join_args "$exc_str" -d)"; fi
 		if [ -n "$inc_str" ]; then global_ed+=" $(join_args "$inc_str" -e)"; fi
-		[ "${args[exclusive_patches]}" = true ] && global_ed+=" --exclusive"
+		
 		for ((bi=0; bi<n_bundles; bi++)); do
-			per_bundle_ed_args+=("$global_ed")
+			local bundle_ed="$global_ed"
+			local is_exclusive=false
+			if [ "${args[exclusive_patches]}" = "true" ]; then
+				is_exclusive=true
+			elif [ "${args[exclusive_patches]}" != "false" ] && [ -n "${args[exclusive_patches]}" ]; then
+				local current_src="${p_srcs_arr[$bi]:-}"
+				local -a exc_srcs=($(list_args "${args[exclusive_patches]}" | tr -d \"\'))
+				[ ${#exc_srcs[@]} -eq 0 ] && exc_srcs=("${args[exclusive_patches]}")
+				for esrc in "${exc_srcs[@]}"; do
+					if [ "$esrc" = "$current_src" ]; then
+						is_exclusive=true
+						break
+					fi
+				done
+			fi
+			[ "$is_exclusive" = true ] && bundle_ed+=" --exclusive"
+			per_bundle_ed_args+=("$bundle_ed")
 		done
 	fi
 
