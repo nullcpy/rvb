@@ -1731,7 +1731,7 @@ build_rv() {
 				local all_patches_op
 				if all_patches_op=$(patches_list "$cli_jar" "${p_jars_arr[$bi]}" "$pkg_name" "${args[cli_source]}"); then
 					local all_patches=()
-					mapfile -t all_patches < <(echo "$all_patches_op" | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
+					mapfile -t all_patches < <(echo "$all_patches_op" | sed -E 's/\x1B\[[0-9;]*[a-zA-Z]//g' | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
 					
 					local -a current_bp_inc=()
 					bp_inc=$(echo "$bp_inc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
