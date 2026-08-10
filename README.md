@@ -1032,8 +1032,8 @@ Patches: [brosssh/patches-2.8.1.mpp](https://github.com/brosssh/morphe-patches/r
 
 <blockquote>
 
-[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260176)<br>
-Patches: [crimera/patches-3.9.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.6)
+[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260185)<br>
+Patches: [crimera/patches-3.9.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.7)
 - Add settings
 - Allow user network certificate
 - Change like animation
@@ -2409,8 +2409,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260179)<br>
-Patches: [icysymmetra/patches-0.6.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.6.1)
+[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260185)<br>
+Patches: [icysymmetra/patches-0.6.2-dev.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.6.2-dev.1)
 - Always show publish date
 - Copy comments without username
 - Custom offline videos limit
@@ -2816,8 +2816,8 @@ Patches: [hoo-dles/patches-1.39.0.mpp](https://github.com/hoo-dles/morphe-patche
   
 <blockquote>
 
-[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260176)<br>
-Patches: [crimera/patches-3.9.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.6)
+[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260185)<br>
+Patches: [crimera/patches-3.9.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.7)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Change app icon
@@ -2896,8 +2896,8 @@ Patches: [crimera/patches-3.9.0-dev.6.mpp](https://github.com/crimera/piko/relea
   
 <blockquote>
 
-[Release 2026-08-09](https://github.com/nullcpy/rvb/releases/tag/260176)<br>
-Patches: [crimera/patches-3.9.0-dev.6.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.6)
+[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260185)<br>
+Patches: [crimera/patches-3.9.0-dev.7.mpp](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.7)
 - Add ability to copy media link
 - Block redirecting to X Lite
 - Bring back twitter
