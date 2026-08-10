@@ -1760,7 +1760,8 @@ build_rv() {
 					if [ -n "$bp_exc" ]; then bundle_ed+=" $(join_args "$bp_exc" -d)"; fi
 					if [ -n "$bp_inc" ]; then bundle_ed+=" $(join_args "$bp_inc" -e)"; fi
 				else
-					bundle_ed+=" --exclusive"
+					epr "FATAL: Failed to fetch patch list for exclusive bundle '${p_jars[$bi]}'. Cannot safely apply per-bundle exclusivity."
+					return 1
 				fi
 			fi
 			per_bundle_ed_args+=("$bundle_ed")
