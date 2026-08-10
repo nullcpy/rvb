@@ -1729,7 +1729,7 @@ build_rv() {
 			fi
 			if [ "$is_exclusive" = true ]; then
 				local all_patches_op
-				if all_patches_op=$(patches_list "$cli_jar" "${p_jars[$bi]}" "$pkg_name" "${args[cli_source]}"); then
+				if all_patches_op=$(patches_list "$cli_jar" "${p_jars_arr[$bi]}" "$pkg_name" "${args[cli_source]}"); then
 					local all_patches=()
 					mapfile -t all_patches < <(echo "$all_patches_op" | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
 					
@@ -1760,7 +1760,7 @@ build_rv() {
 					if [ -n "$bp_exc" ]; then bundle_ed+=" $(join_args "$bp_exc" -d)"; fi
 					if [ -n "$bp_inc" ]; then bundle_ed+=" $(join_args "$bp_inc" -e)"; fi
 				else
-					epr "FATAL: Failed to fetch patch list for exclusive bundle '${p_jars[$bi]}'. Cannot safely apply per-bundle exclusivity."
+					epr "FATAL: Failed to fetch patch list for exclusive bundle '${p_jars_arr[$bi]}'. Cannot safely apply per-bundle exclusivity."
 					return 1
 				fi
 			fi
