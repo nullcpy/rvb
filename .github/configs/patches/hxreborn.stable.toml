@@ -1,5 +1,6 @@
 [proton-mail-morphe]
 enabled = true
+pkg-name = "ch.protonmail.android"
 app-name = "proton-mail"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -16,6 +17,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.andro
 
 [showly-morphe]
 enabled = true
+pkg-name = "com.michaldrabik.showly2"
 app-name = "showly"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -25,5 +27,5 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.showly"
+
 
