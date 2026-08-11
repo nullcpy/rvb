@@ -208,12 +208,12 @@ Patches: [RookieEnough/patches-1.0.4.mpp](https://github.com/RookieEnough/De-Van
 #### [Morphe (rushiranpise)](https://github.com/rushiranpise/morphe-patches)
 
 <details>
-<summary id="accuweather-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.1.13.1.rc-gray?labelColor=f05514&logo=android&logoColor=white&style=flat"></summary>
+<summary id="accuweather-morphe">&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v21.1.14.5.rc-gray?labelColor=f05514&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260136)<br>
-Patches: [rushiranpise/patches-1.16.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.16.0)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260192)<br>
+Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.17.0)
 - GmsCore support (MicroG)
 - Unlock Premium+
 </blockquote>
@@ -950,8 +950,8 @@ Patches: [kiraio-moe/patches-1.3.0.mpp](https://github.com/kiraio-moe/Lain-Patch
 
 <blockquote>
 
-[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260136)<br>
-Patches: [rushiranpise/patches-1.16.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.16.0)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260192)<br>
+Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.17.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
@@ -1470,12 +1470,12 @@ Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morph
 </details>
 
 <details>
-<summary id="moviebox-morphe-androidtv"><b>Android TV</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.1.5.0711.03-gray?labelColor=10cbb7&logo=android&logoColor=white&style=flat"></summary>
+<summary id="moviebox-morphe-androidtv"><b>Android TV</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v1.1.6.0723.03-gray?labelColor=10cbb7&logo=android&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-07-28](https://github.com/nullcpy/rvb/releases/tag/260104)<br>
-Patches: [rushiranpise/patches-1.15.1.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.15.1)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260192)<br>
+Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.17.0)
 - GmsCore support (MicroG)
 - Unlock VIP
 </blockquote>
@@ -2338,8 +2338,8 @@ Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-08-03](https://github.com/nullcpy/rvb/releases/tag/260136)<br>
-Patches: [rushiranpise/patches-1.16.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.16.0)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260192)<br>
+Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.17.0)
 - GmsCore support (MicroG)
 - Unlock Premium
 </blockquote>
