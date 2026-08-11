@@ -805,8 +805,8 @@ Patches: [docbt/patches-1.10.0.mpp](https://github.com/docbt/patched-up/releases
   
 <blockquote>
 
-[Release 2026-08-06](https://github.com/nullcpy/rvb/releases/tag/260144)<br>
-Patches: [RookieEnough/patches-1.1.0.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.1.0)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260193)<br>
+Patches: [RookieEnough/patches-1.1.1-dev.1.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.1.1-dev.1)
 - Fix selected account persistence
 - GmsCore support
 - Spoof features
@@ -2410,8 +2410,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260190)<br>
-Patches: [icysymmetra/patches-0.7.0-dev.2.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.7.0-dev.2)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260193)<br>
+Patches: [icysymmetra/patches-0.7.0-dev.3.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.7.0-dev.3)
 - Always show publish date
 - Copy comments without username
 - Custom offline videos limit
