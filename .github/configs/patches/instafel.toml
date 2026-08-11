@@ -1,5 +1,6 @@
 [instagram-instafel]
 enabled = true
+pkg-name = "com.instagram.android"
 app-name = "instagram"
 rv-brand = "instafel"
 build-mode = "apk"
@@ -15,6 +16,7 @@ dpi = "480dpi nodpi anydpi auto"
 
 [instagram-instafel-clone]
 enabled = true
+pkg-name = "com.instagram.android"
 app-name = "instagram"
 rv-brand = "instafel-clone"
 build-mode = "apk"
