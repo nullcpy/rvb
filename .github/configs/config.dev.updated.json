@@ -82,7 +82,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -108,7 +108,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -170,6 +170,7 @@
   },
   "instagram-instafel": {
     "enabled": false,
+    "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
     "build-mode": "apk",
@@ -182,6 +183,7 @@
   },
   "instagram-instafel-clone": {
     "enabled": false,
+    "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
     "build-mode": "apk",
@@ -194,6 +196,7 @@
   },
   "youtube-morphe": {
     "enabled": false,
+    "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -208,6 +211,7 @@
   },
   "youtube-music-morphe": {
     "enabled": false,
+    "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -222,6 +226,7 @@
   },
   "youtube-morphe-exp": {
     "enabled": false,
+    "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -239,6 +244,7 @@
   },
   "youtube-music-morphe-exp": {
     "enabled": false,
+    "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -256,6 +262,7 @@
   },
   "reddit-morphe-exp": {
     "enabled": false,
+    "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -270,6 +277,7 @@
   },
   "reddit-morphe": {
     "enabled": false,
+    "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -284,6 +292,7 @@
   },
   "twitter-morphe": {
     "enabled": false,
+    "pkg-name": "com.twitter.android",
     "app-name": "twitter",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -298,6 +307,7 @@
   },
   "twitter-morphe-materialu": {
     "enabled": false,
+    "pkg-name": "com.twitter.android",
     "app-name": "twitter",
     "rv-brand": "morphe-materialu",
     "build-mode": "both",
@@ -313,6 +323,7 @@
   },
   "instagram-morphe-piko": {
     "enabled": false,
+    "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "morphe-piko",
     "build-mode": "both",
