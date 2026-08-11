@@ -805,8 +805,8 @@ Patches: [docbt/patches-1.10.0.mpp](https://github.com/docbt/patched-up/releases
   
 <blockquote>
 
-[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260193)<br>
-Patches: [RookieEnough/patches-1.1.1-dev.1.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.1.1-dev.1)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260194)<br>
+Patches: [RookieEnough/patches-1.1.0.mpp](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.1.0)
 - Fix selected account persistence
 - GmsCore support
 - Spoof features
@@ -838,7 +838,7 @@ Patches: [rushiranpise/patches-1.17.0.mpp](https://github.com/rushiranpise/morph
   
 <blockquote>
 
-[Release 2026-08-05](https://github.com/nullcpy/rvb/releases/tag/260141)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260194)<br>
 Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-patches/releases/tag/6.1.0-patches)
 - GmsCore support
 - Spoof features
@@ -1118,7 +1118,7 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
   
 <blockquote>
 
-[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260188)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260194)<br>
 Patches: 
 - Unlock Developer Options
 - Remove Snooze Warning
@@ -1137,7 +1137,7 @@ Patches:
   
 <blockquote>
 
-[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260188)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260194)<br>
 Patches: 
 - Unlock Developer Options
 - Remove Snooze Warning
