@@ -1960,7 +1960,7 @@ Patches: [MorpheApp/patches-1.40.0-dev.3.mpp](https://github.com/MorpheApp/morph
   
 <blockquote>
 
-[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260187)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260189)<br>
 Patches: [MorpheApp/patches-1.40.0-dev.3.mpp](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.3)
 - Custom font
 - Disable modern home
