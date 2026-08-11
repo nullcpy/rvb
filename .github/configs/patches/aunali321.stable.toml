@@ -1,5 +1,6 @@
 [telegram-revanced-gplay]
 enabled = true
+pkg-name = "org.telegram.messenger"
 app-name = "telegram"
 rv-brand = "revanced-gplay"
 build-mode = "apk"
@@ -12,6 +13,7 @@ dpi = "nodpi anydpi auto"
 
 [telegram-revanced-foss]
 enabled = true
+pkg-name = "org.telegram.messenger.web"
 app-name = "telegram"
 rv-brand = "revanced-foss"
 build-mode = "apk"
@@ -25,6 +27,7 @@ dpi = "nodpi anydpi auto"
 
 [instagram-revanced-exp]
 enabled = true
+pkg-name = "com.instagram.android"
 app-name = "instagram"
 rv-brand = "revanced-exp"
 build-mode = "apk"
