@@ -1113,11 +1113,11 @@ Patches: [Raudrobot/patches-6.1.0.rvp](https://github.com/Raudrobot/revanced-pat
 #### [Instafel](https://github.com/mamiiblt/instafel)
 
 <details>
-<summary id="instagram-instafel"><b>Unclone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-instafel"><b>Unclone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v442.0.0.46.79-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260184)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260188)<br>
 Patches: 
 - Unlock Developer Options
 - Remove Snooze Warning
@@ -1132,11 +1132,11 @@ Patches:
 </details>
 
 <details>
-<summary id="instagram-instafel-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v441.0.0.43.81-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
+<summary id="instagram-instafel-clone"><b>Clone</b>&emsp;<a href="https://nullcpy.github.io/"><img src="https://img.shields.io/badge/version-v442.0.0.46.79-gray?labelColor=E4405F&logo=instagram&logoColor=white&style=flat"></summary>
   
 <blockquote>
 
-[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260184)<br>
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260188)<br>
 Patches: 
 - Unlock Developer Options
 - Remove Snooze Warning
