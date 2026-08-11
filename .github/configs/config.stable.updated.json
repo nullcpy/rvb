@@ -1225,7 +1225,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "instafel",
     "build-mode": "apk",
@@ -1237,7 +1237,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
     "build-mode": "apk",
@@ -1780,7 +1780,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "adguard-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
     "build-mode": "both",
@@ -1793,7 +1793,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
   },
   "waze-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "waze",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1805,7 +1805,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "warp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "warp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1817,7 +1817,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1829,7 +1829,7 @@
     "apkpure-dlurl": "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
   },
   "ninja-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1842,7 +1842,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
   },
   "windscribe-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1856,7 +1856,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "terabox",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1868,7 +1868,7 @@
     "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
   },
   "all-document-reader-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "all-document-reader",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1880,7 +1880,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "accuweather-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "accuweather",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1892,7 +1892,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "the-weather-channel-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "the-weather-channel",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1903,7 +1903,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "beta-maniac-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "beta-maniac",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1915,7 +1915,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "google-photos-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe-alt",
     "build-mode": "apk",
@@ -1928,7 +1928,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "moviebox-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "moviebox",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1939,7 +1939,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
   },
   "moviebox-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "moviebox",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
