@@ -1,5 +1,6 @@
 [soundcloud-morphe]
 enabled = true
+pkg-name = "com.soundcloud.android"
 app-name = "soundcloud"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -14,6 +15,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.andr
 
 [duolingo-morphe]
 enabled = true
+pkg-name = "com.duolingo"
 app-name = "duolingo"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -28,6 +30,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.duolingo"
 
 [wps-office-morphe]
 enabled = true
+pkg-name = "cn.wps.moffice_eng"
 app-name = "wps-office"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -43,6 +46,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/cn.wps.moffice_eng"
 
 [wallcraft-morphe]
 enabled = true
+pkg-name = "com.wallpaperscraft.wallpaper"
 app-name = "wallcraft"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -56,6 +60,7 @@ dpi = "nodpi anydpi auto"
 
 [solid-explorer-morphe]
 enabled = true
+pkg-name = "pl.solidexplorer2"
 app-name = "solid-explorer"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -69,6 +74,7 @@ dpi = "nodpi anydpi auto"
 
 [icon-packer-morphe]
 enabled = true
+pkg-name = "cn.ommiao.iconpacker"
 app-name = "icon-packer"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -81,6 +87,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpa
 
 [podcast-addict-morphe]
 enabled = true
+pkg-name = "com.bambuna.podcastaddict"
 app-name = "podcast-addict"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -94,6 +101,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podc
 
 [smart-launcher-6-morphe]
 enabled = true
+pkg-name = "ginlemon.flowerfree"
 app-name = "smart-launcher-6"
 rv-brand = "morphe"
 build-mode = "both"
@@ -108,6 +116,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerf
 
 [merriam-webster-dictionary-morphe]
 enabled = true
+pkg-name = "com.merriamwebster"
 app-name = "merriam-webster-dictionary"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -121,6 +130,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebst
 
 [pandora-morphe]
 enabled = true
+pkg-name = "com.pandora.android"
 app-name = "pandora"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -133,6 +143,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.andr
 
 [xrecorder-morphe]
 enabled = true
+pkg-name = "videoeditor.videorecorder.screenrecorder"
 app-name = "xrecorder"
 rv-brand = "morphe"
 build-mode = "both"
@@ -146,6 +157,7 @@ dpi = "nodpi anydpi auto"
 
 [adguard-morphe]
 enabled = true
+pkg-name = "com.adguard.android"
 app-name = "adguard"
 rv-brand = "morphe"
 build-mode = "both"
@@ -160,6 +172,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adguard.android
 
 [nova-launcher-morphe]
 enabled = true
+pkg-name = "com.teslacoilsw.launcher"
 app-name = "nova-launcher"
 rv-brand = "morphe"
 build-mode = "both"
@@ -174,6 +187,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.teslacoilsw.lau
 
 [ventusky-morphe]
 enabled = true
+pkg-name = "cz.ackee.ventusky"
 app-name = "ventusky"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -187,6 +201,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusk
 
 [camscanner-morphe]
 enabled = true
+pkg-name = "com.intsig.camscanner"
 app-name = "camscanner"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -200,6 +215,7 @@ dpi = "nodpi anydpi auto"
 
 [niagara-launcher-morphe]
 enabled = true
+pkg-name = "bitpit.launcher"
 app-name = "niagara-launcher"
 rv-brand = "morphe"
 build-mode = "both"
@@ -213,6 +229,7 @@ dpi = "nodpi anydpi auto"
 
 [github-morphe]
 enabled = true
+pkg-name = "com.github.android"
 app-name = "github"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -227,6 +244,7 @@ dpi = "nodpi anydpi auto"
 
 [proton-vpn-morphe]
 enabled = true
+pkg-name = "ch.protonvpn.android"
 app-name = "proton-vpn"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -241,6 +259,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.androi
 
 [hellochinese-morphe]
 enabled = true
+pkg-name = "com.hellochinese"
 app-name = "hellochinese"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -252,7 +271,8 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mand
 dpi = "nodpi anydpi auto"
 
 [myfitnesspal-morphe]
-enabled = true 
+enabled = true
+pkg-name = "com.myfitnesspal.android"
 app-name = "myfitnesspal"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -264,7 +284,8 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counte
 uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
 
 [prime-video-morphe]
-enabled = true 
+enabled = true
+pkg-name = "com.amazon.avod.thirdpartyclient"
 app-name = "prime-video"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -276,7 +297,8 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-
 uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
 
 [goodreads-morphe]
-enabled = true 
+enabled = true
+pkg-name = "com.goodreads"
 app-name = "goodreads"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -289,6 +311,7 @@ uptodown-dlurl = "https://goodreads.en.uptodown.com/android"
 
 [lightroom-morphe]
 enabled = true
+pkg-name = "com.adobe.lrmobile"
 app-name = "lightroom"
 rv-brand = "morphe"
 build-mode = "apk"
