@@ -2409,8 +2409,8 @@ Patches: [Paresh-Maheshwari/patches-1.19.0.mpp](https://gitlab.com/Paresh-Mahesh
   
 <blockquote>
 
-[Release 2026-08-10](https://github.com/nullcpy/rvb/releases/tag/260185)<br>
-Patches: [icysymmetra/patches-0.6.2-dev.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.6.2-dev.1)
+[Release 2026-08-11](https://github.com/nullcpy/rvb/releases/tag/260186)<br>
+Patches: [icysymmetra/patches-0.7.0-dev.1.mpp](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.7.0-dev.1)
 - Always show publish date
 - Copy comments without username
 - Custom offline videos limit
