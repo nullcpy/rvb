@@ -1,21 +1,62 @@
-patches-version = "dev"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[reddit-morphe-exp]
-enabled = true
-app-name = "reddit"
-rv-brand = "morphe-exp"
-build-mode = "both"
-arch = "both"
-version = "exp"
-patches-source = "MorpheApp/morphe-patches"
+[hola-vpn-morphe]
+enabled = true 
+app-name = "hola-vpn"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "arm64-v8a"
+patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
+uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/hola-free-vpn-proxy-unblocker/org.hola"
+apkcombo-dlurl = "https://apkcombo.com/hola-vpn-fast-free-vpn-proxy/org.hola.play"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/org.hola.play"
 
+[accuweather-morphe]
+enabled = true
+app-name = "accuweather"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
+apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
 
+[the-weather-channel-morphe]
+enabled = true
+app-name = "the-weather-channel"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://the-weather-channel.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
+apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
+
+[moviebox-morphe-androidtv]
+enabled = true
+app-name = "moviebox"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+# uptodown-dlurl = ""
+# apkmirror-dlurl = ""
+# dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
 

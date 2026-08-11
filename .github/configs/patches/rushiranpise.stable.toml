@@ -49,7 +49,9 @@ patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
-apkpure-dlurl = "https://m.apkpure.com/hola-vpn-proxy-plus/org.hola.prem"
+apkpure-dlurl = "https://apkpure.com/hola-free-vpn-proxy-unblocker/org.hola"
+apkcombo-dlurl = "https://apkcombo.com/hola-vpn-fast-free-vpn-proxy/org.hola.play"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/org.hola.play"
 
 [ninja-vpn-morphe]
 enabled = true 
@@ -91,19 +93,6 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
 uptodown-dlurl = "https://terabox.en.uptodown.com/android"
 
-[all-document-reader-morphe]
-enabled = true
-app-name = "all-document-reader"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://all-documents-reader.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/bucket-of-apps/all-documents-reader-documents-viewer"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-
 [accuweather-morphe]
 enabled = true
 app-name = "accuweather"
@@ -116,6 +105,8 @@ uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
+apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
 
 [the-weather-channel-morphe]
 enabled = true
@@ -126,9 +117,11 @@ arch = "both"
 patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://the-weather-channel.en.uptodown.com/android"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
+apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
 
 [beta-maniac-morphe]
 enabled = true
