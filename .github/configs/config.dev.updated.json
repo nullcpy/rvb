@@ -108,7 +108,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -193,7 +193,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -207,7 +207,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -221,7 +221,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -238,7 +238,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-music-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -255,7 +255,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "reddit-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
@@ -269,7 +269,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "reddit",
     "rv-brand": "morphe",
     "build-mode": "both",
