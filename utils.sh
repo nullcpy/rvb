@@ -1805,91 +1805,208 @@ build_rv() {
 	fi
 
 	local p_patcher_args=()
+	if isoneof "$version_mode" latest beta || [ "$version_mode" != "auto" -a "$version_mode" != "exp" ]; then
+		p_patcher_args+=("-f")
+	fi
 
 	local tried_dl=()
 	local list_patches=""
+	local apk_cache_dir="${APK_CACHE_DIR:-${TEMP_DIR}/apks}"
+	mkdir -p "$apk_cache_dir"
 
-	# 2. Establish dl_from and fetch required HTML responses
-	for dl_p in "${DL_SRCS[@]}"; do
-		if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-		if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
-			args[${dl_p}_dlurl]=""
-			epr "ERROR: Could not get response for ${table} in ${dl_p}"
-			continue
+	local skip_dl_source_check=false
+	local resolved_version=""
+	local get_latest_ver=false
+
+	# 1. Resolve pkg_name early if possible and check cache
+	if [ -n "$pkg_name" ]; then
+		# Check app_versions.json for exact version
+		local app_versions_file=".github/configs/app_versions.json"
+		if [ -f "$app_versions_file" ]; then
+			local json_ver=$(jq -r --arg t "$table" 'to_entries | map(select(.key | startswith("_") | not)) | map(select(.value.keys != null and (.value.keys | index($t)))) | .[0].value.version // empty' "$app_versions_file")
+			if [ -n "$json_ver" ]; then
+				resolved_version="$json_ver"
+			fi
+		fi
+
+		list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+		local cli_source_l="${args[cli_source],,}"
+		if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
+			if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+				epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+				return 0
+			fi
+		fi
+
+		if [ -z "$resolved_version" ]; then
+			if [ "$version_mode" = auto ]; then
+				if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
+					"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
+					epr "get_patch_last_supported_ver failed for '$pkg_name'"
+					return 0
+				fi
+			elif [ "$version_mode" = exp ]; then
+				if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+					wpr "ReVanced CLI does not support experimental versions."
+					return 0
+				fi
+				if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
+					epr "get_patch_exp_ver failed"
+				fi
+				if [ -z "$resolved_version" ]; then
+					epr "No exp version found for '$pkg_name', skipping."
+					return 0
+				fi
+			elif isoneof "$version_mode" latest beta; then
+				: # Needs latest
+			else
+				resolved_version=$version_mode
+			fi
+		fi
+
+		# Cache Check
+		if [ -n "$resolved_version" ]; then
+			local version_f=${resolved_version// /}
+			version_f=${version_f#v}
+			local all_archs_found=true
+			for arch in "${arch_list[@]}"; do
+				arch_f="${arch// /}"
+				local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+				local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+				if [ ! -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
+					all_archs_found=false
+					break
+				fi
+			done
+			if [ "$all_archs_found" = true ]; then
+				skip_dl_source_check=true
+				version="$resolved_version"
+			fi
+		else
+			# Dynamic Cache Discovery for "latest" or empty version
+			local cached_apks=($(find "$apk_cache_dir" -name "${pkg_name}-*.apk" -type f 2>/dev/null || true))
+			if [ ${#cached_apks[@]} -gt 0 ]; then
+				local cached_versions=""
+				for capk in "${cached_apks[@]}"; do
+					local bname=$(basename "$capk")
+					# extract version from format: pkg_name-version-arch.apk
+					local v=${bname#${pkg_name}-}
+					v=${v%-*}
+					cached_versions+="$v"$'\n'
+				done
+				local dyn_ver
+				if dyn_ver=$(echo "$cached_versions" | get_highest_ver) && [ -n "$dyn_ver" ]; then
+					local all_archs_found=true
+					for arch in "${arch_list[@]}"; do
+						arch_f="${arch// /}"
+						local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
+						local common_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-common.apk"
+						if [ ! -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
+							all_archs_found=false
+							break
+						fi
+					done
+					if [ "$all_archs_found" = true ]; then
+						skip_dl_source_check=true
+						version="$dyn_ver"
+						resolved_version="$dyn_ver"
+					fi
+				fi
+			fi
+		fi
+	fi
+
+	if [ "$skip_dl_source_check" = false ]; then
+		# 2. Establish dl_from and fetch required HTML responses
+		for dl_p in "${DL_SRCS[@]}"; do
+			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
+				args[${dl_p}_dlurl]=""
+				epr "ERROR: Could not get response for ${table} in ${dl_p}"
+				continue
+			fi
+			
+			# If pkg_name is still empty, try to scrape it from the response
+			if [ -z "$pkg_name" ]; then
+				if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
+					args[${dl_p}_dlurl]=""
+					epr "ERROR: Could not scrape pkg_name for ${table} in ${dl_p}"
+					continue
+				fi
+			fi
+			
+			tried_dl+=("$dl_p")
+			dl_from=$dl_p
+			break
+		done
+
+		if [ -z "$dl_from" ]; then
+			epr "ERROR: No valid download source found for ${table}."
+			return 0
+		fi
+
+		if [ -z "$pkg_name" ]; then
+			epr "ERROR: Could not determine pkg_name for ${table}."
+			return 0
 		fi
 		
-		# If pkg_name is still empty, try to scrape it from the response
-		if [ -z "$pkg_name" ]; then
-			if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
-				args[${dl_p}_dlurl]=""
-				epr "ERROR: Could not scrape pkg_name for ${table} in ${dl_p}"
-				continue
+		# If we didn't run patches_list earlier because pkg_name was empty
+		if [ -z "$list_patches" ]; then
+			pr "Package name of '${table}' is '$pkg_name'"
+			list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+			
+			local cli_source_l="${args[cli_source],,}"
+			if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
+				if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+					epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+					return 0
+				fi
+			fi
+		fi
+
+		if [ -z "$resolved_version" ]; then
+			if [ "$version_mode" = auto ]; then
+				if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
+					"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
+					epr "get_patch_last_supported_ver failed for '$pkg_name'"
+					return 0
+				fi
+			elif [ "$version_mode" = exp ]; then
+				local cli_source_l="${args[cli_source],,}"
+				if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+					wpr "ReVanced CLI does not support experimental versions."
+					return 0
+				fi
+				if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
+					epr "get_patch_exp_ver failed"
+				fi
+				if [ -z "$resolved_version" ]; then
+					epr "No exp version found for '$pkg_name', skipping."
+					return 0
+				fi
+			elif isoneof "$version_mode" latest beta; then
+				:
+			else
+				resolved_version=$version_mode
 			fi
 		fi
 		
-		tried_dl+=("$dl_p")
-		dl_from=$dl_p
-		break
-	done
-
-	if [ -z "$dl_from" ]; then
-		epr "ERROR: No valid download source found for ${table}."
-		return 0
-	fi
-
-	if [ -z "$pkg_name" ]; then
-		epr "ERROR: Could not determine pkg_name for ${table}."
-		return 0
-	fi
-
-	pr "Package name of '${table}' is '$pkg_name'"
-	list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
-	
-	local cli_source_l="${args[cli_source],,}"
-	if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
-		if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
-			epr "No app-specific patches found for '$pkg_name'. Skipping completely."
-			return 0
+		version="$resolved_version"
+		[ -z "$version" ] && get_latest_ver=true
+		if [ $get_latest_ver = true ]; then
+			if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
+			local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${__AAV__}"
+			if [ -n "${__PKG_VERS_CACHE__["$vers_cache_key"]:-}" ]; then
+				pkgvers="${__PKG_VERS_CACHE__["$vers_cache_key"]}"
+			else
+				pkgvers=$(get_"${dl_from}"_vers)
+				__PKG_VERS_CACHE__["$vers_cache_key"]="$pkgvers"
+			fi
+			version=$(get_highest_ver <<<"$pkgvers") || version=$(head -1 <<<"$pkgvers")
 		fi
-	fi
-
-	local get_latest_ver=false
-	if [ "$version_mode" = auto ]; then
-		if ! version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-			"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
-			epr "get_patch_last_supported_ver failed for '$pkg_name'"
-			return 0
-		elif [ -z "$version" ]; then get_latest_ver=true; fi
-	elif [ "$version_mode" = exp ]; then
-		local cli_source_l="${args[cli_source],,}"
-		if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
-			wpr "ReVanced CLI does not support experimental versions."
-			return 0
-		fi
-		if ! version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
-			epr "get_patch_exp_ver failed"
-		fi
-		if [ -z "$version" ]; then
-			epr "No exp version found for '$pkg_name', skipping."
-			return 0
-		fi
-	elif isoneof "$version_mode" latest beta; then
-		get_latest_ver=true
-		p_patcher_args+=("-f")
 	else
-		version=$version_mode
-		p_patcher_args+=("-f")
-	fi
-	if [ $get_latest_ver = true ]; then
-		if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
-		local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${__AAV__}"
-		if [ -n "${__PKG_VERS_CACHE__["$vers_cache_key"]:-}" ]; then
-			pkgvers="${__PKG_VERS_CACHE__["$vers_cache_key"]}"
-		else
-			pkgvers=$(get_"${dl_from}"_vers)
-			__PKG_VERS_CACHE__["$vers_cache_key"]="$pkgvers"
-		fi
-		version=$(get_highest_ver <<<"$pkgvers") || version=$(head -1 <<<"$pkgvers")
+		pr "Package name of '${table}' is '$pkg_name'"
+		pr "Skipping download source check, APKs for version '$version' found in cache."
 	fi
 	if [ -z "$version" ]; then
 		epr "empty version, not building ${table}."
@@ -1909,8 +2026,8 @@ build_rv() {
 	version_f=${version_f#v}
 	for arch in "${arch_list[@]}"; do
 		arch_f="${arch// /}"
-		local stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
-		local common_apk="${TEMP_DIR}/${pkg_name}-${version_f}-common.apk"
+		local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+		local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
 		if [ -f "$common_apk" ]; then
 			local missing_arch=false
 			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$common_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
