@@ -1,5 +1,6 @@
 [calorie-counter-morphe]
 enabled = true
+pkg-name = "com.fatsecret.android"
 app-name = "calorie-counter"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -16,6 +17,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.andro
 
 [soundcloud-morphe-alt]
 enabled = true
+pkg-name = "com.soundcloud.android"
 app-name = "soundcloud"
 rv-brand = "morphe-alt"
 build-mode = "apk"
