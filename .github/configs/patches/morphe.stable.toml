@@ -1,5 +1,6 @@
 [youtube-morphe-nord]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "morphe-nord"
 build-mode = "both"
@@ -15,6 +16,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [youtube-morphe-mocha]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "morphe-mocha"
 build-mode = "both"
