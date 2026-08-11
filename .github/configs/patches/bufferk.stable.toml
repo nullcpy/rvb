@@ -1,5 +1,6 @@
 [truecaller-morphe-alt]
 enabled = true
+pkg-name = "com.truecaller"
 app-name = "truecaller"
 rv-brand = "morphe-alt"
 build-mode = "both"
@@ -13,6 +14,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
 [medium-morphe]
 enabled = true
+pkg-name = "com.medium.reader"
 app-name = "medium"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -25,6 +27,7 @@ dpi = "nodpi anydpi auto"
 
 [brave-browser-morphe]
 enabled = true
+pkg-name = "com.brave.browser"
 app-name = "brave-browser"
 rv-brand = "morphe"
 build-mode = "apk"
