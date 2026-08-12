@@ -1,23 +1,19 @@
-patches-version = "latest"
+# patches-version = "dev"
 # cli-version = "dev"
-enable-module-update = false
+enable-module-update = true
 
-[messenger-morphe]
+[pocket-casts-morphe]
 enabled = true
-pkg-name = "com.facebook.orca"
-app-name = "messenger"
+pkg-name = "au.com.shiftyjelly.pocketcasts"
+app-name = "pocket-casts"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "rushiranpise/morphe-patches"
-patches-version = "dev"
-excluded-patches = "'Remove Meta AI' 'Hide inbox stories and notes tray' 'Hide inbox subtabs' 'Hide Facebook buttons'"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
-apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
+uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
+dpi = "480-640dpi nodpi anydpi auto"
+apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
 
 
