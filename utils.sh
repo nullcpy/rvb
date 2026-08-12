@@ -2165,6 +2165,8 @@ build_rv() {
 					fi
 				fi
 			fi
+		else
+			pr "Found APK in cache: ${stock_apk}. Skipping download!"
 		fi
 		if [ -f "$stock_apk" ]; then break; fi
 	done
