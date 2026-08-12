@@ -1,5 +1,6 @@
 [disneyplus-morphe-androidtv]
 enabled = true 
+pkg-name = "com.disney.disneyplus"
 app-name = "disneyplus"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -12,6 +13,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.disney.disneypl
 
 [prime-video-morphe-androidtv]
 enabled = true 
+pkg-name = "com.amazon.amazonvideo.livingroom"
 app-name = "prime-video"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -25,6 +27,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvi
 
 [hbomax-morphe-androidtv]
 enabled = true 
+pkg-name = "com.wbd.hbomax"
 app-name = "hbomax"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -37,6 +40,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
 
 [peacock-morphe-androidtv]
 enabled = true 
+pkg-name = "com.peacocktv.peacockandroid"
 app-name = "peacock"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -51,6 +55,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peaco
 
 [tubi-morphe-androidtv]
 enabled = true 
+pkg-name = "com.tubitv"
 app-name = "tubi"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -63,6 +68,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
 
 [vix-morphe-androidtv]
 enabled = true 
+pkg-name = "com.univision.prendetv"
 app-name = "vix"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
@@ -75,6 +81,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.univision.prend
 
 [plutotv-morphe-androidtv]
 enabled = true 
+pkg-name = "tv.pluto.android"
 app-name = "plutotv"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"

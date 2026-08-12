@@ -1,5 +1,6 @@
 [youtube-anddea-nord]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "anddea-nord"
 build-mode = "both"
@@ -16,6 +17,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [youtube-music-anddea-nord]
 enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
 app-name = "youtube-music"
 rv-brand = "anddea-nord"
 build-mode = "both"
@@ -31,6 +33,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [youtube-anddea-mocha]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "anddea-mocha"
 build-mode = "both"
@@ -47,6 +50,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [youtube-music-anddea-mocha]
 enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
 app-name = "youtube-music"
 rv-brand = "anddea-mocha"
 build-mode = "both"
@@ -62,6 +66,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [reddit-anddea]
 enabled = false
+pkg-name = "com.reddit.frontpage"
 app-name = "reddit"
 rv-brand = "anddea"
 build-mode = "apk"

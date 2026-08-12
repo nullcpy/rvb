@@ -1,5 +1,6 @@
 [imdb-morphe]
 enabled = true
+pkg-name = "com.imdb.mobile"
 app-name = "imdb"
 rv-brand = "morphe"
 build-mode = "apk"
