@@ -13,7 +13,7 @@ patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
-dpi = "480-640dpi nodpi anydpi auto"
+dpi = "nodpi anydpi auto"
 apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
 
 

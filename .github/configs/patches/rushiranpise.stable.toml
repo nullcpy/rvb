@@ -41,7 +41,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
-
 [hola-vpn-morphe]
 enabled = true
 pkg-name = "org.hola.play"
@@ -208,4 +207,16 @@ apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
 apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
 
-
+[pocket-casts-morphe]
+enabled = true
+pkg-name = "au.com.shiftyjelly.pocketcasts"
+app-name = "pocket-casts"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
+dpi = "nodpi anydpi auto"
+apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
