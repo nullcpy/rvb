@@ -1879,6 +1879,13 @@ build_rv() {
 				fi
 			done
 			if [ "$all_archs_found" = true ]; then
+				for arch in "${arch_list[@]}"; do
+					arch_f="${arch// /}"
+					local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+					local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+					[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
+					[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+				done
 				skip_dl_source_check=true
 				version="$resolved_version"
 			fi
@@ -1907,6 +1914,13 @@ build_rv() {
 						fi
 					done
 					if [ "$all_archs_found" = true ]; then
+						for arch in "${arch_list[@]}"; do
+							arch_f="${arch// /}"
+							local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
+							local common_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-common.apk"
+							[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
+							[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+						done
 						skip_dl_source_check=true
 						version="$dyn_ver"
 						resolved_version="$dyn_ver"

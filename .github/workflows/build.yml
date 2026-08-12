@@ -90,6 +90,9 @@ jobs:
           set -euo pipefail
           ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
 
+      - name: Cleanup old cached APKs
+        run: bash .github/scripts/build_cache_cleanup.sh
+
       - name: Get output
         id: get_output
         run: bash .github/scripts/build_get_output.sh
