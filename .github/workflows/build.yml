@@ -97,18 +97,6 @@ jobs:
         id: get_output
         run: bash .github/scripts/build_get_output.sh
 
-      - name: Update readme
-        run: |
-          python3 scripts/update-readme.py ${{ steps.version.outputs.NEXT_VER_CODE }} "$GITHUB_REPOSITORY"
-
-      - name: Commit updated readme
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          branch: main
-          skip_checkout: true
-          file_pattern: README.md
-          commit_message: "Update README for Build No. ${{ steps.version.outputs.NEXT_VER_CODE }} [skip ci]"
-
       - name: Upload to release
         uses: softprops/action-gh-release@v3
         with:
