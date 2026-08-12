@@ -514,18 +514,6 @@
     "dpi": "nodpi anydpi auto",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
-  "google-photos-revanced": {
-    "enabled": true,
-    "app-name": "google-photos",
-    "rv-brand": "revanced",
-    "build-mode": "both",
-    "arch": "both",
-    "patches-source": "Raudrobot/revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
-    "dpi": "nodpi anydpi auto"
-  },
   "messenger-revanced": {
     "enabled": false,
     "app-name": "messenger",
@@ -576,7 +564,6 @@
     "arch": "both",
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
     "dpi": "nodpi anydpi auto"
   },
@@ -1256,7 +1243,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
@@ -1269,7 +1256,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
@@ -1824,6 +1811,18 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "dpi": "nodpi anydpi auto",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+  },
+  "google-photos-revanced": {
+    "enabled": false,
+    "app-name": "google-photos",
+    "rv-brand": "revanced",
+    "build-mode": "both",
+    "arch": "both",
+    "patches-source": "ReVanced/revanced-patches",
+    "cli-source": "ReVanced/revanced-cli",
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "dpi": "nodpi anydpi auto"
   },
   "adguard-morphe-nightly": {
     "enabled": false,
