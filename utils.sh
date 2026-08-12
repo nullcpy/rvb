@@ -2171,6 +2171,11 @@ build_rv() {
 		return 0
 	fi
 
+	# Ensure the mtime is set to now so newly downloaded APKs with old server timestamps aren't purged
+	touch "$stock_apk" 2>/dev/null || true
+	[ -f "${stock_apk}.apkm" ] && touch "${stock_apk}.apkm" 2>/dev/null || true
+	[ -n "${common_apk:-}" ] && [ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+
 	local sig_op
 	if [ -f "${stock_apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
