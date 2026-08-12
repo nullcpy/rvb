@@ -33,4 +33,4 @@ jobs:
       - name: Cleanup Archive Release Assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/cleanup-archive-assets.py
+        run: python3 .github/scripts/cleanup-archive-assets.py
