@@ -1,5 +1,6 @@
 [photoshop-mix-morphe]
 enabled = true
+
 app-name = "photoshop-mix"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -11,21 +12,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
-[threads-morphe]
-enabled = true
-app-name = "threads"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "RookieEnough/De-Vanced"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://threads.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
-
 [google-recorder-morphe]
 enabled = true
+pkg-name = "com.google.android.apps.recorder"
 app-name = "google-recorder"
 rv-brand = "morphe"
 build-mode = "both"
