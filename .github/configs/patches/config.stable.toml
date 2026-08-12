@@ -1,5 +1,6 @@
 [google-news-morphe]
 enabled = true
+pkg-name = "com.google.android.apps.magazines"
 app-name = "google-news"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -13,6 +14,7 @@ dpi = "nodpi anydpi auto"
 
 [trakt-morphe]
 enabled = true
+pkg-name = "tv.trakt.trakt"
 app-name = "trakt"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -35,7 +37,8 @@ cli-source = "MorpheApp/morphe-desktop"
 direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 
 [komoot-morphe]
-enabled = true 
+enabled = true
+pkg-name = "de.komoot.android"
 app-name = "komoot"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -48,7 +51,8 @@ uptodown-dlurl = "https://komoot.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
 
 [discord-xposed]
-enabled = true 
+enabled = true
+pkg-name = "com.discord"
 app-name = "discord"
 rv-brand = "xposed"
 build-mode = "apk"
@@ -63,6 +67,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers
 
 [microsoft-edge-morphe]
 enabled = true
+pkg-name = "com.microsoft.emmx"
 app-name = "microsoft-edge"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -76,6 +81,7 @@ dpi = "nodpi anydpi auto"
 
 [kinestop-morphe]
 enabled = true
+pkg-name = "com.urbandroid.kinestop"
 app-name = "kinestop"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -89,6 +95,7 @@ apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.
 
 [hermit-morphe]
 enabled = true
+pkg-name = "com.chimbori.hermitcrab"
 app-name = "hermit"
 rv-brand = "morphe"
 build-mode = "apk"
