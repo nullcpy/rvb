@@ -141,7 +141,18 @@ dpi = "nodpi anydpi auto"
 # uptodown-dlurl = "https://todoist.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
 
-
+[tumblr-morphe]
+enabled = true
+pkg-name = "com.tumblr"
+app-name = "tumblr"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
 
 
 
