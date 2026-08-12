@@ -1,5 +1,6 @@
 [automate-morphe]
 enabled = true
+pkg-name = "com.llamalab.automate"
 app-name = "automate"
 rv-brand = "morphe"
 build-mode = "both"
@@ -12,6 +13,7 @@ dpi = "nodpi anydpi auto"
 
 [speedtest-morphe]
 enabled = true
+pkg-name = "org.zwanoo.android.speedtest"
 app-name = "speedtest"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -24,6 +26,7 @@ dpi = "nodpi anydpi auto"
 
 [autosync-morphe]
 enabled = true
+pkg-name = "com.ttxapps.autosync"
 app-name = "autosync"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -37,6 +40,7 @@ dpi = "nodpi anydpi auto"
 
 [inshorts-morphe]
 enabled = true
+pkg-name = "com.camerasideas.instashot"
 app-name = "inshorts"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -48,7 +52,8 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/inshorts-formerly-news-in-short
 dpi = "nodpi anydpi auto"
 
 [vpnify-morphe]
-enabled = true 
+enabled = true
+pkg-name = "com.vpn.free.hotspot.secure.vpnify"
 app-name = "vpnify"
 rv-brand = "morphe"
 build-mode = "apk"
