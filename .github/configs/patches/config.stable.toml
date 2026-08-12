@@ -11,19 +11,6 @@ uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
 dpi = "nodpi anydpi auto"
 
-[facebook-morphe]
-enabled = true
-app-name = "facebook"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "MeridianFresco/morphe-meta-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
-
 [trakt-morphe]
 enabled = true
 app-name = "trakt"

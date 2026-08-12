@@ -61,20 +61,6 @@ uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
 dpi = "nodpi anydpi auto"
 
-[messenger-morphe]
-enabled = true
-app-name = "messenger"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-version = "552.0.0.44.65"
-patches-source = "RookieEnough/De-Vanced"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
-
 [photomath-morphe]
 enabled = true
 app-name = "photomath"
