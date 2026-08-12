@@ -124,6 +124,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpag
 
 [gboard-morphe]
 enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
 app-name = "gboard"
 rv-brand = "morphe"
 build-mode = "both"
@@ -139,6 +140,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [gboard-morphe-clone]
 enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
 app-name = "gboard"
 rv-brand = "morphe-clone"
 build-mode = "apk"
