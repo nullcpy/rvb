@@ -1886,6 +1886,7 @@ build_rv() {
 					[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
 					[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
 				done
+				pr "Found all required architectures for '$pkg_name' (v$version_f) in cache. Skipping download!"
 				skip_dl_source_check=true
 				version="$resolved_version"
 			fi
@@ -1921,6 +1922,7 @@ build_rv() {
 							[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
 							[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
 						done
+						pr "Discovered highest version (v$dyn_ver) for '$pkg_name' in cache. Skipping download!"
 						skip_dl_source_check=true
 						version="$dyn_ver"
 						resolved_version="$dyn_ver"
