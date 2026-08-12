@@ -7,10 +7,10 @@
   },
   "devanced": {
     "repo": "RookieEnough/De-Vanced",
-    "stable": "v1.2.0",
+    "stable": "v1.2.1",
     "prerelease": "v1.2.1-dev.1",
     "blocked": false,
-    "stable_date": "2026-08-12T15:50:22Z",
+    "stable_date": "2026-08-12T17:58:59Z",
     "pre_date": "2026-08-12T17:18:51Z"
   },
   "anddea": {
@@ -253,6 +253,11 @@
     "blocked": false
   },
   "durgesh0505": {
-    "repo": "durgesh0505/chiggi_morphe_patches"
+    "repo": "durgesh0505/chiggi_morphe_patches",
+    "stable": "v1.18.0",
+    "stable_date": "2026-07-23T01:30:52Z",
+    "prerelease": "",
+    "pre_date": "",
+    "blocked": false
   }
 }
