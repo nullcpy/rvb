@@ -1,5 +1,6 @@
 [pinterest-morphe]
 enabled = true
+pkg-name = "com.pinterest"
 app-name = "pinterest"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -13,6 +14,7 @@ dpi = "nodpi anydpi auto"
 
 [moonplus-reader-morphe]
 enabled = true
+pkg-name = "com.flyersoft.moonreader"
 app-name = "moonplus-reader"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -26,6 +28,7 @@ dpi = "nodpi anydpi auto"
 
 [symfonium-morphe]
 enabled = true
+pkg-name = "app.symfonik.music.player"
 app-name = "symfonium"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -39,6 +42,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.mus
 
 [calcnote-morphe]
 enabled = true
+pkg-name = "com.appumstudios.calcnote"
 app-name = "calcnote"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -52,6 +56,7 @@ dpi = "nodpi anydpi auto"
 
 [acalendar-morphe]
 enabled = true
+pkg-name = "org.withouthat.acalendar"
 app-name = "acalendar"
 rv-brand = "morphe"
 build-mode = "apk"
