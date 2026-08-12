@@ -558,7 +558,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -642,7 +642,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "photoshop-mix-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "photoshop-mix",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -654,7 +654,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "threads-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "threads",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -667,7 +667,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "google-recorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-recorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -680,7 +680,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "rar-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "rar",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -692,7 +692,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "microsoft-lens-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -704,7 +704,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "photomath-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "photomath",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -716,7 +716,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "tumblr-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tumblr",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -727,7 +727,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "viber-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "viber",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -738,7 +738,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
   "pixiv-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "pixiv",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1198,7 +1198,7 @@
     "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "proton-mail",
     "rv-brand": "morphe",
@@ -1215,7 +1215,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.android"
   },
   "showly-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "showly",
     "rv-brand": "morphe",
