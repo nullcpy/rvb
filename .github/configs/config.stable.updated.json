@@ -14,7 +14,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -26,7 +26,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -39,7 +39,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -51,7 +51,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -64,7 +64,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -76,7 +76,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -88,7 +88,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
     "build-mode": "apk",
@@ -476,6 +476,19 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
   },
+  "facebook-morphe": {
+    "enabled": false,
+    "pkg-name": "com.facebook.katana",
+    "app-name": "facebook",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "MeridianFresco/morphe-meta-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
+    "dpi": "nodpi anydpi auto"
+  },
   "youtube-revanced": {
     "enabled": false,
     "app-name": "youtube",
@@ -545,7 +558,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -629,7 +642,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "photoshop-mix-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "photoshop-mix",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -641,7 +654,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "threads-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "threads",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -654,7 +667,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.barcelona"
   },
   "google-recorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "google-recorder",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -667,7 +680,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
   },
   "rar-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "rar",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -679,7 +692,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "microsoft-lens-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -691,7 +704,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "photomath-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "photomath",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -703,7 +716,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "tumblr-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "tumblr",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -714,7 +727,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "viber-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "viber",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -725,7 +738,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.viber.voip"
   },
   "pixiv-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "pixiv",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1981,6 +1994,7 @@
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "rushiranpise/morphe-patches",
+    "excluded-patches": "'Remove Meta AI' 'Hide inbox stories and notes tray' 'Hide inbox subtabs' 'Hide Facebook buttons'",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/messenger",
@@ -1988,19 +2002,18 @@
     "apkpure-dlurl": "https://apkpure.com/facebook-messenger/com.facebook.orca",
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
-  "facebook-morphe": {
+  "pocket-casts-morphe": {
     "enabled": false,
-    "pkg-name": "com.facebook.katana",
-    "app-name": "facebook",
+    "pkg-name": "au.com.shiftyjelly.pocketcasts",
+    "app-name": "pocket-casts",
     "rv-brand": "morphe",
     "build-mode": "apk",
     "arch": "both",
     "patches-source": "rushiranpise/morphe-patches",
     "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
+    "uptodown-dlurl": "https://pocket-casts-podcast-player.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/automattic-inc/pocket-casts",
     "dpi": "nodpi anydpi auto",
-    "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana",
-    "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana"
+    "apkcombo-dlurl": "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
   }
 }

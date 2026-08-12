@@ -70,7 +70,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -123,15 +123,14 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "gboard-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "arm64-v8a",
-    "patches-source": "'jasonwu1994/Gboard-patches' 'jkennethcarino/adobo'",
-    "included-patches": " | 'Enable clipboard in incognito' 'Enable voice typing in incognito'",
-    "exclusive-patches": "'jkennethcarino/adobo'",
-    "excluded-patches": "'Package Rename' | ",
+    "patches-source": "jasonwu1994/Gboard-patches",
+    "excluded-patches": "'Package Rename'",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
@@ -140,14 +139,13 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "gboard-morphe-clone": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe-clone",
     "build-mode": "apk",
     "arch": "arm64-v8a",
-    "patches-source": "'jasonwu1994/Gboard-patches' 'jkennethcarino/adobo'",
-    "included-patches": " | 'Enable clipboard in incognito' 'Enable voice typing in incognito'",
-    "exclusive-patches": "'jkennethcarino/adobo'",
+    "patches-source": "jasonwu1994/Gboard-patches",
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
@@ -182,7 +180,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "morphe",
@@ -197,7 +195,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "morphe",
@@ -212,7 +210,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "morphe-exp",
@@ -230,7 +228,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-music-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "morphe-exp",
@@ -248,7 +246,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "reddit-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
@@ -263,7 +261,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe",
