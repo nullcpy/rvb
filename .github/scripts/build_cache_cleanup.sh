@@ -12,7 +12,7 @@ if [ -d "$APK_CACHE_DIR" ]; then
     
     # Use find to locate files older than RETENTION_DAYS days and delete them
     # -mtime +N matches files modified strictly greater than N*24 hours ago
-    deleted_files=$(find "$APK_CACHE_DIR" -type f \( -name "*.apk" -o -name "*.apkm" \) -mtime +$RETENTION_DAYS -print -delete)
+    deleted_files=$(find "$APK_CACHE_DIR" -type f \( -name "*.apk" -o -name "*.apkm" -o -name "*.xapk" -o -name "*.apks" \) -mtime +$RETENTION_DAYS -print -delete)
     
     if [ -n "$deleted_files" ]; then
         echo "Deleted the following outdated cached APKs:"
