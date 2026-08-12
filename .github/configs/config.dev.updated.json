@@ -3,6 +3,7 @@
   "enable-module-update": false,
   "youtube-revanced": {
     "enabled": false,
+    "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -16,6 +17,7 @@
   },
   "youtube-music-revanced": {
     "enabled": false,
+    "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "revanced",
     "build-mode": "both",
@@ -29,6 +31,7 @@
   },
   "messenger-revanced": {
     "enabled": false,
+    "pkg-name": "com.facebook.orca",
     "app-name": "messenger",
     "rv-brand": "revanced",
     "build-mode": "apk",
@@ -41,6 +44,7 @@
   },
   "youtube-anddea": {
     "enabled": false,
+    "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -56,6 +60,7 @@
   },
   "youtube-music-anddea": {
     "enabled": false,
+    "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
     "rv-brand": "anddea",
     "build-mode": "both",
@@ -70,7 +75,8 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -82,6 +88,7 @@
   },
   "instagram-morphe": {
     "enabled": false,
+    "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -96,6 +103,7 @@
   },
   "tiktok-morphe": {
     "enabled": false,
+    "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "tiktok",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -110,6 +118,7 @@
   },
   "reddit-morphe-adobo": {
     "enabled": false,
+    "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
     "build-mode": "apk",
