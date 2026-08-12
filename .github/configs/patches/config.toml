@@ -1,5 +1,6 @@
 [youtube-revanced]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "revanced"
 build-mode = "both"
@@ -13,6 +14,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 
 [youtube-music-revanced]
 enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
 app-name = "youtube-music"
 rv-brand = "revanced"
 build-mode = "both"
@@ -26,6 +28,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 
 [messenger-revanced]
 enabled = true
+pkg-name = "com.facebook.orca"
 app-name = "messenger"
 rv-brand = "revanced"
 build-mode = "apk"
@@ -38,6 +41,7 @@ dpi = "nodpi anydpi auto"
 
 [youtube-anddea]
 enabled = true
+pkg-name = "com.google.android.youtube"
 app-name = "youtube"
 rv-brand = "anddea"
 build-mode = "both"
@@ -53,6 +57,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [youtube-music-anddea]
 enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
 app-name = "youtube-music"
 rv-brand = "anddea"
 build-mode = "both"
@@ -68,6 +73,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.
 
 [google-photos-morphe]
 enabled = true
+pkg-name = "com.google.android.apps.photos"
 app-name = "google-photos"
 rv-brand = "morphe"
 build-mode = "both"
@@ -80,7 +86,8 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [instagram-morphe]
-enabled = true 
+enabled = true
+pkg-name = "com.instagram.android"
 app-name = "instagram"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -96,6 +103,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.andro
 
 [tiktok-morphe]
 enabled = true
+pkg-name = "com.zhiliaoapp.musically"
 app-name = "tiktok"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -110,6 +118,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musi
 
 [reddit-morphe-adobo]
 enabled = true
+pkg-name = "com.reddit.frontpage"
 app-name = "reddit"
 rv-brand = "morphe-adobo"
 build-mode = "apk"
