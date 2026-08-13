@@ -49,7 +49,7 @@ declare -A cached_versions
 
 while IFS='|' read -r group app; do
     if [ -z "$group" ] || [ -z "$app" ]; then continue; fi
-    echo "Checking version for $group ($app)..."
+    echo "::group::Fetching version for $group ($app)..."
     
     uptodown_url=$(jq -r ".\"$app\".\"uptodown-dlurl\" // empty" temp_all_configs.json)
     apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" temp_all_configs.json)
@@ -64,7 +64,8 @@ while IFS='|' read -r group app; do
     [ -n "$apkcombo_url" ] && { dlurls+=("$apkcombo_url"); sources+=("apkcombo"); }
 
     if [ ${#dlurls[@]} -eq 0 ]; then
-        echo "No dlurl for $app, skipping"
+        echo "::warning::No dlurl for $app, skipping"
+        echo "::endgroup::"
         continue
     fi
     
@@ -75,24 +76,24 @@ while IFS='|' read -r group app; do
         
         if [ -n "${cached_versions[$dlurl]:-}" ]; then
             latest_ver="${cached_versions[$dlurl]}"
-            echo "Reusing cached version for $app: $latest_ver"
+            echo "::notice::Reusing cached version for $app: $latest_ver"
             break
         else
             if [[ "$source" == "uptodown" ]]; then
-                get_uptodown_resp "$dlurl" || { echo "Failed uptodown resp for $app"; continue; }
-                vers=$(get_uptodown_vers) || { echo "Failed uptodown vers for $app"; continue; }
+                get_uptodown_resp "$dlurl" || { echo "::warning::Failed uptodown resp for $app"; continue; }
+                vers=$(get_uptodown_vers) || { echo "::warning::Failed uptodown vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             elif [[ "$source" == "apkmirror" ]]; then
-                get_apkmirror_resp "$dlurl" || { echo "Failed apkmirror resp for $app"; continue; }
-                vers=$(get_apkmirror_vers) || { echo "Failed apkmirror vers for $app"; continue; }
+                get_apkmirror_resp "$dlurl" || { echo "::warning::Failed apkmirror resp for $app"; continue; }
+                vers=$(get_apkmirror_vers) || { echo "::warning::Failed apkmirror vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             elif [[ "$source" == "apkpure" ]]; then
-                get_apkpure_resp "$dlurl" || { echo "Failed apkpure resp for $app"; continue; }
-                vers=$(get_apkpure_vers) || { echo "Failed apkpure vers for $app"; continue; }
+                get_apkpure_resp "$dlurl" || { echo "::warning::Failed apkpure resp for $app"; continue; }
+                vers=$(get_apkpure_vers) || { echo "::warning::Failed apkpure vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             elif [[ "$source" == "apkcombo" ]]; then
-                get_apkcombo_resp "$dlurl" || { echo "Failed apkcombo resp for $app"; continue; }
-                vers=$(get_apkcombo_vers) || { echo "Failed apkcombo vers for $app"; continue; }
+                get_apkcombo_resp "$dlurl" || { echo "::warning::Failed apkcombo resp for $app"; continue; }
+                vers=$(get_apkcombo_vers) || { echo "::warning::Failed apkcombo vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             fi
             
@@ -106,11 +107,12 @@ while IFS='|' read -r group app; do
     done
     
     if [ -n "$latest_ver" ]; then
-        echo "Latest version for $group is $latest_ver"
+        echo "::notice::Latest version for $group is $latest_ver"
         jq -n --arg grp "$group" --arg ver "$latest_ver" '{($grp): $ver}' >> fetched_app_versions.jsonl
     else
-        echo "Could not find latest version for $group"
+        echo "::error::Could not find latest version for $group"
     fi
+    echo "::endgroup::"
 done < check_list.txt
 
 if [ -s fetched_app_versions.jsonl ]; then

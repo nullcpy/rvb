@@ -31,7 +31,7 @@ while IFS= read -r group; do
     fi
     
     if [ "$new_ver" != "$old_ver" ] && [ "$new_ver" != "null" ] && [ -n "$new_ver" ]; then
-        echo "Update detected for $group: $old_ver -> $new_ver"
+        echo "::notice::Update detected for $group: $old_ver -> $new_ver"
         TRIGGER_APP_UPDATE=1
         
         # Add all constituent keys to active_apps.json
@@ -55,7 +55,7 @@ while IFS= read -r group; do
 done < <(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 
 if [ "$TRIGGER_APP_UPDATE" = "1" ]; then
-    echo "Updates were found!"
+    echo "::notice::Updates were found!"
 else
     echo "No app updates found."
 fi

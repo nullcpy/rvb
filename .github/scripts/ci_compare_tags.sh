@@ -32,6 +32,9 @@ TRIGGER_BLOCKED=$(jq -n --argjson old "$OLD_JSON" --argjson new "$NEW_JSON" '
 
 echo "$NEW_JSON" > "$PATCH_FILE"
 
+if [ "$TRIGGER_STABLE" -eq 1 ]; then echo "::notice::Stable patch update detected!"; fi
+if [ "$TRIGGER_PRERELEASE" -eq 1 ]; then echo "::notice::Pre-release patch update detected!"; fi
+if [ "$TRIGGER_BLOCKED" -eq 1 ]; then echo "::warning::One or more patch sources have been blocked or hit rate limits!"; fi
 echo "TRIGGER_STABLE=$TRIGGER_STABLE" >> "$GITHUB_OUTPUT"
 echo "TRIGGER_PRERELEASE=$TRIGGER_PRERELEASE" >> "$GITHUB_OUTPUT"
 echo "TRIGGER_BLOCKED=$TRIGGER_BLOCKED" >> "$GITHUB_OUTPUT"
