@@ -703,7 +703,7 @@ _trawl_8191_get() {
 		wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
 		sleep 5
 	done
-	wpr "Trawl:8191 failed after $max_retries attempts: $url — falling back"
+	wpr "[!] Trawl:8191 failed after $max_retries attempts: $url"
 	return 1
 }
 
