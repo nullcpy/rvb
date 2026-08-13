@@ -1385,10 +1385,7 @@ get_archive_resp() {
 	__DL_RESP_CACHE__["archive_resp_$url"]="$__ARCHIVE_RESP__"
 	__DL_RESP_CACHE__["archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
 }
-get_archive_vers() { 
-	# TODO: Remove apk.apkm, apk.xapk, apk.apks support once the legacy cache is purged from the apks repo!
-	sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\.apkm\|apk\.xapk\|apk\.apks\|apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
-}
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
@@ -1464,8 +1461,7 @@ get_github_resp() {
 
 # Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
 get_github_vers() {
-	# TODO: Remove apk.apkm, apk.xapk, apk.apks support once the legacy cache is purged from the apks repo!
-    sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\.apkm\|apk\.xapk\|apk\.apks\|apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
+    sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
 }
 
 # Extracts package name by stripping everything from the first hyphen '-' onwards
@@ -1881,14 +1877,6 @@ build_rv() {
 				arch_f="${arch// /}"
 				local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 				local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
-		
-		# Rename any legacy cache files on the fly
-		[ -f "${stock_apk}.apkm" ] && mv -f "${stock_apk}.apkm" "${stock_apk%.apk}.apkm" 2>/dev/null || true
-		[ -f "${stock_apk}.xapk" ] && mv -f "${stock_apk}.xapk" "${stock_apk%.apk}.xapk" 2>/dev/null || true
-		[ -f "${stock_apk}.apks" ] && mv -f "${stock_apk}.apks" "${stock_apk%.apk}.apks" 2>/dev/null || true
-		[ -f "${common_apk}.apkm" ] && mv -f "${common_apk}.apkm" "${common_apk%.apk}.apkm" 2>/dev/null || true
-		[ -f "${common_apk}.xapk" ] && mv -f "${common_apk}.xapk" "${common_apk%.apk}.xapk" 2>/dev/null || true
-		[ -f "${common_apk}.apks" ] && mv -f "${common_apk}.apks" "${common_apk%.apk}.apks" 2>/dev/null || true
 
 				if [ ! -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
 					all_archs_found=false
@@ -2061,15 +2049,6 @@ build_rv() {
 		arch_f="${arch// /}"
 		local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 		local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
-		
-		# Rename any legacy cache files on the fly
-		[ -f "${stock_apk}.apkm" ] && mv -f "${stock_apk}.apkm" "${stock_apk%.apk}.apkm" 2>/dev/null || true
-		[ -f "${stock_apk}.xapk" ] && mv -f "${stock_apk}.xapk" "${stock_apk%.apk}.xapk" 2>/dev/null || true
-		[ -f "${stock_apk}.apks" ] && mv -f "${stock_apk}.apks" "${stock_apk%.apk}.apks" 2>/dev/null || true
-		[ -f "${common_apk}.apkm" ] && mv -f "${common_apk}.apkm" "${common_apk%.apk}.apkm" 2>/dev/null || true
-		[ -f "${common_apk}.xapk" ] && mv -f "${common_apk}.xapk" "${common_apk%.apk}.xapk" 2>/dev/null || true
-		[ -f "${common_apk}.apks" ] && mv -f "${common_apk}.apks" "${common_apk%.apk}.apks" 2>/dev/null || true
-
 		if [ -f "$common_apk" ]; then
 			local missing_arch=false
 			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$common_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
