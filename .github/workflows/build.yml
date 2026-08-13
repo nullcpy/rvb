@@ -17,10 +17,6 @@ on:
           - ".github/configs/config.manual.toml"
           - ".github/configs/config.dev.updated.json"
           - ".github/configs/config.stable.updated.json"
-      clear_cache:
-        description: "Clear GitHub Actions Cache before building"
-        type: boolean
-        default: false
 
 concurrency:
   group: build
@@ -83,10 +79,6 @@ jobs:
           key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}
           restore-keys: |
             apks-
-
-      - name: Clear APKs Cache (Manual Purge)
-        if: ${{ inputs.clear_cache == true }}
-        run: rm -rf temp/apks/* || true
 
       - name: Build modules and apks
         env:
