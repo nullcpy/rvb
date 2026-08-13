@@ -76,12 +76,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/build_resolve_version.sh
 
-      - name: Clear GitHub Actions Cache
-        if: ${{ inputs.clear_cache == true }}
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh cache delete --all || true
-
       - name: Cache APKs
         uses: actions/cache@v4
         with:
@@ -89,6 +83,10 @@ jobs:
           key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}
           restore-keys: |
             apks-
+
+      - name: Clear APKs Cache (Manual Purge)
+        if: ${{ inputs.clear_cache == true }}
+        run: rm -rf temp/apks/* || true
 
       - name: Build modules and apks
         env:
