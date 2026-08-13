@@ -80,6 +80,11 @@ jobs:
           restore-keys: |
             apks-
 
+      - name: One-time sync cache to external repo
+        env:
+          GH_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
+        run: bash .github/scripts/one_time_cache_sync.sh
+
       - name: Build modules and apks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
