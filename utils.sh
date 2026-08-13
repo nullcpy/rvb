@@ -2142,10 +2142,7 @@ build_rv() {
 				unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
 			fi
 			if [ "$missing_arch" = false ]; then
-				cp -f "$all_apk" "$stock_apk"
-				if [ -f "${all_apk%.apk}.apkm" ]; then
-					cp -f "${all_apk%.apk}.apkm" "${stock_apk%.apk}.apkm"
-				fi
+				stock_apk="$all_apk"
 			fi
 		fi
 		if [ ! -f "$stock_apk" ]; then
@@ -2225,22 +2222,23 @@ build_rv() {
 			done
 			if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" && "$arch" != "common" ]]; then
 				if check_is_universal "$stock_apk"; then
-					cp -f "$stock_apk" "$all_apk"
+					mv -f "$stock_apk" "$all_apk"
 					if [ -f "${stock_apk%.apk}.apkm" ]; then
-						cp -f "${stock_apk%.apk}.apkm" "${all_apk%.apk}.apkm"
+						mv -f "${stock_apk%.apk}.apkm" "${all_apk%.apk}.apkm"
 					fi
+					stock_apk="$all_apk"
 				fi
 			fi
 			
 			# Sync pristine files from staging to cache
 			if [ -f "$stock_apk" ]; then
-				cp -f "$stock_apk" "$cached_stock_apk"
-				if [ -f "$all_apk" ]; then
+				if [ "$stock_apk" = "$all_apk" ]; then
 					cp -f "$all_apk" "$cached_all_apk"
+					stock_apk="$cached_all_apk"
+				else
+					cp -f "$stock_apk" "$cached_stock_apk"
+					stock_apk="$cached_stock_apk"
 				fi
-				
-				# Point back to cache for GitHub upload and patching steps
-				stock_apk="$cached_stock_apk"
 				all_apk="$cached_all_apk"
 			fi
 
