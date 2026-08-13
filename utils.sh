@@ -2318,7 +2318,9 @@ build_rv() {
 				return 0
 			fi
 		fi
-		rm "$stock_apk_to_patch"
+
+		# Cleanup the temporary stripped apk to save disk space
+		rm -f "$stock_apk_to_patch"
 		if [ "$build_mode" = apk ]; then
 			if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
 				mv -f "$patched_apk" "$apk_output"
