@@ -2194,10 +2194,8 @@ build_rv() {
 				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
 					if [ -f "$common_apk" ]; then
 						gh release upload "$pkg_name" "$common_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
-						[ -f "${common_apk%.apk}.apkm" ] && gh release upload "$pkg_name" "${common_apk%.apk}.apkm" --repo "$UPLOAD_APKS_REPO" --clobber || true
 					else
 						gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
-						[ -f "${stock_apk%.apk}.apkm" ] && gh release upload "$pkg_name" "${stock_apk%.apk}.apkm" --repo "$UPLOAD_APKS_REPO" --clobber || true
 					fi
 				else
 					wpr "Failed to view/create release $pkg_name on $UPLOAD_APKS_REPO"
