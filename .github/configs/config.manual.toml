@@ -2,32 +2,20 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[threads-morphe]
+[poweramp-morphe]
 enabled = true
-pkg-name = "com.instagram.barcelona"
-app-name = "threads"
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "poweramp"
 rv-brand = "morphe"
 build-mode = "apk"
-arch = "both"
-patches-source = "durgesh0505/chiggi_morphe_patches"
-excluded-patches = "'Change app name' 'Change package name'"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://threads.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
-
-[tumblr-morphe]
-enabled = true
-pkg-name = "com.tumblr"
-app-name = "tumblr"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
+arch = "all"
 patches-source = "arandomhooman/hoomans-morphe-patches"
-uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.maxmpz.audioplayer"
 
 
