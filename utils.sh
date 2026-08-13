@@ -2165,6 +2165,17 @@ build_rv() {
 					fi
 				fi
 			fi
+			if [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
+				pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
+				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
+					gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+					[ -f "${stock_apk}.apkm" ] && gh release upload "$pkg_name" "${stock_apk}.apkm" --repo "$UPLOAD_APKS_REPO" --clobber || true
+					[ -f "$common_apk" ] && gh release upload "$pkg_name" "$common_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+					[ -f "${common_apk}.apkm" ] && gh release upload "$pkg_name" "${common_apk}.apkm" --repo "$UPLOAD_APKS_REPO" --clobber || true
+				else
+					wpr "Failed to view/create release $pkg_name on $UPLOAD_APKS_REPO"
+				fi
+			fi
 		else
 			pr "Found APK in cache: ${stock_apk}. Skipping download!"
 		fi
