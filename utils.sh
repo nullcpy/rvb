@@ -780,11 +780,6 @@ apkmirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6"
 	local dlurl="" node app_table emptyCheck
 
-	local apparch=('universal' 'noarch' 'arm64-v8a + x86_64' 'arm64-v8a + armeabi-v7a')
-	if [[ "$arch" != all ]]; then
-		apparch+=("$arch")
-	fi
-
 	local appdpi=("nodpi" "anydpi")
 	local match_any_dpi=false
 	if [ "$dpi" ]; then
@@ -795,6 +790,8 @@ apkmirror_search() {
 	fi
 
 	local best_fallback_url=""
+	local specific_arch_url=""
+	local specific_arch_fallback_url=""
 
 	for ((n = 1; n < 40; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" <<<"$resp")
@@ -803,8 +800,6 @@ apkmirror_search() {
 		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
 		if [ -z "$dlurl" ]; then continue; fi
 
-		
-		
 		local node_apk_bundle node_arch node_dpi
 		node_apk_bundle=$($HTMLQ "div.table-cell:nth-child(1) span.apkm-badge:first-of-type" --text <<<"$node" | xargs)
 		[ -z "$node_apk_bundle" ] && node_apk_bundle="APK"
@@ -820,18 +815,32 @@ apkmirror_search() {
 			fi
 		fi
 
-		if isoneof "$node_arch" "${apparch[@]}"; then
+		# Pass 1 Logic: Return Universal/Fat Bundles immediately to optimize cache size
+		if isoneof "$node_arch" 'universal' 'noarch' 'arm64-v8a + x86_64' 'arm64-v8a + armeabi-v7a'; then
 			if isoneof "$node_dpi" "${appdpi[@]}"; then
 				echo "$dlurl"
 				return 0
 			elif [ "$match_any_dpi" = true ] && [ -z "$best_fallback_url" ]; then
 				best_fallback_url="$dlurl"
 			fi
+		# Pass 2 Logic: If it's strictly the requested arch, save it as a fallback in case no universal is found
+		elif [ "$node_arch" = "$arch" ]; then
+			if isoneof "$node_dpi" "${appdpi[@]}"; then
+				[ -z "$specific_arch_url" ] && specific_arch_url="$dlurl"
+			elif [ "$match_any_dpi" = true ] && [ -z "$specific_arch_fallback_url" ]; then
+				specific_arch_fallback_url="$dlurl"
+			fi
 		fi
 	done
 
 	if [ -n "$best_fallback_url" ]; then
 		echo "$best_fallback_url"
+		return 0
+	elif [ -n "$specific_arch_url" ]; then
+		echo "$specific_arch_url"
+		return 0
+	elif [ -n "$specific_arch_fallback_url" ]; then
+		echo "$specific_arch_fallback_url"
 		return 0
 	fi
 	return 1
@@ -1311,6 +1320,7 @@ dl_uptodown() {
 	data_version=$($HTMLQ '.button.variants' --attribute data-version <<<"$resp") || return 1
 	if [ "$data_version" ]; then
 		files=$(req "${uptodown_dlurl%/*}/app/${data_code}/version/${data_version}/files" - | jq -e -r .content) || return 1
+		local specific_arch_id="" specific_is_bundle=false
 		for ((n = 1; n < 12; n += 1)); do
 			node_class=$($HTMLQ -w -t ".content > :nth-child($n)" --attribute class <<<"$files") || return 1
 			if [ "$node_class" != "variant" ]; then
@@ -1318,15 +1328,31 @@ dl_uptodown() {
 				continue
 			fi
 			if [ -z "$node_arch" ]; then return 1; fi
-			if ! isoneof "$node_arch" "${apparch[@]}"; then continue; fi
-
+			
+			local file_type
 			file_type=$($HTMLQ -w -t ".content > :nth-child($n) > .v-file > span" <<<"$files") || return 1
-			if [ "$file_type" = "xapk" ]; then is_bundle=true; else is_bundle=false; fi
 			data_file_id=$($HTMLQ ".content > :nth-child($n) > .v-report" --attribute data-file-id <<<"$files") || return 1
-			resp=$(req "${uptodown_dlurl}/download/${data_file_id}-x" -)
-			break
+			
+			# Pass 1 Logic: Return Universal/Fat Bundles immediately to optimize cache size
+			if isoneof "$node_arch" 'arm64-v8a, armeabi-v7a, x86_64' 'arm64-v8a, armeabi-v7a, x86, x86_64' 'arm64-v8a, armeabi-v7a' 'universal'; then
+				if [ "$file_type" = "xapk" ]; then is_bundle=true; else is_bundle=false; fi
+				resp=$(req "${uptodown_dlurl}/download/${data_file_id}-x" -)
+				break
+			# Pass 2 Logic: Save specifically requested arch as fallback
+			elif [ "$node_arch" = "$arch" ] && [ -z "$specific_arch_id" ]; then
+				specific_arch_id="$data_file_id"
+				if [ "$file_type" = "xapk" ]; then specific_is_bundle=true; else specific_is_bundle=false; fi
+			fi
 		done
-		if [ $n -eq 12 ]; then return 1; fi
+		
+		if [ $n -eq 12 ]; then
+			if [ -n "$specific_arch_id" ]; then
+				is_bundle=$specific_is_bundle
+				resp=$(req "${uptodown_dlurl}/download/${specific_arch_id}-x" -)
+			else
+				return 1
+			fi
+		fi
 	fi
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
@@ -1676,6 +1702,54 @@ write_build_info() {
 		'if has($key) then .[$key].exts = (.[$key].exts + [$ext] | unique) else .[$key] = {exts: [$ext], name: $name, arch: $arch, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
 		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
 }
+verify_downloaded_apk() {
+	local stock_apk=$1
+	local pkg_name=$2
+	local dl_p=$3
+	local sig_op
+	
+	if [ -f "${stock_apk%.apk}.apkm" ]; then
+		rm -rf "${stock_apk}-zip" || :
+		unzip -j "${stock_apk%.apk}.apkm" -d "${stock_apk}-zip" >/dev/null
+		if [ -f "${stock_apk}-zip/base.apk" ]; then
+			if ! sig_op=$(check_sig "${stock_apk}-zip/base.apk" "$pkg_name" 2>&1); then
+				epr "Signature mismatch on base.apk: $sig_op. Rejecting download from $dl_p..."
+				rm -rf "${stock_apk}-zip" || :
+				return 1
+			fi
+		else
+			for a in "${stock_apk}"-zip/*.apk; do
+				if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
+					epr "Signature mismatch on $a: $sig_op. Rejecting download from $dl_p..."
+					rm -rf "${stock_apk}-zip" || :
+					return 1
+				fi
+				break
+			done
+		fi
+		rm -rf "${stock_apk}-zip" || :
+	else
+		if ! sig_op=$(check_sig "$stock_apk" "$pkg_name" 2>&1); then
+			epr "Signature mismatch on $stock_apk: $sig_op. Rejecting download from $dl_p..."
+			return 1
+		fi
+	fi
+	return 0
+}
+
+check_is_universal() {
+	local stock_apk=$1
+	if [ -f "${stock_apk%.apk}.apkm" ]; then
+		if ! unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64\|armeabi\|x86\|x86_64" || (unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64" && unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "armeabi"); then
+			return 0
+		fi
+	else
+		if ! unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/" || (unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/arm64-v8a/" && unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"); then
+			return 0
+		fi
+	fi
+	return 1
+}
 
 build_rv() {
 	eval "declare -A args=${1#*=}"
@@ -1877,9 +1951,9 @@ build_rv() {
 			for arch in "${arch_list[@]}"; do
 				arch_f="${arch// /}"
 				local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-				local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+				local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 
-				if [ ! -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
+				if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
 					all_archs_found=false
 					break
 				fi
@@ -1888,9 +1962,9 @@ build_rv() {
 				for arch in "${arch_list[@]}"; do
 					arch_f="${arch// /}"
 					local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-					local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+					local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 					[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
-					[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+					[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
 				done
 				pr "Found all required architectures for '$pkg_name' (v$version_f) in cache. Skipping download!"
 				skip_dl_source_check=true
@@ -1914,8 +1988,8 @@ build_rv() {
 					for arch in "${arch_list[@]}"; do
 						arch_f="${arch// /}"
 						local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
-						local common_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-common.apk"
-						if [ ! -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
+						local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
+						if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
 							all_archs_found=false
 							break
 						fi
@@ -1924,9 +1998,9 @@ build_rv() {
 						for arch in "${arch_list[@]}"; do
 							arch_f="${arch// /}"
 							local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
-							local common_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-common.apk"
+							local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
 							[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
-							[ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+							[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
 						done
 						pr "Discovered highest version (v$dyn_ver) for '$pkg_name' in cache. Skipping download!"
 						skip_dl_source_check=true
@@ -2057,27 +2131,27 @@ build_rv() {
 	for arch in "${arch_list[@]}"; do
 		arch_f="${arch// /}"
 		local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-		local cached_common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+		local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 		local stock_apk="$cached_stock_apk"
-		local common_apk="$cached_common_apk"
-		if [ -f "$common_apk" ]; then
+		local all_apk="$cached_all_apk"
+		if [ -f "$all_apk" ]; then
 			local missing_arch=false
-			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$common_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
-				unzip -l "$common_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
-			elif [ "$arch_f" = "arm-v7a" ] && ! unzip -l "$common_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"; then
-				unzip -l "$common_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
+			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
+				unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
+			elif [ "$arch_f" = "arm-v7a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"; then
+				unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
 			fi
 			if [ "$missing_arch" = false ]; then
-				cp -f "$common_apk" "$stock_apk"
-				if [ -f "${common_apk%.apk}.apkm" ]; then
-					cp -f "${common_apk%.apk}.apkm" "${stock_apk%.apk}.apkm"
+				cp -f "$all_apk" "$stock_apk"
+				if [ -f "${all_apk%.apk}.apkm" ]; then
+					cp -f "${all_apk%.apk}.apkm" "${stock_apk%.apk}.apkm"
 				fi
 			fi
 		fi
 		if [ ! -f "$stock_apk" ]; then
 			# Redirect to staging directory for safe downloading and processing
 			stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-			common_apk="${apk_dl_dir}/${pkg_name}-${version_f}-common.apk"
+			all_apk="${apk_dl_dir}/${pkg_name}-${version_f}-all.apk"
 
 			for dl_p in "${DL_SRCS[@]}"; do
 				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
@@ -2142,57 +2216,18 @@ build_rv() {
 						fi
 					fi
 				fi
-
-				local sig_op
-				local sig_ok=true
-				if [ -f "${stock_apk%.apk}.apkm" ]; then
-					rm -rf "${stock_apk}-zip" || :
-					unzip -j "${stock_apk%.apk}.apkm" -d "${stock_apk}-zip" >/dev/null
-					if [ -f "${stock_apk}-zip/base.apk" ]; then
-						if ! sig_op=$(check_sig "${stock_apk}-zip/base.apk" "$pkg_name" 2>&1); then
-							epr "Signature mismatch on base.apk: $sig_op. Rejecting download from $dl_p..."
-							sig_ok=false
-						fi
-					else
-						for a in "${stock_apk}"-zip/*.apk; do
-							if ! sig_op=$(check_sig "$a" "$pkg_name" 2>&1); then
-								epr "Signature mismatch on $a: $sig_op. Rejecting download from $dl_p..."
-								sig_ok=false
-								break
-							fi
-							break # Only check one APK if no base.apk
-						done
-					fi
-					rm -rf "${stock_apk}-zip" || :
-				else
-					if ! sig_op=$(check_sig "$stock_apk" "$pkg_name" 2>&1); then
-						epr "Signature mismatch on $stock_apk: $sig_op. Rejecting download from $dl_p..."
-						sig_ok=false
-					fi
-				fi
-				if [ "$sig_ok" = false ]; then
+				if ! verify_downloaded_apk "$stock_apk" "$pkg_name" "$dl_p"; then
 					rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
 					continue
 				fi
 
 				break
 			done
-			if [ -f "$stock_apk" ] && [ ! -f "$common_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" && "$arch" != "common" ]]; then
-				local is_universal=false
-				if [ -f "${stock_apk%.apk}.apkm" ]; then
-					if ! unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64\|armeabi\|x86\|x86_64" || (unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64" && unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "armeabi"); then
-						is_universal=true
-					fi
-				else
-					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/" || (unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/arm64-v8a/" && unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"); then
-						is_universal=true
-					fi
-				fi
-				
-				if [ "$is_universal" = true ]; then
-					cp -f "$stock_apk" "$common_apk"
+			if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" && "$arch" != "common" ]]; then
+				if check_is_universal "$stock_apk"; then
+					cp -f "$stock_apk" "$all_apk"
 					if [ -f "${stock_apk%.apk}.apkm" ]; then
-						cp -f "${stock_apk%.apk}.apkm" "${common_apk%.apk}.apkm"
+						cp -f "${stock_apk%.apk}.apkm" "${all_apk%.apk}.apkm"
 					fi
 				fi
 			fi
@@ -2200,20 +2235,20 @@ build_rv() {
 			# Sync pristine files from staging to cache
 			if [ -f "$stock_apk" ]; then
 				cp -f "$stock_apk" "$cached_stock_apk"
-				if [ -f "$common_apk" ]; then
-					cp -f "$common_apk" "$cached_common_apk"
+				if [ -f "$all_apk" ]; then
+					cp -f "$all_apk" "$cached_all_apk"
 				fi
 				
 				# Point back to cache for GitHub upload and patching steps
 				stock_apk="$cached_stock_apk"
-				common_apk="$cached_common_apk"
+				all_apk="$cached_all_apk"
 			fi
 
 			if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
 				pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
 				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
-					if [ -f "$common_apk" ]; then
-						gh release upload "$pkg_name" "$common_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+					if [ -f "$all_apk" ]; then
+						gh release upload "$pkg_name" "$all_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
 					else
 						gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
 					fi
@@ -2234,7 +2269,7 @@ build_rv() {
 	# Ensure the mtime is set to now so newly downloaded APKs with old server timestamps aren't purged
 	touch "$stock_apk" 2>/dev/null || true
 	[ -f "${stock_apk%.apk}.apkm" ] && touch "${stock_apk%.apk}.apkm" 2>/dev/null || true
-	[ -n "${common_apk:-}" ] && [ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
+	[ -n "${all_apk:-}" ] && [ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
 
 	# Log usage for apks repo cache sync
 	echo "${pkg_name}-${version_f}" >> "$TEMP_DIR/used_versions.txt"
