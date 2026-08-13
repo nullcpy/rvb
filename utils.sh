@@ -2170,15 +2170,26 @@ build_rv() {
 
 				break
 			done
-			if [ -f "$stock_apk" ] && [ ! -f "$common_apk" ]; then
-				if ! unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/" || (unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/arm64-v8a/" && unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"); then
+			if [ -f "$stock_apk" ] && [ ! -f "$common_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" && "$arch" != "common" ]]; then
+				local is_universal=false
+				if [ -f "${stock_apk%.apk}.apkm" ]; then
+					if ! unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64\|armeabi\|x86\|x86_64" || (unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "arm64" && unzip -l "${stock_apk%.apk}.apkm" 2>/dev/null | grep -iq "armeabi"); then
+						is_universal=true
+					fi
+				else
+					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/" || (unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/arm64-v8a/" && unzip -l "$stock_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"); then
+						is_universal=true
+					fi
+				fi
+				
+				if [ "$is_universal" = true ]; then
 					cp -f "$stock_apk" "$common_apk"
 					if [ -f "${stock_apk%.apk}.apkm" ]; then
 						cp -f "${stock_apk%.apk}.apkm" "${common_apk%.apk}.apkm"
 					fi
 				fi
 			fi
-			if [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
+			if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
 				pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
 				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
 					gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
