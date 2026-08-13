@@ -1343,14 +1343,16 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path="" version_f=${version// /}
-	while IFS= read -r p; do
-		case "$p" in
-			*"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks"|*"${version_f#v}-all.apk"|*"${version_f#v}-all.apkm"|*"${version_f#v}-all.xapk"|*"${version_f#v}-all.apks"|*"${version_f#v}-common.apk"|*"${version_f#v}-common.apkm"|*"${version_f#v}-common.xapk"|*"${version_f#v}-common.apks")
-				path="$p"
-				break
-				;;
-		esac
-	done <<<"$__ARCHIVE_RESP__"
+	for a in "${arch// /}" "common" "all"; do
+		for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+			while IFS= read -r p; do
+				if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+					path="$p"
+					break 3
+				fi
+			done <<<"$__ARCHIVE_RESP__"
+		done
+	done
 	if [ -z "$path" ]; then
 		epr "Version ${version} with arch ${arch} not found in archive"
 		return 1
@@ -1383,7 +1385,7 @@ get_archive_resp() {
 	__DL_RESP_CACHE__["archive_resp_$url"]="$__ARCHIVE_RESP__"
 	__DL_RESP_CACHE__["archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
 }
-get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\.apkm\|apk\.xapk\|apk\.apks\|apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
@@ -1393,14 +1395,16 @@ dl_github() {
 	local base_url=${__GITHUB_URL__:-$url}
     
     # Matches the exact file selection logic from dl_archive
-    while IFS= read -r p; do
-        case "$p" in
-            *"${version_f#v}-${arch// /}.apk"|*"${version_f#v}-${arch// /}.apkm"|*"${version_f#v}-${arch// /}.xapk"|*"${version_f#v}-${arch// /}.apks"|*"${version_f#v}-all.apk"|*"${version_f#v}-all.apkm"|*"${version_f#v}-all.xapk"|*"${version_f#v}-all.apks"|*"${version_f#v}-common.apk"|*"${version_f#v}-common.apkm"|*"${version_f#v}-common.xapk"|*"${version_f#v}-common.apks")
-                path="$p"
-                break
-                ;;
-        esac
-    done <<<"$__ARCHIVE_RESP__"
+    for a in "${arch// /}" "common" "all"; do
+        for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+            while IFS= read -r p; do
+                if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                    path="$p"
+                    break 3
+                fi
+            done <<<"$__ARCHIVE_RESP__"
+        done
+    done
     
     if [ -z "$path" ]; then
         epr "Version ${version} with arch ${arch} not found in github"
@@ -1457,7 +1461,7 @@ get_github_resp() {
 
 # Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
 get_github_vers() {
-    sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
+    sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\.apkm\|apk\.xapk\|apk\.apks\|apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
 }
 
 # Extracts package name by stripping everything from the first hyphen '-' onwards
