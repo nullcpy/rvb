@@ -1816,7 +1816,8 @@ build_rv() {
 	local tried_dl=()
 	local list_patches=""
 	local apk_cache_dir="${APK_CACHE_DIR:-${TEMP_DIR}/apks}"
-	mkdir -p "$apk_cache_dir"
+	local apk_dl_dir="${TEMP_DIR}/apks_dl"
+	mkdir -p "$apk_cache_dir" "$apk_dl_dir"
 
 	local skip_dl_source_check=false
 	local resolved_version=""
@@ -2055,8 +2056,10 @@ build_rv() {
 	version_f=${version_f#v}
 	for arch in "${arch_list[@]}"; do
 		arch_f="${arch// /}"
-		local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-		local common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+		local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+		local cached_common_apk="${apk_cache_dir}/${pkg_name}-${version_f}-common.apk"
+		local stock_apk="$cached_stock_apk"
+		local common_apk="$cached_common_apk"
 		if [ -f "$common_apk" ]; then
 			local missing_arch=false
 			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$common_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
@@ -2072,6 +2075,10 @@ build_rv() {
 			fi
 		fi
 		if [ ! -f "$stock_apk" ]; then
+			# Redirect to staging directory for safe downloading and processing
+			stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+			common_apk="${apk_dl_dir}/${pkg_name}-${version_f}-common.apk"
+
 			for dl_p in "${DL_SRCS[@]}"; do
 				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
 				pr "Downloading '${table}' from '${dl_p}'"
@@ -2189,6 +2196,19 @@ build_rv() {
 					fi
 				fi
 			fi
+			
+			# Sync pristine files from staging to cache
+			if [ -f "$stock_apk" ]; then
+				cp -f "$stock_apk" "$cached_stock_apk"
+				if [ -f "$common_apk" ]; then
+					cp -f "$common_apk" "$cached_common_apk"
+				fi
+				
+				# Point back to cache for GitHub upload and patching steps
+				stock_apk="$cached_stock_apk"
+				common_apk="$cached_common_apk"
+			fi
+
 			if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
 				pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
 				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
