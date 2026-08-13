@@ -84,7 +84,8 @@
     "patches-source": "RookieEnough/De-Vanced",
     "cli-source": "MorpheApp/morphe-desktop",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.photos"
   },
   "instagram-morphe": {
     "enabled": false,
