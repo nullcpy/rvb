@@ -25,6 +25,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.recorder"
 
 [rar-morphe]
 enabled = true
@@ -62,6 +63,7 @@ uptodown-dlurl = "https://photomath.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microblink.photomath"
 
 [viber-morphe]
 enabled = true
@@ -74,6 +76,7 @@ patches-source = "RookieEnough/De-Vanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.viber.voip"
 
 [pixiv-morphe]
 enabled = true

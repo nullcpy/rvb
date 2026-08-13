@@ -122,6 +122,7 @@ uptodown-dlurl = "https://facebook.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
 
 [threads-morphe]
 enabled = true
@@ -137,3 +138,4 @@ uptodown-dlurl = "https://threads.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.barcelona"

@@ -84,6 +84,7 @@ cli-source = "MorpheApp/morphe-desktop"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.photos"
 
 [instagram-morphe]
 enabled = true

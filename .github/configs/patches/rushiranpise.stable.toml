@@ -114,6 +114,7 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
 apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.accuweather.android"
 
 [the-weather-channel-morphe]
 enabled = true
@@ -130,6 +131,7 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
 apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.weather.Weather"
 
 [beta-maniac-morphe]
 enabled = true
@@ -206,6 +208,7 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
 apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
 
 [pocket-casts-morphe]
 enabled = true
@@ -220,3 +223,4 @@ uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
 dpi = "nodpi anydpi auto"
 apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/au.com.shiftyjelly.pocketcasts"
