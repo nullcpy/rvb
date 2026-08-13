@@ -6,8 +6,9 @@ set -euo pipefail
 # while staying safely below GitHub's 10GB total repository cache limit.
 
 APK_CACHE_DIR="temp/apks"
-# Set limit to 8 GB (8 * 1024 * 1024 * 1024 bytes)
-MAX_SIZE_BYTES=$((8 * 1024 * 1024 * 1024))
+# Set limit to 10 GB (10 * 1024 * 1024 * 1024 bytes uncompressed)
+# Note: 10GB uncompressed is roughly 8GB compressed, well within GitHub's 10GB total limit.
+MAX_SIZE_BYTES=$((10 * 1024 * 1024 * 1024))
 RETENTION_TIERS=(30 14 7 3)
 
 if [ ! -d "$APK_CACHE_DIR" ]; then
@@ -23,11 +24,11 @@ get_size() {
 current_size=$(get_size)
 
 if [ "$current_size" -lt "$MAX_SIZE_BYTES" ]; then
-    echo "Cache size is currently $current_size bytes (under 8GB). No cleanup needed!"
+    echo "Cache size is currently $current_size bytes (under 10GB). No cleanup needed!"
     exit 0
 fi
 
-echo "Cache size ($current_size bytes) exceeds 8GB limit! Initiating tiered cleanup..."
+echo "Cache size ($current_size bytes) exceeds 10GB limit! Initiating tiered cleanup..."
 
 for days in "${RETENTION_TIERS[@]}"; do
     echo "Evicting APKs older than $days days..."
@@ -48,4 +49,15 @@ for days in "${RETENTION_TIERS[@]}"; do
     fi
 done
 
-echo "Cache size is still $current_size bytes even after maximum cleanup."
+echo "Cache size is still $current_size bytes. Initiating STRICT fallback eviction (deleting oldest files first)..."
+
+# Strictly enforce limit by deleting oldest files one by one until under limit
+while [ "$current_size" -ge "$MAX_SIZE_BYTES" ]; do
+    oldest_file=$(find "$APK_CACHE_DIR" -type f -printf '%T+ %p\n' | sort | head -n 1 | awk '{print $2}')
+    if [ -z "$oldest_file" ]; then break; fi
+    echo "Evicting oldest file: $oldest_file"
+    rm -f "$oldest_file"
+    current_size=$(get_size)
+done
+
+echo "Strict cleanup complete. Final cache size: $current_size bytes."
