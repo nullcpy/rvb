@@ -96,6 +96,7 @@ jobs:
         env:
           APKS_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
         run: python3 .github/scripts/update_usage_tracker.py
+        
       - name: Cleanup old cached APKs
         run: bash .github/scripts/build_cache_cleanup.sh
 
