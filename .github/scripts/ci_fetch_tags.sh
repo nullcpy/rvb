@@ -54,6 +54,10 @@ while read -r id repo host enabled enabledStable enabledDev; do
       pre_date=$(echo "$pre_obj" | jq -r '.published_at // ""')
     fi
 
+    if [ -n "$stable" ]; then echo "Found stable: $stable"; fi
+    if [ -n "$pre" ]; then echo "Found pre-release: $pre"; fi
+    if [ -z "$stable" ] && [ -z "$pre" ]; then echo "::warning::No valid tags found for $repo"; fi
+
     jq -n --arg id "$id" --arg stable "$stable" --arg stable_date "$stable_date" --arg pre "$pre" --arg pre_date "$pre_date" \
       '{($id): {"stable": $stable, "stable_date": $stable_date, "prerelease": $pre, "pre_date": $pre_date, "blocked": false}}' >> updates.jsonl
   else
