@@ -1941,6 +1941,12 @@ build_rv() {
 		# 2. Establish dl_from and fetch required HTML responses
 		for dl_p in "${DL_SRCS[@]}"; do
 			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+			
+			# If we need to find the latest version, do not use the archive/cache as the source of truth
+			if [ -z "$resolved_version" ] && [ "$dl_p" = "archive" ]; then
+				continue
+			fi
+
 			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
 				args[${dl_p}_dlurl]=""
 				epr "ERROR: Could not get response for ${table} in ${dl_p}"
