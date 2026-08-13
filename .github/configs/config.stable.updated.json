@@ -609,7 +609,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -1103,7 +1103,8 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.lrmobile"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.rumble.battles",
     "app-name": "rumble",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1112,10 +1113,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://rumble.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/rumble-inc/rumble",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rumble.battles"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "tv.twitch.android.app",
     "app-name": "twitch",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1124,10 +1127,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/twitch-interactive-inc/twitch",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.twitch.android.app"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.paget96.batteryguru",
     "app-name": "battery-guru",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1136,10 +1141,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://battery-guru.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.paget96.batteryguru"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.realbyteapps.moneymanagerfree",
     "app-name": "money-manager",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1148,10 +1155,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://money-manager.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.realbyteapps.moneymanagerfree"
   },
   "poweramp-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "poweramp",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1159,10 +1168,15 @@
     "patches-source": "arandomhooman/hoomans-morphe-patches",
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
-    "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android"
+    "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/max-mp/poweramp",
+    "apkpure-dlurl": "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer",
+    "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.maxmpz.audioplayer"
   },
   "at4k-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.overdevs.at4k",
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1171,10 +1185,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv",
-    "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
+    "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.snorelab.app",
     "app-name": "snorelab",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1186,7 +1202,8 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.spocky.projengmenu",
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1199,7 +1216,8 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.adobe.reader",
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1212,7 +1230,8 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
   },
   "inshot-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.camerasideas.instashot",
     "app-name": "inshot",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1221,10 +1240,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor",
-    "uptodown-dlurl": "https://inshot-editor.en.uptodown.com/android"
+    "uptodown-dlurl": "https://inshot-editor.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.camerasideas.instashot"
   },
   "todoist-morphe": {
-    "enabled": true,
+    "enabled": false,
+    "pkg-name": "com.todoist",
     "app-name": "todoist",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1232,10 +1253,11 @@
     "patches-source": "arandomhooman/hoomans-morphe-patches",
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
-    "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+    "apkpure-dlurl": "https://apkpure.com/todoist-to-do-list-planner/com.todoist",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.todoist"
   },
   "tumblr-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tumblr",
     "app-name": "tumblr",
     "rv-brand": "morphe",
