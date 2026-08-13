@@ -1942,9 +1942,11 @@ build_rv() {
 		for dl_p in "${DL_SRCS[@]}"; do
 			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
 			
-			# If we need to find the latest version, do not use the archive/cache as the source of truth
-			if [ -z "$resolved_version" ] && [ "$dl_p" = "archive" ]; then
-				continue
+			# If we need to find the latest version, do not use cache repositories as the source of truth
+			if [ -z "$resolved_version" ]; then
+				if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ]; then
+					continue
+				fi
 			fi
 
 			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
