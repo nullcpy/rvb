@@ -2204,6 +2204,9 @@ build_rv() {
 	[ -f "${stock_apk%.apk}.apkm" ] && touch "${stock_apk%.apk}.apkm" 2>/dev/null || true
 	[ -n "${common_apk:-}" ] && [ -f "$common_apk" ] && touch "$common_apk" 2>/dev/null || true
 
+	# Log usage for apks repo cache sync
+	echo "${pkg_name}-${version_f}" >> "$TEMP_DIR/used_versions.txt"
+
 	local sig_op
 	if [ -f "${stock_apk%.apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
