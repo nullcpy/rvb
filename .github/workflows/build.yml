@@ -17,6 +17,10 @@ on:
           - ".github/configs/config.manual.toml"
           - ".github/configs/config.dev.updated.json"
           - ".github/configs/config.stable.updated.json"
+      clear_cache:
+        description: "Clear GitHub Actions Cache before building"
+        type: boolean
+        default: false
 
 concurrency:
   group: build
@@ -71,6 +75,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/build_resolve_version.sh
+
+      - name: Clear GitHub Actions Cache
+        if: ${{ inputs.clear_cache == true }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh cache delete --all || true
 
       - name: Cache APKs
         uses: actions/cache@v4
