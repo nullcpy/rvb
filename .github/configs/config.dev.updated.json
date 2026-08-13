@@ -103,7 +103,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "tiktok-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "tiktok",
     "rv-brand": "morphe",
@@ -133,7 +133,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "gboard-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe",
@@ -149,7 +149,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "gboard-morphe-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe-clone",
