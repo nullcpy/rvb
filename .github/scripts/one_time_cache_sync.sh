@@ -48,7 +48,7 @@ for file in "${apks[@]}"; do
 
             if echo "$release_data" | jq -e ".assets[] | select(.name == \"$faulty_name\")" > /dev/null 2>&1; then
                 echo " -> Found BUGGY remote asset: $faulty_name. Deleting..."
-                asset_id=$(echo "$release_data" | jq -e -r ".assets[] | select(.name == \"$faulty_name\") | .id")
+                asset_id=$(gh api "repos/${TARGET_REPO}/releases/tags/${pkg_name}" --jq ".assets[] | select(.name == \"$faulty_name\") | .id" 2>/dev/null || echo "")
                 if [ -n "$asset_id" ]; then
                     gh api -X DELETE "repos/${TARGET_REPO}/releases/assets/${asset_id}" || true
                     echo " -> Successfully deleted buggy asset!"
