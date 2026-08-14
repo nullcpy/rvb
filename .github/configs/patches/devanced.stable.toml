@@ -91,3 +91,24 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
 dpi = "nodpi anydpi auto"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
 # archive-dlurl = ""
+
+[strava-morphe]
+enabled = true
+pkg-name = "com.strava"
+app-name = "strava"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://strava.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/strava-run-hike-android-exercise-laugh/com.strava"
+apkcom-dlurl = "https://apkcombo.com/it/strava/com.strava"
+# dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.strava"
+# archive-dlurl = ""
+
+
+
+
+
