@@ -2,20 +2,17 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[netflix-morphe-androidtv]
+[disneyplus-morphe-androidtv]
 enabled = true 
-pkg-name = "com.netflix.ninja"
-app-name = "netflix"
+pkg-name = "com.disney.disneyplus"
+app-name = "disneyplus"
 rv-brand = "morphe-androidtv"
 build-mode = "apk"
-arch = "arm-v7a"
+arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv"
-uptodown-dlurl = "https://netflix-inc-netflix.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja"
-apkcombo-dlurl = "https://apkcombo.com/netflix-tv/com.netflix.ninja"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.netflix.ninja"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
 
 
