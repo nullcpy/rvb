@@ -15,7 +15,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
@@ -28,7 +28,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
@@ -42,7 +42,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
@@ -55,7 +55,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
@@ -69,7 +69,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.tubitv",
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
@@ -82,7 +82,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.univision.prendetv",
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
@@ -95,7 +95,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.pluto.android",
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
@@ -109,7 +109,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
   },
   "netflix-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.netflix.ninja",
     "app-name": "netflix",
     "rv-brand": "morphe-androidtv",
@@ -625,7 +625,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -802,6 +802,18 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
     "dpi": "nodpi anydpi auto",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
+  },
+  "strava-morphe": {
+    "enabled": false,
+    "pkg-name": "com.strava",
+    "app-name": "strava",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "RookieEnough/De-Vanced",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
   },
   "soundcloud-morphe": {
     "enabled": false,
