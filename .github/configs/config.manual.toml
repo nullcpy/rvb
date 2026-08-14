@@ -2,17 +2,19 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[disneyplus-morphe-androidtv]
-enabled = true 
-pkg-name = "com.disney.disneyplus"
-app-name = "disneyplus"
-rv-brand = "morphe-androidtv"
+[facebook-morphe]
+enabled = true
+pkg-name = "com.facebook.katana"
+app-name = "facebook"
+rv-brand = "morphe"
 build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
+arch = "both"
+patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
 
 
