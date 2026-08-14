@@ -93,3 +93,22 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
 uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
 
+[netflix-morphe-androidtv]
+enabled = true 
+pkg-name = "com.netflix.ninja"
+app-name = "netflix"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "arm-v7a"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-desktop"
+dpi = "nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv"
+uptodown-dlurl = "https://netflix-inc-netflix.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja"
+apkcombo-dlurl = "https://apkcombo.com/netflix-tv/com.netflix.ninja"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.netflix.ninja"
+
+
+
+
