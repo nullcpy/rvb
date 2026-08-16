@@ -10,10 +10,7 @@ fetch_gitlab_releases() {
 }
 
 if echo "$BASE_JSON" | jq -e 'length == 0' >/dev/null; then
-  DELIM="$(openssl rand -hex 8)"
-  echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
-  echo "$BASE_JSON" >> "$GITHUB_OUTPUT"
-  echo "${DELIM}" >> "$GITHUB_OUTPUT"
+  echo "$BASE_JSON" > tags_new.json
   exit 0
 fi
 
@@ -81,7 +78,4 @@ else
    NEW_JSON="$BASE_JSON"
 fi
 
-DELIM="$(openssl rand -hex 8)"
-echo "latest<<${DELIM}" >> "$GITHUB_OUTPUT"
-echo "$NEW_JSON" >> "$GITHUB_OUTPUT"
-echo "${DELIM}" >> "$GITHUB_OUTPUT"
+echo "$NEW_JSON" > tags_new.json

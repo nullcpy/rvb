@@ -94,8 +94,17 @@ def process_zip(path, pkgs):
     return {k: v.hexdigest() for k, v in buckets.items()}
 
 def run():
-    tags_old = json.loads(os.environ.get('TAGS_OLD', '{}'))
-    tags_new = json.loads(os.environ.get('TAGS_NEW', '{}'))
+    try:
+        with open('tags_old.json', 'r') as f:
+            tags_old = json.load(f)
+    except FileNotFoundError:
+        tags_old = {}
+        
+    try:
+        with open('tags_new.json', 'r') as f:
+            tags_new = json.load(f)
+    except FileNotFoundError:
+        tags_new = {}
     
     hash_file = '.github/configs/patch_file_hashes.json'
     if os.path.exists(hash_file):

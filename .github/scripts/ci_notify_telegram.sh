@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-[ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
-[ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
+[ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
+[ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'
 
 PATCH_SOURCES_JSON=$(cat .github/configs/patch_sources.json || echo '{}')
 MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson patches "$PATCH_SOURCES_JSON" '

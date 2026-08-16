@@ -6,7 +6,9 @@ ACTIVE_APPS="active_apps.json"
 
 [ -f "$CURRENT_VERSIONS" ] || echo '{}' > "$CURRENT_VERSIONS"
 
-if [ -z "${FETCHED_APP_VERSIONS:-}" ]; then
+if [ -f fetched_app_versions.json ]; then
+    FETCHED_APP_VERSIONS=$(cat fetched_app_versions.json)
+else
     FETCHED_APP_VERSIONS="{}"
 fi
 [ -f "$ACTIVE_APPS" ] || echo '[]' > "$ACTIVE_APPS"

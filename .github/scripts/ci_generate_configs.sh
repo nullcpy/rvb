@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-[ -n "${TAGS_OLD:-}" ] || TAGS_OLD='{}'
-[ -n "${TAGS_NEW:-}" ] || TAGS_NEW='{}'
+[ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
+[ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'
 [ -f active_apps.json ] || echo '[]' > active_apps.json
 [ -f active_patch_apps.stable.json ] || echo '[]' > active_patch_apps.stable.json
 [ -f active_patch_apps.dev.json ] || echo '[]' > active_patch_apps.dev.json

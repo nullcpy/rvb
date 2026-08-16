@@ -62,8 +62,6 @@ jobs:
       - name: Compare latest vs stored tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare
-        env:
-          LATEST_TAGS: ${{ steps.fetch_tags.outputs.latest }}
         run: bash .github/scripts/ci_compare_tags.sh
 
       - name: Fetch App Versions
@@ -74,27 +72,22 @@ jobs:
       - name: Compare App Versions
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: compare_apps
-        env:
-          FETCHED_APP_VERSIONS: ${{ steps.fetch_app_versions.outputs.fetched }}
         run: bash .github/scripts/ci_compare_app_versions.sh
 
       - name: Check Patch App Updates
         if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1') }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
-          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
         run: python .github/scripts/ci_check_app_patches.py
 
       - name: Generate configs (JSON)
         if: ${{ steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
         id: generate_configs
         env:
-          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
-          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
           TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
           TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE }}
+          TRIGGER_BLOCKED: ${{ steps.compare.outputs.TRIGGER_BLOCKED }}
         run: bash .github/scripts/ci_generate_configs.sh
 
       - name: Resolve effective triggers
@@ -110,8 +103,6 @@ jobs:
         if: ${{ steps.ensure_patch_sources.outputs.created == 'false' && (steps.compare.outputs.TRIGGER_STABLE == '1' || steps.compare.outputs.TRIGGER_PRERELEASE == '1' || steps.compare.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1') }}
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TAGS_OLD: ${{ steps.compare.outputs.tags_old }}
-          TAGS_NEW: ${{ steps.compare.outputs.tags_new }}
           TRIGGER_STABLE: ${{ steps.compare.outputs.TRIGGER_STABLE }}
           TRIGGER_PRERELEASE: ${{ steps.compare.outputs.TRIGGER_PRERELEASE }}
           TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE }}

@@ -121,9 +121,6 @@ else
     FETCHED_JSON="{}"
 fi
 
-DELIM="$(openssl rand -hex 8)"
-echo "fetched<<${DELIM}" >> "$GITHUB_OUTPUT"
-echo "$FETCHED_JSON" >> "$GITHUB_OUTPUT"
-echo "${DELIM}" >> "$GITHUB_OUTPUT"
+echo "$FETCHED_JSON" > fetched_app_versions.json
 
 rm -f temp_all_configs.json fetched_app_versions.jsonl check_list.txt
