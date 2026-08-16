@@ -1,7 +1,8 @@
 import os, json, zipfile, hashlib, re, subprocess, glob, sys
 
 def get_app_mappings():
-    apps = {}
+    apps_stable = {}
+    apps_dev = {}
     cli_sources = {}
     import glob
     for toml_file in glob.glob('.github/configs/patches/*.toml'):
@@ -12,6 +13,17 @@ def get_app_mappings():
             for i in range(0, len(sections), 2):
                 key = sections[i].strip()
                 body = sections[i+1]
+                
+                m_enabled = re.search(r'^enabled\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
+                m_stable = re.search(r'^enabledStable\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
+                m_dev = re.search(r'^enabledDev\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
+                
+                enabled = m_enabled.group(1).lower() == 'true' if m_enabled else True
+                enabledStable = m_stable.group(1).lower() == 'true' if m_stable else True
+                enabledDev = m_dev.group(1).lower() == 'true' if m_dev else True
+                
+                if not enabled:
+                    continue
                 
                 # Extract patches-source
                 m_src = re.search(r'patches-source\s*=\s*"([^"]+)"', body)
@@ -35,11 +47,12 @@ def get_app_mappings():
                         pkg_name = m_arch.group(1).rstrip('/').split('/')[-1]
                 
                 if pkg_name:
-                    if src not in apps:
-                        apps[src] = {}
-                    apps[src][key] = pkg_name
+                    if enabledStable:
+                        apps_stable.setdefault(src, {})[key] = pkg_name
+                    if enabledDev:
+                        apps_dev.setdefault(src, {})[key] = pkg_name
 
-    return apps, cli_sources
+    return apps_stable, apps_dev, cli_sources
 
 def process_zip(path, pkgs):
     pkg_bytes = {p: p.encode() for p in pkgs}
@@ -113,7 +126,7 @@ def run():
     else:
         hashes = {}
 
-    apps, cli_sources = get_app_mappings()
+    apps_stable, apps_dev, cli_sources = get_app_mappings()
     
     active_stable = []
     active_dev = []
@@ -130,8 +143,6 @@ def run():
         if not check_stable and not check_dev:
             continue
             
-        repo_apps = apps.get(repo_lower, {})
-        repo_pkgs = list(set(repo_apps.values()))
         repo_clis = cli_sources.get(repo_lower, set())
         
         is_revanced_or_morphe = any('revanced' in c or 'morphe' in c for c in repo_clis)
@@ -142,6 +153,13 @@ def run():
             hashes[repo_lower] = {'stable': {}, 'dev': {}}
             
         def evaluate(tag, channel, active_list):
+            repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_dev.get(repo_lower, {})
+            if not repo_apps:
+                print(f"::notice::No enabled apps found for {repo} ({channel}). Skipping patch inspection.")
+                return
+                
+            repo_pkgs = list(set(repo_apps.values()))
+            
             if not is_revanced_or_morphe:
                 print(f"::notice::Skipping patch inspection for {repo} (not revanced/morphe). Triggering all.")
                 active_list.extend(repo_apps.keys())
