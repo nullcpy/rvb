@@ -47,8 +47,16 @@ def get_app_mappings():
 def process_zip(path, pkgs):
     buckets = {p: hashlib.md5() for p in pkgs + ['shared']}
     comp_map = {}
+    all_comps = set()
     
     with zipfile.ZipFile(path) as z:
+        for info in z.infolist():
+            m = re.search(r'patches/([^/]+)/', info.filename)
+            if m:
+                comp = m.group(1)
+                if comp not in ['shared', 'all']:
+                    all_comps.add(comp)
+                    
         for info in z.infolist():
             if not info.filename.endswith('.class'): continue
             content = z.read(info)
@@ -72,12 +80,17 @@ def process_zip(path, pkgs):
                     buckets[pkg].update(content)
                     assigned = True
                     break
+                    
             if not assigned:
-                for comp, pkg in comp_map.items():
+                for comp in all_comps:
                     if re.search(r'(^|/)' + re.escape(comp) + r'(/|\.|-)', info.filename):
-                        buckets[pkg].update(content)
+                        if comp in comp_map:
+                            buckets[comp_map[comp]].update(content)
+                        # Whether tracked or untracked, we identified it belongs to an app component.
+                        # If it's untracked (not in comp_map), it is intentionally dropped here!
                         assigned = True
                         break
+                        
             if not assigned:
                 buckets['shared'].update(content)
     return {k: v.hexdigest() for k, v in buckets.items()}
