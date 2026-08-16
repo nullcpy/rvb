@@ -2,6 +2,7 @@ import os, json, zipfile, hashlib, re, subprocess, glob, sys
 
 def get_app_mappings():
     apps = {}
+    cli_sources = {}
     import glob
     for toml_file in glob.glob('.github/configs/patches/*.toml'):
         with open(toml_file, 'r', encoding='utf-8') as f:
@@ -15,6 +16,12 @@ def get_app_mappings():
                 # Extract patches-source
                 m_src = re.search(r'patches-source\s*=\s*"([^"]+)"', body)
                 src = m_src.group(1).lower() if m_src else "revanced/revanced-patches"
+                
+                # Extract cli-source
+                m_cli = re.search(r'cli-source\s*=\s*"([^"]+)"', body)
+                cli_src = m_cli.group(1).lower() if m_cli else ""
+                if cli_src:
+                    cli_sources.setdefault(src, set()).add(cli_src)
                 
                 m_pkg = re.search(r'pkg-name\s*=\s*"([^"]+)"', body)
                 pkg_name = m_pkg.group(1) if m_pkg else ''
@@ -32,12 +39,14 @@ def get_app_mappings():
                         apps[src] = {}
                     apps[src][key] = pkg_name
 
-    return apps
+    return apps, cli_sources
 
 def process_zip(path, pkgs):
+    pkg_bytes = {p: p.encode() for p in pkgs}
     buckets = {p: hashlib.md5() for p in pkgs + ['shared']}
     comp_map = {}
     all_comps = set()
+    file_contents = {}
     
     with zipfile.ZipFile(path) as z:
         for info in z.infolist():
@@ -46,38 +55,37 @@ def process_zip(path, pkgs):
                 comp = m.group(1)
                 if comp not in ['shared', 'all']:
                     all_comps.add(comp)
+            
+            if info.filename.endswith('.class'):
+                content = z.read(info)
+                file_contents[info.filename] = content
+                for pkg, b_pkg in pkg_bytes.items():
+                    if b_pkg in content:
+                        if m:
+                            comp = m.group(1)
+                            if comp not in ['shared', 'all']:
+                                comp_map[comp] = pkg
+
+        comp_regexes = {comp: re.compile(r'(^|/)' + re.escape(comp) + r'(/|\.|-)') for comp in all_comps}
                     
-        for info in z.infolist():
-            if not info.filename.endswith('.class'): continue
-            content = z.read(info)
-            for pkg in pkgs:
-                if pkg.encode() in content:
-                    m = re.search(r'patches/([^/]+)/', info.filename)
-                    if m:
-                        comp = m.group(1)
-                        if comp not in ['shared', 'all']:
-                            comp_map[comp] = pkg
-                            
         for info in sorted(z.infolist(), key=lambda x: x.filename):
             if info.is_dir(): continue
             if info.filename.startswith('META-INF/') or info.filename == 'classes.dex':
                 continue
                 
-            content = z.read(info)
+            content = file_contents.get(info.filename) or z.read(info)
             assigned = False
-            for pkg in pkgs:
-                if pkg.encode() in content:
+            for pkg, b_pkg in pkg_bytes.items():
+                if b_pkg in content:
                     buckets[pkg].update(content)
                     assigned = True
                     break
                     
             if not assigned:
-                for comp in all_comps:
-                    if re.search(r'(^|/)' + re.escape(comp) + r'(/|\.|-)', info.filename):
+                for comp, reg in comp_regexes.items():
+                    if reg.search(info.filename):
                         if comp in comp_map:
                             buckets[comp_map[comp]].update(content)
-                        # Whether tracked or untracked, we identified it belongs to an app component.
-                        # If it's untracked (not in comp_map), it is intentionally dropped here!
                         assigned = True
                         break
                         
@@ -96,7 +104,7 @@ def run():
     else:
         hashes = {}
 
-    apps = get_app_mappings()
+    apps, cli_sources = get_app_mappings()
     
     active_stable = []
     active_dev = []
@@ -115,11 +123,21 @@ def run():
             
         repo_apps = apps.get(repo_lower, {})
         repo_pkgs = list(set(repo_apps.values()))
+        repo_clis = cli_sources.get(repo_lower, set())
+        
+        is_revanced_or_morphe = any('revanced' in c or 'morphe' in c for c in repo_clis)
+        if not repo_clis:
+            is_revanced_or_morphe = True
         
         if repo_lower not in hashes:
             hashes[repo_lower] = {'stable': {}, 'dev': {}}
             
         def evaluate(tag, channel, active_list):
+            if not is_revanced_or_morphe:
+                print(f"::notice::Skipping patch inspection for {repo} (not revanced/morphe). Triggering all.")
+                active_list.extend(repo_apps.keys())
+                return
+            
             try:
                 host = new_info.get('host', 'github')
                 if host == 'gitlab':
@@ -134,23 +152,23 @@ def run():
                     file_name = None
                     for link in release_data.get('assets', {}).get('links', []):
                         name = link.get('name', '')
-                        if name.endswith('.mpp') or name.endswith('.jar'):
+                        if name.endswith('.mpp') or name.endswith('.rvp') or name.endswith('.rvb'):
                             download_url = link.get('direct_asset_url') or link.get('url')
                             file_name = name
                             break
                             
                     if not download_url:
-                        raise Exception(f"No .mpp or .jar asset found in GitLab release for {repo}@{tag}")
+                        raise Exception(f"No .mpp, .rvp, or .rvb asset found in GitLab release for {repo}@{tag}")
                         
                     dl_req = urllib.request.Request(download_url, headers={'Accept': 'application/octet-stream'})
                     with urllib.request.urlopen(dl_req) as dl_resp, open(file_name, 'wb') as out_file:
                         out_file.write(dl_resp.read())
                 else:
                     # Download asset using gh cli
-                    subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.jar', '--clobber'], check=True, capture_output=True)
+                    subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.rvp', '-p', '*.rvb', '--clobber'], check=True, capture_output=True)
                 
                 # Find downloaded file
-                files = glob.glob('*.mpp') + glob.glob('*.jar')
+                files = glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.rvb')
                 files = [f for f in files if 'cli' not in f.lower()] # Exclude cli jar if any
                 
                 if not files:
