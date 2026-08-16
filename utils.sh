@@ -472,10 +472,23 @@ gh_dl() {
 
 log() { echo -e "$1  " >>"build.md"; }
 get_highest_ver() {
-	local vers m
+	local vers m valid_vers=""
 	vers=$(tee)
-	m=$(head -1 <<<"$vers")
-	if ! semver_validate "$m"; then echo "$m"; else sort -s -t- -k1,1Vr <<<"$vers" | head -1; fi
+	
+	# Try to find the highest valid semver first
+	while IFS= read -r v; do
+		if [ -n "$v" ] && semver_validate "$v"; then
+			valid_vers+="${v}"$'\n'
+		fi
+	done <<<"$vers"
+	
+	if [ -n "$valid_vers" ]; then
+		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -1
+	else
+		# Fallback to the original behavior if no valid semvers
+		m=$(head -1 <<<"$vers")
+		echo "$m"
+	fi
 }
 semver_validate() {
 	local a="${1%-*}"
@@ -760,10 +773,18 @@ get_apkmirror_vers() {
 	local vers apkm_resp html=""
 	_cf_get "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" || return 1
 	apkm_resp="$html"
+	
+	if [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
+		local main_content
+		main_content=$($HTMLQ "#primary" <<<"$apkm_resp" 2>/dev/null || true)
+		[ -z "$main_content" ] && main_content=$($HTMLQ "#content" <<<"$apkm_resp" 2>/dev/null || true)
+		[ -n "$main_content" ] && apkm_resp="$main_content"
+	fi
+
 	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
 	if [ "${__AAV__:-false}" = false ]; then
 		local IFS=$'\n'
-		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers")
+		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers" || true)
 		local v r_vers=()
 		for v in $vers; do
 			grep -iq "${v} \(beta\|alpha\)" <<<"$apkm_resp" || r_vers+=("$v")
