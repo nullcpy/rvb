@@ -1,16 +1,5 @@
 import os, json, zipfile, hashlib, re, subprocess, glob, sys
 
-def get_pkg_name(app_config):
-    # Extract pkg_name using the exact same logic as utils.sh
-    for url_key in ['github-dlurl', 'archive-dlurl', 'apkmirror-dlurl', 'uptodown-dlurl']:
-        url = app_config.get(url_key, '')
-        if url:
-            if 'releases/tag/' in url or 'apks/' in url:
-                return url.rstrip('/').split('/')[-1]
-            elif 'apkmirror.com/apk/' in url:
-                pass
-    return ''
-
 def get_app_mappings():
     apps = {}
     import glob
@@ -27,15 +16,16 @@ def get_app_mappings():
                 m_src = re.search(r'patches-source\s*=\s*"([^"]+)"', body)
                 src = m_src.group(1).lower() if m_src else "revanced/revanced-patches"
                 
-                # Extract archive-dlurl or github-dlurl to find pkg_name
-                m_arch = re.search(r'archive-dlurl\s*=\s*"([^"]+)"', body)
-                m_git = re.search(r'github-dlurl\s*=\s*"([^"]+)"', body)
+                m_pkg = re.search(r'pkg-name\s*=\s*"([^"]+)"', body)
+                pkg_name = m_pkg.group(1) if m_pkg else ''
                 
-                pkg_name = ''
-                if m_git and 'releases/tag/' in m_git.group(1):
-                    pkg_name = m_git.group(1).rstrip('/').split('/')[-1]
-                elif m_arch and 'apks/' in m_arch.group(1):
-                    pkg_name = m_arch.group(1).rstrip('/').split('/')[-1]
+                if not pkg_name:
+                    m_git = re.search(r'github-dlurl\s*=\s*"([^"]+)"', body)
+                    m_arch = re.search(r'archive-dlurl\s*=\s*"([^"]+)"', body)
+                    if m_git and 'releases/tag/' in m_git.group(1):
+                        pkg_name = m_git.group(1).rstrip('/').split('/')[-1]
+                    elif m_arch and 'apks/' in m_arch.group(1):
+                        pkg_name = m_arch.group(1).rstrip('/').split('/')[-1]
                 
                 if pkg_name:
                     if src not in apps:
