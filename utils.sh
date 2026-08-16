@@ -795,7 +795,16 @@ get_apkmirror_vers() {
 	fi
 }
 
-get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$__APKMIRROR_RESP__"; }
+get_apkmirror_pkg_name() {
+	local resp="$__APKMIRROR_RESP__"
+	if [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
+		local main_content
+		main_content=$($HTMLQ "#primary" <<<"$resp" 2>/dev/null || true)
+		[ -z "$main_content" ] && main_content=$($HTMLQ "#content" <<<"$resp" 2>/dev/null || true)
+		[ -n "$main_content" ] && resp="$main_content"
+	fi
+	sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$resp"
+}
 
 apkmirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6"
@@ -2201,13 +2210,24 @@ build_rv() {
 				fi
 
 				local aapt_cmd="aapt"
-				if ! command -v aapt >/dev/null 2>&1 && [ -n "${ANDROID_SDK_ROOT:-}" ]; then
-					aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
+				if ! command -v aapt >/dev/null 2>&1; then
+					if [ -n "${ANDROID_SDK_ROOT:-}" ]; then
+						aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
+					fi
+					if [ ! -x "$aapt_cmd" ] && [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+						aapt_cmd="$AAPT2"
+					fi
 				fi
 				if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
 					local downloaded_pkg downloaded_ver
-					downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
-					downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+					if [[ "$aapt_cmd" == *"aapt2"* ]]; then
+						downloaded_pkg=$("$aapt_cmd" dump packagename "$stock_apk" 2>/dev/null | tr -d '\r\n') || true
+						# aapt2 dump badging doesn't always work exactly the same on older aapt2 binaries, but we can try
+						downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+					else
+						downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
+						downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+					fi
 					
 					if [ -z "$downloaded_pkg" ]; then
 						epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
