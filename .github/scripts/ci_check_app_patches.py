@@ -118,8 +118,33 @@ def run():
             
         def evaluate(tag, channel, active_list):
             try:
-                # Download asset using gh cli
-                subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.jar', '--clobber'], check=True, capture_output=True)
+                host = new_info.get('host', 'github')
+                if host == 'gitlab':
+                    import urllib.request
+                    encoded_repo = repo.replace('/', '%2F')
+                    api_url = f"https://gitlab.com/api/v4/projects/{encoded_repo}/releases/{tag}"
+                    req = urllib.request.Request(api_url)
+                    with urllib.request.urlopen(req) as response:
+                        release_data = json.loads(response.read().decode('utf-8'))
+                        
+                    download_url = None
+                    file_name = None
+                    for link in release_data.get('assets', {}).get('links', []):
+                        name = link.get('name', '')
+                        if name.endswith('.mpp') or name.endswith('.jar'):
+                            download_url = link.get('direct_asset_url') or link.get('url')
+                            file_name = name
+                            break
+                            
+                    if not download_url:
+                        raise Exception(f"No .mpp or .jar asset found in GitLab release for {repo}@{tag}")
+                        
+                    dl_req = urllib.request.Request(download_url, headers={'Accept': 'application/octet-stream'})
+                    with urllib.request.urlopen(dl_req) as dl_resp, open(file_name, 'wb') as out_file:
+                        out_file.write(dl_resp.read())
+                else:
+                    # Download asset using gh cli
+                    subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.jar', '--clobber'], check=True, capture_output=True)
                 
                 # Find downloaded file
                 files = glob.glob('*.mpp') + glob.glob('*.jar')
