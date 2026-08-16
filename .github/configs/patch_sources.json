@@ -150,10 +150,10 @@
   },
   "hoomans": {
     "repo": "arandomhooman/hoomans-morphe-patches",
-    "stable": "v1.47.0",
+    "stable": "v1.48.0",
     "prerelease": "v1.44.0-dev.4",
     "blocked": false,
-    "stable_date": "2026-08-16T04:28:04Z",
+    "stable_date": "2026-08-16T11:27:55Z",
     "pre_date": "2026-08-13T04:04:19Z"
   },
   "rushiranpise": {
@@ -261,9 +261,11 @@
     "blocked": false
   },
   "franticg33k": {
-    "repo": "franticg33k/morphe-patches"
+    "repo": "franticg33k/morphe-patches",
+    "stable": "v1.3.7",
+    "stable_date": "2026-08-07T02:39:43Z",
+    "prerelease": "v1.3.7-dev.4",
+    "pre_date": "2026-08-06T19:19:18Z",
+    "blocked": false
   }
 }
-
-
-
