@@ -66,3 +66,18 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
 apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
 
+[backdrops-morphe]
+enabled = true
+pkg-name = "com.backdrops.wallpapers"
+app-name = "backdrops"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/backdrops-wallpapers/com.backdrops.wallpapers"
+apkcombo-dlurl = "https://apkcombo.com/backdrops-wallpapers/com.backdrops.wallpapers"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.backdrops.wallpapers"

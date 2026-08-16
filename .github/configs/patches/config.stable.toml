@@ -139,3 +139,21 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.barcelona"
+
+[byair-morphe]
+enabled = true
+pkg-name = "com.byairapp.android"
+app-name = "byair"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "franticg33k/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
+apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.byairapp.android"
+
+
+
