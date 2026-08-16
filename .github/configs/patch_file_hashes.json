@@ -1,0 +1,17 @@
+{
+  "crimera/piko": {
+    "stable": {},
+    "dev": {
+      "com.twitter.android": "066469db7606570f3718d63945eaca68",
+      "com.instagram.android": "826f390522387cfc67b9d748a22d5332",
+      "shared": "c7de81f0d3c5228cc4478363292ce169"
+    }
+  },
+  "franticg33k/morphe-patches": {
+    "stable": {},
+    "dev": {
+      "com.byairapp.android": "56242293516f595ae51b46c37d9c66b3",
+      "shared": "cf16eb2095610d4843c17c9cc833b2d0"
+    }
+  }
+}
