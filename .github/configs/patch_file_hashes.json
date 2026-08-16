@@ -13,5 +13,27 @@
       "com.byairapp.android": "56242293516f595ae51b46c37d9c66b3",
       "shared": "cf16eb2095610d4843c17c9cc833b2d0"
     }
+  },
+  "ajstrick81/morphe-androidtv-patches": {
+    "stable": {
+      "com.disney.disneyplus": "b04951f8cba9a8f109c091b861f80b24",
+      "com.netflix.ninja": "c6acad764462bac7734410a807a2e21a",
+      "com.wbd.hbomax": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
+      "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
+      "com.amazon.amazonvideo.livingroom": "9cdb58b4de8d15a589f57482745d4dee",
+      "tv.pluto.android": "21b638f3a2c93b1afbea6acdb54d2f4f",
+      "com.peacocktv.peacockandroid": "81285dcc209ee4b9c5a3ef3fcd3b940a",
+      "shared": "5198c54fa7c83ac6897c024d13ede12c"
+    },
+    "dev": {}
+  },
+  "hxreborn/morphe-patches": {
+    "stable": {
+      "com.michaldrabik.showly2": "4c02e72417e9ef352eed1765286661db",
+      "ch.protonmail.android": "bbde841613ea2922e71263bc72fa6c7e",
+      "shared": "9f9648e24bca50a3b1f45cd0178c52ed"
+    },
+    "dev": {}
   }
 }
