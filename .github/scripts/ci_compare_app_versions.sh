@@ -57,7 +57,7 @@ while IFS= read -r group; do
 done < <(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 
 if [ "$TRIGGER_APP_UPDATE" = "1" ]; then
-    echo "::notice::Updates were found!"
+    # echo "::notice::Updates were found!"
 else
     echo "No app updates found."
 fi
