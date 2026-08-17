@@ -1329,7 +1329,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tumblr"
   },
   "google-phone-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.dialer",
     "app-name": "google-phone",
     "rv-brand": "morphe",
@@ -1996,7 +1996,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.hola.play",
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
@@ -2040,7 +2040,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "terabox",
     "rv-brand": "morphe",
