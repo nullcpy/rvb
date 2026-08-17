@@ -30,11 +30,11 @@ def get_app_mappings():
                 
                 # Extract patches-source
                 m_src = re.search(r'patches-source\s*=\s*"([^"]+)"', body)
-                src = m_src.group(1).lower() if m_src else "revanced/revanced-patches"
+                src = m_src.group(1).lower() if m_src else "morpheapp/morphe-patches"
                 
                 # Extract cli-source
                 m_cli = re.search(r'cli-source\s*=\s*"([^"]+)"', body)
-                cli_src = m_cli.group(1).lower() if m_cli else ""
+                cli_src = m_cli.group(1).lower() if m_cli else "morpheapp/morphe-desktop"
                 if cli_src:
                     cli_sources.setdefault(src, set()).add(cli_src)
                 
