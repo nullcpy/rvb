@@ -142,6 +142,14 @@ def run():
         check_stable = new_info.get('stable') != "" and new_info.get('stable') != old_info.get('stable')
         check_dev = new_info.get('prerelease') != "" and new_info.get('prerelease') != old_info.get('prerelease')
         
+        if new_info.get('enabled') is False:
+            check_stable = False
+            check_dev = False
+        if new_info.get('enabledStable') is False:
+            check_stable = False
+        if new_info.get('enabledDev') is False:
+            check_dev = False
+        
         if not check_stable and not check_dev:
             continue
             
