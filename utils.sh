@@ -1399,7 +1399,7 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path="" version_f=${version// /}
-	for a in "${arch// /}" "common" "all"; do
+	for a in "${arch// /}" "all"; do
 		for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
 			while IFS= read -r p; do
 				if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
@@ -1441,7 +1441,7 @@ get_archive_resp() {
 	__DL_RESP_CACHE__["archive_resp_$url"]="$__ARCHIVE_RESP__"
 	__DL_RESP_CACHE__["archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
 }
-get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_vers() { sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"; }
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
@@ -1451,7 +1451,7 @@ dl_github() {
 	local base_url=${__GITHUB_URL__:-$url}
     
     # Matches the exact file selection logic from dl_archive
-    for a in "${arch// /}" "common" "all"; do
+    for a in "${arch// /}" "all"; do
         for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
             while IFS= read -r p; do
                 if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
@@ -1517,7 +1517,7 @@ get_github_resp() {
 
 # Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
 get_github_vers() {
-    sed 's/^[^-]*-//;s/-\(all\|common\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
+    sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
 }
 
 # Extracts package name by stripping everything from the first hyphen '-' onwards
@@ -2009,7 +2009,13 @@ build_rv() {
 					local bname=$(basename "$capk")
 					# extract version from format: pkg_name-version-arch.apk
 					local v=${bname#${pkg_name}-}
-					v=${v%-*}
+					v=${v%.apk}
+					v=${v%-arm64-v8a}
+					v=${v%-arm-v7a}
+					v=${v%-x86_64}
+					v=${v%-x86}
+					v=${v%-all}
+					v=${v%-universal}
 					cached_versions+="$v"$'\n'
 				done
 				local dyn_ver
@@ -2261,7 +2267,7 @@ build_rv() {
 
 				break
 			done
-			if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" && "$arch" != "common" ]]; then
+			if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" ]]; then
 				if check_is_universal "$stock_apk"; then
 					mv -f "$stock_apk" "$all_apk"
 					if [ -f "${stock_apk%.apk}.apkm" ]; then
