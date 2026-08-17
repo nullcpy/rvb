@@ -2,36 +2,21 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[backdrops-morphe]
+[google-phone-morphe]
 enabled = true
-pkg-name = "com.backdrops.wallpapers"
-app-name = "backdrops"
+pkg-name = "com.google.android.dialer"
+app-name = "google-phone"
 rv-brand = "morphe"
-build-mode = "apk"
+build-mode = "both"
 arch = "both"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
 dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/backdrops-wallpapers/com.backdrops.wallpapers"
-apkcombo-dlurl = "https://apkcombo.com/backdrops-wallpapers/com.backdrops.wallpapers"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.backdrops.wallpapers"
-
-[byair-morphe]
-enabled = true
-pkg-name = "com.byairapp.android"
-app-name = "byair"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "franticg33k/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
-apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.byairapp.android"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.dialer"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.dialer"
 
 
 

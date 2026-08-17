@@ -174,5 +174,19 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tumblr"
 
-
+[google-phone-morphe]
+enabled = true
+pkg-name = "com.google.android.dialer"
+app-name = "google-phone"
+rv-brand = "morphe"
+build-mode = "both"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.dialer"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.dialer"
 
