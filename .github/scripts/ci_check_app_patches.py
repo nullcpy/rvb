@@ -6,6 +6,8 @@ def get_app_mappings():
     cli_sources = {}
     import glob
     for toml_file in glob.glob('.github/configs/patches/*.toml'):
+        is_stable_only = toml_file.endswith('.stable.toml')
+        is_dev_only = toml_file.endswith('.dev.toml')
         with open(toml_file, 'r', encoding='utf-8') as f:
             content = f.read()
             # Split by [app_key]
@@ -19,8 +21,8 @@ def get_app_mappings():
                 m_dev = re.search(r'^enabledDev\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
                 
                 enabled = m_enabled.group(1).lower() == 'true' if m_enabled else True
-                enabledStable = m_stable.group(1).lower() == 'true' if m_stable else True
-                enabledDev = m_dev.group(1).lower() == 'true' if m_dev else True
+                enabledStable = m_stable.group(1).lower() == 'true' if m_stable else (not is_dev_only)
+                enabledDev = m_dev.group(1).lower() == 'true' if m_dev else (not is_stable_only)
                 
                 if not enabled:
                     continue
