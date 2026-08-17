@@ -1,10 +1,11 @@
-import os, json, zipfile, hashlib, re, subprocess, glob, sys
+import os, json, zipfile, hashlib, re, subprocess, glob
+import urllib.request
 
 def get_app_mappings():
     apps_stable = {}
     apps_dev = {}
     cli_sources = {}
-    import glob
+    
     for toml_file in glob.glob('.github/configs/patches/*.toml'):
         is_stable_only = toml_file.endswith('.stable.toml')
         is_dev_only = toml_file.endswith('.dev.toml')
@@ -61,7 +62,6 @@ def process_zip(path, pkgs):
     buckets = {p: hashlib.md5() for p in pkgs + ['shared']}
     comp_map = {}
     all_comps = set()
-    file_contents = {}
     
     with zipfile.ZipFile(path) as z:
         for info in z.infolist():
@@ -73,7 +73,6 @@ def process_zip(path, pkgs):
             
             if info.filename.endswith('.class'):
                 content = z.read(info)
-                file_contents[info.filename] = content
                 for pkg, b_pkg in pkg_bytes.items():
                     if b_pkg in content:
                         if m:
@@ -88,7 +87,7 @@ def process_zip(path, pkgs):
             if info.filename.startswith('META-INF/') or info.filename == 'classes.dex':
                 continue
                 
-            content = file_contents.get(info.filename) or z.read(info)
+            content = z.read(info)
             assigned = False
             for pkg, b_pkg in pkg_bytes.items():
                 if b_pkg in content:
@@ -107,6 +106,104 @@ def process_zip(path, pkgs):
             if not assigned:
                 buckets['shared'].update(content)
     return {k: v.hexdigest() for k, v in buckets.items()}
+
+def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, active_list, apps_stable, apps_dev, is_revanced_or_morphe):
+    repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_dev.get(repo_lower, {})
+    if not repo_apps:
+        print(f"::notice::No enabled apps found for {repo} ({channel}). Skipping patch inspection.")
+        return
+        
+    repo_pkgs = list(set(repo_apps.values()))
+    
+    if not is_revanced_or_morphe:
+        print(f"::notice::Skipping patch inspection for {repo} (not revanced/morphe). Triggering all.")
+        active_list.extend(repo_apps.keys())
+        return
+    
+    # Cleanup stale files before download
+    for old_f in glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.jar'):
+        os.remove(old_f)
+    
+    try:
+        host = new_info.get('host', 'github')
+        if host == 'gitlab':
+            encoded_repo = repo.replace('/', '%2F')
+            api_url = f"https://gitlab.com/api/v4/projects/{encoded_repo}/releases/{tag}"
+            req = urllib.request.Request(api_url)
+            with urllib.request.urlopen(req) as response:
+                release_data = json.loads(response.read().decode('utf-8'))
+                
+            download_url = None
+            file_name = None
+            for link in release_data.get('assets', {}).get('links', []):
+                name = link.get('name', '')
+                if name.endswith('.mpp') or name.endswith('.rvp') or name.endswith('.jar'):
+                    download_url = link.get('direct_asset_url') or link.get('url')
+                    file_name = name
+                    break
+                    
+            if not download_url:
+                raise Exception(f"No .mpp, .rvp, or .jar asset found in GitLab release for {repo}@{tag}")
+                
+            dl_req = urllib.request.Request(download_url, headers={'Accept': 'application/octet-stream'})
+            with urllib.request.urlopen(dl_req) as dl_resp, open(file_name, 'wb') as out_file:
+                out_file.write(dl_resp.read())
+        else:
+            # Download asset using gh cli
+            subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.rvp', '-p', '*.jar', '--clobber'], check=True, capture_output=True)
+        
+        # Find downloaded files
+        files = glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.jar')
+        files = [f for f in files if 'cli' not in f.lower()] # Exclude cli jar if any
+        
+        if len(files) > 1:
+            no_dev_files = [f for f in files if '-dev' not in f.lower()]
+            if len(no_dev_files) == 1:
+                files = no_dev_files
+        
+        if len(files) > 1:
+            no_debug_files = [f for f in files if 'debug' not in f.lower()]
+            if len(no_debug_files) >= 1:
+                files = no_debug_files
+        
+        if not files:
+            print(f"::warning::No patch file found for {repo}@{tag}. Defaulting to trigger all.")
+            active_list.extend(repo_apps.keys())
+            return
+        
+        patch_file = files[0]
+        new_hashes = process_zip(patch_file, repo_pkgs)
+        
+        # Cleanup downloaded files
+        for f in glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.jar'):
+            os.remove(f)
+        
+        old_hashes = hashes[repo_lower].get(channel, {})
+        
+        # Check if shared changed
+        if old_hashes.get('shared') != new_hashes.get('shared'):
+            print(f"Shared patches changed for {repo} ({channel}). Triggering all apps.")
+            active_list.extend(repo_apps.keys())
+        else:
+            # Check individual packages
+            for toml_key, pkg in repo_apps.items():
+                if old_hashes.get(pkg) != new_hashes.get(pkg):
+                    print(f"Patch changed for {toml_key} ({pkg}) in {repo} ({channel}).")
+                    active_list.append(toml_key)
+        
+        # Save new hashes
+        hashes[repo_lower][channel] = new_hashes
+        
+    except Exception as e:
+        print(f"::warning::Failed to process patches for {repo}@{tag}: {e}. Defaulting to trigger all.")
+        active_list.extend(repo_apps.keys())
+        # Also clean up on failure
+        for f in glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.jar'):
+            try:
+                os.remove(f)
+            except:
+                pass
+
 
 def run():
     try:
@@ -162,86 +259,11 @@ def run():
         if repo_lower not in hashes:
             hashes[repo_lower] = {'stable': {}, 'dev': {}}
             
-        def evaluate(tag, channel, active_list):
-            repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_dev.get(repo_lower, {})
-            if not repo_apps:
-                print(f"::notice::No enabled apps found for {repo} ({channel}). Skipping patch inspection.")
-                return
-                
-            repo_pkgs = list(set(repo_apps.values()))
-            
-            if not is_revanced_or_morphe:
-                print(f"::notice::Skipping patch inspection for {repo} (not revanced/morphe). Triggering all.")
-                active_list.extend(repo_apps.keys())
-                return
-            
-            try:
-                host = new_info.get('host', 'github')
-                if host == 'gitlab':
-                    import urllib.request
-                    encoded_repo = repo.replace('/', '%2F')
-                    api_url = f"https://gitlab.com/api/v4/projects/{encoded_repo}/releases/{tag}"
-                    req = urllib.request.Request(api_url)
-                    with urllib.request.urlopen(req) as response:
-                        release_data = json.loads(response.read().decode('utf-8'))
-                        
-                    download_url = None
-                    file_name = None
-                    for link in release_data.get('assets', {}).get('links', []):
-                        name = link.get('name', '')
-                        if name.endswith('.mpp') or name.endswith('.rvp') or name.endswith('.rvb'):
-                            download_url = link.get('direct_asset_url') or link.get('url')
-                            file_name = name
-                            break
-                            
-                    if not download_url:
-                        raise Exception(f"No .mpp, .rvp, or .rvb asset found in GitLab release for {repo}@{tag}")
-                        
-                    dl_req = urllib.request.Request(download_url, headers={'Accept': 'application/octet-stream'})
-                    with urllib.request.urlopen(dl_req) as dl_resp, open(file_name, 'wb') as out_file:
-                        out_file.write(dl_resp.read())
-                else:
-                    # Download asset using gh cli
-                    subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp', '-p', '*.rvp', '-p', '*.rvb', '--clobber'], check=True, capture_output=True)
-                
-                # Find downloaded file
-                files = glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.rvb')
-                files = [f for f in files if 'cli' not in f.lower()] # Exclude cli jar if any
-                
-                if not files:
-                    print(f"::warning::No patch file found for {repo}@{tag}. Defaulting to trigger all.")
-                    active_list.extend(repo_apps.keys())
-                    return
-                
-                patch_file = files[0]
-                new_hashes = process_zip(patch_file, repo_pkgs)
-                os.remove(patch_file)
-                
-                old_hashes = hashes[repo_lower].get(channel, {})
-                
-                # Check if shared changed
-                if old_hashes.get('shared') != new_hashes.get('shared'):
-                    print(f"Shared patches changed for {repo} ({channel}). Triggering all apps.")
-                    active_list.extend(repo_apps.keys())
-                else:
-                    # Check individual packages
-                    for toml_key, pkg in repo_apps.items():
-                        if old_hashes.get(pkg) != new_hashes.get(pkg):
-                            print(f"Patch changed for {toml_key} ({pkg}) in {repo} ({channel}).")
-                            active_list.append(toml_key)
-                
-                # Save new hashes
-                hashes[repo_lower][channel] = new_hashes
-                
-            except Exception as e:
-                print(f"::warning::Failed to process patches for {repo}@{tag}: {e}. Defaulting to trigger all.")
-                active_list.extend(repo_apps.keys())
-                
         if check_stable:
-            evaluate(new_info.get('stable'), 'stable', active_stable)
+            evaluate_repo_channel(repo_lower, repo, new_info.get('stable'), 'stable', new_info, hashes, active_stable, apps_stable, apps_dev, is_revanced_or_morphe)
             
         if check_dev:
-            evaluate(new_info.get('prerelease'), 'dev', active_dev)
+            evaluate_repo_channel(repo_lower, repo, new_info.get('prerelease'), 'dev', new_info, hashes, active_dev, apps_stable, apps_dev, is_revanced_or_morphe)
 
     with open(hash_file, 'w') as f:
         json.dump(hashes, f, indent=2)
