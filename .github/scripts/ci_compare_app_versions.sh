@@ -56,8 +56,6 @@ while IFS= read -r group; do
     fi
 done < <(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 
-
-
 if [ -n "${GITHUB_OUTPUT:-}" ]; then
     echo "TRIGGER_APP_UPDATE=$TRIGGER_APP_UPDATE" >> "$GITHUB_OUTPUT"
 fi
