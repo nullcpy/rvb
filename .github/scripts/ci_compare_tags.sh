@@ -38,7 +38,7 @@ if [ "$TRIGGER_STABLE" -eq 1 ]; then
     $new | to_entries[] | . as $e
     | ($old[$e.key] // {}) as $o
     | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-    | "::notice::Stable update detected for \($e.key): \($o.stable // "unknown") -> \($e.value.stable)"
+    | "::notice::Stable update detected for \($e.value.repo // $e.key): \($o.stable // "unknown") -> \($e.value.stable)"
   ' <<<"{}"
 fi
 
@@ -47,7 +47,7 @@ if [ "$TRIGGER_PRERELEASE" -eq 1 ]; then
     $new | to_entries[] | . as $e
     | ($old[$e.key] // {}) as $o
     | select($e.value.prerelease != "" and $e.value.prerelease != ($o.prerelease // ""))
-    | "::notice::Pre-release update detected for \($e.key): \($o.prerelease // "unknown") -> \($e.value.prerelease)"
+    | "::notice::Pre-release update detected for \($e.value.repo // $e.key): \($o.prerelease // "unknown") -> \($e.value.prerelease)"
   ' <<<"{}"
 fi
 
@@ -56,7 +56,7 @@ if [ "$TRIGGER_BLOCKED" -eq 1 ]; then
     $new | to_entries[] | . as $e
     | ($old[$e.key] // {}) as $o
     | select($e.value.blocked == true and $o.blocked != true)
-    | "::warning::Repository access blocked for \($e.key)!"
+    | "::warning::Repository access blocked for \($e.value.repo // $e.key)!"
   ' <<<"{}"
 fi
 
