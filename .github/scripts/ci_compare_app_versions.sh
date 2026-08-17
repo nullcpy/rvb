@@ -24,14 +24,6 @@ while IFS= read -r group; do
     new_ver=$(echo "$FETCHED_APP_VERSIONS" | jq -r ".\"$group\"")
     old_ver=$(jq -r ".\"$group\".version // empty" "$CURRENT_VERSIONS")
     
-    # If the group existed as a flat string previously (migration), parse it properly
-    if [ -z "$old_ver" ]; then
-        old_type=$(jq -r ".\"$group\" | type" "$CURRENT_VERSIONS")
-        if [ "$old_type" = "string" ]; then
-            old_ver=$(jq -r ".\"$group\"" "$CURRENT_VERSIONS")
-        fi
-    fi
-    
     if [ "$new_ver" != "$old_ver" ] && [ "$new_ver" != "null" ] && [ -n "$new_ver" ]; then
         echo "::notice::Update detected for $group: $old_ver -> $new_ver"
         TRIGGER_APP_UPDATE=1
