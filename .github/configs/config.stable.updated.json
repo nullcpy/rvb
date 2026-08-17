@@ -1162,7 +1162,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.lrmobile"
   },
   "rumble-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "rumble",
     "rv-brand": "morphe",
@@ -1176,7 +1176,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rumble.battles"
   },
   "twitch-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "twitch",
     "rv-brand": "morphe",
@@ -1190,7 +1190,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.twitch.android.app"
   },
   "battery-guru-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.paget96.batteryguru",
     "app-name": "battery-guru",
     "rv-brand": "morphe",
@@ -1204,7 +1204,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.paget96.batteryguru"
   },
   "money-manager-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.realbyteapps.moneymanagerfree",
     "app-name": "money-manager",
     "rv-brand": "morphe",
@@ -1218,7 +1218,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.realbyteapps.moneymanagerfree"
   },
   "poweramp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "poweramp",
     "rv-brand": "morphe",
@@ -1234,7 +1234,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.maxmpz.audioplayer"
   },
   "at4k-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.overdevs.at4k",
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
@@ -1248,7 +1248,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.snorelab.app",
     "app-name": "snorelab",
     "rv-brand": "morphe",
@@ -1261,7 +1261,7 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.spocky.projengmenu",
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
@@ -1275,7 +1275,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adobe.reader",
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
@@ -1289,7 +1289,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
   },
   "inshot-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.camerasideas.instashot",
     "app-name": "inshot",
     "rv-brand": "morphe",
@@ -1303,7 +1303,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.camerasideas.instashot"
   },
   "todoist-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.todoist",
     "app-name": "todoist",
     "rv-brand": "morphe",
@@ -1316,7 +1316,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.todoist"
   },
   "tumblr-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.tumblr",
     "app-name": "tumblr",
     "rv-brand": "morphe",
@@ -1359,7 +1359,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
@@ -1372,7 +1372,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
