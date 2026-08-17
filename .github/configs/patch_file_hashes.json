@@ -93,23 +93,32 @@
   },
   "rushiranpise/morphe-patches": {
     "stable": {
-      "org.hola.play": "ffeb733ed394d68b8e6e7d5c5f1e812d",
-      "com.google.android.apps.photos": "be265f57e27de6c4fb8d919843782f15",
+      "com.community.mbox.tv": "47d9d191236ceb9625c29dcd3b7835bf",
       "com.facebook.orca": "00fb64af5fa859c4773b63f48d9d0216",
-      "com.weather.Weather": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.windscribe.vpn": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.community.mbox.tv": "d41d8cd98f00b204e9800998ecf8427e",
-      "it.mirko.beta": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.dubox.drive": "b23784e139435f0689f257132009c646",
-      "com.community.oneroom": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.accuweather.android": "d41d8cd98f00b204e9800998ecf8427e",
-      "au.com.shiftyjelly.pocketcasts": "d41d8cd98f00b204e9800998ecf8427e",
       "com.cloudflare.onedotonedotonedotone": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.accuweather.android": "d41d8cd98f00b204e9800998ecf8427e",
+      "it.mirko.beta": "d41d8cd98f00b204e9800998ecf8427e",
       "com.waze": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.adguard.android": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.windscribe.vpn": "d41d8cd98f00b204e9800998ecf8427e",
+      "org.hola.play": "d41d8cd98f00b204e9800998ecf8427e",
       "app.ninjavpn.android": "d41d8cd98f00b204e9800998ecf8427e",
-      "shared": "c4796d0d032a8679dfe40534b3489a1b"
+      "com.weather.Weather": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.dubox.drive": "b23784e139435f0689f257132009c646",
+      "au.com.shiftyjelly.pocketcasts": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.google.android.apps.photos": "be265f57e27de6c4fb8d919843782f15",
+      "com.community.oneroom": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.adguard.android": "d41d8cd98f00b204e9800998ecf8427e",
+      "shared": "1df28172ee325cb58b0696421d983f57"
     },
     "dev": {}
+  },
+  "morpheapp/morphe-patches": {
+    "stable": {},
+    "dev": {
+      "com.google.android.youtube": "d3d4dc1a4afe29c77e0f0d4071b9cace",
+      "com.reddit.frontpage": "d6dd6726ae71f6f76a106cb2be329e10",
+      "com.google.android.apps.youtube.music": "8e56aa79d2931caec2df31ed95869c22",
+      "shared": "cdfe923cebafca954e5ab065fa9c553b"
+    }
   }
 }
