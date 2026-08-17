@@ -56,11 +56,7 @@ while IFS= read -r group; do
     fi
 done < <(echo "$FETCHED_APP_VERSIONS" | jq -r 'keys[]')
 
-if [ "$TRIGGER_APP_UPDATE" = "1" ]; then
-    # echo "::notice::Updates were found!"
-else
-    echo "No app updates found."
-fi
+
 
 if [ -n "${GITHUB_OUTPUT:-}" ]; then
     echo "TRIGGER_APP_UPDATE=$TRIGGER_APP_UPDATE" >> "$GITHUB_OUTPUT"
