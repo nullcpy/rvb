@@ -2,20 +2,37 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[facebook-morphe]
+[instagram-instafel]
 enabled = true
-pkg-name = "com.facebook.katana"
-app-name = "facebook"
-rv-brand = "morphe"
+pkg-name = "com.instagram.android"
+app-name = "instagram"
+rv-brand = "instafel"
 build-mode = "apk"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
+cli-source = "instafel/p-rel"
+patches-source = "instafel/pc-rel"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "480dpi nodpi anydpi auto"
+# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+
+[instagram-instafel-clone]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "instagram"
+rv-brand = "instafel-clone"
+build-mode = "apk"
+arch = "both"
+cli-source = "instafel/p-rel"
+patches-source = "instafel/pc-rel"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "480dpi nodpi anydpi auto"
+# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
+# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
 
 
 
