@@ -80,9 +80,6 @@ jobs:
           restore-keys: |
             apks-
 
-      - name: Remove stub APKs from cache
-        run: rm -f temp/apks/*-stub*.apk || true
-
       - name: Build modules and apks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
