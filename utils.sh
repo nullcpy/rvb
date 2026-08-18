@@ -727,10 +727,14 @@ _trawl_8191_get() {
 				return 0
 			fi
 		fi
-		wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
+		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
+			wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
+		fi
 		sleep 5
 	done
-	wpr "[!] Trawl:8191 failed after $max_retries attempts: $url"
+	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
+		wpr "[!] Trawl:8191 failed after $max_retries attempts: $url"
+	fi
 	return 1
 }
 
@@ -751,7 +755,9 @@ _unqueued_cf_get() {
 		_fallback_get "$@" && return 0
 	fi
 
-	epr "All methods failed for: $1"
+	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
+		epr "All methods failed for: $1"
+	fi
 	return 1
 }
 _cf_get() {
@@ -924,7 +930,7 @@ dl_apkmirror() {
 		target_ver=$(echo "$version" | tr '.' '-' | grep -oP '\d+(-\d+)+')
 		if [ -n "$slug_ver" ] && [ -n "$target_ver" ]; then
 			release_url="${base_url}${example_path/$slug_ver/$target_ver}"
-				_cf_get "$release_url" || true
+				__SILENT_CF_GET__=true _cf_get "$release_url" || true
 			resp="$html"
 			if [[ "$resp" == *"Page Not Found"* ]] || [[ "$resp" == *"404 Whoops"* ]] || [ -z "$resp" ]; then
 					release_url=""
@@ -943,7 +949,7 @@ dl_apkmirror() {
 		apkmname=$($HTMLQ "h1.marginZero" --text <<<"$__APKMIRROR_RESP__")
 		apkmname="${apkmname,,}" apkmname="${apkmname// /-}" apkmname="${apkmname//[^a-z0-9-]/}"
 		release_url="${url%/}/${apkmname}-${search_version}-release/"
-		_cf_get "$release_url" || true
+		__SILENT_CF_GET__=true _cf_get "$release_url" || true
 		resp="$html"
 		if [[ "$resp" == *"Page Not Found"* ]] || [[ "$resp" == *"404 Whoops"* ]] || [ -z "$resp" ]; then
 			release_url=""
@@ -999,7 +1005,7 @@ dl_apkmirror() {
 		# Fallback to direct search if not found on first 5 pages
 		if [ -z "$release_url" ]; then
 			local search_list_url="https://www.apkmirror.com/?post_type=app_release&searchtype=apk&s=${__APKMIRROR_CAT__}+${version}"
-			_cf_get "$search_list_url" || true
+			__SILENT_CF_GET__=true _cf_get "$search_list_url" || true
 			if [ -n "$html" ] && [ "$html" != "null" ]; then
 				local search_links=""
 				if [[ "$html" != *"No results found matching your query"* ]]; then
