@@ -211,6 +211,13 @@ _get_prebuilts() {
 				matches=$matches_new
 			fi
 		fi
+		if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
+			local matches_new
+			matches_new=$(jq --arg ver "${name_ver#v}" -e -r 'map(select(.name | contains($ver)))' <<<"$matches")
+			if [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
+				matches=$matches_new
+			fi
+		fi
 		if [ "$(jq 'length' <<<"$matches")" -eq 0 ]; then
 			epr "No asset was found"
 			return 1
@@ -302,6 +309,13 @@ _get_prebuilts() {
 			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
 				local matches_new
 				matches_new=$(jq -e -r 'map(select(.name | contains("debug") | not))' <<<"$matches")
+				if [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
+					matches=$matches_new
+				fi
+			fi
+			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
+				local matches_new
+				matches_new=$(jq --arg ver "${name_ver#v}" -e -r 'map(select(.name | contains($ver)))' <<<"$matches")
 				if [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
 					matches=$matches_new
 				fi

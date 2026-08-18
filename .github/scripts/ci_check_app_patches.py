@@ -165,6 +165,12 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
             no_debug_files = [f for f in files if 'debug' not in f.lower()]
             if len(no_debug_files) >= 1:
                 files = no_debug_files
+                
+        if len(files) > 1:
+            version = tag[1:] if tag.startswith('v') else tag
+            version_files = [f for f in files if version in f]
+            if len(version_files) >= 1:
+                files = version_files
         
         if not files:
             print(f"::warning::No patch file found for {repo}@{tag}. Defaulting to trigger all.")
