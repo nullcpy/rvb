@@ -11,6 +11,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
 
 [youtube-music-revanced]
 enabled = true
@@ -25,6 +26,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
 
 [messenger-revanced]
 enabled = true
@@ -38,6 +40,7 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
 dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
 
 [youtube-anddea]
 enabled = true

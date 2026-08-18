@@ -11,6 +11,7 @@ uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adobe.psmobile"
 
 [google-recorder-morphe]
 enabled = true
@@ -38,6 +39,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
 dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
 
 [microsoft-lens-morphe]
 enabled = true
@@ -50,6 +52,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
 dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microsoft.lens"
 
 [photomath-morphe]
 enabled = true

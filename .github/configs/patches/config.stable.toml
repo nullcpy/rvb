@@ -11,6 +11,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
 dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.magazines"
 
 [trakt-morphe]
 enabled = true
@@ -25,9 +26,11 @@ uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.trakt.trakt"
 
 [cryptomator-morphe]
-enabled = true
+enabled = false
+pkg-name = "org.cryptomator"
 app-name = "cryptomator"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -49,6 +52,7 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps"
 uptodown-dlurl = "https://komoot.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/de.komoot.android"
 
 [discord-xposed]
 enabled = true
@@ -64,6 +68,7 @@ dpi = "nodpi anydpi auto"
 # uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.discord"
 
 [microsoft-edge-morphe]
 enabled = true
@@ -78,6 +83,7 @@ uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microsoft.emmx"
 
 [kinestop-morphe]
 enabled = true
@@ -92,6 +98,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-si
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.urbandroid.kinestop"
 
 [hermit-morphe]
 enabled = true
