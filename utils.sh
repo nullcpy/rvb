@@ -1974,9 +1974,6 @@ build_rv() {
 		fi
 
 		# Cache Check
-		local available_apks=($(find "$apk_cache_dir" -name "${pkg_name}-*.apk" -type f 2>/dev/null || true))
-		wpr "[DEBUG] Available cached APKs for ${pkg_name}: ${available_apks[*]:-None}"
-
 		if [ -n "$resolved_version" ]; then
 			wpr "[DEBUG] Checking cache. resolved_version is: $resolved_version"
 			local version_f=${resolved_version// /}
