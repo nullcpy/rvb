@@ -89,7 +89,7 @@ apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
 
 [snorelab-morphe]
-enabled = true
+enabled = false
 pkg-name = "com.snorelab.app"
 app-name = "snorelab"
 rv-brand = "morphe"
