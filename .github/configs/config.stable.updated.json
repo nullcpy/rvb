@@ -656,7 +656,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -1374,7 +1374,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
@@ -1387,7 +1387,7 @@
     "dpi": "480dpi nodpi anydpi auto"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
@@ -1956,7 +1956,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "adguard-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adguard.android",
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
@@ -1970,7 +1970,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
   },
   "waze-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.waze",
     "app-name": "waze",
     "rv-brand": "morphe",
@@ -1983,7 +1983,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "warp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.cloudflare.onedotonedotonedotone",
     "app-name": "warp",
     "rv-brand": "morphe",
@@ -1996,7 +1996,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.hola.play",
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
@@ -2011,7 +2011,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.hola.play"
   },
   "ninja-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "app.ninjavpn.android",
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
@@ -2025,7 +2025,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
   },
   "windscribe-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.windscribe.vpn",
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
@@ -2040,7 +2040,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "terabox",
     "rv-brand": "morphe",
@@ -2053,7 +2053,7 @@
     "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
   },
   "accuweather-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.accuweather.android",
     "app-name": "accuweather",
     "rv-brand": "morphe",
@@ -2069,7 +2069,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.accuweather.android"
   },
   "the-weather-channel-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.weather.Weather",
     "app-name": "the-weather-channel",
     "rv-brand": "morphe",
@@ -2085,7 +2085,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.weather.Weather"
   },
   "beta-maniac-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "it.mirko.beta",
     "app-name": "beta-maniac",
     "rv-brand": "morphe",
@@ -2112,7 +2112,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "moviebox-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.community.oneroom",
     "app-name": "moviebox",
     "rv-brand": "morphe",
@@ -2135,7 +2135,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
   },
   "messenger-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "messenger",
     "rv-brand": "morphe",
@@ -2152,7 +2152,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
   },
   "pocket-casts-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "au.com.shiftyjelly.pocketcasts",
     "app-name": "pocket-casts",
     "rv-brand": "morphe",
