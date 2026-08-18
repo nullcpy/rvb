@@ -656,7 +656,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -2098,7 +2098,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "google-photos-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe-alt",
@@ -2124,7 +2124,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
   },
   "moviebox-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.community.mbox.tv",
     "app-name": "moviebox",
     "rv-brand": "morphe-androidtv",
