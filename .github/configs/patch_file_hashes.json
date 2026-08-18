@@ -118,12 +118,27 @@
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "8e56aa79d2931caec2df31ed95869c22",
-      "com.google.android.youtube": "d3d4dc1a4afe29c77e0f0d4071b9cace",
+      "com.google.android.apps.youtube.music": "175a5233f7a080dccaaedcd42f62149c",
+      "com.google.android.youtube": "a8aa819df801edf384499857392f8976",
       "com.reddit.frontpage": "d6dd6726ae71f6f76a106cb2be329e10",
-      "shared": "cdfe923cebafca954e5ab065fa9c553b"
+      "shared": "9eb7ecb88d737e7465e94aff10dfcbaf"
     },
     "stable": {}
+  },
+  "rookieenough/de-vanced": {
+    "dev": {},
+    "stable": {
+      "com.adobe.psmobile": "b31ff5cb09ee96895e708919bab2933b",
+      "com.google.android.apps.photos": "db01aef35f201633d01c5d4d0c7ee27b",
+      "com.google.android.apps.recorder": "d78231285fd4f3ee14c73b1727aefe20",
+      "com.microblink.photomath": "2de0bf7d01b0469aef8885aa7dd7ad50",
+      "com.microsoft.lens": "2658d98a256631a7a4fe53f93b506d72",
+      "com.rarlab.rar": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.strava": "9512d1a71a95a9be275abb8985fb3a84",
+      "com.viber.voip": "594284b3df945aba4661b6d67e7e8e08",
+      "jp.pxv.android": "36f200d201f2169aaac60767327e021b",
+      "shared": "322151c8d84d52da044e4de7a936ee1b"
+    }
   },
   "rushiranpise/morphe-patches": {
     "dev": {},

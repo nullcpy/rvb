@@ -12,7 +12,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://imdb-cine-tv.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/imdb/imdb-imdb",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.imdb.mobile"
   },
   "disneyplus-morphe-androidtv": {
     "enabled": false,
@@ -215,7 +216,8 @@
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.telegram.messenger"
   },
   "telegram-revanced-foss": {
     "enabled": false,
@@ -228,7 +230,8 @@
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.telegram.messenger.web"
   },
   "instagram-revanced-exp": {
     "enabled": false,
@@ -242,7 +245,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "automate-morphe": {
     "enabled": false,
@@ -255,7 +258,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://automate-beta.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/llamalab/automate-llamalab",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.llamalab.automate"
   },
   "speedtest-morphe": {
     "enabled": false,
@@ -268,7 +272,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://speedtest-net-mobile.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.zwanoo.android.speedtest"
   },
   "autosync-morphe": {
     "enabled": false,
@@ -281,7 +286,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://autosync.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/metactrl/autosync-universal-cloud-sync-and-backup",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.ttxapps.autosync"
   },
   "inshorts-morphe": {
     "enabled": false,
@@ -294,7 +300,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://inshorts.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.camerasideas.instashot"
   },
   "vpnify-morphe": {
     "enabled": false,
@@ -303,11 +310,12 @@
     "rv-brand": "morphe",
     "build-mode": "apk",
     "arch": "both",
-    "patches-source": "BholeyKaBhakt/android-patches-xtra",
+    "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
-    "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+    "apkcombo-dlurl": "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.vpn.free.hotspot.secure.vpnify"
   },
   "backdrops-morphe": {
     "enabled": false,
@@ -336,7 +344,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.pinterest"
   },
   "moonplus-reader-morphe": {
     "enabled": false,
@@ -349,7 +358,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://moon-reader.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/moon/moon-reader",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.flyersoft.moonreader"
   },
   "symfonium-morphe": {
     "enabled": false,
@@ -363,7 +373,8 @@
     "uptodown-dlurl": "https://symfonium.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/app.symfonik.music.player"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/app.symfonik.music.player",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/app.symfonik.music.player"
   },
   "calcnote-morphe": {
     "enabled": false,
@@ -376,7 +387,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.appumstudios.calcnote"
   },
   "acalendar-morphe": {
     "enabled": false,
@@ -389,7 +401,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://acalendar.en.uptodown.com/android",
     "dpi": "nodpi anydpi auto",
-    "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+    "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.withouthat.acalendar"
   },
   "truecaller-morphe-alt": {
     "enabled": false,
@@ -403,7 +416,8 @@
     "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.truecaller"
   },
   "medium-morphe": {
     "enabled": false,
@@ -416,7 +430,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://medium.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/a-medium-corporation/medium",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.medium.reader"
   },
   "brave-browser-morphe": {
     "enabled": false,
@@ -429,7 +444,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://brave-software-brave.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
   },
   "google-news-morphe": {
     "enabled": false,
@@ -442,7 +458,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://google-play-newsstand.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/google-news/",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.magazines"
   },
   "trakt-morphe": {
     "enabled": false,
@@ -455,10 +472,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.trakt.trakt"
   },
   "cryptomator-morphe": {
     "enabled": false,
+    "pkg-name": "org.cryptomator",
     "app-name": "cryptomator",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -479,7 +498,8 @@
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps",
     "uptodown-dlurl": "https://komoot.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
+    "apkpure-dlurl": "https://apkpure.com/komoot-hike-bike-run/de.komoot.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/de.komoot.android"
   },
   "discord-xposed": {
     "enabled": false,
@@ -493,7 +513,8 @@
     "patcher-args": "-l 0",
     "dpi": "nodpi anydpi auto",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.discord"
   },
   "microsoft-edge-morphe": {
     "enabled": false,
@@ -506,7 +527,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.microsoft.emmx"
   },
   "kinestop-morphe": {
     "enabled": false,
@@ -520,7 +542,8 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid",
     "dpi": "nodpi anydpi auto",
     "apkpure-dlurl": "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop",
-    "apkcombo-dlurl": "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+    "apkcombo-dlurl": "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.urbandroid.kinestop"
   },
   "hermit-morphe": {
     "enabled": false,
@@ -594,7 +617,8 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-revanced": {
     "enabled": false,
@@ -608,7 +632,8 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "messenger-revanced": {
     "enabled": false,
@@ -621,7 +646,8 @@
     "cli-source": "ReVanced/revanced-cli",
     "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/messenger",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
   },
   "youtube-anddea": {
     "enabled": false,
@@ -656,7 +682,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -745,7 +771,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "photoshop-mix-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adobe.psmobile",
     "app-name": "photoshop-mix",
     "rv-brand": "morphe",
@@ -755,10 +781,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://adobe-photoshop-mix.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/adobe/photoshop-mix",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.psmobile"
   },
   "google-recorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "google-recorder",
     "rv-brand": "morphe",
@@ -773,7 +800,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.recorder"
   },
   "rar-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "rar",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -782,10 +809,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://rar-for-android.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/rar-lab/rar-for-android",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
   },
   "microsoft-lens-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -794,10 +822,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://office-lens.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.microsoft.lens"
   },
   "photomath-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "photomath",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -810,7 +839,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.microblink.photomath"
   },
   "viber-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "viber",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -822,7 +851,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.viber.voip"
   },
   "pixiv-morphe": {
-    "enabled": false,
+    "enabled": true,
     "app-name": "pixiv",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -835,7 +864,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
   },
   "strava-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.strava",
     "app-name": "strava",
     "rv-brand": "morphe",
@@ -847,7 +876,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
   },
   "soundcloud-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "soundcloud",
     "rv-brand": "morphe",
@@ -862,7 +891,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"
   },
   "duolingo-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.duolingo",
     "app-name": "duolingo",
     "rv-brand": "morphe",
@@ -876,7 +905,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.duolingo"
   },
   "wps-office-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cn.wps.moffice_eng",
     "app-name": "wps-office",
     "rv-brand": "morphe",
@@ -891,7 +920,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/cn.wps.moffice_eng"
   },
   "wallcraft-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wallpaperscraft.wallpaper",
     "app-name": "wallcraft",
     "rv-brand": "morphe",
@@ -901,10 +930,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wallpaperscraft.wallpaper"
   },
   "solid-explorer-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "pl.solidexplorer2",
     "app-name": "solid-explorer",
     "rv-brand": "morphe",
@@ -914,10 +944,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/pl.solidexplorer2"
   },
   "icon-packer-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cn.ommiao.iconpacker",
     "app-name": "icon-packer",
     "rv-brand": "morphe",
@@ -927,10 +958,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "apkpure-dlurl": "https://apkpure.com/icon-packer/cn.ommiao.iconpacker",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.bambuna.podcastaddict",
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
@@ -941,10 +973,11 @@
     "uptodown-dlurl": "https://podcast-addict.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.bambuna.podcastaddict"
   },
   "smart-launcher-6-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ginlemon.flowerfree",
     "app-name": "smart-launcher-6",
     "rv-brand": "morphe",
@@ -956,10 +989,11 @@
     "uptodown-dlurl": "https://smart-launcher.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ginlemon.flowerfree"
   },
   "merriam-webster-dictionary-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.merriamwebster",
     "app-name": "merriam-webster-dictionary",
     "rv-brand": "morphe",
@@ -970,10 +1004,11 @@
     "uptodown-dlurl": "https://merriam-webster-dictionary.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.merriamwebster"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.merriamwebster",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.merriamwebster"
   },
   "pandora-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.pandora.android",
     "app-name": "pandora",
     "rv-brand": "morphe",
@@ -982,10 +1017,11 @@
     "patches-source": "hoo-dles/morphe-patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.pandora.android"
   },
   "xrecorder-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "videoeditor.videorecorder.screenrecorder",
     "app-name": "xrecorder",
     "rv-brand": "morphe",
@@ -995,10 +1031,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/videoeditor.videorecorder.screenrecorder"
   },
   "adguard-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adguard.android",
     "app-name": "adguard",
     "rv-brand": "morphe",
@@ -1012,7 +1049,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
   },
   "nova-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.teslacoilsw.launcher",
     "app-name": "nova-launcher",
     "rv-brand": "morphe",
@@ -1027,7 +1064,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.teslacoilsw.launcher"
   },
   "ventusky-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cz.ackee.ventusky",
     "app-name": "ventusky",
     "rv-brand": "morphe",
@@ -1038,10 +1075,11 @@
     "uptodown-dlurl": "https://ventusky-weather-maps-and-radar.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/cz.ackee.ventusky",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/cz.ackee.ventusky"
   },
   "camscanner-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.intsig.camscanner",
     "app-name": "camscanner",
     "rv-brand": "morphe",
@@ -1051,10 +1089,13 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://camscanner-pdf-creator.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/camscanner-scanner-pdf-maker/com.intsig.camscanner",
+    "apkcombo-dlurl": "https://apkcombo.com/camscanner/com.intsig.camscanner",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.intsig.camscanner"
   },
   "niagara-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "bitpit.launcher",
     "app-name": "niagara-launcher",
     "rv-brand": "morphe",
@@ -1064,10 +1105,13 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://niagara-launcher.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher",
+    "apkcombo-dlurl": "https://apkcombo.com/niagara-launcher/bitpit.launcher",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/bitpit.launcher"
   },
   "github-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.github.android",
     "app-name": "github",
     "rv-brand": "morphe",
@@ -1078,10 +1122,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://github-android.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/github/github-2",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.github.android"
   },
   "proton-vpn-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
@@ -1096,7 +1141,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
   "hellochinese-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.hellochinese",
     "app-name": "hellochinese",
     "rv-brand": "morphe",
@@ -1106,10 +1151,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://hellochinese.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.hellochinese"
   },
   "myfitnesspal-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "myfitnesspal",
     "rv-brand": "morphe",
@@ -1119,10 +1165,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
-    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.myfitnesspal.android"
   },
   "prime-video-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.avod.thirdpartyclient",
     "app-name": "prime-video",
     "rv-brand": "morphe",
@@ -1132,10 +1179,13 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video",
-    "uptodown-dlurl": "https://amazon-video.en.uptodown.com/android"
+    "uptodown-dlurl": "https://amazon-video.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom",
+    "apkcombo-dlurl": "https://apkcombo.com/prime-video/com.amazon.avod.thirdpartyclient",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.avod.thirdpartyclient"
   },
   "goodreads-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.goodreads",
     "app-name": "goodreads",
     "rv-brand": "morphe",
@@ -1145,10 +1195,11 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/goodreads/goodreads",
-    "uptodown-dlurl": "https://goodreads.en.uptodown.com/android"
+    "uptodown-dlurl": "https://goodreads.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.goodreads"
   },
   "lightroom-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adobe.lrmobile",
     "app-name": "lightroom",
     "rv-brand": "morphe",
@@ -1162,7 +1213,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.lrmobile"
   },
   "rumble-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.rumble.battles",
     "app-name": "rumble",
     "rv-brand": "morphe",
@@ -1176,7 +1227,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rumble.battles"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "twitch",
     "rv-brand": "morphe",
@@ -1190,7 +1241,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.twitch.android.app"
   },
   "battery-guru-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.paget96.batteryguru",
     "app-name": "battery-guru",
     "rv-brand": "morphe",
@@ -1204,7 +1255,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.paget96.batteryguru"
   },
   "money-manager-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.realbyteapps.moneymanagerfree",
     "app-name": "money-manager",
     "rv-brand": "morphe",
@@ -1218,7 +1269,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.realbyteapps.moneymanagerfree"
   },
   "poweramp-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "poweramp",
     "rv-brand": "morphe",
@@ -1234,7 +1285,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.maxmpz.audioplayer"
   },
   "at4k-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.overdevs.at4k",
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
@@ -1248,7 +1299,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.snorelab.app",
     "app-name": "snorelab",
     "rv-brand": "morphe",
@@ -1261,7 +1312,7 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.spocky.projengmenu",
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
@@ -1275,12 +1326,12 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adobe.reader",
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
     "build-mode": "apk",
-    "arch": "both",
+    "arch": "arm64-v8a",
     "patches-source": "arandomhooman/hoomans-morphe-patches",
     "cli-source": "MorpheApp/morphe-desktop",
     "dpi": "nodpi anydpi auto",
@@ -1289,7 +1340,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
   },
   "inshot-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.camerasideas.instashot",
     "app-name": "inshot",
     "rv-brand": "morphe",
@@ -1303,7 +1354,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.camerasideas.instashot"
   },
   "todoist-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.todoist",
     "app-name": "todoist",
     "rv-brand": "morphe",
@@ -1316,7 +1367,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.todoist"
   },
   "tumblr-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tumblr",
     "app-name": "tumblr",
     "rv-brand": "morphe",
@@ -1329,7 +1380,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tumblr"
   },
   "google-phone-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.dialer",
     "app-name": "google-phone",
     "rv-brand": "morphe",
@@ -1371,7 +1422,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://showly-2-0.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
   },
   "instagram-instafel": {
     "enabled": false,
@@ -1384,7 +1436,8 @@
     "patches-source": "instafel/pc-rel",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "480dpi nodpi anydpi auto"
+    "dpi": "480dpi nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "instagram-instafel-clone": {
     "enabled": false,
@@ -1397,7 +1450,8 @@
     "patches-source": "instafel/pc-rel",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
-    "dpi": "480dpi nodpi anydpi auto"
+    "dpi": "480dpi nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "calorie-counter-morphe": {
     "enabled": false,
@@ -1561,6 +1615,7 @@
   },
   "cricbuzz-morphe": {
     "enabled": false,
+    "pkg-name": "com.cricbuzz.android",
     "app-name": "cricbuzz",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1570,10 +1625,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.cricbuzz.android"
   },
   "plus-messenger-morphe": {
     "enabled": false,
+    "pkg-name": "org.telegram.plus",
     "app-name": "plus-messenger",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1583,10 +1640,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://telegram-plus.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/rafalense/plus-messenger",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.telegram.plus"
   },
   "lumina-wallpapers-morphe": {
     "enabled": false,
+    "pkg-name": "com.lumina.wallpapers",
     "app-name": "lumina-wallpapers",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1594,10 +1653,12 @@
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
     "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://lumina-walls.en.uptodown.com/android"
+    "uptodown-dlurl": "https://lumina-walls.en.uptodown.com/android",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.lumina.wallpapers"
   },
   "document-scanner-morphe": {
     "enabled": false,
+    "pkg-name": "alldocumentreader.office.viewer.filereader.pdfviewerscanner",
     "app-name": "document-scanner",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1607,10 +1668,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://doc-scanner.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/alldocumentreader.office.viewer.filereader.pdfviewerscanner"
   },
   "eyecon-morphe": {
     "enabled": false,
+    "pkg-name": "com.eyecon.global",
     "app-name": "eyecon",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1620,10 +1683,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.eyecon.global"
   },
   "ticktick-morphe": {
     "enabled": false,
+    "pkg-name": "com.ticktick.task",
     "app-name": "ticktick",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1633,10 +1698,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://ticktick.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.ticktick.task"
   },
   "sdmaid-morphe": {
     "enabled": false,
+    "pkg-name": "eu.darken.sdmse",
     "app-name": "sdmaid",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1646,10 +1713,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/eu.darken.sdmse"
   },
   "proton-vpn-morphe-paresh": {
     "enabled": false,
+    "pkg-name": "ch.protonvpn.android",
     "app-name": "proton-vpn",
     "rv-brand": "morphe-paresh",
     "build-mode": "apk",
@@ -1665,6 +1734,7 @@
   },
   "truecaller-morphe": {
     "enabled": false,
+    "pkg-name": "com.truecaller",
     "app-name": "truecaller",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1675,10 +1745,12 @@
     "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block",
     "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.truecaller"
   },
   "fing-morphe": {
     "enabled": false,
+    "pkg-name": "com.overlook.android.fing",
     "app-name": "fing",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1688,10 +1760,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fing-limited/fing-network-tools",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.overlook.android.fing"
   },
   "telegram-morphe-foss": {
     "enabled": false,
+    "pkg-name": "org.telegram.messenger.web",
     "app-name": "telegram",
     "rv-brand": "morphe-foss",
     "build-mode": "apk",
@@ -1701,10 +1775,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.telegram.messenger.web"
   },
   "macrodroid-morphe": {
     "enabled": false,
+    "pkg-name": "com.arlosoft.macrodroid",
     "app-name": "macrodroid",
     "rv-brand": "morphe",
     "build-mode": "both",
@@ -1714,10 +1790,12 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.arlosoft.macrodroid"
   },
   "mxplayer-morphe": {
     "enabled": false,
+    "pkg-name": "com.mxtech.videoplayer.ad",
     "app-name": "mxplayer",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -1727,7 +1805,8 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://mx-player.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro",
-    "dpi": "nodpi anydpi auto"
+    "dpi": "nodpi anydpi auto",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.mxtech.videoplayer.ad"
   },
   "twitter-morphe": {
     "enabled": false,
