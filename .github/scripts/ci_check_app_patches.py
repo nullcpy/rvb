@@ -219,9 +219,10 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
             active_list.extend(repo_apps.keys())
         else:
             # Check individual packages
-            for toml_key, pkg in repo_apps.items():
-                if old_hashes.get(pkg) != new_hashes.get(pkg):
-                    print(f"Patch changed for {toml_key} ({pkg}) in {repo} ({channel}).")
+            for toml_key, meta in repo_apps.items():
+                pkg_name = meta['pkg']
+                if old_hashes.get(pkg_name) != new_hashes.get(pkg_name):
+                    print(f"Patch changed for {toml_key} ({pkg_name}) in {repo} ({channel}).")
                     active_list.append(toml_key)
         
         # Save new hashes
