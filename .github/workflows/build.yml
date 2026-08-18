@@ -76,9 +76,8 @@ jobs:
         uses: actions/cache/restore@v6
         with:
           path: temp/apks
-          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ github.run_id }}
+          key: apks-${{ github.run_id }}
           restore-keys: |
-            apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-
             apks-
 
       - name: Build modules and apks
@@ -109,7 +108,7 @@ jobs:
         if: always()
         with:
           path: temp/apks
-          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ hashFiles('temp/cache_manifest.txt') }}
+          key: apks-${{ hashFiles('temp/cache_manifest.txt') }}
 
       - name: Get output
         id: get_output
