@@ -1975,7 +1975,6 @@ build_rv() {
 
 		# Cache Check
 		if [ -n "$resolved_version" ]; then
-			wpr "[DEBUG] Checking cache. resolved_version is: $resolved_version"
 			local version_f=${resolved_version// /}
 			version_f=${version_f#v}
 			local all_archs_found=true
@@ -1985,11 +1984,8 @@ build_rv() {
 				local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 
 				if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
-					wpr "[DEBUG] Cache MISS for arch: $arch_f. Looked for: $stock_apk OR $all_apk"
 					all_archs_found=false
 					break
-				else
-					wpr "[DEBUG] Cache HIT for arch: $arch_f. Found $stock_apk or $all_apk"
 				fi
 			done
 			if [ "$all_archs_found" = true ]; then
@@ -2030,11 +2026,8 @@ build_rv() {
 						local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
 						local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
 						if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
-							wpr "[DEBUG] Dynamic Cache MISS for arch: $arch_f. Looked for: $stock_apk OR $all_apk"
 							all_archs_found=false
 							break
-						else
-							wpr "[DEBUG] Dynamic Cache HIT for arch: $arch_f. Found $stock_apk or $all_apk"
 						fi
 					done
 					if [ "$all_archs_found" = true ]; then
@@ -2055,7 +2048,6 @@ build_rv() {
 		fi
 	fi
 
-	wpr "[DEBUG] skip_dl_source_check is $skip_dl_source_check"
 	if [ "$skip_dl_source_check" = false ]; then
 		# 2. Establish dl_from and fetch required HTML responses
 		for dl_p in "${DL_SRCS[@]}"; do
@@ -2187,13 +2179,9 @@ build_rv() {
 			fi
 			if [ "$missing_arch" = false ]; then
 				stock_apk="$all_apk"
-			else
-				wpr "[DEBUG] all_apk exists but is missing arch $arch_f!"
 			fi
 		fi
-		wpr "[DEBUG] About to check if stock_apk exists: $stock_apk"
 		if [ ! -f "$stock_apk" ]; then
-			wpr "[DEBUG] stock_apk does not exist. Redirecting to DL..."
 			# Redirect to staging directory for safe downloading and processing
 			stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 			all_apk="${apk_dl_dir}/${pkg_name}-${version_f}-all.apk"
