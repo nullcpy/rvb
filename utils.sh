@@ -1932,7 +1932,9 @@ build_rv() {
 		# Check app_versions.json for exact version
 		local app_versions_file=".github/configs/app_versions.json"
 		if [ -f "$app_versions_file" ]; then
-			local json_ver=$(jq -r --arg t "$table" 'to_entries | map(select(.key | startswith("_") | not)) | map(select(.value.keys != null and (.value.keys | index($t)))) | .[0].value.version // empty' "$app_versions_file")
+			local t_pure="${table% (arm64-v8a)}"
+			t_pure="${t_pure% (arm-v7a)}"
+			local json_ver=$(jq -r --arg t "$t_pure" 'to_entries | map(select(.key | startswith("_") | not)) | map(select(.value.keys != null and (.value.keys | index($t)))) | .[0].value.version // empty' "$app_versions_file")
 			if [ -n "$json_ver" ]; then
 				resolved_version="$json_ver"
 			fi
