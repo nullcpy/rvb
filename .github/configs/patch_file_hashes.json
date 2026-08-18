@@ -16,15 +16,15 @@
   },
   "ajstrick81/morphe-androidtv-patches": {
     "stable": {
-      "com.peacocktv.peacockandroid": "81285dcc209ee4b9c5a3ef3fcd3b940a",
-      "com.disney.disneyplus": "b04951f8cba9a8f109c091b861f80b24",
-      "com.amazon.amazonvideo.livingroom": "9cdb58b4de8d15a589f57482745d4dee",
-      "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
       "com.netflix.ninja": "c6acad764462bac7734410a807a2e21a",
-      "com.wbd.hbomax": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.amazon.amazonvideo.livingroom": "9cdb58b4de8d15a589f57482745d4dee",
       "tv.pluto.android": "21b638f3a2c93b1afbea6acdb54d2f4f",
+      "com.disney.disneyplus": "b04951f8cba9a8f109c091b861f80b24",
+      "com.wbd.hbomax": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.peacocktv.peacockandroid": "81285dcc209ee4b9c5a3ef3fcd3b940a",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
-      "shared": "5198c54fa7c83ac6897c024d13ede12c"
+      "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
+      "shared": "0931595cc31cd10fe1b11c699f35efd2"
     },
     "dev": {}
   },
