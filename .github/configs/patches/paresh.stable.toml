@@ -1,5 +1,6 @@
 [cricbuzz-morphe]
 enabled = true
+pkg-name = "com.cricbuzz.android"
 app-name = "cricbuzz"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -11,9 +12,11 @@ uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/andro
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.cricbuzz.android"
 
 [plus-messenger-morphe]
 enabled = true
+pkg-name = "org.telegram.plus"
 app-name = "plus-messenger"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -25,9 +28,11 @@ uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/rafalense/plus-messenger"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/org.telegram.plus"
 
 [lumina-wallpapers-morphe]
 enabled = true
+pkg-name = "com.lumina.wallpapers"
 app-name = "lumina-wallpapers"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -39,9 +44,11 @@ uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/99-dots-team/lumina-wallpapers-4k-backgrounds"
 # dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.lumina.wallpapers"
 
 [document-scanner-morphe]
 enabled = true
+pkg-name = "alldocumentreader.office.viewer.filereader.pdfviewerscanner"
 app-name = "document-scanner"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -54,9 +61,11 @@ uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/alldocumentreader.office.viewer.filereader.pdfviewerscanner"
 
 [eyecon-morphe]
 enabled = true
+pkg-name = "com.eyecon.global"
 app-name = "eyecon"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -68,9 +77,11 @@ uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/an
 apkmirror-dlurl = "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.eyecon.global"
 
 [ticktick-morphe]
 enabled = true
+pkg-name = "com.ticktick.task"
 app-name = "ticktick"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -82,9 +93,11 @@ uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.ticktick.task"
 
 [sdmaid-morphe]
 enabled = true
+pkg-name = "eu.darken.sdmse"
 app-name = "sdmaid"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -96,9 +109,11 @@ uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/eu.darken.sdmse"
 
 [proton-vpn-morphe-paresh]
 enabled = true
+pkg-name = "ch.protonvpn.android"
 app-name = "proton-vpn"
 rv-brand = "morphe-paresh"
 build-mode = "apk"
@@ -114,6 +129,7 @@ github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.androi
 
 [truecaller-morphe]
 enabled = true
+pkg-name = "com.truecaller"
 app-name = "truecaller"
 rv-brand = "morphe"
 build-mode = "both"
@@ -125,9 +141,11 @@ uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.truecaller"
 
 [fing-morphe]
 enabled = true
+pkg-name = "com.overlook.android.fing"
 app-name = "fing"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -139,9 +157,11 @@ uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.overlook.android.fing"
 
 [telegram-morphe-foss]
 enabled = true
+pkg-name = "org.telegram.messenger.web"
 app-name = "telegram"
 rv-brand = "morphe-foss"
 build-mode = "apk"
@@ -153,9 +173,11 @@ uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/org.telegram.messenger"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/org.telegram.messenger.web"
 
 [macrodroid-morphe]
 enabled = true
+pkg-name = "com.arlosoft.macrodroid"
 app-name = "macrodroid"
 rv-brand = "morphe"
 build-mode = "both"
@@ -168,9 +190,11 @@ uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.arlosoft.macrodroid"
 
 [mxplayer-morphe]
 enabled = true
+pkg-name = "com.mxtech.videoplayer.ad"
 app-name = "mxplayer"
 rv-brand = "morphe"
 build-mode = "apk"
@@ -182,7 +206,7 @@ uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.mxtech.videoplayer.ad"
 
 
 
