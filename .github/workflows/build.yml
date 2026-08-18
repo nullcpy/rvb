@@ -101,12 +101,15 @@ jobs:
       - name: Cleanup old cached APKs
         run: bash .github/scripts/build_cache_cleanup.sh
 
+      - name: Generate Cache Manifest
+        run: find temp/apks/ -maxdepth 1 -type f -printf "%s %f\n" | sort > temp/cache_manifest.txt
+
       - name: Save APKs Cache
         uses: actions/cache/save@v6
         if: always()
         with:
           path: temp/apks
-          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ hashFiles('temp/apks/*') }}
+          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ hashFiles('temp/cache_manifest.txt') }}
 
       - name: Get output
         id: get_output
