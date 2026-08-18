@@ -100,7 +100,7 @@ def process_zip(path, pkgs):
                     if reg.search(info.filename):
                         if comp in comp_map:
                             buckets[comp_map[comp]].update(content)
-                        assigned = True
+                            assigned = True
                         break
                         
             if not assigned:
