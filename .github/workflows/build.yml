@@ -72,12 +72,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/build_resolve_version.sh
 
-      - name: Cache APKs
-        uses: actions/cache@v6
+      - name: Restore APKs Cache
+        uses: actions/cache/restore@v6
         with:
           path: temp/apks
-          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}
+          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ github.run_id }}
           restore-keys: |
+            apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-
             apks-
 
       - name: Build modules and apks
@@ -99,6 +100,13 @@ jobs:
         
       - name: Cleanup old cached APKs
         run: bash .github/scripts/build_cache_cleanup.sh
+
+      - name: Save APKs Cache
+        uses: actions/cache/save@v6
+        if: always()
+        with:
+          path: temp/apks
+          key: apks-${{ hashFiles('.github/configs/app_versions.json', '.github/configs/patches/**/*.toml') }}-${{ hashFiles('temp/apks/*') }}
 
       - name: Get output
         id: get_output
