@@ -88,7 +88,7 @@ def process_zip(path, pkg_info):
                         if pf and comp == pf:
                             comp_map[comp] = pkg
                             break
-                        elif an and (comp == an or an.startswith(comp) or comp.startswith(an) or comp == an_clean or an_clean.startswith(comp) or comp.startswith(an_clean)):
+                        elif an and (comp == an or comp == an_clean):
                             comp_map[comp] = pkg
                             break
                         elif pkg and comp in pkg.split('.'):
