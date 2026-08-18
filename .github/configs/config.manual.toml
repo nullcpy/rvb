@@ -2,20 +2,22 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[facebook-morphe]
+[accuweather-morphe]
 enabled = true
-pkg-name = "com.facebook.katana"
-app-name = "facebook"
+pkg-name = "com.accuweather.android"
+app-name = "accuweather"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
 dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
+# archive-dlurl = ""
+apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
+apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.accuweather.android"
 
 
 
