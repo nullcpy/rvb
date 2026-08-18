@@ -15,7 +15,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
@@ -28,7 +28,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
@@ -42,7 +42,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
@@ -55,7 +55,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
@@ -69,7 +69,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
@@ -82,7 +82,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.univision.prendetv",
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
@@ -95,7 +95,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.pluto.android",
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
@@ -109,7 +109,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
   },
   "netflix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "netflix",
     "rv-brand": "morphe-androidtv",
@@ -847,7 +847,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
   },
   "soundcloud-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.soundcloud.android",
     "app-name": "soundcloud",
     "rv-brand": "morphe",
@@ -862,7 +862,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"
   },
   "duolingo-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.duolingo",
     "app-name": "duolingo",
     "rv-brand": "morphe",
@@ -876,7 +876,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.duolingo"
   },
   "wps-office-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "cn.wps.moffice_eng",
     "app-name": "wps-office",
     "rv-brand": "morphe",
@@ -891,7 +891,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/cn.wps.moffice_eng"
   },
   "wallcraft-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.wallpaperscraft.wallpaper",
     "app-name": "wallcraft",
     "rv-brand": "morphe",
@@ -904,7 +904,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "solid-explorer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "pl.solidexplorer2",
     "app-name": "solid-explorer",
     "rv-brand": "morphe",
@@ -917,7 +917,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "icon-packer-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "cn.ommiao.iconpacker",
     "app-name": "icon-packer",
     "rv-brand": "morphe",
@@ -930,7 +930,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
   },
   "podcast-addict-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.bambuna.podcastaddict",
     "app-name": "podcast-addict",
     "rv-brand": "morphe",
@@ -944,7 +944,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
   },
   "smart-launcher-6-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ginlemon.flowerfree",
     "app-name": "smart-launcher-6",
     "rv-brand": "morphe",
@@ -959,7 +959,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
   },
   "merriam-webster-dictionary-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.merriamwebster",
     "app-name": "merriam-webster-dictionary",
     "rv-brand": "morphe",
@@ -973,7 +973,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.merriamwebster"
   },
   "pandora-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.pandora.android",
     "app-name": "pandora",
     "rv-brand": "morphe",
@@ -985,7 +985,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.pandora.android"
   },
   "xrecorder-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "videoeditor.videorecorder.screenrecorder",
     "app-name": "xrecorder",
     "rv-brand": "morphe",
@@ -998,7 +998,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "adguard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adguard.android",
     "app-name": "adguard",
     "rv-brand": "morphe",
@@ -1012,7 +1012,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
   },
   "nova-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.teslacoilsw.launcher",
     "app-name": "nova-launcher",
     "rv-brand": "morphe",
@@ -1027,7 +1027,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.teslacoilsw.launcher"
   },
   "ventusky-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "cz.ackee.ventusky",
     "app-name": "ventusky",
     "rv-brand": "morphe",
@@ -1041,7 +1041,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
   },
   "camscanner-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.intsig.camscanner",
     "app-name": "camscanner",
     "rv-brand": "morphe",
@@ -1054,7 +1054,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "niagara-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "bitpit.launcher",
     "app-name": "niagara-launcher",
     "rv-brand": "morphe",
@@ -1067,7 +1067,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "github-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.github.android",
     "app-name": "github",
     "rv-brand": "morphe",
@@ -1081,7 +1081,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "proton-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "proton-vpn",
     "rv-brand": "morphe",
@@ -1096,7 +1096,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonvpn.android"
   },
   "hellochinese-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.hellochinese",
     "app-name": "hellochinese",
     "rv-brand": "morphe",
@@ -1109,7 +1109,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "myfitnesspal-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "myfitnesspal",
     "rv-brand": "morphe",
@@ -1122,7 +1122,7 @@
     "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
   },
   "prime-video-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.avod.thirdpartyclient",
     "app-name": "prime-video",
     "rv-brand": "morphe",
@@ -1135,7 +1135,7 @@
     "uptodown-dlurl": "https://amazon-video.en.uptodown.com/android"
   },
   "goodreads-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.goodreads",
     "app-name": "goodreads",
     "rv-brand": "morphe",
@@ -1148,7 +1148,7 @@
     "uptodown-dlurl": "https://goodreads.en.uptodown.com/android"
   },
   "lightroom-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adobe.lrmobile",
     "app-name": "lightroom",
     "rv-brand": "morphe",
@@ -1162,7 +1162,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.lrmobile"
   },
   "rumble-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "rumble",
     "rv-brand": "morphe",
@@ -1176,7 +1176,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rumble.battles"
   },
   "twitch-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "twitch",
     "rv-brand": "morphe",
@@ -1190,7 +1190,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.twitch.android.app"
   },
   "battery-guru-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.paget96.batteryguru",
     "app-name": "battery-guru",
     "rv-brand": "morphe",
@@ -1204,7 +1204,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.paget96.batteryguru"
   },
   "money-manager-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.realbyteapps.moneymanagerfree",
     "app-name": "money-manager",
     "rv-brand": "morphe",
@@ -1218,7 +1218,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.realbyteapps.moneymanagerfree"
   },
   "poweramp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "poweramp",
     "rv-brand": "morphe",
@@ -1234,7 +1234,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.maxmpz.audioplayer"
   },
   "at4k-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.overdevs.at4k",
     "app-name": "at4k-launcher",
     "rv-brand": "morphe",
@@ -1248,7 +1248,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
   },
   "snorelab-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.snorelab.app",
     "app-name": "snorelab",
     "rv-brand": "morphe",
@@ -1261,7 +1261,7 @@
     "uptodown-dlurl": "https://snorelab-record-your-snoring.en.uptodown.com/android"
   },
   "projectivy-launcher-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.spocky.projengmenu",
     "app-name": "projectivy-launcher",
     "rv-brand": "morphe",
@@ -1275,7 +1275,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adobe.reader",
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
@@ -1289,7 +1289,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
   },
   "inshot-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.camerasideas.instashot",
     "app-name": "inshot",
     "rv-brand": "morphe",
@@ -1303,7 +1303,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.camerasideas.instashot"
   },
   "todoist-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.todoist",
     "app-name": "todoist",
     "rv-brand": "morphe",
@@ -1316,7 +1316,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.todoist"
   },
   "tumblr-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.tumblr",
     "app-name": "tumblr",
     "rv-brand": "morphe",
@@ -1329,7 +1329,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.tumblr"
   },
   "google-phone-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.dialer",
     "app-name": "google-phone",
     "rv-brand": "morphe",
@@ -2013,6 +2013,7 @@
   "ninja-vpn-morphe": {
     "enabled": false,
     "pkg-name": "app.ninjavpn.android",
+    "patch-folder": "ninjvapn",
     "app-name": "ninja-vpn",
     "rv-brand": "morphe",
     "build-mode": "apk",
