@@ -79,12 +79,13 @@ def process_zip(path, pkg_info):
                     all_comps.add(comp)
                     # Heuristics
                     for pkg, meta in pkg_info.items():
-                        pf = meta.get('patch_folder', '')
+                        pf_str = meta.get('patch_folder', '')
                         an = meta.get('app_name', '')
                         an_clean = an.replace('-', '')
                         
-                        if pf:
-                            if comp == pf:
+                        if pf_str:
+                            pfs = pf_str.split()
+                            if '*' in pfs or comp in pfs:
                                 comp_map.setdefault(comp, set()).add(pkg)
                             continue
                             
