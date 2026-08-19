@@ -682,7 +682,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -1227,7 +1227,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rumble.battles"
   },
   "twitch-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "twitch",
     "rv-brand": "morphe",
@@ -1326,7 +1326,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.spocky.projengmenu"
   },
   "adobe-acrobat-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adobe.reader",
     "app-name": "adobe-acrobat",
     "rv-brand": "morphe",
@@ -1367,7 +1367,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.todoist"
   },
   "tumblr-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tumblr",
     "app-name": "tumblr",
     "rv-brand": "morphe",
