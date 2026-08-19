@@ -98,6 +98,9 @@ def process_zip(path, pkg_info):
             if info.filename.endswith('.class'):
                 content = z.read(info)
                 for pkg, b_pkg in pkg_bytes.items():
+                    pf = pkg_info[pkg].get('patch_folder', '')
+                    if pf: continue # Explicitly defined patch-folders shouldn't use bytecode fallback
+                    
                     if b_pkg in content:
                         if m:
                             comp = m.group(1)
