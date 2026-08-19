@@ -28,19 +28,6 @@ dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.recorder"
 
-[rar-morphe]
-enabled = true
-app-name = "rar"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "RookieEnough/De-Vanced"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
-dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
-
 [microsoft-lens-morphe]
 enabled = true
 app-name = "microsoft-lens"

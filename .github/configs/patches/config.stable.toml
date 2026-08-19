@@ -3,6 +3,7 @@ enabled = true
 pkg-name = "com.google.android.apps.magazines"
 app-name = "google-news"
 rv-brand = "morphe"
+patch-folder = "news"
 build-mode = "apk"
 arch = "both"
 patches-source = "docbt/patched-up"
