@@ -659,7 +659,7 @@ _patches_list() {
 		for j in "${p_jars[@]}"; do
 			p_args_morphe+="--patches '$j' "
 		done
-		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_morphe -f "'$pkg_name'" --with-versions --with-packages 2>&1); then
+		if ! op=$(eval java -jar "'$cli_jar'" list-patches $p_args_morphe -f "'$pkg_name'" --with-versions --with-packages -x 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
