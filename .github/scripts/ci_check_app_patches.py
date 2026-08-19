@@ -130,6 +130,13 @@ def process_zip(path, pkg_info):
                 continue
                 
             content = z.read(info)
+            
+            # Wildcard catch-all: if an app uses '*', hash EVERYTHING for it
+            for pkg in pkgs:
+                pf_str = pkg_info[pkg].get('patch_folder', '')
+                if pf_str and '*' in pf_str.split():
+                    buckets[pkg].update(content)
+                    
             assigned = False
             for pkg, b_pkg in pkg_bytes.items():
                 if b_pkg in content:
