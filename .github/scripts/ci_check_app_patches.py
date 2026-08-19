@@ -138,19 +138,21 @@ def process_zip(path, pkg_info):
                     buckets[pkg].update(content)
                     
             assigned = False
-            for pkg, b_pkg in pkg_bytes.items():
-                if b_pkg in content:
-                    buckets[pkg].update(content)
-                    assigned = True
+            # 1. Directory Structure matching (Primary source of truth)
+            for comp, reg in comp_regexes.items():
+                if reg.search(info.filename):
+                    if comp in comp_map:
+                        for p in comp_map[comp]:
+                            buckets[p].update(content)
+                    assigned = True # Mark as handled to avoid shared bucket poisoning
                     break
                     
+            # 2. Bytecode Fallback (For isolated patches or shared/ folders)
             if not assigned:
-                for comp, reg in comp_regexes.items():
-                    if reg.search(info.filename):
-                        if comp in comp_map:
-                            for p in comp_map[comp]:
-                                buckets[p].update(content)
-                        assigned = True # Mark as handled to avoid shared bucket poisoning
+                for pkg, b_pkg in pkg_bytes.items():
+                    if b_pkg in content:
+                        buckets[pkg].update(content)
+                        assigned = True
                         break
                         
             if not assigned:
