@@ -3,7 +3,6 @@ enabled = true
 pkg-name = "com.google.android.apps.magazines"
 app-name = "google-news"
 rv-brand = "morphe"
-patch-folder = "news"
 build-mode = "apk"
 arch = "both"
 patches-source = "docbt/patched-up"
@@ -22,23 +21,13 @@ rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "IMXEren/mix-patches"
+patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.trakt.trakt"
-
-[cryptomator-morphe]
-enabled = false
-pkg-name = "org.cryptomator"
-app-name = "cryptomator"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "joganubaid/cryptomator-morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-direct-dlurl = "https://static.cryptomator.org/android/1.12.3/Cryptomator-1.12.3.apk"
 
 [komoot-morphe]
 enabled = true

@@ -190,6 +190,7 @@
   },
   "IMXEren": {
     "repo": "IMXEren/mix-patches",
+    "host": "gitlab",
     "stable": "v1.4.1",
     "prerelease": "v1.4.1-dev.1",
     "blocked": false,

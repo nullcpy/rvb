@@ -13,20 +13,6 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
 
-[waze-morphe]
-enabled = true
-pkg-name = "com.waze"
-app-name = "waze"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://waze.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/waze/waze-gps-maps-traffic-alerts-live-navigation"
-dpi = "nodpi anydpi auto"
-# archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
-
 [warp-morphe]
 enabled = true
 pkg-name = "com.cloudflare.onedotonedotonedotone"
@@ -92,6 +78,7 @@ enabled = true
 pkg-name = "com.dubox.drive"
 app-name = "terabox"
 rv-brand = "morphe"
+patch-folder = "duboxdrive"
 build-mode = "apk"
 arch = "both"
 patches-source = "rushiranpise/morphe-patches"
@@ -163,26 +150,12 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
-[moviebox-morphe]
-enabled = true
-pkg-name = "com.community.oneroom"
-app-name = "moviebox"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
-# apkmirror-dlurl = ""
-# dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
-
 [moviebox-morphe-androidtv]
 enabled = true
 pkg-name = "com.community.mbox.tv"
 app-name = "moviebox"
 rv-brand = "morphe-androidtv"
+patch-folder = "movieboxtv"
 build-mode = "apk"
 arch = "both"
 patches-source = "rushiranpise/morphe-patches"
@@ -225,3 +198,18 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
 dpi = "nodpi anydpi auto"
 apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/au.com.shiftyjelly.pocketcasts"
+
+[rar-morphe]
+enabled = true
+app-name = "rar"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
+dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
+
+

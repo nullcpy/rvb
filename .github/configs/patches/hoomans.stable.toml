@@ -88,24 +88,12 @@ apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 # apkcombo-dlurl = "https://apkcombo.com/at4k-launcher/com.overdevs.at4k"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.overdevs.at4k"
 
-[snorelab-morphe]
-enabled = false
-pkg-name = "com.snorelab.app"
-app-name = "snorelab"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "all"
-patches-source = "arandomhooman/hoomans-morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/reviva-softworks-ltd/snorelab-record-your-snoring"
-uptodown-dlurl = "https://snorelab-record-your-snoring.en.uptodown.com/android"
-
 [projectivy-launcher-morphe]
 enabled = true 
 pkg-name = "com.spocky.projengmenu"
 app-name = "projectivy-launcher"
 rv-brand = "morphe"
+patch-folder = "projectivy"
 build-mode = "apk"
 arch = "all"
 patches-source = "arandomhooman/hoomans-morphe-patches"
@@ -122,6 +110,7 @@ enabled = true
 pkg-name = "com.adobe.reader"
 app-name = "adobe-acrobat"
 rv-brand = "morphe"
+patch-folder = "acrobat"
 build-mode = "apk"
 arch = "arm64-v8a"
 patches-source = "arandomhooman/hoomans-morphe-patches"

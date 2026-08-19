@@ -72,7 +72,7 @@ def process_zip(path, pkg_info):
     
     with zipfile.ZipFile(path) as z:
         for info in z.infolist():
-            m = re.search(r'(?:patches|patched_up)/([^/]+)/', info.filename)
+            m = re.search(r'(?:^|/)(?:patches|patched_up)/([^/]+)/', info.filename)
             if m:
                 comp = m.group(1)
                 if comp not in ['shared', 'all']:
