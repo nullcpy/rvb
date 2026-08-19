@@ -88,6 +88,8 @@ def process_zip(path, pkg_info):
                         elif an and (comp == an or comp == an_clean):
                             comp_map.setdefault(comp, set()).add(pkg)
                         elif pkg and comp in pkg.split('.'):
+                            # Prevent youtube from mapping to youtube-music
+                            if comp == 'youtube' and 'music' in an.lower(): continue
                             comp_map.setdefault(comp, set()).add(pkg)
             
             if info.filename.endswith('.class'):
