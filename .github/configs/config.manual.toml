@@ -2,52 +2,37 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[adobe-acrobat-morphe]
-enabled = true 
-pkg-name = "com.adobe.reader"
-app-name = "adobe-acrobat"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "arm64-v8a"
-patches-source = "arandomhooman/hoomans-morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
-uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adobe.reader"
-
-[camscanner-morphe]
+[brave-browser-morphe-beta]
 enabled = true
-pkg-name = "com.intsig.camscanner"
-app-name = "camscanner"
-rv-brand = "morphe"
+pkg-name = "com.brave.browser_beta"
+app-name = "brave-browser"
+rv-brand = "morphe-beta"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "dh6k/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
+uptodown-dlurl = "https://brave-browser-beta.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-beta"
 dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/camscanner-scanner-pdf-maker/com.intsig.camscanner"
-apkcombo-dlurl = "https://apkcombo.com/camscanner/com.intsig.camscanner"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.intsig.camscanner"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.intsig.camscanner"
+apkpure-dlurl = "https://apkpure.com/brave-browser-beta/com.brave.browser_beta"
+apkcombo-dlurl = "https://apkcombo.com/brave-beta/com.brave.browser_beta"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.brave.browser_beta"
 
-[prime-video-morphe]
+[brave-browser-morphe-nightly]
 enabled = true
-pkg-name = "com.amazon.avod.thirdpartyclient"
-app-name = "prime-video"
-rv-brand = "morphe"
+pkg-name = "com.brave.browser_nightly"
+app-name = "brave-browser"
+rv-brand = "morphe-nightly"
 build-mode = "apk"
 arch = "both"
-patches-source = "hoo-dles/morphe-patches"
+patches-source = "dh6k/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://brave-browser-nightly.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-nightly"
 dpi = "nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video"
-uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom"
-apkcombo-dlurl = "https://apkcombo.com/prime-video/com.amazon.avod.thirdpartyclient"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.amazon.avod.thirdpartyclient"
+apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
+apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.brave.browser_nightly"
 
 
 
