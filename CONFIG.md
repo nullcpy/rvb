@@ -33,6 +33,7 @@ cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "l
 [Some-App]
 app-name = "SomeApp" # if set, release name becomes SomeApp instead of Some-App. default is same as table name, which is 'Some-App' here.
 pkg-name = "com.some.app" # explicit package name override. recommended to avoid unnecessary network checks when caching.
+patch-folder = "someapp" # explicit patch folder name override. forces the CI to strictly match patches inside this exact folder name, bypassing fallback heuristics (useful for resolving collisions like youtube vs youtube-music).
 enabled = true       # whether to build the app. default: true
 build-mode = "both"  # 'both', 'apk' or 'module'. default: apk
 
