@@ -71,31 +71,44 @@ def process_zip(path, pkg_info):
     all_comps = set()
     
     with zipfile.ZipFile(path) as z:
+        # Pass 1: Build all_comps
         for info in z.infolist():
             m = re.search(r'(?:^|/)(?:patches|patched_up)/([^/]+)/', info.filename)
             if m:
                 comp = m.group(1)
                 if comp not in ['shared', 'all']:
                     all_comps.add(comp)
-                    # Heuristics
-                    for pkg, meta in pkg_info.items():
-                        pf_str = meta.get('patch_folder', '')
-                        an = meta.get('app_name', '')
-                        an_clean = an.replace('-', '')
+                    
+        # Inject explicitly defined patch-folders from config so they are evaluated even if the regex above missed them
+        for meta in pkg_info.values():
+            pf_str = meta.get('patch_folder', '')
+            if pf_str:
+                for pf in pf_str.split():
+                    if pf != '*':
+                        all_comps.add(pf)
                         
-                        if pf_str:
-                            pfs = pf_str.split()
-                            if '*' in pfs or comp in pfs:
-                                comp_map.setdefault(comp, set()).add(pkg)
-                            continue
-                            
-                        if an and (comp == an or comp == an_clean):
-                            comp_map.setdefault(comp, set()).add(pkg)
-                        elif pkg and comp in pkg.split('.'):
-                            # Prevent youtube from mapping to youtube-music
-                            if comp == 'youtube' and 'music' in an.lower(): continue
-                            comp_map.setdefault(comp, set()).add(pkg)
+        # Pass 2: Heuristics
+        for comp in all_comps:
+            for pkg, meta in pkg_info.items():
+                pf_str = meta.get('patch_folder', '')
+                an = meta.get('app_name', '')
+                an_clean = an.replace('-', '')
+                
+                if pf_str:
+                    pfs = pf_str.split()
+                    if '*' in pfs or comp in pfs:
+                        comp_map.setdefault(comp, set()).add(pkg)
+                    continue
+                    
+                if an and (comp == an or comp == an_clean):
+                    comp_map.setdefault(comp, set()).add(pkg)
+                elif pkg and comp in pkg.split('.'):
+                    # Prevent youtube from mapping to youtube-music
+                    if comp == 'youtube' and 'music' in an.lower(): continue
+                    comp_map.setdefault(comp, set()).add(pkg)
             
+        # Pass 3: Bytecode Fallback
+        for info in z.infolist():
             if info.filename.endswith('.class'):
                 content = z.read(info)
                 for pkg, b_pkg in pkg_bytes.items():
@@ -103,6 +116,7 @@ def process_zip(path, pkg_info):
                     if pf: continue # Explicitly defined patch-folders shouldn't use bytecode fallback
                     
                     if b_pkg in content:
+                        m = re.search(r'(?:^|/)(?:patches|patched_up)/([^/]+)/', info.filename)
                         if m:
                             comp = m.group(1)
                             if comp not in ['shared', 'all']:
