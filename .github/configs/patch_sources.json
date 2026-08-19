@@ -24,10 +24,10 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.39.1",
-    "prerelease": "v1.40.0-dev.10",
+    "prerelease": "v1.40.0-dev.12",
     "blocked": false,
     "stable_date": "2026-08-08T17:05:00Z",
-    "pre_date": "2026-08-18T14:21:59Z"
+    "pre_date": "2026-08-19T11:57:00Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -191,11 +191,11 @@
   "IMXEren": {
     "repo": "IMXEren/mix-patches",
     "host": "gitlab",
-    "stable": "v1.4.1",
-    "prerelease": "v1.4.1-dev.1",
+    "stable": "v1.5.0",
+    "prerelease": "v1.5.0-dev.1",
     "blocked": false,
-    "stable_date": "2026-07-23T16:30:38Z",
-    "pre_date": "2026-07-23T16:28:01Z"
+    "stable_date": "2026-08-19T02:11:04.715Z",
+    "pre_date": "2026-08-19T02:01:03.645Z"
   },
   "quantavil": {
     "repo": "quantavil/edge-morphe-patches",
@@ -270,6 +270,11 @@
     "blocked": false
   },
   "dh6k": {
-    "repo": "dh6k/morphe-patches"
+    "repo": "dh6k/morphe-patches",
+    "stable": "v1.2.0",
+    "stable_date": "2026-08-12T16:36:52Z",
+    "prerelease": "v1.3.0-dev.1",
+    "pre_date": "2026-08-15T16:24:26Z",
+    "blocked": false
   }
 }

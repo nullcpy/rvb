@@ -1,54 +1,11 @@
 {
   "patches-version": "dev",
   "enable-module-update": false,
-  "youtube-revanced": {
-    "enabled": false,
-    "pkg-name": "com.google.android.youtube",
-    "app-name": "youtube",
-    "rv-brand": "revanced",
-    "build-mode": "both",
-    "arch": "both",
-    "patches-source": "ReVanced/revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
-  },
-  "youtube-music-revanced": {
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.youtube.music",
-    "app-name": "youtube-music",
-    "rv-brand": "revanced",
-    "build-mode": "both",
-    "arch": "both",
-    "patches-source": "ReVanced/revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
-  },
-  "messenger-revanced": {
-    "enabled": false,
-    "pkg-name": "com.facebook.orca",
-    "app-name": "messenger",
-    "rv-brand": "revanced",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "ReVanced/revanced-patches",
-    "cli-source": "ReVanced/revanced-cli",
-    "uptodown-dlurl": "https://facebook-messenger.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/messenger",
-    "dpi": "nodpi anydpi auto",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
-  },
   "youtube-anddea": {
     "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
+    "patch-folder": "youtube",
     "rv-brand": "anddea",
     "build-mode": "both",
     "arch": "both",
@@ -65,6 +22,7 @@
     "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
+    "patch-folder": "music",
     "rv-brand": "anddea",
     "build-mode": "both",
     "arch": "both",
@@ -195,9 +153,10 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "youtube-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
+    "patch-folder": "youtube",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
@@ -210,9 +169,10 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
   },
   "youtube-music-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
+    "patch-folder": "music",
     "rv-brand": "morphe",
     "build-mode": "both",
     "arch": "both",
@@ -225,9 +185,10 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "youtube-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "youtube",
+    "patch-folder": "youtube",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
     "arch": "both",
@@ -243,9 +204,10 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-music-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "youtube-music",
+    "patch-folder": "music",
     "rv-brand": "morphe-exp",
     "build-mode": "both",
     "version": "exp",
@@ -261,7 +223,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "reddit-morphe-exp": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe-exp",
@@ -276,7 +238,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "reddit-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe",
