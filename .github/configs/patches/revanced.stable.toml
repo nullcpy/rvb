@@ -145,6 +145,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.ba
 [youtube-revanced-nord]
 enabled = true
 app-name = "youtube"
+patch-folder = "youtube"
 rv-brand = "revanced-nord"
 build-mode = "both"
 arch = "both"
@@ -159,6 +160,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 [youtube-revanced-mocha]
 enabled = true
 app-name = "youtube"
+patch-folder = "youtube"
 rv-brand = "revanced-mocha"
 build-mode = "both"
 arch = "both"

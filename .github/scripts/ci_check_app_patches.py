@@ -83,9 +83,12 @@ def process_zip(path, pkg_info):
                         an = meta.get('app_name', '')
                         an_clean = an.replace('-', '')
                         
-                        if pf and comp == pf:
-                            comp_map.setdefault(comp, set()).add(pkg)
-                        elif an and (comp == an or comp == an_clean):
+                        if pf:
+                            if comp == pf:
+                                comp_map.setdefault(comp, set()).add(pkg)
+                            continue
+                            
+                        if an and (comp == an or comp == an_clean):
                             comp_map.setdefault(comp, set()).add(pkg)
                         elif pkg and comp in pkg.split('.'):
                             # Prevent youtube from mapping to youtube-music
