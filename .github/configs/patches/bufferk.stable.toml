@@ -27,16 +27,4 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
 dpi = "nodpi anydpi auto"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.medium.reader"
 
-[brave-browser-morphe]
-enabled = true
-pkg-name = "com.brave.browser"
-app-name = "brave-browser"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "bufferk/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
-dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
+
