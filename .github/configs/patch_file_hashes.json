@@ -103,9 +103,9 @@
   "hxreborn/morphe-patches": {
     "dev": {},
     "stable": {
-      "ch.protonmail.android": "3be879b23db01dce9816c21abcf711d6",
-      "com.michaldrabik.showly2": "6132bb2f1ff88e3ed84233accc3b1401",
-      "shared": "99cc17064137fe6cd9be9c3a702e8fee"
+      "ch.protonmail.android": "0306e795f43f390d780aec337cfc6d88",
+      "com.michaldrabik.showly2": "77faaaff80f3870170cabfed9ce9ba5d",
+      "shared": "e4103fe9f4a7c020229409fec0bb1378"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -123,6 +123,13 @@
       "shared": "9eb7ecb88d737e7465e94aff10dfcbaf"
     },
     "stable": {}
+  },
+  "quantavil/edge-morphe-patches": {
+    "dev": {},
+    "stable": {
+      "com.microsoft.emmx": "151519518665e90765b287d5e90ba3e3",
+      "shared": "0e1237ce0a45c8a07bb403c5e043d2f4"
+    }
   },
   "revenge-mod/revenge-xposed": {
     "dev": {},
