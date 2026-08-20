@@ -557,7 +557,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
   },
   "threads-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "threads",
     "rv-brand": "morphe",
@@ -1363,7 +1363,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.dialer"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "proton-mail",
     "rv-brand": "morphe",

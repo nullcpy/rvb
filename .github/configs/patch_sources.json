@@ -135,10 +135,10 @@
   "tiktok": {
     "repo": "icysymmetra/tiktok-patches-for-morphe",
     "stable": "v0.6.1",
-    "prerelease": "v0.7.0-dev.5",
+    "prerelease": "v0.7.0-dev.7",
     "blocked": false,
     "stable_date": "2026-08-09T20:37:48Z",
-    "pre_date": "2026-08-16T21:56:01Z"
+    "pre_date": "2026-08-20T20:33:59Z"
   },
   "x-shim": {
     "enabled": false,
@@ -255,8 +255,8 @@
   },
   "durgesh0505": {
     "repo": "durgesh0505/chiggi_morphe_patches",
-    "stable": "v1.18.0",
-    "stable_date": "2026-07-23T01:30:52Z",
+    "stable": "v1.19.0",
+    "stable_date": "2026-08-20T20:36:01Z",
     "prerelease": "",
     "pre_date": "",
     "blocked": false
