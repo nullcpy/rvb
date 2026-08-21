@@ -557,7 +557,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
   },
   "threads-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "threads",
     "rv-brand": "morphe",
@@ -803,7 +803,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
   },
   "brave-browser-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "brave-browser",
     "rv-brand": "morphe",
@@ -819,7 +819,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
   },
   "brave-browser-morphe-beta": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "brave-browser",
     "rv-brand": "morphe-beta",
@@ -835,7 +835,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser_beta"
   },
   "brave-browser-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "brave-browser",
     "rv-brand": "morphe-nightly",
