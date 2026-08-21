@@ -13,6 +13,14 @@
       "tv.pluto.android": "21b638f3a2c93b1afbea6acdb54d2f4f"
     }
   },
+  "anddea/revanced-patches": {
+    "dev": {
+      "com.google.android.apps.youtube.music": "e8148c5ae240532f32e4ba0ee2dea020",
+      "com.google.android.youtube": "0963f95f577db0ba6a9dd779f0d62ebd",
+      "shared": "4e75cc4ad3579a0a098de2dc58053881"
+    },
+    "stable": {}
+  },
   "arandomhooman/hoomans-morphe-patches": {
     "dev": {},
     "stable": {
@@ -140,6 +148,13 @@
   },
   "instafel/pc-rel": {
     "dev": {},
+    "stable": {}
+  },
+  "jkennethcarino/adobo": {
+    "dev": {
+      "com.reddit.frontpage": "3dc6df277424f5005e822713d150434b",
+      "shared": "d76ff4d174f27c75ba0ee6c944172ba4"
+    },
     "stable": {}
   },
   "kiraio-moe/lain-patches": {
