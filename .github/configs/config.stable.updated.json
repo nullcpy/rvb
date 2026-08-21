@@ -803,7 +803,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
   },
   "brave-browser-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser",
     "app-name": "brave-browser",
     "rv-brand": "morphe",
@@ -819,7 +819,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
   },
   "brave-browser-morphe-beta": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "brave-browser",
     "rv-brand": "morphe-beta",
@@ -835,7 +835,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser_beta"
   },
   "brave-browser-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "brave-browser",
     "rv-brand": "morphe-nightly",
@@ -1363,7 +1363,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.dialer"
   },
   "proton-mail-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "proton-mail",
     "rv-brand": "morphe",
