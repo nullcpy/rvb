@@ -29,4 +29,21 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
 dpi = "nodpi anydpi auto"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
 
+[tiktok-morphe-alt]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "tiktok"
+rv-brand = "morphe-alt"
+build-mode = "apk"
+arch = "both"
+patches-source = "hxreborn/hxreborn-tiktok-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+dpi = "nodpi anydpi auto"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
+
+
+
 
