@@ -122,7 +122,7 @@ def process_zip(path, pkg_info):
                             if comp not in ['shared', 'all']:
                                 comp_map.setdefault(comp, set()).add(pkg)
 
-        comp_regexes = {comp: re.compile(r'(^|/)' + re.escape(comp) + r'(/|\.|-)') for comp in all_comps}
+        comp_regexes = {comp: re.compile(r'(^|/|-|_)' + re.escape(comp) + r'(/|\.|-|_)') for comp in all_comps}
                     
         for info in sorted(z.infolist(), key=lambda x: x.filename):
             if info.is_dir(): continue
