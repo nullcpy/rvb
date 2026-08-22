@@ -1,19 +1,3 @@
-[brave-browser-morphe]
-enabled = true
-pkg-name = "com.brave.browser"
-app-name = "brave-browser"
-rv-brand = "morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "dh6k/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser"
-apkcombo-dlurl = "https://apkcombo.com/brave-browser/com.brave.browser"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
-
 [brave-browser-morphe-beta]
 enabled = true
 pkg-name = "com.brave.browser_beta"
