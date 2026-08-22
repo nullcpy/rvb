@@ -159,10 +159,10 @@
   "rushiranpise": {
     "repo": "rushiranpise/morphe-patches",
     "stable": "v1.19.0",
-    "prerelease": "v1.20.0-dev.9",
+    "prerelease": "v1.20.0-dev.10",
     "blocked": false,
     "stable_date": "2026-08-19T22:33:07Z",
-    "pre_date": "2026-08-21T22:40:45Z"
+    "pre_date": "2026-08-22T03:55:45Z"
   },
   "androidtv": {
     "repo": "ajstrick81/morphe-androidtv-patches",
@@ -278,6 +278,11 @@
     "blocked": false
   },
   "kveld9": {
-    "repo": "kveld9/kveld-morphe-patches"
+    "repo": "kveld9/kveld-morphe-patches",
+    "stable": "v1.3.0",
+    "stable_date": "2026-08-22T00:54:48Z",
+    "prerelease": "",
+    "pre_date": "",
+    "blocked": false
   }
 }

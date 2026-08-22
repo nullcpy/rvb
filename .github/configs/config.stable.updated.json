@@ -622,7 +622,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -801,22 +801,6 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.strava"
-  },
-  "brave-browser-morphe": {
-    "enabled": false,
-    "pkg-name": "com.brave.browser",
-    "app-name": "brave-browser",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "dh6k/morphe-patches",
-    "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://brave-software-brave.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
-    "dpi": "nodpi anydpi auto",
-    "apkpure-dlurl": "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser",
-    "apkcombo-dlurl": "https://apkcombo.com/brave-browser/com.brave.browser",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
   },
   "brave-browser-morphe-beta": {
     "enabled": false,
@@ -1394,7 +1378,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
@@ -1408,7 +1392,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
@@ -1452,6 +1436,22 @@
     "apkpure-dlurl": "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android",
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.soundcloud.android"
+  },
+  "brave-browser-morphe": {
+    "enabled": true,
+    "pkg-name": "com.brave.browser",
+    "app-name": "brave-browser",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "kveld9/kveld-morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://brave-software-brave.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
+    "dpi": "nodpi anydpi auto",
+    "apkpure-dlurl": "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser",
+    "apkcombo-dlurl": "https://apkcombo.com/brave-browser/com.brave.browser",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.brave.browser"
   },
   "youtube-morphe-nord": {
     "enabled": false,

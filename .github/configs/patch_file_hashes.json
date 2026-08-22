@@ -161,6 +161,13 @@
     "dev": {},
     "stable": {}
   },
+  "kveld9/kveld-morphe-patches": {
+    "dev": {},
+    "stable": {
+      "com.brave.browser": "f7b032e96315f464d83613c935fc3b64",
+      "shared": "a7b0d1443579e9e3ec0b512e75604200"
+    }
+  },
   "morpheapp/morphe-patches": {
     "dev": {
       "com.google.android.apps.youtube.music": "877b78766413efb91532558006f92f4a",
