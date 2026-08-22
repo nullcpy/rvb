@@ -679,37 +679,6 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
-  "gboard-morphe": {
-    "enabled": false,
-    "pkg-name": "com.google.android.inputmethod.latin",
-    "app-name": "gboard",
-    "rv-brand": "morphe",
-    "build-mode": "both",
-    "arch": "arm64-v8a",
-    "patches-source": "jasonwu1994/Gboard-patches",
-    "excluded-patches": "'Package Rename'",
-    "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-  },
-  "gboard-morphe-clone": {
-    "enabled": false,
-    "pkg-name": "com.google.android.inputmethod.latin",
-    "app-name": "gboard",
-    "rv-brand": "morphe-clone",
-    "build-mode": "apk",
-    "arch": "arm64-v8a",
-    "patches-source": "jasonwu1994/Gboard-patches",
-    "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
-    "dpi": "nodpi anydpi auto",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
-    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-  },
   "photoshop-mix-morphe": {
     "enabled": false,
     "pkg-name": "com.adobe.psmobile",
@@ -1377,6 +1346,21 @@
     "dpi": "nodpi anydpi auto",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
   },
+  "tiktok-morphe-alt": {
+    "enabled": true,
+    "pkg-name": "com.zhiliaoapp.musically",
+    "app-name": "tiktok",
+    "rv-brand": "morphe-alt",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "hxreborn/hxreborn-tiktok-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
+  },
   "instagram-instafel": {
     "enabled": false,
     "pkg-name": "com.instagram.android",
@@ -1404,6 +1388,37 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
     "dpi": "480dpi nodpi anydpi auto",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
+  },
+  "gboard-morphe": {
+    "enabled": false,
+    "pkg-name": "com.google.android.inputmethod.latin",
+    "app-name": "gboard",
+    "rv-brand": "morphe",
+    "build-mode": "both",
+    "arch": "arm64-v8a",
+    "patches-source": "jasonwu1994/Gboard-patches",
+    "excluded-patches": "'Package Rename'",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+  },
+  "gboard-morphe-clone": {
+    "enabled": false,
+    "pkg-name": "com.google.android.inputmethod.latin",
+    "app-name": "gboard",
+    "rv-brand": "morphe-clone",
+    "build-mode": "apk",
+    "arch": "arm64-v8a",
+    "patches-source": "jasonwu1994/Gboard-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://gboard-go.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gboard",
+    "dpi": "nodpi anydpi auto",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "calorie-counter-morphe": {
     "enabled": false,

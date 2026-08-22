@@ -124,6 +124,13 @@
       "videoeditor.videorecorder.screenrecorder": "04069957d64231075a2e166bc79b51e9"
     }
   },
+  "hxreborn/hxreborn-tiktok-patches": {
+    "dev": {},
+    "stable": {
+      "com.zhiliaoapp.musically": "f57755a4efce97f8efec3fe7ea82a3cb",
+      "shared": "261a0b0cd5b11f65cbae870040a7ef37"
+    }
+  },
   "hxreborn/morphe-patches": {
     "dev": {},
     "stable": {
@@ -178,9 +185,9 @@
   "morpheapp/morphe-patches": {
     "dev": {
       "com.google.android.apps.youtube.music": "fc962ebb58f8972ec8f52a60c12d609e",
-      "com.google.android.youtube": "5ac43636a90cc412e12b2ac565e16e55",
+      "com.google.android.youtube": "7fcd3e99611183cda94f60fad5936eb7",
       "com.reddit.frontpage": "9e8376d341b89525a1bc50b33f2adbf1",
-      "shared": "02c0d2c454d9ef9f8a828cce1a5ee775"
+      "shared": "bf76db2aeb04eb0c12d75dc28ce4f7bb"
     },
     "stable": {}
   },
