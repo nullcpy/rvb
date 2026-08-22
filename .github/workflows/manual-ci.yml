@@ -12,6 +12,11 @@ on:
           - ".github/configs/config.manual.toml"
           - ".github/configs/config.dev.updated.json"
           - ".github/configs/config.stable.updated.json"
+      remove_apks:
+        description: "Optional: APKs to remove from cache (space-separated, e.g., com.brave.browser-1.93.138-*.apk)"
+        required: false
+        type: string
+        default: ""
 
 concurrency:
   group: ci
@@ -22,6 +27,7 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       config_file: ${{ inputs.config_file }}
+      remove_apks: ${{ inputs.remove_apks }}
     secrets: inherit
 
   trigger_cleanup:

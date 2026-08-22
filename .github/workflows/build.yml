@@ -6,6 +6,10 @@ on:
       config_file:
         required: true
         type: string
+      remove_apks:
+        required: false
+        type: string
+        default: ""
   workflow_dispatch:
     inputs:
       config_file:
@@ -17,6 +21,11 @@ on:
           - ".github/configs/config.manual.toml"
           - ".github/configs/config.dev.updated.json"
           - ".github/configs/config.stable.updated.json"
+      remove_apks:
+        description: "Optional: APKs to remove from cache (space-separated, e.g., com.brave.browser-1.93.138-*.apk)"
+        required: false
+        type: string
+        default: ""
 
 concurrency:
   group: build
@@ -79,6 +88,17 @@ jobs:
           key: apks-${{ github.run_id }}
           restore-keys: |
             apks-
+
+      - name: Remove specific APKs from cache
+        if: ${{ inputs.remove_apks != '' }}
+        run: |
+          if [ -d "temp/apks" ]; then
+            cd temp/apks
+            for apk in ${{ inputs.remove_apks }}; do
+              echo "Removing $apk from cache..."
+              rm -f $apk || true
+            done
+          fi
 
       - name: Build modules and apks
         env:
