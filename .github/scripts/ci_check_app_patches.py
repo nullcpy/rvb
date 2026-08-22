@@ -6,7 +6,7 @@ def get_app_mappings():
     apps_dev = {}
     cli_sources = {}
     
-    for toml_file in glob.glob('.github/configs/patches/*.toml'):
+    for toml_file in sorted(glob.glob('.github/configs/patches/*.toml')):
         is_stable_only = toml_file.endswith('.stable.toml')
         is_dev_only = toml_file.endswith('.dev.toml')
         with open(toml_file, 'r', encoding='utf-8') as f:
@@ -96,7 +96,9 @@ def process_zip(path, pkg_info):
                 
                 if pf_str:
                     pfs = pf_str.split()
-                    if '*' in pfs or comp in pfs:
+                    if '*' in pfs:
+                        pass # Handled by global catch-all
+                    elif comp in pfs:
                         comp_map.setdefault(comp, set()).add(pkg)
                     continue
                     
@@ -122,7 +124,8 @@ def process_zip(path, pkg_info):
                             if comp not in ['shared', 'all']:
                                 comp_map.setdefault(comp, set()).add(pkg)
 
-        comp_regexes = {comp: re.compile(r'(^|/|-|_)' + re.escape(comp) + r'(/|\.|-|_)') for comp in all_comps}
+        sorted_comps = sorted(list(all_comps), key=len, reverse=True)
+        comp_regexes = {comp: re.compile(r'(^|/|-|_)' + re.escape(comp) + r'(/|\.|-|_)') for comp in sorted_comps}
                     
         for info in sorted(z.infolist(), key=lambda x: x.filename):
             if info.is_dir(): continue
@@ -153,7 +156,6 @@ def process_zip(path, pkg_info):
                     if b_pkg in content:
                         buckets[pkg].update(content)
                         assigned = True
-                        break
                         
             if not assigned:
                 buckets['shared'].update(content)
