@@ -23,11 +23,11 @@ get_size() {
 current_size=$(get_size)
 
 if [ "$current_size" -lt "$MAX_SIZE_BYTES" ]; then
-    echo "Cache size is currently $current_size bytes (under 10GB). No cleanup needed!"
+    echo "Cache size is currently $current_size bytes (under 12GB). No cleanup needed!"
     exit 0
 fi
 
-echo "Cache size ($current_size bytes) exceeds 10GB limit! Initiating tiered cleanup..."
+echo "Cache size ($current_size bytes) exceeds 12GB limit! Initiating tiered cleanup..."
 
 for days in "${RETENTION_TIERS[@]}"; do
     echo "Evicting APKs older than $days days..."
