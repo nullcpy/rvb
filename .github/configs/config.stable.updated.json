@@ -43,7 +43,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
@@ -1347,7 +1347,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
   },
   "tiktok-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "tiktok",
     "rv-brand": "morphe-alt",
