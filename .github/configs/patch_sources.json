@@ -134,11 +134,11 @@
   },
   "tiktok": {
     "repo": "icysymmetra/tiktok-patches-for-morphe",
-    "stable": "v0.6.1",
-    "prerelease": "v0.7.0-dev.7",
+    "stable": "v0.7.0",
+    "prerelease": "v0.7.0-dev.8",
     "blocked": false,
-    "stable_date": "2026-08-09T20:37:48Z",
-    "pre_date": "2026-08-20T20:33:59Z"
+    "stable_date": "2026-08-23T00:36:23Z",
+    "pre_date": "2026-08-22T21:54:11Z"
   },
   "x-shim": {
     "enabled": false,
@@ -215,8 +215,8 @@
   },
   "gboard": {
     "repo": "jasonwu1994/Gboard-patches",
-    "stable": "v2.11.0",
-    "stable_date": "2026-08-15T02:32:14Z",
+    "stable": "v3.0.0",
+    "stable_date": "2026-08-23T01:45:00Z",
     "prerelease": "v3.0.0-dev.1",
     "pre_date": "2026-08-22T07:03:32Z",
     "blocked": false
