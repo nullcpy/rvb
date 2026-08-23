@@ -127,7 +127,7 @@
   "hxreborn/hxreborn-tiktok-patches": {
     "dev": {},
     "stable": {
-      "com.zhiliaoapp.musically": "f57755a4efce97f8efec3fe7ea82a3cb",
+      "com.zhiliaoapp.musically": "a1a8efd7e9580ccef082ca748fff107c",
       "shared": "261a0b0cd5b11f65cbae870040a7ef37"
     }
   },
@@ -191,7 +191,7 @@
   "morpheapp/morphe-patches": {
     "dev": {
       "com.google.android.apps.youtube.music": "25829a58617ed29b67c853b7be279ad2",
-      "com.google.android.youtube": "6e8a4619ce6fd21411b5e5faa25a091c",
+      "com.google.android.youtube": "c784543499c69d4260b1ac46c7327e4f",
       "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
       "shared": "f2762affcc54e46ded3052242b300391"
     },
@@ -209,7 +209,10 @@
     "stable": {}
   },
   "rookieenough/de-vanced": {
-    "dev": {},
+    "dev": {
+      "com.google.android.apps.photos": "7cd32f962c9232d92087ab71bdaadd62",
+      "shared": "76af59b092b6ffb02f5146be0685ea66"
+    },
     "stable": {
       "com.adobe.psmobile": "b31ff5cb09ee96895e708919bab2933b",
       "com.google.android.apps.photos": "db01aef35f201633d01c5d4d0c7ee27b",
