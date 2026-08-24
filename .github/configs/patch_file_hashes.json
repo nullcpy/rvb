@@ -165,8 +165,8 @@
       "shared": "c588cdcd274f85d6d437dcbad76242e3"
     },
     "stable": {
-      "com.google.android.inputmethod.latin": "354a91de3ebbb9d9535cfafe405c50fc",
-      "shared": "f14c5d01336cd9cb785b348d4cd1d896"
+      "com.google.android.inputmethod.latin": "f49944c56db7c20ddbd8d6bffdc55953",
+      "shared": "b765b950ee7b3a50a3ef6a7e318d7a13"
     }
   },
   "jkennethcarino/adobo": {
@@ -189,12 +189,17 @@
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "ad31870cc2c5b984b19a5c094b580621",
-      "com.google.android.youtube": "095da753845f1a06707bd91d2cf39477",
+      "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
+      "com.google.android.youtube": "4b8921d76be86d7ccc9725f17939a8e1",
       "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
       "shared": "87074844f535c57687c3a5f8e5d6be75"
     },
-    "stable": {}
+    "stable": {
+      "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
+      "com.google.android.youtube": "4b8921d76be86d7ccc9725f17939a8e1",
+      "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
+      "shared": "87074844f535c57687c3a5f8e5d6be75"
+    }
   },
   "quantavil/edge-morphe-patches": {
     "dev": {},
