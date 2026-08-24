@@ -39,6 +39,13 @@
       "tv.twitch.android.app": "3e8106c7599d420305cb11fb8d8ec5da"
     }
   },
+  "brosssh/morphe-patches": {
+    "dev": {
+      "com.instagram.android": "24698cb783ba369703a33e3ed545c836",
+      "shared": "706769a6420115f6ef9462f98d8d6cc3"
+    },
+    "stable": {}
+  },
   "crimera/piko": {
     "dev": {
       "com.instagram.android": "f2d5da2f103087457ebcf8209a07a18e",
@@ -161,8 +168,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "dev": {
-      "com.google.android.inputmethod.latin": "44c8ee7e01d35be6f4386419e6307b90",
-      "shared": "c588cdcd274f85d6d437dcbad76242e3"
+      "com.google.android.inputmethod.latin": "c2f1fd9c2ee2dd407a5f6884f304505b",
+      "shared": "e55202ea7eb6f95bd32a50ad42dab65d"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "f49944c56db7c20ddbd8d6bffdc55953",
