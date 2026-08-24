@@ -50,10 +50,9 @@
   "dh6k/morphe-patches": {
     "dev": {},
     "stable": {
-      "com.brave.browser": "76a9994ca0b78420ad9f2601cbd289f2",
       "com.brave.browser_beta": "76a9994ca0b78420ad9f2601cbd289f2",
       "com.brave.browser_nightly": "76a9994ca0b78420ad9f2601cbd289f2",
-      "shared": "620ac3dca07e53d7ea6e42b73b3eed78"
+      "shared": "006b9db213da925ec092b2cc2319621a"
     }
   },
   "durgesh0505/chiggi_morphe_patches": {
@@ -190,10 +189,10 @@
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "25829a58617ed29b67c853b7be279ad2",
-      "com.google.android.youtube": "c784543499c69d4260b1ac46c7327e4f",
+      "com.google.android.apps.youtube.music": "ad31870cc2c5b984b19a5c094b580621",
+      "com.google.android.youtube": "095da753845f1a06707bd91d2cf39477",
       "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
-      "shared": "f2762affcc54e46ded3052242b300391"
+      "shared": "87074844f535c57687c3a5f8e5d6be75"
     },
     "stable": {}
   },
