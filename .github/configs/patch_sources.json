@@ -23,11 +23,11 @@
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
-    "stable": "v1.39.1",
-    "prerelease": "v1.40.0-dev.22",
+    "stable": "v1.40.0",
+    "prerelease": "v1.40.0-dev.23",
     "blocked": false,
-    "stable_date": "2026-08-08T17:05:00Z",
-    "pre_date": "2026-08-24T07:13:52Z"
+    "stable_date": "2026-08-24T11:45:33Z",
+    "pre_date": "2026-08-24T11:34:26Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -215,8 +215,8 @@
   },
   "gboard": {
     "repo": "jasonwu1994/Gboard-patches",
-    "stable": "v3.1.0",
-    "stable_date": "2026-08-23T21:40:42Z",
+    "stable": "v3.2.0",
+    "stable_date": "2026-08-24T09:31:37Z",
     "prerelease": "v3.2.0-dev.1",
     "pre_date": "2026-08-24T00:47:10Z",
     "blocked": false
@@ -231,8 +231,8 @@
   },
   "hxreborn": {
     "repo": "hxreborn/morphe-patches",
-    "stable": "v1.11.0",
-    "stable_date": "2026-08-23T13:15:31Z",
+    "stable": "v1.11.1",
+    "stable_date": "2026-08-24T10:50:48Z",
     "prerelease": "v1.1.0-dev.1",
     "pre_date": "2026-07-19T18:13:41Z",
     "blocked": false
