@@ -1,37 +1,22 @@
-# patches-version = "dev"
+patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[gboard-morphe]
+[moviebox-morphe]
 enabled = true
-pkg-name = "com.google.android.inputmethod.latin"
-app-name = "gboard"
+pkg-name = "com.community.oneroom"
+app-name = "moviebox"
 rv-brand = "morphe"
-build-mode = "both"
-arch = "arm64-v8a"
-patches-source = "jasonwu1994/Gboard-patches"
-excluded-patches = "'Package Rename'"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
-
-[gboard-morphe-clone]
-enabled = true
-pkg-name = "com.google.android.inputmethod.latin"
-app-name = "gboard"
-rv-brand = "morphe-clone"
 build-mode = "apk"
-arch = "arm64-v8a"
-patches-source = "jasonwu1994/Gboard-patches"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+patches-version = "dev"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-dpi = "nodpi anydpi auto"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
+uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
+# apkmirror-dlurl = ""
+# dpi = "nodpi anydpi auto"
+# archive-dlurl = ""
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
 
 
 
