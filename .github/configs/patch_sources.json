@@ -64,10 +64,10 @@
   "brosssh": {
     "repo": "brosssh/morphe-patches",
     "stable": "v2.8.1",
-    "prerelease": "v2.8.1-dev.5",
+    "prerelease": "v2.8.2-dev.1",
     "blocked": false,
     "stable_date": "2026-07-16T08:59:03Z",
-    "pre_date": "2026-07-16T08:52:00Z"
+    "pre_date": "2026-08-24T20:36:58Z"
   },
   "binarymend": {
     "repo": "binarymend/morphe-patches",
@@ -217,8 +217,8 @@
     "repo": "jasonwu1994/Gboard-patches",
     "stable": "v3.2.0",
     "stable_date": "2026-08-24T09:31:37Z",
-    "prerelease": "v3.2.0-dev.1",
-    "pre_date": "2026-08-24T00:47:10Z",
+    "prerelease": "v3.3.0-dev.1",
+    "pre_date": "2026-08-24T19:42:28Z",
     "blocked": false
   },
   "instafel": {
@@ -279,8 +279,8 @@
   },
   "kveld9": {
     "repo": "kveld9/kveld-morphe-patches",
-    "stable": "v1.5.0",
-    "stable_date": "2026-08-23T21:57:50Z",
+    "stable": "v1.6.0",
+    "stable_date": "2026-08-24T19:11:47Z",
     "prerelease": "",
     "pre_date": "",
     "blocked": false
