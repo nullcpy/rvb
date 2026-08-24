@@ -162,12 +162,12 @@
   },
   "jasonwu1994/gboard-patches": {
     "dev": {
-      "com.google.android.inputmethod.latin": "675d7788509576dd582ac06c0d4d8c25",
-      "shared": "12d97a524e3d8cb13d9454139f01b3b5"
+      "com.google.android.inputmethod.latin": "44c8ee7e01d35be6f4386419e6307b90",
+      "shared": "c588cdcd274f85d6d437dcbad76242e3"
     },
     "stable": {
-      "com.google.android.inputmethod.latin": "044b077eeb7cd14ccb665ed4074ad085",
-      "shared": "dde709690a7b9822ebb2760d9f6f0cd9"
+      "com.google.android.inputmethod.latin": "354a91de3ebbb9d9535cfafe405c50fc",
+      "shared": "f14c5d01336cd9cb785b348d4cd1d896"
     }
   },
   "jkennethcarino/adobo": {
@@ -184,8 +184,8 @@
   "kveld9/kveld-morphe-patches": {
     "dev": {},
     "stable": {
-      "com.brave.browser": "f7b032e96315f464d83613c935fc3b64",
-      "shared": "a7b0d1443579e9e3ec0b512e75604200"
+      "com.brave.browser": "bbf549cbb6658d83203b9715f99993c9",
+      "shared": "c51c251b601509f2be92922bda06c94a"
     }
   },
   "morpheapp/morphe-patches": {
