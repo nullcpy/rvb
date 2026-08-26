@@ -1,17 +1,5 @@
-gboard-morphe (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
-gboard-morphe-clone (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
-youtube-morphe (arm64-v8a): 21.04.223  
-youtube-morphe (arm-v7a): 21.04.223  
-youtube-music-morphe (arm64-v8a): 9.15.51  
-youtube-music-morphe (arm-v7a): 9.15.51  
-youtube-morphe-exp (arm64-v8a): 21.34.243  
-youtube-morphe-exp (arm-v7a): 21.34.243  
-youtube-music-morphe-exp (arm64-v8a): 9.33.52  
-youtube-music-morphe-exp (arm-v7a): 9.33.52  
-reddit-morphe-exp (arm64-v8a): 2026.34.0  
-reddit-morphe-exp (arm-v7a): 2026.34.0  
-reddit-morphe (arm64-v8a): 2026.14.0  
-reddit-morphe (arm-v7a): 2026.14.0  
+proton-mail-morphe (arm64-v8a): 7.10.4[versionCodes:ARM64_V8A=17667,ARMEABI_V7A=17667,X86_64=17667,X86=17667]  
+proton-mail-morphe (arm-v7a): 7.10.4[versionCodes:ARM64_V8A=17667,ARMEABI_V7A=17667,X86_64=17667,X86=17667]  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -20,8 +8,5 @@ reddit-morphe (arm-v7a): 2026.14.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: jasonwu1994/patches-3.5.0-dev.1.mpp  
-[Changelog](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.5.0-dev.1)
-
-Patches: MorpheApp/patches-1.41.0-dev.1.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.1)  
+Patches: hxreborn/patches-1.12.0.mpp  
+[Changelog](https://github.com/hxreborn/morphe-patches/releases/tag/v1.12.0)  
