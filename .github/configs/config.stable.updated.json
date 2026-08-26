@@ -622,7 +622,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -1316,7 +1316,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.dialer"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "proton-mail",
     "rv-brand": "morphe",
@@ -1333,7 +1333,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.android"
   },
   "showly-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "showly",
     "rv-brand": "morphe",
@@ -1390,7 +1390,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "gboard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe",
@@ -1406,7 +1406,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "gboard-morphe-clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe-clone",
