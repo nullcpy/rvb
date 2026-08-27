@@ -24,10 +24,10 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.40.0",
-    "prerelease": "v1.41.0-dev.1",
+    "prerelease": "v1.41.0-dev.2",
     "blocked": false,
     "stable_date": "2026-08-24T11:45:33Z",
-    "pre_date": "2026-08-26T08:59:58Z"
+    "pre_date": "2026-08-27T09:19:52Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -64,10 +64,10 @@
   "brosssh": {
     "repo": "brosssh/morphe-patches",
     "stable": "v2.8.1",
-    "prerelease": "v2.8.2-dev.1",
+    "prerelease": "v2.8.2-dev.2",
     "blocked": false,
     "stable_date": "2026-07-16T08:59:03Z",
-    "pre_date": "2026-08-24T20:36:58Z"
+    "pre_date": "2026-08-27T08:01:23Z"
   },
   "binarymend": {
     "repo": "binarymend/morphe-patches",
@@ -166,10 +166,10 @@
   },
   "androidtv": {
     "repo": "ajstrick81/morphe-androidtv-patches",
-    "stable": "v1.29.4",
+    "stable": "v1.30.0",
     "prerelease": "v1.5.7-dev.3",
     "blocked": false,
-    "stable_date": "2026-08-26T01:59:41Z",
+    "stable_date": "2026-08-27T01:57:48Z",
     "pre_date": "2026-06-26T16:45:34Z"
   },
   "revenge": {
@@ -192,10 +192,10 @@
     "repo": "IMXEren/mix-patches",
     "host": "gitlab",
     "stable": "v1.6.0",
-    "prerelease": "v1.6.0-dev.3",
+    "prerelease": "v1.6.1-dev.1",
     "blocked": false,
     "stable_date": "2026-08-25T21:53:15.816Z",
-    "pre_date": "2026-08-25T19:48:52.024Z"
+    "pre_date": "2026-08-27T02:14:43.257Z"
   },
   "quantavil": {
     "repo": "quantavil/edge-morphe-patches",
@@ -217,8 +217,8 @@
     "repo": "jasonwu1994/Gboard-patches",
     "stable": "v3.5.0",
     "stable_date": "2026-08-26T19:38:18Z",
-    "prerelease": "v3.5.0-dev.1",
-    "pre_date": "2026-08-26T06:43:17Z",
+    "prerelease": "v3.6.0-dev.1",
+    "pre_date": "2026-08-26T23:52:30Z",
     "blocked": false
   },
   "instafel": {
