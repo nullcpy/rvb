@@ -8,8 +8,8 @@
       "com.peacocktv.peacockandroid": "81285dcc209ee4b9c5a3ef3fcd3b940a",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
-      "com.wbd.hbomax": "1d5952df50a9ddb2e207c54779f124b5",
-      "shared": "1ff06a7046fd3e27be42987d5ff8a954",
+      "com.wbd.hbomax": "e3a10e3b06ed3f53a5b5d4dabc175044",
+      "shared": "f08314801d96a811105be4f932622421",
       "tv.pluto.android": "21b638f3a2c93b1afbea6acdb54d2f4f"
     }
   },
@@ -41,8 +41,8 @@
   },
   "brosssh/morphe-patches": {
     "dev": {
-      "com.instagram.android": "24698cb783ba369703a33e3ed545c836",
-      "shared": "706769a6420115f6ef9462f98d8d6cc3"
+      "com.instagram.android": "efab2a964a11129ee3e218a482255ae3",
+      "shared": "e8477a3349f8bb6238d3bdfde82b803b"
     },
     "stable": {}
   },
@@ -168,8 +168,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "dev": {
-      "com.google.android.inputmethod.latin": "b4124d4e55ad288e3080d052533b89f5",
-      "shared": "b4cbefc747af69211e0c8c7b602efb5b"
+      "com.google.android.inputmethod.latin": "5f7167cdb7e9906765cf1e18c5f37e96",
+      "shared": "88d43bea541c84ea182e1310f184f630"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "2b88ca20ca9cc5f1f2d90691efb72e98",
@@ -196,10 +196,10 @@
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "bf21d76b5a4c11def52f6bc8a7ff1317",
-      "com.google.android.youtube": "d5175c40589d9b2ea35e03d3183ff70d",
+      "com.google.android.apps.youtube.music": "c0a465967ee3a8a274884d8318433f3f",
+      "com.google.android.youtube": "1a434d38c00e72a4c74160fc7cf508f0",
       "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
-      "shared": "ade2bb9660b4eceddf73664a827bb29d"
+      "shared": "63807336e5dcee2f49a07d89fb9881e6"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
