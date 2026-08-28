@@ -1,7 +1,5 @@
-twitter-morphe (arm64-v8a): 12.17.0-release.0  
-twitter-morphe (arm-v7a): 12.17.0-release.0  
-twitter-morphe-materialu (arm64-v8a): 12.17.0-release.0  
-twitter-morphe-materialu (arm-v7a): 12.17.0-release.0  
+gboard-morphe (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
+gboard-morphe-clone (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -10,5 +8,5 @@ twitter-morphe-materialu (arm-v7a): 12.17.0-release.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: crimera/patches-3.9.0-dev.10.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.9.0-dev.10)  
+Patches: jasonwu1994/patches-3.6.0.mpp  
+[Changelog](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.6.0)  
