@@ -245,3 +245,85 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/amazon-india-shop-pay-minitv/in.amazon.mShop.android.shopping"
 apkcombo-dlurl = "https://apkcombo.com/amazon-india-shopping/in.amazon.mShop.android.shopping"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/in.amazon.mShop.android.shopping"
+
+[calm-morphe]
+enabled = true
+pkg-name = "com.calm.android"
+app-name = "calm"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://calm.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/calm-com-inc/calm-meditate-sleep-relax/"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/calm-sleep-meditate-relax/com.calm.android"
+apkcombo-dlurl = "https://apkcombo.com/calm/com.calm.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.calm.android"
+
+[bluetooth-keyboard-and-mouse-morphe]
+enabled = true
+pkg-name = "io.appground.blek"
+app-name = "bluetooth-keyboard-and-mouse"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://bluetooth-keyboard-and-mouse.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/appground-io/bluetooth-keyboard-mouse-2"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/bluetooth-keyboard-mouse/io.appground.blek"
+apkcombo-dlurl = "https://apkcombo.com/bluetooth-keyboard-mouse/io.appground.blek"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/io.appground.blek"
+
+[swift-keyboard-morphe]
+enabled = true
+pkg-name = "com.touchtype.swiftkey"
+app-name = "swift-keyboard"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://swiftkey-keyboard.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey"
+apkcombo-dlurl = "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.touchtype.swiftkey"
+
+[macrodroid-morphe-alt]
+enabled = true
+pkg-name = "com.arlosoft.macrodroid"
+app-name = "macrodroid"
+rv-brand = "morphe-alt"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2/"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/macrodroid-device-automation-app/com.arlosoft.macrodroid"
+apkcombo-dlurl = "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.arlosoft.macrodroid"
+
+[send-files-to-tv-morphe]
+enabled = true
+pkg-name = "com.yablio.sendfilestotv"
+app-name = "send-files-to-tv"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://send-files-to-tv.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/yablio/send-files-to-tv/"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv"
+apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.yablio.sendfilestotv"
+
+

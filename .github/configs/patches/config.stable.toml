@@ -90,23 +90,6 @@ apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.ki
 apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.urbandroid.kinestop"
 
-[hermit-morphe]
-enabled = true
-pkg-name = "com.chimbori.hermitcrab"
-app-name = "hermit"
-rv-brand = "morphe"
-patch-folder = "hermit"
-build-mode = "apk"
-arch = "both"
-patches-source = "kiraio-moe/Lain-Patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://hermit.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser"
-dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
-apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
-
 [facebook-morphe]
 enabled = true
 pkg-name = "com.facebook.katana"
