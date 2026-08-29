@@ -1,0 +1,14 @@
+[nuvio-morphe-androidtv]
+enabled = true
+pkg-name = "com.nuvio.tv"
+app-name = "nuvio"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "both"
+patches-source = "liongalahad/nuviotv-morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.nuvio.tv"
+
+
+

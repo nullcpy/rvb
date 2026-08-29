@@ -1,0 +1,34 @@
+[drofus-morphe]
+enabled = true
+pkg-name = "com.mixapplications.rufus"
+app-name = "drofus"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "kiraio-moe/Lain-Patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://rufus-unofficial.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mixapplications/drofus-iso2usb/"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/rufus-unofficial/com.mixapplications.rufus"
+apkcombo-dlurl = "https://apkcombo.com/drofus-iso-2-usb/com.mixapplications.rufus"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.mixapplications.rufus"
+
+[hermit-morphe]
+enabled = true
+pkg-name = "com.chimbori.hermitcrab"
+app-name = "hermit"
+rv-brand = "morphe"
+patch-folder = "hermit"
+build-mode = "apk"
+arch = "both"
+patches-source = "kiraio-moe/Lain-Patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://hermit.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
+apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.chimbori.hermitcrab"
+
+
