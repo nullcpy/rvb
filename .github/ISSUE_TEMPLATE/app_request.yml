@@ -25,6 +25,7 @@ body:
     id: play-store
     attributes:
       label: Play Store link
+      description: Search on [Play Store](https://play.google.com/store/apps) and provide the link.
     validations:
       required: false
   - type: markdown
@@ -36,35 +37,35 @@ body:
     id: uptodown
     attributes:
       label: Uptodown link
-      description: Search on [Uptodown](https://en.uptodown.com/android) and provide the download link here.
+      description: Search on [Uptodown](https://en.uptodown.com/android) and provide the link.
     validations:
       required: false
   - type: input
     id: apkmirror
     attributes:
       label: APKMirror link
-      description: Search on [APKMirror](https://www.apkmirror.com/) and provide the download link here.
+      description: Search on [APKMirror](https://www.apkmirror.com/) and provide the link.
     validations:
       required: false
   - type: input
     id: apkpure
     attributes:
       label: APKPure link
-      description: Search on [APKPure](https://apkpure.com/) and provide the download link here.
+      description: Search on [APKPure](https://apkpure.com/) and provide the link.
     validations:
       required: false
   - type: input
     id: apkcombo
     attributes:
       label: APKCombo link
-      description: Search on [APKCombo](https://apkcombo.com/) and provide the download link here.
+      description: Search on [APKCombo](https://apkcombo.com/) and provide the link.
     validations:
       required: false
   - type: input
     id: github-apk
     attributes:
       label: GitHub APK link
-      description: If the APK is available on GitHub releases, please also provide the link here.
+      description: If the APK is available on GitHub releases, please also provide the link.
     validations:
       required: false
   - type: input
