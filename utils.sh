@@ -533,7 +533,7 @@ _get_patch_last_supported_ver() {
 		local ver vers="" NL=$'\n'
 		while IFS= read -r line; do
 			line="${line:1:${#line}-2}"
-			ver=$(sed -n "/^Name: $line\$/,/^\$/p" <<<"$op" | sed -n "/^Compatible versions:\$/,/^\$/p" | tail -n +2)
+			ver=$(sed -n "/^Name: $line\$/,/^\$/p" <<<"$op" | sed -n "/^Compatible versions:\$/,/^\$/p" | tail -n +2 | sed 's/ \[.*//')
 			vers="${vers}${ver}${NL}"
 		done <<<"$(list_args "$inc_sel")"
 		vers=$(awk '{$1=$1}1' <<<"$vers")
@@ -552,7 +552,7 @@ _get_patch_last_supported_ver() {
 	if [ -z "$pcount" ]; then
 		return
 	fi
-	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | get_highest_ver || return 1
+	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | sed 's/ \[.*//' | get_highest_ver || return 1
 }
 
 get_patch_exp_ver() {
