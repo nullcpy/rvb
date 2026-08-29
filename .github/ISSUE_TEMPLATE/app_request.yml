@@ -28,36 +28,12 @@ body:
     validations:
       required: false
   - type: input
-    id: uptodown
+    id: apk-link
     attributes:
-      label: Uptodown link
+      label: APK Download Link
+      description: Search for the app on [Uptodown](https://en.uptodown.com/android), [APKMirror](https://www.apkmirror.com/), [APKPure](https://apkpure.com/), or [APKCombo](https://apkcombo.com/) and provide the download link here. (If it's available on GitHub releases, provide that link instead).
     validations:
-      required: false
-  - type: input
-    id: apkmirror
-    attributes:
-      label: APKMirror link
-    validations:
-      required: false
-  - type: input
-    id: apkpure
-    attributes:
-      label: APKPure link
-    validations:
-      required: false
-  - type: input
-    id: apkcombo
-    attributes:
-      label: APKCombo link
-    validations:
-      required: false
-  - type: input
-    id: github-apk
-    attributes:
-      label: GitHub APK link
-      description: Only if the APK is available on GitHub releases.
-    validations:
-      required: false
+      required: true
   - type: input
     id: patch-repo
     attributes:
