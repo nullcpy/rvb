@@ -1,5 +1,5 @@
-titanium-browser-morphe (arm64-v8a): 152.0.7977.64  
-titanium-browser-morphe (arm-v7a): 152.0.7977.64  
+nuvio-morphe-androidtv (arm64-v8a): 0.8.7-beta  
+nuvio-morphe-androidtv (arm-v7a): 0.8.7-beta  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +8,5 @@ titanium-browser-morphe (arm-v7a): 152.0.7977.64
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: dh6k/patches-1.4.0.mpp  
-[Changelog](https://github.com/dh6k/morphe-patches/releases/tag/v1.4.0)  
+Patches: liongalahad/patches-1.0.0-dev.29.mpp  
+[Changelog](https://github.com/liongalahad/nuviotv-morphe-patches/releases/tag/v1.0.0-dev.29)  
