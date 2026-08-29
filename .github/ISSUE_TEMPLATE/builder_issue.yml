@@ -1,7 +1,7 @@
-name: "🐞 Bug report"
+name: "🐞 Builder issue"
 description: "Report a bug or an issue related to the builder."
-title: "bug: [Short Description]"
-labels: ["bug"]
+title: "builder issue: [Short Description]"
+labels: ["builder"]
 body:
   - type: textarea
     id: bug-description
