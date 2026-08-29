@@ -1,24 +1,39 @@
-patches-version = "latest"
+# patches-version = "latest"
 # cli-version = "dev"
 enable-module-update = true
 
-[moviebox-morphe]
+[proton-mail-morphe]
 enabled = true
-pkg-name = "com.community.oneroom"
-app-name = "moviebox"
+pkg-name = "ch.protonmail.android"
+app-name = "proton-mail"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "rushiranpise/morphe-patches"
-patches-version = "dev"
+patches-source = "hxreborn/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
-# apkmirror-dlurl = ""
-# dpi = "nodpi anydpi auto"
-# archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
+apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.android"
 
-
+[instagram-morphe-piko]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "instagram"
+rv-brand = "morphe-piko"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "crimera/piko"
+# patcher-args = "--continue-on-error"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
 
 
 
