@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **WARNING:** Failing to properly fill out this form will result in your issue being closed without warning. These requests are monitored and processed by an AI agent.
+        > *WARNING:* Failing to properly fill out this form will result in your issue being closed without warning. These requests are monitored and processed by an AI agent.
   - type: input
     id: app-name
     attributes:
@@ -31,8 +31,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### APK Download Links
-        **CRITICAL:** You MUST provide as many download links as possible! These websites have aggressive anti-bot scraping protections, so if you only provide one link, the build will likely fail. At least one link is absolutely required to submit the request.
+        **APK Download Links**
+        > *CRITICAL:* You MUST provide as many download links as possible! These websites have aggressive anti-bot scraping protections, so if you only provide one link, the build will likely fail. At least one link is absolutely required to submit the request.
   - type: input
     id: uptodown
     attributes:
