@@ -1,21 +1,18 @@
-# patches-version = "latest"
+patches-version = "dev"
 # cli-version = "dev"
 enable-module-update = true
 
-[titanium-browser-morphe]
+[nuvio-morphe-androidtv]
 enabled = true
-pkg-name = "io.github.jqssun.helium"
-app-name = "titanium-browser"
-rv-brand = "morphe"
+pkg-name = "com.nuvio.tv"
+app-name = "nuvio"
+rv-brand = "morphe-androidtv"
 build-mode = "apk"
 arch = "both"
-patches-source = "dh6k/morphe-patches"
-included-patches = "'Keep Helium Child Processes Alive'"
+patches-source = "liongalahad/nuviotv-morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-# dpi = "nodpi anydpi auto"
-apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
-apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/io.github.jqssun.helium"
+dpi = "nodpi anydpi auto"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.nuvio.tv"
 
 
 
