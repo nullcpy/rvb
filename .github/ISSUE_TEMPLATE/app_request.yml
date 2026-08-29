@@ -97,5 +97,3 @@ body:
           required: true
         - label: This app with this patch is not already built by the builder.
           required: true
-        - label: Make sure there's an ReVanced, Morphe, or Xposed patch/module exist for the app.
-          required: true
