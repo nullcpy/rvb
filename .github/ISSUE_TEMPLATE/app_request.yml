@@ -1,0 +1,101 @@
+name: "📱 Request app"
+description: "Request a new app to be built."
+title: "request: [App Name]"
+labels: ["request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **WARNING:** Failing to properly fill out this form will result in your issue being closed without warning. These requests are monitored and processed by an AI agent.
+  - type: input
+    id: app-name
+    attributes:
+      label: App name
+      description: The name of the application.
+    validations:
+      required: true
+  - type: input
+    id: pkg-name
+    attributes:
+      label: Package name
+      description: The package name of the app (e.g., com.example.app). You can find this in the patch repo's `patches-list.json` or in the app's Play Store URL.
+    validations:
+      required: true
+  - type: input
+    id: play-store
+    attributes:
+      label: Play Store link
+    validations:
+      required: false
+  - type: input
+    id: uptodown
+    attributes:
+      label: Uptodown link
+    validations:
+      required: false
+  - type: input
+    id: apkmirror
+    attributes:
+      label: APKMirror link
+    validations:
+      required: false
+  - type: input
+    id: apkpure
+    attributes:
+      label: APKPure link
+    validations:
+      required: false
+  - type: input
+    id: apkcombo
+    attributes:
+      label: APKCombo link
+    validations:
+      required: false
+  - type: input
+    id: github-apk
+    attributes:
+      label: GitHub APK link
+      description: Only if the APK is available on GitHub releases.
+    validations:
+      required: false
+  - type: input
+    id: patch-repo
+    attributes:
+      label: Patch repo link
+      description: Link to the repository containing the patches.
+    validations:
+      required: true
+  - type: dropdown
+    id: default-patches
+    attributes:
+      label: Are all patches applied by default?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: included-patches
+    attributes:
+      label: Included Patches
+      description: If you answered "No" above, list the exact patch names to include, separated by commas and enclosed in single quotes (e.g., 'Patch One', 'Patch Two'). Look at the patch repo's `patches-list.json`.
+    validations:
+      required: false
+  - type: input
+    id: excluded-patches
+    attributes:
+      label: Excluded Patches
+      description: If you answered "No" above, list the exact patch names to exclude, separated by commas and enclosed in single quotes (e.g., 'Patch One', 'Patch Two').
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: There is no existing app request and this is not a duplicate.
+          required: true
+        - label: This app with this patch is not already built by the builder.
+          required: true
+        - label: Make sure there's an ReVanced, Morphe, or Xposed patch/module exist for the app.
+          required: true
