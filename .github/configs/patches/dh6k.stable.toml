@@ -29,3 +29,21 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
 apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.brave.browser_nightly"
+
+[titanium-browser-morphe]
+enabled = true
+pkg-name = "io.github.jqssun.helium"
+app-name = "titanium-browser"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "dh6k/morphe-patches"
+included-patches = "'Keep Helium Child Processes Alive'"
+cli-source = "MorpheApp/morphe-desktop"
+# dpi = "nodpi anydpi auto"
+apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
+apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/io.github.jqssun.helium"
+
+
+
