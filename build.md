@@ -1,4 +1,5 @@
-hbomax-morphe-androidtv (all): 7.9.0.61  
+brave-browser-morphe (arm64-v8a): 1.94.117  
+brave-browser-morphe (arm-v7a): 1.94.117  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,5 +8,5 @@ hbomax-morphe-androidtv (all): 7.9.0.61
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: ajstrick81/patches-1.30.3.mpp  
-[Changelog](https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.30.3)  
+Patches: kveld9/patches-1.8.0.mpp  
+[Changelog](https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.8.0)  
