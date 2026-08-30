@@ -168,8 +168,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "dev": {
-      "com.google.android.inputmethod.latin": "2cc0e415d74bd90407fc56bbe5ac953c",
-      "shared": "380f0cd5cd14260d859d88bd6f45c3ba"
+      "com.google.android.inputmethod.latin": "3f1cf7f5e8bf5402b6e34a158cb91727",
+      "shared": "270156106f221872ea4b1c96e448a87a"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "b70c6544c9630fdf4b8175caf8fc46a9",
@@ -178,8 +178,8 @@
   },
   "jkennethcarino/adobo": {
     "dev": {
-      "com.reddit.frontpage": "579a1ad341ea88664e85741411541ec4",
-      "shared": "785e5b96616ef3ab82e752dbe01a3ec5"
+      "com.reddit.frontpage": "de8c8e5d63fab01d990a9857465b9160",
+      "shared": "fa0407da7d140ecf4bdc8ecb87f7c398"
     },
     "stable": {}
   },
@@ -195,15 +195,18 @@
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
-    "dev": {},
+    "dev": {
+      "com.nuvio.tv": "0befdeb9231b8a953688822465d8563b",
+      "shared": "92172fea35904e44ce2d50da5b968cdb"
+    },
     "stable": {}
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "b746979ae034d1dbcc0490f581834327",
-      "com.google.android.youtube": "81d2b48cd110de924fa372ce3eb52679",
-      "com.reddit.frontpage": "0ac14a3d605be224b665b57f29da534f",
-      "shared": "cce77395ea5cf9e1e555ed5e6236a5cb"
+      "com.google.android.apps.youtube.music": "d184b61d2899ef07ece6ed10767ad2e1",
+      "com.google.android.youtube": "f944135994890b9dd6f55150d66d1132",
+      "com.reddit.frontpage": "61dfe9c1ad45610585ea130788620b51",
+      "shared": "16a9262286681eeb922fd7abcc8bdfdf"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
@@ -225,7 +228,7 @@
   },
   "rookieenough/de-vanced": {
     "dev": {
-      "com.google.android.apps.photos": "8ab013b7ebfe5203efdde66c4a173966",
+      "com.google.android.apps.photos": "ef8b113ca722c6d2e8f3b55d98b73f36",
       "shared": "c5a39d6d1df0db781e93ce05f2d760e1"
     },
     "stable": {
