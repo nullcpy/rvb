@@ -140,9 +140,9 @@
   "hxreborn/morphe-patches": {
     "dev": {},
     "stable": {
-      "ch.protonmail.android": "867f0f7854bf8d832a6e0861396c2c2f",
-      "com.michaldrabik.showly2": "608cd9414421c678038cd6632d725a16",
-      "shared": "449558be64f6d8efa7603f7dcbb1282d"
+      "ch.protonmail.android": "bb139abdb50d7dc53a0db482d0b326a7",
+      "com.michaldrabik.showly2": "66e7d52714bb3f9d53403759f0d5bec7",
+      "shared": "b9ee0e6099e080e647471c65105492b5"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -247,22 +247,27 @@
   "rushiranpise/morphe-patches": {
     "dev": {},
     "stable": {
-      "app.ninjavpn.android": "3a48dc05ba03405b8799b72597ad43ad",
-      "au.com.shiftyjelly.pocketcasts": "b0ef8d86c2a4b872c8062bb51e605b79",
-      "com.accuweather.android": "3f44adb826d1067999a48b23d87a7cfc",
-      "com.adguard.android": "68b29b45b0ad99588126b11253f6bde3",
-      "com.cloudflare.onedotonedotonedotone": "4ecbd2e21af82859b74e9285fd9165e1",
-      "com.community.mbox.tv": "f17d38f4493074e549e3429ba7c505af",
-      "com.dubox.drive": "974ba5de9ffedc59ec240ee336fb7133",
-      "com.facebook.orca": "cea1edd8e37f78a26a2d917e59b30ff2",
-      "com.google.android.apps.photos": "3b2ea11a4eb3abed56e7e7bffa8b1aae",
-      "com.rarlab.rar": "b4eb9940fb14b298088c3f0654584d8c",
-      "com.weather.Weather": "db1f9a185177fab9d2750dce4690b5b6",
-      "com.windscribe.vpn": "fe88cd68491a31c6ab5e55c9432f7ec3",
-      "in.amazon.mShop.android.shopping": "fa91d0e0d56e0c9e454d30faa6ca68c0",
-      "it.mirko.beta": "639196b21ddb44d4624e19414e00608f",
-      "org.hola.play": "4641cae5159e4d5578eb8260a83cc454",
-      "shared": "4d0acbe72d1888c113ffb1a30532d905"
+      "app.ninjavpn.android": "951ca2570f889336f7a8541744708c59",
+      "au.com.shiftyjelly.pocketcasts": "7fb45c67ab883941537ba6b27af4d0c1",
+      "com.accuweather.android": "5b673e01c174cd84dbd5547040049d09",
+      "com.adguard.android": "eacc3641c7a502084f29e218c1867095",
+      "com.arlosoft.macrodroid": "257055e029549bfd409ff7dbda2a06fe",
+      "com.calm.android": "e360113a6684ae3c9b7a3f93bea062fe",
+      "com.cloudflare.onedotonedotonedotone": "f5c49a12faf18a10fa359bc0c97946f2",
+      "com.community.mbox.tv": "cb539c23a5a39ecafd47284ab669c273",
+      "com.community.oneroom": "467fa2bb296f9e7b53ab59f173d7f708",
+      "com.dubox.drive": "fd2bf6a8f46a275b2a82b21e772906d5",
+      "com.facebook.orca": "e11198646b081b962f389ee1c5437e56",
+      "com.google.android.apps.photos": "2d0d1e4c355521beb809cbaef3ae3f6e",
+      "com.rarlab.rar": "fde552075cd3deb80bbcb1b410c2d575",
+      "com.weather.Weather": "c0c118c1a50120317b6b6ffd9d02c6f3",
+      "com.windscribe.vpn": "ad65a4a5966384d839b4ab553c17c74c",
+      "com.yablio.sendfilestotv": "0c0cfa5f9267a73ee779f2359a3adca1",
+      "in.amazon.mShop.android.shopping": "47f07b000040f52681b00586e084c6ca",
+      "io.appground.blek": "ab21addced4d455c1169565896439652",
+      "it.mirko.beta": "db587cae396f3decf2546e7d69edf0e3",
+      "org.hola.play": "63eb5daa70199a0d7d690f7f89a37326",
+      "shared": "c2e8e4ebb3d67d1b99c4130652798396"
     }
   }
 }
