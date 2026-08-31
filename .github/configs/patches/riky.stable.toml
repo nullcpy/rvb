@@ -1,0 +1,13 @@
+[capcut-morphe]
+enabled = true
+pkg-name = "com.lemon.lvoverseas"
+app-name = "capcut"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "riky-dev/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://viamaker.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut"
+apkpure-dlurl = "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.lemon.lvoverseas"
