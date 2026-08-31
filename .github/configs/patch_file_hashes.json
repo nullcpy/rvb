@@ -182,14 +182,26 @@
   },
   "jkennethcarino/adobo": {
     "dev": {
-      "com.reddit.frontpage": "9ab541036e33c40f9b91ce34cc04693f",
+      "com.reddit.frontpage": "2d779742ea0e5c2e8fa743a7859462b2",
       "shared": "d951daa79b374c4a5554ac8cee2acbeb"
     },
-    "stable": {}
+    "stable": {
+      "com.imdb.mobile": "d09462d6bd0e422d7586a2c679626b83",
+      "com.reddit.frontpage": "2d779742ea0e5c2e8fa743a7859462b2",
+      "shared": "d951daa79b374c4a5554ac8cee2acbeb"
+    }
   },
   "kiraio-moe/lain-patches": {
     "dev": {},
     "stable": {}
+  },
+  "kondratjev/morphe-patches": {
+    "dev": {},
+    "stable": {
+      "com.fatsecret.android": "d3748db7b1eb4383b6f472c976f55d5f",
+      "com.soundcloud.android": "6e6ed834873d533cd7228680bd5d8fea",
+      "shared": "5d045e29818cb88b682038265dbe6719"
+    }
   },
   "kveld9/kveld-morphe-patches": {
     "dev": {},
@@ -208,7 +220,7 @@
   "morpheapp/morphe-patches": {
     "dev": {
       "com.google.android.apps.youtube.music": "0eaf9ea7c857a448dcaacba7643c905a",
-      "com.google.android.youtube": "548810afa6a9a79118ec2db71e02a8d2",
+      "com.google.android.youtube": "55a0b816297e9fb9e9d5d43fcbab69c3",
       "com.reddit.frontpage": "61dfe9c1ad45610585ea130788620b51",
       "shared": "56f3c9829ea09f0ea4b9012c723a9022"
     },
@@ -239,19 +251,19 @@
   },
   "rookieenough/de-vanced": {
     "dev": {
-      "com.google.android.apps.photos": "ef8b113ca722c6d2e8f3b55d98b73f36",
-      "shared": "c5a39d6d1df0db781e93ce05f2d760e1"
+      "com.google.android.apps.photos": "5bcabd1d13409c66561ce74a6e7b24dd",
+      "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     },
     "stable": {
       "com.adobe.psmobile": "b9667c696d47df8cdce969af2eec1d75",
-      "com.google.android.apps.photos": "ef8b113ca722c6d2e8f3b55d98b73f36",
+      "com.google.android.apps.photos": "5bcabd1d13409c66561ce74a6e7b24dd",
       "com.google.android.apps.recorder": "4f001c35ce5d3ad2b92c57abb1f1fc3a",
       "com.microblink.photomath": "c933ff9804a097dd662035f5b7a4368e",
       "com.microsoft.lens": "84dfa71a873a4e353ff3e27cdf4ead82",
       "com.strava": "8edcc88a3749ddc3bc0df52eb4fd79c9",
       "com.viber.voip": "517a37b120b644ae84ac39a46805a211",
       "jp.pxv.android": "bbff12bb565c10a8e155b197a2f79980",
-      "shared": "c5a39d6d1df0db781e93ce05f2d760e1"
+      "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     }
   },
   "rushiranpise/morphe-patches": {
