@@ -1,15 +1,18 @@
-youtube-morphe (arm64-v8a): 21.07.247  
-youtube-morphe (arm-v7a): 21.07.247  
-youtube-music-morphe (arm64-v8a): 9.15.51  
-youtube-music-morphe (arm-v7a): 9.15.51  
-youtube-morphe-exp (arm64-v8a): 21.35.442  
-youtube-morphe-exp (arm-v7a): 21.35.442  
-youtube-music-morphe-exp (arm64-v8a): 9.34.52  
-youtube-music-morphe-exp (arm-v7a): 9.34.52  
-reddit-morphe-exp (arm64-v8a): 2026.35.0  
-reddit-morphe-exp (arm-v7a): 2026.35.0  
-reddit-morphe (arm64-v8a): 2026.14.0  
-reddit-morphe (arm-v7a): 2026.14.0  
+google-photos-morphe (arm64-v8a): 7.90.0.971743778  
+google-photos-morphe (arm-v7a): 7.90.0.971743778  
+google-recorder-morphe (arm64-v8a): 4.2.20260709.968193888  
+photomath-morphe (arm64-v8a): 8.48.0  
+photomath-morphe (arm-v7a): 8.48.0  
+viber-morphe (arm64-v8a): 26.1.2.0  
+viber-morphe (arm-v7a): 26.1.2.0  
+pixiv-morphe (arm64-v8a): 6.141.1  
+pixiv-morphe (arm-v7a): 6.141.1  
+strava-morphe (arm64-v8a): 477.14  
+strava-morphe (arm-v7a): 477.14  
+gboard-morphe (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
+gboard-morphe-clone (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
+capcut-morphe (arm64-v8a): 19.2.0  
+capcut-morphe (arm-v7a): 19.2.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -18,5 +21,11 @@ reddit-morphe (arm-v7a): 2026.14.0
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: MorpheApp/patches-1.41.0-dev.9.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.9)  
+Patches: jasonwu1994/patches-3.8.0.mpp  
+[Changelog](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.8.0)
+
+Patches: riky-dev/patches-1.4.1.mpp  
+[Changelog](https://github.com/riky-dev/morphe-patches/releases/tag/v1.4.1)
+
+Patches: RookieEnough/patches-1.3.0.mpp  
+[Changelog](https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.0)  
