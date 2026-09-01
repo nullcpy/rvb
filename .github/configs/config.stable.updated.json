@@ -467,7 +467,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/tv.trakt.trakt"
   },
   "komoot-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "de.komoot.android",
     "app-name": "komoot",
     "rv-brand": "morphe",
@@ -618,7 +618,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.photos"
   },
   "instagram-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "morphe",
@@ -1387,7 +1387,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "gboard-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe",
@@ -1403,7 +1403,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "gboard-morphe-clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "gboard",
     "rv-brand": "morphe-clone",
@@ -2395,5 +2395,18 @@
     "apkpure-dlurl": "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv",
     "apkcombo-dlurl": "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv",
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.yablio.sendfilestotv"
+  },
+  "picsart-morphe": {
+    "enabled": true,
+    "pkg-name": "com.picsart.studio",
+    "app-name": "picsart",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "rushiranpise/morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://picsart-estudio.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/picsart/com.picsart.studio",
+    "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.picsart.studio"
   }
 }
