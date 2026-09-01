@@ -2,7 +2,7 @@
   "patches-version": "latest",
   "enable-module-update": true,
   "imdb-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.imdb.mobile",
     "app-name": "imdb",
     "rv-brand": "morphe",
@@ -482,7 +482,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/de.komoot.android"
   },
   "discord-xposed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "discord",
     "rv-brand": "xposed",
@@ -605,7 +605,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
   },
   "google-photos-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe",
@@ -648,7 +648,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
   },
   "reddit-morphe-adobo": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "reddit",
     "rv-brand": "morphe-adobo",
@@ -663,7 +663,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
   },
   "photoshop-mix-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adobe.psmobile",
     "app-name": "photoshop-mix",
     "rv-brand": "morphe",
@@ -677,7 +677,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adobe.psmobile"
   },
   "google-recorder-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "google-recorder",
     "rv-brand": "morphe",
@@ -692,7 +692,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.recorder"
   },
   "microsoft-lens-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "microsoft-lens",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -705,7 +705,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.microsoft.lens"
   },
   "photomath-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "photomath",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -718,7 +718,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.microblink.photomath"
   },
   "viber-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "viber",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -730,7 +730,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.viber.voip"
   },
   "pixiv-morphe": {
-    "enabled": true,
+    "enabled": false,
     "app-name": "pixiv",
     "rv-brand": "morphe",
     "build-mode": "apk",
@@ -743,7 +743,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
   },
   "strava-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "strava",
     "rv-brand": "morphe",
@@ -1359,7 +1359,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
   },
   "instagram-instafel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel",
@@ -1373,7 +1373,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
   },
   "instagram-instafel-clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "instagram",
     "rv-brand": "instafel-clone",
@@ -1418,7 +1418,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.google.android.inputmethod.latin"
   },
   "calorie-counter-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.fatsecret.android",
     "app-name": "calorie-counter",
     "rv-brand": "morphe",
@@ -1434,7 +1434,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.fatsecret.android"
   },
   "soundcloud-morphe-alt": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "soundcloud",
     "rv-brand": "morphe-alt",
@@ -2084,7 +2084,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.lemon.lvoverseas"
   },
   "adguard-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.adguard.android",
     "app-name": "adguard",
     "rv-brand": "morphe-nightly",
@@ -2098,7 +2098,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
   },
   "warp-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.cloudflare.onedotonedotonedotone",
     "app-name": "warp",
     "rv-brand": "morphe",
@@ -2111,7 +2111,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "hola-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.hola.play",
     "app-name": "hola-vpn",
     "rv-brand": "morphe",
@@ -2126,7 +2126,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/org.hola.play"
   },
   "ninja-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "app.ninjavpn.android",
     "patch-folder": "ninjvapn",
     "app-name": "ninja-vpn",
@@ -2141,7 +2141,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
   },
   "windscribe-vpn-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.windscribe.vpn",
     "app-name": "windscribe-vpn",
     "rv-brand": "morphe",
@@ -2156,7 +2156,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
   },
   "terabox-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "terabox",
     "rv-brand": "morphe",
@@ -2170,7 +2170,7 @@
     "uptodown-dlurl": "https://terabox.en.uptodown.com/android"
   },
   "accuweather-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.accuweather.android",
     "app-name": "accuweather",
     "rv-brand": "morphe",
@@ -2186,7 +2186,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.accuweather.android"
   },
   "the-weather-channel-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.weather.Weather",
     "app-name": "the-weather-channel",
     "rv-brand": "morphe",
@@ -2202,7 +2202,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.weather.Weather"
   },
   "beta-maniac-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "it.mirko.beta",
     "app-name": "beta-maniac",
     "rv-brand": "morphe",
@@ -2215,7 +2215,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "google-photos-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "google-photos",
     "rv-brand": "morphe-alt",
@@ -2229,7 +2229,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "moviebox-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.community.oneroom",
     "app-name": "moviebox",
     "rv-brand": "morphe",
@@ -2241,7 +2241,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
   },
   "moviebox-morphe-androidtv": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.community.mbox.tv",
     "app-name": "moviebox",
     "rv-brand": "morphe-androidtv",
@@ -2253,7 +2253,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
   },
   "messenger-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.orca",
     "app-name": "messenger",
     "rv-brand": "morphe",
@@ -2270,7 +2270,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
   },
   "pocket-casts-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "au.com.shiftyjelly.pocketcasts",
     "app-name": "pocket-casts",
     "rv-brand": "morphe",
@@ -2285,7 +2285,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/au.com.shiftyjelly.pocketcasts"
   },
   "rar-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rarlab.rar",
     "app-name": "rar",
     "rv-brand": "morphe",
@@ -2301,7 +2301,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
   },
   "amazon-india-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.amazon.mShop.android.shopping",
     "app-name": "amazon-india",
     "rv-brand": "morphe",
@@ -2317,7 +2317,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/in.amazon.mShop.android.shopping"
   },
   "calm-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.calm.android",
     "app-name": "calm",
     "rv-brand": "morphe",
@@ -2333,7 +2333,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.calm.android"
   },
   "bluetooth-keyboard-and-mouse-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "io.appground.blek",
     "app-name": "bluetooth-keyboard-and-mouse",
     "rv-brand": "morphe",
@@ -2365,7 +2365,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.touchtype.swiftkey"
   },
   "macrodroid-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.arlosoft.macrodroid",
     "app-name": "macrodroid",
     "rv-brand": "morphe-alt",
@@ -2381,7 +2381,7 @@
     "github-dlurl": "https://github.com/nullcpy/apks/releases/tag/com.arlosoft.macrodroid"
   },
   "send-files-to-tv-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.yablio.sendfilestotv",
     "app-name": "send-files-to-tv",
     "rv-brand": "morphe",

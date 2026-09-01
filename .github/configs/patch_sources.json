@@ -24,10 +24,10 @@
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
     "stable": "v1.40.0",
-    "prerelease": "v1.41.0-dev.10",
+    "prerelease": "v1.41.0-dev.11",
     "blocked": false,
     "stable_date": "2026-08-24T11:45:33Z",
-    "pre_date": "2026-08-31T18:14:01Z"
+    "pre_date": "2026-08-31T21:33:28Z"
   },
   "piko": {
     "repo": "crimera/piko",
@@ -158,11 +158,11 @@
   },
   "rushiranpise": {
     "repo": "rushiranpise/morphe-patches",
-    "stable": "v1.21.2",
-    "prerelease": "v1.21.2-dev.1",
+    "stable": "v1.21.3",
+    "prerelease": "v1.21.3-dev.2",
     "blocked": false,
-    "stable_date": "2026-08-31T13:40:14Z",
-    "pre_date": "2026-08-31T13:35:42Z"
+    "stable_date": "2026-08-31T22:35:28Z",
+    "pre_date": "2026-08-31T22:30:18Z"
   },
   "androidtv": {
     "repo": "ajstrick81/morphe-androidtv-patches",
@@ -217,8 +217,8 @@
     "repo": "jasonwu1994/Gboard-patches",
     "stable": "v3.8.0",
     "stable_date": "2026-08-31T10:14:13Z",
-    "prerelease": "v3.8.0-dev.3",
-    "pre_date": "2026-08-31T07:17:06Z",
+    "prerelease": "v3.9.0-dev.1",
+    "pre_date": "2026-09-01T04:50:25Z",
     "blocked": false
   },
   "instafel": {
