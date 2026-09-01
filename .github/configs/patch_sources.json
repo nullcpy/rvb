@@ -23,10 +23,10 @@
   },
   "morphe": {
     "repo": "MorpheApp/morphe-patches",
-    "stable": "v1.40.0",
+    "stable": "v1.41.0",
     "prerelease": "v1.41.0-dev.12",
     "blocked": false,
-    "stable_date": "2026-08-24T11:45:33Z",
+    "stable_date": "2026-09-01T16:30:24Z",
     "pre_date": "2026-09-01T08:43:02Z"
   },
   "piko": {
@@ -80,11 +80,11 @@
   "paresh": {
     "repo": "Paresh-Maheshwari/paresh-patches",
     "host": "gitlab",
-    "stable": "v1.19.0",
-    "prerelease": "v1.20.0-dev.2",
+    "stable": "v1.20.0",
+    "prerelease": "v1.20.0-dev.4",
     "blocked": false,
-    "stable_date": "2026-07-07T17:45:47.815Z",
-    "pre_date": "2026-08-08T04:55:25.025Z"
+    "stable_date": "2026-09-01T16:37:52.954Z",
+    "pre_date": "2026-09-01T16:25:25.186Z"
   },
   "docbt": {
     "repo": "docbt/patched-up",
@@ -192,10 +192,10 @@
     "repo": "IMXEren/mix-patches",
     "host": "gitlab",
     "stable": "v1.6.0",
-    "prerelease": "v1.6.1-dev.1",
+    "prerelease": "v1.7.0-dev.1",
     "blocked": false,
     "stable_date": "2026-08-25T21:53:15.816Z",
-    "pre_date": "2026-08-27T02:14:43.257Z"
+    "pre_date": "2026-09-01T15:49:25.477Z"
   },
   "quantavil": {
     "repo": "quantavil/edge-morphe-patches",

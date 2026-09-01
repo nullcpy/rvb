@@ -229,10 +229,29 @@
       "shared": "f048785060da58388f923cddb628062f"
     },
     "stable": {
-      "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
-      "com.google.android.youtube": "4b8921d76be86d7ccc9725f17939a8e1",
-      "com.reddit.frontpage": "6b9a6347faba99f583457ac09481d085",
-      "shared": "87074844f535c57687c3a5f8e5d6be75"
+      "com.google.android.apps.youtube.music": "1566688fd31cd5b4de87fc0d4c91fbf0",
+      "com.google.android.youtube": "a57d162877a0c59e8c8fef6955a6fdb1",
+      "com.reddit.frontpage": "61dfe9c1ad45610585ea130788620b51",
+      "shared": "a0c2760cca9ea7253161ddeea1afb15b"
+    }
+  },
+  "paresh-maheshwari/paresh-patches": {
+    "dev": {},
+    "stable": {
+      "alldocumentreader.office.viewer.filereader.pdfviewerscanner": "d41d8cd98f00b204e9800998ecf8427e",
+      "ch.protonvpn.android": "070b150b4a0e8349c92b34ef53ced15c",
+      "com.arlosoft.macrodroid": "b6c935a80266c830553f85ecfa09f270",
+      "com.cricbuzz.android": "fb45b341d76e3102a945ca2ff3ec5a22",
+      "com.eyecon.global": "be047f0f61610288c570630680d32fd7",
+      "com.lumina.wallpapers": "107fc7ebcfae4b563609ab5f2539d1db",
+      "com.mxtech.videoplayer.ad": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.overlook.android.fing": "6c0dbc6f6ce9cacf53ea6178feebbf1f",
+      "com.ticktick.task": "6e1cf519d16cdc86dea964188a7c9d70",
+      "com.truecaller": "1cadfabcdc2586ef950e4b8edb6620ee",
+      "eu.darken.sdmse": "966690fa9aceaa328c1277d83a6c2bd3",
+      "org.telegram.messenger.web": "d590bc2abddd94ca5c49a27aa191abfc",
+      "org.telegram.plus": "abb92126213b44e2d638188fe926c99e",
+      "shared": "5b84fc998e5bc59f64763778f064cd4f"
     }
   },
   "quantavil/edge-morphe-patches": {
