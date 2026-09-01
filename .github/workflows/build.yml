@@ -51,7 +51,7 @@ jobs:
         options: --shm-size=1gb
     steps:
       - name: Setup java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           distribution: "temurin"
           java-version: "21"
