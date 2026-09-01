@@ -44,7 +44,11 @@
       "com.instagram.android": "efab2a964a11129ee3e218a482255ae3",
       "shared": "e8477a3349f8bb6238d3bdfde82b803b"
     },
-    "stable": {}
+    "stable": {
+      "com.instagram.android": "efab2a964a11129ee3e218a482255ae3",
+      "de.komoot.android": "0277a67a65d165f8c41b799a592891f4",
+      "shared": "e8477a3349f8bb6238d3bdfde82b803b"
+    }
   },
   "crimera/piko": {
     "dev": {
@@ -176,8 +180,8 @@
       "shared": "32a0dd69176c11d314c84646dba4082e"
     },
     "stable": {
-      "com.google.android.inputmethod.latin": "0055fe949ef83047249566589f962f67",
-      "shared": "7631baef2c71c87387b2eaefd73876be"
+      "com.google.android.inputmethod.latin": "38675539d87bf4d15ec41fa5f4e17619",
+      "shared": "38dbb201befb4008a0789d0420c04647"
     }
   },
   "jkennethcarino/adobo": {
@@ -219,10 +223,10 @@
   },
   "morpheapp/morphe-patches": {
     "dev": {
-      "com.google.android.apps.youtube.music": "0eaf9ea7c857a448dcaacba7643c905a",
-      "com.google.android.youtube": "5fe9cf3f990a66365ad78279ae340734",
+      "com.google.android.apps.youtube.music": "1566688fd31cd5b4de87fc0d4c91fbf0",
+      "com.google.android.youtube": "9c8d8f340372b17c7367628461789774",
       "com.reddit.frontpage": "61dfe9c1ad45610585ea130788620b51",
-      "shared": "56f3c9829ea09f0ea4b9012c723a9022"
+      "shared": "f048785060da58388f923cddb628062f"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "2ee253ab8ad76813c0d714a30d69887a",
@@ -269,27 +273,28 @@
   "rushiranpise/morphe-patches": {
     "dev": {},
     "stable": {
-      "app.ninjavpn.android": "96b61f1c1357a10d1a2c04787f1d5eab",
-      "au.com.shiftyjelly.pocketcasts": "5710d8d6c6616e76649cc026c6365e6e",
-      "com.accuweather.android": "8b94b0f87b2585138454e796e644e159",
-      "com.adguard.android": "2682f5e8365015c2e2b975606eb77b0c",
-      "com.arlosoft.macrodroid": "941f770919c50fc6f3b8ec823b071e0d",
-      "com.calm.android": "c655ee555c263cfbae7874366b94b56f",
-      "com.cloudflare.onedotonedotonedotone": "f7171020e856c7b6fa8825dbff7a3220",
-      "com.community.mbox.tv": "0c998af844d7a1be36b8bc8c957e1e81",
-      "com.community.oneroom": "714eec97d8a145055a6b01787a16b951",
+      "app.ninjavpn.android": "c090aaa8dc190f12e77c61cc8ed0d68e",
+      "au.com.shiftyjelly.pocketcasts": "7faec024e3a22d1a598686a5f0f69f1b",
+      "com.accuweather.android": "0b3606c35a2ce61517b6304ac4afc0d1",
+      "com.adguard.android": "82d868ffdb5d7d5c1a49c517e85fcd09",
+      "com.arlosoft.macrodroid": "25465b4b44a78495817ec55bbcfb9d78",
+      "com.calm.android": "6def1e4649cf3fded01783da06eb912c",
+      "com.cloudflare.onedotonedotonedotone": "21b8277734738c4689faa6564459ffb4",
+      "com.community.mbox.tv": "1e7748426f5b5e30377df30951aa0ffb",
+      "com.community.oneroom": "071dc28585f439eee3ec9b87a36baab4",
       "com.dubox.drive": "d41d8cd98f00b204e9800998ecf8427e",
-      "com.facebook.orca": "190a1b14c3be1cd1c769fb5477f3e5e1",
-      "com.google.android.apps.photos": "66c2501e7caeeeaa678ce62a86c85a9b",
-      "com.rarlab.rar": "f4392331884a9eecbe7cca4edb0908f8",
-      "com.weather.Weather": "d2bb9b0edc789ba7e041cb2d4b476419",
-      "com.windscribe.vpn": "3efa2e17eabdf686dbc2f203794312a0",
-      "com.yablio.sendfilestotv": "e27dfd964b1792d89e6dbb6ecf76ebc4",
-      "in.amazon.mShop.android.shopping": "7954c775d5fbc96fb92fc42f8f2e1b96",
-      "io.appground.blek": "5861c553c5115a644467c5539a0e7004",
-      "it.mirko.beta": "51c53f1853754a93a2e89510fdfae328",
-      "org.hola.play": "e92326c415ef7bf0bae43021d2dc375f",
-      "shared": "c2e8e4ebb3d67d1b99c4130652798396"
+      "com.facebook.orca": "4d09b29ff9cce5576788197f153cdd1c",
+      "com.google.android.apps.photos": "4ed6fe87b4befd85d9dfc10806c92719",
+      "com.picsart.studio": "a36db1f9c8c34ea0bb95d83f136de0bb",
+      "com.rarlab.rar": "f0cf739091c529460671f3fdb2e70004",
+      "com.weather.Weather": "9e11a75d40fc4406f53b82139ef5e28c",
+      "com.windscribe.vpn": "c12f8064b468defef24af5dd729b7151",
+      "com.yablio.sendfilestotv": "010f8ab7f551de2458c24daef47d0b85",
+      "in.amazon.mShop.android.shopping": "64743063c5fcc2831934920c8cfeaa2e",
+      "io.appground.blek": "1ce521b8d776b480c1ccc717a64add8b",
+      "it.mirko.beta": "7c139a1fd926a7b6b3adef3be5514769",
+      "org.hola.play": "f18dc8d0279232ee4cf5f1b7c9223138",
+      "shared": "3feee68e9fca7acb1461160dc0edc12a"
     }
   }
 }
