@@ -326,6 +326,18 @@ apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilesto
 apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
 github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.yablio.sendfilestotv"
 
+[picsart-morphe]
+enabled = true
+pkg-name = "com.picsart.studio"
+app-name = "picsart"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "rushiranpise/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.picsart.studio"
 
 
 
