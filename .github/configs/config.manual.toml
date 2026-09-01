@@ -2,19 +2,18 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[capcut-morphe]
+[picsart-morphe]
 enabled = true
-pkg-name = "com.lemon.lvoverseas"
-app-name = "capcut"
+pkg-name = "com.picsart.studio"
+app-name = "picsart"
 rv-brand = "morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://viamaker.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut"
-apkpure-dlurl = "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.lemon.lvoverseas"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.picsart.studio"
 
 
 
