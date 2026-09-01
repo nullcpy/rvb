@@ -1,42 +1,37 @@
-komoot-morphe (arm64-v8a): 2026.26.7  
-komoot-morphe (arm-v7a): 2026.26.7  
-instagram-morphe (arm64-v8a): 439.0.0.37.89  
-instagram-morphe (arm-v7a): 439.0.0.37.89  
-gboard-morphe (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
-gboard-morphe-clone (arm64-v8a): 18.0.3.954559732-release-arm64-v8a  
-adguard-morphe-nightly (arm64-v8a): 4.14.68  
-adguard-morphe-nightly (arm-v7a): 4.14.68  
-warp-morphe (arm64-v8a): 6.38.9  
-warp-morphe (arm-v7a): 6.38.9  
-hola-vpn-morphe (arm64-v8a): AARCH64_1.248.400  
-ninja-vpn-morphe (arm64-v8a): 1.4.7  
-windscribe-vpn-morphe (all): 4.2.2328  
-accuweather-morphe (arm64-v8a): 21.1.15-3-rc  
-accuweather-morphe (arm-v7a): 21.1.15-3-rc  
-the-weather-channel-morphe (arm64-v8a): 16.19.1  
-the-weather-channel-morphe (arm-v7a): 16.19.1  
-beta-maniac-morphe (arm64-v8a): 0.11.0  
-beta-maniac-morphe (arm-v7a): 0.11.0  
-google-photos-morphe-alt (arm64-v8a): 7.90.0.971743778  
-google-photos-morphe-alt (arm-v7a): 7.90.0.971743778  
-messenger-morphe (arm64-v8a): 576.0.0.47.92  
-messenger-morphe (arm-v7a): 576.0.0.47.92  
-pocket-casts-morphe (arm64-v8a): 8.16  
-pocket-casts-morphe (arm-v7a): 8.16  
-rar-morphe (arm64-v8a): 7.23.build134  
-rar-morphe (arm-v7a): 7.23.build134  
-amazon-india-morphe (arm64-v8a): 32.16.2.300  
-amazon-india-morphe (arm-v7a): 32.16.2.300  
-calm-morphe (arm64-v8a): 6.102  
-calm-morphe (arm-v7a): 6.102  
-bluetooth-keyboard-and-mouse-morphe (arm64-v8a): 6.23.1  
-bluetooth-keyboard-and-mouse-morphe (arm-v7a): 6.23.1  
-macrodroid-morphe-alt (arm64-v8a): 5.66.9  
-macrodroid-morphe-alt (arm-v7a): 5.66.9  
-send-files-to-tv-morphe (arm64-v8a): 1.4.22  
-send-files-to-tv-morphe (arm-v7a): 1.4.22  
-picsart-morphe (arm64-v8a): 30.6.4  
-picsart-morphe (arm-v7a): 30.6.4  
+youtube-morphe-nord (arm64-v8a): 21.07.247  
+youtube-morphe-nord (arm-v7a): 21.07.247  
+youtube-morphe-mocha (arm64-v8a): 21.07.247  
+youtube-morphe-mocha (arm-v7a): 21.07.247  
+youtube-morphe (arm64-v8a): 21.07.247  
+youtube-morphe (arm-v7a): 21.07.247  
+youtube-music-morphe (arm64-v8a): 9.15.51  
+youtube-music-morphe (arm-v7a): 9.15.51  
+youtube-morphe-exp (arm64-v8a): 21.35.442  
+youtube-morphe-exp (arm-v7a): 21.35.442  
+youtube-music-morphe-exp (arm64-v8a): 9.34.52  
+youtube-music-morphe-exp (arm-v7a): 9.34.52  
+reddit-morphe-exp (arm64-v8a): 2026.35.0  
+reddit-morphe-exp (arm-v7a): 2026.35.0  
+reddit-morphe (arm64-v8a): 2026.14.0  
+reddit-morphe (arm-v7a): 2026.14.0  
+cricbuzz-morphe (arm64-v8a): 16.02.05  
+cricbuzz-morphe (arm-v7a): 16.02.05  
+plus-messenger-morphe (arm64-v8a): 12.9.2.0  
+plus-messenger-morphe (arm-v7a): 12.9.2.0  
+eyecon-morphe (arm64-v8a): 4.2026.04.05.1300  
+eyecon-morphe (arm-v7a): 4.2026.04.05.1300  
+ticktick-morphe (arm64-v8a): 8.1.3.3  
+ticktick-morphe (arm-v7a): 8.1.3.3  
+sdmaid-morphe (arm64-v8a): 1.7.3-rc0  
+sdmaid-morphe (arm-v7a): 1.7.3-rc0  
+truecaller-morphe (arm64-v8a): 26.10.6  
+truecaller-morphe (arm-v7a): 26.10.6  
+fing-morphe (arm64-v8a): 12.12.0  
+fing-morphe (arm-v7a): 12.12.0  
+telegram-morphe-foss (arm64-v8a): 12.9.2  
+telegram-morphe-foss (arm-v7a): 12.9.2  
+macrodroid-morphe (arm64-v8a): 5.62.11  
+macrodroid-morphe (arm-v7a): 5.62.11  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -45,11 +40,8 @@ picsart-morphe (arm-v7a): 30.6.4
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: brosssh/patches-2.8.2.mpp  
-[Changelog](https://github.com/brosssh/morphe-patches/releases/tag/v2.8.2)
+Patches: MorpheApp/patches-1.41.0.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0)
 
-Patches: jasonwu1994/patches-3.9.0.mpp  
-[Changelog](https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.9.0)
-
-Patches: rushiranpise/patches-1.21.4.mpp  
-[Changelog](https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.4)  
+Patches: Paresh-Maheshwari/patches-1.20.0.mpp  
+[Changelog](https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.20.0)  
