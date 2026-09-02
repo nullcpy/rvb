@@ -16,6 +16,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+
 [twitter-morphe-materialu]
 enabled = true
 pkg-name = "com.twitter.android"
@@ -33,6 +34,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+
 [instagram-morphe-piko]
 enabled = true
 pkg-name = "com.instagram.android"

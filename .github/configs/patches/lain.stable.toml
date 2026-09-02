@@ -12,6 +12,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/mixapplications/drofus-iso2usb/
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/rufus-unofficial/com.mixapplications.rufus"
 apkcombo-dlurl = "https://apkcombo.com/drofus-iso-2-usb/com.mixapplications.rufus"
+
 [hermit-morphe]
 enabled = true
 pkg-name = "com.chimbori.hermitcrab"

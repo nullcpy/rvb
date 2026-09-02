@@ -14,6 +14,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [youtube-music-anddea-nord]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
@@ -29,6 +30,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
 [youtube-anddea-mocha]
 enabled = true
 pkg-name = "com.google.android.youtube"
@@ -45,6 +47,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [youtube-music-anddea-mocha]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
@@ -60,6 +63,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
 [reddit-anddea]
 enabled = false
 pkg-name = "com.reddit.frontpage"

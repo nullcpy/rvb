@@ -11,6 +11,7 @@ uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
 [medium-morphe]
 enabled = true
 pkg-name = "com.medium.reader"

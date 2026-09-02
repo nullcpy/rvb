@@ -10,6 +10,7 @@ uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
 [lightroom-revanced]
 enabled = true
 app-name = "lightroom"
@@ -21,6 +22,7 @@ cli-source = "ReVanced/revanced-cli"
 # uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
 [duolingo-revanced]
 enabled = true
 app-name = "duolingo"
@@ -33,6 +35,7 @@ uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
+
 [twitch-revanced]
 enabled = true
 app-name = "twitch"
@@ -46,6 +49,7 @@ uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
 [twitter-revanced]
 enabled = true
 app-name = "twitter"
@@ -58,6 +62,7 @@ uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
+
 [tiktok-revanced]
 enabled = false
 app-name = "tiktok"
@@ -70,6 +75,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
 [soundcloud-revanced]
 enabled = true
 app-name = "soundcloud"
@@ -81,6 +87,7 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
 dpi = "nodpi anydpi auto"
+
 [google-recorder-revanced]
 enabled = true
 app-name = "google-recorder"
@@ -93,6 +100,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
 [proton-vpn-revanced]
 enabled = true
 app-name = "proton-vpn"
@@ -105,6 +113,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
 [instagram-revanced]
 enabled = false
 app-name = "instagram"
@@ -119,6 +128,7 @@ uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
 [threads-revanced]
 enabled = true
 app-name = "threads"
@@ -131,6 +141,7 @@ uptodown-dlurl = "https://threads.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
+
 [youtube-revanced-nord]
 enabled = true
 app-name = "youtube"
@@ -145,6 +156,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [youtube-revanced-mocha]
 enabled = true
 app-name = "youtube"
@@ -159,6 +171,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [google-photos-revanced]
 enabled = true
 app-name = "google-photos"

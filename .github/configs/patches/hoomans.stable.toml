@@ -10,6 +10,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://rumble.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
 dpi = "nodpi anydpi auto"
+
 [twitch-morphe]
 enabled = true
 pkg-name = "tv.twitch.android.app"
@@ -23,6 +24,7 @@ uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
 [battery-guru-morphe]
 enabled = true
 pkg-name = "com.paget96.batteryguru"
@@ -36,6 +38,7 @@ uptodown-dlurl = "https://battery-guru.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
 [money-manager-morphe]
 enabled = true
 pkg-name = "com.realbyteapps.moneymanagerfree"
@@ -49,6 +52,7 @@ uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
+
 [poweramp-morphe]
 enabled = true
 pkg-name = "com.maxmpz.audioplayer"
@@ -63,6 +67,7 @@ uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
 apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
 apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
 [at4k-launcher-morphe]
 enabled = true 
 pkg-name = "com.overdevs.at4k"
@@ -76,6 +81,7 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
 apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 # apkcombo-dlurl = "https://apkcombo.com/at4k-launcher/com.overdevs.at4k"
+
 [projectivy-launcher-morphe]
 enabled = true 
 pkg-name = "com.spocky.projengmenu"
@@ -91,6 +97,7 @@ dpi = "nodpi anydpi auto"
 # uptodown-dlurl = "https://projectivy-launcher.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
 apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+
 [adobe-acrobat-morphe]
 enabled = true 
 pkg-name = "com.adobe.reader"
@@ -104,6 +111,7 @@ cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
 uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
+
 [inshot-morphe]
 enabled = true 
 pkg-name = "com.camerasideas.instashot"
@@ -116,6 +124,7 @@ cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor"
 uptodown-dlurl = "https://inshot-editor.en.uptodown.com/android"
+
 [todoist-morphe]
 enabled = true 
 pkg-name = "com.todoist"
@@ -129,6 +138,7 @@ dpi = "nodpi anydpi auto"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
 # uptodown-dlurl = "https://todoist.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+
 [tumblr-morphe]
 enabled = true
 pkg-name = "com.tumblr"
@@ -141,6 +151,7 @@ uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.tumblr"
+
 [google-phone-morphe]
 enabled = true
 pkg-name = "com.google.android.dialer"
