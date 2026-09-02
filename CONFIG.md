@@ -67,7 +67,7 @@ apkcombo-dlurl = "https://apkcombo.com/some-app/com.some.app"
 github-dlurl = "https://github.com/developer/app/releases/latest"
 # regex used to pick the exact apk file from the github release assets. supports {version} and {arch} string interpolation.
 # you can define a generic regex, or map architectures to specific regexes using 'arch: regex | arch2: regex2'.
-github-regex = "arm64-v8a: MyApp-arm64-v{version}\.apk | arm-v7a: MyApp-arm-v{version}\.apk"
+github-regex = "arm64-v8a: 'MyApp-arm64-v{version}\.apk' | arm-v7a: 'MyApp-arm-v{version}\.apk'"
 # direct download url. the url must have point to an apk file with name format shown in this example
 direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 

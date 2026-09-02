@@ -10,4 +10,4 @@ included-patches = "'Allow Importing Subs from Local Storage' 'Library Mode Focu
 excluded-patches = "'Side-by-side installation'"
 cli-source = "MorpheApp/morphe-desktop"
 github-dlurl = "https://github.com/NuvioMedia/NuvioTV/releases/latest"
-github-regex = 'app-full-universal-release\.apk'
+github-regex = "app-full-universal-release\\.apk"
