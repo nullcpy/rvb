@@ -1243,7 +1243,7 @@ get_apkcombo_vers() {
 get_apkcombo_pkg_name() { echo "$__APKCOMBO_PKG__"; }
 dl_apkcombo() {
 	local _url=$1 version=$2 output=$3 _arch=$4 _dpi=$5
-	local html="" dl_url final_url checkin page_url page compact_page
+	local html="" dl_url="" final_url checkin page_url page compact_page
 
 	if [ -n "$version" ]; then
 		local sfxs=("apk" "xapk" "apks")
