@@ -11,8 +11,6 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.magazines"
-
 [trakt-morphe]
 enabled = true
 pkg-name = "tv.trakt.trakt"
@@ -27,8 +25,6 @@ uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.trakt.trakt"
-
 [komoot-morphe]
 enabled = true
 pkg-name = "de.komoot.android"
@@ -42,8 +38,6 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps"
 uptodown-dlurl = "https://komoot.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/de.komoot.android"
-
 [discord-xposed]
 enabled = true
 pkg-name = "com.discord"
@@ -58,8 +52,6 @@ dpi = "nodpi anydpi auto"
 # uptodown-dlurl = "https://discord-chat-for-gamers.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.discord"
-
 [microsoft-edge-morphe]
 enabled = true
 pkg-name = "com.microsoft.emmx"
@@ -73,8 +65,6 @@ uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microsoft.emmx"
-
 [kinestop-morphe]
 enabled = true
 pkg-name = "com.urbandroid.kinestop"
@@ -88,8 +78,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-si
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.urbandroid.kinestop"
-
 [facebook-morphe]
 enabled = true
 pkg-name = "com.facebook.katana"
@@ -103,8 +91,6 @@ uptodown-dlurl = "https://facebook.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.katana"
-
 [threads-morphe]
 enabled = true
 pkg-name = "com.instagram.barcelona"
@@ -120,8 +106,6 @@ uptodown-dlurl = "https://threads.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.barcelona"
-
 [byair-morphe]
 enabled = true
 pkg-name = "com.byairapp.android"
@@ -135,7 +119,3 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-track
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
 apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.byairapp.android"
-
-
-

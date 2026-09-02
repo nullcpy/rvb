@@ -5,7 +5,7 @@ CWD=$(pwd)
 TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
-DL_SRCS=("direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo")
+DL_SRCS=("cache_repo" "direct" "github" "archive" "apkmirror" "uptodown" "apkpure" "apkcombo")
 BUILD_JSON_FILE="build.json"
 PATCH_OUTPUT=""
 
@@ -1496,17 +1496,42 @@ dl_github() {
     local path="" version_f=${version// /}
 	local base_url=${__GITHUB_URL__:-$url}
     
-    # Matches the exact file selection logic from dl_archive
-    for a in "${arch// /}" "all"; do
-        for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
-            while IFS= read -r p; do
-                if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
-                    path="$p"
-                    break 3
-                fi
-            done <<<"$__ARCHIVE_RESP__"
+local regex=""
+    if [ -n "${args[github_regex]:-}" ]; then
+        if [[ "${args[github_regex]}" == *":"* ]]; then
+            regex=$(echo "${args[github_regex]}" | awk -F'|' -v a="$arch" '{
+                for(i=1;i<=NF;i++) {
+                    split($i, kv, ":")
+                    gsub(/^[ \t'\''"]+|[ \t'\''"]+$/, "", kv[1])
+                    if(kv[1] == a) {
+                        gsub(/^[ \t'\''"]+|[ \t'\''"]+$/, "", kv[2])
+                        print kv[2]
+                        exit
+                    }
+                }
+            }')
+        else
+            regex="${args[github_regex]}"
+        fi
+    fi
+
+    if [ -n "$regex" ] && [ "$dl_p" != "cache_repo" ]; then
+        regex="${regex//\{version\}/${version_f#v}}"
+        regex="${regex//\{arch\}/${arch}}"
+        path=$(grep -iE "$regex" <<<"$__ARCHIVE_RESP__" | head -1)
+    else
+        # Matches the exact file selection logic from dl_archive
+        for a in "${arch// /}" "all"; do
+            for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+                while IFS= read -r p; do
+                    if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                        path="$p"
+                        break 3
+                    fi
+                done <<<"$__ARCHIVE_RESP__"
+            done
         done
-    done
+    fi
     
     if [ -z "$path" ]; then
         epr "Version ${version} with arch ${arch} not found in github"
@@ -1570,6 +1595,13 @@ get_github_vers() {
 get_github_pkg_name() {
     sed 's/-.*//' <<<"$__ARCHIVE_RESP__" | head -n 1
 }
+
+# -------------------- cache_repo --------------------
+dl_cache_repo() { dl_github "$@"; }
+get_cache_repo_resp() { get_github_resp "$@"; }
+get_cache_repo_vers() { get_github_vers "$@"; }
+get_cache_repo_pkg_name() { get_github_pkg_name "$@"; }
+
 
 # -------------------- direct --------------------
 dl_direct() {
@@ -2116,12 +2148,15 @@ build_rv() {
 
 		if [ "$skip_dl_source_check" = false ]; then
 			# 2. Establish dl_from and fetch required HTML responses
+		if [ -n "${UPLOAD_APKS_REPO:-}" ] && [ -n "$pkg_name" ]; then
+			args[cache_repo_dlurl]="https://github.com/${UPLOAD_APKS_REPO}/releases/tag/${pkg_name}"
+		fi
 			for dl_p in "${DL_SRCS[@]}"; do
 				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
 				
 				# If we need to find the latest version, do not use cache repositories as the source of truth
 				if [ -z "$resolved_version" ]; then
-					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ]; then
+					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ] || [ "$dl_p" = "cache_repo" ]; then
 						continue
 					fi
 				fi
@@ -2355,7 +2390,7 @@ build_rv() {
 					all_apk="$cached_all_apk"
 				fi
 
-				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
+				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ] && [ "$dl_p" != "cache_repo" ]; then
 					pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
 					if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
 						if [ -f "$all_apk" ]; then

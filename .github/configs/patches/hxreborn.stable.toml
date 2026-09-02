@@ -13,8 +13,6 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
 apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/ch.protonmail.android"
-
 [showly-morphe]
 enabled = true
 pkg-name = "com.michaldrabik.showly2"
@@ -27,8 +25,6 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.michaldrabik.showly2"
-
 [tiktok-morphe-alt]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
@@ -42,8 +38,3 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
-
-
-
-

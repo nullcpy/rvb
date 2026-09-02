@@ -11,8 +11,6 @@ uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adguard.android"
-
 [warp-morphe]
 enabled = true
 pkg-name = "com.cloudflare.onedotonedotonedotone"
@@ -26,7 +24,6 @@ uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
-
 [hola-vpn-morphe]
 enabled = true
 pkg-name = "org.hola.play"
@@ -40,8 +37,6 @@ dpi = "nodpi anydpi auto"
 uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/hola-free-vpn-proxy-unblocker/org.hola"
 apkcombo-dlurl = "https://apkcombo.com/hola-vpn-fast-free-vpn-proxy/org.hola.play"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/org.hola.play"
-
 [ninja-vpn-morphe]
 enabled = true
 pkg-name = "app.ninjavpn.android"
@@ -56,8 +51,6 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
 # uptodown-dlurl = "https://ninja-vpn.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/app.ninjavpn.android"
-
 [windscribe-vpn-morphe]
 enabled = true
 pkg-name = "com.windscribe.vpn"
@@ -71,8 +64,6 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
 uptodown-dlurl = "https://windscribe.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.windscribe.vpn"
-
 [terabox-morphe]
 enabled = true
 pkg-name = "com.dubox.drive"
@@ -86,7 +77,6 @@ cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
 uptodown-dlurl = "https://terabox.en.uptodown.com/android"
-
 [accuweather-morphe]
 enabled = true
 pkg-name = "com.accuweather.android"
@@ -102,8 +92,6 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
 apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.accuweather.android"
-
 [the-weather-channel-morphe]
 enabled = true
 pkg-name = "com.weather.Weather"
@@ -119,8 +107,6 @@ dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
 apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.weather.Weather"
-
 [beta-maniac-morphe]
 enabled = true
 pkg-name = "it.mirko.beta"
@@ -134,7 +120,6 @@ uptodown-dlurl = "https://beta-maniac.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-
 [google-photos-morphe-alt]
 enabled = true
 pkg-name = "com.google.android.apps.photos"
@@ -149,7 +134,6 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
-
 [moviebox-morphe]
 enabled = true
 pkg-name = "com.community.oneroom"
@@ -163,8 +147,6 @@ uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
 # apkmirror-dlurl = ""
 # dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.oneroom"
-
 [moviebox-morphe-androidtv]
 enabled = true
 pkg-name = "com.community.mbox.tv"
@@ -179,8 +161,6 @@ cli-source = "MorpheApp/morphe-desktop"
 # apkmirror-dlurl = ""
 # dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
-
 [messenger-morphe]
 enabled = true
 pkg-name = "com.facebook.orca"
@@ -197,8 +177,6 @@ dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
 apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.orca"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.facebook.orca"
-
 [pocket-casts-morphe]
 enabled = true
 pkg-name = "au.com.shiftyjelly.pocketcasts"
@@ -212,8 +190,6 @@ uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
 dpi = "nodpi anydpi auto"
 apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/au.com.shiftyjelly.pocketcasts"
-
 [rar-morphe]
 enabled = true
 pkg-name = "com.rarlab.rar"
@@ -228,8 +204,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/rar-extractor-manager/com.rarlab.rar"
 apkcombo-dlurl = "https://apkcombo.com/rar/com.rarlab.rar"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.rarlab.rar"
-
 [amazon-india-morphe]
 enabled = true
 pkg-name = "in.amazon.mShop.android.shopping"
@@ -244,8 +218,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-india-
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/amazon-india-shop-pay-minitv/in.amazon.mShop.android.shopping"
 apkcombo-dlurl = "https://apkcombo.com/amazon-india-shopping/in.amazon.mShop.android.shopping"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/in.amazon.mShop.android.shopping"
-
 [calm-morphe]
 enabled = true
 pkg-name = "com.calm.android"
@@ -260,8 +232,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/calm-com-inc/calm-meditate-slee
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/calm-sleep-meditate-relax/com.calm.android"
 apkcombo-dlurl = "https://apkcombo.com/calm/com.calm.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.calm.android"
-
 [bluetooth-keyboard-and-mouse-morphe]
 enabled = true
 pkg-name = "io.appground.blek"
@@ -276,8 +246,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/appground-io/bluetooth-keyboard
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/bluetooth-keyboard-mouse/io.appground.blek"
 apkcombo-dlurl = "https://apkcombo.com/bluetooth-keyboard-mouse/io.appground.blek"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/io.appground.blek"
-
 [swift-keyboard-morphe]
 enabled = true
 pkg-name = "com.touchtype.swiftkey"
@@ -292,8 +260,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard"
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey"
 apkcombo-dlurl = "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.touchtype.swiftkey"
-
 [macrodroid-morphe-alt]
 enabled = true
 pkg-name = "com.arlosoft.macrodroid"
@@ -308,8 +274,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-auto
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/macrodroid-device-automation-app/com.arlosoft.macrodroid"
 apkcombo-dlurl = "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.arlosoft.macrodroid"
-
 [send-files-to-tv-morphe]
 enabled = true
 pkg-name = "com.yablio.sendfilestotv"
@@ -324,8 +288,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/yablio/send-files-to-tv/"
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv"
 apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.yablio.sendfilestotv"
-
 [picsart-morphe]
 enabled = true
 pkg-name = "com.picsart.studio"
@@ -337,8 +299,3 @@ patches-source = "rushiranpise/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.picsart.studio"
-
-
-
-
