@@ -176,8 +176,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "dev": {
-      "com.google.android.inputmethod.latin": "faab6e646a3d15550710066d7260a0e8",
-      "shared": "32a0dd69176c11d314c84646dba4082e"
+      "com.google.android.inputmethod.latin": "e5718250e27db832d2e3683e1e8b462a",
+      "shared": "bedaca350ec7acd2ccaa481bfaebf9fb"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "38675539d87bf4d15ec41fa5f4e17619",
@@ -252,6 +252,13 @@
       "org.telegram.messenger.web": "d590bc2abddd94ca5c49a27aa191abfc",
       "org.telegram.plus": "abb92126213b44e2d638188fe926c99e",
       "shared": "5b84fc998e5bc59f64763778f064cd4f"
+    }
+  },
+  "prathxmop/prathxm-patches": {
+    "dev": {},
+    "stable": {
+      "com.chess": "f0ea781f8e8cb347be8deff2427905d5",
+      "shared": "896486938b5de28e83d923a732d3ec47"
     }
   },
   "quantavil/edge-morphe-patches": {
