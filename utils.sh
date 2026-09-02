@@ -1263,6 +1263,15 @@ dl_apkcombo() {
 		page="$html"
 		compact_page=$(tr '\n' ' ' <<<"$page")
 
+		if [ -n "$version" ]; then
+			local page_vername
+			page_vername=$(echo "$page" | grep -oP '<span class="vername">\K[^<]+' | head -1) || true
+			if [ -n "$page_vername" ] && ! echo "$page_vername" | grep -qFi "$version"; then
+				wpr "Version mismatch on APKCombo: requested '$version' but found '$page_vername'"
+				continue
+			fi
+		fi
+
 		dl_url=$(echo "$page" | grep -oP '(?<=a href=")https://download\.apkcombo\.com/[^"]+' | head -1) || true
 		[ -z "$dl_url" ] && dl_url=$(echo "$page" | grep -oP '(?<=a href=")/r2[^"]+' | head -1) || true
 		[ -z "$dl_url" ] && dl_url=$(echo "$compact_page" | grep -oP '"download_url"\s*:\s*"\K[^"]+' | head -1 | sed 's#\\/#/#g') || true
