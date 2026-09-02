@@ -11,6 +11,7 @@ uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
 [google-recorder-morphe]
 enabled = true
 pkg-name = "com.google.android.apps.recorder"
@@ -24,6 +25,7 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
 [microsoft-lens-morphe]
 enabled = true
 app-name = "microsoft-lens"
@@ -35,6 +37,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
 dpi = "nodpi anydpi auto"
+
 [photomath-morphe]
 enabled = true
 app-name = "photomath"
@@ -47,6 +50,7 @@ uptodown-dlurl = "https://photomath.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+
 [viber-morphe]
 enabled = true
 app-name = "viber"
@@ -58,6 +62,7 @@ patches-source = "RookieEnough/De-Vanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
+
 [pixiv-morphe]
 enabled = true
 app-name = "pixiv"
@@ -70,6 +75,7 @@ uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
+
 [strava-morphe]
 enabled = true
 pkg-name = "com.strava"

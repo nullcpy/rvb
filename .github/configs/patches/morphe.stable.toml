@@ -13,6 +13,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
 [youtube-morphe-mocha]
 enabled = true
 pkg-name = "com.google.android.youtube"

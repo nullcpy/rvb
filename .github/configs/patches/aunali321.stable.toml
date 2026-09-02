@@ -10,6 +10,7 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
 dpi = "nodpi anydpi auto"
+
 [telegram-revanced-foss]
 enabled = true
 pkg-name = "org.telegram.messenger.web"
@@ -22,6 +23,7 @@ cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
 dpi = "nodpi anydpi auto"
+
 [instagram-revanced-exp]
 enabled = true
 pkg-name = "com.instagram.android"

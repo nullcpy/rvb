@@ -11,6 +11,7 @@ uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
+
 [moonplus-reader-morphe]
 enabled = true
 pkg-name = "com.flyersoft.moonreader"
@@ -24,6 +25,7 @@ uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/moon/moon-reader"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
 [symfonium-morphe]
 enabled = true
 pkg-name = "app.symfonik.music.player"
@@ -37,6 +39,7 @@ uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
+
 [calcnote-morphe]
 enabled = true
 pkg-name = "com.appumstudios.calcnote"
@@ -50,6 +53,7 @@ uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
+
 [acalendar-morphe]
 enabled = true
 pkg-name = "org.withouthat.acalendar"

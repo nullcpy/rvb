@@ -12,6 +12,7 @@ uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+
 [gboard-morphe-clone]
 enabled = true
 pkg-name = "com.google.android.inputmethod.latin"
