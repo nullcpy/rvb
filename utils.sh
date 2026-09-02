@@ -1563,13 +1563,30 @@ get_github_resp() {
 		__GITHUB_URL__="${__DL_RESP_CACHE__["github_url_$url"]}"
 		return 0
 	fi
-	local repo tag resp
+	local repo tag resp endpoint
 	
 	repo=$(cut -d/ -f4-5 <<<"$url")
 	tag=${url%/}
 	tag=${tag##*/}
 	
-	resp=$(gh_req "https://api.github.com/repos/${repo}/releases/tags/${tag}" -) || return 1
+	endpoint="tags/${tag}"
+	[ "$tag" = "latest" ] && endpoint="latest"
+	
+	if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases/${endpoint}" -); then
+		if [ "$tag" != "latest" ] && [[ "$tag" == v* ]]; then
+			tag="${tag#v}"
+			endpoint="tags/${tag}"
+			if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases/${endpoint}" -); then
+				return 1
+			fi
+		else
+			return 1
+		fi
+	fi
+
+	if [ "$tag" = "latest" ]; then
+		tag=$(jq -r '.tag_name' <<<"$resp")
+	fi
 	
 	# Extract only supported file extensions
 	__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
