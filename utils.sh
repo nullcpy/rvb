@@ -2174,7 +2174,7 @@ build_rv() {
 				
 				# If we need to find the latest version, do not use cache repositories as the source of truth
 				if [ -z "$resolved_version" ]; then
-					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ] || [ "$dl_p" = "cache_repo" ]; then
+					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "cache_repo" ]; then
 						continue
 					fi
 				fi
@@ -2408,7 +2408,7 @@ build_rv() {
 					all_apk="$cached_all_apk"
 				fi
 
-				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ] && [ "$dl_p" != "cache_repo" ]; then
+				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "archive" ] && [ "$dl_p" != "cache_repo" ]; then
 					pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
 					if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
 						if [ -f "$all_apk" ]; then
