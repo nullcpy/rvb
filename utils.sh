@@ -2052,7 +2052,7 @@ build_rv() {
 				resolved_version=$version_mode
 			fi
 		fi
-
+	fi
 
 	local all_resolved_versions=()
 	if [ -n "$resolved_version" ]; then
@@ -2072,7 +2072,8 @@ build_rv() {
 		tried_dl=()
 		dl_from=""
 			# Cache Check
-			if [ -n "$resolved_version" ]; then
+			if [ -n "$pkg_name" ]; then
+				if [ -n "$resolved_version" ]; then
 				local version_f=${resolved_version// /}
 				version_f=${version_f#v}
 				local all_archs_found=true
