@@ -192,10 +192,10 @@
     "repo": "IMXEren/mix-patches",
     "host": "gitlab",
     "stable": "v1.6.0",
-    "prerelease": "v1.7.0-dev.1",
+    "prerelease": "v1.7.0-dev.2",
     "blocked": false,
     "stable_date": "2026-08-25T21:53:15.816Z",
-    "pre_date": "2026-09-01T15:49:25.477Z"
+    "pre_date": "2026-09-02T00:30:44.187Z"
   },
   "quantavil": {
     "repo": "quantavil/edge-morphe-patches",
@@ -217,8 +217,8 @@
     "repo": "jasonwu1994/Gboard-patches",
     "stable": "v3.9.0",
     "stable_date": "2026-09-01T05:51:23Z",
-    "prerelease": "v3.9.0-dev.1",
-    "pre_date": "2026-09-01T04:50:25Z",
+    "prerelease": "v3.10.0-dev.3",
+    "pre_date": "2026-09-01T22:42:41Z",
     "blocked": false
   },
   "instafel": {
@@ -310,6 +310,11 @@
     "blocked": false
   },
   "prathxmop": {
-    "repo": "PrathxmOp/Prathxm-Patches"
+    "repo": "PrathxmOp/Prathxm-Patches",
+    "stable": "v1.13.0",
+    "stable_date": "2026-07-10T09:33:46Z",
+    "prerelease": "v1.13.1-dev.4",
+    "pre_date": "2026-08-24T16:16:24Z",
+    "blocked": false
   }
 }
