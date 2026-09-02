@@ -12,3 +12,5 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser"
 apkcombo-dlurl = "https://apkcombo.com/brave-browser/com.brave.browser"
+github-dlurl = "https://github.com/brave/brave-browser/releases/latest"
+github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
