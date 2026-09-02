@@ -504,6 +504,23 @@ get_highest_ver() {
 		echo "$m"
 	fi
 }
+sort_vers() {
+	local vers valid_vers=""
+	vers=$(tee)
+	
+	# Try to find valid semvers first
+	while IFS= read -r v; do
+		if [ -n "$v" ] && semver_validate "$v"; then
+			valid_vers+="${v}"$'\n'
+		fi
+	done <<<"$vers"
+	
+	if [ -n "$valid_vers" ]; then
+		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -2
+	else
+		head -2 <<<"$vers"
+	fi
+}
 semver_validate() {
 	local a="${1%-*}"
 	local a="${a#v}"
@@ -541,7 +558,7 @@ _get_patch_last_supported_ver() {
 			echo "$vers" | tr ' ' '\n' | sort | uniq -c | sort -k1,1nr | awk '
 				NR==1 { max=$1; print $2; next }
 				$1==max { print $2 }
-			' | get_highest_ver
+			' | sort_vers
 			return
 		fi
 	fi
@@ -552,7 +569,7 @@ _get_patch_last_supported_ver() {
 	if [ -z "$pcount" ]; then
 		return
 	fi
-	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | sed 's/ \[.*//' | get_highest_ver || return 1
+	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | sed 's/ \[.*//' | sort_vers || return 1
 }
 
 get_patch_exp_ver() {
@@ -573,7 +590,7 @@ get_patch_exp_ver() {
 	done
 
 	if [ -n "$exp_versions" ]; then
-		get_highest_ver <<<"$exp_versions"
+		sort_vers <<<"$exp_versions"
 	fi
 }
 
@@ -2004,341 +2021,376 @@ build_rv() {
 			fi
 		fi
 
-		# Cache Check
-		if [ -n "$resolved_version" ]; then
-			local version_f=${resolved_version// /}
-			version_f=${version_f#v}
-			local all_archs_found=true
-			for arch in "${arch_list[@]}"; do
-				arch_f="${arch// /}"
-				local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-				local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 
-				if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
-					all_archs_found=false
-					break
-				fi
-			done
-			if [ "$all_archs_found" = true ]; then
+	local all_resolved_versions=()
+	if [ -n "$resolved_version" ]; then
+		mapfile -t all_resolved_versions <<<"$resolved_version"
+	else
+		all_resolved_versions=("")
+	fi
+
+	local final_stock_apk=""
+	local final_all_apk=""
+	local final_version=""
+	
+	for curr_resolved_version in "${all_resolved_versions[@]}"; do
+		resolved_version="$curr_resolved_version"
+		skip_dl_source_check=false
+		get_latest_ver=false
+		tried_dl=()
+		dl_from=""
+			# Cache Check
+			if [ -n "$resolved_version" ]; then
+				local version_f=${resolved_version// /}
+				version_f=${version_f#v}
+				local all_archs_found=true
 				for arch in "${arch_list[@]}"; do
 					arch_f="${arch// /}"
 					local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 					local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
-					[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
-					[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
+
+					if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
+						all_archs_found=false
+						break
+					fi
 				done
-				pr "Found all required architectures for '$pkg_name' (v$version_f) in cache. Skipping download!"
-				skip_dl_source_check=true
-				version="$resolved_version"
-			fi
-		else
-			# Dynamic Cache Discovery for "latest" or empty version
-			local cached_apks=($(find "$apk_cache_dir" -name "${pkg_name}-*.apk" -type f 2>/dev/null || true))
-			if [ ${#cached_apks[@]} -gt 0 ]; then
-				local cached_versions=""
-				for capk in "${cached_apks[@]}"; do
-					local bname=$(basename "$capk")
-					# extract version from format: pkg_name-version-arch.apk
-					local v=${bname#${pkg_name}-}
-					v=${v%.apk}
-					v=${v%-arm64-v8a}
-					v=${v%-arm-v7a}
-					v=${v%-x86_64}
-					v=${v%-x86}
-					v=${v%-all}
-					v=${v%-universal}
-					cached_versions+="$v"$'\n'
-				done
-				local dyn_ver
-				if dyn_ver=$(echo "$cached_versions" | get_highest_ver) && [ -n "$dyn_ver" ]; then
-					local all_archs_found=true
+				if [ "$all_archs_found" = true ]; then
 					for arch in "${arch_list[@]}"; do
 						arch_f="${arch// /}"
-						local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
-						local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
-						if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
-							all_archs_found=false
-							break
-						fi
+						local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+						local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
+						[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
+						[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
 					done
-					if [ "$all_archs_found" = true ]; then
+					pr "Found all required architectures for '$pkg_name' (v$version_f) in cache. Skipping download!"
+					skip_dl_source_check=true
+					version="$resolved_version"
+				fi
+			else
+				# Dynamic Cache Discovery for "latest" or empty version
+				local cached_apks=($(find "$apk_cache_dir" -name "${pkg_name}-*.apk" -type f 2>/dev/null || true))
+				if [ ${#cached_apks[@]} -gt 0 ]; then
+					local cached_versions=""
+					for capk in "${cached_apks[@]}"; do
+						local bname=$(basename "$capk")
+						# extract version from format: pkg_name-version-arch.apk
+						local v=${bname#${pkg_name}-}
+						v=${v%.apk}
+						v=${v%-arm64-v8a}
+						v=${v%-arm-v7a}
+						v=${v%-x86_64}
+						v=${v%-x86}
+						v=${v%-all}
+						v=${v%-universal}
+						cached_versions+="$v"$'\n'
+					done
+					local dyn_ver
+					if dyn_ver=$(echo "$cached_versions" | get_highest_ver) && [ -n "$dyn_ver" ]; then
+						local all_archs_found=true
 						for arch in "${arch_list[@]}"; do
 							arch_f="${arch// /}"
 							local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
 							local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
-							[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
-							[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
+							if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
+								all_archs_found=false
+								break
+							fi
 						done
-						pr "Discovered highest version (v$dyn_ver) for '$pkg_name' in cache. Skipping download!"
-						skip_dl_source_check=true
-						version="$dyn_ver"
-						resolved_version="$dyn_ver"
-					fi
-				fi
-			fi
-		fi
-	fi
-
-	if [ "$skip_dl_source_check" = false ]; then
-		# 2. Establish dl_from and fetch required HTML responses
-		for dl_p in "${DL_SRCS[@]}"; do
-			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-			
-			# If we need to find the latest version, do not use cache repositories as the source of truth
-			if [ -z "$resolved_version" ]; then
-				if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ]; then
-					continue
-				fi
-			fi
-
-			if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
-				args[${dl_p}_dlurl]=""
-				epr "ERROR: Could not get response for ${table} in ${dl_p}"
-				continue
-			fi
-			
-			# If pkg_name is still empty, try to scrape it from the response
-			if [ -z "$pkg_name" ]; then
-				if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
-					args[${dl_p}_dlurl]=""
-					epr "ERROR: Could not scrape pkg_name for ${table} in ${dl_p}"
-					continue
-				fi
-			fi
-			
-			tried_dl+=("$dl_p")
-			dl_from=$dl_p
-			break
-		done
-
-		if [ -z "$dl_from" ]; then
-			epr "ERROR: No valid download source found for ${table}."
-			return 0
-		fi
-
-		if [ -z "$pkg_name" ]; then
-			epr "ERROR: Could not determine pkg_name for ${table}."
-			return 0
-		fi
-		
-		# If we didn't run patches_list earlier because pkg_name was empty
-		if [ -z "$list_patches" ]; then
-			pr "Package name of '${table}' is '$pkg_name'"
-			list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
-			
-			local cli_source_l="${args[cli_source],,}"
-			if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
-				if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
-					epr "No app-specific patches found for '$pkg_name'. Skipping completely."
-					return 0
-				fi
-			fi
-		fi
-
-		if [ -z "$resolved_version" ]; then
-			if [ "$version_mode" = auto ]; then
-				if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-					"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
-					epr "get_patch_last_supported_ver failed for '$pkg_name'"
-					return 0
-				fi
-			elif [ "$version_mode" = exp ]; then
-				local cli_source_l="${args[cli_source],,}"
-				if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
-					wpr "ReVanced CLI does not support experimental versions."
-					return 0
-				fi
-				if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
-					epr "get_patch_exp_ver failed"
-				fi
-				if [ -z "$resolved_version" ]; then
-					epr "No exp version found for '$pkg_name', skipping."
-					return 0
-				fi
-			elif isoneof "$version_mode" latest beta; then
-				:
-			else
-				resolved_version=$version_mode
-			fi
-		fi
-		
-		version="$resolved_version"
-		[ -z "$version" ] && get_latest_ver=true
-		if [ $get_latest_ver = true ]; then
-			if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
-			local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${__AAV__}"
-			if [ -n "${__PKG_VERS_CACHE__["$vers_cache_key"]:-}" ]; then
-				pkgvers="${__PKG_VERS_CACHE__["$vers_cache_key"]}"
-			else
-				pkgvers=$(get_"${dl_from}"_vers)
-				__PKG_VERS_CACHE__["$vers_cache_key"]="$pkgvers"
-			fi
-			version=$(get_highest_ver <<<"$pkgvers") || version=$(head -1 <<<"$pkgvers")
-		fi
-	else
-		pr "Package name of '${table}' is '$pkg_name'"
-		pr "Skipping download source check, APKs for version '$version' found in cache."
-	fi
-	if [ -z "$version" ]; then
-		epr "empty version, not building ${table}."
-		return 0
-	fi
-
-	if [ "$mode_arg" = module ]; then
-		build_mode_arr=(module)
-	elif [ "$mode_arg" = apk ]; then
-		build_mode_arr=(apk)
-	elif [ "$mode_arg" = both ]; then
-		build_mode_arr=(apk module)
-	fi
-
-	pr "Choosing version '${version}' for ${table}"
-	local version_f=${version// /}
-	version_f=${version_f#v}
-	for arch in "${arch_list[@]}"; do
-		arch_f="${arch// /}"
-		local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-		local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
-		local stock_apk="$cached_stock_apk"
-		local all_apk="$cached_all_apk"
-		if [ -f "$all_apk" ]; then
-			local missing_arch=false
-			if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
-				unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
-			elif [ "$arch_f" = "arm-v7a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"; then
-				unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
-			fi
-			if [ "$missing_arch" = false ]; then
-				stock_apk="$all_apk"
-			fi
-		fi
-		if [ ! -f "$stock_apk" ]; then
-			# Redirect to staging directory for safe downloading and processing
-			stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-			all_apk="${apk_dl_dir}/${pkg_name}-${version_f}-all.apk"
-
-			for dl_p in "${DL_SRCS[@]}"; do
-				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-				pr "Downloading '${table}' from '${dl_p}'"
-				if ! isoneof $dl_p "${tried_dl[@]}"; then
-					if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
-						epr "ERROR: Could not get '${table}' from '${dl_p}'"
-						continue
-					fi
-				fi
-				if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
-					pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
-					continue
-				fi
-				if ! unzip -l "$stock_apk" >/dev/null 2>&1; then
-					epr "ERROR: Downloaded file from ${dl_p} is not a valid zip archive (Cloudflare block or bad file)!"
-					rm -f "$stock_apk"
-					continue
-				fi
-				if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
-					pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as XAPK/APKS..."
-					mv "$stock_apk" "${stock_apk}.xapk"
-					if ! _apkpure_install_xapk "${stock_apk}.xapk" "$stock_apk"; then
-						epr "ERROR: Failed to extract XAPK/APKS"
-						rm -f "${stock_apk}.xapk" "$stock_apk"
-						continue
-					fi
-					rm -f "${stock_apk}.xapk"
-				fi
-
-				local aapt_cmd="aapt"
-				if ! command -v aapt >/dev/null 2>&1; then
-					if [ -n "${ANDROID_SDK_ROOT:-}" ]; then
-						aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
-					fi
-					if [ ! -x "$aapt_cmd" ] && [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
-						aapt_cmd="$AAPT2"
-					fi
-				fi
-				if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
-					local downloaded_pkg downloaded_ver
-					if [[ "$aapt_cmd" == *"aapt2"* ]]; then
-						downloaded_pkg=$("$aapt_cmd" dump packagename "$stock_apk" 2>/dev/null | tr -d '\r\n') || true
-						# aapt2 dump badging doesn't always work exactly the same on older aapt2 binaries, but we can try
-						downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
-					else
-						downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
-						downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
-					fi
-					
-					if [ -z "$downloaded_pkg" ]; then
-						epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
-						rm -f "$stock_apk"
-						continue
-					fi
-
-					if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
-						epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
-						rm -f "$stock_apk"
-						continue
-					fi
-
-					if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" ]]; then
-						if [ "$version" != "$downloaded_ver" ]; then
-							pr "Updating version from '${version}' to '${downloaded_ver}' based on APK info"
-							version="$downloaded_ver"
-							version_f=${version// /}
-							version_f=${version_f#v}
-							
-							local new_stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
-							mv "$stock_apk" "$new_stock_apk"
-							stock_apk="$new_stock_apk"
+						if [ "$all_archs_found" = true ]; then
+							for arch in "${arch_list[@]}"; do
+								arch_f="${arch// /}"
+								local stock_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-${arch_f}.apk"
+								local all_apk="${apk_cache_dir}/${pkg_name}-${dyn_ver}-all.apk"
+								[ -f "$stock_apk" ] && touch "$stock_apk" 2>/dev/null || true
+								[ -f "$all_apk" ] && touch "$all_apk" 2>/dev/null || true
+							done
+							pr "Discovered highest version (v$dyn_ver) for '$pkg_name' in cache. Skipping download!"
+							skip_dl_source_check=true
+							version="$dyn_ver"
+							resolved_version="$dyn_ver"
 						fi
 					fi
 				fi
-				if ! verify_downloaded_apk "$stock_apk" "$pkg_name" "$dl_p"; then
-					rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
-					continue
+			fi
+		fi
+
+		if [ "$skip_dl_source_check" = false ]; then
+			# 2. Establish dl_from and fetch required HTML responses
+			for dl_p in "${DL_SRCS[@]}"; do
+				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+				
+				# If we need to find the latest version, do not use cache repositories as the source of truth
+				if [ -z "$resolved_version" ]; then
+					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "github" ]; then
+						continue
+					fi
 				fi
 
+				if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
+					args[${dl_p}_dlurl]=""
+					epr "ERROR: Could not get response for ${table} in ${dl_p}"
+					continue
+				fi
+				
+				# If pkg_name is still empty, try to scrape it from the response
+				if [ -z "$pkg_name" ]; then
+					if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
+						args[${dl_p}_dlurl]=""
+						epr "ERROR: Could not scrape pkg_name for ${table} in ${dl_p}"
+						continue
+					fi
+				fi
+				
+				tried_dl+=("$dl_p")
+				dl_from=$dl_p
 				break
 			done
-			if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" ]]; then
-				if check_is_universal "$stock_apk"; then
-					mv -f "$stock_apk" "$all_apk"
-					if [ -f "${stock_apk%.apk}.apkm" ]; then
-						mv -f "${stock_apk%.apk}.apkm" "${all_apk%.apk}.apkm"
+
+			if [ -z "$dl_from" ]; then
+				epr "ERROR: No valid download source found for ${table}."
+				return 0
+			fi
+
+			if [ -z "$pkg_name" ]; then
+				epr "ERROR: Could not determine pkg_name for ${table}."
+				return 0
+			fi
+			
+			# If we didn't run patches_list earlier because pkg_name was empty
+			if [ -z "$list_patches" ]; then
+				pr "Package name of '${table}' is '$pkg_name'"
+				list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+				
+				local cli_source_l="${args[cli_source],,}"
+				if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
+					if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+						epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+						return 0
 					fi
-					stock_apk="$all_apk"
+				fi
+			fi
+
+			if [ -z "$resolved_version" ]; then
+				if [ "$version_mode" = auto ]; then
+					if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
+						"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
+						epr "get_patch_last_supported_ver failed for '$pkg_name'"
+						return 0
+					fi
+				elif [ "$version_mode" = exp ]; then
+					local cli_source_l="${args[cli_source],,}"
+					if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+						wpr "ReVanced CLI does not support experimental versions."
+						return 0
+					fi
+					if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
+						epr "get_patch_exp_ver failed"
+					fi
+					if [ -z "$resolved_version" ]; then
+						epr "No exp version found for '$pkg_name', skipping."
+						return 0
+					fi
+				elif isoneof "$version_mode" latest beta; then
+					:
+				else
+					resolved_version=$version_mode
 				fi
 			fi
 			
-			# Sync pristine files from staging to cache
-			if [ -f "$stock_apk" ]; then
-				if [ "$stock_apk" = "$all_apk" ]; then
-					cp -f "$all_apk" "$cached_all_apk"
-					stock_apk="$cached_all_apk"
+			version="$resolved_version"
+			[ -z "$version" ] && get_latest_ver=true
+			if [ $get_latest_ver = true ]; then
+				if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
+				local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${__AAV__}"
+				if [ -n "${__PKG_VERS_CACHE__["$vers_cache_key"]:-}" ]; then
+					pkgvers="${__PKG_VERS_CACHE__["$vers_cache_key"]}"
 				else
-					cp -f "$stock_apk" "$cached_stock_apk"
-					stock_apk="$cached_stock_apk"
+					pkgvers=$(get_"${dl_from}"_vers)
+					__PKG_VERS_CACHE__["$vers_cache_key"]="$pkgvers"
 				fi
-				all_apk="$cached_all_apk"
-			fi
-
-			if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
-				pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
-				if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
-					if [ -f "$all_apk" ]; then
-						gh release upload "$pkg_name" "$all_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
-					else
-						gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
-					fi
-				else
-					wpr "Failed to view/create release $pkg_name on $UPLOAD_APKS_REPO"
-				fi
+				version=$(get_highest_ver <<<"$pkgvers") || version=$(head -1 <<<"$pkgvers")
 			fi
 		else
-			pr "Found APK in cache: ${stock_apk}. Skipping download!"
+			pr "Package name of '${table}' is '$pkg_name'"
+			pr "Skipping download source check, APKs for version '$version' found in cache."
 		fi
-		if [ -f "$stock_apk" ]; then break; fi
+		if [ -z "$version" ]; then
+			epr "empty version, not building ${table}."
+			continue
+		fi
+
+		if [ "$mode_arg" = module ]; then
+			build_mode_arr=(module)
+		elif [ "$mode_arg" = apk ]; then
+			build_mode_arr=(apk)
+		elif [ "$mode_arg" = both ]; then
+			build_mode_arr=(apk module)
+		fi
+
+		pr "Choosing version '${version}' for ${table}"
+		local version_f=${version// /}
+		version_f=${version_f#v}
+		for arch in "${arch_list[@]}"; do
+			arch_f="${arch// /}"
+			local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+			local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
+			local stock_apk="$cached_stock_apk"
+			local all_apk="$cached_all_apk"
+			if [ -f "$all_apk" ]; then
+				local missing_arch=false
+				if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
+					unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
+				elif [ "$arch_f" = "arm-v7a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/armeabi-v7a/"; then
+					unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
+				fi
+				if [ "$missing_arch" = false ]; then
+					stock_apk="$all_apk"
+				fi
+			fi
+			if [ ! -f "$stock_apk" ]; then
+				# Redirect to staging directory for safe downloading and processing
+				stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
+				all_apk="${apk_dl_dir}/${pkg_name}-${version_f}-all.apk"
+
+				for dl_p in "${DL_SRCS[@]}"; do
+					if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+					pr "Downloading '${table}' from '${dl_p}'"
+					if ! isoneof $dl_p "${tried_dl[@]}"; then
+						if ! get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; then
+							epr "ERROR: Could not get '${table}' from '${dl_p}'"
+							continue
+						fi
+					fi
+					if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
+						pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+						continue
+					fi
+					if ! unzip -l "$stock_apk" >/dev/null 2>&1; then
+						epr "ERROR: Downloaded file from ${dl_p} is not a valid zip archive (Cloudflare block or bad file)!"
+						rm -f "$stock_apk"
+						continue
+					fi
+					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
+						pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as XAPK/APKS..."
+						mv "$stock_apk" "${stock_apk}.xapk"
+						if ! _apkpure_install_xapk "${stock_apk}.xapk" "$stock_apk"; then
+							epr "ERROR: Failed to extract XAPK/APKS"
+							rm -f "${stock_apk}.xapk" "$stock_apk"
+							continue
+						fi
+						rm -f "${stock_apk}.xapk"
+					fi
+
+					local aapt_cmd="aapt"
+					if ! command -v aapt >/dev/null 2>&1; then
+						if [ -n "${ANDROID_SDK_ROOT:-}" ]; then
+							aapt_cmd=$(ls -1 $ANDROID_SDK_ROOT/build-tools/*/aapt 2>/dev/null | tail -1) || true
+						fi
+						if [ ! -x "$aapt_cmd" ] && [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+							aapt_cmd="$AAPT2"
+						fi
+					fi
+					if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
+						local downloaded_pkg downloaded_ver
+						if [[ "$aapt_cmd" == *"aapt2"* ]]; then
+							downloaded_pkg=$("$aapt_cmd" dump packagename "$stock_apk" 2>/dev/null | tr -d '\r\n') || true
+							# aapt2 dump badging doesn't always work exactly the same on older aapt2 binaries, but we can try
+							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+						else
+							downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
+							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+						fi
+						
+						if [ -z "$downloaded_pkg" ]; then
+							epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
+							rm -f "$stock_apk"
+							continue
+						fi
+
+						if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
+							epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
+							rm -f "$stock_apk"
+							continue
+						fi
+
+						if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" ]]; then
+							if [ "$version" != "$downloaded_ver" ]; then
+								pr "Updating version from '${version}' to '${downloaded_ver}' based on APK info"
+								version="$downloaded_ver"
+								version_f=${version// /}
+								version_f=${version_f#v}
+								
+								local new_stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
+								mv "$stock_apk" "$new_stock_apk"
+								stock_apk="$new_stock_apk"
+							fi
+						fi
+					fi
+					if ! verify_downloaded_apk "$stock_apk" "$pkg_name" "$dl_p"; then
+						rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+						continue
+					fi
+
+					break
+				done
+				if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" ]]; then
+					if check_is_universal "$stock_apk"; then
+						mv -f "$stock_apk" "$all_apk"
+						if [ -f "${stock_apk%.apk}.apkm" ]; then
+							mv -f "${stock_apk%.apk}.apkm" "${all_apk%.apk}.apkm"
+						fi
+						stock_apk="$all_apk"
+					fi
+				fi
+				
+				# Sync pristine files from staging to cache
+				if [ -f "$stock_apk" ]; then
+					if [ "$stock_apk" = "$all_apk" ]; then
+						cp -f "$all_apk" "$cached_all_apk"
+						stock_apk="$cached_all_apk"
+					else
+						cp -f "$stock_apk" "$cached_stock_apk"
+						stock_apk="$cached_stock_apk"
+					fi
+					all_apk="$cached_all_apk"
+				fi
+
+				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "github" ] && [ "$dl_p" != "archive" ]; then
+					pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
+					if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
+						if [ -f "$all_apk" ]; then
+							gh release upload "$pkg_name" "$all_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+						else
+							gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+						fi
+					else
+						wpr "Failed to view/create release $pkg_name on $UPLOAD_APKS_REPO"
+					fi
+				fi
+			else
+				pr "Found APK in cache: ${stock_apk}. Skipping download!"
+			fi
+			if [ -f "$stock_apk" ]; then break; fi
+		done
+		if [ ! -f "$stock_apk" ]; then
+			epr "ERROR: Could not download '${table}' for version $resolved_version"
+			continue
+		fi
+
+		if [ -f "$stock_apk" ]; then
+			final_stock_apk="$stock_apk"
+			final_all_apk="${all_apk:-}"
+			final_version="$version"
+			break
+		fi
 	done
+
+	stock_apk="$final_stock_apk"
+	all_apk="$final_all_apk"
+	version="$final_version"
+	
 	if [ ! -f "$stock_apk" ]; then
-		epr "ERROR: Could not download '${table}'"
+		epr "ERROR: Could not download '${table}' after trying all supported versions."
 		return 0
 	fi
 
