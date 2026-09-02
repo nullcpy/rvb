@@ -12,6 +12,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-be
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/brave-browser-beta/com.brave.browser_beta"
 apkcombo-dlurl = "https://apkcombo.com/brave-beta/com.brave.browser_beta"
+github-dlurl = "https://github.com/brave/brave-browser"
+github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
+
 [brave-browser-morphe-nightly]
 enabled = true
 pkg-name = "com.brave.browser_nightly"
@@ -26,6 +29,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-ni
 dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
 apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
+github-dlurl = "https://github.com/brave/brave-browser"
+github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
+
 [titanium-browser-morphe]
 enabled = true
 pkg-name = "io.github.jqssun.helium"
