@@ -55,6 +55,7 @@ while IFS='|' read -r group app; do
     apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" temp_all_configs.json)
     apkpure_url=$(jq -r ".\"$app\".\"apkpure-dlurl\" // empty" temp_all_configs.json)
     apkcombo_url=$(jq -r ".\"$app\".\"apkcombo-dlurl\" // empty" temp_all_configs.json)
+    github_url=$(jq -r ".\"$app\".\"github-dlurl\" // empty" temp_all_configs.json)
 
     dlurls=()
     sources=()
@@ -62,6 +63,7 @@ while IFS='|' read -r group app; do
     [ -n "$apkmirror_url" ] && { dlurls+=("$apkmirror_url"); sources+=("apkmirror"); }
     [ -n "$apkpure_url" ] && { dlurls+=("$apkpure_url"); sources+=("apkpure"); }
     [ -n "$apkcombo_url" ] && { dlurls+=("$apkcombo_url"); sources+=("apkcombo"); }
+    [ -n "$github_url" ] && { dlurls+=("$github_url"); sources+=("github"); }
 
     if [ ${#dlurls[@]} -eq 0 ]; then
         echo "::warning::No dlurl for $app, skipping"
@@ -94,6 +96,10 @@ while IFS='|' read -r group app; do
             elif [[ "$source" == "apkcombo" ]]; then
                 get_apkcombo_resp "$dlurl" || { echo "::warning::Failed apkcombo resp for $app"; continue; }
                 vers=$(get_apkcombo_vers) || { echo "::warning::Failed apkcombo vers for $app"; continue; }
+                latest_ver=$(echo "$vers" | get_highest_ver) || true
+            elif [[ "$source" == "github" ]]; then
+                get_github_resp "$dlurl" || { echo "::warning::Failed github resp for $app"; continue; }
+                vers=$(get_github_vers) || { echo "::warning::Failed github vers for $app"; continue; }
                 latest_ver=$(echo "$vers" | get_highest_ver) || true
             fi
             
