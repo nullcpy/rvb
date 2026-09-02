@@ -9,8 +9,6 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.disney.disneyplus"
-
 [prime-video-morphe-androidtv]
 enabled = true 
 pkg-name = "com.amazon.amazonvideo.livingroom"
@@ -23,8 +21,6 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi 320dpi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.amazon.amazonvideo.livingroom"
-
 [hbomax-morphe-androidtv]
 enabled = true 
 pkg-name = "com.wbd.hbomax"
@@ -36,8 +32,6 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.wbd.hbomax"
-
 [peacock-morphe-androidtv]
 enabled = true 
 pkg-name = "com.peacocktv.peacockandroid"
@@ -51,8 +45,6 @@ dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
 # apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
 apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.peacocktv.peacockandroid"
-
 [tubi-morphe-androidtv]
 enabled = true 
 pkg-name = "com.tubitv"
@@ -64,8 +56,6 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.tubitv"
-
 [vix-morphe-androidtv]
 enabled = true 
 pkg-name = "com.univision.prendetv"
@@ -77,8 +67,6 @@ patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.univision.prendetv"
-
 [plutotv-morphe-androidtv]
 enabled = true 
 pkg-name = "tv.pluto.android"
@@ -91,8 +79,6 @@ cli-source = "MorpheApp/morphe-desktop"
 dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
 uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/tv.pluto.android"
-
 [netflix-morphe-androidtv]
 enabled = true 
 pkg-name = "com.netflix.ninja"
@@ -107,8 +93,3 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv"
 uptodown-dlurl = "https://netflix-inc-netflix.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja"
 apkcombo-dlurl = "https://apkcombo.com/netflix-tv/com.netflix.ninja"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.netflix.ninja"
-
-
-
-

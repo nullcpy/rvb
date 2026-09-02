@@ -11,8 +11,6 @@ uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.adobe.psmobile"
-
 [google-recorder-morphe]
 enabled = true
 pkg-name = "com.google.android.apps.recorder"
@@ -26,8 +24,6 @@ uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.recorder"
-
 [microsoft-lens-morphe]
 enabled = true
 app-name = "microsoft-lens"
@@ -39,8 +35,6 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microsoft.lens"
-
 [photomath-morphe]
 enabled = true
 app-name = "photomath"
@@ -53,8 +47,6 @@ uptodown-dlurl = "https://photomath.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.microblink.photomath"
-
 [viber-morphe]
 enabled = true
 app-name = "viber"
@@ -66,8 +58,6 @@ patches-source = "RookieEnough/De-Vanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.viber.voip"
-
 [pixiv-morphe]
 enabled = true
 app-name = "pixiv"
@@ -79,9 +69,7 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/jp.pxv.android"
 # archive-dlurl = ""
-
 [strava-morphe]
 enabled = true
 pkg-name = "com.strava"
@@ -95,10 +83,4 @@ cli-source = "MorpheApp/morphe-desktop"
 # apkpure-dlurl = "https://apkpure.com/strava-run-hike-android-exercise-laugh/com.strava"
 apkcombo-dlurl = "https://apkcombo.com/it/strava/com.strava"
 # dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.strava"
 # archive-dlurl = ""
-
-
-
-
-

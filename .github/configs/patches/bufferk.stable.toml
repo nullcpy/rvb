@@ -11,8 +11,6 @@ uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.truecaller"
-
 [medium-morphe]
 enabled = true
 pkg-name = "com.medium.reader"
@@ -25,6 +23,3 @@ cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://medium.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
 dpi = "nodpi anydpi auto"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.medium.reader"
-
-

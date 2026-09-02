@@ -13,8 +13,6 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.youtube"
-
 [youtube-music-anddea]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
@@ -30,8 +28,6 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.youtube.music"
-
 [google-photos-morphe]
 enabled = true
 pkg-name = "com.google.android.apps.photos"
@@ -45,8 +41,6 @@ cli-source = "MorpheApp/morphe-desktop"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.google.android.apps.photos"
-
 [instagram-morphe]
 enabled = true
 pkg-name = "com.instagram.android"
@@ -61,8 +55,6 @@ uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.instagram.android"
-
 [tiktok-morphe]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
@@ -76,8 +68,6 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.zhiliaoapp.musically"
-
 [reddit-morphe-adobo]
 enabled = true
 pkg-name = "com.reddit.frontpage"
@@ -91,11 +81,3 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
 dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.reddit.frontpage"
-
-
-
-
-
-
-
