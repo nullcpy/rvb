@@ -1862,17 +1862,20 @@ patch_apk() {
 		local built_apk=""
 		if echo "$patches_to_run" | grep -qwi "clone"; then
 			built_apk=$(find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | grep -iE "/clone|_c_" | head -n 1)
-		fi
-		if [ -z "$built_apk" ]; then
+			if [ -z "$built_apk" ]; then
+				echo "[-] ERROR: Clone build was requested but no clone APK was generated!"
+				return 1
+			fi
+		else
 			built_apk=$(find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | head -n 1)
 		fi
 		if [ -n "$built_apk" ] && [ -f "$built_apk" ]; then
 			mv "$built_apk" "$patched_apk"
-			rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
+			#rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
 			return 0
 		else
 			rm -f "$patched_apk" 2>/dev/null || :
-			rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
+			#rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
 			return 1
 		fi
 	fi
