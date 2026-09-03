@@ -1561,6 +1561,7 @@ get_github_resp() {
 		__ARCHIVE_RESP__="${__DL_RESP_CACHE__["github_archive_resp_$url"]}"
 		__ARCHIVE_PKG_NAME__="${__DL_RESP_CACHE__["github_archive_pkg_$url"]}"
 		__GITHUB_URL__="${__DL_RESP_CACHE__["github_url_$url"]}"
+		__GITHUB_TAG__="${__DL_RESP_CACHE__["github_tag_$url"]}"
 		return 0
 	fi
 	local repo tag resp endpoint
@@ -1568,6 +1569,16 @@ get_github_resp() {
 	repo=$(cut -d/ -f4-5 <<<"$url")
 	tag=${url%/}
 	tag=${tag##*/}
+	
+	if [ "$tag" = "${repo##*/}" ]; then
+		if [ -n "${version:-}" ]; then
+			tag="v${version}"
+		elif [ -n "${resolved_version:-}" ]; then
+			tag="v${resolved_version}"
+		else
+			tag="latest"
+		fi
+	fi
 	
 	endpoint="tags/${tag}"
 	[ "$tag" = "latest" ] && endpoint="latest"
@@ -1597,15 +1608,17 @@ get_github_resp() {
 	if [ -z "$__ARCHIVE_PKG_NAME__" ]; then return 1; fi
 	
 	__GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+	__GITHUB_TAG__="$tag"
 	
 	__DL_RESP_CACHE__["github_archive_resp_$url"]="$__ARCHIVE_RESP__"
 	__DL_RESP_CACHE__["github_archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
 	__DL_RESP_CACHE__["github_url_$url"]="$__GITHUB_URL__"
+	__DL_RESP_CACHE__["github_tag_$url"]="$__GITHUB_TAG__"
 }
 
 # Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
 get_github_vers() {
-    sed 's/^[^-]*-//;s/-\(all\|arm64-v8a\|arm-v7a\|x86\|x86_64\)\.\(apk\|apkm\|xapk\|apks\)$//g' <<<"$__ARCHIVE_RESP__"
+    echo "${__GITHUB_TAG__#v}"
 }
 
 # Extracts package name by stripping everything from the first hyphen '-' onwards
