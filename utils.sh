@@ -1494,7 +1494,19 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 dl_github() {
     local url=$1 version=$2 output=$3 arch=$4
     local path="" version_f=${version// /}
-	local base_url=${__GITHUB_URL__:-$url}
+	local repo=$(cut -d/ -f4-5 <<<"$url")
+    
+    local exact_tag=""
+    for t in $__GITHUB_TAG__; do
+        if [ "$t" = "v${version_f#v}" ] || [ "$t" = "${version_f#v}" ]; then
+            exact_tag="$t"
+            break
+        fi
+    done
+    if [ -z "$exact_tag" ]; then
+        exact_tag="v${version_f#v}"
+    fi
+	local base_url="https://github.com/${repo}/releases/download/${exact_tag}"
     
 local regex=""
     if [ -n "${args[github_regex]:-}" ]; then
@@ -1580,10 +1592,13 @@ get_github_resp() {
 		fi
 	fi
 	
-	endpoint="tags/${tag}"
-	[ "$tag" = "latest" ] && endpoint="latest"
+	if [ "$tag" = "latest" ]; then
+		endpoint=""
+	else
+		endpoint="tags/${tag}"
+	fi
 	
-	if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases/${endpoint}" -); then
+	if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases${endpoint:+/$endpoint}" -); then
 		if [ "$tag" != "latest" ] && [[ "$tag" == v* ]]; then
 			tag="${tag#v}"
 			endpoint="tags/${tag}"
@@ -1596,11 +1611,12 @@ get_github_resp() {
 	fi
 
 	if [ "$tag" = "latest" ]; then
-		tag=$(jq -r '.tag_name' <<<"$resp")
+		tag=$(jq -r '.[].tag_name' <<<"$resp")
+		__ARCHIVE_RESP__=$(jq -r '.[].assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
+	else
+		__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
 	fi
 	
-	# Extract only supported file extensions
-	__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
 	if [ -z "$__ARCHIVE_RESP__" ]; then return 1; fi
 	
 	# Grab the package name exactly like how get_archive_vers isolates the version
@@ -1618,7 +1634,7 @@ get_github_resp() {
 
 # Extracts version matching the archive logic: strips prefix (up to first '-') and suffix (arch/extension)
 get_github_vers() {
-    echo "${__GITHUB_TAG__#v}"
+    echo "$__GITHUB_TAG__" | sed 's/^v//'
 }
 
 # Extracts package name by stripping everything from the first hyphen '-' onwards
