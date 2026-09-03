@@ -1860,8 +1860,13 @@ patch_apk() {
 		PATCH_OUTPUT+=$'\n'"$build_op"
 
 		local built_apk=""
+		echo "[DEBUG] Found APKs in output directory:"
+		find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" || true
+		
 		if echo "$patches_to_run" | grep -qwi "clone"; then
+			echo "[DEBUG] Clone patch was requested. Filtering for /clone or _c_..."
 			built_apk=$(find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | grep -iE "/clone|_c_" | head -n 1)
+			echo "[DEBUG] Filtered clone APK: '$built_apk'"
 			if [ -z "$built_apk" ]; then
 				echo "[-] ERROR: Clone build was requested but no clone APK was generated!"
 				return 1
