@@ -1494,19 +1494,23 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 dl_github() {
     local url=$1 version=$2 output=$3 arch=$4
     local path="" version_f=${version// /}
-	local repo=$(cut -d/ -f4-5 <<<"$url")
+    local repo=$(cut -d/ -f4-5 <<<"$url")
+    local base_url=${__GITHUB_URL__:-$url}
     
-    local exact_tag=""
-    for t in $__GITHUB_TAG__; do
-        if [ "$t" = "v${version_f#v}" ] || [ "$t" = "${version_f#v}" ]; then
-            exact_tag="$t"
-            break
+    # If __GITHUB_TAG__ contains multiple tags (from /releases array), we must find the exact one
+    if echo "$__GITHUB_TAG__" | grep -q "[[:space:]]"; then
+        local exact_tag=""
+        for t in $__GITHUB_TAG__; do
+            if [ "$t" = "v${version_f#v}" ] || [ "$t" = "${version_f#v}" ]; then
+                exact_tag="$t"
+                break
+            fi
+        done
+        if [ -z "$exact_tag" ]; then
+            exact_tag="v${version_f#v}"
         fi
-    done
-    if [ -z "$exact_tag" ]; then
-        exact_tag="v${version_f#v}"
+        base_url="https://github.com/${repo}/releases/download/${exact_tag}"
     fi
-	local base_url="https://github.com/${repo}/releases/download/${exact_tag}"
     
 local regex=""
     if [ -n "${args[github_regex]:-}" ]; then
@@ -1536,15 +1540,17 @@ local regex=""
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
+                    p="${p%$'\r'}"
                     if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
                         path="$p"
                         break 3
                     fi
-                done <<<"$__ARCHIVE_RESP__"
+                done <<<"$(echo "$__ARCHIVE_RESP__" | tr -d '\r')"
             done
         done
     fi
     
+    path="${path%$'\r'}"
     if [ -z "$path" ]; then
         epr "Version ${version} with arch ${arch} not found in github"
         return 1
@@ -1643,10 +1649,119 @@ get_github_pkg_name() {
 }
 
 # -------------------- cache_repo --------------------
-dl_cache_repo() { dl_github "$@"; }
-get_cache_repo_resp() { get_github_resp "$@"; }
-get_cache_repo_vers() { get_github_vers "$@"; }
-get_cache_repo_pkg_name() { get_github_pkg_name "$@"; }
+get_cache_repo_resp() {
+	local url="${1}"
+	if [ -n "${__DL_RESP_CACHE__["cache_repo_archive_resp_$url"]:-}" ]; then
+		__ARCHIVE_RESP__="${__DL_RESP_CACHE__["cache_repo_archive_resp_$url"]}"
+		__ARCHIVE_PKG_NAME__="${__DL_RESP_CACHE__["cache_repo_archive_pkg_$url"]}"
+		__CACHE_REPO_URL__="${__DL_RESP_CACHE__["cache_repo_url_$url"]}"
+		__CACHE_REPO_TAG__="${__DL_RESP_CACHE__["cache_repo_tag_$url"]}"
+		return 0
+	fi
+	local repo tag resp endpoint
+	
+	repo=$(cut -d/ -f4-5 <<<"$url")
+	tag=${url%/}
+	tag=${tag##*/}
+	endpoint="tags/${tag}"
+	
+	if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases/${endpoint}" -); then
+        return 1
+	fi
+	
+	# Extract only supported file extensions
+	__ARCHIVE_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
+	if [ -z "$__ARCHIVE_RESP__" ]; then return 1; fi
+	
+	# Grab the package name exactly like how get_archive_vers isolates the version
+	__ARCHIVE_PKG_NAME__=$(sed 's/-.*//' <<<"$__ARCHIVE_RESP__" | head -n 1)
+	if [ -z "$__ARCHIVE_PKG_NAME__" ]; then return 1; fi
+	
+	__CACHE_REPO_URL__="https://github.com/${repo}/releases/download/${tag}"
+	__CACHE_REPO_TAG__="$tag"
+	
+	__DL_RESP_CACHE__["cache_repo_archive_resp_$url"]="$__ARCHIVE_RESP__"
+	__DL_RESP_CACHE__["cache_repo_archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
+	__DL_RESP_CACHE__["cache_repo_url_$url"]="$__CACHE_REPO_URL__"
+	__DL_RESP_CACHE__["cache_repo_tag_$url"]="$__CACHE_REPO_TAG__"
+}
+
+get_cache_repo_vers() {
+    # cache_repo is never used for checking versions, only for downloading
+    echo "${__CACHE_REPO_TAG__#v}"
+}
+
+get_cache_repo_pkg_name() {
+    echo "$__ARCHIVE_PKG_NAME__"
+}
+
+dl_cache_repo() {
+    local url=$1 version=$2 output=$3 arch=$4
+    local path="" version_f=${version// /}
+	local base_url=${__CACHE_REPO_URL__:-$url}
+    
+    local regex=""
+    if [ -n "${args[cache_repo_regex]:-}" ]; then
+        if [[ "${args[cache_repo_regex]}" == *":"* ]]; then
+            regex=$(echo "${args[cache_repo_regex]}" | awk -F'|' -v a="$arch" '{
+                for(i=1;i<=NF;i++) {
+                    split($i, kv, ":")
+                    gsub(/^[ \t'\''"]+|[ \t'\''"]+$/, "", kv[1])
+                    if(kv[1] == a) {
+                        gsub(/^[ \t'\''"]+|[ \t'\''"]+$/, "", kv[2])
+                        print kv[2]
+                        exit
+                    }
+                }
+            }')
+        else
+            regex="${args[cache_repo_regex]}"
+        fi
+    fi
+
+    if [ -n "$regex" ]; then
+        regex="${regex//\{version\}/${version_f#v}}"
+        regex="${regex//\{arch\}/${arch}}"
+        path=$(grep -iE "$regex" <<<"$__ARCHIVE_RESP__" | head -1)
+    else
+        # Matches the exact file selection logic from dl_archive
+        for a in "${arch// /}" "all"; do
+            for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+                # use tr to strip carriage returns (CR) from jq output for correct bash matching
+                while IFS= read -r p; do
+                    p="${p%$'\r'}"
+                    if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                        path="$p"
+                        break 3
+                    fi
+                done <<<"$(echo "$__ARCHIVE_RESP__" | tr -d '\r')"
+            done
+        done
+    fi
+    
+    # Strip any \r from path just in case
+    path="${path%$'\r'}"
+    if [ -z "$path" ]; then
+        epr "Version ${version} with arch ${arch} not found in cache_repo"
+        return 1
+    fi
+    
+    local ext="${path##*.}"
+    case "$ext" in
+        apk)
+            req "${base_url}/${path}" "$output"
+            ;;
+        apkm|xapk|apks)
+			local bundle="${output}.${ext}"
+			req "${base_url}/${path}" "$bundle" || return 1
+			merge_splits "$bundle" "$output"
+            ;;
+        *)
+            epr "Unsupported cache_repo file type for ${path}"
+            return 1
+            ;;
+    esac
+}
 
 
 # -------------------- direct --------------------
