@@ -1841,7 +1841,7 @@ patch_apk() {
 
 		local patches_to_run=""
 		if [ -n "$per_bundle_ed" ]; then
-			patches_to_run=$(echo "$per_bundle_ed" | grep -oP "['\"]\K[^'\"]+" 2>/dev/null | tr '\n' ' ' | sed 's/ *$//')
+			patches_to_run=$(echo "$per_bundle_ed" | sed -E 's/(-[ed] |--exclusive)//g' | tr -d "'\"" | tr '\n' ' ' | sed 's/ *$//')
 		fi
 		if [ -z "$patches_to_run" ]; then
 			patches_to_run="unlock_developer_options remove_snooze_warning remove_ads amoled_theme instafel"
