@@ -1,5 +1,7 @@
-brave-browser-morphe (arm64-v8a): 1.94.119  
-brave-browser-morphe (arm-v7a): 1.94.119  
+instagram-instafel (arm64-v8a): 445.0.0.45.83  
+instagram-instafel (arm-v7a): 445.0.0.45.83  
+instagram-instafel-clone (arm64-v8a): 445.0.0.45.83  
+instagram-instafel-clone (arm-v7a): 445.0.0.45.83  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -7,6 +9,6 @@ brave-browser-morphe (arm-v7a): 1.94.119
 
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
-CLI: MorpheApp/morphe-desktop-1.14.0-all.jar  
-Patches: kveld9/patches-1.11.0.mpp  
-[Changelog](https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.11.0)  
+CLI: instafel/ifl-patcher-v4.7.0-release.jar  
+Patches: instafel/ifl-patcher-core-a3b665e.jar  
+[Changelog](https://github.com/instafel/pc-rel/releases/tag/a3b665e-4.7.0)  
