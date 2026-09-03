@@ -1228,7 +1228,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-phone/com.google.android.dialer"
   },
   "proton-mail-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "proton-mail",
     "rv-brand": "morphe",
@@ -1244,7 +1244,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "showly-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "showly",
     "rv-brand": "morphe",
@@ -1356,7 +1356,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
   "brave-browser-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "brave-browser",
     "rv-brand": "morphe",
