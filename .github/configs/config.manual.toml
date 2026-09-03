@@ -3,7 +3,7 @@
 enable-module-update = true
 
 [instagram-instafel]
-enabled = true
+enabled = false
 pkg-name = "com.instagram.android"
 app-name = "instagram"
 rv-brand = "instafel"
