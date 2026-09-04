@@ -1718,16 +1718,12 @@ local regex=""
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
-                    if [ -n "$version_code" ]; then
-                        if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
-                            path="$p"
-                            break 3
-                        fi
-                    else
-                        if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
-                            path="$p"
-                            break 3
-                        fi
+                    if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
+                        path="$p"
+                        break 3
+                    elif [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                        path="$p"
+                        break 3
                     fi
                 done <<<"$norm_resp"
             done
