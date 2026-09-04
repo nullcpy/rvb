@@ -12,6 +12,8 @@ arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
+apkpure-dlurl = "https://apkpure.com/disneyplus-app/com.disney.disneyplus"
+apkcombo-dlurl = "https://apkcombo.com/disney-plus/com.disney.disneyplus"
 
 
 
