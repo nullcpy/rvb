@@ -872,7 +872,33 @@ _fallback_get(){
 	CF_COOKIES=""
 	user_agent="${DEFAULT_UA}"
 }
+
+_cf_cffi_get() {
+	local url=$1
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
+	fi
+	[ -z "$py_cmd" ] && return 2
+	local py_script="${CWD}/scripts/cf_get.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/scripts/cf_get.py"
+	[ ! -f "$py_script" ] && return 2
+
+	local cffi_res
+	if cffi_res=$("$py_cmd" "$py_script" "$url" "$TEMP_DIR/cookie.txt" 2>/dev/null); then
+		html="$cffi_res"
+		CF_COOKIES=""
+		user_agent="${DEFAULT_UA}"
+		return 0
+	else
+		return 1
+	fi
+}
+
 _unqueued_cf_get() {
+	_cf_cffi_get "$@" && return 0
 	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
 		_trawl_8191_get "$@" && return 0
 	else
@@ -1125,7 +1151,27 @@ dl_apkmirror() {
 	if [ -z "$release_url" ]; then
 		local list_url="${url%/}"
 		local version_href=""
-		for page_num in $(seq 1 10); do
+
+		# 1. Targeted search query (?s=version) first as inspired by uni-apks
+		local search_target_url="${list_url}/?s=${clean_version}"
+		if _cf_get "$search_target_url" 2>/dev/null && [ -n "$html" ]; then
+			local s_flat=$(echo "$html" | tr -d '\n\r')
+			local s_split="${s_flat//<\/a>/<\/a>
+}"
+			local s_links=$(echo "$s_split" | grep -oP 'href="\K/apk/[^"]+')
+			version_href=$(echo "$s_links" | grep -F "$search_version-release" | head -1) || true
+			if [ -z "$version_href" ]; then
+				version_href=$(echo "$s_split" | grep -F "$version" | grep -oP 'href="\K/apk/[^"]+' | grep -F -- '-release/' | head -1) || true
+			fi
+			if [ -n "$version_href" ]; then
+				release_url="$base_url$version_href"
+				_cf_get "$release_url" || return 1
+				resp="$html"
+			fi
+		fi
+
+		if [ -z "$release_url" ]; then
+			for page_num in $(seq 1 10); do
 			local page_url="$list_url/"
 			[[ $page_num -gt 1 ]] && page_url="$list_url/page/$page_num/"
 			_cf_get "$page_url" || return 1
@@ -1160,13 +1206,14 @@ dl_apkmirror() {
 				version_href=$(echo "$all_links" | grep -E "${short_search_version}(-[0-9])?-release/?$" | head -1) || true
 			fi
 
-			if [ -n "$version_href" ]; then
-				release_url="$base_url$version_href"
-				_cf_get "$release_url" || return 1
-				resp="$html"
-				break
-			fi
-		done
+				if [ -n "$version_href" ]; then
+					release_url="$base_url$version_href"
+					_cf_get "$release_url" || return 1
+					resp="$html"
+					break
+				fi
+			done
+		fi
 		
 		# Fallback to direct search if not found on first 5 pages
 		if [ -z "$release_url" ]; then

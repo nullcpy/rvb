@@ -38,10 +38,21 @@ def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, 
         node_arch = re.sub(r'<[^>]+>', '', cells[1]).strip() if len(cells) > 1 else ""
         node_dpi = re.sub(r'<[^>]+>', '', cells[3]).strip() if len(cells) > 3 else ""
 
-        vc_m = re.search(r'class="colorLightBlack"[^>]*>([0-9]+)</span>', r)
-        if not vc_m:
-            vc_m = re.search(r'span class="[^"]*colorLightBlack[^"]*"[^>]*>.*?([0-9]+).*?</span>', r, re.DOTALL)
-        node_vc = vc_m.group(1).strip() if vc_m else ""
+        node_vc = ""
+        if len(cells) > 0:
+            spans = re.findall(r'<span\s+class="([^"]*colorLightBlack[^"]*)"[^>]*>(.*?)</span>', cells[0], re.DOTALL)
+            for cls, content in spans:
+                if "dateyear_utc" in cls or "wrapText" in cls or "dateyear_utc" in content:
+                    continue
+                clean_txt = re.sub(r'<[^>]+>', '', content).strip()
+                if clean_txt.isdigit():
+                    node_vc = clean_txt
+                    break
+        if not node_vc:
+            vc_m = re.search(r'class="colorLightBlack"[^>]*>([0-9]+)</span>', r)
+            if not vc_m:
+                vc_m = re.search(r'span class="[^"]*colorLightBlack[^"]*"[^>]*>.*?([0-9]+).*?</span>', r, re.DOTALL)
+            node_vc = vc_m.group(1).strip() if vc_m else ""
 
         if node_apk_bundle != apk_bundle:
             continue
