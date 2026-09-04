@@ -9,8 +9,8 @@
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
       "com.wbd.hbomax": "98d6f8aece496a778e33edefaea58184",
-      "shared": "0a0b8a0ed50ebd369dd821e097a588bd",
-      "tv.pluto.android": "21b638f3a2c93b1afbea6acdb54d2f4f"
+      "shared": "d700e98c7610bc1dbc6470c84ae59d3d",
+      "tv.pluto.android": "25fe673a221a25e3a66b2c405a62b119"
     }
   },
   "anddea/revanced-patches": {
@@ -52,9 +52,9 @@
   },
   "crimera/piko": {
     "dev": {
-      "com.instagram.android": "4e805e89067b1be9c2f9eaee6d96b151",
-      "com.twitter.android": "a90b18f719b69483ef32f9da4d063229",
-      "shared": "d5f222c6f361bf7d083990a3056bf800"
+      "com.instagram.android": "6358d74e30663cc23c1cd55dec2c8170",
+      "com.twitter.android": "6f08a40ff5b9cb3cd48a662c1e447145",
+      "shared": "9881fc864bce56b5c5ae1f06d17ceab4"
     },
     "stable": {
       "com.instagram.android": "084b5083d2993f8e93436d3ba6df3d7d",
@@ -82,7 +82,10 @@
       "com.byairapp.android": "56242293516f595ae51b46c37d9c66b3",
       "shared": "cf16eb2095610d4843c17c9cc833b2d0"
     },
-    "stable": {}
+    "stable": {
+      "com.byairapp.android": "56242293516f595ae51b46c37d9c66b3",
+      "shared": "cf16eb2095610d4843c17c9cc833b2d0"
+    }
   },
   "hoo-dles/morphe-patches": {
     "dev": {
