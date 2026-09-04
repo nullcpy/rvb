@@ -1669,7 +1669,7 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
 dl_github() {
-    local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false} version_code=${7:-}
+    local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false}
     local path="" version_f=${version// /}
     local repo=$(cut -d/ -f4-5 <<<"$url")
     local base_url=${__GITHUB_URL__:-$url}
@@ -1718,10 +1718,7 @@ local regex=""
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
-                    if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
-                        path="$p"
-                        break 3
-                    elif [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                    if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
                         path="$p"
                         break 3
                     fi
