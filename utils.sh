@@ -970,8 +970,6 @@ apkmirror_search() {
 		if py_res=$("$py_cmd" "$py_script" "$dpi" "$arch" "$apk_bundle" "$clean_search_version" "$search_version" "$target_vc" <<<"$resp") && [ -n "$py_res" ]; then
 			echo "$py_res"
 			return 0
-		else
-			return 1
 		fi
 	fi
 
@@ -1605,12 +1603,16 @@ dl_archive() {
 	for a in "${arch// /}" "all"; do
 		for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
 			while IFS= read -r p; do
-				if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
-					path="$p"
-					break 3
-				elif [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
-					path="$p"
-					break 3
+				if [ -n "$version_code" ]; then
+					if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
+						path="$p"
+						break 3
+					fi
+				else
+					if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+						path="$p"
+						break 3
+					fi
 				fi
 			done <<<"$norm_resp"
 		done
@@ -1716,12 +1718,16 @@ local regex=""
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
-                    if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
-                        path="$p"
-                        break 3
-                    elif [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
-                        path="$p"
-                        break 3
+                    if [ -n "$version_code" ]; then
+                        if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
+                            path="$p"
+                            break 3
+                        fi
+                    else
+                        if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                            path="$p"
+                            break 3
+                        fi
                     fi
                 done <<<"$norm_resp"
             done
@@ -1907,12 +1913,16 @@ dl_cache_repo() {
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
-                    if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
-                        path="$p"
-                        break 3
-                    elif [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
-                        path="$p"
-                        break 3
+                    if [ -n "$version_code" ]; then
+                        if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
+                            path="$p"
+                            break 3
+                        fi
+                    else
+                        if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
+                            path="$p"
+                            break 3
+                        fi
                     fi
                 done <<<"$norm_resp"
             done
