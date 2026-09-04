@@ -12,6 +12,7 @@ PATCH_OUTPUT=""
 if [ "${GITHUB_TOKEN-}" ]; then GH_HEADER="Authorization: token ${GITHUB_TOKEN}"; else GH_HEADER=; fi
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 OS=$(uname -o)
+DEFAULT_UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
 
 declare -gA __PREBUILTS_CACHE__
 declare -gA __PATCHES_LIST_CACHE__
@@ -384,6 +385,18 @@ set_prebuilts() {
 	if [ ! -x "$AAPT2" ] && command -v aapt2 >/dev/null 2>&1; then AAPT2="aapt2"; fi
 	TOML="${BIN_DIR}/toml/tq-${arch}"
 	if [ ! -x "$TOML" ] && command -v tq >/dev/null 2>&1; then TOML="tq"; fi
+
+	local sdk_root="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+	if [ -n "$sdk_root" ] && [ -d "$sdk_root/build-tools" ]; then
+		local latest_bt
+		latest_bt=$(ls -1d "$sdk_root"/build-tools/* 2>/dev/null | sort -V | tail -1)
+		if [ -n "$latest_bt" ] && [ -f "$latest_bt/lib/apksigner.jar" ]; then
+			APKSIGNER="$latest_bt/lib/apksigner.jar"
+		fi
+		if [ ! -x "$AAPT2" ] && [ -n "$latest_bt" ] && [ -x "$latest_bt/aapt2" ]; then
+			AAPT2="$latest_bt/aapt2"
+		fi
+	fi
 }
 
 config_update() {
@@ -478,7 +491,7 @@ _req() {
 		mv -f "$dlp" "$op"
 	fi
 }
-req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
+req() { _req "$1" "$2" -H "User-Agent: ${DEFAULT_UA}"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
@@ -795,14 +808,17 @@ _trawl_8191_get() {
 		response=$(curl -m 90 -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
 			-d "{\"url\":\"$url\",\"maxTimeout\":60000,\"skipHttp\":true${extra_headers}}") || true
-		status=$(echo "$response" | jq -r '.statusCode // empty')
-		if [[ "$status" == "200" ]]; then
-			html=$(echo "$response" | jq -r '.html // empty')
-			if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-				export CF_COOKIES
-				CF_COOKIES=$(echo "$response" | jq -r '[.cookies[] | .name + "=" + .value] | join("; ")')
-				user_agent=$(echo "$response" | jq -r '.userAgent // empty')
-				return 0
+		local parsed_meta
+		if parsed_meta=$(jq -r '[.statusCode // "", .userAgent // "", ([.cookies[]? | .name + "=" + .value] | join("; "))] | @tsv' <<<"$response" 2>/dev/null); then
+			local status ua cookies
+			IFS=$'\t' read -r status ua cookies <<<"$parsed_meta"
+			if [[ "$status" == "200" ]]; then
+				html=$(jq -r '.html // empty' <<<"$response" 2>/dev/null || true)
+				if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
+					export CF_COOKIES="$cookies"
+					user_agent="$ua"
+					return 0
+				fi
 			fi
 		fi
 		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
@@ -819,12 +835,12 @@ _trawl_8191_get() {
 
 _fallback_get(){
 	local url=$1
-	html=$(curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 -s -f "$url" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0") || return 1
+	html=$(curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 -s -f "$url" -H "User-Agent: ${DEFAULT_UA}") || return 1
 	if [[ "$html" == *"Attention Required!"* || "$html" == *"Just a moment..."* || "$html" == *"Please Wait... | Cloudflare"* || "$html" == *"Verify you are human"* ]]; then
 		return 1
 	fi
 	CF_COOKIES=""
-	user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"
+	user_agent="${DEFAULT_UA}"
 }
 _unqueued_cf_get() {
 	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
@@ -842,7 +858,9 @@ _cf_get() {
 	mkdir -p "$TEMP_DIR"
 	local lock=$TEMP_DIR/cf_get.lock
 	exec 200>"$lock"
-	flock -x 200
+	if command -v flock >/dev/null 2>&1; then
+		flock -x 200
+	fi
 	trap 'exec 200>&-' RETURN EXIT INT TERM
 	_unqueued_cf_get "$@"
 }
@@ -906,6 +924,27 @@ get_apkmirror_pkg_name() {
 
 apkmirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6" target_vc="${7:-}"
+	
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
+	fi
+
+	local py_script="${CWD}/scripts/apkmirror_search.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/scripts/apkmirror_search.py"
+
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
+		local py_res
+		if py_res=$("$py_cmd" "$py_script" "$dpi" "$arch" "$apk_bundle" "$clean_search_version" "$search_version" "$target_vc" <<<"$resp") && [ -n "$py_res" ]; then
+			echo "$py_res"
+			return 0
+		else
+			return 1
+		fi
+	fi
+
 	local dlurl="" node app_table emptyCheck
 
 	local appdpi=("nodpi" "anydpi")
@@ -1532,6 +1571,7 @@ get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)"
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false} version_code=${7:-}
 	local path="" version_f=${version// /}
+	local norm_resp="${__ARCHIVE_RESP__//$'\r'/}"
 	for a in "${arch// /}" "all"; do
 		for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
 			while IFS= read -r p; do
@@ -1542,7 +1582,7 @@ dl_archive() {
 					path="$p"
 					break 3
 				fi
-			done <<<"$__ARCHIVE_RESP__"
+			done <<<"$norm_resp"
 		done
 	done
 	if [ -z "$path" ]; then
@@ -1577,7 +1617,22 @@ get_archive_resp() {
 	__DL_RESP_CACHE__["archive_resp_$url"]="$__ARCHIVE_RESP__"
 	__DL_RESP_CACHE__["archive_pkg_$url"]="$__ARCHIVE_PKG_NAME__"
 }
-get_archive_vers() { sed -E 's/^[^-]*-//;s/(-[0-9]+)?-(all|arm64-v8a|arm-v7a|x86|x86_64)\.(apk|apkm|xapk|apks)$//g' <<<"$__ARCHIVE_RESP__"; }
+get_archive_vers() {
+	if command -v python3 >/dev/null 2>&1 || command -v python >/dev/null 2>&1; then
+		local py_bin="python3"
+		command -v python3 >/dev/null 2>&1 || py_bin="python"
+		"$py_bin" -c "
+import sys, re
+pat = re.compile(r'^[^-]*-|(-[0-9]+)?-(all|arm64-v8a|arm-v7a|x86|x86_64)\.(apk|apkm|xapk|apks)$')
+for line in sys.stdin:
+    l = line.strip()
+    if l:
+        print(pat.sub('', l))
+" <<<"$__ARCHIVE_RESP__"
+	else
+		sed -E 's/^[^-]*-//;s/(-[0-9]+)?-(all|arm64-v8a|arm-v7a|x86|x86_64)\.(apk|apkm|xapk|apks)$//g' <<<"$__ARCHIVE_RESP__"
+	fi
+}
 get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 
 # -------------------- github --------------------
@@ -1627,10 +1682,10 @@ local regex=""
         path=$(grep -iE "$regex" <<<"$__ARCHIVE_RESP__" | head -1)
     else
         # Matches the exact file selection logic from dl_archive
+        local norm_resp="${__ARCHIVE_RESP__//$'\r'/}"
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
                 while IFS= read -r p; do
-                    p="${p%$'\r'}"
                     if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
                         path="$p"
                         break 3
@@ -1638,7 +1693,7 @@ local regex=""
                         path="$p"
                         break 3
                     fi
-                done <<<"$(echo "$__ARCHIVE_RESP__" | tr -d '\r')"
+                done <<<"$norm_resp"
             done
         done
     fi
@@ -1818,11 +1873,10 @@ dl_cache_repo() {
         path=$(grep -iE "$regex" <<<"$__ARCHIVE_RESP__" | head -1)
     else
         # Matches the exact file selection logic from dl_archive
+        local norm_resp="${__ARCHIVE_RESP__//$'\r'/}"
         for a in "${arch// /}" "all"; do
             for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
-                # use tr to strip carriage returns (CR) from jq output for correct bash matching
                 while IFS= read -r p; do
-                    p="${p%$'\r'}"
                     if [ -n "$version_code" ] && [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
                         path="$p"
                         break 3
@@ -1830,7 +1884,7 @@ dl_cache_repo() {
                         path="$p"
                         break 3
                     fi
-                done <<<"$(echo "$__ARCHIVE_RESP__" | tr -d '\r')"
+                done <<<"$norm_resp"
             done
         done
     fi
@@ -1910,6 +1964,11 @@ patch_apk() {
 		local cli_dir
 		cli_dir=$(dirname "$cli_jar")
 		for j in "${p_jars[@]}"; do
+			local j_base
+			j_base=$(basename "$j")
+			cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
+			cp "$j" "$j_base" 2>/dev/null || :
+			cp "$j" "$rel_tmp_dir/$j_base" 2>/dev/null || :
 			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
 			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
 			cp "$j" "$rel_tmp_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
