@@ -9,7 +9,6 @@ patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
 
 [google-recorder-morphe]
@@ -23,7 +22,6 @@ patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [microsoft-lens-morphe]
@@ -36,7 +34,6 @@ patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
-dpi = "nodpi anydpi auto"
 
 [photomath-morphe]
 enabled = true
@@ -48,7 +45,6 @@ patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://photomath.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [viber-morphe]
@@ -60,7 +56,6 @@ arch = "both"
 patches-source = "RookieEnough/De-Vanced"
 # github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.viber.voip"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
 [pixiv-morphe]
@@ -73,7 +68,6 @@ patches-source = "RookieEnough/De-Vanced"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [strava-morphe]
@@ -88,5 +82,4 @@ cli-source = "MorpheApp/morphe-desktop"
 # uptodown-dlurl = "https://strava.en.uptodown.com/android"
 # apkpure-dlurl = "https://apkpure.com/strava-run-hike-android-exercise-laugh/com.strava"
 apkcombo-dlurl = "https://apkcombo.com/it/strava/com.strava"
-# dpi = "nodpi anydpi auto"
 # archive-dlurl = ""

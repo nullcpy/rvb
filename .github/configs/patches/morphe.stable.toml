@@ -11,7 +11,6 @@ cli-source = "MorpheApp/morphe-desktop"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-morphe-mocha]
@@ -27,5 +26,4 @@ cli-source = "MorpheApp/morphe-desktop"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"

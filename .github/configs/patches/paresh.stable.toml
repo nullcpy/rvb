@@ -10,7 +10,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [plus-messenger-morphe]
@@ -25,7 +24,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/rafalense/plus-messenger"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [lumina-wallpapers-morphe]
@@ -40,7 +38,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/99-dots-team/lumina-wallpapers-4k-backgrounds"
-# dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [document-scanner-morphe]
@@ -56,7 +53,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [eyecon-morphe]
@@ -71,7 +67,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [ticktick-morphe]
@@ -86,7 +81,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [sdmaid-morphe]
@@ -101,7 +95,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/eu.darken.sdmse"
 
 [proton-vpn-morphe-paresh]
@@ -116,7 +109,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [truecaller-morphe]
@@ -131,7 +123,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
 [fing-morphe]
@@ -146,7 +137,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [telegram-morphe-foss]
@@ -161,7 +151,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/org.telegram.messenger"
 
 [macrodroid-morphe]
@@ -177,7 +166,6 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [mxplayer-morphe]
@@ -192,5 +180,4 @@ patches-source-host = "gitlab"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""

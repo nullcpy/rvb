@@ -9,7 +9,6 @@ patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.pinterest"
 
 [moonplus-reader-morphe]
@@ -23,7 +22,6 @@ patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/moon/moon-reader"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [symfonium-morphe]
@@ -37,7 +35,6 @@ patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
 
 [calcnote-morphe]
@@ -51,7 +48,6 @@ patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
 
 [acalendar-morphe]
@@ -64,5 +60,4 @@ arch = "all"
 patches-source = "binarymend/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
-dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
