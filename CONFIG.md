@@ -42,6 +42,10 @@ build-mode = "both"  # 'both', 'apk' or 'module'. default: apk
 # 'latest' gets the latest stable without checking patches support. 'beta' gets the latest beta/alpha
 # whitespace seperated list of patches to exclude. default: ""
 version = "auto"     # 'auto', 'exp', 'latest', 'beta' or a version number (e.g. '17.40.41'). default: auto
+# target Android versionCode. 'auto' automatically resolves the supported versionCode from patch metadata (e.g. Morphe Desktop).
+# can also be set to an explicit versionCode (e.g. '473623755') or mapped per-architecture ('arm64-v8a: 473623755 | arm-v7a: 473623748').
+# used by APKMirror to select the exact build variant and to validate/invalidate cached and downloaded APKs. default: "" (or auto when resolved)
+version-code = "auto"
 
 # optional args to be passed to cli. can be used to set patch options
 # multiline strings in the config is supported
