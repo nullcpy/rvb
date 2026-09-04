@@ -10,7 +10,6 @@ included-patches = "'AMOLED dark theme'"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
-dpi = "nodpi anydpi auto"
 
 [duolingo-morphe]
 enabled = true
@@ -23,7 +22,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [wps-office-morphe]
@@ -38,7 +36,6 @@ cli-source = "MorpheApp/morphe-desktop"
 version = "18.12.1"
 uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [wallcraft-morphe]
@@ -52,7 +49,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://wallpaperscraft.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [solid-explorer-morphe]
@@ -66,7 +62,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = ""
 
 [icon-packer-morphe]
@@ -79,7 +74,6 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 apkpure-dlurl = "https://apkpure.com/icon-packer/cn.ommiao.iconpacker"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
 
 [podcast-addict-morphe]
@@ -93,7 +87,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
 [smart-launcher-6-morphe]
@@ -109,7 +102,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [merriam-webster-dictionary-morphe]
@@ -124,7 +116,6 @@ version = "5.5.0"
 patches-source = "hoo-dles/morphe-patches"
 uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
 
 [pandora-morphe]
@@ -137,7 +128,6 @@ arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 # github-dlurl = "https://github.com/nvbangg/apks/releases/tag/com.pandora.android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
 
 [xrecorder-morphe]
@@ -151,7 +141,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
 [adguard-morphe]
@@ -165,7 +154,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [nova-launcher-morphe]
@@ -180,7 +168,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
 
 [ventusky-morphe]
@@ -194,7 +181,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://ventusky-weather-maps-and-radar.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
 
 [camscanner-morphe]
@@ -208,7 +194,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
-dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/camscanner-scanner-pdf-maker/com.intsig.camscanner"
 apkcombo-dlurl = "https://apkcombo.com/camscanner/com.intsig.camscanner"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.intsig.camscanner"
@@ -225,7 +210,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
-dpi = "nodpi anydpi auto"
 apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
 apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
 # archive-dlurl = "https://archive.org/download/geologically/apks/bitpit.launcher"
@@ -242,7 +226,6 @@ included-patches = "'AMOLED dark theme'"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://github-android.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/github/github-2"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.github.android"
 
 [proton-vpn-morphe]
@@ -256,7 +239,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [hellochinese-morphe]
@@ -270,7 +252,6 @@ patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese"
-dpi = "nodpi anydpi auto"
 
 [myfitnesspal-morphe]
 enabled = true
@@ -281,7 +262,6 @@ build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
 uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
 
@@ -294,7 +274,6 @@ build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video"
 uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom"
@@ -309,7 +288,6 @@ build-mode = "apk"
 arch = "both"
 patches-source = "hoo-dles/morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-dpi = "nodpi anydpi auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/goodreads/goodreads"
 uptodown-dlurl = "https://goodreads.en.uptodown.com/android"
 

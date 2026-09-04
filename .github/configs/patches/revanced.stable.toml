@@ -8,7 +8,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 [lightroom-revanced]
@@ -33,7 +32,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/duolingo/duolingo-duolingo"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.duolingo"
 
 [twitch-revanced]
@@ -47,7 +45,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/tv.twitch.android.app"
 
 [twitter-revanced]
@@ -60,7 +57,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 
 [tiktok-revanced]
@@ -73,7 +69,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
 [soundcloud-revanced]
@@ -86,7 +81,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
-dpi = "nodpi anydpi auto"
 
 [google-recorder-revanced]
 enabled = true
@@ -98,7 +92,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
 
 [proton-vpn-revanced]
@@ -111,7 +104,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
 [instagram-revanced]
@@ -126,7 +118,6 @@ included-patches = "'Hide ads' 'Anonymous story viewing' 'Enable developer menu'
 exclusive-patches = true
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
 [threads-revanced]
@@ -139,7 +130,6 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.barcelona"
 
 [youtube-revanced-nord]
@@ -154,7 +144,6 @@ cli-source = "ReVanced/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [youtube-revanced-mocha]
@@ -169,7 +158,6 @@ cli-source = "ReVanced/revanced-cli"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-dpi = "nodpi anydpi auto"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
 [google-photos-revanced]
@@ -182,5 +170,4 @@ patches-source = "ReVanced/revanced-patches"
 cli-source = "ReVanced/revanced-cli"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-dpi = "nodpi anydpi auto"
 # archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.photos"
