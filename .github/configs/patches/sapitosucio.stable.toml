@@ -1,0 +1,15 @@
+[facebook-morphe]
+enabled = true
+pkg-name = "com.facebook.katana"
+app-name = "facebook"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "SapitoSucio/FroggoMorphePatches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
+apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
+dpi = "nodpi anydpi auto"
+# archive-dlurl = "https://archive.org/download/geologically/apks/com.facebook.katana"
