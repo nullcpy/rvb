@@ -1003,8 +1003,9 @@ apkmirror_search() {
 
 	local appdpi=("nodpi" "anydpi")
 	local match_any_dpi=false
-	if [ "$dpi" ]; then
-		appdpi+=($dpi)
+	local dpi_to_use="${dpi:-nodpi anydpi auto}"
+	if [ "$dpi_to_use" ]; then
+		appdpi+=($dpi_to_use)
 		if isoneof "auto" "${appdpi[@]}"; then
 			match_any_dpi=true
 		fi

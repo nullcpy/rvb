@@ -18,7 +18,7 @@ There exists an example below with all defaults shown and all the keys explicitl
 ```toml
 compression-level = 9                # module zip compression level
 remove-rv-integrations-checks = true # remove checks from the revanced integrations
-dpi = "nodpi anydpi 120-640dpi"      # dpi packages to be searched in order. default: "nodpi anydpi"
+dpi = "nodpi anydpi auto"            # dpi packages to be searched in order. 'auto' matches whatever is available. default: "nodpi anydpi auto"
 
 patches-source = "revanced/revanced-patches" # where to fetch patches bundle from. default: "MorpheApp/morphe-patches"
 patches-source-host = "github"               # source host for patches: "github" or "gitlab". default: "github"
@@ -76,7 +76,7 @@ github-regex = "arm64-v8a: 'MyApp-arm64-v{version}\\.apk' | arm-v7a: 'MyApp-arm-
 direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 
 module-prop-name = "some-app-module"                       # module prop name.
-dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. 'auto' matches whatever is available. default: nodpi anydpi
+dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. 'auto' matches whatever is available. default: nodpi anydpi auto
 arch = "arm64-v8a"                                         # 'auto', 'arm64-v8a', 'arm-v7a', 'all', 'both'. 'both' downloads both arm64-v8a and arm-v7a. 'auto' tries all → arm64-v8a → arm-v7a, using the first available. default: auto
 ```
 
