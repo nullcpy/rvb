@@ -15,7 +15,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
@@ -27,7 +27,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
@@ -40,7 +40,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
@@ -52,7 +52,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
@@ -65,7 +65,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
@@ -77,7 +77,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.univision.prendetv",
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
@@ -89,7 +89,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.pluto.android",
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
@@ -102,7 +102,7 @@
     "uptodown-dlurl": "https://pluto-tv.en.uptodown.com/android"
   },
   "netflix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "netflix",
     "rv-brand": "morphe-androidtv",
@@ -490,19 +490,6 @@
     "apkpure-dlurl": "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop",
     "apkcombo-dlurl": "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
   },
-  "facebook-morphe": {
-    "enabled": false,
-    "pkg-name": "com.facebook.katana",
-    "app-name": "facebook",
-    "rv-brand": "morphe",
-    "build-mode": "apk",
-    "arch": "both",
-    "patches-source": "MeridianFresco/morphe-meta-patches",
-    "cli-source": "MorpheApp/morphe-desktop",
-    "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
-    "dpi": "nodpi anydpi auto"
-  },
   "threads-morphe": {
     "enabled": false,
     "pkg-name": "com.instagram.barcelona",
@@ -519,7 +506,7 @@
     "dpi": "nodpi anydpi auto"
   },
   "byair-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.byairapp.android",
     "app-name": "byair",
     "rv-brand": "morphe",
@@ -2285,5 +2272,20 @@
     "cli-source": "MorpheApp/morphe-desktop",
     "uptodown-dlurl": "https://picsart-estudio.en.uptodown.com/android",
     "apkcombo-dlurl": "https://apkcombo.com/picsart/com.picsart.studio"
+  },
+  "facebook-morphe": {
+    "enabled": true,
+    "pkg-name": "com.facebook.katana",
+    "app-name": "facebook",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "SapitoSucio/FroggoMorphePatches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
+    "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana",
+    "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana",
+    "dpi": "nodpi anydpi auto"
   }
 }

@@ -53,8 +53,8 @@
   "crimera/piko": {
     "dev": {
       "com.instagram.android": "6358d74e30663cc23c1cd55dec2c8170",
-      "com.twitter.android": "6f08a40ff5b9cb3cd48a662c1e447145",
-      "shared": "9881fc864bce56b5c5ae1f06d17ceab4"
+      "com.twitter.android": "a90b18f719b69483ef32f9da4d063229",
+      "shared": "57f49120c936203e94e057111cadce06"
     },
     "stable": {
       "com.instagram.android": "084b5083d2993f8e93436d3ba6df3d7d",
@@ -324,6 +324,13 @@
       "it.mirko.beta": "7c139a1fd926a7b6b3adef3be5514769",
       "org.hola.play": "f18dc8d0279232ee4cf5f1b7c9223138",
       "shared": "3feee68e9fca7acb1461160dc0edc12a"
+    }
+  },
+  "sapitosucio/froggomorphepatches": {
+    "dev": {},
+    "stable": {
+      "com.facebook.katana": "c08748efec6831fb7ca717fce8b0ce31",
+      "shared": "b729f99c591c50dec896494ebca13344"
     }
   }
 }
