@@ -379,8 +379,11 @@ set_prebuilts() {
 	arch=$(uname -m)
 	if [ "$arch" = aarch64 ]; then arch=arm64; elif [ "${arch:0:5}" = "armv7" ]; then arch=arm; fi
 	HTMLQ="${BIN_DIR}/htmlq/htmlq-${arch}"
+	if [ ! -x "$HTMLQ" ] && command -v htmlq >/dev/null 2>&1; then HTMLQ="htmlq"; fi
 	AAPT2="${BIN_DIR}/aapt2/aapt2-${arch}"
+	if [ ! -x "$AAPT2" ] && command -v aapt2 >/dev/null 2>&1; then AAPT2="aapt2"; fi
 	TOML="${BIN_DIR}/toml/tq-${arch}"
+	if [ ! -x "$TOML" ] && command -v tq >/dev/null 2>&1; then TOML="tq"; fi
 }
 
 config_update() {
@@ -592,6 +595,64 @@ get_patch_exp_ver() {
 	if [ -n "$exp_versions" ]; then
 		sort_vers <<<"$exp_versions"
 	fi
+}
+
+get_patch_version_code() {
+	local raw_op="$1" version="$2" arch="${3:-}"
+	local abi=""
+	case "${arch,,}" in
+		arm64-v8a|arm64) abi="ARM64_V8A" ;;
+		arm-v7a|armeabi-v7a|arm) abi="ARMEABI_V7A" ;;
+		x86_64) abi="X86_64" ;;
+		x86) abi="X86" ;;
+	esac
+
+	local line="" l
+	while IFS= read -r l; do
+		if [[ "$l" =~ ^[[:space:]]*${version//./\\.}[[:space:]] ]]; then
+			line="$l"
+			break
+		fi
+	done <<<"$raw_op"
+
+	if [[ "$line" =~ \[versionCodes:[[:space:]]*([^]]+)\] ]]; then
+		local vcodes="${BASH_REMATCH[1]}"
+		if [ -n "$abi" ]; then
+			if [[ "$vcodes" =~ ${abi}=([0-9]+) ]]; then
+				echo "${BASH_REMATCH[1]}"
+				return 0
+			fi
+			return 1
+		elif [[ "$vcodes" =~ =([0-9]+) ]]; then
+			echo "${BASH_REMATCH[1]}"
+			return 0
+		fi
+	fi
+	return 1
+}
+
+parse_arch_mapping() {
+	local mapping="${1:-}" arch="${2:-}"
+	if [[ "$mapping" != *":"* ]]; then
+		echo "$mapping"
+		return 0
+	fi
+	local matched="" entry
+	local old_ifs="$IFS"
+	IFS='|'
+	for entry in $mapping; do
+		if [[ "$entry" =~ ^[[:space:]]*([^:]+)[[:space:]]*:[[:space:]]*(.*)$ ]]; then
+			local e_arch="${BASH_REMATCH[1]//[[:space:]]/}"
+			local e_val="${BASH_REMATCH[2]}"
+			e_val="${e_val//[ \'\";\r\n]/}"
+			if [ "${e_arch,,}" = "${arch,,}" ]; then
+				matched="$e_val"
+				break
+			fi
+		fi
+	done
+	IFS="$old_ifs"
+	echo "$matched"
 }
 
 patches_list_versions() {
@@ -844,7 +905,7 @@ get_apkmirror_pkg_name() {
 }
 
 apkmirror_search() {
-	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6"
+	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6" target_vc="${7:-}"
 	local dlurl="" node app_table emptyCheck
 
 	local appdpi=("nodpi" "anydpi")
@@ -860,24 +921,45 @@ apkmirror_search() {
 	local specific_arch_url=""
 	local specific_arch_fallback_url=""
 
-	for ((n = 1; n < 40; n++)); do
+	for ((n = 1; n < 100; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" <<<"$resp")
 		if [ -z "$node" ]; then break; fi
 		
 		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
 		if [ -z "$dlurl" ]; then continue; fi
 
-		local node_apk_bundle node_arch node_dpi
+		local node_apk_bundle node_arch node_dpi node_vc
 		node_apk_bundle=$($HTMLQ "div.table-cell:nth-child(1) span.apkm-badge:first-of-type" --text <<<"$node" | xargs)
 		[ -z "$node_apk_bundle" ] && node_apk_bundle="APK"
 
 		node_arch=$($HTMLQ "div.table-cell:nth-child(2)" --text <<<"$node" | xargs)
 		node_dpi=$($HTMLQ "div.table-cell:nth-child(4)" --text <<<"$node" | xargs)
+		node_vc=""
+		local vc_regex='class="colorLightBlack"[^>]*>([0-9]+)</span>'
+		if [[ "$node" =~ $vc_regex ]]; then
+			node_vc="${BASH_REMATCH[1]}"
+		else
+			local raw_vc
+			raw_vc=$($HTMLQ "div.table-cell:nth-child(1) span.colorLightBlack" --text <<<"$node" 2>/dev/null || true)
+			local num_regex='([0-9]+)'
+			if [[ "$raw_vc" =~ $num_regex ]]; then
+				node_vc="${BASH_REMATCH[1]}"
+			fi
+		fi
 
 		if [ "$node_apk_bundle" != "$apk_bundle" ]; then continue; fi
 
 		if [ -n "$clean_search_version" ]; then
 			if [[ "$dlurl" != *"$clean_search_version"* ]] && [[ "$dlurl" != *"$search_version"* ]]; then
+				continue
+			fi
+		fi
+
+		if [ -n "$target_vc" ]; then
+			if [ -n "$node_vc" ] && [ "$node_vc" = "$target_vc" ]; then
+				echo "$dlurl"
+				return 0
+			else
 				continue
 			fi
 		fi
@@ -914,7 +996,7 @@ apkmirror_search() {
 }
 
 dl_apkmirror() {
-	local url=$1 version=${2// /-} output=$3 arch=$4 dpi=$5 is_bundle=false
+	local url=$1 version=${2// /-} output=$3 arch=$4 dpi=$5 is_bundle=false get_latest_ver=${6:-false} version_code=${7:-}
 	local base_url="https://www.apkmirror.com"
 	local html=""
 
@@ -1063,12 +1145,17 @@ dl_apkmirror() {
 			types="APK BUNDLE"
 		fi
 		for type in $types; do
-			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type" "$clean_search_version" "$search_version"); then
+			if dlurl=$(apkmirror_search "$resp" "$dpi" "$arch" "$type" "$clean_search_version" "$search_version" "$version_code"); then
 				[ "$type" = "BUNDLE" ] && is_bundle=true || is_bundle=false
 				break
 			fi
 		done
-		if [ -z "$dlurl" ]; then return 1; fi
+		if [ -z "$dlurl" ]; then
+			if [ -n "$version_code" ]; then
+				wpr "Could not find variant with version code '$version_code' for version '$version' on APKMirror"
+			fi
+			return 1
+		fi
 		
 		_cf_get "$dlurl" || return 1
 		resp="$html"
@@ -2248,12 +2335,40 @@ build_rv() {
 				local all_archs_found=true
 				for arch in "${arch_list[@]}"; do
 					arch_f="${arch// /}"
+					local target_version_code
+					target_version_code=$(parse_arch_mapping "${args[version_code]:-}" "$arch_f")
+					if [ -z "$target_version_code" ] || [ "$target_version_code" = "auto" ]; then
+						target_version_code=""
+						if [ -n "$resolved_version" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
+							local raw_vers
+							if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+								target_version_code=$(get_patch_version_code "$raw_vers" "$resolved_version" "$arch_f" || true)
+							fi
+						fi
+					fi
+
 					local stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 					local all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
+					local check_apk=""
+					[ -f "$stock_apk" ] && check_apk="$stock_apk"
+					[ -z "$check_apk" ] && [ -f "$all_apk" ] && check_apk="$all_apk"
 
-					if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ]; then
+					if [ -z "$check_apk" ]; then
 						all_archs_found=false
 						break
+					elif [ -n "$target_version_code" ]; then
+						local cached_vc=""
+						if command -v aapt >/dev/null 2>&1; then
+							cached_vc=$(aapt dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
+						elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+							cached_vc=$("$AAPT2" dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
+						fi
+						if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
+							pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
+							rm -f "$check_apk"
+							all_archs_found=false
+							break
+						fi
 					fi
 				done
 				if [ "$all_archs_found" = true ]; then
@@ -2437,6 +2552,21 @@ build_rv() {
 		version_f=${version_f#v}
 		for arch in "${arch_list[@]}"; do
 			arch_f="${arch// /}"
+			local target_version_code
+			target_version_code=$(parse_arch_mapping "${args[version_code]:-}" "$arch_f")
+			if [ -z "$target_version_code" ] || [ "$target_version_code" = "auto" ]; then
+				target_version_code=""
+				if [ -n "$version" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
+					local raw_vers
+					if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+						target_version_code=$(get_patch_version_code "$raw_vers" "$version" "$arch_f" || true)
+					fi
+				fi
+			fi
+			if [ -n "$target_version_code" ]; then
+				pr "Target version code for '$pkg_name' (v${version}, arch: ${arch_f}): $target_version_code"
+			fi
+
 			local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
 			local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
 			local stock_apk="$cached_stock_apk"
@@ -2452,6 +2582,25 @@ build_rv() {
 					stock_apk="$all_apk"
 				fi
 			fi
+
+			local check_apk=""
+			[ -f "$stock_apk" ] && check_apk="$stock_apk"
+			[ -z "$check_apk" ] && [ -f "$all_apk" ] && check_apk="$all_apk"
+			if [ -n "$check_apk" ] && [ -n "$target_version_code" ]; then
+				local cached_vc=""
+				if command -v aapt >/dev/null 2>&1; then
+					cached_vc=$(aapt dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
+				elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+					cached_vc=$("$AAPT2" dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
+				fi
+				if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
+					pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
+					rm -f "$check_apk"
+					stock_apk=""
+					all_apk=""
+				fi
+			fi
+
 			if [ ! -f "$stock_apk" ]; then
 				# Redirect to staging directory for safe downloading and processing
 				stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
@@ -2466,7 +2615,7 @@ build_rv() {
 							continue
 						fi
 					fi
-					if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
+					if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver" "$target_version_code"; then
 						pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
 						continue
 					fi
@@ -2496,14 +2645,15 @@ build_rv() {
 						fi
 					fi
 					if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
-						local downloaded_pkg downloaded_ver
+						local downloaded_pkg downloaded_ver downloaded_vc
 						if [[ "$aapt_cmd" == *"aapt2"* ]]; then
 							downloaded_pkg=$("$aapt_cmd" dump packagename "$stock_apk" 2>/dev/null | tr -d '\r\n') || true
-							# aapt2 dump badging doesn't always work exactly the same on older aapt2 binaries, but we can try
 							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+							downloaded_vc=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) || true
 						else
 							downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
 							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
+							downloaded_vc=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) || true
 						fi
 						
 						if [ -z "$downloaded_pkg" ]; then
@@ -2516,6 +2666,14 @@ build_rv() {
 							epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
 							rm -f "$stock_apk"
 							continue
+						fi
+
+						if [ -n "$target_version_code" ] && [ -n "$downloaded_vc" ]; then
+							if [ "$downloaded_vc" != "$target_version_code" ]; then
+								epr "ERROR: Downloaded APK version code ($downloaded_vc) does not match expected ($target_version_code). Rejecting..."
+								rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+								continue
+							fi
 						fi
 
 						if [ -n "$downloaded_ver" ] && [[ "$dl_p" == "direct" ]]; then
