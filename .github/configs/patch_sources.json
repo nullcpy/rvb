@@ -32,10 +32,10 @@
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.9.0",
-    "prerelease": "v3.10.0-dev.2",
+    "prerelease": "v3.10.0-dev.3",
     "blocked": false,
     "stable_date": "2026-08-31T02:40:04Z",
-    "pre_date": "2026-09-04T02:56:10Z"
+    "pre_date": "2026-09-04T04:50:10Z"
   },
   "hoodles": {
     "repo": "hoo-dles/morphe-patches",
@@ -263,10 +263,10 @@
   },
   "franticg33k": {
     "repo": "franticg33k/morphe-patches",
-    "stable": "v1.3.8",
-    "stable_date": "2026-09-04T04:22:31Z",
-    "prerelease": "v1.3.8-dev.3",
-    "pre_date": "2026-09-04T04:14:37Z",
+    "stable": "v1.3.9",
+    "stable_date": "2026-09-04T08:13:16Z",
+    "prerelease": "v1.3.9-dev.1",
+    "pre_date": "2026-09-04T06:34:12Z",
     "blocked": false
   },
   "dh6k": {
@@ -318,6 +318,11 @@
     "blocked": false
   },
   "sapitosucio": {
-    "repo": "SapitoSucio/FroggoMorphePatches"
+    "repo": "SapitoSucio/FroggoMorphePatches",
+    "stable": "v1.2.4",
+    "stable_date": "2026-09-02T22:03:06Z",
+    "prerelease": "v1.4.0-dev.1",
+    "pre_date": "2026-09-03T11:25:07Z",
+    "blocked": false
   }
 }
