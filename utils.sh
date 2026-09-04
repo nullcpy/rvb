@@ -2365,7 +2365,7 @@ build_rv() {
 						fi
 						if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
 							pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
-							rm -f "$check_apk"
+							[ "$check_apk" != "$all_apk" ] && rm -f "$check_apk"
 							all_archs_found=false
 							break
 						fi
@@ -2595,7 +2595,7 @@ build_rv() {
 				fi
 				if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
 					pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
-					rm -f "$check_apk"
+					[ "$check_apk" != "$all_apk" ] && rm -f "$check_apk"
 					stock_apk=""
 					all_apk=""
 				fi
