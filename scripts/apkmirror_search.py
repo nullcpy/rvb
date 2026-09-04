@@ -6,7 +6,7 @@ def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, 
     appdpi = ["nodpi", "anydpi"]
     match_any_dpi = False
     if dpi:
-        appdpi.append(dpi)
+        appdpi.extend(dpi.split())
         if "auto" in appdpi:
             match_any_dpi = True
 
@@ -15,22 +15,21 @@ def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, 
     specific_arch_fallback_url = ""
 
     # Split rows by table-row headerFont
-    rows = re.findall(
-        r'<div class="table-row headerFont">(.*?)(?=<div class="table-row headerFont"|</div>\s*</div>\s*</div>)',
-        html_content,
-        re.DOTALL
-    )
-    if not rows:
+    parts = re.split(r'<div class="[^"]*table-row[^"]*headerFont[^"]*"[^>]*>', html_content)
+    if len(parts) <= 1:
         return None
+    rows = parts[1:]
 
     # Reverse rows to match bash nth-last-child traversal order
     reversed_rows = list(reversed(rows))
 
     for r in reversed_rows:
-        href_m = re.search(r'href="(https://www\.apkmirror\.com/apk/[^"]+)"', r)
+        href_m = re.search(r'href="((?:https://www\.apkmirror\.com)?/apk/[^"]+)"', r)
         if not href_m:
             continue
         dlurl = href_m.group(1)
+        if not dlurl.startswith("http"):
+            dlurl = "https://www.apkmirror.com" + dlurl
 
         badge_m = re.search(r'class="apkm-badge"[^>]*>([^<]+)</span>', r)
         node_apk_bundle = badge_m.group(1).strip() if badge_m else "APK"
@@ -40,6 +39,8 @@ def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, 
         node_dpi = re.sub(r'<[^>]+>', '', cells[3]).strip() if len(cells) > 3 else ""
 
         vc_m = re.search(r'class="colorLightBlack"[^>]*>([0-9]+)</span>', r)
+        if not vc_m:
+            vc_m = re.search(r'span class="[^"]*colorLightBlack[^"]*"[^>]*>.*?([0-9]+).*?</span>', r, re.DOTALL)
         node_vc = vc_m.group(1).strip() if vc_m else ""
 
         if node_apk_bundle != apk_bundle:
