@@ -26,36 +26,39 @@ until
 do sleep 1; done
 if [ ! -f ~/.rvmm_"$(date '+%Y%m')" ]; then
 	pr "Setting up environment..."
-	yes "" | pkg update -y && pkg upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && pkg install -y git curl jq openjdk-21 zip
+	yes "" | pkg update -y && pkg upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && pkg install -y git curl jq openjdk-21 zip python
 	: >~/.rvmm_"$(date '+%Y%m')"
 fi
-mkdir -p /sdcard/Download/revanced-magisk-module/
+mkdir -p /sdcard/Download/rvb/
 
-if [ -d revanced-magisk-module ] || [ -f config.toml ]; then
-	if [ -d revanced-magisk-module ]; then cd revanced-magisk-module; fi
-	pr "Checking for revanced-magisk-module updates"
+REPO_DIR="rvb"
+[ -d revanced-magisk-module ] && REPO_DIR="revanced-magisk-module"
+
+if [ -d "$REPO_DIR" ] || [ -f config.toml ]; then
+	if [ -d "$REPO_DIR" ]; then cd "$REPO_DIR"; fi
+	pr "Checking for updates"
 	git fetch
 	if git status | grep -q 'is behind\|fatal'; then
-		pr "revanced-magisk-module is not synced with upstream."
-		pr "Cloning revanced-magisk-module. config.toml will be preserved."
+		pr "rvb is not synced with upstream."
+		pr "Cloning rvb. config.toml will be preserved."
 		cd ..
-		cp -f revanced-magisk-module/config.toml .
-		rm -rf revanced-magisk-module
-		git clone https://github.com/j-hc/revanced-magisk-module --recurse --depth 1
-		mv -f config.toml revanced-magisk-module/config.toml
-		cd revanced-magisk-module
+		cp -f "$REPO_DIR"/config.toml .
+		rm -rf "$REPO_DIR"
+		git clone https://github.com/nullcpy/rvb --recurse --depth 1
+		mv -f config.toml rvb/config.toml
+		cd rvb
 	fi
 else
-	pr "Cloning revanced-magisk-module."
-	git clone https://github.com/j-hc/revanced-magisk-module --depth 1
-	cd revanced-magisk-module
+	pr "Cloning rvb."
+	git clone https://github.com/nullcpy/rvb --depth 1
+	cd rvb
 	sed -i '/^enabled.*/d; /^\[.*\]/a enabled = false' config.toml
-	grep -q 'revanced-magisk-module' ~/.gitconfig 2>/dev/null ||
-		git config --global --add safe.directory ~/revanced-magisk-module
+	grep -q 'rvb' ~/.gitconfig 2>/dev/null ||
+		git config --global --add safe.directory ~/rvb
 fi
 
-[ -f ~/storage/downloads/revanced-magisk-module/config.toml ] ||
-	cp config.toml ~/storage/downloads/revanced-magisk-module/config.toml
+[ -f ~/storage/downloads/rvb/config.toml ] ||
+	cp config.toml ~/storage/downloads/rvb/config.toml
 
 if ask "Open rvmm-config-gen to generate a config?"; then
 	am start -a android.intent.action.VIEW -d https://j-hc.github.io/rvmm-config-gen/
@@ -63,11 +66,11 @@ fi
 printf "\n"
 until
 	if ask "Open 'config.toml' to configure builds?\nAll are disabled by default, you will need to enable at first time building"; then
-		am start -a android.intent.action.VIEW -d file:///sdcard/Download/revanced-magisk-module/config.toml -t text/plain
+		am start -a android.intent.action.VIEW -d file:///sdcard/Download/rvb/config.toml -t text/plain
 	fi
 	ask "Setup is done. Do you want to start building?"
 do :; done
-cp -f ~/storage/downloads/revanced-magisk-module/config.toml config.toml
+cp -f ~/storage/downloads/rvb/config.toml config.toml
 
 ./build.sh
 
@@ -78,10 +81,10 @@ for op in *; do
 		pr "glob fail"
 		exit 1
 	}
-	mv -f "${PWD}/${op}" ~/storage/downloads/revanced-magisk-module/"${op}"
+	mv -f "${PWD}/${op}" ~/storage/downloads/rvb/"${op}"
 done
 
-pr "Outputs are available in /sdcard/Download/revanced-magisk-module folder"
-am start -a android.intent.action.VIEW -d file:///sdcard/Download/revanced-magisk-module -t resource/folder
+pr "Outputs are available in /sdcard/Download/rvb folder"
+am start -a android.intent.action.VIEW -d file:///sdcard/Download/rvb -t resource/folder
 sleep 2
-am start -a android.intent.action.VIEW -d file:///sdcard/Download/revanced-magisk-module -t resource/folder
+am start -a android.intent.action.VIEW -d file:///sdcard/Download/rvb -t resource/folder
