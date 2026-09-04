@@ -3,10 +3,11 @@ import sys
 import re
 
 def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, search_version, target_vc):
+    dpi_str = dpi if dpi else "nodpi anydpi auto"
     appdpi = ["nodpi", "anydpi"]
     match_any_dpi = False
-    if dpi:
-        appdpi.extend(dpi.split())
+    if dpi_str:
+        appdpi.extend(dpi_str.split())
         if "auto" in appdpi:
             match_any_dpi = True
 
