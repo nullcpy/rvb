@@ -732,11 +732,21 @@ _patches_list() {
 	fi
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	if [[ "$cli_source_l" == *"instafel"* ]]; then
-		local cli_dir
+		local cli_dir cli_commit
 		cli_dir=$(dirname "$cli_jar")
+		cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
+		[ -z "$cli_commit" ] && cli_commit="8e4756f"
 		for j in "${p_jars[@]}"; do
-			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			local j_base
+			j_base=$(basename "$j")
+			cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
+			cp "$j" "$j_base" 2>/dev/null || :
+			cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+			if [ "$cli_commit" != "8e4756f" ]; then
+				cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+				cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			fi
 		done
 		if ! op=$(eval java -jar "'$cli_jar'" list 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
@@ -1961,17 +1971,24 @@ patch_apk() {
 	if [[ "$cli_source_l" == *"instafel"* ]]; then
 		local rel_tmp_dir="${patched_apk}-temporary-files"
 		mkdir -p "$rel_tmp_dir"
-		local cli_dir
+		local cli_dir cli_commit
 		cli_dir=$(dirname "$cli_jar")
+		cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
+		[ -z "$cli_commit" ] && cli_commit="8e4756f"
 		for j in "${p_jars[@]}"; do
 			local j_base
 			j_base=$(basename "$j")
 			cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
 			cp "$j" "$j_base" 2>/dev/null || :
 			cp "$j" "$rel_tmp_dir/$j_base" 2>/dev/null || :
-			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			cp "$j" "$rel_tmp_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+			cp "$j" "$rel_tmp_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+			if [ "$cli_commit" != "8e4756f" ]; then
+				cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+				cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+				cp "$j" "$rel_tmp_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			fi
 		done
 
 		local init_cmd="java -jar '$cli_jar' init '$stock_input'"
