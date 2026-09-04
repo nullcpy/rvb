@@ -23,6 +23,26 @@ declare -gA __DL_RESP_CACHE__
 toml_prep() {
 	if [ ! -f "$1" ]; then return 1; fi
 	if [ "${1##*.}" == toml ]; then
+		if [ -x "$TOML" ] 2>/dev/null && __TOML__=$("$TOML" --output json --file "$1" . 2>/dev/null); then
+			return 0
+		fi
+		if command -v python3 >/dev/null 2>&1 || command -v python >/dev/null 2>&1; then
+			local py_bin="python3"
+			command -v python3 >/dev/null 2>&1 || py_bin="python"
+			if __TOML__=$("$py_bin" -c "
+try:
+    import tomllib
+except ImportError:
+    try:
+        import tomli as tomllib
+    except ImportError:
+        import sys; sys.exit(1)
+import json, sys
+print(json.dumps(tomllib.load(open(sys.argv[1], 'rb'))))
+" "$1" 2>/dev/null); then
+				return 0
+			fi
+		fi
 		__TOML__=$($TOML --output json --file "$1" .)
 	elif [ "${1##*.}" == json ]; then
 		__TOML__=$(cat "$1")
