@@ -1,5 +1,17 @@
-brave-browser-morphe (arm64-v8a): 1.94.121  
-brave-browser-morphe (arm-v7a): 1.94.121  
+nuvio-morphe-androidtv (arm64-v8a): 0.9.0-beta  
+nuvio-morphe-androidtv (arm-v7a): 0.9.0-beta  
+youtube-morphe (arm64-v8a): 21.07.247  
+youtube-morphe (arm-v7a): 21.07.247  
+youtube-music-morphe (arm64-v8a): 9.15.51  
+youtube-music-morphe (arm-v7a): 9.15.51  
+youtube-morphe-exp (arm64-v8a): 21.35.442  
+youtube-morphe-exp (arm-v7a): 21.35.442  
+youtube-music-morphe-exp (arm64-v8a): 9.35.54  
+youtube-music-morphe-exp (arm-v7a): 9.35.54  
+reddit-morphe-exp (arm64-v8a): 2026.35.0  
+reddit-morphe-exp (arm-v7a): 2026.35.0  
+reddit-morphe (arm64-v8a): 2026.14.0  
+reddit-morphe (arm-v7a): 2026.14.0  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -8,5 +20,8 @@ brave-browser-morphe (arm-v7a): 1.94.121
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.15.0-all.jar  
-Patches: kveld9/patches-1.13.0.mpp  
-[Changelog](https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.13.0)  
+Patches: liongalahad/patches-1.0.0-beta.1.mpp  
+[Changelog](https://github.com/liongalahad/nuviotv-morphe-patches/releases/tag/v1.0.0-beta.1)
+
+Patches: MorpheApp/patches-1.42.0-dev.3.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.3)  
