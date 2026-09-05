@@ -26,4 +26,3 @@ for OUTPUT in *module*.zip; do
   DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/$ARCHIVE_TAG/${OUTPUT}"
   get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
 done
-cd ..
