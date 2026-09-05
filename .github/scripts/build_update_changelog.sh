@@ -1,11 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-NEXT_VER_CODE="${NEXT_VER_CODE:-$(date +'%Y%m%d')}"
-ARCHIVE_TAG="${ARCHIVE_TAG:-stable}"
-GITHUB_SERVER_URL="${GITHUB_SERVER_URL:-https://github.com}"
-GITHUB_REPOSITORY="${GITHUB_REPOSITORY:-}"
-
 git checkout -f update || git switch --discard-changes --orphan update
 mkdir -p changelogs
 cp -f build.tmp "changelogs/${NEXT_VER_CODE}.md"
@@ -28,7 +23,7 @@ for OUTPUT in *module*.zip; do
   UPDATE_JSON="${UPDATE_JSON##*/}"
   VER=$(echo "$ZIP_S" | grep version=)
   VER="${VER##*=}"
-  DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${ARCHIVE_TAG:-stable}/${OUTPUT}"
+  DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/$ARCHIVE_TAG/${OUTPUT}"
   get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
 done
 cd ..
