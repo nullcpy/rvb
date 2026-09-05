@@ -1,5 +1,11 @@
 #!/bin/bash
 set -euo pipefail
+
+NEXT_VER_CODE="${NEXT_VER_CODE:-$(date +'%Y%m%d')}"
+ARCHIVE_TAG="${ARCHIVE_TAG:-stable}"
+GITHUB_SERVER_URL="${GITHUB_SERVER_URL:-https://github.com}"
+GITHUB_REPOSITORY="${GITHUB_REPOSITORY:-}"
+
 git checkout -f update || git switch --discard-changes --orphan update
 mkdir -p changelogs
 cp -f build.tmp "changelogs/${NEXT_VER_CODE}.md"
