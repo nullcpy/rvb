@@ -15,6 +15,17 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
 apkpure-dlurl = "https://apkpure.com/disneyplus-app/com.disney.disneyplus"
 apkcombo-dlurl = "https://apkcombo.com/disney-plus/com.disney.disneyplus"
 
-
+[vix-morphe-androidtv]
+enabled = true 
+pkg-name = "com.univision.prendetv"
+app-name = "vix"
+rv-brand = "morphe-androidtv"
+build-mode = "apk"
+arch = "all"
+patches-source = "ajstrick81/morphe-androidtv-patches"
+cli-source = "MorpheApp/morphe-desktop"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
+apkpure-dlurl = "https://apkpure.com/vix-tv-deportes-y-noticias/com.univision.prendetv"
+apkcombo-dlurl = "https://apkcombo.com/vix/com.univision.prendetv/"
 
 
