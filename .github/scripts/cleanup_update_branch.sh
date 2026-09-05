@@ -22,6 +22,10 @@ if [ -d changelogs ]; then
     fname=$(basename "$f")
     tag="${fname%.md}"
     if ! echo "$ACTIVE_TAGS" | grep -Fxq "$tag"; then
+      if grep -q "changelogs/${tag}\.md" *-update.json 2>/dev/null; then
+        echo "Keeping changelog: $f (release '$tag' pruned, but still referenced by an active update.json)"
+        continue
+      fi
       echo "Pruning orphaned changelog: $f (release tag '$tag' no longer exists)"
       rm -f "$f"
       DELETED_COUNT=$((DELETED_COUNT + 1))

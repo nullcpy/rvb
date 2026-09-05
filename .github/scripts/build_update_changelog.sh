@@ -22,7 +22,7 @@ for OUTPUT in *module*.zip; do
   UPDATE_JSON="${UPDATE_JSON##*/}"
   VER=$(echo "$ZIP_S" | grep version=)
   VER="${VER##*=}"
-  DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/$NEXT_VER_CODE/${OUTPUT}"
+  DLURL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${ARCHIVE_TAG:-stable}/${OUTPUT}"
   get_update_json "$VER" "$DLURL" >"../$UPDATE_JSON"
 done
 cd ..
