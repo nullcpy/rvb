@@ -522,7 +522,7 @@ gh_dl() {
 
 log() { echo -e "$1  " >>"build.md"; }
 get_highest_ver() {
-	local vers m valid_vers=""
+	local vers valid_vers=""
 	vers=$(tee)
 	
 	# Try to find the highest valid semver first
@@ -535,9 +535,8 @@ get_highest_ver() {
 	if [ -n "$valid_vers" ]; then
 		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -1
 	else
-		# Fallback to the original behavior if no valid semvers
-		m=$(head -1 <<<"$vers")
-		echo "$m"
+		# Fallback to sorting all versions descending if no semvers validated
+		sort -s -t- -k1,1Vr <<<"$vers" | head -1
 	fi
 }
 sort_vers() {
@@ -554,14 +553,15 @@ sort_vers() {
 	if [ -n "$valid_vers" ]; then
 		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -2
 	else
-		head -2 <<<"$vers"
+		sort -s -t- -k1,1Vr <<<"$vers" | head -2
 	fi
 }
 semver_validate() {
-	local a="${1%-*}"
-	local a="${a#v}"
+	local a="${1%%[-+_ (]*}"
+	a="${a#v}"
+	a="${a#V}"
 	local ac="${a//[.0-9]/}"
-	[ ${#ac} = 0 ]
+	[ -n "$a" ] && [ ${#ac} = 0 ]
 }
 get_patch_last_supported_ver() {
 	local cache_key="${1}_${2}_${3:-}_${4:-}_${5:-}_${6:-}"
