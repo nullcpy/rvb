@@ -1,6 +1,6 @@
 {
   "patches-version": "dev",
-  "enable-module-update": false,
+  "enable-module-update": true,
   "youtube-anddea": {
     "enabled": false,
     "pkg-name": "com.google.android.youtube",

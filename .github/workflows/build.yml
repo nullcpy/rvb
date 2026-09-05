@@ -178,7 +178,7 @@ jobs:
         with:
           branch: update
           skip_checkout: true
-          file_pattern: build.md *-update.json
+          file_pattern: build.md changelogs/*.md *-update.json
           commit_message: Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}
 
       - name: Remove frequently updated apps
