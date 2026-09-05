@@ -1,8 +1,5 @@
-twitter-morphe (arm64-v8a): 12.19.1-release.0  
-twitter-morphe (arm-v7a): 12.19.1-release.0  
-twitter-morphe-materialu (arm64-v8a): 12.19.1-release.0  
-twitter-morphe-materialu (arm-v7a): 12.19.1-release.0  
-instagram-morphe-piko (arm64-v8a): 439.0.0.37.89  
+brave-browser-morphe (arm64-v8a): 1.94.121  
+brave-browser-morphe (arm-v7a): 1.94.121  
 
 **Notes:**  
 • Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  
@@ -11,5 +8,5 @@ instagram-morphe-piko (arm64-v8a): 439.0.0.37.89
 [GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)
   
 CLI: MorpheApp/morphe-desktop-1.15.0-all.jar  
-Patches: crimera/patches-3.10.0-dev.4.mpp  
-[Changelog](https://github.com/crimera/piko/releases/tag/v3.10.0-dev.4)  
+Patches: kveld9/patches-1.13.0.mpp  
+[Changelog](https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.13.0)  
