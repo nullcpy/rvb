@@ -169,6 +169,7 @@ jobs:
       - name: Update changelog and module update files
         env:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/build_update_changelog.sh
