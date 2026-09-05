@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 git checkout -f update || git switch --discard-changes --orphan update
+mkdir -p changelogs
+cp -f build.tmp "changelogs/${NEXT_VER_CODE}.md"
 cp -f build.tmp build.md
 
 get_update_json() {
@@ -8,7 +10,7 @@ get_update_json() {
   \"version\": \"$1\",
   \"versionCode\": $NEXT_VER_CODE,
   \"zipUrl\": \"$2\",
-  \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/build.md\"
+  \"changelog\": \"https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/changelogs/$NEXT_VER_CODE.md\"
 }"
 }
 
