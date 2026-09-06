@@ -2,30 +2,19 @@
 # cli-version = "dev"
 enable-module-update = true
 
-[disneyplus-morphe-androidtv]
-enabled = true 
-pkg-name = "com.disney.disneyplus"
-app-name = "disneyplus"
-rv-brand = "morphe-androidtv"
+[aliexpress-morphe]
+enabled = true
+pkg-name = "com.alibaba.aliexpresshd"
+app-name = "aliexpress"
+rv-brand = "morphe"
 build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
+arch = "both"
+patches-source = "Quantro100/Morphe-patches"
 cli-source = "MorpheApp/morphe-desktop"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
-apkpure-dlurl = "https://apkpure.com/disneyplus-app/com.disney.disneyplus"
-apkcombo-dlurl = "https://apkcombo.com/disney-plus/com.disney.disneyplus"
-
-[vix-morphe-androidtv]
-enabled = true 
-pkg-name = "com.univision.prendetv"
-app-name = "vix"
-rv-brand = "morphe-androidtv"
-build-mode = "apk"
-arch = "all"
-patches-source = "ajstrick81/morphe-androidtv-patches"
-cli-source = "MorpheApp/morphe-desktop"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
-apkpure-dlurl = "https://apkpure.com/vix-tv-deportes-y-noticias/com.univision.prendetv"
-apkcombo-dlurl = "https://apkcombo.com/vix/com.univision.prendetv/"
+included-patches = "'Enable image saving' 'Disable splash screen'"
+uptodown-dlurl = "https://aliexpress.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app"
+apkpure-dlurl = "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd"
+apkcombo-dlurl = "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
 
 
