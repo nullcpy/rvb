@@ -1723,22 +1723,25 @@ dl_github() {
     local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false}
     local path="" version_f=${version// /}
     local repo=$(cut -d/ -f4-5 <<<"$url")
-    local base_url=${__GITHUB_URL__:-$url}
-    
-    # If __GITHUB_TAG__ contains multiple tags (from /releases array), we must find the exact one
-    if echo "$__GITHUB_TAG__" | grep -q "[[:space:]]"; then
-        local exact_tag=""
-        for t in $__GITHUB_TAG__; do
-            if [ "$t" = "v${version_f#v}" ] || [ "$t" = "${version_f#v}" ]; then
-                exact_tag="$t"
-                break
-            fi
-        done
-        if [ -z "$exact_tag" ]; then
+    local exact_tag=""
+    while IFS= read -r t; do
+        [ -z "$t" ] && continue
+        if [ "$t" = "v${version_f#v}" ] || [ "$t" = "${version_f#v}" ]; then
+            exact_tag="$t"
+            break
+        fi
+    done <<<"$__GITHUB_TAG__"
+
+    if [ -z "$exact_tag" ]; then
+        local tag_lines
+        tag_lines=$(grep -c . <<<"$__GITHUB_TAG__" || true)
+        if [ "$tag_lines" -eq 1 ]; then
+            exact_tag="$__GITHUB_TAG__"
+        else
             exact_tag="v${version_f#v}"
         fi
-        base_url="https://github.com/${repo}/releases/download/${exact_tag}"
     fi
+    local base_url="https://github.com/${repo}/releases/download/${exact_tag}"
     
 local regex=""
     if [ -n "${args[github_regex]:-}" ]; then
@@ -1883,7 +1886,13 @@ get_github_resp() {
 	[ -z "$__GITHUB_PKG_NAME__" ] && __GITHUB_PKG_NAME__="${pkg_name:-}"
 	if [ -z "$__GITHUB_PKG_NAME__" ]; then return 1; fi
 	
-	__GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+	local tag_lines
+	tag_lines=$(grep -c . <<<"$tag" || true)
+	if [ "$tag_lines" -eq 1 ]; then
+		__GITHUB_URL__="https://github.com/${repo}/releases/download/${tag}"
+	else
+		__GITHUB_URL__="https://github.com/${repo}/releases/download"
+	fi
 	__GITHUB_TAG__="$tag"
 	
 	__DL_RESP_CACHE__["github_resp_$cache_key"]="$__GITHUB_RESP__"
