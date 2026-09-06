@@ -18,7 +18,7 @@ There exists an example below with all defaults shown and all the keys explicitl
 ```toml
 compression-level = 9                # module zip compression level
 remove-rv-integrations-checks = true # remove checks from the revanced integrations
-dpi = "nodpi anydpi auto"            # dpi packages to be searched in order. 'auto' matches whatever is available. default: "nodpi anydpi auto"
+dpi = "320dpi nodpi"            # dpi packages to be searched in order. 'auto' matches whatever is available. default: "nodpi anydpi auto"
 
 patches-source = "revanced/revanced-patches" # where to fetch patches bundle from. default: "MorpheApp/morphe-patches"
 patches-source-host = "github"               # source host for patches: "github" or "gitlab". default: "github"
@@ -67,8 +67,11 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/some-app/com.some.app"
 apkcombo-dlurl = "https://apkcombo.com/some-app/com.some.app"
-# github release tag url. downloads apk assets from that release.
-github-dlurl = "https://github.com/developer/app/releases/latest"
+# github release url or repo url (e.g. 'https://github.com/developer/app', '.../releases/latest', or '.../releases/tag/v1.0').
+github-dlurl = "https://github.com/developer/app"
+# regex used to filter releases when querying a repo url without a fixed tag (e.g. multi-channel repos).
+# if omitted, the script automatically checks if table or rv-brand targets a channel (beta, nightly, alpha, canary) or filters for stable releases.
+github-release-regex = "^Beta"
 # regex used to pick the exact apk file from the github release assets. supports {version} and {arch} string interpolation.
 # you can define a generic regex, or map architectures to specific regexes using 'arch: regex | arch2: regex2'.
 github-regex = "arm64-v8a: 'MyApp-arm64-v{version}\\.apk' | arm-v7a: 'MyApp-arm-v{version}\\.apk'"

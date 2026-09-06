@@ -169,6 +169,8 @@ for table_name in $(toml_get_table_names); do
 	app_args[dpi]="${app_args[dpi]:-$DEF_DPI}"
 	app_args[arch]=$(toml_get "$t" arch) || app_args[arch]="auto"
 	app_args[github_regex]=$(toml_get "$t" github-regex) || app_args[github_regex]=""
+	app_args[github_release_regex]=$(toml_get "$t" github-release-regex) || app_args[github_release_regex]=""
+	app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]=""
 	table_name_f=${table_name,,}
 	table_name_f=${table_name_f// /-}
 	app_args[module_prop_name]=$(toml_get "$t" module-prop-name) || app_args[module_prop_name]="${table_name_f}-jhc"
