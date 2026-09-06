@@ -2780,7 +2780,7 @@ build_rv() {
 			[ -z "$version" ] && get_latest_ver=true
 			if [ $get_latest_ver = true ]; then
 				if [ "$version_mode" = beta ]; then __AAV__="true"; else __AAV__="false"; fi
-				local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${__AAV__}"
+				local vers_cache_key="${dl_from}_${args[${dl_from}_dlurl]}_${pkg_name:-default}_${__AAV__}"
 				if [ -n "${__PKG_VERS_CACHE__["$vers_cache_key"]:-}" ]; then
 					pkgvers="${__PKG_VERS_CACHE__["$vers_cache_key"]}"
 				else
