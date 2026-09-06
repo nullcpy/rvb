@@ -65,9 +65,10 @@
   "dh6k/morphe-patches": {
     "dev": {},
     "stable": {
-      "com.brave.browser_beta": "76a9994ca0b78420ad9f2601cbd289f2",
-      "com.brave.browser_nightly": "76a9994ca0b78420ad9f2601cbd289f2",
-      "shared": "006b9db213da925ec092b2cc2319621a"
+      "com.brave.browser_beta": "62ae75872698973b3097ee2ea2885428",
+      "com.brave.browser_nightly": "62ae75872698973b3097ee2ea2885428",
+      "io.github.jqssun.helium": "40782fc887187cb68189d66dc96154cc",
+      "shared": "0a50131a103ed182be3454f358bac6c5"
     }
   },
   "durgesh0505/chiggi_morphe_patches": {
@@ -269,6 +270,13 @@
     "stable": {
       "com.microsoft.emmx": "151519518665e90765b287d5e90ba3e3",
       "shared": "0e1237ce0a45c8a07bb403c5e043d2f4"
+    }
+  },
+  "quantro100/morphe-patches": {
+    "dev": {},
+    "stable": {
+      "com.alibaba.aliexpresshd": "db1739d61bbc548a390d6c39dcf6f2f9",
+      "shared": "29ccc7f8306a556542e4d41b869adf94"
     }
   },
   "revenge-mod/revenge-xposed": {

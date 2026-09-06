@@ -14,7 +14,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/imdb/imdb-imdb"
   },
   "disneyplus-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "disneyplus",
     "rv-brand": "morphe-androidtv",
@@ -27,7 +27,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/disney-plus/com.disney.disneyplus"
   },
   "prime-video-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "prime-video",
     "rv-brand": "morphe-androidtv",
@@ -40,7 +40,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv"
   },
   "hbomax-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "hbomax",
     "rv-brand": "morphe-androidtv",
@@ -51,7 +51,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv"
   },
   "peacock-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "peacock",
     "rv-brand": "morphe-androidtv",
@@ -63,7 +63,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
   },
   "tubi-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "tubi",
     "rv-brand": "morphe-androidtv",
@@ -74,7 +74,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
   },
   "vix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.univision.prendetv",
     "app-name": "vix",
     "rv-brand": "morphe-androidtv",
@@ -82,10 +82,12 @@
     "arch": "all",
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "cli-source": "MorpheApp/morphe-desktop",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv",
+    "apkpure-dlurl": "https://apkpure.com/vix-tv-deportes-y-noticias/com.univision.prendetv",
+    "apkcombo-dlurl": "https://apkcombo.com/vix/com.univision.prendetv/"
   },
   "plutotv-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.pluto.android",
     "app-name": "plutotv",
     "rv-brand": "morphe-androidtv",
@@ -97,7 +99,7 @@
     "uptodown-dlurl": "https://pluto-tv.en.uptodown.com/android"
   },
   "netflix-morphe-androidtv": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "netflix",
     "rv-brand": "morphe-androidtv",
@@ -644,7 +646,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
   },
   "brave-browser-morphe-beta": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "brave-browser",
     "rv-brand": "morphe-beta",
@@ -660,7 +662,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "brave-browser-morphe-nightly": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "brave-browser",
     "rv-brand": "morphe-nightly",
@@ -676,7 +678,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "titanium-browser-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "titanium-browser",
     "rv-brand": "morphe",
@@ -1651,6 +1653,20 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/chess-com/chess-play-learn",
     "apkpure-dlurl": "https://apkpure.com/chess-play-and-learn-online/com.chess",
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
+  },
+  "aliexpress-morphe": {
+    "enabled": true,
+    "pkg-name": "com.alibaba.aliexpresshd",
+    "app-name": "aliexpress",
+    "rv-brand": "morphe",
+    "build-mode": "apk",
+    "arch": "both",
+    "patches-source": "Quantro100/Morphe-patches",
+    "cli-source": "MorpheApp/morphe-desktop",
+    "uptodown-dlurl": "https://aliexpress.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app",
+    "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
+    "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "proton-mail-revanced": {
     "enabled": false,

@@ -40,10 +40,10 @@
   "hoodles": {
     "repo": "hoo-dles/morphe-patches",
     "stable": "v1.43.0",
-    "prerelease": "v1.44.0-dev.2",
+    "prerelease": "v1.44.0-dev.3",
     "blocked": false,
     "stable_date": "2026-08-30T00:32:47Z",
-    "pre_date": "2026-09-05T20:05:00Z"
+    "pre_date": "2026-09-06T02:53:08Z"
   },
   "adobo": {
     "repo": "jkennethcarino/adobo",
@@ -271,10 +271,10 @@
   },
   "dh6k": {
     "repo": "dh6k/morphe-patches",
-    "stable": "v1.4.0",
-    "stable_date": "2026-08-24T09:07:19Z",
-    "prerelease": "v1.5.0-dev.5",
-    "pre_date": "2026-09-04T09:26:29Z",
+    "stable": "v1.5.0",
+    "stable_date": "2026-09-05T22:28:53Z",
+    "prerelease": "v1.6.0-dev.4",
+    "pre_date": "2026-09-06T03:30:35Z",
     "blocked": false
   },
   "kveld9": {
@@ -326,6 +326,11 @@
     "blocked": false
   },
   "quantro100": {
-    "repo": "Quantro100/Morphe-patches"
+    "repo": "Quantro100/Morphe-patches",
+    "stable": "v1.0.7",
+    "stable_date": "2026-06-02T20:22:14Z",
+    "prerelease": "",
+    "pre_date": "",
+    "blocked": false
   }
 }
