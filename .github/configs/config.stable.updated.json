@@ -635,7 +635,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
   },
   "strava-morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.strava",
     "app-name": "strava",
     "rv-brand": "morphe",
@@ -646,7 +646,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
   },
   "brave-browser-morphe-beta": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "brave-browser",
     "rv-brand": "morphe-beta",
@@ -662,7 +662,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "brave-browser-morphe-nightly": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "brave-browser",
     "rv-brand": "morphe-nightly",
@@ -678,7 +678,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "titanium-browser-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "titanium-browser",
     "rv-brand": "morphe",
@@ -1655,7 +1655,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "aliexpress-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "aliexpress",
     "rv-brand": "morphe",
@@ -1663,6 +1663,7 @@
     "arch": "both",
     "patches-source": "Quantro100/Morphe-patches",
     "cli-source": "MorpheApp/morphe-desktop",
+    "included-patches": "'Enable image saving' 'Disable splash screen'",
     "uptodown-dlurl": "https://aliexpress.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app",
     "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
