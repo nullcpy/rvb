@@ -814,6 +814,13 @@ merge_splits() {
 		mv -f "$bundle" "$output"
 		return 0
 	fi
+	local apk_count
+	apk_count=$(unzip -l "$bundle" 2>/dev/null | grep -c '\.apk$' || true)
+	if [ "$apk_count" -le 1 ] && unzip -l "$bundle" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*base\.apk$'; then
+		pr "Extracting base.apk from bundle"
+		unzip -p "$bundle" base.apk > "$output" || return 1
+		return 0
+	fi
 	pr "Merging splits"
 	get_apkeditor || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
@@ -1420,24 +1427,7 @@ _apkpure_install_xapk() {
 		epr "Downloaded XAPK is not a valid zip (Cloudflare block?): $xapk"
 		return 1
 	fi
-	get_apkeditor || return 1
-	if unzip -l "$xapk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*base\.apk$'; then
-		pr "Extracting base.apk from XAPK"
-		unzip -p "$xapk" base.apk > "$output" || return 1
-	else
-		pr "Merging XAPK splits with APKEditor"
-		local OP
-		if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" m -i "$xapk" -o "${output}-unsigned" 2>&1); then
-			epr "APKEditor m error: $OP"
-			return 1
-		fi
-		if ! OP=$(java -jar "$APKSIGNER" sign --ks ks-p12.keystore --ks-pass pass:123456789 --key-pass pass:123456789 --ks-key-alias jhc \
-			--out "$output" "${output}-unsigned" 2>&1); then
-			epr "apksigner error: $OP"
-			return 1
-		fi
-		rm "${output}.idsig" "${output}-unsigned" 2>/dev/null || :
-	fi
+	merge_splits "$xapk" "$output"
 }
 
 # -------------------- apkcombo --------------------
@@ -2893,14 +2883,14 @@ build_rv() {
 						continue
 					fi
 					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
-						pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as XAPK/APKS..."
-						mv "$stock_apk" "${stock_apk}.xapk"
-						if ! _apkpure_install_xapk "${stock_apk}.xapk" "$stock_apk"; then
-							epr "ERROR: Failed to extract XAPK/APKS"
-							rm -f "${stock_apk}.xapk" "$stock_apk"
+						pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as bundle (XAPK/APKS/APKM)..."
+						mv "$stock_apk" "${stock_apk}.bundle"
+						if ! merge_splits "${stock_apk}.bundle" "$stock_apk"; then
+							epr "ERROR: Failed to extract/merge bundle"
+							rm -f "${stock_apk}.bundle" "$stock_apk"
 							continue
 						fi
-						rm -f "${stock_apk}.xapk"
+						rm -f "${stock_apk}.bundle"
 					fi
 
 					local aapt_cmd="aapt"

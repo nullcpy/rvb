@@ -32,7 +32,7 @@ def apkmirror_search(html_content, dpi, arch, apk_bundle, clean_search_version, 
         if not dlurl.startswith("http"):
             dlurl = "https://www.apkmirror.com" + dlurl
 
-        badge_m = re.search(r'class="apkm-badge"[^>]*>([^<]+)</span>', r)
+        badge_m = re.search(r'class="[^"]*apkm-badge[^"]*"[^>]*>([^<]+)</span>', r)
         node_apk_bundle = badge_m.group(1).strip() if badge_m else "APK"
 
         cells = re.findall(r'<div class="table-cell[^"]*"[^>]*>(.*?)</div>', r, re.DOTALL)
