@@ -1,0 +1,14 @@
+[aliexpress-morphe]
+enabled = true
+pkg-name = "com.alibaba.aliexpresshd"
+app-name = "aliexpress"
+rv-brand = "morphe"
+build-mode = "apk"
+arch = "both"
+patches-source = "Quantro100/Morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://aliexpress.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app"
+apkpure-dlurl = "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd"
+apkcombo-dlurl = "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+
