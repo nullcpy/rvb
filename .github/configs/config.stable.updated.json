@@ -635,7 +635,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
   },
   "strava-morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "strava",
     "rv-brand": "morphe",
@@ -1161,7 +1161,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly"
   },
   "tiktok-morphe-alt": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "tiktok",
     "rv-brand": "morphe-alt",
