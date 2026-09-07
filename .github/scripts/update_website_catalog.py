@@ -247,6 +247,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
     apps.sort(key=lambda a: a["appName"].lower())
     catalog_data["apps"] = apps
     catalog_data["updated_at"] = now_iso
+    catalog_data["brands"] = brands
     return catalog_data
 
 def main():
