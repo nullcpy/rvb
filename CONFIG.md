@@ -76,7 +76,7 @@ apkcombo-dlurl = "https://apkcombo.com/some-app/com.some.app"
 # github release url or repo url (e.g. 'https://github.com/developer/app', '.../releases/latest', or '.../releases/tag/v1.0').
 github-dlurl = "https://github.com/developer/app"
 # regex used to filter releases when querying a repo url without a fixed tag (e.g. multi-channel repos).
-# if omitted, the script automatically checks if table, brand, or rv-brand targets a channel (beta, nightly, alpha, canary) or filters for stable releases.
+# if omitted, the script automatically checks if table, brand, or variant targets a channel (beta, nightly, alpha, canary) or filters for stable releases.
 github-release-regex = "^Beta"
 # regex used to pick the exact apk file from the github release assets. supports {version} and {arch} string interpolation.
 # you can define a generic regex, or map architectures to specific regexes using 'arch: regex | arch2: regex2'.
@@ -105,24 +105,7 @@ The build engine (`utils.sh`) automatically derives filename slugs directly from
 - `brand = "Morphe"` ➔ `morphe`
 - `app-name = "YouTube Music"` ➔ `youtube-music`
 
-Every configuration is self-contained in its TOML file with zero external lookup files or legacy baggage.
-
-#### Migrating from Legacy `rv-brand`
-
-Previously, `rv-brand` combined brand, variants, and channels into a single hyphenated string. This has been replaced by explicit, separate keys:
-
-| Legacy `rv-brand` | New Declarative Configuration |
-| :--- | :--- |
-| `rv-brand = "anddea-nord"` | `brand = "ReVanced Advanced"`, `variant = "Nord"` |
-| `rv-brand = "anddea-mocha"` | `brand = "ReVanced Advanced"`, `variant = "Mocha"` |
-| `rv-brand = "anddea"` | `brand = "ReVanced Advanced"` |
-| `rv-brand = "morphe-piko"` | `brand = "Piko"` |
-| `rv-brand = "morphe-adobo"` | `brand = "Adobo"` |
-| `rv-brand = "morphe-alt"` | `brand = "Morphe"`, `sub-variant = "alt"` |
-| `rv-brand = "morphe-androidtv"` | `brand = "Android TV"`, `sub-variant = "clone"` |
-
-> [!NOTE]
-> All legacy composite `rv-brand` configurations should be replaced with explicit `brand`, `variant`, and `sub-variant` keys.
+Every configuration is self-contained in its TOML file with zero external lookup files.
 
 **Output Filename Structure:**
 ```
