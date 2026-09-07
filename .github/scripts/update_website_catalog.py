@@ -216,7 +216,6 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "assets": assets
         }
         patch_entry["builds"].insert(0, build_entry)
-        patch_entry["builds"] = patch_entry["builds"][:10]
 
     # Sort apps alphabetically
     apps.sort(key=lambda a: a["appName"].lower())
