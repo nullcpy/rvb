@@ -3053,26 +3053,31 @@ build_rv() {
 	fi
 
 	local microg_patches=()
-	local IFS=$'
-'
-	for p in $(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" | sed 's/^Name: //' || :); do
-		microg_patches+=("$p")
-	done
-	unset IFS
-	if [ ${#microg_patches[@]} -gt 0 ]; then
-		local found=false
-		for p in "${microg_patches[@]}"; do
-			if [[ "${p_patcher_args[*]}" == *"$p"* ]]; then
-				found=true
-				p_patcher_args=("${p_patcher_args[@]//-[ei] \'$p\'/}")
-				p_patcher_args=("${p_patcher_args[@]//-[ei] \"$p\"/}")
-				p_patcher_args=("${p_patcher_args[@]//-[ei] $p/}")
-			fi
-		done
-		if [ "$found" = true ]; then
-			wpr "You cant include/exclude microg patch as that's done by rvmm builder automatically."
-		fi
-	fi
+	local microg_default_enabled=()
+	while IFS=$'\t' read -r p_name p_enabled; do
+		[ -z "$p_name" ] && continue
+		microg_patches+=("$p_name")
+		microg_default_enabled+=("$p_enabled")
+	done < <(awk '
+		BEGIN { RS=""; FS="\n" }
+		{
+			pname = ""
+			enabled = ""
+			for (i=1; i<=NF; i++) {
+				if ($i ~ /^Name: /) {
+					pname = substr($i, 7)
+					gsub(/\r/, "", pname)
+				}
+				if ($i ~ /^Enabled: /) {
+					enabled = substr($i, 10)
+					gsub(/\r/, "", enabled)
+				}
+			}
+			if (tolower(pname) ~ /gmscore|microg/) {
+				print pname "\t" (enabled == "true" ? "true" : "false")
+			}
+		}
+	' <<<"$list_patches")
 
 	local patcher_args patched_apk build_mode
 	local rv_brand_f=${args[rv_brand],,}
@@ -3084,22 +3089,43 @@ build_rv() {
 		patcher_args=("${p_patcher_args[@]}")
 		local -a cur_per_bundle_ed_args=("${per_bundle_ed_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
-		if [ ${#microg_patches[@]} -gt 0 ]; then
+		if [ ${#microg_patches[@]} -gt 0 ] || [ ${#build_mode_arr[@]} -gt 1 ]; then
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
 		else
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
 		fi
 		if [ ${#microg_patches[@]} -gt 0 ]; then
-			for p in "${microg_patches[@]}"; do
-				local mg_arg=""
+			for idx in "${!microg_patches[@]}"; do
+				local p="${microg_patches[$idx]}"
+				local is_def_enabled="${microg_default_enabled[$idx]}"
 				if [ "$build_mode" = apk ]; then
-					mg_arg=" -e \"$p\""
+					if [ "$is_def_enabled" = "true" ]; then
+						for ((bi=0; bi<n_bundles; bi++)); do
+							if [[ "${cur_per_bundle_ed_args[$bi]}" != *"-d \"$p\""* && \
+							      "${cur_per_bundle_ed_args[$bi]}" != *"-d '$p'"* && \
+							      "${cur_per_bundle_ed_args[$bi]}" != *"-d $p"* && \
+							      "${cur_per_bundle_ed_args[$bi]}" != *"-e \"$p\""* && \
+							      "${cur_per_bundle_ed_args[$bi]}" != *"-e '$p'"* && \
+							      "${cur_per_bundle_ed_args[$bi]}" != *"-e $p"* ]]; then
+								cur_per_bundle_ed_args[$bi]+=" -e \"$p\""
+							fi
+						done
+					fi
 				elif [ "$build_mode" = module ]; then
-					mg_arg=" -d \"$p\""
+					patcher_args=("${patcher_args[@]//-[ei] \'$p\'/}")
+					patcher_args=("${patcher_args[@]//-[ei] \"$p\"/}")
+					patcher_args=("${patcher_args[@]//-[ei] $p/}")
+					for ((bi=0; bi<n_bundles; bi++)); do
+						cur_per_bundle_ed_args[$bi]="${cur_per_bundle_ed_args[$bi]//-e \'$p\'/}"
+						cur_per_bundle_ed_args[$bi]="${cur_per_bundle_ed_args[$bi]//-e \"$p\"/}"
+						cur_per_bundle_ed_args[$bi]="${cur_per_bundle_ed_args[$bi]//-e $p/}"
+						if [[ "${cur_per_bundle_ed_args[$bi]}" != *"-d \"$p\""* && \
+						      "${cur_per_bundle_ed_args[$bi]}" != *"-d '$p'"* && \
+						      "${cur_per_bundle_ed_args[$bi]}" != *"-d $p"* ]]; then
+							cur_per_bundle_ed_args[$bi]+=" -d \"$p\""
+						fi
+					done
 				fi
-				for ((bi=0; bi<n_bundles; bi++)); do
-					cur_per_bundle_ed_args[$bi]+="$mg_arg"
-				done
 			done
 		fi
 		if [ "$build_mode" = module ]; then
