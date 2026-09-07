@@ -31,8 +31,7 @@ DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER="latest"
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="MorpheApp/morphe-patches"
 DEF_PATCHES_SRC_HOST=$(toml_get "$main_config_t" patches-source-host) || DEF_PATCHES_SRC_HOST="github"
 DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="MorpheApp/morphe-desktop"
-DEF_RV_BRAND=$(toml_get "$main_config_t" brand) || DEF_RV_BRAND=""
-[ -z "$DEF_RV_BRAND" ] && { DEF_RV_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV_BRAND="ReVanced"; }
+DEF_BRAND=$(toml_get "$main_config_t" brand) || DEF_BRAND=""
 DEF_DPI=$(toml_get "$main_config_t" dpi) || DEF_DPI="nodpi anydpi auto"
 DEF_AUTHOR_NAME=$(toml_get "$main_config_t" author) || DEF_AUTHOR_NAME="nullcpy"
 DEF_AUTHOR_PAGE=$(toml_get "$main_config_t" author-page) || DEF_AUTHOR_PAGE="github.com/nullcpy/rvb"
@@ -123,7 +122,7 @@ for table_name in $(toml_get_table_names); do
 	app_args[patches_src]=${p_srcs[0]}
 	app_args[patches_ref]="${patches_ref_all% }"
 	app_args[changelog_url]="${changelog_url_all% }"
-	app_args[brand]=$(toml_get "$t" brand) || app_args[brand]="${p_srcs[0]%%/*}"
+	app_args[brand]=$(toml_get "$t" brand) || app_args[brand]="${DEF_BRAND:-${p_srcs[0]%%/*}}"
 	app_args[variant]=$(toml_get "$t" variant) || app_args[variant]=""
 	app_args[sub_variant]=$(toml_get "$t" sub-variant) || app_args[sub_variant]=""
 	[ -z "${app_args[sub_variant]}" ] && { app_args[sub_variant]=$(toml_get "$t" sub_variant) || app_args[sub_variant]=""; }
