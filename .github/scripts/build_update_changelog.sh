@@ -1,6 +1,23 @@
 #!/bin/bash
 set -euo pipefail
 
+# Check if any module zip was actually built
+shopt -s nullglob
+MODULES=(build/*module*.zip)
+shopt -u nullglob
+
+if [ ${#MODULES[@]} -eq 0 ]; then
+  echo "No modules produced in this build. Skipping update branch changelog."
+  if [ -n "${GITHUB_OUTPUT-}" ]; then
+    echo "has_modules=false" >> "$GITHUB_OUTPUT"
+  fi
+  exit 0
+fi
+
+if [ -n "${GITHUB_OUTPUT-}" ]; then
+  echo "has_modules=true" >> "$GITHUB_OUTPUT"
+fi
+
 git checkout -f update || git switch --discard-changes --orphan update
 mkdir -p changelogs
 cp -f build.tmp "changelogs/${NEXT_VER_CODE}.md"
