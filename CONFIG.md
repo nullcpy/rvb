@@ -215,3 +215,37 @@ App versions are permanently tracked and committed to `.github/configs/app_versi
 You can manually update this file if you need to force a specific version state, but the CI will automatically manage it during scheduled runs.
 
 **Selective Checking:** If you only want the CI to check specific apps (instead of all enabled apps in your config), you can add `"_check_only_listed": true` to the top level of `app_versions.json`. When this is true, the script will only check for updates for the apps that already exist as keys in the file, saving time and resources.
+
+## Release Cleanup & Catalog Synchronization
+
+Maintenance and cleanup workflows ensure GitHub Releases, changelogs, and the website catalog remain pruned and synchronized with live metrics.
+
+### Automated Routine Cleanup (`cleanup.yml`)
+- **Numbered Releases**: Retains the latest 98 numbered releases via `ophub/delete-releases-workflows`.
+- **Archive Releases**: Retains rolling `stable` and `beta` releases, keeping up to 2 versions per asset group via `cleanup-archive-assets.py`.
+- **Website Catalog Sync (`sync_website_catalog.py`)**:
+  - Pulls live `download_count` numbers directly from GitHub Releases API in a single bulk request (`releases?per_page=100`).
+  - Updates asset download metrics and recalculates `totalDownloads` for every brand and app in `data.json`.
+  - Prunes deleted builds and empty apps, and reconciles variant pointers (`latestStable`, `latestBeta`).
+  - **Circuit Breaker**: Hard-aborts if GitHub API returns `< 10` releases to protect `data.json` from accidental corruption.
+
+### Full Clean Slate / Rebuilding from Scratch
+To completely wipe all historical releases (including `stable` and `beta`) and rebuild everything with clean Schema v2 naming conventions:
+1. In `.github/workflows/cleanup.yml`, set:
+   ```yaml
+   releases_keep_latest: 0
+   workflows_keep_day: 0
+   # (omit releases_keep_keyword: stable/beta)
+   ```
+2. Set `ALLOW_EMPTY_CATALOG: "true"` in the `Synchronize Website Catalog Data` step.
+3. Trigger the **Cleanup** workflow via `workflow_dispatch`.
+   - All past releases, tags, and workflow logs are purged.
+   - `sync_website_catalog.py` resets `data.json` on `nullcpy.github.io` to `apps: []` without tripping the circuit breaker.
+4. Subsequent CI builds will author clean numbered releases and rolling archives from scratch.
+5. **Restoring Routine Configuration**: After the clean-slate rebuild has run, restore `.github/workflows/cleanup.yml` back to standard retention:
+   ```yaml
+   releases_keep_latest: 98
+   releases_keep_keyword: stable/beta
+   workflows_keep_day: 0
+   ```
+   and remove `ALLOW_EMPTY_CATALOG: "true"` (or set to `"false"`) to re-arm the circuit breaker.
