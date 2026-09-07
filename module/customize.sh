@@ -184,6 +184,11 @@ fi
 rm -rf "${MODPATH:?}/bin" "$MODPATH/stock/"
 cp -f "$MODPATH/module.prop" "$MODPATH/module.prop.orig"
 
+MAINTAINER_FILE="$MODPATH/maintainer.txt"
+if [ -f "$MAINTAINER_FILE" ]; then MAINTAINER=$(cat "$MAINTAINER_FILE"); fi
+if [ -z "${MAINTAINER:-}" ]; then MAINTAINER="nullcpy (github.com/nullcpy/rvb)"; fi
+rm -f "$MAINTAINER_FILE"
+
 ui_print "* Done. No need to reboot."
-ui_print "  by j-hc (github.com/j-hc)"
+ui_print "  by $MAINTAINER"
 ui_print " "
