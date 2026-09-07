@@ -190,16 +190,6 @@ def main():
     lines.append("")
     lines.append("🌐 [GitHub](https://github.com/nullcpy/rvb) | 💬 [Group](https://t.me/rvb27) | ☕ [Donate](https://fahim-ahmed05.github.io/donate) | 🔗 [Website](https://nullcpy.github.io)")
     lines.append("")
-
-    # Skipped section if any
-    skipped_file = Path("temp/skipped")
-    if skipped_file.exists():
-        skipped_text = skipped_file.read_text(encoding="utf-8").strip()
-        if skipped_text:
-            lines.append("### ⏭️ Skipped")
-            lines.append(skipped_text)
-            lines.append("")
-
     content = "\n".join(lines)
     with open("build.md", "w", encoding="utf-8") as f:
         f.write(content)
