@@ -209,8 +209,8 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "package_name": pkg_name,
             "patchMeta": {
                 "cli": "",
-                "patches": [patches_ref] if patches_ref else [],
-                "changelogs": [changelog_url] if changelog_url else []
+                "patches": patches_ref.split() if isinstance(patches_ref, str) else (patches_ref or []),
+                "changelogs": changelog_url.split() if isinstance(changelog_url, str) else (changelog_url or [])
             },
             "appliedPatches": info.get("applied_patches") or [],
             "assets": assets
