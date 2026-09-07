@@ -14,8 +14,6 @@ def load_json(path, default=None):
             print(f"Warning: Could not read {path}: {e}")
     return default if default is not None else {}
 
-CONFIG = load_json("config.json")
-
 def resolve_display_name(target_key, info):
     base_name = info.get("display_name") or target_key
     variant = (info.get("variant") or "").strip()
