@@ -275,10 +275,11 @@ def main():
     print("Cloning website repository (nullcpy.github.io)...")
     run_cmd(f"git clone --depth 1 {website_repo_url} {clone_dir}")
 
-    catalog_path = clone_dir / "catalog.json"
-    catalog_data = load_json(catalog_path, default={"version": 1, "updated_at": "", "apps": []})
+    old_catalog_path = clone_dir / "catalog.json"
+    data_path = clone_dir / "data.json"
+    catalog_data = load_json(data_path if data_path.exists() else old_catalog_path, default={"version": 1, "updated_at": "", "apps": []})
 
-    print("Updating catalog data with new build entries...")
+    print("Updating website data with new build entries...")
     updated_catalog = update_catalog_data(
         catalog_data,
         build_info,
@@ -291,22 +292,26 @@ def main():
         config
     )
 
-    with open(catalog_path, "w", encoding="utf-8") as f:
+    with open(data_path, "w", encoding="utf-8") as f:
         json.dump(updated_catalog, f, separators=(",", ":"))
 
-    print("Committing and pushing updated catalog.json...")
+    if old_catalog_path.exists():
+        old_catalog_path.unlink()
+        run_cmd("git rm -f catalog.json", check=False, cwd=clone_dir)
+
+    print("Committing and pushing updated data.json...")
     run_cmd("git config user.name 'github-actions[bot]'", cwd=clone_dir)
     run_cmd("git config user.email 'github-actions[bot]@users.noreply.github.com'", cwd=clone_dir)
-    run_cmd("git add catalog.json", cwd=clone_dir)
+    run_cmd("git add data.json", cwd=clone_dir)
 
     status = run_cmd("git status --porcelain", cwd=clone_dir)
     if not status:
-        print("No catalog changes to commit.")
+        print("No data changes to commit.")
         return
 
-    run_cmd(f"git commit -m 'chore: update catalog for build {next_ver_code}'", cwd=clone_dir)
+    run_cmd(f"git commit -m 'chore: update data for build {next_ver_code}'", cwd=clone_dir)
     run_cmd("git push origin main", cwd=clone_dir)
-    print("Successfully published updated catalog.json to nullcpy.github.io!")
+    print("Successfully published updated data.json to nullcpy.github.io!")
 
 if __name__ == "__main__":
     main()
