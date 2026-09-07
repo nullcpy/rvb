@@ -1,12 +1,11 @@
-[imdb-morphe]
+[imdb-adobo]
 enabled = true
 pkg-name = "com.imdb.mobile"
-app-name = "imdb"
-rv-brand = "morphe"
+app-name = "IMDb"
+brand = "Adobo"
 build-mode = "apk"
 arch = "all"
 patches-source = "jkennethcarino/adobo"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
-# archive-dlurl = ""

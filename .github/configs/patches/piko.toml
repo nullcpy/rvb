@@ -1,48 +1,53 @@
-[twitter-morphe]
+[twitter-piko]
 enabled = true 
 pkg-name = "com.twitter.android"
-app-name = "twitter"
-rv-brand = "morphe"
+app-name = "Twitter"
+brand = "Piko"
 build-mode = "both"
 arch = "both"
 patches-source = "crimera/piko"
-# patches-source = "'inotia00/x-shim' 'crimera/piko'"
-# patches-source-host = "'gitlab' 'github'"
-# version = "11.81.0-release.0"
-# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
 
-[twitter-morphe-materialu]
+[twitter-piko-materialu]
 enabled = true
 pkg-name = "com.twitter.android"
-app-name = "twitter"
-rv-brand = "morphe-materialu"
+app-name = "Twitter"
+brand = "Piko"
+variant = "MaterialYou"
 build-mode = "both"
 arch = "both"
 patches-source = "crimera/piko"
-# patches-source-host = "'gitlab' 'github'"
-# patcher-args = "--continue-on-error"
 included-patches = "'Bring back twitter' 'Dynamic color'"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.twitter.android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
 
-[instagram-morphe-piko]
+[instagram-piko]
 enabled = true
 pkg-name = "com.instagram.android"
-app-name = "instagram"
-rv-brand = "morphe-piko"
+app-name = "Instagram"
+brand = "Piko"
 build-mode = "both"
 arch = "arm64-v8a"
 patches-source = "crimera/piko"
-# patcher-args = "--continue-on-error"
 cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-# archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
+
+[instagram-piko-clone]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+brand = "Piko"
+sub-variant = "clone"
+included-patches = "'Change package name'"
+build-mode = "both"
+arch = "arm64-v8a"
+patches-source = "crimera/piko"
+cli-source = "MorpheApp/morphe-desktop"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"

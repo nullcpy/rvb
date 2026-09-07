@@ -2,7 +2,7 @@
 enabled = true
 pkg-name = "com.brave.browser"
 app-name = "brave-browser"
-rv-brand = "morphe"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "kveld9/kveld-morphe-patches"

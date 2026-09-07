@@ -2,7 +2,8 @@
 enabled = true
 pkg-name = "com.nuvio.tv"
 app-name = "nuvio"
-rv-brand = "morphe-androidtv"
+brand = "Android TV"
+sub-variant = "clone"
 build-mode = "apk"
 arch = "both"
 patches-source = "liongalahad/nuviotv-morphe-patches"

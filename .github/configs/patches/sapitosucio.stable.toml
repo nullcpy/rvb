@@ -2,7 +2,7 @@
 enabled = true
 pkg-name = "com.facebook.katana"
 app-name = "facebook"
-rv-brand = "morphe"
+brand = "Morphe"
 build-mode = "apk"
 arch = "arm64-v8a"
 patches-source = "SapitoSucio/FroggoMorphePatches"

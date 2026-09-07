@@ -111,8 +111,45 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
         app_name = format_display_name(target_key, raw_display, brands)
         app_key = normalize_key(app_name) or normalize_key(target_key)
 
-        patch_key, patch_name = parse_patch_info(info.get("patches_source"), info.get("patches"))
-        variant_key, variant_name = parse_variant(target_key, app_key, patch_key, brands)
+        brand_cfg = info.get("brand")
+        if brand_cfg:
+            brand_norm = re.sub(r"[_\s-]+", "", brand_cfg.lower())
+            if brand_norm in brands:
+                patch_name = brands[brand_norm]
+                patch_key = normalize_key(patch_name)
+            else:
+                matched_key = next((k for k, v in brands.items() if re.sub(r"[_\s-]+", "", v.lower()) == brand_norm), None)
+                if matched_key:
+                    patch_name = brands[matched_key]
+                    patch_key = normalize_key(patch_name)
+                else:
+                    patch_name = brand_cfg
+                    patch_key = normalize_key(brand_cfg)
+        else:
+            patch_key, patch_name = parse_patch_info(info.get("patches_source"), info.get("patches"))
+
+        variant_cfg = (info.get("variant") or "").strip()
+        sub_variant_cfg = (info.get("sub_variant") or "").strip()
+
+        if variant_cfg or sub_variant_cfg:
+            parts_key = []
+            parts_name = []
+            if variant_cfg and variant_cfg.lower() != "default":
+                v_norm = re.sub(r"[_\s-]+", "", variant_cfg.lower())
+                v_display = brands.get(v_norm, variant_cfg)
+                parts_key.append(normalize_key(variant_cfg))
+                parts_name.append(v_display)
+            if sub_variant_cfg:
+                parts_key.append(normalize_key(sub_variant_cfg))
+                if parts_name:
+                    parts_name.append(f"({sub_variant_cfg.capitalize()})")
+                else:
+                    parts_name.append(sub_variant_cfg.capitalize())
+            
+            variant_key = "-".join(parts_key) if parts_key else "default"
+            variant_name = " ".join(parts_name) if parts_name else "Standard"
+        else:
+            variant_key, variant_name = parse_variant(target_key, app_key, patch_key, brands)
 
         version = info.get("version", "")
         pkg_name = info.get("package_name", "")
@@ -157,12 +194,17 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             variant_entry = {
                 "variantKey": variant_key,
                 "variantName": variant_name,
+                "package_name": pkg_name,
+                "apkFilter": f"^{file_prefix}-v.*\\.apk$",
                 "latestStable": None,
                 "latestBeta": None,
                 "latestArchiveStable": None,
                 "latestArchiveBeta": None
             }
             patch_entry["variants"].append(variant_entry)
+        else:
+            variant_entry["package_name"] = pkg_name or variant_entry.get("package_name", "")
+            variant_entry["apkFilter"] = f"^{file_prefix}-v.*\\.apk$"
 
         # Update latest channel pointers
         channel_meta = {
@@ -229,6 +271,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "assets": assets
         }
         patch_entry["builds"].insert(0, build_entry)
+        patch_entry["builds"] = patch_entry["builds"][:10]
 
     # Sort apps alphabetically
     apps.sort(key=lambda a: a["appName"].lower())
@@ -275,9 +318,8 @@ def main():
     print("Cloning website repository (nullcpy.github.io)...")
     run_cmd(f"git clone --depth 1 {website_repo_url} {clone_dir}")
 
-    old_catalog_path = clone_dir / "catalog.json"
     data_path = clone_dir / "data.json"
-    catalog_data = load_json(data_path if data_path.exists() else old_catalog_path, default={"version": 1, "updated_at": "", "apps": []})
+    catalog_data = load_json(data_path, default={"version": 1, "updated_at": "", "apps": []})
 
     print("Updating website data with new build entries...")
     updated_catalog = update_catalog_data(
@@ -295,9 +337,6 @@ def main():
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(updated_catalog, f, separators=(",", ":"))
 
-    if old_catalog_path.exists():
-        old_catalog_path.unlink()
-        run_cmd("git rm -f catalog.json", check=False, cwd=clone_dir)
 
     print("Committing and pushing updated data.json...")
     run_cmd("git config user.name 'github-actions[bot]'", cwd=clone_dir)

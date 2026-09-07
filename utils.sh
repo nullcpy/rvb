@@ -2164,11 +2164,31 @@ check_sig() {
 	fi
 }
 
+resolve_slug() {
+	local val="${1:-}"
+	[ -z "$val" ] && return 0
+	local val_clean="${val,,}"
+	val_clean="${val_clean// /-}"
+	if [ -f "brands.json" ]; then
+		local slug
+		slug=$(jq -r --arg val "$val" --arg vclean "$val_clean" \
+			'to_entries | map(select(.value == $val or .key == $val or .key == $vclean or (.value | gsub("[_\\s-]+"; "") | ascii_downcase) == ($val | gsub("[_\\s-]+"; "") | ascii_downcase))) | .[0].key // empty' brands.json 2>/dev/null || true)
+		if [ -n "$slug" ]; then
+			echo "$slug"
+			return 0
+		fi
+	fi
+	echo "$val_clean"
+}
+
 write_build_info() {
 	local key=$1 arch=$2 ext=$3 name=$4 version=$5 patches=$6 changelog=$7
 	local pkg_name=${8:-${pkg_name:-}}
 	local display_name=${9:-${app_name:-${key}}}
 	local patches_source=${10:-${args[patches_src]:-}}
+	local brand=${11:-${args[brand]:-}}
+	local variant=${12:-${args[variant]:-}}
+	local sub_variant=${13:-${args[sub_variant]:-}}
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
 	# extract applied patches supporting revanced, morphe-desktop, and instafel output formats
@@ -2188,12 +2208,18 @@ write_build_info() {
 		--arg pkg_name "$pkg_name" \
 		--arg display_name "$display_name" \
 		--arg patches_source "$patches_source" \
+		--arg brand "$brand" \
+		--arg variant "$variant" \
+		--arg sub_variant "$sub_variant" \
 		--argjson applied "$applied_json" \
 		'if has($key) then
 			.[$key].exts = (.[$key].exts + [$ext] | unique) |
 			(if $pkg_name != "" then .[$key].package_name = $pkg_name else . end) |
 			(if $display_name != "" then .[$key].display_name = $display_name else . end) |
-			(if $patches_source != "" then .[$key].patches_source = $patches_source else . end)
+			(if $patches_source != "" then .[$key].patches_source = $patches_source else . end) |
+			(if $brand != "" then .[$key].brand = $brand else . end) |
+			(if $variant != "" then .[$key].variant = $variant else . end) |
+			(if $sub_variant != "" then .[$key].sub_variant = $sub_variant else . end)
 		else
 			.[$key] = {
 				exts: [$ext],
@@ -2205,6 +2231,9 @@ write_build_info() {
 				package_name: $pkg_name,
 				display_name: $display_name,
 				patches_source: $patches_source,
+				brand: $brand,
+				variant: $variant,
+				sub_variant: $sub_variant,
 				applied_patches: $applied
 			}
 		end' \
@@ -2276,8 +2305,9 @@ build_rv() {
 	local patches_jar="${args[ptjar]}"
 	local mode_arg=${args[build_mode]} version_mode=${args[version]}
 	local app_name=${args[app_name]}
-	local app_name_l=${app_name,,}
-	app_name_l=${app_name_l// /-}
+	local app_name_l
+	app_name_l=$(resolve_slug "$app_name")
+	[ -z "$app_name_l" ] && { app_name_l=${app_name,,}; app_name_l=${app_name_l// /-}; }
 	local table=${args[table]}
 	local dl_from=${args[dl_from]}
 	local arch=${args[arch]}
@@ -3034,8 +3064,24 @@ build_rv() {
 	' <<<"$list_patches")
 
 	local patcher_args patched_apk build_mode
-	local rv_brand_f=${args[rv_brand],,}
-	rv_brand_f=${rv_brand_f// /-}
+	local brand_val="${args[brand]:-}"
+	local brand_slug=""
+	[ -n "$brand_val" ] && brand_slug=$(resolve_slug "$brand_val")
+
+	local variant_val="${args[variant]:-}"
+	local variant_slug=""
+	[ -n "$variant_val" ] && variant_slug=$(resolve_slug "$variant_val")
+
+	local sub_variant_val="${args[sub_variant]:-}"
+	local sub_variant_slug=""
+	[ -n "$sub_variant_val" ] && sub_variant_slug=$(resolve_slug "$sub_variant_val")
+
+	local file_prefix="${app_name_l}"
+	[ -n "$brand_slug" ] && file_prefix+="-${brand_slug}"
+	[ -n "$variant_slug" ] && [ "$variant_slug" != "default" ] && file_prefix+="-${variant_slug}"
+	[ -n "$sub_variant_slug" ] && file_prefix+="-${sub_variant_slug}"
+
+	local rv_brand_f="${brand_slug}"
 	local patches_ref="${args[patches_ref]}"
 	local changelog_url="${args[changelog_url]}"
 	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
@@ -3044,9 +3090,9 @@ build_rv() {
 		local -a cur_per_bundle_ed_args=("${per_bundle_ed_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
 		if [ ${#microg_patches[@]} -gt 0 ] || [ ${#build_mode_arr[@]} -gt 1 ]; then
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
+			patched_apk="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}-${build_mode}.apk"
 		else
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
+			patched_apk="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.apk"
 		fi
 		if [ ${#microg_patches[@]} -gt 0 ]; then
 			for idx in "${!microg_patches[@]}"; do
@@ -3089,7 +3135,7 @@ build_rv() {
 			fi
 		fi
 
-		local stock_apk_to_patch="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.stripped.apk"
+		local stock_apk_to_patch="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.stripped.apk"
 		if [ ! -f "$stock_apk_to_patch" ]; then
 			cp -f "$stock_apk" "$stock_apk_to_patch"
 			if [ "$arch" = "arm64-v8a" ]; then
@@ -3111,7 +3157,7 @@ build_rv() {
 			per_bundle_ed_joined+="${cur_per_bundle_ed_args[$bi]}"
 		done
 
-		local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
+		local apk_output="${BUILD_DIR}/${file_prefix}-v${version_f}-${arch_f}.apk"
 		if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
 			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}" "${args[cli_source]}" "$per_bundle_ed_joined"; then
 				epr "Building '${table}' failed!"
@@ -3126,7 +3172,7 @@ build_rv() {
 				cp -f "$patched_apk" "$apk_output"
 			fi
 			pr "Built ${table} (non-root): '${apk_output}'"
-			write_build_info "${table% (*}" "${arch_f}" ".apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}"
+			write_build_info "${table% (*}" "${arch_f}" ".apk" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
 			continue
 		fi
 		local base_template
@@ -3147,7 +3193,7 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}-${rv_brand_f}-module-v${version_f}-${arch_f}.zip"
+		local module_output="${file_prefix}-module-v${version_f}-${arch_f}.zip"
 		pr "Packing module ${table}"
 		cp -f "$patched_apk" "${base_template}/base.apk"
 
@@ -3178,7 +3224,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
-		write_build_info "${table% (*}" "${arch_f}" ".zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}"
+		write_build_info "${table% (*}" "${arch_f}" ".zip" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
 	done
 }
 

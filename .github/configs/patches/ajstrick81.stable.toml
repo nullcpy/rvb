@@ -1,8 +1,9 @@
 [disneyplus-morphe-androidtv]
 enabled = true 
 pkg-name = "com.disney.disneyplus"
-app-name = "disneyplus"
-rv-brand = "morphe-androidtv"
+app-name = "Disney+"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
@@ -14,8 +15,10 @@ apkcombo-dlurl = "https://apkcombo.com/disney-plus/com.disney.disneyplus"
 [prime-video-morphe-androidtv]
 enabled = true 
 pkg-name = "com.amazon.amazonvideo.livingroom"
-app-name = "prime-video"
-rv-brand = "morphe-androidtv"
+app-name = "Prime Video"
+brand = "Morphe"
+variant = "Android TV"
+sub-variant = "clone"
 build-mode = "apk"
 arch = "arm-v7a"
 included-patches = "'Clone Prime Video'"
@@ -27,8 +30,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-a
 [hbomax-morphe-androidtv]
 enabled = true 
 pkg-name = "com.wbd.hbomax"
-app-name = "hbomax"
-rv-brand = "morphe-androidtv"
+app-name = "HBO Max"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
@@ -38,21 +42,22 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-
 [peacock-morphe-androidtv]
 enabled = true 
 pkg-name = "com.peacocktv.peacockandroid"
-app-name = "peacock"
-rv-brand = "morphe-androidtv"
+app-name = "Peacock"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
 cli-source = "MorpheApp/morphe-desktop"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
-# apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid"
 apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
 
 [tubi-morphe-androidtv]
 enabled = true 
 pkg-name = "com.tubitv"
-app-name = "tubi"
-rv-brand = "morphe-androidtv"
+app-name = "Tubi"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
@@ -62,8 +67,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-t
 [vix-morphe-androidtv]
 enabled = true 
 pkg-name = "com.univision.prendetv"
-app-name = "vix"
-rv-brand = "morphe-androidtv"
+app-name = "ViX"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
@@ -75,8 +81,9 @@ apkcombo-dlurl = "https://apkcombo.com/vix/com.univision.prendetv/"
 [plutotv-morphe-androidtv]
 enabled = true 
 pkg-name = "tv.pluto.android"
-app-name = "plutotv"
-rv-brand = "morphe-androidtv"
+app-name = "PlutoTV"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "all"
 patches-source = "ajstrick81/morphe-androidtv-patches"
@@ -87,8 +94,9 @@ uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
 [netflix-morphe-androidtv]
 enabled = true 
 pkg-name = "com.netflix.ninja"
-app-name = "netflix"
-rv-brand = "morphe-androidtv"
+app-name = "Netflix"
+brand = "Morphe"
+variant = "Android TV"
 build-mode = "apk"
 arch = "arm-v7a"
 patches-source = "ajstrick81/morphe-androidtv-patches"
