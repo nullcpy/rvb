@@ -89,10 +89,11 @@ def main():
 
     surviving_apps = []
     for app in apps:
-        surviving_patches = []
-        for patch in app.get("patches", []):
+        surviving_brands = []
+        brands_list = app.get("brands", [])
+        for brand in brands_list:
             surviving_builds = []
-            for b in patch.get("builds", []):
+            for b in brand.get("builds", []):
                 if b.get("isArchive"):
                     rel_type = b.get("releaseType", "stable")
                     active_set = beta_assets if rel_type == "beta" else stable_assets
@@ -111,49 +112,51 @@ def main():
                     else:
                         total_pruned_builds += 1
 
-            patch["builds"] = surviving_builds
+            brand["builds"] = surviving_builds
 
             # Reconcile variant pointers with surviving builds
-            surviving_build_keys = {str(b.get("buildKey") or b.get("releaseId") or b.get("build")) for b in surviving_builds}
-            for v in patch.get("variants", []):
-                v_key = v.get("variantKey", "default")
+            for v in brand.get("variants", []):
+                v_var = v.get("variant")
+                v_sub = v.get("subVariant")
                 for ch in ["latestStable", "latestBeta"]:
                     curr = v.get(ch)
-                    if curr:
-                        curr_key = str(curr.get("buildKey") or curr.get("releaseId") or curr.get("build"))
-                        if curr_key not in surviving_build_keys:
-                            rel_filter = "stable" if ch == "latestStable" else "beta"
-                            new_b = next((b for b in surviving_builds if (b.get("variantKey") or "default") == v_key and b.get("releaseType") == rel_filter), None)
-                            if new_b:
-                                v[ch] = {
-                                    "version": new_b.get("version", ""),
-                                    "build": new_b.get("build", ""),
-                                    "publishedAt": new_b.get("publishedAt", ""),
-                                    "releaseId": new_b.get("releaseId", ""),
-                                    "releaseUrl": new_b.get("releaseUrl", ""),
-                                    "isArchiveFallback": new_b.get("isArchive", False)
-                                }
-                            else:
-                                v[ch] = None
+                    rel_filter = "stable" if ch == "latestStable" else "beta"
+                    # Find newest matching surviving build
+                    new_b = next((
+                        b for b in surviving_builds
+                        if b.get("variant") == v_var and b.get("subVariant") == v_sub and b.get("releaseType") == rel_filter
+                    ), None)
+                    if new_b:
+                        v[ch] = {
+                            "version": new_b.get("version", ""),
+                            "build": new_b.get("build", ""),
+                            "publishedAt": new_b.get("publishedAt", ""),
+                            "releaseId": new_b.get("releaseId", ""),
+                            "releaseUrl": new_b.get("releaseUrl", ""),
+                            "isArchiveFallback": new_b.get("isArchive", False)
+                        }
+                    else:
+                        v[ch] = None
 
-            # Keep patch if it has surviving builds
+            # Keep brand if it has surviving builds
             if surviving_builds:
-                patch["latestVersion"] = surviving_builds[0].get("version", "")
-                patch["latestPublishedAt"] = surviving_builds[0].get("publishedAt", "")
-                patch["totalDownloads"] = sum(
+                brand["latestVersion"] = surviving_builds[0].get("version", "")
+                brand["latestPublishedAt"] = surviving_builds[0].get("publishedAt", "")
+                brand["totalDownloads"] = sum(
                     sum(a.get("download_count", 0) for a in b.get("assets", []))
                     for b in surviving_builds
                 )
-                surviving_patches.append(patch)
+                surviving_brands.append(brand)
 
-        # Keep app if it has surviving patches
-        if surviving_patches:
-            app["patches"] = surviving_patches
-            app["totalDownloads"] = sum(p.get("totalDownloads", 0) for p in surviving_patches)
+        # Keep app if it has surviving brands
+        if surviving_brands:
+            app["brands"] = surviving_brands
+            app["totalDownloads"] = sum(b.get("totalDownloads", 0) for b in surviving_brands)
             surviving_apps.append(app)
         else:
             total_pruned_apps += 1
 
+    catalog_data["version"] = 2
     catalog_data["apps"] = surviving_apps
     print(f"Sanitization complete: removed {total_pruned_builds} obsolete builds, {total_pruned_assets} pruned assets, and {total_pruned_apps} empty apps.")
 
