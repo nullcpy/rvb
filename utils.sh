@@ -2167,18 +2167,9 @@ check_sig() {
 resolve_slug() {
 	local val="${1:-}"
 	[ -z "$val" ] && return 0
-	local val_clean="${val,,}"
-	val_clean="${val_clean// /-}"
-	if [ -f "brands.json" ]; then
-		local slug
-		slug=$(jq -r --arg val "$val" --arg vclean "$val_clean" \
-			'to_entries | map(select(.value == $val or .key == $val or .key == $vclean or (.value | gsub("[_\\s-]+"; "") | ascii_downcase) == ($val | gsub("[_\\s-]+"; "") | ascii_downcase))) | .[0].key // empty' brands.json 2>/dev/null || true)
-		if [ -n "$slug" ]; then
-			echo "$slug"
-			return 0
-		fi
-	fi
-	echo "$val_clean"
+	local slug
+	slug=$(echo "$val" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g' | sed -E 's/^-+|-+$//g')
+	echo "$slug"
 }
 
 write_build_info() {
