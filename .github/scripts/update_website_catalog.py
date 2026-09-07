@@ -284,10 +284,6 @@ def main():
     print("Cloning website repository (nullcpy.github.io)...")
     run_cmd(f"git clone --depth 1 {website_repo_url} {clone_dir}")
 
-    # Copy brands.json into website repo to keep it in sync
-    if os.path.exists("brands.json"):
-        shutil.copy2("brands.json", clone_dir / "brands.json")
-
     catalog_path = clone_dir / "catalog.json"
     catalog_data = load_json(catalog_path, default={"version": 1, "updated_at": "", "apps": []})
 
@@ -309,7 +305,7 @@ def main():
     print("Committing and pushing updated catalog.json...")
     run_cmd("git config user.name 'github-actions[bot]'", cwd=clone_dir)
     run_cmd("git config user.email 'github-actions[bot]@users.noreply.github.com'", cwd=clone_dir)
-    run_cmd("git add catalog.json brands.json", cwd=clone_dir)
+    run_cmd("git add catalog.json", cwd=clone_dir)
 
     status = run_cmd("git status --porcelain", cwd=clone_dir)
     if not status:
