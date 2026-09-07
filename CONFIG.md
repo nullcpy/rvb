@@ -30,12 +30,12 @@ brand = "Morphe"                     # patch brand/engine identity (e.g. "ReVanc
 author = "nullcpy"                   # module author name. default: "nullcpy"
 author-page = "github.com/nullcpy/rvb" # module author page/link printed during installation. default: "github.com/nullcpy/rvb"
 
-patches-version = "v2.160.0" # 'latest', 'dev', or a version number. default: "latest"
-cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "latest"
+patches-version = "v2.160.0" # 'stable', 'beta', or a version number. default: "stable"
+cli-version = "v5.0.0"       # 'stable', 'beta', or a version number. default: "stable"
 
 > [!TIP]
-> **File-Level Defaults in Split Configs:**  
-> When organizing configs into separate files under `.github/configs/patches/` (e.g. `bufferk.stable.toml`, `anddea.stable.toml`), keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, and `brand`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
+> **File-Level Defaults in Modular Configs:**  
+> Keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, `patches-version`, and `brand`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
 
 [Some-App]
 app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Default is table name.
@@ -184,23 +184,31 @@ You can natively build Instagram Alpha using the Instafel Patcher engine (`insta
 ```toml
 [instagram-instafel]
 cli-source = "instafel/p-rel"                            # Use Instafel Patcher CLI
-cli-version = "latest"
+cli-version = "stable"
 patches-source = "instafel/pc-rel"                       # Provide Instafel Patcher Core
-patches-version = "latest"
+patches-version = "stable"
 included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'instafel'"
 ```
 
-## Modular Configuration Directory
+## Modular Configuration Directory & Dynamic Pool Routing
 
-All configurations are now stored in the `.github/configs/patches/` directory for better maintainability.
+Configurations are organized in `.github/configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`).
 
-- `config.toml`: Contains the global settings and base configurations.
-- `*.stable.toml`: Configurations specifically merged into the `stable` build.
-- `*.dev.toml`: Configurations specifically merged into the `dev` (pre-release) build.
+You do **not** need separate files for stable and beta:
+- **Single-File Co-existence**: All variants and builds for a brand or patch source can reside in the same `.toml` file.
+- **Dynamic Pool Routing**:
+  - **Both Pools (Default)**: If neither the file-level header nor the app specifies `patches-version`, the app is automatically compiled into **both** stable and beta pools.
+  - **Stable Only**: Setting `patches-version = "stable"` routes the app exclusively to the stable build.
+  - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build.
+  - **File-Level Defaults**: Setting `patches-version = "stable"` (or `"beta"`) at the top of the file before the first `[...]` header applies that pool to all apps in the file unless individually overridden.
+  - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
-Any configuration file in `.github/configs/patches/` that does **not** contain `stable` or `dev` in its filename is automatically included in **both** builds.
+## Automated Patch Sources State Tracking
 
-To add a new app, simply create or update a `.toml` file in `.github/configs/patches/`.
+Patch sources and their release versions in `.github/configs/patch_sources.json` are **100% automated**:
+- The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github` or `gitlab`), and checks for new stable and beta releases.
+- Unreferenced or deleted patch sources are pruned automatically.
+- **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
 
 ## Automatic App Version Checking
 
