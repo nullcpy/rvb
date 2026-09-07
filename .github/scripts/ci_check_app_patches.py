@@ -1,72 +1,67 @@
 import os, json, zipfile, hashlib, re, subprocess, glob
 import urllib.request
 
+def load_channel_config(channel):
+    filename = f"config.{channel}.json"
+    if not os.path.exists(filename):
+        subprocess.run(["bash", ".github/scripts/ci_compile_base_configs.sh"], check=False)
+    if os.path.exists(filename):
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Warning: Failed to read {filename}: {e}")
+    return {}
+
 def get_app_mappings():
     apps_stable = {}
     apps_dev = {}
     cli_sources = {}
-    
-    for toml_file in sorted(glob.glob('.github/configs/patches/*.toml')):
-        is_stable_only = toml_file.endswith('.stable.toml')
-        is_dev_only = toml_file.endswith('.dev.toml')
-        with open(toml_file, 'r', encoding='utf-8') as f:
-            content = f.read()
-            # Split by [app_key]
-            parts = re.split(r'^\[(.*?)\]\s*$', content, flags=re.MULTILINE)
-            header = parts[0]
-            m_header_src = re.search(r'patches-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', header)
-            header_src = (m_header_src.group(1) or m_header_src.group(2)).strip().lower() if m_header_src else "morpheapp/morphe-patches"
-            m_header_cli = re.search(r'cli-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', header)
-            header_cli = (m_header_cli.group(1) or m_header_cli.group(2)).strip().lower() if m_header_cli else "morpheapp/morphe-desktop"
 
-            sections = parts[1:]
-            for i in range(0, len(sections), 2):
-                key = sections[i].strip()
-                body = sections[i+1]
-                
-                m_enabled = re.search(r'^enabled\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
-                m_stable = re.search(r'^enabledStable\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
-                m_dev = re.search(r'^enabledDev\s*=\s*(true|false)', body, flags=re.MULTILINE | re.IGNORECASE)
-                
-                enabled = m_enabled.group(1).lower() == 'true' if m_enabled else True
-                enabledStable = m_stable.group(1).lower() == 'true' if m_stable else (not is_dev_only)
-                enabledDev = m_dev.group(1).lower() == 'true' if m_dev else (not is_stable_only)
-                
-                if not enabled:
-                    continue
-                
-                # Extract patches-source
-                m_src = re.search(r'patches-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', body)
-                src = (m_src.group(1) or m_src.group(2)).strip().lower() if m_src else header_src
-                
-                # Extract cli-source
-                m_cli = re.search(r'cli-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', body)
-                cli_src = (m_cli.group(1) or m_cli.group(2)).strip().lower() if m_cli else header_cli
-                if cli_src:
-                    cli_sources.setdefault(src, set()).add(cli_src)
-                
-                m_pkg = re.search(r'pkg-name\s*=\s*"([^"]+)"', body)
-                pkg_name = m_pkg.group(1) if m_pkg else ''
-                
-                m_app = re.search(r'app-name\s*=\s*"([^"]+)"', body)
-                app_name = m_app.group(1).lower() if m_app else ''
-                
-                m_pf = re.search(r'patch-folder\s*=\s*"([^"]+)"', body)
-                patch_folder = m_pf.group(1).lower() if m_pf else ''
-                
-                if not pkg_name:
-                    m_git = re.search(r'github-dlurl\s*=\s*"([^"]+)"', body)
-                    m_arch = re.search(r'archive-dlurl\s*=\s*"([^"]+)"', body)
-                    if m_git and 'releases/tag/' in m_git.group(1):
-                        pkg_name = m_git.group(1).rstrip('/').split('/')[-1]
-                    elif m_arch and 'apks/' in m_arch.group(1):
-                        pkg_name = m_arch.group(1).rstrip('/').split('/')[-1]
-                
-                if pkg_name:
-                    if enabledStable:
-                        apps_stable.setdefault(src, {})[key] = {'pkg': pkg_name, 'app_name': app_name, 'patch_folder': patch_folder}
-                    if enabledDev:
-                        apps_dev.setdefault(src, {})[key] = {'pkg': pkg_name, 'app_name': app_name, 'patch_folder': patch_folder}
+    for channel, target_dict in [('stable', apps_stable), ('dev', apps_dev)]:
+        data = load_channel_config(channel)
+        for key, val in data.items():
+            if not isinstance(val, dict):
+                continue
+
+            enabled = val.get('enabled', True)
+            if isinstance(enabled, str):
+                enabled = enabled.lower() == 'true'
+            if not enabled:
+                continue
+
+            if channel == 'stable':
+                en = val.get('enabledStable', True)
+            else:
+                en = val.get('enabledDev', True)
+            if isinstance(en, str):
+                en = en.lower() == 'true'
+            if not en:
+                continue
+
+            src = (val.get('patches-source') or 'morpheapp/morphe-patches').strip().lower()
+            cli_src = (val.get('cli-source') or 'morpheapp/morphe-desktop').strip().lower()
+            if cli_src:
+                cli_sources.setdefault(src, set()).add(cli_src)
+
+            pkg_name = val.get('pkg-name') or ''
+            app_name = (val.get('app-name') or '').lower()
+            patch_folder = (val.get('patch-folder') or '').lower()
+
+            if not pkg_name:
+                m_git = val.get('github-dlurl') or ''
+                m_arch = val.get('archive-dlurl') or ''
+                if 'releases/tag/' in m_git:
+                    pkg_name = m_git.rstrip('/').split('/')[-1]
+                elif 'apks/' in m_arch:
+                    pkg_name = m_arch.rstrip('/').split('/')[-1]
+
+            if pkg_name:
+                target_dict.setdefault(src, {})[key] = {
+                    'pkg': pkg_name,
+                    'app_name': app_name,
+                    'patch_folder': patch_folder
+                }
 
     return apps_stable, apps_dev, cli_sources
 

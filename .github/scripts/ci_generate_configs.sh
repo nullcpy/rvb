@@ -31,12 +31,14 @@ jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
 ' > active.prerelease.json
 
 if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
-  STABLE_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.dev.toml" | sort)
-  if [ -n "$STABLE_CONFIGS" ]; then
-    # shellcheck disable=SC2086
-    toml_merge_configs $STABLE_CONFIGS > config.stable.json
-  else
-    echo "{}" > config.stable.json
+  if [ ! -f config.stable.json ]; then
+    STABLE_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.dev.toml" | sort)
+    if [ -n "$STABLE_CONFIGS" ]; then
+      # shellcheck disable=SC2086
+      toml_merge_configs $STABLE_CONFIGS > config.stable.json
+    else
+      echo "{}" > config.stable.json
+    fi
   fi
 
   jq --slurpfile active active.stable.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.stable.json '
@@ -54,12 +56,14 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
 fi
 
 if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
-  DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.stable.toml" | sort)
-  if [ -n "$DEV_CONFIGS" ]; then
-    # shellcheck disable=SC2086
-    toml_merge_configs $DEV_CONFIGS > config.dev.json
-  else
-    echo "{}" > config.dev.json
+  if [ ! -f config.dev.json ]; then
+    DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.stable.toml" | sort)
+    if [ -n "$DEV_CONFIGS" ]; then
+      # shellcheck disable=SC2086
+      toml_merge_configs $DEV_CONFIGS > config.dev.json
+    else
+      echo "{}" > config.dev.json
+    fi
   fi
 
   jq --slurpfile active active.prerelease.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.dev.json --argjson tags "$TAGS_NEW" '

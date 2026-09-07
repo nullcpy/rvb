@@ -7,17 +7,17 @@ dos2unix utils.sh 2>/dev/null || true
 source utils.sh
 set_prebuilts
 
-# Find all app configs
-CONFIG_FILES=$(find .github/configs/patches -name "*.toml")
-
-if [ -z "$CONFIG_FILES" ]; then
-    echo "No config files found in .github/configs/patches"
-    exit 0
+# Use pre-compiled config if available, or compile as fallback
+if [ ! -f config.all.json ]; then
+    CONFIG_FILES=$(find .github/configs/patches -name "*.toml")
+    if [ -z "$CONFIG_FILES" ]; then
+        echo "No config files found in .github/configs/patches"
+        exit 0
+    fi
+    # shellcheck disable=SC2086
+    toml_merge_configs $CONFIG_FILES > config.all.json
 fi
-
-# Convert all TOML files to a single JSON with propagated defaults
-# shellcheck disable=SC2086
-toml_merge_configs $CONFIG_FILES > temp_all_configs.json
+ALL_CONFIGS="config.all.json"
 
 [ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json
 > fetched_app_versions.jsonl
@@ -27,7 +27,7 @@ if [ "$CHECK_ONLY_LISTED" = "true" ]; then
     jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' .github/configs/app_versions.json > check_list.txt
 else
     # All enabled apps
-    ENABLED_APPS=$(jq -r 'to_entries | map(select((.value | type == "object") and .value.enabled == true)) | .[].key' temp_all_configs.json)
+    ENABLED_APPS=$(jq -r 'to_entries | map(select((.value | type == "object") and .value.enabled == true)) | .[].key' "$ALL_CONFIGS")
     
     # Get all grouped apps to exclude them
     GROUPED_APPS=$(jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[].value.keys[]?' .github/configs/app_versions.json 2>/dev/null || echo "")
@@ -51,11 +51,11 @@ while IFS='|' read -r group app; do
     if [ -z "$group" ] || [ -z "$app" ]; then continue; fi
     echo "::group::Fetching version for $group ($app)..."
     
-    uptodown_url=$(jq -r ".\"$app\".\"uptodown-dlurl\" // empty" temp_all_configs.json)
-    apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" temp_all_configs.json)
-    apkpure_url=$(jq -r ".\"$app\".\"apkpure-dlurl\" // empty" temp_all_configs.json)
-    apkcombo_url=$(jq -r ".\"$app\".\"apkcombo-dlurl\" // empty" temp_all_configs.json)
-    github_url=$(jq -r ".\"$app\".\"github-dlurl\" // empty" temp_all_configs.json)
+    uptodown_url=$(jq -r ".\"$app\".\"uptodown-dlurl\" // empty" "$ALL_CONFIGS")
+    apkmirror_url=$(jq -r ".\"$app\".\"apkmirror-dlurl\" // empty" "$ALL_CONFIGS")
+    apkpure_url=$(jq -r ".\"$app\".\"apkpure-dlurl\" // empty" "$ALL_CONFIGS")
+    apkcombo_url=$(jq -r ".\"$app\".\"apkcombo-dlurl\" // empty" "$ALL_CONFIGS")
+    github_url=$(jq -r ".\"$app\".\"github-dlurl\" // empty" "$ALL_CONFIGS")
 
     dlurls=()
     sources=()
@@ -129,4 +129,4 @@ fi
 
 echo "$FETCHED_JSON" > fetched_app_versions.json
 
-rm -f temp_all_configs.json fetched_app_versions.jsonl check_list.txt
+rm -f fetched_app_versions.jsonl check_list.txt

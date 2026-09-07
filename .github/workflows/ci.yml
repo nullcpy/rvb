@@ -52,6 +52,10 @@ jobs:
           file_pattern: .github/configs/patch_sources.json
           commit_message: "Create dummy patch_sources.json"
 
+      - name: Compile Base Configs (JSON)
+        if: steps.ensure_patch_sources.outputs.created == 'false'
+        run: bash .github/scripts/ci_compile_base_configs.sh
+
       - name: Fetch latest tags
         if: steps.ensure_patch_sources.outputs.created == 'false'
         id: fetch_tags

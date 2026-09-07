@@ -69,7 +69,13 @@ jobs:
 
       - name: Install Bouncy Castle for BKS Keystore
         run: |
-          if yq -o=json eval '.' "${{ steps.context.outputs.CONFIG_FILE }}" | jq -e 'to_entries | any((.value | type == "object") and .value.enabled == true and (.value["cli-source"] | type == "string" and test("npatch|lspatch"; "i")))' >/dev/null; then
+          CFG="${{ steps.context.outputs.CONFIG_FILE }}"
+          if [[ "$CFG" == *.json ]]; then
+            JSON_STREAM="cat $CFG"
+          else
+            JSON_STREAM="yq -o=json eval . $CFG"
+          fi
+          if $JSON_STREAM | jq -e 'to_entries | any((.value | type == "object") and .value.enabled == true and (.value["cli-source"] | type == "string" and test("npatch|lspatch"; "i")))' >/dev/null; then
             bash .github/scripts/build_install_bouncy_castle.sh
           else
             echo "Skipping Bouncy Castle installation (no enabled Xposed modules found in config)."
