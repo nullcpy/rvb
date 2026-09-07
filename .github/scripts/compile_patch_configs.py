@@ -28,9 +28,9 @@ def normalize_channel(val):
     if not val or not isinstance(val, str):
         return None
     v = val.strip().lower()
-    if v in ("stable", "latest"):
+    if v == "stable":
         return "stable"
-    if v in ("beta", "dev", "prerelease"):
+    if v == "beta":
         return "beta"
     return val.strip()  # Pinned version string like "v1.41.0"
 

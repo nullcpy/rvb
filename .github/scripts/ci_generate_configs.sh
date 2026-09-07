@@ -25,9 +25,9 @@ jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
 jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
   [ $new | to_entries[] | . as $e
       | ($old[$e.key] // {}) as $o
-      | ($e.value.beta // $e.value.prerelease // "") as $new_beta
-      | ($o.beta // $o.prerelease // "") as $old_beta
-      | ($e.value.beta_date // $e.value.pre_date // "") as $b_date
+      | ($e.value.beta // "") as $new_beta
+      | ($o.beta // "") as $old_beta
+      | ($e.value.beta_date // "") as $b_date
       | ($e.value.stable_date // "") as $s_date
       | select($new_beta != "" and $new_beta != $old_beta)
       | select($e.value.blocked != true)
@@ -58,7 +58,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
   ' config.stable.json > .github/configs/config.stable.updated.json
 fi
 
-if [ "${TRIGGER_BETA:-${TRIGGER_PRERELEASE:-0}}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
+if [ "${TRIGGER_BETA:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
   jq --slurpfile active active.beta.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.beta.json --argjson tags "$TAGS_NEW" '
     { "patches-version": "beta" } as $force |
     ($force + . + $force) |
@@ -74,7 +74,7 @@ if [ "${TRIGGER_BETA:-${TRIGGER_PRERELEASE:-0}}" = "1" ] || [ "${TRIGGER_APP_UPD
             . as $src |
             ($tags | to_entries | map(select((.value.repo | ascii_downcase) == $src)) | .[0].value) as $t |
             if $t == null then false
-            else (($t.beta_date // $t.pre_date // "") > ($t.stable_date // "")) end
+            else (($t.beta_date // "") > ($t.stable_date // "")) end
           ) | any
         ) as $has_valid_beta |
 

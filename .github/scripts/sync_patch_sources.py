@@ -211,8 +211,8 @@ def main():
                 "host": host,
                 "stable": old_info.get("stable", ""),
                 "stable_date": old_info.get("stable_date", ""),
-                "beta": old_info.get("beta", old_info.get("prerelease", "")),
-                "beta_date": old_info.get("beta_date", old_info.get("pre_date", "")),
+                "beta": old_info.get("beta", ""),
+                "beta_date": old_info.get("beta_date", ""),
                 "blocked": True
             }
             continue
@@ -234,7 +234,7 @@ def main():
         stable_tag, stable_date, beta_tag, beta_date = parse_releases(releases, host)
 
         old_stable = old_info.get("stable", "")
-        old_beta = old_info.get("beta", old_info.get("prerelease", ""))
+        old_beta = old_info.get("beta", "")
 
         if stable_tag and stable_tag != old_stable:
             print(f"::notice::Stable update detected for {repo}: {old_stable or 'none'} -> {stable_tag}")
@@ -273,7 +273,6 @@ def main():
         with open(github_output, "a", encoding="utf-8") as f:
             f.write(f"TRIGGER_STABLE={trigger_stable}\n")
             f.write(f"TRIGGER_BETA={trigger_beta}\n")
-            f.write(f"TRIGGER_PRERELEASE={trigger_beta}\n")
             f.write(f"TRIGGER_BLOCKED={trigger_blocked}\n")
 
     print(f"Patch sources synchronized: {len(new_state)} active sources tracked.")
