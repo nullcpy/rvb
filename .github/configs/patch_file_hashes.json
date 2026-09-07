@@ -5,7 +5,7 @@
       "com.amazon.amazonvideo.livingroom": "9cdb58b4de8d15a589f57482745d4dee",
       "com.disney.disneyplus": "1f5663763de63b310083fa8abeb62633",
       "com.netflix.ninja": "2ae9f15c7d091e950d85a3ad62ae01e6",
-      "com.peacocktv.peacockandroid": "81285dcc209ee4b9c5a3ef3fcd3b940a",
+      "com.peacocktv.peacockandroid": "7ff4398760822eebd22cc15045755afd",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
       "com.wbd.hbomax": "0637750201901bb6687deaebb4cb442e",
@@ -52,8 +52,8 @@
   },
   "crimera/piko": {
     "dev": {
-      "com.instagram.android": "26cae31baefd2df06495acb9700256d5",
-      "com.twitter.android": "39db42b9e7a1b6ddd0b0f6e879fe3001",
+      "com.instagram.android": "d2de23089a13b23befc8566c64530c4a",
+      "com.twitter.android": "70346e9272f1a93bb4682d07b125318e",
       "shared": "57f49120c936203e94e057111cadce06"
     },
     "stable": {
@@ -116,30 +116,30 @@
       "videoeditor.videorecorder.screenrecorder": "04069957d64231075a2e166bc79b51e9"
     },
     "stable": {
-      "bitpit.launcher": "e968c18df01feab67e06850c97c21c3d",
+      "bitpit.launcher": "8b7512facf22c0149e588b59f084ef7b",
       "ch.protonvpn.android": "fc383ae0a443b356fed0b6c658d06ab2",
       "cn.ommiao.iconpacker": "8f39bb5770a756e037aa92faa6093432",
       "cn.wps.moffice_eng": "447813aedaba74ed575d4f0cfc21a46f",
       "com.adguard.android": "49db6f400dda8088d3c561c0d13126eb",
       "com.adobe.lrmobile": "b6a29ee09897cf26ce99b46d6ea9a8b0",
-      "com.amazon.avod.thirdpartyclient": "1a213a8188a80eb9f6b619174e8a48d4",
-      "com.bambuna.podcastaddict": "decd800501ed9c0187df18e66cc35775",
-      "com.duolingo": "96623deddda16d3b472ca91804b64e42",
+      "com.amazon.avod.thirdpartyclient": "b4af734d77cd6c96ebc69eb25ca00eaa",
+      "com.bambuna.podcastaddict": "c5014f7044cccd0b5f1a3cdb162437dd",
+      "com.duolingo": "567a24ef30a153cca87e51cf0a3cf3eb",
       "com.github.android": "aadbc3f7908964c81676f1f3415eb729",
-      "com.goodreads": "84be04ee0086e1f7a619efdc8c18ea1f",
+      "com.goodreads": "b7fad1b822c0b9790b5a39379f712ae1",
       "com.hellochinese": "1399ee6c3e33c987c0345bca59d0d7cb",
-      "com.intsig.camscanner": "0a026184de79dde62da6001db7016bcc",
+      "com.intsig.camscanner": "0b4ca9534c59e67d0a5cc607370bd377",
       "com.merriamwebster": "085859c18ca7dbcef6e0d1edbb5a6dbf",
       "com.myfitnesspal.android": "ed1989ddb10bfad4387b5865ba8a1915",
       "com.pandora.android": "979f2d05036202d55389b47205cc1a72",
-      "com.soundcloud.android": "782d875e03f2fe18aa666cc4f7c32434",
+      "com.soundcloud.android": "1a84ca7ae3822e3baa7e9ae6b2d084e0",
       "com.teslacoilsw.launcher": "acd4f90ccaae4da6f18831921f006d95",
       "com.wallpaperscraft.wallpaper": "e76ad26c50960129bfcdf1593ba6a70f",
       "cz.ackee.ventusky": "ed386fb3971cb592c47941df5564d78c",
-      "ginlemon.flowerfree": "910fcffcafc4c52d4a36531549013835",
-      "pl.solidexplorer2": "2abf5e651d2cb46222cb8ba05ae7466e",
-      "shared": "03268a0210d1f5ca194204e761e9085c",
-      "videoeditor.videorecorder.screenrecorder": "30d507ee5760e7683355db61cd5e22c5"
+      "ginlemon.flowerfree": "8565a9df34cb8847ead3223b60d713b3",
+      "pl.solidexplorer2": "a9f0bae93d8e7e68f5c5f6e4438802e6",
+      "shared": "c4aaa51816a85efa26dc8cd35b80bcc5",
+      "videoeditor.videorecorder.screenrecorder": "b757bfdb8b080a895208709fb2927845"
     }
   },
   "hxreborn/hxreborn-tiktok-patches": {
@@ -159,7 +159,7 @@
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "dev": {
-      "com.zhiliaoapp.musically": "4863dd5c2e202670b050ebc9c1f271ad",
+      "com.zhiliaoapp.musically": "9c88d77d535f3cc528aea2d5a09fc8ec",
       "shared": "4c8e9750b338baa9b2956091fbe5841a"
     },
     "stable": {
@@ -214,7 +214,7 @@
   "kveld9/kveld-morphe-patches": {
     "dev": {},
     "stable": {
-      "com.brave.browser": "c2c3092493d63ab3627c8a85a271d4c0",
+      "com.brave.browser": "968768fc70c4fe447a7f147eeaa447a3",
       "shared": "cb5f0009e71c25a410dd697e4cf4fb38"
     }
   },
