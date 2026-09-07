@@ -79,7 +79,7 @@ def parse_patch_info(patches_source, patches_ref):
     name = primary_clean or "Patched"
     return key, name
 
-def parse_variant(target_key, app_key, patch_key):
+def parse_variant(target_key, app_key, patch_key, brands=None):
     # Determine if target has a variant suffix like -exp, -alt, -adobo, etc.
     rem = target_key.lower()
     for prefix in [app_key, patch_key]:
@@ -88,6 +88,9 @@ def parse_variant(target_key, app_key, patch_key):
 
     if not rem or rem in ["apk", "module", "root", "nonroot"]:
         return "default", "Standard"
+
+    if brands and rem in brands:
+        return rem, brands[rem]
 
     variant_names = {
         "exp": "Experimental",
@@ -112,7 +115,8 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
 
     for target_key, info in build_info.items():
         file_prefix = info.get("name") or target_key
-        matching_files = [f for f in built_files if f.name.lower().startswith(file_prefix.lower())]
+        prefix_lower = file_prefix.lower()
+        matching_files = [f for f in built_files if (f.name.lower().startswith(prefix_lower + "-v") or f.name.lower().startswith(prefix_lower + "-module-"))]
         if not matching_files:
             continue
 
@@ -121,7 +125,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
         app_key = normalize_key(app_name) or normalize_key(target_key)
 
         patch_key, patch_name = parse_patch_info(info.get("patches_source"), info.get("patches"))
-        variant_key, variant_name = parse_variant(target_key, app_key, patch_key)
+        variant_key, variant_name = parse_variant(target_key, app_key, patch_key, brands)
 
         version = info.get("version", "")
         pkg_name = info.get("package_name", "")
