@@ -41,8 +41,9 @@ def main():
         print(f"Error: Failed to parse GitHub releases API response: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Circuit-breaker: abort if response is unexpectedly empty or tiny
-    if not isinstance(releases_data, list) or len(releases_data) < 10:
+    # Circuit-breaker: abort if response is unexpectedly empty or tiny (unless ALLOW_EMPTY_CATALOG is explicitly set)
+    allow_empty = os.environ.get("ALLOW_EMPTY_CATALOG", "false").lower() == "true"
+    if not allow_empty and (not isinstance(releases_data, list) or len(releases_data) < 10):
         print(f"Error: GitHub API returned only {len(releases_data) if isinstance(releases_data, list) else 0} releases (< 10 threshold). Aborting to prevent catalog corruption.", file=sys.stderr)
         sys.exit(1)
 
