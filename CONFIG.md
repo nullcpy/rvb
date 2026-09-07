@@ -130,10 +130,10 @@ ${app_slug}-${brand_slug}${variant:+-$variant}${sub_variant:+-$sub_variant}-v${v
 ```
 
 Examples:
-- `app-name = "YouTube"`, `brand = "ReVanced Advanced"`, `variant = "Nord"` ➔ `youtube-anddea-nord-v20.51.39-arm64-v8a.apk`
-- `app-name = "YouTube Music"`, `brand = "ReVanced Advanced"` ➔ `youtube-music-anddea-v8.11.51-arm64-v8a.apk`
+- `app-name = "YouTube"`, `brand = "ReVanced Advanced"`, `variant = "Nord"` ➔ `youtube-revanced-advanced-nord-v20.51.39-arm64-v8a.apk`
+- `app-name = "YouTube Music"`, `brand = "Anddea"` ➔ `youtube-music-anddea-v8.11.51-arm64-v8a.apk`
 - `app-name = "Instagram"`, `brand = "Piko"`, `sub-variant = "clone"` ➔ `instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk`
-- `app-name = "Prime Video"`, `brand = "Android TV"`, `sub-variant = "clone"` ➔ `prime-video-androidtv-clone-v3.0.354-arm-v7a.apk`
+- `app-name = "Prime Video"`, `brand = "Android TV"`, `sub-variant = "clone"` ➔ `prime-video-android-tv-clone-v3.0.354-arm-v7a.apk`
 - `app-name = "TikTok"`, `brand = "Morphe"`, `sub-variant = "alt"` ➔ `tiktok-morphe-alt-v37.5.4-arm64-v8a.apk`
 
 ## Multiple Patch Sources
