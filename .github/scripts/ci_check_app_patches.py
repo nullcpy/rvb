@@ -20,8 +20,6 @@ def get_app_mappings():
 
     for channel, target_dict in [('stable', apps_stable), ('beta', apps_beta)]:
         data = load_channel_config(channel)
-        if not data and channel == 'beta':
-            data = load_channel_config('dev')
         for key, val in data.items():
             if not isinstance(val, dict):
                 continue
@@ -30,15 +28,6 @@ def get_app_mappings():
             if isinstance(enabled, str):
                 enabled = enabled.lower() == 'true'
             if not enabled:
-                continue
-
-            if channel == 'stable':
-                en = val.get('enabledStable', True)
-            else:
-                en = val.get('enabledBeta', val.get('enabledDev', True))
-            if isinstance(en, str):
-                en = en.lower() == 'true'
-            if not en:
                 continue
 
             src = (val.get('patches-source') or 'morpheapp/morphe-patches').strip().lower()
