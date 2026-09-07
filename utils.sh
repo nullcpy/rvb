@@ -1822,7 +1822,7 @@ get_github_resp() {
 		if [ -n "${args[github_release_regex]:-}" ]; then
 			jq_filter="[.[] | select((.name // \"\") | test(\"${args[github_release_regex]}\"; \"i\"))]"
 		else
-			local variant_l="${table,,} ${args[rv_brand]:-}"
+			local variant_l="${table,,} ${args[variant]:-} ${args[brand]:-}"
 			if [[ "$variant_l" == *"beta"* ]]; then
 				jq_filter='[.[] | select((.name // "") | test("(^|[^a-zA-Z])Beta([^a-zA-Z]|$)"; "i"))]'
 			elif [[ "$variant_l" == *"nightly"* ]]; then
@@ -3118,7 +3118,6 @@ build_rv() {
 	[ -n "$variant_slug" ] && [ "$variant_slug" != "default" ] && file_prefix+="-${variant_slug}"
 	[ -n "$sub_variant_slug" ] && file_prefix+="-${sub_variant_slug}"
 
-	local rv_brand_f="${brand_slug}"
 	local patches_ref="${args[patches_ref]}"
 	local changelog_url="${args[changelog_url]}"
 	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
@@ -3221,12 +3220,16 @@ build_rv() {
 
 		local patches_ver
 		patches_ver="${patches_jar%% *}"; patches_ver="${patches_ver##*-}"
+		local brand_display="${args[brand]:-}"
+		[ -n "${args[variant]:-}" ] && [ "${args[variant]}" != "Default" ] && brand_display+=" ${args[variant]}"
+		[ -n "${args[sub_variant]:-}" ] && brand_display+=" ${args[sub_variant]}"
+		brand_display="${brand_display#" "}"
 		module_prop \
 			"${args[module_prop_name]}" \
-			"${app_name} ${args[rv_brand]}" \
+			"${app_name} ${brand_display}" \
 			"${version_f} (patches ${patches_ver})" \
 			"${DEF_AUTHOR_NAME:-nullcpy}" \
-			"${app_name} ${args[rv_brand]} module" \
+			"${app_name} ${brand_display} module" \
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
 

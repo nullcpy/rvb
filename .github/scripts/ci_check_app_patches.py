@@ -154,8 +154,8 @@ def process_zip(path, pkg_info):
                 buckets['shared'].update(content)
     return {k: v.hexdigest() for k, v in buckets.items()}
 
-def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, active_list, apps_stable, apps_dev, is_revanced_or_morphe):
-    repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_dev.get(repo_lower, {})
+def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, active_list, apps_stable, apps_beta, is_revanced_or_morphe):
+    repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_beta.get(repo_lower, {})
     if not repo_apps:
         print(f"::notice::No enabled apps found for {repo} ({channel}). Skipping patch inspection.")
         return
@@ -294,8 +294,8 @@ def run():
         
         # Determine if we need to check stable/beta
         check_stable = new_info.get('stable') != "" and new_info.get('stable') != old_info.get('stable')
-        new_beta = new_info.get('beta') or new_info.get('prerelease') or ""
-        old_beta = old_info.get('beta') or old_info.get('prerelease') or ""
+        new_beta = new_info.get('beta', '')
+        old_beta = old_info.get('beta', '')
         check_beta = new_beta != "" and new_beta != old_beta
         
         if new_info.get('enabled') is False or new_info.get('blocked') is True:
