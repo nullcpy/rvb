@@ -135,6 +135,7 @@ Examples:
 - `app-name = "Instagram"`, `brand = "Piko"`, `sub-variant = "clone"` ➔ `instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk`
 - `app-name = "Prime Video"`, `brand = "Android TV"`, `sub-variant = "clone"` ➔ `prime-video-android-tv-clone-v3.0.354-arm-v7a.apk`
 - `app-name = "TikTok"`, `brand = "Morphe"`, `sub-variant = "alt"` ➔ `tiktok-morphe-alt-v37.5.4-arm64-v8a.apk`
+- `app-name = "Disney+"`, `brand = "Android TV"`, `sub-variant = "clone"` ➔ `disney-android-tv-clone-v3.0.354-arm-v7a.apk`
 
 ## Multiple Patch Sources
 
