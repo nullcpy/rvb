@@ -167,6 +167,7 @@ jobs:
         run: bash .github/scripts/build_notify_telegram.sh
 
       - name: Update changelog and module update files
+        id: update_changelog
         env:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
@@ -175,6 +176,7 @@ jobs:
         run: bash .github/scripts/build_update_changelog.sh
 
       - name: Commit updated build and module update files
+        if: steps.update_changelog.outputs.has_modules == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: update
