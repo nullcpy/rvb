@@ -2168,7 +2168,7 @@ resolve_slug() {
 	local val="${1:-}"
 	[ -z "$val" ] && return 0
 	local slug
-	slug=$(echo "$val" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g' | sed -E 's/^-+|-+$//g')
+	slug=$(echo "$val" | sed -e 's/\+/plus/g' -e 's/&/and/g' | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g' | sed -E 's/^-+|-+$//g')
 	echo "$slug"
 }
 
