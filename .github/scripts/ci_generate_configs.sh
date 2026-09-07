@@ -40,7 +40,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
   fi
 
   jq --slurpfile active active.stable.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.stable.json '
-    { "patches-version": "latest", "enable-module-update": true } as $force |
+    { "patches-version": "latest" } as $force |
     ($force + . + $force) |
     with_entries(
       if .value | type == "object" then
@@ -63,7 +63,7 @@ if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] 
   fi
 
   jq --slurpfile active active.prerelease.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.dev.json --argjson tags "$TAGS_NEW" '
-    { "patches-version": "dev", "enable-module-update": true } as $force |
+    { "patches-version": "dev" } as $force |
     ($force + . + $force) |
     with_entries(
       if .value | type == "object" then
