@@ -2,7 +2,7 @@
 enabled = true
 pkg-name = "com.lemon.lvoverseas"
 app-name = "capcut"
-rv-brand = "morphe"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "riky-dev/morphe-patches"

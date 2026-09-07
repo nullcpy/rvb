@@ -2,7 +2,7 @@
 enabled = true
 pkg-name = "com.alibaba.aliexpresshd"
 app-name = "aliexpress"
-rv-brand = "morphe"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "Quantro100/Morphe-patches"

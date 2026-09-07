@@ -25,7 +25,7 @@ patches-source-host = "github"               # source host for patches: "github"
 cli-source = "ReVanced/revanced-cli"             # where to fetch cli from. default: "MorpheApp/morphe-desktop"
 cli-source-host = "github"                       # source host for cli: "github" or "gitlab". default: "github"
 # options like cli-source can also set per app
-rv-brand = "ReVanced Extended" # rebrand from 'ReVanced' to something different. default: patches-source owner
+brand = "Morphe"                     # patch brand/engine identity (e.g. "ReVanced Advanced", "Piko", "Morphe", "Android TV"). default: patches-source owner.
 
 author = "nullcpy"                   # module author name. default: "nullcpy"
 author-page = "github.com/nullcpy/rvb" # module author page/link printed during installation. default: "github.com/nullcpy/rvb"
@@ -34,7 +34,10 @@ patches-version = "v2.160.0" # 'latest', 'dev', or a version number. default: "l
 cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "latest"
 
 [Some-App]
-app-name = "SomeApp" # if set, release name becomes SomeApp instead of Some-App. default is same as table name, which is 'Some-App' here.
+app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Default is table name.
+brand = "Piko"           # per-app patch brand override (e.g. "Piko", "Adobo", "ReVanced Advanced").
+variant = "Nord"         # optional feature/visual variant (e.g. "Nord", "Mocha", "MaterialYou").
+sub-variant = "clone"    # optional packaging/install variant (e.g. "clone", "alt").
 pkg-name = "com.some.app" # explicit package name override. recommended to avoid unnecessary network checks when caching.
 patch-folder = "someapp" # explicit patch folder name override. forces the CI to strictly match patches inside this exact folder name, bypassing fallback heuristics (useful for resolving collisions like youtube vs youtube-music). Supports multiple folders space-separated (e.g. "ad backup geo"), or a wildcard "*" to force mapping every single patch folder in the repo.
 enabled = true       # whether to build the app. default: true
@@ -73,7 +76,7 @@ apkcombo-dlurl = "https://apkcombo.com/some-app/com.some.app"
 # github release url or repo url (e.g. 'https://github.com/developer/app', '.../releases/latest', or '.../releases/tag/v1.0').
 github-dlurl = "https://github.com/developer/app"
 # regex used to filter releases when querying a repo url without a fixed tag (e.g. multi-channel repos).
-# if omitted, the script automatically checks if table or rv-brand targets a channel (beta, nightly, alpha, canary) or filters for stable releases.
+# if omitted, the script automatically checks if table, brand, or rv-brand targets a channel (beta, nightly, alpha, canary) or filters for stable releases.
 github-release-regex = "^Beta"
 # regex used to pick the exact apk file from the github release assets. supports {version} and {arch} string interpolation.
 # you can define a generic regex, or map architectures to specific regexes using 'arch: regex | arch2: regex2'.
@@ -83,8 +86,70 @@ direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 
 module-prop-name = "some-app-module"                       # module prop name. default: "<app>-<author>"
 dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. 'auto' matches whatever is available. default: nodpi anydpi auto
-arch = "arm64-v8a"                                         # 'auto', 'arm64-v8a', 'arm-v7a', 'all', 'both'. 'both' downloads both arm64-v8a and arm-v7a. 'auto' tries all → arm64-v8a → arm-v7a, using the first available. default: auto
 ```
+
+### Naming & Catalog Hierarchy
+
+The declarative keys define both the asset filename and how the app appears in release notes and the website catalog:
+- **`app-name`**: Sets the human-readable display name (e.g. `YouTube`, `Instagram`, `Prime Video`).
+- **`brand`**: Declares the canonical patch brand or creator identity matching `brands.json` (e.g. `ReVanced Advanced`, `Piko`, `Adobo`, `Paresh`, `Android TV`, `Morphe`).
+- **`variant`**: (Optional) Declares visual or feature variations (e.g. `Nord`, `Mocha`, `MaterialYou`).
+- **`sub-variant`**: (Optional) Declares packaging or installation variations (e.g. `clone`, `alt`).
+
+#### Brand Resolution & `brands.json` Matching
+
+Brand names configured in TOML should match the canonical display names defined in `brands.json`:
+- **Anddea Patches (`anddea/revanced-patches`)**:
+  In `brands.json`, the slug `anddea` maps to `"ReVanced Advanced"`:
+  ```json
+  "anddea": "ReVanced Advanced"
+  ```
+  When configuring apps using Anddea patches, always declare `brand = "ReVanced Advanced"`:
+  ```toml
+  [youtube-anddea-nord]
+  app-name = "YouTube"
+  brand = "ReVanced Advanced"
+  variant = "Nord"
+  ```
+- **Automatic Slug Resolution**:
+  The build engine (`utils.sh`) queries `brands.json` using `resolve_slug()` to translate canonical brand and app names into filename-safe slugs:
+  - `brand = "ReVanced Advanced"` automatically resolves to `brand_slug = "anddea"`
+  - `brand = "Android TV"` resolves to `brand_slug = "androidtv"`
+  - `brand = "Disney+"` resolves to `brand_slug = "disneyplus"`
+  - `brand = "Piko"` resolves to `brand_slug = "piko"`
+  - `brand = "Adobo"` resolves to `brand_slug = "adobo"`
+  - `brand = "Paresh"` resolves to `brand_slug = "paresh"`
+
+This ensures that generated release assets retain exact historical naming patterns (e.g. `youtube-anddea-nord-v...apk`), while the website catalog and release notes display the canonical title `"ReVanced Advanced"`.
+
+#### Migrating from Legacy `rv-brand`
+
+Previously, `rv-brand` combined brand, variants, and channels into a single hyphenated string. This has been replaced by explicit, separate keys:
+
+| Legacy `rv-brand` | New Declarative Configuration |
+| :--- | :--- |
+| `rv-brand = "anddea-nord"` | `brand = "ReVanced Advanced"`, `variant = "Nord"` |
+| `rv-brand = "anddea-mocha"` | `brand = "ReVanced Advanced"`, `variant = "Mocha"` |
+| `rv-brand = "anddea"` | `brand = "ReVanced Advanced"` |
+| `rv-brand = "morphe-piko"` | `brand = "Piko"` |
+| `rv-brand = "morphe-adobo"` | `brand = "Adobo"` |
+| `rv-brand = "morphe-alt"` | `brand = "Morphe"`, `sub-variant = "alt"` |
+| `rv-brand = "morphe-androidtv"` | `brand = "Android TV"`, `sub-variant = "clone"` |
+
+> [!NOTE]
+> All legacy composite `rv-brand` configurations should be replaced with explicit `brand`, `variant`, and `sub-variant` keys matching `brands.json`.
+
+**Output Filename Structure:**
+```
+${app_slug}-${brand_slug}${variant:+-$variant}${sub_variant:+-$sub_variant}-v${version}-${arch}.apk
+```
+
+Examples:
+- `app-name = "YouTube"`, `brand = "ReVanced Advanced"`, `variant = "Nord"` ➔ `youtube-anddea-nord-v20.51.39-arm64-v8a.apk`
+- `app-name = "YouTube Music"`, `brand = "ReVanced Advanced"` ➔ `youtube-music-anddea-v8.11.51-arm64-v8a.apk`
+- `app-name = "Instagram"`, `brand = "Piko"`, `sub-variant = "clone"` ➔ `instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk`
+- `app-name = "Prime Video"`, `brand = "Android TV"`, `sub-variant = "clone"` ➔ `prime-video-androidtv-clone-v3.0.354-arm-v7a.apk`
+- `app-name = "TikTok"`, `brand = "Morphe"`, `sub-variant = "alt"` ➔ `tiktok-morphe-alt-v37.5.4-arm64-v8a.apk`
 
 ## Multiple Patch Sources
 

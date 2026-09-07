@@ -1,8 +1,8 @@
 [proton-mail-morphe]
 enabled = true
 pkg-name = "ch.protonmail.android"
-app-name = "proton-mail"
-rv-brand = "morphe"
+app-name = "Proton Mail"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "hxreborn/morphe-patches"
@@ -16,8 +16,8 @@ archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.an
 [showly-morphe]
 enabled = true
 pkg-name = "com.michaldrabik.showly2"
-app-name = "showly"
-rv-brand = "morphe"
+app-name = "Showly"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "hxreborn/morphe-patches"
@@ -28,8 +28,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
 [tiktok-morphe-alt]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
-app-name = "tiktok"
-rv-brand = "morphe-alt"
+app-name = "TikTok"
+brand = "Morphe"
+sub-variant = "alt"
 build-mode = "apk"
 arch = "both"
 patches-source = "hxreborn/hxreborn-tiktok-patches"

@@ -1,9 +1,9 @@
 [youtube-anddea]
 enabled = true
 pkg-name = "com.google.android.youtube"
-app-name = "youtube"
+app-name = "YouTube"
 patch-folder = "youtube"
-rv-brand = "anddea"
+brand = "ReVanced Advanced"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
@@ -16,9 +16,9 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 [youtube-music-anddea]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
-app-name = "youtube-music"
+app-name = "YouTube Music"
 patch-folder = "music"
-rv-brand = "anddea"
+brand = "ReVanced Advanced"
 build-mode = "both"
 arch = "both"
 patches-source = "anddea/revanced-patches"
@@ -31,8 +31,8 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.google.andro
 [google-photos-morphe]
 enabled = true
 pkg-name = "com.google.android.apps.photos"
-app-name = "google-photos"
-rv-brand = "morphe"
+app-name = "Google Photos"
+brand = "Morphe"
 build-mode = "both"
 arch = "both"
 patches-source = "RookieEnough/De-Vanced"
@@ -44,8 +44,8 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 [instagram-morphe]
 enabled = true
 pkg-name = "com.instagram.android"
-app-name = "instagram"
-rv-brand = "morphe"
+app-name = "Instagram"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "brosssh/morphe-patches"
@@ -58,8 +58,8 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.an
 [tiktok-morphe]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
-app-name = "tiktok"
-rv-brand = "morphe"
+app-name = "TikTok"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "icysymmetra/tiktok-patches-for-morphe"
@@ -68,11 +68,11 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
 
-[reddit-morphe-adobo]
+[reddit-adobo]
 enabled = true
 pkg-name = "com.reddit.frontpage"
-app-name = "reddit"
-rv-brand = "morphe-adobo"
+app-name = "Reddit"
+brand = "Adobo"
 build-mode = "apk"
 arch = "both"
 patches-source = "jkennethcarino/adobo"

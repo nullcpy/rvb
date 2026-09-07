@@ -2,7 +2,7 @@
 enabled = true
 pkg-name = "com.chess"
 app-name = "chess-com"
-rv-brand = "morphe"
+brand = "Morphe"
 build-mode = "apk"
 arch = "both"
 patches-source = "PrathxmOp/Prathxm-Patches"
