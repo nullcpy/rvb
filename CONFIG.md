@@ -92,35 +92,20 @@ dpi = "360-480dpi"                                         # used to select apk 
 
 The declarative keys define both the asset filename and how the app appears in release notes and the website catalog:
 - **`app-name`**: Sets the human-readable display name (e.g. `YouTube`, `Instagram`, `Prime Video`).
-- **`brand`**: Declares the canonical patch brand or creator identity matching `brands.json` (e.g. `ReVanced Advanced`, `Piko`, `Adobo`, `Paresh`, `Android TV`, `Morphe`).
+- **`brand`**: Declares the canonical patch brand or creator identity (e.g. `ReVanced Advanced`, `Piko`, `Adobo`, `Paresh`, `Android TV`, `Morphe`).
 - **`variant`**: (Optional) Declares visual or feature variations (e.g. `Nord`, `Mocha`, `MaterialYou`).
 - **`sub-variant`**: (Optional) Declares packaging or installation variations (e.g. `clone`, `alt`).
 
-#### Brand Resolution & `brands.json` Matching
+#### Direct Slug Resolution
 
-Brand names configured in TOML should match the canonical display names defined in `brands.json`:
-- **Anddea Patches (`anddea/revanced-patches`)**:
-  In `brands.json`, the slug `anddea` maps to `"ReVanced Advanced"`:
-  ```json
-  "anddea": "ReVanced Advanced"
-  ```
-  When configuring apps using Anddea patches, always declare `brand = "ReVanced Advanced"`:
-  ```toml
-  [youtube-anddea-nord]
-  app-name = "YouTube"
-  brand = "ReVanced Advanced"
-  variant = "Nord"
-  ```
-- **Automatic Slug Resolution**:
-  The build engine (`utils.sh`) queries `brands.json` using `resolve_slug()` to translate canonical brand and app names into filename-safe slugs:
-  - `brand = "ReVanced Advanced"` automatically resolves to `brand_slug = "anddea"`
-  - `brand = "Android TV"` resolves to `brand_slug = "androidtv"`
-  - `brand = "Disney+"` resolves to `brand_slug = "disneyplus"`
-  - `brand = "Piko"` resolves to `brand_slug = "piko"`
-  - `brand = "Adobo"` resolves to `brand_slug = "adobo"`
-  - `brand = "Paresh"` resolves to `brand_slug = "paresh"`
+The build engine (`utils.sh`) automatically derives filename slugs directly from your declarative configuration using clean kebab-casing:
+- `brand = "ReVanced Advanced"` ➔ `revanced-advanced` (or `brand = "Anddea"` ➔ `anddea`)
+- `brand = "Android TV"` ➔ `android-tv`
+- `brand = "Piko"` ➔ `piko`
+- `brand = "Morphe"` ➔ `morphe`
+- `app-name = "YouTube Music"` ➔ `youtube-music`
 
-This ensures that generated release assets retain exact historical naming patterns (e.g. `youtube-anddea-nord-v...apk`), while the website catalog and release notes display the canonical title `"ReVanced Advanced"`.
+Every configuration is self-contained in its TOML file with zero external lookup files or legacy baggage.
 
 #### Migrating from Legacy `rv-brand`
 
@@ -137,7 +122,7 @@ Previously, `rv-brand` combined brand, variants, and channels into a single hyph
 | `rv-brand = "morphe-androidtv"` | `brand = "Android TV"`, `sub-variant = "clone"` |
 
 > [!NOTE]
-> All legacy composite `rv-brand` configurations should be replaced with explicit `brand`, `variant`, and `sub-variant` keys matching `brands.json`.
+> All legacy composite `rv-brand` configurations should be replaced with explicit `brand`, `variant`, and `sub-variant` keys.
 
 **Output Filename Structure:**
 ```

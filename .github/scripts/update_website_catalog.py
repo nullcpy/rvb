@@ -41,31 +41,6 @@ def normalize_arch(arch_raw):
         return "x86"
     return a or "all"
 
-def format_display_name(slug, configured_name, brands):
-    candidates = []
-    if configured_name and configured_name.strip():
-        candidates.append(configured_name.strip())
-    if slug and slug.strip():
-        candidates.append(slug.strip())
-
-    for c in candidates:
-        norm = re.sub(r"[_\s-]+", "", c.lower())
-        if norm in brands:
-            return brands[norm]
-        norm_hyphen = re.sub(r"[_\s]+", "-", c.lower())
-        if norm_hyphen in brands:
-            return brands[norm_hyphen]
-
-    if configured_name and configured_name.strip():
-        val = configured_name.strip()
-        if not val.islower() and not val.isupper():
-            return val
-        words = re.sub(r"[_\s-]+", " ", val).split()
-        return " ".join(brands.get(w.lower(), w.capitalize()) for w in words)
-
-    words = re.sub(r"[_\s-]+", " ", slug.strip()).split()
-    return " ".join(brands.get(w.lower(), w.capitalize()) for w in words)
-
 def parse_patch_info(patches_source, patches_ref):
     primary = (patches_source or "").split()[0] if patches_source else ""
     if not primary and patches_ref:
@@ -79,22 +54,7 @@ def parse_patch_info(patches_source, patches_ref):
     name = primary_clean or "Patched"
     return key, name
 
-def parse_variant(target_key, app_key, patch_key, brands=None):
-    # Determine if target has a variant suffix like -exp, -alt, -adobo, etc.
-    rem = target_key.lower()
-    for prefix in [app_key, patch_key]:
-        rem = rem.replace(prefix, "")
-    rem = re.sub(r"^[_\s-]+|[_\s-]+$", "", rem)
-
-    if not rem or rem in ["apk", "module", "root", "nonroot"]:
-        return "default", "Standard"
-
-    if brands and rem in brands:
-        return rem, brands[rem]
-
-    return rem, rem.capitalize()
-
-def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is_prerelease, github_server, github_repo, brands, config=None):
+def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is_prerelease, github_server, github_repo, config=None):
     apps = catalog_data.get("apps", [])
     app_map = {app["appKey"]: app for app in apps}
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -107,49 +67,34 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
         if not matching_files:
             continue
 
-        raw_display = info.get("display_name") or target_key
-        app_name = format_display_name(target_key, raw_display, brands)
+        raw_display = (info.get("display_name") or target_key).strip()
+        app_name = raw_display
         app_key = normalize_key(app_name) or normalize_key(target_key)
 
-        brand_cfg = info.get("brand")
+        brand_cfg = (info.get("brand") or "").strip()
         if brand_cfg:
-            brand_norm = re.sub(r"[_\s-]+", "", brand_cfg.lower())
-            if brand_norm in brands:
-                patch_name = brands[brand_norm]
-                patch_key = normalize_key(patch_name)
-            else:
-                matched_key = next((k for k, v in brands.items() if re.sub(r"[_\s-]+", "", v.lower()) == brand_norm), None)
-                if matched_key:
-                    patch_name = brands[matched_key]
-                    patch_key = normalize_key(patch_name)
-                else:
-                    patch_name = brand_cfg
-                    patch_key = normalize_key(brand_cfg)
+            patch_name = brand_cfg
+            patch_key = normalize_key(brand_cfg)
         else:
             patch_key, patch_name = parse_patch_info(info.get("patches_source"), info.get("patches"))
 
         variant_cfg = (info.get("variant") or "").strip()
         sub_variant_cfg = (info.get("sub_variant") or "").strip()
 
-        if variant_cfg or sub_variant_cfg:
-            parts_key = []
-            parts_name = []
-            if variant_cfg and variant_cfg.lower() != "default":
-                v_norm = re.sub(r"[_\s-]+", "", variant_cfg.lower())
-                v_display = brands.get(v_norm, variant_cfg)
-                parts_key.append(normalize_key(variant_cfg))
-                parts_name.append(v_display)
-            if sub_variant_cfg:
-                parts_key.append(normalize_key(sub_variant_cfg))
-                if parts_name:
-                    parts_name.append(f"({sub_variant_cfg.capitalize()})")
-                else:
-                    parts_name.append(sub_variant_cfg.capitalize())
-            
-            variant_key = "-".join(parts_key) if parts_key else "default"
-            variant_name = " ".join(parts_name) if parts_name else "Standard"
-        else:
-            variant_key, variant_name = parse_variant(target_key, app_key, patch_key, brands)
+        parts_key = []
+        parts_name = []
+        if variant_cfg and variant_cfg.lower() != "default":
+            parts_key.append(normalize_key(variant_cfg))
+            parts_name.append(variant_cfg)
+        if sub_variant_cfg:
+            parts_key.append(normalize_key(sub_variant_cfg))
+            if parts_name:
+                parts_name.append(f"({sub_variant_cfg})")
+            else:
+                parts_name.append(sub_variant_cfg)
+
+        variant_key = "-".join(parts_key) if parts_key else "default"
+        variant_name = " ".join(parts_name) if parts_name else "Standard"
 
         version = info.get("version", "")
         pkg_name = info.get("package_name", "")
@@ -277,9 +222,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
     apps.sort(key=lambda a: a["appName"].lower())
     catalog_data["apps"] = apps
     catalog_data["updated_at"] = now_iso
-    catalog_data["brands"] = brands
     if config:
-        config["brands"] = brands
         catalog_data["config"] = config
     return catalog_data
 
@@ -304,7 +247,6 @@ def main():
         return
 
     build_info = load_json(build_json_file)
-    brands = load_json("brands.json")
     config = load_json("config.json")
     build_dir = Path("build")
     built_files = [f for f in build_dir.iterdir() if f.is_file()] if build_dir.exists() else []
@@ -330,7 +272,6 @@ def main():
         is_prerelease,
         github_server,
         github_repo,
-        brands,
         config
     )
 

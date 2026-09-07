@@ -15,62 +15,18 @@ def load_json(path, default=None):
     return default if default is not None else {}
 
 CONFIG = load_json("config.json")
-BRANDS = load_json("brands.json")
 
-def format_display_name(slug, configured_name=None):
-    candidates = []
-    if configured_name and configured_name.strip():
-        candidates.append(configured_name.strip())
-    if slug and slug.strip():
-        candidates.append(slug.strip())
-
-    for c in candidates:
-        norm = re.sub(r"[_\s-]+", "", c.lower())
-        if norm in BRANDS:
-            return BRANDS[norm]
-        norm_hyphen = re.sub(r"[_\s]+", "-", c.lower())
-        if norm_hyphen in BRANDS:
-            return BRANDS[norm_hyphen]
-
-    if configured_name and configured_name.strip():
-        val = configured_name.strip()
-        if not val.islower() and not val.isupper():
-            return val
-        words = re.sub(r"[_\s-]+", " ", val).split()
-        return " ".join(BRANDS.get(w.lower(), w.capitalize()) for w in words)
-
-    words = re.sub(r"[_\s-]+", " ", slug.strip()).split()
-    return " ".join(BRANDS.get(w.lower(), w.capitalize()) for w in words)
-
-def resolve_display_name(target_key, configured_name, brands, known_patch_tokens=None):
-    clean_target = target_key.lower()
-    patch_tokens = known_patch_tokens or CONFIG.get("knownPatchTokens", ["morphe", "revanced", "rvx", "anddea", "instafel", "xposed"])
-    tokens = clean_target.split("-")
-    patch_idx = -1
-    for idx, t in enumerate(tokens):
-        if t in patch_tokens:
-            patch_idx = idx
-            break
-
-    if patch_idx >= 0:
-        app_slug = "-".join(tokens[:patch_idx])
-        variant_tokens = tokens[patch_idx + 1:]
-    else:
-        app_slug = target_key
-        variant_tokens = []
-
-    base_name = format_display_name(configured_name or app_slug, configured_name)
-
-    variant_names = []
-    for vt in variant_tokens:
-        clean_vt = re.sub(r"[^a-z0-9]", "", vt)
-        if not clean_vt or clean_vt in ["apk", "zip", "module", "root", "nonroot"]:
-            continue
-        v_display = brands.get(clean_vt, clean_vt.capitalize())
-        variant_names.append(v_display)
-
-    if variant_names:
-        return f"{base_name} ({' '.join(variant_names)})"
+def resolve_display_name(target_key, info):
+    base_name = info.get("display_name") or target_key
+    variant = (info.get("variant") or "").strip()
+    sub_variant = (info.get("sub_variant") or "").strip()
+    extras = []
+    if variant and variant.lower() != "default":
+        extras.append(variant)
+    if sub_variant:
+        extras.append(sub_variant)
+    if extras:
+        return f"{base_name} ({' - '.join(extras)})"
     return base_name
 
 def normalize_arch(arch_raw):
@@ -139,9 +95,8 @@ def main():
                 "apps": {}
             }
 
-        # Resolve display name including variant overrides (e.g. YouTube (Nord Theme))
-        configured_display = info.get("display_name")
-        display_name = resolve_display_name(target_key, configured_display, BRANDS)
+        # Resolve display name directly from structured build info
+        display_name = resolve_display_name(target_key, info)
         version = info.get("version", "")
         file_prefix = info.get("name", "")
 
