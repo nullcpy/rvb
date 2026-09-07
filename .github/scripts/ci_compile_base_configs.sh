@@ -22,10 +22,6 @@ else
   echo "{}" > config.dev.json
 fi
 
-# Create a unified config for version fetching
-jq -s 'add // {}' config.stable.json config.dev.json > config.all.json
-
 echo "Base configs compiled successfully."
 echo "Stable apps/keys: $(jq 'keys | length' config.stable.json)"
 echo "Dev apps/keys:    $(jq 'keys | length' config.dev.json)"
-echo "Total apps/keys:  $(jq 'keys | length' config.all.json)"
