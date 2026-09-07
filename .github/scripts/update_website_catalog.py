@@ -92,22 +92,9 @@ def parse_variant(target_key, app_key, patch_key, brands=None):
     if brands and rem in brands:
         return rem, brands[rem]
 
-    variant_names = {
-        "exp": "Experimental",
-        "alt": "Alternative",
-        "adobo": "Adobo",
-        "piko": "Piko",
-        "foss": "FOSS",
-        "beta": "Beta",
-        "clone": "Clone",
-        "androidtv": "Android TV",
-        "materialu": "Material You",
-        "nord": "Nord Theme",
-        "mocha": "Mocha Theme",
-    }
-    return rem, variant_names.get(rem, rem.capitalize())
+    return rem, rem.capitalize()
 
-def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is_prerelease, github_server, github_repo, brands):
+def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is_prerelease, github_server, github_repo, brands, config=None):
     apps = catalog_data.get("apps", [])
     app_map = {app["appKey"]: app for app in apps}
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -248,6 +235,9 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
     catalog_data["apps"] = apps
     catalog_data["updated_at"] = now_iso
     catalog_data["brands"] = brands
+    if config:
+        config["brands"] = brands
+        catalog_data["config"] = config
     return catalog_data
 
 def main():
@@ -272,6 +262,7 @@ def main():
 
     build_info = load_json(build_json_file)
     brands = load_json("brands.json")
+    config = load_json("config.json")
     build_dir = Path("build")
     built_files = [f for f in build_dir.iterdir() if f.is_file()] if build_dir.exists() else []
 
@@ -296,7 +287,8 @@ def main():
         is_prerelease,
         github_server,
         github_repo,
-        brands
+        brands,
+        config
     )
 
     with open(catalog_path, "w", encoding="utf-8") as f:

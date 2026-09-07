@@ -5,16 +5,17 @@ import json
 import glob
 from pathlib import Path
 
-def load_brands(brands_path="brands.json"):
-    if os.path.exists(brands_path):
+def load_json(path, default=None):
+    if os.path.exists(path):
         try:
-            with open(brands_path, "r", encoding="utf-8") as f:
+            with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            print(f"Warning: Could not read {brands_path}: {e}")
-    return {}
+            print(f"Warning: Could not read {path}: {e}")
+    return default if default is not None else {}
 
-BRANDS = load_brands()
+CONFIG = load_json("config.json")
+BRANDS = load_json("brands.json")
 
 def format_display_name(slug, configured_name=None):
     candidates = []
@@ -41,13 +42,13 @@ def format_display_name(slug, configured_name=None):
     words = re.sub(r"[_\s-]+", " ", slug.strip()).split()
     return " ".join(BRANDS.get(w.lower(), w.capitalize()) for w in words)
 
-def resolve_display_name(target_key, configured_name, brands):
+def resolve_display_name(target_key, configured_name, brands, known_patch_tokens=None):
     clean_target = target_key.lower()
-    known_patch_tokens = ["morphe", "revanced", "rvx", "anddea", "instafel", "xposed"]
+    patch_tokens = known_patch_tokens or CONFIG.get("knownPatchTokens", ["morphe", "revanced", "rvx", "anddea", "instafel", "xposed"])
     tokens = clean_target.split("-")
     patch_idx = -1
     for idx, t in enumerate(tokens):
-        if t in known_patch_tokens:
+        if t in patch_tokens:
             patch_idx = idx
             break
 
