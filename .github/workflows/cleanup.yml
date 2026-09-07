@@ -40,8 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/cleanup_update_branch.sh
 
-      - name: Cleanup Website Catalog Data
+      - name: Synchronize Website Catalog Data
         env:
           WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/cleanup_website_catalog.py
+        run: python3 .github/scripts/sync_website_catalog.py

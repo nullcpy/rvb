@@ -185,12 +185,14 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
         arch_order = {"arm64": 0, "arm": 1, "all": 2, "universal": 3, "x86_64": 4, "x86": 5}
         assets.sort(key=lambda a: arch_order.get(a["arch"], 99))
 
-        # Remove existing build matching same build number, variant, and subVariant
-        brand_entry["builds"] = [
+        # Separate existing numbered builds and archive builds
+        existing_numbered = [
             b for b in brand_entry["builds"]
-            if not (str(b.get("build")) == str(next_ver_code) and
-                    b.get("variant") == variant_val and
-                    b.get("subVariant") == sub_variant_val)
+            if not b.get("isArchive") and not (
+                str(b.get("build")) == str(next_ver_code) and
+                b.get("variant") == variant_val and
+                b.get("subVariant") == sub_variant_val
+            )
         ]
 
         build_entry = {
@@ -208,7 +210,49 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "appliedPatches": info.get("applied_patches") or [],
             "assets": assets
         }
-        brand_entry["builds"].insert(0, build_entry)
+
+        # Rolling archive build entry
+        archive_tag = "beta" if is_prerelease else "stable"
+        archive_assets = [
+            {
+                "name": a["name"],
+                "browser_download_url": f"{github_server}/{github_repo}/releases/download/{archive_tag}/{a['name']}",
+                "size": a["size"],
+                "download_count": a.get("download_count", 0),
+                "arch": a["arch"],
+                "fileType": a["fileType"]
+            }
+            for a in assets
+        ]
+        archive_entry = {
+            "build": version,
+            "releaseId": archive_tag,
+            "releaseType": release_type,
+            "isArchive": True,
+            "version": version,
+            "variant": variant_val,
+            "subVariant": sub_variant_val,
+            "publishedAt": now_iso,
+            "releaseUrl": f"{github_server}/{github_repo}/releases/tag/{archive_tag}",
+            "patchSources": patches_ref.split() if isinstance(patches_ref, str) else (patches_ref or []),
+            "changelogs": changelog_url.split() if isinstance(changelog_url, str) else (changelog_url or []),
+            "appliedPatches": info.get("applied_patches") or [],
+            "assets": archive_assets
+        }
+
+        # Existing archive builds matching same variant & subVariant (excluding same version)
+        matching_archive = [
+            b for b in brand_entry["builds"]
+            if b.get("isArchive") and b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val and b.get("version") != version
+        ]
+        other_archive = [
+            b for b in brand_entry["builds"]
+            if b.get("isArchive") and not (b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val)
+        ]
+        # Keep up to 1 older archive build for same variant (so total archive builds for this variant is at most 2)
+        surviving_archive = [archive_entry] + matching_archive[:1] + other_archive
+
+        brand_entry["builds"] = [build_entry] + existing_numbered + surviving_archive
 
     # Sort apps alphabetically
     apps.sort(key=lambda a: a["appName"].lower())
@@ -279,8 +323,20 @@ def main():
         return
 
     run_cmd(f"git commit -m 'chore: update data for build {next_ver_code}'", cwd=clone_dir)
-    run_cmd("git push origin main", cwd=clone_dir)
-    print("Successfully published updated data.json to nullcpy.github.io!")
+    
+    pushed = False
+    for attempt in range(1, 4):
+        try:
+            run_cmd("git push origin main", cwd=clone_dir)
+            pushed = True
+            print("Successfully published updated data.json to nullcpy.github.io!")
+            break
+        except Exception as e:
+            print(f"Warning: Git push attempt {attempt} failed: {e}. Retrying with rebase...", file=sys.stderr)
+            run_cmd("git pull --rebase origin main", check=False, cwd=clone_dir)
+    if not pushed:
+        print("Error: Failed to push updated data.json after 3 attempts.", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

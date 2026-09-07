@@ -162,7 +162,7 @@ jobs:
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
-        run: python3 .github/scripts/update_website_catalog.py || true
+        run: python3 .github/scripts/update_website_catalog.py
 
       - name: Notify telegram
         env:
