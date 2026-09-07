@@ -12,7 +12,14 @@ def get_app_mappings():
         with open(toml_file, 'r', encoding='utf-8') as f:
             content = f.read()
             # Split by [app_key]
-            sections = re.split(r'^\[(.*?)\]\s*$', content, flags=re.MULTILINE)[1:]
+            parts = re.split(r'^\[(.*?)\]\s*$', content, flags=re.MULTILINE)
+            header = parts[0]
+            m_header_src = re.search(r'patches-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', header)
+            header_src = (m_header_src.group(1) or m_header_src.group(2)).strip().lower() if m_header_src else "morpheapp/morphe-patches"
+            m_header_cli = re.search(r'cli-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', header)
+            header_cli = (m_header_cli.group(1) or m_header_cli.group(2)).strip().lower() if m_header_cli else "morpheapp/morphe-desktop"
+
+            sections = parts[1:]
             for i in range(0, len(sections), 2):
                 key = sections[i].strip()
                 body = sections[i+1]
@@ -29,12 +36,12 @@ def get_app_mappings():
                     continue
                 
                 # Extract patches-source
-                m_src = re.search(r'patches-source\s*=\s*"([^"]+)"', body)
-                src = m_src.group(1).lower() if m_src else "morpheapp/morphe-patches"
+                m_src = re.search(r'patches-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', body)
+                src = (m_src.group(1) or m_src.group(2)).strip().lower() if m_src else header_src
                 
                 # Extract cli-source
-                m_cli = re.search(r'cli-source\s*=\s*"([^"]+)"', body)
-                cli_src = m_cli.group(1).lower() if m_cli else "morpheapp/morphe-desktop"
+                m_cli = re.search(r'cli-source\s*=\s*(?:"""([\s\S]*?)"""|"([^"]+)")', body)
+                cli_src = (m_cli.group(1) or m_cli.group(2)).strip().lower() if m_cli else header_cli
                 if cli_src:
                     cli_sources.setdefault(src, set()).add(cli_src)
                 

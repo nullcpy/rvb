@@ -15,9 +15,9 @@ if [ -z "$CONFIG_FILES" ]; then
     exit 0
 fi
 
-# Convert all TOML files to a single JSON
+# Convert all TOML files to a single JSON with propagated defaults
 # shellcheck disable=SC2086
-yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $CONFIG_FILES > temp_all_configs.json
+toml_merge_configs $CONFIG_FILES > temp_all_configs.json
 
 [ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json
 > fetched_app_versions.jsonl

@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+# Convert utils.sh to Unix line endings if needed
+dos2unix utils.sh 2>/dev/null || true
+source utils.sh
+
 [ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
 [ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'
 [ -f active_apps.json ] || echo '[]' > active_apps.json
@@ -30,7 +34,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
   STABLE_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.dev.toml" | sort)
   if [ -n "$STABLE_CONFIGS" ]; then
     # shellcheck disable=SC2086
-    yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $STABLE_CONFIGS > config.stable.json
+    toml_merge_configs $STABLE_CONFIGS > config.stable.json
   else
     echo "{}" > config.stable.json
   fi
@@ -53,7 +57,7 @@ if [ "${TRIGGER_PRERELEASE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] 
   DEV_CONFIGS=$(find .github/configs/patches -name "*.toml" ! -name "*.stable.toml" | sort)
   if [ -n "$DEV_CONFIGS" ]; then
     # shellcheck disable=SC2086
-    yq -o=json eval-all '. as $item ireduce ({}; . * $item)' $DEV_CONFIGS > config.dev.json
+    toml_merge_configs $DEV_CONFIGS > config.dev.json
   else
     echo "{}" > config.dev.json
   fi
