@@ -1,0 +1,80 @@
+{
+  "owner": "nullcpy",
+  "repo": "rvb",
+  "cacheDuration": 5,
+  "knownPatchTokens": [
+    "revanced",
+    "morphe",
+    "anddea",
+    "rvx",
+    "xposed",
+    "instafel"
+  ],
+  "variantKeywords": [
+    "exp",
+    "nord",
+    "mocha",
+    "privacy",
+    "materialu",
+    "foss",
+    "gplay",
+    "piko",
+    "adobo",
+    "patcheddit",
+    "paresh",
+    "nightly",
+    "androidtv",
+    "alt",
+    "clone",
+    "beta"
+  ],
+  "knownArchs": [
+    "arm64-v8a",
+    "arm64",
+    "aarch64",
+    "armeabi-v7a",
+    "arm-v7a",
+    "arm32",
+    "arm",
+    "x86_64",
+    "x86",
+    "universal",
+    "all"
+  ],
+  "appCategories": {
+    "androidtv": ["primevideo", "plutotv", "moviebox", "disneyplus", "hbomax", "tubi", "vix", "at4klauncher", "projectivylauncher", "peacock", "netflix", "nuvio"],
+    "google": ["youtube", "google"],
+    "meta": ["threads", "instagram", "messenger", "facebook", "!plusmessenger"],
+    "vpn": ["1111warp", "vpnify", "vpn"]
+  },
+  "sharedAppWordStoplist": [
+    "messenger",
+    "document",
+    "reader",
+    "keyboard",
+    "browser",
+    "editor",
+    "video"
+  ],
+  "appNotices": [
+    {
+      "triggers": ["youtube", "google"],
+      "className": "microg-note",
+      "title": "Login Issue",
+      "text": "Signing into Google account on APK (not Module) requires MicroG. Please install one from below before trying to sign in.",
+      "links": [
+        { "label": "Morphe", "url": "https://github.com/MorpheApp/MicroG-RE/releases/latest" },
+        { "label": "ReVanced", "url": "https://github.com/ReVanced/GmsCore/releases/latest" }
+      ]
+    },
+    {
+      "triggers": ["twitter"],
+      "className": "twitter-login-note",
+      "title": "Login Issue",
+      "text": "Since October 2025, Twitter has started checking whether the app is modified or if phone integrity fails during login.",
+      "links": [
+        { "label": "Workarounds", "url": "https://t.me/pikopatches/1/59772" }
+      ]
+    }
+  ]
+}
