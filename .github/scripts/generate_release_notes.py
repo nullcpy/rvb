@@ -41,6 +41,37 @@ def format_display_name(slug, configured_name=None):
     words = re.sub(r"[_\s-]+", " ", slug.strip()).split()
     return " ".join(BRANDS.get(w.lower(), w.capitalize()) for w in words)
 
+def resolve_display_name(target_key, configured_name, brands):
+    clean_target = target_key.lower()
+    known_patch_tokens = ["morphe", "revanced", "rvx", "anddea", "instafel", "xposed"]
+    tokens = clean_target.split("-")
+    patch_idx = -1
+    for idx, t in enumerate(tokens):
+        if t in known_patch_tokens:
+            patch_idx = idx
+            break
+
+    if patch_idx >= 0:
+        app_slug = "-".join(tokens[:patch_idx])
+        variant_tokens = tokens[patch_idx + 1:]
+    else:
+        app_slug = target_key
+        variant_tokens = []
+
+    base_name = format_display_name(configured_name or app_slug, configured_name)
+
+    variant_names = []
+    for vt in variant_tokens:
+        clean_vt = re.sub(r"[^a-z0-9]", "", vt)
+        if not clean_vt or clean_vt in ["apk", "zip", "module", "root", "nonroot"]:
+            continue
+        v_display = brands.get(clean_vt, clean_vt.capitalize())
+        variant_names.append(v_display)
+
+    if variant_names:
+        return f"{base_name} ({' '.join(variant_names)})"
+    return base_name
+
 def normalize_arch(arch_raw):
     a = (arch_raw or "").lower().strip()
     if "arm64" in a or "aarch64" in a:
@@ -107,10 +138,9 @@ def main():
                 "apps": {}
             }
 
-        # Resolve display name
-        display_name = info.get("display_name") or target_key
-        # Clean display name from brand overrides
-        display_name = format_display_name(target_key, display_name)
+        # Resolve display name including variant overrides (e.g. YouTube (Nord Theme))
+        configured_display = info.get("display_name")
+        display_name = resolve_display_name(target_key, configured_display, BRANDS)
         version = info.get("version", "")
         file_prefix = info.get("name", "")
 
@@ -126,7 +156,8 @@ def main():
         # module format: <file_prefix>-module-v<version>-<arch>.zip
         for fname in built_files:
             lower = fname.lower()
-            if not lower.startswith(file_prefix.lower()):
+            prefix_lower = file_prefix.lower()
+            if not (lower.startswith(prefix_lower + "-v") or lower.startswith(prefix_lower + "-module-")):
                 continue
 
             # Check if apk
