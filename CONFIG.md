@@ -27,6 +27,9 @@ cli-source-host = "github"                       # source host for cli: "github"
 # options like cli-source can also set per app
 rv-brand = "ReVanced Extended" # rebrand from 'ReVanced' to something different. default: patches-source owner
 
+author = "nullcpy"                   # module author name. default: "nullcpy"
+author-page = "github.com/nullcpy/rvb" # module author page/link printed during installation. default: "github.com/nullcpy/rvb"
+
 patches-version = "v2.160.0" # 'latest', 'dev', or a version number. default: "latest"
 cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "latest"
 
@@ -78,7 +81,7 @@ github-regex = "arm64-v8a: 'MyApp-arm64-v{version}\\.apk' | arm-v7a: 'MyApp-arm-
 # direct download url. the url must have point to an apk file with name format shown in this example
 direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 
-module-prop-name = "some-app-module"                       # module prop name.
+module-prop-name = "some-app-module"                       # module prop name. default: "<app>-<author>"
 dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. 'auto' matches whatever is available. default: nodpi anydpi auto
 arch = "arm64-v8a"                                         # 'auto', 'arm64-v8a', 'arm-v7a', 'all', 'both'. 'both' downloads both arm64-v8a and arm-v7a. 'auto' tries all → arm64-v8a → arm-v7a, using the first available. default: auto
 ```
