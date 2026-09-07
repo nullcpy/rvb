@@ -32,17 +32,17 @@
   "piko": {
     "repo": "crimera/piko",
     "stable": "v3.9.0",
-    "prerelease": "v3.10.0-dev.4",
+    "prerelease": "v3.10.0-dev.5",
     "blocked": false,
     "stable_date": "2026-08-31T02:40:04Z",
-    "pre_date": "2026-09-04T22:13:25Z"
+    "pre_date": "2026-09-07T01:37:01Z"
   },
   "hoodles": {
     "repo": "hoo-dles/morphe-patches",
-    "stable": "v1.43.0",
+    "stable": "v1.44.0",
     "prerelease": "v1.44.0-dev.2",
     "blocked": false,
-    "stable_date": "2026-08-30T00:32:47Z",
+    "stable_date": "2026-09-07T01:13:25Z",
     "pre_date": "2026-09-05T20:05:00Z"
   },
   "adobo": {
@@ -135,10 +135,10 @@
   "tiktok": {
     "repo": "icysymmetra/tiktok-patches-for-morphe",
     "stable": "v0.7.0",
-    "prerelease": "v0.8.0-dev.4",
+    "prerelease": "v0.8.0-dev.5",
     "blocked": false,
     "stable_date": "2026-08-23T00:36:23Z",
-    "pre_date": "2026-09-06T11:13:42Z"
+    "pre_date": "2026-09-06T23:41:09Z"
   },
   "x-shim": {
     "enabled": false,
@@ -166,10 +166,10 @@
   },
   "androidtv": {
     "repo": "ajstrick81/morphe-androidtv-patches",
-    "stable": "v1.31.0",
+    "stable": "v1.32.0",
     "prerelease": "v1.5.7-dev.3",
     "blocked": false,
-    "stable_date": "2026-09-05T14:21:18Z",
+    "stable_date": "2026-09-06T22:35:10Z",
     "pre_date": "2026-06-26T16:45:34Z"
   },
   "revenge": {
@@ -279,8 +279,8 @@
   },
   "kveld9": {
     "repo": "kveld9/kveld-morphe-patches",
-    "stable": "v1.13.0",
-    "stable_date": "2026-09-05T00:54:12Z",
+    "stable": "v1.13.1",
+    "stable_date": "2026-09-07T00:44:40Z",
     "prerelease": "",
     "pre_date": "",
     "blocked": false
