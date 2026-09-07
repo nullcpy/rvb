@@ -15,11 +15,13 @@ def load_channel_config(channel):
 
 def get_app_mappings():
     apps_stable = {}
-    apps_dev = {}
+    apps_beta = {}
     cli_sources = {}
 
-    for channel, target_dict in [('stable', apps_stable), ('dev', apps_dev)]:
+    for channel, target_dict in [('stable', apps_stable), ('beta', apps_beta)]:
         data = load_channel_config(channel)
+        if not data and channel == 'beta':
+            data = load_channel_config('dev')
         for key, val in data.items():
             if not isinstance(val, dict):
                 continue
@@ -33,7 +35,7 @@ def get_app_mappings():
             if channel == 'stable':
                 en = val.get('enabledStable', True)
             else:
-                en = val.get('enabledDev', True)
+                en = val.get('enabledBeta', val.get('enabledDev', True))
             if isinstance(en, str):
                 en = en.lower() == 'true'
             if not en:
@@ -63,7 +65,7 @@ def get_app_mappings():
                     'patch_folder': patch_folder
                 }
 
-    return apps_stable, apps_dev, cli_sources
+    return apps_stable, apps_beta, cli_sources
 
 def process_zip(path, pkg_info):
     pkgs = list(pkg_info.keys())
@@ -291,29 +293,27 @@ def run():
     else:
         hashes = {}
 
-    apps_stable, apps_dev, cli_sources = get_app_mappings()
+    apps_stable, apps_beta, cli_sources = get_app_mappings()
     
     active_stable = []
-    active_dev = []
+    active_beta = []
 
     for repo_key, new_info in tags_new.items():
         old_info = tags_old.get(repo_key, {})
         repo = new_info.get('repo', '')
         repo_lower = repo.lower()
         
-        # Determine if we need to check stable/dev
+        # Determine if we need to check stable/beta
         check_stable = new_info.get('stable') != "" and new_info.get('stable') != old_info.get('stable')
-        check_dev = new_info.get('prerelease') != "" and new_info.get('prerelease') != old_info.get('prerelease')
+        new_beta = new_info.get('beta') or new_info.get('prerelease') or ""
+        old_beta = old_info.get('beta') or old_info.get('prerelease') or ""
+        check_beta = new_beta != "" and new_beta != old_beta
         
-        if new_info.get('enabled') is False:
+        if new_info.get('enabled') is False or new_info.get('blocked') is True:
             check_stable = False
-            check_dev = False
-        if new_info.get('enabledStable') is False:
-            check_stable = False
-        if new_info.get('enabledDev') is False:
-            check_dev = False
+            check_beta = False
         
-        if not check_stable and not check_dev:
+        if not check_stable and not check_beta:
             continue
             
         repo_clis = cli_sources.get(repo_lower, set())
@@ -323,13 +323,15 @@ def run():
             is_revanced_or_morphe = True
         
         if repo_lower not in hashes:
-            hashes[repo_lower] = {'stable': {}, 'dev': {}}
+            hashes[repo_lower] = {}
+        hashes[repo_lower].setdefault('stable', {})
+        hashes[repo_lower].setdefault('beta', {})
             
         if check_stable:
-            evaluate_repo_channel(repo_lower, repo, new_info.get('stable'), 'stable', new_info, hashes, active_stable, apps_stable, apps_dev, is_revanced_or_morphe)
+            evaluate_repo_channel(repo_lower, repo, new_info.get('stable'), 'stable', new_info, hashes, active_stable, apps_stable, apps_beta, is_revanced_or_morphe)
             
-        if check_dev:
-            evaluate_repo_channel(repo_lower, repo, new_info.get('prerelease'), 'dev', new_info, hashes, active_dev, apps_stable, apps_dev, is_revanced_or_morphe)
+        if check_beta:
+            evaluate_repo_channel(repo_lower, repo, new_beta, 'beta', new_info, hashes, active_beta, apps_stable, apps_beta, is_revanced_or_morphe)
 
     with open(hash_file, 'w') as f:
         json.dump(hashes, f, indent=2, sort_keys=True)
@@ -337,8 +339,8 @@ def run():
     with open('active_patch_apps.stable.json', 'w') as f:
         json.dump(list(set(active_stable)), f)
         
-    with open('active_patch_apps.dev.json', 'w') as f:
-        json.dump(list(set(active_dev)), f)
+    with open('active_patch_apps.beta.json', 'w') as f:
+        json.dump(list(set(active_beta)), f)
 
 if __name__ == '__main__':
     run()

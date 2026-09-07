@@ -175,14 +175,14 @@ source_release_pick_from_list() {
 	local host=${1,,} mode=$2
 	case "$host" in
 		github)
-			if [ "$mode" = dev ]; then
+			if [ "$mode" = dev ] || [ "$mode" = beta ]; then
 				jq -e -c 'map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			else
 				jq -e -c 'map(select(.prerelease != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			fi
 			;;
 		gitlab)
-			if [ "$mode" = dev ]; then
+			if [ "$mode" = dev ] || [ "$mode" = beta ]; then
 				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
 			else
 				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
@@ -237,18 +237,18 @@ _get_prebuilts() {
 
 	local rv_rel release resp tag_name matches asset name url
 	rv_rel=$(source_release_api_base "$host" "$src") || return 1
-	if [ "$ver" = "dev" ]; then
+	if [ "$ver" = "beta" ] || [ "$ver" = "dev" ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-		release=$(source_release_pick_from_list "$host" dev <<<"$resp") || true
+		release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 		ver=$(jq -r '.tag_name' <<<"$release") || true
 		if [ -z "$ver" ] || [ "$ver" = "null" ]; then
 			ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
 			release="" # Clear release if we had to fallback to get_highest_ver
 		fi
 	fi
-	if [ "$ver" = "latest" ]; then
+	if [ "$ver" = "stable" ] || [ "$ver" = "latest" ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-		release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
+		release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 	elif [ -z "${release:-}" ]; then
 		rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
 		release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
@@ -335,18 +335,18 @@ _get_prebuilts() {
 		
 		local rv_rel release resp tag_name matches asset name url
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
-		if [ "$ver" = "dev" ]; then
+		if [ "$ver" = "beta" ] || [ "$ver" = "dev" ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-			release=$(source_release_pick_from_list "$host" dev <<<"$resp") || true
+			release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 			ver=$(jq -r '.tag_name' <<<"$release") || true
 			if [ -z "$ver" ] || [ "$ver" = "null" ]; then
 				ver=$(jq -e -r '.[].tag_name' <<<"$resp" | get_highest_ver) || return 1
 				release="" # Clear release if we had to fallback to get_highest_ver
 			fi
 		fi
-		if [ "$ver" = "latest" ]; then
+		if [ "$ver" = "stable" ] || [ "$ver" = "latest" ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
-			release=$(source_release_pick_from_list "$host" latest <<<"$resp") || return 1
+			release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 		elif [ -z "${release:-}" ]; then
 			rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
 			release=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1

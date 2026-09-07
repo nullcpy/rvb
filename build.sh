@@ -26,8 +26,8 @@ toml_prep "${1:-config.toml}" || abort "could not find config file '${1:-config.
 main_config_t=$(toml_get_table_main)
 COMPRESSION_LEVEL=$(toml_get "$main_config_t" compression-level) || COMPRESSION_LEVEL="9"
 REMOVE_RV_INTEGRATIONS_CHECKS=$(toml_get "$main_config_t" remove-rv-integrations-checks) || REMOVE_RV_INTEGRATIONS_CHECKS="false"
-DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER="latest"
-DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER="latest"
+DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER="stable"
+DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER="stable"
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="MorpheApp/morphe-patches"
 DEF_PATCHES_SRC_HOST=$(toml_get "$main_config_t" patches-source-host) || DEF_PATCHES_SRC_HOST="github"
 DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="MorpheApp/morphe-desktop"
@@ -170,7 +170,7 @@ for table_name in $(toml_get_table_names); do
 
 	# Automatically append -beta to the module ID for pre-release builds
 	# so they have an independent update channel in Magisk
-	if { [[ "${1:-}" == *"dev"* ]] || [ "${DEF_PATCHES_VER:-}" = "dev" ]; } && [[ "${app_args[module_prop_name]}" != *"-beta"* ]]; then
+	if { [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]] || [ "${DEF_PATCHES_VER:-}" = "beta" ] || [ "${DEF_PATCHES_VER:-}" = "dev" ] || [ "${patches_ver:-}" = "beta" ] || [ "${patches_ver:-}" = "dev" ]; } && [[ "${app_args[module_prop_name]}" != *"-beta"* ]]; then
 		app_args[module_prop_name]="${app_args[module_prop_name]}-beta"
 	fi
 

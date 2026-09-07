@@ -10,17 +10,12 @@ set_prebuilts
 # Use pre-compiled configs if available, or compile as fallback
 CONFIG_INPUTS=()
 [ -f config.stable.json ] && CONFIG_INPUTS+=(config.stable.json)
-[ -f config.dev.json ] && CONFIG_INPUTS+=(config.dev.json)
+[ -f config.beta.json ] && CONFIG_INPUTS+=(config.beta.json)
 
 if [ ${#CONFIG_INPUTS[@]} -eq 0 ]; then
-    CONFIG_FILES=$(find .github/configs/patches -name "*.toml")
-    if [ -z "$CONFIG_FILES" ]; then
-        echo "No config files found in .github/configs/patches"
-        exit 0
-    fi
-    # shellcheck disable=SC2086
-    toml_merge_configs $CONFIG_FILES > config.stable.json
-    CONFIG_INPUTS=(config.stable.json)
+    python3 .github/scripts/compile_patch_configs.py
+    [ -f config.stable.json ] && CONFIG_INPUTS+=(config.stable.json)
+    [ -f config.beta.json ] && CONFIG_INPUTS+=(config.beta.json)
 fi
 
 [ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json

@@ -11,3 +11,7 @@ __pycache__/
 build.json
 /test
 module/maintainer.txt
+config.stable.json
+config.beta.json
+active*.json
+tags_*.json

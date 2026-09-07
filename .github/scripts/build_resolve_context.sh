@@ -9,20 +9,21 @@ fi
 
 echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
 
-IS_DEV=false
-if [[ "$CONFIG" == *"dev"* ]]; then
-  IS_DEV=true
+IS_BETA=false
+if [[ "$CONFIG" == *"beta"* ]] || [[ "$CONFIG" == *"dev"* ]]; then
+  IS_BETA=true
 elif [[ "$CONFIG" == *.json ]]; then
-  if [ "$(jq -r '."patches-version" // empty' "$CONFIG")" = "dev" ]; then
-    IS_DEV=true
+  pv=$(jq -r '."patches-version" // empty' "$CONFIG")
+  if [ "$pv" = "beta" ] || [ "$pv" = "dev" ]; then
+    IS_BETA=true
   fi
 elif [[ "$CONFIG" == *.toml ]]; then
-  if awk '/^\[/ {exit} {print}' "$CONFIG" | grep -qE '^[[:space:]]*patches-version[[:space:]]*=[[:space:]]*"?dev"?'; then
-    IS_DEV=true
+  if awk '/^\[/ {exit} {print}' "$CONFIG" | grep -qE '^[[:space:]]*patches-version[[:space:]]*=[[:space:]]*"?(beta|dev)"?'; then
+    IS_BETA=true
   fi
 fi
 
-if [ "$IS_DEV" = true ]; then
+if [ "$IS_BETA" = true ]; then
   echo "IS_PRERELEASE=true" >> "$GITHUB_OUTPUT"
   echo "TG_THREAD_ID=350" >> "$GITHUB_OUTPUT"
   echo "TITLE_SUFFIX= (Pre-release)" >> "$GITHUB_OUTPUT"
