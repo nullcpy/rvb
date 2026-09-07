@@ -33,6 +33,10 @@ author-page = "github.com/nullcpy/rvb" # module author page/link printed during 
 patches-version = "v2.160.0" # 'latest', 'dev', or a version number. default: "latest"
 cli-version = "v5.0.0"       # 'latest', 'dev', or a version number. default: "latest"
 
+> [!TIP]
+> **File-Level Defaults in Split Configs:**  
+> When organizing configs into separate files under `.github/configs/patches/` (e.g. `bufferk.stable.toml`, `anddea.stable.toml`), keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, and `brand`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
+
 [Some-App]
 app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Default is table name.
 brand = "Piko"           # per-app patch brand override (e.g. "Piko", "Adobo", "ReVanced Advanced").

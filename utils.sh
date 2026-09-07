@@ -23,16 +23,21 @@ declare -gA __PATCH_VER_CACHE__
 declare -gA __PKG_VERS_CACHE__
 declare -gA __DL_RESP_CACHE__
 
-toml_prep() {
-	if [ ! -f "$1" ]; then return 1; fi
-	if [ "${1##*.}" == toml ]; then
-		if [ -x "$TOML" ] 2>/dev/null && __TOML__=$("$TOML" --output json --file "$1" . 2>/dev/null); then
-			return 0
+toml_file_to_json() {
+	local f="$1"
+	if [ ! -f "$f" ]; then return 1; fi
+	if [[ "$f" == *.toml ]]; then
+		local res=""
+		if [ -n "${TOML-}" ] && [ -x "$TOML" ] 2>/dev/null; then
+			if res=$("$TOML" --output json --file "$f" . 2>/dev/null) && [ -n "$res" ]; then
+				echo "$res"
+				return 0
+			fi
 		fi
 		if command -v python3 >/dev/null 2>&1 || command -v python >/dev/null 2>&1; then
 			local py_bin="python3"
 			command -v python3 >/dev/null 2>&1 || py_bin="python"
-			if __TOML__=$("$py_bin" -c "
+			if res=$("$py_bin" -c "
 try:
     import tomllib
 except ImportError:
@@ -42,14 +47,55 @@ except ImportError:
         import sys; sys.exit(1)
 import json, sys
 print(json.dumps(tomllib.load(open(sys.argv[1], 'rb'))))
-" "$1" 2>/dev/null); then
+" "$f" 2>/dev/null) && [ -n "$res" ]; then
+				echo "$res"
 				return 0
 			fi
 		fi
-		__TOML__=$($TOML --output json --file "$1" .)
-	elif [ "${1##*.}" == json ]; then
-		__TOML__=$(cat "$1")
-	else abort "config extension not supported"; fi
+		if command -v yq >/dev/null 2>&1; then
+			if res=$(yq -o=json eval '.' "$f" 2>/dev/null) && [ -n "$res" ]; then
+				echo "$res"
+				return 0
+			fi
+		fi
+		abort "Neither python (tomllib/tomli) nor yq is available to parse $f"
+	elif [[ "$f" == *.json ]]; then
+		cat "$f"
+	else
+		abort "config extension not supported: $f"
+	fi
+}
+
+toml_merge_configs() {
+	local files=("$@")
+	local jsons=()
+	for f in "${files[@]}"; do
+		[ -f "$f" ] || continue
+		local file_json
+		file_json=$(toml_file_to_json "$f") || continue
+
+		local propagated
+		propagated=$(jq '
+			(to_entries | map(select(.value | type != "object")) | from_entries) as $defaults |
+			map_values(
+				if type == "object" then
+					($defaults + .)
+				else . end
+			)
+		' <<<"$file_json")
+		jsons+=("$propagated")
+	done
+
+	if [ ${#jsons[@]} -eq 0 ]; then
+		echo "{}"
+	else
+		printf '%s\n' "${jsons[@]}" | jq -s 'add // {}'
+	fi
+}
+
+toml_prep() {
+	if [ ! -f "$1" ]; then return 1; fi
+	__TOML__=$(toml_file_to_json "$1") || abort "failed to parse config file: $1"
 }
 toml_get_table_names() { jq -r -e 'to_entries[] | select(.value | type == "object") | .key' <<<"$__TOML__"; }
 toml_get_table_main() { jq -r -e 'to_entries | map(select(.value | type != "object")) | from_entries' <<<"$__TOML__"; }

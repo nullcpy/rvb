@@ -1,13 +1,14 @@
+patches-source = "bufferk/morphe-patches"
+cli-source = "MorpheApp/morphe-desktop"
+brand = "Morphe"
+
 [truecaller-morphe-alt]
 enabled = true
 pkg-name = "com.truecaller"
 app-name = "truecaller"
-brand = "Morphe"
 sub-variant = "alt"
 build-mode = "both"
 arch = "both"
-patches-source = "bufferk/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
@@ -16,10 +17,7 @@ archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 enabled = true
 pkg-name = "com.medium.reader"
 app-name = "medium"
-brand = "Morphe"
 build-mode = "apk"
 arch = "both"
-patches-source = "bufferk/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
 uptodown-dlurl = "https://medium.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
