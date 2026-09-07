@@ -38,11 +38,6 @@ DEF_AUTHOR_NAME=$(toml_get "$main_config_t" author) || DEF_AUTHOR_NAME="nullcpy"
 DEF_AUTHOR_PAGE=$(toml_get "$main_config_t" author-page) || DEF_AUTHOR_PAGE="github.com/nullcpy/rvb"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
 
-if [ "${2-}" = "--config-update" ]; then
-	config_update
-	exit 0
-fi
-
 : >build.md
 ENABLE_MODULE_UPDATE=$(toml_get "$main_config_t" enable-module-update) || ENABLE_MODULE_UPDATE=true
 if [ "$ENABLE_MODULE_UPDATE" = true ] && [ -z "${GITHUB_REPOSITORY-}" ]; then
@@ -212,38 +207,8 @@ done
 rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
-log "\n**Notes:**"
-log "• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs."
-log "• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules."
-log "\n[GitHub](https://github.com/nullcpy/rvb) | [Group](https://t.me/rvb27) | [Donate](https://fahim-ahmed05.github.io/donate) | [Website](https://nullcpy.github.io)\n"
-
-changelog_merged=$(cat "$TEMP_DIR"/*/changelog.md 2>/dev/null || :)
-changelog_merged=$(awk '
-{
-	line=$0
-	if (line ~ /^(CLI|Patches): /) {
-		key=line
-		sub(/\r$/, "", key)
-		gsub(/[[:space:]]+$/, "", key)
-		if (seen[key]++) {
-			skip_changelog = 1
-			next
-		}
-		skip_changelog = 0
-	} else if (skip_changelog) {
-		if (line ~ /^\[Changelog\]/ || line == "" || line == "\r") {
-			next
-		}
-		skip_changelog = 0
-	}
-	print line
-}' <<<"$changelog_merged")
-log "$changelog_merged"
-
-SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
-if [ -n "$SKIPPED" ]; then
-	log "\nSkipped:"
-	log "$SKIPPED"
+if command -v python3 >/dev/null 2>&1; then
+	python3 .github/scripts/generate_release_notes.py
 fi
 
 pr "Done"

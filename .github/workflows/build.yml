@@ -149,12 +149,14 @@ jobs:
           overwrite_files: true
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
-      - name: Upload build.json to numbered release
+      - name: Update Website Catalog
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload ${{ steps.version.outputs.NEXT_VER_CODE }} build.json \
-            --repo "$GITHUB_REPOSITORY" --clobber
+          WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+        run: python3 .github/scripts/update_website_catalog.py || true
 
       - name: Notify telegram
         env:

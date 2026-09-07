@@ -422,73 +422,6 @@ set_prebuilts() {
 	fi
 }
 
-config_update() {
-	if [ ! -f build.md ]; then abort "build.md not available"; fi
-	declare -A sources
-	: >"$TEMP_DIR"/skipped
-	local upped=()
-	local prcfg=false
-	for table_name in $(toml_get_table_names); do
-		if [ -z "$table_name" ]; then continue; fi
-		t=$(toml_get_table "$table_name")
-		enabled=$(toml_get "$t" enabled) || enabled=true
-		if [ "$enabled" = "false" ]; then continue; fi
-		local raw_patches_src raw_patches_host raw_patches_ver
-		raw_patches_src=$(toml_get "$t" patches-source) || raw_patches_src=$DEF_PATCHES_SRC
-		raw_patches_host=$(toml_get "$t" patches-source-host) || raw_patches_host=$DEF_PATCHES_SRC_HOST
-		raw_patches_ver=$(toml_get "$t" patches-version) || raw_patches_ver=$DEF_PATCHES_VER
-		local IFS=$'\n'
-		local p_srcs=($(list_args "$raw_patches_src" | tr -d \"\')); [ ${#p_srcs[@]} -eq 0 ] && p_srcs=("$raw_patches_src")
-		local p_hosts=($(list_args "$raw_patches_host" | tr -d \"\')); [ ${#p_hosts[@]} -eq 0 ] && p_hosts=("$raw_patches_host")
-		local p_vers=($(list_args "$raw_patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$raw_patches_ver")
-		unset IFS
-		local table_updated=false
-		for i in "${!p_srcs[@]}"; do
-			local PATCHES_SRC="${p_srcs[$i]}"
-			local PATCHES_HOST="${p_hosts[$i]:-${p_hosts[0]}}"
-			local PATCHES_VER="${p_vers[$i]:-${p_vers[0]}}"
-			if [[ -v sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"] ]]; then
-				if [ "${sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]}" = 1 ]; then table_updated=true; fi
-			else
-				sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=0
-				local rv_rel resp last_patches
-				rv_rel=$(source_release_api_base "$PATCHES_HOST" "$PATCHES_SRC") || continue
-				if [ "$PATCHES_VER" = "dev" ]; then
-					resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
-					last_patches=$(source_release_pick_from_list "$PATCHES_HOST" dev <<<"$resp") || continue
-				elif [ "$PATCHES_VER" = "latest" ]; then
-					resp=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || continue
-					last_patches=$(source_release_pick_from_list "$PATCHES_HOST" latest <<<"$resp") || continue
-				else
-					rv_rel=$(source_release_tag_api "$PATCHES_HOST" "$PATCHES_SRC" "$PATCHES_VER") || continue
-					last_patches=$({ if [ "$PATCHES_HOST" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || continue
-				fi
-				if ! last_patches=$(source_release_assets_json "$PATCHES_HOST" <<<"$last_patches" | jq -e -r '.[0].name'); then
-					abort "config_update error: '$last_patches'"
-				fi
-				if [ "$last_patches" ]; then
-					if ! OP=$(grep "^Patches: ${PATCHES_SRC%%/*}/" build.md | grep -m1 "$last_patches"); then
-						sources["$PATCHES_HOST/$PATCHES_SRC/$PATCHES_VER"]=1
-						prcfg=true
-						table_updated=true
-					else
-						echo "$OP" >>"$TEMP_DIR"/skipped
-					fi
-				fi
-			fi
-		done
-		[ "$table_updated" = true ] && upped+=("$table_name")
-	done
-	if [ "$prcfg" = true ]; then
-		local query=""
-		for table in "${upped[@]}"; do
-			if [ -n "$query" ]; then query+=" or "; fi
-			query+=".key == \"$table\""
-		done
-		jq "to_entries | map(select(${query} or (.value | type != \"object\"))) | from_entries" <<<"$__TOML__"
-	fi
-}
-
 _req() {
 	local ip="$1" op="$2"
 	shift 2
@@ -2233,9 +2166,9 @@ check_sig() {
 
 write_build_info() {
 	local key=$1 arch=$2 ext=$3 name=$4 version=$5 patches=$6 changelog=$7
-	if [ "$ext" = ".apk" ] || [ "$mode_arg" = module ]; then
-		log "${key} (${arch}): ${version}"
-	fi
+	local pkg_name=${8:-${pkg_name:-}}
+	local display_name=${9:-${app_name:-${key}}}
+	local patches_source=${10:-${args[patches_src]:-}}
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
 	# extract applied patches supporting revanced, morphe-desktop, and instafel output formats
@@ -2252,8 +2185,29 @@ write_build_info() {
 		--arg version "$version" \
 		--arg patches "$patches" \
 		--arg changelog "$changelog" \
+		--arg pkg_name "$pkg_name" \
+		--arg display_name "$display_name" \
+		--arg patches_source "$patches_source" \
 		--argjson applied "$applied_json" \
-		'if has($key) then .[$key].exts = (.[$key].exts + [$ext] | unique) else .[$key] = {exts: [$ext], name: $name, arch: $arch, version: $version, patches: $patches, changlog: $changelog, applied_patches: $applied} end' \
+		'if has($key) then
+			.[$key].exts = (.[$key].exts + [$ext] | unique) |
+			(if $pkg_name != "" then .[$key].package_name = $pkg_name else . end) |
+			(if $display_name != "" then .[$key].display_name = $display_name else . end) |
+			(if $patches_source != "" then .[$key].patches_source = $patches_source else . end)
+		else
+			.[$key] = {
+				exts: [$ext],
+				name: $name,
+				arch: $arch,
+				version: $version,
+				patches: $patches,
+				changlog: $changelog,
+				package_name: $pkg_name,
+				display_name: $display_name,
+				patches_source: $patches_source,
+				applied_patches: $applied
+			}
+		end' \
 		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
 }
 verify_downloaded_apk() {
@@ -3172,7 +3126,7 @@ build_rv() {
 				cp -f "$patched_apk" "$apk_output"
 			fi
 			pr "Built ${table} (non-root): '${apk_output}'"
-			write_build_info "${table% (*}" "${arch_f}" ".apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
+			write_build_info "${table% (*}" "${arch_f}" ".apk" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}"
 			continue
 		fi
 		local base_template
@@ -3224,7 +3178,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
-		write_build_info "${table% (*}" "${arch_f}" ".zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url"
+		write_build_info "${table% (*}" "${arch_f}" ".zip" "${app_name_l}-${rv_brand_f}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}"
 	done
 }
 

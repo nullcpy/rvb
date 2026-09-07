@@ -1,37 +1,30 @@
 #!/bin/bash
 set -euo pipefail
-cd build || { echo "build folder not found"; exit 1; }
-
 NL=$'\n'
-APKS=""
-MODULES=""
-HAS_MODULES=false
 
-shopt -s nullglob
-for OUTPUT in *; do
-  DL_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/$NEXT_VER_CODE/${OUTPUT}"
-  if [[ $OUTPUT = *.apk ]]; then
-    APKS+="${NL}${NL}<a href=\"${DL_URL}\">${OUTPUT}</a>"
-  elif [[ $OUTPUT = *.zip ]]; then
-    MODULES+="${NL}${NL}<a href=\"${DL_URL}\">${OUTPUT}</a>"
-    HAS_MODULES=true
-  fi
-done
-shopt -u nullglob
-
-MODULES=${MODULES#"$NL"}
-APKS=${APKS#"$NL"}
-
-BODY="$(sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g; s/^\* /↪ /g; s/^- /↪ /g; s/### //g; s/###//g; /^==/d; s/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g; s/`\([^`]*\)`/<code>\1<\/code>/g; s/\[\([^]]*\)\](\([^)]*\))/<a href="\2">\1<\/a>/g;' ../build.tmp)"
-
-TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g')"
-MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}${NL}${NL}"
-  
-if [ "$HAS_MODULES" = true ]; then
-  MSG+="<b>Modules:</b>${MODULES}${NL}${NL}"
+BUILD_FILE="build.md"
+if [ ! -f "$BUILD_FILE" ]; then
+  BUILD_FILE="build.tmp"
+fi
+if [ ! -f "$BUILD_FILE" ]; then
+  echo "Release notes file (build.md or build.tmp) not found"
+  exit 1
 fi
 
-MSG+="<b>APKs:</b>${APKS}"
+BODY="$(sed \
+  -e 's/&/&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' \
+  -e 's/^### \(.*\)/<b>\1<\/b>/g' \
+  -e 's/^\* /• /g' \
+  -e 's/^  \* /  ↪ /g' \
+  -e 's/^- /• /g' \
+  -e 's/^---$//g' \
+  -e 's/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g' \
+  -e 's/`\([^`]*\)`/<code>\1<\/code>/g' \
+  -e 's/\[\([^]]*\)\](\([^)]*\))/<a href="\2">\1<\/a>/g' \
+  "$BUILD_FILE")"
+
+TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')"
+MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}"
 
 # Split MSG into ≤4096-char chunks on line boundaries (never breaks URLs)
 TG_LIMIT=4096
@@ -43,7 +36,7 @@ send_chunk() {
     --data-urlencode "disable_web_page_preview=true" \
     --data-urlencode "text=${text}" \
     --data-urlencode "chat_id=@rvb27" \
-    --data-urlencode "message_thread_id=${TG_THREAD_ID}" \
+    --data-urlencode "message_thread_id=${TG_THREAD_ID:-}" \
     "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
   curl -s -X POST \
     --data-urlencode "parse_mode=HTML" \
