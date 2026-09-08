@@ -1,14 +1,134 @@
-patches-source = "shaun-the-sheep-patches/morphe-patches"
-brand = "ShaunTheSheep"
-
 [KineStop-ShaunTheSheep]
 enabled = true
 pkg-name = "com.urbandroid.kinestop"
 app-name = "KineStop"
+patches-source = "shaun-the-sheep-patches/morphe-patches"
+brand = "ShaunTheSheep"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid"
 apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 
+[Facebook-Froggo]
+enabled = true
+pkg-name = "com.facebook.katana"
+app-name = "Facebook"
+patches-source = "SapitoSucio/FroggoMorphePatches"
+brand = "Froggo"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
+apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
+
+[CapCut-riky]
+enabled = true
+pkg-name = "com.lemon.lvoverseas"
+app-name = "CapCut"
+patches-source = "riky-dev/morphe-patches"
+brand = "riky"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut"
+uptodown-dlurl = "https://viamaker.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
+
+[Discord-revenge]
+enabled = true
+pkg-name = "com.discord"
+app-name = "Discord"
+patches-source = "revenge-mod/revenge-xposed"
+cli-source = "7723mod/NPatch"
+brand = "revenge"
+patcher-args = "-l 0"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
+
+[AliExpress-Quantro100]
+enabled = true
+pkg-name = "com.alibaba.aliexpresshd"
+app-name = "AliExpress"
+patches-source = "Quantro100/Morphe-patches"
+brand = "Quantro100"
+included-patches = "'Enable image saving' 'Disable splash screen'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app"
+uptodown-dlurl = "https://aliexpress.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd"
+apkcombo-dlurl = "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+
+[MicrosoftEdge-quantavil]
+enabled = true
+pkg-name = "com.microsoft.emmx"
+app-name = "Microsoft Edge"
+patches-source = "quantavil/edge-morphe-patches"
+brand = "quantavil"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
+uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
+
+[ChessDotCom-Prathxm]
+enabled = true
+pkg-name = "com.chess"
+app-name = "Chess.com"
+patches-source = "PrathxmOp/Prathxm-Patches"
+brand = "Prathxm"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/chess-com/chess-play-learn"
+uptodown-dlurl = "https://chess-play-and-learn.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/chess-play-and-learn-online/com.chess"
+apkcombo-dlurl = "https://apkcombo.com/chess/com.chess"
+
+[BraveBrowser-kveld9]
+enabled = true
+pkg-name = "com.brave.browser"
+app-name = "Brave Browser"
+patches-source = "kveld9/kveld-morphe-patches"
+brand = "kveld9"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
+uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser"
+apkcombo-dlurl = "https://apkcombo.com/brave-browser/com.brave.browser"
+github-dlurl = "https://github.com/brave/brave-browser"
+github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
+
+[TraktTV-IMXEren]
+enabled = true
+pkg-name = "tv.trakt.trakt"
+app-name = "trakt.TV"
+patches-source = "IMXEren/mix-patches"
+patches-source-host = "gitlab"
+brand = "IMXEren"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
+apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+
+[TikTok-icysymmetra]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "icysymmetra/tiktok-patches-for-morphe"
+brand = "icysymmetra"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+[ByAir-franticg33k]
+enabled = true
+pkg-name = "com.byairapp.android"
+app-name = "ByAir"
+patches-source = "franticg33k/morphe-patches"
+brand = "franticg33k"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status"
+apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
+apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
+
+[GoogleNews-docbt]
+enabled = true
+pkg-name = "com.google.android.apps.magazines"
+app-name = "Google News"
+patches-source = "docbt/patched-up"
+brand = "docbt"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
+uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/google-news-daily-headlines/com.google.android.apps.magazines"
+apkcombo-dlurl = "https://apkcombo.com/google-news/com.google.android.apps.magazines"
 
 
 
