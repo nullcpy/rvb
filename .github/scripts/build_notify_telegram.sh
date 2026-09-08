@@ -22,11 +22,11 @@ BODY="$(sed \
   -e 's/^\* /• /g' \
   -e 's/^  \* /  ↪ /g' \
   -e 's/^- /• /g' \
-  -e 's/^---$//g' \
+  -e '/^---$/d' \
   -e 's/\*\*\([^*]*\)\*\*/<b>\1<\/b>/g' \
   -e 's/`\([^`]*\)`/<code>\1<\/code>/g' \
   -e 's/\[\([^]]*\)\](\([^)]*\))/<a href="\2">\1<\/a>/g' \
-  "$BUILD_FILE")"
+  "$BUILD_FILE" | cat -s)"
 
 TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')"
 MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}"
