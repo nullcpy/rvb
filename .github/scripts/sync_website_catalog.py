@@ -184,10 +184,16 @@ def main():
                                 a["download_count"] = live_info.get("download_count", a.get("download_count", 0))
                                 if live_info.get("size"):
                                     a["size"] = live_info["size"]
+                                surviving_assets.append(a)
                                 total_refreshed_assets += 1
-                            surviving_assets.append(a)
-                        b["assets"] = surviving_assets
-                        surviving_builds.append(b)
+                            else:
+                                total_pruned_assets += 1
+
+                        if surviving_assets:
+                            b["assets"] = surviving_assets
+                            surviving_builds.append(b)
+                        else:
+                            total_pruned_builds += 1
                     else:
                         total_pruned_builds += 1
 
