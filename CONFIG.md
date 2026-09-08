@@ -42,7 +42,8 @@ app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Def
 brand = "Piko"           # per-app patch brand override (e.g. "Piko", "Adobo", "ReVanced Advanced").
 variant = "Nord"         # optional feature/visual variant (e.g. "Nord", "Mocha", "MaterialYou").
 sub-variant = "clone"    # optional packaging/install variant (e.g. "clone", "alt").
-pkg-name = "com.some.app" # explicit package name override. recommended to avoid unnecessary network checks when caching.
+pkg-name = "com.some.app" # stock package name (used by APKMirror/Uptodown scrapers and version checking).
+patched-pkg-name = "com.some.app.clone" # optional override for the resulting installed package name (e.g. for clone patches). If omitted, the builder auto-detects the actual package ID from the compiled APK manifest via aapt2.
 patch-folder = "someapp" # explicit patch folder name override. forces the CI to strictly match patches inside this exact folder name, bypassing fallback heuristics (useful for resolving collisions like youtube vs youtube-music). Supports multiple folders space-separated (e.g. "ad backup geo"), or a wildcard "*" to force mapping every single patch folder in the repo.
 enabled = true       # whether to build the app. default: true
 build-mode = "both"  # 'both', 'apk' or 'module'. default: apk
@@ -99,6 +100,8 @@ The declarative keys define both the asset filename and how the app appears in r
 - **`brand`**: Declares the canonical patch brand or creator identity (e.g. `ReVanced Advanced`, `Piko`, `Adobo`, `Paresh`, `Android TV`, `Morphe`).
 - **`variant`**: (Optional) Declares visual or feature variations (e.g. `Nord`, `Mocha`, `MaterialYou`).
 - **`sub-variant`**: (Optional) Declares packaging or installation variations (e.g. `clone`, `alt`).
+- **`pkg-name`**: Sets the upstream stock application package name (e.g. `com.amazon.amazonvideo.livingroom`), used by scrapers (APKMirror, Uptodown) and patch bytecode checkers.
+- **`patched-pkg-name`**: (Optional) Declares the resulting installed package name when changed by a clone patch (e.g. `com.amazon.amazonvideo.livingroom.clone`). Used by the website catalog and Obtainium for installation tracking. If omitted on cloned apps, the build engine automatically extracts the real package ID from the built APK's manifest using `aapt2`.
 
 #### Direct Slug Resolution
 

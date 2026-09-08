@@ -53,8 +53,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-t
 enabled = true 
 pkg-name = "com.univision.prendetv"
 app-name = "ViX"
-
-
 build-mode = "apk"
 arch = "all"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
@@ -65,8 +63,6 @@ apkcombo-dlurl = "https://apkcombo.com/vix/com.univision.prendetv/"
 enabled = true 
 pkg-name = "tv.pluto.android"
 app-name = "PlutoTV"
-
-
 build-mode = "apk"
 arch = "all"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
@@ -76,8 +72,6 @@ uptodown-dlurl = "https://pluto-tv.en.uptodown.com/android"
 enabled = true 
 pkg-name = "com.netflix.ninja"
 app-name = "Netflix"
-
-
 build-mode = "apk"
 arch = "arm-v7a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv"

@@ -161,6 +161,7 @@ for table_name in $(toml_get_table_names); do
 	fi
 
 	app_args[pkg_name]=$(toml_get "$t" pkg-name) || app_args[pkg_name]=""
+	app_args[patched_pkg_name]=$(toml_get "$t" patched-pkg-name) || app_args[patched_pkg_name]=""
 	app_args[dpi]=$(toml_get "$t" dpi) || app_args[dpi]="$DEF_DPI"
 	app_args[github_regex]=$(toml_get "$t" github-regex) || app_args[github_regex]=""
 	app_args[github_release_regex]=$(toml_get "$t" github-release-regex) || app_args[github_release_regex]=""
