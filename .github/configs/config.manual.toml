@@ -1,3 +1,5 @@
+patches-version = "beta"
+
 [YouTube-Morphe]
 enabled = true
 pkg-name = "com.google.android.youtube"
@@ -201,5 +203,34 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
+[Gboard-jasonwu1994]
+enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
+app-name = "Gboard"
+build-mode = "both"
+patches-source = "jasonwu1994/Gboard-patches"
+brand = "jasonwu1994"
+arch = "arm64-v8a"
+excluded-patches = "'Package Rename'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
+apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+
+[Gboard-jasonwu1994-Clone]
+enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
+app-name = "Gboard"
+variant = "Clone"
+patches-source = "jasonwu1994/Gboard-patches"
+brand = "jasonwu1994"
+arch = "arm64-v8a"
+excluded-patches = "'Package Rename'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
+apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
 
