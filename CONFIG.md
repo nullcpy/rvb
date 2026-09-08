@@ -35,7 +35,7 @@ cli-version = "v5.0.0"       # 'stable', 'beta', or a version number. default: "
 
 > [!TIP]
 > **File-Level Defaults in Modular Configs:**  
-> Keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, `patches-version`, and `brand`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
+> Keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, `patches-version`, `brand`, and `variant`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
 
 [Some-App]
 app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Default is table name.
@@ -192,15 +192,18 @@ included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_a
 
 ## Modular Configuration Directory & Dynamic Pool Routing
 
-Configurations are organized in `.github/configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`).
+Configurations are organized in `.github/configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`, `ajstrick81.toml`).
 
 You do **not** need separate files for stable and beta:
 - **Single-File Co-existence**: All variants and builds for a brand or patch source can reside in the same `.toml` file.
+- **Top-Level Inheritance**: Keys defined at the top of the file before the first `[...]` header (such as `patches-source`, `brand`, `variant`, and `patches-version`) act as file-level defaults. Apps automatically inherit them, keeping app blocks concise and DRY.
+- **Default CLI Engine**: `cli-source` defaults to `"MorpheApp/morphe-desktop"` globally and can be completely omitted unless using alternative tools like `7723mod/NPatch` or `instafel/p-rel`.
 - **Dynamic Pool Routing**:
   - **Both Pools (Default)**: If neither the file-level header nor the app specifies `patches-version`, the app is automatically compiled into **both** stable and beta pools.
-  - **Stable Only**: Setting `patches-version = "stable"` routes the app exclusively to the stable build.
-  - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build.
-  - **File-Level Defaults**: Setting `patches-version = "stable"` (or `"beta"`) at the top of the file before the first `[...]` header applies that pool to all apps in the file unless individually overridden.
+  - **Stable Only**: Setting `patches-version = "stable"` routes the app exclusively to the stable build pool.
+  - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build pool.
+  - **File-Level Defaults**: Setting `patches-version = "stable"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
+  - **Filename Inference**: A filename with `.stable.toml` or `.beta.toml` automatically defaults all apps in that file to that channel. Renaming to `*.toml` enables dual-pool compilation by default.
   - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
 ## Automated Patch Sources State Tracking

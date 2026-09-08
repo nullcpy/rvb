@@ -1,10 +1,10 @@
 patches-source = "jkennethcarino/adobo"
 
-[imdb-adobo]
+[imdb-jkennethcarino]
 enabled = true
 pkg-name = "com.imdb.mobile"
 app-name = "IMDb"
-brand = "Adobo"
+brand = "jkennethcarino"
 build-mode = "apk"
 arch = "all"
 uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
