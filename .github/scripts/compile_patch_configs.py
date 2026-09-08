@@ -13,6 +13,7 @@ import os
 import sys
 import glob
 import json
+import re
 
 try:
     import tomllib
@@ -85,19 +86,29 @@ def compile_configs(patches_dir=".github/configs/patches"):
             else:
                 channel = file_pv
 
+            is_pinned = channel not in ("stable", "beta", "both")
+            is_beta_pin = False
+            if is_pinned:
+                is_beta_pin = bool(re.search(r"[-._](beta|dev|alpha|rc|pre)", channel, re.IGNORECASE)) or (file_pv == "beta")
+
             # Route to stable pool
-            if channel in ("stable", "both") or (channel != "beta"):
+            if channel in ("stable", "both") or (is_pinned and not is_beta_pin):
                 entry = dict(merged)
-                if channel in ("stable", "both"):
-                    entry["patches-version"] = "stable"
-                else:
+                if is_pinned:
                     entry["patches-version"] = channel
+                else:
+                    # Omit redundant key when matching pool default
+                    entry.pop("patches-version", None)
                 stable_pool[app_key] = entry
 
             # Route to beta pool
-            if channel in ("beta", "both"):
+            if channel in ("beta", "both") or (is_pinned and is_beta_pin):
                 entry = dict(merged)
-                entry["patches-version"] = "beta"
+                if is_pinned:
+                    entry["patches-version"] = channel
+                else:
+                    # Omit redundant key when matching pool default
+                    entry.pop("patches-version", None)
                 beta_pool[app_key] = entry
 
     return stable_pool, beta_pool
@@ -107,11 +118,17 @@ def main():
     patches_dir = sys.argv[1] if len(sys.argv) > 1 else ".github/configs/patches"
     stable_pool, beta_pool = compile_configs(patches_dir)
 
+    stable_out = {"patches-version": "stable"}
+    stable_out.update(stable_pool)
+
+    beta_out = {"patches-version": "beta"}
+    beta_out.update(beta_pool)
+
     with open("config.stable.json", "w", encoding="utf-8") as f:
-        json.dump(stable_pool, f, indent=2)
+        json.dump(stable_out, f, indent=2)
 
     with open("config.beta.json", "w", encoding="utf-8") as f:
-        json.dump(beta_pool, f, indent=2)
+        json.dump(beta_out, f, indent=2)
 
     print("Base patch configurations compiled successfully.")
     print(f"Stable pool apps: {len(stable_pool)}")
