@@ -1,7 +1,7 @@
 patches-source = "riky-dev/morphe-patches"
-brand = "riky-dev"
+brand = "riky"
 
-[CapCut-riky-dev]
+[CapCut-riky]
 enabled = true
 pkg-name = "com.lemon.lvoverseas"
 app-name = "CapCut"

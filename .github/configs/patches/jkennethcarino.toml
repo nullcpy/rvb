@@ -1,7 +1,7 @@
 patches-source = "jkennethcarino/adobo"
-brand = "jkennethcarino"
+brand = "adobo"
 
-[Reddit-jkennethcarino]
+[Reddit-adobo]
 enabled = true
 pkg-name = "com.reddit.frontpage"
 app-name = "Reddit"
@@ -11,7 +11,7 @@ apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
 apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[IMDb-jkennethcarino]
+[IMDb-adobo]
 enabled = true
 pkg-name = "com.imdb.mobile"
 app-name = "IMDb"

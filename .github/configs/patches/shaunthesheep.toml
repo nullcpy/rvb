@@ -1,7 +1,7 @@
 patches-source = "shaun-the-sheep-patches/morphe-patches"
-brand = "shaun-the-sheep-patches"
+brand = "ShaunTheSheep"
 
-[KineStop-shaun-the-sheep-patches]
+[KineStop-ShaunTheSheep]
 enabled = true
 pkg-name = "com.urbandroid.kinestop"
 app-name = "KineStop"
