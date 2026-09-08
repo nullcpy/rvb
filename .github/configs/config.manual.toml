@@ -1,435 +1,400 @@
-[Automate-BholeyKaBhakt]
+[Rumble-hooman]
 enabled = true
-pkg-name = "com.llamalab.automate"
-app-name = "Automate"
-build-mode = "both"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/llamalab/automate-llamalab"
-uptodown-dlurl = "https://automate-beta.en.uptodown.com/android"
+pkg-name = "com.rumble.battles"
+app-name = "Rumble"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
 
-[Speedtest-BholeyKaBhakt]
+[Twitch-hooman]
 enabled = true
-pkg-name = "org.zwanoo.android.speedtest"
-app-name = "Speedtest"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/ookla/speedtest"
-uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
+pkg-name = "tv.twitch.android.app"
+app-name = "Twitch"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 
-[Autosync-BholeyKaBhakt]
+[BatteryGuru-hooman]
 enabled = true
-pkg-name = "com.ttxapps.autosync"
-app-name = "Autosync"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/metactrl/autosync-universal-cloud-sync-and-backup"
-uptodown-dlurl = "https://autosync.en.uptodown.com/android"
+pkg-name = "com.paget96.batteryguru"
+app-name = "Battery Guru"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/"
+uptodown-dlurl = "https://battery-guru.en.uptodown.com/android"
 
-[Inshorts-BholeyKaBhakt]
+[MoneyManager-hooman]
+enabled = true
+pkg-name = "com.realbyteapps.moneymanagerfree"
+app-name = "Money Manager"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
+uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
+
+[Poweramp-hooman]
+enabled = true
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "Poweramp"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
+[AT4KLauncher-hooman-AndroidTV]
+enabled = true
+pkg-name = "com.overdevs.at4k"
+app-name = "AT4K Launcher"
+variant = "Android TV"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
+apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
+
+[ProjectivyLauncher-hooman-AndroidTV]
+enabled = true
+pkg-name = "com.spocky.projengmenu"
+app-name = "Projectivy Launcher"
+patch-folder = "projectivy"
+variant = "Android TV"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
+apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+
+[AdobeAcrobat-hooman]
+enabled = true
+pkg-name = "com.adobe.reader"
+app-name = "Adobe Acrobat"
+patch-folder = "acrobat"
+arch = "arm64-v8a"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
+uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
+
+[InShot-hooman]
 enabled = true
 pkg-name = "com.camerasideas.instashot"
-app-name = "Inshorts"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2"
-uptodown-dlurl = "https://inshorts.en.uptodown.com/android"
+app-name = "InShot"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor"
+uptodown-dlurl = "https://inshot-editor.en.uptodown.com/android"
 
-[VPNify-BholeyKaBhakt]
+[Todoist-hooman]
 enabled = true
-pkg-name = "com.vpn.free.hotspot.secure.vpnify"
-app-name = "VPNify"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
-apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+pkg-name = "com.todoist"
+app-name = "Todoist"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
+apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+apkcombo-dlurl = "https://apkcombo.com/todoist/com.todoist"
 
-[Backdrops-BholeyKaBhakt]
+[Tumblr-hooman]
 enabled = true
-pkg-name = "com.backdrops.wallpapers"
-app-name = "Backdrops"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers"
-uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/backdrops-wallpapers/com.backdrops.wallpapers"
-apkcombo-dlurl = "https://apkcombo.com/backdrops-wallpapers/com.backdrops.wallpapers"
+pkg-name = "com.tumblr"
+app-name = "Tumblr"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tumblr-1-for-android-app/com.tumblr"
+apkcombo-dlurl = "https://apkcombo.com/tumblr/com.tumblr"
 
-[Pinterest-binarymend]
+[GooglePhone-hooman]
 enabled = true
-pkg-name = "com.pinterest"
-app-name = "Pinterest"
-patches-source = "binarymend/morphe-patches"
-brand = "binarymend"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
-uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
-
-[MoonPlusReader-binarymend]
-enabled = true
-pkg-name = "com.flyersoft.moonreader"
-app-name = "Moon+ Reader"
-patches-source = "binarymend/morphe-patches"
-brand = "binarymend"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/moon/moon-reader"
-uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
-
-[Symfonium-binarymend]
-enabled = true
-pkg-name = "app.symfonik.music.player"
-app-name = "Symfonium"
-patches-source = "binarymend/morphe-patches"
-brand = "binarymend"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast"
-uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
-
-[CalcNote-binarymend]
-enabled = true
-pkg-name = "com.appumstudios.calcnote"
-app-name = "CalcNote"
-patches-source = "binarymend/morphe-patches"
-brand = "binarymend"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator"
-uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
-
-[aCalendar-binarymend]
-enabled = true
-pkg-name = "org.withouthat.acalendar"
-app-name = "aCalendar"
-patches-source = "binarymend/morphe-patches"
-brand = "binarymend"
-uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
-
-[GooglePhotos-DeVanced]
-enabled = true
-pkg-name = "com.google.android.apps.photos"
-app-name = "Google Photos"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
+pkg-name = "com.google.android.dialer"
+app-name = "Google Phone"
 build-mode = "both"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
 
-[AdobePhotoshopMix-DeVanced]
+[MicrosoftSwiftKey-hooman]
 enabled = true
-pkg-name = "com.adobe.psmobile"
-app-name = "Adobe Photoshop Mix"
+pkg-name = "com.touchtype.swiftkey"
+app-name = "Microsoft Swiftkey"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard"
+uptodown-dlurl = "https://swiftkey-keyboard.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey"
+apkcombo-dlurl = "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
+
+[Twitter-Piko]
+enabled = true
+pkg-name = "com.twitter.android"
+app-name = "Twitter"
+patches-source = "crimera/piko"
+build-mode = "both"
+brand = "Piko"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+
+[Twitter-Piko-MaterialYou]
+enabled = true
+pkg-name = "com.twitter.android"
+app-name = "Twitter"
+patches-source = "crimera/piko"
+build-mode = "both"
+brand = "Piko"
+variant = "Material You"
+included-patches = "'Bring back twitter' 'Dynamic color'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+
+[Instagram-Piko]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+patches-source = "crimera/piko"
+build-mode = "both"
+brand = "Piko"
 arch = "arm64-v8a"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
-uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
-[GoogleRecorder-DeVanced]
+[Instagram-Piko-Clone]
 enabled = true
-pkg-name = "com.google.android.apps.recorder"
-app-name = "Google Recorder"
-build-mode = "both"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+sub-variant = "Clone"
 arch = "arm64-v8a"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
-uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+patches-source = "crimera/piko"
+brand = "Piko"
+included-patches = "'Clone'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
-[MicrosoftLens-DeVanced]
-enabled = true
-pkg-name = "com.microsoft.office.officelens"
-app-name = "Microsoft Lens"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
-uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
-
-[Photomath-DeVanced]
-enabled = true
-pkg-name = "com.google.android.apps.photomath"
-app-name = "Photomath"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
-uptodown-dlurl = "https://photomath.en.uptodown.com/android"
-
-[Viber-DeVanced]
-enabled = true
-pkg-name = "com.viber.voip"
-app-name = "Viber"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
-
-[pixiv-DeVanced]
-enabled = true
-pkg-name = "jp.pxv.android"
-app-name = "pixiv"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
-uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
-
-[Strava-DeVanced]
-enabled = true
-pkg-name = "com.strava"
-app-name = "Strava"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkcombo-dlurl = "https://apkcombo.com/it/strava/com.strava"
-
-[SoundCloud-hoodles]
-enabled = true
-pkg-name = "com.soundcloud.android"
-app-name = "SoundCloud"
-included-patches = "'AMOLED dark theme'"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
-apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
-
-[Duolingo-hoodles]
-enabled = true
-pkg-name = "com.duolingo"
-app-name = "Duolingo"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/duolingo-learn-languages/com.duolingo"
-apkcombo-dlurl = "https://apkcombo.com/duolingo/com.duolingo"
-
-[WPSOffice-hoodles]
-enabled = true
-pkg-name = "cn.wps.moffice_eng"
-app-name = "WPS Office"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf"
-uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/wps-office-pdf-word-excel-ppt/cn.wps.moffice_eng"
-apkcombo-dlurl = "https://apkcombo.com/wps-office/cn.wps.moffice_eng"
-
-[Wallcraft-hoodles]
-enabled = true
-pkg-name = "com.wallpaperscraft.wallpaper"
-app-name = "Wallcraft"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds"
-uptodown-dlurl = "https://wallpaperscraft.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/wallpaper-4k-hd-%E2%80%93-wallcraft/com.wallpaperscraft.wallpaper"
-apkcombo-dlurl = "https://apkcombo.com/wallpaper-4k-hd-wallcraft/com.wallpaperscraft.wallpaper"
-
-[SolidExplorer-hoodles]
-enabled = true
-pkg-name = "pl.solidexplorer2"
-app-name = "Solid Explorer"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager"
-uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/solid-explorer-file-manager/pl.solidexplorer2"
-apkcombo-dlurl = "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
-
-[IconPacker-hoodles]
-enabled = true
-pkg-name = "cn.ommiao.iconpacker"
-app-name = "Icon Packer"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkpure-dlurl = "https://apkpure.com/icon-packer/cn.ommiao.iconpacker"
-apkcombo-dlurl = "https://apkcombo.com/icon-packer/cn.ommiao.iconpacker"
-archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
-
-[PodcastAddict-hoodles]
-enabled = true
-pkg-name = "com.bambuna.podcastaddict"
-app-name = "Podcast Addict"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict"
-uptodown-dlurl = "https://podcast-addict.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/podcast-addict-app/com.bambuna.podcastaddict"
-apkcombo-dlurl = "https://apkcombo.com/podcast-addict-podcast-player/com.bambuna.podcastaddict"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
-
-[SmartLauncher6-hoodles]
-enabled = true
-pkg-name = "ginlemon.flowerfree"
-app-name = "Smart Launcher 6"
-patch-folder = "smartlauncher"
-build-mode = "both"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/smart-launcher"
-uptodown-dlurl = "https://smart-launcher.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/smart-launcher-6/ginlemon.flowerfree"
-apkcombo-dlurl = "https://apkcombo.com/smart-launcher-6-%E2%80%A7-home-screen/ginlemon.flowerfree"
-archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
-
-[MerriamWebsterDictionary-hoodles]
-enabled = true
-pkg-name = "com.merriamwebster"
-app-name = "Merriam Webster Dictionary"
-patch-folder = "webster"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/merriam-webster-inc/dictionary-merriam-webster"
-apkpure-dlurl = "https://apkpure.com/dictionary-merriam-webster/com.merriamwebster"
-apkcombo-dlurl = "https://apkcombo.com/dictionary-merriam-webster/com.merriamwebster"
-uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
-
-[Pandora-hoodles]
-enabled = true
-pkg-name = "com.pandora.android"
-app-name = "Pandora"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts"
-apkcombo-dlurl = "https://apkcombo.com/pandora/com.pandora.android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
-
-[XRecorder-hoodles]
-enabled = true
-pkg-name = "videoeditor.videorecorder.screenrecorder"
-app-name = "XRecorder"
-build-mode = "both"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder"
-apkpure-dlurl = "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.videorecorder.screenrecorder"
-apkcombo-dlurl = "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder"
-uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
-
-[AdGuard-hoodles]
+[AdGuard-rushiranpise-Nightly]
 enabled = true
 pkg-name = "com.adguard.android"
 app-name = "AdGuard"
+variant = "Nightly"
 build-mode = "both"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
 uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/adguard/com.adguard.android"
 
-[NovaLauncher-hoodles]
+[Cloudflare-WARP-rushiranpise]
 enabled = true
-pkg-name = "com.teslacoilsw.launcher"
-app-name = "Nova Launcher"
-patch-folder = "nova"
-build-mode = "both"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
-uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
-apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+pkg-name = "com.cloudflare.onedotonedotonedotone"
+app-name = "Cloudflare WARP"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
+uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
 
-[Ventusky-hoodles]
+[HolaVPN-rushiranpise]
 enabled = true
-pkg-name = "cz.ackee.ventusky"
-app-name = "Ventusky"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar"
-uptodown-dlurl = "https://ventusky-weather-maps-and-radar.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/ventusky-weather-radar/cz.ackee.ventusky"
-apkcombo-dlurl = "https://apkcombo.com/ventusky/cz.ackee.ventusky"
-archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
-
-[CamScanner-hoodles]
-enabled = true
-pkg-name = "com.intsig.camscanner"
-app-name = "CamScanner"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator"
-uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/camscanner-scanner-pdf-maker/com.intsig.camscanner"
-apkcombo-dlurl = "https://apkcombo.com/camscanner/com.intsig.camscanner"
-
-[NiagaraLauncher-hoodles]
-enabled = true
-pkg-name = "bitpit.launcher"
-app-name = "Niagara Launcher"
-patch-folder = "niagara"
-build-mode = "both"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
-uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
-apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
-
-[GitHub-hoodles]
-enabled = true
-pkg-name = "com.github.android"
-app-name = "GitHub"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-included-patches = "'AMOLED dark theme'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/github/github-2"
-uptodown-dlurl = "https://github-android.en.uptodown.com/android"
-
-[ProtonVPN-hoodles]
-enabled = true
-pkg-name = "ch.protonvpn.android"
-app-name = "Proton VPN"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
-uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
-
-[HelloChinese-hoodles]
-enabled = true
-pkg-name = "com.hellochinese"
-app-name = "HelloChinese"
+pkg-name = "org.hola.play"
+app-name = "Hola VPN"
 arch = "arm64-v8a"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese"
-uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/hola-free-vpn-proxy-unblocker/org.hola"
+apkcombo-dlurl = "https://apkcombo.com/hola-vpn-fast-free-vpn-proxy/org.hola.play"
 
-[MyFitnessPal-hoodles]
+[NinjaVPN-rushiranpise]
 enabled = true
-pkg-name = "com.myfitnesspal.android"
-app-name = "MyFitnessPal"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
-uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
-
-[PrimeVideo-hoodles]
-enabled = true
-pkg-name = "com.amazon.avod.thirdpartyclient"
-app-name = "Prime Video"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video"
-uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom"
-apkcombo-dlurl = "https://apkcombo.com/prime-video/com.amazon.avod.thirdpartyclient"
-
-[Goodreads-hoodles]
-enabled = true
-pkg-name = "com.goodreads"
-app-name = "Goodreads"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/goodreads/goodreads"
-uptodown-dlurl = "https://goodreads.en.uptodown.com/android"
-
-[AdobeLightroom-hoodles]
-enabled = true
-pkg-name = "com.adobe.lrmobile"
-app-name = "Adobe Lightroom"
+pkg-name = "app.ninjavpn.android"
+app-name = "Ninja VPN"
+patch-folder = "ninjvapn"
 arch = "arm64-v8a"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
-uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+
+[WindscribeVPN-rushiranpise]
+enabled = true
+pkg-name = "com.windscribe.vpn"
+app-name = "Windscribe VPN"
+arch = "all"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
+uptodown-dlurl = "https://windscribe.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
+
+[TeraBox-rushiranpise]
+enabled = true
+pkg-name = "com.dubox.drive"
+app-name = "TeraBox"
+patch-folder = "duboxdrive"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
+uptodown-dlurl = "https://terabox.en.uptodown.com/android"
+
+[AccuWeather-rushiranpise]
+enabled = true
+pkg-name = "com.accuweather.android"
+app-name = "AccuWeather"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
+uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
+apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
+
+[TheWeatherChannel-rushiranpise]
+enabled = true
+pkg-name = "com.weather.Weather"
+app-name = "The Weather Channel"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
+uptodown-dlurl = "https://the-weather-channel.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
+apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
+
+[BetaManiac-rushiranpise]
+enabled = true
+pkg-name = "it.mirko.beta"
+app-name = "Beta Maniac"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2"
+uptodown-dlurl = "https://beta-maniac.en.uptodown.com/android"
+
+[GooglePhotos-rushiranpise]
+enabled = true
+pkg-name = "com.google.android.apps.photos"
+app-name = "Google Photos"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+included-patches = "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+
+[MovieBox-rushiranpise]
+enabled = true
+pkg-name = "com.community.oneroom"
+app-name = "MovieBox"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
+
+[MovieBox-rushiranpise-AndroidTV]
+enabled = true
+pkg-name = "com.community.mbox.tv"
+app-name = "MovieBox"
+variant = "Android TV"
+patch-folder = "movieboxtv"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+
+[Messenger-rushiranpise]
+enabled = true
+pkg-name = "com.facebook.orca"
+app-name = "Messenger"
+excluded-patches = "'Remove Meta AI' 'Hide inbox stories and notes tray' 'Hide inbox subtabs' 'Hide Facebook buttons'"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
+apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
+
+[PocketCasts-rushiranpise]
+enabled = true
+pkg-name = "au.com.shiftyjelly.pocketcasts"
+app-name = "Pocket Casts"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
+uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
+
+[RAR-rushiranpise]
+enabled = true
+pkg-name = "com.rarlab.rar"
+app-name = "RAR"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/rar-extractor-manager/com.rarlab.rar"
+apkcombo-dlurl = "https://apkcombo.com/rar/com.rarlab.rar"
+
+[AmazonIndia-rushiranpise]
+enabled = true
+pkg-name = "in.amazon.mShop.android.shopping"
+app-name = "Amazon India"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-india-shop-pay"
+uptodown-dlurl = "https://amazon-india.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/amazon-india-shop-pay-minitv/in.amazon.mShop.android.shopping"
+apkcombo-dlurl = "https://apkcombo.com/amazon-india-shopping/in.amazon.mShop.android.shopping"
+
+[Calm-rushiranpise]
+enabled = true
+pkg-name = "com.calm.android"
+app-name = "Calm"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/calm-com-inc/calm-meditate-sleep-relax/"
+uptodown-dlurl = "https://calm.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/calm-sleep-meditate-relax/com.calm.android"
+apkcombo-dlurl = "https://apkcombo.com/calm/com.calm.android"
+
+[BluetoothKeyboardAndMouse-rushiranpise]
+enabled = true
+pkg-name = "io.appground.blek"
+app-name = "Bluetooth Keyboard & Mouse"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/appground-io/bluetooth-keyboard-mouse-2"
+uptodown-dlurl = "https://bluetooth-keyboard-and-mouse.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/bluetooth-keyboard-mouse/io.appground.blek"
+apkcombo-dlurl = "https://apkcombo.com/bluetooth-keyboard-mouse/io.appground.blek"
+
+[MacroDroid-rushiranpise]
+enabled = true
+pkg-name = "com.arlosoft.macrodroid"
+app-name = "MacroDroid"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/macrodroid-device-automation-app/com.arlosoft.macrodroid"
+apkcombo-dlurl = "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
+
+[SendFilesToTV-rushiranpise]
+enabled = true
+pkg-name = "com.yablio.sendfilestotv"
+app-name = "Send Files to TV"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/yablio/send-files-to-tv/"
+uptodown-dlurl = "https://send-files-to-tv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv"
+apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
+
+[PicsArt-rushiranpise]
+enabled = true
+pkg-name = "com.picsart.studio"
+app-name = "PicsArt"
+arch = "all"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
