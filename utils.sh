@@ -2075,6 +2075,10 @@ patch_apk() {
 			fi
 		done
 
+		local expected_base
+		expected_base=$(basename "$stock_input" .apk)
+		[ -n "$expected_base" ] && [ -d "$expected_base" ] && rm -rf "$expected_base" 2>/dev/null || :
+
 		local init_cmd="java -jar '$cli_jar' init '$stock_input'"
 		pr "$init_cmd"
 		local init_op
@@ -2082,11 +2086,18 @@ patch_apk() {
 		pr "$init_op"
 
 		local wdir=""
-		local proj_file
-		proj_file=$(find . "$rel_tmp_dir" -maxdepth 3 -type f -name "project.json" 2>/dev/null | head -n 1)
-		if [ -n "$proj_file" ]; then
-			wdir=$(dirname "$proj_file")
-			wdir="${wdir#./}"
+		if [ -n "$expected_base" ] && [ -d "$expected_base" ] && [ -f "$expected_base/project.json" ]; then
+			wdir="$expected_base"
+		elif [ -n "$expected_base" ] && [ -d "$rel_tmp_dir/$expected_base" ] && [ -f "$rel_tmp_dir/$expected_base/project.json" ]; then
+			wdir="$rel_tmp_dir/$expected_base"
+		else
+			local proj_file
+			proj_file=$(find "$rel_tmp_dir" . -maxdepth 3 -type f -name "project.json" 2>/dev/null | grep "$expected_base" | head -n 1)
+			[ -z "$proj_file" ] && proj_file=$(find "$rel_tmp_dir" . -maxdepth 3 -type f -name "project.json" 2>/dev/null | head -n 1)
+			if [ -n "$proj_file" ]; then
+				wdir=$(dirname "$proj_file")
+				wdir="${wdir#./}"
+			fi
 		fi
 
 		if [ -z "$wdir" ] || [ ! -d "$wdir" ]; then
@@ -2120,6 +2131,7 @@ patch_apk() {
 			built_apk=$(find "$wdir/build" "$wdir" "$rel_tmp_dir" -maxdepth 5 -type f -name "*.apk" 2>/dev/null | grep -v "$stock_input" | grep -iE "/clone|_c_" | head -n 1)
 			if [ -z "$built_apk" ]; then
 				echo "[-] ERROR: Clone build was requested but no clone APK was generated!"
+				rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
 				return 1
 			fi
 		else
@@ -2127,11 +2139,11 @@ patch_apk() {
 		fi
 		if [ -n "$built_apk" ] && [ -f "$built_apk" ]; then
 			mv "$built_apk" "$patched_apk"
-			#rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
+			rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
 			return 0
 		else
 			rm -f "$patched_apk" 2>/dev/null || :
-			#rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
+			rm -rf "$rel_tmp_dir" "$wdir" 2>/dev/null || :
 			return 1
 		fi
 	fi
