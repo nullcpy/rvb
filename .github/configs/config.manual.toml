@@ -1,49 +1,205 @@
-patches-version = "beta"
-
-[Twitter-Piko]
+[YouTube-Morphe]
 enabled = true
-pkg-name = "com.twitter.android"
-app-name = "Twitter"
-patches-source = "crimera/piko"
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+patch-folder = "youtube"
+patches-source = "MorpheApp/morphe-patches"
 build-mode = "both"
-brand = "Piko"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
+apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[Twitter-Piko-MaterialYou]
+[YouTubeMusic-Morphe]
 enabled = true
-pkg-name = "com.twitter.android"
-app-name = "Twitter"
-patches-source = "crimera/piko"
+pkg-name = "com.google.android.apps.youtube.music"
+app-name = "YouTube Music"
+patch-folder = "music"
+patches-source = "MorpheApp/morphe-patches"
 build-mode = "both"
-brand = "Piko"
-variant = "Material You"
-included-patches = "'Bring back twitter' 'Dynamic color'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music"
+apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[Instagram-Piko]
+[YouTube-Morphe-NordTheme]
 enabled = true
-pkg-name = "com.instagram.android"
-app-name = "Instagram"
-patches-source = "crimera/piko"
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+variant = "Nord Theme"
+patch-folder = "youtube"
+patches-source = "MorpheApp/morphe-patches"
 build-mode = "both"
-brand = "Piko"
-arch = "arm64-v8a"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+brand = "Morphe"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
+apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[Instagram-Piko-Clone]
+[YouTube-Morphe-MochaTheme]
 enabled = true
-pkg-name = "com.instagram.android"
-app-name = "Instagram"
-sub-variant = "Clone"
-arch = "arm64-v8a"
-patches-source = "crimera/piko"
-brand = "Piko"
-included-patches = "'Clone'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+variant = "Mocha Theme"
+patch-folder = "youtube"
+patches-source = "MorpheApp/morphe-patches"
+build-mode = "both"
+brand = "Morphe"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
+apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTube-Morphe-Experimental]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+variant = "Experimental"
+patch-folder = "youtube"
+version = "exp"
+patches-source = "MorpheApp/morphe-patches"
+build-mode = "both"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
+apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[YouTubeMusic-Morphe-Experimental]
+enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
+app-name = "YouTube Music"
+variant = "Experimental"
+patch-folder = "music"
+version = "exp"
+patches-source = "MorpheApp/morphe-patches"
+build-mode = "both"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music"
+apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[Reddit-Morphe-Experimental]
+enabled = true
+pkg-name = "com.reddit.frontpage"
+app-name = "Reddit"
+variant = "Experimental"
+version = "exp"
+patches-source = "MorpheApp/morphe-patches"
+build-mode = "both"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
+apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
+
+[Reddit-Morphe]
+enabled = true
+pkg-name = "com.reddit.frontpage"
+app-name = "Reddit"
+patches-source = "MorpheApp/morphe-patches"
+build-mode = "both"
+brand = "Morphe"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
+apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[youtube-anddea-nord]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+patch-folder = "youtube"
+variant = "Nord Theme"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-nord]
+enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
+app-name = "YouTube Music"
+patch-folder = "music"
+variant = "Nord Theme"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[youtube-anddea-mocha]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+patch-folder = "youtube"
+variant = "Mocha Theme"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+included-patches = "'MaterialYou'"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea-mocha]
+enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
+app-name = "YouTube Music"
+patch-folder = "music"
+variant = "Mocha Theme"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+[youtube-anddea]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+patch-folder = "youtube"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+
+[youtube-music-anddea]
+enabled = true
+pkg-name = "com.google.android.apps.youtube.music"
+app-name = "YouTube Music"
+patch-folder = "music"
+patches-source = "anddea/revanced-patches"
+build-mode = "both"
+brand = "anddea"
+patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+
+
 
