@@ -1,8 +1,8 @@
 patches-source = "Paresh-Maheshwari/paresh-patches"
 patches-source-host = "gitlab"
-brand = "Paresh-Maheshwari"
+brand = "Paresh"
 
-[Cricbuzz-Paresh-Maheshwari]
+[Cricbuzz-Paresh]
 enabled = true
 pkg-name = "com.cricbuzz.android"
 app-name = "Cricbuzz"
@@ -11,7 +11,7 @@ uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/andro
 apkpure-dlurl = "https://apkpure.com/cricbuzz-live-cricket-scores/com.cricbuzz.android"
 apkcombo-dlurl = "https://apkcombo.com/cricbuzz/com.cricbuzz.android"
 
-[PlusMessenger-Paresh-Maheshwari]
+[PlusMessenger-Paresh]
 enabled = true
 pkg-name = "org.telegram.plus"
 app-name = "Plus Messenger"
@@ -20,7 +20,7 @@ uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/2025-plus-messenger-questions-tool/org.telegram.plus"
 apkcombo-dlurl = "https://apkcombo.com/plus-messenger/org.telegram.plus"
 
-[LuminaWallpapers-Paresh-Maheshwari]
+[LuminaWallpapers-Paresh]
 enabled = true
 pkg-name = "com.lumina.wallpapers"
 app-name = "Lumina Wallpapers"
@@ -28,14 +28,14 @@ uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/lumina-wallpapers/com.lumina.wallpapers"
 apkcombo-dlurl = "https://apkcombo.com/lumina-wallpapers/com.lumina.wallpapers"
 
-[DocumentScanner-Paresh-Maheshwari]
+[DocumentScanner-Paresh]
 enabled = true
 pkg-name = "alldocumentreader.office.viewer.filereader.pdfviewerscanner"
 app-name = "Document Scanner"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
 uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
 
-[Eyecon-Paresh-Maheshwari]
+[Eyecon-Paresh]
 enabled = true
 pkg-name = "com.eyecon.global"
 app-name = "Eyecon"
@@ -44,7 +44,7 @@ uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/an
 apkpure-dlurl = "https://apkpure.com/eyecon-caller-id-spam-block/com.eyecon.global"
 apkcombo-dlurl = "https://apkcombo.com/eyecon/com.eyecon.global"
 
-[TickTick-Paresh-Maheshwari]
+[TickTick-Paresh]
 enabled = true
 pkg-name = "com.ticktick.task"
 app-name = "TickTick"
@@ -53,7 +53,7 @@ uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/ticktick-to-do-list-calendar/com.ticktick.task"
 apkcombo-dlurl = "https://apkcombo.com/ticktick/com.ticktick.task"
 
-[SDMaid-Paresh-Maheshwari]
+[SDMaid-Paresh]
 enabled = true
 pkg-name = "eu.darken.sdmse"
 app-name = "SD Maid 2/SE"
@@ -71,7 +71,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
-[Truecaller-Paresh-Maheshwari]
+[Truecaller-Paresh]
 enabled = true
 pkg-name = "com.truecaller"
 app-name = "Truecaller"
@@ -80,14 +80,14 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/tr
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
-[Fing-Paresh-Maheshwari]
+[Fing-Paresh]
 enabled = true
 pkg-name = "com.overlook.android.fing"
 app-name = "Fing"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
 uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 
-[Telegram-Paresh-Maheshwari-FOSS]
+[Telegram-Paresh-FOSS]
 enabled = true
 pkg-name = "org.telegram.messenger.web"
 app-name = "Telegram"
@@ -97,7 +97,7 @@ uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/telegram-messenger/org.telegram.messenger.web"
 apkcombo-dlurl = "https://apkcombo.com/telegram/org.telegram.messenger.web"
 
-[MacroDroid-Paresh-Maheshwari]
+[MacroDroid-Paresh]
 enabled = true
 pkg-name = "com.arlosoft.macrodroid"
 app-name = "MacroDroid"
@@ -105,7 +105,7 @@ build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 
-[MXPlayer-Paresh-Maheshwari]
+[MXPlayer-Paresh]
 enabled = true
 pkg-name = "com.mxtech.videoplayer.ad"
 app-name = "MX Player"

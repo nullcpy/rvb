@@ -1,7 +1,7 @@
 patches-source = "hoo-dles/morphe-patches"
-brand = "hoo-dles"
+brand = "hoodles"
 
-[SoundCloud-hoo-dles]
+[SoundCloud-hoodles]
 enabled = true
 pkg-name = "com.soundcloud.android"
 app-name = "SoundCloud"
@@ -11,7 +11,7 @@ uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
 apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
 
-[Duolingo-hoo-dles]
+[Duolingo-hoodles]
 enabled = true
 pkg-name = "com.duolingo"
 app-name = "Duolingo"
@@ -20,7 +20,7 @@ uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/duolingo-learn-languages/com.duolingo"
 apkcombo-dlurl = "https://apkcombo.com/duolingo/com.duolingo"
 
-[WPSOffice-hoo-dles]
+[WPSOffice-hoodles]
 enabled = true
 pkg-name = "cn.wps.moffice_eng"
 app-name = "WPS Office"
@@ -30,7 +30,7 @@ uptodown-dlurl = "https://wps-office.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/wps-office-pdf-word-excel-ppt/cn.wps.moffice_eng"
 apkcombo-dlurl = "https://apkcombo.com/wps-office/cn.wps.moffice_eng"
 
-[Wallcraft-hoo-dles]
+[Wallcraft-hoodles]
 enabled = true
 pkg-name = "com.wallpaperscraft.wallpaper"
 app-name = "Wallcraft"
@@ -39,7 +39,7 @@ uptodown-dlurl = "https://wallpaperscraft.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/wallpaper-4k-hd-%E2%80%93-wallcraft/com.wallpaperscraft.wallpaper"
 apkcombo-dlurl = "https://apkcombo.com/wallpaper-4k-hd-wallcraft/com.wallpaperscraft.wallpaper"
 
-[SolidExplorer-hoo-dles]
+[SolidExplorer-hoodles]
 enabled = true
 pkg-name = "pl.solidexplorer2"
 app-name = "Solid Explorer"
@@ -48,7 +48,7 @@ uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/solid-explorer-file-manager/pl.solidexplorer2"
 apkcombo-dlurl = "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
 
-[IconPacker-hoo-dles]
+[IconPacker-hoodles]
 enabled = true
 pkg-name = "cn.ommiao.iconpacker"
 app-name = "Icon Packer"
@@ -56,7 +56,7 @@ apkpure-dlurl = "https://apkpure.com/icon-packer/cn.ommiao.iconpacker"
 apkcombo-dlurl = "https://apkcombo.com/icon-packer/cn.ommiao.iconpacker"
 archive-dlurl = "https://archive.org/download/geologically/apks/cn.ommiao.iconpacker"
 
-[PodcastAddict-hoo-dles]
+[PodcastAddict-hoodles]
 enabled = true
 pkg-name = "com.bambuna.podcastaddict"
 app-name = "Podcast Addict"
@@ -66,7 +66,7 @@ apkpure-dlurl = "https://apkpure.com/podcast-addict-app/com.bambuna.podcastaddic
 apkcombo-dlurl = "https://apkcombo.com/podcast-addict-podcast-player/com.bambuna.podcastaddict"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.bambuna.podcastaddict"
 
-[SmartLauncher6-hoo-dles]
+[SmartLauncher6-hoodles]
 enabled = true
 pkg-name = "ginlemon.flowerfree"
 app-name = "Smart Launcher 6"
@@ -78,7 +78,7 @@ apkpure-dlurl = "https://apkpure.com/smart-launcher-6/ginlemon.flowerfree"
 apkcombo-dlurl = "https://apkcombo.com/smart-launcher-6-%E2%80%A7-home-screen/ginlemon.flowerfree"
 archive-dlurl = "https://archive.org/download/geologically/apks/ginlemon.flowerfree"
 
-[MerriamWebsterDictionary-hoo-dles]
+[MerriamWebsterDictionary-hoodles]
 enabled = true
 pkg-name = "com.merriamwebster"
 app-name = "Merriam Webster Dictionary"
@@ -89,7 +89,7 @@ apkcombo-dlurl = "https://apkcombo.com/dictionary-merriam-webster/com.merriamweb
 uptodown-dlurl = "https://merriam-webster-dictionary.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.merriamwebster"
 
-[Pandora-hoo-dles]
+[Pandora-hoodles]
 enabled = true
 pkg-name = "com.pandora.android"
 app-name = "Pandora"
@@ -97,7 +97,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts"
 apkcombo-dlurl = "https://apkcombo.com/pandora/com.pandora.android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.pandora.android"
 
-[XRecorder-hoo-dles]
+[XRecorder-hoodles]
 enabled = true
 pkg-name = "videoeditor.videorecorder.screenrecorder"
 app-name = "XRecorder"
@@ -107,7 +107,7 @@ apkpure-dlurl = "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.v
 apkcombo-dlurl = "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
 
-[AdGuard-hoo-dles]
+[AdGuard-hoodles]
 enabled = true
 pkg-name = "com.adguard.android"
 app-name = "AdGuard"
@@ -116,7 +116,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguar
 uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/adguard/com.adguard.android"
 
-[NovaLauncher-hoo-dles]
+[NovaLauncher-hoodles]
 enabled = true
 pkg-name = "com.teslacoilsw.launcher"
 app-name = "Nova Launcher"
@@ -128,7 +128,7 @@ apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw
 apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
 
-[Ventusky-hoo-dles]
+[Ventusky-hoodles]
 enabled = true
 pkg-name = "cz.ackee.ventusky"
 app-name = "Ventusky"
@@ -138,7 +138,7 @@ apkpure-dlurl = "https://apkpure.com/ventusky-weather-radar/cz.ackee.ventusky"
 apkcombo-dlurl = "https://apkcombo.com/ventusky/cz.ackee.ventusky"
 archive-dlurl = "https://archive.org/download/geologically/apks/cz.ackee.ventusky"
 
-[CamScanner-hoo-dles]
+[CamScanner-hoodles]
 enabled = true
 pkg-name = "com.intsig.camscanner"
 app-name = "CamScanner"
@@ -147,7 +147,7 @@ uptodown-dlurl = "https://camscanner-pdf-creator.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/camscanner-scanner-pdf-maker/com.intsig.camscanner"
 apkcombo-dlurl = "https://apkcombo.com/camscanner/com.intsig.camscanner"
 
-[NiagaraLauncher-hoo-dles]
+[NiagaraLauncher-hoodles]
 enabled = true
 pkg-name = "bitpit.launcher"
 app-name = "Niagara Launcher"
@@ -158,7 +158,7 @@ uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
 apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
 
-[GitHub-hoo-dles]
+[GitHub-hoodles]
 enabled = true
 pkg-name = "com.github.android"
 app-name = "GitHub"
@@ -166,7 +166,7 @@ included-patches = "'AMOLED dark theme'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/github/github-2"
 uptodown-dlurl = "https://github-android.en.uptodown.com/android"
 
-[ProtonVPN-hoo-dles]
+[ProtonVPN-hoodles]
 enabled = true
 pkg-name = "ch.protonvpn.android"
 app-name = "Proton VPN"
@@ -174,7 +174,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvp
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
 
-[HelloChinese-hoo-dles]
+[HelloChinese-hoodles]
 enabled = true
 pkg-name = "com.hellochinese"
 app-name = "HelloChinese"
@@ -182,14 +182,14 @@ arch = "arm64-v8a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese"
 uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
 
-[MyFitnessPal-hoo-dles]
+[MyFitnessPal-hoodles]
 enabled = true
 pkg-name = "com.myfitnesspal.android"
 app-name = "MyFitnessPal"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
 uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
 
-[PrimeVideo-hoo-dles]
+[PrimeVideo-hoodles]
 enabled = true
 pkg-name = "com.amazon.avod.thirdpartyclient"
 app-name = "Prime Video"
@@ -198,14 +198,14 @@ uptodown-dlurl = "https://amazon-video.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom"
 apkcombo-dlurl = "https://apkcombo.com/prime-video/com.amazon.avod.thirdpartyclient"
 
-[Goodreads-hoo-dles]
+[Goodreads-hoodles]
 enabled = true
 pkg-name = "com.goodreads"
 app-name = "Goodreads"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/goodreads/goodreads"
 uptodown-dlurl = "https://goodreads.en.uptodown.com/android"
 
-[AdobeLightroom-hoo-dles]
+[AdobeLightroom-hoodles]
 enabled = true
 pkg-name = "com.adobe.lrmobile"
 app-name = "Adobe Lightroom"

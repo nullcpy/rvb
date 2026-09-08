@@ -1,7 +1,7 @@
 patches-source = "durgesh0505/chiggi_morphe_patches"
-brand = "durgesh0505"
+brand = "chiggi"
 
-[Threads-durgesh0505]
+[Threads-chiggi]
 enabled = true
 pkg-name = "com.instagram.barcelona"
 app-name = "Threads"
@@ -11,7 +11,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-
 uptodown-dlurl = "https://threads.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/threads-app/com.instagram.barcelona"
 
-[Threads-durgesh0505-Clone]
+[Threads-chiggi-Clone]
 enabled = true
 pkg-name = "com.instagram.barcelona"
 app-name = "Threads"

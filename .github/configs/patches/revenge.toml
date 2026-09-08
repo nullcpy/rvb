@@ -1,8 +1,8 @@
 patches-source = "revenge-mod/revenge-xposed"
 cli-source = "7723mod/NPatch"
-brand = "revenge-xposed"
+brand = "revenge"
 
-[Discord-revenge-xposed]
+[Discord-revenge]
 enabled = true
 pkg-name = "com.discord"
 app-name = "Discord"

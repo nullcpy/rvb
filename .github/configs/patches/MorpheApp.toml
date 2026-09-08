@@ -1,9 +1,9 @@
 patches-source = "MorpheApp/morphe-patches"
 patches-version = "both"
 build-mode = "both"
-brand = "MorpheApp"
+brand = "Morphe"
 
-[YouTube-MorpheApp]
+[YouTube-Morphe]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -14,7 +14,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
 apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTubeMusic-MorpheApp]
+[YouTubeMusic-Morphe]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
 app-name = "YouTube Music"
@@ -25,7 +25,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtu
 apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[YouTube-MorpheApp-NordTheme]
+[YouTube-Morphe-NordTheme]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -38,7 +38,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
 apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-MorpheApp-MochaTheme]
+[YouTube-Morphe-MochaTheme]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -51,7 +51,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
 apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-MorpheApp-Experimental]
+[YouTube-Morphe-Experimental]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -64,7 +64,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
 apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTubeMusic-MorpheApp-Experimental]
+[YouTubeMusic-Morphe-Experimental]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
 app-name = "YouTube Music"
@@ -77,7 +77,7 @@ apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtu
 apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[Reddit-MorpheApp-Experimental]
+[Reddit-Morphe-Experimental]
 enabled = true
 pkg-name = "com.reddit.frontpage"
 app-name = "Reddit"
@@ -88,7 +88,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
 apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
 
-[Reddit-MorpheApp]
+[Reddit-Morphe]
 enabled = true
 pkg-name = "com.reddit.frontpage"
 app-name = "Reddit"
