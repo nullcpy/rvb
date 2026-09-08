@@ -1,3 +1,5 @@
+patches-source = "anddea/revanced-patches"
+
 [youtube-anddea-nord]
 enabled = true
 pkg-name = "com.google.android.youtube"
@@ -7,8 +9,7 @@ brand = "ReVanced Advanced"
 variant = "Nord"
 build-mode = "both"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
+
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -24,8 +25,8 @@ brand = "ReVanced Advanced"
 variant = "Nord"
 build-mode = "both"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
+
+
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
@@ -40,8 +41,8 @@ brand = "ReVanced Advanced"
 variant = "Mocha"
 build-mode = "both"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
+
+
 included-patches = "'MaterialYou'"
 patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
@@ -57,8 +58,8 @@ brand = "ReVanced Advanced"
 variant = "Mocha"
 build-mode = "both"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
+
+
 patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
@@ -71,8 +72,8 @@ app-name = "Reddit"
 brand = "ReVanced Advanced"
 build-mode = "apk"
 arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
+
+
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
