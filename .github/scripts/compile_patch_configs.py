@@ -47,6 +47,9 @@ def compile_configs(patches_dir=".github/configs/patches"):
         print(f"Warning: No TOML files found in {patches_dir}", file=sys.stderr)
         return stable_pool, beta_pool
 
+    seen_stable = {}
+    seen_beta = {}
+
     for filepath in toml_files:
         filename = os.path.basename(filepath)
         try:
@@ -93,6 +96,10 @@ def compile_configs(patches_dir=".github/configs/patches"):
 
             # Route to stable pool
             if channel in ("stable", "both") or (is_pinned and not is_beta_pin):
+                if app_key in stable_pool:
+                    print(f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_stable[app_key]})", file=sys.stderr)
+                    sys.exit(1)
+                seen_stable[app_key] = filename
                 entry = dict(merged)
                 if is_pinned:
                     entry["patches-version"] = channel
@@ -103,6 +110,10 @@ def compile_configs(patches_dir=".github/configs/patches"):
 
             # Route to beta pool
             if channel in ("beta", "both") or (is_pinned and is_beta_pin):
+                if app_key in beta_pool:
+                    print(f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_beta[app_key]})", file=sys.stderr)
+                    sys.exit(1)
+                seen_beta[app_key] = filename
                 entry = dict(merged)
                 if is_pinned:
                     entry["patches-version"] = channel

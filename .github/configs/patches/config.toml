@@ -1,32 +1,4 @@
-[youtube-anddea]
-enabled = true
-pkg-name = "com.google.android.youtube"
-app-name = "YouTube"
-patch-folder = "youtube"
-brand = "ReVanced Advanced"
-build-mode = "both"
-arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[youtube-music-anddea]
-enabled = true
-pkg-name = "com.google.android.apps.youtube.music"
-app-name = "YouTube Music"
-patch-folder = "music"
-brand = "ReVanced Advanced"
-build-mode = "both"
-arch = "both"
-patches-source = "anddea/revanced-patches"
-cli-source = "MorpheApp/morphe-desktop"
-patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
 [google-photos-morphe]
 enabled = true
