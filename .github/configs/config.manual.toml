@@ -1,206 +1,242 @@
-[Reddit-adobo]
-enabled = true
-pkg-name = "com.reddit.frontpage"
-app-name = "Reddit"
-patches-source = "jkennethcarino/adobo"
-brand = "adobo"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
-apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
-
-[IMDb-adobo]
-enabled = true
-pkg-name = "com.imdb.mobile"
-app-name = "IMDb"
-arch = "all"
-patches-source = "jkennethcarino/adobo"
-brand = "adobo"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
-uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/imdb-movies-tv-shows-app/com.imdb.mobile"
-apkcombo-dlurl = "https://apkcombo.com/imdb/com.imdb.mobile"
-
-[komoot-brosssh]
-enabled = true
-pkg-name = "de.komoot.android"
-app-name = "Komoot"
-patches-source = "brosssh/morphe-patches"
-brand = "brosssh"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps"
-uptodown-dlurl = "https://komoot.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
-
-[Instagram-brosssh]
+[Instagram-brosssh-Clone]
 enabled = true
 pkg-name = "com.instagram.android"
 app-name = "Instagram"
 patches-source = "brosssh/morphe-patches"
 brand = "brosssh"
+variant = "Clone"
+excluded-patches = "'Clone'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
-[Truecaller-bufferk]
+[DROFUS-Lain]
+enabled = true
+pkg-name = "com.mixapplications.rufus"
+app-name = "DROFUS"
+patches-source = "kiraio-moe/Lain-Patches"
+brand = "Lain"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mixapplications/drofus-iso2usb/"
+uptodown-dlurl = "https://rufus-unofficial.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/rufus-unofficial/com.mixapplications.rufus"
+apkcombo-dlurl = "https://apkcombo.com/drofus-iso-2-usb/com.mixapplications.rufus"
+
+[Hermit-Lain]
+enabled = true
+pkg-name = "com.chimbori.hermitcrab"
+app-name = "Hermit"
+patch-folder = "hermit"
+patches-source = "kiraio-moe/Lain-Patches"
+brand = "Lain"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser"
+uptodown-dlurl = "https://hermit.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab"
+apkcombo-dlurl = "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+
+[ProtonMail-hxreborn]
+enabled = true
+pkg-name = "ch.protonmail.android"
+app-name = "Proton Mail"
+patches-source = "hxreborn/morphe-patches"
+brand = "hxreborn"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
+apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+
+[Showly-hxreborn]
+enabled = true
+pkg-name = "com.michaldrabik.showly2"
+app-name = "Showly"
+patches-source = "hxreborn/morphe-patches"
+brand = "hxreborn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
+uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/showly-track-tv-shows-movie/com.michaldrabik.showly2"
+apkcombo-dlurl = "https://apkcombo.com/showly-track-shows-movies/com.michaldrabik.showly2"
+
+[TikTok-hxreborn]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+brand = "hxreborn"
+patches-source = "hxreborn/hxreborn-tiktok-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+[Nuvio-liongalahad-AndroidTV]
+enabled = true
+pkg-name = "com.nuvio.tv"
+app-name = "Nuvio"
+variant = "Android TV"
+patches-source = "liongalahad/nuviotv-morphe-patches"
+brand = "liongalahad"
+included-patches = "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'"
+github-dlurl = "https://github.com/NuvioMedia/NuvioTV"
+github-regex = 'app-full-universal-release\.apk'
+
+[Nuvio-liongalahad-AndroidTV-Clone]
+enabled = true
+pkg-name = "com.nuvio.tv"
+app-name = "Nuvio"
+variant = "Android TV"
+patches-source = "liongalahad/nuviotv-morphe-patches"
+brand = "liongalahad"
+sub-variant = "Clone"
+included-patches = "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'"
+excluded-patches = "'Side-by-side installation'"
+github-dlurl = "https://github.com/NuvioMedia/NuvioTV"
+github-regex = 'app-full-universal-release\.apk'
+
+[Cricbuzz-Paresh]
+enabled = true
+pkg-name = "com.cricbuzz.android"
+app-name = "Cricbuzz"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cricbuzz-com/cricbuzz-live-cricket-scores-news"
+uptodown-dlurl = "https://cricbuzz-cricket-scores-and-news.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/cricbuzz-live-cricket-scores/com.cricbuzz.android"
+apkcombo-dlurl = "https://apkcombo.com/cricbuzz/com.cricbuzz.android"
+
+[PlusMessenger-Paresh]
+enabled = true
+pkg-name = "org.telegram.plus"
+app-name = "Plus Messenger"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rafalense/plus-messenger"
+uptodown-dlurl = "https://telegram-plus.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/2025-plus-messenger-questions-tool/org.telegram.plus"
+apkcombo-dlurl = "https://apkcombo.com/plus-messenger/org.telegram.plus"
+
+[LuminaWallpapers-Paresh]
+enabled = true
+pkg-name = "com.lumina.wallpapers"
+app-name = "Lumina Wallpapers"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/lumina-wallpapers/com.lumina.wallpapers"
+apkcombo-dlurl = "https://apkcombo.com/lumina-wallpapers/com.lumina.wallpapers"
+
+[DocumentScanner-Paresh]
+enabled = true
+pkg-name = "alldocumentreader.office.viewer.filereader.pdfviewerscanner"
+app-name = "Document Scanner"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
+uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
+
+[Eyecon-Paresh]
+enabled = true
+pkg-name = "com.eyecon.global"
+app-name = "Eyecon"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/eyecon-phone-dialer-contacts/eyecon-caller-id-spam-block"
+uptodown-dlurl = "https://eyecon-phone-dialer-and-cont-eyecon.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/eyecon-caller-id-spam-block/com.eyecon.global"
+apkcombo-dlurl = "https://apkcombo.com/eyecon/com.eyecon.global"
+
+[TickTick-Paresh]
+enabled = true
+pkg-name = "com.ticktick.task"
+app-name = "TickTick"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner"
+uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/ticktick-to-do-list-calendar/com.ticktick.task"
+apkcombo-dlurl = "https://apkcombo.com/ticktick/com.ticktick.task"
+
+[SDMaid-Paresh]
+enabled = true
+pkg-name = "eu.darken.sdmse"
+app-name = "SD Maid 2/SE"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
+uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+apkcombo-dlurl = "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+
+[ProtonVPN-Paresh]
+enabled = true
+pkg-name = "ch.protonvpn.android"
+app-name = "Proton VPN"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonvpn.android"
+
+[Truecaller-Paresh]
 enabled = true
 pkg-name = "com.truecaller"
 app-name = "Truecaller"
 build-mode = "both"
-patches-source = "bufferk/morphe-patches"
-brand = "bufferk"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
-[Medium-bufferk]
+[Fing-Paresh]
 enabled = true
-pkg-name = "com.medium.reader"
-app-name = "Medium"
-patches-source = "bufferk/morphe-patches"
-brand = "bufferk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
-uptodown-dlurl = "https://medium.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/medium/com.medium.reader"
-apkcombo-dlurl = "https://apkcombo.com/medium/com.medium.reader"
+pkg-name = "com.overlook.android.fing"
+app-name = "Fing"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/fing-limited/fing-network-tools"
+uptodown-dlurl = "https://fing-network-tools.en.uptodown.com/android"
 
-[Threads-chiggi]
+[Telegram-Paresh-FOSS]
 enabled = true
-pkg-name = "com.instagram.barcelona"
-app-name = "Threads"
-patch-folder = "threads"
-arch = "arm64-v8a"
-patches-source = "durgesh0505/chiggi_morphe_patches"
-brand = "chiggi"
-excluded-patches = "'Change app name' 'Change package name'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
-uptodown-dlurl = "https://threads.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/threads-app/com.instagram.barcelona"
+pkg-name = "org.telegram.messenger.web"
+app-name = "Telegram"
+variant = "FOSS"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/telegram-messenger/org.telegram.messenger.web"
+apkcombo-dlurl = "https://apkcombo.com/telegram/org.telegram.messenger.web"
 
-[Threads-chiggi-Clone]
+[MacroDroid-Paresh]
 enabled = true
-pkg-name = "com.instagram.barcelona"
-app-name = "Threads"
-patch-folder = "threads"
-variant = "Clone"
-arch = "arm64-v8a"
-patches-source = "durgesh0505/chiggi_morphe_patches"
-brand = "chiggi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
-uptodown-dlurl = "https://threads.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/threads-app/com.instagram.barcelona"
-
-[BraveBrowser-dh6k-Beta]
-enabled = true
-pkg-name = "com.brave.browser_beta"
-app-name = "Brave Browser"
-variant = "Beta"
-patches-source = "dh6k/morphe-patches"
-brand = "dh6k"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-beta"
-uptodown-dlurl = "https://brave-browser-beta.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/brave-browser-beta/com.brave.browser_beta"
-apkcombo-dlurl = "https://apkcombo.com/brave-beta/com.brave.browser_beta"
-github-dlurl = "https://github.com/brave/brave-browser"
-github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
-
-[BraveBrowser-dh6k-Nightly]
-enabled = true
-pkg-name = "com.brave.browser_nightly"
-app-name = "Brave Browser"
-variant = "Nightly"
-patches-source = "dh6k/morphe-patches"
-brand = "dh6k"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-nightly"
-uptodown-dlurl = "https://brave-browser-nightly.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
-apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
-github-dlurl = "https://github.com/brave/brave-browser"
-github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
-
-[TitaniumBrowser-dh6k]
-enabled = true
-pkg-name = "io.github.jqssun.helium"
-app-name = "Titanium Browser"
-patches-source = "dh6k/morphe-patches"
-brand = "dh6k"
-included-patches = "'Keep Helium Child Processes Alive'"
-apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
-apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
-
-[Instagram-InstaFel]
-enabled = true
-pkg-name = "com.instagram.android"
-app-name = "Instagram"
-patches-source = "instafel/pc-rel"
-cli-source = "instafel/p-rel"
-brand = "Instafel"
-included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
-dpi = "480dpi nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-
-[Instagram-InstaFel-Clone]
-enabled = true
-pkg-name = "com.instagram.android"
-app-name = "Instagram"
-variant = "Clone"
-patches-source = "instafel/pc-rel"
-cli-source = "instafel/p-rel"
-brand = "Instafel"
-included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
-dpi = "480dpi nodpi anydpi auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-
-[Gboard-jasonwu1994]
-enabled = true
-pkg-name = "com.google.android.inputmethod.latin"
-app-name = "Gboard"
+pkg-name = "com.arlosoft.macrodroid"
+app-name = "MacroDroid"
 build-mode = "both"
-patches-source = "jasonwu1994/Gboard-patches"
-patches-version = "both"
-brand = "jasonwu1994"
-arch = "arm64-v8a"
-excluded-patches = "'Package Rename'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
-apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 
-[Gboard-jasonwu1994-Clone]
+[MXPlayer-Paresh]
 enabled = true
-pkg-name = "com.google.android.inputmethod.latin"
-app-name = "Gboard"
-variant = "Clone"
-patches-source = "jasonwu1994/Gboard-patches"
-patches-version = "both"
-brand = "jasonwu1994"
-arch = "arm64-v8a"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
-uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
-apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+pkg-name = "com.mxtech.videoplayer.ad"
+app-name = "MX Player"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+brand = "Paresh"
+arch = "all"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro"
+uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
 
-[CalorieCounter-kondratjev]
-enabled = true
-pkg-name = "com.fatsecret.android"
-app-name = "Calorie Counter"
-patches-source = "kondratjev/morphe-patches"
-brand = "kondratjev"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/"
-uptodown-dlurl = "https://fatsecret-calorie-counter.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android"
-apkcombo-dlurl = "https://apkcombo.com/fatsecret/com.fatsecret.android"
-
-[SoundCloud-kondratjev]
-enabled = true
-pkg-name = "com.soundcloud.android"
-app-name = "SoundCloud"
-patches-source = "kondratjev/morphe-patches"
-brand = "kondratjev"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
-apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"

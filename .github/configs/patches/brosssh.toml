@@ -17,3 +17,12 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
+[Instagram-brosssh-Clone]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+variant = "Clone"
+excluded-patches = "'Clone'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
