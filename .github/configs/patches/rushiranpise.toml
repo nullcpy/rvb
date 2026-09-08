@@ -1,0 +1,180 @@
+patches-source = "rushiranpise/morphe-patches"
+patches-version = "stable"
+brand = "Morphe"
+
+[AdGuard-rushiranpise-Nightly]
+enabled = true
+pkg-name = "com.adguard.android"
+app-name = "AdGuard"
+variant = "Nightly"
+build-mode = "both"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
+uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
+
+[WARP-rushiranpise]
+enabled = true
+pkg-name = "com.cloudflare.onedotonedotonedotone"
+app-name = "1.1.1.1 + WARP"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
+uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
+
+[HolaVPN-rushiranpise]
+enabled = true
+pkg-name = "org.hola.play"
+app-name = "Hola VPN"
+arch = "arm64-v8a"
+uptodown-dlurl = "https://holavpn.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/hola-free-vpn-proxy-unblocker/org.hola"
+apkcombo-dlurl = "https://apkcombo.com/hola-vpn-fast-free-vpn-proxy/org.hola.play"
+
+[NinjaVPN-rushiranpise]
+enabled = true
+pkg-name = "app.ninjavpn.android"
+app-name = "Ninja VPN"
+patch-folder = "ninjvapn"
+arch = "arm64-v8a"
+apkpure-dlurl = "https://apkpure.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+apkcombo-dlurl = "https://apkcombo.com/ninja-vpn-fast-secure-vpn/app.ninjavpn.android"
+
+[WindscribeVPN-rushiranpise]
+enabled = true
+pkg-name = "com.windscribe.vpn"
+app-name = "Windscribe VPN"
+arch = "all"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/windscribe/windscribe-vpn"
+uptodown-dlurl = "https://windscribe.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/windscribe/com.windscribe.vpn"
+
+[TeraBox-rushiranpise]
+enabled = true
+pkg-name = "com.dubox.drive"
+app-name = "TeraBox"
+patch-folder = "duboxdrive"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup"
+uptodown-dlurl = "https://terabox.en.uptodown.com/android"
+
+[AccuWeather-rushiranpise]
+enabled = true
+pkg-name = "com.accuweather.android"
+app-name = "AccuWeather"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/accuweather/accuweather"
+uptodown-dlurl = "https://accuweather.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/accuweather-weather-radar/com.accuweather.android"
+apkcombo-dlurl = "https://apkcombo.com/accuweather/com.accuweather.android"
+
+[TheWeatherChannel-rushiranpise]
+enabled = true
+pkg-name = "com.weather.Weather"
+app-name = "The Weather Channel"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/the-weather-channel/the-weather-channel-local-forecast-weather-maps"
+uptodown-dlurl = "https://the-weather-channel.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/the-weather-channel-radar/com.weather.Weather"
+apkcombo-dlurl = "https://apkcombo.com/the-weather-channel/com.weather.Weather"
+
+[BetaManiac-rushiranpise]
+enabled = true
+pkg-name = "it.mirko.beta"
+app-name = "Beta Maniac"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2"
+uptodown-dlurl = "https://beta-maniac.en.uptodown.com/android"
+
+[GooglePhotos-rushiranpise]
+enabled = true
+pkg-name = "com.google.android.apps.photos"
+app-name = "Google Photos"
+included-patches = "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+
+[MovieBox-rushiranpise]
+enabled = true
+pkg-name = "com.community.oneroom"
+app-name = "MovieBox"
+uptodown-dlurl = "https://com-community-oneroom.en.uptodown.com/android"
+
+[MovieBox-rushiranpise-AndroidTV]
+enabled = true
+pkg-name = "com.community.mbox.tv"
+app-name = "MovieBox"
+variant = "Android TV"
+patch-folder = "movieboxtv"
+github-dlurl = "https://github.com/nullcpy/apks/releases/tag/com.community.mbox.tv"
+
+[Messenger-rushiranpise]
+enabled = true
+pkg-name = "com.facebook.orca"
+app-name = "Messenger"
+excluded-patches = "'Remove Meta AI' 'Hide inbox stories and notes tray' 'Hide inbox subtabs' 'Hide Facebook buttons'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/facebook-messenger/com.facebook.orca"
+apkcombo-dlurl = "https://apkcombo.com/facebook-messenger/com.facebook.orca"
+
+[PocketCasts-rushiranpise]
+enabled = true
+pkg-name = "au.com.shiftyjelly.pocketcasts"
+app-name = "Pocket Casts"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/automattic-inc/pocket-casts"
+uptodown-dlurl = "https://pocket-casts-podcast-player.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/pocket-casts/au.com.shiftyjelly.pocketcasts"
+
+[RAR-rushiranpise]
+enabled = true
+pkg-name = "com.rarlab.rar"
+app-name = "RAR"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rar-lab/rar-for-android"
+uptodown-dlurl = "https://rar-for-android.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/rar-extractor-manager/com.rarlab.rar"
+apkcombo-dlurl = "https://apkcombo.com/rar/com.rarlab.rar"
+
+[AmazonIndia-rushiranpise]
+enabled = true
+pkg-name = "in.amazon.mShop.android.shopping"
+app-name = "Amazon India"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-india-shop-pay"
+uptodown-dlurl = "https://amazon-india.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/amazon-india-shop-pay-minitv/in.amazon.mShop.android.shopping"
+apkcombo-dlurl = "https://apkcombo.com/amazon-india-shopping/in.amazon.mShop.android.shopping"
+
+[Calm-rushiranpise]
+enabled = true
+pkg-name = "com.calm.android"
+app-name = "Calm"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/calm-com-inc/calm-meditate-sleep-relax/"
+uptodown-dlurl = "https://calm.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/calm-sleep-meditate-relax/com.calm.android"
+apkcombo-dlurl = "https://apkcombo.com/calm/com.calm.android"
+
+[BluetoothKeyboardAndMouse-rushiranpise]
+enabled = true
+pkg-name = "io.appground.blek"
+app-name = "Bluetooth Keyboard & Mouse"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/appground-io/bluetooth-keyboard-mouse-2"
+uptodown-dlurl = "https://bluetooth-keyboard-and-mouse.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/bluetooth-keyboard-mouse/io.appground.blek"
+apkcombo-dlurl = "https://apkcombo.com/bluetooth-keyboard-mouse/io.appground.blek"
+
+[MacroDroid-rushiranpise]
+enabled = true
+pkg-name = "com.arlosoft.macrodroid"
+app-name = "MacroDroid"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
+uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/macrodroid-device-automation-app/com.arlosoft.macrodroid"
+apkcombo-dlurl = "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
+
+[SendFilesToTV-rushiranpise]
+enabled = true
+pkg-name = "com.yablio.sendfilestotv"
+app-name = "Send Files to TV"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/yablio/send-files-to-tv/"
+uptodown-dlurl = "https://send-files-to-tv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv"
+apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
+
+[PicsArt-rushiranpise]
+enabled = true
+pkg-name = "com.picsart.studio"
+app-name = "PicsArt"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"

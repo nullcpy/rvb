@@ -1,0 +1,22 @@
+patches-source = "bufferk/morphe-patches"
+patches-version = "stable"
+brand = "bufferk"
+
+[Truecaller-bufferk]
+enabled = true
+pkg-name = "com.truecaller"
+app-name = "Truecaller"
+build-mode = "both"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
+
+[Medium-bufferk]
+enabled = true
+pkg-name = "com.medium.reader"
+app-name = "Medium"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
+uptodown-dlurl = "https://medium.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/medium/com.medium.reader"
+apkcombo-dlurl = "https://apkcombo.com/medium/com.medium.reader"

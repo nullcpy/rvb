@@ -1,53 +1,40 @@
-[twitter-piko]
-enabled = true 
+patches-source = "crimera/piko"
+patches-version = "both"
+build-mode = "both"
+brand = "Piko"
+
+[Twitter-Piko]
+enabled = true
 pkg-name = "com.twitter.android"
 app-name = "Twitter"
-brand = "Piko"
-build-mode = "both"
-arch = "both"
-patches-source = "crimera/piko"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
 
-[twitter-piko-materialu]
+[Twitter-Piko-MaterialYou]
 enabled = true
 pkg-name = "com.twitter.android"
 app-name = "Twitter"
-brand = "Piko"
-variant = "MaterialYou"
-build-mode = "both"
-arch = "both"
-patches-source = "crimera/piko"
+variant = "Material You"
 included-patches = "'Bring back twitter' 'Dynamic color'"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
 
-[instagram-piko]
+[Instagram-Piko]
 enabled = true
 pkg-name = "com.instagram.android"
 app-name = "Instagram"
-brand = "Piko"
-build-mode = "both"
 arch = "arm64-v8a"
-patches-source = "crimera/piko"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 
-[instagram-piko-clone]
+[Instagram-Piko-Clone]
 enabled = true
 pkg-name = "com.instagram.android"
 app-name = "Instagram"
-brand = "Piko"
-sub-variant = "clone"
-included-patches = "'Change package name'"
-build-mode = "both"
+sub-variant = "Clone"
 arch = "arm64-v8a"
-patches-source = "crimera/piko"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+included-patches = "'Clone'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"

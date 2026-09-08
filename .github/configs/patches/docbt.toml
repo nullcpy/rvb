@@ -1,0 +1,12 @@
+patches-source = "docbt/patched-up"
+patches-version = "stable"
+brand = "docbt"
+
+[GoogleNews-docbt]
+enabled = true
+pkg-name = "com.google.android.apps.magazines"
+app-name = "Google News"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
+uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/google-news-daily-headlines/com.google.android.apps.magazines"
+apkcombo-dlurl = "https://apkcombo.com/google-news/com.google.android.apps.magazines"

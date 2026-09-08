@@ -1,0 +1,15 @@
+patches-source = "SapitoSucio/FroggoMorphePatches"
+patches-version = "stable"
+brand = "SapitoSucio"
+arch = "arm64-v8a"
+
+[Facebook-SapitoSucio]
+enabled = true
+pkg-name = "com.facebook.katana"
+app-name = "Facebook"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
+apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
+
+

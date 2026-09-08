@@ -1,0 +1,12 @@
+patches-source = "revenge-mod/revenge-xposed"
+patches-version = "stable"
+cli-source = "7723mod/NPatch"
+brand = "revenge-xposed"
+
+[Discord-revenge-xposed]
+enabled = true
+pkg-name = "com.discord"
+app-name = "Discord"
+patcher-args = "-l 0"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"

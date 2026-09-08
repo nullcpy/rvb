@@ -1,0 +1,15 @@
+patches-source = "franticg33k/morphe-patches"
+patches-version = "stable"
+brand = "franticg33k"
+
+[ByAir-franticg33k]
+enabled = true
+pkg-name = "com.byairapp.android"
+app-name = "ByAir"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status"
+apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
+apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
+
+
+
+

@@ -1,0 +1,115 @@
+patches-source = "arandomhooman/hoomans-morphe-patches"
+patches-version = "stable"
+brand = "arandomhooman"
+
+[Rumble-arandomhooman]
+enabled = true
+pkg-name = "com.rumble.battles"
+app-name = "Rumble"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
+
+[Twitch-arandomhooman]
+enabled = true
+pkg-name = "tv.twitch.android.app"
+app-name = "Twitch"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+
+[BatteryGuru-arandomhooman]
+enabled = true
+pkg-name = "com.paget96.batteryguru"
+app-name = "Battery Guru"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/paget96/battery-guru-health-saver/"
+uptodown-dlurl = "https://battery-guru.en.uptodown.com/android"
+
+[MoneyManager-arandomhooman]
+enabled = true
+pkg-name = "com.realbyteapps.moneymanagerfree"
+app-name = "Money Manager"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
+uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
+
+[Poweramp-arandomhooman]
+enabled = true
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "Poweramp"
+arch = "all"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
+[AT4KLauncher-arandomhooman-AndroidTV]
+enabled = true
+pkg-name = "com.overdevs.at4k"
+app-name = "AT4K Launcher"
+variant = "Android TV"
+arch = "all"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
+apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
+
+[ProjectivyLauncher-arandomhooman-AndroidTV]
+enabled = true
+pkg-name = "com.spocky.projengmenu"
+app-name = "Projectivy Launcher"
+patch-folder = "projectivy"
+variant = "Android TV"
+arch = "all"
+apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
+apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+
+[AdobeAcrobat-arandomhooman]
+enabled = true
+pkg-name = "com.adobe.reader"
+app-name = "Adobe Acrobat"
+patch-folder = "acrobat"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat"
+uptodown-dlurl = "https://adobe-reader.en.uptodown.com/android"
+
+[InShot-arandomhooman]
+enabled = true
+pkg-name = "com.camerasideas.instashot"
+app-name = "InShot"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor"
+uptodown-dlurl = "https://inshot-editor.en.uptodown.com/android"
+
+[Todoist-arandomhooman]
+enabled = true
+pkg-name = "com.todoist"
+app-name = "Todoist"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/doist/todoist"
+apkpure-dlurl = "https://apkpure.com/todoist-to-do-list-planner/com.todoist"
+apkcombo-dlurl = "https://apkcombo.com/todoist/com.todoist"
+
+[Tumblr-arandomhooman]
+enabled = true
+pkg-name = "com.tumblr"
+app-name = "Tumblr"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tumblr-1-for-android-app/com.tumblr"
+apkcombo-dlurl = "https://apkcombo.com/tumblr/com.tumblr"
+
+[GooglePhone-arandomhooman]
+enabled = true
+pkg-name = "com.google.android.dialer"
+app-name = "Google Phone"
+build-mode = "both"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
+
+[MicrosoftSwiftKey-arandomhooman]
+enabled = true
+pkg-name = "com.touchtype.swiftkey"
+app-name = "Microsoft Swiftkey"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard"
+uptodown-dlurl = "https://swiftkey-keyboard.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey"
+apkcombo-dlurl = "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
+
+
+
