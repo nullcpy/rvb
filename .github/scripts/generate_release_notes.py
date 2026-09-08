@@ -33,13 +33,39 @@ def normalize_arch(arch_raw):
         return "arm64"
     if "arm" in a or "armeabi" in a:
         return "arm"
-    if a in ["all", "universal"]:
+    if a in ["all", "universal"] or a.endswith("-all") or a.endswith("-universal"):
         return "all"
     if "x86_64" in a or "x64" in a:
         return "x86_64"
     if "x86" in a:
         return "x86"
-    return a or "universal"
+    return a or "all"
+
+def extract_arch(fname, version=""):
+    # First match against known architecture tokens at the end of the filename
+    match = re.search(
+        r"-(arm64-v8a|armeabi-v7a|arm-v7a|aarch64|arm64|arm32|arm|x86_64|x64|x86|universal|all)(?:-(?:apk|module))?\.(?:apk|zip)$",
+        fname,
+        re.IGNORECASE
+    )
+    if match:
+        return match.group(1)
+
+    # If version is provided, match what follows -v<version>-
+    if version:
+        clean_ver = re.escape(version.lstrip("v"))
+        m = re.search(rf"-v?{clean_ver}-([a-zA-Z0-9_-]+?)(?:-(?:apk|module))?\.(?:apk|zip)$", fname, re.IGNORECASE)
+        if m:
+            return m.group(1)
+
+    # Fallback to the last hyphen-delimited segment before extension
+    name_no_ext = re.sub(r"\.(?:apk|zip)$", "", fname, flags=re.IGNORECASE)
+    name_no_mode = re.sub(r"-(?:apk|module)$", "", name_no_ext, flags=re.IGNORECASE)
+    parts = name_no_mode.split("-")
+    if len(parts) > 1:
+        return parts[-1]
+
+    return "all"
 
 def main():
     next_ver_code = os.environ.get("NEXT_VER_CODE", "").strip()
@@ -124,17 +150,14 @@ def main():
 
             # Check if apk
             if lower.endswith(".apk") and not "-module-" in lower:
-                # Extract arch from filename
-                arch_match = re.search(r"-v[^-]+-([a-zA-Z0-9_-]+)\.apk$", fname, re.IGNORECASE)
-                raw_arch = arch_match.group(1) if arch_match else ""
+                raw_arch = extract_arch(fname, version)
                 norm_arch = normalize_arch(raw_arch)
                 dl_url = f"{github_server}/{github_repo}/releases/download/{next_ver_code}/{fname}" if (github_repo and next_ver_code) else f"./build/{fname}"
                 app_entry["apks"].append((norm_arch, dl_url))
 
             # Check if module zip
             elif lower.endswith(".zip") and "-module-" in lower:
-                arch_match = re.search(r"-v[^-]+-([a-zA-Z0-9_-]+)\.zip$", fname, re.IGNORECASE)
-                raw_arch = arch_match.group(1) if arch_match else ""
+                raw_arch = extract_arch(fname, version)
                 norm_arch = normalize_arch(raw_arch)
                 dl_url = f"{github_server}/{github_repo}/releases/download/{next_ver_code}/{fname}" if (github_repo and next_ver_code) else f"./build/{fname}"
                 app_entry["modules"].append((norm_arch, dl_url))
