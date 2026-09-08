@@ -1,15 +1,6 @@
 patches-source = "kiraio-moe/Lain-Patches"
 brand = "Lain"
 
-[DROFUS-Lain]
-enabled = true
-pkg-name = "com.mixapplications.rufus"
-app-name = "DROFUS"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mixapplications/drofus-iso2usb/"
-uptodown-dlurl = "https://rufus-unofficial.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/rufus-unofficial/com.mixapplications.rufus"
-apkcombo-dlurl = "https://apkcombo.com/drofus-iso-2-usb/com.mixapplications.rufus"
-
 [Hermit-Lain]
 enabled = true
 pkg-name = "com.chimbori.hermitcrab"

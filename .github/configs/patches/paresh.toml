@@ -28,13 +28,6 @@ uptodown-dlurl = "https://lumina-walls.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/lumina-wallpapers/com.lumina.wallpapers"
 apkcombo-dlurl = "https://apkcombo.com/lumina-wallpapers/com.lumina.wallpapers"
 
-[DocumentScanner-Paresh]
-enabled = true
-pkg-name = "alldocumentreader.office.viewer.filereader.pdfviewerscanner"
-app-name = "Document Scanner"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/lufick/document-scanner-pdf-creator"
-uptodown-dlurl = "https://doc-scanner.en.uptodown.com/android"
-
 [Eyecon-Paresh]
 enabled = true
 pkg-name = "com.eyecon.global"
