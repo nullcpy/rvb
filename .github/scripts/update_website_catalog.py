@@ -102,6 +102,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             apps.append(app_entry)
         else:
             app_entry = app_map[app_key]
+            app_entry["appName"] = app_name
             app_entry["latestPublishedAt"] = now_iso
             if "brands" not in app_entry:
                 app_entry["brands"] = []
@@ -120,6 +121,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             }
             app_entry["brands"].append(brand_entry)
         else:
+            brand_entry["brandName"] = brand_name
             brand_entry["latestVersion"] = version
             brand_entry["latestPublishedAt"] = now_iso
 
