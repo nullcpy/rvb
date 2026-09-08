@@ -156,3 +156,14 @@ app-name = "PicsArt"
 arch = "all"
 uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
+
+[ProtonMail-rushiranpise]
+enabled = true
+pkg-name = "ch.protonmail.android"
+app-name = "Proton Mail"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
+apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+

@@ -6,6 +6,7 @@ enabled = true
 pkg-name = "com.google.android.apps.photos"
 app-name = "Google Photos"
 build-mode = "both"
+patches-version = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 
 [AdobePhotoshopMix-DeVanced]

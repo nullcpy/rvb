@@ -25,6 +25,7 @@ enabled = true
 pkg-name = "com.zhiliaoapp.musically"
 app-name = "TikTok"
 patches-source = "hxreborn/hxreborn-tiktok-patches"
+patches-version = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
