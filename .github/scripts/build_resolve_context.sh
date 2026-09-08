@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
-CONFIG="$1"
+CONFIG="${1:-}"
 
-if [ ! -f "$CONFIG" ]; then
-  echo "::error::Config file not found: $CONFIG"
+if [ -z "$CONFIG" ] || [ ! -f "$CONFIG" ]; then
+  echo "::error::Config file not found: ${CONFIG:-(empty)}"
   exit 1
 fi
 

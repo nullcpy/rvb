@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+if [ -z "${TG_TOKEN:-}" ]; then
+  echo "TG_TOKEN is not set. Skipping Telegram notification."
+  exit 0
+fi
+
 [ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
 [ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'
 

@@ -20,8 +20,12 @@ fi
 
 git checkout -f update || git switch --discard-changes --orphan update
 mkdir -p changelogs
-cp -f build.tmp "changelogs/${NEXT_VER_CODE}.md"
-cp -f build.tmp build.md
+SRC_MD="build.md"
+[ -f build.tmp ] && SRC_MD="build.tmp"
+if [ -f "$SRC_MD" ]; then
+  cp -f "$SRC_MD" "changelogs/${NEXT_VER_CODE}.md"
+  cp -f "$SRC_MD" build.md
+fi
 
 get_update_json() {
   echo "{
