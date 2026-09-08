@@ -67,7 +67,7 @@ for table_name in $(toml_get_table_names); do
 	patches_src=$(toml_get "$t" patches-source) || patches_src=$DEF_PATCHES_SRC
 	patches_src_host=$(toml_get "$t" patches-source-host) || patches_src_host=$DEF_PATCHES_SRC_HOST
 	patches_ver=$(toml_get "$t" patches-version) || patches_ver=$DEF_PATCHES_VER
-	[ "$patches_ver" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]]; then patches_ver="beta"; else patches_ver="stable"; fi; }
+	[ "$patches_ver" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]] || [ "$DEF_PATCHES_VER" = "beta" ] || [ "$DEF_PATCHES_VER" = "dev" ]; then patches_ver="beta"; else patches_ver="stable"; fi; }
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
