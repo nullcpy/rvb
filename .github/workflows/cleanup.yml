@@ -44,4 +44,6 @@ jobs:
         env:
           WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/sync_website_catalog.py
+        run: |
+          git checkout main || true
+          python3 .github/scripts/sync_website_catalog.py
