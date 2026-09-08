@@ -199,6 +199,13 @@ def main():
 
             brand["builds"] = surviving_builds
 
+            # Sort builds newest-first so index [0] is always the most recent
+            surviving_builds_sorted = sorted(
+                surviving_builds,
+                key=lambda b: b.get("publishedAt") or "",
+                reverse=True
+            )
+
             # Reconcile variant pointers with surviving builds and prune dead variants
             surviving_variants = []
             for v in brand.get("variants", []):
@@ -234,8 +241,8 @@ def main():
 
             # Keep brand if it has surviving builds
             if surviving_builds:
-                brand["latestVersion"] = surviving_builds[0].get("version", "")
-                brand["latestPublishedAt"] = surviving_builds[0].get("publishedAt", "")
+                brand["latestVersion"] = surviving_builds_sorted[0].get("version", "")
+                brand["latestPublishedAt"] = surviving_builds_sorted[0].get("publishedAt", "")
                 brand["totalDownloads"] = sum(
                     sum(a.get("download_count", 0) for a in b.get("assets", []))
                     for b in surviving_builds
@@ -266,8 +273,18 @@ def main():
             print("No catalog changes to commit.")
             return
         run_cmd("git commit -m 'chore: sync live download metrics and prune deleted releases'", cwd=clone_dir)
-        run_cmd("git push origin main", cwd=clone_dir)
-        print("Pushed synchronized data.json to nullcpy.github.io!")
+        pushed = False
+        for attempt in range(1, 4):
+            result = subprocess.run("git push origin main", shell=True, capture_output=True, text=True, cwd=clone_dir)
+            if result.returncode == 0:
+                pushed = True
+                print("Pushed synchronized data.json to nullcpy.github.io!")
+                break
+            print(f"Warning: Git push attempt {attempt} failed: {result.stderr.strip()}. Retrying with rebase...", file=sys.stderr)
+            subprocess.run("git pull --rebase origin main", shell=True, cwd=clone_dir)
+        if not pushed:
+            print("Error: Failed to push synced data.json after 3 attempts.", file=sys.stderr)
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()

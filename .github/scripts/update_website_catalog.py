@@ -112,7 +112,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
 
         version = info.get("version", "")
         pkg_name = (info.get("package_name") or info.get("patched_pkg_name") or "").strip()
-        changelog_url = (info.get("changlog") or info.get("changelog") or "").strip()
+        changelog_url = (info.get("changelog") or "").strip()
         patches_ref = info.get("patches", "").strip()
 
         # Find or create app entry
@@ -353,14 +353,13 @@ def main():
     
     pushed = False
     for attempt in range(1, 4):
-        try:
-            run_cmd("git push origin main", cwd=clone_dir)
+        result = subprocess.run("git push origin main", shell=True, capture_output=True, text=True, cwd=clone_dir)
+        if result.returncode == 0:
             pushed = True
             print("Successfully published updated data.json to nullcpy.github.io!")
             break
-        except Exception as e:
-            print(f"Warning: Git push attempt {attempt} failed: {e}. Retrying with rebase...", file=sys.stderr)
-            run_cmd("git pull --rebase origin main", check=False, cwd=clone_dir)
+        print(f"Warning: Git push attempt {attempt} failed: {result.stderr.strip()}. Retrying with rebase...", file=sys.stderr)
+        subprocess.run("git pull --rebase origin main", shell=True, cwd=clone_dir)
     if not pushed:
         print("Error: Failed to push updated data.json after 3 attempts.", file=sys.stderr)
         sys.exit(1)

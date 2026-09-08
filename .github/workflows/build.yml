@@ -155,25 +155,6 @@ jobs:
           overwrite_files: true
           prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
-      - name: Update Website Catalog
-        env:
-          WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
-          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
-        run: python3 .github/scripts/update_website_catalog.py
-
-      - name: Notify telegram
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
-          TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
-          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: bash .github/scripts/build_notify_telegram.sh
-
       - name: Update changelog and module update files
         id: update_changelog
         env:
@@ -194,7 +175,7 @@ jobs:
 
       - name: Remove frequently updated apps
         run: |
-          git checkout main
+          git checkout -f main
           bash .github/scripts/build_exclude_from_archive.sh
 
       - name: Upload to release (Archive)
@@ -205,3 +186,22 @@ jobs:
           tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
           overwrite_files: true
           target_commitish: main
+
+      - name: Update Website Catalog
+        env:
+          WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+        run: python3 .github/scripts/update_website_catalog.py
+
+      - name: Notify telegram
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
+          TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_notify_telegram.sh
