@@ -193,10 +193,18 @@ def main():
 
             brand["builds"] = surviving_builds
 
-            # Reconcile variant pointers with surviving builds
+            # Reconcile variant pointers with surviving builds and prune dead variants
+            surviving_variants = []
             for v in brand.get("variants", []):
                 v_var = v.get("variant")
                 v_sub = v.get("subVariant")
+                has_builds = any(
+                    b for b in surviving_builds
+                    if b.get("variant") == v_var and b.get("subVariant") == v_sub
+                )
+                if not has_builds:
+                    continue
+
                 for ch in ["latestStable", "latestBeta"]:
                     rel_filter = "stable" if ch == "latestStable" else "beta"
                     # Find newest matching surviving build
@@ -215,6 +223,8 @@ def main():
                         }
                     else:
                         v[ch] = None
+                surviving_variants.append(v)
+            brand["variants"] = surviving_variants
 
             # Keep brand if it has surviving builds
             if surviving_builds:
