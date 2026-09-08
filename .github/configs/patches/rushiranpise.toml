@@ -10,10 +10,10 @@ build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adguard-software-limited/adguard"
 uptodown-dlurl = "https://adguard-for-android.en.uptodown.com/android"
 
-[WARP-rushiranpise]
+[Cloudflare-WARP-rushiranpise]
 enabled = true
 pkg-name = "com.cloudflare.onedotonedotonedotone"
-app-name = "1.1.1.1 + WARP"
+app-name = "Cloudflare WARP"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cloudflare/1-1-1-1-faster-safer-internet"
 uptodown-dlurl = "https://1-1-1-1.en.uptodown.com/android"
 
