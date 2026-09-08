@@ -197,6 +197,7 @@ def main():
             tag_str = ""
 
         lines.append(f"### 🧩 {src}{tag_str}")
+        lines.append("")
 
         # List apps in this patch group
         for app_name in sorted(apps.keys()):
@@ -212,7 +213,7 @@ def main():
                 mod_links = " • ".join([f"[{arch}]({url})" for arch, url in app["modules"]])
                 lines.append(f"  * Module: {mod_links}")
 
-        lines.append("")
+            lines.append("")
 
     # Notes section
     lines.append("---")
