@@ -97,10 +97,4 @@ build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
 
-[MXPlayer-Paresh]
-enabled = true
-pkg-name = "com.mxtech.videoplayer.ad"
-app-name = "MX Player"
-arch = "all"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mx-media-entertainment-pte-ltd/mx-player-pro"
-uptodown-dlurl = "https://mx-player.en.uptodown.com/android"
+
