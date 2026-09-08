@@ -1,11 +1,25 @@
 patches-source = "jkennethcarino/adobo"
+patches-version = "stable"
+brand = "jkennethcarino"
 
-[imdb-jkennethcarino]
+[Reddit-jkennethcarino]
+enabled = true
+pkg-name = "com.reddit.frontpage"
+app-name = "Reddit"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
+apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+
+[IMDb-jkennethcarino]
 enabled = true
 pkg-name = "com.imdb.mobile"
 app-name = "IMDb"
-brand = "jkennethcarino"
-build-mode = "apk"
 arch = "all"
-uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
+uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/imdb-movies-tv-shows-app/com.imdb.mobile"
+apkcombo-dlurl = "https://apkcombo.com/imdb/com.imdb.mobile"
+
+

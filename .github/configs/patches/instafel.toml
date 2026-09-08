@@ -1,32 +1,25 @@
-[instagram-instafel]
-enabled = true
-pkg-name = "com.instagram.android"
-app-name = "instagram"
-brand = "Instafel"
-build-mode = "apk"
-arch = "both"
-cli-source = "instafel/p-rel"
 patches-source = "instafel/pc-rel"
-included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-dpi = "480dpi nodpi anydpi auto"
-# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
-# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+patches-version = "stable"
+cli-source = "instafel/p-rel"
+brand = "Instafel"
 
-[instagram-instafel-clone]
+[Instagram-InstaFel]
 enabled = true
 pkg-name = "com.instagram.android"
-app-name = "instagram"
-brand = "Instafel"
-sub-variant = "clone"
-build-mode = "apk"
-arch = "both"
-cli-source = "instafel/p-rel"
-patches-source = "instafel/pc-rel"
-included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+app-name = "Instagram"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
 dpi = "480dpi nodpi anydpi auto"
-# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# apkpure-dlurl = "https://apkpure.com/instagram-app/com.instagram.android"
-# apkcombo-dlurl = "https://apkcombo.com/instagram/com.instagram.android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+
+[Instagram-InstaFel-Clone]
+enabled = true
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+variant = "Clone"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
+dpi = "480dpi nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+
+
+
+

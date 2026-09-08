@@ -1,40 +1,35 @@
-[proton-mail-morphe]
+patches-source = "hxreborn/morphe-patches"
+patches-version = "stable"
+brand = "hxreborn"
+
+[ProtonMail-hxreborn]
 enabled = true
 pkg-name = "ch.protonmail.android"
 app-name = "Proton Mail"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "hxreborn/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
 apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
-[showly-morphe]
+[Showly-hxreborn]
 enabled = true
 pkg-name = "com.michaldrabik.showly2"
 app-name = "Showly"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "hxreborn/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/showly"
+uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/showly-track-tv-shows-movie/com.michaldrabik.showly2"
+apkcombo-dlurl = "https://apkcombo.com/showly-track-shows-movies/com.michaldrabik.showly2"
 
-[tiktok-morphe-alt]
+[TikTok-hxreborn]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
 app-name = "TikTok"
-brand = "Morphe"
-sub-variant = "alt"
-build-mode = "apk"
-arch = "both"
 patches-source = "hxreborn/hxreborn-tiktok-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+
+

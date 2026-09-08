@@ -1,6 +1,7 @@
 patches-source = "anddea/revanced-patches"
-brand = "Anddea"
+patches-version = "both"
 build-mode = "both"
+brand = "anddea"
 
 [youtube-anddea-nord]
 enabled = true

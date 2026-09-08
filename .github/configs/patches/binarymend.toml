@@ -1,0 +1,39 @@
+patches-source = "binarymend/morphe-patches"
+patches-version = "stable"
+brand = "binarymend"
+
+[Pinterest-binarymend]
+enabled = true
+pkg-name = "com.pinterest"
+app-name = "Pinterest"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
+uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
+
+[MoonPlusReader-binarymend]
+enabled = true
+pkg-name = "com.flyersoft.moonreader"
+app-name = "Moon+ Reader"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/moon/moon-reader"
+uptodown-dlurl = "https://moon-reader.en.uptodown.com/android"
+
+[Symfonium-binarymend]
+enabled = true
+pkg-name = "app.symfonik.music.player"
+app-name = "Symfonium"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tolriq/symfonium-music-player-cast"
+uptodown-dlurl = "https://symfonium.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/app.symfonik.music.player"
+
+[CalcNote-binarymend]
+enabled = true
+pkg-name = "com.appumstudios.calcnote"
+app-name = "CalcNote"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator"
+uptodown-dlurl = "https://calcnote-notepad-calculator.en.uptodown.com/android"
+
+[aCalendar-binarymend]
+enabled = true
+pkg-name = "org.withouthat.acalendar"
+app-name = "aCalendar"
+uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"

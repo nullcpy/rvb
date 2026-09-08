@@ -1,0 +1,64 @@
+patches-source = "RookieEnough/De-Vanced"
+patches-version = "stable"
+brand = "RookieEnough"
+
+[GooglePhotos-RookieEnough]
+enabled = true
+pkg-name = "com.google.android.apps.photos"
+app-name = "Google Photos"
+build-mode = "both"
+patches-version = "beta"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+
+[AdobePhotoshopMix-RookieEnough]
+enabled = true
+pkg-name = "com.adobe.psmobile"
+app-name = "Adobe Photoshop Mix"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
+uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
+
+[GoogleRecorder-RookieEnough]
+enabled = true
+pkg-name = "com.google.android.apps.recorder"
+app-name = "Google Recorder"
+build-mode = "both"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.recorder"
+
+[MicrosoftLens-RookieEnough]
+enabled = true
+pkg-name = "com.microsoft.office.officelens"
+app-name = "Microsoft Lens"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+
+[Photomath-RookieEnough]
+enabled = true
+pkg-name = "com.google.android.apps.photomath"
+app-name = "Photomath"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
+uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+
+[Viber-RookieEnough]
+enabled = true
+pkg-name = "com.viber.voip"
+app-name = "Viber"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
+
+[pixiv-RookieEnough]
+enabled = true
+pkg-name = "jp.pxv.android"
+app-name = "pixiv"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+
+[Strava-RookieEnough]
+enabled = true
+pkg-name = "com.strava"
+app-name = "Strava"
+apkcombo-dlurl = "https://apkcombo.com/it/strava/com.strava"
+

@@ -1,44 +1,35 @@
-[brave-browser-morphe-beta]
+patches-source = "dh6k/morphe-patches"
+patches-version = "stable"
+brand = "dh6k"
+
+[BraveBrowser-dh6k-Beta]
 enabled = true
 pkg-name = "com.brave.browser_beta"
-app-name = "brave-browser"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "dh6k/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-browser-beta.en.uptodown.com/android"
+app-name = "Brave Browser"
+variant = "Beta"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-beta"
+uptodown-dlurl = "https://brave-browser-beta.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/brave-browser-beta/com.brave.browser_beta"
 apkcombo-dlurl = "https://apkcombo.com/brave-beta/com.brave.browser_beta"
 github-dlurl = "https://github.com/brave/brave-browser"
 github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
 
-[brave-browser-morphe-nightly]
+[BraveBrowser-dh6k-Nightly]
 enabled = true
 pkg-name = "com.brave.browser_nightly"
-app-name = "brave-browser"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "dh6k/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-browser-nightly.en.uptodown.com/android"
+app-name = "Brave Browser"
+variant = "Nightly"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-nightly"
+uptodown-dlurl = "https://brave-browser-nightly.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
 apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
 github-dlurl = "https://github.com/brave/brave-browser"
 github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
 
-[titanium-browser-morphe]
+[TitaniumBrowser-dh6k]
 enabled = true
 pkg-name = "io.github.jqssun.helium"
-app-name = "titanium-browser"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "dh6k/morphe-patches"
+app-name = "Titanium Browser"
 included-patches = "'Keep Helium Child Processes Alive'"
-cli-source = "MorpheApp/morphe-desktop"
 apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
 apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"

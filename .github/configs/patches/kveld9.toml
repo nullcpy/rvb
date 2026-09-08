@@ -1,14 +1,13 @@
-[brave-browser-morphe]
+patches-source = "kveld9/kveld-morphe-patches"
+patches-version = "stable"
+brand = "kveld9"
+
+[BraveBrowser-kveld9]
 enabled = true
 pkg-name = "com.brave.browser"
-app-name = "brave-browser"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "kveld9/kveld-morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
+app-name = "Brave Browser"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
+uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser"
 apkcombo-dlurl = "https://apkcombo.com/brave-browser/com.brave.browser"
 github-dlurl = "https://github.com/brave/brave-browser"

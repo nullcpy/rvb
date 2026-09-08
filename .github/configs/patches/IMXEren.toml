@@ -1,0 +1,13 @@
+patches-source = "IMXEren/mix-patches"
+patches-version = "stable"
+patches-source-host = "gitlab"
+brand = "IMXEren"
+
+[TraktTV-IMXEren]
+enabled = true
+pkg-name = "tv.trakt.trakt"
+app-name = "trakt.TV"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
+apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"

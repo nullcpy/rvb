@@ -1,30 +1,21 @@
-[calorie-counter-morphe]
+patches-source = "kondratjev/morphe-patches"
+patches-version = "stable"
+brand = "kondratjev"
+
+[CalorieCounter-kondratjev]
 enabled = true
 pkg-name = "com.fatsecret.android"
-app-name = "calorie-counter"
-brand = "Morphe"
-build-mode = "apk"
-arch = "both"
-patches-source = "kondratjev/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://fatsecret-calorie-counter.en.uptodown.com/android"
+app-name = "Calorie Counter"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/"
+uptodown-dlurl = "https://fatsecret-calorie-counter.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android"
 apkcombo-dlurl = "https://apkcombo.com/fatsecret/com.fatsecret.android"
-# archive-dlurl = ""
 
-[soundcloud-morphe-alt]
+[SoundCloud-kondratjev]
 enabled = true
 pkg-name = "com.soundcloud.android"
-app-name = "soundcloud"
-brand = "Morphe"
-sub-variant = "alt"
-build-mode = "apk"
-arch = "both"
-patches-source = "kondratjev/morphe-patches"
-cli-source = "MorpheApp/morphe-desktop"
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+app-name = "SoundCloud"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
 apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
-# archive-dlurl = ""

@@ -1,0 +1,15 @@
+patches-source = "icysymmetra/tiktok-patches-for-morphe"
+patches-version = "both"
+brand = "icysymmetra"
+
+[TikTok-icysymmetra]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+
+
+
