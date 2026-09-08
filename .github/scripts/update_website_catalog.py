@@ -85,7 +85,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
         sub_variant_val = sub_variant_cfg if sub_variant_cfg else None
 
         version = info.get("version", "")
-        pkg_name = info.get("package_name", "")
+        pkg_name = (info.get("package_name") or info.get("patched_pkg_name") or "").strip()
         changelog_url = (info.get("changlog") or info.get("changelog") or "").strip()
         patches_ref = info.get("patches", "").strip()
 

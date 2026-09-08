@@ -3201,6 +3201,19 @@ build_rv() {
 			fi
 		fi
 
+		local final_pkg_name="${args[patched_pkg_name]:-}"
+		if [ -z "$final_pkg_name" ] && [ -f "$patched_apk" ] && [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+			local detected_pkg
+			detected_pkg=$("$AAPT2" dump badging "$patched_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1 || true)
+			if [ -n "$detected_pkg" ]; then
+				if [ "$detected_pkg" != "$pkg_name" ]; then
+					pr "Detected modified package ID in manifest: '$pkg_name' -> '$detected_pkg'"
+				fi
+				final_pkg_name="$detected_pkg"
+			fi
+		fi
+		final_pkg_name="${final_pkg_name:-$pkg_name}"
+
 		if [ "$build_mode" = apk ]; then
 			if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
 				mv -f "$patched_apk" "$apk_output"
@@ -3208,7 +3221,7 @@ build_rv() {
 				cp -f "$patched_apk" "$apk_output"
 			fi
 			pr "Built ${table} (non-root): '${apk_output}'"
-			write_build_info "${table% (*}" "${arch_f}" ".apk" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
+			write_build_info "${table% (*}" "${arch_f}" ".apk" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$final_pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
 			continue
 		fi
 		local base_template
@@ -3216,7 +3229,7 @@ build_rv() {
 		cp -a $MODULE_TEMPLATE_DIR/. "$base_template"
 		local upj="${args[module_prop_name],,}-update.json"
 
-		module_config "$base_template" "$pkg_name" "$version_f" "$arch"
+		module_config "$base_template" "$final_pkg_name" "$version_f" "$arch"
 
 		local patches_ver
 		patches_ver="${patches_jar%% *}"; patches_ver="${patches_ver##*-}"
@@ -3264,7 +3277,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
-		write_build_info "${table% (*}" "${arch_f}" ".zip" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
+		write_build_info "${table% (*}" "${arch_f}" ".zip" "${file_prefix}" "$version_f" "$patches_ref" "$changelog_url" "$final_pkg_name" "${app_name}" "${args[patches_src]}" "${brand_val}" "${variant_val}" "${sub_variant_val}"
 	done
 }
 
