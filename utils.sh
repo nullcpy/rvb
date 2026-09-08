@@ -1620,23 +1620,30 @@ dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false} version_code=${7:-}
 	local path="" version_f=${version// /}
 	local norm_resp="${__ARCHIVE_RESP__//$'\r'/}"
-	for a in "${arch// /}" "all"; do
-		for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
-			while IFS= read -r p; do
-				if [ -n "$version_code" ]; then
+	if [ -n "$version_code" ]; then
+		for a in "${arch// /}" "all"; do
+			for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+				while IFS= read -r p; do
 					if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
 						path="$p"
 						break 3
 					fi
-				else
+				done <<<"$norm_resp"
+			done
+		done
+	fi
+	if [ -z "$path" ]; then
+		for a in "${arch// /}" "all"; do
+			for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+				while IFS= read -r p; do
 					if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
 						path="$p"
 						break 3
 					fi
-				fi
-			done <<<"$norm_resp"
+				done <<<"$norm_resp"
+			done
 		done
-	done
+	fi
 	if [ -z "$path" ]; then
 		epr "Version ${version} with arch ${arch} not found in archive"
 		return 1
@@ -1646,8 +1653,10 @@ dl_archive() {
 			req "${url}/${path}" "$output"
 			;;
 		apkm|xapk|apks)
-			req "${url}/${path}" "${output}.${path##*.}" || return 1
-			merge_splits "${output}.${path##*.}" "${output}"
+			local bundle="${output}.${path##*.}"
+			req "${url}/${path}" "$bundle" || return 1
+			merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
+			rm -f "$bundle"
 			;;
 		*)
 			epr "Unsupported archive file type for ${path}"
@@ -1964,23 +1973,30 @@ dl_cache_repo() {
     else
         # Matches the exact file selection logic from dl_archive
         local norm_resp="${__CACHE_REPO_RESP__//$'\r'/}"
-        for a in "${arch// /}" "all"; do
-            for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
-                while IFS= read -r p; do
-                    if [ -n "$version_code" ]; then
+        if [ -n "$version_code" ]; then
+            for a in "${arch// /}" "all"; do
+                for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+                    while IFS= read -r p; do
                         if [[ "$p" == *"${version_f#v}-${version_code}-${a}.${ext}" ]]; then
                             path="$p"
                             break 3
                         fi
-                    else
+                    done <<<"$norm_resp"
+                done
+            done
+        fi
+        if [ -z "$path" ]; then
+            for a in "${arch// /}" "all"; do
+                for ext in "apk" "apkm" "xapk" "apks" "apk.apkm" "apk.xapk" "apk.apks"; do
+                    while IFS= read -r p; do
                         if [[ "$p" == *"${version_f#v}-${a}.${ext}" ]]; then
                             path="$p"
                             break 3
                         fi
-                    fi
-                done <<<"$norm_resp"
+                    done <<<"$norm_resp"
+                done
             done
-        done
+        fi
     fi
     
     # Strip any \r from path just in case
@@ -1998,7 +2014,8 @@ dl_cache_repo() {
         apkm|xapk|apks)
 			local bundle="${output}.${ext}"
 			req "${base_url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "$output"
+			merge_splits "$bundle" "$output" || { rm -f "$bundle"; return 1; }
+			rm -f "$bundle"
             ;;
         *)
             epr "Unsupported cache_repo file type for ${path}"
