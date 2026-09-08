@@ -6,6 +6,7 @@ enabled = true
 pkg-name = "com.truecaller"
 app-name = "Truecaller"
 build-mode = "both"
+patches-version = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
