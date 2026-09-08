@@ -1,100 +1,14 @@
-patches-source = "MorpheApp/morphe-patches"
-patches-version = "both"
-build-mode = "both"
-brand = "MorpheApp"
+patches-source = "shaun-the-sheep-patches/morphe-patches"
+brand = "ShaunTheSheep"
 
-[YouTube-MorpheApp]
+[KineStop-ShaunTheSheep]
 enabled = true
-pkg-name = "com.google.android.youtube"
-app-name = "YouTube"
-patch-folder = "youtube"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
-apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
+pkg-name = "com.urbandroid.kinestop"
+app-name = "KineStop"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid"
+apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
 
-[YouTubeMusic-MorpheApp]
-enabled = true
-pkg-name = "com.google.android.apps.youtube.music"
-app-name = "YouTube Music"
-patch-folder = "music"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music"
-apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
 
-[YouTube-MorpheApp-NordTheme]
-enabled = true
-pkg-name = "com.google.android.youtube"
-app-name = "YouTube"
-variant = "Nord Theme"
-patch-folder = "youtube"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
-apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
 
-[YouTube-MorpheApp-MochaTheme]
-enabled = true
-pkg-name = "com.google.android.youtube"
-app-name = "YouTube"
-variant = "Mocha Theme"
-patch-folder = "youtube"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
-apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[YouTube-MorpheApp-Experimental]
-enabled = true
-pkg-name = "com.google.android.youtube"
-app-name = "YouTube"
-variant = "Experimental"
-patch-folder = "youtube"
-version = "exp"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
-apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.youtube"
-
-[YouTubeMusic-MorpheApp-Experimental]
-enabled = true
-pkg-name = "com.google.android.apps.youtube.music"
-app-name = "YouTube Music"
-variant = "Experimental"
-patch-folder = "music"
-version = "exp"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music"
-apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
-
-[Reddit-MorpheApp-Experimental]
-enabled = true
-pkg-name = "com.reddit.frontpage"
-app-name = "Reddit"
-variant = "Experimental"
-version = "exp"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
-apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
-
-[Reddit-MorpheApp]
-enabled = true
-pkg-name = "com.reddit.frontpage"
-app-name = "Reddit"
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
-apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
