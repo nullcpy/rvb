@@ -1,134 +1,204 @@
-[KineStop-ShaunTheSheep]
+[Reddit-adobo]
 enabled = true
-pkg-name = "com.urbandroid.kinestop"
-app-name = "KineStop"
-patches-source = "shaun-the-sheep-patches/morphe-patches"
-brand = "ShaunTheSheep"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/urbandroid-team/kinestop-car-sickness-aid"
-apkpure-dlurl = "https://apkpure.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
-apkcombo-dlurl = "https://apkcombo.com/kinestop-car-sickness-aid/com.urbandroid.kinestop"
+pkg-name = "com.reddit.frontpage"
+app-name = "Reddit"
+patches-source = "jkennethcarino/adobo"
+brand = "adobo"
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/reddit-app/com.reddit.frontpage"
+apkcombo-dlurl = "https://apkcombo.com/reddit/com.reddit.frontpage"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.reddit.frontpage"
 
-[Facebook-Froggo]
+[IMDb-adobo]
 enabled = true
-pkg-name = "com.facebook.katana"
-app-name = "Facebook"
-patches-source = "SapitoSucio/FroggoMorphePatches"
-brand = "Froggo"
-arch = "arm64-v8a"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
-apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
+pkg-name = "com.imdb.mobile"
+app-name = "IMDb"
+arch = "all"
+patches-source = "jkennethcarino/adobo"
+brand = "adobo"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/imdb/imdb-imdb"
+uptodown-dlurl = "https://imdb-cine-tv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/imdb-movies-tv-shows-app/com.imdb.mobile"
+apkcombo-dlurl = "https://apkcombo.com/imdb/com.imdb.mobile"
 
-[CapCut-riky]
+[komoot-brosssh]
 enabled = true
-pkg-name = "com.lemon.lvoverseas"
-app-name = "CapCut"
-patches-source = "riky-dev/morphe-patches"
-brand = "riky"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut"
-uptodown-dlurl = "https://viamaker.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
+pkg-name = "de.komoot.android"
+app-name = "Komoot"
+patches-source = "brosssh/morphe-patches"
+brand = "brosssh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/komoot-gmbh/komoot-cycling-hiking-mountain-biking-maps"
+uptodown-dlurl = "https://komoot.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/komoot-hike-bike-run/de.komoot.android"
 
-[Discord-revenge]
+[Instagram-brosssh]
 enabled = true
-pkg-name = "com.discord"
-app-name = "Discord"
-patches-source = "revenge-mod/revenge-xposed"
-cli-source = "7723mod/NPatch"
-brand = "revenge"
-patcher-args = "-l 0"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+patches-source = "brosssh/morphe-patches"
+brand = "brosssh"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.instagram.android"
 
-[AliExpress-Quantro100]
+[Truecaller-bufferk]
 enabled = true
-pkg-name = "com.alibaba.aliexpresshd"
-app-name = "AliExpress"
-patches-source = "Quantro100/Morphe-patches"
-brand = "Quantro100"
-included-patches = "'Enable image saving' 'Disable splash screen'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app"
-uptodown-dlurl = "https://aliexpress.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd"
-apkcombo-dlurl = "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+pkg-name = "com.truecaller"
+app-name = "Truecaller"
+build-mode = "both"
+patches-source = "bufferk/morphe-patches"
+brand = "bufferk"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
+uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.truecaller"
 
-[MicrosoftEdge-quantavil]
+[Medium-bufferk]
 enabled = true
-pkg-name = "com.microsoft.emmx"
-app-name = "Microsoft Edge"
-patches-source = "quantavil/edge-morphe-patches"
-brand = "quantavil"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
-uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
+pkg-name = "com.medium.reader"
+app-name = "Medium"
+patches-source = "bufferk/morphe-patches"
+brand = "bufferk"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/a-medium-corporation/medium"
+uptodown-dlurl = "https://medium.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/medium/com.medium.reader"
+apkcombo-dlurl = "https://apkcombo.com/medium/com.medium.reader"
 
-[ChessDotCom-Prathxm]
+[Threads-chiggi]
 enabled = true
-pkg-name = "com.chess"
-app-name = "Chess.com"
-patches-source = "PrathxmOp/Prathxm-Patches"
-brand = "Prathxm"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/chess-com/chess-play-learn"
-uptodown-dlurl = "https://chess-play-and-learn.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/chess-play-and-learn-online/com.chess"
-apkcombo-dlurl = "https://apkcombo.com/chess/com.chess"
+pkg-name = "com.instagram.barcelona"
+app-name = "Threads"
+patch-folder = "threads"
+patches-source = "durgesh0505/chiggi_morphe_patches"
+brand = "chiggi"
+excluded-patches = "'Change app name' 'Change package name'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/threads-app/com.instagram.barcelona"
 
-[BraveBrowser-kveld9]
+[Threads-chiggi-Clone]
 enabled = true
-pkg-name = "com.brave.browser"
+pkg-name = "com.instagram.barcelona"
+app-name = "Threads"
+patch-folder = "threads"
+variant = "Clone"
+patches-source = "durgesh0505/chiggi_morphe_patches"
+brand = "chiggi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/threads-an-instagram-app"
+uptodown-dlurl = "https://threads.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/threads-app/com.instagram.barcelona"
+
+[BraveBrowser-dh6k-Beta]
+enabled = true
+pkg-name = "com.brave.browser_beta"
 app-name = "Brave Browser"
-patches-source = "kveld9/kveld-morphe-patches"
-brand = "kveld9"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser"
-uptodown-dlurl = "https://brave-software-brave.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser"
-apkcombo-dlurl = "https://apkcombo.com/brave-browser/com.brave.browser"
+variant = "Beta"
+patches-source = "dh6k/morphe-patches"
+brand = "dh6k"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-beta"
+uptodown-dlurl = "https://brave-browser-beta.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/brave-browser-beta/com.brave.browser_beta"
+apkcombo-dlurl = "https://apkcombo.com/brave-beta/com.brave.browser_beta"
 github-dlurl = "https://github.com/brave/brave-browser"
 github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
 
-[TraktTV-IMXEren]
+[BraveBrowser-dh6k-Nightly]
 enabled = true
-pkg-name = "tv.trakt.trakt"
-app-name = "trakt.TV"
-patches-source = "IMXEren/mix-patches"
-patches-source-host = "gitlab"
-brand = "IMXEren"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
-uptodown-dlurl = "https://trakt.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
-apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+pkg-name = "com.brave.browser_nightly"
+app-name = "Brave Browser"
+variant = "Nightly"
+patches-source = "dh6k/morphe-patches"
+brand = "dh6k"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/brave-software/brave-browser-nightly"
+uptodown-dlurl = "https://brave-browser-nightly.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/brave-nightly/com.brave.browser_nightly"
+apkcombo-dlurl = "https://apkcombo.com/brave-nightly/com.brave.browser_nightly"
+github-dlurl = "https://github.com/brave/brave-browser"
+github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
 
-[TikTok-icysymmetra]
+[TitaniumBrowser-dh6k]
 enabled = true
-pkg-name = "com.zhiliaoapp.musically"
-app-name = "TikTok"
-patches-source = "icysymmetra/tiktok-patches-for-morphe"
-brand = "icysymmetra"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.zhiliaoapp.musically"
+pkg-name = "io.github.jqssun.helium"
+app-name = "Titanium Browser"
+patches-source = "dh6k/morphe-patches"
+brand = "dh6k"
+included-patches = "'Keep Helium Child Processes Alive'"
+apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
+apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
 
-[ByAir-franticg33k]
+[Instagram-InstaFel]
 enabled = true
-pkg-name = "com.byairapp.android"
-app-name = "ByAir"
-patches-source = "franticg33k/morphe-patches"
-brand = "franticg33k"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status"
-apkpure-dlurl = "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android"
-apkcombo-dlurl = "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+patches-source = "instafel/pc-rel"
+cli-source = "instafel/p-rel"
+brand = "Instafel"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
+dpi = "480dpi nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 
-[GoogleNews-docbt]
+[Instagram-InstaFel-Clone]
 enabled = true
-pkg-name = "com.google.android.apps.magazines"
-app-name = "Google News"
-patches-source = "docbt/patched-up"
-brand = "docbt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-news/"
-uptodown-dlurl = "https://google-play-newsstand.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/google-news-daily-headlines/com.google.android.apps.magazines"
-apkcombo-dlurl = "https://apkcombo.com/google-news/com.google.android.apps.magazines"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+variant = "Clone"
+patches-source = "instafel/pc-rel"
+cli-source = "instafel/p-rel"
+brand = "Instafel"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
+dpi = "480dpi nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 
+[Gboard-jasonwu1994]
+enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
+app-name = "Gboard"
+build-mode = "both"
+patches-source = "jasonwu1994/Gboard-patches"
+patches-version = "both"
+brand = "jasonwu1994"
+arch = "arm64-v8a"
+excluded-patches = "'Package Rename'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
+apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
+[Gboard-jasonwu1994-Clone]
+enabled = true
+pkg-name = "com.google.android.inputmethod.latin"
+app-name = "Gboard"
+variant = "Clone"
+patches-source = "jasonwu1994/Gboard-patches"
+patches-version = "both"
+brand = "jasonwu1994"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gboard"
+uptodown-dlurl = "https://gboard-go.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin"
+apkcombo-dlurl = "https://apkcombo.com/gboard/com.google.android.inputmethod.latin"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
 
+[CalorieCounter-kondratjev]
+enabled = true
+pkg-name = "com.fatsecret.android"
+app-name = "Calorie Counter"
+patches-source = "kondratjev/morphe-patches"
+brand = "kondratjev"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/"
+uptodown-dlurl = "https://fatsecret-calorie-counter.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/calorie-counter-by-fatsecret/com.fatsecret.android"
+apkcombo-dlurl = "https://apkcombo.com/fatsecret/com.fatsecret.android"
+
+[SoundCloud-kondratjev]
+enabled = true
+pkg-name = "com.soundcloud.android"
+app-name = "SoundCloud"
+patches-source = "kondratjev/morphe-patches"
+brand = "kondratjev"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud"
+uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android"
+apkcombo-dlurl = "https://apkcombo.com/soundcloud/com.soundcloud.android"
