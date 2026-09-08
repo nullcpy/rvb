@@ -2293,7 +2293,7 @@ write_build_info() {
 				arch: $arch,
 				version: $version,
 				patches: $patches,
-				changlog: $changelog,
+				changelog: $changelog,
 				package_name: $pkg_name,
 				display_name: $display_name,
 				patches_source: $patches_source,
