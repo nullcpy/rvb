@@ -32,6 +32,8 @@ def normalize_channel(val):
         return "stable"
     if v == "beta":
         return "beta"
+    if v in ("both", "all"):
+        return "both"
     return val.strip()  # Pinned version string like "v1.41.0"
 
 
@@ -56,13 +58,13 @@ def compile_configs(patches_dir=".github/configs/patches"):
         # File-level defaults are keys defined before tables
         file_defaults = {k: v for k, v in data.items() if not isinstance(v, dict)}
 
-        # Resolve file-level channel default
+        # Resolve file-level channel default (default is "stable" if omitted)
         file_pv = normalize_channel(file_defaults.get("patches-version"))
         if not file_pv:
-            if ".stable." in filename:
-                file_pv = "stable"
-            elif ".beta." in filename or ".dev." in filename:
+            if ".beta." in filename or ".dev." in filename:
                 file_pv = "beta"
+            else:
+                file_pv = "stable"
 
         for app_key, app_table in data.items():
             if not isinstance(app_table, dict):
@@ -84,21 +86,18 @@ def compile_configs(patches_dir=".github/configs/patches"):
                 channel = file_pv
 
             # Route to stable pool
-            if channel != "beta":
+            if channel in ("stable", "both") or (channel != "beta"):
                 entry = dict(merged)
-                if channel in ("stable", None):
+                if channel in ("stable", "both"):
                     entry["patches-version"] = "stable"
                 else:
                     entry["patches-version"] = channel
                 stable_pool[app_key] = entry
 
             # Route to beta pool
-            if channel != "stable":
+            if channel in ("beta", "both"):
                 entry = dict(merged)
-                if channel in ("beta", None):
-                    entry["patches-version"] = "beta"
-                else:
-                    entry["patches-version"] = channel
+                entry["patches-version"] = "beta"
                 beta_pool[app_key] = entry
 
     return stable_pool, beta_pool

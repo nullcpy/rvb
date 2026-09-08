@@ -30,8 +30,8 @@ brand = "Morphe"                     # patch brand/engine identity (e.g. "ReVanc
 author = "nullcpy"                   # module author name. default: "nullcpy"
 author-page = "github.com/nullcpy/rvb" # module author page/link printed during installation. default: "github.com/nullcpy/rvb"
 
-patches-version = "v2.160.0" # 'stable', 'beta', or a version number. default: "stable"
-cli-version = "v5.0.0"       # 'stable', 'beta', or a version number. default: "stable"
+patches-version = "stable"  # 'stable', 'beta', 'both', or a version number. default: "stable"
+cli-version = "stable"      # 'stable', 'beta', or a version number. default: "stable"
 
 > [!TIP]
 > **File-Level Defaults in Modular Configs:**  
