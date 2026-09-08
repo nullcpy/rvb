@@ -20,6 +20,7 @@ uptodown-dlurl = "https://speedtest-net-mobile.en.uptodown.com/android"
 enabled = true
 pkg-name = "com.ttxapps.autosync"
 app-name = "Autosync"
+arch = "arm64-v8a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/metactrl/autosync-universal-cloud-sync-and-backup"
 uptodown-dlurl = "https://autosync.en.uptodown.com/android"
 
