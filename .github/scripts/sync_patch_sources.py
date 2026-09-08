@@ -194,7 +194,7 @@ def main():
     trigger_blocked = 0
 
     for repo, host in sorted(active_sources.items()):
-        print(f"Checking {repo} ({host})...")
+        print(f"::group::{repo} ({host})")
         old_info = old_state.get(repo, {})
 
         if host == "gitlab":
@@ -203,7 +203,7 @@ def main():
             releases, blocked = fetch_github_releases(repo, token)
 
         if blocked:
-            print(f"::warning::Repository access blocked for {repo}!")
+            print(f"  ::warning::Repository access blocked!")
             if not old_info.get("blocked", False):
                 trigger_blocked = 1
             new_state[repo] = {
@@ -215,11 +215,12 @@ def main():
                 "beta_date": old_info.get("beta_date", ""),
                 "blocked": True
             }
+            print("::endgroup::")
             continue
 
         if releases is None:
             # API failure or rate limit: retain old info safely
-            print(f"::warning::Could not fetch releases for {repo}. Retaining previous state.")
+            print(f"  ::warning::Could not fetch releases. Retaining previous state.")
             entry = dict(old_info)
             entry["repo"] = repo
             entry["host"] = host
@@ -229,6 +230,7 @@ def main():
             entry.setdefault("beta_date", "")
             entry.setdefault("blocked", False)
             new_state[repo] = entry
+            print("::endgroup::")
             continue
 
         stable_tag, stable_date, beta_tag, beta_date = parse_releases(releases, host)
@@ -237,14 +239,22 @@ def main():
         old_beta = old_info.get("beta", "")
 
         if stable_tag and stable_tag != old_stable:
-            print(f"::notice::Stable update detected for {repo}: {old_stable or 'none'} -> {stable_tag}")
+            print(f"  ↑ Stable: {old_stable or 'none'} → {stable_tag}")
             trigger_stable = 1
+        elif stable_tag:
+            print(f"    Stable: {stable_tag} (no change)")
+        else:
+            print(f"    Stable: (none)")
 
         if beta_tag and beta_tag != old_beta:
-            print(f"::notice::Beta update detected for {repo}: {old_beta or 'none'} -> {beta_tag}")
+            print(f"  ↑ Beta:   {old_beta or 'none'} → {beta_tag}")
             # Beta triggers if it is newer than stable
             if beta_date > stable_date:
                 trigger_beta = 1
+        elif beta_tag:
+            print(f"    Beta:   {beta_tag} (no change)")
+        else:
+            print(f"    Beta:   (none)")
 
         new_state[repo] = {
             "repo": repo,
@@ -255,6 +265,7 @@ def main():
             "beta_date": beta_date,
             "blocked": False
         }
+        print("::endgroup::")
 
     # Save state files
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)

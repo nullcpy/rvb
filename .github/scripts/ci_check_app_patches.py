@@ -156,8 +156,10 @@ def process_zip(path, pkg_info):
 
 def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, active_list, apps_stable, apps_beta, is_revanced_or_morphe):
     repo_apps = apps_stable.get(repo_lower, {}) if channel == 'stable' else apps_beta.get(repo_lower, {})
+    print(f"::group::{repo} [{channel}] @ {tag}")
     if not repo_apps:
-        print(f"::notice::No enabled apps found for {repo} ({channel}). Skipping patch inspection.")
+        print(f"  No enabled apps found. Skipping patch inspection.")
+        print("::endgroup::")
         return
         
     pkg_info = {}
@@ -167,8 +169,9 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
             pkg_info[pkg] = meta
     
     if not is_revanced_or_morphe:
-        print(f"::notice::Skipping patch inspection for {repo} (not revanced/morphe). Triggering all.")
+        print(f"  Not a revanced/morphe patcher — triggering all {len(repo_apps)} app(s).")
         active_list.extend(repo_apps.keys())
+        print("::endgroup::")
         return
     
     # Cleanup stale files before download
@@ -224,8 +227,9 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
                 files = version_files
         
         if not files:
-            print(f"::warning::No patch file found for {repo}@{tag}. Defaulting to trigger all.")
+            print(f"  ::warning::No patch file found. Defaulting to trigger all {len(repo_apps)} app(s).")
             active_list.extend(repo_apps.keys())
+            print("::endgroup::")
             return
         
         new_hashes = process_zip(files[0], pkg_info)
@@ -238,21 +242,29 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
         
         # Check if shared changed
         if old_hashes.get('shared') != new_hashes.get('shared'):
-            print(f"Shared patches changed for {repo} ({channel}). Triggering all apps.")
+            print(f"  Shared patches changed — triggering all {len(repo_apps)} app(s).")
             active_list.extend(repo_apps.keys())
         else:
             # Check individual packages
+            changed = []
             for toml_key, meta in repo_apps.items():
                 pkg_name = meta['pkg']
                 if old_hashes.get(pkg_name) != new_hashes.get(pkg_name):
-                    print(f"Patch changed for {toml_key} ({pkg_name}) in {repo} ({channel}).")
+                    changed.append((toml_key, pkg_name))
                     active_list.append(toml_key)
+            if changed:
+                print(f"  {len(changed)} app(s) changed:")
+                for toml_key, pkg_name in changed:
+                    print(f"    ✎ {toml_key} ({pkg_name})")
+            else:
+                print(f"  No patch changes detected for {len(repo_apps)} app(s).")
         
         # Save new hashes
         hashes[repo_lower][channel] = new_hashes
+        print("::endgroup::")
         
     except Exception as e:
-        print(f"::warning::Failed to process patches for {repo}@{tag}: {e}. Defaulting to trigger all.")
+        print(f"  ::warning::Failed to process patches @ {tag}: {e}. Defaulting to trigger all.")
         active_list.extend(repo_apps.keys())
         # Also clean up on failure
         for f in glob.glob('*.mpp') + glob.glob('*.rvp') + glob.glob('*.jar'):
@@ -260,6 +272,7 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
                 os.remove(f)
             except:
                 pass
+        print("::endgroup::")
 
 
 def run():
