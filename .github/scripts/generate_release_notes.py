@@ -76,13 +76,21 @@ def main():
         
         # Determine patch version tag
         patch_tag = ""
-        if changelog_url and "/tag/" in changelog_url:
-            patch_tag = changelog_url.split("/tag/")[-1].split()[0]
-        elif patches_ref:
-            ref_part = patches_ref.split()[0]
-            tag_match = re.search(r"v\d+(\.\d+)*", ref_part)
+        if changelog_url:
+            first_url = changelog_url.split()[0]
+            if "/tag/" in first_url:
+                patch_tag = first_url.split("/tag/")[-1].strip("/")
+            elif "/-/releases/" in first_url:
+                patch_tag = first_url.split("/-/releases/")[-1].strip("/")
+            elif "/releases/" in first_url:
+                patch_tag = first_url.split("/releases/")[-1].strip("/")
+
+        if not patch_tag and patches_ref:
+            ref_part = re.sub(r"\.(mpp|jar|rvp|apk|zip)$", "", patches_ref.split()[0], flags=re.IGNORECASE)
+            tag_match = re.search(r"v?\d+(\.\d+)+([.-][a-zA-Z0-9]+)*", ref_part)
             if tag_match:
-                patch_tag = tag_match.group(0)
+                matched = tag_match.group(0)
+                patch_tag = matched if matched.startswith("v") else f"v{matched}"
 
         group_key = primary_source
         if group_key not in patch_groups:
@@ -160,6 +168,8 @@ def main():
             tag_str = f" ([{tag}]({cl_url}))"
         elif tag:
             tag_str = f" ({tag})"
+        elif cl_url:
+            tag_str = f" ([release]({cl_url}))"
         else:
             tag_str = ""
 
