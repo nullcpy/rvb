@@ -35,7 +35,7 @@ cli-version = "v5.0.0"       # 'stable', 'beta', or a version number. default: "
 
 > [!TIP]
 > **File-Level Defaults in Modular Configs:**  
-> Keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, `patches-version`, `brand`, and `variant`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
+> Keys defined at the top of the file before the first `[...]` section (such as `patches-source`, `cli-source`, `patches-version`, `brand`, `variant`, `arch`, and `build-mode`) act as file-level defaults for all apps in that file. Apps automatically inherit them unless overridden.
 
 [Some-App]
 app-name = "SomeApp"     # clean display name (e.g. "YouTube", "Instagram"). Default is table name.
@@ -47,6 +47,7 @@ patched-pkg-name = "com.some.app.clone" # optional override for the resulting in
 patch-folder = "someapp" # explicit patch folder name override. forces the CI to strictly match patches inside this exact folder name, bypassing fallback heuristics (useful for resolving collisions like youtube vs youtube-music). Supports multiple folders space-separated (e.g. "ad backup geo"), or a wildcard "*" to force mapping every single patch folder in the repo.
 enabled = true       # whether to build the app. default: true
 build-mode = "both"  # 'both', 'apk' or 'module'. default: apk
+arch = "both"        # 'both', 'auto', 'all', 'arm64-v8a', 'arm-v7a', 'x86_64', or 'x86'. default: both
 
 # 'auto' option gets the latest possible version supported by all the included patches
 # 'exp' gets the latest experimental version from patches.json. falls back to 'latest' if none found.
