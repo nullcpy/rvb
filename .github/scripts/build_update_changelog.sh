@@ -24,7 +24,6 @@ SRC_MD="build.md"
 [ -f build.tmp ] && SRC_MD="build.tmp"
 if [ -f "$SRC_MD" ]; then
   cp -f "$SRC_MD" "changelogs/${NEXT_VER_CODE}.md"
-  cp -f "$SRC_MD" build.md
 fi
 
 get_update_json() {
