@@ -2,6 +2,11 @@
 set -euo pipefail
 NL=$'\n'
 
+if [ -z "${TG_TOKEN:-}" ]; then
+  echo "TG_TOKEN is not set. Skipping Telegram notification."
+  exit 0
+fi
+
 BUILD_FILE="build.md"
 if [ ! -f "$BUILD_FILE" ]; then
   BUILD_FILE="build.tmp"
@@ -30,7 +35,8 @@ MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}"
 TG_LIMIT=4096
 CHUNK=""
 send_chunk() {
-  local text="$1"
+  local text="${1:-}"
+  [ -z "$text" ] && return 0
   curl -s -X POST \
     --data-urlencode "parse_mode=HTML" \
     --data-urlencode "disable_web_page_preview=true" \

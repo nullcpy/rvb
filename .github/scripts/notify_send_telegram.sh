@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+if [ -z "${TG_TOKEN:-}" ]; then
+  echo "TG_TOKEN is not set. Skipping Telegram notification."
+  exit 0
+fi
+
 # Escape special HTML characters in dynamic/user-generated content
 esc() { printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
 
