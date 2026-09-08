@@ -169,7 +169,7 @@ def main():
         elif tag:
             tag_str = f" ({tag})"
         elif cl_url:
-            tag_str = f" ([release]({cl_url}))"
+            tag_str = f" ([changelog]({cl_url}))"
         else:
             tag_str = ""
 
