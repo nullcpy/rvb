@@ -8,6 +8,13 @@ if [ -z "$ACTIVE_TAGS" ]; then
   exit 0
 fi
 
+ORIG_REF=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || git rev-parse HEAD 2>/dev/null || echo "main")
+cleanup() {
+  echo "--- Restoring original branch ($ORIG_REF) ---"
+  git checkout "$ORIG_REF" 2>/dev/null || git checkout main 2>/dev/null || true
+}
+trap cleanup EXIT
+
 echo "--- Checking out update branch ---"
 git fetch origin update || true
 git checkout -B update origin/update
