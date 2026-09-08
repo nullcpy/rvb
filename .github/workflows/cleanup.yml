@@ -24,9 +24,10 @@ jobs:
         with:
           delete_releases: true
           delete_tags: true
-          releases_keep_latest: 0
+          releases_keep_latest: 98
           delete_workflows: true
-          workflows_keep_day: 0
+          workflows_keep_day: 3
+          releases_keep_keyword: stable/beta
           gh_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup Archive Release Assets
@@ -43,5 +44,4 @@ jobs:
         env:
           WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ALLOW_EMPTY_CATALOG: "true"
         run: python3 .github/scripts/sync_website_catalog.py
