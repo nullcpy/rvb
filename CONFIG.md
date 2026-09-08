@@ -203,11 +203,11 @@ You do **not** need separate files for stable and beta:
 - **Top-Level Inheritance**: Keys defined at the top of the file before the first `[...]` header (such as `patches-source`, `brand`, `variant`, and `patches-version`) act as file-level defaults. Apps automatically inherit them, keeping app blocks concise and DRY.
 - **Default CLI Engine**: `cli-source` defaults to `"MorpheApp/morphe-desktop"` globally and can be completely omitted unless using alternative tools like `7723mod/NPatch` or `instafel/p-rel`.
 - **Dynamic Pool Routing**:
-  - **Both Pools (Default)**: If neither the file-level header nor the app specifies `patches-version`, the app is automatically compiled into **both** stable and beta pools.
-  - **Stable Only**: Setting `patches-version = "stable"` routes the app exclusively to the stable build pool.
+  - **Stable Only (Default)**: If neither the file-level header nor the app specifies `patches-version`, the app is automatically compiled into the **stable** build pool only.
+  - **Both Pools**: Setting `patches-version = "both"` (at the top of the file or in an app block) compiles the app into **both** stable and beta pools.
   - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build pool.
-  - **File-Level Defaults**: Setting `patches-version = "stable"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
-  - **Filename Inference**: A filename with `.stable.toml` or `.beta.toml` automatically defaults all apps in that file to that channel. Renaming to `*.toml` enables dual-pool compilation by default.
+  - **File-Level Defaults**: Setting `patches-version = "both"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
+  - **Filename Inference**: A filename with `.beta.toml` (or legacy `.dev.toml`) automatically defaults all apps in that file to beta. Renaming to `*.toml` defaults to stable unless `patches-version = "both"` is set.
   - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
 ## Automated Patch Sources State Tracking
