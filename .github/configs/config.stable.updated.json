@@ -1049,7 +1049,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
@@ -1060,7 +1060,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "variant": "Clone",
@@ -1122,7 +1122,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1152,6 +1152,7 @@
     "app-name": "Nuvio",
     "variant": "Android TV",
     "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
+    "excluded-patches": "'Side-by-side installation'",
     "github-dlurl": "https://github.com/NuvioMedia/NuvioTV",
     "github-regex": "app-full-universal-release\\.apk"
   },
@@ -1164,7 +1165,6 @@
     "variant": "Android TV",
     "sub-variant": "Clone",
     "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
-    "excluded-patches": "'Side-by-side installation'",
     "github-dlurl": "https://github.com/NuvioMedia/NuvioTV",
     "github-regex": "app-full-universal-release\\.apk"
   },
