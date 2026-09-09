@@ -50,18 +50,21 @@ while IFS='|' read -r group app; do
     if [ -z "$group" ] || [ -z "$app" ]; then continue; fi
     echo "::group::Fetching version for $group ($app)..."
     
-    IFS=$'\t' read -r uptodown_url apkmirror_url apkpure_url apkcombo_url github_url < <(
+    mapfile -t _urls < <(
         jq -r -s --arg app "$app" '
             add | .[$app] as $a |
-            [
-                ($a["uptodown-dlurl"] // ""),
-                ($a["apkmirror-dlurl"] // ""),
-                ($a["apkpure-dlurl"] // ""),
-                ($a["apkcombo-dlurl"] // ""),
-                ($a["github-dlurl"] // "")
-            ] | @tsv
+            ($a["uptodown-dlurl"] // ""),
+            ($a["apkmirror-dlurl"] // ""),
+            ($a["apkpure-dlurl"] // ""),
+            ($a["apkcombo-dlurl"] // ""),
+            ($a["github-dlurl"] // "")
         ' "${CONFIG_INPUTS[@]}"
     )
+    uptodown_url="${_urls[0]:-}"
+    apkmirror_url="${_urls[1]:-}"
+    apkpure_url="${_urls[2]:-}"
+    apkcombo_url="${_urls[3]:-}"
+    github_url="${_urls[4]:-}"
 
     dlurls=()
     sources=()
