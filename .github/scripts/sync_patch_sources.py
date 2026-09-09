@@ -240,6 +240,7 @@ def main():
 
         if stable_tag and stable_tag != old_stable:
             print(f"  ↑ Stable: {old_stable or 'none'} → {stable_tag}")
+            print(f"::notice title=New Stable Release::{repo} — {old_stable or 'none'} → {stable_tag}")
             trigger_stable = 1
         elif stable_tag:
             print(f"    Stable: {stable_tag} (no change)")
@@ -250,6 +251,7 @@ def main():
             print(f"  ↑ Beta:   {old_beta or 'none'} → {beta_tag}")
             # Beta triggers if it is newer than stable
             if beta_date > stable_date:
+                print(f"::notice title=New Beta Release::{repo} — {old_beta or 'none'} → {beta_tag}")
                 trigger_beta = 1
         elif beta_tag:
             print(f"    Beta:   {beta_tag} (no change)")
@@ -288,6 +290,14 @@ def main():
 
     print(f"Patch sources synchronized: {len(new_state)} active sources tracked.")
     print(f"Triggers: STABLE={trigger_stable}, BETA={trigger_beta}, BLOCKED={trigger_blocked}")
+    if not trigger_stable and not trigger_beta and not trigger_blocked:
+        print("::notice title=Patch Sync Summary::No new patch releases detected")
+    else:
+        parts = []
+        if trigger_stable: parts.append("STABLE")
+        if trigger_beta:   parts.append("BETA")
+        if trigger_blocked: parts.append("BLOCKED")
+        print(f"::notice title=Patch Sync Summary::Build triggered — {', '.join(parts)}")
 
 
 if __name__ == "__main__":
