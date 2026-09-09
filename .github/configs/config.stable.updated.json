@@ -1122,7 +1122,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1499,7 +1499,7 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "brand": "revenge",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "patcher-args": "-l 0",
