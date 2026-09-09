@@ -47,8 +47,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 .github/scripts/sync_patch_sources.py
 
+      - name: Setup Python dependencies
+        run: pip install --no-cache-dir curl_cffi || true
+
       - name: Fetch App Versions
         id: fetch_app_versions
+        env:
+          CF_BYPASS_SOLVER_TRAWL_8191_ENABLED: "true"
         run: bash .github/scripts/ci_fetch_app_versions.sh
         
       - name: Compare App Versions
