@@ -104,7 +104,7 @@ for table_name in $(toml_get_table_names); do
 		phost="${p_hosts[$i]:-${p_hosts[0]}}"
 		# Find the downloaded jar/apk for this source to get actual version
 		pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
-		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' -o -name '*.apk' 2>/dev/null | sort | tail -1)
+		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' -o -name '*.apk' -o -name 'ifl-patcher*.jar' 2>/dev/null | sort | tail -1)
 		if [ -n "$pfile" ]; then
 			pfilename=${pfile##*/}
 			

@@ -95,7 +95,7 @@ def main():
     for target_key, info in build_info.items():
         patches_source = info.get("patches_source") or ""
         patches_ref = info.get("patches") or ""
-        changelog_url = (info.get("changlog") or info.get("changelog") or "").strip()
+        changelog_url = (info.get("changelog") or "").strip()
 
         # Extract primary patch source and version tag
         primary_source = patches_source.split()[0] if patches_source else (patches_ref.split()[0].split("/")[0] if "/" in patches_ref else "Patched")
