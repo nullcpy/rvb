@@ -170,6 +170,7 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
     
     if not is_revanced_or_morphe:
         print(f"  Not a revanced/morphe patcher — triggering all {len(repo_apps)} app(s).")
+        print(f"::notice title=Patch Update [{channel}]::{repo} — non-morphe/revanced patcher, triggering all {len(repo_apps)} app(s)")
         active_list.extend(repo_apps.keys())
         print("::endgroup::")
         return
@@ -243,6 +244,7 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
         # Check if shared changed
         if old_hashes.get('shared') != new_hashes.get('shared'):
             print(f"  Shared patches changed — triggering all {len(repo_apps)} app(s).")
+            print(f"::notice title=Patch Update [{channel}]::{repo} @ {tag} — shared patches changed, triggering all {len(repo_apps)} app(s)")
             active_list.extend(repo_apps.keys())
         else:
             # Check individual packages
@@ -256,6 +258,7 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
                 print(f"  {len(changed)} app(s) changed:")
                 for toml_key, pkg_name in changed:
                     print(f"    ✎ {toml_key} ({pkg_name})")
+                    print(f"::notice title=Patch Update [{channel}]::{repo} @ {tag} — {toml_key} ({pkg_name}) patches changed")
             else:
                 print(f"  No patch changes detected for {len(repo_apps)} app(s).")
         
@@ -338,11 +341,24 @@ def run():
     with open(hash_file, 'w') as f:
         json.dump(hashes, f, indent=2, sort_keys=True)
         
+    stable_set = list(set(active_stable))
+    beta_set = list(set(active_beta))
+
     with open('active_patch_apps.stable.json', 'w') as f:
-        json.dump(list(set(active_stable)), f)
+        json.dump(stable_set, f)
         
     with open('active_patch_apps.beta.json', 'w') as f:
-        json.dump(list(set(active_beta)), f)
+        json.dump(beta_set, f)
+
+    if stable_set or beta_set:
+        parts = []
+        if stable_set:
+            parts.append(f"stable: {', '.join(sorted(stable_set))}")
+        if beta_set:
+            parts.append(f"beta: {', '.join(sorted(beta_set))}")
+        print(f"::notice title=Patch Check Summary::Apps queued for build — {' | '.join(parts)}")
+    else:
+        print("::notice title=Patch Check Summary::No patch changes detected across all repos")
 
 if __name__ == '__main__':
     run()
