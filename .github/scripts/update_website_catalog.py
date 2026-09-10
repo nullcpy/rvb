@@ -85,6 +85,9 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
     app_map = {app["appKey"]: app for app in apps}
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     release_type = "beta" if is_prerelease else "stable"
+    archive_failed = os.environ.get("ARCHIVE_UPLOAD_FAILED", "false").lower() == "true"
+    if archive_failed:
+        print("Warning: ARCHIVE_UPLOAD_FAILED=true — archive entries will not be updated in the catalog.")
 
     for target_key, info in build_info.items():
         file_prefix = info.get("name") or target_key
@@ -178,7 +181,7 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "publishedAt": now_iso,
             "releaseId": next_ver_code,
             "releaseUrl": f"{github_server}/{github_repo}/releases/tag/{next_ver_code}",
-            "isArchiveFallback": False
+            "isArchiveFallback": archive_failed
         }
         if release_type == "beta":
             variant_entry["latestBeta"] = channel_meta
@@ -276,8 +279,12 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             b for b in brand_entry["builds"]
             if b.get("isArchive") and not (b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val and b.get("releaseType") == release_type)
         ]
-        # Keep up to 1 older archive build for same variant and channel
-        surviving_archive = [archive_entry] + matching_archive[:1] + other_archive
+        if archive_failed:
+            # Archive upload failed: preserve existing archive entries, do not write new ones
+            surviving_archive = matching_archive[:1] + other_archive
+        else:
+            # Keep up to 1 older archive build for same variant and channel
+            surviving_archive = [archive_entry] + matching_archive[:1] + other_archive
 
         brand_entry["builds"] = [build_entry] + existing_numbered + surviving_archive
 
