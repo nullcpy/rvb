@@ -145,15 +145,19 @@ jobs:
         run: bash .github/scripts/build_get_output.sh
 
       - name: Upload to release
-        uses: softprops/action-gh-release@v3
+        uses: Wandalen/wretry.action@v3.8.0
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: ./build/*
-          name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
-          tag_name: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          overwrite_files: true
-          prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
+          action: softprops/action-gh-release@v3
+          attempt_limit: 3
+          attempt_delay: 30000
+          with: |
+            body: ${{ steps.get_output.outputs.BUILD_LOG }}
+            token: ${{ secrets.GITHUB_TOKEN }}
+            files: ./build/*
+            name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
+            tag_name: ${{ steps.version.outputs.NEXT_VER_CODE }}
+            overwrite_files: true
+            prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
 
       - name: Update changelog and module update files
         id: update_changelog
@@ -179,21 +183,30 @@ jobs:
           bash .github/scripts/build_exclude_from_archive.sh
 
       - name: Upload to release (Archive)
-        uses: softprops/action-gh-release@v3
+        id: archive_upload
+        continue-on-error: true
+        uses: Wandalen/wretry.action@v3.8.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: ./build/*
-          tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
-          overwrite_files: true
-          target_commitish: main
+          action: softprops/action-gh-release@v3
+          attempt_limit: 3
+          attempt_delay: 30000
+          with: |
+            token: ${{ secrets.GITHUB_TOKEN }}
+            files: ./build/*
+            tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
+            overwrite_files: true
+            target_commitish: main
 
       - name: Update Website Catalog
+        if: always()
+        continue-on-error: true
         env:
           WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+          ARCHIVE_UPLOAD_FAILED: ${{ steps.archive_upload.outcome == 'failure' && 'true' || 'false' }}
         run: python3 .github/scripts/update_website_catalog.py
 
       - name: Notify telegram
