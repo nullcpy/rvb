@@ -28,7 +28,7 @@ def main():
     cookie_file = sys.argv[2] if len(sys.argv) > 2 else ""
 
     # Try modern Chrome browser fingerprints supported by curl_cffi
-    impersonate_targets = ["chrome133", "chrome124", "chrome120", "chrome110"]
+    impersonate_targets = ["chrome136", "chrome133", "chrome131", "chrome124", "chrome120", "chrome110"]
     
     for imp in impersonate_targets:
         try:
@@ -45,13 +45,13 @@ def main():
 
             resp = s.get(url, timeout=15, allow_redirects=True)
             if is_challenge(resp.status_code, resp.text):
-                sys.exit(1)
+                continue  # try next fingerprint instead of giving up
 
             if resp.status_code == 200 and resp.text:
                 sys.stdout.write(resp.text)
                 sys.exit(0)
             else:
-                sys.exit(1)
+                continue  # non-200, try next fingerprint
         except Exception:
             continue
 
