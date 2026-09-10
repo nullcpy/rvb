@@ -217,5 +217,4 @@ jobs:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          ARCHIVE_UPLOAD_FAILED: ${{ steps.archive_upload.outcome == 'failure' && 'true' || 'false' }}
         run: bash .github/scripts/build_notify_telegram.sh
