@@ -818,7 +818,7 @@ merge_splits() {
 
 _trawl_8191_get() {
 	local url=$1 referer=${2:-}
-	local max_retries=1 attempt
+	local max_retries=2 attempt
 	local solver_url="${TRAWL_URL:-http://localhost:8191}/scrape"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
@@ -828,11 +828,11 @@ _trawl_8191_get() {
 			-H 'Content-Type: application/json' \
 			-d "{\"url\":\"$url\",\"maxTimeout\":60000,\"skipHttp\":true${extra_headers}}") || true
 		local parsed_meta
-		if parsed_meta=$(jq -r '[.statusCode // "", .userAgent // "", ([.cookies[]? | .name + "=" + .value] | join("; "))] | @tsv' <<<"$response" 2>/dev/null); then
+		if parsed_meta=$(jq -r '[.statusCode // "", .userAgent // "", ([.cookies[]? | .name + "=" + .value] | join("; "))] | @tsv' <<< "$response" 2>/dev/null); then
 			local status ua cookies
-			IFS=$'\t' read -r status ua cookies <<<"$parsed_meta"
+			IFS=$'\t' read -r status ua cookies <<< "$parsed_meta"
 			if [[ "$status" == "200" ]]; then
-				html=$(jq -r '.html // empty' <<<"$response" 2>/dev/null || true)
+				html=$(jq -r '.html // empty' <<< "$response" 2>/dev/null || true)
 				if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
 					export CF_COOKIES="$cookies"
 					user_agent="$ua"
@@ -843,7 +843,7 @@ _trawl_8191_get() {
 		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
 			wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
 		fi
-		sleep 5
+		[[ $attempt -lt $max_retries ]] && sleep 5
 	done
 	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
 		wpr "[!] Trawl:8191 failed after $max_retries attempts: $url"
