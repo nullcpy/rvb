@@ -1100,7 +1100,7 @@
   "CalorieCounter-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.fatsecret.android",
     "app-name": "Calorie Counter",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
@@ -1111,7 +1111,7 @@
   "SoundCloud-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "SoundCloud",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
@@ -1122,7 +1122,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
