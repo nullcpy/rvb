@@ -151,7 +151,7 @@ jobs:
           attempt_limit: 3
           attempt_delay: 30000
           with: |
-            body: ${{ steps.get_output.outputs.BUILD_LOG }}
+            body_path: build.md
             token: ${{ secrets.GITHUB_TOKEN }}
             files: ./build/*
             name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
