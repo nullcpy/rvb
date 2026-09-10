@@ -270,21 +270,22 @@ def update_catalog_data(catalog_data, build_info, built_files, next_ver_code, is
             "assets": archive_assets
         }
 
-        # Existing archive builds matching same variant, subVariant and same releaseType (excluding same version)
+        # All existing archive builds for this variant and channel
         matching_archive = [
             b for b in brand_entry["builds"]
-            if b.get("isArchive") and b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val and b.get("releaseType") == release_type and b.get("version") != version
+            if b.get("isArchive") and b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val and b.get("releaseType") == release_type
         ]
         other_archive = [
             b for b in brand_entry["builds"]
             if b.get("isArchive") and not (b.get("variant") == variant_val and b.get("subVariant") == sub_variant_val and b.get("releaseType") == release_type)
         ]
         if archive_failed:
-            # Archive upload failed: preserve existing archive entries, do not write new ones
-            surviving_archive = matching_archive[:1] + other_archive
+            # Archive upload failed: preserve up to 2 existing archive entries, including same version if it exists
+            surviving_archive = matching_archive[:2] + other_archive
         else:
-            # Keep up to 1 older archive build for same variant and channel
-            surviving_archive = [archive_entry] + matching_archive[:1] + other_archive
+            # Archive upload succeeded: keep new archive entry, plus up to 1 older archive entry of a DIFFERENT version
+            older_different_version = [b for b in matching_archive if b.get("version") != version]
+            surviving_archive = [archive_entry] + older_different_version[:1] + other_archive
 
         brand_entry["builds"] = [build_entry] + existing_numbered + surviving_archive
 
