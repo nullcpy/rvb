@@ -10,6 +10,10 @@ on:
         required: false
         type: string
         default: ""
+    outputs:
+      archive_upload_failed:
+        description: "Whether the archive upload failed after all retries"
+        value: ${{ jobs.build.outputs.archive_upload_failed }}
   workflow_dispatch:
     inputs:
       config_file:
@@ -37,6 +41,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    outputs:
+      archive_upload_failed: ${{ steps.archive_upload.outcome == 'failure' }}
     services:
       redis:
         image: redis:alpine
