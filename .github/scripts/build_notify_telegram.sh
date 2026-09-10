@@ -33,7 +33,11 @@ BODY="$(sed \
   ' | cat -s)"
 
 TITLE_SUFFIX_ESC="$(echo "${TITLE_SUFFIX:-}" | sed 's/&/&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')"
-MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}"
+ARCHIVE_WARNING=""
+if [ "${ARCHIVE_UPLOAD_FAILED:-false}" = "true" ]; then
+  ARCHIVE_WARNING="${NL}${NL}⚠️ <b>Archive upload failed</b> — downloads available via numbered release only."
+fi
+MSG="<b>Build No. $NEXT_VER_CODE</b>${TITLE_SUFFIX_ESC}${NL}${NL}${BODY}${ARCHIVE_WARNING}"
 
 # Split MSG into ≤4096-char chunks on line boundaries (never breaks URLs)
 TG_LIMIT=4096
