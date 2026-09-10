@@ -198,8 +198,6 @@ jobs:
             target_commitish: main
 
       - name: Update Website Catalog
-        if: always()
-        continue-on-error: true
         env:
           WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
