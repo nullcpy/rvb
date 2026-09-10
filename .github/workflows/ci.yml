@@ -133,11 +133,3 @@ jobs:
     with:
       workflow_name: "CI"
     secrets: inherit
-
-  trigger_notify_archive_failure:
-    needs: [build_beta, build_stable]
-    if: ${{ always() && (needs.build_beta.outputs.archive_upload_failed == 'true' || needs.build_stable.outputs.archive_upload_failed == 'true') }}
-    uses: ./.github/workflows/notify.yml
-    with:
-      workflow_name: "Build (Archive Upload)"
-    secrets: inherit
