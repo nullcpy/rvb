@@ -357,7 +357,7 @@ def main():
         print("No data changes to commit.")
         return
 
-    run_cmd(f"git commit -m 'chore: update data for build {next_ver_code}'", cwd=clone_dir)
+    run_cmd(f"git commit -m 'chore: update data for build {next_ver_code} [skip ci]'", cwd=clone_dir)
     
     pushed = False
     for attempt in range(1, 4):

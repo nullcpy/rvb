@@ -47,3 +47,14 @@ jobs:
         run: |
           git checkout main || true
           python3 .github/scripts/sync_website_catalog.py
+
+      - name: Dispatch Website Deployment (Manual Cleanup Only)
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        env:
+          DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
+        run: |
+          curl -f -X POST https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token $DISPATCH_TOKEN" \
+          -d '{"event_type": "update-catalog-cache"}'
+

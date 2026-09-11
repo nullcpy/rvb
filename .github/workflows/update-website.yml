@@ -1,0 +1,23 @@
+name: Update Website
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: website
+  cancel-in-progress: true
+
+jobs:
+  dispatch_update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Dispatch Website Deployment
+        env:
+          DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
+        run: |
+          curl -f -X POST https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token $DISPATCH_TOKEN" \
+          -d '{"event_type": "update-catalog-cache"}'
