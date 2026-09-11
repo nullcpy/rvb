@@ -16,9 +16,9 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "a5696f00c57bb0408877768d55ce13e5",
-      "com.google.android.youtube": "2e25e1856c5ba4a1d194cc933a461500",
-      "shared": "43e9670c90e7d1b4b3962060253ee5df"
+      "com.google.android.apps.youtube.music": "36817ab0b0cfc78d16a9f3e3ddac8500",
+      "com.google.android.youtube": "a57a6443ce30ef49c73d630e78cd282d",
+      "shared": "78a5856192f57b3a46bf8a24ef2a3bf5"
     },
     "stable": {}
   },
@@ -153,9 +153,9 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "07e80954a8be0270621665ef31c11601",
-      "com.michaldrabik.showly2": "7427d1abbd1523bb96aa95fffab705ad",
-      "shared": "ce699102a1df3704a1932bd91ed23755"
+      "ch.protonmail.android": "bab4de707e59ed865cdb4899b91a43cd",
+      "com.michaldrabik.showly2": "501859c1f6b58a07361b16db05d6e54b",
+      "shared": "e16b00ac03f565f1f9264401791ad4c4"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -215,7 +215,7 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "d398b10baa722cf1b94fe1158365f6c5",
+      "com.brave.browser": "c448903a6384a8c63295dccc44d90233",
       "shared": "0a127de40cb49e92ce48abc1bbb96125"
     }
   },
@@ -298,12 +298,12 @@
     },
     "stable": {
       "com.google.android.apps.photomath": "8ff5991ed09592c3fe72dcd4d0538abb",
-      "com.google.android.apps.photos": "a138ca7d85df61704e4e92d61b31553c",
-      "com.google.android.apps.recorder": "9aab2542ff97cac957b9a6beedde32de",
-      "com.microsoft.office.officelens": "48be13307bf7ee68010a4399a103fb04",
-      "com.strava": "c439122a44dd30919a4e773619d9a93c",
-      "com.viber.voip": "392f386ea83338ecb87235ff6914b0e9",
-      "jp.pxv.android": "560b47432a271b76f6cdf29431bf3940",
+      "com.google.android.apps.photos": "235e86c23e3b2e19f5cba5b5af3f466c",
+      "com.google.android.apps.recorder": "42259511d709a1d73c76033a10021d9c",
+      "com.microsoft.office.officelens": "71998ed4024db0d7817a601e0ae228df",
+      "com.strava": "38cba2f0c2057df5ff0ea0542dc2c4ac",
+      "com.viber.voip": "461cf1010fe9b6678ede0fd7e11dc5a7",
+      "jp.pxv.android": "6bb89cdb2e06487befdbe8bba03d9b36",
       "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     }
   },
