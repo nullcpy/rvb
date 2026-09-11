@@ -464,26 +464,16 @@
   "GooglePhotos-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "build-mode": "both",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
   },
-  "AdobePhotoshopMix-DeVanced": {
-    "patches-source": "RookieEnough/De-Vanced",
-    "brand": "DeVanced",
-    "enabled": true,
-    "pkg-name": "com.adobe.psmobile",
-    "app-name": "Adobe Photoshop Mix",
-    "arch": "arm64-v8a",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/adobe/photoshop-mix",
-    "uptodown-dlurl": "https://adobe-photoshop-mix.en.uptodown.com/android"
-  },
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -495,7 +485,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
@@ -504,7 +494,7 @@
   "Photomath-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
@@ -513,7 +503,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -522,7 +512,7 @@
   "pixiv-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
@@ -531,7 +521,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -1003,7 +993,7 @@
   "ProtonMail-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
@@ -1015,7 +1005,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1719,6 +1709,17 @@
     "apkpure-dlurl": "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android",
     "apkcombo-dlurl": "https://apkcombo.com/proton-mail/ch.protonmail.android",
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
+  },
+  "AdobeScan-rushiranpise": {
+    "patches-source": "rushiranpise/morphe-patches",
+    "brand": "rushiranpise",
+    "enabled": false,
+    "pkg-name": "com.adobe.scan.android",
+    "app-name": "Adobe Scan",
+    "arch": "arm64-v8a",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/adobe/adobe-scan-pdf-scanner-ocr",
+    "uptodown-dlurl": "https://adobe-scan.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/adobe-scan/com.adobe.scan.android"
   },
   "KineStop-ShaunTheSheep": {
     "patches-source": "shaun-the-sheep-patches/morphe-patches",
