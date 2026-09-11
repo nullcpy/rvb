@@ -779,6 +779,32 @@ _patches_list() {
 	echo "$op"
 }
 
+has_compatible_patches() {
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 version=$4 cli_source=$5
+	local cli_source_l="${cli_source,,}"
+	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]] || [[ "$cli_source_l" == *"instafel"* ]]; then
+		return 0
+	fi
+	[ -z "$cli_jar" ] || [ -z "$patches_jar" ] || [ -z "$pkg_name" ] || [ -z "$version" ] && return 0
+
+	local raw_vers
+	if ! raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source") || [ -z "$raw_vers" ]; then
+		return 0
+	fi
+
+	if echo "$raw_vers" | grep -Eq "^[[:space:]]*Any([[:space:]]|$)"; then
+		return 0
+	fi
+
+	local ver_clean=${version// /}
+	ver_clean=${ver_clean#v}
+	if echo "$raw_vers" | grep -Eq "^[[:space:]]*${ver_clean//./\\.}([[:space:]]|$)"; then
+		return 0
+	fi
+
+	return 1
+}
+
 isoneof() {
 	local i=$1 v
 	shift
@@ -2849,6 +2875,12 @@ build_rv() {
 		pr "Choosing version '${version}' for ${table}"
 		local version_f=${version// /}
 		version_f=${version_f#v}
+
+		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}"; then
+			wpr "No compatible patches found in '${args[cli_source]:-}' for '$pkg_name' v${version_f}. Skipping ${table}."
+			continue
+		fi
+
 		for arch in "${arch_list[@]}"; do
 			arch_f="${arch// /}"
 			local target_version_code
