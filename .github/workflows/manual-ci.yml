@@ -36,6 +36,12 @@ jobs:
     uses: ./.github/workflows/cleanup.yml
     secrets: inherit
 
+  trigger_website_update:
+    needs: [build_manual, trigger_cleanup]
+    if: ${{ always() && needs.build_manual.result == 'success' }}
+    uses: ./.github/workflows/update-website.yml
+    secrets: inherit
+
   trigger_notify_failure:
     needs: [build_manual]
     if: ${{ failure() }}

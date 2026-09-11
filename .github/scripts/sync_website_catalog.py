@@ -272,7 +272,7 @@ def main():
         if not status:
             print("No catalog changes to commit.")
             return
-        run_cmd("git commit -m 'chore: sync live download metrics and prune deleted releases'", cwd=clone_dir)
+        run_cmd("git commit -m 'chore: sync live download metrics and prune deleted releases [skip ci]'", cwd=clone_dir)
         pushed = False
         for attempt in range(1, 4):
             result = subprocess.run("git push origin main", shell=True, capture_output=True, text=True, cwd=clone_dir)
