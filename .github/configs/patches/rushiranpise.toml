@@ -167,3 +167,13 @@ apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.a
 apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
 archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
+[AdobeScan-rushiranpise]
+enabled = true
+pkg-name = "com.adobe.scan.android"
+app-name = "Adobe Scan"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-scan-pdf-scanner-ocr"
+uptodown-dlurl = "https://adobe-scan.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/adobe-scan/com.adobe.scan.android"
+
+
+

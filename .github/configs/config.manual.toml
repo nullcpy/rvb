@@ -1,10 +1,25 @@
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-
 [AdobePhotoshopMix-DeVanced]
 enabled = true
 pkg-name = "com.adobe.photoshopmix"
 app-name = "Adobe Photoshop Mix"
 arch = "arm64-v8a"
+patches-source = "RookieEnough/De-Vanced"
+brand = "DeVanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
 uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/adobe-photoshop-mix-cut-out/com.adobe.photoshopmix"
+apkcombo-dlurl = "https://apkcombo.com/adobe-photoshop-mix-cut-out/com.adobe.photoshopmix"
+
+[AdobeScan-rushiranpise]
+enabled = true
+pkg-name = "com.adobe.scan.android"
+app-name = "Adobe Scan"
+patches-source = "rushiranpise/morphe-patches"
+brand = "rushiranpise"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-scan-pdf-scanner-ocr"
+uptodown-dlurl = "https://adobe-scan.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/adobe-scan/com.adobe.scan.android"
+
+
+
+
