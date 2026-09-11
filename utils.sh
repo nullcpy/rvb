@@ -787,8 +787,13 @@ has_compatible_patches() {
 	fi
 	[ -z "$cli_jar" ] || [ -z "$patches_jar" ] || [ -z "$pkg_name" ] || [ -z "$version" ] && return 0
 
+	local extra_args=""
+	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+		extra_args="-x"
+	fi
+
 	local raw_vers
-	if ! raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source") || [ -z "$raw_vers" ]; then
+	if ! raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source" "$extra_args") || [ -z "$raw_vers" ]; then
 		return 0
 	fi
 
@@ -2526,6 +2531,10 @@ build_rv() {
 	local skip_dl_source_check=false
 	local resolved_version=""
 	local get_latest_ver=false
+	local cli_source_l="${args[cli_source]:-}"
+	cli_source_l="${cli_source_l,,}"
+	local cli_lv_extra=""
+	[[ "$cli_source_l" == *"morphe-desktop"* ]] && cli_lv_extra="-x"
 
 	# 1. Resolve pkg_name early if possible and check cache
 	if [ -n "$pkg_name" ]; then
@@ -2607,7 +2616,7 @@ build_rv() {
 						target_version_code=""
 						if [ -n "$resolved_version" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
 							local raw_vers
-							if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+							if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}" "$cli_lv_extra"); then
 								target_version_code=$(get_patch_version_code "$raw_vers" "$resolved_version" "$arch_f" || true)
 							fi
 						fi
@@ -2653,7 +2662,7 @@ build_rv() {
 							target_version_code=""
 							if [ -n "$resolved_version" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
 								local raw_vers
-								if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+								if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}" "$cli_lv_extra"); then
 									target_version_code=$(get_patch_version_code "$raw_vers" "$resolved_version" "$arch_f" || true)
 								fi
 							fi
@@ -2702,7 +2711,7 @@ build_rv() {
 								target_version_code=""
 								if [ -n "$dyn_ver" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
 									local raw_vers
-									if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+									if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}" "$cli_lv_extra"); then
 										target_version_code=$(get_patch_version_code "$raw_vers" "$dyn_ver" "$arch_f" || true)
 									fi
 								fi
@@ -2733,7 +2742,7 @@ build_rv() {
 									target_version_code=""
 									if [ -n "$dyn_ver" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
 										local raw_vers
-										if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+										if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}" "$cli_lv_extra"); then
 											target_version_code=$(get_patch_version_code "$raw_vers" "$dyn_ver" "$arch_f" || true)
 										fi
 									fi
@@ -2889,7 +2898,7 @@ build_rv() {
 				target_version_code=""
 				if [ -n "$version" ] && [ -n "$cli_jar" ] && [ -n "$patches_jar" ]; then
 					local raw_vers
-					if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}"); then
+					if raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]:-}" "$cli_lv_extra"); then
 						target_version_code=$(get_patch_version_code "$raw_vers" "$version" "$arch_f" || true)
 					fi
 				fi
