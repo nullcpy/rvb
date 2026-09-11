@@ -1,9 +1,10 @@
 patches-source = "RookieEnough/De-Vanced"
 brand = "DeVanced"
 
-[MicrosoftLens-DeVanced]
+[AdobePhotoshopMix-DeVanced]
 enabled = true
-pkg-name = "com.microsoft.office.officelens"
-app-name = "Microsoft Lens"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
-uptodown-dlurl = "https://office-lens.en.uptodown.com/android"
+pkg-name = "com.adobe.photoshopmix"
+app-name = "Adobe Photoshop Mix"
+arch = "arm64-v8a"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
+uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
