@@ -1,25 +1,9 @@
-patches-source = "liongalahad/nuviotv-morphe-patches"
-patches-version = "beta"
-brand = "liongalahad"
+patches-source = "RookieEnough/De-Vanced"
+brand = "DeVanced"
 
-[Nuvio-liongalahad-AndroidTV]
+[MicrosoftLens-DeVanced]
 enabled = true
-pkg-name = "com.nuvio.tv"
-app-name = "Nuvio"
-variant = "Android TV"
-included-patches = "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'"
-excluded-patches = "'Side-by-side installation'"
-github-dlurl = "https://github.com/NuvioMedia/NuvioTV"
-github-regex = 'app-full-universal-release\.apk'
-
-[Nuvio-liongalahad-AndroidTV-Clone]
-enabled = true
-pkg-name = "com.nuvio.tv"
-app-name = "Nuvio"
-variant = "Android TV"
-sub-variant = "Clone"
-included-patches = "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'"
-github-dlurl = "https://github.com/NuvioMedia/NuvioTV"
-github-regex = 'app-full-universal-release\.apk'
-
-
+pkg-name = "com.microsoft.office.officelens"
+app-name = "Microsoft Lens"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner"
+uptodown-dlurl = "https://office-lens.en.uptodown.com/android"

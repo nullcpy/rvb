@@ -9,14 +9,6 @@ build-mode = "both"
 patches-version = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 
-[AdobePhotoshopMix-DeVanced]
-enabled = true
-pkg-name = "com.adobe.psmobile"
-app-name = "Adobe Photoshop Mix"
-arch = "arm64-v8a"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
-uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
-
 [GoogleRecorder-DeVanced]
 enabled = true
 pkg-name = "com.google.android.apps.recorder"
