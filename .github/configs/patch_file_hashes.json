@@ -215,7 +215,7 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "4a0bca78aa90f8c5242c2150e3e3c1cf",
+      "com.brave.browser": "257429d4a288c7e94c638b1f599a56fe",
       "shared": "bead690ffc0a5a2e310458c862af24ab"
     }
   },
@@ -228,10 +228,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "71a88e22ec140f5860a8648c0af16ea0",
-      "com.google.android.youtube": "c623508d437a6784dc6c5013daecb0cb",
-      "com.reddit.frontpage": "61dfe9c1ad45610585ea130788620b51",
-      "shared": "f373a97d0ec843a13d79e1616cded025"
+      "com.google.android.apps.youtube.music": "7a194718d826a11e23681cf4619ced17",
+      "com.google.android.youtube": "1aa6ee7377c6cbc6fdf20b97d9bd07a7",
+      "com.reddit.frontpage": "18666d250ecd8f1683931acec86cf41b",
+      "shared": "f73a9490ddbb35af76726c304540f912"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "834d27ce912641b037a0ccdf882c16a0",
@@ -293,15 +293,18 @@
   },
   "rookieenough/de-vanced": {
     "beta": {
-      "com.google.android.apps.photos": "5bcabd1d13409c66561ce74a6e7b24dd",
+      "com.google.android.apps.photos": "4b7d36961bb93f005990762869809ffe",
       "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     },
     "stable": {
-      "com.adobe.psmobile": "b9667c696d47df8cdce969af2eec1d75",
-      "com.google.android.apps.photos": "5bcabd1d13409c66561ce74a6e7b24dd",
-      "com.google.android.apps.recorder": "4f001c35ce5d3ad2b92c57abb1f1fc3a",
-      "com.strava": "bab4e948df3feea98d2250fb8414fcb7",
-      "com.viber.voip": "517a37b120b644ae84ac39a46805a211",
+      "com.adobe.psmobile": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.google.android.apps.photomath": "8ff5991ed09592c3fe72dcd4d0538abb",
+      "com.google.android.apps.photos": "4b7d36961bb93f005990762869809ffe",
+      "com.google.android.apps.recorder": "edec7b1f46c6bbf09e10f1f1f5d49985",
+      "com.microsoft.office.officelens": "0c8d7418dd5124d214b50f01be0f6e44",
+      "com.strava": "c8c5626631bb541ab7dc61a172a197de",
+      "com.viber.voip": "ef9bf8ea8d1ba833813deb87c01b5ecb",
+      "jp.pxv.android": "6d4add04a79c098d8886272261860924",
       "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     }
   },
