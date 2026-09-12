@@ -1489,7 +1489,7 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "brand": "revenge",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "patcher-args": "-l 0",
