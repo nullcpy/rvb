@@ -110,5 +110,12 @@ uptodown-dlurl = "https://swiftkey-keyboard.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey"
 apkcombo-dlurl = "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
 
-
+[FolderSync-hooman]
+enabled = true
+pkg-name = "dk.tacit.android.foldersync.lite"
+app-name = "FolderSync"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tacit-dynamics/foldersync"
+uptodown-dlurl = "https://foldersync-lite.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite"
+apkcombo-dlurl = "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
 

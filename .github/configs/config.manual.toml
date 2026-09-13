@@ -1,26 +1,24 @@
-[AdobePhotoshopMix-DeVanced]
+[FolderSync-hooman]
 enabled = true
-pkg-name = "com.adobe.photoshopmix"
-app-name = "Adobe Photoshop Mix"
-arch = "auto"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/photoshop-mix"
-uptodown-dlurl = "https://adobe-photoshop-mix.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/adobe-photoshop-mix-cut-out/com.adobe.photoshopmix"
-apkcombo-dlurl = "https://apkcombo.com/adobe-photoshop-mix-cut-out/com.adobe.photoshopmix"
+pkg-name = "dk.tacit.android.foldersync.lite"
+app-name = "FolderSync"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+brand = "hooman"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tacit-dynamics/foldersync"
+uptodown-dlurl = "https://foldersync-lite.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite"
+apkcombo-dlurl = "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
 
-[AdobeScan-rushiranpise]
+[ProtonMail-hxreborn]
 enabled = true
-pkg-name = "com.adobe.scan.android"
-app-name = "Adobe Scan"
-patches-source = "rushiranpise/morphe-patches"
-brand = "rushiranpise"
-arch = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-scan-pdf-scanner-ocr"
-uptodown-dlurl = "https://adobe-scan.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/adobe-scan/com.adobe.scan.android"
-
-
+pkg-name = "ch.protonmail.android"
+app-name = "Proton Mail"
+patches-source = "hxreborn/morphe-patches"
+brand = "hxreborn"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
+apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
+archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
 
 
