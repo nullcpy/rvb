@@ -63,7 +63,7 @@
   "GooglePhotos-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "build-mode": "both",
