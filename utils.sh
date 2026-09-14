@@ -797,15 +797,28 @@ has_compatible_patches() {
 		return 0
 	fi
 
-	if echo "$raw_vers" | grep -Eq "^[[:space:]]*Any([[:space:]]|$)"; then
-		return 0
-	fi
+	local ver_clean="${version// /}"
+	ver_clean="${ver_clean#v}"
+	ver_clean="${ver_clean#V}"
+	local line v_raw v_clean
+	while IFS= read -r line; do
+		[[ "$line" =~ ^[[:space:]]*INFO: ]] && continue
+		[[ "$line" =~ ^[[:space:]]*Most[[:space:]]common ]] && continue
 
-	local ver_clean=${version// /}
-	ver_clean=${ver_clean#v}
-	if echo "$raw_vers" | grep -Eq "^[[:space:]]*${ver_clean//./\\.}([[:space:]]|$)"; then
-		return 0
-	fi
+		if [[ "$line" =~ ^[[:space:]]*Any([[:space:]]|$) ]]; then
+			return 0
+		fi
+
+		# Strip patch count and versionCodes metadata: e.g. " (4 patches)" or " [versionCodes: ...]"
+		v_raw=$(sed -e 's/ (.* patch.*//' -e 's/ \[.*//' <<<"$line" | awk '{$1=$1}1')
+		v_clean="${v_raw// /}"
+		v_clean="${v_clean#v}"
+		v_clean="${v_clean#V}"
+
+		if [ -n "$v_clean" ] && [ "$v_clean" = "$ver_clean" ]; then
+			return 0
+		fi
+	done <<<"$raw_vers"
 
 	return 1
 }
@@ -2886,7 +2899,7 @@ build_rv() {
 		version_f=${version_f#v}
 
 		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}"; then
-			wpr "No compatible patches found in '${args[cli_source]:-}' for '$pkg_name' v${version_f}. Skipping ${table}."
+			wpr "No compatible patches found in '${args[patches_src]:-${args[cli_source]:-}}' for '$pkg_name' v${version_f}. Skipping ${table}."
 			continue
 		fi
 
