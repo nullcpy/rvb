@@ -20,4 +20,4 @@ jobs:
           curl -f -X POST https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches \
           -H "Accept: application/vnd.github.v3+json" \
           -H "Authorization: token $DISPATCH_TOKEN" \
-          -d '{"event_type": "update-catalog-cache"}'
+          -d '{"event_type": "deploy-pages"}'
