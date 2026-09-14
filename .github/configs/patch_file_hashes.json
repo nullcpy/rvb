@@ -2,13 +2,13 @@
   "ajstrick81/morphe-androidtv-patches": {
     "beta": {},
     "stable": {
-      "com.amazon.amazonvideo.livingroom": "9cdb58b4de8d15a589f57482745d4dee",
-      "com.disney.disneyplus": "1f5663763de63b310083fa8abeb62633",
-      "com.netflix.ninja": "2ae9f15c7d091e950d85a3ad62ae01e6",
+      "com.amazon.amazonvideo.livingroom": "def42a8de5e286140b0dab4ffe36aedb",
+      "com.disney.disneyplus": "7d34a9626400902f133b5016887509f8",
+      "com.netflix.ninja": "da8e66d3332f1d63c42f00c05036243a",
       "com.peacocktv.peacockandroid": "7ff4398760822eebd22cc15045755afd",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
-      "com.wbd.hbomax": "0637750201901bb6687deaebb4cb442e",
+      "com.wbd.hbomax": "62d421421ab7d213ad26b1b296796164",
       "shared": "29fb6a6fbd8aaa338f28194d5675b5ae",
       "tv.pluto.android": "40dcc7c8b97d540deab8a158a9ad6ba1",
       "tv.twitch.android.app": "dcc3c62ee2cb5ba1793d74172bcf61fb"
@@ -53,8 +53,8 @@
   },
   "crimera/piko": {
     "beta": {
-      "com.instagram.android": "6585a876351a5bbb7190c4aeaaecf5e8",
-      "com.twitter.android": "2eb0a988ba3dd485259160654529decc",
+      "com.instagram.android": "9fdac617e2f3580eeaf8156617709903",
+      "com.twitter.android": "4fc2550423abe25a1647d19df78db37f",
       "shared": "306a26f969894f9f6eb65156853a889a"
     },
     "stable": {
@@ -216,7 +216,7 @@
     "beta": {},
     "stable": {
       "com.brave.browser": "22ec1c8cccf8148baf40c790298e58ec",
-      "shared": "0a127de40cb49e92ce48abc1bbb96125"
+      "shared": "f770f13923d320ace36c61af9184a18c"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
@@ -229,9 +229,9 @@
   "morpheapp/morphe-patches": {
     "beta": {
       "com.google.android.apps.youtube.music": "f57d2fd1c9e95314eaf8a50c42ea8156",
-      "com.google.android.youtube": "bf15dc972c0d786ce4b33be2373838b6",
-      "com.reddit.frontpage": "930becdcac042d7ee25e346dd88fdd96",
-      "shared": "a8acab5db440da54f09dd05f6a31348a"
+      "com.google.android.youtube": "49d7d5f129c94e0cd26e7f0ecf21027e",
+      "com.reddit.frontpage": "963b4214951e8c84365b508d2f2c5755",
+      "shared": "b02a223a57d905f4d87e56a8d129b677"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "834d27ce912641b037a0ccdf882c16a0",
