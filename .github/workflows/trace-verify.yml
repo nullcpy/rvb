@@ -1,0 +1,26 @@
+name: Trace Verify
+
+on:
+  push:
+    paths:
+      - "utils.sh"
+      - "build.sh"
+      - ".github/traces/**"
+  workflow_dispatch:
+
+concurrency:
+  group: trace-verify
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Run trace harness verify
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq || true
+          bash .github/traces/trace_runner.sh verify

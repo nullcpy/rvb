@@ -1,0 +1,19 @@
+[
+ {
+  "tag_name": "v1.8.1",
+  "prerelease": false,
+  "published_at": "2026-01-01T00:00:00Z",
+  "assets": [
+   {
+    "name": "patches-1.8.1.mpp",
+    "url": "https://fake.asset/patches-1.8.1.mpp",
+    "browser_download_url": "https://fake.asset/patches-1.8.1.mpp"
+   },
+   {
+    "name": "patches-1.8.1.mpp.asc",
+    "url": "https://fake.asset/patches-1.8.1.mpp.asc",
+    "browser_download_url": "https://fake.asset/patches-1.8.1.mpp.asc"
+   }
+  ]
+ }
+]

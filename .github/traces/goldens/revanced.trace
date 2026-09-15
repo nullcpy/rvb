@@ -1,0 +1,25 @@
+=== FIXTURE: revanced ===
+[+] Getting prebuilts (ReVanced)
+[+] Getting 'temp/revanced-rv/revanced-cli-4.9.0.jar' from 'https://fake.asset/revanced-cli-4.9.0.jar'
+[+] Getting 'temp/revanced-rv/patches-4.9.0.rvp' from 'https://fake.asset/patches-4.9.0.rvp'
+PREBUILT CLI: temp/revanced-rv/revanced-cli-4.9.0.jar
+PREBUILT BUNDLES: temp/revanced-rv/patches-4.9.0.rvp
+--- app: Telegram-Revanced ---
+PATCHES_LIST_VERSIONS:
+  1.95.101 (7 patches)
+  1.95.100 [versionCodes: arm64-v8a=701951010]
+  2.9.6
+HAS_COMPATIBLE_PATCHES(hit): rc=0
+HAS_COMPATIBLE_PATCHES(miss): rc=1
+PATCHES_LIST:
+  INFO: Patch name: Unlock aCalendar+
+  Enabled: true
+  Version: 2.9.6
+  Description: test patch
+PATCH_APK:
+  rc=0 patched_exists=yes
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/revanced-rv/revanced-cli-4.9.0.jar] [list-versions] [-b] [-p] [temp/revanced-rv/patches-4.9.0.rvp] [-f] [org.telegram.messenger]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/revanced-rv/revanced-cli-4.9.0.jar] [list-versions] [-b] [-p] [temp/revanced-rv/patches-4.9.0.rvp] [-f] [org.telegram.messenger]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/revanced-rv/revanced-cli-4.9.0.jar] [list-versions] [-b] [-p] [temp/revanced-rv/patches-4.9.0.rvp] [-f] [org.telegram.messenger]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/revanced-rv/revanced-cli-4.9.0.jar] [list-patches] [-b] [-p] [temp/revanced-rv/patches-4.9.0.rvp] [--packages] [--versions] [--options] [--filter-package-name=org.telegram.messenger]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/revanced-rv/revanced-cli-4.9.0.jar] [patch] [stock.apk] [-t] [<RUN>/build/out-Telegram-Revanced.apk-temporary-files] [-o] [build/out-Telegram-Revanced.apk] [--keystore=ks.keystore] [--keystore-entry-password=123456789] [--keystore-password=123456789] [--signer=jhc] [--keystore-entry-alias=jhc] [--patches] [temp/revanced-rv/patches-4.9.0.rvp] [-b]

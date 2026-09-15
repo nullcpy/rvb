@@ -1,0 +1,10 @@
+patches-source = "ReVanced/revanced-patches"
+cli-source = "ReVanced/revanced-cli"
+patches-version = "stable"
+brand = "revanced"
+
+[Telegram-Revanced]
+enabled = true
+pkg-name = "org.telegram.messenger"
+app-name = "Telegram"
+version = "1.95.101"

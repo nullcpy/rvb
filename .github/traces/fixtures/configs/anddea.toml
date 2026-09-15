@@ -1,0 +1,11 @@
+patches-source = "anddea/revanced-patches"
+cli-source = "anddea/revanced-cli"
+patches-version = "stable"
+brand = "anddea"
+
+[YouTube-Anddea]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+version = "1.95.101"
+excluded-patches = "'Some Patch' 'Another Patch'"

@@ -1,0 +1,16 @@
+=== FIXTURE: npatch ===
+[+] Getting prebuilts (revenge-mod)
+[+] Getting 'temp/7723mod-rv/NPatch-1.5.0.jar' from 'https://fake.asset/NPatch-1.5.0.jar'
+[+] Getting 'temp/revenge-mod-rv/revenge-xposed-1.0.0.apk' from 'https://fake.asset/revenge-xposed-1.0.0.apk'
+PREBUILT CLI: temp/7723mod-rv/NPatch-1.5.0.jar
+PREBUILT BUNDLES: temp/revenge-mod-rv/revenge-xposed-1.0.0.apk
+--- app: Discord-Revenge ---
+PATCHES_LIST_VERSIONS:
+  
+HAS_COMPATIBLE_PATCHES(hit): rc=0
+HAS_COMPATIBLE_PATCHES(miss): rc=0
+PATCHES_LIST:
+  Name: xposed-module-dummy
+PATCH_APK:
+  rc=0 patched_exists=yes
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/7723mod-rv/NPatch-1.5.0.jar] [-o] [<RUN>/build/out-Discord-Revenge.apk-temporary-files] [-m] [temp/revenge-mod-rv/revenge-xposed-1.0.0.apk] [-l] [0] [stock.apk]

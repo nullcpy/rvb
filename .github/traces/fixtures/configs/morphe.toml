@@ -1,0 +1,8 @@
+patches-source = "MorpheApp/morphe-patches"
+patches-version = "stable"
+
+[aCalendar-Morphe]
+enabled = true
+pkg-name = "com.abitovenutchy"
+app-name = "aCalendar+"
+version = "2.9.6"

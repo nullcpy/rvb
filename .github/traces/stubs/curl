@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# Fake curl: serves local fixtures for the GitHub release API and fake asset
+# downloads so the trace harness never touches the network.
+# Handles the invocations utils.sh _req makes:
+#   curl -L -c F -b F --connect-timeout N --retry N --fail -s -S [-H k:v ...] URL -o OUT
+set -u
+FIXTURE_DIR="${TRACE_FIXTURES:?TRACE_FIXTURES must be set}"
+
+URL=""; OUT=""; SKIP_NEXT=false
+while [ $# -gt 0 ]; do
+	if $SKIP_NEXT; then SKIP_NEXT=false; shift; continue; fi
+	case "$1" in
+		-o) OUT="${2:?}"; shift 2 ;;
+		-c|-b|--connect-timeout|--retry|--max-time|-m|--url|-H|--header) shift 2 ;;
+		--fail|-s|-S|-L|-sS) shift ;;
+		http://*|https://*) URL="$1"; shift ;;
+		*) shift ;;
+	esac
+done
+
+fail() { echo "curl-stub: $*" >&2; exit 22; }
+
+case "$URL" in
+https://api.github.com/repos/*/releases/tags/*)
+	rest="${URL#https://api.github.com/repos/}"
+	repo="${rest%%/releases*}"
+	tag="${rest##*/tags/}"
+	f="$FIXTURE_DIR/releases/${repo//\//__}.json"
+	[ -f "$f" ] || fail "no fixture for repo '$repo'"
+	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then
+		jq --arg t "$tag" '.[] | select(.tag_name==$t)' "$f"
+	else
+		jq --arg t "$tag" '.[] | select(.tag_name==$t)' "$f" > "$OUT"
+	fi
+	;;
+https://api.github.com/repos/*/releases*)
+	rest="${URL#https://api.github.com/repos/}"
+	repo="${rest%%/releases*}"
+	f="$FIXTURE_DIR/releases/${repo//\//__}.json"
+	[ -f "$f" ] || fail "no fixture for repo '$repo'"
+	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then
+		cat "$f"
+	else
+		cp "$f" "$OUT"
+	fi
+	;;
+https://fake.asset/*)
+	name="${URL##*/}"
+	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then
+		printf 'FAKE-ASSET:%s\n' "$name"
+	else
+		printf 'FAKE-ASSET:%s\n' "$name" > "$OUT"
+	fi
+	;;
+*)
+	fail "unhandled URL in trace mode: $URL"
+	;;
+esac
+exit 0

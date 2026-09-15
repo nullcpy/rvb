@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+# Fake java for the trace harness. Records every invocation to $TRACE_OUT and
+# returns canned output matching what the engine parses per tool. Also creates
+# the side-effect files patch flows expect (fake output APKs / instafel workdir)
+# so the full command->output-recovery path is exercised offline.
+set -u
+# NOTE: utils.sh wraps java in `env -i PATH HOME LANG java ...`, which strips
+# TRACE_OUT from the environment. HOME is the only per-run location that
+# survives, so the runner exports HOME=<run dir> and we fall back to there.
+TRACE_OUT="${TRACE_OUT:-$HOME/rvb_trace.txt}"
+{ printf 'ARGS:'; for a in "$@"; do printf ' [%s]' "$a"; done; printf '\n'; } >> "$TRACE_OUT"
+
+cli=""; sub=""
+args=("$@")
+for ((i=1;i<=${#args[@]};i++)); do
+	v="${args[$((i-1))]}"
+	case "$v" in
+	-jar) cli="${args[$i]}"; continue ;;
+	-cp) continue ;;
+	esac
+	[ -n "${cli:-}" ] && [ -z "$sub" ] && case "$v" in
+		patch|list-versions|list-patches|list|init|run|build|verify) sub="$v" ;;
+	esac
+done
+
+tmpdir_of=""
+for ((i=1;i<=${#args[@]};i++)); do
+	[ "${args[$((i-1))]}" = "-t" ] && tmpdir_of="${args[$i]}"
+	[ "${args[$((i-1))]}" = "-o" ] && tmpdir_of="${args[$i]}"
+done
+out_of=""
+for ((i=1;i<=${#args[@]};i++)); do
+	[ "${args[$((i-1))]}" = "-o" ] && out_of="${args[$i]}"
+done
+
+case "$sub" in
+list-versions)
+	cat <<'EOF'
+1.95.101 (7 patches)
+1.95.100 [versionCodes: arm64-v8a=701951010]
+2.9.6
+EOF
+	;;
+list-patches|list)
+	cat <<'EOF'
+INFO: Patch name: Unlock aCalendar+
+Enabled: true
+Version: 2.9.6
+Description: test patch
+EOF
+	[ "$sub" = "list" ] && { echo "patch names:"; echo " unlock_developer_options"; echo " remove_ads"; }
+	;;
+patch)
+	echo 'INFO: "Test Patch A" succeeded'
+	echo "INFO: Applied: Test Patch B"
+	# revanced/morphe write the patched apk themselves; fake it
+	[ -n "$out_of" ] && printf 'FAKE-PATCHED-APK\n' > "$out_of"
+	;;
+init)
+	# instafel init <apk>: creates <workdir>/project.json in CWD
+	stock="${args[-1]:-}"
+	base=$(basename "$stock" .apk)
+	mkdir -p "$base" && echo '{}' > "$base/project.json"
+	echo "initialized $base"
+	;;
+run)
+	echo "I: Patch 'unlock_developer_options' loaded"
+	echo "I: Patch 'remove_ads' loaded"
+	# args: [-jar cli] run <wdir> <patch names...>  — wdir is right after "run"
+	for ((i=1;i<=${#args[@]};i++)); do
+		if [ "${args[$((i-1))]}" = "run" ]; then
+			wd="${args[$i]}"
+			[ "${args[-1]:-}" = "clone" ] && touch "$wd/clone_marker"
+			break
+		fi
+	done
+	;;
+build)
+	wd="${args[-1]:-.}"
+	mkdir -p "$wd/build" && printf 'FAKE-PATCHED-APK\n' > "$wd/build/patched.apk"
+	[ -f "$wd/clone_marker" ] && printf 'FAKE-CLONE-APK\n' > "$wd/build/clone_c.apk"
+	echo "built $wd/build/patched.apk"
+	;;
+verify)
+	echo "Signer: SHA-256 digest: 0000000000000000000000000000000000000000000000000000000000000000"
+	;;
+*)
+	# npatch/lspatch style: java -jar cli -o tmpdir -m mod.apk ... stock.apk
+	if [ -n "$tmpdir_of" ]; then
+		mkdir -p "$tmpdir_of"
+		printf 'FAKE-PATCHED-APK\n' > "$tmpdir_of/patched.apk"
+	fi
+	echo "generic java stub ran"
+	;;
+esac
+exit 0

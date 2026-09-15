@@ -1,0 +1,9 @@
+patches-source = "LSPatch/lsposed-modules"
+cli-source = "LSPatch/LSPatch"
+patches-version = "stable"
+brand = "lspatch"
+
+[Viber-LSPatch]
+enabled = true
+pkg-name = "com.viber.voip"
+app-name = "Viber"

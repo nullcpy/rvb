@@ -1,0 +1,29 @@
+[
+ {
+  "tag_name": "v4.9.0",
+  "prerelease": false,
+  "published_at": "2026-01-01T00:00:00Z",
+  "assets": [
+   {
+    "name": "revanced-cli-4.9.0.jar",
+    "url": "https://fake.asset/revanced-cli-4.9.0.jar",
+    "browser_download_url": "https://fake.asset/revanced-cli-4.9.0.jar"
+   },
+   {
+    "name": "revanced-cli-4.9.0.jar.asc",
+    "url": "https://fake.asset/revanced-cli-4.9.0.jar.asc",
+    "browser_download_url": "https://fake.asset/revanced-cli-4.9.0.jar.asc"
+   },
+   {
+    "name": "notes.txt",
+    "url": "https://fake.asset/notes.txt",
+    "browser_download_url": "https://fake.asset/notes.txt"
+   },
+   {
+    "name": "revanced-cli-4.9.0-debug.jar",
+    "url": "https://fake.asset/revanced-cli-4.9.0-debug.jar",
+    "browser_download_url": "https://fake.asset/revanced-cli-4.9.0-debug.jar"
+   }
+  ]
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "tag_name": "v4.9.0-anddea",
+  "prerelease": false,
+  "published_at": "2026-01-01T00:00:00Z",
+  "assets": [
+   {
+    "name": "patches-4.9.0.rvp",
+    "url": "https://fake.asset/patches-4.9.0.rvp",
+    "browser_download_url": "https://fake.asset/patches-4.9.0.rvp"
+   },
+   {
+    "name": "extra.zip",
+    "url": "https://fake.asset/extra.zip",
+    "browser_download_url": "https://fake.asset/extra.zip"
+   }
+  ]
+ }
+]

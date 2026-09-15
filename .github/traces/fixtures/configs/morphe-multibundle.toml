@@ -1,0 +1,10 @@
+patches-source = '"MorpheApp/morphe-patches" "MorpheApp/morphe-patches2"'
+patches-version = "stable"
+brand = "morphe"
+
+[Brave-Morphe-Multi]
+enabled = true
+pkg-name = "com.brave.browser"
+app-name = "Brave Browser"
+version = "1.95.101"
+included-patches = "'Brave Origin' 'Skip First Run'"

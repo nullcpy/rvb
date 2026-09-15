@@ -1,0 +1,26 @@
+=== FIXTURE: morphe-multibundle ===
+[+] Getting prebuilts (MorpheApp)
+[!] More than 1 asset was found for this release. Falling back to the first one found...
+[+] Getting 'temp/morpheapp-rv/morphe-desktop-1.8.1.jar' from 'https://fake.asset/morphe-desktop-1.8.1.jar'
+[+] Getting 'temp/morpheapp-rv/patches-1.8.1.mpp' from 'https://fake.asset/patches-1.8.1.mpp'
+PREBUILT CLI: temp/morpheapp-rv/morphe-desktop-1.8.1.jar
+PREBUILT BUNDLES: temp/morpheapp-rv/patches-1.8.1.mpp temp/morpheapp-rv/patches-1.8.1.mpp
+--- app: Brave-Morphe-Multi ---
+PATCHES_LIST_VERSIONS:
+  1.95.101 (7 patches)
+  1.95.100 [versionCodes: arm64-v8a=701951010]
+  2.9.6
+HAS_COMPATIBLE_PATCHES(hit): rc=0
+HAS_COMPATIBLE_PATCHES(miss): rc=1
+PATCHES_LIST:
+  INFO: Patch name: Unlock aCalendar+
+  Enabled: true
+  Version: 2.9.6
+  Description: test patch
+PATCH_APK:
+  rc=0 patched_exists=yes
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/morpheapp-rv/morphe-desktop-1.8.1.jar] [list-versions] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-f] [com.brave.browser]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/morpheapp-rv/morphe-desktop-1.8.1.jar] [list-versions] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-f] [com.brave.browser] [-x]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/morpheapp-rv/morphe-desktop-1.8.1.jar] [list-versions] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-f] [com.brave.browser] [-x]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/morpheapp-rv/morphe-desktop-1.8.1.jar] [list-patches] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-f] [com.brave.browser] [--with-versions] [--with-packages] [-x]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/morpheapp-rv/morphe-desktop-1.8.1.jar] [patch] [stock.apk] [-t] [<RUN>/build/out-Brave-Morphe-Multi.apk-temporary-files] [-o] [build/out-Brave-Morphe-Multi.apk] [--keystore=ks.keystore] [--keystore-entry-password=123456789] [--keystore-password=123456789] [--signer=jhc] [--keystore-entry-alias=jhc] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-e] [Brave Origin] [-e] [Skip First Run] [--patches] [temp/morpheapp-rv/patches-1.8.1.mpp] [-e] [Brave Origin] [-e] [Skip First Run]

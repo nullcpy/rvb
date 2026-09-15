@@ -1,0 +1,44 @@
+=== FIXTURE: instafel ===
+[+] Getting prebuilts (instafel)
+[+] Getting 'temp/instafel-rv/instafel-0.3.jar' from 'https://fake.asset/instafel-0.3.jar'
+[+] Getting 'temp/instafel-rv/ifl-patcher-core-0.3.jar' from 'https://fake.asset/ifl-patcher-core-0.3.jar'
+PREBUILT CLI: temp/instafel-rv/instafel-0.3.jar
+PREBUILT BUNDLES: temp/instafel-rv/ifl-patcher-core-0.3.jar
+--- app: Instagram-InstaFel ---
+PATCHES_LIST_VERSIONS:
+  
+HAS_COMPATIBLE_PATCHES(hit): rc=0
+HAS_COMPATIBLE_PATCHES(miss): rc=0
+PATCHES_LIST:
+  INFO: Patch name: Unlock aCalendar+
+  Enabled: true
+  Version: 2.9.6
+  Description: test patch
+  patch names:
+   unlock_developer_options
+   remove_ads
+PATCH_APK:
+  rc=0 patched_exists=yes
+--- app: Instagram-InstaFel-Clone ---
+PATCHES_LIST_VERSIONS:
+  
+HAS_COMPATIBLE_PATCHES(hit): rc=0
+HAS_COMPATIBLE_PATCHES(miss): rc=0
+PATCHES_LIST:
+  INFO: Patch name: Unlock aCalendar+
+  Enabled: true
+  Version: 2.9.6
+  Description: test patch
+  patch names:
+   unlock_developer_options
+   remove_ads
+PATCH_APK:
+  rc=0 patched_exists=yes
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [remove_snooze_warning] [remove_ads] [amoled_theme] [instafel]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [build] [stock]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [clone]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [build] [stock]
