@@ -3226,6 +3226,10 @@ build_rv() {
 						# cache/ship the vendor bundle; the apkeditor-merged apk is
 						# redundant for morphe (it merges bundles natively) — drop it
 						[ "$morphe_bundle_path" != "$stock_apk" ] && rm -f "$stock_apk"
+						# drop leftover sidecars so only one file represents the bundle
+						for _bx in xapk apkm apks; do
+							[ -f "${stock_apk%.apk}.${_bx}" ] && [ "${stock_apk%.apk}.${_bx}" != "$morphe_bundle_path" ] && rm -f "${stock_apk%.apk}.${_bx}"
+						done
 						stock_apk="$morphe_bundle_path"
 						all_apk=""
 					fi
