@@ -1011,7 +1011,14 @@ _trim_bundle_for_arch() {
 # carries AndroidManifest, package name and versionCode — enough for the
 # aapt/validation reads on bundle cache entries).
 _bundle_extract_base() {
-	unzip -p "$1" base.apk > "$2" 2>/dev/null
+	if unzip -p "$1" base.apk > "$2" 2>/dev/null && [ -s "$2" ]; then
+		return 0
+	fi
+	# bundles without a literal base.apk: largest member is conventionally it
+	local largest
+	largest=$(unzip -l "$1" 2>/dev/null | awk '/\.apk$/{if ($1>max){max=$1; name=$NF}} END{print name}')
+	[ -n "$largest" ] || { rm -f "$2"; return 1; }
+	unzip -p "$1" "$largest" > "$2" 2>/dev/null && [ -s "$2" ]
 }
 
 # Read aapt badging field ($3: versionCode|versionName|package) from file $1,
@@ -1027,8 +1034,7 @@ _meta_field_of() {
 	local v=""
 	if command -v aapt >/dev/null 2>&1; then
 		case "$field" in
-			package) v=$(aapt dump packagename "$probe" 2>/dev/null | tr -d '
-') ;;
+			package) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) ;;
 			versionCode) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
 			versionName) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
 		esac
@@ -1342,7 +1348,13 @@ dl_apkmirror() {
 	local html=""
 
 	if [ -f "${output%.apk}.apkm" ]; then
-		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then return 0; fi  # caller keeps the bundle sidecar
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+			# sidecar exists but merged output may not (prior passthrough run
+			# adopted+deleted it): hand the bundle itself to the caller's
+			# adoption logic instead of re-merging through apkeditor.
+			cp -f "${output%.apk}.apkm" "${output}"
+			return 0
+		fi
 		merge_splits "${output%.apk}.apkm" "${output}"
 		return 0
 	fi
@@ -1562,7 +1574,12 @@ dl_apkmirror() {
 			epr "Downloaded file is not a valid zip (apkm): $final_url"
 			return 1
 		fi
-		merge_splits "${output%.apk}.apkm" "${output}"
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+			# bundle-as-apk; build_rv's manifest check adopts it as .xapk
+			cp -f "${output%.apk}.apkm" "${output}"
+		else
+			merge_splits "${output%.apk}.apkm" "${output}"
+		fi
 	else
 		wget -nv -O "${output}" \
 			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
@@ -1867,7 +1884,11 @@ dl_uptodown() {
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
 	if [ $is_bundle = true ]; then
 		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1
-		merge_splits "${output%.apk}.apkm" "${output}"
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+			cp -f "${output%.apk}.apkm" "${output}"
+		else
+			merge_splits "${output%.apk}.apkm" "${output}"
+		fi
 	else
 		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
 	fi
