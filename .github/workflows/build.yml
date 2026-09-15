@@ -71,14 +71,16 @@ jobs:
         run: |
           CFG="${{ steps.context.outputs.CONFIG_FILE }}"
           if [[ "$CFG" == *.json ]]; then
-            JSON_STREAM="cat $CFG"
+            RESOLVED="$CFG"
           else
-            JSON_STREAM="yq -o=json eval . $CFG"
+            mkdir -p temp
+            yq -o=json eval . "$CFG" > temp/resolved_config.json
+            RESOLVED=temp/resolved_config.json
           fi
-          if $JSON_STREAM | jq -e 'to_entries | any((.value | type == "object") and .value.enabled == true and (.value["cli-source"] | type == "string" and test("npatch|lspatch"; "i")))' >/dev/null; then
+          if python3 .github/scripts/patchers.py needs-bks "$RESOLVED"; then
             bash .github/scripts/build_install_bouncy_castle.sh
           else
-            echo "Skipping Bouncy Castle installation (no enabled Xposed modules found in config)."
+            echo "Skipping Bouncy Castle installation (no BKS-needing Xposed modules found in config)."
           fi
 
       - name: Resolve version code

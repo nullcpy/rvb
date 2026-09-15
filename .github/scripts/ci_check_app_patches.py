@@ -1,5 +1,8 @@
 import os, json, zipfile, hashlib, re, subprocess, glob
 import urllib.request
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from patchers import ci_bundle_diffable
 
 def load_channel_config(channel):
     filename = f"config.{channel}.json"
@@ -322,11 +325,9 @@ def run():
             continue
             
         repo_clis = cli_sources.get(repo_lower, set())
-        
-        is_revanced_or_morphe = any('revanced' in c or 'morphe' in c for c in repo_clis)
-        if not repo_clis:
-            is_revanced_or_morphe = True
-        
+
+        is_revanced_or_morphe = ci_bundle_diffable(repo_clis)
+
         if repo_lower not in hashes:
             hashes[repo_lower] = {}
         hashes[repo_lower].setdefault('stable', {})
