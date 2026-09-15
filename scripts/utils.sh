@@ -39,7 +39,7 @@ declare -gA __DL_RESP_CACHE__
 # RVB_PATCHERS_SH lets the trace harness point at it when utils.sh is sourced
 # from a process substitution (same trick as scripts/cf_get.py lookup below).
 _RVB_PATCHERS_SH="${RVB_PATCHERS_SH:-${CWD}/.github/scripts/patchers.sh}"
-[ ! -f "$_RVB_PATCHERS_SH" ] && [ -n "${BASH_SOURCE[0]:-}" ] && _RVB_PATCHERS_SH="$(dirname "${BASH_SOURCE[0]}")/.github/scripts/patchers.sh"
+[ ! -f "$_RVB_PATCHERS_SH" ] && [ -n "${BASH_SOURCE[0]:-}" ] && _RVB_PATCHERS_SH="$(dirname "$(dirname "${BASH_SOURCE[0]}")")/.github/scripts/patchers.sh"
 if [ -f "$_RVB_PATCHERS_SH" ]; then
 	# shellcheck disable=SC1090
 	source "$_RVB_PATCHERS_SH"
@@ -1043,7 +1043,7 @@ _cf_cffi_get() {
 	fi
 	[ -z "$py_cmd" ] && return 2
 	local py_script="${CWD}/scripts/cf_get.py"
-	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/scripts/cf_get.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/cf_get.py"
 	[ ! -f "$py_script" ] && return 2
 
 	local cffi_res
@@ -1149,7 +1149,7 @@ apkmirror_search() {
 	fi
 
 	local py_script="${CWD}/scripts/apkmirror_search.py"
-	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/scripts/apkmirror_search.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/apkmirror_search.py"
 
 	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
 		local py_res

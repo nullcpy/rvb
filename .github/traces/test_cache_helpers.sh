@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "${BASH_SOURCE[0]}")/../.."
 # shellcheck disable=SC1091
-source utils.sh >/dev/null 2>&1
+source scripts/utils.sh >/dev/null 2>&1
 apk_cache_dir=$(mktemp -d)
 pkg_name="com.test"
 declare -A args=([version_code]="" [cli_source]="")

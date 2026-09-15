@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # Convert utils.sh to Unix line endings if needed
-dos2unix utils.sh 2>/dev/null || true
+dos2unix scripts/utils.sh 2>/dev/null || true
 
-source utils.sh
+source scripts/utils.sh
 set_prebuilts
 
 # Use pre-compiled configs if available, or compile as fallback

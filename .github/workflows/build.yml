@@ -136,7 +136,7 @@ jobs:
           RELEASE_NOTES_WEBSITE_LINK: "${{ vars.RELEASE_NOTES_WEBSITE_LINK || 'https://nullcpy.github.io' }}"
         run: |
           set -euo pipefail
-          ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
+          bash scripts/build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
 
       - name: Update Usage Tracker
         env:

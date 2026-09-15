@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Convert utils.sh to Unix line endings if needed
-dos2unix utils.sh 2>/dev/null || true
-source utils.sh
+dos2unix scripts/utils.sh 2>/dev/null || true
+source scripts/utils.sh
 
 [ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
 [ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'

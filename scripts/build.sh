@@ -3,7 +3,9 @@
 set -euo pipefail
 shopt -s nullglob
 
-source utils.sh
+# Engine is run with repo root as CWD (workflows, CI scripts) but lives beside
+# utils.sh under scripts/; source the sibling explicitly.
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/utils.sh"
 echo '{}' > "$BUILD_JSON_FILE"
 
 trap "abort" INT

@@ -3,8 +3,8 @@ name: Trace Verify
 on:
   push:
     paths:
-      - "utils.sh"
-      - "build.sh"
+      - "scripts/build.sh"
+      - "scripts/utils.sh"
       - ".github/traces/**"
   workflow_dispatch:
 

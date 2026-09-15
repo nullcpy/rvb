@@ -39,7 +39,7 @@ export REMOVE_RV_INTEGRATIONS_CHECKS="${REMOVE_RV_INTEGRATIONS_CHECKS:-false}"
 cd "$RUN_ROOT"
 # Windows checkouts carry CRLF working copies; strip CR so WSL/bash can source
 # shellcheck disable=SC1091
-source <(tr -d '\r' < "$RVB_ROOT/utils.sh") 2>/dev/null || { echo "FATAL: sourcing utils.sh failed"; exit 1; }
+source <(tr -d '\r' < "$RVB_ROOT/scripts/utils.sh") 2>/dev/null || { echo "FATAL: sourcing utils.sh failed"; exit 1; }
 
 if [ ${#FIXTURES[@]} -eq 0 ] || [ -z "${FIXTURES[0]:-}" ]; then
 	FIXTURES=("$TRACES_DIR"/fixtures/configs/*.toml)
