@@ -24,6 +24,11 @@ RVB_KEYSTORE_P12="${RVB_KEYSTORE_P12:-ks-p12.keystore}"
 RVB_KEYSTORE_PASS="${RVB_KEYSTORE_PASS:-123456789}"
 RVB_KEY_ALIAS="${RVB_KEY_ALIAS:-jhc}"
 
+# Instafel fallbacks (used when the CLI manifest lacks a commit hash, and
+# when a config omits included-patches). Overridable without code edits.
+RVB_INSTAFEL_FALLBACK_COMMIT="${RVB_INSTAFEL_FALLBACK_COMMIT:-8e4756f}"
+RVB_INSTAFEL_DEFAULT_PATCHES="${RVB_INSTAFEL_DEFAULT_PATCHES:-unlock_developer_options remove_snooze_warning remove_ads amoled_theme instafel}"
+
 declare -gA __PREBUILTS_CACHE__
 declare -gA __PATCHES_LIST_CACHE__
 declare -gA __PATCH_VER_CACHE__
@@ -563,7 +568,7 @@ semver_validate() {
 	[ -n "$a" ] && [ ${#ac} = 0 ]
 }
 get_patch_last_supported_ver() {
-	local cache_key="${1}_${2}_${3:-}_${4:-}_${5:-}_${6:-}"
+	local cache_key="${1}_${2}_${3:-}_${4:-}_${5:-}_${6:-}_${7:-}_${8:-}"
 	if [ -n "${__PATCH_VER_CACHE__["$cache_key"]:-}" ]; then
 		echo "${__PATCH_VER_CACHE__["$cache_key"]}"
 		return 0
@@ -575,7 +580,7 @@ get_patch_last_supported_ver() {
 }
 
 _get_patch_last_supported_ver() {
-	local list_patches=$1 pkg_name=$2 inc_sel=${3:-} _exc_sel=${4:-} _exclusive=${5:-} cli_source=${6:-} # TODO: resolve using all of these
+	local list_patches=$1 pkg_name=$2 inc_sel=${3:-} _exc_sel=${4:-} _exclusive=${5:-} cli_source=${6:-} cli_jar=${7:-} patches_jar=${8:-}
 	local op
 	if [ "$inc_sel" ]; then
 		if ! op=$(awk '{$1=$1}1' <<<"$list_patches"); then
@@ -848,7 +853,7 @@ _instafel_shadow_core() {
 	local cli_dir cli_commit d j j_base
 	cli_dir=$(dirname "$cli_jar")
 	cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
-	[ -z "$cli_commit" ] && cli_commit="8e4756f"
+	[ -z "$cli_commit" ] && cli_commit="$RVB_INSTAFEL_FALLBACK_COMMIT"
 	for j in $(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'); do
 		j_base=$(basename "$j")
 		cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
@@ -857,10 +862,10 @@ _instafel_shadow_core() {
 		cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
 		cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
 		for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :; done
-		if [ "$cli_commit" != "8e4756f" ]; then
-			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :; done
+		if [ "$cli_commit" != "$RVB_INSTAFEL_FALLBACK_COMMIT" ]; then
+			cp "$j" "$cli_dir/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
+			for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :; done
 		fi
 	done
 }
@@ -2277,7 +2282,7 @@ patch_apk() {
 			patches_to_run=$(echo "$per_bundle_ed" | grep -oE "['\"][^'\"]+['\"]" | tr -d "'\"" | tr '\n' ' ' | sed 's/ *$//')
 		fi
 		if [ -z "$patches_to_run" ]; then
-			patches_to_run="unlock_developer_options remove_snooze_warning remove_ads amoled_theme instafel"
+			patches_to_run="$RVB_INSTAFEL_DEFAULT_PATCHES"
 		fi
 
 		local run_cmd="java -jar '$cli_jar' run '$wdir' $patches_to_run"
@@ -2413,6 +2418,15 @@ write_build_info() {
 	local applied_json
 	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=I: Patch \x27)[^\x27]+(?=\x27 loaded)' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
 	[[ "$applied_json" != \[* ]] && applied_json='[]'
+	# Warn (don't fail) when a tool that reports applied patches yields none —
+	# previously this degraded silently into an empty catalog field. xposed
+	# modules and instafel are excluded: xposed reports none by design, and
+	# instafel prints its names before the -o build step whose captured
+	# PATCH_OUTPUT we parse here (its run/build split makes the empty case
+	# legitimately common).
+	if [ "$applied_json" = "[]" ] && [ -n "$PATCH_OUTPUT" ] && [ "${PATCHER_FLOW:-}" = cli-patch ]; then
+		wpr "No applied patches parsed from ${PATCHER_KIND:-cli-patch} CLI output for '$key' — catalog may show an empty patch list."
+	fi
 	jq --arg key "$key" \
 		--arg ext "$ext" \
 		--arg arch "$arch" \
@@ -2522,7 +2536,7 @@ _resolve_list_and_version() {
 	if [ -z "$resolved_version" ]; then
 		if [ "$version_mode" = auto ]; then
 			if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-				"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
+				"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}" "$cli_jar" "$patches_jar"); then
 				epr "get_patch_last_supported_ver failed for '$pkg_name'"
 				return 2
 			fi

@@ -13,61 +13,12 @@ Writes:
 """
 import json
 import os
-import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-
-def normalize_key(s):
-    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
-
-
-def normalize_arch(arch_raw):
-    a = (arch_raw or "").lower().strip()
-    if "arm64" in a or "aarch64" in a:
-        return "arm64"
-    if "arm" in a or "armeabi" in a:
-        return "arm"
-    if a in ["all", "universal"] or a.endswith("-all") or a.endswith("-universal"):
-        return "all"
-    if "x86_64" in a or "x64" in a:
-        return "x86_64"
-    if "x86" in a:
-        return "x86"
-    return a or "all"
-
-
-def extract_arch(fname, version=""):
-    match = re.search(
-        r"-(arm64-v8a|armeabi-v7a|arm-v7a|aarch64|arm64|arm32|arm|x86_64|x64|x86|universal|all)(?:-(?:apk|module))?\.(?:apk|zip)$",
-        fname,
-        re.IGNORECASE,
-    )
-    if match:
-        return match.group(1)
-    if version:
-        clean_ver = re.escape(version.lstrip("v"))
-        m = re.search(rf"-v?{clean_ver}-([a-zA-Z0-9_-]+?)(?:-(?:apk|module))?\.(?:apk|zip)$", fname, re.IGNORECASE)
-        if m:
-            return m.group(1)
-    name_no_ext = re.sub(r"\.(?:apk|zip)$", "", fname, flags=re.IGNORECASE)
-    name_no_mode = re.sub(r"-(?:apk|module)$", "", name_no_ext, flags=re.IGNORECASE)
-    parts = name_no_mode.split("-")
-    if len(parts) > 1:
-        return parts[-1]
-    return "all"
-
-
-def parse_patch_info(patches_source, patches_ref):
-    primary = (patches_source or "").split()[0] if patches_source else ""
-    if not primary and patches_ref:
-        primary = patches_ref.split()[0].split("/")[0]
-    primary_clean = primary.split("/")[-1].replace("-patches", "").replace("patches-", "")
-    primary_clean = primary_clean.split("-")[0] if "-" in primary_clean else primary_clean
-    primary_clean = primary_clean.capitalize() if primary_clean.islower() else primary_clean
-    key = normalize_key(primary_clean) or "patched"
-    return key, primary_clean or "Patched"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from naming import extract_arch, normalize_arch, normalize_key, parse_patch_info  # noqa: E402
 
 
 def main():

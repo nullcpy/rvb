@@ -26,6 +26,9 @@ from pathlib import Path
 
 SCHEMA_VERSION = 1
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from naming import extract_arch, file_prefix as file_prefix_of, normalize_arch  # noqa: E402
+
 
 def run_cmd(cmd, check=True):
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
@@ -33,47 +36,6 @@ def run_cmd(cmd, check=True):
         print(f"Error running command: {cmd}\n{result.stderr}", file=sys.stderr)
         sys.exit(1)
     return result.stdout.strip()
-
-
-def normalize_arch(arch_raw):
-    a = (arch_raw or "").lower().strip()
-    if "arm64" in a or "aarch64" in a:
-        return "arm64"
-    if "arm" in a or "armeabi" in a:
-        return "arm"
-    if a in ["all", "universal"] or a.endswith("-all") or a.endswith("-universal"):
-        return "all"
-    if "x86_64" in a or "x64" in a:
-        return "x86_64"
-    if "x86" in a:
-        return "x86"
-    return a or "all"
-
-
-def extract_arch(fname, version=""):
-    match = re.search(
-        r"-(arm64-v8a|armeabi-v7a|arm-v7a|aarch64|arm64|arm32|arm|x86_64|x64|x86|universal|all)(?:-(?:apk|module))?\.(?:apk|zip)$",
-        fname,
-        re.IGNORECASE,
-    )
-    if match:
-        return match.group(1)
-    if version:
-        clean_ver = re.escape(version.lstrip("v"))
-        m = re.search(rf"-v?{clean_ver}-([a-zA-Z0-9_-]+?)(?:-(?:apk|module))?\.(?:apk|zip)$", fname, re.IGNORECASE)
-        if m:
-            return m.group(1)
-    name_no_ext = re.sub(r"\.(?:apk|zip)$", "", fname, flags=re.IGNORECASE)
-    name_no_mode = re.sub(r"-(?:apk|module)$", "", name_no_ext, flags=re.IGNORECASE)
-    parts = name_no_mode.split("-")
-    if len(parts) > 1:
-        return parts[-1]
-    return "all"
-
-
-def file_prefix_of(fname):
-    m = re.match(r"^(.*?)-(?:v[0-9]|module-)", fname, re.IGNORECASE)
-    return m.group(1) if m else fname.rsplit(".", 1)[0]
 
 
 def fallback_entry(fname, origin_build, published_at):
