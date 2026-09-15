@@ -194,6 +194,34 @@ patches-version = "stable"
 included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'instafel'"
 ```
 
+## Morphe Bundle Passthrough
+
+When the tool is **morphe-desktop** (`cli-source = "MorpheApp/morphe-desktop"`,
+the default) and the stock download is a bundle format (`.xapk`/`.apkm`/`.apks`),
+the engine keeps the vendor bundle as the cache artifact and hands it to morphe
+directly instead of pre-merging it with apkeditor. Morphe merges bundles
+natively, and some apps misbehave after apkeditor's rewrite+re-sign, so this
+produces cleaner patched APKs and avoids caching two copies of the same app.
+
+- **Scope**: automatic — no per-app config. Applies per build when the download
+  is a bundle; plain `.apk` stocks and all other patcher tools (revanced family,
+  Xposed, instafel) are untouched.
+- **Cache**: the bundle is stored once as `${pkg}-${version}-all.xapk` (or
+  `.apkm`/`.apks`). For `arch = all`/`auto` it goes to morphe whole; for
+  `arm64-v8a`/`arm-v7a`/`x86`/`x86_64` the engine strips only the *other ABIs'*
+  `config.*` members (a `zip -d`, no merge, no re-sign) and passes the trimmed
+  bundle. Switching an app from `all` to `both`/`arm64-v8a` reuses the cached
+  bundle rather than re-downloading.
+- **Module stock**: `include-stock = merged` merges from the cached bundle on
+  demand (throwaway, never cached); `split` reads the bundle directly; `disable`
+  needs nothing. All three work with passthrough active.
+- **Cache repo (`nullcpy/apks`)**: the bundle is uploaded as-is (it is the file
+  the build used); the downloader side already accepts bundle extensions.
+- **Kill switch**: set the repo variable `RVB_MORPHE_PASSTHROUGH=false`
+  (Settings → Secrets and variables → Actions → Variables) to revert to the old
+  merge-at-download behavior without a code change. Existing merged-`.apk`
+  cache entries keep working for any non-morphe tool.
+
 ## Modular Configuration Directory & Dynamic Pool Routing
 
 Configurations are organized in `.github/configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`, `ajstrick81.toml`).

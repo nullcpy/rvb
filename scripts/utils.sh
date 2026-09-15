@@ -29,6 +29,14 @@ RVB_KEY_ALIAS="${RVB_KEY_ALIAS:-jhc}"
 RVB_INSTAFEL_FALLBACK_COMMIT="${RVB_INSTAFEL_FALLBACK_COMMIT:-8e4756f}"
 RVB_INSTAFEL_DEFAULT_PATCHES="${RVB_INSTAFEL_DEFAULT_PATCHES:-unlock_developer_options remove_snooze_warning remove_ads amoled_theme instafel}"
 
+# Morphe bundle passthrough: when the CLI tool is morphe-desktop, the freshly
+# downloaded stock is a bundle format (.xapk/.apkm/.apks), and this switch is
+# on, the bundle is kept as the cache artifact (instead of apkeditor-merging
+# it) and passed to morphe directly — morphe merges bundles natively, and some
+# APKs misbehave after apkeditor's rewrite+re-sign. Set
+# RVB_MORPHE_PASSTHROUGH=false to revert to the old merge-at-download flow.
+RVB_MORPHE_PASSTHROUGH="${RVB_MORPHE_PASSTHROUGH:-true}"
+
 declare -gA __PREBUILTS_CACHE__
 declare -gA __PATCHES_LIST_CACHE__
 declare -gA __PATCH_VER_CACHE__
@@ -709,7 +717,11 @@ _cache_all_archs_present() {
 		if [ -z "$check_apk" ]; then
 			return 1
 		elif [ "$validate" = validate ] && [ -n "$_CACHE_VC" ]; then
-			if ! _cache_validate_apk "$check_apk" "$_CACHE_VC"; then
+			local cached_vc
+			cached_vc=$(_meta_field_of "$check_apk" versionCode) || cached_vc=""
+			if [ -n "$cached_vc" ] && [ "$cached_vc" != "$_CACHE_VC" ]; then
+				pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$_CACHE_VC'. Cache invalidated."
+				[ "$check_apk" != "$_CACHE_ALL_APK" ] && rm -f "$check_apk"
 				return 1
 			fi
 		fi
@@ -755,6 +767,13 @@ _cache_probe_apk() {
 	local all_apk="${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apk"
 	[ -f "$stock_apk" ] && check_apk="$stock_apk"
 	[ -z "$check_apk" ] && [ -f "$all_apk" ] && check_apk="$all_apk"
+	if [ -z "$check_apk" ] && [ "${_CACHE_BUNDLE_OK:-false}" = true ]; then
+		local bx
+		for bx in xapk apkm apks; do
+			local bpath="${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.${bx}"
+			if [ -f "$bpath" ]; then check_apk="$bpath"; all_apk="$bpath"; break; fi
+		done
+	fi
 	if [ -z "$check_apk" ] && [ -n "$vc" ]; then
 		local legacy_stock="${apk_cache_dir}/${pkg_name}-${ver}-${arch}.apk"
 		local legacy_all="${apk_cache_dir}/${pkg_name}-${ver}-all.apk"
@@ -766,23 +785,6 @@ _cache_probe_apk() {
 	_CACHE_ALL_APK="$all_apk"
 }
 
-# Confirm a candidate's versionCode matches the target; deletes the (non-"all")
-# stale file and returns 1 on mismatch. Reads AAPT2/pkg_name from scope.
-_cache_validate_apk() {
-	local check_apk=$1 vc=$2
-	local cached_vc=""
-	if command -v aapt >/dev/null 2>&1; then
-		cached_vc=$(aapt dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
-	elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
-		cached_vc=$("$AAPT2" dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
-	fi
-	if [ -n "$cached_vc" ] && [ "$cached_vc" != "$vc" ]; then
-		pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$vc'. Cache invalidated."
-		[ "$check_apk" != "$_CACHE_ALL_APK" ] && rm -f "$check_apk"
-		return 1
-	fi
-	return 0
-}
 
 # Refresh mtimes on all cached variants for one pkg/arch/version (exact, all,
 # and the two legacy names).
@@ -793,6 +795,9 @@ _cache_touch_apks() {
 	local f
 	for f in "${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-${arch}.apk" \
 		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apk" \
+		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.xapk" \
+		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apkm" \
+		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apks" \
 		"${apk_cache_dir}/${pkg_name}-${ver}-${arch}.apk" \
 		"${apk_cache_dir}/${pkg_name}-${ver}-all.apk"; do
 		[ -f "$f" ] && touch "$f" 2>/dev/null || true
@@ -955,6 +960,88 @@ isoneof() {
 	shift
 	for v; do [ "$v" = "$i" ] && return 0; done
 	return 1
+}
+
+# -------------------- morphe bundle passthrough helpers --------------------
+# When _CACHE_BUNDLE_OK=true (morphe + RVB_MORPHE_PASSTHROUGH) the cache may
+# hold the vendor bundle (.xapk/.apkm/.apks) instead of a merged apk.
+
+_bundle_ext_of() { # $1=path -> echoes extension without dot if it is a bundle
+	local ext="${1##*.}"
+	case "${ext,,}" in xapk|apkm|apks) echo "${ext,,}" ;; *) return 1 ;; esac
+}
+
+# config.* member keep-list for one target arch (mips/unknown ABIs treated as
+# generic: only base kept is never correct, so for those we keep everything).
+_bundle_keep_regex_for_arch() {
+	case "$1" in
+		arm64-v8a) echo 'arm64_v8a' ;;
+		arm-v7a) echo 'armeabi' ;;
+		x86_64) echo 'x86_64' ;;
+		x86) echo 'x86(?!_)' ;;
+		*) echo '' ;; # all/universal: keep everything
+	esac
+}
+
+# Copy $1 bundle -> $2 trimmed to $3 arch by deleting other-ABI config members.
+# Density/language configs are always kept (name doesn't identify an ABI).
+_trim_bundle_for_arch() {
+	local src=$1 dst=$2 arch=$3
+	cp -f "$src" "$dst" || return 1
+	local keep; keep=$(_bundle_keep_regex_for_arch "$arch")
+	[ -z "$keep" ] && return 0
+	local -a drop=()
+	local name
+	while IFS= read -r name; do
+		[[ "$name" == *.apk ]] || continue
+		name="${name##*/}"
+		[[ "$name" == base.apk ]] && continue
+		# only native-ABI config splits are trim candidates; language/density/
+	# sdk splits (config.hdpi, config.en, config.v21…) must always stay
+	[[ "$name" =~ config\.(arm64_v8a|armeabi[_-]v7a|armeabi|x86_64|x86|mips|mips64)([._-]|\.apk$) ]] || continue
+		if ! grep -qP "$keep" <<<"$name"; then drop+=("$name"); fi
+	done < <(unzip -Z1 "$src" 2>/dev/null)
+	if [ ${#drop[@]} -gt 0 ]; then
+		zip -q -d "$dst" "${drop[@]}" 2>/dev/null || return 1
+	fi
+	return 0
+}
+
+# Extract base.apk from bundle $1 to path $2 (no merge, no re-sign: base.apk
+# carries AndroidManifest, package name and versionCode — enough for the
+# aapt/validation reads on bundle cache entries).
+_bundle_extract_base() {
+	unzip -p "$1" base.apk > "$2" 2>/dev/null
+}
+
+# Read aapt badging field ($3: versionCode|versionName|package) from file $1,
+# transparently handling bundles by their base.apk. Echoes value or nothing.
+_meta_field_of() {
+	local file=$1 field=$2
+	local probe="$file" tmp=""
+	if _bundle_ext_of "$file" >/dev/null 2>&1; then
+		tmp="${TEMP_DIR}/meta_probe_$$.apk"
+		_bundle_extract_base "$file" "$tmp" || { rm -f "$tmp"; return 1; }
+		probe="$tmp"
+	fi
+	local v=""
+	if command -v aapt >/dev/null 2>&1; then
+		case "$field" in
+			package) v=$(aapt dump packagename "$probe" 2>/dev/null | tr -d '
+') ;;
+			versionCode) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
+			versionName) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
+		esac
+	elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
+		case "$field" in
+			package) v=$("$AAPT2" dump packagename "$probe" 2>/dev/null | tr -d '
+') ;;
+			versionCode) v=$("$AAPT2" dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
+			versionName) v=$("$AAPT2" dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
+		esac
+	fi
+	[ -n "$tmp" ] && rm -f "$tmp"
+	[ -n "$v" ] && echo "$v"
 }
 
 merge_splits() {
@@ -1255,6 +1342,7 @@ dl_apkmirror() {
 	local html=""
 
 	if [ -f "${output%.apk}.apkm" ]; then
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then return 0; fi  # caller keeps the bundle sidecar
 		merge_splits "${output%.apk}.apkm" "${output}"
 		return 0
 	fi
@@ -1826,8 +1914,12 @@ dl_archive() {
 		apkm|xapk|apks)
 			local bundle="${output}.${path##*.}"
 			req "${url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
-			rm -f "$bundle"
+			merge_splits "$bundle" "${output}" || { [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ] || rm -f "$bundle"; return 1; }
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+				mv -f "$bundle" "${output%.apk}.${path##*.}"  # keep sidecar for passthrough
+			else
+				rm -f "$bundle"
+			fi
 			;;
 		*)
 			epr "Unsupported archive file type for ${path}"
@@ -1944,7 +2036,12 @@ local regex=""
         apkm|xapk|apks)
 			local bundle="${output}.${ext}"
 			req "${base_url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "$output"
+			merge_splits "$bundle" "$output" || return 1
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+				mv -f "$bundle" "${output%.apk}.${ext}"  # keep sidecar for passthrough
+			else
+				rm -f "$bundle"
+			fi
             ;;
         *)
             epr "Unsupported github file type for ${path}"
@@ -2185,8 +2282,12 @@ dl_cache_repo() {
         apkm|xapk|apks)
 			local bundle="${output}.${ext}"
 			req "${base_url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "$output" || { rm -f "$bundle"; return 1; }
-			rm -f "$bundle"
+			merge_splits "$bundle" "$output" || { [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ] || rm -f "$bundle"; return 1; }
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+				mv -f "$bundle" "${output%.apk}.${ext}"  # keep sidecar for passthrough
+			else
+				rm -f "$bundle"
+			fi
             ;;
         *)
             epr "Unsupported cache_repo file type for ${path}"
@@ -2473,6 +2574,23 @@ verify_downloaded_apk() {
 	local pkg_name=$2
 	local dl_p=$3
 	local sig_op
+
+	if _bundle_ext_of "$stock_apk" >/dev/null 2>&1; then
+		# bundle stock: signature lives on base.apk
+		local tmpb="${TEMP_DIR}/verify_base_$$.apk"
+		if ! _bundle_extract_base "$stock_apk" "$tmpb"; then
+			epr "Cannot extract base.apk from bundle $stock_apk"
+			rm -f "$tmpb"
+			return 1
+		fi
+		if ! sig_op=$(check_sig "$tmpb" "$pkg_name" 2>&1); then
+			epr "Signature mismatch on base.apk of $stock_apk: $sig_op. Rejecting download from $dl_p..."
+			rm -f "$tmpb"
+			return 1
+		fi
+		rm -f "$tmpb"
+		return 0
+	fi
 	
 	if [ -f "${stock_apk%.apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
@@ -2711,6 +2829,17 @@ build_rv() {
 	cli_source_l="${cli_source_l,,}"
 	resolve_patcher "${args[cli_source]:-}"
 	local cli_lv_extra="$PATCHER_LIST_X"
+	# Morphe bundle passthrough: keep vendor bundles (.xapk/.apkm/.apks) as the
+	# cache artifact and hand them to morphe directly (it merges bundles natively)
+	# — only when the tool is morphe-desktop and RVB_MORPHE_PASSTHROUGH is on.
+	# Other tools keep the apkeditor-merge-at-download flow unchanged.
+	local MORPHE_PASSTHROUGH_ACTIVE=false
+	local _CACHE_BUNDLE_OK=false
+	local morphe_bundle_path=""
+	if [ "$PATCHER_KIND" = morphe ] && [ "$RVB_MORPHE_PASSTHROUGH" = true ]; then
+		MORPHE_PASSTHROUGH_ACTIVE=true
+		_CACHE_BUNDLE_OK=true
+	fi
 
 	# 1. Resolve pkg_name early if possible and check cache
 	if [ -n "$pkg_name" ]; then
@@ -2917,7 +3046,22 @@ build_rv() {
 					all_apk="$legacy_all"
 				fi
 			fi
-			if [ -f "$all_apk" ]; then
+			local cached_bundle_apk=""
+			if [ "$_CACHE_BUNDLE_OK" = true ]; then
+				local bx
+				for bx in xapk apkm apks; do
+					if [ -f "${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.${bx}" ]; then
+						cached_bundle_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.${bx}"
+						break
+					fi
+				done
+			fi
+			if [ -n "$cached_bundle_apk" ]; then
+				# vendor bundle is universal; skip per-arch apk names
+				stock_apk="$cached_bundle_apk"
+				all_apk="$cached_bundle_apk"
+			fi
+			if [ -f "$all_apk" ] && [ -z "$cached_bundle_apk" ]; then
 				local missing_arch=false
 				if [ "$arch_f" = "arm64-v8a" ] && ! unzip -l "$all_apk" 2>/dev/null | grep -q "lib/arm64-v8a/"; then
 					unzip -l "$all_apk" 2>/dev/null | grep -q "lib/" && missing_arch=true
@@ -2933,12 +3077,8 @@ build_rv() {
 			[ -f "$stock_apk" ] && check_apk="$stock_apk"
 			[ -z "$check_apk" ] && [ -f "$all_apk" ] && check_apk="$all_apk"
 			if [ -n "$check_apk" ] && [ -n "$target_version_code" ]; then
-				local cached_vc=""
-				if command -v aapt >/dev/null 2>&1; then
-					cached_vc=$(aapt dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
-				elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
-					cached_vc=$("$AAPT2" dump badging "$check_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1 || true)
-				fi
+				local cached_vc
+				cached_vc=$(_meta_field_of "$check_apk" versionCode) || true
 				if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
 					pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
 					[ "$check_apk" != "$all_apk" ] && rm -f "$check_apk"
@@ -2973,12 +3113,19 @@ build_rv() {
 					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
 						pr "WARNING: ${stock_apk} does not contain AndroidManifest.xml at root. Attempting to extract as bundle (XAPK/APKS/APKM)..."
 						mv "$stock_apk" "${stock_apk}.bundle"
-						if ! merge_splits "${stock_apk}.bundle" "$stock_apk"; then
-							epr "ERROR: Failed to extract/merge bundle"
-							rm -f "${stock_apk}.bundle" "$stock_apk"
-							continue
+						if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+							# passthrough: keep the bundle (generic .xapk name is fine for
+							# morphe; it merges bundles natively) — no apkeditor merge.
+							mv -f "${stock_apk}.bundle" "${stock_apk%.apk}.xapk"
+							stock_apk="${stock_apk%.apk}.xapk"
+						else
+							if ! merge_splits "${stock_apk}.bundle" "$stock_apk"; then
+								epr "ERROR: Failed to extract/merge bundle"
+								rm -f "${stock_apk}.bundle" "$stock_apk"
+								continue
+							fi
+							rm -f "${stock_apk}.bundle"
 						fi
-						rm -f "${stock_apk}.bundle"
 					fi
 
 					local aapt_cmd="aapt"
@@ -2992,15 +3139,9 @@ build_rv() {
 					fi
 					if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
 						local downloaded_pkg downloaded_ver downloaded_vc
-						if [[ "$aapt_cmd" == *"aapt2"* ]]; then
-							downloaded_pkg=$("$aapt_cmd" dump packagename "$stock_apk" 2>/dev/null | tr -d '\r\n') || true
-							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
-							downloaded_vc=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) || true
-						else
-							downloaded_pkg=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) || true
-							downloaded_ver=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) || true
-							downloaded_vc=$("$aapt_cmd" dump badging "$stock_apk" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) || true
-						fi
+							downloaded_pkg=$(_meta_field_of "$stock_apk" package) || true
+							downloaded_ver=$(_meta_field_of "$stock_apk" versionName) || true
+							downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
 						
 						if [ -z "$downloaded_pkg" ]; then
 							epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
@@ -3037,14 +3178,38 @@ build_rv() {
 							fi
 						fi
 					fi
-					if ! verify_downloaded_apk "$stock_apk" "$pkg_name" "$dl_p"; then
+					local _vapk="$stock_apk"
+					if ! verify_downloaded_apk "$_vapk" "$pkg_name" "$dl_p"; then
 						rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
 						continue
 					fi
 
 					break
 				done
-				if [ -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" ]]; then
+				local _be
+				if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+					if _be=$(_bundle_ext_of "$stock_apk"); then
+						morphe_bundle_path="$stock_apk"
+					else
+						for bx in xapk apkm apks; do
+							if [ -f "${stock_apk%.apk}.${bx}" ]; then
+								morphe_bundle_path="${stock_apk%.apk}.${bx}"
+								break
+							elif [ -f "${stock_apk}.${bx}" ]; then
+								morphe_bundle_path="${stock_apk}.${bx}"
+								break
+							fi
+						done
+					fi
+					if [ -n "$morphe_bundle_path" ]; then
+						# cache/ship the vendor bundle; the apkeditor-merged apk is
+						# redundant for morphe (it merges bundles natively) — drop it
+						[ "$morphe_bundle_path" != "$stock_apk" ] && rm -f "$stock_apk"
+						stock_apk="$morphe_bundle_path"
+						all_apk=""
+					fi
+				fi
+				if [ -f "$stock_apk" ] && [ -z "$morphe_bundle_path" ] && [ ! -f "$all_apk" ] && [[ "$arch" != "all" && "$arch" != "universal" ]]; then
 					if check_is_universal "$stock_apk"; then
 						mv -f "$stock_apk" "$all_apk"
 						if [ -f "${stock_apk%.apk}.apkm" ]; then
@@ -3056,7 +3221,13 @@ build_rv() {
 				
 				# Sync pristine files from staging to cache
 				if [ -f "$stock_apk" ]; then
-					if [ "$stock_apk" = "$all_apk" ]; then
+					local _sync_bext
+					if _sync_bext=$(_bundle_ext_of "$stock_apk"); then
+						local cached_bundle="${cached_all_apk%.apk}.${_sync_bext}"
+						cp -f "$stock_apk" "$cached_bundle"
+						stock_apk="$cached_bundle"
+						all_apk="$cached_bundle"
+					elif [ "$stock_apk" = "$all_apk" ]; then
 						cp -f "$all_apk" "$cached_all_apk"
 						stock_apk="$cached_all_apk"
 						all_apk="$cached_all_apk"
@@ -3115,7 +3286,20 @@ build_rv() {
 	echo "${pkg_name}-${version_f}" >> "$TEMP_DIR/used_versions.txt"
 
 	local sig_op
-	if [ -f "${stock_apk%.apk}.apkm" ]; then
+	if _bundle_ext_of "$stock_apk" >/dev/null 2>&1; then
+		local tmpb="${TEMP_DIR}/stockcheck_base_$$.apk"
+		if ! _bundle_extract_base "$stock_apk" "$tmpb"; then
+			epr "Cannot extract base.apk from bundle $stock_apk"
+			rm -f "$tmpb"
+			return 1
+		fi
+		if ! sig_op=$(check_sig "$tmpb" "$pkg_name" 2>&1); then
+			epr "Not building $table, apk signature mismatch 'base.apk' in $stock_apk: $sig_op"
+			rm -f "$tmpb"
+			return 0
+		fi
+		rm -f "$tmpb"
+	elif [ -f "${stock_apk%.apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
 		unzip -j "${stock_apk%.apk}.apkm" -d "${stock_apk}-zip" >/dev/null
 		if [ -f "${stock_apk}-zip/base.apk" ]; then
@@ -3235,7 +3419,26 @@ build_rv() {
 			patcher_args+=("$PATCHER_MOUNT_ARG")
 		fi
 
-		local stock_apk_to_patch="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.stripped.apk"
+		local stock_apk_to_patch
+		local _pt_bext=""
+		if [ -n "$morphe_bundle_path" ] || _pt_bext=$(_bundle_ext_of "$stock_apk"); then
+			# morphe passthrough input: trim the bundle's config members to the
+			# target arch (no apkeditor, no re-sign); "all" ships the raw bundle.
+			[ -z "$_pt_bext" ] && _pt_bext=xapk
+			stock_apk_to_patch="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.stripped.${_pt_bext}"
+			if [ ! -f "$stock_apk_to_patch" ]; then
+				if [ "$arch_f" = "all" ] || [ "$arch_f" = "universal" ]; then
+					cp -f "$stock_apk" "$stock_apk_to_patch"
+				else
+					_trim_bundle_for_arch "$stock_apk" "$stock_apk_to_patch" "$arch_f" || {
+						epr "Failed to trim bundle for $arch_f"
+						rm -f "$stock_apk_to_patch"
+						return 1
+					}
+				fi
+			fi
+		else
+		stock_apk_to_patch="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.stripped.apk"
 		if [ ! -f "$stock_apk_to_patch" ]; then
 			cp -f "$stock_apk" "$stock_apk_to_patch"
 			if [ "$arch" = "arm64-v8a" ]; then
@@ -3249,6 +3452,7 @@ build_rv() {
 			else
 				zip -d "$stock_apk_to_patch" "lib/x86_64/*" "lib/x86/*" >/dev/null 2>&1 || :
 			fi
+		fi
 		fi
 
 		local per_bundle_ed_joined=""
@@ -3336,23 +3540,42 @@ build_rv() {
 
 		if [ "${args[include_stock]}" != "disable" ]; then
 			mkdir -p "${base_template}/stock/"
+			local _stk_bext=""
+			_bundle_ext_of "$stock_apk" >/dev/null 2>&1 && _stk_bext=1
 			if [ "${args[include_stock]}" = "merged" ]; then
-				cp -f "$stock_apk" "${base_template}/stock/base.apk"
+				if [ -n "$_stk_bext" ]; then
+					# module needs a real merged apk for stock; merge from the
+					# cached bundle on demand (throwaway, never cached)
+					local _mod_stock="${TEMP_DIR}/${file_prefix}-${version_f}-stock-merged.apk"
+					merge_splits "$stock_apk" "$_mod_stock" >/dev/null 2>&1 || {
+						epr "Failed to merge bundle for module stock"
+						return 0
+					}
+					cp -f "$_mod_stock" "${base_template}/stock/base.apk"
+					rm -f "$_mod_stock"
+				else
+					cp -f "$stock_apk" "${base_template}/stock/base.apk"
+				fi
 			elif [ "${args[include_stock]}" = "split" ]; then
-				if [ ! -f "${stock_apk%.apk}.apkm" ]; then
+				local _split_src=""
+				if [ -n "$_stk_bext" ]; then _split_src="$stock_apk"
+				elif [ -f "${stock_apk%.apk}.apkm" ]; then _split_src="${stock_apk%.apk}.apkm"
+				elif [ -f "${stock_apk}.apkm" ]; then _split_src="${stock_apk}.apkm"
+				fi
+				if [ -z "$_split_src" ]; then
 					epr "Cannot include as 'split' because stock apk of $table_name is not a bundle"
 					return 0
 				fi
 				if [ "$arch" = "arm64-v8a" ]; then
-					unzip -j "${stock_apk%.apk}.apkm" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
+					unzip -j "$_split_src" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
 				elif [ "$arch" = "arm-v7a" ]; then
-					unzip -j "${stock_apk%.apk}.apkm" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -x '*arm64_v8a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
+					unzip -j "$_split_src" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -x '*arm64_v8a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
 				elif [ "$arch" = "x86" ]; then
-					unzip -j "${stock_apk%.apk}.apkm" '*.apk' -x '*x86_64.apk' -x '*arm64_v8a.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
+					unzip -j "$_split_src" '*.apk' -x '*x86_64.apk' -x '*arm64_v8a.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
 				elif [ "$arch" = "x86_64" ]; then
-					unzip -j "${stock_apk%.apk}.apkm" '*.apk' -x '*x86.apk' -x '*arm64_v8a.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
+					unzip -j "$_split_src" '*.apk' -x '*x86.apk' -x '*arm64_v8a.apk' -x '*armeabi_v7a.apk' -d "${base_template}/stock/" >/dev/null 2>&1
 				else
-					unzip -j "${stock_apk%.apk}.apkm" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -d "${base_template}/stock/" >/dev/null 2>&1
+					unzip -j "$_split_src" '*.apk' -x '*x86_64.apk' -x '*x86.apk' -d "${base_template}/stock/" >/dev/null 2>&1
 				fi
 			fi
 		fi

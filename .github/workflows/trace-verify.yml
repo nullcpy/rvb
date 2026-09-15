@@ -24,3 +24,8 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y jq || true
           bash .github/traces/trace_runner.sh verify
+
+      - name: Run helper regression tests
+        run: |
+          bash .github/traces/test_cache_helpers.sh
+          bash .github/traces/test_bundle_helpers.sh
