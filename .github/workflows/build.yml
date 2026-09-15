@@ -83,6 +83,14 @@ jobs:
             echo "Skipping Bouncy Castle installation (no BKS-needing Xposed modules found in config)."
           fi
 
+      - name: Install signing keystore
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+          KEYSTORE_P12_B64: ${{ secrets.KEYSTORE_P12_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        run: bash .github/scripts/install_keystore.sh
+
       - name: Resolve version code
         id: version
         env:
