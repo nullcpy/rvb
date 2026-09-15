@@ -30,6 +30,9 @@ export TRACE_FIXTURES="$TRACES_DIR/fixtures"
 export GITHUB_TOKEN="trace-dummy-token"
 export NEXT_VER_CODE="000000"
 export GITHUB_REPOSITORY=""
+# utils.sh is sourced via process substitution, so its own BASH_SOURCE path
+# lookup for the patcher registry can't work; point it explicitly.
+export RVB_PATCHERS_SH="$RVB_ROOT/.github/scripts/patchers.sh"
 # normally set by build.sh before get_prebuilts; harness defaults to the common config
 export REMOVE_RV_INTEGRATIONS_CHECKS="${REMOVE_RV_INTEGRATIONS_CHECKS:-false}"
 

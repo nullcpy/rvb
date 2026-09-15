@@ -23,6 +23,19 @@ declare -gA __PATCH_VER_CACHE__
 declare -gA __PKG_VERS_CACHE__
 declare -gA __DL_RESP_CACHE__
 
+# Patcher tool registry: resolve_patcher() + PATCHER_* flags.
+# RVB_PATCHERS_SH lets the trace harness point at it when utils.sh is sourced
+# from a process substitution (same trick as scripts/cf_get.py lookup below).
+_RVB_PATCHERS_SH="${RVB_PATCHERS_SH:-${CWD}/.github/scripts/patchers.sh}"
+[ ! -f "$_RVB_PATCHERS_SH" ] && [ -n "${BASH_SOURCE[0]:-}" ] && _RVB_PATCHERS_SH="$(dirname "${BASH_SOURCE[0]}")/.github/scripts/patchers.sh"
+if [ -f "$_RVB_PATCHERS_SH" ]; then
+	# shellcheck disable=SC1090
+	source "$_RVB_PATCHERS_SH"
+else
+	echo "FATAL: patcher registry not found at $_RVB_PATCHERS_SH" >&2
+	exit 1
+fi
+
 toml_file_to_json() {
 	local f="$1"
 	if [ ! -f "$f" ]; then return 1; fi
@@ -217,6 +230,7 @@ get_prebuilts() {
 
 _get_prebuilts() {
 	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host_list=$4 patches_src_list=$5 patches_ver_list=$6
+	resolve_patcher "$cli_src"
 	
 	local first_patch_src
 	first_patch_src=$(list_args "$patches_src_list" | tr -d \"\' | head -n 1)
@@ -360,12 +374,8 @@ _get_prebuilts() {
 			matches=$(source_release_assets_json "$host" <<<"$release") || return 1
 			if [ "$(jq 'length' <<<"$matches")" -gt 1 ]; then
 				local matches_new
-				if echo "$cli_src" | grep -qiE "(npatch|lspatch)"; then
-					matches_new=$(jq -e -r 'map(select(.name | test("\\.apk$"; "i")))' <<<"$matches")
-				else
-					matches_new=$(jq -e -r 'map(select(.name | test("\\.(rvp|mpp|jar)$"; "i")))' <<<"$matches")
-				fi
-				if [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
+				matches_new=$(jq -e -r --arg re "$PATCHER_BUNDLE_RE" 'map(select(.name | test($re; "i")))' <<<"$matches") || true
+				if [ -n "$matches_new" ] && [ "$(jq 'length' <<<"$matches_new")" -ge 1 ]; then
 					matches=$matches_new
 				fi
 			fi
@@ -684,32 +694,22 @@ patches_list_versions() {
 
 _patches_list_versions() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 extra_args=${5:-} op
-	local cli_source_l="${cli_source,,}"
-	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]] || [[ "$cli_source_l" == *"instafel"* ]]; then
+	resolve_patcher "$cli_source"
+	if [ "$PATCHER_HAS_PATCH_LIST" = false ]; then
 		echo ""
 		return 0
 	fi
 
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	
-	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
-		local p_args_morphe=""
-		for j in "${p_jars[@]}"; do
-			p_args_morphe+="--patches '$j' "
-		done
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions $p_args_morphe -f "'$pkg_name'" $extra_args 2>&1); then
-			epr "Could not list versions $cli_jar: '$op'"
-			return 1
-		fi
-	else
-		local p_args_revanced=""
-		for j in "${p_jars[@]}"; do
-			p_args_revanced+="-p '$j' "
-		done
-		if ! op=$(eval java -jar "'$cli_jar'" list-versions -b $p_args_revanced -f "'$pkg_name'" $extra_args 2>&1); then
-			epr "Could not list versions $cli_jar: '$op'"
-			return 1
-		fi
+
+	local p_args=""
+	for j in "${p_jars[@]}"; do
+		p_args+="$PATCHER_LIST_BUNDLE_ARG '$j' "
+	done
+	# shellcheck disable=SC2086  # registry tokens are single fixed args
+	if ! op=$(eval java -jar "'$cli_jar'" $PATCHER_LIST_VERSIONS_SUB $PATCHER_LIST_B $p_args-f "'$pkg_name'" "$extra_args" 2>&1); then
+		epr "Could not list versions $cli_jar: '$op'"
+		return 1
 	fi
 	echo "$op"
 }
@@ -727,13 +727,13 @@ patches_list() {
 
 _patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 op
-	local cli_source_l="${cli_source,,}"
-	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
+	resolve_patcher "$cli_source"
+	if [ "$PATCHER_FLOW" = xposed-module ]; then
 		echo "Name: xposed-module-dummy"
 		return 0
 	fi
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
-	if [[ "$cli_source_l" == *"instafel"* ]]; then
+	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
 		local cli_dir cli_commit
 		cli_dir=$(dirname "$cli_jar")
 		cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
@@ -757,7 +757,7 @@ _patches_list() {
 		echo "$op"
 		return 0
 	fi
-	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+	if [ "$PATCHER_KIND" = morphe ]; then
 		local p_args_morphe=""
 		for j in "${p_jars[@]}"; do
 			p_args_morphe+="--patches '$j' "
@@ -781,16 +781,13 @@ _patches_list() {
 
 has_compatible_patches() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 version=$4 cli_source=$5
-	local cli_source_l="${cli_source,,}"
-	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]] || [[ "$cli_source_l" == *"instafel"* ]]; then
+	resolve_patcher "$cli_source"
+	if [ "$PATCHER_ANY_VERSION" = true ]; then
 		return 0
 	fi
 	[ -z "$cli_jar" ] || [ -z "$patches_jar" ] || [ -z "$pkg_name" ] || [ -z "$version" ] && return 0
 
-	local extra_args=""
-	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
-		extra_args="-x"
-	fi
+	local extra_args="$PATCHER_LIST_X"
 
 	local raw_vers
 	if ! raw_vers=$(patches_list_versions "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source" "$extra_args") || [ -z "$raw_vers" ]; then
@@ -2088,7 +2085,8 @@ patch_apk() {
 	unset IFS
 
 	local cli_source_l="${cli_source,,}"
-	if [[ "$cli_source_l" == *"npatch"* ]] || [[ "$cli_source_l" == *"lspatch"* ]]; then
+	resolve_patcher "$cli_source"
+	if [ "$PATCHER_FLOW" = xposed-module ]; then
 		local p_args_modules=""
 		for j in "${p_jars[@]}"; do
 			p_args_modules+=" -m '$j'"
@@ -2113,7 +2111,7 @@ patch_apk() {
 		return 1
 	fi
 
-	if [[ "$cli_source_l" == *"instafel"* ]]; then
+	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
 		local rel_tmp_dir="${patched_apk}-temporary-files"
 		mkdir -p "$rel_tmp_dir"
 		local cli_dir cli_commit
@@ -2220,7 +2218,7 @@ patch_apk() {
 	fi
 
 	local p_args_long="" p_args_short=""
-	if [[ "$cli_source_l" == *"morphe-desktop"* ]]; then
+	if [ "$PATCHER_BUNDLE_ED_PER_BUNDLE" = true ]; then
 		for ((i=0; i<${#p_jars[@]}; i++)); do
 			local j="${p_jars[$i]}"
 			local ed="${ed_parts[$i]:-}"
@@ -2546,8 +2544,8 @@ build_rv() {
 	local get_latest_ver=false
 	local cli_source_l="${args[cli_source]:-}"
 	cli_source_l="${cli_source_l,,}"
-	local cli_lv_extra=""
-	[[ "$cli_source_l" == *"morphe-desktop"* ]] && cli_lv_extra="-x"
+	resolve_patcher "${args[cli_source]:-}"
+	local cli_lv_extra="$PATCHER_LIST_X"
 
 	# 1. Resolve pkg_name early if possible and check cache
 	if [ -n "$pkg_name" ]; then
@@ -2563,8 +2561,7 @@ build_rv() {
 		fi
 
 		list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
-		local cli_source_l="${args[cli_source],,}"
-		if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
+		if [ "$PATCHER_HAS_PATCH_LIST" = true ]; then
 			if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
 				epr "No app-specific patches found for '$pkg_name'. Skipping completely."
 				return 0
@@ -2579,7 +2576,7 @@ build_rv() {
 					return 0
 				fi
 			elif [ "$version_mode" = exp ]; then
-				if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+				if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
 					wpr "ReVanced CLI does not support experimental versions."
 					return 0
 				fi
@@ -2828,8 +2825,7 @@ build_rv() {
 				pr "Package name of '${table}' is '$pkg_name'"
 				list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
 				
-				local cli_source_l="${args[cli_source],,}"
-				if [[ "$cli_source_l" != *"npatch"* ]] && [[ "$cli_source_l" != *"lspatch"* ]] && [[ "$cli_source_l" != *"instafel"* ]]; then
+				if [ "$PATCHER_HAS_PATCH_LIST" = true ]; then
 					if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
 						epr "No app-specific patches found for '$pkg_name'. Skipping completely."
 						return 0
@@ -2845,8 +2841,7 @@ build_rv() {
 						return 0
 					fi
 				elif [ "$version_mode" = exp ]; then
-					local cli_source_l="${args[cli_source],,}"
-					if [[ "$cli_source_l" == *"revanced/revanced-cli"* ]]; then
+					if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
 						wpr "ReVanced CLI does not support experimental versions."
 						return 0
 					fi
@@ -3247,11 +3242,8 @@ build_rv() {
 				fi
 			done
 		fi
-		if [ "$build_mode" = module ]; then
-			local cli_src_lower="${args[cli_source],,}"
-			if [[ "$cli_src_lower" != *"revanced-cli"* ]] && [[ "$cli_src_lower" != *"npatch"* ]] && [[ "$cli_src_lower" != *"lspatch"* ]] && [[ "$cli_src_lower" != *"instafel"* ]]; then
-				patcher_args+=("--mount")
-			fi
+		if [ "$build_mode" = module ] && [ -n "$PATCHER_MOUNT_ARG" ]; then
+			patcher_args+=("$PATCHER_MOUNT_ARG")
 		fi
 
 		local stock_apk_to_patch="${TEMP_DIR}/${file_prefix}-${version_f}-${arch_f}.stripped.apk"

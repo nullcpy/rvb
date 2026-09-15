@@ -76,6 +76,7 @@ for table_name in $(toml_get_table_names); do
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
 	if ! isoneof "$cli_src_host" github gitlab; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+	resolve_patcher "$cli_src"
 
 	# Parse patch sources: may be a single string or multiline (quoted list)
 	IFS=$'\n'
@@ -102,9 +103,13 @@ for table_name in $(toml_get_table_names); do
 	for i in "${!p_srcs[@]}"; do
 		psrc="${p_srcs[$i]}"
 		phost="${p_hosts[$i]:-${p_hosts[0]}}"
-		# Find the downloaded jar/apk for this source to get actual version
+		# Find the downloaded bundle for this source to get actual version
 		pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
-		pfile=$(find "$pdir" -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' -o -name '*.apk' -o -name 'ifl-patcher*.jar' 2>/dev/null | sort | tail -1)
+		case "$PATCHER_FLOW" in
+			xposed-module) pfile=$(find "$pdir" -name '*.apk' 2>/dev/null | sort | tail -1) ;;
+			instafel-workflow) pfile=$(find "$pdir" -name 'ifl-patcher*.jar' 2>/dev/null | sort | tail -1) ;;
+			*) pfile=$(find "$pdir" \( -name 'patches-*.rvp' -o -name 'patches-*.jar' -o -name '*.mpp' \) 2>/dev/null | sort | tail -1) ;;
+		esac
 		if [ -n "$pfile" ]; then
 			pfilename=${pfile##*/}
 			
