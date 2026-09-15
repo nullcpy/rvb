@@ -71,6 +71,6 @@ curl -s -X POST \
   --data-urlencode "parse_mode=Markdown" \
   --data-urlencode "disable_web_page_preview=true" \
   --data-urlencode "text=${FULL_MSG}" \
-  --data-urlencode "chat_id=@rvb27" \
-  --data-urlencode "message_thread_id=2747" \
+  --data-urlencode "chat_id=${TG_CHAT_ID:-@rvb27}" \
+  --data-urlencode "message_thread_id=${TG_THREAD_CI:-2747}" \
   "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" > /dev/null

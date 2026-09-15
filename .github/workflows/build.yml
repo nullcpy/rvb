@@ -65,6 +65,9 @@ jobs:
 
       - name: Resolve build context
         id: context
+        env:
+          TG_THREAD_STABLE: ${{ vars.TG_THREAD_STABLE }}
+          TG_THREAD_BETA: ${{ vars.TG_THREAD_BETA }}
         run: bash .github/scripts/build_resolve_context.sh "${{ inputs.config_file }}"
 
       - name: Install Bouncy Castle for BKS Keystore
@@ -124,10 +127,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
-          UPLOAD_APKS_REPO: "nullcpy/apks"
+          UPLOAD_APKS_REPO: "${{ vars.APKS_REPO || 'nullcpy/apks' }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           CF_BYPASS_SOLVER_TRAWL_8191_ENABLED: "true"
+          RELEASE_NOTES_TG_LINK: "${{ vars.RELEASE_NOTES_TG_LINK || 'https://t.me/rvb27' }}"
+          RELEASE_NOTES_DONATE_LINK: "${{ vars.RELEASE_NOTES_DONATE_LINK || 'https://fahim-ahmed05.github.io/donate' }}"
+          RELEASE_NOTES_WEBSITE_LINK: "${{ vars.RELEASE_NOTES_WEBSITE_LINK || 'https://nullcpy.github.io' }}"
         run: |
           set -euo pipefail
           ./build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
@@ -135,6 +141,7 @@ jobs:
       - name: Update Usage Tracker
         env:
           APKS_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
+          APKS_REPO: "${{ vars.APKS_REPO || 'nullcpy/apks' }}"
         run: python3 .github/scripts/update_usage_tracker.py || true
         
       - name: Cleanup old cached APKs
@@ -230,8 +237,9 @@ jobs:
         continue-on-error: true
         env:
           DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
+          WEBSITE_REPO: "${{ vars.WEBSITE_REPO || 'nullcpy/nullcpy.github.io' }}"
         run: |
-          curl -fsS -X POST "https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches" \
+          curl -fsS -X POST "https://api.github.com/repos/${WEBSITE_REPO}/dispatches" \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $DISPATCH_TOKEN" \
             -d '{"event_type": "catalog-updated"}' \
@@ -240,6 +248,8 @@ jobs:
       - name: Notify telegram
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: "${{ vars.TG_CHAT_ID || '@rvb27' }}"
+          TG_CHAT_ID_BROADCAST: "${{ vars.TG_CHAT_ID_BROADCAST || '@rvb28' }}"
           TG_THREAD_ID: ${{ steps.context.outputs.TG_THREAD_ID }}
           TITLE_SUFFIX: ${{ steps.context.outputs.TITLE_SUFFIX }}
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}

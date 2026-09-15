@@ -222,7 +222,11 @@ def main():
     lines.append("• Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) or [MicroG](https://github.com/ReVanced/GmsCore/releases/latest), required for Google APKs.  ")
     lines.append("• Use [Zygisk Detach](https://github.com/j-hc/zygisk-detach) to stop Play Store from updating Modules.  ")
     lines.append("")
-    lines.append("🌐 [GitHub](https://github.com/nullcpy/rvb) | 💬 [Group](https://t.me/rvb27) | ☕ [Donate](https://fahim-ahmed05.github.io/donate) | 🔗 [Website](https://nullcpy.github.io)")
+    gh_repo = os.environ.get("GITHUB_REPOSITORY") or "nullcpy/rvb"
+    tg_link = os.environ.get("RELEASE_NOTES_TG_LINK") or "https://t.me/rvb27"
+    donate_link = os.environ.get("RELEASE_NOTES_DONATE_LINK") or "https://fahim-ahmed05.github.io/donate"
+    website_link = os.environ.get("RELEASE_NOTES_WEBSITE_LINK") or "https://nullcpy.github.io"
+    lines.append(f"🌐 [GitHub](https://github.com/{gh_repo}) | 💬 [Group]({tg_link}) | ☕ [Donate]({donate_link}) | 🔗 [Website]({website_link})")
     lines.append("")
     content = "\n".join(lines)
     with open("build.md", "w", encoding="utf-8") as f:

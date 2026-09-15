@@ -44,8 +44,9 @@ jobs:
         continue-on-error: true
         env:
           DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
+          WEBSITE_REPO: "${{ vars.WEBSITE_REPO || 'nullcpy/nullcpy.github.io' }}"
         run: |
-          curl -fsS -X POST "https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches" \
+          curl -fsS -X POST "https://api.github.com/repos/${WEBSITE_REPO}/dispatches" \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $DISPATCH_TOKEN" \
             -d '{"event_type": "catalog-updated"}' \

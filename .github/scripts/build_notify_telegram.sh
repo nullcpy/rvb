@@ -45,14 +45,14 @@ send_chunk() {
     --data-urlencode "parse_mode=HTML" \
     --data-urlencode "disable_web_page_preview=true" \
     --data-urlencode "text=${text}" \
-    --data-urlencode "chat_id=@rvb27" \
+    --data-urlencode "chat_id=${TG_CHAT_ID:-@rvb27}" \
     --data-urlencode "message_thread_id=${TG_THREAD_ID:-}" \
     "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
   curl -s -X POST \
     --data-urlencode "parse_mode=HTML" \
     --data-urlencode "disable_web_page_preview=true" \
     --data-urlencode "text=${text}" \
-    --data-urlencode "chat_id=@rvb28" \
+    --data-urlencode "chat_id=${TG_CHAT_ID_BROADCAST:-@rvb28}" \
     "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 }
 
