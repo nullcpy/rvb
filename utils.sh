@@ -732,6 +732,32 @@ patches_list() {
 	echo "$result"
 }
 
+# Instafel CLI resolves its patcher-core jar by filename in the CLI dir, CWD
+# (and, during patching, the run temp dir). Shadow copies of the bundle jars
+# under every name the CLI may look for. Extra target dirs passed as args.
+_instafel_shadow_core() {
+	local cli_jar=$1 patches_jar=$2; shift 2
+	local -a extra_dirs=("$@")
+	local cli_dir cli_commit d j j_base
+	cli_dir=$(dirname "$cli_jar")
+	cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
+	[ -z "$cli_commit" ] && cli_commit="8e4756f"
+	for j in $(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'); do
+		j_base=$(basename "$j")
+		cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
+		cp "$j" "$j_base" 2>/dev/null || :
+		for d in "${extra_dirs[@]}"; do cp "$j" "$d/$j_base" 2>/dev/null || :; done
+		cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+		cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+		for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :; done
+		if [ "$cli_commit" != "8e4756f" ]; then
+			cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
+			for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :; done
+		fi
+	done
+}
+
 _patches_list() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 cli_source=$4 op
 	resolve_patcher "$cli_source"
@@ -741,22 +767,7 @@ _patches_list() {
 	fi
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
-		local cli_dir cli_commit
-		cli_dir=$(dirname "$cli_jar")
-		cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
-		[ -z "$cli_commit" ] && cli_commit="8e4756f"
-		for j in "${p_jars[@]}"; do
-			local j_base
-			j_base=$(basename "$j")
-			cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
-			cp "$j" "$j_base" 2>/dev/null || :
-			cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-			if [ "$cli_commit" != "8e4756f" ]; then
-				cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-				cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			fi
-		done
+		_instafel_shadow_core "$cli_jar" "$patches_jar"
 		if ! op=$(eval java -jar "'$cli_jar'" list 2>&1); then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
@@ -2121,25 +2132,7 @@ patch_apk() {
 	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
 		local rel_tmp_dir="${patched_apk}-temporary-files"
 		mkdir -p "$rel_tmp_dir"
-		local cli_dir cli_commit
-		cli_dir=$(dirname "$cli_jar")
-		cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
-		[ -z "$cli_commit" ] && cli_commit="8e4756f"
-		for j in "${p_jars[@]}"; do
-			local j_base
-			j_base=$(basename "$j")
-			cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
-			cp "$j" "$j_base" 2>/dev/null || :
-			cp "$j" "$rel_tmp_dir/$j_base" 2>/dev/null || :
-			cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-			cp "$j" "$rel_tmp_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-			if [ "$cli_commit" != "8e4756f" ]; then
-				cp "$j" "$cli_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-				cp "$j" "ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-				cp "$j" "$rel_tmp_dir/ifl-patcher-core-8e4756f.jar" 2>/dev/null || :
-			fi
-		done
+		_instafel_shadow_core "$cli_jar" "$patches_jar" "$rel_tmp_dir"
 
 		local expected_base
 		expected_base=$(basename "$stock_input" .apk)
@@ -2403,6 +2396,50 @@ check_is_universal() {
 	return 1
 }
 
+# Shared version-resolution pre-pass used by build_rv's two call sites
+# (early pkg path + post-download path). Operates on the caller's dynamic
+# locals: list_patches, resolved_version, version_mode.
+# Returns: 0 continue | 1 hard failure (caller `return 1`) | 2 skip app (caller `return 0`)
+_resolve_list_and_version() {
+	local cli_jar=$1 patches_jar=$2 pkg_name=$3 table=$4 say_pkg=${5:-false}
+	if [ -z "$list_patches" ]; then
+		[ "$say_pkg" = true ] && pr "Package name of '${table}' is '$pkg_name'"
+		list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
+	fi
+	if [ "$PATCHER_HAS_PATCH_LIST" = true ]; then
+		if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
+			epr "No app-specific patches found for '$pkg_name'. Skipping completely."
+			return 2
+		fi
+	fi
+	if [ -z "$resolved_version" ]; then
+		if [ "$version_mode" = auto ]; then
+			if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
+				"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
+				epr "get_patch_last_supported_ver failed for '$pkg_name'"
+				return 2
+			fi
+		elif [ "$version_mode" = exp ]; then
+			if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
+				wpr "ReVanced CLI does not support experimental versions."
+				return 2
+			fi
+			if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
+				epr "get_patch_exp_ver failed"
+			fi
+			if [ -z "$resolved_version" ]; then
+				epr "No exp version found for '$pkg_name', skipping."
+				return 2
+			fi
+		elif isoneof "$version_mode" latest beta; then
+			: # Needs latest
+		else
+			resolved_version=$version_mode
+		fi
+	fi
+	return 0
+}
+
 build_rv() {
 	eval "declare -A args=${1#*=}"
 	local version="${args[version]:-}" pkg_name="${args[pkg_name]:-}"
@@ -2567,39 +2604,13 @@ build_rv() {
 			fi
 		fi
 
-		list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
-		if [ "$PATCHER_HAS_PATCH_LIST" = true ]; then
-			if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
-				epr "No app-specific patches found for '$pkg_name'. Skipping completely."
-				return 0
-			fi
-		fi
-
-		if [ -z "$resolved_version" ]; then
-			if [ "$version_mode" = auto ]; then
-				if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-					"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
-					epr "get_patch_last_supported_ver failed for '$pkg_name'"
-					return 0
-				fi
-			elif [ "$version_mode" = exp ]; then
-				if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
-					wpr "ReVanced CLI does not support experimental versions."
-					return 0
-				fi
-				if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
-					epr "get_patch_exp_ver failed"
-				fi
-				if [ -z "$resolved_version" ]; then
-					epr "No exp version found for '$pkg_name', skipping."
-					return 0
-				fi
-			elif isoneof "$version_mode" latest beta; then
-				: # Needs latest
-			else
-				resolved_version=$version_mode
-			fi
-		fi
+		# Re-resolve fresh at this site (matches original unconditional call);
+		# list_patches may be cached from an earlier pkg attempt.
+		list_patches=""
+		local _rstatus=0
+		_resolve_list_and_version "$cli_jar" "$patches_jar" "$pkg_name" "$table" false || _rstatus=$?
+		if [ "$_rstatus" = 1 ]; then return 1; fi
+		if [ "$_rstatus" = 2 ]; then return 0; fi
 	fi
 
 	local all_resolved_versions=()
@@ -2828,43 +2839,10 @@ build_rv() {
 			fi
 			
 			# If we didn't run patches_list earlier because pkg_name was empty
-			if [ -z "$list_patches" ]; then
-				pr "Package name of '${table}' is '$pkg_name'"
-				list_patches=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}") || return 1
-				
-				if [ "$PATCHER_HAS_PATCH_LIST" = true ]; then
-					if ! grep -Fq "$pkg_name" <<<"$list_patches"; then
-						epr "No app-specific patches found for '$pkg_name'. Skipping completely."
-						return 0
-					fi
-				fi
-			fi
-
-			if [ -z "$resolved_version" ]; then
-				if [ "$version_mode" = auto ]; then
-					if ! resolved_version=$(get_patch_last_supported_ver "$list_patches" "$pkg_name" \
-						"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}"); then
-						epr "get_patch_last_supported_ver failed for '$pkg_name'"
-						return 0
-					fi
-				elif [ "$version_mode" = exp ]; then
-					if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
-						wpr "ReVanced CLI does not support experimental versions."
-						return 0
-					fi
-					if ! resolved_version=$(get_patch_exp_ver "$cli_jar" "$patches_jar" "$pkg_name" "${args[cli_source]}"); then
-						epr "get_patch_exp_ver failed"
-					fi
-					if [ -z "$resolved_version" ]; then
-						epr "No exp version found for '$pkg_name', skipping."
-						return 0
-					fi
-				elif isoneof "$version_mode" latest beta; then
-					:
-				else
-					resolved_version=$version_mode
-				fi
-			fi
+			local _rstatus=0
+			_resolve_list_and_version "$cli_jar" "$patches_jar" "$pkg_name" "$table" true || _rstatus=$?
+			if [ "$_rstatus" = 1 ]; then return 1; fi
+			if [ "$_rstatus" = 2 ]; then return 0; fi
 			
 			version="$resolved_version"
 			[ -z "$version" ] && get_latest_ver=true
