@@ -464,7 +464,7 @@
   "GooglePhotos-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "build-mode": "both",
@@ -473,7 +473,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -485,7 +485,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
@@ -503,7 +503,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -512,7 +512,7 @@
   "pixiv-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
@@ -521,7 +521,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -1101,7 +1101,7 @@
   "CalorieCounter-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.fatsecret.android",
     "app-name": "Calorie Counter",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
@@ -1112,7 +1112,7 @@
   "SoundCloud-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "SoundCloud",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/soundcloud/soundcloud-soundcloud",
@@ -1123,7 +1123,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1136,7 +1136,7 @@
   "TikTok-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
@@ -1147,7 +1147,7 @@
   "TikTok-kveld9-Asia": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
