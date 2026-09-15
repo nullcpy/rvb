@@ -40,11 +40,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/cleanup_update_branch.sh
 
-      - name: Synchronize Website Catalog Data
+      - name: Notify website catalog rebuild
+        continue-on-error: true
         env:
-          WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
         run: |
-          git checkout main || true
-          python3 .github/scripts/sync_website_catalog.py
+          curl -fsS -X POST "https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $DISPATCH_TOKEN" \
+            -d '{"event_type": "catalog-updated"}' \
+            || echo "::warning::Website catalog dispatch failed; the scheduled rebuild will converge."
 

@@ -148,6 +148,12 @@ jobs:
         id: get_output
         run: bash .github/scripts/build_get_output.sh
 
+      - name: Generate release manifest
+        env:
+          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+        run: python3 .github/scripts/build_make_manifest.py
+
       - name: Upload to release
         uses: Wandalen/wretry.action@v3.8.0
         with:
@@ -157,7 +163,9 @@ jobs:
           with: |
             body_path: build.md
             token: ${{ secrets.GITHUB_TOKEN }}
-            files: ./build/*
+            files: |
+              ./build/*
+              ./temp/manifest/build.json
             name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
             tag_name: ${{ steps.version.outputs.NEXT_VER_CODE }}
             overwrite_files: true
@@ -201,15 +209,23 @@ jobs:
             overwrite_files: true
             target_commitish: main
 
-      - name: Update Website Catalog
+      - name: Merge and upload archive manifest
         env:
-          WEBSITE_REPO_TOKEN: ${{ secrets.APKS_REPO_TOKEN }}
-          NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
-          ARCHIVE_UPLOAD_FAILED: ${{ steps.archive_upload.outcome == 'failure' && 'true' || 'false' }}
-        run: python3 .github/scripts/update_website_catalog.py
+        run: bash .github/scripts/merge_archive_manifest.sh
+
+      - name: Notify website catalog rebuild
+        continue-on-error: true
+        env:
+          DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
+        run: |
+          curl -fsS -X POST "https://api.github.com/repos/nullcpy/nullcpy.github.io/dispatches" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $DISPATCH_TOKEN" \
+            -d '{"event_type": "catalog-updated"}' \
+            || echo "::warning::Website catalog dispatch failed; the scheduled rebuild will converge."
 
       - name: Notify telegram
         env:

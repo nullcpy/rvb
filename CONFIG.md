@@ -231,36 +231,62 @@ You can manually update this file if you need to force a specific version state,
 
 **Selective Checking:** If you only want the CI to check specific apps (instead of all enabled apps in your config), you can add `"_check_only_listed": true` to the top level of `app_versions.json`. When this is true, the script will only check for updates for the apps that already exist as keys in the file, saving time and resources.
 
-## Release Cleanup & Catalog Synchronization
+## Release Cleanup & Catalog Architecture
 
-Maintenance and cleanup workflows ensure GitHub Releases, changelogs, and the website catalog remain pruned and synchronized with live metrics.
+Maintenance and cleanup workflows keep GitHub Releases and changelogs pruned. The
+website catalog (`data.json` on `nullcpy.github.io`) is **derived, not edited**: every
+release carries a `build.json` manifest and the website repo regenerates its catalog
+from scratch by folding those manifests against the live releases API.
+
+### Release Manifests (`build.json`)
+- **What**: a per-release, filename-keyed JSON manifest describing every APK/module
+  in that release — app identity, brand, variant, version, arch, patch sources and
+  `appliedPatches`. Schema documented in `.github/scripts/build_make_manifest.py`.
+- **Numbered releases**: the builder uploads one manifest per build
+  (`build_make_manifest.py` → release asset `build.json`).
+- **Archive releases (`stable`/`beta`)**: after each archive file upload,
+  `merge_archive_manifest.sh` downloads the release's existing `build.json`, unions it
+  with the new build's entries (same filename = file replaced = metadata replaced),
+  drops entries whose file no longer exists in the release, and uploads the result.
+  The archive therefore carries cumulative metadata for every file it contains, even
+  after the originating numbered release is deleted.
+- **Backfill**: `.github/scripts/backfill_manifests.py` (run with `--apply`) can
+  regenerate manifests on all live releases from a healthy `data.json` (one-time
+  migration tool; dry run by default).
+
+### Website Rebuild (nullcpy.github.io repo)
+`.github/workflows/rebuild-catalog.yml` runs on `repository_dispatch
+(catalog-updated)` — sent fire-and-forget by `build.yml` and `cleanup.yml` — plus a
+scheduled safety net. It fetches all live releases and their `build.json`, regenerates
+`data.json` (schema v2) from scratch, and pushes only on material change. Deletions are
+automatic: a release or asset that no longer exists simply doesn't appear. Circuit
+breakers abort a rebuild (leaving `data.json` untouched) if the releases API looks
+empty (< 10 releases) or the catalog shrinks beyond `MIN_RATIO` (default 0.6); `FORCE=1`
+overrides. Releases without a manifest get minimal filename-derived fallback entries.
 
 ### Automated Routine Cleanup (`cleanup.yml`)
-- **Numbered Releases**: Retains the latest 98 numbered releases via `ophub/delete-releases-workflows`.
-- **Archive Releases**: Retains rolling `stable` and `beta` releases, keeping up to 2 versions per asset group via `cleanup-archive-assets.py`.
-- **Website Catalog Sync (`sync_website_catalog.py`)**:
-  - Pulls live `download_count` numbers directly from GitHub Releases API in a single bulk request (`releases?per_page=100`).
-  - Updates asset download metrics and recalculates `totalDownloads` for every brand and app in `data.json`.
-  - Prunes deleted builds and empty apps, and reconciles variant pointers (`latestStable`, `latestBeta`).
-  - **Circuit Breaker**: Hard-aborts if GitHub API returns `< 10` releases to protect `data.json` from accidental corruption.
+- **Numbered Releases**: Retains the latest 98 numbered releases via `ophub/delete-releases-workflows`. Keeping 98 *is* the catalog's history window — deleted releases vanish from the website, which is correct since their files are gone.
+- **Archive Releases**: Retains rolling `stable` and `beta` releases, keeping up to 2 versions per asset group via `cleanup-archive-assets.py`. Pruned assets drop out of the catalog automatically at the next rebuild.
+- Ends with a fire-and-forget `catalog-updated` dispatch so the website reflects deletions promptly.
 
 ### Full Clean Slate / Rebuilding from Scratch
-To completely wipe all historical releases (including `stable` and `beta`) and rebuild everything with clean Schema v2 naming conventions:
+To completely wipe all historical releases (including `stable` and `beta`):
 1. In `.github/workflows/cleanup.yml`, set:
    ```yaml
    releases_keep_latest: 0
    workflows_keep_day: 0
    # (omit releases_keep_keyword: stable/beta)
    ```
-2. Set `ALLOW_EMPTY_CATALOG: "true"` in the `Synchronize Website Catalog Data` step.
-3. Trigger the **Cleanup** workflow via `workflow_dispatch`.
-   - All past releases, tags, and workflow logs are purged.
-   - `sync_website_catalog.py` resets `data.json` on `nullcpy.github.io` to `apps: []` without tripping the circuit breaker.
-4. Subsequent CI builds will author clean numbered releases and rolling archives from scratch.
-5. **Restoring Routine Configuration**: After the clean-slate rebuild has run, restore `.github/workflows/cleanup.yml` back to standard retention:
+2. Trigger the **Cleanup** workflow via `workflow_dispatch`. All past releases, tags,
+   and workflow logs are purged.
+3. In the **website repo**, run Rebuild Catalog with `FORCE=1` (edit the workflow env or
+   temporarily raise `MIN_RELEASES_THRESHOLD=0`) to publish an empty catalog; the
+   breaker would otherwise refuse to write with < 10 live releases.
+4. Subsequent CI builds author clean numbered releases, rolling archives, and fresh
+   manifests; every website rebuild thereafter is derived from whatever is live.
+5. **Restoring Routine Configuration**: restore `cleanup.yml` to standard retention:
    ```yaml
    releases_keep_latest: 98
    releases_keep_keyword: stable/beta
    workflows_keep_day: 0
    ```
-   and remove `ALLOW_EMPTY_CATALOG: "true"` (or set to `"false"`) to re-arm the circuit breaker.
