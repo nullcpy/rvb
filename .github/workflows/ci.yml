@@ -27,7 +27,7 @@ jobs:
           - 8191:8191
         env:
           REDIS_URL: redis://redis:6379
-        options: --shm-size=1gb
+        options: --shm-size=2gb
     outputs:
       trigger_stable: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
       trigger_beta: ${{ steps.effective_triggers.outputs.TRIGGER_BETA }}
@@ -49,6 +49,14 @@ jobs:
 
       - name: Setup Python dependencies
         run: pip install --no-cache-dir curl_cffi || true
+
+      - name: Wait for Trawl
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8191/health >/dev/null 2>&1 && exit 0
+            sleep 5
+          done
+          echo "::warning::Trawl not ready, proceeding anyway"
 
       - name: Fetch App Versions
         id: fetch_app_versions

@@ -1082,15 +1082,15 @@ merge_splits() {
 
 _trawl_8191_get() {
 	local url=$1 referer=${2:-}
-	local max_retries=2 attempt
+	local max_retries=3 attempt
 	local solver_url="${TRAWL_URL:-http://localhost:8191}/scrape"
 	local extra_headers=""
 	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
 	for attempt in $(seq 1 $max_retries); do
 		local response status
-		response=$(curl -m 90 -s -X POST "$solver_url" \
+		response=$(curl -m 120 -s -X POST "$solver_url" \
 			-H 'Content-Type: application/json' \
-			-d "{\"url\":\"$url\",\"maxTimeout\":60000,\"skipHttp\":true${extra_headers}}") || true
+			-d "{\"url\":\"$url\",\"maxTimeout\":120000,\"skipHttp\":true${extra_headers}}") || true
 		local parsed_meta
 		if parsed_meta=$(jq -r '[.statusCode // "", .userAgent // "", ([.cookies[]? | .name + "=" + .value] | join("; "))] | @tsv' <<< "$response" 2>/dev/null); then
 			local status ua cookies
