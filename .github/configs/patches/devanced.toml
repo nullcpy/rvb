@@ -40,13 +40,6 @@ app-name = "Viber"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.viber.voip"
 
-[pixiv-DeVanced]
-enabled = true
-pkg-name = "jp.pxv.android"
-app-name = "pixiv"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
-uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
-
 [Strava-DeVanced]
 enabled = true
 pkg-name = "com.strava"

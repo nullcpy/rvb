@@ -1,21 +1,21 @@
-patches-source = "kveld9/kveld-morphe-patches"
-brand = "kveld9"
-
-[TikTok-kveld9]
+[Facebook-andrewliang25]
 enabled = true
-pkg-name = "com.zhiliaoapp.musically"
-app-name = "TikTok"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
-apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+pkg-name = "com.facebook.katana"
+app-name = "Facebook"
+patches-source = "andrewliang25/morphe-patches"
+brand = "andrewliang25"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
+uptodown-dlurl = "https://facebook.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
+apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
 
-[TikTok-kveld9-Asia]
+[pixiv-Fripe070]
 enabled = true
-pkg-name = "com.ss.android.ugc.trill"
-app-name = "TikTok"
-variant = "Asia"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok"
-uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-asia-app/com.ss.android.ugc.trill"
-apkcombo-dlurl = "https://apkcombo.com/tiktok-asia/com.ss.android.ugc.trill"
+pkg-name = "jp.pxv.android"
+app-name = "pixiv"
+patches-source = "Fripe070/PixivPatches"
+brand = "Fripe070"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/pixiv/jp.pxv.android"
+apkcombo-dlurl = "https://apkcombo.com/pixiv/jp.pxv.android"

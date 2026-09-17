@@ -1,0 +1,22 @@
+[pixiv-DeVanced]
+enabled = true
+pkg-name = "jp.pxv.android"
+app-name = "pixiv"
+patches-source = "RookieEnough/De-Vanced"
+brand = "DeVanced"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/pixiv/jp.pxv.android"
+apkcombo-dlurl = "https://apkcombo.com/pixiv/jp.pxv.android"
+
+[pixiv-Fripe070]
+enabled = true
+pkg-name = "jp.pxv.android"
+app-name = "pixiv"
+patches-source = "Fripe070/PixivPatches"
+brand = "Fripe070"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/pixiv/jp.pxv.android"
+apkcombo-dlurl = "https://apkcombo.com/pixiv/jp.pxv.android"
+
