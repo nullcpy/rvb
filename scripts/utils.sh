@@ -1080,6 +1080,15 @@ merge_splits() {
 	return 0
 }
 
+_trawl_ready() {
+	local deadline=$((SECONDS + 30))
+	while (( SECONDS < deadline )); do
+		curl -sf http://localhost:8191/health >/dev/null 2>&1 && return 0
+		sleep 5
+	done
+	return 1
+}
+
 _trawl_8191_get() {
 	local url=$1 referer=${2:-}
 	local max_retries=3 attempt
