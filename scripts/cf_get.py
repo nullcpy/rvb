@@ -20,6 +20,57 @@ def is_challenge(status_code: int, text: str) -> bool:
         "turnstile"
     ))
 
+def get_impersonate_targets() -> list:
+    targets = []
+    BrowserType = None
+    for module_name in (
+        "curl_cffi.requests",
+        "curl_cffi.requests.session",
+        "curl_cffi.requests.impersonate",
+        "curl_cffi",
+    ):
+        try:
+            mod = __import__(module_name, fromlist=["BrowserType"])
+            bt = getattr(mod, "BrowserType", None)
+            if bt:
+                BrowserType = bt
+                break
+        except Exception:
+            continue
+
+    if BrowserType:
+        try:
+            import re
+            members = [m.value for m in BrowserType if hasattr(m, "value")]
+
+            def sort_key(name: str):
+                m_num = re.search(r"\d+", str(name))
+                ver = int(m_num.group(0)) if m_num else 0
+                name_str = str(name).lower()
+                if "chrome" in name_str and "android" not in name_str:
+                    return (3, ver)
+                elif "safari" in name_str:
+                    return (2, ver)
+                elif "edge" in name_str:
+                    return (1, ver)
+                return (0, ver)
+
+            sorted_members = sorted(members, key=sort_key, reverse=True)
+            for t in sorted_members:
+                if t not in targets:
+                    targets.append(t)
+        except Exception:
+            pass
+
+    # Ensure rolling aliases are prioritized
+    if "chrome" not in targets:
+        targets.insert(0, "chrome")
+    if "safari" not in targets:
+        targets.append("safari")
+
+    # Pick rolling alias + top modern distinct targets (capped to 8)
+    return targets[:8]
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(2)
@@ -27,8 +78,7 @@ def main():
     url = sys.argv[1]
     cookie_file = sys.argv[2] if len(sys.argv) > 2 else ""
 
-    # Try modern Chrome browser fingerprints supported by curl_cffi
-    impersonate_targets = ["chrome", "chrome136", "chrome133", "chrome131", "chrome124", "chrome120", "safari"]
+    impersonate_targets = get_impersonate_targets()
     
     for imp in impersonate_targets:
         try:
