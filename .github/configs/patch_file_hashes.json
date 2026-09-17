@@ -135,25 +135,25 @@
       "ch.protonvpn.android": "fc383ae0a443b356fed0b6c658d06ab2",
       "cn.ommiao.iconpacker": "8f39bb5770a756e037aa92faa6093432",
       "cn.wps.moffice_eng": "447813aedaba74ed575d4f0cfc21a46f",
-      "com.adguard.android": "49db6f400dda8088d3c561c0d13126eb",
-      "com.adobe.lrmobile": "b6a29ee09897cf26ce99b46d6ea9a8b0",
-      "com.amazon.avod.thirdpartyclient": "b4af734d77cd6c96ebc69eb25ca00eaa",
+      "com.adguard.android": "fc3cbe0152d03affe00dda0510c06f71",
+      "com.adobe.lrmobile": "a00f2718d6ed36bc0cfc5235bbae2d24",
+      "com.amazon.avod.thirdpartyclient": "1d689bf966f0fe57015e9e4e887c3547",
       "com.bambuna.podcastaddict": "c5014f7044cccd0b5f1a3cdb162437dd",
       "com.duolingo": "567a24ef30a153cca87e51cf0a3cf3eb",
       "com.github.android": "aadbc3f7908964c81676f1f3415eb729",
-      "com.goodreads": "b7fad1b822c0b9790b5a39379f712ae1",
+      "com.goodreads": "c31962adcdb8d9a3594ea8a4a70cd0d8",
       "com.hellochinese": "1399ee6c3e33c987c0345bca59d0d7cb",
       "com.intsig.camscanner": "0b4ca9534c59e67d0a5cc607370bd377",
       "com.merriamwebster": "085859c18ca7dbcef6e0d1edbb5a6dbf",
       "com.myfitnesspal.android": "ed1989ddb10bfad4387b5865ba8a1915",
       "com.pandora.android": "979f2d05036202d55389b47205cc1a72",
-      "com.soundcloud.android": "1a84ca7ae3822e3baa7e9ae6b2d084e0",
+      "com.soundcloud.android": "8c2750a7369498d991a1a1848c536a12",
       "com.teslacoilsw.launcher": "acd4f90ccaae4da6f18831921f006d95",
       "com.wallpaperscraft.wallpaper": "e76ad26c50960129bfcdf1593ba6a70f",
       "cz.ackee.ventusky": "ed386fb3971cb592c47941df5564d78c",
       "ginlemon.flowerfree": "8565a9df34cb8847ead3223b60d713b3",
       "pl.solidexplorer2": "a9f0bae93d8e7e68f5c5f6e4438802e6",
-      "shared": "c4aaa51816a85efa26dc8cd35b80bcc5",
+      "shared": "275abf8423d52cef659e346bbe53bfe2",
       "videoeditor.videorecorder.screenrecorder": "b757bfdb8b080a895208709fb2927845"
     }
   },
@@ -229,10 +229,10 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "b1ca6fe83178f2e58af0d0295c4e3030",
-      "com.ss.android.ugc.trill": "5cc47af7a8ccadd5716c94ae8eb65761",
-      "com.zhiliaoapp.musically": "5cc47af7a8ccadd5716c94ae8eb65761",
-      "shared": "bc9a3e0a39435125984743b2e401ed45"
+      "com.brave.browser": "4a600654e96d9421b90d7307530f2d23",
+      "com.ss.android.ugc.trill": "971caa3610f40db1bd27c5757fbc666b",
+      "com.zhiliaoapp.musically": "971caa3610f40db1bd27c5757fbc666b",
+      "shared": "c4010ea8a987479fbe2e6042b3f62a2d"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
@@ -245,7 +245,7 @@
   "morpheapp/morphe-patches": {
     "beta": {
       "com.google.android.apps.youtube.music": "ac8289b399defc11d4a537467e7bccad",
-      "com.google.android.youtube": "e824a56f5a3e15499380f0e96106b0fa",
+      "com.google.android.youtube": "b7456efa1027e9c64a50511b48d7a44f",
       "com.reddit.frontpage": "569f7eb9334163efdffd8a0715e61d26",
       "shared": "4acd6e1942d5c56801f251973a0dfba5"
     },
@@ -309,7 +309,7 @@
   },
   "rookieenough/de-vanced": {
     "beta": {
-      "com.google.android.apps.photos": "4c37271244fe3577824234b2c4691ced",
+      "com.google.android.apps.photos": "d3a4d7fd064e5d6e3928f50f2a4f65e2",
       "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
     },
     "stable": {
