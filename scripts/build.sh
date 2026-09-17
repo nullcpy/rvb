@@ -195,13 +195,13 @@ for table_name in $(toml_get_table_names); do
 		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)"
+		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)"
+		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
@@ -210,7 +210,7 @@ for table_name in $(toml_get_table_names); do
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)"
+		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
 		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
 	fi
 done

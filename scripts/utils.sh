@@ -130,7 +130,7 @@ toml_prep() {
 	if [ ! -f "$1" ]; then return 1; fi
 	__TOML__=$(toml_file_to_json "$1") || abort "failed to parse config file: $1"
 }
-toml_get_table_names() { jq -r -e 'to_entries[] | select(.value | type == "object") | .key' <<<"$__TOML__"; }
+toml_get_table_names() { jq -r -e 'to_entries[] | select(.value | type == "object") | .key' <<<"$__TOML__" | tr -d '\r'; }
 toml_get_table_main() { jq -r -e 'to_entries | map(select(.value | type != "object")) | from_entries' <<<"$__TOML__"; }
 toml_get_table() { jq -r -e ".\"${1}\"" <<<"$__TOML__"; }
 toml_get() {
@@ -1581,6 +1581,7 @@ dl_apkmirror() {
 			"$final_url" || return 1
 		if ! unzip -l "${output%.apk}.apkm" >/dev/null 2>&1; then
 			epr "Downloaded file is not a valid zip (apkm): $final_url"
+			rm -f "${output%.apk}.apkm"
 			return 1
 		fi
 		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
@@ -1673,15 +1674,23 @@ dl_apkpure() {
 			-H "Referer: $dl_page_url" \
 			"${cookie_header[@]}" \
 			--connect-timeout 30 --max-time 300 \
-			"$download_url" -o "${output}.xapk" || return 1
-		_apkpure_install_xapk "${output}.xapk" "${output}" || return 1
+			"$download_url" -o "${output}.xapk" || { rm -f "${output}.xapk"; return 1; }
+		if ! _apkpure_install_xapk "${output}.xapk" "${output}"; then
+			rm -f "${output}.xapk"
+			return 1
+		fi
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+			mv -f "${output}.xapk" "${output%.apk}.xapk"
+		else
+			rm -f "${output}.xapk"
+		fi
 	else
 		curl -L --fail -s -S \
 			-H "User-Agent: ${user_agent:-Mozilla/5.0}" \
 			-H "Referer: $dl_page_url" \
 			"${cookie_header[@]}" \
 			--connect-timeout 30 --max-time 300 \
-			"$download_url" -o "${output}" || return 1
+			"$download_url" -o "${output}" || { rm -f "${output}"; return 1; }
 	fi
 }
 
@@ -1689,9 +1698,13 @@ _apkpure_install_xapk() {
 	local xapk=$1 output=$2
 	if ! unzip -l "$xapk" >/dev/null 2>&1; then
 		epr "Downloaded XAPK is not a valid zip (Cloudflare block?): $xapk"
+		rm -f "$xapk"
 		return 1
 	fi
-	merge_splits "$xapk" "$output"
+	if ! merge_splits "$xapk" "$output"; then
+		rm -f "$output"
+		return 1
+	fi
 }
 
 # -------------------- apkcombo --------------------
@@ -1800,13 +1813,22 @@ PYC
 	pr "Downloading from APKCombo: $final_url"
 	curl -L --fail -s -S --connect-timeout 30 --max-time 300 \
 		-H "User-Agent: ${user_agent:-Mozilla/5.0}" \
-		-H "Referer: $page_url" "$final_url" -o "$output" || return 1
+		-H "Referer: $page_url" "$final_url" -o "$output" || { rm -f "$output"; return 1; }
 	if ! unzip -l "$output" >/dev/null 2>&1; then
 		epr "Downloaded file from APKCombo is not a valid zip"
+		rm -f "$output"
 		return 1
 	fi
 	if echo "$final_url$dl_url" | grep -qi 'xapk\|\.apks'; then
-		_apkpure_install_xapk "$output" "${output}.extracted" || return 1
+		local ext="xapk"
+		echo "$final_url$dl_url" | grep -qi '\.apks' && ext="apks"
+		if ! _apkpure_install_xapk "$output" "${output}.extracted"; then
+			rm -f "$output" "${output}.extracted"
+			return 1
+		fi
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+			cp -f "$output" "${output%.apk}.${ext}"
+		fi
 		mv "${output}.extracted" "$output"
 	fi
 }
@@ -3133,11 +3155,12 @@ build_rv() {
 					fi
 					if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver" "$target_version_code"; then
 						pr "ERROR: Could not download '${table}' from '${dl_p}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+						rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 						continue
 					fi
 					if ! unzip -l "$stock_apk" >/dev/null 2>&1; then
 						epr "ERROR: Downloaded file from ${dl_p} is not a valid zip archive (Cloudflare block or bad file)!"
-						rm -f "$stock_apk"
+						rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 						continue
 					fi
 					if ! unzip -l "$stock_apk" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
@@ -3222,12 +3245,20 @@ build_rv() {
 						morphe_bundle_path="$stock_apk"
 					else
 						for bx in xapk apkm apks; do
+							local candidate=""
 							if [ -f "${stock_apk%.apk}.${bx}" ]; then
-								morphe_bundle_path="${stock_apk%.apk}.${bx}"
-								break
+								candidate="${stock_apk%.apk}.${bx}"
 							elif [ -f "${stock_apk}.${bx}" ]; then
-								morphe_bundle_path="${stock_apk}.${bx}"
-								break
+								candidate="${stock_apk}.${bx}"
+							fi
+							if [ -n "$candidate" ]; then
+								if unzip -l "$candidate" >/dev/null 2>&1; then
+									morphe_bundle_path="$candidate"
+									break
+								else
+									wpr "Corrupt bundle sidecar found and removed: $candidate"
+									rm -f "$candidate"
+								fi
 							fi
 						done
 					fi
@@ -3238,6 +3269,7 @@ build_rv() {
 						# drop leftover sidecars so only one file represents the bundle
 						for _bx in xapk apkm apks; do
 							[ -f "${stock_apk%.apk}.${_bx}" ] && [ "${stock_apk%.apk}.${_bx}" != "$morphe_bundle_path" ] && rm -f "${stock_apk%.apk}.${_bx}"
+							[ -f "${stock_apk}.${_bx}" ] && [ "${stock_apk}.${_bx}" != "$morphe_bundle_path" ] && rm -f "${stock_apk}.${_bx}"
 						done
 						stock_apk="$morphe_bundle_path"
 						all_apk=""
@@ -3325,7 +3357,7 @@ build_rv() {
 		if ! _bundle_extract_base "$stock_apk" "$tmpb"; then
 			epr "Cannot extract base.apk from bundle $stock_apk"
 			rm -f "$tmpb"
-			return 1
+			return 0
 		fi
 		if ! sig_op=$(check_sig "$tmpb" "$pkg_name" 2>&1); then
 			epr "Not building $table, apk signature mismatch 'base.apk' in $stock_apk: $sig_op"
@@ -3467,7 +3499,7 @@ build_rv() {
 					_trim_bundle_for_arch "$stock_apk" "$stock_apk_to_patch" "$arch_f" || {
 						epr "Failed to trim bundle for $arch_f"
 						rm -f "$stock_apk_to_patch"
-						return 1
+						return 0
 					}
 				fi
 			fi
