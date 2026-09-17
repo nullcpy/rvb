@@ -22,6 +22,13 @@
     },
     "stable": {}
   },
+  "andrewliang25/morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.facebook.katana": "36b686c7da5624e0463207d2f99fa05f",
+      "shared": "7c131ea894766cbcd932a14f493a635a"
+    }
+  },
   "arandomhooman/hoomans-morphe-patches": {
     "beta": {},
     "stable": {
@@ -89,6 +96,13 @@
       "shared": "cf16eb2095610d4843c17c9cc833b2d0"
     }
   },
+  "fripe070/pixivpatches": {
+    "beta": {},
+    "stable": {
+      "jp.pxv.android": "ee544ff2052b1ff5536295bc3db0e9fc",
+      "shared": "88145df615f85fd9e698657c6942f52f"
+    }
+  },
   "hoo-dles/morphe-patches": {
     "beta": {
       "bitpit.launcher": "da6ecc087e6282ec8ce024ea656fb484",
@@ -153,9 +167,9 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "759e59ff983b247540370eacf5dc347a",
-      "com.michaldrabik.showly2": "467a225092a9950bf586e4fea6d6ad99",
-      "shared": "120ce607112f2536ba363d1dc11084fd"
+      "ch.protonmail.android": "f7182d1ac61866ea5429d1b87adca501",
+      "com.michaldrabik.showly2": "69f09074101a64226871b33f80ece798",
+      "shared": "5e1511719106a8ba5463491ab39a5415"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -230,10 +244,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "3833cb8c57f276f67a34e490ee4047ff",
-      "com.google.android.youtube": "fed635665f8189938c2bf65dc1b261be",
+      "com.google.android.apps.youtube.music": "ac8289b399defc11d4a537467e7bccad",
+      "com.google.android.youtube": "e824a56f5a3e15499380f0e96106b0fa",
       "com.reddit.frontpage": "569f7eb9334163efdffd8a0715e61d26",
-      "shared": "86af4708f57cf211834b8bba6c634c4d"
+      "shared": "4acd6e1942d5c56801f251973a0dfba5"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "d0fac8952bcb3c5e898f43a9af93f87c",

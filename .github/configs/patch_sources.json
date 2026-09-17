@@ -17,6 +17,15 @@
     "stable": "v2.12.0",
     "stable_date": "2026-06-22T17:44:41Z"
   },
+  "Fripe070/PixivPatches": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "Fripe070/PixivPatches",
+    "stable": "v1.2.1",
+    "stable_date": "2026-09-14T21:13:20Z"
+  },
   "IMXEren/mix-patches": {
     "beta": "v1.7.2-dev.1",
     "beta_date": "2026-09-13T12:18:20.352Z",
@@ -27,8 +36,8 @@
     "stable_date": "2026-09-11T06:02:09.402Z"
   },
   "MorpheApp/morphe-patches": {
-    "beta": "v1.44.0-dev.2",
-    "beta_date": "2026-09-16T11:52:58Z",
+    "beta": "v1.44.0-dev.3",
+    "beta_date": "2026-09-17T11:52:11Z",
     "blocked": false,
     "host": "github",
     "repo": "MorpheApp/morphe-patches",
@@ -97,6 +106,15 @@
     "repo": "anddea/revanced-patches",
     "stable": "v4.2.0",
     "stable_date": "2026-08-07T15:03:16Z"
+  },
+  "andrewliang25/morphe-patches": {
+    "beta": "v3.0.0-dev.1",
+    "beta_date": "2026-09-15T15:38:30Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "andrewliang25/morphe-patches",
+    "stable": "v3.0.0",
+    "stable_date": "2026-09-15T15:44:59Z"
   },
   "arandomhooman/hoomans-morphe-patches": {
     "beta": "v1.44.0-dev.4",
@@ -203,8 +221,8 @@
     "blocked": false,
     "host": "github",
     "repo": "hxreborn/morphe-patches",
-    "stable": "v1.23.0",
-    "stable_date": "2026-09-15T05:51:29Z"
+    "stable": "v1.24.0",
+    "stable_date": "2026-09-17T15:12:45Z"
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": "v0.8.0-dev.11",
