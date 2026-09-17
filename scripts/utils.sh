@@ -1081,16 +1081,27 @@ merge_splits() {
 }
 
 _trawl_ready() {
-	local deadline=$((SECONDS + 30))
+	[ "${__TRAWL_IS_READY__:-0}" -eq 1 ] && return 0
+	local health_url="${TRAWL_URL:-http://localhost:8191}/health"
+	local deadline=$((SECONDS + 90))
 	while (( SECONDS < deadline )); do
-		curl -sf http://localhost:8191/health >/dev/null 2>&1 && return 0
-		sleep 5
+		if curl -sf "$health_url" >/dev/null 2>&1; then
+			__TRAWL_IS_READY__=1
+			return 0
+		fi
+		sleep 3
 	done
 	return 1
 }
 
 _trawl_8191_get() {
 	local url=$1 referer=${2:-}
+	_trawl_ready || {
+		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
+			wpr "Trawl is not reachable at ${TRAWL_URL:-http://localhost:8191}/health"
+		fi
+		return 1
+	}
 	local max_retries=3 attempt
 	local solver_url="${TRAWL_URL:-http://localhost:8191}/scrape"
 	local extra_headers=""
@@ -1163,9 +1174,8 @@ _unqueued_cf_get() {
 	_cf_cffi_get "$@" && return 0
 	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
 		_trawl_8191_get "$@" && return 0
-	else
-		_fallback_get "$@" && return 0
 	fi
+	_fallback_get "$@" && return 0
 
 	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
 		epr "All methods failed for: $1"
@@ -1668,21 +1678,20 @@ dl_apkpure() {
 	local is_bundle=false
 	echo "$download_url" | grep -qi 'xapk' && is_bundle=true
 
+	local bundle="${output%.apk}.xapk"
 	if [ "$is_bundle" = true ]; then
 		curl -L -s -S \
 			-H "User-Agent: ${user_agent:-Mozilla/5.0}" \
 			-H "Referer: $dl_page_url" \
 			"${cookie_header[@]}" \
 			--connect-timeout 30 --max-time 300 \
-			"$download_url" -o "${output}.xapk" || { rm -f "${output}.xapk"; return 1; }
-		if ! _apkpure_install_xapk "${output}.xapk" "${output}"; then
-			rm -f "${output}.xapk"
+			"$download_url" -o "$bundle" || { rm -f "$bundle"; return 1; }
+		if ! _apkpure_install_xapk "$bundle" "${output}"; then
+			rm -f "$bundle"
 			return 1
 		fi
-		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-			mv -f "${output}.xapk" "${output%.apk}.xapk"
-		else
-			rm -f "${output}.xapk"
+		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" != true ]; then
+			rm -f "$bundle"
 		fi
 	else
 		curl -L --fail -s -S \
@@ -1914,11 +1923,13 @@ dl_uptodown() {
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
 	if [ $is_bundle = true ]; then
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output.apkm" || return 1
+		local bundle="${output%.apk}.apkm"
+		req "https://dw.uptodown.com/dwn/${data_url}" "$bundle" || return 1
 		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-			cp -f "${output%.apk}.apkm" "${output}"
+			cp -f "$bundle" "${output}"
 		else
-			merge_splits "${output%.apk}.apkm" "${output}"
+			merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
+			rm -f "$bundle"
 		fi
 	else
 		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
@@ -1964,12 +1975,10 @@ dl_archive() {
 			req "${url}/${path}" "$output"
 			;;
 		apkm|xapk|apks)
-			local bundle="${output}.${path##*.}"
+			local bundle="${output%.apk}.${path##*.}"
 			req "${url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "${output}" || { [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ] || rm -f "$bundle"; return 1; }
-			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-				mv -f "$bundle" "${output%.apk}.${path##*.}"  # keep sidecar for passthrough
-			else
+			merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" != true ]; then
 				rm -f "$bundle"
 			fi
 			;;
@@ -2086,12 +2095,10 @@ local regex=""
             req "${base_url}/${path}" "$output"
             ;;
         apkm|xapk|apks)
-			local bundle="${output}.${ext}"
+			local bundle="${output%.apk}.${ext}"
 			req "${base_url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "$output" || return 1
-			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-				mv -f "$bundle" "${output%.apk}.${ext}"  # keep sidecar for passthrough
-			else
+			merge_splits "$bundle" "$output" || { rm -f "$bundle"; return 1; }
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" != true ]; then
 				rm -f "$bundle"
 			fi
             ;;
@@ -2332,12 +2339,10 @@ dl_cache_repo() {
             req "${base_url}/${path}" "$output"
             ;;
         apkm|xapk|apks)
-			local bundle="${output}.${ext}"
+			local bundle="${output%.apk}.${ext}"
 			req "${base_url}/${path}" "$bundle" || return 1
-			merge_splits "$bundle" "$output" || { [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ] || rm -f "$bundle"; return 1; }
-			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-				mv -f "$bundle" "${output%.apk}.${ext}"  # keep sidecar for passthrough
-			else
+			merge_splits "$bundle" "$output" || { rm -f "$bundle"; return 1; }
+			if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" != true ]; then
 				rm -f "$bundle"
 			fi
             ;;
@@ -3253,6 +3258,10 @@ build_rv() {
 							fi
 							if [ -n "$candidate" ]; then
 								if unzip -l "$candidate" >/dev/null 2>&1; then
+									if [ "$candidate" = "${stock_apk}.${bx}" ]; then
+										mv -f "${stock_apk}.${bx}" "${stock_apk%.apk}.${bx}" 2>/dev/null || true
+										candidate="${stock_apk%.apk}.${bx}"
+									fi
 									morphe_bundle_path="$candidate"
 									break
 								else
