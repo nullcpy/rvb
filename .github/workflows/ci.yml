@@ -50,14 +50,6 @@ jobs:
       - name: Setup Python dependencies
         run: pip install --no-cache-dir curl_cffi || true
 
-      - name: Wait for Trawl
-        run: |
-          for i in $(seq 1 30); do
-            curl -sf http://localhost:8191/health >/dev/null 2>&1 && exit 0
-            sleep 5
-          done
-          echo "::warning::Trawl not ready, proceeding anyway"
-
       - name: Fetch App Versions
         id: fetch_app_versions
         env:
