@@ -36,7 +36,7 @@ PATCH_APK:
   rc=0 patched_exists=yes
 ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
 ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [remove_snooze_warning] [remove_ads] [amoled_theme] [instafel]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [remove_ads] [instafel]
 ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [build] [stock]
 ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
 ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
