@@ -48,7 +48,7 @@ jobs:
         run: python3 .github/scripts/sync_patch_sources.py
 
       - name: Setup Python dependencies
-        run: pip install --no-cache-dir curl-cffi
+        run: pip install --no-cache-dir curl_cffi || true
 
       - name: Fetch App Versions
         id: fetch_app_versions
