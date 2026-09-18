@@ -508,8 +508,19 @@ _req() {
 	local ip="$1" op="$2"
 	shift 2
 	local dlp="$op"
+	local _req_lock=""
 	if [ "$op" != - ]; then
 		if [ -f "$op" ]; then return; fi
+		# Serialize fetches per destination: parallel siblings used to download
+		# the same jar/mpp twice because the exists-check and the write were not
+		# atomic. Re-check under the lock; a waiter finds the file already there.
+		if command -v flock >/dev/null 2>&1; then
+			mkdir -p "${TEMP_DIR}/dllocks"
+			exec 204>"${TEMP_DIR}/dllocks/$(tr -cs 'a-zA-Z0-9._-' '_' <<<"$op").lock"
+			flock -x 204
+			_req_lock=1
+			if [ -f "$op" ]; then exec 204>&-; return 0; fi
+		fi
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
 		if [ -f "$dlp" ]; then
 			local wait_c=0
@@ -523,11 +534,13 @@ _req() {
 	if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 --fail -s -S "$@" "$ip" -o "$dlp"; then
 		epr "Request failed: $ip"
 		if [ "$dlp" != - ]; then rm -f "$dlp"; fi
+		if [ -n "$_req_lock" ]; then exec 204>&-; fi
 		return 1
 	fi
 	if [ "$dlp" != - ]; then
 		mv -f "$dlp" "$op"
 	fi
+	if [ -n "$_req_lock" ]; then exec 204>&-; fi
 }
 req() { _req "$1" "$2" -H "User-Agent: ${DEFAULT_UA}"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
@@ -2523,7 +2536,24 @@ patch_apk() {
 		fi
 	fi
 
-	local base_cmd="java -jar '$cli_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=$RVB_KEYSTORE \
+	# Morphe keeps a writable data root *next to its JAR* (morphe-data/). With
+	# parallel builds, siblings sharing the cached JAR would share — and purge —
+	# that directory, so each patch run executes from a private JAR copy in its
+	# own stage dir, removed right after patching. The cached JAR stays read-only.
+	local stage_jar="$cli_jar" stage_dir=""
+	if [ "${PATCHER_KIND:-}" = morphe ]; then
+		local sbase
+		sbase=$(basename "$cli_jar")
+		stage_dir="${TEMP_DIR}/morphe-stage-$(basename "$patched_apk" .apk)-$$"
+		if mkdir -p "$stage_dir" && cp -f "$cli_jar" "${stage_dir}/${sbase}"; then
+			stage_jar="${stage_dir}/${sbase}"
+		else
+			wpr "Could not stage a private morphe JAR copy; using the shared one"
+			stage_dir=""
+		fi
+	fi
+
+	local base_cmd="java -jar '$stage_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=$RVB_KEYSTORE \
 --keystore-entry-password=$RVB_KEYSTORE_PASS --keystore-password=$RVB_KEYSTORE_PASS --signer=$RVB_KEY_ALIAS --keystore-entry-alias=$RVB_KEY_ALIAS"
 
 	local -a ed_parts=()
@@ -2576,6 +2606,8 @@ patch_apk() {
 		PATCH_OUTPUT=$(eval "$cmd_short" 2>&1)
 		ret=$?
 	fi
+
+	if [ -n "$stage_dir" ]; then rm -rf "$stage_dir"; fi
 
 	echo "$PATCH_OUTPUT"
 	if [ $ret -eq 0 ] && [ -f "$patched_apk" ]; then
@@ -3163,6 +3195,18 @@ build_rv() {
 			fi
 
 			local vc_infix="${target_version_code:+-${target_version_code}}"
+			# Serialize the cache-check → download → upload sequence per pkg+version.
+			# Sibling processes (parallel builds) then hit the local cache path or the
+			# cache repo instead of hammering the same source twice, and can never
+			# race on creating/uploading to the same apks-cache-repo release.
+			# Lock files live OUTSIDE apk_cache_dir so they never enter its cache manifest.
+			local _apk_lock_held=""
+			if command -v flock >/dev/null 2>&1; then
+				mkdir -p "${TEMP_DIR}/apkslocks"
+				exec 203>"${TEMP_DIR}/apkslocks/${pkg_name}-${version_f}${vc_infix}.lock"
+				flock -x 203
+				_apk_lock_held=1
+			fi
 			local cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-${arch_f}.apk"
 			local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
 			local stock_apk="$cached_stock_apk"
@@ -3387,19 +3431,26 @@ build_rv() {
 
 				if [ -f "$stock_apk" ] && [ -n "${UPLOAD_APKS_REPO:-}" ] && [ "$dl_p" != "archive" ] && [ "$dl_p" != "cache_repo" ]; then
 					pr "Uploading newly downloaded APKs to ${UPLOAD_APKS_REPO}..."
-					if gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; then
-						if [ -n "$all_apk" ] && [ -f "$all_apk" ]; then
-							gh release upload "$pkg_name" "$all_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
-						else
-							gh release upload "$pkg_name" "$stock_apk" --repo "$UPLOAD_APKS_REPO" --clobber || true
+					local _ua_file="$stock_apk" _ua_ok="" _ua_att
+					[ -n "$all_apk" ] && [ -f "$all_apk" ] && _ua_file="$all_apk"
+					# Retry: with parallel builds a sibling process can create the same
+					# release tag between our view (404) and create (422 tag exists);
+					# the next attempt's view finds it. Upload races are transient too.
+					for _ua_att in 1 2 3; do
+						if { gh release view "$pkg_name" --repo "$UPLOAD_APKS_REPO" >/dev/null 2>&1 || \
+							gh release create "$pkg_name" --repo "$UPLOAD_APKS_REPO" --title "$pkg_name" --notes ""; } && \
+							gh release upload "$pkg_name" "$_ua_file" --repo "$UPLOAD_APKS_REPO" --clobber; then
+							_ua_ok=1
+							break
 						fi
-					else
-						wpr "Failed to view/create release $pkg_name on $UPLOAD_APKS_REPO"
-					fi
+						[ "$_ua_att" -lt 3 ] && { wpr "Cache upload for $pkg_name failed (attempt $_ua_att/3), retrying..."; sleep $((_ua_att * 3)); }
+					done
+					[ -n "$_ua_ok" ] || wpr "Failed to view/create/upload release $pkg_name on $UPLOAD_APKS_REPO after 3 attempts"
 				fi
 			else
 				pr "Found APK in cache: ${stock_apk}. Skipping download!"
 			fi
+			if [ -n "$_apk_lock_held" ]; then exec 203>&-; fi
 			if [ -f "$stock_apk" ]; then break; fi
 		done
 		if [ ! -f "$stock_apk" ]; then

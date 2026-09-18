@@ -316,7 +316,7 @@ while ((PAR_JOBS > 1 && ${#JOB_PID[@]} > 0)); do
 	sleep 1
 done
 merge_build_info
-rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR"
+rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR" "$TEMP_DIR/dllocks" "$TEMP_DIR/apkslocks" "$TEMP_DIR"/morphe-stage-*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
 if command -v python3 >/dev/null 2>&1; then
