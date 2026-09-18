@@ -602,7 +602,7 @@
   "SwiftBackup-heval99": {
     "patches-source": "heval99/Heval-Morphe-Patches",
     "brand": "heval99",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "uptodown-dlurl": "https://swift-backup.en.uptodown.com/android",
@@ -613,7 +613,7 @@
   "FairEmail-heval99": {
     "patches-source": "heval99/Heval-Morphe-Patches",
     "brand": "heval99",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "uptodown-dlurl": "https://fairemail.en.uptodown.com/android",
