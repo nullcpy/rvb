@@ -2,7 +2,10 @@
 set -euo pipefail
 
 YEAR=$(date -u +"%y")
-TAG=$( { gh release list --exclude-drafts -L 100 2>/dev/null || true; } | awk -F '\t' -v year="$YEAR" '$3 ~ "^" year "[0-9][0-9][0-9][0-9]$" {print $3}' | sort -nr | head -n1 )
+TAG=$( {
+    gh release list -L 100 2>/dev/null | awk -F '\t' -v year="$YEAR" '$3 ~ "^" year "[0-9][0-9][0-9][0-9]$" {print $3}' || true
+    git tag -l "${YEAR}*" 2>/dev/null | awk -v year="$YEAR" '$1 ~ "^" year "[0-9][0-9][0-9][0-9]$" {print $1}' || true
+} | sort -u -nr | head -n1 )
 
 if [ -n "$TAG" ]; then
     BUILD_COUNT=${TAG:2:4}
@@ -12,4 +15,8 @@ else
 fi
 
 NEXT_VER_CODE=$(printf "%s%04d" "$YEAR" "$BUILD_COUNT")
-echo "NEXT_VER_CODE=$NEXT_VER_CODE" >> "$GITHUB_OUTPUT"
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+    echo "NEXT_VER_CODE=$NEXT_VER_CODE" >> "$GITHUB_OUTPUT"
+fi
+echo "NEXT_VER_CODE=$NEXT_VER_CODE"
+
