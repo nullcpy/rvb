@@ -602,7 +602,7 @@
   "SoundCloud-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "SoundCloud",
     "included-patches": "'AMOLED dark theme'",
@@ -614,7 +614,7 @@
   "Duolingo-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.duolingo",
     "app-name": "Duolingo",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo",
@@ -625,7 +625,7 @@
   "WPSOffice-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cn.wps.moffice_eng",
     "app-name": "WPS Office",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf",
@@ -636,7 +636,7 @@
   "Wallcraft-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wallpaperscraft.wallpaper",
     "app-name": "Wallcraft",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/nebuchadnezzar-doo/wallpapers-hd-4k-backgrounds",
@@ -647,7 +647,7 @@
   "SolidExplorer-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "pl.solidexplorer2",
     "app-name": "Solid Explorer",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
@@ -658,7 +658,7 @@
   "IconPacker-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cn.ommiao.iconpacker",
     "app-name": "Icon Packer",
     "apkpure-dlurl": "https://apkpure.com/icon-packer/cn.ommiao.iconpacker",
@@ -668,7 +668,7 @@
   "PodcastAddict-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.bambuna.podcastaddict",
     "app-name": "Podcast Addict",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/xavier-guillemane/podcast-addict",
@@ -680,7 +680,7 @@
   "SmartLauncher6-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ginlemon.flowerfree",
     "app-name": "Smart Launcher 6",
     "patch-folder": "smartlauncher",
@@ -694,7 +694,7 @@
   "MerriamWebsterDictionary-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.merriamwebster",
     "app-name": "Merriam Webster Dictionary",
     "patch-folder": "webster",
@@ -707,7 +707,7 @@
   "Pandora-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.pandora.android",
     "app-name": "Pandora",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pandora/pandora-music-podcasts",
@@ -717,7 +717,7 @@
   "XRecorder-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "videoeditor.videorecorder.screenrecorder",
     "app-name": "XRecorder",
     "build-mode": "both",
@@ -729,7 +729,7 @@
   "AdGuard-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adguard.android",
     "app-name": "AdGuard",
     "build-mode": "both",
@@ -740,7 +740,7 @@
   "NovaLauncher-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.teslacoilsw.launcher",
     "app-name": "Nova Launcher",
     "patch-folder": "nova",
@@ -754,7 +754,7 @@
   "Ventusky-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "cz.ackee.ventusky",
     "app-name": "Ventusky",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ventusky/ventusky-weather-maps-radar",
@@ -766,7 +766,7 @@
   "CamScanner-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.intsig.camscanner",
     "app-name": "CamScanner",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/intsig-pte/camscanner-phone-pdf-creator",
@@ -777,7 +777,7 @@
   "NiagaraLauncher-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "bitpit.launcher",
     "app-name": "Niagara Launcher",
     "patch-folder": "niagara",
@@ -790,7 +790,7 @@
   "GitHub-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.github.android",
     "app-name": "GitHub",
     "included-patches": "'AMOLED dark theme'",
@@ -800,7 +800,7 @@
   "ProtonVPN-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn",
@@ -810,7 +810,7 @@
   "HelloChinese-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.hellochinese",
     "app-name": "HelloChinese",
     "arch": "arm64-v8a",
@@ -820,7 +820,7 @@
   "MyFitnessPal-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "MyFitnessPal",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
@@ -829,7 +829,7 @@
   "PrimeVideo-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.avod.thirdpartyclient",
     "app-name": "Prime Video",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video",
@@ -840,7 +840,7 @@
   "Goodreads-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.goodreads",
     "app-name": "Goodreads",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/goodreads/goodreads",
@@ -849,7 +849,7 @@
   "AdobeLightroom-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.adobe.lrmobile",
     "app-name": "Adobe Lightroom",
     "arch": "arm64-v8a",
@@ -1052,7 +1052,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
@@ -1063,7 +1063,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "variant": "Clone",
@@ -1075,7 +1075,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Gboard",
     "build-mode": "both",
@@ -1090,7 +1090,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Gboard",
     "variant": "Clone",
@@ -1547,7 +1547,7 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "brand": "revenge",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "patcher-args": "-l 0",
