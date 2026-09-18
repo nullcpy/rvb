@@ -127,6 +127,7 @@ for f in "$RUN_ROOT"/*.trace; do
 		-e "s|$RUN_ROOT|<RUN>|g" \
 		-e "s|/dev/fd/[0-9]+|<SRC>|g" \
 		-e "s|/tmp/[^ ]*|<TMP>|g" \
+		-e "s|temp/morphe-stage-[^/[:space:]]+/|temp/morpheapp-rv/|g" \
 		"$f"
 done
 
