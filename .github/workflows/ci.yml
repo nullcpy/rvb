@@ -17,17 +17,10 @@ jobs:
       actions: write
     timeout-minutes: 60
     services:
-      redis:
-        image: redis:alpine
+      cf_solver:
+        image: ghcr.io/sarperavci/cloudflarebypassforscraping:latest
         ports:
-          - 6379:6379
-      trawl:
-        image: ghcr.io/germondai/trawl:latest
-        ports:
-          - 8191:8191
-        env:
-          REDIS_URL: redis://redis:6379
-        options: --shm-size=2gb
+          - 8000:8000
     outputs:
       trigger_stable: ${{ steps.effective_triggers.outputs.TRIGGER_STABLE }}
       trigger_beta: ${{ steps.effective_triggers.outputs.TRIGGER_BETA }}
@@ -53,7 +46,7 @@ jobs:
       - name: Fetch App Versions
         id: fetch_app_versions
         env:
-          CF_BYPASS_SOLVER_TRAWL_8191_ENABLED: "true"
+          CF_SOLVER_URL: "http://localhost:8000"
         run: bash .github/scripts/ci_fetch_app_versions.sh
         
       - name: Compare App Versions

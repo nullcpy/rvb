@@ -1080,61 +1080,21 @@ merge_splits() {
 	return 0
 }
 
-_trawl_ready() {
-	[ "${__TRAWL_IS_READY__:-0}" -eq 1 ] && return 0
-	local health_url="${TRAWL_URL:-http://localhost:8191}/health"
-	local deadline=$((SECONDS + 90))
-	while (( SECONDS < deadline )); do
-		if curl -sf "$health_url" >/dev/null 2>&1; then
-			__TRAWL_IS_READY__=1
-			return 0
-		fi
-		sleep 3
-	done
-	return 1
-}
-
-_trawl_8191_get() {
-	local url=$1 referer=${2:-}
-	_trawl_ready || {
-		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
-			wpr "Trawl is not reachable at ${TRAWL_URL:-http://localhost:8191}/health"
-		fi
-		return 1
-	}
-	local max_retries=3 attempt
-	local solver_url="${TRAWL_URL:-http://localhost:8191}/scrape"
-	local extra_headers=""
-	[ -n "$referer" ] && extra_headers=",\"headers\":{\"Referer\":\"$referer\"}"
-	for attempt in $(seq 1 $max_retries); do
-		local response status
-		response=$(curl -m 120 -s -X POST "$solver_url" \
-			-H 'Content-Type: application/json' \
-			-d "{\"url\":\"$url\",\"maxTimeout\":120000,\"skipHttp\":true${extra_headers}}") || true
-		local parsed_meta
-		if parsed_meta=$(jq -r '[.statusCode // "", .userAgent // "", ([.cookies[]? | .name + "=" + .value] | join("; "))] | @tsv' <<< "$response" 2>/dev/null); then
-			local status ua cookies
-			IFS=$'\t' read -r status ua cookies <<< "$parsed_meta"
-			if [[ "$status" == "200" ]]; then
-				html=$(jq -r '.html // empty' <<< "$response" 2>/dev/null || true)
-				if [[ -n "$html" && "$html" != *"Attention Required!"* && "$html" != *"Just a moment..."* && "$html" != *"Please Wait... | Cloudflare"* && "$html" != *"Verify you are human"* ]]; then
-					export CF_COOKIES="$cookies"
-					user_agent="$ua"
-					return 0
-				fi
-			fi
-		fi
-		if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
-			wpr "Trawl:8191 attempt $attempt/$max_retries failed for: $url"
-		fi
-		[[ $attempt -lt $max_retries ]] && sleep 5
-	done
-	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
-		wpr "[!] Trawl:8191 failed after $max_retries attempts: $url"
+_cf_cffi_download() {
+	local url=$1 dest=$2 referer=${3:-}
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
 	fi
-	return 1
-}
+	[ -z "$py_cmd" ] && return 2
+	local py_script="${CWD}/scripts/cf_get.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/cf_get.py"
+	[ ! -f "$py_script" ] && return 2
 
+	"$py_cmd" "$py_script" download "$url" "$dest" "$referer" "$TEMP_DIR/cookie.txt"
+}
 
 _fallback_get(){
 	local url=$1
@@ -1162,8 +1122,16 @@ _cf_cffi_get() {
 	local cffi_res
 	if cffi_res=$("$py_cmd" "$py_script" "$url" "$TEMP_DIR/cookie.txt" 2>/dev/null); then
 		html="$cffi_res"
-		CF_COOKIES=""
-		user_agent="${DEFAULT_UA}"
+		if [ -f "$TEMP_DIR/cf_ua.txt" ]; then
+			user_agent="$(cat "$TEMP_DIR/cf_ua.txt" 2>/dev/null || echo "${DEFAULT_UA}")"
+		else
+			user_agent="${DEFAULT_UA}"
+		fi
+		if [ -f "$TEMP_DIR/cf_cookies.txt" ]; then
+			export CF_COOKIES="$(cat "$TEMP_DIR/cf_cookies.txt" 2>/dev/null || echo "")"
+		else
+			CF_COOKIES=""
+		fi
 		return 0
 	else
 		return 1
@@ -1172,9 +1140,6 @@ _cf_cffi_get() {
 
 _unqueued_cf_get() {
 	_cf_cffi_get "$@" && return 0
-	if [[ "${CF_BYPASS_SOLVER_TRAWL_8191_ENABLED:-false}" == true ]]; then
-		_trawl_8191_get "$@" && return 0
-	fi
 	_fallback_get "$@" && return 0
 
 	if [[ "${__SILENT_CF_GET__:-false}" != true ]]; then
@@ -1217,7 +1182,26 @@ get_apkmirror_vers() {
 	local vers apkm_resp html=""
 	_cf_get "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" || return 1
 	apkm_resp="$html"
-	
+
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
+	fi
+
+	local py_script="${CWD}/scripts/apkmirror_search.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/apkmirror_search.py"
+
+	local allow_all="${__AAV__:-false}"
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
+		local py_vers
+		if py_vers=$("$py_cmd" "$py_script" vers "$allow_all" <<<"$apkm_resp") && [ -n "$py_vers" ]; then
+			echo "$py_vers"
+			return 0
+		fi
+	fi
+
 	if [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
 		local main_content
 		main_content=$($HTMLQ "#primary" <<<"$apkm_resp" 2>/dev/null || true)
@@ -1225,13 +1209,13 @@ get_apkmirror_vers() {
 		[ -n "$main_content" ] && apkm_resp="$main_content"
 	fi
 
-	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
-	if [ "${__AAV__:-false}" = false ]; then
+	vers=$(echo "$apkm_resp" | grep -oP 'class="fontBlack"[^>]*href="[^"]*-release/"[^>]*>\K[^<]+' | awk '{print $NF}' || true)
+	if [ "$allow_all" = false ]; then
 		local IFS=$'\n'
-		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers" || true)
+		vers=$(grep -iv "\(beta\|alpha\|secondary\)" <<<"$vers" || true)
 		local v r_vers=()
 		for v in $vers; do
-			grep -iq "${v} \(beta\|alpha\)" <<<"$apkm_resp" || r_vers+=("$v")
+			grep -iq "${v} \(beta\|alpha\|secondary\)" <<<"$apkm_resp" || r_vers+=("$v")
 		done
 		echo "${r_vers[*]}"
 	else
@@ -1241,13 +1225,30 @@ get_apkmirror_vers() {
 
 get_apkmirror_pkg_name() {
 	local resp="$__APKMIRROR_RESP__"
-	if [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
-		local main_content
-		main_content=$($HTMLQ "#primary" <<<"$resp" 2>/dev/null || true)
-		[ -z "$main_content" ] && main_content=$($HTMLQ "#content" <<<"$resp" 2>/dev/null || true)
-		[ -n "$main_content" ] && resp="$main_content"
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
 	fi
-	sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$resp"
+
+	local py_script="${CWD}/scripts/apkmirror_search.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/apkmirror_search.py"
+
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
+		local py_pkg
+		if py_pkg=$("$py_cmd" "$py_script" pkg <<<"$resp") && [ -n "$py_pkg" ]; then
+			echo "$py_pkg"
+			return 0
+		fi
+	fi
+
+	local pkg
+	pkg=$(echo "$resp" | grep -oP 'play\.google\.com/store/apps/details\?id=\K[a-zA-Z0-9_.]+' | head -1) || true
+	if [ -z "$pkg" ]; then
+		pkg=$(sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$resp")
+	fi
+	echo "$pkg"
 }
 
 apkmirror_search() {
@@ -1582,13 +1583,19 @@ dl_apkmirror() {
 	local referer_url="$base_url$btn_url"
 	[[ "$btn_url" == http* ]] && referer_url="$btn_url"
 
-	if [ "$is_bundle" = true ]; then
-		wget -nv -O "${output%.apk}.apkm" \
+	local target_dl_dest="${output}"
+	[ "$is_bundle" = true ] && target_dl_dest="${output%.apk}.apkm"
+
+	if ! _cf_cffi_download "$final_url" "$target_dl_dest" "$referer_url"; then
+		wget -nv -O "$target_dl_dest" \
 			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
 			--referer="$referer_url" \
 			"${cookie_args[@]}" \
 			--timeout=300 \
 			"$final_url" || return 1
+	fi
+
+	if [ "$is_bundle" = true ]; then
 		if ! unzip -l "${output%.apk}.apkm" >/dev/null 2>&1; then
 			epr "Downloaded file is not a valid zip (apkm): $final_url"
 			rm -f "${output%.apk}.apkm"
@@ -1600,13 +1607,6 @@ dl_apkmirror() {
 		else
 			merge_splits "${output%.apk}.apkm" "${output}"
 		fi
-	else
-		wget -nv -O "${output}" \
-			--header="User-Agent: ${user_agent:-Mozilla/5.0}" \
-			--referer="$referer_url" \
-			"${cookie_args[@]}" \
-			--timeout=300 \
-			"$final_url" || return 1
 	fi
 }
 
