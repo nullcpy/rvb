@@ -70,31 +70,51 @@ if [ ${#FILES[@]} -eq 0 ]; then
     exit 0
 fi
 
-echo "Uploading ${#FILES[@]} file(s) to release $TAG..."
+PARALLEL_JOBS="${UPLOAD_CONCURRENCY:-4}"
+echo "Uploading ${#FILES[@]} file(s) to release $TAG (concurrency: $PARALLEL_JOBS)..."
 
-# 4. Upload each file with retry
-FAILED_FILES=()
-for file in "${FILES[@]}"; do
+# 4. Upload files in parallel with per-file retry
+FAILED_LOG=$(mktemp)
+trap 'rm -f "$FAILED_LOG"' EXIT
+
+upload_file() {
+    local file="$1"
+    local idx="$2"
+    local total="$3"
+    local filename
     filename=$(basename "$file")
-    echo "⬆️ Uploading $filename..."
-    uploaded=false
+    echo "⬆️ [$idx/$total] Uploading $filename..."
     for attempt in 1 2 3; do
         if gh release upload "$TAG" "$file" --clobber -R "$REPO"; then
-            echo "✅ Uploaded $filename"
-            uploaded=true
-            break
+            echo "✅ [$idx/$total] Uploaded $filename"
+            return 0
         fi
-        echo "::warning::Attempt $attempt/3 failed for $filename, retrying in 10s..."
-        sleep 10
+        echo "::warning::[$idx/$total] Attempt $attempt/3 failed for $filename, retrying in 5s..."
+        sleep 5
     done
-    if [ "$uploaded" = false ]; then
-        echo "::error::Failed to upload $filename after 3 attempts"
-        FAILED_FILES+=("$filename")
+    echo "::error::[$idx/$total] Failed to upload $filename after 3 attempts"
+    echo "$filename" >> "$FAILED_LOG"
+    return 1
+}
+
+job_count=0
+idx=0
+total=${#FILES[@]}
+
+for file in "${FILES[@]}"; do
+    ((idx++)) || true
+    upload_file "$file" "$idx" "$total" &
+    ((job_count++)) || true
+    if [ "$job_count" -ge "$PARALLEL_JOBS" ]; then
+        wait -n || true
+        ((job_count--)) || true
     fi
 done
+wait
 
-if [ ${#FAILED_FILES[@]} -gt 0 ]; then
-    echo "::error::The following file(s) failed to upload: ${FAILED_FILES[*]}"
+if [ -s "$FAILED_LOG" ]; then
+    echo "::error::The following file(s) failed to upload:"
+    cat "$FAILED_LOG"
     exit 1
 fi
 
