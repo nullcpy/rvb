@@ -3,11 +3,22 @@ import sys
 import re
 
 def extract_versions(html_content: str, allow_all: bool = False) -> list[str]:
+    # Restrict search to primary content / listWidget area to avoid scraping
+    # sidebar widgets ("Popular in last 24 hours", trending apps, etc.)
+    content_to_search = html_content
+    m_primary = re.search(r'(?:id="primary"|class="[^"]*listWidget[^"]*")(.*)', html_content, re.DOTALL)
+    if m_primary:
+        content_to_search = m_primary.group(1)
+
+    m_secondary = re.search(r'(?:id="secondary"|<aside\b|class="[^"]*sidebar[^"]*")', content_to_search, re.IGNORECASE)
+    if m_secondary:
+        content_to_search = content_to_search[:m_secondary.start()]
+
     # Extract links with class fontBlack pointing to releases
-    links = re.findall(r'<a\s+[^>]*class="[^"]*fontBlack[^"]*"[^>]*href="([^"]*-release/)"[^>]*>(.*?)</a>', html_content, re.DOTALL)
+    links = re.findall(r'<a\s+[^>]*class="[^"]*fontBlack[^"]*"[^>]*href="([^"]*-release/)"[^>]*>(.*?)</a>', content_to_search, re.DOTALL)
     if not links:
         # Fallback in case attribute order differs
-        links = re.findall(r'<a\s+[^>]*href="([^"]*-release/)"[^>]*class="[^"]*fontBlack[^"]*"[^>]*>(.*?)</a>', html_content, re.DOTALL)
+        links = re.findall(r'<a\s+[^>]*href="([^"]*-release/)"[^>]*class="[^"]*fontBlack[^"]*"[^>]*>(.*?)</a>', content_to_search, re.DOTALL)
 
     versions = []
     seen = set()
@@ -135,7 +146,7 @@ def main():
         html_content = sys.stdin.read()
         vers = extract_versions(html_content, allow_all=allow_all)
         if vers:
-            print(" ".join(vers))
+            print("\n".join(vers))
             sys.exit(0)
         sys.exit(1)
 

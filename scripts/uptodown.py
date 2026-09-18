@@ -285,7 +285,7 @@ def main():
         allow_all = (sys.argv[3].lower() == "true") if len(sys.argv) > 3 else False
         vers = get_versions(url, allow_all=allow_all)
         if vers:
-            print(" ".join(vers))
+            print("\n".join(vers))
             sys.exit(0)
         sys.exit(1)
 
