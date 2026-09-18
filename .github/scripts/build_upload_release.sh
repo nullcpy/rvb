@@ -1,57 +1,80 @@
 #!/bin/bash
 set -euo pipefail
 
-TAG="${TAG:?TAG not set}"
+# Unified release uploader using native gh CLI with per-file retry and clobber.
+#
+# Inputs (via env vars):
+#   RELEASE_TAG / TAG     : Release tag name (required)
+#   RELEASE_TITLE / TITLE : Release title (default: "Build No. $TAG")
+#   RELEASE_BODY_FILE     : Path to markdown notes file (e.g. build.md)
+#   RELEASE_NOTES         : Inline release notes string (used if no body file)
+#   IS_PRERELEASE         : "true" to mark as prerelease (default: "false")
+#   RELEASE_TARGET        : Target branch/commit for new release (optional, e.g. main)
+#   UPLOAD_FILES          : Space-separated files/glob patterns (default: "./build/*")
+#   GITHUB_REPOSITORY     : owner/repo (required)
+#   GH_TOKEN              : GitHub token (required)
+
+TAG="${RELEASE_TAG:-${TAG:?RELEASE_TAG or TAG not set}}"
 REPO="${GITHUB_REPOSITORY:?GITHUB_REPOSITORY not set}"
-PRERELEASE="${IS_PRERELEASE:-false}"
-BODY_FILE="build.md"
-TITLE="Build No. $TAG"
+TITLE="${RELEASE_TITLE:-${TITLE:-Build No. $TAG}}"
+BODY_FILE="${RELEASE_BODY_FILE:-${BODY_FILE:-}}"
+IS_PRERELEASE="${IS_PRERELEASE:-false}"
+TARGET="${RELEASE_TARGET:-${TARGET:-}}"
+FILES_PATTERN="${UPLOAD_FILES:-${FILES:-./build/*}}"
 
-echo "=== Uploading build release for tag: $TAG ==="
+echo "=== Uploading release assets for tag: $TAG ==="
 
-# 1. Ensure release exists or create it
-PRERELEASE_ARG=()
-if [ "$PRERELEASE" = "true" ]; then
-    PRERELEASE_ARG=(--prerelease)
+# 1. Prepare create / edit flags
+TARGET_ARG=()
+[ -n "$TARGET" ] && TARGET_ARG=(--target "$TARGET")
+
+PRERELEASE_CREATE_ARG=()
+PRERELEASE_EDIT_ARG=()
+if [ "$IS_PRERELEASE" = "true" ]; then
+    PRERELEASE_CREATE_ARG=(--prerelease)
+    PRERELEASE_EDIT_ARG=(--prerelease)
+else
+    PRERELEASE_EDIT_ARG=(--prerelease=false)
 fi
 
 NOTES_ARG=()
-if [ -s "$BODY_FILE" ]; then
+if [ -n "$BODY_FILE" ] && [ -s "$BODY_FILE" ]; then
     NOTES_ARG=(-F "$BODY_FILE")
+elif [ -n "${RELEASE_NOTES:-}" ]; then
+    NOTES_ARG=(-n "$RELEASE_NOTES")
 else
     NOTES_ARG=(-n "")
 fi
 
+# 2. Ensure release exists or create it
 if gh release view "$TAG" -R "$REPO" >/dev/null 2>&1; then
     echo "Release $TAG already exists, updating metadata..."
-    EDIT_PRERELEASE_ARG=()
-    if [ "$PRERELEASE" = "true" ]; then
-        EDIT_PRERELEASE_ARG=(--prerelease)
-    else
-        EDIT_PRERELEASE_ARG=(--prerelease=false)
-    fi
-    gh release edit "$TAG" -t "$TITLE" "${NOTES_ARG[@]}" "${EDIT_PRERELEASE_ARG[@]}" -R "$REPO" || true
+    gh release edit "$TAG" -t "$TITLE" "${NOTES_ARG[@]}" "${PRERELEASE_EDIT_ARG[@]}" -R "$REPO" || true
 else
     echo "Creating release $TAG..."
-    gh release create "$TAG" -t "$TITLE" "${NOTES_ARG[@]}" "${PRERELEASE_ARG[@]}" -R "$REPO"
+    gh release create "$TAG" -t "$TITLE" "${NOTES_ARG[@]}" "${PRERELEASE_CREATE_ARG[@]}" "${TARGET_ARG[@]}" -R "$REPO"
 fi
 
-# 2. Collect files to upload
+# 3. Collect files to upload
 shopt -s nullglob
-FILES=(./build/* ./temp/manifest/build.json)
+FILES=()
+for pattern in $FILES_PATTERN; do
+    for f in $pattern; do
+        [ -f "$f" ] && FILES+=("$f")
+    done
+done
 shopt -u nullglob
 
 if [ ${#FILES[@]} -eq 0 ]; then
-    echo "::warning::No build files found to upload"
+    echo "No files matched '$FILES_PATTERN' to upload"
     exit 0
 fi
 
 echo "Uploading ${#FILES[@]} file(s) to release $TAG..."
 
-# 3. Upload each file with retry
+# 4. Upload each file with retry
 FAILED_FILES=()
 for file in "${FILES[@]}"; do
-    [ -f "$file" ] || continue
     filename=$(basename "$file")
     echo "⬆️ Uploading $filename..."
     uploaded=false

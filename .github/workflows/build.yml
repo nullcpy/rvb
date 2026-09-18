@@ -175,8 +175,11 @@ jobs:
       - name: Upload to release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          RELEASE_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          RELEASE_TITLE: "Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}"
+          RELEASE_BODY_FILE: build.md
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+          UPLOAD_FILES: "./build/* ./temp/manifest/build.json"
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/build_upload_release.sh
 
@@ -208,9 +211,13 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          RELEASE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          RELEASE_TITLE: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          RELEASE_NOTES: "Archive release for ${{ steps.context.outputs.ARCHIVE_TAG }} builds"
+          RELEASE_TARGET: main
+          UPLOAD_FILES: "./build/*"
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: bash .github/scripts/build_upload_archive.sh
+        run: bash .github/scripts/build_upload_release.sh
 
       - name: Merge and upload archive manifest
         env:
