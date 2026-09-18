@@ -1,21 +1,10 @@
-[Facebook-andrewliang25]
+[AdobeLightroom-hoodles]
 enabled = true
-pkg-name = "com.facebook.katana"
-app-name = "Facebook"
-patches-source = "andrewliang25/morphe-patches"
-brand = "andrewliang25"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
-apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
-
-[pixiv-Fripe070]
-enabled = true
-pkg-name = "jp.pxv.android"
-app-name = "pixiv"
-patches-source = "Fripe070/PixivPatches"
-brand = "Fripe070"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv"
-uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/pixiv/jp.pxv.android"
-apkcombo-dlurl = "https://apkcombo.com/pixiv/jp.pxv.android"
+pkg-name = "com.adobe.lrmobile"
+app-name = "Adobe Lightroom"
+arch = "arm64-v8a"
+patches-source = "hoo-dles/morphe-patches"
+brand = "hoodles"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
