@@ -1846,96 +1846,114 @@ PYC
 # -------------------- uptodown --------------------
 get_uptodown_resp() {
 	local url="${1}"
-	if [ -n "${__DL_RESP_CACHE__["uptodown_resp_$url"]:-}" ]; then
-		__UPTODOWN_RESP__="${__DL_RESP_CACHE__["uptodown_resp_$url"]}"
-		__UPTODOWN_RESP_PKG__="${__DL_RESP_CACHE__["uptodown_resp_pkg_$url"]}"
-		return 0
-	fi
-	__UPTODOWN_RESP__=$(req "${url}/versions" -) || return 1
-	__UPTODOWN_RESP_PKG__=$(req "${url}/download" -) || return 1
-	__DL_RESP_CACHE__["uptodown_resp_$url"]="$__UPTODOWN_RESP__"
-	__DL_RESP_CACHE__["uptodown_resp_pkg_$url"]="$__UPTODOWN_RESP_PKG__"
+	local clean_url="${url%/versions}"
+	clean_url="${clean_url%/download}"
+	clean_url="${clean_url%/}"
+	__UPTODOWN_CLEAN_URL__="$clean_url"
+	[ -n "${__DL_RESP_CACHE__["uptodown_resp_$url"]:-}" ] && return 0
+	__DL_RESP_CACHE__["uptodown_resp_$url"]="$clean_url"
+	return 0
 }
-get_uptodown_vers() { $HTMLQ --text ".version" <<<"$__UPTODOWN_RESP__"; }
+
+get_uptodown_vers() {
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
+	fi
+
+	local py_script="${CWD}/scripts/uptodown.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/uptodown.py"
+
+	local allow_all="${__AAV__:-false}"
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ] && [ -n "${__UPTODOWN_CLEAN_URL__:-}" ]; then
+		local py_vers
+		if py_vers=$("$py_cmd" "$py_script" vers "$__UPTODOWN_CLEAN_URL__" "$allow_all" 2>/dev/null) && [ -n "$py_vers" ]; then
+			echo "$py_vers"
+			return 0
+		fi
+	fi
+
+	local vers
+	vers=$(grep -oP '<span class="version">\K[^<]+' <<<"${__UPTODOWN_RESP__:-}" || true)
+	if [ -z "$vers" ] && [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
+		vers=$($HTMLQ --text ".version" <<<"${__UPTODOWN_RESP__:-}" 2>/dev/null || true)
+	fi
+	if [ "$allow_all" = false ]; then
+		vers=$(grep -iv "\(beta\|alpha\|secondary\)" <<<"$vers" || true)
+	fi
+	echo "$vers"
+}
+
+get_uptodown_pkg_name() {
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
+	fi
+
+	local py_script="${CWD}/scripts/uptodown.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/uptodown.py"
+
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ] && [ -n "${__UPTODOWN_CLEAN_URL__:-}" ]; then
+		local py_pkg
+		if py_pkg=$("$py_cmd" "$py_script" pkg "$__UPTODOWN_CLEAN_URL__" 2>/dev/null) && [ -n "$py_pkg" ]; then
+			echo "$py_pkg"
+			return 0
+		fi
+	fi
+
+	local pkg
+	pkg=$(grep -oP 'play\.google\.com/store/apps/details\?id=\K[a-zA-Z0-9_.]+' <<<"${__UPTODOWN_RESP_PKG__:-}${__UPTODOWN_RESP__:-}" | head -1) || true
+	if [ -z "$pkg" ] && [ -n "${HTMLQ:-}" ] && [ -x "$HTMLQ" ]; then
+		pkg=$($HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)" <<<"${__UPTODOWN_RESP_PKG__:-}" 2>/dev/null || true)
+	fi
+	echo "$pkg"
+}
+
 dl_uptodown() {
 	local uptodown_dlurl=$1 version=$2 output=$3 arch=$4 _dpi=$5
 	if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
 
-	local apparch=('arm64-v8a, armeabi-v7a, x86_64' 'arm64-v8a, armeabi-v7a, x86, x86_64' 'arm64-v8a, armeabi-v7a')
-	if [ "$arch" != all ]; then
-		apparch+=("$arch")
+	local py_cmd=""
+	if command -v python3 >/dev/null 2>&1; then
+		py_cmd="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py_cmd="python"
 	fi
 
-	local op resp data_code
-	data_code=$($HTMLQ "#detail-app-name" --attribute data-code <<<"$__UPTODOWN_RESP__")
-	local versionURL=""
-	local is_bundle=false
-	for i in {1..20}; do
-		resp=$(req "${uptodown_dlurl}/apps/${data_code}/versions/${i}" -)
-		if ! op=$(jq -e -r ".data | map(select(.version == \"${version}\")) | .[0]" <<<"$resp"); then
-			continue
-		fi
-		if [ "$(jq -e -r ".kindFile" <<<"$op")" = "xapk" ]; then is_bundle=true; fi
-		if versionURL=$(jq -e -r '.versionURL' <<<"$op"); then break; else return 1; fi
-	done
-	if [ -z "$versionURL" ]; then return 1; fi
-	versionURL=$(jq -e -r '.url + "/" + .extraURL + "/" + (.versionID | tostring)' <<<"$versionURL")
-	resp=$(req "$versionURL" -) || return 1
+	local py_script="${CWD}/scripts/uptodown.py"
+	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/uptodown.py"
 
-	local data_version files node_arch="" data_file_id node_class
-	data_version=$($HTMLQ '.button.variants' --attribute data-version <<<"$resp") || return 1
-	if [ "$data_version" ]; then
-		files=$(req "${uptodown_dlurl%/*}/app/${data_code}/version/${data_version}/files" - | jq -e -r .content) || return 1
-		local specific_arch_id="" specific_is_bundle=false
-		for ((n = 1; n < 12; n += 1)); do
-			node_class=$($HTMLQ -w -t ".content > :nth-child($n)" --attribute class <<<"$files") || return 1
-			if [ "$node_class" != "variant" ]; then
-				node_arch=$($HTMLQ -w -t ".content > :nth-child($n)" <<<"$files" | xargs) || return 1
-				continue
-			fi
-			if [ -z "$node_arch" ]; then return 1; fi
-			
-			local file_type
-			file_type=$($HTMLQ -w -t ".content > :nth-child($n) > .v-file > span" <<<"$files") || return 1
-			data_file_id=$($HTMLQ ".content > :nth-child($n) > .v-report" --attribute data-file-id <<<"$files") || return 1
-			
-			# Pass 1 Logic: Return Universal/Fat Bundles immediately to optimize cache size
-			if isoneof "$node_arch" 'arm64-v8a, armeabi-v7a, x86_64' 'arm64-v8a, armeabi-v7a, x86, x86_64' 'arm64-v8a, armeabi-v7a' 'universal'; then
-				if [ "$file_type" = "xapk" ]; then is_bundle=true; else is_bundle=false; fi
-				resp=$(req "${uptodown_dlurl}/download/${data_file_id}-x" -)
-				break
-			# Pass 2 Logic: Save specifically requested arch as fallback
-			elif [ "$node_arch" = "$arch" ] && [ -z "$specific_arch_id" ]; then
-				specific_arch_id="$data_file_id"
-				if [ "$file_type" = "xapk" ]; then specific_is_bundle=true; else specific_is_bundle=false; fi
-			fi
-		done
-		
-		if [ $n -eq 12 ]; then
-			if [ -n "$specific_arch_id" ]; then
-				is_bundle=$specific_is_bundle
-				resp=$(req "${uptodown_dlurl}/download/${specific_arch_id}-x" -)
+	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
+		local py_info
+		if py_info=$("$py_cmd" "$py_script" download-url "$uptodown_dlurl" "$version" "$arch" 2>/dev/null) && [ -n "$py_info" ]; then
+			local cdn_url is_bundle
+			cdn_url=$(cut -f1 <<<"$py_info")
+			is_bundle=$(cut -f2 <<<"$py_info")
+
+			pr "Downloading from Uptodown CDN: $cdn_url"
+			if [ "$is_bundle" = "true" ]; then
+				local bundle="${output%.apk}.apkm"
+				req "$cdn_url" "$bundle" || return 1
+				if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
+					cp -f "$bundle" "${output}"
+				else
+					merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
+					rm -f "$bundle"
+				fi
 			else
-				return 1
+				req "$cdn_url" "$output" || return 1
 			fi
+			return 0
 		fi
 	fi
-	local data_url
-	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
-	if [ $is_bundle = true ]; then
-		local bundle="${output%.apk}.apkm"
-		req "https://dw.uptodown.com/dwn/${data_url}" "$bundle" || return 1
-		if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
-			cp -f "$bundle" "${output}"
-		else
-			merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
-			rm -f "$bundle"
-		fi
-	else
-		req "https://dw.uptodown.com/dwn/${data_url}" "$output"
-	fi
+
+	epr "Failed to resolve Uptodown download URL for $uptodown_dlurl version $version"
+	return 1
 }
-get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)" <<<"$__UPTODOWN_RESP_PKG__"; }
 
 # -------------------- archive --------------------
 dl_archive() {
