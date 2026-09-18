@@ -22,5 +22,5 @@ else
 	umount_all
 	echo "* Disabled successfully"
 
-	ch_desc "⚠️ Disabled by action"
+	ch_desc "⛔ Disabled by action"
 fi

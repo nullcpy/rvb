@@ -7,6 +7,10 @@ ch_desc() {
 	sed -i "s|^description=.*|description=${1}|" "$MODDIR/module.prop"
 }
 
+ch_desc_err() {
+	ch_desc "⚠️ Needs reflash: '${1}'"
+}
+
 if su -M -c true >/dev/null 2>/dev/null; then
 	alias mm='su -M -c'
 else alias mm='nsenter -t1 -m'; fi
@@ -46,17 +50,17 @@ get_mounts() {
 
 mount_rv() {
 	if [ ! -d "${1}/lib" ]; then
-		err "Your installation got broken. Dont report this, consider using rvmm-zygisk-mount."
+		ch_desc_err "Your installation got broken. Dont report this, consider using rvmm-zygisk-mount."
 		return 1
 	fi
 	VERSION=$(get_app_version)
 	if [ "$VERSION" != "$PKG_VER" ] && [ "$VERSION" ]; then
-		err "version mismatch (installed:$VERSION, module:$PKG_VER)"
+		ch_desc_err "Version mismatch (installed:$VERSION, module:$PKG_VER)"
 		return 1
 	fi
 	umount_all
 	if ! OP=$(chcon u:object_r:apk_data_file:s0 "$RVPATH" 2>&1); then
-		err "Error chcon: '$OP'"
+		ch_desc_err "Error chcon: '$OP'"
 		return 1
 	fi
 	mount -o bind "$RVPATH" "${1}/base.apk"
@@ -67,7 +71,7 @@ mount_rv() {
 
 mount_rv_now() {
 	if ! BASEPATH=$(get_basepath); then
-		err "app not installed: '$BASEPATH'"
+		ch_desc_err "App not installed: '$BASEPATH'"
 		return 1
 	fi
 	mount_rv "$BASEPATH"

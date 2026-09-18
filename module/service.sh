@@ -3,10 +3,6 @@ MODDIR="$(dirname "$(readlink -f "$0")")"
 export MODDIR
 . "$MODDIR/utils.sh"
 
-err() {
-	sed -i "s|^description=.*|description=⚠️ Needs reflash: '${1}'|" "$MODDIR/module.prop"
-}
-
 run() {
 	until [ "$(getprop sys.boot_completed)" = 1 ]; do sleep 1; done
 	until [ -d "/sdcard/Android" ]; do sleep 1; done
@@ -18,7 +14,7 @@ run() {
 	do sleep 2; done
 
 	if [ $SVCL != 0 ]; then
-		err "app not installed: '$BASEPATH'"
+		ch_desc_err "App not installed: '$BASEPATH'"
 		return
 	fi
 	sleep 4
