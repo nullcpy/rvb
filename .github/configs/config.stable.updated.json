@@ -599,6 +599,28 @@
     "apkpure-dlurl": "https://apkpure.com/byair-flight-tracker-status/com.byairapp.android",
     "apkcombo-dlurl": "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
   },
+  "SwiftBackup-heval99": {
+    "patches-source": "heval99/Heval-Morphe-Patches",
+    "brand": "heval99",
+    "enabled": true,
+    "pkg-name": "org.swiftapps.swiftbackup",
+    "app-name": "SwiftBackup",
+    "uptodown-dlurl": "https://swift-backup.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
+    "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
+    "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+  },
+  "FairEmail-heval99": {
+    "patches-source": "heval99/Heval-Morphe-Patches",
+    "brand": "heval99",
+    "enabled": true,
+    "pkg-name": "eu.faircode.email",
+    "app-name": "FairEmail",
+    "uptodown-dlurl": "https://fairemail.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/marcel-bokhorst/fairemail-open-source-privacy-oriented-email",
+    "apkpure-dlurl": "https://apkpure.com/fairemail-privacy-aware-email/eu.faircode.email",
+    "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
+  },
   "SoundCloud-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
@@ -1052,7 +1074,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
@@ -1063,7 +1085,7 @@
     "patches-source": "instafel/pc-rel",
     "cli-source": "instafel/p-rel",
     "brand": "Instafel",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "variant": "Clone",
@@ -1125,7 +1147,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1138,7 +1160,7 @@
   "TikTok-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
@@ -1149,7 +1171,7 @@
   "TikTok-kveld9-Asia": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
@@ -1547,7 +1569,7 @@
     "patches-source": "revenge-mod/revenge-xposed",
     "cli-source": "7723mod/NPatch",
     "brand": "revenge",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "patcher-args": "-l 0",

@@ -103,6 +103,14 @@
       "shared": "88145df615f85fd9e698657c6942f52f"
     }
   },
+  "heval99/heval-morphe-patches": {
+    "beta": {},
+    "stable": {
+      "eu.faircode.email": "6510a9ba2242ffa180d0b63b6b8702f5",
+      "org.swiftapps.swiftbackup": "a6f8bde2c097b3330f4e60644de3e125",
+      "shared": "f58f43ff836e0762fe9f9d84376b1567"
+    }
+  },
   "hoo-dles/morphe-patches": {
     "beta": {
       "bitpit.launcher": "da6ecc087e6282ec8ce024ea656fb484",
@@ -195,8 +203,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "e5718250e27db832d2e3683e1e8b462a",
-      "shared": "bedaca350ec7acd2ccaa481bfaebf9fb"
+      "com.google.android.inputmethod.latin": "87854a4cf16eb4915fb9570ae0a75306",
+      "shared": "37065a181bd2031f90a4eba4af80f320"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "4ea5b8001d75b6e795776688e8207365",
@@ -309,8 +317,8 @@
   },
   "rookieenough/de-vanced": {
     "beta": {
-      "com.google.android.apps.photos": "d3a4d7fd064e5d6e3928f50f2a4f65e2",
-      "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
+      "com.google.android.apps.photos": "0fb90bad1539622a420a7daf7fb7c4e9",
+      "shared": "47aeb6555648cdf0a98d5bbc5d216fd3"
     },
     "stable": {
       "com.google.android.apps.photomath": "8ff5991ed09592c3fe72dcd4d0538abb",
