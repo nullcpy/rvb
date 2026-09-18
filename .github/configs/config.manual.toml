@@ -1,13 +1,4 @@
-[SwiftBackup-heval99]
-enabled = true
-pkg-name = "org.swiftapps.swiftbackup"
-app-name = "Swift Backup"
-patches-source = "heval99/Heval-Morphe-Patches"
-brand = "heval99"
-uptodown-dlurl = "https://swift-backup.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/swiftapps-org/swift-backup"
-apkpure-dlurl = "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup"
-apkcombo-dlurl = "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+patches-version = "beta"
 
 [XRecorder-hoodles]
 enabled = true
@@ -19,21 +10,3 @@ apkpure-dlurl = "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.v
 apkcombo-dlurl = "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
 
-[Photomath-DeVanced]
-enabled = true
-pkg-name = "com.google.android.apps.photomath"
-app-name = "Photomath"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
-uptodown-dlurl = "https://photomath.en.uptodown.com/android"
-
-[PicsArt-rushiranpise]
-enabled = true
-pkg-name = "com.picsart.studio"
-app-name = "PicsArt"
-patches-source = "rushiranpise/morphe-patches"
-brand = "rushiranpise"
-arch = "all"
-uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
