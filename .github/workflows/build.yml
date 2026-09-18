@@ -173,21 +173,12 @@ jobs:
         run: python3 .github/scripts/build_make_manifest.py
 
       - name: Upload to release
-        uses: Wandalen/wretry.action@v3.8.0
-        with:
-          action: softprops/action-gh-release@v3
-          attempt_limit: 3
-          attempt_delay: 30000
-          with: |
-            body_path: build.md
-            token: ${{ secrets.GITHUB_TOKEN }}
-            files: |
-              ./build/*
-              ./temp/manifest/build.json
-            name: Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}
-            tag_name: ${{ steps.version.outputs.NEXT_VER_CODE }}
-            overwrite_files: true
-            prerelease: ${{ steps.context.outputs.IS_PRERELEASE == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_upload_release.sh
 
       - name: Update changelog and module update files
         id: update_changelog
@@ -215,17 +206,11 @@ jobs:
       - name: Upload to release (Archive)
         id: archive_upload
         continue-on-error: true
-        uses: Wandalen/wretry.action@v3.8.0
-        with:
-          action: softprops/action-gh-release@v3
-          attempt_limit: 3
-          attempt_delay: 30000
-          with: |
-            token: ${{ secrets.GITHUB_TOKEN }}
-            files: ./build/*
-            tag_name: ${{ steps.context.outputs.ARCHIVE_TAG }}
-            overwrite_files: true
-            target_commitish: main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_upload_archive.sh
 
       - name: Merge and upload archive manifest
         env:
