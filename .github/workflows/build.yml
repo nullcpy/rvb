@@ -221,18 +221,6 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/merge_archive_manifest.sh
 
-      - name: Notify website catalog rebuild
-        continue-on-error: true
-        env:
-          DISPATCH_TOKEN: ${{ secrets.WEBSITE_DISPATCH_TOKEN || secrets.APKS_REPO_TOKEN }}
-          WEBSITE_REPO: "${{ vars.WEBSITE_REPO || 'nullcpy/nullcpy.github.io' }}"
-        run: |
-          curl -fsS -X POST "https://api.github.com/repos/${WEBSITE_REPO}/dispatches" \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $DISPATCH_TOKEN" \
-            -d '{"event_type": "catalog-updated"}' \
-            || echo "::warning::Website catalog dispatch failed; the scheduled rebuild will converge."
-
       - name: Notify telegram
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
