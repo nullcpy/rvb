@@ -42,7 +42,7 @@ jobs:
     env:
       # How many app builds run at the same time. 1 = one at a time (normal).
       # Set to 2-4 to speed up builds (runner has 4 cores).
-      PARALLEL_JOBS: "1"
+      PARALLEL_JOBS: "2"
       # How many files upload at the same time.
       UPLOAD_CONCURRENCY: "4"
     services:
