@@ -37,6 +37,14 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    # Performance tuning knobs — version-controlled here instead of repo
+    # variables (visible in PRs, survive forks, git history for the values).
+    env:
+      # How many app builds run at the same time. 1 = one at a time (normal).
+      # Set to 2-4 to speed up builds (runner has 4 cores).
+      PARALLEL_JOBS: "1"
+      # How many files upload at the same time.
+      UPLOAD_CONCURRENCY: "4"
     services:
       cf_solver:
         image: ghcr.io/sarperavci/cloudflarebypassforscraping:latest
@@ -174,7 +182,6 @@ jobs:
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
           UPLOAD_FILES: "./build/* ./temp/manifest/build.json"
           GITHUB_REPOSITORY: ${{ github.repository }}
-          UPLOAD_CONCURRENCY: "${{ vars.UPLOAD_CONCURRENCY || '4' }}"
         run: bash .github/scripts/build_upload_release.sh
 
       - name: Update changelog and module update files
@@ -211,7 +218,6 @@ jobs:
           RELEASE_TARGET: main
           UPLOAD_FILES: "./build/*"
           GITHUB_REPOSITORY: ${{ github.repository }}
-          UPLOAD_CONCURRENCY: "${{ vars.UPLOAD_CONCURRENCY || '4' }}"
         run: bash .github/scripts/build_upload_release.sh
 
       - name: Merge and upload archive manifest

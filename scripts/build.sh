@@ -4,8 +4,10 @@ set -euo pipefail
 shopt -s nullglob
 
 # Engine is run with repo root as CWD (workflows, CI scripts) but lives beside
-# utils.sh under scripts/; source the sibling explicitly.
-source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/utils.sh"
+# utils.sh under scripts/; source the sibling explicitly. The path is also
+# handed to pooled children (parallel-jobs) through RVB_UTILS_SH.
+RVB_UTILS_SH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/utils.sh"
+source "$RVB_UTILS_SH"
 echo '{}' > "$BUILD_JSON_FILE"
 
 trap "abort" INT
@@ -44,6 +46,14 @@ DEF_ARCH=$(toml_get "$main_config_t" arch) || DEF_ARCH="both"
 DEF_BUILD_MODE=$(toml_get "$main_config_t" build-mode) || DEF_BUILD_MODE="apk"
 DEF_AUTHOR_NAME=$(toml_get "$main_config_t" author) || DEF_AUTHOR_NAME="nullcpy"
 DEF_AUTHOR_PAGE=$(toml_get "$main_config_t" author-page) || DEF_AUTHOR_PAGE="github.com/nullcpy/rvb"
+# Concurrent table builds. The ONLY knob is the PARALLEL_JOBS env set in
+# .github/workflows/build.yml — it is not read from any config file.
+# 1 (default) keeps the historical fully-sequential path untouched.
+PAR_JOBS="${PARALLEL_JOBS:-1}"
+[[ "$PAR_JOBS" =~ ^[0-9]+$ ]] || { epr "PARALLEL_JOBS '$PAR_JOBS' is not a number; falling back to 1"; PAR_JOBS=1; }
+((PAR_JOBS < 1)) && PAR_JOBS=1
+((PAR_JOBS > 8)) && { wpr "capping parallel-jobs at 8 (runner is 4-core/16GB)"; PAR_JOBS=8; }
+pr "PARALLEL_JOBS: $PAR_JOBS"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
 
 : >build.md
@@ -61,6 +71,94 @@ done
 
 mkdir -p ${MODULE_TEMPLATE_DIR}/bin/arm64 ${MODULE_TEMPLATE_DIR}/bin/arm ${MODULE_TEMPLATE_DIR}/bin/x86 ${MODULE_TEMPLATE_DIR}/bin/x64
 echo "${DEF_AUTHOR_NAME}${DEF_AUTHOR_PAGE:+ ($DEF_AUTHOR_PAGE)}" > "${MODULE_TEMPLATE_DIR}/maintainer.txt"
+
+# -- Build process pool (parallel-jobs > 1) --
+# Each table build runs as a fresh `bash -c` child that re-sources utils.sh,
+# so PATCHER_*/PATCH_OUTPUT globals and in-process caches are per-job by
+# construction. Children log to temp/queue/<id>.log and drop an rc file; the
+# parent replays finished logs inside their own ::group:: (completion order)
+# so the Actions log stays as clean as the sequential one. Serial mode
+# (PAR_JOBS=1) bypasses all of this and behaves exactly as before.
+QUEUE_DIR="$TEMP_DIR/queue"
+# =() initializers are required: bash 5.3+ treats bare `declare -gA` as unset
+# under `set -u`, breaking ${#JOB_PID[@]} on the empty pool.
+declare -gA JOB_PID=() JOB_LABEL=() JOB_LOG=() JOB_RC=()
+JOB_SEQ=0
+
+if ((PAR_JOBS > 1)); then
+	mkdir -p "$QUEUE_DIR"
+	# vars build_rv reads as globals; children get them through the env
+	export RVB_UTILS_SH COMPRESSION_LEVEL ENABLE_MODULE_UPDATE DEF_AUTHOR_NAME REMOVE_RV_INTEGRATIONS_CHECKS
+
+	_reap_done() {
+		local id rc
+		for id in "${!JOB_PID[@]}"; do
+			if [ ! -f "${JOB_RC[$id]}" ]; then
+				# still running → keep waiting; wrapper died without an rc (killed
+				# externally, rare) → synthesize a failure so the drain can't hang
+				kill -0 "${JOB_PID[$id]}" 2>/dev/null && continue
+				echo 137 >"${JOB_RC[$id]}"
+			fi
+			rc=$(cat "${JOB_RC[$id]}" 2>/dev/null) || rc=1
+			if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${JOB_LABEL[$id]}"; fi
+			cat "${JOB_LOG[$id]}" 2>/dev/null
+			if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+			[ "$rc" = 0 ] || epr "Build failed for ${JOB_LABEL[$id]} (exit $rc)"
+			rm -f "${JOB_LOG[$id]}" "${JOB_RC[$id]}"
+			unset "JOB_PID[$id]" "JOB_LABEL[$id]" "JOB_LOG[$id]" "JOB_RC[$id]"
+		done
+		return 0
+	}
+	_wait_slot() {
+		while ((${#JOB_PID[@]} >= PAR_JOBS)); do
+			_reap_done
+			((${#JOB_PID[@]} < PAR_JOBS)) && break
+			wait -n >/dev/null 2>&1 || true
+			sleep 1
+		done
+		return 0
+	}
+	_enqueue_build() { # $1=declare-p app_args $2=label
+		_wait_slot
+		local id=$((JOB_SEQ + 1))
+		JOB_SEQ=$id
+		(
+			# set +e: the wrapper must survive a failing child to record its rc
+			set +e
+			RVB_CHILD=1 bash -c 'set -euo pipefail; shopt -s nullglob; source "$RVB_UTILS_SH"; set_prebuilts; build_rv "$1"' _ "$1" \
+				>"$QUEUE_DIR/$id.log" 2>&1
+			echo $? >"$QUEUE_DIR/$id.rc"
+		) &
+		JOB_PID[$id]=$!
+		JOB_LABEL[$id]="$2"
+		JOB_LOG[$id]="$QUEUE_DIR/$id.log"
+		JOB_RC[$id]="$QUEUE_DIR/$id.rc"
+	}
+	_kill_jobs() {
+		local p
+		for p in "${JOB_PID[@]}"; do
+			pkill -P "$p" 2>/dev/null || true
+			kill "$p" 2>/dev/null || true
+		done
+		return 0
+	}
+	# INT: children must die with the parent, then run the normal abort sweep
+	trap 'pr "Interrupted — stopping ${#JOB_PID[@]} in-flight job(s)"; _kill_jobs; abort' INT
+fi
+
+# Single entry point for kicking one table build: inline in serial mode
+# (original behavior, incl. per-build groups), pooled otherwise (the group is
+# emitted by _reap_done from the captured log).
+_run_build() { # $1=label $2=declare-p app_args
+	if ((PAR_JOBS <= 1)); then
+		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building $1"; fi
+		build_rv "$2" || epr "Build failed for $1"
+		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+	else
+		_enqueue_build "$2" "$1"
+	fi
+	return 0
+}
 
 for table_name in $(toml_get_table_names); do
 	if [ -z "$table_name" ]; then continue; fi
@@ -190,31 +288,35 @@ for table_name in $(toml_get_table_names); do
 	fi
 
 	if [ "${app_args[arch]}" = both ]; then
+		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
-		module_prop_name_b=${app_args[module_prop_name]}
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+		_run_build "${app_args[table]}" "$(declare -p app_args)"
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+		_run_build "${app_args[table]}" "$(declare -p app_args)"
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
 		elif [ "${app_args[arch]}" = "arm-v7a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Building ${app_args[table]}"; fi
-		build_rv "$(declare -p app_args)" || epr "Build failed for ${app_args[table]}"
-		if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+		_run_build "${app_args[table]}" "$(declare -p app_args)"
 	fi
 done
-rm -rf temp/tmp.*
+
+# Drain the pool: replay every remaining job log as it finishes, then fold
+# the per-job build.json fragments into the final catalog.
+while ((PAR_JOBS > 1 && ${#JOB_PID[@]} > 0)); do
+	_reap_done
+	((${#JOB_PID[@]} > 0)) || break
+	wait -n >/dev/null 2>&1 || true
+	sleep 1
+done
+merge_build_info
+rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR"
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
 if command -v python3 >/dev/null 2>&1; then

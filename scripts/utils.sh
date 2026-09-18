@@ -158,6 +158,12 @@ wpr() {
 }
 abort() {
 	epr "ABORT: ${1-}"
+	# In a pooled child (build.sh parallel-jobs) the parent owns the shared
+	# tmp-file sweep — deleting temp/*tmp.* here would kill sibling downloads.
+	if [ "${RVB_CHILD-}" = 1 ]; then
+		trap - SIGTERM SIGINT EXIT
+		exit 1
+	fi
 	rm -rf ./${TEMP_DIR}/*tmp.* ./${TEMP_DIR}/*/*tmp.* ./${TEMP_DIR}/*-temporary-files ./${TEMP_DIR}/*.apk-temporary-files ./*-temporary-files
 	trap - SIGTERM SIGINT EXIT
 	exit 1
@@ -1052,6 +1058,22 @@ _meta_field_of() {
 
 merge_splits() {
 	local bundle=$1 output=$2
+	# Serialize merges (and the apkeditor/apksigner writes they do) targeting
+	# the same output: build.sh may run several tables over one shared stock
+	# cache path concurrently when parallel-jobs > 1. Lock name is flattened
+	# from the target path — no mkdir needed.
+	local _ms_lock="${TEMP_DIR}/mergesplits.$(tr -c 'a-zA-Z0-9._-' '_' <<<"$output").lock"
+	if command -v flock >/dev/null 2>&1; then
+		exec 201>"$_ms_lock"
+		flock -x 201
+	fi
+	_merge_splits_locked "$bundle" "$output"
+	local _ms_ret=$?
+	exec 201>&-
+	return $_ms_ret
+}
+_merge_splits_locked() {
+	local bundle=$1 output=$2
 	if unzip -l "$bundle" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*AndroidManifest\.xml$'; then
 		pr "Downloaded bundle is actually a standard APK. Bypassing merge."
 		mv -f "$bundle" "$output"
@@ -1061,22 +1083,28 @@ merge_splits() {
 	apk_count=$(unzip -l "$bundle" 2>/dev/null | grep -c '\.apk$' || true)
 	if [ "$apk_count" -le 1 ] && unzip -l "$bundle" 2>/dev/null | grep -q '^[[:space:]]*[0-9].*base\.apk$'; then
 		pr "Extracting base.apk from bundle"
-		unzip -p "$bundle" base.apk > "$output" || return 1
+		unzip -p "$bundle" base.apk > "${output}-merge-tmp" || { rm -f "${output}-merge-tmp"; return 1; }
+		mv -f "${output}-merge-tmp" "$output"
 		return 0
 	fi
 	pr "Merging splits"
 	get_apkeditor || return 1
-	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-unsigned" -clean-meta -f 2>&1); then
+	# write to temp siblings and rename atomically: a concurrent process may
+	# have already produced (or be reading) $output — never truncate in place
+	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "$bundle" -o "${output}-merge-tmp.unsigned" -clean-meta -f 2>&1); then
 		epr "APKEditor error: $OP"
+		rm -f "${output}-merge-tmp.unsigned"
 		return 1
 	fi
 	# sign the merged stock apk
 	if ! OP=$(java -jar "$APKSIGNER" sign --ks "$RVB_KEYSTORE_P12" --ks-pass pass:$RVB_KEYSTORE_PASS --key-pass pass:$RVB_KEYSTORE_PASS --ks-key-alias "$RVB_KEY_ALIAS" \
-		--out "${output}" "${output}-unsigned"); then
+		--out "${output}-merge-tmp" "${output}-merge-tmp.unsigned"); then
 		epr "apksigner error: $OP"
+		rm -f "${output}-merge-tmp.unsigned" "${output}-merge-tmp"
 		return 1
 	fi
-	rm "${output}.idsig" "${output}-unsigned" 2>/dev/null || :
+	mv -f "${output}-merge-tmp" "$output" || return 1
+	rm "${output}.idsig" "${output}-merge-tmp.unsigned" 2>/dev/null || :
 	return 0
 }
 
@@ -2603,7 +2631,14 @@ write_build_info() {
 	if [ "$applied_json" = "[]" ] && [ -n "$PATCH_OUTPUT" ] && [ "${PATCHER_FLOW:-}" = cli-patch ]; then
 		wpr "No applied patches parsed from ${PATCHER_KIND:-cli-patch} CLI output for '$key' — catalog may show an empty patch list."
 	fi
-	jq --arg key "$key" \
+	# One fragment per write (key+arch+ext suffixed, pid-guarded): concurrent
+	# build processes never touch the same file; merge_build_info folds them
+	# into $BUILD_JSON_FILE at the end of the run.
+	local frag_dir="${TEMP_DIR}/build_info" fid
+	mkdir -p "$frag_dir"
+	fid=$(tr -cs 'a-zA-Z0-9._-' '-' <<<"${key}|${arch}|${ext}")
+	fid="${fid%%-}"; fid="${fid##-}"
+	jq -n --arg key "$key" \
 		--arg ext "$ext" \
 		--arg arch "$arch" \
 		--arg name "$name" \
@@ -2617,32 +2652,51 @@ write_build_info() {
 		--arg variant "$variant" \
 		--arg sub_variant "$sub_variant" \
 		--argjson applied "$applied_json" \
-		'if has($key) then
-			.[$key].exts = (.[$key].exts + [$ext] | unique) |
-			(if ($ext == ".apk" and $pkg_name != "") or ((.[$key].package_name // "") == "" and $pkg_name != "") then .[$key].package_name = $pkg_name else . end) |
-			(if $display_name != "" then .[$key].display_name = $display_name else . end) |
-			(if $patches_source != "" then .[$key].patches_source = $patches_source else . end) |
-			(if $brand != "" then .[$key].brand = $brand else . end) |
-			(if $variant != "" then .[$key].variant = $variant else . end) |
-			(if $sub_variant != "" then .[$key].sub_variant = $sub_variant else . end)
-		else
-			.[$key] = {
-				exts: [$ext],
-				name: $name,
-				arch: $arch,
-				version: $version,
-				patches: $patches,
-				changelog: $changelog,
-				package_name: $pkg_name,
-				display_name: $display_name,
-				patches_source: $patches_source,
-				brand: $brand,
-				variant: $variant,
-				sub_variant: $sub_variant,
-				applied_patches: $applied
-			}
-		end' \
-		"$BUILD_JSON_FILE" > "${BUILD_JSON_FILE}.tmp" && mv "${BUILD_JSON_FILE}.tmp" "$BUILD_JSON_FILE"
+		'{ ($key): {
+			exts: [$ext],
+			name: $name,
+			arch: $arch,
+			version: $version,
+			patches: $patches,
+			changelog: $changelog,
+			package_name: $pkg_name,
+			display_name: $display_name,
+			patches_source: $patches_source,
+			brand: $brand,
+			variant: $variant,
+			sub_variant: $sub_variant,
+			applied_patches: $applied
+		} }' >"${frag_dir}/${fid}.$$.json"
+}
+
+# Recombine the per-write fragments from $TEMP_DIR/build_info into
+# $BUILD_JSON_FILE. Called once by build.sh after all builds (serial or
+# pooled) finish; fragment filenames sort in creation order, so the first
+# fragment for a key provides the entry and later ones only union exts and
+# fill empty scalars — mirroring the old sequential update semantics.
+merge_build_info() {
+	local frag_dir="${TEMP_DIR}/build_info"
+	[ -d "$frag_dir" ] || return 0
+	local files=()
+	mapfile -t files < <(find "$frag_dir" -maxdepth 1 -type f -name '*.json' | sort)
+	if [ ${#files[@]} -eq 0 ]; then
+		rm -rf "$frag_dir"
+		return 0
+	fi
+	jq -s '
+		reduce .[] as $f ({};
+			($f | to_entries[0]) as $e |
+			if .[$e.key] == null then .[$e.key] = $e.value
+			else
+				.[$e.key].exts = ((.[$e.key].exts + $e.value.exts) | unique) |
+				reduce (["name","arch","version","patches","changelog","package_name","display_name","patches_source","brand","variant","sub_variant"][]) as $k (.;
+					if ((.[$e.key][$k] // "") == "") and (($e.value[$k] // "") != "")
+					then .[$e.key][$k] = $e.value[$k] else . end) |
+				if ((.[$e.key].applied_patches | length) == 0) and (($e.value.applied_patches | length) > 0)
+				then .[$e.key].applied_patches = $e.value.applied_patches else . end
+			end)
+	' "${files[@]}" >"${BUILD_JSON_FILE}.merge-tmp" && mv -f "${BUILD_JSON_FILE}.merge-tmp" "$BUILD_JSON_FILE"
+	rm -rf "$frag_dir"
 }
 verify_downloaded_apk() {
 	local stock_apk=$1
