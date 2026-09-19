@@ -69,14 +69,6 @@ app-name = "Beta Maniac"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mirko-dimartino/beta-maniac-life-of-a-beta-tester-2"
 uptodown-dlurl = "https://beta-maniac.en.uptodown.com/android"
 
-[GooglePhotos-rushiranpise]
-enabled = true
-pkg-name = "com.google.android.apps.photos"
-app-name = "Google Photos"
-included-patches = "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-
 [Messenger-rushiranpise]
 enabled = true
 pkg-name = "com.facebook.orca"

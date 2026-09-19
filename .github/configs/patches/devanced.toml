@@ -1,14 +1,6 @@
 patches-source = "RookieEnough/De-Vanced"
 brand = "DeVanced"
 
-[GooglePhotos-DeVanced]
-enabled = true
-pkg-name = "com.google.android.apps.photos"
-app-name = "Google Photos"
-build-mode = "both"
-patches-version = "both"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
-
 [GoogleRecorder-DeVanced]
 enabled = true
 pkg-name = "com.google.android.apps.recorder"
