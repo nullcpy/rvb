@@ -105,7 +105,7 @@
   "Reddit-adobo": {
     "patches-source": "jkennethcarino/adobo",
     "brand": "adobo",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
@@ -1019,7 +1019,7 @@
   "ProtonMail-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
@@ -1031,7 +1031,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1556,7 +1556,7 @@
   "ChessDotCom-Prathxm": {
     "patches-source": "PrathxmOp/Prathxm-Patches",
     "brand": "Prathxm",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.chess",
     "app-name": "Chess.com",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/chess-com/chess-play-learn",
