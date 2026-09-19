@@ -60,15 +60,6 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
-  "GooglePhotos-DeVanced": {
-    "patches-source": "RookieEnough/De-Vanced",
-    "brand": "DeVanced",
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.photos",
-    "app-name": "Google Photos",
-    "build-mode": "both",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
-  },
   "TikTok-hxreborn": {
     "patches-source": "hxreborn/hxreborn-tiktok-patches",
     "brand": "hxreborn",
@@ -230,6 +221,15 @@
     "apkpure-dlurl": "https://apkpure.com/reddit-app/com.reddit.frontpage",
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+  },
+  "GooglePhotos-DeVanced": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "DeVanced",
+    "build-mode": "both",
+    "patches-source": "RookieEnough/De-Vanced",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
   },
   "Twitter-Piko": {
     "patches-source": "crimera/piko",
