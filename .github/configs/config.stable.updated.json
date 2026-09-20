@@ -522,7 +522,7 @@
   "BraveBrowser-dh6k-Beta": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "Brave Browser",
     "variant": "Beta",
@@ -536,7 +536,7 @@
   "BraveBrowser-dh6k-Nightly": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "Brave Browser",
     "variant": "Nightly",
@@ -550,7 +550,7 @@
   "TitaniumBrowser-dh6k": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "Titanium Browser",
     "included-patches": "'Keep Helium Child Processes Alive'",
@@ -1485,7 +1485,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
