@@ -436,7 +436,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -522,7 +522,7 @@
   "BraveBrowser-dh6k-Beta": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "Brave Browser",
     "variant": "Beta",
@@ -536,7 +536,7 @@
   "BraveBrowser-dh6k-Nightly": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "Brave Browser",
     "variant": "Nightly",
@@ -550,7 +550,7 @@
   "TitaniumBrowser-dh6k": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "Titanium Browser",
     "included-patches": "'Keep Helium Child Processes Alive'",
@@ -1030,7 +1030,7 @@
   "ProtonMail-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
@@ -1042,7 +1042,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
