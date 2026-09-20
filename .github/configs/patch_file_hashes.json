@@ -9,7 +9,7 @@
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
       "com.wbd.hbomax": "62d421421ab7d213ad26b1b296796164",
-      "shared": "44c4a841573ed76659b37cc893f21519",
+      "shared": "00e1bbdc9f0517c8eeafe5e5e4287be6",
       "tv.pluto.android": "40dcc7c8b97d540deab8a158a9ad6ba1",
       "tv.twitch.android.app": "dcc3c62ee2cb5ba1793d74172bcf61fb"
     }
@@ -17,8 +17,8 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "953773e1288687cb9cf14434668c0297",
-      "shared": "a41a99b60dbfd88a2368e5b1fd309497"
+      "com.google.android.apps.photos": "d6b1efa9e71902b26e9e48444cc78f9b",
+      "shared": "c9d98409af8b3f0fdfec4909cd3e0400"
     }
   },
   "anddea/revanced-patches": {
@@ -49,9 +49,11 @@
       "com.rumble.battles": "f65a2338fdeedb636dc5a5cb61e809ae",
       "com.spocky.projengmenu": "d41d8cd98f00b204e9800998ecf8427e",
       "com.todoist": "286fac8822df6e6d81a6431dc6ced576",
-      "com.tumblr": "0850547e97d26fa6cd5f55e20cfa281c",
+      "com.touchtype.swiftkey": "89e2ee9de935b0d02c00ba18c8890d0e",
+      "com.tumblr": "dcc3993223d4d6aa8bc7942eca4b18dd",
+      "dk.tacit.android.foldersync.lite": "7e453c1636fd6079817eb4b07711fc8e",
       "shared": "419b00daa7dd52bf4dfb8d8d2f279b24",
-      "tv.twitch.android.app": "3e8106c7599d420305cb11fb8d8ec5da"
+      "tv.twitch.android.app": "22bf456248d104256a3a5108f3d482d4"
     }
   },
   "brosssh/morphe-patches": {
@@ -336,13 +338,13 @@
     },
     "stable": {
       "com.google.android.apps.photomath": "8ff5991ed09592c3fe72dcd4d0538abb",
-      "com.google.android.apps.photos": "7be47d5f7d30b6b00723010f69467ecc",
-      "com.google.android.apps.recorder": "59fa65b6cf7bd443f5514282d73c4b94",
-      "com.microsoft.office.officelens": "89d79226fa78827d4184527dcd99bbe4",
-      "com.strava": "23c284485e0f571d94d5ceabf9f69e70",
-      "com.viber.voip": "78e3d52707a0cedf260d99add0de6c1d",
-      "jp.pxv.android": "815bf175611d7fd76ebbbf57d634629c",
-      "shared": "c7c0b1ab00a768a24f19783c60c69f3b"
+      "com.google.android.apps.photos": "0fb90bad1539622a420a7daf7fb7c4e9",
+      "com.google.android.apps.recorder": "04796457e0f57f7a3ec1f183db2230fa",
+      "com.microsoft.office.officelens": "7f9cebed507a314c2bba2c5249552e71",
+      "com.strava": "037298bad41404867b8f1fe94882f9c7",
+      "com.viber.voip": "c6a555042d08486e72ba2ffde21f09ec",
+      "jp.pxv.android": "8302170348a561fcf04e59eb1dbafc12",
+      "shared": "47aeb6555648cdf0a98d5bbc5d216fd3"
     }
   },
   "rushiranpise/morphe-patches": {
