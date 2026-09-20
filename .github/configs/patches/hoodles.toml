@@ -212,3 +212,13 @@ arch = "arm64-v8a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.adobe.lrmobile"
+
+[Xodo-hoodles]
+enabled = true
+pkg-name = "com.xodo.pdf.reader"
+app-name = "Xodo"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/apryse-software-inc/xodo-pdf-reader-editor"
+uptodown-dlurl = "https://xodo-docs.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/xodo-pdf-reader-editor/com.xodo.pdf.reader"
+apkcombo-dlurl = "https://apkcombo.com/pdf-reader-editor-xodo/com.xodo.pdf.reader"
+

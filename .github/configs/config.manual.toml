@@ -1,13 +1,10 @@
-patches-version = "stable"
-
-[XRecorder-hoodles]
+[Xodo-hoodles]
 enabled = true
+pkg-name = "com.xodo.pdf.reader"
+app-name = "Xodo"
 patches-source = "hoo-dles/morphe-patches"
 brand = "hoodles"
-pkg-name = "videoeditor.videorecorder.screenrecorder"
-app-name = "XRecorder"
-build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-video-recorder-xrecorder"
-apkpure-dlurl = "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.videorecorder.screenrecorder"
-apkcombo-dlurl = "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder"
-uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/apryse-software-inc/xodo-pdf-reader-editor"
+uptodown-dlurl = "https://xodo-docs.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/xodo-pdf-reader-editor/com.xodo.pdf.reader"
+apkcombo-dlurl = "https://apkcombo.com/pdf-reader-editor-xodo/com.xodo.pdf.reader"
