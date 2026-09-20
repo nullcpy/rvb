@@ -29,6 +29,6 @@ github-regex = 'arm64-v8a: BraveMonoarm64\.apk | arm-v7a: BraveMonoarm\.apk'
 enabled = true
 pkg-name = "io.github.jqssun.helium"
 app-name = "Titanium Browser"
-included-patches = "'Keep Helium Child Processes Alive'"
+included-patches = "'Keep Titanium Extensions Child Processes Alive' 'Force highest refresh rate'"
 apkpure-dlurl = "https://apkpure.com/helium-browser/io.github.jqssun.helium"
 apkcombo-dlurl = "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
