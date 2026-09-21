@@ -2056,9 +2056,24 @@ dl_uptodown() {
 	local py_script="${CWD}/scripts/uptodown.py"
 	[ ! -f "$py_script" ] && [ -n "${BASH_SOURCE[0]:-}" ] && py_script="$(dirname "${BASH_SOURCE[0]}")/uptodown.py"
 
+	local errf="${TEMP_DIR}/uptodown_resolve_$$.err"
 	if [ -n "$py_cmd" ] && [ -f "$py_script" ]; then
-		local py_info
-		if py_info=$("$py_cmd" "$py_script" download-url "$uptodown_dlurl" "$version" "$arch" 2>/dev/null) && [ -n "$py_info" ]; then
+		local py_info="" attempt
+		# Retry: Uptodown's API/auth endpoints are bot-gated and can throw
+		# intermittently (HTTP 403/503 or a JSON error) from datacenter IPs
+		# like GitHub runners. A few short-backoff attempts ride out transient
+		# blocks; stderr is captured (not discarded) so a hard failure reports
+		# its real cause instead of a blank "Failed to resolve".
+		for attempt in 1 2 3; do
+			if py_info=$("$py_cmd" "$py_script" download-url "$uptodown_dlurl" "$version" "$arch" 2>"$errf") && [ -n "$py_info" ]; then
+				break
+			fi
+			py_info=""
+			if [ "$attempt" -lt 3 ]; then
+				sleep $((attempt * 2))
+			fi
+		done
+		if [ -n "$py_info" ]; then
 			local cdn_url is_bundle
 			cdn_url=$(cut -f1 <<<"$py_info")
 			is_bundle=$(cut -f2 <<<"$py_info")
@@ -2066,21 +2081,27 @@ dl_uptodown() {
 			pr "Downloading from Uptodown CDN: $cdn_url"
 			if [ "$is_bundle" = "true" ]; then
 				local bundle="${output%.apk}.apkm"
-				req "$cdn_url" "$bundle" || return 1
+				req "$cdn_url" "$bundle" || { rm -f "$errf"; return 1; }
 				if [ "${MORPHE_PASSTHROUGH_ACTIVE:-false}" = true ]; then
 					cp -f "$bundle" "${output}"
 				else
-					merge_splits "$bundle" "${output}" || { rm -f "$bundle"; return 1; }
+					merge_splits "$bundle" "${output}" || { rm -f "$bundle" "$errf"; return 1; }
 					rm -f "$bundle"
 				fi
 			else
-				req "$cdn_url" "$output" || return 1
+				req "$cdn_url" "$output" || { rm -f "$errf"; return 1; }
 			fi
+			rm -f "$errf"
 			return 0
 		fi
 	fi
 
-	epr "Failed to resolve Uptodown download URL for $uptodown_dlurl version $version"
+	local reason=""
+	if [ -f "$errf" ]; then
+		reason=$(tail -1 "$errf" 2>/dev/null)
+	fi
+	epr "Failed to resolve Uptodown download URL for $uptodown_dlurl version $version: ${reason:-unknown error}"
+	rm -f "$errf"
 	return 1
 }
 
