@@ -26,6 +26,15 @@
     "stable": "v2.12.0",
     "stable_date": "2026-06-22T17:44:41Z"
   },
+  "Entree3k/Morning-Entree-Patches": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "Entree3k/Morning-Entree-Patches",
+    "stable": "v1.22.0",
+    "stable_date": "2026-09-08T16:28:24Z"
+  },
   "Fripe070/PixivPatches": {
     "beta": "",
     "beta_date": "",
@@ -152,6 +161,15 @@
     "stable": "v2.8.2",
     "stable_date": "2026-09-01T07:46:05Z"
   },
+  "browzomje/browzomje-patches": {
+    "beta": "v1.8.1-dev.1",
+    "beta_date": "2026-08-19T20:01:29Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "browzomje/browzomje-patches",
+    "stable": "v1.10.0",
+    "stable_date": "2026-09-03T09:17:16Z"
+  },
   "bufferk/morphe-patches": {
     "beta": "v1.8.0-dev.1",
     "beta_date": "2026-07-18T11:46:49Z",
@@ -248,8 +266,8 @@
     "blocked": false,
     "host": "github",
     "repo": "hxreborn/morphe-patches",
-    "stable": "v1.27.0",
-    "stable_date": "2026-09-21T12:19:40Z"
+    "stable": "v1.27.1",
+    "stable_date": "2026-09-21T18:30:18Z"
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": "v0.8.0-dev.11",
