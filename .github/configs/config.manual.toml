@@ -1,10 +1,12 @@
-[Xodo-hoodles]
+[NiagaraLauncher-Entree3k]
 enabled = true
-pkg-name = "com.xodo.pdf.reader"
-app-name = "Xodo"
-patches-source = "hoo-dles/morphe-patches"
-brand = "hoodles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/apryse-software-inc/xodo-pdf-reader-editor"
-uptodown-dlurl = "https://xodo-docs.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/xodo-pdf-reader-editor/com.xodo.pdf.reader"
-apkcombo-dlurl = "https://apkcombo.com/pdf-reader-editor-xodo/com.xodo.pdf.reader"
+pkg-name = "bitpit.launcher"
+app-name = "Niagara Launcher"
+patch-folder = "niagara"
+build-mode = "both"
+patches-source = "Entree3k/Morning-Entree-Patches"
+brand = "Entree3k"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
+uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
+apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
