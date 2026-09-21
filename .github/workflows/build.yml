@@ -43,6 +43,14 @@ jobs:
       # How many app builds run at the same time. 1 = one at a time (normal).
       # Set to 2-4 to speed up builds (runner has 4 cores).
       PARALLEL_JOBS: "4"
+      # How many APK downloads the prewarm pass runs at the same time, decoupled
+      # from PARALLEL_JOBS: mirrors (APKMirror/Uptodown/APKPure) and the GitHub
+      # API rate-limit/bot-gate datacenter IPs, so downloading fewer files in
+      # parallel is more reliable while builds still saturate the CPU.
+      # Unset = follow PARALLEL_JOBS.
+      DOWNLOAD_PARALLELISM: "2"
+      # false = skip the prewarm pass and go back to downloading inside builds.
+      PREWARM_APKS: "true"
       # How many files upload at the same time.
       UPLOAD_CONCURRENCY: "8"
     services:

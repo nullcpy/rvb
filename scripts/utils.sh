@@ -2952,6 +2952,11 @@ _resolve_list_and_version() {
 build_rv() {
 	eval "declare -A args=${1#*=}"
 	local version="${args[version]:-}" pkg_name="${args[pkg_name]:-}"
+	# Download-only mode: resolve the version, fetch the stock APK into the shared
+	# cache, then stop before any patch/sign/output work. Driven by the prewarm
+	# pass in build.sh so parallel builds find APKs already cached instead of
+	# holding a build slot while doing slow network I/O.
+	local download_only="${args[download_only]:-false}"
 	
 	if [ -z "$pkg_name" ]; then
 		if [ -n "${args[github_dlurl]}" ] && [[ "${args[github_dlurl]}" == *"releases/tag/"* ]]; then
@@ -3581,6 +3586,9 @@ build_rv() {
 	
 	if [ ! -f "$stock_apk" ]; then
 		epr "ERROR: Could not download '${table}' after trying all supported versions."
+		# In download-only (prewarm) mode fetching WAS the whole job, so fail loudly
+		# for the prewarm report; the real build still retries the sources itself.
+		[ "$download_only" = true ] && return 1
 		return 0
 	fi
 
@@ -3591,6 +3599,11 @@ build_rv() {
 
 	# Log usage for apks repo cache sync
 	echo "${pkg_name}-${version_f}" >> "$TEMP_DIR/used_versions.txt"
+
+	if [ "$download_only" = true ]; then
+		pr "[prewarm] APK for '${table}' (v${version}) secured in cache: ${stock_apk}"
+		return 0
+	fi
 
 	local sig_op
 	if _bundle_ext_of "$stock_apk" >/dev/null 2>&1; then

@@ -54,6 +54,19 @@ PAR_JOBS="${PARALLEL_JOBS:-1}"
 ((PAR_JOBS < 1)) && PAR_JOBS=1
 ((PAR_JOBS > 8)) && { wpr "capping parallel-jobs at 8 (runner is 4-core/16GB)"; PAR_JOBS=8; }
 pr "PARALLEL_JOBS: $PAR_JOBS"
+# Concurrent APK *downloads* for the prewarm pass (see the prewarm pool below).
+# Downloads are I/O-bound and rate/bot-limited while patching is CPU-bound, so
+# they get their own knob instead of sharing PARALLEL_JOBS. Defaults to
+# PARALLEL_JOBS, i.e. no policy change unless you set it in build.yml.
+DL_PAR_JOBS="${DOWNLOAD_PARALLELISM:-$PAR_JOBS}"
+if ! [[ "$DL_PAR_JOBS" =~ ^[0-9]+$ ]]; then
+	epr "DOWNLOAD_PARALLELISM '$DL_PAR_JOBS' is not a number; falling back to $PAR_JOBS"
+	DL_PAR_JOBS=$PAR_JOBS
+fi
+if ((DL_PAR_JOBS < 1)); then DL_PAR_JOBS=1; fi
+# Master switch for the prewarm pass (only meaningful with PARALLEL_JOBS > 1).
+PREWARM_APKS="${PREWARM_APKS:-true}"
+pr "DOWNLOAD_PARALLELISM: $DL_PAR_JOBS (prewarm: $PREWARM_APKS)"
 mkdir -p "$TEMP_DIR" "$BUILD_DIR"
 
 : >build.md
@@ -80,13 +93,17 @@ echo "${DEF_AUTHOR_NAME}${DEF_AUTHOR_PAGE:+ ($DEF_AUTHOR_PAGE)}" > "${MODULE_TEM
 # so the Actions log stays as clean as the sequential one. Serial mode
 # (PAR_JOBS=1) bypasses all of this and behaves exactly as before.
 QUEUE_DIR="$TEMP_DIR/queue"
+PW_QUEUE_DIR="$TEMP_DIR/pqueue"
 # =() initializers are required: bash 5.3+ treats bare `declare -gA` as unset
 # under `set -u`, breaking ${#JOB_PID[@]} on the empty pool.
 declare -gA JOB_PID=() JOB_LABEL=() JOB_LOG=() JOB_RC=()
 JOB_SEQ=0
+# Prewarm pool: download-only build_rv children (one per table, first arch).
+declare -gA PW_PID=() PW_LABEL=() PW_LOG=() PW_RC=() PW_SEEN=()
+PW_SEQ=0
 
 if ((PAR_JOBS > 1)); then
-	mkdir -p "$QUEUE_DIR"
+	mkdir -p "$QUEUE_DIR" "$PW_QUEUE_DIR"
 	# vars build_rv reads as globals; children get them through the env
 	export RVB_UTILS_SH COMPRESSION_LEVEL ENABLE_MODULE_UPDATE DEF_AUTHOR_NAME REMOVE_RV_INTEGRATIONS_CHECKS
 
@@ -136,7 +153,7 @@ if ((PAR_JOBS > 1)); then
 	}
 	_kill_jobs() {
 		local p
-		for p in "${JOB_PID[@]}"; do
+		for p in "${JOB_PID[@]}" "${PW_PID[@]}"; do
 			pkill -P "$p" 2>/dev/null || true
 			kill "$p" 2>/dev/null || true
 		done
@@ -144,6 +161,67 @@ if ((PAR_JOBS > 1)); then
 	}
 	# INT: children must die with the parent, then run the normal abort sweep
 	trap 'pr "Interrupted — stopping ${#JOB_PID[@]} in-flight job(s)"; _kill_jobs; abort' INT
+
+	# -- Prewarm (download) pool --
+	# Runs build_rv in download-only mode ahead of the real builds so the shared
+	# APK cache gets warm. No new coordination is needed: the existing per
+	# pkg+version flock means a build that starts before its prewarm finishes
+	# simply waits for it and then reports "Found APK in cache", so a build slot
+	# is no longer held hostage by slow mirror downloads. A failed prewarm is
+	# harmless — the build just downloads itself, exactly like before.
+	_pw_reap() {
+		local id rc
+		for id in "${!PW_PID[@]}"; do
+			if [ ! -f "${PW_RC[$id]}" ]; then
+				kill -0 "${PW_PID[$id]}" 2>/dev/null && continue
+				echo 137 >"${PW_RC[$id]}"
+			fi
+			rc=$(cat "${PW_RC[$id]}" 2>/dev/null) || rc=1
+			if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::group::Prewarm ${PW_LABEL[$id]}"; fi
+			cat "${PW_LOG[$id]}" 2>/dev/null
+			if [ -n "${GITHUB_REPOSITORY:-}" ]; then echo "::endgroup::"; fi
+			[ "$rc" = 0 ] || epr "Prewarm failed for ${PW_LABEL[$id]} (exit $rc) — its build will retry the sources"
+			rm -f "${PW_LOG[$id]}" "${PW_RC[$id]}"
+			unset "PW_PID[$id]" "PW_LABEL[$id]" "PW_LOG[$id]" "PW_RC[$id]"
+		done
+		return 0
+	}
+	_pw_wait_slot() {
+		while ((${#PW_PID[@]} >= DL_PAR_JOBS)); do
+			_pw_reap
+			((${#PW_PID[@]} < DL_PAR_JOBS)) && break
+			wait -n >/dev/null 2>&1 || true
+			sleep 1
+		done
+		return 0
+	}
+	_enqueue_prewarm() { # $1=declare-p app_args $2=label
+		local blob="$1" label="$2" pure="$2"
+		pure="${pure% (arm64-v8a)}"
+		pure="${pure% (arm-v7a)}"
+		# One fetch per app+version is enough: a universal APK is promoted to
+		# <pkg>-<ver>-all.apk and shared by every arch, and the pkg+version lock
+		# serializes the rest. Only genuinely per-arch split sources need the
+		# second file, and that build falls back to downloading it itself.
+		[ -n "${PW_SEEN[$pure]:-}" ] && return 0
+		PW_SEEN[$pure]=1
+		_pw_wait_slot
+		local id=$((PW_SEQ + 1))
+		PW_SEQ=$id
+		# Clone the arg blob with download-only mode switched on.
+		local pwblob="${blob%\)} [\"download_only\"]=\"true\" )"
+		(
+			set +e
+			RVB_CHILD=1 bash -c 'set -euo pipefail; shopt -s nullglob; source "$RVB_UTILS_SH"; set_prebuilts; build_rv "$1"' _ "$pwblob" \
+				>"$PW_QUEUE_DIR/$id.log" 2>&1
+			echo $? >"$PW_QUEUE_DIR/$id.rc"
+		) &
+		PW_PID[$id]=$!
+		PW_LABEL[$id]="$pure"
+		PW_LOG[$id]="$PW_QUEUE_DIR/$id.log"
+		PW_RC[$id]="$PW_QUEUE_DIR/$id.rc"
+		return 0
+	}
 fi
 
 # Single entry point for kicking one table build: inline in serial mode
@@ -157,6 +235,18 @@ _run_build() { # $1=label $2=declare-p app_args
 	else
 		_enqueue_build "$2" "$1"
 	fi
+	return 0
+}
+
+# Same as _run_build, but queues the APK download first so the build finds it
+# in cache. Serial mode (PARALLEL_JOBS=1) is left exactly as it was: there the
+# download would happen inline in the one build anyway, so prewarming would
+# only add a barrier.
+_run_build_warmed() { # $1=label $2=declare-p app_args
+	if ((PAR_JOBS > 1)) && [ "$PREWARM_APKS" = true ]; then
+		_enqueue_prewarm "$2" "$1"
+	fi
+	_run_build "$1" "$2"
 	return 0
 }
 
@@ -292,18 +382,18 @@ for table_name in $(toml_get_table_names); do
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm64"
-		_run_build "${app_args[table]}" "$(declare -p app_args)"
+		_run_build_warmed "${app_args[table]}" "$(declare -p app_args)"
 		app_args[table]="$table_name (arm-v7a)"
 		app_args[arch]="arm-v7a"
 		app_args[module_prop_name]="${module_prop_name_b}-arm"
-		_run_build "${app_args[table]}" "$(declare -p app_args)"
+		_run_build_warmed "${app_args[table]}" "$(declare -p app_args)"
 	else
 		if [ "${app_args[arch]}" = "arm64-v8a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
 		elif [ "${app_args[arch]}" = "arm-v7a" ]; then
 			app_args[module_prop_name]="${app_args[module_prop_name]}-arm"
 		fi
-		_run_build "${app_args[table]}" "$(declare -p app_args)"
+		_run_build_warmed "${app_args[table]}" "$(declare -p app_args)"
 	fi
 done
 
@@ -315,8 +405,16 @@ while ((PAR_JOBS > 1 && ${#JOB_PID[@]} > 0)); do
 	wait -n >/dev/null 2>&1 || true
 	sleep 1
 done
+# Prewarm jobs write no build artifacts, but their logs carry the consolidated
+# download report, so reap them too.
+while ((PAR_JOBS > 1 && ${#PW_PID[@]} > 0)); do
+	_pw_reap
+	((${#PW_PID[@]} > 0)) || break
+	wait -n >/dev/null 2>&1 || true
+	sleep 1
+done
 merge_build_info
-rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR" "$TEMP_DIR/dllocks" "$TEMP_DIR/apkslocks" "$TEMP_DIR"/morphe-stage-*
+rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR" "$PW_QUEUE_DIR" "$TEMP_DIR/dllocks" "$TEMP_DIR/apkslocks" "$TEMP_DIR"/morphe-stage-*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
 if command -v python3 >/dev/null 2>&1; then
