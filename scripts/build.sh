@@ -98,7 +98,7 @@ PW_QUEUE_DIR="$TEMP_DIR/pqueue"
 # under `set -u`, breaking ${#JOB_PID[@]} on the empty pool.
 declare -gA JOB_PID=() JOB_LABEL=() JOB_LOG=() JOB_RC=()
 JOB_SEQ=0
-# Prewarm pool: download-only build_rv children (one per table, first arch).
+# Prewarm pool: download-only build_rv children, one per table arch variant.
 declare -gA PW_PID=() PW_LABEL=() PW_LOG=() PW_RC=() PW_SEEN=()
 PW_SEQ=0
 
@@ -196,15 +196,16 @@ if ((PAR_JOBS > 1)); then
 		return 0
 	}
 	_enqueue_prewarm() { # $1=declare-p app_args $2=label
-		local blob="$1" label="$2" pure="$2"
-		pure="${pure% (arm64-v8a)}"
-		pure="${pure% (arm-v7a)}"
-		# One fetch per app+version is enough: a universal APK is promoted to
-		# <pkg>-<ver>-all.apk and shared by every arch, and the pkg+version lock
-		# serializes the rest. Only genuinely per-arch split sources need the
-		# second file, and that build falls back to downloading it itself.
-		[ -n "${PW_SEEN[$pure]:-}" ] && return 0
-		PW_SEEN[$pure]=1
+		local blob="$1" label="$2"
+		# One job per table *arch variant*, keyed on the full label. The second
+		# arch is not wasted work: if the first fetch turned out universal it was
+		# promoted to <pkg>-<ver>-all.apk, which _cache_probe_apk accepts for any
+		# arch, so that child short-circuits on the cache check and touches no
+		# mirror at all. Only genuinely per-arch split sources reach the network,
+		# and prewarming them is exactly the point — it keeps that download out of
+		# a build slot too.
+		[ -n "${PW_SEEN[$label]:-}" ] && return 0
+		PW_SEEN[$label]=1
 		_pw_wait_slot
 		local id=$((PW_SEQ + 1))
 		PW_SEQ=$id
@@ -217,7 +218,7 @@ if ((PAR_JOBS > 1)); then
 			echo $? >"$PW_QUEUE_DIR/$id.rc"
 		) &
 		PW_PID[$id]=$!
-		PW_LABEL[$id]="$pure"
+		PW_LABEL[$id]="$label"
 		PW_LOG[$id]="$PW_QUEUE_DIR/$id.log"
 		PW_RC[$id]="$PW_QUEUE_DIR/$id.rc"
 		return 0

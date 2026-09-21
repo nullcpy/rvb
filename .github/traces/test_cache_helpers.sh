@@ -32,6 +32,27 @@ arch_list=(all)
 : > "$apk_cache_dir/com.test-1.2.3-all.apk"
 _cache_all_archs_present 1.2.3 validate || fail "validate without vc target"
 
+# --- prewarm decisions: a universal -all.apk (or a vendor bundle) must satisfy
+# every arch, so the second arch's prewarm job short-circuits on the cache check
+# and touches no mirror; a per-arch stock apk must not leak to the other arch.
+rm -f "$apk_cache_dir/com.test-1.2.3-arm64-v8a.apk"
+: > "$apk_cache_dir/com.test-1.2.3-all.apk"
+arch_list=(arm-v7a); _cache_all_archs_present 1.2.3 || fail "universal must satisfy arm-v7a"
+arch_list=(arm64-v8a); _cache_all_archs_present 1.2.3 || fail "universal must satisfy arm64-v8a"
+arch_list=(arm64-v8a arm-v7a); _cache_all_archs_present 1.2.3 || fail "universal must satisfy both arches"
+rm -f "$apk_cache_dir/com.test-1.2.3-all.apk"
+: > "$apk_cache_dir/com.test-1.2.3-arm64-v8a.apk"
+arch_list=(arm-v7a); _cache_all_archs_present 1.2.3 && fail "per-arch apk must not satisfy the other arch"
+
+_CACHE_BUNDLE_OK=true
+: > "$apk_cache_dir/com.test-4.0.0-all.xapk"
+arch_list=(arm-v7a); _cache_all_archs_present 4.0.0 || fail "bundle must satisfy arm-v7a"
+arch_list=(arm64-v8a arm-v7a); _cache_all_archs_present 4.0.0 || fail "bundle must satisfy both arches"
+_CACHE_BUNDLE_OK=false
+arch_list=(arm-v7a); _cache_all_archs_present 4.0.0 && fail "bundle must be ignored when passthrough is off"
+rm -f "$apk_cache_dir/com.test-4.0.0-all.xapk" "$apk_cache_dir/com.test-1.2.3-arm64-v8a.apk"
+arch_list=(all)
+
 args[version_code]="123"
 : > "$apk_cache_dir/com.test-1.2.3-123-all.apk"
 _cache_probe_apk 1.2.3 all || true

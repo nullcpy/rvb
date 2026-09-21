@@ -47,7 +47,10 @@ jobs:
       # from PARALLEL_JOBS: mirrors (APKMirror/Uptodown/APKPure) and the GitHub
       # API rate-limit/bot-gate datacenter IPs, so downloading fewer files in
       # parallel is more reliable while builds still saturate the CPU.
-      # Unset = follow PARALLEL_JOBS.
+      # One job per table arch variant; a job whose APK is already cached (e.g.
+      # the second arch of a universal APK) exits on the cache check without any
+      # network. Same app + version shares one lock, so raising this only helps
+      # across *different* apps. Unset = follow PARALLEL_JOBS.
       DOWNLOAD_PARALLELISM: "2"
       # false = skip the prewarm pass and go back to downloading inside builds.
       PREWARM_APKS: "true"
