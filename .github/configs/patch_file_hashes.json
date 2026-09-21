@@ -17,7 +17,7 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "9e4fecc5286c6b9ab18101dc7349716e",
+      "com.google.android.apps.photos": "b33facd76e67927a0a341c6b78ae2278",
       "shared": "f17b82e93a1074d085da8a31ec75fd84"
     }
   },
@@ -191,9 +191,9 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "5e5af67f5fddb89a2b9cb92d0f8b4fe9",
-      "com.michaldrabik.showly2": "e0da2232de75c7e98b46c809d4da97f9",
-      "shared": "ec3ee6ac87441b44ca89c62548a691c4"
+      "ch.protonmail.android": "4fa7f5557f1cf7e6adc9c892b8d15d55",
+      "com.michaldrabik.showly2": "ec325551940111580105e74593c4b33f",
+      "shared": "fe712199a9ddc23ca6f7e4d2c4882137"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -268,16 +268,16 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "5cb9f7fb5bc0894127897bac11c38b4f",
-      "com.google.android.youtube": "a3597c8292073466a2c2f5dcd1bcd30d",
-      "com.reddit.frontpage": "3e8eeeb8e27553038933e95c92c1cb60",
-      "shared": "53d067a6a54e482e4fcb5731e91bc8ea"
+      "com.google.android.apps.youtube.music": "908eefc5b29a33d6807ef54a9ef097d9",
+      "com.google.android.youtube": "b0349aa5928e90577a3fefa6e8d7e989",
+      "com.reddit.frontpage": "07ece1f12b0118f04ec458beaaa324ad",
+      "shared": "a2b459ac00d67d9541f7554ceb34cb4e"
     },
     "stable": {
-      "com.google.android.apps.youtube.music": "d0fac8952bcb3c5e898f43a9af93f87c",
-      "com.google.android.youtube": "de563b50d6eef601f4f19bb7452ac7ad",
-      "com.reddit.frontpage": "e9a2ac18b6298ea0203f6c861f462e0e",
-      "shared": "cad2aa13c5398b029e4963588bb4b2c0"
+      "com.google.android.apps.youtube.music": "908eefc5b29a33d6807ef54a9ef097d9",
+      "com.google.android.youtube": "b0349aa5928e90577a3fefa6e8d7e989",
+      "com.reddit.frontpage": "07ece1f12b0118f04ec458beaaa324ad",
+      "shared": "a2b459ac00d67d9541f7554ceb34cb4e"
     }
   },
   "paresh-maheshwari/paresh-patches": {
