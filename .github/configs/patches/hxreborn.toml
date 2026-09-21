@@ -20,16 +20,5 @@ uptodown-dlurl = "https://showly-2-0.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/showly-track-tv-shows-movie/com.michaldrabik.showly2"
 apkcombo-dlurl = "https://apkcombo.com/showly-track-shows-movies/com.michaldrabik.showly2"
 
-[TikTok-hxreborn]
-enabled = true
-pkg-name = "com.zhiliaoapp.musically"
-app-name = "TikTok"
-patches-source = "hxreborn/hxreborn-tiktok-patches"
-patches-version = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
-apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
-
 
 

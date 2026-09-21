@@ -1,0 +1,62 @@
+# All TikTok variants, whatever patch bundle they use.
+# Like facebook.toml this is grouped by app rather than by patch author, so
+# every table has to carry its own patches-source and brand: file-level
+# defaults cannot serve four different bundles.
+
+[TikTok-hushfeed]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "SysAdminDoc/hushfeed"
+brand = "hushfeed"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+
+[TikTok-hxreborn]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "hxreborn/hxreborn-tiktok-patches"
+patches-version = "both"
+brand = "hxreborn"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+
+[TikTok-icysymmetra]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "icysymmetra/tiktok-patches-for-morphe"
+patches-version = "both"
+brand = "icysymmetra"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+
+[TikTok-kveld9]
+enabled = true
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "kveld9/kveld-morphe-patches"
+brand = "kveld9"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+
+[TikTok-kveld9-Asia]
+enabled = true
+pkg-name = "com.ss.android.ugc.trill"
+app-name = "TikTok"
+variant = "Asia"
+patches-source = "kveld9/kveld-morphe-patches"
+brand = "kveld9"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok"
+uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-asia-app/com.ss.android.ugc.trill"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-asia/com.ss.android.ugc.trill"
