@@ -531,7 +531,17 @@ _req() {
 			if [ -f "$op" ]; then return 0; fi
 		fi
 	fi
-	if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 10 --retry 1 --fail -s -S "$@" "$ip" -o "$dlp"; then
+	# Ceilings for the transfer itself: --connect-timeout only bounds setup, so a
+	# mirror that connects and then trickles could occupy its slot indefinitely —
+	# which in the prewarm pool also stalls build.sh's enqueue loop. 30 min is far
+	# above any legitimate APK/bundle fetch on a runner link, and the stall guard
+	# aborts a transfer sustaining <1 KiB/s for 2 min so the caller can fall through
+	# to the next download source instead of burning the whole job timeout.
+	# Placed before "$@" so a caller can still override them with its own flags.
+	if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" \
+		--connect-timeout 10 --retry 1 --max-time "${RVB_DL_MAX_TIME:-1800}" \
+		--speed-limit 1024 --speed-time 120 \
+		--fail -s -S "$@" "$ip" -o "$dlp"; then
 		epr "Request failed: $ip"
 		if [ "$dlp" != - ]; then rm -f "$dlp"; fi
 		if [ -n "$_req_lock" ]; then exec 204>&-; fi
