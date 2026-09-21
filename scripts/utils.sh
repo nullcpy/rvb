@@ -971,6 +971,26 @@ has_compatible_patches() {
 		fi
 	done <<<"$raw_vers"
 
+	# Version-unpinned patches (e.g. structural browser hooks) enumerate their
+	# package under Compatible packages but print no version constraint, so
+	# list-versions yields no candidate line for any version. Morphe's CLI still
+	# applies them with "Compatibility: Unknown", so accept the target only when
+	# a patch block pairs the exact "Package name:" line with NO "Compatible
+	# versions:" section: global/universal patches match every -f filter yet
+	# print no package line, and packages pinned to other versions keep their
+	# version block — both must stay on the strict skip path.
+	if [ "$PATCHER_KIND" = morphe ]; then
+		local op_list
+		if [ -n "$patches_jar" ] && op_list=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source"); then
+			if awk -v pkg="$pkg_name" 'BEGIN{pat="^[[:space:]]*Package name:[[:space:]]*" pkg "[[:space:]]*$"}
+				/^[[:space:]]*Package name:/{if (seen && !pins) ok=1; seen=($0 ~ pat); pins=0}
+				/^[[:space:]]*Compatible versions:/{if (seen) pins=1}
+				END{if (seen && !pins) ok=1; exit !ok}' <<<"$op_list"; then
+				return 0
+			fi
+		fi
+	fi
+
 	return 1
 }
 
