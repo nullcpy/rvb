@@ -935,6 +935,7 @@ _patches_list() {
 
 has_compatible_patches() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 version=$4 cli_source=$5
+	local inc_patches=${6:-}
 	resolve_patcher "$cli_source"
 	if [ "$PATCHER_ANY_VERSION" = true ]; then
 		return 0
@@ -974,19 +975,57 @@ has_compatible_patches() {
 	# Version-unpinned patches (e.g. structural browser hooks) enumerate their
 	# package under Compatible packages but print no version constraint, so
 	# list-versions yields no candidate line for any version. Morphe's CLI still
-	# applies them with "Compatibility: Unknown", so accept the target only when
-	# a patch block pairs the exact "Package name:" line with NO "Compatible
-	# versions:" section: global/universal patches match every -f filter yet
-	# print no package line, and packages pinned to other versions keep their
-	# version block — both must stay on the strict skip path.
-	if [ "$PATCHER_KIND" = morphe ]; then
+	# applies them with "Compatibility: Unknown". When the strict scan above
+	# found nothing, accept the target only if an unpinned patch actually gets
+	# applied: with included-patches configured, at least one of its names must
+	# match a package-enumerated unpinned patch; with none configured, at least
+	# one such patch must be default-enabled. Otherwise warn and skip rather
+	# than hand Morphe a target where nothing applies. Global/universal patches
+	# print no package line, and pinned packages keep their version block, so
+	# both stay on the strict skip path. Only reached when no pinned patch
+	# matched, so pinned-app behavior is untouched.
+	if [ "$PATCHER_KIND" = morphe ] && [ -n "$patches_jar" ]; then
 		local op_list
-		if [ -n "$patches_jar" ] && op_list=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source"); then
-			if awk -v pkg="$pkg_name" 'BEGIN{pat="^[[:space:]]*Package name:[[:space:]]*" pkg "[[:space:]]*$"}
-				/^[[:space:]]*Package name:/{if (seen && !pins) ok=1; seen=($0 ~ pat); pins=0}
-				/^[[:space:]]*Compatible versions:/{if (seen) pins=1}
-				END{if (seen && !pins) ok=1; exit !ok}' <<<"$op_list"; then
-				return 0
+		if op_list=$(patches_list "$cli_jar" "$patches_jar" "$pkg_name" "$cli_source"); then
+			# Emit "<patch name>\t<default-enabled>" per unpinned patch that
+			# enumerates this package. Dynamic pattern only via $0 ~ pat; state
+			# resets on every Package name line; flush at END (no exit-in-rule).
+			local unp
+			unp=$(awk -v pkg="$pkg_name" 'BEGIN{pat="^[[:space:]]*Package name:[[:space:]]*" pkg "[[:space:]]*$"}
+				function flush(){if (seen && !pins && name != "") print name "\t" en}
+				{if ($0 ~ /^INFO: Index:/ || $0 ~ /^[[:space:]]*Index:/) {flush(); name=""; en=""; seen=0; pins=0}
+					else if ($0 ~ /^[[:space:]]*Name:/) {name=$0; sub(/^[[:space:]]*Name:[[:space:]]*/, "", name); sub(/[[:space:]]+$/, "", name)}
+					else if ($0 ~ /^[[:space:]]*Enabled:/) {en=($0 ~ /true/) ? "true" : "false"}
+					else if ($0 ~ /^[[:space:]]*Package name:/) {seen=($0 ~ pat); pins=0}
+					else if ($0 ~ /^[[:space:]]*Compatible versions:/ && seen) pins=1}
+				END{flush()}' <<<"$op_list")
+			if [ -n "$unp" ]; then
+				local -a inc_names=()
+				local n uname uen
+				while IFS= read -r n; do
+					n="${n#"${n%%[![:space:]]*}"}"
+					n="${n%"${n##*[![:space:]]}"}"
+					n=${n#\'}; n=${n%\'}; n=${n#\"}; n=${n%\"}
+					[ -n "$n" ] && inc_names+=("$n")
+				done <<<"$(list_args "${inc_patches//|/ }")"
+				if [ ${#inc_names[@]} -gt 0 ]; then
+					local match=false
+					while IFS=$'\t' read -r uname uen; do
+						[ -z "$uname" ] && continue
+						for n in "${inc_names[@]}"; do
+							if [ "$n" = "$uname" ]; then match=true; break; fi
+						done
+						[ "$match" = true ] && break
+					done <<<"$unp"
+					if [ "$match" = true ]; then return 0; fi
+					wpr "Only version-unpinned patches found in '$pkg_name' bundle ($(cut -f1 <<<"$unp" | paste -sd ',' -)); none of included-patches matches them, so nothing would be applied."
+					return 1
+				fi
+				if awk -F'\t' '$2 == "true"{found=1} END{exit !found}' <<<"$unp"; then
+					return 0
+				fi
+				wpr "Only version-unpinned patches found in '$pkg_name' bundle ($(cut -f1 <<<"$unp" | paste -sd ',' -)), but none is default-enabled and no included-patches are configured."
+				return 1
 			fi
 		fi
 	fi
@@ -3192,7 +3231,7 @@ build_rv() {
 		local version_f=${version// /}
 		version_f=${version_f#v}
 
-		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}"; then
+		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}" "${args[included_patches]:-}"; then
 			wpr "No compatible patches found in '${args[patches_src]:-${args[cli_source]:-}}' for '$pkg_name' v${version_f}. Skipping ${table}."
 			continue
 		fi
