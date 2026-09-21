@@ -17,8 +17,8 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "b678e3c0fd825c5edad6144b368e7b27",
-      "shared": "c9d98409af8b3f0fdfec4909cd3e0400"
+      "com.google.android.apps.photos": "9e4fecc5286c6b9ab18101dc7349716e",
+      "shared": "f17b82e93a1074d085da8a31ec75fd84"
     }
   },
   "anddea/revanced-patches": {
@@ -219,8 +219,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "87854a4cf16eb4915fb9570ae0a75306",
-      "shared": "37065a181bd2031f90a4eba4af80f320"
+      "com.google.android.inputmethod.latin": "6f3f9b44eb7d9a4cf013f3006f25b68d",
+      "shared": "af7ad4075bc3ab6af6281cd63dc6283a"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "4ea5b8001d75b6e795776688e8207365",
@@ -268,10 +268,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "4f383917b5388e9fb9a3d8ba68f05ad2",
-      "com.google.android.youtube": "01e83b093b4f971a4fb238b9193155ca",
+      "com.google.android.apps.youtube.music": "5cb9f7fb5bc0894127897bac11c38b4f",
+      "com.google.android.youtube": "a3597c8292073466a2c2f5dcd1bcd30d",
       "com.reddit.frontpage": "3e8eeeb8e27553038933e95c92c1cb60",
-      "shared": "8c33c2a8675627741747e746ee32f8f4"
+      "shared": "53d067a6a54e482e4fcb5731e91bc8ea"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "d0fac8952bcb3c5e898f43a9af93f87c",
