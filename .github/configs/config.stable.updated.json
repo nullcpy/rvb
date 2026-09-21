@@ -436,7 +436,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -475,7 +475,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -487,7 +487,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
@@ -505,7 +505,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -514,7 +514,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -893,7 +893,7 @@
   "Twitch-hooman": {
     "patches-source": "arandomhooman/hoomans-morphe-patches",
     "brand": "hooman",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "apkmirror-dlurl": "https://apkmirror.com/apk/twitch-interactive-inc/twitch",
@@ -1030,7 +1030,7 @@
   "ProtonMail-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
@@ -1042,7 +1042,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1149,7 +1149,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1162,7 +1162,7 @@
   "TikTok-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
@@ -1173,7 +1173,7 @@
   "TikTok-kveld9-Asia": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
@@ -1466,7 +1466,7 @@
     "uptodown-dlurl": "https://macrodroid.en.uptodown.com/android"
   },
   "GooglePhotos-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "DeVanced",
@@ -1543,7 +1543,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "pixiv-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "patches-source": "RookieEnough/De-Vanced",
