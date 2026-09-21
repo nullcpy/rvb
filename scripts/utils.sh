@@ -1109,21 +1109,27 @@ _meta_field_of() {
 		_bundle_extract_base "$file" "$tmp" || { rm -f "$tmp"; return 1; }
 		probe="$tmp"
 	fi
-	local v=""
-	if command -v aapt >/dev/null 2>&1; then
+	local v="" _tool
+	# Tool preference: AAPT2 first. Legacy `aapt` (V1) `dump badging` silently
+	# prints nothing for manifests compiled against recent SDKs (e.g. apps that
+	# target Android 15/16), which used to make download verification reject
+	# perfectly valid modern APKs. Only fall back to legacy aapt when AAPT2 is
+	# unavailable or yields no value for the field.
+	for _tool in "${AAPT2:-}" aapt2 aapt; do
+		[ -z "$_tool" ] && continue
+		if ! command -v "$_tool" >/dev/null 2>&1 && [ ! -x "$_tool" ]; then
+			continue
+		fi
 		case "$field" in
-			package) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1) ;;
-			versionCode) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
-			versionName) v=$(aapt dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
+			package)
+				[[ "$_tool" == *"aapt2"* ]] && v=$("$_tool" dump packagename "$probe" 2>/dev/null | tr -d '\r\n')
+				[ -z "$v" ] && v=$("$_tool" dump badging "$probe" 2>/dev/null | grep -oP "package: name='\K[^']+" | head -1)
+				;;
+			versionCode) v=$("$_tool" dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
+			versionName) v=$("$_tool" dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
 		esac
-	elif [ -n "${AAPT2:-}" ] && [ -x "$AAPT2" ]; then
-		case "$field" in
-			package) v=$("$AAPT2" dump packagename "$probe" 2>/dev/null | tr -d '
-') ;;
-			versionCode) v=$("$AAPT2" dump badging "$probe" 2>/dev/null | grep -oP "versionCode='\K[^']+" | head -1) ;;
-			versionName) v=$("$AAPT2" dump badging "$probe" 2>/dev/null | grep -oP "versionName='\K[^']+" | head -1) ;;
-		esac
-	fi
+		[ -n "$v" ] && break
+	done
 	[ -n "$tmp" ] && rm -f "$tmp"
 	[ -n "$v" ] && echo "$v"
 }
@@ -1323,8 +1329,12 @@ get_apkmirror_vers() {
 	fi
 }
 
-get_apkmirror_pkg_name() {
-	local resp="$__APKMIRROR_RESP__"
+# Extract the app package name from an arbitrary APKMirror page's HTML
+# (release page or category page). Every APKMirror app page embeds a Play
+# Store deep link, so this works on the release page we resolved to as well
+# as the config's category page.
+_apkmirror_html_pkg_name() {
+	local resp="$1"
 	local py_cmd=""
 	if command -v python3 >/dev/null 2>&1; then
 		py_cmd="python3"
@@ -1349,6 +1359,10 @@ get_apkmirror_pkg_name() {
 		pkg=$(sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<<"$resp")
 	fi
 	echo "$pkg"
+}
+
+get_apkmirror_pkg_name() {
+	_apkmirror_html_pkg_name "$__APKMIRROR_RESP__"
 }
 
 apkmirror_search() {
@@ -1627,6 +1641,21 @@ dl_apkmirror() {
 
 		if [ -z "$release_url" ]; then
 			epr "Could not find version $version on APKMirror"
+			return 1
+		fi
+	fi
+
+	# APKMirror's fuzzy search fallback can resolve to an unrelated app's
+	# release page (e.g. a superseded version grabbing the top search hit),
+	# which then wastes a bundle download + merge before the post-download
+	# package guard rejects it. Verify the discovered page's package against
+	# the expected pkg_name first; only reject when the page clearly belongs
+	# to a different app (an empty extraction keeps prior behavior).
+	if [ -n "${pkg_name:-}" ] && [ -n "$resp" ]; then
+		local page_pkg
+		page_pkg=$(_apkmirror_html_pkg_name "$resp")
+		if [ -n "$page_pkg" ] && [ "$page_pkg" != "$pkg_name" ]; then
+			epr "Resolved APKMirror page is for '$page_pkg', not expected '$pkg_name'. Skipping apkmirror for version $version."
 			return 1
 		fi
 	fi
