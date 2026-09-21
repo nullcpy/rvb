@@ -1,0 +1,22 @@
+patches-source = "Entree3k/Morning-Entree-Patches"
+brand = "morningentree"
+
+[AppSales-morningentree]
+enabled = true
+pkg-name = "net.tsapps.appsales"
+app-name = "AppSales"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ts-apps/appsales-best-apps-on-sale"
+uptodown-dlurl = "https://appsales.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/appsales/net.tsapps.appsales"
+apkcombo-dlurl = "https://apkcombo.com/appsales/net.tsapps.appsales"
+
+[NiagaraLauncher-morningentree]
+enabled = true
+pkg-name = "bitpit.launcher"
+app-name = "Niagara Launcher"
+patch-folder = "niagara"
+build-mode = "both"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
+uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
+apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
