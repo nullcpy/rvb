@@ -1,15 +1,13 @@
-[NiagaraLauncher-Entree3k]
+[TikTok-hushfeed]
 enabled = true
-pkg-name = "bitpit.launcher"
-app-name = "Niagara Launcher"
-patch-folder = "niagara"
-build-mode = "both"
-patches-source = "Entree3k/Morning-Entree-Patches"
-brand = "Entree3k"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mellowdrop-studio/niagara-launcher-%f0%9f%94%b9-fresh-clean"
-uptodown-dlurl = "https://niagara-launcher.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher"
-apkcombo-dlurl = "https://apkcombo.com/niagara-launcher/bitpit.launcher"
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "SysAdminDoc/hushfeed"
+brand = "hushfeed"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
 
 [Citymapper-rushiranpise]
 enabled = true

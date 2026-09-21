@@ -1,8 +1,3 @@
-# All TikTok variants, whatever patch bundle they use.
-# Like facebook.toml this is grouped by app rather than by patch author, so
-# every table has to carry its own patches-source and brand: file-level
-# defaults cannot serve four different bundles.
-
 [TikTok-hushfeed]
 enabled = true
 pkg-name = "com.zhiliaoapp.musically"
