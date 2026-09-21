@@ -532,11 +532,11 @@ _req() {
 		fi
 	fi
 	# Ceilings for the transfer itself: --connect-timeout only bounds setup, so a
-	# mirror that connects and then trickles could occupy its slot indefinitely —
-	# which in the prewarm pool also stalls build.sh's enqueue loop. 30 min is far
-	# above any legitimate APK/bundle fetch on a runner link, and the stall guard
-	# aborts a transfer sustaining <1 KiB/s for 2 min so the caller can fall through
-	# to the next download source instead of burning the whole job timeout.
+	# mirror that connects and then trickles could occupy its build slot
+	# indefinitely. 30 min is far above any legitimate APK/bundle fetch on a
+	# runner link, and the stall guard aborts a transfer sustaining <1 KiB/s for
+	# 2 min so the caller can fall through to the next download source instead of
+	# burning the whole job timeout.
 	# Placed before "$@" so a caller can still override them with its own flags.
 	if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" \
 		--connect-timeout 10 --retry 1 --max-time "${RVB_DL_MAX_TIME:-1800}" \
@@ -2962,11 +2962,6 @@ _resolve_list_and_version() {
 build_rv() {
 	eval "declare -A args=${1#*=}"
 	local version="${args[version]:-}" pkg_name="${args[pkg_name]:-}"
-	# Download-only mode: resolve the version, fetch the stock APK into the shared
-	# cache, then stop before any patch/sign/output work. Driven by the prewarm
-	# pass in build.sh so parallel builds find APKs already cached instead of
-	# holding a build slot while doing slow network I/O.
-	local download_only="${args[download_only]:-false}"
 	
 	if [ -z "$pkg_name" ]; then
 		if [ -n "${args[github_dlurl]}" ] && [[ "${args[github_dlurl]}" == *"releases/tag/"* ]]; then
@@ -3596,9 +3591,6 @@ build_rv() {
 	
 	if [ ! -f "$stock_apk" ]; then
 		epr "ERROR: Could not download '${table}' after trying all supported versions."
-		# In download-only (prewarm) mode fetching WAS the whole job, so fail loudly
-		# for the prewarm report; the real build still retries the sources itself.
-		[ "$download_only" = true ] && return 1
 		return 0
 	fi
 
@@ -3609,11 +3601,6 @@ build_rv() {
 
 	# Log usage for apks repo cache sync
 	echo "${pkg_name}-${version_f}" >> "$TEMP_DIR/used_versions.txt"
-
-	if [ "$download_only" = true ]; then
-		pr "[prewarm] APK for '${table}' (v${version}) secured in cache: ${stock_apk}"
-		return 0
-	fi
 
 	local sig_op
 	if _bundle_ext_of "$stock_apk" >/dev/null 2>&1; then

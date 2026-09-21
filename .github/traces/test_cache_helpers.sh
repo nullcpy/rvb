@@ -32,9 +32,10 @@ arch_list=(all)
 : > "$apk_cache_dir/com.test-1.2.3-all.apk"
 _cache_all_archs_present 1.2.3 validate || fail "validate without vc target"
 
-# --- prewarm decisions: a universal -all.apk (or a vendor bundle) must satisfy
-# every arch, so the second arch's prewarm job short-circuits on the cache check
-# and touches no mirror; a per-arch stock apk must not leak to the other arch.
+# --- arch-satisfaction rules: a universal -all.apk (or a vendor bundle) must
+# satisfy every arch, so a build whose sibling arch already fetched it
+# short-circuits on the cache check and touches no mirror; a per-arch stock apk
+# must not leak to the other arch.
 rm -f "$apk_cache_dir/com.test-1.2.3-arm64-v8a.apk"
 : > "$apk_cache_dir/com.test-1.2.3-all.apk"
 arch_list=(arm-v7a); _cache_all_archs_present 1.2.3 || fail "universal must satisfy arm-v7a"
