@@ -52,7 +52,6 @@ apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 enabled = true
 pkg-name = "com.spocky.projengmenu"
 app-name = "Projectivy Launcher"
-patch-folder = "projectivy"
 variant = "Android TV"
 arch = "all"
 apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
@@ -118,4 +117,3 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tacit-dynamics/foldersync"
 uptodown-dlurl = "https://foldersync-lite.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite"
 apkcombo-dlurl = "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
-

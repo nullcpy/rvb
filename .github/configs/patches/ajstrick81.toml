@@ -4,7 +4,7 @@ variant = "Android TV"
 arch = "all"
 
 [DisneyPlus-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.disney.disneyplus"
 app-name = "Disney+"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/disney/disney-android-tv"
@@ -12,7 +12,7 @@ apkpure-dlurl = "https://apkpure.com/disneyplus-app/com.disney.disneyplus"
 apkcombo-dlurl = "https://apkcombo.com/disney-plus/com.disney.disneyplus"
 
 [PrimeVideo-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.amazon.amazonvideo.livingroom"
 app-name = "Prime Video"
 arch = "arm-v7a"
@@ -21,7 +21,7 @@ apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvid
 apkcombo-dlurl = "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom"
 
 [PrimeVideo-ajstrick81-AndroidTV-Clone]
-enabled = true 
+enabled = true
 pkg-name = "com.amazon.amazonvideo.livingroom"
 app-name = "Prime Video"
 sub-variant = "Clone"
@@ -32,7 +32,7 @@ apkpure-dlurl = "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvid
 apkcombo-dlurl = "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom"
 
 [HBOMax-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.wbd.hbomax"
 app-name = "HBO Max"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv"
@@ -40,7 +40,7 @@ apkpure-dlurl = "https://apkpure.com/hbo-max-stream-tv-movies/com.wbd.stream"
 apkcombo-dlurl = "https://apkcombo.com/hbo-max-stream-movies-tv/com.wbd.hbomax"
 
 [Peacock-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.peacocktv.peacockandroid"
 app-name = "Peacock"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv"
@@ -48,7 +48,7 @@ apkpure-dlurl = "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.p
 apkcombo-dlurl = "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
 
 [Tubi-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.tubitv"
 app-name = "Tubi"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv"
@@ -56,7 +56,7 @@ apkpure-dlurl = "https://apkpure.com/tubi-movies-tv-shows-android-app/com.tubitv
 apkcombo-dlurl = "https://apkcombo.com/tubi-tv/com.tubitv"
 
 [ViX-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.univision.prendetv"
 app-name = "ViX"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv"
@@ -64,7 +64,7 @@ apkpure-dlurl = "https://apkpure.com/vix-tv-deportes-y-noticias/com.univision.pr
 apkcombo-dlurl = "https://apkcombo.com/vix/com.univision.prendetv/"
 
 [PlutoTV-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "tv.pluto.android"
 app-name = "PlutoTV"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv"
@@ -73,7 +73,7 @@ apkpure-dlurl = "https://apkpure.com/pluto-tv-watch-free-movies-tv/tv.pluto.andr
 apkcombo-dlurl = "https://apkcombo.com/pluto-tv/tv.pluto.android"
 
 [Netflix-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "com.netflix.ninja"
 app-name = "Netflix"
 arch = "arm-v7a"
@@ -83,11 +83,10 @@ apkpure-dlurl = "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja"
 apkcombo-dlurl = "https://apkcombo.com/netflix-tv/com.netflix.ninja"
 
 [Twitch-ajstrick81-AndroidTV]
-enabled = true 
+enabled = true
 pkg-name = "tv.twitch.android.app"
 app-name = "Twitch"
+patch-folder = "twitchatv"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch-android-tv/"
 apkpure-dlurl = "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
 apkcombo-dlurl = "https://apkcombo.com/twitch/tv.twitch.android.app"
-
-

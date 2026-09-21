@@ -50,6 +50,7 @@ apkcombo-dlurl = "https://apkcombo.com/ticktick/com.ticktick.task"
 enabled = true
 pkg-name = "eu.darken.sdmse"
 app-name = "SD Maid 2/SE"
+patch-folder = "sdmaidse"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
 uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
@@ -96,5 +97,3 @@ app-name = "MacroDroid"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/arlosoft/macrodroid-device-automation-2"
 uptodown-dlurl = "https://macrodroid.en.uptodown.com/android"
-
-
