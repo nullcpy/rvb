@@ -168,5 +168,20 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-scan-pdf-scanner-oc
 uptodown-dlurl = "https://adobe-scan.en.uptodown.com/android"
 apkcombo-dlurl = "https://apkcombo.com/adobe-scan/com.adobe.scan.android"
 
+[Citymapper-rushiranpise]
+enabled = true
+pkg-name = "com.citymapper.app.release"
+app-name = "Citymapper"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/citymapper-limited/citymapper"
+uptodown-dlurl = "https://citymapper.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/citymapper/com.citymapper.app.release"
+apkcombo-dlurl = "https://apkcombo.com/citymapper/com.citymapper.app.release"
 
-
+[AmazonShopping-rushiranpise]
+enabled = true
+pkg-name = "com.amazon.mShop.android.shopping"
+app-name = "Amazon Shopping"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-shopping"
+uptodown-dlurl = "https://amazon-shopping.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/amazon-shopping/com.amazon.mShop.android.shopping"
+apkcombo-dlurl = "https://apkcombo.com/amazon-shopping/com.amazon.mShop.android.shopping"
