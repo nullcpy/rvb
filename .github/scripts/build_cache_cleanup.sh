@@ -6,8 +6,8 @@ set -euo pipefail
 # while staying safely below GitHub's 10GB total repository cache limit.
 
 APK_CACHE_DIR="temp/apks"
-# Set limit to 12 GB (12 * 1024 * 1024 * 1024 bytes uncompressed)
-MAX_SIZE_BYTES=$((12 * 1024 * 1024 * 1024))
+# Set limit to 8 GB (8 * 1024 * 1024 * 1024 bytes uncompressed)
+MAX_SIZE_BYTES=$((8 * 1024 * 1024 * 1024))
 RETENTION_TIERS=(30 14 7 3)
 
 if [ ! -d "$APK_CACHE_DIR" ]; then
