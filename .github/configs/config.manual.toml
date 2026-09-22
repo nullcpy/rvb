@@ -1,32 +1,24 @@
-[TikTok-hushfeed]
-enabled = true
-pkg-name = "com.zhiliaoapp.musically"
-app-name = "TikTok"
-patches-source = "SysAdminDoc/hushfeed"
-brand = "hushfeed"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
-apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+patches-source = "instafel/pc-rel"
+cli-source = "instafel/p-rel"
+brand = "Instafel"
 
-[Citymapper-rushiranpise]
+[Instagram-InstaFel]
 enabled = true
-pkg-name = "com.citymapper.app.release"
-app-name = "Citymapper"
-patches-source = "rushiranpise/morphe-patches"
-brand = "rushiranpise"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/citymapper-limited/citymapper"
-uptodown-dlurl = "https://citymapper.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/citymapper/com.citymapper.app.release"
-apkcombo-dlurl = "https://apkcombo.com/citymapper/com.citymapper.app.release"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'"
+dpi = "480dpi nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
 
-[AmazonShopping-rushiranpise]
+[Instagram-InstaFel-Clone]
 enabled = true
-pkg-name = "com.amazon.mShop.android.shopping"
-app-name = "Amazon Shopping"
-patches-source = "rushiranpise/morphe-patches"
-brand = "rushiranpise"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-shopping"
-uptodown-dlurl = "https://amazon-shopping.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/amazon-shopping/com.amazon.mShop.android.shopping"
-apkcombo-dlurl = "https://apkcombo.com/amazon-shopping/com.amazon.mShop.android.shopping"
+pkg-name = "com.instagram.android"
+app-name = "Instagram"
+variant = "Clone"
+included-patches = "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'"
+dpi = "480dpi nodpi anydpi auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
+
+
+
+
