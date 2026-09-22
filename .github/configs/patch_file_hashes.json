@@ -106,7 +106,7 @@
     "beta": {},
     "stable": {
       "com.instagram.barcelona": "8154ad9811995b4f49bbeea5611f6776",
-      "shared": "221afbaf26a44026921f41c0d5c73a81"
+      "shared": "75f6751041c0cd43322f0f02b8b75482"
     }
   },
   "entree3k/morning-entree-patches": {
@@ -393,6 +393,13 @@
     "stable": {
       "com.facebook.katana": "c08748efec6831fb7ca717fce8b0ce31",
       "shared": "b729f99c591c50dec896494ebca13344"
+    }
+  },
+  "sysadmindoc/hushfeed": {
+    "beta": {},
+    "stable": {
+      "com.zhiliaoapp.musically": "e33ab373003b2d8e26ffebf8bdc8f54e",
+      "shared": "3384521f21388684c65f93035b0e67d9"
     }
   }
 }
