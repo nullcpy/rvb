@@ -168,7 +168,14 @@ abort() {
 	trap - SIGTERM SIGINT EXIT
 	exit 1
 }
-java() { env -i PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}" java --enable-native-access=ALL-UNNAMED "$@"; }
+# env -i keeps JVM runs hermetic; XDG_DATA_HOME is forwarded so callers can
+# relocate an app's per-user state dir out of the shared HOME (see the
+# instafel flows) — without it, parallel builds race on $HOME state.
+java() {
+	local -a java_env=(PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}")
+	[ -n "${XDG_DATA_HOME:-}" ] && java_env+=(XDG_DATA_HOME="$XDG_DATA_HOME")
+	env -i "${java_env[@]}" java --enable-native-access=ALL-UNNAMED "$@";
+}
 
 source_release_api_base() {
 	local host=${1,,} src=$2 encoded
@@ -881,25 +888,30 @@ patches_list() {
 # Instafel CLI resolves its patcher-core jar by filename in the CLI dir, CWD
 # (and, during patching, the run temp dir). Shadow copies of the bundle jars
 # under every name the CLI may look for. Extra target dirs passed as args.
+# The CLI-dir/CWD targets are shared with sibling builds, so copy with
+# --remove-destination (unlink+create) instead of truncate-in-place when the
+# platform's cp supports it.
 _instafel_shadow_core() {
 	local cli_jar=$1 patches_jar=$2; shift 2
 	local -a extra_dirs=("$@")
 	local cli_dir cli_commit d j j_base
+	local _cp="cp"
+	cp --version 2>/dev/null | grep -q GNU && _cp="cp --remove-destination"
 	cli_dir=$(dirname "$cli_jar")
 	cli_commit=$(unzip -p "$cli_jar" META-INF/MANIFEST.MF 2>/dev/null | sed -n 's/^Patcher-Cli-Commit: //p' | tr -d '\r')
 	[ -z "$cli_commit" ] && cli_commit="$RVB_INSTAFEL_FALLBACK_COMMIT"
 	for j in $(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'); do
 		j_base=$(basename "$j")
-		cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
-		cp "$j" "$j_base" 2>/dev/null || :
-		for d in "${extra_dirs[@]}"; do cp "$j" "$d/$j_base" 2>/dev/null || :; done
-		cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-		cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
-		for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :; done
+		$_cp "$j" "$cli_dir/$j_base" 2>/dev/null || :
+		$_cp "$j" "$j_base" 2>/dev/null || :
+		for d in "${extra_dirs[@]}"; do $_cp "$j" "$d/$j_base" 2>/dev/null || :; done
+		$_cp "$j" "$cli_dir/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+		$_cp "$j" "ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :
+		for d in "${extra_dirs[@]}"; do $_cp "$j" "$d/ifl-patcher-core-${cli_commit}.jar" 2>/dev/null || :; done
 		if [ "$cli_commit" != "$RVB_INSTAFEL_FALLBACK_COMMIT" ]; then
-			cp "$j" "$cli_dir/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
-			cp "$j" "ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
-			for d in "${extra_dirs[@]}"; do cp "$j" "$d/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :; done
+			$_cp "$j" "$cli_dir/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
+			$_cp "$j" "ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :
+			for d in "${extra_dirs[@]}"; do $_cp "$j" "$d/ifl-patcher-core-${RVB_INSTAFEL_FALLBACK_COMMIT}.jar" 2>/dev/null || :; done
 		fi
 	done
 }
@@ -914,7 +926,20 @@ _patches_list() {
 	local p_jars=($(echo "$patches_jar" | tr ' ' '\n' | grep -v '^$'))
 	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
 		_instafel_shadow_core "$cli_jar" "$patches_jar"
-		if ! op=$(eval java -jar "'$cli_jar'" list 2>&1); then
+		# The patcher creates $XDG_DATA_HOME|~/.local/share/.../core_data/info.json
+		# check-then-create style at startup; concurrent builds sharing one HOME
+		# crash the loser ("Information file cannot be created"). Give each list
+		# call a private, throwaway data dir instead.
+		local ifl_xdg
+		ifl_xdg=$(mktemp -d "${TMPDIR:-/tmp}/ifl-xdg.XXXXXX" 2>/dev/null) || ifl_xdg=""
+		local op_rc=0
+		if [ -n "$ifl_xdg" ]; then
+			op=$(eval "XDG_DATA_HOME='$ifl_xdg' java -jar '$cli_jar' list" 2>&1) || op_rc=$?
+			rm -rf "$ifl_xdg" 2>/dev/null || :
+		else
+			op=$(eval java -jar "'$cli_jar'" list 2>&1) || op_rc=$?
+		fi
+		if [ "$op_rc" -ne 0 ]; then
 			epr "Could not get patches list $cli_jar: '$op'"
 			return 1
 		fi
@@ -2580,13 +2605,18 @@ patch_apk() {
 	if [ "$PATCHER_FLOW" = instafel-workflow ]; then
 		local rel_tmp_dir="${patched_apk}-temporary-files"
 		mkdir -p "$rel_tmp_dir"
+		# Private copy of the patcher's per-user data dir (core_data/info.json):
+		# sibling builds sharing $HOME race on creating it. Lives under
+		# rel_tmp_dir, so it is cleaned up with the rest of the run's temp files.
+		local ifl_xdg="$rel_tmp_dir/xdg-data"
+		mkdir -p "$ifl_xdg"
 		_instafel_shadow_core "$cli_jar" "$patches_jar" "$rel_tmp_dir"
 
 		local expected_base
 		expected_base=$(basename "$stock_input" .apk)
 		[ -n "$expected_base" ] && [ -d "$expected_base" ] && rm -rf "$expected_base" 2>/dev/null || :
 
-		local init_cmd="java -jar '$cli_jar' init '$stock_input'"
+		local init_cmd="XDG_DATA_HOME='$ifl_xdg' java -jar '$cli_jar' init '$stock_input'"
 		pr "$init_cmd"
 		local init_op
 		init_op=$(eval "$init_cmd" 2>&1)
@@ -2621,12 +2651,12 @@ patch_apk() {
 			patches_to_run="$RVB_INSTAFEL_DEFAULT_PATCHES"
 		fi
 
-		local run_cmd="java -jar '$cli_jar' run '$wdir' $patches_to_run"
+		local run_cmd="XDG_DATA_HOME='$ifl_xdg' java -jar '$cli_jar' run '$wdir' $patches_to_run"
 		pr "$run_cmd"
 		PATCH_OUTPUT=$(eval "$run_cmd" 2>&1)
 		echo "$PATCH_OUTPUT"
 
-		local build_cmd="java -jar '$cli_jar' build '$wdir'"
+		local build_cmd="XDG_DATA_HOME='$ifl_xdg' java -jar '$cli_jar' build '$wdir'"
 		pr "$build_cmd"
 		local build_op
 		build_op=$(eval "$build_cmd" 2>&1)
