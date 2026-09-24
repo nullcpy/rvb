@@ -2,14 +2,14 @@
   "ajstrick81/morphe-androidtv-patches": {
     "beta": {},
     "stable": {
-      "com.amazon.amazonvideo.livingroom": "def42a8de5e286140b0dab4ffe36aedb",
-      "com.disney.disneyplus": "7d34a9626400902f133b5016887509f8",
+      "com.amazon.amazonvideo.livingroom": "2d9bb32bd90f76066ddd09a2b76eebe7",
+      "com.disney.disneyplus": "fb4055dcbe6c0270ddec57215ed10bd4",
       "com.netflix.ninja": "db9bdba0cf971d916d921b722955cc4e",
       "com.peacocktv.peacockandroid": "7ff4398760822eebd22cc15045755afd",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
-      "com.wbd.hbomax": "62d421421ab7d213ad26b1b296796164",
-      "shared": "00e1bbdc9f0517c8eeafe5e5e4287be6",
+      "com.wbd.hbomax": "04db80a6460c84ff5bb97c71ef770cdf",
+      "shared": "f945abb34f52bdfa8b918c01ad1b1c83",
       "tv.pluto.android": "40dcc7c8b97d540deab8a158a9ad6ba1",
       "tv.twitch.android.app": "dcc3c62ee2cb5ba1793d74172bcf61fb"
     }
@@ -283,10 +283,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "a28a5eb2ffac89f50d1a8beec0eb5052",
-      "com.google.android.youtube": "45d842f87ed29d677b4387f65d8e627e",
+      "com.google.android.apps.youtube.music": "f42ef8490a123a448a10a3b30bf2cc3d",
+      "com.google.android.youtube": "be8b29dffc2d3e9a7e591f0f3305bec1",
       "com.reddit.frontpage": "334575154fce69437e8949e727cc02c2",
-      "shared": "dbbb8bccbbfc9c63d04ed1511653d220"
+      "shared": "68bc263706f8e8eb00256dd72315cda6"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "908eefc5b29a33d6807ef54a9ef097d9",
