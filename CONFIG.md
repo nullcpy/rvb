@@ -240,16 +240,25 @@ You do **not** need separate files for stable and beta:
 
 ## Automated Patch Sources State Tracking
 
-> **Where the state lives:** the generated files ("`patch_sources.json`",
-> "app_versions.json", "stable-build.json", "beta-build.json",
-> "patch_file_hashes.json") are **not tracked on main** — the CI watcher commits
-> them to the dedicated **`data` branch** ("commit_data_branch.sh") so main's
-> history stays human-only. Every CI job that reads them runs
-> "fetch_data_branch.sh" right after checkout; do the same locally before
-> building from a fresh clone ("bash .github/scripts/fetch_data_branch.sh").
-> To edit state by hand, commit it directly to the `data` branch.
+> **Where configs and state live:** main is **pure code** — everything under
+> `configs/` and `state/` is **not tracked there**. The canonical copies live on
+> the dedicated **`data`** branch:
+>
+> - `configs/config.manual.toml`, `configs/patches/*.toml` — **yours**: edit the
+>   local (ignored) copies, then publish with
+>   `bash .github/scripts/push_data_configs.sh "<message>"`.
+> - `configs/stable-build.json`, `configs/beta-build.json` — generated pool
+>   configs, written by the watcher only.
+> - `state/*.json` (`patch_sources`, `app_versions`, `patch_file_hashes`) —
+>   machine state, written by the watcher only (`commit_data_branch.sh`).
+>
+> Every CI job materializes them via `fetch_data_branch.sh` right after
+> checkout; do the same locally after cloning (it also refreshes your TOML
+> copies from the branch — push your edits **before** fetching, fetch
+> overwrites). Never hand-commit JSONs; to force a state change, edit the
+> local file and let the watcher pick it up, or commit directly to `data`.
 
-Patch sources and their release versions in `configs/patch_sources.json` are **100% automated**:
+Patch sources and their release versions in `state/patch_sources.json` are **100% automated**:
 - The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github` or `gitlab`), and checks for new stable and beta releases.
 - Unreferenced or deleted patch sources are pruned automatically.
 - **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
@@ -260,10 +269,10 @@ The CI workflow automatically detects when a new version of an app is released o
 
 ### How it Works
 1. **Version Fetching**: During the CI run, it reads all enabled apps from the `configs/patches/*.toml` configurations and queries the URLs (`uptodown-dlurl`, `apkmirror-dlurl`, etc.).
-2. **Comparison**: It checks the newly fetched versions against the currently stored versions in `configs/app_versions.json`.
+2. **Comparison**: It checks the newly fetched versions against the currently stored versions in `state/app_versions.json`.
 3. **Triggering**: If a new version is detected, the app is added to a temporary `active_apps.json` list, and the CI is triggered to build it.
 ### Tracking File
-App versions are permanently tracked in `configs/app_versions.json` (on the `data` branch, see above).
+App versions are permanently tracked in `state/app_versions.json` (on the `data` branch, see above).
 You can manually update this file if you need to force a specific version state, but the CI will automatically manage it during scheduled runs.
 
 **Selective Checking:** If you only want the CI to check specific apps (instead of all enabled apps in your config), you can add `"_check_only_listed": true` to the top level of `app_versions.json`. When this is true, the script will only check for updates for the apps that already exist as keys in the file, saving time and resources.
