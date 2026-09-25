@@ -67,10 +67,15 @@ for fx in "${FIXTURES[@]}"; do
 		pt_src=$(toml_get "$m" patches-source) || pt_src="MorpheApp/morphe-patches"
 		pt_ver=$(toml_get "$m" patches-version) || pt_ver="stable"
 
-		# resolve prebuilts through the real path (stubbed network)
-		PREBUILTS=$(get_prebuilts github "$cli_src" "$cli_ver" github "$pt_src" "$pt_ver") \
+		# resolve prebuilts through the real path (stubbed network). Mirrors how
+		# build.sh calls get_prebuilts now: invoked directly (NOT via $(...)) so the
+		# __PREBUILTS_CACHE__ write survives, and the result is read from the
+		# __PREBUILTS_RESULT global (get_prebuilts no longer echoes to stdout).
+		get_prebuilts github "$cli_src" "$cli_ver" github "$pt_src" "$pt_ver" \
 			|| { echo "RESULT: get_prebuilts failed"; exit 0; }
-		read -r cli_jar patches_jar_all <<< "$PREBUILTS"
+		read -r -a __pb <<< "$__PREBUILTS_RESULT"
+		cli_jar=${__pb[0]}
+		patches_jar_all="${__pb[*]:1}"
 		echo "PREBUILT CLI: $cli_jar"
 		echo "PREBUILT BUNDLES: $patches_jar_all"
 

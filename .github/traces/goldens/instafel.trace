@@ -1,9 +1,9 @@
 === FIXTURE: instafel ===
 [+] Getting prebuilts (instafel)
-[+] Getting 'temp/instafel-rv/instafel-0.3.jar' from 'https://fake.asset/instafel-0.3.jar'
-[+] Getting 'temp/instafel-rv/ifl-patcher-core-0.3.jar' from 'https://fake.asset/ifl-patcher-core-0.3.jar'
-PREBUILT CLI: temp/instafel-rv/instafel-0.3.jar
-PREBUILT BUNDLES: temp/instafel-rv/ifl-patcher-core-0.3.jar
+[+] Getting 'temp/github__instafel__p-rel-rv/instafel-0.3.jar' from 'https://fake.asset/instafel-0.3.jar'
+[+] Getting 'temp/github__instafel__pc-rel-rv/ifl-patcher-core-0.3.jar' from 'https://fake.asset/ifl-patcher-core-0.3.jar'
+PREBUILT CLI: temp/github__instafel__p-rel-rv/instafel-0.3.jar
+PREBUILT BUNDLES: temp/github__instafel__pc-rel-rv/ifl-patcher-core-0.3.jar
 --- app: Instagram-InstaFel ---
 PATCHES_LIST_VERSIONS:
   
@@ -34,11 +34,11 @@ PATCHES_LIST:
    remove_ads
 PATCH_APK:
   rc=0 patched_exists=yes
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [remove_ads] [instafel]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [build] [stock]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [list]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [init] [stock.apk]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [clone]
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/instafel-rv/instafel-0.3.jar] [build] [stock]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [list]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [init] [stock.apk]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [remove_ads] [instafel]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [build] [stock]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [list]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [init] [stock.apk]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [run] [stock] [unlock_developer_options] [clone]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__instafel__p-rel-rv/instafel-0.3.jar] [build] [stock]

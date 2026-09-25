@@ -1,9 +1,9 @@
 === FIXTURE: lspatch ===
 [+] Getting prebuilts (LSPatch)
-[+] Getting 'temp/lspatch-rv/lspatch-0.6.jar' from 'https://fake.asset/lspatch-0.6.jar'
-[+] Getting 'temp/lspatch-rv/module-0.6.apk' from 'https://fake.asset/module-0.6.apk'
-PREBUILT CLI: temp/lspatch-rv/lspatch-0.6.jar
-PREBUILT BUNDLES: temp/lspatch-rv/module-0.6.apk
+[+] Getting 'temp/github__lspatch__lspatch-rv/lspatch-0.6.jar' from 'https://fake.asset/lspatch-0.6.jar'
+[+] Getting 'temp/github__lspatch__lsposed-modules-rv/module-0.6.apk' from 'https://fake.asset/module-0.6.apk'
+PREBUILT CLI: temp/github__lspatch__lspatch-rv/lspatch-0.6.jar
+PREBUILT BUNDLES: temp/github__lspatch__lsposed-modules-rv/module-0.6.apk
 --- app: Viber-LSPatch ---
 PATCHES_LIST_VERSIONS:
   
@@ -13,4 +13,4 @@ PATCHES_LIST:
   Name: xposed-module-dummy
 PATCH_APK:
   rc=0 patched_exists=yes
-ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/lspatch-rv/lspatch-0.6.jar] [-o] [<RUN>/build/out-Viber-LSPatch.apk-temporary-files] [-m] [temp/lspatch-rv/module-0.6.apk] [stock.apk]
+ARGS: [--enable-native-access=ALL-UNNAMED] [-jar] [temp/github__lspatch__lspatch-rv/lspatch-0.6.jar] [-o] [<RUN>/build/out-Viber-LSPatch.apk-temporary-files] [-m] [temp/github__lspatch__lsposed-modules-rv/module-0.6.apk] [stock.apk]
