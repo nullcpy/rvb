@@ -3154,7 +3154,7 @@ build_rv() {
 	# 1. Resolve pkg_name early if possible and check cache
 	if [ -n "$pkg_name" ]; then
 		# Check app_versions.json for exact version
-		local app_versions_file=".github/configs/app_versions.json"
+		local app_versions_file="configs/app_versions.json"
 		if [ -f "$app_versions_file" ]; then
 			local t_pure="${table% (arm64-v8a)}"
 			t_pure="${t_pure% (arm-v7a)}"
