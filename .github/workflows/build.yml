@@ -220,12 +220,13 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/build_upload_release.sh
 
-      - name: Merge and upload archive manifest
+      - name: Merge archive manifest into website branch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
+          BUILD_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: bash .github/scripts/merge_archive_manifest.sh
+        run: bash .github/scripts/merge_archive_branch.sh
 
       - name: Notify telegram
         env:

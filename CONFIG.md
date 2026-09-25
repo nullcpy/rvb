@@ -273,11 +273,14 @@ from scratch by folding those manifests against the live releases API.
 - **Numbered releases**: the builder uploads one manifest per build
   (`build_make_manifest.py` → release asset `build.json`).
 - **Archive releases (`stable`/`beta`)**: after each archive file upload,
-  `merge_archive_manifest.sh` downloads the release's existing `build.json`, unions it
-  with the new build's entries (same filename = file replaced = metadata replaced),
-  drops entries whose file no longer exists in the release, and uploads the result.
-  The archive therefore carries cumulative metadata for every file it contains, even
-  after the originating numbered release is deleted.
+  `merge_archive_branch.sh` checks out the repo's `website` branch, unions the
+  new build's entries with the cumulative `archive/<channel>.json` there (same
+  filename = file replaced = metadata replaced), drops entries whose file no
+  longer exists in the release, commits `manifests/<tag>.json` alongside, and
+  pushes. The archive therefore carries cumulative metadata for every file it
+  contains, even after the originating numbered release is deleted — and the
+  branch history makes any manifest loss recoverable via `git log -p` /
+  `git show <rev>:archive/stable.json`.
 - **Backfill**: `.github/scripts/backfill_manifests.py` (run with `--apply`) can
   regenerate manifests on all live releases from a healthy `data.json` (one-time
   migration tool; dry run by default).
@@ -285,16 +288,19 @@ from scratch by folding those manifests against the live releases API.
 ### Website Rebuild (nullcpy.github.io repo)
 `.github/workflows/rebuild-catalog.yml` runs on `repository_dispatch
 (catalog-updated)` — sent fire-and-forget by `build.yml` and `cleanup.yml` — plus a
-scheduled safety net. It fetches all live releases and their `build.json`, regenerates
-`data.json` (schema v2) from scratch, and pushes only on material change. Deletions are
-automatic: a release or asset that no longer exists simply doesn't appear. Circuit
-breakers abort a rebuild (leaving `data.json` untouched) if the releases API looks
-empty (< 10 releases) or the catalog shrinks beyond `MIN_RATIO` (default 0.6); `FORCE=1`
-overrides. Releases without a manifest get minimal filename-derived fallback entries.
+scheduled safety net. It checks out the `website` branch of this repo for the
+manifests (plus fetches live releases for existence, sizes, and download
+counts), regenerates `data.json` (schema v2) from scratch, and pushes only on
+material change. Deletions are automatic: a release or asset that no longer
+exists simply doesn't appear. Circuit breakers abort a rebuild (leaving
+`data.json` untouched) if the releases API looks empty (< 10 releases) or the
+catalog shrinks beyond `MIN_RATIO` (default 0.6); `FORCE=1` overrides.
+Releases without a manifest get minimal filename-derived fallback entries.
 
 ### Automated Routine Cleanup (`cleanup.yml`)
 - **Numbered Releases**: Retains the latest 98 numbered releases via `ophub/delete-releases-workflows`. Keeping 98 *is* the catalog's history window — deleted releases vanish from the website, which is correct since their files are gone.
 - **Archive Releases**: Retains rolling `stable` and `beta` releases, keeping up to 2 versions per asset group via `cleanup-archive-assets.py`. Pruned assets drop out of the catalog automatically at the next rebuild.
+- **Website Branch**: `cleanup_website_branch.sh` deletes `manifests/<tag>.json` for numbered releases that no longer exist (same pattern as the update branch's changelog pruning).
 - Ends with a fire-and-forget `catalog-updated` dispatch so the website reflects deletions promptly.
 
 ### Full Clean Slate / Rebuilding from Scratch
