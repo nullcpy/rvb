@@ -11,9 +11,10 @@ set -euo pipefail
 #  2. changelogs/<tag>.md for releases that no longer exist and are no longer
 #     referenced by any surviving *-update.json.
 #
-# The branch root is a wire format: module zips bake
-# https://raw.githubusercontent.com/<repo>/update/<name>-update.json at build
-# time, so files are only ever deleted here, never moved or renamed.
+# The branch layout is a wire format: module zips bake
+# https://raw.githubusercontent.com/<repo>/update/<channel>/<name>-update.json
+# at build time (update_json_path in scripts/utils.sh), so files are only ever
+# deleted here, never moved or renamed.
 
 REPO="${GITHUB_REPOSITORY:-nullcpy/rvb}"
 
@@ -44,9 +45,9 @@ git fetch origin update || true
 git checkout -B update origin/update
 
 DELETED_JSON=0
-echo "--- Checking root update.json files for dead pointers ---"
+echo "--- Checking update.json pointers for dead downloads ---"
 shopt -s nullglob
-for f in *-update.json; do
+for f in *-update.json stable/*-update.json beta/*-update.json; do
   [ -f "$f" ] || continue
   url=$(jq -r '.zipUrl // empty' "$f" 2>/dev/null || echo '')
   [ -n "$url" ] || continue
@@ -62,7 +63,7 @@ for f in *-update.json; do
   else
     # Pointer to a numbered release: dead once that release is deleted.
     if ! echo "$ACTIVE_TAGS" | grep -Fxq "$tag"; then
-      echo "Pruning fossilized pointer: $f (release '$tag' no longer exists)"
+      echo "Pruning dead pointer: $f (release '$tag' no longer exists)"
       rm -f "$f"
       DELETED_JSON=$((DELETED_JSON + 1))
     fi
@@ -80,7 +81,7 @@ if [ -d changelogs ]; then
     fname=$(basename "$f")
     tag="${fname%.md}"
     if ! echo "$ACTIVE_TAGS" | grep -Fxq "$tag"; then
-      if grep -q "changelogs/${tag}\.md" *-update.json /dev/null 2>/dev/null; then
+      if find . -name '*-update.json' -exec grep -qs "changelogs/${tag}\.md" {} +; then
         echo "Keeping changelog: $f (release '$tag' pruned, but still referenced by an active update.json)"
         continue
       fi
