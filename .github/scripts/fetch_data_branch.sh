@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Materialize the `data` branch into the working tree: configs/ (human TOMLs
-# + generated *-build.json) and state/ (watcher JSONs), so every generator,
+# + generated *_build.json) and state/ (watcher JSONs), so every generator,
 # watcher and build finds its inputs at the paths it already references
 # (commit_data_branch.sh / push_data_configs.sh are the writer sides).
 #

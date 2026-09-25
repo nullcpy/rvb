@@ -19,8 +19,8 @@ on:
         default: "configs/config.manual.toml"
         options:
           - "configs/config.manual.toml"
-          - "configs/beta-build.json"
-          - "configs/stable-build.json"
+          - "configs/beta_build.json"
+          - "configs/stable_build.json"
       remove_apks:
         description: "Optional: APKs to remove from cache (space-separated, e.g., com.brave.browser-1.93.138-*.apk)"
         required: false
@@ -65,7 +65,7 @@ jobs:
           submodules: true
 
       - name: Fetch configs & state (data branch)
-        # Materializes configs/ (human TOMLs + generated *-build.json) and
+        # Materializes configs/ (human TOMLs + generated *_build.json) and
         # state/ (watcher JSONs) — the data branch is their canonical home.
         run: bash .github/scripts/fetch_data_branch.sh
 
