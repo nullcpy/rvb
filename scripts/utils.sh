@@ -3862,7 +3862,8 @@ build_rv() {
 		local base_template
 		base_template=$(mktemp -d -p "$TEMP_DIR")
 		cp -a $MODULE_TEMPLATE_DIR/. "$base_template"
-		local upj="${args[module_prop_name],,}-update.json"
+		local upj
+		upj=$(update_json_path "${args[module_prop_name]}" "${DEF_AUTHOR_NAME:-nullcpy}")
 
 		module_config "$base_template" "$final_pkg_name" "$version_f" "$arch"
 
@@ -3949,6 +3950,29 @@ module_config() {
 PKG_VER=$3
 MODULE_ARCH=$ma" >"$1/config"
 }
+
+# Map a module id (module_prop_name) to its update-branch JSON path:
+#   <channel>/<id-without-author-or-channel-suffix>-update.json
+# The channel folder (stable|beta) replaces the old "-beta-" filename infix,
+# and the author segment is dropped since it's constant for this repo.
+# Module id shape from build.sh: <table>-<author>[-beta][-arm64|-arm].
+# This path is a wire format baked into every module zip via module.prop
+# updateJson — changing it orphans installed modules; never restructure
+# the branch to "tidy" it.
+update_json_path() {
+	local mpn=${1,,} author=${2,,} chan=stable arch=""
+	case $mpn in
+		*-arm64) arch="-arm64"; mpn=${mpn%-arm64} ;;
+		*-arm) arch="-arm"; mpn=${mpn%-arm} ;;
+	esac
+	if [[ $mpn == *-beta ]]; then
+		chan="beta"
+		mpn=${mpn%-beta}
+	fi
+	[ -n "$author" ] && mpn=${mpn%-$author}
+	echo "$chan/${mpn}${arch}-update.json"
+}
+
 module_prop() {
 	echo "id=${1}
 name=${2}
