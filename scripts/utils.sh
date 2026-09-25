@@ -481,6 +481,11 @@ _get_prebuilts() {
 		fi
 
 		echo "$tag_name" > "${dir}/tag_name.txt"
+		# Per-bundle tag marker, keyed to the exact downloaded/found file. Unlike the
+		# dir-level tag_name.txt it is immune to other versions/apps sharing the same
+		# folder and to a process-level cache hit skipping the rewrite, so build.sh
+		# can always read the authoritative tag for the file this build actually used.
+		echo "$tag_name" > "${file}.tag"
 
 		if [ "$grab_cl" = true ]; then
 			if [ "$host" = github ]; then
