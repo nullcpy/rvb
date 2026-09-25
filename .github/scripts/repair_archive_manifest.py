@@ -107,7 +107,8 @@ def load_catalog_index(path):
     """
     p = Path(path)
     if not p.exists():
-        print(f"Catalog {p} not found — degraded entries will not be recovered")
+        print(
+            f"Catalog {p} not found — degraded entries will not be recovered")
         return {}
     cat = json.loads(p.read_text(encoding="utf-8"))
     tables = {"patchSetRef": ("appliedPatches", cat.get("patchSets") or []),
@@ -119,7 +120,8 @@ def load_catalog_index(path):
             vmeta = {}
             for v in brand.get("variants", []):
                 prefix = None
-                m = re.match(r"^\^(.*)-v\.\*\\\.apk\$$", v.get("apkFilter") or "")
+                m = re.match(r"^\^(.*)-v\.\*\\\.apk\$$",
+                             v.get("apkFilter") or "")
                 if m:
                     prefix = m.group(1)
                 vmeta[(v.get("variant"), v.get("subVariant"))] = {
@@ -143,7 +145,8 @@ def main():
     ap.add_argument(
         "--repo", default=os.environ.get("RVB_REPO", "nullcpy/rvb"))
     ap.add_argument("--data-json",
-                    default=os.environ.get("DATA_JSON", "../nullcpy.github.io/data.json"),
+                    default=os.environ.get(
+                        "DATA_JSON", "../nullcpy.github.io/data.json"),
                     help="website catalog used to recover files whose release was deleted")
     args = ap.parse_args()
 
