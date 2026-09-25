@@ -185,3 +185,15 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-shoppi
 uptodown-dlurl = "https://amazon-shopping.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/amazon-shopping/com.amazon.mShop.android.shopping"
 apkcombo-dlurl = "https://apkcombo.com/amazon-shopping/com.amazon.mShop.android.shopping"
+
+[Telegram-rushiranpise-GooglePlay]
+enabled = true
+pkg-name = "org.telegram.messenger"
+app-name = "Telegram"
+variant = "Google Play"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
+
+
+
+
