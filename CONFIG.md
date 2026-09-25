@@ -241,7 +241,7 @@ You do **not** need separate files for stable and beta:
 ## Automated Patch Sources State Tracking
 
 > **Where the state lives:** the generated files ("`patch_sources.json`",
-> "app_versions.json", "config.stable.updated.json", "config.beta.updated.json",
+> "app_versions.json", "stable-build.json", "beta-build.json",
 > "patch_file_hashes.json") are **not tracked on main** — the CI watcher commits
 > them to the dedicated **`data` branch** ("commit_data_branch.sh") so main's
 > history stays human-only. Every CI job that reads them runs
