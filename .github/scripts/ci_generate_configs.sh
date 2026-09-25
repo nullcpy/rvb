@@ -55,7 +55,7 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
         if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or ($activeApps[0] | index($k)) then . else (.value.enabled = false) end
       else . end
     )
-  ' config.stable.json > configs/config.stable.updated.json
+  ' config.stable.json > configs/stable-build.json
 fi
 
 if [ "${TRIGGER_BETA:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
@@ -81,5 +81,5 @@ if [ "${TRIGGER_BETA:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "
         if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or (($activeApps[0] | index($k)) and $has_valid_beta) then . else (.value.enabled = false) end
       else . end
     )
-  ' config.beta.json > configs/config.beta.updated.json
+  ' config.beta.json > configs/beta-build.json
 fi

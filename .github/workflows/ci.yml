@@ -104,7 +104,7 @@ jobs:
     if: ${{ needs.check_patch.outputs.trigger_beta == '1' }}
     uses: ./.github/workflows/build.yml
     with:
-      config_file: "configs/config.beta.updated.json"
+      config_file: "configs/beta-build.json"
     secrets: inherit
 
   build_stable:
@@ -112,7 +112,7 @@ jobs:
     if: ${{ always() && needs.check_patch.outputs.trigger_stable == '1' && needs.check_patch.result == 'success' && needs.build_beta.result != 'cancelled' }}
     uses: ./.github/workflows/build.yml
     with:
-      config_file: "configs/config.stable.updated.json"
+      config_file: "configs/stable-build.json"
     secrets: inherit
 
   trigger_cleanup:

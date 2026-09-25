@@ -16,8 +16,8 @@ config.beta.json
 # Machine-owned state: canonical copy lives on the `data` branch, materialized
 # by .github/scripts/fetch_data_branch.sh — never commit these to main.
 configs/app_versions.json
-configs/config.beta.updated.json
-configs/config.stable.updated.json
+configs/beta-build.json
+configs/stable-build.json
 configs/patch_file_hashes.json
 configs/patch_sources.json
 active*.json
