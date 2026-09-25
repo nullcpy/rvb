@@ -1,12 +1,12 @@
 # Release manifest scripts (`build.json`)
 
-Every release in this repo carries a `build.json` asset — a schema-v1,
-filename-keyed manifest describing the APKs/ZIPs in that release (app name,
-version, arch, applied patches, `originBuild`, ...). The numbered releases get
-a manifest for exactly their own files; the cumulative archive manifests and
-the per-build copies live on the **`website` branch** of this repo, which the
-website catalog rebuild consumes directly. These scripts implement and repair
-that pipeline.
+Every build produces a `build.json` manifest — a schema-v1, filename-keyed
+description of the APKs/ZIPs in that build (app name, version, arch, applied
+patches, `originBuild`, ...). Manifests live in exactly one shared place:
+the **`website` branch** of this repo — a per-build copy plus the cumulative
+archive manifests that the website catalog rebuild consumes. Release pages
+carry only the files themselves. These scripts implement and repair that
+pipeline.
 
 ```
 builder (utils.sh)                build.yml
@@ -14,13 +14,12 @@ builder (utils.sh)                build.yml
       ▼                                ▼
  build.json ──► build_make_manifest.py ──► temp/manifest/build.json
                         │                          │
-                        │            ┌─────────────┴──────────────┐
-                        ▼            ▼ (numbered release)         ▼ (archive upload)
-            temp/manifest/*.json   build_upload_release.sh   merge_archive_branch.sh
-                                   (UPLOAD_FILES includes      │ commits manifests/<tag>.json
-                                    temp/manifest/build.json)  │ + merges archive/<channel>.json
-                                                               ▼   (union, live-filter, push)
-                                              website branch: archive/{stable,beta}.json
+                        ▼                          ▼ (after archive upload)
+            temp/manifest/*.json        merge_archive_branch.sh
+            (not uploaded anymore)       │ commits manifests/<tag>.json
+                                         │ + merges archive/<channel>.json
+                                         ▼   (union, live-filter, push)
+                        website branch: archive/{stable,beta}.json
 ```
 
 ## Per-build pipeline (runs in CI)
@@ -31,10 +30,10 @@ manifest (`temp/manifest/build.json`) that everything downstream consumes.
 Env: `NEXT_VER_CODE` (release tag), `IS_PRERELEASE` (→ channel `beta`/`stable`).
 
 ### `build_upload_release.sh`
-Unified uploader (native `gh`, per-file retry, `--clobber`). Used for both the
-numbered release (build outputs + `temp/manifest/build.json`) and the archive
-releases. Note: `gh` names an uploaded asset after the **local file's
-basename** — always stage files under their intended asset name.
+Unified uploader (native `gh`, per-file retry, `--clobber`). Used for the
+numbered release (build outputs) and the archive releases. Note: `gh` names
+an uploaded asset after the **local file's basename** — always stage files
+under their intended asset name.
 
 ### `merge_archive_branch.sh`
 Merges the current build's manifest into the `website` branch: writes
@@ -69,10 +68,15 @@ pattern as `cleanup_update_branch.sh` does for changelogs). `archive/*.json`
 entries for pruned files drop out at the next build merge (live filter).
 
 ### `seed_website_branch.py`
-Downloads every live release's `build.json` asset and lays out the full
-`website` branch content (`manifests/*.json` + `archive/*.json`). Used to seed
-the branch initially; also the recovery path to rebuild the branch from
-scratch after a manifest repair (`--out` then replace the branch content).
+Downloads every live release's `build.json` **asset** and lays out the full
+`website` branch content (`manifests/*.json` + `archive/*.json`). Historical
+role: seeded the branch at migration time (2026-09-25). Since per-build
+manifests stopped being uploaded as release assets, the branch is the sole
+store — recovery order is now: ① branch git history
+(`git log -p archive/stable.json`, `git show <rev>:archive/stable.json`,
+force-push to undo), ② the repair tools below rebuilding from the surviving
+window of legacy release assets + a healthy website `data.json`, ③ this
+script (only while legacy assets still exist).
 
 ## One-time repair tools (manual, dry-run by default)
 
@@ -95,16 +99,16 @@ check the dry-run's fallback count is acceptable before `--apply`.
 python3 .github/scripts/repair_archive_manifest.py --archive stable          # dry run
 git -C ../nullcpy.github.io show <pre-incident-rev>:data.json > /tmp/data_prewipe.json
 python3 .github/scripts/repair_archive_manifest.py --archive stable \
-        --data-json /tmp/data_prewipe.json --apply                           # upload
+        --data-json /tmp/data_prewipe.json                                   # writes output file
 ```
 
-After `--apply`, re-sync the `website` branch with
-`seed_website_branch.py --out temp/website-branch` and replace the branch's
-`archive/<channel>.json` with the repaired file, then trigger the website's
+The repaired file is then committed to the `website` branch as
+`archive/<channel>.json` (the `--apply` flag still uploads a release asset,
+which the pipeline no longer reads), then trigger the website's
 `rebuild-catalog.yml` (workflow_dispatch) so `data.json` re-folds from it.
 Since the branch keeps full history, the first recovery step for a degraded
-`archive/*.json` is now `git log -p` / `git show <rev>:archive/stable.json`
-on the branch itself.
+`archive/*.json` is `git log -p` / `git show <rev>:archive/stable.json` on
+the branch itself.
 
 ### `backfill_manifests.py`
 Backfills **per-release** `build.json` assets into the numbered releases from

@@ -263,15 +263,17 @@ You can manually update this file if you need to force a specific version state,
 
 Maintenance and cleanup workflows keep GitHub Releases and changelogs pruned. The
 website catalog (`data.json` on `nullcpy.github.io`) is **derived, not edited**: every
-release carries a `build.json` manifest and the website repo regenerates its catalog
-from scratch by folding those manifests against the live releases API.
+build's metadata lives in a `build.json` manifest on the repo's `website` branch and
+the website repo regenerates its catalog from scratch by folding those manifests
+against the live releases API.
 
 ### Release Manifests (`build.json`)
 - **What**: a per-release, filename-keyed JSON manifest describing every APK/module
   in that release — app identity, brand, variant, version, arch, patch sources and
   `appliedPatches`. Schema documented in `.github/scripts/build_make_manifest.py`.
-- **Numbered releases**: the builder uploads one manifest per build
-  (`build_make_manifest.py` → release asset `build.json`).
+- **Numbered releases**: the builder generates one manifest per build
+  (`build_make_manifest.py` → `temp/manifest/build.json`); it is committed to the
+  `website` branch as `manifests/<tag>.json`, not uploaded as a release asset.
 - **Archive releases (`stable`/`beta`)**: after each archive file upload,
   `merge_archive_branch.sh` checks out the repo's `website` branch, unions the
   new build's entries with the cumulative `archive/<channel>.json` there (same
