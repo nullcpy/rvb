@@ -1,6 +1,6 @@
 # data branch — generated CI state (machine-owned)
 
-`.github/configs/*.json` files that the CI watcher regenerates constantly.
+`configs/*.json` files that the CI watcher regenerates constantly.
 They live here instead of main so main's history contains only human
 decisions. Consumers materialize them with `fetch_data_branch.sh` (workflows
 `ci.yml` and `build.yml` run it right after checkout).
