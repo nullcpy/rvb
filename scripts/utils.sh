@@ -400,11 +400,16 @@ _get_prebuilts() {
 		local tag="Patches" fprefix="patches"
 		local grab_cl=true
 		
+		# Reset per-source resolution state. `local` re-declaration does NOT clear a
+		# variable already local to this function, so release would otherwise leak from
+		# the CLI block (or the previous source). The concrete-version branch below is
+		# gated on [ -z "$release" ], so a stale release would skip the tag fetch and
+		# resolve this source's bundle from the wrong release entirely.
+		local rv_rel resp tag_name matches asset name url release=""
 		local dir
 		dir=$(rv_release_dir "$host" "$src")
 		[ -d "$dir" ] || mkdir "$dir"
 		
-		local rv_rel release resp tag_name matches asset name url
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
 		if [ "$ver" = "beta" ] || [ "$ver" = "dev" ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
