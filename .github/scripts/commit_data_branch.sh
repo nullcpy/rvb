@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Commit the watcher-owned generated files (state/*.json: patch_sources,
-# app_versions, patch_file_hashes; configs/*-build.json: the generated pool
+# app_versions, patch_file_hashes; configs/*_build.json: the generated pool
 # configs) to the `data` branch so main's history stays human-only.
 #
 # Plumbing-only by design: builds the commit with a temporary index and

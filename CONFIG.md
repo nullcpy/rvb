@@ -247,7 +247,7 @@ You do **not** need separate files for stable and beta:
 > - `configs/config.manual.toml`, `configs/patches/*.toml` — **yours**: edit the
 >   local (ignored) copies, then publish with
 >   `bash .github/scripts/push_data_configs.sh "<message>"`.
-> - `configs/stable-build.json`, `configs/beta-build.json` — generated pool
+> - `configs/stable_build.json`, `configs/beta_build.json` — generated pool
 >   configs, written by the watcher only.
 > - `state/*.json` (`patch_sources`, `app_versions`, `patch_file_hashes`) —
 >   machine state, written by the watcher only (`commit_data_branch.sh`).

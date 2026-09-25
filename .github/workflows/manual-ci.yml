@@ -10,8 +10,8 @@ on:
         default: "configs/config.manual.toml"
         options:
           - "configs/config.manual.toml"
-          - "configs/beta-build.json"
-          - "configs/stable-build.json"
+          - "configs/beta_build.json"
+          - "configs/stable_build.json"
       remove_apks:
         description: "Optional: APKs to remove from cache (space-separated, e.g., com.brave.browser-1.93.138-*.apk)"
         required: false
