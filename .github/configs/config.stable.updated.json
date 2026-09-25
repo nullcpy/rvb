@@ -617,7 +617,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -1150,7 +1150,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1867,7 +1867,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -1878,7 +1878,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9-Asia": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
