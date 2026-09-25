@@ -50,7 +50,14 @@ shopt -s nullglob
 for f in *.json stable/*.json beta/*.json; do
   [ -f "$f" ] || continue
   url=$(jq -r '.zipUrl // empty' "$f" 2>/dev/null || echo '')
-  [ -n "$url" ] || continue
+  if [ -z "$url" ]; then
+    # These folders hold updater pointers only, and the writer always emits a
+    # zipUrl — anything without one is garbage the phone would choke on.
+    echo "Pruning invalid pointer: $f (no parseable zipUrl)"
+    rm -f "$f"
+    DELETED_JSON=$((DELETED_JSON + 1))
+    continue
+  fi
   # .../releases/download/<tag>/<asset>
   tag=$(basename "$(dirname "$url")")
   asset=$(basename "$url")
