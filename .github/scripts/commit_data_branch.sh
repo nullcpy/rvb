@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-# Commit machine-owned state files (configs/*.json: patch_sources,
-# app_versions, generated config.stable/beta.updated, patch_file_hashes) to
-# the `data` branch so main's history stays human-only.
+# Commit the watcher-owned generated files (state/*.json: patch_sources,
+# app_versions, patch_file_hashes; configs/*-build.json: the generated pool
+# configs) to the `data` branch so main's history stays human-only.
 #
 # Plumbing-only by design: builds the commit with a temporary index and
 # commit-tree, never touching the checked-out branch, the real index, or the
@@ -14,12 +14,12 @@ set -euo pipefail
 #   - Single writer (ci.yml's `ci` concurrency group); the push-retry loop is
 #     insurance, not a merge strategy: on a race, our worktree files win.
 #   - fetch_data_branch.sh is the counterpart that materializes the branch
-#     back into configs/ for builds and watchers.
-#   - Only *.json directly under configs/ is committed; nothing else
-#     can reach `data` through here.
+#     back into configs/ and state/ for builds and watchers.
+#   - Only *.json directly under configs/ and state/ is committed — human
+#     TOMLs (push_data_configs.sh territory) can never reach `data` here.
 
 BRANCH="data"
-STATE_DIR="configs"
+STATE_DIRS=("configs" "state")
 COMMIT_MSG="${DATA_COMMIT_MSG:-chore: update generated patch sources, app versions and configs}"
 
 export GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-github-actions[bot]}"
@@ -28,18 +28,20 @@ export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 # build_commit <base> — creates a commit on <base> carrying the worktree's
-# state json files; echoes the new sha, returns 1 when nothing differs.
+# generated json files; echoes the new sha, returns 1 when nothing differs.
 build_commit() {
-	local base=$1 idx tree blob old changed="" commit
+	local base=$1 d idx tree blob old changed="" commit
 	idx=$(mktemp)
 	GIT_INDEX_FILE=$idx git read-tree "$base"
 	shopt -s nullglob
-	for f in "$STATE_DIR"/*.json; do
-		blob=$(git hash-object -w "$f")
-		old=$(git rev-parse "$base:$f" 2> /dev/null || echo '')
-		[ "$blob" = "$old" ] && continue
-		GIT_INDEX_FILE=$idx git update-index --add --cacheinfo "100644,$blob,$f"
-		changed=1
+	for d in "${STATE_DIRS[@]}"; do
+		for f in "$d"/*.json; do
+			blob=$(git hash-object -w "$f")
+			old=$(git rev-parse "$base:$f" 2> /dev/null || echo '')
+			[ "$blob" = "$old" ] && continue
+			GIT_INDEX_FILE=$idx git update-index --add --cacheinfo "100644,$blob,$f"
+			changed=1
+		done
 	done
 	shopt -u nullglob
 	[ -n "$changed" ] || {
