@@ -40,6 +40,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/cleanup_update_branch.sh
 
+      - name: Cleanup Website Branch Manifests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/cleanup_website_branch.sh
+
       - name: Notify website catalog rebuild
         continue-on-error: true
         env:
