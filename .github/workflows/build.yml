@@ -180,7 +180,7 @@ jobs:
           RELEASE_TITLE: "Build No. ${{ steps.version.outputs.NEXT_VER_CODE }}"
           RELEASE_BODY_FILE: build.md
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
-          UPLOAD_FILES: "./build/* ./temp/manifest/build.json"
+          UPLOAD_FILES: "./build/*"
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/build_upload_release.sh
 
