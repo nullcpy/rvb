@@ -200,12 +200,20 @@ jobs:
 
       - name: Commit updated build and module update files
         if: steps.update_changelog.outputs.has_modules == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          branch: update
-          skip_checkout: true
-          file_pattern: changelogs/*.md *-update.json
-          commit_message: Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}
+        # Explicit staging (the auto-commit action's default would sweep in
+        # unrelated dirt): pointers listed by build_update_changelog.sh plus
+        # this build's changelog. Branch already checked out by that script.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --pathspec-from-file=.updated_pointers
+          git add changelogs
+          if git diff --cached --quiet; then
+            echo "No update-branch changes to commit."
+          else
+            git commit -m "Bump version ${{ steps.version.outputs.NEXT_VER_CODE }}"
+            git push origin update
+          fi
 
       - name: Remove frequently updated apps
         run: |
