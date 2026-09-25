@@ -268,6 +268,17 @@ get_prebuilts() {
 	__PREBUILTS_RESULT="$result"
 }
 
+# Canonical on-disk folder for a source's downloaded release assets. Namespaced by
+# forge host AND the full owner/repo so that two repos under one owner (e.g.
+# hxreborn/morphe-patches vs hxreborn/hxreborn-tiktok-patches), or the same
+# owner/repo on GitHub vs GitLab, never share a folder and cross-match by version.
+# Lowercased; '/' becomes '__'; the legacy '-rv' (ReVanced) marker is kept.
+rv_release_dir() { # $1=host (github|gitlab) $2=owner/repo -> ${TEMP_DIR}/<host>__<owner>__<repo>-rv
+	local slug=${2,,}
+	slug=${slug//\//__}
+	printf '%s/%s__%s-rv' "$TEMP_DIR" "${1,,}" "$slug"
+}
+
 _get_prebuilts() {
 	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host_list=$4 patches_src_list=$5 patches_ver_list=$6
 	resolve_patcher "$cli_src"
@@ -279,8 +290,10 @@ _get_prebuilts() {
 	# so fully disk-cached runs stay silent instead of repeating it per app.
 	local prebuilts_header_printed=false
 
-	local cl_dir=${first_patch_src%/*}
-	cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
+	local first_patch_host
+	first_patch_host=$(list_args "$patches_host_list" | tr -d \"\' | head -n 1)
+	local cl_dir
+	cl_dir=$(rv_release_dir "$first_patch_host" "$first_patch_src")
 	[ -d "$cl_dir" ] || mkdir "$cl_dir"
 
 	local host=$cli_host src=$cli_src tag="CLI" ver=${cli_ver} fprefix="cli"
@@ -288,8 +301,8 @@ _get_prebuilts() {
 	if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
 
 	local grab_cl=false
-	local dir=${src%/*}
-	dir=${TEMP_DIR}/${dir,,}-rv
+	local dir
+	dir=$(rv_release_dir "$host" "$src")
 	[ -d "$dir" ] || mkdir "$dir"
 
 	local rv_rel release resp tag_name matches asset name url
@@ -387,8 +400,8 @@ _get_prebuilts() {
 		local tag="Patches" fprefix="patches"
 		local grab_cl=true
 		
-		local dir=${src%/*}
-		dir=${TEMP_DIR}/${dir,,}-rv
+		local dir
+		dir=$(rv_release_dir "$host" "$src")
 		[ -d "$dir" ] || mkdir "$dir"
 		
 		local rv_rel release resp tag_name matches asset name url

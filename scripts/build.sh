@@ -206,7 +206,7 @@ for table_name in $(toml_get_table_names); do
 		psrc="${p_srcs[$i]}"
 		phost="${p_hosts[$i]:-${p_hosts[0]}}"
 		# Find the downloaded bundle for this source to get actual version
-		pdir=${psrc%/*}; pdir=${TEMP_DIR}/${pdir,,}-rv
+		pdir=$(rv_release_dir "$phost" "$psrc")
 		case "$PATCHER_FLOW" in
 			xposed-module) pfile=$(find "$pdir" -name '*.apk' 2>/dev/null | sort | tail -1) ;;
 			instafel-workflow) pfile=$(find "$pdir" -name 'ifl-patcher*.jar' 2>/dev/null | sort | tail -1) ;;
