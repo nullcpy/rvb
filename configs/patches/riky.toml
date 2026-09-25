@@ -1,0 +1,10 @@
+patches-source = "riky-dev/morphe-patches"
+brand = "riky"
+
+[CapCut-riky]
+enabled = true
+pkg-name = "com.lemon.lvoverseas"
+app-name = "CapCut"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut"
+uptodown-dlurl = "https://viamaker.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"

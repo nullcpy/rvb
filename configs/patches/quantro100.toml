@@ -1,0 +1,14 @@
+patches-source = "Quantro100/Morphe-patches"
+brand = "Quantro100"
+
+[AliExpress-Quantro100]
+enabled = true
+pkg-name = "com.alibaba.aliexpresshd"
+app-name = "AliExpress"
+included-patches = "'Enable image saving' 'Disable splash screen'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app"
+uptodown-dlurl = "https://aliexpress.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd"
+apkcombo-dlurl = "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+
+

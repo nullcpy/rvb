@@ -1,0 +1,13 @@
+patches-source = "quantavil/edge-morphe-patches"
+brand = "quantavil"
+
+[MicrosoftEdge-quantavil]
+enabled = true
+pkg-name = "com.microsoft.emmx"
+app-name = "Microsoft Edge"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge"
+uptodown-dlurl = "https://microsoft-edge.en.uptodown.com/android"
+
+
+
+
