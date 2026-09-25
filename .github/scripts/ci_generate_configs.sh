@@ -44,7 +44,7 @@ if [ ! -f config.stable.json ] || [ ! -f config.beta.json ]; then
 fi
 
 if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "${TRIGGER_BLOCKED:-0}" = "1" ]; then
-  jq --slurpfile active active.stable.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.stable.json '
+  jq --argjson tags "$TAGS_NEW" --slurpfile active active.stable.json --slurpfile activeApps active_apps.json --slurpfile activePatchApps active_patch_apps.stable.json '
     { "patches-version": "stable" } as $force |
     ($force + . + $force) |
     with_entries(
@@ -52,7 +52,19 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
         .key as $k |
         .value as $app |
         (($app["patches-source"] // "morpheapp/morphe-patches") | ascii_downcase | gsub("[\"'\''\\n\\r\\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
-        if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or ($activeApps[0] | index($k)) then . else (.value.enabled = false) end
+        # Hard-pin each app to the concrete stable tag from the watcher snapshot, so
+        # the build resolves an exact release instead of re-resolving "stable" live
+        # per app (which let a mid-run release switch cause dev.14/dev.15 drift).
+        # One tag per source, index-aligned with the patches-source list; skip the
+        # pin (inherit the floating channel) if any source has no recorded tag.
+        ($srcs | map(. as $src | ($tags | to_entries | map(select(((.value.repo // .key) | ascii_downcase) == $src)) | (.[0].value.stable // "")))) as $ptags |
+        ((($ptags | length) > 0) and ($ptags | all(. != ""))) as $pin_ok |
+        (if ($ptags | length) == 1 then $ptags[0] else ("'\''" + ($ptags | join("'\'' '\''")) + "'\''") end) as $pin |
+        if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or ($activeApps[0] | index($k)) then
+          (if $pin_ok then (.value["patches-version"] = $pin) else . end)
+        else
+          (.value.enabled = false)
+        end
       else . end
     )
   ' config.stable.json > configs/stable_build.json
@@ -78,7 +90,17 @@ if [ "${TRIGGER_BETA:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "
           ) | any
         ) as $has_valid_beta |
 
-        if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or (($activeApps[0] | index($k)) and $has_valid_beta) then . else (.value.enabled = false) end
+        # Hard-pin each app to the concrete beta tag from the watcher snapshot (one
+        # per source, index-aligned with patches-source); skip the pin and inherit
+        # the floating "beta" channel if any source has no recorded beta tag.
+        ($srcs | map(. as $src | ($tags | to_entries | map(select(((.value.repo // .key) | ascii_downcase) == $src)) | (.[0].value.beta // "")))) as $ptags |
+        ((($ptags | length) > 0) and ($ptags | all(. != ""))) as $pin_ok |
+        (if ($ptags | length) == 1 then $ptags[0] else ("'\''" + ($ptags | join("'\'' '\''")) + "'\''") end) as $pin |
+        if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or (($activeApps[0] | index($k)) and $has_valid_beta) then
+          (if $pin_ok then (.value["patches-version"] = $pin) else . end)
+        else
+          (.value.enabled = false)
+        end
       else . end
     )
   ' config.beta.json > configs/beta_build.json
