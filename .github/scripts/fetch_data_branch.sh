@@ -18,5 +18,8 @@ if ! git fetch -q origin data; then
 fi
 
 git checkout -q FETCH_HEAD -- .github/configs/
+# Worktree-only: drop the staging checkout added (files are gitignored on main;
+# leaving them in the index dirties `git status` for every later step).
+git reset -q -- $(git ls-tree --name-only -r FETCH_HEAD .github/configs/)
 echo "Materialized state from data@$(git rev-parse --short FETCH_HEAD):"
 git ls-tree --name-only -r FETCH_HEAD .github/configs/ | sed 's/^/  /'
