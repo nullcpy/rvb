@@ -1,0 +1,77 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260118",
+  "channel": "stable",
+  "publishedAt": "2026-09-24T21:10:14Z"
+ },
+ "files": {
+  "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.2.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.2.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Fix] Restore screens on re-signed builds ",
+    "[General] Open links in external browser ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Download any story ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260118",
+   "publishedAt": "2026-09-24T21:10:14Z"
+  },
+  "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.2.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.2.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Fix] Restore screens on re-signed builds ",
+    "[General] Open links in external browser ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Download any story ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260118",
+   "publishedAt": "2026-09-24T21:10:14Z"
+  }
+ }
+}

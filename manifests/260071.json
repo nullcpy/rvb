@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260071",
+  "channel": "stable",
+  "publishedAt": "2026-09-18T04:12:57Z"
+ },
+ "files": {
+  "adobe-lightroom-hoodles-v11.5.22-arm64-v8a.apk": {
+   "name": "adobe-lightroom-hoodles",
+   "version": "11.5.22",
+   "appKey": "adobelightroom",
+   "appName": "Adobe Lightroom",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.adobe.lrmobile",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Unlock premium features "
+   ],
+   "originBuild": "260071",
+   "publishedAt": "2026-09-18T04:12:57Z"
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260030",
+  "channel": "stable",
+  "publishedAt": "2026-09-11T06:48:54Z"
+ },
+ "files": {
+  "adobe-scan-rushiranpise-v26.08.01-arm64-v8a.apk": {
+   "name": "adobe-scan-rushiranpise",
+   "version": "26.08.01",
+   "appKey": "adobescan",
+   "appName": "Adobe Scan",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.adobe.scan.android",
+   "patchSources": [
+    "rushiranpise/patches-1.21.5.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260030",
+   "publishedAt": "2026-09-11T06:48:54Z"
+  }
+ }
+}

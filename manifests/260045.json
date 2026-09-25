@@ -1,0 +1,59 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260045",
+  "channel": "stable",
+  "publishedAt": "2026-09-13T16:29:47Z"
+ },
+ "files": {
+  "foldersync-hooman-v4.12.0-arm64-v8a.apk": {
+   "name": "foldersync-hooman",
+   "version": "4.12.0",
+   "appKey": "foldersync",
+   "appName": "FolderSync",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "dk.tacit.android.foldersync.lite",
+   "patchSources": [
+    "arandomhooman/patches-1.51.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.51.1"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260045",
+   "publishedAt": "2026-09-13T16:29:47Z"
+  },
+  "foldersync-hooman-v4.12.0-arm-v7a.apk": {
+   "name": "foldersync-hooman",
+   "version": "4.12.0",
+   "appKey": "foldersync",
+   "appName": "FolderSync",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "dk.tacit.android.foldersync.lite",
+   "patchSources": [
+    "arandomhooman/patches-1.51.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.51.1"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260045",
+   "publishedAt": "2026-09-13T16:29:47Z"
+  }
+ }
+}

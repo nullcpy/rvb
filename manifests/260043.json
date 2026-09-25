@@ -1,0 +1,61 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260043",
+  "channel": "stable",
+  "publishedAt": "2026-09-13T11:39:29Z"
+ },
+ "files": {
+  "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.20.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.20.2"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260043",
+   "publishedAt": "2026-09-13T11:39:29Z"
+  },
+  "showly-hxreborn-v3.70.0-arm-v7a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.20.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.20.2"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260043",
+   "publishedAt": "2026-09-13T11:39:29Z"
+  }
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260025",
+  "channel": "stable",
+  "publishedAt": "2026-09-10T15:54:23Z"
+ },
+ "files": {
+  "calorie-counter-kondratjev-v11.8.0.5-arm64-v8a.apk": {
+   "name": "calorie-counter-kondratjev",
+   "version": "11.8.0.5",
+   "appKey": "caloriecounter",
+   "appName": "Calorie Counter",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kondratjev",
+   "brandName": "kondratjev",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.fatsecret.android",
+   "patchSources": [
+    "kondratjev/patches-1.23.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kondratjev/morphe-patches/releases/tag/v1.23.0"
+   ],
+   "appliedPatches": [
+    "Disable community tab ",
+    "Disable force update dialog ",
+    "Unlock Premium "
+   ],
+   "originBuild": "260025",
+   "publishedAt": "2026-09-10T15:54:23Z"
+  },
+  "calorie-counter-kondratjev-v11.8.0.5-arm-v7a.apk": {
+   "name": "calorie-counter-kondratjev",
+   "version": "11.8.0.5",
+   "appKey": "caloriecounter",
+   "appName": "Calorie Counter",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kondratjev",
+   "brandName": "kondratjev",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.fatsecret.android",
+   "patchSources": [
+    "kondratjev/patches-1.23.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kondratjev/morphe-patches/releases/tag/v1.23.0"
+   ],
+   "appliedPatches": [
+    "Disable community tab ",
+    "Disable force update dialog ",
+    "Unlock Premium "
+   ],
+   "originBuild": "260025",
+   "publishedAt": "2026-09-10T15:54:23Z"
+  },
+  "soundcloud-kondratjev-v2026.08.26-release-arm64-v8a.apk": {
+   "name": "soundcloud-kondratjev",
+   "version": "2026.08.26-release",
+   "appKey": "soundcloud",
+   "appName": "SoundCloud",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kondratjev",
+   "brandName": "kondratjev",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.soundcloud.android",
+   "patchSources": [
+    "kondratjev/patches-1.23.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kondratjev/morphe-patches/releases/tag/v1.23.0"
+   ],
+   "appliedPatches": [
+    "Disable analytics ",
+    "Disable consent popup ",
+    "Enable SoundCloud Go "
+   ],
+   "originBuild": "260025",
+   "publishedAt": "2026-09-10T15:54:23Z"
+  },
+  "soundcloud-kondratjev-v2026.08.26-release-arm-v7a.apk": {
+   "name": "soundcloud-kondratjev",
+   "version": "2026.08.26-release",
+   "appKey": "soundcloud",
+   "appName": "SoundCloud",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kondratjev",
+   "brandName": "kondratjev",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.soundcloud.android",
+   "patchSources": [
+    "kondratjev/patches-1.23.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kondratjev/morphe-patches/releases/tag/v1.23.0"
+   ],
+   "appliedPatches": [
+    "Disable analytics ",
+    "Disable consent popup ",
+    "Enable SoundCloud Go "
+   ],
+   "originBuild": "260025",
+   "publishedAt": "2026-09-10T15:54:23Z"
+  }
+ }
+}

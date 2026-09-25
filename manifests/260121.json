@@ -1,0 +1,207 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260121",
+  "channel": "stable",
+  "publishedAt": "2026-09-25T10:01:17Z"
+ },
+ "files": {
+  "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.2.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.2.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Fix] Restore screens on re-signed builds ",
+    "[General] AMOLED black theme ",
+    "[General] Open links in external browser ",
+    "[Reels] Download any reel ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Download any story ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  },
+  "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.2.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.2.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Fix] Restore screens on re-signed builds ",
+    "[General] AMOLED black theme ",
+    "[General] Open links in external browser ",
+    "[Reels] Download any reel ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Download any story ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  },
+  "photomath-devanced-v8.48.0-arm-v7a.apk": {
+   "name": "photomath-devanced",
+   "version": "8.48.0",
+   "appKey": "photomath",
+   "appName": "Photomath",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microblink.photomath",
+   "patchSources": [
+    "RookieEnough/patches-1.4.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+   ],
+   "appliedPatches": [
+    "Hide update popup ",
+    "Spoof device ID ",
+    "Unlock plus "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  },
+  "photomath-devanced-v8.48.0-arm64-v8a.apk": {
+   "name": "photomath-devanced",
+   "version": "8.48.0",
+   "appKey": "photomath",
+   "appName": "Photomath",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microblink.photomath",
+   "patchSources": [
+    "RookieEnough/patches-1.4.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+   ],
+   "appliedPatches": [
+    "Hide update popup ",
+    "Spoof device ID ",
+    "Unlock plus "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  },
+  "telegram-rushiranpise-google-play-v12.10.1-arm64-v8a.apk": {
+   "name": "telegram-rushiranpise-google-play",
+   "version": "12.10.1",
+   "appKey": "telegram",
+   "appName": "Telegram",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Google Play",
+   "subVariant": null,
+   "packageName": "org.telegram.messenger",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Anti-delete messages ",
+    "Anti-disappearing media ",
+    "Anti-screenshot notification ",
+    "Bypass channel restrictions ",
+    "Bypass content restrictions ",
+    "Bypass integrity check ",
+    "Disable auto-update ",
+    "Disable channel switching ",
+    "Download speed boost ",
+    "Hide typing indicator ",
+    "Remove ads ",
+    "Unlock Premium ",
+    "Use normal paste ",
+    "Voice to music "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  },
+  "telegram-rushiranpise-google-play-v12.10.1-arm-v7a.apk": {
+   "name": "telegram-rushiranpise-google-play",
+   "version": "12.10.1",
+   "appKey": "telegram",
+   "appName": "Telegram",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Google Play",
+   "subVariant": null,
+   "packageName": "org.telegram.messenger",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Anti-delete messages ",
+    "Anti-disappearing media ",
+    "Anti-screenshot notification ",
+    "Bypass channel restrictions ",
+    "Bypass content restrictions ",
+    "Bypass integrity check ",
+    "Disable auto-update ",
+    "Disable channel switching ",
+    "Download speed boost ",
+    "Hide typing indicator ",
+    "Remove ads ",
+    "Unlock Premium ",
+    "Use normal paste ",
+    "Voice to music "
+   ],
+   "originBuild": "260121",
+   "publishedAt": "2026-09-25T10:01:17Z"
+  }
+ }
+}

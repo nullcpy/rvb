@@ -1,0 +1,131 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260087",
+  "channel": "stable",
+  "publishedAt": "2026-09-19T20:23:33Z"
+ },
+ "files": {
+  "chess-com-prathxm-v4.10.0-arm-v7a.apk": {
+   "name": "chess-com-prathxm",
+   "version": "4.10.0",
+   "appKey": "chesscom",
+   "appName": "Chess.com",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "prathxm",
+   "brandName": "Prathxm",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.chess",
+   "patchSources": [
+    "PrathxmOp/patches-1.13.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/PrathxmOp/Prathxm-Patches/releases/tag/v1.13.1"
+   ],
+   "appliedPatches": [
+    "Ad-Free ",
+    "Custom Titles ",
+    "Global Crash Handler ",
+    "Lichess Puzzles ",
+    "Local Stockfish Analysis ",
+    "Unlock All Bots "
+   ],
+   "originBuild": "260087",
+   "publishedAt": "2026-09-19T20:23:33Z"
+  },
+  "chess-com-prathxm-v4.10.0-arm64-v8a.apk": {
+   "name": "chess-com-prathxm",
+   "version": "4.10.0",
+   "appKey": "chesscom",
+   "appName": "Chess.com",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "prathxm",
+   "brandName": "Prathxm",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.chess",
+   "patchSources": [
+    "PrathxmOp/patches-1.13.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/PrathxmOp/Prathxm-Patches/releases/tag/v1.13.1"
+   ],
+   "appliedPatches": [
+    "Ad-Free ",
+    "Custom Titles ",
+    "Global Crash Handler ",
+    "Lichess Puzzles ",
+    "Local Stockfish Analysis ",
+    "Unlock All Bots "
+   ],
+   "originBuild": "260087",
+   "publishedAt": "2026-09-19T20:23:33Z"
+  },
+  "reddit-adobo-v2026.38.0-arm-v7a.apk": {
+   "name": "reddit-adobo",
+   "version": "2026.38.0",
+   "appKey": "reddit",
+   "appName": "Reddit",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "adobo",
+   "brandName": "adobo",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.reddit.frontpage",
+   "patchSources": [
+    "jkennethcarino/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jkennethcarino/adobo/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Colorize comment indent lines ",
+    "Disable home screen redirect ",
+    "Disable screenshot banner ",
+    "Hide community menu badge ",
+    "Hide post view counts ",
+    "Open external links directly ",
+    "Remove ads and telemetry ",
+    "Sanitize share links "
+   ],
+   "originBuild": "260087",
+   "publishedAt": "2026-09-19T20:23:33Z"
+  },
+  "reddit-adobo-v2026.38.0-arm64-v8a.apk": {
+   "name": "reddit-adobo",
+   "version": "2026.38.0",
+   "appKey": "reddit",
+   "appName": "Reddit",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "adobo",
+   "brandName": "adobo",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.reddit.frontpage",
+   "patchSources": [
+    "jkennethcarino/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jkennethcarino/adobo/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Colorize comment indent lines ",
+    "Disable home screen redirect ",
+    "Disable screenshot banner ",
+    "Hide community menu badge ",
+    "Hide post view counts ",
+    "Open external links directly ",
+    "Remove ads and telemetry ",
+    "Sanitize share links "
+   ],
+   "originBuild": "260087",
+   "publishedAt": "2026-09-19T20:23:33Z"
+  }
+ }
+}

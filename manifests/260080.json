@@ -1,0 +1,63 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260080",
+  "channel": "stable",
+  "publishedAt": "2026-09-19T04:03:15Z"
+ },
+ "files": {
+  "swift-backup-byehi98-v5.1.0-arm64-v8a.apk": {
+   "name": "swift-backup-byehi98",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "byehi98",
+   "brandName": "byehi98",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "byehi98/patches-1.28.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.28.0"
+   ],
+   "appliedPatches": [
+    "Swift Backup Premium Unlock ",
+    "Swift Backup Tamper Protection ",
+    "Swift Backup Web Login "
+   ],
+   "originBuild": "260080",
+   "publishedAt": "2026-09-19T04:03:15Z"
+  },
+  "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
+   "name": "swift-backup-byehi98",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "byehi98",
+   "brandName": "byehi98",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "byehi98/patches-1.28.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.28.0"
+   ],
+   "appliedPatches": [
+    "Swift Backup Premium Unlock ",
+    "Swift Backup Tamper Protection ",
+    "Swift Backup Web Login "
+   ],
+   "originBuild": "260080",
+   "publishedAt": "2026-09-19T04:03:15Z"
+  }
+ }
+}

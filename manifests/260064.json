@@ -1,0 +1,307 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260064",
+  "channel": "stable",
+  "publishedAt": "2026-09-16T16:31:45Z"
+ },
+ "files": {
+  "instagram-instafel-v446.0.0.49.77-arm-v7a.apk": {
+   "name": "instagram-instafel",
+   "version": "446.0.0.49.77",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.instagram.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger"
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "instagram-instafel-v446.0.0.49.77-arm64-v8a.apk": {
+   "name": "instagram-instafel",
+   "version": "446.0.0.49.77",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.instagram.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger"
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "instagram-instafel-clone-v446.0.0.49.77-arm-v7a.apk": {
+   "name": "instagram-instafel-clone",
+   "version": "446.0.0.49.77",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "com.instafel.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger",
+    "Clone General",
+    "Replace Instagram Strings"
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "instagram-instafel-clone-v446.0.0.49.77-arm64-v8a.apk": {
+   "name": "instagram-instafel-clone",
+   "version": "446.0.0.49.77",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "com.instafel.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger",
+    "Clone General",
+    "Replace Instagram Strings"
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.31.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.31.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.31.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.31.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.31.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.31.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.31.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.31.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260064",
+   "publishedAt": "2026-09-16T16:31:45Z"
+  }
+ }
+}

@@ -1,0 +1,428 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260103",
+  "channel": "stable",
+  "publishedAt": "2026-09-22T11:31:10Z"
+ },
+ "files": {
+  "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+   "name": "gboard-jasonwu1994-clone",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "dev.jason.com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Toolbar Editing Buttons ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input ",
+    "Package Rename "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "gboard-jasonwu1994-module-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.zip": {
+   "name": "gboard-jasonwu1994",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Toolbar Editing Buttons ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "gboard-jasonwu1994-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+   "name": "gboard-jasonwu1994",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Toolbar Editing Buttons ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm-v7a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.9.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.9.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm64-v8a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.9.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.9.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.9.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.9.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.9.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.9.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "instagram-instafel-clone-v448.0.0.52.84-arm64-v8a.apk": {
+   "name": "instagram-instafel-clone",
+   "version": "448.0.0.52.84",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "com.instafel.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger",
+    "Clone General",
+    "Replace Instagram Strings"
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "instagram-instafel-clone-v448.0.0.52.84-arm-v7a.apk": {
+   "name": "instagram-instafel-clone",
+   "version": "448.0.0.52.84",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "com.instafel.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger",
+    "Clone General",
+    "Replace Instagram Strings"
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  },
+  "instagram-instafel-v448.0.0.52.84-arm64-v8a.apk": {
+   "name": "instagram-instafel",
+   "version": "448.0.0.52.84",
+   "appKey": "instagram",
+   "appName": "Instagram",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "instafel",
+   "brandName": "Instafel",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.instagram.android",
+   "patchSources": [
+    "instafel/ifl-patcher-v4.7.0-release.jar"
+   ],
+   "changelogs": [
+    "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+   ],
+   "appliedPatches": [
+    "Unlock Developer Options",
+    "Remove Snooze Warning",
+    "Remove Ads",
+    "AMOLED Theme",
+    "Get Generation Info",
+    "Copy Instafel Sources",
+    "Add Initialize Instafel",
+    "Change Home Long Click",
+    "Add App Trigger"
+   ],
+   "originBuild": "260103",
+   "publishedAt": "2026-09-22T11:31:10Z"
+  }
+ }
+}

@@ -1,0 +1,1255 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260070",
+  "channel": "stable",
+  "publishedAt": "2026-09-18T03:53:29Z"
+ },
+ "files": {
+  "soundcloud-hoodles-v2026.08.26-release-arm64-v8a.apk": {
+   "name": "soundcloud-hoodles",
+   "version": "2026.08.26-release",
+   "appKey": "soundcloud",
+   "appName": "SoundCloud",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.soundcloud.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Disable telemetry ",
+    "Enable SoundCloud Go "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "soundcloud-hoodles-v2026.08.26-release-arm-v7a.apk": {
+   "name": "soundcloud-hoodles",
+   "version": "2026.08.26-release",
+   "appKey": "soundcloud",
+   "appName": "SoundCloud",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.soundcloud.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Disable telemetry ",
+    "Enable SoundCloud Go "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "duolingo-hoodles-v6.95.4-arm-v7a.apk": {
+   "name": "duolingo-hoodles",
+   "version": "6.95.4",
+   "appKey": "duolingo",
+   "appName": "Duolingo",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.duolingo",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "duolingo-hoodles-v6.95.4-arm64-v8a.apk": {
+   "name": "duolingo-hoodles",
+   "version": "6.95.4",
+   "appKey": "duolingo",
+   "appName": "Duolingo",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.duolingo",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "wps-office-hoodles-v18.24-arm64-v8a.apk": {
+   "name": "wps-office-hoodles",
+   "version": "18.24",
+   "appKey": "wpsoffice",
+   "appName": "WPS Office",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cn.wps.moffice_eng",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable anti-tamper ",
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "wps-office-hoodles-v18.24-arm-v7a.apk": {
+   "name": "wps-office-hoodles",
+   "version": "18.24",
+   "appKey": "wpsoffice",
+   "appName": "WPS Office",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cn.wps.moffice_eng",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable anti-tamper ",
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "wallcraft-hoodles-v3.61.01-arm-v7a.apk": {
+   "name": "wallcraft-hoodles",
+   "version": "3.61.01",
+   "appKey": "wallcraft",
+   "appName": "Wallcraft",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.wallpaperscraft.wallpaper",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "wallcraft-hoodles-v3.61.01-arm64-v8a.apk": {
+   "name": "wallcraft-hoodles",
+   "version": "3.61.01",
+   "appKey": "wallcraft",
+   "appName": "Wallcraft",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.wallpaperscraft.wallpaper",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "solid-explorer-hoodles-v3.5.20-arm64-v8a.apk": {
+   "name": "solid-explorer-hoodles",
+   "version": "3.5.20",
+   "appKey": "solidexplorer",
+   "appName": "Solid Explorer",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "pl.solidexplorer2",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "solid-explorer-hoodles-v3.5.20-arm-v7a.apk": {
+   "name": "solid-explorer-hoodles",
+   "version": "3.5.20",
+   "appKey": "solidexplorer",
+   "appName": "Solid Explorer",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "pl.solidexplorer2",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "icon-packer-hoodles-v1.21.0-release-arm-v7a.apk": {
+   "name": "icon-packer-hoodles",
+   "version": "1.21.0-release",
+   "appKey": "iconpacker",
+   "appName": "Icon Packer",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cn.ommiao.iconpacker",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Unlock premium features "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "icon-packer-hoodles-v1.21.0-release-arm64-v8a.apk": {
+   "name": "icon-packer-hoodles",
+   "version": "1.21.0-release",
+   "appKey": "iconpacker",
+   "appName": "Icon Packer",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cn.ommiao.iconpacker",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Unlock premium features "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "podcast-addict-hoodles-v2026.10.1-arm-v7a.apk": {
+   "name": "podcast-addict-hoodles",
+   "version": "2026.10.1",
+   "appKey": "podcastaddict",
+   "appName": "Podcast Addict",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.bambuna.podcastaddict",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "podcast-addict-hoodles-v2026.10.1-arm64-v8a.apk": {
+   "name": "podcast-addict-hoodles",
+   "version": "2026.10.1",
+   "appKey": "podcastaddict",
+   "appName": "Podcast Addict",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.bambuna.podcastaddict",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "smart-launcher-6-hoodles-module-v6.6build016-arm64-v8a.zip": {
+   "name": "smart-launcher-6-hoodles",
+   "version": "6.6build016",
+   "appKey": "smartlauncher6",
+   "appName": "Smart Launcher 6",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ginlemon.flowerfree",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "smart-launcher-6-hoodles-v6.6build016-arm64-v8a.apk": {
+   "name": "smart-launcher-6-hoodles",
+   "version": "6.6build016",
+   "appKey": "smartlauncher6",
+   "appName": "Smart Launcher 6",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ginlemon.flowerfree",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "smart-launcher-6-hoodles-module-v6.6build016-arm-v7a.zip": {
+   "name": "smart-launcher-6-hoodles",
+   "version": "6.6build016",
+   "appKey": "smartlauncher6",
+   "appName": "Smart Launcher 6",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ginlemon.flowerfree",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "smart-launcher-6-hoodles-v6.6build016-arm-v7a.apk": {
+   "name": "smart-launcher-6-hoodles",
+   "version": "6.6build016",
+   "appKey": "smartlauncher6",
+   "appName": "Smart Launcher 6",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ginlemon.flowerfree",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "merriam-webster-dictionary-hoodles-v5.6.2-arm64-v8a.apk": {
+   "name": "merriam-webster-dictionary-hoodles",
+   "version": "5.6.2",
+   "appKey": "merriamwebsterdictionary",
+   "appName": "Merriam Webster Dictionary",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.merriamwebster",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "merriam-webster-dictionary-hoodles-v5.6.2-arm-v7a.apk": {
+   "name": "merriam-webster-dictionary-hoodles",
+   "version": "5.6.2",
+   "appKey": "merriamwebsterdictionary",
+   "appName": "Merriam Webster Dictionary",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.merriamwebster",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "pandora-hoodles-v2609.1-arm-v7a.apk": {
+   "name": "pandora-hoodles",
+   "version": "2609.1",
+   "appKey": "pandora",
+   "appName": "Pandora",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.pandora.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable ads ",
+    "Unlimited skips "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "pandora-hoodles-v2609.1-arm64-v8a.apk": {
+   "name": "pandora-hoodles",
+   "version": "2609.1",
+   "appKey": "pandora",
+   "appName": "Pandora",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.pandora.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable ads ",
+    "Unlimited skips "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "nova-launcher-hoodles-module-v88600-arm64-v8a.zip": {
+   "name": "nova-launcher-hoodles",
+   "version": "88600",
+   "appKey": "novalauncher",
+   "appName": "Nova Launcher",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.teslacoilsw.launcher",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Prime "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "nova-launcher-hoodles-module-v88600-arm-v7a.zip": {
+   "name": "nova-launcher-hoodles",
+   "version": "88600",
+   "appKey": "novalauncher",
+   "appName": "Nova Launcher",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.teslacoilsw.launcher",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Prime "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "nova-launcher-hoodles-v88600-arm-v7a.apk": {
+   "name": "nova-launcher-hoodles",
+   "version": "88600",
+   "appKey": "novalauncher",
+   "appName": "Nova Launcher",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.teslacoilsw.launcher",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Prime "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "nova-launcher-hoodles-v88600-arm64-v8a.apk": {
+   "name": "nova-launcher-hoodles",
+   "version": "88600",
+   "appKey": "novalauncher",
+   "appName": "Nova Launcher",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.teslacoilsw.launcher",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Prime "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "ventusky-hoodles-v53.1-arm-v7a.apk": {
+   "name": "ventusky-hoodles",
+   "version": "53.1",
+   "appKey": "ventusky",
+   "appName": "Ventusky",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cz.ackee.ventusky",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "ventusky-hoodles-v53.1-arm64-v8a.apk": {
+   "name": "ventusky-hoodles",
+   "version": "53.1",
+   "appKey": "ventusky",
+   "appName": "Ventusky",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "cz.ackee.ventusky",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "camscanner-hoodles-v7.20.0.2606230000-arm64-v8a.apk": {
+   "name": "camscanner-hoodles",
+   "version": "7.20.0.2606230000",
+   "appKey": "camscanner",
+   "appName": "CamScanner",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.intsig.camscanner",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "camscanner-hoodles-v7.20.0.2606230000-arm-v7a.apk": {
+   "name": "camscanner-hoodles",
+   "version": "7.20.0.2606230000",
+   "appKey": "camscanner",
+   "appName": "CamScanner",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.intsig.camscanner",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "github-hoodles-v1.271.1-arm64-v8a.apk": {
+   "name": "github-hoodles",
+   "version": "1.271.1",
+   "appKey": "github",
+   "appName": "GitHub",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.github.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "github-hoodles-v1.271.1-arm-v7a.apk": {
+   "name": "github-hoodles",
+   "version": "1.271.1",
+   "appKey": "github",
+   "appName": "GitHub",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.github.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "proton-vpn-hoodles-v5.19.43.0-arm64-v8a.apk": {
+   "name": "proton-vpn-hoodles",
+   "version": "5.19.43.0",
+   "appKey": "protonvpn",
+   "appName": "Proton VPN",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ch.protonvpn.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Remove delay ",
+    "Unlock LAN connections ",
+    "Unlock custom DNS ",
+    "Unlock split tunneling "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "proton-vpn-hoodles-v5.19.43.0-arm-v7a.apk": {
+   "name": "proton-vpn-hoodles",
+   "version": "5.19.43.0",
+   "appKey": "protonvpn",
+   "appName": "Proton VPN",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "ch.protonvpn.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Remove delay ",
+    "Unlock LAN connections ",
+    "Unlock custom DNS ",
+    "Unlock split tunneling "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "hellochinese-hoodles-v7.11.0-arm64-v8a.apk": {
+   "name": "hellochinese-hoodles",
+   "version": "7.11.0",
+   "appKey": "hellochinese",
+   "appName": "HelloChinese",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.hellochinese",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "myfitnesspal-hoodles-v26.31.0-arm64-v8a.apk": {
+   "name": "myfitnesspal-hoodles",
+   "version": "26.31.0",
+   "appKey": "myfitnesspal",
+   "appName": "MyFitnessPal",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.myfitnesspal.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium+ "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "myfitnesspal-hoodles-v26.31.0-arm-v7a.apk": {
+   "name": "myfitnesspal-hoodles",
+   "version": "26.31.0",
+   "appKey": "myfitnesspal",
+   "appName": "MyFitnessPal",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.myfitnesspal.android",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium+ "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "prime-video-hoodles-v3.0.452.1047-arm64-v8a.apk": {
+   "name": "prime-video-hoodles",
+   "version": "3.0.452.1047",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.amazon.avod.thirdpartyclient",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "prime-video-hoodles-v3.0.452.1047-arm-v7a.apk": {
+   "name": "prime-video-hoodles",
+   "version": "3.0.452.1047",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.amazon.avod.thirdpartyclient",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "goodreads-hoodles-v2.75.0Build3-arm64-v8a.apk": {
+   "name": "goodreads-hoodles",
+   "version": "2.75.0Build3",
+   "appKey": "goodreads",
+   "appName": "Goodreads",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.goodreads",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable ads "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "goodreads-hoodles-v2.75.0Build3-arm-v7a.apk": {
+   "name": "goodreads-hoodles",
+   "version": "2.75.0Build3",
+   "appKey": "goodreads",
+   "appName": "Goodreads",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.goodreads",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Disable ads "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.40.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.40.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Clean New Tab Page ",
+    "Clean Share URL ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Sensor Privacy Guard ",
+    "Skip First Run "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.40.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.40.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Clean New Tab Page ",
+    "Clean Share URL ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Sensor Privacy Guard ",
+    "Skip First Run "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.40.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.40.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Copy comments without username ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Fix Google login ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Show seekbar ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.40.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.40.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Copy comments without username ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Fix Google login ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Show seekbar ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.41.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.41.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Copy comments without username ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Fix Google login ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Show seekbar ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.41.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.41.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Copy comments without username ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Fix Google login ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Show seekbar ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260070",
+   "publishedAt": "2026-09-18T03:53:29Z"
+  }
+ }
+}

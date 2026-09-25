@@ -1,0 +1,211 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260098",
+  "channel": "stable",
+  "publishedAt": "2026-09-21T20:18:10Z"
+ },
+ "files": {
+  "appsales-entree3k-v12.3-arm64-v8a.apk": {
+   "name": "appsales-entree3k",
+   "version": "12.3",
+   "appKey": "appsales",
+   "appName": "AppSales",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "net.tsapps.appsales",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  },
+  "appsales-entree3k-v12.3-arm-v7a.apk": {
+   "name": "appsales-entree3k",
+   "version": "12.3",
+   "appKey": "appsales",
+   "appName": "AppSales",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "net.tsapps.appsales",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  },
+  "pinterest-browzomje-v14.34.0-arm-v7a.apk": {
+   "name": "pinterest-browzomje",
+   "version": "14.34.0",
+   "appKey": "pinterest",
+   "appName": "Pinterest",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "browzomje",
+   "brandName": "browzomje",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.pinterest",
+   "patchSources": [
+    "browzomje/patches-1.10.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/browzomje/browzomje-patches/releases/tag/v1.10.0"
+   ],
+   "appliedPatches": [
+    "Copy direct link ",
+    "Disable AppsFlyer tracking ",
+    "Disable Google Engage ",
+    "Disable Google Engage worker ",
+    "Disable ads ",
+    "Disable email confirmation dialog ",
+    "Disable third-party trackers ",
+    "Download board ",
+    "Download pin from long press ",
+    "Download video ",
+    "Hide Create nav button ",
+    "Hide Notifications nav button ",
+    "Hide Search nav button ",
+    "Hide ad views ",
+    "Hide comments ",
+    "Hide greeting header buttons ",
+    "Hide screenshot share menu ",
+    "Hide search history ",
+    "Morphe runtime names ",
+    "Morphe settings entry ",
+    "Morphe settings screen (label) ",
+    "Morphe settings screen (manifest) ",
+    "Neutralize advertising ID ",
+    "Open links in the default browser ",
+    "Sanitize copied links ",
+    "Sanitize shared links ",
+    "Set pin as wallpaper ",
+    "Use the system share sheet "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  },
+  "pinterest-browzomje-v14.34.0-arm64-v8a.apk": {
+   "name": "pinterest-browzomje",
+   "version": "14.34.0",
+   "appKey": "pinterest",
+   "appName": "Pinterest",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "browzomje",
+   "brandName": "browzomje",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.pinterest",
+   "patchSources": [
+    "browzomje/patches-1.10.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/browzomje/browzomje-patches/releases/tag/v1.10.0"
+   ],
+   "appliedPatches": [
+    "Copy direct link ",
+    "Disable AppsFlyer tracking ",
+    "Disable Google Engage ",
+    "Disable Google Engage worker ",
+    "Disable ads ",
+    "Disable email confirmation dialog ",
+    "Disable third-party trackers ",
+    "Download board ",
+    "Download pin from long press ",
+    "Download video ",
+    "Hide Create nav button ",
+    "Hide Notifications nav button ",
+    "Hide Search nav button ",
+    "Hide ad views ",
+    "Hide comments ",
+    "Hide greeting header buttons ",
+    "Hide screenshot share menu ",
+    "Hide search history ",
+    "Morphe runtime names ",
+    "Morphe settings entry ",
+    "Morphe settings screen (label) ",
+    "Morphe settings screen (manifest) ",
+    "Neutralize advertising ID ",
+    "Open links in the default browser ",
+    "Sanitize copied links ",
+    "Sanitize shared links ",
+    "Set pin as wallpaper ",
+    "Use the system share sheet "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  },
+  "showly-hxreborn-v3.70.0-arm-v7a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.27.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.27.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  },
+  "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.27.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.27.1"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260098",
+   "publishedAt": "2026-09-21T20:18:10Z"
+  }
+ }
+}

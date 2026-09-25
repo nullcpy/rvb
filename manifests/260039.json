@@ -1,0 +1,105 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260039",
+  "channel": "stable",
+  "publishedAt": "2026-09-12T20:18:05Z"
+ },
+ "files": {
+  "discord-revenge-v344.13-Stable-arm64-v8a.apk": {
+   "name": "discord-revenge",
+   "version": "344.13-Stable",
+   "appKey": "discord",
+   "appName": "Discord",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "revenge",
+   "brandName": "revenge",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.discord",
+   "patchSources": [
+    "revenge-mod/app-release.apk"
+   ],
+   "changelogs": [
+    "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260039",
+   "publishedAt": "2026-09-12T20:18:05Z"
+  },
+  "discord-revenge-v344.13-Stable-arm-v7a.apk": {
+   "name": "discord-revenge",
+   "version": "344.13-Stable",
+   "appKey": "discord",
+   "appName": "Discord",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "revenge",
+   "brandName": "revenge",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.discord",
+   "patchSources": [
+    "revenge-mod/app-release.apk"
+   ],
+   "changelogs": [
+    "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
+   ],
+   "appliedPatches": [],
+   "originBuild": "260039",
+   "publishedAt": "2026-09-12T20:18:05Z"
+  },
+  "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.20.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.20.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260039",
+   "publishedAt": "2026-09-12T20:18:05Z"
+  },
+  "showly-hxreborn-v3.70.0-arm-v7a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.20.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.20.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260039",
+   "publishedAt": "2026-09-12T20:18:05Z"
+  }
+ }
+}

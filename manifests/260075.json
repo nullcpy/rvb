@@ -1,0 +1,59 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260075",
+  "channel": "stable",
+  "publishedAt": "2026-09-18T15:48:54Z"
+ },
+ "files": {
+  "fairemail-heval99-v1.2337-arm-v7a.apk": {
+   "name": "fairemail-heval99",
+   "version": "1.2337",
+   "appKey": "fairemail",
+   "appName": "FairEmail",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "eu.faircode.email",
+   "patchSources": [
+    "heval99/patches-1.3.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.3.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260075",
+   "publishedAt": "2026-09-18T15:48:54Z"
+  },
+  "fairemail-heval99-v1.2337-arm64-v8a.apk": {
+   "name": "fairemail-heval99",
+   "version": "1.2337",
+   "appKey": "fairemail",
+   "appName": "FairEmail",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "eu.faircode.email",
+   "patchSources": [
+    "heval99/patches-1.3.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.3.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260075",
+   "publishedAt": "2026-09-18T15:48:54Z"
+  }
+ }
+}

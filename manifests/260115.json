@@ -1,0 +1,111 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260115",
+  "channel": "stable",
+  "publishedAt": "2026-09-24T11:18:56Z"
+ },
+ "files": {
+  "brave-browser-dh6k-beta-v1.97.47-arm64-v8a.apk": {
+   "name": "brave-browser-dh6k-beta",
+   "version": "1.97.47",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "dh6k",
+   "brandName": "dh6k",
+   "variant": "Beta",
+   "subVariant": null,
+   "packageName": "com.brave.browser_beta",
+   "patchSources": [
+    "dh6k/patches-1.7.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/dh6k/morphe-patches/releases/tag/v1.7.0"
+   ],
+   "appliedPatches": [
+    "Brave Origin ",
+    "Brave Startup Performance Optimization "
+   ],
+   "originBuild": "260115",
+   "publishedAt": "2026-09-24T11:18:56Z"
+  },
+  "brave-browser-dh6k-beta-v1.97.47-arm-v7a.apk": {
+   "name": "brave-browser-dh6k-beta",
+   "version": "1.97.47",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "dh6k",
+   "brandName": "dh6k",
+   "variant": "Beta",
+   "subVariant": null,
+   "packageName": "com.brave.browser_beta",
+   "patchSources": [
+    "dh6k/patches-1.7.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/dh6k/morphe-patches/releases/tag/v1.7.0"
+   ],
+   "appliedPatches": [
+    "Brave Origin ",
+    "Brave Startup Performance Optimization "
+   ],
+   "originBuild": "260115",
+   "publishedAt": "2026-09-24T11:18:56Z"
+  },
+  "brave-browser-dh6k-nightly-v1.98.27-arm-v7a.apk": {
+   "name": "brave-browser-dh6k-nightly",
+   "version": "1.98.27",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "dh6k",
+   "brandName": "dh6k",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.brave.browser_nightly",
+   "patchSources": [
+    "dh6k/patches-1.7.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/dh6k/morphe-patches/releases/tag/v1.7.0"
+   ],
+   "appliedPatches": [
+    "Brave Origin ",
+    "Brave Startup Performance Optimization "
+   ],
+   "originBuild": "260115",
+   "publishedAt": "2026-09-24T11:18:56Z"
+  },
+  "brave-browser-dh6k-nightly-v1.98.27-arm64-v8a.apk": {
+   "name": "brave-browser-dh6k-nightly",
+   "version": "1.98.27",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "dh6k",
+   "brandName": "dh6k",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.brave.browser_nightly",
+   "patchSources": [
+    "dh6k/patches-1.7.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/dh6k/morphe-patches/releases/tag/v1.7.0"
+   ],
+   "appliedPatches": [
+    "Brave Origin ",
+    "Brave Startup Performance Optimization "
+   ],
+   "originBuild": "260115",
+   "publishedAt": "2026-09-24T11:18:56Z"
+  }
+ }
+}

@@ -1,0 +1,979 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260088",
+  "channel": "stable",
+  "publishedAt": "2026-09-20T03:21:06Z"
+ },
+ "files": {
+  "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
+   "name": "disney-ajstrick81-android-tv",
+   "version": "26.16.0+rc2-2026.09.08",
+   "appKey": "disney",
+   "appName": "Disney+",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.disney.disneyplus",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Disney+ Android TV "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "foldersync-hooman-v4.12.0-arm-v7a.apk": {
+   "name": "foldersync-hooman",
+   "version": "4.12.0",
+   "appKey": "foldersync",
+   "appName": "FolderSync",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "dk.tacit.android.foldersync.lite",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "foldersync-hooman-v4.12.0-arm64-v8a.apk": {
+   "name": "foldersync-hooman",
+   "version": "4.12.0",
+   "appKey": "foldersync",
+   "appName": "FolderSync",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "dk.tacit.android.foldersync.lite",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm-v7a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features ",
+    "Change package name "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm64-v8a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features ",
+    "Change package name "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features ",
+    "Change package name "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.5.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.5.0"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "Fix memory style font loading ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features ",
+    "Change package name "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-recorder-devanced-v4.2.20260709.976121876-arm64-v8a.apk": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "google-recorder-devanced-module-v4.2.20260709.976121876-arm64-v8a.zip": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+   "name": "hbo-max-ajstrick81-android-tv",
+   "version": "7.9.0.61",
+   "appKey": "hbomax",
+   "appName": "HBO Max",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.wbd.hbomax",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "HBO Max - Disable Ads ",
+    "HBO Max - Prefer Ad-Free Stream "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "microsoft-lens-devanced-v16.0.19628.20008-arm-v7a.apk": {
+   "name": "microsoft-lens-devanced",
+   "version": "16.0.19628.20008",
+   "appKey": "microsoftlens",
+   "appName": "Microsoft Lens",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microsoft.office.officelens",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide OneDrive migration "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a.apk": {
+   "name": "microsoft-lens-devanced",
+   "version": "16.0.19628.20008",
+   "appKey": "microsoftlens",
+   "appName": "Microsoft Lens",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microsoft.office.officelens",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide OneDrive migration "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "microsoft-swiftkey-hooman-v9.13.13.5-arm-v7a.apk": {
+   "name": "microsoft-swiftkey-hooman",
+   "version": "9.13.13.5",
+   "appKey": "microsoftswiftkey",
+   "appName": "Microsoft Swiftkey",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.touchtype.swiftkey",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Disable cloud sign-in prompt ",
+    "Disable telemetry "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "microsoft-swiftkey-hooman-v9.13.13.5-arm64-v8a.apk": {
+   "name": "microsoft-swiftkey-hooman",
+   "version": "9.13.13.5",
+   "appKey": "microsoftswiftkey",
+   "appName": "Microsoft Swiftkey",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.touchtype.swiftkey",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Disable cloud sign-in prompt ",
+    "Disable telemetry "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+   "name": "netflix-ajstrick81-android-tv",
+   "version": "13.0.1build25028",
+   "appKey": "netflix",
+   "appName": "Netflix",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.netflix.ninja.clone",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Disable Netflix CertCheck ",
+    "Remove Netflix ads (bundle engine) ",
+    "Remove Netflix ads (loader) ",
+    "Clone Netflix "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "peacock-ajstrick81-android-tv-v7.8.100-all.apk": {
+   "name": "peacock-ajstrick81-android-tv",
+   "version": "7.8.100",
+   "appKey": "peacock",
+   "appName": "Peacock",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.peacocktv.peacockandroid",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Disable auto-updates ",
+    "Skip ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+   "name": "plutotv-ajstrick81-android-tv",
+   "version": "5.66.0-leanback",
+   "appKey": "plutotv",
+   "appName": "PlutoTV",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "tv.pluto.android",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Disable auto-updates ",
+    "Mask live ad breaks (black screen + mute) ",
+    "Override certificate pinning ",
+    "Skip ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv-clone",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": "Clone",
+   "packageName": "com.amazon.amazonvideo.livingroom.mod",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads ",
+    "Clone Prime Video "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.amazon.amazonvideo.livingroom",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "strava-devanced-v477.14-arm64-v8a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "strava-devanced-v477.14-arm-v7a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "tubi-ajstrick81-android-tv-v10.28.5000-all.apk": {
+   "name": "tubi-ajstrick81-android-tv",
+   "version": "10.28.5000",
+   "appKey": "tubi",
+   "appName": "Tubi",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.tubitv",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Skip ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "tumblr-hooman-v45.8.0.110-arm64-v8a.apk": {
+   "name": "tumblr-hooman",
+   "version": "45.8.0.110",
+   "appKey": "tumblr",
+   "appName": "Tumblr",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.tumblr",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Disable Tumblr TV ",
+    "Disable ad-free banner ",
+    "Disable blog notification reminder ",
+    "Disable gift message popup ",
+    "Disable in-app update ",
+    "Disable screenshot sharing ",
+    "Enable premium UI ",
+    "Remove ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "tumblr-hooman-v45.8.0.110-arm-v7a.apk": {
+   "name": "tumblr-hooman",
+   "version": "45.8.0.110",
+   "appKey": "tumblr",
+   "appName": "Tumblr",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.tumblr",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "Disable Tumblr TV ",
+    "Disable ad-free banner ",
+    "Disable blog notification reminder ",
+    "Disable gift message popup ",
+    "Disable in-app update ",
+    "Disable screenshot sharing ",
+    "Enable premium UI ",
+    "Remove ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+   "name": "twitch-ajstrick81-android-tv",
+   "version": "13.0.0.2",
+   "appKey": "twitch",
+   "appName": "Twitch",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "tv.twitch.android.app",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Block TV ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "twitch-hooman-v30.7.2-arm64-v8a.apk": {
+   "name": "twitch-hooman",
+   "version": "30.7.2",
+   "appKey": "twitch",
+   "appName": "Twitch",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "tv.twitch.android.app",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "7TV and BTTV emotes ",
+    "Auto claim channel points ",
+    "Block live ads ",
+    "Fix login ",
+    "Fix notifications ",
+    "Hide display ads ",
+    "Show deleted messages "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "twitch-hooman-v30.7.2-arm-v7a.apk": {
+   "name": "twitch-hooman",
+   "version": "30.7.2",
+   "appKey": "twitch",
+   "appName": "Twitch",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hooman",
+   "brandName": "hooman",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "tv.twitch.android.app",
+   "patchSources": [
+    "arandomhooman/patches-1.52.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/arandomhooman/hoomans-morphe-patches/releases/tag/v1.52.0"
+   ],
+   "appliedPatches": [
+    "7TV and BTTV emotes ",
+    "Auto claim channel points ",
+    "Block live ads ",
+    "Fix login ",
+    "Fix notifications ",
+    "Hide display ads ",
+    "Show deleted messages "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "vix-ajstrick81-android-tv-v4.47.2_tv-all.apk": {
+   "name": "vix-ajstrick81-android-tv",
+   "version": "4.47.2_tv",
+   "appKey": "vix",
+   "appName": "ViX",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.univision.prendetv",
+   "patchSources": [
+    "ajstrick81/patches-1.37.4.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.4"
+   ],
+   "appliedPatches": [
+    "Override certificate pinning ",
+    "Skip ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "viber-devanced-v26.1.2.0-arm-v7a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "viber-devanced-v26.1.2.0-arm64-v8a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "pixiv-devanced-v6.196.0-arm-v7a.apk": {
+   "name": "pixiv-devanced",
+   "version": "6.196.0",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide ads ",
+    "Remove popular search time limit "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  },
+  "pixiv-devanced-v6.196.0-arm64-v8a.apk": {
+   "name": "pixiv-devanced",
+   "version": "6.196.0",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3"
+   ],
+   "appliedPatches": [
+    "Hide ads ",
+    "Remove popular search time limit "
+   ],
+   "originBuild": "260088",
+   "publishedAt": "2026-09-20T03:21:06Z"
+  }
+ }
+}

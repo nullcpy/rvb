@@ -1,0 +1,319 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260079",
+  "channel": "stable",
+  "publishedAt": "2026-09-19T02:59:25Z"
+ },
+ "files": {
+  "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
+   "name": "disney-ajstrick81-android-tv",
+   "version": "26.16.0+rc2-2026.09.08",
+   "appKey": "disney",
+   "appName": "Disney+",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.disney.disneyplus",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Disney+ Android TV "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "fairemail-heval99-v1.2337-arm-v7a.apk": {
+   "name": "fairemail-heval99",
+   "version": "1.2337",
+   "appKey": "fairemail",
+   "appName": "FairEmail",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "eu.faircode.email",
+   "patchSources": [
+    "heval99/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "fairemail-heval99-v1.2337-arm64-v8a.apk": {
+   "name": "fairemail-heval99",
+   "version": "1.2337",
+   "appKey": "fairemail",
+   "appName": "FairEmail",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "eu.faircode.email",
+   "patchSources": [
+    "heval99/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+   "name": "hbo-max-ajstrick81-android-tv",
+   "version": "7.9.0.61",
+   "appKey": "hbomax",
+   "appName": "HBO Max",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.wbd.hbomax",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "HBO Max - Disable Ads ",
+    "HBO Max - Prefer Ad-Free Stream "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+   "name": "netflix-ajstrick81-android-tv",
+   "version": "13.0.1build25028",
+   "appKey": "netflix",
+   "appName": "Netflix",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.netflix.ninja.clone",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Disable Netflix CertCheck ",
+    "Remove Netflix ads (bundle engine) ",
+    "Remove Netflix ads (loader) ",
+    "Clone Netflix "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "peacock-ajstrick81-android-tv-v7.8.100-all.apk": {
+   "name": "peacock-ajstrick81-android-tv",
+   "version": "7.8.100",
+   "appKey": "peacock",
+   "appName": "Peacock",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.peacocktv.peacockandroid",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Disable auto-updates ",
+    "Skip ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+   "name": "plutotv-ajstrick81-android-tv",
+   "version": "5.66.0-leanback",
+   "appKey": "plutotv",
+   "appName": "PlutoTV",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "tv.pluto.android",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Disable auto-updates ",
+    "Mask live ad breaks (black screen + mute) ",
+    "Override certificate pinning ",
+    "Skip ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv-clone",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": "Clone",
+   "packageName": "com.amazon.amazonvideo.livingroom.mod",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads ",
+    "Clone Prime Video "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.amazon.amazonvideo.livingroom",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "tubi-ajstrick81-android-tv-v10.28.5000-all.apk": {
+   "name": "tubi-ajstrick81-android-tv",
+   "version": "10.28.5000",
+   "appKey": "tubi",
+   "appName": "Tubi",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.tubitv",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Skip ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+   "name": "twitch-ajstrick81-android-tv",
+   "version": "13.0.0.2",
+   "appKey": "twitch",
+   "appName": "Twitch",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "tv.twitch.android.app",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Block TV ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  },
+  "vix-ajstrick81-android-tv-v4.47.2_tv-all.apk": {
+   "name": "vix-ajstrick81-android-tv",
+   "version": "4.47.2_tv",
+   "appKey": "vix",
+   "appName": "ViX",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.univision.prendetv",
+   "patchSources": [
+    "ajstrick81/patches-1.37.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.3"
+   ],
+   "appliedPatches": [
+    "Override certificate pinning ",
+    "Skip ads "
+   ],
+   "originBuild": "260079",
+   "publishedAt": "2026-09-19T02:59:25Z"
+  }
+ }
+}

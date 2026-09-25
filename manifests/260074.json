@@ -1,0 +1,305 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260074",
+  "channel": "beta",
+  "publishedAt": "2026-09-18T15:43:47Z"
+ },
+ "files": {
+  "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+   "name": "gboard-jasonwu1994-clone",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": "Clone",
+   "subVariant": null,
+   "packageName": "dev.jason.com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0-dev.2"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input ",
+    "Package Rename "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "gboard-jasonwu1994-module-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.zip": {
+   "name": "gboard-jasonwu1994",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0-dev.2"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "gboard-jasonwu1994-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+   "name": "gboard-jasonwu1994",
+   "version": "18.0.3.954559732-release-arm64-v8a",
+   "appKey": "gboard",
+   "appName": "Gboard",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "jasonwu1994",
+   "brandName": "jasonwu1994",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.inputmethod.latin",
+   "patchSources": [
+    "jasonwu1994/patches-3.11.0-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.11.0-dev.2"
+   ],
+   "appliedPatches": [
+    "AI Writing Tools ",
+    "Access Points menu style ",
+    "Add Gboard Signature Bypass ",
+    "Advanced Voice Typing ",
+    "Backup & Restore ",
+    "Change emoji size ",
+    "Clipboard Custom Character Limit ",
+    "Clipboard Enhancements ",
+    "Close Proactive Suggestions ",
+    "Custom Symbols ",
+    "Custom Theme ",
+    "Developer options ",
+    "Emojis, stickers & GIFs Tab Order ",
+    "Enable Inline Autofill Suggestions ",
+    "Enable OCR / Scan Text ",
+    "Enable accessibility layout ",
+    "Enable cursor trackpad mode ",
+    "Enable split keyboard ",
+    "English QWERTY Up-Flick Uppercase ",
+    "FTP Server ",
+    "Floating Web Search ",
+    "G Logo on Spacebar ",
+    "Grammar Checker ",
+    "Hyperspeed Typing Animation ",
+    "Incognito Mode Toggle ",
+    "Inline Suggestions ",
+    "Key Shape Selection ",
+    "Latin Globe Key Ignore Interval ",
+    "Long-Press Editing Shortcuts ",
+    "Quick Insert ",
+    "Rounded Keyboard Panel ",
+    "Settings Homepage Override ",
+    "Simple Calculator ",
+    "Swipeable Custom Top Row ",
+    "Top Toolbar Item Count ",
+    "Use Bluetooth Microphone ",
+    "Web Clipboard ",
+    "Zhuyin Bottom Row Key Sizes ",
+    "Zhuyin Quick Traditional/Simplified Toggle ",
+    "Zhuyin Slide Input "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3-dev.2"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3-dev.2"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3-dev.2"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  },
+  "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.3-dev.2.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.3-dev.2"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260074",
+   "publishedAt": "2026-09-18T15:43:47Z"
+  }
+ }
+}

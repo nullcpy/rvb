@@ -1,0 +1,285 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260028",
+  "channel": "stable",
+  "publishedAt": "2026-09-11T03:35:54Z"
+ },
+ "files": {
+  "brave-browser-kveld9-v1.94.121-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.94.121",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.19.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.19.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Disable Pull To Refresh ",
+    "Skip First Run "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "brave-browser-kveld9-v1.94.121-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.94.121",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.19.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.19.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Disable Pull To Refresh ",
+    "Skip First Run "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "google-recorder-devanced-v4.2.20260709.976121876-arm64-v8a.apk": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "google-recorder-devanced-module-v4.2.20260709.976121876-arm64-v8a.zip": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "pixiv-devanced-v6.141.1-arm64-v8a.apk": {
+   "name": "pixiv-devanced",
+   "version": "6.141.1",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Hide ads ",
+    "Remove popular search time limit "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "pixiv-devanced-v6.141.1-arm-v7a.apk": {
+   "name": "pixiv-devanced",
+   "version": "6.141.1",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Hide ads ",
+    "Remove popular search time limit "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "strava-devanced-v477.14-arm64-v8a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "strava-devanced-v477.14-arm-v7a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "viber-devanced-v26.1.2.0-arm64-v8a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  },
+  "viber-devanced-v26.1.2.0-arm-v7a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.3.3.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.3.3"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260028",
+   "publishedAt": "2026-09-11T03:35:54Z"
+  }
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260111",
+  "channel": "stable",
+  "publishedAt": "2026-09-23T16:22:01Z"
+ },
+ "files": {
+  "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.29.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.29.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260111",
+   "publishedAt": "2026-09-23T16:22:01Z"
+  },
+  "showly-hxreborn-v3.70.0-arm-v7a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.29.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.29.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260111",
+   "publishedAt": "2026-09-23T16:22:01Z"
+  },
+  "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
+   "name": "swift-backup-byehi98",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "byehi98",
+   "brandName": "byehi98",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "byehi98/patches-1.30.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.30.0"
+   ],
+   "appliedPatches": [
+    "Swift Backup Premium Unlock ",
+    "Swift Backup Tamper Protection ",
+    "Swift Backup Web Login "
+   ],
+   "originBuild": "260111",
+   "publishedAt": "2026-09-23T16:22:01Z"
+  },
+  "swift-backup-byehi98-v5.1.0-arm64-v8a.apk": {
+   "name": "swift-backup-byehi98",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "byehi98",
+   "brandName": "byehi98",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "byehi98/patches-1.30.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.30.0"
+   ],
+   "appliedPatches": [
+    "Swift Backup Premium Unlock ",
+    "Swift Backup Tamper Protection ",
+    "Swift Backup Web Login "
+   ],
+   "originBuild": "260111",
+   "publishedAt": "2026-09-23T16:22:01Z"
+  }
+ }
+}

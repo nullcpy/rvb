@@ -1,0 +1,133 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260068",
+  "channel": "stable",
+  "publishedAt": "2026-09-18T02:37:27Z"
+ },
+ "files": {
+  "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.0.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.0.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260068",
+   "publishedAt": "2026-09-18T02:37:27Z"
+  },
+  "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+   "name": "facebook-andrewliang25",
+   "version": "577.0.0.50.72",
+   "appKey": "facebook",
+   "appName": "Facebook",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "andrewliang25",
+   "brandName": "andrewliang25",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.facebook.katana",
+   "patchSources": [
+    "andrewliang25/patches-3.0.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.0.0"
+   ],
+   "appliedPatches": [
+    "[Ad] Block ad telemetry ",
+    "[Ad] Block background ad prefetch ",
+    "[Ad] Disable Audience Network ",
+    "[Feed] Hide sponsored posts ",
+    "[Feed] Hide suggested and promoted posts ",
+    "[Reels] Hide sponsored reels ",
+    "[Stories] Hide sponsored stories "
+   ],
+   "originBuild": "260068",
+   "publishedAt": "2026-09-18T02:37:27Z"
+  },
+  "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
+   "name": "pixiv-fripe070",
+   "version": "6.196.0",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "fripe070",
+   "brandName": "Fripe070",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "Fripe070/patches-1.2.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Fripe070/PixivPatches/releases/tag/v1.2.1"
+   ],
+   "appliedPatches": [
+    "Pixiv AI Work Flagger ",
+    "Pixiv Adblocker ",
+    "Pixiv Analytics Blocker ",
+    "Pixiv Downloader ",
+    "Pixiv Export Activities ",
+    "Pixiv OLED Dark Theme ",
+    "Pixiv Persistent Navigation ",
+    "Pixiv Premium Features "
+   ],
+   "originBuild": "260068",
+   "publishedAt": "2026-09-18T02:37:27Z"
+  },
+  "pixiv-fripe070-v6.196.0-arm64-v8a.apk": {
+   "name": "pixiv-fripe070",
+   "version": "6.196.0",
+   "appKey": "pixiv",
+   "appName": "pixiv",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "fripe070",
+   "brandName": "Fripe070",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "jp.pxv.android",
+   "patchSources": [
+    "Fripe070/patches-1.2.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Fripe070/PixivPatches/releases/tag/v1.2.1"
+   ],
+   "appliedPatches": [
+    "Pixiv AI Work Flagger ",
+    "Pixiv Adblocker ",
+    "Pixiv Analytics Blocker ",
+    "Pixiv Downloader ",
+    "Pixiv Export Activities ",
+    "Pixiv OLED Dark Theme ",
+    "Pixiv Persistent Navigation ",
+    "Pixiv Premium Features "
+   ],
+   "originBuild": "260068",
+   "publishedAt": "2026-09-18T02:37:27Z"
+  }
+ }
+}

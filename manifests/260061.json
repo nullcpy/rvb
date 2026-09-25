@@ -1,0 +1,1113 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260061",
+  "channel": "stable",
+  "publishedAt": "2026-09-16T03:54:34Z"
+ },
+ "files": {
+  "accuweather-rushiranpise-v21.1.15-3-rc-arm64-v8a.apk": {
+   "name": "accuweather-rushiranpise",
+   "version": "21.1.15-3-rc",
+   "appKey": "accuweather",
+   "appName": "AccuWeather",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.accuweather.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium+ "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "accuweather-rushiranpise-v21.1.15-3-rc-arm-v7a.apk": {
+   "name": "accuweather-rushiranpise",
+   "version": "21.1.15-3-rc",
+   "appKey": "accuweather",
+   "appName": "AccuWeather",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.accuweather.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium+ "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "adguard-rushiranpise-nightly-v4.14.68-arm64-v8a.apk": {
+   "name": "adguard-rushiranpise-nightly",
+   "version": "4.14.68",
+   "appKey": "adguard",
+   "appName": "AdGuard",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.adguard.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Lifetime Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "adguard-rushiranpise-nightly-module-v4.14.68-arm64-v8a.zip": {
+   "name": "adguard-rushiranpise-nightly",
+   "version": "4.14.68",
+   "appKey": "adguard",
+   "appName": "AdGuard",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.adguard.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Lifetime Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "adguard-rushiranpise-nightly-v4.14.68-arm-v7a.apk": {
+   "name": "adguard-rushiranpise-nightly",
+   "version": "4.14.68",
+   "appKey": "adguard",
+   "appName": "AdGuard",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.adguard.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Lifetime Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "adguard-rushiranpise-nightly-module-v4.14.68-arm-v7a.zip": {
+   "name": "adguard-rushiranpise-nightly",
+   "version": "4.14.68",
+   "appKey": "adguard",
+   "appName": "AdGuard",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": "Nightly",
+   "subVariant": null,
+   "packageName": "com.adguard.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Lifetime Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "adobe-scan-rushiranpise-v26.08.01-arm64-v8a.apk": {
+   "name": "adobe-scan-rushiranpise",
+   "version": "26.08.01",
+   "appKey": "adobescan",
+   "appName": "Adobe Scan",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.adobe.scan.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "amazon-india-rushiranpise-v32.17.0.300-arm64-v8a.apk": {
+   "name": "amazon-india-rushiranpise",
+   "version": "32.17.0.300",
+   "appKey": "amazonindia",
+   "appName": "Amazon India",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "in.amazon.mShop.android.shopping",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Dark mode ",
+    "Disable search suggestions tracking ",
+    "Disable video autoplay ",
+    "Fix Amazon manifest conflicts ",
+    "Hide Rufus tab ",
+    "Open links in browser ",
+    "Price history charts ",
+    "Remove ads "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "amazon-india-rushiranpise-v32.17.0.300-arm-v7a.apk": {
+   "name": "amazon-india-rushiranpise",
+   "version": "32.17.0.300",
+   "appKey": "amazonindia",
+   "appName": "Amazon India",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "in.amazon.mShop.android.shopping",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Dark mode ",
+    "Disable search suggestions tracking ",
+    "Disable video autoplay ",
+    "Fix Amazon manifest conflicts ",
+    "Hide Rufus tab ",
+    "Open links in browser ",
+    "Price history charts ",
+    "Remove ads "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "beta-maniac-rushiranpise-v0.11.0-arm64-v8a.apk": {
+   "name": "beta-maniac-rushiranpise",
+   "version": "0.11.0",
+   "appKey": "betamaniac",
+   "appName": "Beta Maniac",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "it.mirko.beta",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "beta-maniac-rushiranpise-v0.11.0-arm-v7a.apk": {
+   "name": "beta-maniac-rushiranpise",
+   "version": "0.11.0",
+   "appKey": "betamaniac",
+   "appName": "Beta Maniac",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "it.mirko.beta",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "bluetooth-keyboard-mouse-rushiranpise-v6.23.1-arm64-v8a.apk": {
+   "name": "bluetooth-keyboard-mouse-rushiranpise",
+   "version": "6.23.1",
+   "appKey": "bluetoothkeyboardmouse",
+   "appName": "Bluetooth Keyboard & Mouse",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "io.appground.blek",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "bluetooth-keyboard-mouse-rushiranpise-v6.23.1-arm-v7a.apk": {
+   "name": "bluetooth-keyboard-mouse-rushiranpise",
+   "version": "6.23.1",
+   "appKey": "bluetoothkeyboardmouse",
+   "appName": "Bluetooth Keyboard & Mouse",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "io.appground.blek",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "calm-rushiranpise-v6.102-arm64-v8a.apk": {
+   "name": "calm-rushiranpise",
+   "version": "6.102",
+   "appKey": "calm",
+   "appName": "Calm",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.calm.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "calm-rushiranpise-v6.102-arm-v7a.apk": {
+   "name": "calm-rushiranpise",
+   "version": "6.102",
+   "appKey": "calm",
+   "appName": "Calm",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.calm.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "cloudflare-warp-rushiranpise-v6.38.9-arm64-v8a.apk": {
+   "name": "cloudflare-warp-rushiranpise",
+   "version": "6.38.9",
+   "appKey": "cloudflarewarp",
+   "appName": "Cloudflare WARP",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.cloudflare.onedotonedotonedotone",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Disable Analytics / Telemetry ",
+    "Spoof WARP+ Unlimited UI "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "cloudflare-warp-rushiranpise-v6.38.9-arm-v7a.apk": {
+   "name": "cloudflare-warp-rushiranpise",
+   "version": "6.38.9",
+   "appKey": "cloudflarewarp",
+   "appName": "Cloudflare WARP",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.cloudflare.onedotonedotonedotone",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Disable Analytics / Telemetry ",
+    "Spoof WARP+ Unlimited UI "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "google-photos-rushiranpise-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-rushiranpise",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Change package name ",
+    "Enable DCIM folders backup control ",
+    "Fix DCIM folder classification ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "google-photos-rushiranpise-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-rushiranpise",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Change package name ",
+    "Enable DCIM folders backup control ",
+    "Fix DCIM folder classification ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "hola-vpn-rushiranpise-vAARCH64_1.248.400-arm64-v8a.apk": {
+   "name": "hola-vpn-rushiranpise",
+   "version": "AARCH64_1.248.400",
+   "appKey": "holavpn",
+   "appName": "Hola VPN",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.hola.play",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "macrodroid-rushiranpise-v5.66.9-arm64-v8a.apk": {
+   "name": "macrodroid-rushiranpise",
+   "version": "5.66.9",
+   "appKey": "macrodroid",
+   "appName": "MacroDroid",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.arlosoft.macrodroid",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Pro "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "macrodroid-rushiranpise-v5.66.9-arm-v7a.apk": {
+   "name": "macrodroid-rushiranpise",
+   "version": "5.66.9",
+   "appKey": "macrodroid",
+   "appName": "MacroDroid",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.arlosoft.macrodroid",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Pro "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "messenger-rushiranpise-v576.0.0.47.92-arm64-v8a.apk": {
+   "name": "messenger-rushiranpise",
+   "version": "576.0.0.47.92",
+   "appKey": "messenger",
+   "appName": "Messenger",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.messenger.orca",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Allow screen capture ",
+    "Block screenshot detection ",
+    "Change package name ",
+    "Disable media transcoding ",
+    "Disable typing indicator ",
+    "Enable chat heads ",
+    "Hide inbox ads ",
+    "Open links externally "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "messenger-rushiranpise-v576.0.0.47.92-arm-v7a.apk": {
+   "name": "messenger-rushiranpise",
+   "version": "576.0.0.47.92",
+   "appKey": "messenger",
+   "appName": "Messenger",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.messenger.orca",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Allow screen capture ",
+    "Block screenshot detection ",
+    "Change package name ",
+    "Disable media transcoding ",
+    "Disable typing indicator ",
+    "Enable chat heads ",
+    "Hide inbox ads ",
+    "Open links externally "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "ninja-vpn-rushiranpise-v1.4.7-arm64-v8a.apk": {
+   "name": "ninja-vpn-rushiranpise",
+   "version": "1.4.7",
+   "appKey": "ninjavpn",
+   "appName": "Ninja VPN",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.ninjavpn.android",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "picsart-rushiranpise-v30.7.8-all.apk": {
+   "name": "picsart-rushiranpise",
+   "version": "30.7.8",
+   "appKey": "picsart",
+   "appName": "PicsArt",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.picsart.studio",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Remove Ads ",
+    "Remove Watermark ",
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "pocket-casts-rushiranpise-v8.16-arm64-v8a.apk": {
+   "name": "pocket-casts-rushiranpise",
+   "version": "8.16",
+   "appKey": "pocketcasts",
+   "appName": "Pocket Casts",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "au.com.shiftyjelly.pocketcasts",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Patron "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "pocket-casts-rushiranpise-v8.16-arm-v7a.apk": {
+   "name": "pocket-casts-rushiranpise",
+   "version": "8.16",
+   "appKey": "pocketcasts",
+   "appName": "Pocket Casts",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "au.com.shiftyjelly.pocketcasts",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Patron "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "rar-rushiranpise-v7.23.build134-arm64-v8a.apk": {
+   "name": "rar-rushiranpise",
+   "version": "7.23.build134",
+   "appKey": "rar",
+   "appName": "RAR",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.rarlab.rar",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Pro "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "rar-rushiranpise-v7.23.build134-arm-v7a.apk": {
+   "name": "rar-rushiranpise",
+   "version": "7.23.build134",
+   "appKey": "rar",
+   "appName": "RAR",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.rarlab.rar",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Pro "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "send-files-to-tv-rushiranpise-v1.4.22-arm64-v8a.apk": {
+   "name": "send-files-to-tv-rushiranpise",
+   "version": "1.4.22",
+   "appKey": "sendfilestotv",
+   "appName": "Send Files to TV",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.yablio.sendfilestotv",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Remove Ads "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "send-files-to-tv-rushiranpise-v1.4.22-arm-v7a.apk": {
+   "name": "send-files-to-tv-rushiranpise",
+   "version": "1.4.22",
+   "appKey": "sendfilestotv",
+   "appName": "Send Files to TV",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.yablio.sendfilestotv",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Remove Ads "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "the-weather-channel-rushiranpise-v16.21.1-arm64-v8a.apk": {
+   "name": "the-weather-channel-rushiranpise",
+   "version": "16.21.1",
+   "appKey": "theweatherchannel",
+   "appName": "The Weather Channel",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.weather.Weather",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "the-weather-channel-rushiranpise-v16.21.1-arm-v7a.apk": {
+   "name": "the-weather-channel-rushiranpise",
+   "version": "16.21.1",
+   "appKey": "theweatherchannel",
+   "appName": "The Weather Channel",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.weather.Weather",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Playback Speed Persistence ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Playback Speed Persistence ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Playback Speed Persistence ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.30.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.30.1"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Playback Speed Persistence ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  },
+  "windscribe-vpn-rushiranpise-v4.2.2328-all.apk": {
+   "name": "windscribe-vpn-rushiranpise",
+   "version": "4.2.2328",
+   "appKey": "windscribevpn",
+   "appName": "Windscribe VPN",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.windscribe.vpn",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Premium "
+   ],
+   "originBuild": "260061",
+   "publishedAt": "2026-09-16T03:54:34Z"
+  }
+ }
+}

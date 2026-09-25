@@ -1,0 +1,131 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260081",
+  "channel": "stable",
+  "publishedAt": "2026-09-19T05:31:47Z"
+ },
+ "files": {
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm-v7a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.4.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.4.1"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Bake memory style flags ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260081",
+   "publishedAt": "2026-09-19T05:31:47Z"
+  },
+  "google-photos-akashsriram-module-v7.92.0.977185651-arm64-v8a.zip": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.4.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.4.1"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Bake memory style flags ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260081",
+   "publishedAt": "2026-09-19T05:31:47Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm-v7a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.4.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.4.1"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Bake memory style flags ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260081",
+   "publishedAt": "2026-09-19T05:31:47Z"
+  },
+  "google-photos-akashsriram-v7.92.0.977185651-arm64-v8a.apk": {
+   "name": "google-photos-akashsriram",
+   "version": "7.92.0.977185651",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "akashsriram",
+   "brandName": "AkashSriram",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "Akash-Sriram/patches-1.4.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.4.1"
+   ],
+   "appliedPatches": [
+    "Account avatar ",
+    "Bake memory style flags ",
+    "Enable DCIM folders backup control ",
+    "Enable Phenotype flag manager ",
+    "GmsCore support ",
+    "Model Readiness Gates ",
+    "Spoof features "
+   ],
+   "originBuild": "260081",
+   "publishedAt": "2026-09-19T05:31:47Z"
+  }
+ }
+}

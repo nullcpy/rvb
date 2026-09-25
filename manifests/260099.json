@@ -1,0 +1,107 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260099",
+  "channel": "stable",
+  "publishedAt": "2026-09-21T20:54:41Z"
+ },
+ "files": {
+  "niagara-launcher-entree3k-module-v1.16.7-arm64-v8a.zip": {
+   "name": "niagara-launcher-entree3k",
+   "version": "1.16.7",
+   "appKey": "niagaralauncher",
+   "appName": "Niagara Launcher",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "bitpit.launcher",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Niagara Pro "
+   ],
+   "originBuild": "260099",
+   "publishedAt": "2026-09-21T20:54:41Z"
+  },
+  "niagara-launcher-entree3k-module-v1.16.7-arm-v7a.zip": {
+   "name": "niagara-launcher-entree3k",
+   "version": "1.16.7",
+   "appKey": "niagaralauncher",
+   "appName": "Niagara Launcher",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "bitpit.launcher",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Niagara Pro "
+   ],
+   "originBuild": "260099",
+   "publishedAt": "2026-09-21T20:54:41Z"
+  },
+  "niagara-launcher-entree3k-v1.16.7-arm64-v8a.apk": {
+   "name": "niagara-launcher-entree3k",
+   "version": "1.16.7",
+   "appKey": "niagaralauncher",
+   "appName": "Niagara Launcher",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "bitpit.launcher",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Niagara Pro "
+   ],
+   "originBuild": "260099",
+   "publishedAt": "2026-09-21T20:54:41Z"
+  },
+  "niagara-launcher-entree3k-v1.16.7-arm-v7a.apk": {
+   "name": "niagara-launcher-entree3k",
+   "version": "1.16.7",
+   "appKey": "niagaralauncher",
+   "appName": "Niagara Launcher",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "entree3k",
+   "brandName": "Entree3k",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "bitpit.launcher",
+   "patchSources": [
+    "Entree3k/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/Entree3k/Morning-Entree-Patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Enable Niagara Pro "
+   ],
+   "originBuild": "260099",
+   "publishedAt": "2026-09-21T20:54:41Z"
+  }
+ }
+}

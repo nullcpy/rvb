@@ -1,0 +1,163 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260052",
+  "channel": "stable",
+  "publishedAt": "2026-09-14T16:09:26Z"
+ },
+ "files": {
+  "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.24.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.24.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260052",
+   "publishedAt": "2026-09-14T16:09:26Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.24.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.24.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260052",
+   "publishedAt": "2026-09-14T16:09:26Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.24.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.24.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260052",
+   "publishedAt": "2026-09-14T16:09:26Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.24.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.24.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Feed Ad Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop Anchors ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Live Stream 3D Gift Optimizer ",
+    "Live Stream SDK & Minigame De-bloat ",
+    "Media Usability & Watermark-Free Downloader ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260052",
+   "publishedAt": "2026-09-14T16:09:26Z"
+  }
+ }
+}

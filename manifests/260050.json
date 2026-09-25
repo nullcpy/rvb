@@ -1,0 +1,206 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260050",
+  "channel": "stable",
+  "publishedAt": "2026-09-14T05:19:58Z"
+ },
+ "files": {
+  "brave-browser-kveld9-v1.95.101-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.23.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.23.1"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.23.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.23.1"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
+   "name": "disney-ajstrick81-android-tv",
+   "version": "26.16.0+rc2-2026.09.08",
+   "appKey": "disney",
+   "appName": "Disney+",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.disney.disneyplus",
+   "patchSources": [
+    "ajstrick81/patches-1.36.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.36.0"
+   ],
+   "appliedPatches": [
+    "Disney+ Android TV "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+   "name": "hbo-max-ajstrick81-android-tv",
+   "version": "7.9.0.61",
+   "appKey": "hbomax",
+   "appName": "HBO Max",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.wbd.hbomax",
+   "patchSources": [
+    "ajstrick81/patches-1.36.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.36.0"
+   ],
+   "appliedPatches": [
+    "HBO Max - Disable Ads ",
+    "HBO Max - Prefer Ad-Free Stream "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+   "name": "netflix-ajstrick81-android-tv",
+   "version": "13.0.1build25028",
+   "appKey": "netflix",
+   "appName": "Netflix",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.netflix.ninja.clone",
+   "patchSources": [
+    "ajstrick81/patches-1.36.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.36.0"
+   ],
+   "appliedPatches": [
+    "Disable Netflix CertCheck ",
+    "Remove Netflix ads (bundle engine) ",
+    "Remove Netflix ads (loader) ",
+    "Clone Netflix "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv-clone",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": "Clone",
+   "packageName": "com.amazon.amazonvideo.livingroom.mod",
+   "patchSources": [
+    "ajstrick81/patches-1.36.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.36.0"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads ",
+    "Clone Prime Video "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  },
+  "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+   "name": "prime-video-ajstrick81-android-tv",
+   "version": "6.23.23+v15.5.0.70-armv7a",
+   "appKey": "primevideo",
+   "appName": "Prime Video",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "ajstrick81",
+   "brandName": "ajstrick81",
+   "variant": "Android TV",
+   "subVariant": null,
+   "packageName": "com.amazon.amazonvideo.livingroom",
+   "patchSources": [
+    "ajstrick81/patches-1.36.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.36.0"
+   ],
+   "appliedPatches": [
+    "Bundle native ad-strip hook ",
+    "Disable auto-updates ",
+    "Load native ad-strip hook ",
+    "Override certificate pinning ",
+    "Prime Video extension ",
+    "Skip ads "
+   ],
+   "originBuild": "260050",
+   "publishedAt": "2026-09-14T05:19:58Z"
+  }
+ }
+}

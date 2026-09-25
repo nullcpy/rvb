@@ -1,0 +1,239 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260100",
+  "channel": "stable",
+  "publishedAt": "2026-09-22T00:19:18Z"
+ },
+ "files": {
+  "amazon-shopping-rushiranpise-v32.17.0.100-arm-v7a.apk": {
+   "name": "amazon-shopping-rushiranpise",
+   "version": "32.17.0.100",
+   "appKey": "amazonshopping",
+   "appName": "Amazon Shopping",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.amazon.mShop.android.shopping",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Dark mode ",
+    "Disable search suggestions tracking ",
+    "Disable video autoplay ",
+    "Fix Amazon manifest conflicts ",
+    "Hide Rufus tab ",
+    "Open links in browser ",
+    "Price history charts ",
+    "Remove ads "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  },
+  "amazon-shopping-rushiranpise-v32.17.0.100-arm64-v8a.apk": {
+   "name": "amazon-shopping-rushiranpise",
+   "version": "32.17.0.100",
+   "appKey": "amazonshopping",
+   "appName": "Amazon Shopping",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.amazon.mShop.android.shopping",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Dark mode ",
+    "Disable search suggestions tracking ",
+    "Disable video autoplay ",
+    "Fix Amazon manifest conflicts ",
+    "Hide Rufus tab ",
+    "Open links in browser ",
+    "Price history charts ",
+    "Remove ads "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  },
+  "citymapper-rushiranpise-v11.58-arm-v7a.apk": {
+   "name": "citymapper-rushiranpise",
+   "version": "11.58",
+   "appKey": "citymapper",
+   "appName": "Citymapper",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.citymapper.app.release",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Club "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  },
+  "citymapper-rushiranpise-v11.58-arm64-v8a.apk": {
+   "name": "citymapper-rushiranpise",
+   "version": "11.58",
+   "appKey": "citymapper",
+   "appName": "Citymapper",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.citymapper.app.release",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Unlock Club "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  },
+  "tiktok-hushfeed-v47.0.3-arm-v7a.apk": {
+   "name": "tiktok-hushfeed",
+   "version": "47.0.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hushfeed",
+   "brandName": "hushfeed",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "SysAdminDoc/patches-0.58.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.58.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Comment publish diagnostics ",
+    "Copy comments without username ",
+    "Custom offline videos limit ",
+    "Disable login requirement ",
+    "Disable screen capture detection ",
+    "Disable the long press quick share ",
+    "Disable the long press repost ",
+    "Downloads ",
+    "Feature Gate Lab ",
+    "Feed filter ",
+    "Feed tab navigation ",
+    "Fix Google login ",
+    "Follow diagnostics ",
+    "Hide CAPTCHA popups ",
+    "Hide feed LIVE button ",
+    "Hide feed follow button ",
+    "Hide feed save button ",
+    "Hide feed search button ",
+    "Hide floating promotions ",
+    "Hide quick comment reactions ",
+    "Hold-and-slide 2x lock ",
+    "Keep the Favorites tab ",
+    "Open external links directly ",
+    "Playback speed ",
+    "Remember clear display ",
+    "Resume videos after scrolling ",
+    "SIM spoof ",
+    "Sanitize sharing links ",
+    "Settings ",
+    "Show LIVE search ",
+    "Show the progress bar ",
+    "Show the progress bar thumbnail ",
+    "Stop video looping ",
+    "Translate comments ",
+    "Use non-personalized search "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  },
+  "tiktok-hushfeed-v47.0.3-arm64-v8a.apk": {
+   "name": "tiktok-hushfeed",
+   "version": "47.0.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hushfeed",
+   "brandName": "hushfeed",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "SysAdminDoc/patches-0.58.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.58.0"
+   ],
+   "appliedPatches": [
+    "Always show publish date ",
+    "Comment publish diagnostics ",
+    "Copy comments without username ",
+    "Custom offline videos limit ",
+    "Disable login requirement ",
+    "Disable screen capture detection ",
+    "Disable the long press quick share ",
+    "Disable the long press repost ",
+    "Downloads ",
+    "Feature Gate Lab ",
+    "Feed filter ",
+    "Feed tab navigation ",
+    "Fix Google login ",
+    "Follow diagnostics ",
+    "Hide CAPTCHA popups ",
+    "Hide feed LIVE button ",
+    "Hide feed follow button ",
+    "Hide feed save button ",
+    "Hide feed search button ",
+    "Hide floating promotions ",
+    "Hide quick comment reactions ",
+    "Hold-and-slide 2x lock ",
+    "Keep the Favorites tab ",
+    "Open external links directly ",
+    "Playback speed ",
+    "Remember clear display ",
+    "Resume videos after scrolling ",
+    "SIM spoof ",
+    "Sanitize sharing links ",
+    "Settings ",
+    "Show LIVE search ",
+    "Show the progress bar ",
+    "Show the progress bar thumbnail ",
+    "Stop video looping ",
+    "Translate comments ",
+    "Use non-personalized search "
+   ],
+   "originBuild": "260100",
+   "publishedAt": "2026-09-22T00:19:18Z"
+  }
+ }
+}

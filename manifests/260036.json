@@ -1,0 +1,437 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260036",
+  "channel": "stable",
+  "publishedAt": "2026-09-11T20:51:25Z"
+ },
+ "files": {
+  "brave-browser-kveld9-v1.95.101-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.21.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.21.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Disable Pull To Refresh ",
+    "Skip First Run "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.21.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.21.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Disable Pull To Refresh ",
+    "Skip First Run "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-photos-devanced-module-v7.80.0.929302933-arm64-v8a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.80.0.929302933",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-photos-devanced-v7.80.0.929302933-arm64-v8a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.80.0.929302933",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-photos-devanced-v7.80.0.929302933-arm-v7a.apk": {
+   "name": "google-photos-devanced",
+   "version": "7.80.0.929302933",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-photos-devanced-module-v7.80.0.929302933-arm-v7a.zip": {
+   "name": "google-photos-devanced",
+   "version": "7.80.0.929302933",
+   "appKey": "googlephotos",
+   "appName": "Google Photos",
+   "arch": "arm",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "app.morphe.android.apps.photos",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Fix selected account persistence ",
+    "GmsCore support ",
+    "Spoof features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-recorder-devanced-v4.2.20260709.976121876-arm64-v8a.apk": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "google-recorder-devanced-module-v4.2.20260709.976121876-arm64-v8a.zip": {
+   "name": "google-recorder-devanced",
+   "version": "4.2.20260709.976121876",
+   "appKey": "googlerecorder",
+   "appName": "Google Recorder",
+   "arch": "arm64",
+   "fileType": "Module",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.google.android.apps.recorder",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Remove device restrictions "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a.apk": {
+   "name": "microsoft-lens-devanced",
+   "version": "16.0.19628.20008",
+   "appKey": "microsoftlens",
+   "appName": "Microsoft Lens",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microsoft.office.officelens",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Hide OneDrive migration "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "microsoft-lens-devanced-v16.0.19628.20008-arm-v7a.apk": {
+   "name": "microsoft-lens-devanced",
+   "version": "16.0.19628.20008",
+   "appKey": "microsoftlens",
+   "appName": "Microsoft Lens",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.microsoft.office.officelens",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Hide OneDrive migration "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.18.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.18.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "showly-hxreborn-v3.70.0-arm-v7a.apk": {
+   "name": "showly-hxreborn",
+   "version": "3.70.0",
+   "appKey": "showly",
+   "appName": "Showly",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hxreborn",
+   "brandName": "hxreborn",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.michaldrabik.showly2",
+   "patchSources": [
+    "hxreborn/patches-1.18.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hxreborn/morphe-patches/releases/tag/v1.18.0"
+   ],
+   "appliedPatches": [
+    "AMOLED dark theme ",
+    "Unlock premium "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "strava-devanced-v477.14-arm64-v8a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "strava-devanced-v477.14-arm-v7a.apk": {
+   "name": "strava-devanced",
+   "version": "477.14",
+   "appKey": "strava",
+   "appName": "Strava",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.strava",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Add 'Give Kudos' button to 'Group Activity' ",
+    "Add activity export ",
+    "Add media download ",
+    "Add route export ",
+    "Block Snowplow tracking ",
+    "Disable Quick Edit ",
+    "Enable password login ",
+    "Hide distractions ",
+    "Overwrite media upload parameters ",
+    "Unlock subscription features "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "viber-devanced-v26.1.2.0-arm64-v8a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  },
+  "viber-devanced-v26.1.2.0-arm-v7a.apk": {
+   "name": "viber-devanced",
+   "version": "26.1.2.0",
+   "appKey": "viber",
+   "appName": "Viber",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "devanced",
+   "brandName": "DeVanced",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.viber.voip",
+   "patchSources": [
+    "RookieEnough/patches-1.4.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.0"
+   ],
+   "appliedPatches": [
+    "Hide Ads "
+   ],
+   "originBuild": "260036",
+   "publishedAt": "2026-09-11T20:51:25Z"
+  }
+ }
+}

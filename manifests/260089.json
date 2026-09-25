@@ -1,0 +1,59 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260089",
+  "channel": "stable",
+  "publishedAt": "2026-09-20T08:19:54Z"
+ },
+ "files": {
+  "xodo-hoodles-v11.0.0-arm-v7a.apk": {
+   "name": "xodo-hoodles",
+   "version": "11.0.0",
+   "appKey": "xodo",
+   "appName": "Xodo",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.xodo.pdf.reader",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260089",
+   "publishedAt": "2026-09-20T08:19:54Z"
+  },
+  "xodo-hoodles-v11.0.0-arm64-v8a.apk": {
+   "name": "xodo-hoodles",
+   "version": "11.0.0",
+   "appKey": "xodo",
+   "appName": "Xodo",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "hoodles",
+   "brandName": "hoodles",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.xodo.pdf.reader",
+   "patchSources": [
+    "hoo-dles/patches-1.44.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/hoo-dles/morphe-patches/releases/tag/v1.44.1"
+   ],
+   "appliedPatches": [
+    "Enable Pro "
+   ],
+   "originBuild": "260089",
+   "publishedAt": "2026-09-20T08:19:54Z"
+  }
+ }
+}

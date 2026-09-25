@@ -1,0 +1,239 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260066",
+  "channel": "stable",
+  "publishedAt": "2026-09-17T03:23:57Z"
+ },
+ "files": {
+  "brave-browser-kveld9-v1.95.101-arm64-v8a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.34.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.34.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  },
+  "brave-browser-kveld9-v1.95.101-arm-v7a.apk": {
+   "name": "brave-browser-kveld9",
+   "version": "1.95.101",
+   "appKey": "bravebrowser",
+   "appName": "Brave Browser",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.brave.browser",
+   "patchSources": [
+    "kveld9/patches-1.34.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.34.0"
+   ],
+   "appliedPatches": [
+    "Block Brave Telemetry ",
+    "Brave In-Product & Commercial Notification Optimizer ",
+    "Brave Origin ",
+    "Brave Startup Performance Optimization ",
+    "Disable Background Sync & Periodic Sync ",
+    "Disable Battery Status API & OS Listener ",
+    "Skip First Run "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.34.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.34.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  },
+  "tiktok-kveld9-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.zhiliaoapp.musically",
+   "patchSources": [
+    "kveld9/patches-1.34.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.34.0"
+   ],
+   "appliedPatches": [
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm-v7a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.35.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.35.0"
+   ],
+   "appliedPatches": [
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  },
+  "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
+   "name": "tiktok-kveld9-asia",
+   "version": "46.9.3",
+   "appKey": "tiktok",
+   "appName": "TikTok",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "kveld9",
+   "brandName": "kveld9",
+   "variant": "Asia",
+   "subVariant": null,
+   "packageName": "com.ss.android.ugc.trill",
+   "patchSources": [
+    "kveld9/patches-1.35.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.35.0"
+   ],
+   "appliedPatches": [
+    "Bypass Mandatory Login ",
+    "Clean Share URL ",
+    "Client-Side AI & Behavioral Profiling Governor ",
+    "Core Asset De-bloat ",
+    "Device Privacy Guard ",
+    "Disable Push Notifications ",
+    "Feed Ad Blocker ",
+    "Feed Bloat & Distraction Blocker ",
+    "Feed Live Stream Blocker ",
+    "Hide TikTok Shop & Mall ",
+    "In-App Browser Privacy Guard ",
+    "Instant Launch & Splash Blocker ",
+    "Language Pack Purger ",
+    "Media Usability & Watermark-Free Downloader ",
+    "P2P Video Relay & Mesh CDN Blocker ",
+    "Resource & Battery Governor ",
+    "Skip First-Launch Onboarding ",
+    "Studio & Creation De-bloat ",
+    "Unified Telemetry & Tracker Silencer ",
+    "Update Prompt Suppressor "
+   ],
+   "originBuild": "260066",
+   "publishedAt": "2026-09-17T03:23:57Z"
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "schema": 1,
+ "kind": "build",
+ "meta": {
+  "build": "260076",
+  "channel": "stable",
+  "publishedAt": "2026-09-18T17:08:11Z"
+ },
+ "files": {
+  "picsart-rushiranpise-v30.7.8-all.apk": {
+   "name": "picsart-rushiranpise",
+   "version": "30.7.8",
+   "appKey": "picsart",
+   "appName": "PicsArt",
+   "arch": "all",
+   "fileType": "APK",
+   "brandKey": "rushiranpise",
+   "brandName": "rushiranpise",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "com.picsart.studio",
+   "patchSources": [
+    "rushiranpise/patches-1.22.0.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.22.0"
+   ],
+   "appliedPatches": [
+    "Remove Ads ",
+    "Remove Watermark ",
+    "Unlock Premium "
+   ],
+   "originBuild": "260076",
+   "publishedAt": "2026-09-18T17:08:11Z"
+  },
+  "swift-backup-heval99-v5.1.0-arm64-v8a.apk": {
+   "name": "swift-backup-heval99",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm64",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "heval99/patches-1.3.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.3.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260076",
+   "publishedAt": "2026-09-18T17:08:11Z"
+  },
+  "swift-backup-heval99-v5.1.0-arm-v7a.apk": {
+   "name": "swift-backup-heval99",
+   "version": "5.1.0",
+   "appKey": "swiftbackup",
+   "appName": "Swift Backup",
+   "arch": "arm",
+   "fileType": "APK",
+   "brandKey": "heval99",
+   "brandName": "heval99",
+   "variant": null,
+   "subVariant": null,
+   "packageName": "org.swiftapps.swiftbackup",
+   "patchSources": [
+    "heval99/patches-1.3.1.mpp"
+   ],
+   "changelogs": [
+    "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.3.1"
+   ],
+   "appliedPatches": [
+    "Enable Premium "
+   ],
+   "originBuild": "260076",
+   "publishedAt": "2026-09-18T17:08:11Z"
+  }
+ }
+}
