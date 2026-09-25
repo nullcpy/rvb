@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-09-25T20:27:14Z"
+    "publishedAt": "2026-09-25T21:34:30Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -2798,17 +2798,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.29.0.mpp"
+        "hxreborn/patches-1.30.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.29.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.30.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme ",
         "Unlock premium "
       ],
-      "originBuild": "260111",
-      "publishedAt": "2026-09-23T16:22:01Z"
+      "originBuild": "260124",
+      "publishedAt": "2026-09-25T21:33:57Z"
     },
     "showly-hxreborn-v3.70.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -2823,17 +2823,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.29.0.mpp"
+        "hxreborn/patches-1.30.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.29.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.30.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme ",
         "Unlock premium "
       ],
-      "originBuild": "260111",
-      "publishedAt": "2026-09-23T16:22:01Z"
+      "originBuild": "260124",
+      "publishedAt": "2026-09-25T21:33:57Z"
     },
     "google-photos-devanced-module-v7.80.0.929302933-arm64-v8a.zip": {
       "name": "google-photos-devanced",
@@ -11128,10 +11128,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.58.0.mpp"
+        "SysAdminDoc/patches-0.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.58.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.59.0"
       ],
       "appliedPatches": [
         "Always show publish date ",
@@ -11149,12 +11149,12 @@
         "Fix Google login ",
         "Follow diagnostics ",
         "Hide CAPTCHA popups ",
+        "Hide comment typing suggestions ",
         "Hide feed LIVE button ",
         "Hide feed follow button ",
         "Hide feed save button ",
         "Hide feed search button ",
         "Hide floating promotions ",
-        "Hide quick comment reactions ",
         "Hold-and-slide 2x lock ",
         "Keep the Favorites tab ",
         "Open external links directly ",
@@ -11171,8 +11171,8 @@
         "Translate comments ",
         "Use non-personalized search "
       ],
-      "originBuild": "260101",
-      "publishedAt": "2026-09-22T03:06:50Z"
+      "originBuild": "260124",
+      "publishedAt": "2026-09-25T21:33:57Z"
     },
     "tiktok-hushfeed-v47.0.3-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -11187,10 +11187,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.58.0.mpp"
+        "SysAdminDoc/patches-0.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.58.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.59.0"
       ],
       "appliedPatches": [
         "Always show publish date ",
@@ -11208,12 +11208,12 @@
         "Fix Google login ",
         "Follow diagnostics ",
         "Hide CAPTCHA popups ",
+        "Hide comment typing suggestions ",
         "Hide feed LIVE button ",
         "Hide feed follow button ",
         "Hide feed save button ",
         "Hide feed search button ",
         "Hide floating promotions ",
-        "Hide quick comment reactions ",
         "Hold-and-slide 2x lock ",
         "Keep the Favorites tab ",
         "Open external links directly ",
@@ -11230,8 +11230,8 @@
         "Translate comments ",
         "Use non-personalized search "
       ],
-      "originBuild": "260101",
-      "publishedAt": "2026-09-22T03:06:50Z"
+      "originBuild": "260124",
+      "publishedAt": "2026-09-25T21:33:57Z"
     },
     "threads-chiggi-clone-v434.0.0.41.74-arm64-v8a.apk": {
       "name": "threads-chiggi-clone",
