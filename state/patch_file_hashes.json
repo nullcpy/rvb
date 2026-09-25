@@ -2,14 +2,14 @@
   "ajstrick81/morphe-androidtv-patches": {
     "beta": {},
     "stable": {
-      "com.amazon.amazonvideo.livingroom": "2d9bb32bd90f76066ddd09a2b76eebe7",
+      "com.amazon.amazonvideo.livingroom": "e37957d772dba25d22cc3084e1f6b32a",
       "com.disney.disneyplus": "fb4055dcbe6c0270ddec57215ed10bd4",
-      "com.netflix.ninja": "db9bdba0cf971d916d921b722955cc4e",
+      "com.netflix.ninja": "2e80681d6195e57f5c75f505c4bc1a18",
       "com.peacocktv.peacockandroid": "7ff4398760822eebd22cc15045755afd",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
       "com.wbd.hbomax": "04db80a6460c84ff5bb97c71ef770cdf",
-      "shared": "f945abb34f52bdfa8b918c01ad1b1c83",
+      "shared": "6bf068c4fee17475e617216825999b90",
       "tv.pluto.android": "40dcc7c8b97d540deab8a158a9ad6ba1",
       "tv.twitch.android.app": "dcc3c62ee2cb5ba1793d74172bcf61fb"
     }
@@ -23,9 +23,9 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "e16c671799df8f6dd955061c9b98e13b",
-      "com.google.android.youtube": "ae122b40961edfd3c878ae4599a6c137",
-      "shared": "7bde30acb2bbcdec4698746c1d6db80f"
+      "com.google.android.apps.youtube.music": "2114cf43fd309673be0b921863d04f1a",
+      "com.google.android.youtube": "96cbb47b228863c853b0adbe2f317190",
+      "shared": "64cd23189407b4424baeb9406ad36646"
     },
     "stable": {}
   },
@@ -78,7 +78,7 @@
     "beta": {},
     "stable": {
       "org.swiftapps.swiftbackup": "19f8e7d3f7903d93d21919ae4e0b5bc2",
-      "shared": "b65c1a62ea755e342d73a80384eb683f"
+      "shared": "66150f7348cfc09825e997bd9b676fa2"
     }
   },
   "crimera/piko": {
@@ -283,10 +283,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "9d25cfd6ee351e37c189927d81b9b4c4",
-      "com.google.android.youtube": "f6fdb8226600434613213ff90ed7e433",
-      "com.reddit.frontpage": "334575154fce69437e8949e727cc02c2",
-      "shared": "68bc263706f8e8eb00256dd72315cda6"
+      "com.google.android.apps.youtube.music": "92d0d0a775360789023be6393bcc7ab3",
+      "com.google.android.youtube": "1b80857fea93e1ac49d8b0e734b1eb31",
+      "com.reddit.frontpage": "36d2c3154e8110f1ed70e7b26692db1f",
+      "shared": "04db01d71127866fa161073205469567"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "908eefc5b29a33d6807ef54a9ef097d9",
@@ -342,7 +342,7 @@
   "riky-dev/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.lemon.lvoverseas": "bc47ad35b408d7cedf2000b46d9bbe06",
+      "com.lemon.lvoverseas": "b33e426315b7c0c7db9c9fc6f83647ba",
       "shared": "8193a540857adec90636bba3db566d80"
     }
   },

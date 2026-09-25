@@ -155,125 +155,135 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
     "apkpure-dlurl": "https://apkpure.com/disneyplus-app/com.disney.disneyplus",
-    "apkcombo-dlurl": "https://apkcombo.com/disney-plus/com.disney.disneyplus"
+    "apkcombo-dlurl": "https://apkcombo.com/disney-plus/com.disney.disneyplus",
+    "patches-version": "v1.37.6"
   },
   "PrimeVideo-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv",
     "apkpure-dlurl": "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom",
-    "apkcombo-dlurl": "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom"
+    "apkcombo-dlurl": "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom",
+    "patches-version": "v1.37.6"
   },
   "PrimeVideo-ajstrick81-AndroidTV-Clone": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "sub-variant": "Clone",
     "included-patches": "'Clone Prime Video'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv",
     "apkpure-dlurl": "https://apkpure.com/prime-video-android-tv/com.amazon.amazonvideo.livingroom",
-    "apkcombo-dlurl": "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom"
+    "apkcombo-dlurl": "https://apkcombo.com/prime-video/com.amazon.amazonvideo.livingroom",
+    "patches-version": "v1.37.6"
   },
   "HBOMax-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
     "apkpure-dlurl": "https://apkpure.com/hbo-max-stream-tv-movies/com.wbd.stream",
-    "apkcombo-dlurl": "https://apkcombo.com/hbo-max-stream-movies-tv/com.wbd.hbomax"
+    "apkcombo-dlurl": "https://apkcombo.com/hbo-max-stream-movies-tv/com.wbd.hbomax",
+    "patches-version": "v1.37.6"
   },
   "Peacock-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "Peacock",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv",
     "apkpure-dlurl": "https://apkpure.com/peacock-tv-stream-tv-movies/com.peacocktv.peacockandroid",
-    "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid"
+    "apkcombo-dlurl": "https://apkcombo.com/peacock-tv/com.peacocktv.peacockandroid",
+    "patches-version": "v1.37.6"
   },
   "Tubi-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.tubitv",
     "app-name": "Tubi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
     "apkpure-dlurl": "https://apkpure.com/tubi-movies-tv-shows-android-app/com.tubitv",
-    "apkcombo-dlurl": "https://apkcombo.com/tubi-tv/com.tubitv"
+    "apkcombo-dlurl": "https://apkcombo.com/tubi-tv/com.tubitv",
+    "patches-version": "v1.37.6"
   },
   "ViX-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.univision.prendetv",
     "app-name": "ViX",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv",
     "apkpure-dlurl": "https://apkpure.com/vix-tv-deportes-y-noticias/com.univision.prendetv",
-    "apkcombo-dlurl": "https://apkcombo.com/vix/com.univision.prendetv/"
+    "apkcombo-dlurl": "https://apkcombo.com/vix/com.univision.prendetv/",
+    "patches-version": "v1.37.6"
   },
   "PlutoTV-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.pluto.android",
     "app-name": "PlutoTV",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv",
     "uptodown-dlurl": "https://pluto-tv.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/pluto-tv-watch-free-movies-tv/tv.pluto.android",
-    "apkcombo-dlurl": "https://apkcombo.com/pluto-tv/tv.pluto.android"
+    "apkcombo-dlurl": "https://apkcombo.com/pluto-tv/tv.pluto.android",
+    "patches-version": "v1.37.6"
   },
   "Netflix-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
     "uptodown-dlurl": "https://netflix-inc-netflix.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja",
-    "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
+    "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja",
+    "patches-version": "v1.37.6"
   },
   "Twitch-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patch-folder": "twitchatv",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch-android-tv/",
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app",
-    "apkcombo-dlurl": "https://apkcombo.com/twitch/tv.twitch.android.app"
+    "apkcombo-dlurl": "https://apkcombo.com/twitch/tv.twitch.android.app",
+    "patches-version": "v1.37.6"
   },
   "youtube-anddea-nord": {
     "patches-source": "anddea/revanced-patches",
@@ -472,7 +482,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -480,7 +490,8 @@
     "uptodown-dlurl": "https://swift-backup.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
     "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
-    "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+    "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup",
+    "patches-version": "v1.31.0"
   },
   "Threads-chiggi": {
     "patches-source": "durgesh0505/chiggi_morphe_patches",
@@ -533,7 +544,7 @@
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
     "enabled": false,
-    "pkg-name": "com.google.android.apps.photomath",
+    "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
     "uptodown-dlurl": "https://photomath.en.uptodown.com/android"
@@ -622,6 +633,7 @@
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
     "brand": "andrewliang25",
+    "included-patches": "'[General] AMOLED black theme' '[Reels] Download any reel'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
     "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana",
@@ -1150,7 +1162,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1589,12 +1601,13 @@
   "CapCut-riky": {
     "patches-source": "riky-dev/morphe-patches",
     "brand": "riky",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.lemon.lvoverseas",
     "app-name": "CapCut",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
     "uptodown-dlurl": "https://viamaker.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
+    "apkpure-dlurl": "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas",
+    "patches-version": "v2.0.0"
   },
   "AdGuard-rushiranpise-Nightly": {
     "patches-source": "rushiranpise/morphe-patches",
@@ -1823,6 +1836,16 @@
     "apkpure-dlurl": "https://apkpure.com/amazon-shopping/com.amazon.mShop.android.shopping",
     "apkcombo-dlurl": "https://apkcombo.com/amazon-shopping/com.amazon.mShop.android.shopping"
   },
+  "Telegram-rushiranpise-GooglePlay": {
+    "patches-source": "rushiranpise/morphe-patches",
+    "brand": "rushiranpise",
+    "enabled": false,
+    "pkg-name": "org.telegram.messenger",
+    "app-name": "Telegram",
+    "variant": "Google Play",
+    "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
+  },
   "KineStop-ShaunTheSheep": {
     "patches-source": "shaun-the-sheep-patches/morphe-patches",
     "brand": "ShaunTheSheep",
@@ -1867,7 +1890,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -1878,7 +1901,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9-Asia": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",

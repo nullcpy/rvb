@@ -4,27 +4,29 @@
     "patches-source": "anddea/revanced-patches",
     "build-mode": "both",
     "brand": "anddea",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patch-folder": "youtube",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "patches-version": "v4.3.0-dev.8"
   },
   "youtube-music-anddea": {
     "patches-source": "anddea/revanced-patches",
     "build-mode": "both",
     "brand": "anddea",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patch-folder": "music",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "patches-version": "v4.3.0-dev.8"
   },
   "Instagram-brosssh": {
     "patches-source": "brosssh/morphe-patches",
@@ -117,7 +119,7 @@
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patch-folder": "youtube",
@@ -125,13 +127,14 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "patches-version": "v1.45.0-dev.15"
   },
   "YouTubeMusic-Morphe": {
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patch-folder": "music",
@@ -139,13 +142,14 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "patches-version": "v1.45.0-dev.15"
   },
   "YouTube-Morphe-Experimental": {
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "variant": "Experimental",
@@ -155,13 +159,14 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube",
+    "patches-version": "v1.45.0-dev.15"
   },
   "YouTubeMusic-Morphe-Experimental": {
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "variant": "Experimental",
@@ -171,13 +176,14 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music",
+    "patches-version": "v1.45.0-dev.15"
   },
   "Reddit-Morphe-Experimental": {
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "variant": "Experimental",
@@ -185,20 +191,22 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/reddit-app/com.reddit.frontpage",
-    "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
+    "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage",
+    "patches-version": "v1.45.0-dev.15"
   },
   "Reddit-Morphe": {
     "patches-source": "MorpheApp/morphe-patches",
     "build-mode": "both",
     "brand": "Morphe",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "apkmirror-dlurl": "https://apkmirror.com/apk/redditinc/reddit",
     "uptodown-dlurl": "https://reddit-official-app.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/reddit-app/com.reddit.frontpage",
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage",
+    "patches-version": "v1.45.0-dev.15"
   },
   "GooglePhotos-DeVanced": {
     "enabled": false,
