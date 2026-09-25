@@ -1,0 +1,19 @@
+# Concrete pinned patches-version, CLI from a different owner.
+# Regression guard for the release-leak in _get_prebuilts: the CLI release must
+# NOT bleed into a pinned patch source's resolution. Before the per-iteration
+# `release=""` reset, a concrete patches-version skipped the tag fetch (the
+# branch is gated on [ -z "$release" ]) and resolved the bundle from the CLI's
+# release — downloading the CLI jar into the patches directory, so every app
+# then found "No app-specific patches". Stable/beta fixtures never hit this
+# because those branches always re-fetch; only a pinned version exposes it.
+patches-source = "anddea/revanced-patches"
+cli-source = "MorpheApp/morphe-desktop"
+patches-version = "v4.9.0-anddea"
+brand = "anddeaPinned"
+
+[YouTube-AnddeaPinned]
+enabled = true
+pkg-name = "com.google.android.youtube"
+app-name = "YouTube"
+version = "1.95.101"
+excluded-patches = "'Some Patch' 'Another Patch'"
