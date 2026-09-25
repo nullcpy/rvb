@@ -38,6 +38,7 @@ RVB_INSTAFEL_DEFAULT_PATCHES="${RVB_INSTAFEL_DEFAULT_PATCHES:-unlock_developer_o
 RVB_MORPHE_PASSTHROUGH="${RVB_MORPHE_PASSTHROUGH:-true}"
 
 declare -gA __PREBUILTS_CACHE__
+declare -g __PREBUILTS_RESULT=""
 declare -gA __PATCHES_LIST_CACHE__
 declare -gA __PATCH_VER_CACHE__
 declare -gA __PKG_VERS_CACHE__
@@ -249,16 +250,22 @@ get_apkeditor() {
 	gh_dl "$TEMP_DIR/apkeditor.jar" "$dl_url" >/dev/null || return 1
 }
 
+# Result is published through the global __PREBUILTS_RESULT instead of stdout on
+# purpose: callers MUST invoke this directly (NOT via $(...)). Command
+# substitution runs in a subshell, so the __PREBUILTS_CACHE__ write below would
+# be discarded there and every call would miss the cache and re-hit the release
+# API. Printing to a global keeps both the cache write and the read in the main
+# shell so repeated apps sharing a source set are served from memory.
 get_prebuilts() {
 	local cache_key="${1}_${2}_${3}_${4}_${5}_${6}"
 	if [ -n "${__PREBUILTS_CACHE__["$cache_key"]:-}" ]; then
-		echo "${__PREBUILTS_CACHE__["$cache_key"]}"
+		__PREBUILTS_RESULT="${__PREBUILTS_CACHE__["$cache_key"]}"
 		return 0
 	fi
 	local result
 	if ! result=$(_get_prebuilts "$@"); then return 1; fi
 	__PREBUILTS_CACHE__["$cache_key"]="$result"
-	echo "$result"
+	__PREBUILTS_RESULT="$result"
 }
 
 _get_prebuilts() {
