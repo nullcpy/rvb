@@ -18,23 +18,23 @@ if [ ${#CONFIG_INPUTS[@]} -eq 0 ]; then
     [ -f config.beta.json ] && CONFIG_INPUTS+=(config.beta.json)
 fi
 
-[ -f .github/configs/app_versions.json ] || echo '{}' > .github/configs/app_versions.json
+[ -f configs/app_versions.json ] || echo '{}' > configs/app_versions.json
 > fetched_app_versions.jsonl
-CHECK_ONLY_LISTED=$(jq -r '."_check_only_listed" // false' .github/configs/app_versions.json)
+CHECK_ONLY_LISTED=$(jq -r '."_check_only_listed" // false' configs/app_versions.json)
 
 if [ "$CHECK_ONLY_LISTED" = "true" ]; then
-    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' .github/configs/app_versions.json > check_list.txt
+    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' configs/app_versions.json > check_list.txt
 else
     # All enabled apps across stable and dev configs
     ENABLED_APPS=$(jq -r -s 'add | to_entries | map(select((.value | type == "object") and .value.enabled == true)) | .[].key' "${CONFIG_INPUTS[@]}")
     
     # Get all grouped apps to exclude them
-    GROUPED_APPS=$(jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[].value.keys[]?' .github/configs/app_versions.json 2>/dev/null || echo "")
+    GROUPED_APPS=$(jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[].value.keys[]?' configs/app_versions.json 2>/dev/null || echo "")
     
     > check_list.txt
     
     # Add groups first
-    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' .github/configs/app_versions.json >> check_list.txt
+    jq -r 'to_entries | map(select(.key | startswith("_") | not)) | .[] | "\(.key)|\(.value.keys[0])"' configs/app_versions.json >> check_list.txt
     
     # Add non-grouped enabled apps
     for app in $ENABLED_APPS; do

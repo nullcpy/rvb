@@ -7,11 +7,11 @@ on:
         description: "Select the config file to use"
         required: true
         type: choice
-        default: ".github/configs/config.manual.toml"
+        default: "configs/config.manual.toml"
         options:
-          - ".github/configs/config.manual.toml"
-          - ".github/configs/config.beta.updated.json"
-          - ".github/configs/config.stable.updated.json"
+          - "configs/config.manual.toml"
+          - "configs/config.beta.updated.json"
+          - "configs/config.stable.updated.json"
       remove_apks:
         description: "Optional: APKs to remove from cache (space-separated, e.g., com.brave.browser-1.93.138-*.apk)"
         required: false

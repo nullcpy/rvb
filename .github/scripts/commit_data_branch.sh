@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Commit machine-owned state files (.github/configs/*.json: patch_sources,
+# Commit machine-owned state files (configs/*.json: patch_sources,
 # app_versions, generated config.stable/beta.updated, patch_file_hashes) to
 # the `data` branch so main's history stays human-only.
 #
@@ -14,12 +14,12 @@ set -euo pipefail
 #   - Single writer (ci.yml's `ci` concurrency group); the push-retry loop is
 #     insurance, not a merge strategy: on a race, our worktree files win.
 #   - fetch_data_branch.sh is the counterpart that materializes the branch
-#     back into .github/configs/ for builds and watchers.
-#   - Only *.json directly under .github/configs/ is committed; nothing else
+#     back into configs/ for builds and watchers.
+#   - Only *.json directly under configs/ is committed; nothing else
 #     can reach `data` through here.
 
 BRANCH="data"
-STATE_DIR=".github/configs"
+STATE_DIR="configs"
 COMMIT_MSG="${DATA_COMMIT_MSG:-chore: update generated patch sources, app versions and configs}"
 
 export GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-github-actions[bot]}"

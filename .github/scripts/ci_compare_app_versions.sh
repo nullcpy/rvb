@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-CURRENT_VERSIONS=".github/configs/app_versions.json"
+CURRENT_VERSIONS="configs/app_versions.json"
 ACTIVE_APPS="active_apps.json"
 
 [ -f "$CURRENT_VERSIONS" ] || echo '{}' > "$CURRENT_VERSIONS"

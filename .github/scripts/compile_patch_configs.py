@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 compile_patch_configs.py
-Parses all TOML patch configurations in .github/configs/patches/
+Parses all TOML patch configurations in configs/patches/
 and generates config.stable.json and config.beta.json with dynamic pool routing:
 - apps with patches-version = "stable" go to stable pool only
 - apps with patches-version = "beta" go to beta pool only
@@ -38,7 +38,7 @@ def normalize_channel(val):
     return val.strip()  # Pinned version string like "v1.41.0"
 
 
-def compile_configs(patches_dir=".github/configs/patches"):
+def compile_configs(patches_dir="configs/patches"):
     stable_pool = {}
     beta_pool = {}
 
@@ -126,7 +126,7 @@ def compile_configs(patches_dir=".github/configs/patches"):
 
 
 def main():
-    patches_dir = sys.argv[1] if len(sys.argv) > 1 else ".github/configs/patches"
+    patches_dir = sys.argv[1] if len(sys.argv) > 1 else "configs/patches"
     stable_pool, beta_pool = compile_configs(patches_dir)
 
     stable_out = {"patches-version": "stable"}

@@ -294,7 +294,7 @@ def run():
     except FileNotFoundError:
         tags_new = {}
     
-    hash_file = '.github/configs/patch_file_hashes.json'
+    hash_file = 'configs/patch_file_hashes.json'
     if os.path.exists(hash_file):
         with open(hash_file, 'r') as f:
             hashes = json.load(f)

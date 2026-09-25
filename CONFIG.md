@@ -224,7 +224,7 @@ produces cleaner patched APKs and avoids caching two copies of the same app.
 
 ## Modular Configuration Directory & Dynamic Pool Routing
 
-Configurations are organized in `.github/configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`, `ajstrick81.toml`).
+Configurations are organized in `configs/patches/*.toml` (e.g. `morphe.toml`, `anddea.toml`, `piko.toml`, `ajstrick81.toml`).
 
 You do **not** need separate files for stable and beta:
 - **Single-File Co-existence**: All variants and builds for a brand or patch source can reside in the same `.toml` file.
@@ -249,7 +249,7 @@ You do **not** need separate files for stable and beta:
 > building from a fresh clone ("bash .github/scripts/fetch_data_branch.sh").
 > To edit state by hand, commit it directly to the `data` branch.
 
-Patch sources and their release versions in `.github/configs/patch_sources.json` are **100% automated**:
+Patch sources and their release versions in `configs/patch_sources.json` are **100% automated**:
 - The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github` or `gitlab`), and checks for new stable and beta releases.
 - Unreferenced or deleted patch sources are pruned automatically.
 - **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
@@ -259,11 +259,11 @@ Patch sources and their release versions in `.github/configs/patch_sources.json`
 The CI workflow automatically detects when a new version of an app is released on APKMirror, Uptodown, or Archive.org.
 
 ### How it Works
-1. **Version Fetching**: During the CI run, it reads all enabled apps from the `.github/configs/patches/*.toml` configurations and queries the URLs (`uptodown-dlurl`, `apkmirror-dlurl`, etc.).
-2. **Comparison**: It checks the newly fetched versions against the currently stored versions in `.github/configs/app_versions.json`.
+1. **Version Fetching**: During the CI run, it reads all enabled apps from the `configs/patches/*.toml` configurations and queries the URLs (`uptodown-dlurl`, `apkmirror-dlurl`, etc.).
+2. **Comparison**: It checks the newly fetched versions against the currently stored versions in `configs/app_versions.json`.
 3. **Triggering**: If a new version is detected, the app is added to a temporary `active_apps.json` list, and the CI is triggered to build it.
 ### Tracking File
-App versions are permanently tracked in `.github/configs/app_versions.json` (on the `data` branch, see above).
+App versions are permanently tracked in `configs/app_versions.json` (on the `data` branch, see above).
 You can manually update this file if you need to force a specific version state, but the CI will automatically manage it during scheduled runs.
 
 **Selective Checking:** If you only want the CI to check specific apps (instead of all enabled apps in your config), you can add `"_check_only_listed": true` to the top level of `app_versions.json`. When this is true, the script will only check for updates for the apps that already exist as keys in the file, saving time and resources.

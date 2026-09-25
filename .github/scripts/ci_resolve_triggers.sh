@@ -9,7 +9,7 @@ TRIGGER_STABLE=0
 TRIGGER_BETA=0
 
 if [ "$RAW_TRIGGER_STABLE" = "1" ] || [ "$RAW_TRIGGER_APP_UPDATE" = "1" ]; then
-  CFG=".github/configs/config.stable.updated.json"
+  CFG="configs/config.stable.updated.json"
   if [ -f "$CFG" ]; then
     ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
     if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
@@ -21,7 +21,7 @@ if [ "$RAW_TRIGGER_STABLE" = "1" ] || [ "$RAW_TRIGGER_APP_UPDATE" = "1" ]; then
 fi
 
 if [ "$RAW_TRIGGER_BETA" = "1" ] || [ "$RAW_TRIGGER_APP_UPDATE" = "1" ]; then
-  CFG=".github/configs/config.beta.updated.json"
+  CFG="configs/config.beta.updated.json"
   if [ -f "$CFG" ]; then
     ENABLED_COUNT=$(jq '[.[] | objects | select(.enabled != false)] | length' "$CFG" || echo 0)
     if [ "${ENABLED_COUNT:-0}" -gt 0 ]; then
