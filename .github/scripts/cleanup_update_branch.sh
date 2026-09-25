@@ -2,17 +2,17 @@
 set -euo pipefail
 
 # Prune the update branch:
-#  1. *-update.json whose download pointer is dead — the zipUrl asset no longer
-#     exists on the archive release it names (manual asset removal or rotation
-#     past the retention window both qualify), or, for numbered-release
-#     pointers, the release itself was deleted. A still-built slug always
-#     refreshes its pointer from the newest build, so pruning dead ones loses
-#     nothing: next build recreates them.
+#  1. Channel-pointer JSON (stable/*.json, beta/*.json) whose download pointer
+#     is dead — the zipUrl asset no longer exists on the archive release it
+#     names (manual asset removal or rotation past the retention window both
+#     qualify), or, for numbered-release pointers, the release itself was
+#     deleted. A still-built slug always refreshes its pointer from the newest
+#     build, so pruning dead ones loses nothing: next build recreates them.
 #  2. changelogs/<tag>.md for releases that no longer exist and are no longer
-#     referenced by any surviving *-update.json.
+#     referenced by any surviving pointer.
 #
 # The branch layout is a wire format: module zips bake
-# https://raw.githubusercontent.com/<repo>/update/<channel>/<name>-update.json
+# https://raw.githubusercontent.com/<repo>/update/<channel>/<name>.json
 # at build time (update_json_path in scripts/utils.sh), so files are only ever
 # deleted here, never moved or renamed.
 
@@ -47,7 +47,7 @@ git checkout -B update origin/update
 DELETED_JSON=0
 echo "--- Checking update.json pointers for dead downloads ---"
 shopt -s nullglob
-for f in *-update.json stable/*-update.json beta/*-update.json; do
+for f in *.json stable/*.json beta/*.json; do
   [ -f "$f" ] || continue
   url=$(jq -r '.zipUrl // empty' "$f" 2>/dev/null || echo '')
   [ -n "$url" ] || continue
@@ -81,7 +81,7 @@ if [ -d changelogs ]; then
     fname=$(basename "$f")
     tag="${fname%.md}"
     if ! echo "$ACTIVE_TAGS" | grep -Fxq "$tag"; then
-      if find . -name '*-update.json' -exec grep -qs "changelogs/${tag}\.md" {} +; then
+      if find . -name '*.json' -exec grep -qs "changelogs/${tag}\.md" {} +; then
         echo "Keeping changelog: $f (release '$tag' pruned, but still referenced by an active update.json)"
         continue
       fi

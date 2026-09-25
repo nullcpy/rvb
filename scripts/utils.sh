@@ -3952,7 +3952,7 @@ MODULE_ARCH=$ma" >"$1/config"
 }
 
 # Map a module id (module_prop_name) to its update-branch JSON path:
-#   <channel>/<id-without-author-or-channel-suffix>-update.json
+#   <channel>/<id-without-author-or-channel-suffix>.json
 # The channel folder (stable|beta) replaces the old "-beta-" filename infix,
 # and the author segment is dropped since it's constant for this repo.
 # Module id shape from build.sh: <table>-<author>[-beta][-arm64|-arm].
@@ -3970,7 +3970,7 @@ update_json_path() {
 		mpn=${mpn%-beta}
 	fi
 	[ -n "$author" ] && mpn=${mpn%-$author}
-	echo "$chan/${mpn}${arch}-update.json"
+	echo "$chan/${mpn}${arch}.json"
 }
 
 module_prop() {
