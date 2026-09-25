@@ -9,8 +9,12 @@ latest build's entries only). This script:
   2. downloads build.json from every numbered release,
   3. merges in the entries whose filenames still live on the archive
      (newest originBuild wins for files covered by several releases),
-  4. synthesizes filename-derived fallback entries (empty appliedPatches)
-     for live assets no release manifest covers — reported separately.
+  4. recovers entries for files whose numbered release was already deleted
+     from the website catalog data.json (schema-v2 apps/brands/builds, with
+     the patchSetRef/changelogRef/patchSourceRef tables resolved),
+  5. only as a last resort synthesizes filename-derived fallback entries
+     (empty appliedPatches) — reported separately, since the catalog
+     renders such degraded entries as nameless "patched" wrapper cards.
 
 Idempotent; dry-run by default.
 
@@ -18,7 +22,9 @@ Usage:
     python3 .github/scripts/repair_archive_manifest.py [--archive stable] [--apply]
 
 Env:
-    RVB_REPO   owner/repo (default: nullcpy/rvb)
+    RVB_REPO    owner/repo (default: nullcpy/rvb)
+    DATA_JSON   website catalog used for recovery (default: ../nullcpy.github.io/data.json;
+                pass a git-history revision to recover pre-incident data)
 """
 import argparse
 import datetime
@@ -32,7 +38,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from backfill_manifests import fallback_entry  # noqa: E402
+from backfill_manifests import fallback_entry, manifest_entry_from_app  # noqa: E402
 
 SCHEMA_VERSION = 1
 
@@ -92,6 +98,42 @@ def fetch_release_manifest(repo, rel, tmpdir):
         return None
 
 
+def load_catalog_index(path):
+    """fname -> (file_obj, app, brand, variant_meta, build) from a website data.json.
+
+    Reverses rebuild_catalog.py's dedup: patchSetRef/changelogRef/patchSourceRef
+    integers are resolved back into appliedPatches/changelogs/patchSources lists
+    (a missing ref means an empty list — _dedup_lists drops those).
+    """
+    p = Path(path)
+    if not p.exists():
+        print(f"Catalog {p} not found — degraded entries will not be recovered")
+        return {}
+    cat = json.loads(p.read_text(encoding="utf-8"))
+    tables = {"patchSetRef": ("appliedPatches", cat.get("patchSets") or []),
+              "changelogRef": ("changelogs", cat.get("changelogSets") or []),
+              "patchSourceRef": ("patchSources", cat.get("patchSourceSets") or [])}
+    index = {}
+    for app in cat.get("apps", []):
+        for brand in app.get("brands", []):
+            vmeta = {}
+            for v in brand.get("variants", []):
+                prefix = None
+                m = re.match(r"^\^(.*)-v\.\*\\\.apk\$$", v.get("apkFilter") or "")
+                if m:
+                    prefix = m.group(1)
+                vmeta[(v.get("variant"), v.get("subVariant"))] = {
+                    "prefix": prefix, "packageName": v.get("packageName")}
+            for b in brand.get("builds", []):
+                build = dict(b)
+                for ref_key, (field, table) in tables.items():
+                    ref = build.pop(ref_key, None)
+                    build[field] = table[ref] if ref is not None else []
+                for f in build.get("assets", []):
+                    index.setdefault(f["name"], (f, app, brand, vmeta, build))
+    return index
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--archive", default="stable", choices=["stable", "beta"],
@@ -100,6 +142,9 @@ def main():
                     help="upload the rebuilt manifest (default: dry run)")
     ap.add_argument(
         "--repo", default=os.environ.get("RVB_REPO", "nullcpy/rvb"))
+    ap.add_argument("--data-json",
+                    default=os.environ.get("DATA_JSON", "../nullcpy.github.io/data.json"),
+                    help="website catalog used to recover files whose release was deleted")
     args = ap.parse_args()
 
     live = archive_live_assets(args.repo, args.archive)
@@ -132,12 +177,23 @@ def main():
         shutil.rmtree(tmpdir, ignore_errors=True)
 
     missing = sorted(live_set - set(files))
+    catalog_index = load_catalog_index(Path(args.data_json).resolve())
+    recovered = 0
     for fname in missing:
-        files[fname] = fallback_entry(fname, None, "")
+        hit = catalog_index.get(fname)
+        if hit:
+            f, app, brand, vmeta, build = hit
+            vm = vmeta.get((build.get("variant"), build.get("subVariant")), {})
+            files[fname] = manifest_entry_from_app(f, app, brand, vm, build,
+                                                   build.get("publishedAt") or "")
+            recovered += 1
+        else:
+            files[fname] = fallback_entry(fname, None, "")
+    degraded = [f for f in missing if not files[f].get("version")]
     if missing:
         print(f"\n{len(missing)} live assets covered by NO release manifest "
-              f"(fallback entries, appliedPatches empty):")
-        for f in missing:
+              f"({recovered} recovered from catalog, {len(degraded)} degraded fallback):")
+        for f in degraded:
             print(f"  {f}")
 
     now_iso = datetime.datetime.now(
@@ -149,7 +205,8 @@ def main():
         "files": files,
     }
     print(f"\nRebuilt manifest: {len(files)} entries for {len(live)} live assets "
-          f"({len(files) - len(missing)} from release manifests, {len(missing)} fallback)")
+          f"({len(files) - len(missing)} from release manifests, "
+          f"{recovered} from catalog, {len(degraded)} fallback)")
 
     out_path = Path("temp/manifest") / f"repair-{args.archive}-build.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)

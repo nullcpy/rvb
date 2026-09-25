@@ -73,12 +73,22 @@ Rebuilds an **archive** release's cumulative `build.json` from the numbered
 releases' own `build.json` assets — used after the merge hardening gap wiped
 `stable`. Merges entries whose filenames still live on the archive (newest
 `originBuild` wins); files whose originating numbered release has already been
-deleted get filename-derived fallback entries (empty `appliedPatches`).
+deleted are recovered from the website catalog (`--data-json`, pass a
+pre-incident `data.json` revision from git history — its
+`patchSetRef`/`changelogRef`/`patchSourceRef` tables are resolved back into
+full entries). Only what neither source covers gets filename-derived fallback
+entries — those render as degraded "patched" wrapper cards on the site, so
+check the dry-run's fallback count is acceptable before `--apply`.
 
 ```bash
 python3 .github/scripts/repair_archive_manifest.py --archive stable          # dry run
-python3 .github/scripts/repair_archive_manifest.py --archive stable --apply  # upload
+git -C ../nullcpy.github.io show <pre-incident-rev>:data.json > /tmp/data_prewipe.json
+python3 .github/scripts/repair_archive_manifest.py --archive stable \
+        --data-json /tmp/data_prewipe.json --apply                           # upload
 ```
+
+After uploading, trigger the website's `rebuild-catalog.yml` (workflow_dispatch)
+so `data.json` re-folds from the repaired archive manifest.
 
 ### `backfill_manifests.py`
 Backfills **per-release** `build.json` assets into the numbered releases from
