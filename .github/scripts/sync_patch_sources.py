@@ -4,7 +4,7 @@ sync_patch_sources.py
 Automated patch sources state manager for CI:
 1. Dynamically discovers all unique (patches-source, patches-source-host) from all .toml patch configs.
 2. Queries GitHub and GitLab APIs for active releases.
-3. Tracks latest stable and beta releases in configs/patch_sources.json (state cache).
+3. Tracks latest stable and beta releases in state/patch_sources.json (state cache).
 4. Automatically prunes sources no longer used in any TOML config.
 5. Detects changes and emits TRIGGER_STABLE, TRIGGER_BETA, and TRIGGER_BLOCKED.
 """
@@ -28,7 +28,7 @@ except ImportError:
 
 
 PATCHES_DIR = "configs/patches"
-STATE_FILE = "configs/patch_sources.json"
+STATE_FILE = "state/patch_sources.json"
 
 
 def split_quoted_list(text):
