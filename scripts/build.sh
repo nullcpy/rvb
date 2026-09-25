@@ -188,11 +188,13 @@ for table_name in $(toml_get_table_names); do
 		if ! isoneof "$h" github gitlab; then abort "ERROR: patches-source-host '$h' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
 	done
 
-	if ! PREBUILTS="$(get_prebuilts "$cli_src_host" "$cli_src" "$cli_ver" "$patches_src_host" "$patches_src" "$patches_ver")"; then
+	# NOTE: called directly, not via $(...), so the __PREBUILTS_CACHE__ write in
+	# get_prebuilts survives in this shell (see get_prebuilts in utils.sh).
+	if ! get_prebuilts "$cli_src_host" "$cli_src" "$cli_ver" "$patches_src_host" "$patches_src" "$patches_ver"; then
 		epr "Could not get prebuilts"
 		continue
 	fi
-	read -r cli_jar patches_jar_all <<< "$PREBUILTS"
+	read -r cli_jar patches_jar_all <<< "$__PREBUILTS_RESULT"
 	app_args[cli]=$cli_jar
 	app_args[ptjar]=$patches_jar_all
 	app_args[cli_source]=$cli_src
