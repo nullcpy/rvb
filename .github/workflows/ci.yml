@@ -31,6 +31,9 @@ jobs:
           ref: main
           fetch-depth: 1
 
+      - name: Fetch generated state (data branch)
+        run: bash .github/scripts/fetch_data_branch.sh
+
       - name: Compile Base Configs (JSON)
         run: bash .github/scripts/ci_compile_base_configs.sh
 
@@ -92,12 +95,9 @@ jobs:
 
       - name: Commit updated patch sources and configs
         if: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE == '1' || steps.sync_patch_sources.outputs.TRIGGER_BETA == '1' || steps.sync_patch_sources.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          branch: main
-          skip_checkout: true
-          file_pattern: .github/configs/*.json
-          commit_message: "Update patch sources, app versions and generated configs [skip ci]"
+        # Commits .github/configs/*.json to the `data` branch (plumbing-only,
+        # keeps main's history human-only). Counterpart: fetch_data_branch.sh.
+        run: bash .github/scripts/commit_data_branch.sh
 
   build_beta:
     needs: check_patch

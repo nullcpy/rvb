@@ -64,6 +64,11 @@ jobs:
           fetch-depth: 0
           submodules: true
 
+      - name: Fetch generated state (data branch)
+        # Materializes .github/configs/*.json (patch sources, generated
+        # configs) produced by the ci.yml watcher — see data branch.
+        run: bash .github/scripts/fetch_data_branch.sh
+
       - name: Resolve build context
         id: context
         env:
