@@ -13,5 +13,12 @@ build.json
 module/maintainer.txt
 config.stable.json
 config.beta.json
+# Machine-owned state: canonical copy lives on the `data` branch, materialized
+# by .github/scripts/fetch_data_branch.sh — never commit these to main.
+.github/configs/app_versions.json
+.github/configs/config.beta.updated.json
+.github/configs/config.stable.updated.json
+.github/configs/patch_file_hashes.json
+.github/configs/patch_sources.json
 active*.json
-tags_*.json
+tags_*.json
