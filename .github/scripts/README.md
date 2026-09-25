@@ -3,9 +3,10 @@
 Every release in this repo carries a `build.json` asset — a schema-v1,
 filename-keyed manifest describing the APKs/ZIPs in that release (app name,
 version, arch, applied patches, `originBuild`, ...). The numbered releases get
-a manifest for exactly their own files; the two rolling archive releases
-(`stable`, `beta`) additionally get a **cumulative** manifest covering every
-file still archived on them. These scripts implement and repair that pipeline.
+a manifest for exactly their own files; the cumulative archive manifests and
+the per-build copies live on the **`website` branch** of this repo, which the
+website catalog rebuild consumes directly. These scripts implement and repair
+that pipeline.
 
 ```
 builder (utils.sh)                build.yml
@@ -15,13 +16,11 @@ builder (utils.sh)                build.yml
                         │                          │
                         │            ┌─────────────┴──────────────┐
                         ▼            ▼ (numbered release)         ▼ (archive upload)
-            temp/manifest/*.json   build_upload_release.sh   merge_archive_manifest.sh
-                                   (UPLOAD_FILES includes      │ unions old cumulative
-                                    temp/manifest/build.json)  │ manifest + new entries,
-                                                               │ drops files no longer
-                                                               │ on the release
-                                                               ▼
-                                                <stable|beta>/build.json
+            temp/manifest/*.json   build_upload_release.sh   merge_archive_branch.sh
+                                   (UPLOAD_FILES includes      │ commits manifests/<tag>.json
+                                    temp/manifest/build.json)  │ + merges archive/<channel>.json
+                                                               ▼   (union, live-filter, push)
+                                              website branch: archive/{stable,beta}.json
 ```
 
 ## Per-build pipeline (runs in CI)
@@ -37,24 +36,24 @@ numbered release (build outputs + `temp/manifest/build.json`) and the archive
 releases. Note: `gh` names an uploaded asset after the **local file's
 basename** — always stage files under their intended asset name.
 
-### `merge_archive_manifest.sh`
-Merges the current build's manifest into the archive release's cumulative
-`build.json`. Run **after** the archive file upload so the live-asset filter
-sees the new files. Env: `ARCHIVE_TAG` (`stable`|`beta`), `GITHUB_REPOSITORY`.
+### `merge_archive_branch.sh`
+Merges the current build's manifest into the `website` branch: writes
+`manifests/<tag>.json` and updates the cumulative `archive/<channel>.json`
+(union, live-filter against the release's APK/ZIP assets, sanity gate) and
+pushes. Run **after** the archive file upload so the live-asset filter sees the
+new files. Env: `ARCHIVE_TAG` (`stable`|`beta`), `BUILD_TAG` (this release's
+tag), `GITHUB_REPOSITORY`.
 
-Hardened against the 2026-09-24 incident where one transient
-`gh release download` failure silently restarted the cumulative manifest from
-the current build only (stable dropped from 408 → 2 entries):
+The branch design removes the 2026-09-24 incident class by construction: the
+previous cumulative manifest is a checked-out file, not a `gh release
+download` that can fail into an empty base — a broken `git fetch` fails the
+job loudly instead. Remaining guards: the sanity gate recomputes the expected
+minimum (`|union(old, new) ∩ live assets|`) and refuses to push a merge that
+kept fewer entries; push retries rebase against concurrent branch updates.
 
-- the old-manifest download retries 3× (like the upload) and **aborts the job**
-  if the release has a `build.json` asset that cannot be fetched — only a
-  genuinely absent asset is treated as "first merge";
-- before uploading, a sanity gate recomputes the expected minimum
-  (`|union(old, new) ∩ live assets|`) and refuses to publish a merge that kept
-  fewer entries.
-
-Regression tests: `temp/test_merge_archive_manifest.sh` (stubbed `gh`, run from
-Git Bash; `temp/` is gitignored, keep a copy alongside the other local tests).
+Regression tests: `temp/test_merge_archive_branch.sh` (stubbed `gh`, local
+bare `origin`; run from Git Bash — `temp/` is gitignored, keep a copy
+alongside the other local tests).
 
 ## Archive maintenance
 
@@ -62,6 +61,18 @@ Git Bash; `temp/` is gitignored, keep a copy alongside the other local tests).
 Prunes old assets from the archive releases (size caps). The merge script's
 live-asset filter automatically drops manifest entries whose files were
 pruned, so the cumulative manifest tracks what is actually downloadable.
+
+### `cleanup_website_branch.sh`
+Runs in `cleanup.yml` after release deletion: removes `manifests/<tag>.json`
+from the `website` branch when the numbered release no longer exists (same
+pattern as `cleanup_update_branch.sh` does for changelogs). `archive/*.json`
+entries for pruned files drop out at the next build merge (live filter).
+
+### `seed_website_branch.py`
+Downloads every live release's `build.json` asset and lays out the full
+`website` branch content (`manifests/*.json` + `archive/*.json`). Used to seed
+the branch initially; also the recovery path to rebuild the branch from
+scratch after a manifest repair (`--out` then replace the branch content).
 
 ## One-time repair tools (manual, dry-run by default)
 
@@ -87,8 +98,13 @@ python3 .github/scripts/repair_archive_manifest.py --archive stable \
         --data-json /tmp/data_prewipe.json --apply                           # upload
 ```
 
-After uploading, trigger the website's `rebuild-catalog.yml` (workflow_dispatch)
-so `data.json` re-folds from the repaired archive manifest.
+After `--apply`, re-sync the `website` branch with
+`seed_website_branch.py --out temp/website-branch` and replace the branch's
+`archive/<channel>.json` with the repaired file, then trigger the website's
+`rebuild-catalog.yml` (workflow_dispatch) so `data.json` re-folds from it.
+Since the branch keeps full history, the first recovery step for a degraded
+`archive/*.json` is now `git log -p` / `git show <rev>:archive/stable.json`
+on the branch itself.
 
 ### `backfill_manifests.py`
 Backfills **per-release** `build.json` assets into the numbered releases from
