@@ -267,7 +267,10 @@ _get_prebuilts() {
 	
 	local first_patch_src
 	first_patch_src=$(list_args "$patches_src_list" | tr -d \"\' | head -n 1)
-	pr "Getting prebuilts (${first_patch_src%/*})" >&2
+	# The "Getting prebuilts" header is printed lazily, exactly once, the first
+	# time a file actually needs to be downloaded (see the download sites below),
+	# so fully disk-cached runs stay silent instead of repeating it per app.
+	local prebuilts_header_printed=false
 
 	local cl_dir=${first_patch_src%/*}
 	cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
@@ -345,6 +348,7 @@ _get_prebuilts() {
 		url=$(source_release_asset_url "$host" <<<"$asset")
 		name=$(jq -r .name <<<"$asset")
 		file="${dir}/${name}"
+		if [ "$prebuilts_header_printed" != true ]; then pr "Getting prebuilts (${first_patch_src%/*})" >&2; prebuilts_header_printed=true; fi
 		if [ "$host" = github ]; then
 			gh_dl "$file" "$url" >&2 || return 1
 		else
@@ -443,6 +447,7 @@ _get_prebuilts() {
 			url=$(source_release_asset_url "$host" <<<"$asset")
 			name=$(jq -r .name <<<"$asset")
 			file="${dir}/${name}"
+			if [ "$prebuilts_header_printed" != true ]; then pr "Getting prebuilts (${first_patch_src%/*})" >&2; prebuilts_header_printed=true; fi
 			if [ "$host" = github ]; then
 				gh_dl "$file" "$url" >&2 || return 1
 			else
