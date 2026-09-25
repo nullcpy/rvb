@@ -472,7 +472,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -533,7 +533,7 @@
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
     "enabled": false,
-    "pkg-name": "com.google.android.apps.photomath",
+    "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
     "uptodown-dlurl": "https://photomath.en.uptodown.com/android"
@@ -622,6 +622,7 @@
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
     "brand": "andrewliang25",
+    "included-patches": "'[General] AMOLED black theme' '[Reels] Download any reel'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
     "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana",
@@ -1150,7 +1151,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1823,6 +1824,16 @@
     "apkpure-dlurl": "https://apkpure.com/amazon-shopping/com.amazon.mShop.android.shopping",
     "apkcombo-dlurl": "https://apkcombo.com/amazon-shopping/com.amazon.mShop.android.shopping"
   },
+  "Telegram-rushiranpise-GooglePlay": {
+    "patches-source": "rushiranpise/morphe-patches",
+    "brand": "rushiranpise",
+    "enabled": false,
+    "pkg-name": "org.telegram.messenger",
+    "app-name": "Telegram",
+    "variant": "Google Play",
+    "uptodown-dlurl": "https://telegram-google-play-version.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
+  },
   "KineStop-ShaunTheSheep": {
     "patches-source": "shaun-the-sheep-patches/morphe-patches",
     "brand": "ShaunTheSheep",
@@ -1867,7 +1878,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -1878,7 +1889,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9-Asia": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
