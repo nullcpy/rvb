@@ -79,31 +79,26 @@ trap 'rm -f "$FAILED_LOG"' EXIT
 
 upload_file() {
     local file="$1"
-    local idx="$2"
-    local total="$3"
     local filename
     filename=$(basename "$file")
-    echo "⬆️ [$idx/$total] Uploading $filename..."
+    echo "⬆️ $filename..."
     for attempt in 1 2 3; do
         if gh release upload "$TAG" "$file" --clobber -R "$REPO"; then
-            echo "✅ [$idx/$total] Uploaded $filename"
+            echo "✅ $filename"
             return 0
         fi
-        echo "::warning::[$idx/$total] Attempt $attempt/3 failed for $filename, retrying in 5s..."
+        echo "::warning::Attempt $attempt/3 failed for $filename, retrying in 5s..."
         sleep 5
     done
-    echo "::error::[$idx/$total] Failed to upload $filename after 3 attempts"
+    echo "::error::Failed to upload $filename after 3 attempts"
     echo "$filename" >> "$FAILED_LOG"
     return 1
 }
 
 job_count=0
-idx=0
-total=${#FILES[@]}
 
 for file in "${FILES[@]}"; do
-    ((idx++)) || true
-    upload_file "$file" "$idx" "$total" &
+    upload_file "$file" &
     ((job_count++)) || true
     if [ "$job_count" -ge "$PARALLEL_JOBS" ]; then
         wait -n || true
