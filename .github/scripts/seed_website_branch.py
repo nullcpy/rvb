@@ -34,8 +34,10 @@ def run_args(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--repo", default=os.environ.get("RVB_REPO", "nullcpy/rvb"))
-    ap.add_argument("--out", required=True, help="output directory for branch content")
+    ap.add_argument(
+        "--repo", default=os.environ.get("RVB_REPO", "nullcpy/rvb"))
+    ap.add_argument("--out", required=True,
+                    help="output directory for branch content")
     args = ap.parse_args()
 
     out = Path(args.out)
