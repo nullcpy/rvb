@@ -26,9 +26,27 @@ if [ ! -f "$NEW_MANIFEST" ]; then
   exit 0
 fi
 
-# 1. Previous cumulative manifest from the archive release (or empty).
-if ! gh release download "$ARCHIVE_TAG" -p build.json -O "$OLD_MANIFEST" -R "$REPO" 2>/dev/null; then
+# 1. Previous cumulative manifest from the archive release. If the release has
+#    a build.json asset but it cannot be fetched, that is fatal: merging against
+#    an empty old manifest silently restarts the archive from the current build
+#    only (this is how stable lost 400+ entries on 2026-09-24). Retry like the
+#    upload below; only a genuinely absent build.json asset means "first merge".
+HAS_MANIFEST=$(gh api "repos/$REPO/releases/tags/$ARCHIVE_TAG" \
+  -q '[.assets[].name | select(. == "build.json")] | length' 2>/dev/null || echo 1)
+if [ "$HAS_MANIFEST" = "0" ]; then
+  echo "No build.json asset on $ARCHIVE_TAG yet — starting a fresh cumulative manifest."
   echo 'null' > "$OLD_MANIFEST"
+else
+  ATTEMPT=1
+  until gh release download "$ARCHIVE_TAG" -p build.json -O "$OLD_MANIFEST" -R "$REPO"; do
+    ATTEMPT=$((ATTEMPT + 1))
+    if [ "$ATTEMPT" -gt 3 ]; then
+      echo "::error::Could not download the existing archive manifest from $ARCHIVE_TAG after 3 attempts — refusing to merge against an empty old manifest" >&2
+      exit 1
+    fi
+    echo "Old-manifest download attempt $((ATTEMPT - 1)) failed, retrying in 15s..." >&2
+    sleep 15
+  done
 fi
 
 # 2. APK/ZIP assets actually present in the archive release right now.
@@ -49,7 +67,20 @@ jq -s --slurpfile live temp/manifest/archive-live.json \
   ' "$OLD_MANIFEST" "$NEW_MANIFEST" > "$OUT_MANIFEST"
 
 ENTRIES=$(jq '.files | length' "$OUT_MANIFEST")
-echo "Merged archive manifest for $ARCHIVE_TAG: $ENTRIES entries. Uploading..."
+# Sanity gate: every old/new entry whose file still lives on the release must
+# have survived the merge. A shortfall means something upstream went wrong
+# (stale live list, truncated download) — refuse to publish instead of
+# silently shrinking the archive manifest.
+EXPECTED=$(jq -s --slurpfile live temp/manifest/archive-live.json '
+  (((.[0].files // {}) | keys) + ((.[1].files // {}) | keys) | unique) as $keys
+  | [$keys[] | select(. as $k | $live[0] | index($k))] | length
+' "$OLD_MANIFEST" "$NEW_MANIFEST")
+if [ "$ENTRIES" -lt "$EXPECTED" ]; then
+  echo "::error::Merge kept $ENTRIES entries but $EXPECTED archived files still have manifest entries — refusing to upload" >&2
+  exit 1
+fi
+LIVE_COUNT=$(grep -c . "$LIVE_LIST" || true)
+echo "Merged archive manifest for $ARCHIVE_TAG: $ENTRIES entries ($LIVE_COUNT live assets, $EXPECTED expected minimum). Uploading..."
 
 # 4. Upload with retries so a transient API failure doesn't silently orphan the
 #    new files' metadata until the next rebuild.
