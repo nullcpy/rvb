@@ -2,11 +2,12 @@
 set -euo pipefail
 
 # Prune the update branch:
-#  1. *-update.json whose download pointer is fossilized — the zipUrl asset is
-#     gone from the archive release AND the origin build's numbered release has
-#     been deleted. Asset rotation alone never triggers this: a slug that is
-#     still being built gets its update.json rewritten on every build against
-#     files that exist at that moment.
+#  1. *-update.json whose download pointer is dead — the zipUrl asset no longer
+#     exists on the archive release it names (manual asset removal or rotation
+#     past the retention window both qualify), or, for numbered-release
+#     pointers, the release itself was deleted. A still-built slug always
+#     refreshes its pointer from the newest build, so pruning dead ones loses
+#     nothing: next build recreates them.
 #  2. changelogs/<tag>.md for releases that no longer exist and are no longer
 #     referenced by any surviving *-update.json.
 #
@@ -43,7 +44,7 @@ git fetch origin update || true
 git checkout -B update origin/update
 
 DELETED_JSON=0
-echo "--- Checking root update.json files for fossilized pointers ---"
+echo "--- Checking root update.json files for dead pointers ---"
 shopt -s nullglob
 for f in *-update.json; do
   [ -f "$f" ] || continue
@@ -53,21 +54,11 @@ for f in *-update.json; do
   tag=$(basename "$(dirname "$url")")
   asset=$(basename "$url")
   if [ "$tag" = "stable" ] || [ "$tag" = "beta" ]; then
-    asset_live=1
-    echo "$LIVE_ASSETS" | grep -Fxq "$asset" || asset_live=0
-    if [ "$asset_live" = "1" ]; then
-      continue  # pointer still resolves, keep
+    if ! echo "$LIVE_ASSETS" | grep -Fxq "$asset"; then
+      echo "Pruning dead pointer: $f (asset '$asset' no longer on $tag)"
+      rm -f "$f"
+      DELETED_JSON=$((DELETED_JSON + 1))
     fi
-    # Dead archive asset: only prune when the origin build is also gone,
-    # so a failed archive upload (release alive) does not orphan the slug.
-    rel=$(jq -r '.changelog // empty' "$f" | sed -n 's#.*/changelogs/\(.*\)\.md$#\1#p')
-    if [ -n "$rel" ] && echo "$ACTIVE_TAGS" | grep -Fxq "$rel"; then
-      echo "Keeping $f (asset pruned but release $rel is still active)"
-      continue
-    fi
-    echo "Pruning fossilized pointer: $f (asset '$asset' gone, release '${rel:-?}' gone)"
-    rm -f "$f"
-    DELETED_JSON=$((DELETED_JSON + 1))
   else
     # Pointer to a numbered release: dead once that release is deleted.
     if ! echo "$ACTIVE_TAGS" | grep -Fxq "$tag"; then
@@ -78,7 +69,7 @@ for f in *-update.json; do
   fi
 done
 shopt -u nullglob
-echo "Pruned $DELETED_JSON fossilized update.json pointer(s)."
+echo "Pruned $DELETED_JSON dead update.json pointer(s)."
 
 DELETED_COUNT=0
 if [ -d changelogs ]; then
@@ -108,7 +99,7 @@ if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git status --por
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
   git add -A
-  git commit -m "chore: prune fossilized update pointers and orphaned changelogs [skip ci]"
+  git commit -m "chore: prune dead update pointers and orphaned changelogs [skip ci]"
   git push origin update
 else
   echo "Nothing to prune. Update branch is clean."
