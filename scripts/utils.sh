@@ -1042,18 +1042,16 @@ _patches_list_versions() {
 	fi
 	echo "$op"
 }
-# Quote a newline-separated list of raw patch names into the "'A' 'B'" group format
-# that list_args/join_args speak, escaping any apostrophe inside a name. Without the
-# escape, a name like "Keep the screen's refresh rate" leaves an unbalanced quote in
-# the eval'd command line: the run dies on "unexpected EOF while looking for matching
-# quote", or - with an even number of strays - silently splits one name into several
-# arguments and hands the CLI garbage instead of a patch.
-_quote_patch_names() {
-	local n esc
+# Wrap raw patch names (one per line) into the "'A' 'B'" group shape that TOML
+# values use. Deliberately NOT shell-escaped: this is the same representation a
+# person writes by hand, so everything downstream - list_args, the compatibility
+# gate, the applied-patch post-flight check - sees one shape from both sources.
+# Shell quoting happens once, in join_args.
+_group_patch_names() {
+	local n
 	while IFS= read -r n; do
 		[ -z "$n" ] && continue
-		esc=$(printf '%s' "$n" | sed "s/'/'\\\\''/g")
-		printf "'%s' " "$esc"
+		printf "'%s' " "$n"
 	done
 }
 
@@ -3343,7 +3341,7 @@ build_rv() {
 				abort "ERROR: inclusive-patches for '$table' needs a CLI that lists its patches; '${args[cli_source]:-}' gave none. Use included-patches for this source."
 			fi
 			incl_drop=$(list_args "${incl_exc[$incl_bi]:-${incl_exc[0]:-}}" | sed -e "s/^'//" -e "s/'\$//" -e 's/^"//' -e 's/"\$//')
-			incl_out=$(printf '%s\n' "$incl_names" | grep -vxF -f <(printf '%s\n' "$incl_drop") | _quote_patch_names)
+			incl_out=$(printf '%s\n' "$incl_names" | grep -vxF -f <(printf '%s\n' "$incl_drop") | _group_patch_names)
 			incl_out="${incl_out%"${incl_out##*[![:space:]]}"}"
 			if [ -z "$incl_out" ]; then
 				abort "ERROR: inclusive-patches for '$table' resolved to no patch names from '${p_srcs_arr[$incl_bi]:-}'."
@@ -4270,7 +4268,22 @@ build_rv() {
 }
 
 list_args() { tr -d '\t\r' <<<"$1" | tr -s ' ' | sed "s/' '/'\\n'/g" | sed 's/" "/"\n"/g' | sed 's/\([^"]\)"\([^"]\)/\1'\''\2/g' | grep -v '^$' || :; }
-join_args() { list_args "$1" | sed "s/^/${2} /" | paste -sd " " - || :; }
+# Turn a group string ("'A' 'B'", the shape included-patches/excluded-patches hold)
+# into "<flag> '<name>'" words. This is the one place patch names get shell-quoted:
+# the result is interpolated into a command string that build_rv evals, so a name
+# carrying an apostrophe - hushfeed ships "Keep the screen's refresh rate" - would
+# otherwise leave an unbalanced quote there, failing the run with "unexpected EOF
+# while looking for matching quote" or, with an even number of strays, silently
+# splitting one name into several CLI arguments. Escaping exactly one layer of
+# wrapper quotes also means hand-written and inclusive selections behave the same.
+join_args() {
+	local n
+	list_args "$1" | while IFS= read -r n; do
+		n=${n#\'}; n=${n%\'}; n=${n#\"}; n=${n%\"}
+		[ -z "$n" ] && continue
+		printf "%s '%s'\n" "$2" "$(printf '%s' "$n" | sed "s/'/'\\\\''/g")"
+	done | paste -sd " " - || :
+}
 
 module_config() {
 	local ma=""
