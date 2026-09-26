@@ -20,7 +20,9 @@ import urllib.request
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import derive_source_changes
+# Sibling module, importable only because of the insert above - keep it after it.
+# isort:skip stops the formatter lifting it back over the path setup.
+import derive_source_changes  # isort:skip  # noqa: E402
 
 try:
     import tomllib
@@ -63,8 +65,10 @@ def discover_active_sources(patches_dir=PATCHES_DIR):
             print(f"Warning: Could not parse {filepath}: {e}", file=sys.stderr)
             continue
 
-        file_defaults = {k: v for k, v in data.items() if not isinstance(v, dict)}
-        def_src = file_defaults.get("patches-source", "MorpheApp/morphe-patches")
+        file_defaults = {k: v for k,
+                         v in data.items() if not isinstance(v, dict)}
+        def_src = file_defaults.get(
+            "patches-source", "MorpheApp/morphe-patches")
         def_host = file_defaults.get("patches-source-host", "github")
 
         for app_key, app_table in data.items():
@@ -86,7 +90,8 @@ def discover_active_sources(patches_dir=PATCHES_DIR):
             host_list = split_quoted_list(host_str)
 
             for i, src in enumerate(src_list):
-                host = host_list[i] if i < len(host_list) else (host_list[0] if host_list else "github")
+                host = host_list[i] if i < len(host_list) else (
+                    host_list[0] if host_list else "github")
                 host = host.lower()
                 if src:
                     active_sources[src] = host
@@ -110,10 +115,12 @@ def fetch_github_releases(repo, token=None):
     except urllib.error.HTTPError as e:
         if e.code in (403, 404, 451):
             return None, True
-        print(f"Warning: GitHub API error {e.code} for {repo}", file=sys.stderr)
+        print(
+            f"Warning: GitHub API error {e.code} for {repo}", file=sys.stderr)
         return None, False
     except Exception as e:
-        print(f"Warning: Failed to fetch releases for {repo}: {e}", file=sys.stderr)
+        print(
+            f"Warning: Failed to fetch releases for {repo}: {e}", file=sys.stderr)
         return None, False
 
 
@@ -128,10 +135,12 @@ def fetch_gitlab_releases(repo):
     except urllib.error.HTTPError as e:
         if e.code in (403, 404):
             return None, True
-        print(f"Warning: GitLab API error {e.code} for {repo}", file=sys.stderr)
+        print(
+            f"Warning: GitLab API error {e.code} for {repo}", file=sys.stderr)
         return None, False
     except Exception as e:
-        print(f"Warning: Failed to fetch GitLab releases for {repo}: {e}", file=sys.stderr)
+        print(
+            f"Warning: Failed to fetch GitLab releases for {repo}: {e}", file=sys.stderr)
         return None, False
 
 
@@ -164,7 +173,8 @@ def parse_releases(releases, host):
         for rel in releases:
             tag = rel.get("tag_name") or ""
             date = rel.get("published_at") or rel.get("created_at") or ""
-            is_pre = rel.get("prerelease", False) or bool(beta_pattern.search(tag))
+            is_pre = rel.get("prerelease", False) or bool(
+                beta_pattern.search(tag))
             if not tag:
                 continue
             if is_pre:
@@ -182,7 +192,8 @@ def parse_releases(releases, host):
 def main():
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     active_sources = discover_active_sources()
-    print(f"Discovered {len(active_sources)} active patch source(s) across TOML configs.")
+    print(
+        f"Discovered {len(active_sources)} active patch source(s) across TOML configs.")
 
     # Load previous state
     old_state = {}
@@ -191,7 +202,8 @@ def main():
             with open(STATE_FILE, "r", encoding="utf-8") as f:
                 old_state = json.load(f)
         except Exception as e:
-            print(f"Warning: Failed to read {STATE_FILE}: {e}", file=sys.stderr)
+            print(
+                f"Warning: Failed to read {STATE_FILE}: {e}", file=sys.stderr)
 
     new_state = {}
     trigger_stable = 0
@@ -238,14 +250,16 @@ def main():
             print("::endgroup::")
             continue
 
-        stable_tag, stable_date, beta_tag, beta_date = parse_releases(releases, host)
+        stable_tag, stable_date, beta_tag, beta_date = parse_releases(
+            releases, host)
 
         old_stable = old_info.get("stable", "")
         old_beta = old_info.get("beta", "")
 
         if stable_tag and stable_tag != old_stable:
             print(f"  ↑ Stable: {old_stable or 'none'} → {stable_tag}")
-            print(f"::notice title=New Stable Release::{repo} — {old_stable or 'none'} → {stable_tag}")
+            print(
+                f"::notice title=New Stable Release::{repo} — {old_stable or 'none'} → {stable_tag}")
         elif stable_tag:
             print(f"    Stable: {stable_tag} (no change)")
         else:
@@ -255,7 +269,8 @@ def main():
             print(f"  ↑ Beta:   {old_beta or 'none'} → {beta_tag}")
             # Beta triggers if it is newer than stable
             if beta_date > stable_date:
-                print(f"::notice title=New Beta Release::{repo} — {old_beta or 'none'} → {beta_tag}")
+                print(
+                    f"::notice title=New Beta Release::{repo} — {old_beta or 'none'} → {beta_tag}")
         elif beta_tag:
             print(f"    Beta:   {beta_tag} (no change)")
         else:
@@ -303,16 +318,22 @@ def main():
             f.write(f"TRIGGER_BETA={trigger_beta}\n")
             f.write(f"TRIGGER_BLOCKED={trigger_blocked}\n")
 
-    print(f"Patch sources synchronized: {len(new_state)} active sources tracked.")
-    print(f"Triggers: STABLE={trigger_stable}, BETA={trigger_beta}, BLOCKED={trigger_blocked}")
+    print(
+        f"Patch sources synchronized: {len(new_state)} active sources tracked.")
+    print(
+        f"Triggers: STABLE={trigger_stable}, BETA={trigger_beta}, BLOCKED={trigger_blocked}")
     if not trigger_stable and not trigger_beta and not trigger_blocked:
         print("::notice title=Patch Sync Summary::No new patch releases detected")
     else:
         parts = []
-        if trigger_stable: parts.append("STABLE")
-        if trigger_beta:   parts.append("BETA")
-        if trigger_blocked: parts.append("BLOCKED")
-        print(f"::notice title=Patch Sync Summary::Build triggered — {', '.join(parts)}")
+        if trigger_stable:
+            parts.append("STABLE")
+        if trigger_beta:
+            parts.append("BETA")
+        if trigger_blocked:
+            parts.append("BLOCKED")
+        print(
+            f"::notice title=Patch Sync Summary::Build triggered — {', '.join(parts)}")
 
 
 if __name__ == "__main__":
