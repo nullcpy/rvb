@@ -917,8 +917,15 @@ _cache_target_vc() {
 # versionCode metadata lookup (defaults to $1 — the pre-refactor code used
 # version_f in filenames but the unstripped resolved_version in
 # get_patch_version_code). Populates: _CACHE_VC, _CACHE_CHECK_APK (path or
-# empty), _CACHE_ALL_APK (non-legacy "all" candidate, used by validation
-# delete check).
+# empty), _CACHE_ALL_APK (the "all" candidate, which the validation delete check
+# spares because it is shared by every arch).
+#
+# The version code entered these names after the cache existed. Names without it
+# are deliberately not probed: nothing writes them any more, so reviving them
+# meant trusting a file whose code was never checked when it was stored, and
+# _cache_touch_apks kept refreshing its mtime so cache eviction never retired it.
+# A miss now costs one re-download per app+version, after which the modern name is
+# what exists.
 _cache_probe_apk() {
 	local ver=$1 arch=$2 raw_ver=${3:-$1}
 	local vc check_apk=""
@@ -935,20 +942,14 @@ _cache_probe_apk() {
 			if [ -f "$bpath" ]; then check_apk="$bpath"; all_apk="$bpath"; break; fi
 		done
 	fi
-	if [ -z "$check_apk" ] && [ -n "$vc" ]; then
-		local legacy_stock="${apk_cache_dir}/${pkg_name}-${ver}-${arch}.apk"
-		local legacy_all="${apk_cache_dir}/${pkg_name}-${ver}-all.apk"
-		[ -f "$legacy_stock" ] && check_apk="$legacy_stock"
-		[ -z "$check_apk" ] && [ -f "$legacy_all" ] && check_apk="$legacy_all"
-	fi
 	_CACHE_VC="$vc"
 	_CACHE_CHECK_APK="$check_apk"
 	_CACHE_ALL_APK="$all_apk"
 }
 
 
-# Refresh mtimes on all cached variants for one pkg/arch/version (exact, all,
-# and the two legacy names).
+# Refresh mtimes on every cached variant this pkg/arch/version can be served by,
+# so a cache hit does not age toward eviction while it is still in use.
 _cache_touch_apks() {
 	local ver=$1 arch=$2
 	local vc; vc=$(_cache_target_vc "$ver" "$arch")
@@ -958,9 +959,7 @@ _cache_touch_apks() {
 		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apk" \
 		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.xapk" \
 		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apkm" \
-		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apks" \
-		"${apk_cache_dir}/${pkg_name}-${ver}-${arch}.apk" \
-		"${apk_cache_dir}/${pkg_name}-${ver}-all.apk"; do
+		"${apk_cache_dir}/${pkg_name}-${ver}${vc_infix}-all.apks"; do
 		[ -f "$f" ] && touch "$f" 2>/dev/null || true
 	done
 }
@@ -3505,14 +3504,9 @@ build_rv() {
 			local cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
 			local stock_apk="$cached_stock_apk"
 			local all_apk="$cached_all_apk"
-			if [ ! -f "$stock_apk" ] && [ ! -f "$all_apk" ] && [ -n "$target_version_code" ]; then
-				local legacy_stock="${apk_cache_dir}/${pkg_name}-${version_f}-${arch_f}.apk"
-				local legacy_all="${apk_cache_dir}/${pkg_name}-${version_f}-all.apk"
-				if [ -f "$legacy_stock" ] || [ -f "$legacy_all" ]; then
-					stock_apk="$legacy_stock"
-					all_apk="$legacy_all"
-				fi
-			fi
+			# No pre-versionCode name is tried here (see _cache_probe_apk for why): if
+			# the modern names miss, this arch re-downloads and lands under the key that
+			# states the code it was checked against.
 			local cached_bundle_apk=""
 			if [ "$_CACHE_BUNDLE_OK" = true ]; then
 				local bx
