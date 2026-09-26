@@ -84,6 +84,7 @@ def compile_configs(patches_dir="configs/patches"):
                 continue
 
             app_pv_raw = app_table.get("patches-version")
+            app_pv_manual = bool(app_pv_raw)
             if app_pv_raw:
                 channel = normalize_channel(app_pv_raw)
             else:
@@ -103,6 +104,11 @@ def compile_configs(patches_dir="configs/patches"):
                 entry = dict(merged)
                 if is_pinned:
                     entry["patches-version"] = channel
+                    # Authoritative pin: written by a human in the app table, so
+                    # ci_generate_configs.sh must not overwrite it with the
+                    # watcher's current tag. File-level defaults stay auto-managed.
+                    if app_pv_manual:
+                        entry["patches-pin-manual"] = True
                 else:
                     # Omit redundant key when matching pool default
                     entry.pop("patches-version", None)
@@ -117,6 +123,9 @@ def compile_configs(patches_dir="configs/patches"):
                 entry = dict(merged)
                 if is_pinned:
                     entry["patches-version"] = channel
+                    # See stable pool: manual app-level pins are authoritative.
+                    if app_pv_manual:
+                        entry["patches-pin-manual"] = True
                 else:
                     # Omit redundant key when matching pool default
                     entry.pop("patches-version", None)

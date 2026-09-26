@@ -236,6 +236,7 @@ You do **not** need separate files for stable and beta:
   - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build pool.
   - **File-Level Defaults**: Setting `patches-version = "both"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
   - **Filename Inference**: A filename with `.beta.toml` (or legacy `.dev.toml`) automatically defaults all apps in that file to beta. Renaming to `*.toml` defaults to stable unless `patches-version = "both"` is set.
+  - **Concrete Version Pins**: A version number instead of a channel (e.g. `patches-version = "v4.8.3"`) pins that app to the exact release. Written **inside an app block** it is authoritative — the watcher's config regeneration keeps it and never overwrites it with the latest tag (apps get an internal `patches-pin-manual` marker). As a **file-level default** it is auto-managed: the watcher replaces it with each source's current channel tag on every generation.
   - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
 ## Automated Patch Sources State Tracking

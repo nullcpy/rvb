@@ -57,11 +57,13 @@ if [ "${TRIGGER_STABLE:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [
         # per app (which let a mid-run release switch cause dev.14/dev.15 drift).
         # One tag per source, index-aligned with the patches-source list; skip the
         # pin (inherit the floating channel) if any source has no recorded tag.
+        # A manual TOML pin (patches-pin-manual, set by compile_patch_configs.py)
+        # is authoritative: the app stays enabled but its version is left alone.
         ($srcs | map(. as $src | ($tags | to_entries | map(select(((.value.repo // .key) | ascii_downcase) == $src)) | (.[0].value.stable // "")))) as $ptags |
         ((($ptags | length) > 0) and ($ptags | all(. != ""))) as $pin_ok |
         (if ($ptags | length) == 1 then $ptags[0] else ("'\''" + ($ptags | join("'\'' '\''")) + "'\''") end) as $pin |
         if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or ($activeApps[0] | index($k)) then
-          (if $pin_ok then (.value["patches-version"] = $pin) else . end)
+          (if ($pin_ok and ($app["patches-pin-manual"] | if . == true then false else true end)) then (.value["patches-version"] = $pin) else . end)
         else
           (.value.enabled = false)
         end
@@ -93,11 +95,12 @@ if [ "${TRIGGER_BETA:-0}" = "1" ] || [ "${TRIGGER_APP_UPDATE:-0}" = "1" ] || [ "
         # Hard-pin each app to the concrete beta tag from the watcher snapshot (one
         # per source, index-aligned with patches-source); skip the pin and inherit
         # the floating "beta" channel if any source has no recorded beta tag.
+        # A manual TOML pin (patches-pin-manual) is authoritative: keep its version.
         ($srcs | map(. as $src | ($tags | to_entries | map(select(((.value.repo // .key) | ascii_downcase) == $src)) | (.[0].value.beta // "")))) as $ptags |
         ((($ptags | length) > 0) and ($ptags | all(. != ""))) as $pin_ok |
         (if ($ptags | length) == 1 then $ptags[0] else ("'\''" + ($ptags | join("'\'' '\''")) + "'\''") end) as $pin |
         if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or (($activeApps[0] | index($k)) and $has_valid_beta) then
-          (if $pin_ok then (.value["patches-version"] = $pin) else . end)
+          (if ($pin_ok and ($app["patches-pin-manual"] | if . == true then false else true end)) then (.value["patches-version"] = $pin) else . end)
         else
           (.value.enabled = false)
         end
