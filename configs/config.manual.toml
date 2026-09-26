@@ -1,30 +1,21 @@
-[Photomath-DeVanced]
+[AtvTools-hxreborn]
 enabled = true
-pkg-name = "com.microblink.photomath"
-app-name = "Photomath"
-patches-source = "RookieEnough/De-Vanced"
-brand = "DeVanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath"
-uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+pkg-name = "dev.vodik7.atvtools"
+app-name = "atvTools"
+patches-source = "hxreborn/morphe-patches"
+brand = "hxreborn"
+apkpure-dlurl = "https://apkpure.com/atvtools/dev.vodik7.atvtools"
+apkcombo-dlurl = "https://apkcombo.com/atvtools/dev.vodik7.atvtools"
 
-[Telegram-rushiranpise-GooglePlay]
+[TikTok-hushfeed]
 enabled = true
-pkg-name = "org.telegram.messenger"
-app-name = "Telegram"
-variant = "Google Play"
-patches-source = "rushiranpise/morphe-patches"
-brand = "rushiranpise"
-uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
-
-[Facebook-andrewliang25]
-enabled = true
-pkg-name = "com.facebook.katana"
-app-name = "Facebook"
-patches-source = "andrewliang25/morphe-patches"
-brand = "andrewliang25"
-included-patches = "'[General] AMOLED black theme' '[Reels] Download any reel'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook"
-uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/facebook-app/com.facebook.katana"
-apkcombo-dlurl = "https://apkcombo.com/facebook/com.facebook.katana"
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "SysAdminDoc/hushfeed"
+brand = "hushfeed"
+inclusive-patches = true
+excluded-patches = "'Remove unused language packs'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
