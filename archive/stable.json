@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-09-25T21:34:30Z"
+    "publishedAt": "2026-09-26T05:22:09Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -3862,10 +3862,10 @@
       "subVariant": null,
       "packageName": "com.netflix.ninja.clone",
       "patchSources": [
-        "ajstrick81/patches-1.37.6.mpp"
+        "ajstrick81/patches-1.37.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.6"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.37.7"
       ],
       "appliedPatches": [
         "Disable Netflix CertCheck ",
@@ -3873,8 +3873,8 @@
         "Remove Netflix ads (loader) ",
         "Clone Netflix "
       ],
-      "originBuild": "260123",
-      "publishedAt": "2026-09-25T20:26:58Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv-clone",
@@ -8134,18 +8134,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.31.0.mpp"
+        "byehi98/patches-1.31.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.31.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.31.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock ",
         "Swift Backup Tamper Protection ",
         "Swift Backup Web Login "
       ],
-      "originBuild": "260123",
-      "publishedAt": "2026-09-25T20:26:58Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -8160,18 +8160,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.31.0.mpp"
+        "byehi98/patches-1.31.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.31.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.31.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock ",
         "Swift Backup Tamper Protection ",
         "Swift Backup Web Login "
       ],
-      "originBuild": "260123",
-      "publishedAt": "2026-09-25T20:26:58Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "google-photos-akashsriram-module-v7.92.0.977185651-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -9708,14 +9708,15 @@
       "subVariant": null,
       "packageName": "com.ss.android.ugc.trill",
       "patchSources": [
-        "kveld9/patches-1.46.0.mpp"
+        "kveld9/patches-2.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.46.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date ",
         "Bypass Mandatory Login ",
+        "Bypass Screen Capture Detection ",
         "Clean Share URL ",
         "Client-Side AI & Behavioral Profiling Governor ",
         "Copy Comments Without Username ",
@@ -9730,10 +9731,10 @@
         "Feed Bloat & Distraction Blocker ",
         "Fix Google Login ",
         "Force Auto-Scroll ",
+        "Hide Community Tab ",
         "Hide Feed Search Bar ",
         "Hide Popular Lives In Search ",
         "Hide Profile Photo Follow Button ",
-        "Hide STEM and Community Tabs ",
         "Hide Suggested Searches ",
         "Hide TikTok Shop & Mall ",
         "In-App Browser Privacy Guard ",
@@ -9746,8 +9747,8 @@
         "Unified Telemetry & Tracker Silencer ",
         "Update Prompt Suppressor "
       ],
-      "originBuild": "260120",
-      "publishedAt": "2026-09-25T03:29:47Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "tiktok-kveld9-asia-v47.0.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -9762,14 +9763,15 @@
       "subVariant": null,
       "packageName": "com.ss.android.ugc.trill",
       "patchSources": [
-        "kveld9/patches-1.46.0.mpp"
+        "kveld9/patches-2.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.46.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date ",
         "Bypass Mandatory Login ",
+        "Bypass Screen Capture Detection ",
         "Clean Share URL ",
         "Client-Side AI & Behavioral Profiling Governor ",
         "Copy Comments Without Username ",
@@ -9784,10 +9786,10 @@
         "Feed Bloat & Distraction Blocker ",
         "Fix Google Login ",
         "Force Auto-Scroll ",
+        "Hide Community Tab ",
         "Hide Feed Search Bar ",
         "Hide Popular Lives In Search ",
         "Hide Profile Photo Follow Button ",
-        "Hide STEM and Community Tabs ",
         "Hide Suggested Searches ",
         "Hide TikTok Shop & Mall ",
         "In-App Browser Privacy Guard ",
@@ -9800,8 +9802,8 @@
         "Unified Telemetry & Tracker Silencer ",
         "Update Prompt Suppressor "
       ],
-      "originBuild": "260120",
-      "publishedAt": "2026-09-25T03:29:47Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "tiktok-kveld9-v47.0.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9",
@@ -9816,14 +9818,15 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-1.46.0.mpp"
+        "kveld9/patches-2.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.46.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date ",
         "Bypass Mandatory Login ",
+        "Bypass Screen Capture Detection ",
         "Clean Share URL ",
         "Client-Side AI & Behavioral Profiling Governor ",
         "Copy Comments Without Username ",
@@ -9838,10 +9841,10 @@
         "Feed Bloat & Distraction Blocker ",
         "Fix Google Login ",
         "Force Auto-Scroll ",
+        "Hide Community Tab ",
         "Hide Feed Search Bar ",
         "Hide Popular Lives In Search ",
         "Hide Profile Photo Follow Button ",
-        "Hide STEM and Community Tabs ",
         "Hide Suggested Searches ",
         "Hide TikTok Shop & Mall ",
         "In-App Browser Privacy Guard ",
@@ -9854,8 +9857,8 @@
         "Unified Telemetry & Tracker Silencer ",
         "Update Prompt Suppressor "
       ],
-      "originBuild": "260120",
-      "publishedAt": "2026-09-25T03:29:47Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "tiktok-kveld9-v47.0.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -9870,14 +9873,15 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-1.46.0.mpp"
+        "kveld9/patches-2.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.46.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date ",
         "Bypass Mandatory Login ",
+        "Bypass Screen Capture Detection ",
         "Clean Share URL ",
         "Client-Side AI & Behavioral Profiling Governor ",
         "Copy Comments Without Username ",
@@ -9892,10 +9896,10 @@
         "Feed Bloat & Distraction Blocker ",
         "Fix Google Login ",
         "Force Auto-Scroll ",
+        "Hide Community Tab ",
         "Hide Feed Search Bar ",
         "Hide Popular Lives In Search ",
         "Hide Profile Photo Follow Button ",
-        "Hide STEM and Community Tabs ",
         "Hide Suggested Searches ",
         "Hide TikTok Shop & Mall ",
         "In-App Browser Privacy Guard ",
@@ -9908,8 +9912,8 @@
         "Unified Telemetry & Tracker Silencer ",
         "Update Prompt Suppressor "
       ],
-      "originBuild": "260120",
-      "publishedAt": "2026-09-25T03:29:47Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "youtube-morphe-mocha-theme-v21.16.256-arm64-v8a.apk": {
       "name": "youtube-morphe-mocha-theme",
@@ -11128,14 +11132,15 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.59.0.mpp"
+        "SysAdminDoc/patches-0.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.59.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.60.0"
       ],
       "appliedPatches": [
         "Always show publish date ",
         "Comment publish diagnostics ",
+        "Comment send fix ",
         "Copy comments without username ",
         "Custom offline videos limit ",
         "Disable login requirement ",
@@ -11171,8 +11176,8 @@
         "Translate comments ",
         "Use non-personalized search "
       ],
-      "originBuild": "260124",
-      "publishedAt": "2026-09-25T21:33:57Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "tiktok-hushfeed-v47.0.3-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -11187,14 +11192,15 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.59.0.mpp"
+        "SysAdminDoc/patches-0.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.59.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.60.0"
       ],
       "appliedPatches": [
         "Always show publish date ",
         "Comment publish diagnostics ",
+        "Comment send fix ",
         "Copy comments without username ",
         "Custom offline videos limit ",
         "Disable login requirement ",
@@ -11230,8 +11236,8 @@
         "Translate comments ",
         "Use non-personalized search "
       ],
-      "originBuild": "260124",
-      "publishedAt": "2026-09-25T21:33:57Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "threads-chiggi-clone-v434.0.0.41.74-arm64-v8a.apk": {
       "name": "threads-chiggi-clone",
@@ -11698,10 +11704,10 @@
       "subVariant": null,
       "packageName": "com.brave.browser",
       "patchSources": [
-        "kveld9/patches-1.46.0.mpp"
+        "kveld9/patches-2.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v1.46.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
       ],
       "appliedPatches": [
         "Block Brave Telemetry ",
@@ -11716,8 +11722,8 @@
         "Skip First Run ",
         "Suppress In-App Promos & Surveys "
       ],
-      "originBuild": "260120",
-      "publishedAt": "2026-09-25T03:29:47Z"
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     },
     "photomath-devanced-v8.48.0-arm-v7a.apk": {
       "name": "photomath-devanced",
@@ -16426,6 +16432,40 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T16:21:47Z"
+    },
+    "brave-browser-kveld9-v1.96.59-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.96.59",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Block Brave Telemetry ",
+        "Brave In-Product & Commercial Notification Optimizer ",
+        "Brave Origin ",
+        "Brave Startup Performance Optimization ",
+        "Clean New Tab Page ",
+        "Clean Share URL ",
+        "Disable Background Sync & Periodic Sync ",
+        "Disable Battery Status API & OS Listener ",
+        "Sensor Privacy Guard ",
+        "Skip First Run ",
+        "Suppress In-App Promos & Surveys "
+      ],
+      "originBuild": "260126",
+      "publishedAt": "2026-09-26T05:21:30Z"
     }
   }
 }
