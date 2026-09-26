@@ -5,7 +5,10 @@ Parses all TOML patch configurations in configs/patches/
 and generates config.stable.json and config.beta.json with dynamic pool routing:
 - apps with patches-version = "stable" go to stable pool only
 - apps with patches-version = "beta" go to beta pool only
-- apps with no patches-version go to both pools (inheriting file-level default if set)
+- apps with patches-version = "both" go to both pools
+- apps with no patches-version inherit the file-level default, which is itself
+  "stable" unless the filename carries .beta./.dev. — so such an app lands in
+  one pool, not both. "both" is what opts an app into both.
 - apps with enabled = false are omitted
 """
 

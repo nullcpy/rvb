@@ -2980,9 +2980,28 @@ check_is_universal() {
 	return 1
 }
 
+# Recorded version for one app from state/app_versions.json. $1 = build table
+# name (the " (arch)" suffix build_rv carries is stripped before matching).
+# The file maps a group to {keys[], version} and the watcher only maintains the
+# groups hand-listed in it ("_check_only_listed") — i.e. exactly the apps whose
+# patch CLI advertises no supported version. Echoes nothing when untracked.
+_app_versions_json_ver() {
+	local app_versions_file="state/app_versions.json"
+	[ -f "$app_versions_file" ] || return 0
+	local t_pure="${1% (arm64-v8a)}"
+	t_pure="${t_pure% (arm-v7a)}"
+	jq -r --arg t "$t_pure" 'to_entries | map(select(.key | startswith("_") | not)) | map(select(.value.keys != null and (.value.keys | index($t)))) | .[0].value.version // empty' "$app_versions_file"
+}
+
 # Shared version-resolution pre-pass used by build_rv's two call sites
 # (early pkg path + post-download path). Operates on the caller's dynamic
 # locals: list_patches, resolved_version, version_mode.
+#
+# Precedence (highest first): an explicit version_mode (a concrete tag, or
+# exp/latest/beta) > the version the patch bundle advertises > the version the
+# watcher recorded in state/app_versions.json (only reachable when the bundle
+# advertises nothing, i.e. get_patch_last_supported_ver returns "Any") > the
+# live latest from the download source, which build_rv resolves afterwards.
 # Returns: 0 continue | 1 hard failure (caller `return 1`) | 2 skip app (caller `return 0`)
 _resolve_list_and_version() {
 	local cli_jar=$1 patches_jar=$2 pkg_name=$3 table=$4 say_pkg=${5:-false}
@@ -3002,6 +3021,18 @@ _resolve_list_and_version() {
 				"${args[included_patches]:-}" "${args[excluded_patches]:-}" "${args[exclusive_patches]:-}" "${args[cli_source]:-}" "$cli_jar" "$patches_jar"); then
 				epr "get_patch_last_supported_ver failed for '$pkg_name'"
 				return 2
+			fi
+			# A bundle can also advertise no version at all ("Any" — see
+			# _get_patch_last_supported_ver), which succeeds with empty output.
+			# That is the only case the watcher's recorded version is a fallback
+			# for; it must never outrank a version the patches were tested with.
+			if [ -z "$resolved_version" ]; then
+				local json_ver
+				json_ver=$(_app_versions_json_ver "$table")
+				if [ -n "$json_ver" ]; then
+					pr "Patches advertise no version for '$pkg_name'; using watcher version '$json_ver'"
+					resolved_version="$json_ver"
+				fi
 			fi
 		elif [ "$version_mode" = exp ]; then
 			if [ "$PATCHER_EXP_VERSION_UNSUPPORTED" = true ]; then
@@ -3188,17 +3219,6 @@ build_rv() {
 
 	# 1. Resolve pkg_name early if possible and check cache
 	if [ -n "$pkg_name" ]; then
-		# Check app_versions.json for exact version
-		local app_versions_file="state/app_versions.json"
-		if [ -f "$app_versions_file" ]; then
-			local t_pure="${table% (arm64-v8a)}"
-			t_pure="${t_pure% (arm-v7a)}"
-			local json_ver=$(jq -r --arg t "$t_pure" 'to_entries | map(select(.key | startswith("_") | not)) | map(select(.value.keys != null and (.value.keys | index($t)))) | .[0].value.version // empty' "$app_versions_file")
-			if [ -n "$json_ver" ]; then
-				resolved_version="$json_ver"
-			fi
-		fi
-
 		# Re-resolve fresh at this site (matches original unconditional call);
 		# list_patches may be cached from an earlier pkg attempt.
 		list_patches=""
