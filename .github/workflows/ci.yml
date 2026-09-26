@@ -56,14 +56,25 @@ jobs:
         id: compare_apps
         run: bash .github/scripts/ci_compare_app_versions.sh
 
+      # Single owner of "is there any work left downstream". Every step below
+      # reads these two outputs instead of re-pasting the trigger expressions.
+      - name: Classify triggers
+        id: flags
+        env:
+          TRIGGER_STABLE: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE || '0' }}
+          TRIGGER_BETA: ${{ steps.sync_patch_sources.outputs.TRIGGER_BETA || '0' }}
+          TRIGGER_BLOCKED: ${{ steps.sync_patch_sources.outputs.TRIGGER_BLOCKED || '0' }}
+          TRIGGER_APP_UPDATE: ${{ steps.compare_apps.outputs.TRIGGER_APP_UPDATE || '0' }}
+        run: bash .github/scripts/ci_trigger_flags.sh
+
       - name: Check Patch App Updates
-        if: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE == '1' || steps.sync_patch_sources.outputs.TRIGGER_BETA == '1' }}
+        if: ${{ steps.flags.outputs.SOURCES_CHANGED == '1' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 .github/scripts/ci_check_app_patches.py
 
       - name: Generate configs (JSON)
-        if: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE == '1' || steps.sync_patch_sources.outputs.TRIGGER_BETA == '1' || steps.sync_patch_sources.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
+        if: ${{ steps.flags.outputs.ANYTHING_CHANGED == '1' }}
         id: generate_configs
         env:
           TRIGGER_STABLE: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE }}
@@ -81,7 +92,7 @@ jobs:
         run: bash .github/scripts/ci_resolve_triggers.sh
 
       - name: Notify telegram
-        if: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE == '1' || steps.sync_patch_sources.outputs.TRIGGER_BETA == '1' || steps.sync_patch_sources.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
+        if: ${{ steps.flags.outputs.ANYTHING_CHANGED == '1' }}
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: "${{ vars.TG_CHAT_ID || '@rvb27' }}"
@@ -94,7 +105,7 @@ jobs:
         run: bash .github/scripts/ci_notify_telegram.sh
 
       - name: Commit updated patch sources and configs
-        if: ${{ steps.sync_patch_sources.outputs.TRIGGER_STABLE == '1' || steps.sync_patch_sources.outputs.TRIGGER_BETA == '1' || steps.sync_patch_sources.outputs.TRIGGER_BLOCKED == '1' || steps.compare_apps.outputs.TRIGGER_APP_UPDATE == '1' }}
+        if: ${{ steps.flags.outputs.ANYTHING_CHANGED == '1' }}
         # Commits state/*.json + configs/*_build.json to the `data` branch
         # (plumbing-only, keeps main's history human-only; TOMLs are excluded
         # and go through push_data_configs.sh). Counterpart: fetch_data_branch.sh.
