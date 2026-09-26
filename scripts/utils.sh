@@ -303,12 +303,13 @@ _release_channel_of() {
 # $1=owner/repo (any case) $2=host $3=channel (stable|beta)
 # state/patch_sources.json is the watcher's snapshot of every patch source's
 # current release per channel (see sync_patch_sources.py); reading it here saves
-# a release listing plus a second copy of the selection heuristics. Sources the
-# watcher is holding (blocked) keep a deliberately stale tag, so they never
-# resolve from here and fall back to the live path. RVB_PATCH_SOURCES_JSON lets
-# the trace harness pin the lookup off, the same way RVB_PATCHERS_SH does. The
-# type==object filter skips metadata keys: jq errors out of the whole program on
-# ".value.repo" of a string, which would silently disable every resolution.
+# a release listing plus a second copy of the selection heuristics. A blocked
+# source is reported as "no tag" here even though the snapshot still carries its
+# last known tag - callers must check _patch_source_state_blocked and skip it.
+# RVB_PATCH_SOURCES_JSON lets the trace harness pin the lookup off, the same way
+# RVB_PATCHERS_SH does. The type==object filter skips metadata keys: jq errors out
+# of the whole program on ".value.repo" of a string, which would silently disable
+# every resolution.
 _patch_source_state_tag() {
 	local file="${RVB_PATCH_SOURCES_JSON:-state/patch_sources.json}"
 	[ -f "$file" ] || return 0
@@ -320,6 +321,26 @@ _patch_source_state_tag() {
 		| (.[0].value // {}) as $e
 		| if $e.blocked == true then "" else ($e[$ch] // "") end
 	' "$file"
+}
+
+# Is this patch source's repository blocked? Success = yes. $1=owner/repo (any case)
+# $2=host
+# sync_patch_sources.py marks an entry blocked when the forge answers 404 (deleted
+# or renamed), 451 (legal takedown) or 403 (made private / access refused), and
+# freezes whatever tags it last knew. Those are not things a retry or a live listing
+# can fix, so a build must not spend a request on them - see _get_prebuilts.
+# A missing file, an unknown source or a jq error all answer "not blocked", which
+# leaves the live listing path as the default behaviour.
+_patch_source_state_blocked() {
+	local file="${RVB_PATCH_SOURCES_JSON:-state/patch_sources.json}"
+	[ -f "$file" ] || return 1
+	jq -e --arg repo "${1,,}" --arg host "${2:-github}" '
+		to_entries
+		| map(select(.value | type == "object"))
+		| map(select(((.value.repo // .key) | ascii_downcase) == $repo))
+		| map(select(((.value.host // "github") | ascii_downcase) == $host))
+		| (.[0].value.blocked // false)
+	' "$file" >/dev/null
 }
 
 _get_prebuilts() {
@@ -458,13 +479,20 @@ _get_prebuilts() {
 		
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
 		local channel snap_tag
-		channel=$(_release_channel_of "$ver")
+		# Gone, taken down or unreachable as far as the forge is concerned: skip the
+		# whole app rather than spend a live listing on it (and on every arch of it).
+		# Checked before any version handling, because a pinned tag of a dead repo is
+		# just as undownloadable as a keyword - build.sh logs the skip and moves on.
+		if _patch_source_state_blocked "$src" "$host"; then
+			epr "Patch source '$src' is blocked in the watcher state (repository gone, taken down or inaccessible); not building this app"
+			return 1
+		fi
 		# A channel keyword is a question the watcher has already answered: this
 		# source's current stable/beta release is recorded in the state snapshot the
 		# build job checked out. Resolve from there (one local read, and no second
-		# copy of the selection heuristics); on a miss - unknown source, no tag for
-		# that channel, or the source is held back - fall through to the live path
-		# below unchanged.
+		# copy of the selection heuristics); on a miss - unknown source, or no tag
+		# recorded for that channel - fall through to the live path below unchanged.
+		channel=$(_release_channel_of "$ver")
 		if [ -n "$channel" ]; then
 			snap_tag=$(_patch_source_state_tag "$src" "$host" "$channel")
 			if [ -n "$snap_tag" ]; then

@@ -93,6 +93,15 @@ github-regex = "arm64-v8a: 'MyApp-arm64-v{version}\\.apk' | arm-v7a: 'MyApp-arm-
 direct-dlurl = "https://website/com.google.android.youtube-20.40.45-all.apk"
 
 module-prop-name = "some-app-module"                       # module prop name. default: "<app>-<author>"
+# write an `updateJson=` line into the built Magisk/KernelSU module's module.prop, so a
+# manager polls this repo's update branch for a newer build of that module instead of
+# the user re-downloading it by hand. The path is the module id without its author and
+# channel suffixes, under the pool folder it was built from: `stable/<id>.json` or
+# `beta/<id>.json`. That string is a wire format - installed modules on the wild already
+# carry it, so changing the layout orphans them.
+# FILE-LEVEL ONLY (an app block cannot change it), and forced off for local builds,
+# where there is no published update branch to point at. default: true in CI, false locally
+enable-module-update = true
 dpi = "360-480dpi"                                         # used to select apk variant from apkmirror. 'auto' matches whatever is available. default: nodpi anydpi auto
 ```
 
@@ -239,7 +248,8 @@ You do **not** need separate files for stable and beta:
   - **File-Level Defaults**: Setting `patches-version = "both"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
   - **Filename Inference**: A filename with `.beta.toml` automatically defaults all apps in that file to beta. Renaming to `*.toml` defaults to stable unless `patches-version = "both"` is set. (A legacy `.dev.toml` spelling is no longer recognized — a source named like `devanced.toml` would otherwise be mistaken for one.)
   - **Concrete Version Pins**: A version number instead of a channel (e.g. `patches-version = "v4.8.3"`) pins that exact release — one app when written in an app block, every app in the file when written at the top level. The generated pool config carries it verbatim and nothing rewrites it.
-  - **Channel Resolution**: `"stable"` and `"beta"` are the only channel keywords, and they stay as keywords in the generated config; the build resolves each source's keyword against `state/patch_sources.json`, the watcher's record of that source's current release per channel. One source of truth instead of a stamped copy that can go stale, and a build run is consistent with the state it was generated from because `configs/` and `state/` come from the same `data` commit. A source the watcher holds back (`blocked`), or one with no release on that channel, falls back to listing the releases live. Any other word is treated as a release tag, so a mistyped channel fails on the release lookup rather than building the wrong thing.
+  - **Channel Resolution**: `"stable"` and `"beta"` are the only channel keywords, and they stay as keywords in the generated config; the build resolves each source's keyword against `state/patch_sources.json`, the watcher's record of that source's current release per channel. One source of truth instead of a stamped copy that can go stale, and a build run is consistent with the state it was generated from because `configs/` and `state/` come from the same `data` commit. A source with no release recorded on that channel falls back to listing the releases live. Any other word is treated as a release tag, so a mistyped channel fails on the release lookup rather than building the wrong thing.
+  - **Blocked Sources**: when the forge answers `404` (deleted or renamed), `451` (legal takedown) or `403` (private or access refused), the watcher marks that source `blocked` and freezes its last known tags. A build then **skips every app using it** - keyword or pinned version alike - instead of querying the releases endpoint, because neither a retry nor a live listing can recover a repository that is gone. The app is logged as "Could not get prebuilts" and the run moves on; it comes back on its own once the source is reachable again.
   - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
 ## Automated Patch Sources State Tracking
@@ -267,6 +277,7 @@ Patch sources and their release versions in `state/patch_sources.json` are **100
 - Unreferenced or deleted patch sources are pruned automatically.
 - **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
 - The build reads this file to turn a `patches-version = "stable"|"beta"` keyword into a concrete tag, so it is the answer to "what is the current release" for both the watcher and the builder.
+- A `blocked: true` entry is the watcher's record that the repository cannot be reached (404/451/403). Its tags are kept as they were, and the build refuses to use them - it skips the app rather than spend a request on a dead repository.
 
 ## Automatic App Version Checking
 
