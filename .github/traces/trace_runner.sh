@@ -33,6 +33,11 @@ export GITHUB_REPOSITORY=""
 # utils.sh is sourced via process substitution, so its own BASH_SOURCE path
 # lookup for the patcher registry can't work; point it explicitly.
 export RVB_PATCHERS_SH="$RVB_ROOT/.github/scripts/patchers.sh"
+# The goldens record the LIVE release-listing path, so the state-snapshot lookup
+# must be off deliberately rather than by accident of cwd: on a real build job the
+# data checkout does put state/patch_sources.json in reach, and a developer copy
+# would make the traces machine-dependent without this.
+export RVB_PATCH_SOURCES_JSON="${RVB_PATCH_SOURCES_JSON:-$RUN_ROOT/no-state-snapshot.json}"
 # normally set by build.sh before get_prebuilts; harness defaults to the common config
 export REMOVE_RV_INTEGRATIONS_CHECKS="${REMOVE_RV_INTEGRATIONS_CHECKS:-false}"
 

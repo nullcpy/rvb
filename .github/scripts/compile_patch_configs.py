@@ -7,9 +7,13 @@ and generates config.stable.json and config.beta.json with dynamic pool routing:
 - apps with patches-version = "beta" go to beta pool only
 - apps with patches-version = "both" go to both pools
 - apps with no patches-version inherit the file-level default, which is itself
-  "stable" unless the filename carries .beta./.dev. — so such an app lands in
+  "stable" unless the filename carries .beta. — so such an app lands in
   one pool, not both. "both" is what opts an app into both.
 - apps with enabled = false are omitted
+
+Which release a channel keyword means is not resolved here: the generated config
+keeps the keyword and the build looks the tag up in state/patch_sources.json. A
+concrete patches-version (a tag instead of a channel) is copied verbatim.
 """
 
 import os
@@ -29,6 +33,12 @@ except ImportError:
 
 
 def normalize_channel(val):
+    """Canonicalize a patches-version value to "stable"/"beta"/"both", or return a
+    concrete tag unchanged. Those three words are the whole vocabulary: stable and
+    beta name a release channel, both is pool routing that build.sh resolves before
+    a build runs. Anything else is read as a release tag to pin to - including a
+    mistyped channel, which then fails loudly instead of quietly landing in a pool.
+    utils.sh mirrors the same two keywords in _release_channel_of."""
     if not val or not isinstance(val, str):
         return None
     v = val.strip().lower()
@@ -36,7 +46,7 @@ def normalize_channel(val):
         return "stable"
     if v == "beta":
         return "beta"
-    if v in ("both", "all"):
+    if v == "both":
         return "both"
     return val.strip()  # Pinned version string like "v1.41.0"
 
@@ -70,10 +80,10 @@ def compile_configs(patches_dir="configs/patches"):
         # Resolve file-level channel default (default is "stable" if omitted)
         file_pv = normalize_channel(file_defaults.get("patches-version"))
         if not file_pv:
-            if ".beta." in filename or ".dev." in filename:
-                file_pv = "beta"
-            else:
-                file_pv = "stable"
+            # A .beta. filename is the only file-name signal; "dev" is not a channel
+            # spelling any more, and matching on a bare substring would pull in a
+            # source named like devanced.toml.
+            file_pv = "beta" if ".beta." in filename else "stable"
 
         for app_key, app_table in data.items():
             if not isinstance(app_table, dict):
@@ -89,7 +99,6 @@ def compile_configs(patches_dir="configs/patches"):
                 continue
 
             app_pv_raw = app_table.get("patches-version")
-            app_pv_manual = bool(app_pv_raw)
             if app_pv_raw:
                 channel = normalize_channel(app_pv_raw)
             else:
@@ -110,12 +119,13 @@ def compile_configs(patches_dir="configs/patches"):
                 seen_stable[app_key] = filename
                 entry = dict(merged)
                 if is_pinned:
+                    # Carried exactly as written. Generation used to overwrite a
+                    # non-channel patches-version with the watcher's current tag;
+                    # the build now resolves channel keywords from that snapshot
+                    # itself (see _patch_source_state_tag in utils.sh), so a pin is
+                    # the only thing left in the config and it is always the
+                    # author's, in both pools.
                     entry["patches-version"] = channel
-                    # Authoritative pin: written by a human in the app table, so
-                    # ci_generate_configs.sh must not overwrite it with the
-                    # watcher's current tag. File-level defaults stay auto-managed.
-                    if app_pv_manual:
-                        entry["patches-pin-manual"] = True
                 else:
                     # Omit redundant key when matching pool default
                     entry.pop("patches-version", None)
@@ -130,10 +140,8 @@ def compile_configs(patches_dir="configs/patches"):
                 seen_beta[app_key] = filename
                 entry = dict(merged)
                 if is_pinned:
+                    # See stable pool: a written pin is carried unchanged.
                     entry["patches-version"] = channel
-                    # See stable pool: manual app-level pins are authoritative.
-                    if app_pv_manual:
-                        entry["patches-pin-manual"] = True
                 else:
                     # Omit redundant key when matching pool default
                     entry.pop("patches-version", None)

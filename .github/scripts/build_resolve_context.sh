@@ -10,15 +10,19 @@ fi
 echo "CONFIG_FILE=$CONFIG" >> "$GITHUB_OUTPUT"
 
 IS_BETA=false
-if [[ "$CONFIG" == *"beta"* ]] || [[ "$CONFIG" == *"dev"* ]]; then
+# Two ways a build is a pre-release: the config FILENAME (the generated
+# beta_build.json, or a hand-written .beta. TOML) or the channel value it carries,
+# which is only ever "stable" or "beta". A "dev" spelling used to be accepted in
+# both; it matched whole paths too loosely to be safe and no config ever used it.
+if [[ "$CONFIG" == *"beta"* ]]; then
   IS_BETA=true
 elif [[ "$CONFIG" == *.json ]]; then
   pv=$(jq -r '."patches-version" // empty' "$CONFIG")
-  if [ "$pv" = "beta" ] || [ "$pv" = "dev" ]; then
+  if [ "$pv" = "beta" ]; then
     IS_BETA=true
   fi
 elif [[ "$CONFIG" == *.toml ]]; then
-  if awk '/^\[/ {exit} {print}' "$CONFIG" | grep -qE '^[[:space:]]*patches-version[[:space:]]*=[[:space:]]*"?(beta|dev)"?'; then
+  if awk '/^\[/ {exit} {print}' "$CONFIG" | grep -qE '^[[:space:]]*patches-version[[:space:]]*=[[:space:]]*"?beta"?'; then
     IS_BETA=true
   fi
 fi

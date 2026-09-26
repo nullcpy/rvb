@@ -219,17 +219,20 @@ source_release_asset_url() {
 }
 
 source_release_pick_from_list() {
+	# $2 = channel keyword: "beta" or anything else (read as stable). "dev" is not a
+	# keyword any more, so it is not tested here even though a release TAG may
+	# contain it (v1.2.3-dev.4) - that is matched by the gitlab pattern below.
 	local host=${1,,} mode=$2
 	case "$host" in
 		github)
-			if [ "$mode" = dev ] || [ "$mode" = beta ]; then
+			if [ "$mode" = beta ]; then
 				jq -e -c 'map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			else
 				jq -e -c 'map(select(.prerelease != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			fi
 			;;
 		gitlab)
-			if [ "$mode" = dev ] || [ "$mode" = beta ]; then
+			if [ "$mode" = beta ]; then
 				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
 			else
 				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
@@ -279,6 +282,46 @@ rv_release_dir() { # $1=host (github|gitlab) $2=owner/repo -> ${TEMP_DIR}/<host>
 	printf '%s/%s__%s-rv' "$TEMP_DIR" "${1,,}" "$slug"
 }
 
+# Canonical release channel of a version value, or empty when it is not a channel
+# keyword. "stable" and "beta" are the entire vocabulary - CONFIG.md documents
+# nothing else, and compile_patch_configs.py routes pools on the same two words.
+# Anything else (a concrete tag, or a word someone typed by mistake) goes down the
+# exact-release path, so "latest" fails loudly at the release API instead of
+# quietly building whichever channel a fallback happened to pick. "both" is pool
+# routing that build.sh resolves from the config it was given before a build ever
+# sees it, so it is deliberately not a channel here. Keeping the two tests in one
+# function is what stops the beta/stable branch conditions from drifting apart.
+_release_channel_of() {
+	case "${1,,}" in
+	stable) echo stable ;;
+	beta) echo beta ;;
+	*) echo "" ;;
+	esac
+}
+
+# Concrete tag the watcher recorded for one patch source, or nothing.
+# $1=owner/repo (any case) $2=host $3=channel (stable|beta)
+# state/patch_sources.json is the watcher's snapshot of every patch source's
+# current release per channel (see sync_patch_sources.py); reading it here saves
+# a release listing plus a second copy of the selection heuristics. Sources the
+# watcher is holding (blocked) keep a deliberately stale tag, so they never
+# resolve from here and fall back to the live path. RVB_PATCH_SOURCES_JSON lets
+# the trace harness pin the lookup off, the same way RVB_PATCHERS_SH does. The
+# type==object filter skips metadata keys: jq errors out of the whole program on
+# ".value.repo" of a string, which would silently disable every resolution.
+_patch_source_state_tag() {
+	local file="${RVB_PATCH_SOURCES_JSON:-state/patch_sources.json}"
+	[ -f "$file" ] || return 0
+	jq -r --arg repo "${1,,}" --arg host "${2:-github}" --arg ch "$3" '
+		to_entries
+		| map(select(.value | type == "object"))
+		| map(select(((.value.repo // .key) | ascii_downcase) == $repo))
+		| map(select(((.value.host // "github") | ascii_downcase) == $host))
+		| (.[0].value // {}) as $e
+		| if $e.blocked == true then "" else ($e[$ch] // "") end
+	' "$file"
+}
+
 _get_prebuilts() {
 	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host_list=$4 patches_src_list=$5 patches_ver_list=$6
 	resolve_patcher "$cli_src"
@@ -305,9 +348,12 @@ _get_prebuilts() {
 	dir=$(rv_release_dir "$host" "$src")
 	[ -d "$dir" ] || mkdir "$dir"
 
-	local rv_rel release resp tag_name matches asset name url
+	local rv_rel release resp tag_name matches asset name url channel
 	rv_rel=$(source_release_api_base "$host" "$src") || return 1
-	if [ "$ver" = "beta" ] || [ "$ver" = "dev" ]; then
+	# The CLI is not in the watcher snapshot (that file tracks patch sources only),
+	# so its channel keyword still resolves through the live listing below.
+	channel=$(_release_channel_of "$ver")
+	if [ "$channel" = beta ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 		release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 		ver=$(jq -r '.tag_name' <<<"$release") || true
@@ -316,7 +362,7 @@ _get_prebuilts() {
 			release="" # Clear release if we had to fallback to get_highest_ver
 		fi
 	fi
-	if [ "$ver" = "stable" ] || [ "$ver" = "latest" ]; then
+	if [ "$channel" = stable ]; then
 		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 		release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 	elif [ -z "${release:-}" ]; then
@@ -411,7 +457,23 @@ _get_prebuilts() {
 		[ -d "$dir" ] || mkdir "$dir"
 		
 		rv_rel=$(source_release_api_base "$host" "$src") || return 1
-		if [ "$ver" = "beta" ] || [ "$ver" = "dev" ]; then
+		local channel snap_tag
+		channel=$(_release_channel_of "$ver")
+		# A channel keyword is a question the watcher has already answered: this
+		# source's current stable/beta release is recorded in the state snapshot the
+		# build job checked out. Resolve from there (one local read, and no second
+		# copy of the selection heuristics); on a miss - unknown source, no tag for
+		# that channel, or the source is held back - fall through to the live path
+		# below unchanged.
+		if [ -n "$channel" ]; then
+			snap_tag=$(_patch_source_state_tag "$src" "$host" "$channel")
+			if [ -n "$snap_tag" ]; then
+				pr "Resolved '$src' ($channel) to '$snap_tag' from state snapshot" >&2
+				ver="$snap_tag"
+				channel=""
+			fi
+		fi
+		if [ "$channel" = beta ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 			release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 			ver=$(jq -r '.tag_name' <<<"$release") || true
@@ -420,7 +482,7 @@ _get_prebuilts() {
 				release="" # Clear release if we had to fallback to get_highest_ver
 			fi
 		fi
-		if [ "$ver" = "stable" ] || [ "$ver" = "latest" ]; then
+		if [ "$channel" = stable ]; then
 			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
 			release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 		elif [ -z "${release:-}" ]; then

@@ -32,8 +32,8 @@ fi
 # ~25-line jq copies; they differed in exactly three things, all expressed via
 # $channel below, and any rule change had to be applied twice in lockstep.
 #
-#   $channel   "stable"/"beta": the inherited default written by $force, and
-#              which tag field of the watcher snapshot supplies the pin.
+#   $channel   "stable"/"beta": the inherited default written by $force, and the
+#              channel whose date fields feed $app_update_ok.
 #   $active / $activePatchApps / the config and output paths: per pool.
 #   app_update_ok: an app-version bump only pulls an app into the BETA pool when
 #              one of its sources really has beta_date > stable_date, because
@@ -51,14 +51,15 @@ read -r -d '' POOL_PROGRAM <<'JQ' || true
       .value as $app |
       (($app["patches-source"] // "morpheapp/morphe-patches") | ascii_downcase | gsub("[\"'\n\r\t]"; " ") | split(" ") | map(select(. != ""))) as $srcs |
 
-      # The concrete tag of each of this app's sources, index-aligned with the
-      # patches-source list, read from the watcher snapshot so the build resolves
-      # an exact release instead of re-resolving the floating channel per app
-      # (which let a mid-run release switch cause dev.14/dev.15 drift).
-      ($srcs | map(. as $src | ($tags | to_entries | map(select(((.value.repo // .key) | ascii_downcase) == $src)) | (.[0].value[$channel] // "")))) as $ptags |
-      # No pin at all if any source lacks a recorded tag: inherit the channel.
-      ((($ptags | length) > 0) and ($ptags | all(. != ""))) as $pin_ok |
-      (if ($ptags | length) == 1 then $ptags[0] else ("'" + ($ptags | join("' '")) + "'") end) as $pin |
+      # No concrete tag is stamped into the config any more. An app whose
+      # patches-version is a channel keyword keeps the keyword, and the build
+      # resolves it against the same watcher snapshot (state/patch_sources.json,
+      # via _patch_source_state_tag in utils.sh). Writing the tag here froze a copy
+      # of "current stable" into configs/*_build.json, so two artifacts had to stay
+      # in agreement about what the channel meant. Reproducibility inside one build
+      # run is unaffected: the job materializes configs/ and state/ from one
+      # data-branch commit, so every app in it resolves from the same snapshot.
+      # $tags is still read below, for the beta date gate.
 
       (if $channel != "beta" then true else
          ($srcs | map(
@@ -69,11 +70,10 @@ read -r -d '' POOL_PROGRAM <<'JQ' || true
           ) | any)
        end) as $app_update_ok |
 
-      # A manual TOML pin (patches-pin-manual, set by compile_patch_configs.py)
-      # is authoritative: the app still follows the trigger rules, but its version
-      # is left alone instead of being re-stamped to the watcher's current tag.
+      # Membership only: the trigger rules decide who is enabled, and a written
+      # version - channel keyword or concrete pin - is never rewritten here.
       if ((($srcs - $active[0]) != $srcs) and ($activePatchApps[0] | index($k))) or (($activeApps[0] | index($k)) and $app_update_ok) then
-        (if ($pin_ok and ($app["patches-pin-manual"] | if . == true then false else true end)) then (.value["patches-version"] = $pin) else . end)
+        .
       else
         (.value.enabled = false)
       end

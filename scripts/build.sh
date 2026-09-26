@@ -31,7 +31,10 @@ main_config_t=$(toml_get_table_main)
 COMPRESSION_LEVEL=$(toml_get "$main_config_t" compression-level) || COMPRESSION_LEVEL="9"
 REMOVE_RV_INTEGRATIONS_CHECKS=$(toml_get "$main_config_t" remove-rv-integrations-checks) || REMOVE_RV_INTEGRATIONS_CHECKS="false"
 DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER="stable"
-[ "$DEF_PATCHES_VER" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]]; then DEF_PATCHES_VER="beta"; else DEF_PATCHES_VER="stable"; fi; }
+# "both" means "whichever pool this config is for", and the only signal for that is
+# the file being built: the beta pool is configs/beta_build.json (a hand-written
+# config names itself with .beta.).
+[ "$DEF_PATCHES_VER" = "both" ] && { if [[ "${1:-}" == *"beta"* ]]; then DEF_PATCHES_VER="beta"; else DEF_PATCHES_VER="stable"; fi; }
 DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER="stable"
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="MorpheApp/morphe-patches"
 DEF_PATCHES_SRC_HOST=$(toml_get "$main_config_t" patches-source-host) || DEF_PATCHES_SRC_HOST="github"
@@ -40,7 +43,6 @@ DEF_CLI_SRC_HOST=$(toml_get "$main_config_t" cli-source-host) || DEF_CLI_SRC_HOS
 DEF_BRAND=$(toml_get "$main_config_t" brand) || DEF_BRAND=""
 DEF_VARIANT=$(toml_get "$main_config_t" variant) || DEF_VARIANT=""
 DEF_SUB_VARIANT=$(toml_get "$main_config_t" sub-variant) || DEF_SUB_VARIANT=""
-[ -z "$DEF_SUB_VARIANT" ] && { DEF_SUB_VARIANT=$(toml_get "$main_config_t" sub_variant) || DEF_SUB_VARIANT=""; }
 DEF_DPI=$(toml_get "$main_config_t" dpi) || DEF_DPI="nodpi anydpi auto"
 DEF_ARCH=$(toml_get "$main_config_t" arch) || DEF_ARCH="both"
 DEF_BUILD_MODE=$(toml_get "$main_config_t" build-mode) || DEF_BUILD_MODE="apk"
@@ -171,7 +173,9 @@ for table_name in $(toml_get_table_names); do
 	patches_src=$(toml_get "$t" patches-source) || patches_src=$DEF_PATCHES_SRC
 	patches_src_host=$(toml_get "$t" patches-source-host) || patches_src_host=$DEF_PATCHES_SRC_HOST
 	patches_ver=$(toml_get "$t" patches-version) || patches_ver=$DEF_PATCHES_VER
-	[ "$patches_ver" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]] || [ "$DEF_PATCHES_VER" = "beta" ] || [ "$DEF_PATCHES_VER" = "dev" ]; then patches_ver="beta"; else patches_ver="stable"; fi; }
+	# "both" is not a channel — it is routing, resolved here from the config being
+	# built: a beta-named file, or a file-level default already set to beta.
+	[ "$patches_ver" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [ "$DEF_PATCHES_VER" = "beta" ]; then patches_ver="beta"; else patches_ver="stable"; fi; }
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
@@ -241,7 +245,6 @@ for table_name in $(toml_get_table_names); do
 	app_args[brand]=$(toml_get "$t" brand) || app_args[brand]="${DEF_BRAND:-${p_srcs[0]%%/*}}"
 	app_args[variant]=$(toml_get "$t" variant) || app_args[variant]="$DEF_VARIANT"
 	app_args[sub_variant]=$(toml_get "$t" sub-variant) || app_args[sub_variant]="$DEF_SUB_VARIANT"
-	[ -z "${app_args[sub_variant]}" ] && { app_args[sub_variant]=$(toml_get "$t" sub_variant) || app_args[sub_variant]="$DEF_SUB_VARIANT"; }
 
 	app_args[excluded_patches]=$(toml_get "$t" excluded-patches) || app_args[excluded_patches]=""
 	if [ -n "${app_args[excluded_patches]}" ] && [[ ${app_args[excluded_patches]} != *'"'* ]]; then abort "patch names inside excluded-patches must be quoted"; fi
@@ -289,8 +292,9 @@ for table_name in $(toml_get_table_names); do
 	app_args[module_prop_name]=$(toml_get "$t" module-prop-name) || app_args[module_prop_name]="${table_name_f}-${DEF_AUTHOR_NAME}"
 
 	# Automatically append -beta to the module ID for pre-release builds
-	# so they have an independent update channel in Magisk
-	if { [[ "${1:-}" == *"beta"* ]] || [[ "${1:-}" == *"dev"* ]] || [ "${DEF_PATCHES_VER:-}" = "beta" ] || [ "${DEF_PATCHES_VER:-}" = "dev" ] || [ "${patches_ver:-}" = "beta" ] || [ "${patches_ver:-}" = "dev" ]; } && [[ "${app_args[module_prop_name]}" != *"-beta"* ]]; then
+	# so they have an independent update channel in Magisk. The channel value is
+	# only ever "stable" or "beta"; the glob is the beta pool's own filename.
+	if { [[ "${1:-}" == *"beta"* ]] || [ "${DEF_PATCHES_VER:-}" = "beta" ] || [ "${patches_ver:-}" = "beta" ]; } && [[ "${app_args[module_prop_name]}" != *"-beta"* ]]; then
 		app_args[module_prop_name]="${app_args[module_prop_name]}-beta"
 	fi
 

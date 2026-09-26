@@ -32,6 +32,8 @@ author-page = "github.com/nullcpy/rvb" # module author page/link printed during 
 
 patches-version = "stable"  # 'stable', 'beta', 'both', or a version number. default: "stable"
 cli-version = "stable"      # 'stable', 'beta', or a version number. default: "stable"
+# 'stable' and 'beta' are the only channel keywords; a keyword resolves against
+# state/patch_sources.json (see Pool Routing below). 'both' is routing, not a channel.
 
 > [!TIP]
 > **File-Level Defaults in Modular Configs:**  
@@ -150,8 +152,8 @@ patches-source-host = "github"
 patches-source-host = "'github' 'gitlab'"
 
 # Same rule applies to patches-version:
-patches-version = "latest"                        # applies to all sources
-patches-version = "'latest' 'v1.2.3'"             # per-source versions
+patches-version = "stable"                        # applies to all sources
+patches-version = "'stable' 'v1.2.3'"             # per-source versions
 ```
 
 > [!TIP]
@@ -171,9 +173,9 @@ You can natively inject Xposed modules into an app using `7723mod/NPatch` or `LS
 ```toml
 [Discord]
 cli-source = "7723mod/NPatch"                            # Use NPatch as the CLI
-cli-version = "latest"
+cli-version = "stable"
 patches-source = "revenge-mod/revenge-xposed"            # Provide the Xposed module as the patches bundle
-patches-version = "latest"
+patches-version = "stable"
 version = "auto"                                         # 'auto' safely falls back to 'latest' since modules don't list supported versions
 arch = "auto"
 github-dlurl = "https://github.com/discord/releases/..." # Or apkmirror, etc.
@@ -235,8 +237,9 @@ You do **not** need separate files for stable and beta:
   - **Both Pools**: Setting `patches-version = "both"` (at the top of the file or in an app block) compiles the app into **both** stable and beta pools.
   - **Beta Only**: Setting `patches-version = "beta"` routes the app exclusively to the beta (pre-release) build pool.
   - **File-Level Defaults**: Setting `patches-version = "both"` (or `"beta"`) at the top applies that channel to all apps in the file unless individually overridden.
-  - **Filename Inference**: A filename with `.beta.toml` (or legacy `.dev.toml`) automatically defaults all apps in that file to beta. Renaming to `*.toml` defaults to stable unless `patches-version = "both"` is set.
-  - **Concrete Version Pins**: A version number instead of a channel (e.g. `patches-version = "v4.8.3"`) pins that app to the exact release. Written **inside an app block** it is authoritative — the watcher's config regeneration keeps it and never overwrites it with the latest tag (apps get an internal `patches-pin-manual` marker). As a **file-level default** it is auto-managed: the watcher replaces it with each source's current channel tag on every generation.
+  - **Filename Inference**: A filename with `.beta.toml` automatically defaults all apps in that file to beta. Renaming to `*.toml` defaults to stable unless `patches-version = "both"` is set. (A legacy `.dev.toml` spelling is no longer recognized — a source named like `devanced.toml` would otherwise be mistaken for one.)
+  - **Concrete Version Pins**: A version number instead of a channel (e.g. `patches-version = "v4.8.3"`) pins that exact release — one app when written in an app block, every app in the file when written at the top level. The generated pool config carries it verbatim and nothing rewrites it.
+  - **Channel Resolution**: `"stable"` and `"beta"` are the only channel keywords, and they stay as keywords in the generated config; the build resolves each source's keyword against `state/patch_sources.json`, the watcher's record of that source's current release per channel. One source of truth instead of a stamped copy that can go stale, and a build run is consistent with the state it was generated from because `configs/` and `state/` come from the same `data` commit. A source the watcher holds back (`blocked`), or one with no release on that channel, falls back to listing the releases live. Any other word is treated as a release tag, so a mistyped channel fails on the release lookup rather than building the wrong thing.
   - **Disabling an App**: Set `enabled = false` to disable an app across all pools.
 
 ## Automated Patch Sources State Tracking
@@ -263,6 +266,7 @@ Patch sources and their release versions in `state/patch_sources.json` are **100
 - The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github` or `gitlab`), and checks for new stable and beta releases.
 - Unreferenced or deleted patch sources are pruned automatically.
 - **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
+- The build reads this file to turn a `patches-version = "stable"|"beta"` keyword into a concrete tag, so it is the answer to "what is the current release" for both the watcher and the builder.
 
 ## Automatic App Version Checking
 
