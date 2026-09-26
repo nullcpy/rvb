@@ -22,3 +22,14 @@ apkcombo-dlurl = "https://apkcombo.com/showly-track-shows-movies/com.michaldrabi
 
 
 
+# https://github.com/nullcpy/rvb/issues/158 - Android TV helper tool.
+# Not on APKMirror or Uptodown, so the two stores that do carry it are listed in
+# the order DL_SRCS tries them. Patch folder is auto-detected (the bundle declares
+# the package in its compiled metadata, app/morphe/patches/atvtools/), so no
+# patch-folder key is needed - same as the tables above.
+[AtvTools-hxreborn]
+enabled = true
+pkg-name = "dev.vodik7.atvtools"
+app-name = "atvTools"
+apkpure-dlurl = "https://apkpure.com/atvtools/dev.vodik7.atvtools"
+apkcombo-dlurl = "https://apkcombo.com/atvtools/dev.vodik7.atvtools"
