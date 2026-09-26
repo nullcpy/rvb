@@ -7,6 +7,8 @@ Automated patch sources state manager for CI:
 3. Tracks latest stable and beta releases in state/patch_sources.json (state cache).
 4. Automatically prunes sources no longer used in any TOML config.
 5. Detects changes and emits TRIGGER_STABLE, TRIGGER_BETA, and TRIGGER_BLOCKED.
+6. Writes changed_sources.json: the one canonical "what moved since last run"
+    record set that every later step consumes (see derive_source_changes.py).
 """
 
 import os
@@ -16,6 +18,9 @@ import json
 import re
 import urllib.request
 import urllib.parse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import derive_source_changes
 
 try:
     import tomllib
@@ -241,7 +246,6 @@ def main():
         if stable_tag and stable_tag != old_stable:
             print(f"  ↑ Stable: {old_stable or 'none'} → {stable_tag}")
             print(f"::notice title=New Stable Release::{repo} — {old_stable or 'none'} → {stable_tag}")
-            trigger_stable = 1
         elif stable_tag:
             print(f"    Stable: {stable_tag} (no change)")
         else:
@@ -252,7 +256,6 @@ def main():
             # Beta triggers if it is newer than stable
             if beta_date > stable_date:
                 print(f"::notice title=New Beta Release::{repo} — {old_beta or 'none'} → {beta_tag}")
-                trigger_beta = 1
         elif beta_tag:
             print(f"    Beta:   {beta_tag} (no change)")
         else:
@@ -279,6 +282,18 @@ def main():
 
     with open("tags_new.json", "w", encoding="utf-8") as f:
         json.dump(new_state, f, indent=2)
+
+    # One derivation of "what changed", shared by every later step instead of
+    # each re-diffing tags_old/tags_new with its own rules. The trigger flags
+    # below are read out of these records, so a trigger can never disagree with
+    # what ci_check_app_patches.py and ci_generate_configs.sh will act on.
+    changed_records = derive_source_changes.derive(old_state, new_state)
+    with open("changed_sources.json", "w", encoding="utf-8") as f:
+        json.dump(changed_records, f, indent=2, sort_keys=True)
+    if any(r["channel"] == "stable" for r in changed_records):
+        trigger_stable = 1
+    if any(r["channel"] == "beta" and r["newer_than_base"] for r in changed_records):
+        trigger_beta = 1
 
     # Export CI trigger variables
     github_output = os.environ.get("GITHUB_OUTPUT")

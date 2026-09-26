@@ -283,17 +283,26 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
 
 def run():
     try:
-        with open('tags_old.json', 'r') as f:
-            tags_old = json.load(f)
-    except FileNotFoundError:
-        tags_old = {}
-        
-    try:
         with open('tags_new.json', 'r') as f:
             tags_new = json.load(f)
     except FileNotFoundError:
         tags_new = {}
-    
+
+    # The changed-source diff lives in derive_source_changes.py (run by
+    # sync_patch_sources.py) so this step cannot drift from the trigger flags or
+    # from the config generator's idea of which sources moved.
+    try:
+        with open('changed_sources.json', 'r') as f:
+            changed = json.load(f)
+    except FileNotFoundError:
+        print("::error::changed_sources.json missing - the Sync Patch Sources "
+              "step must run before this one.")
+        raise SystemExit(1)
+
+    moved = {}
+    for rec in changed:
+        moved.setdefault(rec['key'], {})[rec['channel']] = rec['tag']
+
     hash_file = 'state/patch_file_hashes.json'
     if os.path.exists(hash_file):
         with open(hash_file, 'r') as f:
@@ -302,28 +311,15 @@ def run():
         hashes = {}
 
     apps_stable, apps_beta, cli_sources = get_app_mappings()
-    
+
     active_stable = []
     active_beta = []
 
-    for repo_key, new_info in tags_new.items():
-        old_info = tags_old.get(repo_key, {})
+    for repo_key, channels in moved.items():
+        new_info = tags_new.get(repo_key) or {}
         repo = new_info.get('repo', '')
         repo_lower = repo.lower()
-        
-        # Determine if we need to check stable/beta
-        check_stable = new_info.get('stable') != "" and new_info.get('stable') != old_info.get('stable')
-        new_beta = new_info.get('beta', '')
-        old_beta = old_info.get('beta', '')
-        check_beta = new_beta != "" and new_beta != old_beta
-        
-        if new_info.get('enabled') is False or new_info.get('blocked') is True:
-            check_stable = False
-            check_beta = False
-        
-        if not check_stable and not check_beta:
-            continue
-            
+
         repo_clis = cli_sources.get(repo_lower, set())
 
         is_revanced_or_morphe = ci_bundle_diffable(repo_clis)
@@ -332,12 +328,12 @@ def run():
             hashes[repo_lower] = {}
         hashes[repo_lower].setdefault('stable', {})
         hashes[repo_lower].setdefault('beta', {})
-            
-        if check_stable:
-            evaluate_repo_channel(repo_lower, repo, new_info.get('stable'), 'stable', new_info, hashes, active_stable, apps_stable, apps_beta, is_revanced_or_morphe)
-            
-        if check_beta:
-            evaluate_repo_channel(repo_lower, repo, new_beta, 'beta', new_info, hashes, active_beta, apps_stable, apps_beta, is_revanced_or_morphe)
+
+        if 'stable' in channels:
+            evaluate_repo_channel(repo_lower, repo, channels['stable'], 'stable', new_info, hashes, active_stable, apps_stable, apps_beta, is_revanced_or_morphe)
+
+        if 'beta' in channels:
+            evaluate_repo_channel(repo_lower, repo, channels['beta'], 'beta', new_info, hashes, active_beta, apps_stable, apps_beta, is_revanced_or_morphe)
 
     with open(hash_file, 'w') as f:
         json.dump(hashes, f, indent=2, sort_keys=True)

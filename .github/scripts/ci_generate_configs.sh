@@ -5,38 +5,23 @@ set -euo pipefail
 dos2unix scripts/utils.sh 2>/dev/null || true
 source scripts/utils.sh
 
-[ -f tags_old.json ] && TAGS_OLD=$(cat tags_old.json) || TAGS_OLD='{}'
 [ -f tags_new.json ] && TAGS_NEW=$(cat tags_new.json) || TAGS_NEW='{}'
 [ -f active_apps.json ] || echo '[]' > active_apps.json
 [ -f active_patch_apps.stable.json ] || echo '[]' > active_patch_apps.stable.json
 [ -f active_patch_apps.beta.json ] || echo '[]' > active_patch_apps.beta.json
 
-jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-  [ $new | to_entries[] | . as $e
-      | ($old[$e.key] // {}) as $o
-      | select($e.value.stable != "" and $e.value.stable != ($o.stable // ""))
-      | select($e.value.blocked != true)
-      | ($e.value.repo // $e.key // "") as $r
-      | select($r != "")
-      | $r | ascii_downcase
-  ]
-' > active.stable.json
+# The changed-source diff is no longer re-derived here. changed_sources.json is
+# written once by Sync Patch Sources (derive_source_changes.py), so this step,
+# ci_check_app_patches.py and the TRIGGER_* flags can never disagree about which
+# sources moved. These are projections, not rule copies: beta keeps its
+# historical "only when newer than stable" gate, now carried as a record field.
+if [ ! -f changed_sources.json ]; then
+  echo "::error::changed_sources.json missing - Sync Patch Sources must run first."
+  exit 1
+fi
 
-jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" '
-  [ $new | to_entries[] | . as $e
-      | ($old[$e.key] // {}) as $o
-      | ($e.value.beta // "") as $new_beta
-      | ($o.beta // "") as $old_beta
-      | ($e.value.beta_date // "") as $b_date
-      | ($e.value.stable_date // "") as $s_date
-      | select($new_beta != "" and $new_beta != $old_beta)
-      | select($e.value.blocked != true)
-      | select($b_date > $s_date)
-      | ($e.value.repo // $e.key // "") as $r
-      | select($r != "")
-      | $r | ascii_downcase
-  ]
-' > active.beta.json
+jq -c '[ .[] | select(.channel == "stable") | .repo ] | unique' changed_sources.json > active.stable.json
+jq -c '[ .[] | select(.channel == "beta" and .newer_than_base) | .repo ] | unique' changed_sources.json > active.beta.json
 
 # Compile base configs if missing
 if [ ! -f config.stable.json ] || [ ! -f config.beta.json ]; then
