@@ -44,7 +44,8 @@ def compile_configs(patches_dir="configs/patches"):
 
     toml_files = sorted(glob.glob(os.path.join(patches_dir, "*.toml")))
     if not toml_files:
-        print(f"Warning: No TOML files found in {patches_dir}", file=sys.stderr)
+        print(
+            f"Warning: No TOML files found in {patches_dir}", file=sys.stderr)
         return stable_pool, beta_pool
 
     seen_stable = {}
@@ -60,7 +61,8 @@ def compile_configs(patches_dir="configs/patches"):
             sys.exit(1)
 
         # File-level defaults are keys defined before tables
-        file_defaults = {k: v for k, v in data.items() if not isinstance(v, dict)}
+        file_defaults = {k: v for k,
+                         v in data.items() if not isinstance(v, dict)}
 
         # Resolve file-level channel default (default is "stable" if omitted)
         file_pv = normalize_channel(file_defaults.get("patches-version"))
@@ -93,12 +95,14 @@ def compile_configs(patches_dir="configs/patches"):
             is_pinned = channel not in ("stable", "beta", "both")
             is_beta_pin = False
             if is_pinned:
-                is_beta_pin = bool(re.search(r"[-._](beta|dev|alpha|rc|pre)", channel, re.IGNORECASE)) or (file_pv == "beta")
+                is_beta_pin = bool(re.search(
+                    r"[-._](beta|dev|alpha|rc|pre)", channel, re.IGNORECASE)) or (file_pv == "beta")
 
             # Route to stable pool
             if channel in ("stable", "both") or (is_pinned and not is_beta_pin):
                 if app_key in stable_pool:
-                    print(f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_stable[app_key]})", file=sys.stderr)
+                    print(
+                        f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_stable[app_key]})", file=sys.stderr)
                     sys.exit(1)
                 seen_stable[app_key] = filename
                 entry = dict(merged)
@@ -117,7 +121,8 @@ def compile_configs(patches_dir="configs/patches"):
             # Route to beta pool
             if channel in ("beta", "both") or (is_pinned and is_beta_pin):
                 if app_key in beta_pool:
-                    print(f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_beta[app_key]})", file=sys.stderr)
+                    print(
+                        f"Error: Duplicate app key '[{app_key}]' in {filename} (already defined in {seen_beta[app_key]})", file=sys.stderr)
                     sys.exit(1)
                 seen_beta[app_key] = filename
                 entry = dict(merged)
