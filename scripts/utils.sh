@@ -178,10 +178,18 @@ java() {
 	env -i "${java_env[@]}" java --enable-native-access=ALL-UNNAMED "$@";
 }
 
+# Per-forge release API endpoints. $2 is always "owner/repo" (gitlab URL-encodes
+# it because its API keys projects by numeric/encoded path).
+# codeberg.org runs Forgejo, whose REST API is the Gitea one: paths hang off
+# /api/v1/repos/<owner>/<repo>, releases carry prerelease/published_at like GitHub,
+# but pagination uses limit (per_page is ignored) and an asset's API url is null -
+# only browser_download_url is populated. Hence the dedicated helpers below rather
+# than reusing github's case arms wholesale.
 source_release_api_base() {
 	local host=${1,,} src=$2 encoded
 	case "$host" in
 		github) echo "https://api.github.com/repos/${src}/releases" ;;
+		codeberg) echo "https://codeberg.org/api/v1/repos/${src}/releases" ;;
 		gitlab)
 			encoded=$(jq -nr --arg v "$src" '$v | @uri')
 			echo "https://gitlab.com/api/v4/projects/${encoded}/releases"
@@ -190,11 +198,41 @@ source_release_api_base() {
 	esac
 }
 
+# Release listing URL, with the pagination parameter that forge actually honours.
+# Asking Codeberg for per_page=100 silently returns its 30-item default page, which
+# would make an older release look like it no longer exists; limit=50 is that API's
+# page maximum, and it lists newest-first like the others.
+source_release_list_url() {
+	local host=${1,,} src=$2 base
+	base=$(source_release_api_base "$host" "$src") || return 1
+	case "$host" in
+	codeberg) echo "${base}?limit=50" ;;
+	*) echo "${base}?per_page=100" ;;
+	esac
+}
+
+# Human-facing release page: $1=host $2=owner/repo $3=tag. This is the one owner of
+# that shape - changelog.md, build metadata and the release notes all derive it from
+# here instead of repeating the per-forge literal.
+source_release_web_url() {
+	local host=${1,,} src=$2 tag=$3
+	case "$host" in
+		github) echo "https://github.com/${src}/releases/tag/${tag}" ;;
+		# Forgejo/Gitea keeps GitHub's /releases/tag/<tag> web layout
+		codeberg) echo "https://codeberg.org/${src}/releases/tag/${tag}" ;;
+		gitlab) echo "https://gitlab.com/${src}/-/releases/${tag}" ;;
+		*) return 1 ;;
+	esac
+}
+
 source_release_tag_api() {
 	local host=${1,,} src=$2 tag=$3 base
 	base=$(source_release_api_base "$host" "$src") || return 1
 	case "$host" in
-		github) echo "${base}/tags/${tag}" ;;
+		# This is the path a resolved tag takes (a concrete pin, or a channel keyword
+		# answered from state/patch_sources.json), so every supported forge needs an
+		# arm here - Forgejo keeps GitHub's /releases/tags/<tag> layout.
+		github | codeberg) echo "${base}/tags/${tag}" ;;
 		gitlab) echo "${base}/${tag}" ;;
 		*) return 1 ;;
 	esac
@@ -203,7 +241,10 @@ source_release_tag_api() {
 source_release_assets_json() {
 	local host=${1,,}
 	case "$host" in
-		github) jq -e '[.assets[]? | select(.name | (endswith("asc") or endswith("json")) | not)]' ;;
+		# Codeberg assets sit directly under .assets[] like GitHub's, and a release
+		# there commonly ships a metadata sidecar (output-metadata.json) next to the
+		# apk, so the same .json/.asc filter matters.
+		github | codeberg) jq -e '[.assets[]? | select(.name | (endswith("asc") or endswith("json")) | not)]' ;;
 		gitlab) jq -e '[.assets.links[]? | select(.name | (endswith("asc") or endswith("json")) | not)]' ;;
 		*) return 1 ;;
 	esac
@@ -213,6 +254,9 @@ source_release_asset_url() {
 	local host=${1,,}
 	case "$host" in
 		github) jq -r '.url' ;;
+		# .url is null on Forgejo/Gitea installations; browser_download_url is the
+		# only usable link (and needs no auth header for public repos).
+		codeberg) jq -r '.browser_download_url // .url' ;;
 		gitlab) jq -r '.direct_asset_url // .url' ;;
 		*) return 1 ;;
 	esac
@@ -224,11 +268,13 @@ source_release_pick_from_list() {
 	# contain it (v1.2.3-dev.4) - that is matched by the gitlab pattern below.
 	local host=${1,,} mode=$2
 	case "$host" in
-		github)
+		github | codeberg)
+			# .draft is always false for GitHub (its API omits drafts entirely) but
+			# Forgejo lists them, and an unpublished release is nobody's channel entry.
 			if [ "$mode" = beta ]; then
-				jq -e -c 'map(select(.prerelease == true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
+				jq -e -c 'map(select(.prerelease == true and .draft != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			else
-				jq -e -c 'map(select(.prerelease != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
+				jq -e -c 'map(select(.prerelease != true and .draft != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			fi
 			;;
 		gitlab)
@@ -362,7 +408,7 @@ _get_prebuilts() {
 
 	local host=$cli_host src=$cli_src tag="CLI" ver=${cli_ver} fprefix="cli"
 	host=${host,,}
-	if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
+	if ! isoneof "$host" github gitlab codeberg; then abort "source host '$host' is not supported"; fi
 
 	local grab_cl=false
 	local dir
@@ -370,12 +416,12 @@ _get_prebuilts() {
 	[ -d "$dir" ] || mkdir "$dir"
 
 	local rv_rel release resp tag_name matches asset name url channel
-	rv_rel=$(source_release_api_base "$host" "$src") || return 1
+	rv_rel=$(source_release_list_url "$host" "$src") || return 1
 	# The CLI is not in the watcher snapshot (that file tracks patch sources only),
 	# so its channel keyword still resolves through the live listing below.
 	channel=$(_release_channel_of "$ver")
 	if [ "$channel" = beta ]; then
-		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 		release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 		ver=$(jq -r '.tag_name' <<<"$release") || true
 		if [ -z "$ver" ] || [ "$ver" = "null" ]; then
@@ -384,7 +430,7 @@ _get_prebuilts() {
 		fi
 	fi
 	if [ "$channel" = stable ]; then
-		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+		resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 		release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 	elif [ -z "${release:-}" ]; then
 		rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
@@ -463,7 +509,7 @@ _get_prebuilts() {
 		local ver="${p_vers[$i]:-${p_vers[0]}}"
 		
 		host=${host,,}
-		if ! isoneof "$host" github gitlab; then abort "source host '$host' is not supported"; fi
+		if ! isoneof "$host" github gitlab codeberg; then abort "source host '$host' is not supported"; fi
 		local tag="Patches" fprefix="patches"
 		local grab_cl=true
 		
@@ -477,7 +523,7 @@ _get_prebuilts() {
 		dir=$(rv_release_dir "$host" "$src")
 		[ -d "$dir" ] || mkdir "$dir"
 		
-		rv_rel=$(source_release_api_base "$host" "$src") || return 1
+		rv_rel=$(source_release_list_url "$host" "$src") || return 1
 		local channel snap_tag
 		# Gone, taken down or unreachable as far as the forge is concerned: skip the
 		# whole app rather than spend a live listing on it (and on every arch of it).
@@ -502,7 +548,7 @@ _get_prebuilts() {
 			fi
 		fi
 		if [ "$channel" = beta ]; then
-			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 			release=$(source_release_pick_from_list "$host" beta <<<"$resp") || true
 			ver=$(jq -r '.tag_name' <<<"$release") || true
 			if [ -z "$ver" ] || [ "$ver" = "null" ]; then
@@ -511,7 +557,7 @@ _get_prebuilts() {
 			fi
 		fi
 		if [ "$channel" = stable ]; then
-			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel?per_page=100" -; else req "$rv_rel?per_page=100" -; fi; }) || return 1
+			resp=$({ if [ "$host" = github ]; then gh_req "$rv_rel" -; else req "$rv_rel" -; fi; }) || return 1
 			release=$(source_release_pick_from_list "$host" stable <<<"$resp") || return 1
 		elif [ -z "${release:-}" ]; then
 			rv_rel=$(source_release_tag_api "$host" "$src" "$ver") || return 1
@@ -583,10 +629,9 @@ _get_prebuilts() {
 		echo "$tag_name" > "${file}.tag"
 
 		if [ "$grab_cl" = true ]; then
-			if [ "$host" = github ]; then
-				echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
-			else
-				echo -e "[Changelog](https://gitlab.com/${src}/-/releases/${tag_name})\n" >>"${cl_dir}/changelog.md"
+			local cl_url
+			if cl_url=$(source_release_web_url "$host" "$src" "$tag_name"); then
+				echo -e "[Changelog](${cl_url})\n" >>"${cl_dir}/changelog.md"
 			fi
 		fi
 		if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then

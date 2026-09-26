@@ -44,6 +44,37 @@ https://api.github.com/repos/*/releases*)
 		cp "$f" "$OUT"
 	fi
 	;;
+https://codeberg.org/api/v1/repos/*/releases/tags/*)
+	# Forgejo/Gitea: same /releases/tags/<tag> endpoint as GitHub. Serve the single
+	# release object, and fail loudly on a tag that does not exist (the real API
+	# returns 404), so a wrong tag cannot masquerade as an empty success.
+	rest="${URL#https://codeberg.org/api/v1/repos/}"
+	repo="${rest%%/releases*}"
+	tag="${rest##*/tags/}"
+	f="$FIXTURE_DIR/releases/${repo//\//__}.json"
+	[ -f "$f" ] || fail "no codeberg fixture for repo '$repo'"
+	got=$(jq -c --arg t "$tag" '[.[] | select(.tag_name==$t)][0] // empty' "$f")
+	[ "$got" = "" ] || [ "$got" = "null" ] && fail "codeberg fixture for '$repo' has no tag '$tag'"
+	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then
+		printf '%s\n' "$got"
+	else
+		printf '%s\n' "$got" > "$OUT"
+	fi
+	;;
+https://codeberg.org/api/v1/repos/*/releases*)
+	# Query string is part of the case match only; the whole fixture list is the
+	# page. Whether the caller asked for ?limit=50 rather than ?per_page=100 is
+	# asserted by temp/_ver/codeberg_helpers.sh, which is where that matters.
+	rest="${URL#https://codeberg.org/api/v1/repos/}"
+	repo="${rest%%/releases*}"
+	f="$FIXTURE_DIR/releases/${repo//\//__}.json"
+	[ -f "$f" ] || fail "no codeberg fixture for repo '$repo'"
+	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then
+		cat "$f"
+	else
+		cp "$f" "$OUT"
+	fi
+	;;
 https://fake.asset/*)
 	name="${URL##*/}"
 	if [ -z "$OUT" ] || [ "$OUT" = "-" ]; then

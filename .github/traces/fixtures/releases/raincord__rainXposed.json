@@ -1,0 +1,59 @@
+[
+    {
+        "tag_name": "1140-draft",
+        "prerelease": false,
+        "draft": true,
+        "published_at": "2026-10-01T00:00:00+02:00",
+        "assets": [
+            {
+                "name": "app-release.apk",
+                "url": null,
+                "browser_download_url": "https://fake.asset/draft-app-release.apk"
+            }
+        ]
+    },
+    {
+        "tag_name": "1140-dev1",
+        "prerelease": true,
+        "draft": false,
+        "published_at": "2026-09-20T00:00:00+02:00",
+        "assets": [
+            {
+                "name": "app-release.apk",
+                "url": null,
+                "browser_download_url": "https://fake.asset/dev-app-release.apk"
+            }
+        ]
+    },
+    {
+        "tag_name": "1130",
+        "prerelease": false,
+        "draft": false,
+        "published_at": "2026-09-17T18:20:44+02:00",
+        "assets": [
+            {
+                "name": "app-release.apk",
+                "url": null,
+                "browser_download_url": "https://fake.asset/app-release.apk"
+            },
+            {
+                "name": "output-metadata.json",
+                "url": null,
+                "browser_download_url": "https://fake.asset/output-metadata.json"
+            }
+        ]
+    },
+    {
+        "tag_name": "1110",
+        "prerelease": false,
+        "draft": false,
+        "published_at": "2026-03-21T11:53:42+01:00",
+        "assets": [
+            {
+                "name": "app-release.apk",
+                "url": null,
+                "browser_download_url": "https://fake.asset/old-app-release.apk"
+            }
+        ]
+    }
+]

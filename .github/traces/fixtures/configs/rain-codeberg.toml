@@ -1,0 +1,26 @@
+# Patch bundle hosted on Codeberg (Forgejo), injected as an Xposed module through
+# NPatch - the shape issue #157 (raincord/rainXposed) asks for.
+#
+# Regression guard for the forge plumbing. Everything below is visible in the
+# golden, so a change that silently breaks Codeberg support shows up here rather
+# than in a CI build:
+#   - the listing must be requested with ?limit=50 (Forgejo ignores per_page and
+#     caps its default page at 30),
+#   - the 1140-draft release is the newest non-prerelease and must be skipped,
+#   - 1140-dev1 is a prerelease and must not be picked for the stable channel,
+#   - the asset must come from browser_download_url: Forgejo returns "url": null,
+#     so reading .url would try to download the literal string "null",
+#   - the output-metadata.json sidecar must be filtered out, leaving exactly one
+#     asset (otherwise "more than 1 asset" noise plus a wrong pick),
+#   - the changelog link must be codeberg.org/<repo>/releases/tag/<tag>.
+patches-source = "raincord/rainXposed"
+patches-source-host = "codeberg"
+cli-source = "7723mod/NPatch"
+patches-version = "stable"
+brand = "rain"
+
+[Discord-Rain]
+enabled = true
+pkg-name = "com.discord"
+app-name = "Discord"
+patcher-args = "-l 0"

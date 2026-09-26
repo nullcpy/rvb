@@ -233,6 +233,35 @@ def evaluate_repo_channel(repo_lower, repo, tag, channel, new_info, hashes, acti
                 download_url, headers={'Accept': 'application/octet-stream'})
             with urllib.request.urlopen(dl_req) as dl_resp, open(file_name, 'wb') as out_file:
                 out_file.write(dl_resp.read())
+        elif host == 'codeberg':
+            # Forgejo/Gitea (codeberg.org): the tag endpoint is GitHub-shaped, but the
+            # asset link lives in browser_download_url (.url comes back null) and `gh`
+            # cannot address a non-GitHub forge at all. Not reachable for today's
+            # sources - a Codeberg bundle here is an Xposed module, which takes the
+            # "not a revanced/morphe patcher" path above - but the alternative is a
+            # GitHub API call for a repository that only exists on Codeberg.
+            api_url = f"https://codeberg.org/api/v1/repos/{repo}/releases/tags/{tag}"
+            req = urllib.request.Request(
+                api_url, headers={'Accept': 'application/json'})
+            with urllib.request.urlopen(req) as response:
+                release_data = json.loads(response.read().decode('utf-8'))
+
+            download_url = None
+            file_name = None
+            for asset in (release_data.get('assets') or []):
+                name = asset.get('name', '')
+                if name.endswith('.mpp') or name.endswith('.rvp') or name.endswith('.jar'):
+                    download_url = asset.get(
+                        'browser_download_url') or asset.get('url')
+                    file_name = name
+                    break
+
+            if not download_url:
+                raise Exception(
+                    f"No .mpp, .rvp, or .jar asset found in Codeberg release for {repo}@{tag}")
+
+            with urllib.request.urlopen(download_url) as dl_resp, open(file_name, 'wb') as out_file:
+                out_file.write(dl_resp.read())
         else:
             # Download asset using gh cli
             subprocess.run(['gh', 'release', 'download', tag, '-R', repo, '-p', '*.mpp',

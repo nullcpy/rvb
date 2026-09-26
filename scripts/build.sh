@@ -179,7 +179,7 @@ for table_name in $(toml_get_table_names); do
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
-	if ! isoneof "$cli_src_host" github gitlab; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+	if ! isoneof "$cli_src_host" github gitlab codeberg; then abort "ERROR: cli-source-host '$cli_src_host' is not a valid option for '$table_name': only 'github', 'gitlab' or 'codeberg' is allowed"; fi
 	resolve_patcher "$cli_src"
 
 	# Parse patch sources: may be a single string or multiline (quoted list)
@@ -189,7 +189,7 @@ for table_name in $(toml_get_table_names); do
 	p_vers=($(list_args "$patches_ver" | tr -d \"\')); [ ${#p_vers[@]} -eq 0 ] && p_vers=("$patches_ver")
 	unset IFS
 	for h in "${p_hosts[@]}"; do
-		if ! isoneof "$h" github gitlab; then abort "ERROR: patches-source-host '$h' is not a valid option for '$table_name': only 'github' or 'gitlab' is allowed"; fi
+		if ! isoneof "$h" github gitlab codeberg; then abort "ERROR: patches-source-host '$h' is not a valid option for '$table_name': only 'github', 'gitlab' or 'codeberg' is allowed"; fi
 	done
 
 	# NOTE: called directly, not via $(...), so the __PREBUILTS_CACHE__ write in
@@ -232,10 +232,10 @@ for table_name in $(toml_get_table_names); do
 			fi
 			
 			patches_ref_all+="${psrc%%/*}/${pfilename} "
-			if [ "$phost" = github ]; then
-				changelog_url_all+="https://github.com/${psrc}/releases/tag/${ptag} "
-			else
-				changelog_url_all+="https://gitlab.com/${psrc}/-/releases/${ptag} "
+			# One owner for the release-page shape (utils.sh). An unrecognised host
+			# contributes no link rather than a guessed one.
+			if cl_url=$(source_release_web_url "$phost" "$psrc" "$ptag"); then
+				changelog_url_all+="${cl_url} "
 			fi
 		fi
 	done

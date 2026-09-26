@@ -17,15 +17,18 @@ MSG_BODY=$(jq -rn --argjson new "$TAGS_NEW" --argjson old "$TAGS_OLD" --argjson 
     | ($o.beta // "") as $ob
     | select(($e.value.stable != "" and $e.value.stable != ($o.stable // "")) or ($nb != "" and $nb != $ob) or ($e.value.blocked == true and $o.blocked != true))
     | ($patches[$e.key].host // "github") as $host
-    | ($host == "gitlab") as $is_gitlab
-    | ($is_gitlab | if . then "https://gitlab.com/" else "https://github.com/" end) as $base
+    # Release-page shape per forge, mirroring source_release_web_url in utils.sh:
+    # GitLab puts the tag under /-/releases/, GitHub and Forgejo (Codeberg) under
+    # /releases/tag/.
+    | (if $host == "gitlab" then "https://gitlab.com/" elif $host == "codeberg" then "https://codeberg.org/" else "https://github.com/" end) as $base
+    | (if $host == "gitlab" then "-/releases/" else "releases/tag/" end) as $relpath
     | "📦 [\($e.value.repo)](\($base)\($e.value.repo))" +
       (if ($e.value.blocked == true and $o.blocked != true) then "\n  ╰ 🚫 Repository access blocked." else "" end) +
       (if ($e.value.blocked != true and $e.value.stable != "" and $e.value.stable != ($o.stable // "")) then
-        (if $is_gitlab then "\n  ╰ Stable: [\($e.value.stable)](https://gitlab.com/\($e.value.repo)/-/releases/\($e.value.stable))" else "\n  ╰ Stable: [\($e.value.stable)](https://github.com/\($e.value.repo)/releases/tag/\($e.value.stable))" end)
+        "\n  ╰ Stable: [\($e.value.stable)](\($base)\($e.value.repo)/\($relpath)\($e.value.stable))"
       else "" end) +
       (if ($e.value.blocked != true and $nb != "" and $nb != $ob) then
-        (if $is_gitlab then "\n  ╰ Beta: [\($nb)](https://gitlab.com/\($e.value.repo)/-/releases/\($nb))" else "\n  ╰ Beta: [\($nb)](https://github.com/\($e.value.repo)/releases/tag/\($nb))" end)
+        "\n  ╰ Beta: [\($nb)](\($base)\($e.value.repo)/\($relpath)\($nb))"
       else "" end)
   ] | join("\n\n")
 ')

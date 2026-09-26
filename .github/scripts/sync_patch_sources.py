@@ -3,7 +3,7 @@
 sync_patch_sources.py
 Automated patch sources state manager for CI:
 1. Dynamically discovers all unique (patches-source, patches-source-host) from all .toml patch configs.
-2. Queries GitHub and GitLab APIs for active releases.
+2. Queries GitHub, GitLab and Codeberg APIs for active releases.
 3. Tracks latest stable and beta releases in state/patch_sources.json (state cache).
 4. Automatically prunes sources no longer used in any TOML config.
 5. Detects changes and emits TRIGGER_STABLE, TRIGGER_BETA, and TRIGGER_BLOCKED.
@@ -144,6 +144,34 @@ def fetch_gitlab_releases(repo):
         return None, False
 
 
+def fetch_codeberg_releases(repo):
+    """Release list from codeberg.org, which runs Forgejo (Gitea API).
+
+    The response shape matches GitHub's (tag_name / prerelease / published_at), so
+    parse_releases reads it on that branch. Two differences that matter: the page
+    size parameter is `limit` (`per_page` is ignored, and the default page is only
+    30 items), and `limit=50` is that API's maximum.
+    """
+    url = f"https://codeberg.org/api/v1/repos/{repo}/releases?limit=50"
+    headers = {"User-Agent": "Mozilla/5.0 (rvb-patch-sync)",
+               "Accept": "application/json"}
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read().decode("utf-8")), False
+    except urllib.error.HTTPError as e:
+        # 404 deleted or private, 403 access refused, 451 taken down
+        if e.code in (403, 404, 451):
+            return None, True
+        print(
+            f"Warning: Codeberg API error {e.code} for {repo}", file=sys.stderr)
+        return None, False
+    except Exception as e:
+        print(
+            f"Warning: Failed to fetch Codeberg releases for {repo}: {e}", file=sys.stderr)
+        return None, False
+
+
 def parse_releases(releases, host):
     if not isinstance(releases, list):
         return "", "", "", ""
@@ -169,10 +197,14 @@ def parse_releases(releases, host):
                 if not stable_tag or date > stable_date:
                     stable_tag = tag
                     stable_date = date
-    else:  # github
+    else:  # github and codeberg: same release shape, prerelease flag + published_at
         for rel in releases:
             tag = rel.get("tag_name") or ""
             date = rel.get("published_at") or rel.get("created_at") or ""
+            # GitHub's API never lists drafts; Forgejo's does, and an unpublished
+            # release is no one's channel release.
+            if rel.get("draft"):
+                continue
             is_pre = rel.get("prerelease", False) or bool(
                 beta_pattern.search(tag))
             if not tag:
@@ -216,6 +248,8 @@ def main():
 
         if host == "gitlab":
             releases, blocked = fetch_gitlab_releases(repo)
+        elif host == "codeberg":
+            releases, blocked = fetch_codeberg_releases(repo)
         else:
             releases, blocked = fetch_github_releases(repo, token)
 

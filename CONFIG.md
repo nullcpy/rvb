@@ -21,9 +21,9 @@ remove-rv-integrations-checks = true # remove checks from the revanced integrati
 dpi = "320dpi nodpi"            # dpi packages to be searched in order. 'auto' matches whatever is available. default: "nodpi anydpi auto"
 
 patches-source = "revanced/revanced-patches" # where to fetch patches bundle from. default: "MorpheApp/morphe-patches"
-patches-source-host = "github"               # source host for patches: "github" or "gitlab". default: "github"
+patches-source-host = "github"               # source host for patches: "github", "gitlab" or "codeberg". default: "github"
 cli-source = "ReVanced/revanced-cli"             # where to fetch cli from. default: "MorpheApp/morphe-desktop"
-cli-source-host = "github"                       # source host for cli: "github" or "gitlab". default: "github"
+cli-source-host = "github"                       # source host for cli: "github", "gitlab" or "codeberg". default: "github"
 # options like cli-source can also set per app
 brand = "Morphe"                     # patch brand/engine identity (e.g. "ReVanced Advanced", "Piko", "Morphe", "Android TV"). default: patches-source owner.
 
@@ -163,12 +163,20 @@ patches-source = """\
 patches-source-host = "github"
 
 # If sources span different hosts, provide one value per source in order:
-patches-source-host = "'github' 'gitlab'"
+patches-source-host = "'github' 'gitlab'"        # any of github | gitlab | codeberg
 
 # Same rule applies to patches-version:
 patches-version = "stable"                        # applies to all sources
 patches-version = "'stable' 'v1.2.3'"             # per-source versions
 ```
+
+> [!NOTE]
+> **Codeberg sources** (`"codeberg"`) are read through Forgejo's GitHub-compatible API:
+> stable vs beta is the same `prerelease` flag GitHub uses, drafts are ignored, and the
+> listing is requested with `limit=50` because that API silently ignores `per_page`. The
+> bundle is downloaded from the release asset's `browser_download_url`, whatever the file
+> is called (`app-release.apk` is common for Xposed modules), and the changelog link is
+> built as `https://codeberg.org/<owner>/<repo>/releases/tag/<tag>`.
 
 > [!TIP]
 > **Per-bundle patch selection**: When using multiple sources, separate patch lists 
@@ -278,11 +286,11 @@ You do **not** need separate files for stable and beta:
 > local file and let the watcher pick it up, or commit directly to `data`.
 
 Patch sources and their release versions in `state/patch_sources.json` are **100% automated**:
-- The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github` or `gitlab`), and checks for new stable and beta releases.
+- The CI automatically scans all `.toml` files, discovers every active `patches-source` repository and host (`github`, `gitlab` or `codeberg`), and checks for new stable and beta releases.
 - Unreferenced or deleted patch sources are pruned automatically.
 - **You do not need to manually edit `patch_sources.json`.** Simply add or update `patches-source` in your `.toml` files.
 - The build reads this file to turn a `patches-version = "stable"|"beta"` keyword into a concrete tag, so it is the answer to "what is the current release" for both the watcher and the builder.
-- A `blocked: true` entry is the watcher's record that the repository cannot be reached (404/451/403). Its tags are kept as they were, and the build refuses to use them - it skips the app rather than spend a request on a dead repository.
+- A `blocked: true` entry is the watcher's record that the repository cannot be reached (404/451/403, on any of the three forges). Its tags are kept as they were, and the build refuses to use them - it skips the app rather than spend a request on a dead repository.
 
 ## Automatic App Version Checking
 
