@@ -3607,18 +3607,25 @@ build_rv() {
 					fi
 					if [ -n "$aapt_cmd" ] && [ -x "$aapt_cmd" ]; then
 						local downloaded_pkg downloaded_ver downloaded_vc
-							downloaded_pkg=$(_meta_field_of "$stock_apk" package) || true
-							downloaded_ver=$(_meta_field_of "$stock_apk" versionName) || true
+						downloaded_pkg=$(_meta_field_of "$stock_apk" package) || true
+						downloaded_ver=$(_meta_field_of "$stock_apk" versionName) || true
 						
+						# Every rejection in this loop clears the same artifact set the
+						# download-failure paths above use: the staged apk plus any sibling
+						# extension the source produced (.apkm/.xapk/.apks/.bundle). These are
+						# staging paths - the sync into apk_cache_dir happens after the loop - so a
+						# leftover bundle could otherwise be picked up by the NEXT source's download
+						# (the candidate scans at the bottom of the loop look for "${stock_apk%.apk}.<ext>")
+						# and get merged, verified and cached as if it had passed identity checks.
 						if [ -z "$downloaded_pkg" ]; then
 							epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
-							rm -f "$stock_apk"
+							rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 							continue
 						fi
 
-						if [ -n "$downloaded_pkg" ] && [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
+						if [ "$downloaded_pkg" != "$pkg_name" ] && [[ "$pkg_name" == *.* ]]; then
 							epr "ERROR: Downloaded APK package name ($downloaded_pkg) does not match expected ($pkg_name). Rejecting..."
-							rm -f "$stock_apk"
+							rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 							continue
 						fi
 
@@ -3633,11 +3640,11 @@ build_rv() {
 							downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
 							if [ -z "$downloaded_vc" ]; then
 								epr "ERROR: Expected version code $target_version_code for '$pkg_name' but aapt read none from the downloaded file (dump badging produced nothing). Rejecting..."
-								rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+								rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 								continue
 							elif [ "$downloaded_vc" != "$target_version_code" ]; then
 								epr "ERROR: Downloaded APK version code ($downloaded_vc) does not match expected ($target_version_code). Rejecting..."
-								rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+								rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 								continue
 							fi
 						fi
@@ -3659,7 +3666,7 @@ build_rv() {
 					fi
 					local _vapk="$stock_apk"
 					if ! verify_downloaded_apk "$_vapk" "$pkg_name" "$dl_p"; then
-						rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+						rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
 						continue
 					fi
 
