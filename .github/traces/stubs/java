@@ -29,8 +29,10 @@ for ((i=1;i<=${#args[@]};i++)); do
 	[ "${args[$((i-1))]}" = "-o" ] && tmpdir_of="${args[$i]}"
 done
 out_of=""
+res_of=""
 for ((i=1;i<=${#args[@]};i++)); do
 	[ "${args[$((i-1))]}" = "-o" ] && out_of="${args[$i]}"
+	[ "${args[$((i-1))]}" = "-r" ] && res_of="${args[$i]}"
 done
 
 case "$sub" in
@@ -53,6 +55,12 @@ EOF
 patch)
 	echo 'INFO: "Test Patch A" succeeded'
 	echo "INFO: Applied: Test Patch B"
+	# morphe's -r summary. The names must match the two lines above, so the
+	# result-file path and the stdout-scrape fallback report the same applied set and
+	# a divergence between them shows up in a golden instead of in a build log.
+	if [ -n "$res_of" ]; then
+		printf '{"packageName":"com.example","packageVersion":"2.9.6","patchingSteps":[{"step":"PATCHING","success":true},{"step":"REBUILDING","success":true}],"appliedPatches":[{"name":"Test Patch A"},{"name":"Test Patch B"}],"failedPatches":[]}\n' > "$res_of"
+	fi
 	# revanced/morphe write the patched apk themselves; fake it
 	[ -n "$out_of" ] && printf 'FAKE-PATCHED-APK\n' > "$out_of"
 	;;

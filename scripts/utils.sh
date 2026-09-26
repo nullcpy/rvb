@@ -1069,6 +1069,22 @@ _all_patch_names() { # $1=cli_jar $2=bundle $3=pkg $4=cli_source
 		| sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//'
 }
 
+# Applied patch names from a morphe -r result file, as a JSON array. Echoes nothing
+# when the file is absent or unparsable, which is the caller's cue to fall back to
+# scraping. Shape (verified against morphe-desktop 1.15.1):
+#   {"packageName":..,"packageVersion":..,"patchingSteps":[{"step","success"}],
+#    "appliedPatches":[{"name":..}],"failedPatches":[{"name":..}]}
+_applied_from_result() {
+	[ -f "$1" ] || return 0
+	jq -c '[.appliedPatches[]? | if type=="object" then .name else . end | select(. != null)]' "$1" 2>/dev/null || :
+}
+
+# Names morphe reported as failed, comma separated (empty when none/unparsable).
+_failed_from_result() {
+	[ -f "$1" ] || return 0
+	jq -r '[.failedPatches[]? | if type=="object" then (.name // .patch // tostring) else . end] | join(", ")' "$1" 2>/dev/null || :
+}
+
 patches_list() {
 	local cache_key="${1}_${2}_${3}_${4}"
 	if [ -n "${__PATCHES_LIST_CACHE__["$cache_key"]:-}" ]; then
@@ -2901,6 +2917,22 @@ patch_apk() {
 	local base_cmd="java -jar '$stage_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=$RVB_KEYSTORE \
 --keystore-entry-password=$RVB_KEYSTORE_PASS --keystore-password=$RVB_KEYSTORE_PASS --signer=$RVB_KEY_ALIAS --keystore-entry-alias=$RVB_KEY_ALIAS"
 
+	# Morphe writes a machine-readable summary of the run (-r): which patches applied,
+	# which failed, and per-step success. Other tools have no equivalent, so the
+	# stdout scrape in write_build_info stays the fallback. The path is deliberately
+	# under TEMP_DIR and never apk_cache_dir - build.yml lists that directory into the
+	# APK cache manifest, so a stray .json there would be published as a cache asset.
+	PATCH_RESULT_FILE=""
+	if [ "${PATCHER_KIND:-}" = morphe ]; then
+		if mkdir -p "${TEMP_DIR}/patch_results" 2>/dev/null; then
+			PATCH_RESULT_FILE="${TEMP_DIR}/patch_results/$(basename "$patched_apk" .apk).json"
+			rm -f "$PATCH_RESULT_FILE" 2>/dev/null || :
+			base_cmd+=" -r '$PATCH_RESULT_FILE'"
+		else
+			wpr "Could not create the patch-result directory; falling back to parsing CLI output"
+		fi
+	fi
+
 	local -a ed_parts=()
 	if [ -n "$per_bundle_ed" ]; then
 		local IFS='|'
@@ -2992,13 +3024,51 @@ write_build_info() {
 	local sub_variant=${13:-${args[sub_variant]:-}}
 	local arch_orig="${args[arch]// /}"
 	if [ "$arch_orig" != "auto" ]; then ext="${arch}${ext}"; arch=""; fi
-	# extract applied patches supporting revanced, morphe-desktop, and instafel output formats
-	# revanced: INFO: "Patch Name" succeeded
-	# morphe:   INFO: Applied: Patch Name
-	# instafel: I: Patch 'Patch Name' loaded
-	local applied_json
-	applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=I: Patch \x27)[^\x27]+(?=\x27 loaded)' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
+	# Applied patches: morphe's -r summary when we have one (it lists every patch
+	# actually applied, defaults included, verified against morphe-desktop 1.15.1),
+	# otherwise scrape the CLI output.
+	#   revanced: INFO: "Patch Name" succeeded
+	#   morphe:   INFO: Applied: Patch Name
+	#   instafel: I: Patch 'Patch Name' loaded
+	local applied_json=""
+	if [ -n "${PATCH_RESULT_FILE:-}" ]; then
+		applied_json=$(_applied_from_result "$PATCH_RESULT_FILE")
+		if [ -n "$applied_json" ] && [ "$applied_json" != "[]" ]; then
+			local failed_list
+			failed_list=$(_failed_from_result "$PATCH_RESULT_FILE")
+			[ -n "$failed_list" ] && wpr "Morphe reported failed patches for '$key': $failed_list"
+		elif [ -n "$applied_json" ]; then
+			# An empty list from a tool that writes a summary is a real signal, not a
+			# parse miss - but it is also what a schema change would look like, so say
+			# which source produced it before anyone reads the empty catalog field as
+			# "this app has no patches".
+			wpr "Morphe result file for '$key' lists no applied patches (schema change?)"
+			applied_json=""
+		fi
+	fi
+	if [ -z "$applied_json" ]; then
+		applied_json=$(printf '%s\n' "$PATCH_OUTPUT" | grep -oP '(?<=INFO: ")[^"\n]+(?=" succeeded)|(?<=INFO: Applied: ).*|(?<=I: Patch \x27)[^\x27]+(?=\x27 loaded)' | jq -R -s -c 'split("\n") | map(select(length > 0))' 2>/dev/null || true)
+	fi
 	[[ "$applied_json" != \[* ]] && applied_json='[]'
+
+	# A name the config explicitly asked for that the run did not report applying means
+	# the catalog would advertise a patch that is not in the APK: usually the author
+	# renaming or dropping it, sometimes a version the patch no longer supports. Warn
+	# only - tools without a result file scrape less reliably, and an inclusive
+	# expansion lists every name the bundle offered, so "not applied" there can also
+	# mean "applied but unreported".
+	if [ "$applied_json" != "[]" ] && [ -n "${args[included_patches]:-}" ]; then
+		local inc_name missing_inc=""
+		while IFS= read -r inc_name; do
+			inc_name="${inc_name#\'}"; inc_name="${inc_name%\'}"
+			inc_name="${inc_name#\"}"; inc_name="${inc_name%\"}"
+			[ -z "$inc_name" ] && continue
+			printf '%s' "$applied_json" | jq -e --arg n "$inc_name" 'index($n) != null' >/dev/null 2>&1 \
+				|| missing_inc+=" '$inc_name'"
+		done <<<"$(list_args "${args[included_patches]//|/ }")"
+		[ -n "$missing_inc" ] && wpr "Requested but not reported as applied for '$key':$missing_inc"
+	fi
+
 	# Warn (don't fail) when a tool that reports applied patches yields none —
 	# previously this degraded silently into an empty catalog field. xposed
 	# modules and instafel are excluded: xposed reports none by design, and
