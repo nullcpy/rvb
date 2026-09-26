@@ -1,17 +1,8 @@
-# Discord - two Xposed module bundles for the same app, both injected through
-# NPatch. They differ in repository, brand and forge, so each table names its own
-# patches-source / patches-source-host / brand: a single file-level default cannot
-# serve two bundles. This file replaces revenge.toml (same content, kept as
-# [Discord-revenge]) because the app now has more than one patcher behind it -
-# compile_patch_configs.py rejects a duplicate table key across files, so the old
-# file had to go rather than sit alongside this one.
 cli-source = "7723mod/NPatch"
 
 [Discord-revenge]
 enabled = true
 patches-source = "revenge-mod/revenge-xposed"
-# "both" is routing, not a channel: it puts the app in the stable and beta pools,
-# and each pool's own default says which release that pool pulls.
 patches-version = "both"
 brand = "revenge"
 pkg-name = "com.discord"
@@ -20,9 +11,6 @@ patcher-args = "-l 0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 
-# https://github.com/nullcpy/rvb/issues/157 - rain, hosted on Codeberg.
-# No prereleases are published there today, so it stays in the stable pool only;
-# "both" would also queue it for every beta run with the same bundle.
 [Discord-rain]
 enabled = true
 patches-source = "raincord/rainXposed"
