@@ -9,48 +9,14 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
 apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
 
-# Curated selection (issue #157 review): hushfeed ships every patch by default in
-# its own releases, but several strip features or are developer tools. This lists
-# the opt-in patches worth shipping - each one either only adds a Hushfeed settings
-# switch (inert until the user turns it on) or removes nothing. Everything left out
-# either breaks a feature (Remove creation tools, Limit background traffic), rewrites
-# resources (AMOLED dark theme), changes the version code (Hide Play Store update
-# offer), or is a diagnostic. Names must match the CLI listing exactly.
-included-patches = """\
-  'Disable telemetry' \
-  'Block contact list access' \
-  'Block installed app scanning' \
-  'Device privacy guard' \
-  'Location access governor' \
-  'Resource and battery governor' \
-  'In-app browser privacy guard' \
-  'Camera and microphone indicator' \
-  'Ghost mode' \
-  'Block P2P video relay' \
-  'Skip the splash ad' \
-  'Hide video overlays' \
-  'Hide already seen videos' \
-  'Show author region' \
-  'Skip content warnings' \
-  'Hide search suggestions' \
-  'Hide inbox items' \
-  'Hide inbox stories' \
-  'Hide suggested accounts' \
-  'Expand activity list' \
-  'Notification controls' \
-  'Comment sort controls' \
-  'Comment tools' \
-  'Enable voice comments' \
-  'Advanced downloads' \
-  'Subtitle tools' \
-  'Allow Duet and Stitch' \
-  'Allow screenshots and Circle to Search' \
-  'Playback quality' \
-  'Fit the video to the screen' \
-  'Keep the screen's refresh rate' \
-  'Block author button' \
-  'Double-tap controls' \
-  """
+# Apply every patch the bundle offers for TikTok except the ones listed in
+# excluded-patches below. "Remove unused language packs" empties the language
+# bundles it is not asked to keep, so an APK built with it cannot be switched to
+# another language later without rebuilding - the one patch here that changes what
+# the app can still do afterwards. Watch the name: if the author renames it, the
+# exclusion stops matching and the patch comes back silently.
+inclusive-patches = true
+excluded-patches = "'Remove unused language packs'"
 
 [TikTok-hxreborn]
 enabled = true
