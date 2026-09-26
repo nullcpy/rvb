@@ -1042,6 +1042,33 @@ _patches_list_versions() {
 	fi
 	echo "$op"
 }
+# Quote a newline-separated list of raw patch names into the "'A' 'B'" group format
+# that list_args/join_args speak, escaping any apostrophe inside a name. Without the
+# escape, a name like "Keep the screen's refresh rate" leaves an unbalanced quote in
+# the eval'd command line: the run dies on "unexpected EOF while looking for matching
+# quote", or - with an even number of strays - silently splits one name into several
+# arguments and hands the CLI garbage instead of a patch.
+_quote_patch_names() {
+	local n esc
+	while IFS= read -r n; do
+		[ -z "$n" ] && continue
+		esc=$(printf '%s' "$n" | sed "s/'/'\\\\''/g")
+		printf "'%s' " "$esc"
+	done
+}
+
+# Every patch name a bundle offers for one package, one raw name per line (the
+# caller quotes them). Used by inclusive-patches. Fails when the tool cannot list
+# patches or the listing errors: guessing at "all" is worse than refusing, the same
+# rule the exclusive-patches expansion below already follows.
+_all_patch_names() { # $1=cli_jar $2=bundle $3=pkg $4=cli_source
+	local op
+	[ "${PATCHER_HAS_PATCH_LIST:-false}" = true ] || return 1
+	if ! op=$(patches_list "$1" "$2" "$3" "$4"); then return 1; fi
+	printf '%s\n' "$op" | grep -iE '^[[:space:]]*Name:' \
+		| sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//'
+}
+
 patches_list() {
 	local cache_key="${1}_${2}_${3}_${4}"
 	if [ -n "${__PATCHES_LIST_CACHE__["$cache_key"]:-}" ]; then
@@ -3225,6 +3252,40 @@ build_rv() {
 	local -a per_bundle_ed_args=()
 	local exc_str="${args[excluded_patches]}"
 	local inc_str="${args[included_patches]}"
+
+	# inclusive-patches: expand "every patch this bundle offers for the app" into
+	# explicit names, right here, so everything downstream - the version-compatibility
+	# gate, the -e/-d assembly below, the catalog's applied-patch list - keeps reading
+	# the one included-patches string it already understands and no other code has to
+	# learn the flag. Setting both flags at once is rejected in build.sh. An excluded
+	# name is dropped from the expansion rather than passed as both -e and -d, where
+	# argument order would decide what happens.
+	if [ "${args[inclusive_patches]:-false}" = true ]; then
+		local -a incl_exc=()
+		if [[ "$exc_str" == *"|"* ]]; then
+			IFS='|' read -ra incl_exc <<< "$exc_str"
+		else
+			incl_exc=("$exc_str")
+		fi
+		local incl_bi incl_names incl_drop incl_out incl_join="" incl_n
+		for ((incl_bi=0; incl_bi<n_bundles; incl_bi++)); do
+			if ! incl_names=$(_all_patch_names "$cli_jar" "${p_jars_arr[$incl_bi]}" "$pkg_name" "${args[cli_source]:-}"); then
+				abort "ERROR: inclusive-patches for '$table' needs a CLI that lists its patches; '${args[cli_source]:-}' gave none. Use included-patches for this source."
+			fi
+			incl_drop=$(list_args "${incl_exc[$incl_bi]:-${incl_exc[0]:-}}" | sed -e "s/^'//" -e "s/'\$//" -e 's/^"//' -e 's/"\$//')
+			incl_out=$(printf '%s\n' "$incl_names" | grep -vxF -f <(printf '%s\n' "$incl_drop") | _quote_patch_names)
+			incl_out="${incl_out%"${incl_out##*[![:space:]]}"}"
+			if [ -z "$incl_out" ]; then
+				abort "ERROR: inclusive-patches for '$table' resolved to no patch names from '${p_srcs_arr[$incl_bi]:-}'."
+			fi
+			incl_n=$(printf '%s\n' "$incl_names" | grep -c .)
+			pr "inclusive-patches: '$table' -> $incl_n patches from '${p_srcs_arr[$incl_bi]:-}'"
+			[ "$incl_bi" -gt 0 ] && incl_join+=" | "
+			incl_join+="$incl_out"
+		done
+		inc_str="$incl_join"
+		args[included_patches]="$incl_join"
+	fi
 
 	if [[ "$exc_str" == *"|"* ]] || [[ "$inc_str" == *"|"* ]]; then
 		local -a exc_parts=() inc_parts=()

@@ -251,6 +251,18 @@ for table_name in $(toml_get_table_names); do
 	app_args[included_patches]=$(toml_get "$t" included-patches) || app_args[included_patches]=""
 	if [ -n "${app_args[included_patches]}" ] && [[ ${app_args[included_patches]} != *'"'* ]]; then abort "patch names inside included-patches must be quoted"; fi
 	app_args[exclusive_patches]=$(toml_get "$t" exclusive-patches) || app_args[exclusive_patches]=false
+	# The mirror of exclusive-patches: true means "apply every patch this bundle
+	# offers for the app" instead of "apply only the listed ones". Boolean only - it
+	# does not take the patch-source form exclusive-patches accepts - and it cannot
+	# be combined with it. utils.sh expands it into explicit names at patch time.
+	# Placed right after exclusive-patches because the conflict check needs its value.
+	app_args[inclusive_patches]=$(toml_get "$t" inclusive-patches) || app_args[inclusive_patches]=false
+	if ! isoneof "${app_args[inclusive_patches]}" true false; then
+		abort "ERROR: inclusive-patches '${app_args[inclusive_patches]}' for '$table_name' must be true or false (unlike exclusive-patches it takes no patch-source list)"
+	fi
+	if [ "${app_args[inclusive_patches]}" = true ] && [ "${app_args[exclusive_patches]}" != false ]; then
+		abort "ERROR: inclusive-patches and exclusive-patches are opposites; set only one for '$table_name'"
+	fi
 	app_args[version]=$(toml_get "$t" version) || app_args[version]="auto"
 	app_args[version_code]=$(toml_get "$t" version-code) || app_args[version_code]=""
 	app_args[app_name]=$(toml_get "$t" app-name) || app_args[app_name]=$table_name
