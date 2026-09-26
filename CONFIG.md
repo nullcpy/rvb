@@ -58,7 +58,12 @@ arch = "both"        # 'both', 'auto', 'all', 'arm64-v8a', 'arm-v7a', 'x86_64', 
 version = "auto"     # 'auto', 'exp', 'latest', 'beta' or a version number (e.g. '17.40.41'). default: auto
 # target Android versionCode. 'auto' automatically resolves the supported versionCode from patch metadata (e.g. Morphe Desktop).
 # can also be set to an explicit versionCode (e.g. '473623755') or mapped per-architecture ('arm64-v8a: 473623755 | arm-v7a: 473623748').
-# used by APKMirror to select the exact build variant and to validate/invalidate cached and downloaded APKs. default: "" (or auto when resolved)
+# used by APKMirror and the cache repo to pick the exact build variant, and enforced on
+# every download from any source: the APK's own versionCode is read back and a mismatch -
+# or a file it cannot read a code from - rejects it and falls through to the next source.
+# Also part of the stock-APK cache key (<pkg>-<version>-<code>-<arch>), so two builds that
+# share a version string but differ by code never collide. Apps whose patches declare no
+# versionCode get no code in the name and no such check. default: "" (or auto when resolved)
 version-code = "auto"
 
 # optional args to be passed to cli. can be used to set patch options

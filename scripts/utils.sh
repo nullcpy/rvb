@@ -3609,7 +3609,6 @@ build_rv() {
 						local downloaded_pkg downloaded_ver downloaded_vc
 							downloaded_pkg=$(_meta_field_of "$stock_apk" package) || true
 							downloaded_ver=$(_meta_field_of "$stock_apk" versionName) || true
-							downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
 						
 						if [ -z "$downloaded_pkg" ]; then
 							epr "ERROR: Downloaded file is not a valid APK or aapt failed to parse it. Rejecting..."
@@ -3623,8 +3622,20 @@ build_rv() {
 							continue
 						fi
 
-						if [ -n "$target_version_code" ] && [ -n "$downloaded_vc" ]; then
-							if [ "$downloaded_vc" != "$target_version_code" ]; then
+						# A target version code is a claim the cache filename goes on making
+						# (<pkg>-<version>-<code>-<arch>), so it has to be read off the bytes.
+						# An unreadable code is NOT a pass: versionCode only comes from
+						# `dump badging`, while the package check above can succeed on the
+						# cheaper `dump packagename` - so a badging failure used to slip an
+						# unverified APK into the cache under a version code it never proved.
+						# Apps with no resolved target code never enter this block at all.
+						if [ -n "$target_version_code" ]; then
+							downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
+							if [ -z "$downloaded_vc" ]; then
+								epr "ERROR: Expected version code $target_version_code for '$pkg_name' but aapt read none from the downloaded file (dump badging produced nothing). Rejecting..."
+								rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
+								continue
+							elif [ "$downloaded_vc" != "$target_version_code" ]; then
 								epr "ERROR: Downloaded APK version code ($downloaded_vc) does not match expected ($target_version_code). Rejecting..."
 								rm -f "$stock_apk" "${stock_apk%.apk}.apkm"
 								continue
