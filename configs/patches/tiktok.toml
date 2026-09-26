@@ -4,19 +4,12 @@ pkg-name = "com.zhiliaoapp.musically"
 app-name = "TikTok"
 patches-source = "SysAdminDoc/hushfeed"
 brand = "hushfeed"
+inclusive-patches = true
+excluded-patches = "'Remove unused language packs'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
 apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
-
-# Apply every patch the bundle offers for TikTok except the ones listed in
-# excluded-patches below. "Remove unused language packs" empties the language
-# bundles it is not asked to keep, so an APK built with it cannot be switched to
-# another language later without rebuilding - the one patch here that changes what
-# the app can still do afterwards. Watch the name: if the author renames it, the
-# exclusion stops matching and the patch comes back silently.
-inclusive-patches = true
-excluded-patches = "'Remove unused language packs'"
 
 [TikTok-hxreborn]
 enabled = true
