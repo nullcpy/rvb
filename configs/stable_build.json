@@ -254,13 +254,14 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
     "uptodown-dlurl": "https://netflix-inc-netflix.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja",
-    "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
+    "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja",
+    "patches-version": "v1.37.7"
   },
   "Twitch-ajstrick81-AndroidTV": {
     "patches-source": "ajstrick81/morphe-androidtv-patches",
@@ -472,7 +473,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -480,7 +481,8 @@
     "uptodown-dlurl": "https://swift-backup.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
     "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
-    "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+    "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup",
+    "patches-version": "v1.31.1"
   },
   "Threads-chiggi": {
     "patches-source": "durgesh0505/chiggi_morphe_patches",
@@ -1054,27 +1056,25 @@
   "ProtonMail-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "apkmirror-dlurl": "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email",
     "uptodown-dlurl": "https://protonmail.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android",
     "apkcombo-dlurl": "https://apkcombo.com/proton-mail/ch.protonmail.android",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android",
-    "patches-version": "v1.30.0"
+    "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
     "uptodown-dlurl": "https://showly-2-0.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/showly-track-tv-shows-movie/com.michaldrabik.showly2",
-    "apkcombo-dlurl": "https://apkcombo.com/showly-track-shows-movies/com.michaldrabik.showly2",
-    "patches-version": "v1.30.0"
+    "apkcombo-dlurl": "https://apkcombo.com/showly-track-shows-movies/com.michaldrabik.showly2"
   },
   "Instagram-InstaFel": {
     "patches-source": "instafel/pc-rel",
@@ -1153,7 +1153,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1161,7 +1161,8 @@
     "apkpure-dlurl": "https://apkpure.com/brave-browser-private-ads-block/com.brave.browser",
     "apkcombo-dlurl": "https://apkcombo.com/brave-browser/com.brave.browser",
     "github-dlurl": "https://github.com/brave/brave-browser",
-    "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
+    "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk",
+    "patches-version": "v2.0.0"
   },
   "Hermit-Lain": {
     "patches-source": "kiraio-moe/Lain-Patches",
@@ -1856,7 +1857,7 @@
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically",
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically",
-    "patches-version": "v0.59.0"
+    "patches-version": "v0.60.0"
   },
   "TikTok-hxreborn": {
     "enabled": false,
@@ -1881,7 +1882,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -1889,10 +1890,11 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly",
     "uptodown-dlurl": "https://tiktok.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically",
-    "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+    "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically",
+    "patches-version": "v2.0.0"
   },
   "TikTok-kveld9-Asia": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ss.android.ugc.trill",
     "app-name": "TikTok",
     "variant": "Asia",
@@ -1901,6 +1903,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok",
     "uptodown-dlurl": "https://tik-tok.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/tiktok-asia-app/com.ss.android.ugc.trill",
-    "apkcombo-dlurl": "https://apkcombo.com/tiktok-asia/com.ss.android.ugc.trill"
+    "apkcombo-dlurl": "https://apkcombo.com/tiktok-asia/com.ss.android.ugc.trill",
+    "patches-version": "v2.0.0"
   }
 }

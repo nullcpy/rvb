@@ -4,7 +4,7 @@
     "stable": {
       "com.amazon.amazonvideo.livingroom": "e37957d772dba25d22cc3084e1f6b32a",
       "com.disney.disneyplus": "fb4055dcbe6c0270ddec57215ed10bd4",
-      "com.netflix.ninja": "2e80681d6195e57f5c75f505c4bc1a18",
+      "com.netflix.ninja": "c62d934c1675ee6f8bb387f6b8c971f0",
       "com.peacocktv.peacockandroid": "7ff4398760822eebd22cc15045755afd",
       "com.tubitv": "ad4cfa4b600c6451571625a911aace33",
       "com.univision.prendetv": "af7f8e042bd4b56df21f80a2c99ac58f",
@@ -78,7 +78,7 @@
     "beta": {},
     "stable": {
       "org.swiftapps.swiftbackup": "19f8e7d3f7903d93d21919ae4e0b5bc2",
-      "shared": "66150f7348cfc09825e997bd9b676fa2"
+      "shared": "ff4b5af8ae2db3f4385cbdfa005c4b56"
     }
   },
   "crimera/piko": {
@@ -213,7 +213,7 @@
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": {
-      "com.zhiliaoapp.musically": "f197950837dfe231b1a631043d2cc65a",
+      "com.zhiliaoapp.musically": "4dbbc2c764e93c8131bfeba4742c852a",
       "shared": "4c8e9750b338baa9b2956091fbe5841a"
     },
     "stable": {
@@ -268,10 +268,10 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "eb15658fdc23b6f97d5ba7ee2ae7f60e",
-      "com.ss.android.ugc.trill": "43e37dc34ffd05891f9087e9f10dae0b",
-      "com.zhiliaoapp.musically": "43e37dc34ffd05891f9087e9f10dae0b",
-      "shared": "b86a5c58bd9d47c55928cebfee37025a"
+      "com.brave.browser": "af6984094c19854a21d44dcb26cc2ae9",
+      "com.ss.android.ugc.trill": "00d65fbe6f4f7c87bd8be6359daf3c3a",
+      "com.zhiliaoapp.musically": "00d65fbe6f4f7c87bd8be6359daf3c3a",
+      "shared": "e4b02b0b1e928d82a8f1872bf3a792b5"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
@@ -283,10 +283,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "92d0d0a775360789023be6393bcc7ab3",
-      "com.google.android.youtube": "1b80857fea93e1ac49d8b0e734b1eb31",
+      "com.google.android.apps.youtube.music": "124126789c7ac352e96a035261baffa2",
+      "com.google.android.youtube": "2eea92a01242a3885a28d32fb5d9afc2",
       "com.reddit.frontpage": "36d2c3154e8110f1ed70e7b26692db1f",
-      "shared": "04db01d71127866fa161073205469567"
+      "shared": "2ae9970594e5fbcba3eef3afbbdce1a6"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "908eefc5b29a33d6807ef54a9ef097d9",
@@ -398,7 +398,7 @@
   "sysadmindoc/hushfeed": {
     "beta": {},
     "stable": {
-      "com.zhiliaoapp.musically": "f91234dcb47b0cd5a8bb1acd10fec4f4",
+      "com.zhiliaoapp.musically": "72f0af3917246bccfddc8409103d07a3",
       "shared": "d98d134085e880fcec6fd44b190a04fe"
     }
   }
