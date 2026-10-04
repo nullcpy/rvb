@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-04T11:07:30Z"
+    "publishedAt": "2026-10-04T19:55:56Z"
   },
   "files": {
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
@@ -977,10 +977,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1058,8 +1058,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko-material-you",
@@ -1074,10 +1074,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1155,8 +1155,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko-material-you",
@@ -1171,10 +1171,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1252,8 +1252,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko-material-you",
@@ -1268,10 +1268,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1349,8 +1349,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko",
@@ -1365,10 +1365,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1444,8 +1444,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko",
@@ -1460,10 +1460,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1539,8 +1539,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko",
@@ -1555,10 +1555,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1634,8 +1634,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "twitter-piko-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko",
@@ -1650,10 +1650,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.10.0-dev.9.mpp"
+        "crimera/patches-3.10.0-dev.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.9"
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1729,8 +1729,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260144",
-      "publishedAt": "2026-09-29T18:13:30Z"
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     },
     "youtube-morphe-module-v21.13.164-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -4348,170 +4348,6 @@
       "originBuild": "260125",
       "publishedAt": "2026-09-26T05:10:41Z"
     },
-    "reddit-morphe-experimental-v2026.38.0-arm-v7a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-experimental-module-v2026.38.0-arm-v7a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-experimental-v2026.38.0-arm64-v8a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-experimental-module-v2026.38.0-arm64-v8a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
     "youtube-music-morphe-experimental-module-v9.38.51-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
       "version": "9.38.51",
@@ -6291,6 +6127,259 @@
       ],
       "originBuild": "260176",
       "publishedAt": "2026-10-04T11:07:03Z"
+    },
+    "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
+      "name": "instagram-piko-clone",
+      "version": "447.0.0.55.81",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": null,
+      "subVariant": "Clone",
+      "packageName": "com.instagram.android.piko",
+      "patchSources": [
+        "crimera/patches-3.10.0-dev.10.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
+      ],
+      "appliedPatches": [
+        "Add settings",
+        "Allow user network certificate",
+        "Change like animation",
+        "Change version code",
+        "Clone",
+        "Copy comment",
+        "Custom font",
+        "Custom sharing domain",
+        "Customise story ring size",
+        "Customise story timestamp",
+        "Customize navigation bar",
+        "Disable Reels scrolling",
+        "Disable ads",
+        "Disable analytics",
+        "Disable comments",
+        "Disable discover people",
+        "Disable double tap like",
+        "Disable explore",
+        "Disable highlights",
+        "Disable screenshot detection",
+        "Disable stories",
+        "Disable story flipping",
+        "Disable swipe to create",
+        "Disable typing status",
+        "Disable video autoplay",
+        "Download media",
+        "Download voice message",
+        "External downloader",
+        "Filter stories",
+        "Focus Lock",
+        "Friendship status indicator",
+        "Hide Reels follow button",
+        "Hide group creation button on sharesheet",
+        "Hide notes tray",
+        "Hide reshare button",
+        "Hide stories tray",
+        "Hide suggested content",
+        "Improve image viewing",
+        "Inbox lock",
+        "Limit feed to following profiles",
+        "Loop story",
+        "Make ephemeral media permanent",
+        "Mark chat as read manually",
+        "More options on post",
+        "More options on profile",
+        "Open links externally",
+        "Recommended flags",
+        "Remove build expired popup",
+        "Remove empty bottom space",
+        "Sanitize share links",
+        "Save Instants",
+        "Save deleted messages",
+        "Save media comment",
+        "Theme",
+        "Unlock Plus benefits",
+        "Unlock developer options",
+        "Unlock employee options",
+        "Validate links",
+        "View DMs anonymously",
+        "View live anonymously",
+        "View stories anonymously",
+        "View story mentions"
+      ],
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
+    },
+    "instagram-piko-v447.0.0.55.81-arm64-v8a.apk": {
+      "name": "instagram-piko",
+      "version": "447.0.0.55.81",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "crimera/patches-3.10.0-dev.10.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
+      ],
+      "appliedPatches": [
+        "Add settings",
+        "Allow user network certificate",
+        "Change like animation",
+        "Change version code",
+        "Copy comment",
+        "Custom font",
+        "Custom sharing domain",
+        "Customise story ring size",
+        "Customise story timestamp",
+        "Customize navigation bar",
+        "Disable Reels scrolling",
+        "Disable ads",
+        "Disable analytics",
+        "Disable comments",
+        "Disable discover people",
+        "Disable double tap like",
+        "Disable explore",
+        "Disable highlights",
+        "Disable screenshot detection",
+        "Disable stories",
+        "Disable story flipping",
+        "Disable swipe to create",
+        "Disable typing status",
+        "Disable video autoplay",
+        "Download media",
+        "Download voice message",
+        "External downloader",
+        "Filter stories",
+        "Focus Lock",
+        "Friendship status indicator",
+        "Hide Reels follow button",
+        "Hide group creation button on sharesheet",
+        "Hide notes tray",
+        "Hide reshare button",
+        "Hide stories tray",
+        "Hide suggested content",
+        "Improve image viewing",
+        "Inbox lock",
+        "Limit feed to following profiles",
+        "Loop story",
+        "Make ephemeral media permanent",
+        "Mark chat as read manually",
+        "More options on post",
+        "More options on profile",
+        "Open links externally",
+        "Recommended flags",
+        "Remove build expired popup",
+        "Remove empty bottom space",
+        "Sanitize share links",
+        "Save Instants",
+        "Save deleted messages",
+        "Save media comment",
+        "Theme",
+        "Unlock Plus benefits",
+        "Unlock developer options",
+        "Unlock employee options",
+        "Validate links",
+        "View DMs anonymously",
+        "View live anonymously",
+        "View stories anonymously",
+        "View story mentions"
+      ],
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
+    },
+    "instagram-piko-module-v447.0.0.55.81-arm64-v8a.zip": {
+      "name": "instagram-piko",
+      "version": "447.0.0.55.81",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "crimera/patches-3.10.0-dev.10.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.10"
+      ],
+      "appliedPatches": [
+        "Add settings",
+        "Allow user network certificate",
+        "Change like animation",
+        "Change version code",
+        "Copy comment",
+        "Custom font",
+        "Custom sharing domain",
+        "Customise story ring size",
+        "Customise story timestamp",
+        "Customize navigation bar",
+        "Disable Reels scrolling",
+        "Disable ads",
+        "Disable analytics",
+        "Disable comments",
+        "Disable discover people",
+        "Disable double tap like",
+        "Disable explore",
+        "Disable highlights",
+        "Disable screenshot detection",
+        "Disable stories",
+        "Disable story flipping",
+        "Disable swipe to create",
+        "Disable typing status",
+        "Disable video autoplay",
+        "Download media",
+        "Download voice message",
+        "External downloader",
+        "Filter stories",
+        "Focus Lock",
+        "Friendship status indicator",
+        "Hide Reels follow button",
+        "Hide group creation button on sharesheet",
+        "Hide notes tray",
+        "Hide reshare button",
+        "Hide stories tray",
+        "Hide suggested content",
+        "Improve image viewing",
+        "Inbox lock",
+        "Limit feed to following profiles",
+        "Loop story",
+        "Make ephemeral media permanent",
+        "Mark chat as read manually",
+        "More options on post",
+        "More options on profile",
+        "Open links externally",
+        "Recommended flags",
+        "Remove build expired popup",
+        "Remove empty bottom space",
+        "Sanitize share links",
+        "Save Instants",
+        "Save deleted messages",
+        "Save media comment",
+        "Theme",
+        "Unlock Plus benefits",
+        "Unlock developer options",
+        "Unlock employee options",
+        "Validate links",
+        "View DMs anonymously",
+        "View live anonymously",
+        "View stories anonymously",
+        "View story mentions"
+      ],
+      "originBuild": "260179",
+      "publishedAt": "2026-10-04T19:55:31Z"
     }
   }
 }
