@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-04T04:48:34Z"
+    "publishedAt": "2026-10-04T11:16:42Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -2088,25 +2088,25 @@
       "subVariant": null,
       "packageName": "com.strava",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Add 'Give Kudos' button to 'Group Activity' ",
-        "Add activity export ",
-        "Add media download ",
-        "Add route export ",
-        "Block Snowplow tracking ",
-        "Disable Quick Edit ",
-        "Enable password login ",
-        "Hide distractions ",
-        "Overwrite media upload parameters ",
-        "Unlock subscription features "
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "strava-devanced-v477.14-arm-v7a.apk": {
       "name": "strava-devanced",
@@ -2121,25 +2121,25 @@
       "subVariant": null,
       "packageName": "com.strava",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Add 'Give Kudos' button to 'Group Activity' ",
-        "Add activity export ",
-        "Add media download ",
-        "Add route export ",
-        "Block Snowplow tracking ",
-        "Disable Quick Edit ",
-        "Enable password login ",
-        "Hide distractions ",
-        "Overwrite media upload parameters ",
-        "Unlock subscription features "
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "viber-devanced-v26.1.2.0-arm64-v8a.apk": {
       "name": "viber-devanced",
@@ -2154,16 +2154,16 @@
       "subVariant": null,
       "packageName": "com.viber.voip",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Hide Ads "
+        "Hide Ads"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "viber-devanced-v26.1.2.0-arm-v7a.apk": {
       "name": "viber-devanced",
@@ -2178,16 +2178,16 @@
       "subVariant": null,
       "packageName": "com.viber.voip",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Hide Ads "
+        "Hide Ads"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a.apk": {
       "name": "microsoft-lens-devanced",
@@ -2820,18 +2820,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Fix selected account persistence ",
-        "GmsCore support ",
-        "Spoof features "
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
       "name": "google-photos-devanced",
@@ -2846,18 +2846,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Fix selected account persistence ",
-        "GmsCore support ",
-        "Spoof features "
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
       "name": "google-photos-devanced",
@@ -2872,18 +2872,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Fix selected account persistence ",
-        "GmsCore support ",
-        "Spoof features "
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
       "name": "google-photos-devanced",
@@ -2898,18 +2898,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Fix selected account persistence ",
-        "GmsCore support ",
-        "Spoof features "
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "foldersync-hooman-v4.12.0-arm64-v8a.apk": {
       "name": "foldersync-hooman",
@@ -7052,18 +7052,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.37.0.mpp"
+        "byehi98/patches-1.37.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -7078,18 +7078,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.37.0.mpp"
+        "byehi98/patches-1.37.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "youtube-morphe-experimental-module-v21.38.123-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -8242,17 +8242,17 @@
       "subVariant": null,
       "packageName": "jp.pxv.android",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Hide ads ",
-        "Remove popular search time limit "
+        "Hide ads",
+        "Remove popular search time limit"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "pixiv-devanced-v6.196.0-arm64-v8a.apk": {
       "name": "pixiv-devanced",
@@ -8267,17 +8267,17 @@
       "subVariant": null,
       "packageName": "jp.pxv.android",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
-        "Hide ads ",
-        "Remove popular search time limit "
+        "Hide ads",
+        "Remove popular search time limit"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "xodo-hoodles-v11.0.0-arm-v7a.apk": {
       "name": "xodo-hoodles",
@@ -10310,18 +10310,18 @@
       "subVariant": null,
       "packageName": "com.microblink.photomath",
       "patchSources": [
-        "RookieEnough/patches-1.5.0.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.0"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
         "Hide update popup",
         "Spoof device ID",
         "Unlock plus"
       ],
-      "originBuild": "260164",
-      "publishedAt": "2026-10-02T23:47:22Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "photomath-devanced-v8.48.0-arm64-v8a.apk": {
       "name": "photomath-devanced",
@@ -10336,18 +10336,18 @@
       "subVariant": null,
       "packageName": "com.microblink.photomath",
       "patchSources": [
-        "RookieEnough/patches-1.5.0.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.0"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
         "Hide update popup",
         "Spoof device ID",
         "Unlock plus"
       ],
-      "originBuild": "260164",
-      "publishedAt": "2026-10-02T23:47:22Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "telegram-rushiranpise-google-play-v12.10.1-arm64-v8a.apk": {
       "name": "telegram-rushiranpise-google-play",
@@ -18961,10 +18961,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "RookieEnough/patches-1.5.0.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.0"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18983,8 +18983,8 @@
         "Reels 2x speed",
         "Messenger install compatibility"
       ],
-      "originBuild": "260165",
-      "publishedAt": "2026-10-03T01:43:07Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "messenger-devanced-v573.0.0.44.88-arm64-v8a.apk": {
       "name": "messenger-devanced",
@@ -18999,10 +18999,10 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "RookieEnough/patches-1.5.0.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.0"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
         "Disable typing indicator",
@@ -19013,8 +19013,8 @@
         "Open links externally",
         "Remove Meta AI"
       ],
-      "originBuild": "260165",
-      "publishedAt": "2026-10-03T01:43:07Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "messenger-devanced-v573.0.0.44.88-arm-v7a.apk": {
       "name": "messenger-devanced",
@@ -19029,10 +19029,10 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "RookieEnough/patches-1.5.0.mpp"
+        "RookieEnough/patches-1.5.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.0"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
       ],
       "appliedPatches": [
         "Disable typing indicator",
@@ -19043,8 +19043,8 @@
         "Open links externally",
         "Remove Meta AI"
       ],
-      "originBuild": "260165",
-      "publishedAt": "2026-10-03T01:43:07Z"
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     },
     "facebook-hushfacebook-v581.0.0.45.58-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -19865,6 +19865,54 @@
       ],
       "originBuild": "260174",
       "publishedAt": "2026-10-03T22:50:29Z"
+    },
+    "google-recorder-devanced-module-v4.2.20260823.982886211-arm64-v8a.zip": {
+      "name": "google-recorder-devanced",
+      "version": "4.2.20260823.982886211",
+      "appKey": "googlerecorder",
+      "appName": "Google Recorder",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.recorder",
+      "patchSources": [
+        "RookieEnough/patches-1.5.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
+      ],
+      "appliedPatches": [
+        "Remove device restrictions"
+      ],
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
+    },
+    "google-recorder-devanced-v4.2.20260823.982886211-arm64-v8a.apk": {
+      "name": "google-recorder-devanced",
+      "version": "4.2.20260823.982886211",
+      "appKey": "googlerecorder",
+      "appName": "Google Recorder",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.recorder",
+      "patchSources": [
+        "RookieEnough/patches-1.5.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.5.1"
+      ],
+      "appliedPatches": [
+        "Remove device restrictions"
+      ],
+      "originBuild": "260177",
+      "publishedAt": "2026-10-04T11:16:14Z"
     }
   }
 }
