@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-05T12:13:15Z"
+    "publishedAt": "2026-10-05T17:21:20Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14903,16 +14903,16 @@
       "subVariant": null,
       "packageName": "dev.vodik7.atvtools",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "atvtools-hxreborn-v1.3.2-arm64-v8a.apk": {
       "name": "atvtools-hxreborn",
@@ -14927,16 +14927,16 @@
       "subVariant": null,
       "packageName": "dev.vodik7.atvtools",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "facebook-hushfacebook-v580.0.0.51.74-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -17818,17 +17818,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
       "name": "showly-hxreborn",
@@ -17843,17 +17843,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -17868,17 +17868,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "reddit-morphe-experimental-v2026.39.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -18945,17 +18945,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.40.0.mpp"
+        "hxreborn/patches-1.41.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.40.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260180",
-      "publishedAt": "2026-10-04T20:07:08Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "facebook-devanced-v580.0.0.51.74-arm64-v8a.apk": {
       "name": "facebook-devanced",
@@ -19699,15 +19699,16 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.8.mpp"
+        "SysAdminDoc/patches-0.0.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.8"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.9"
       ],
       "appliedPatches": [
         "Disable analytics",
         "Disable call debug upload",
         "Disable chat swipe actions",
+        "Disable double-tap reactions",
         "Disable draft link previews",
         "Disable pull to next channel",
         "Disable update checks",
@@ -19724,10 +19725,12 @@
         "Open links externally",
         "Quiet contacts nag",
         "Repair Firebase push registration",
-        "Strip link tracking"
+        "Show user and chat IDs",
+        "Strip link tracking",
+        "Use normal paste"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "telegram-hushtelegram-foss-v12.10.6-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -19742,15 +19745,16 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.8.mpp"
+        "SysAdminDoc/patches-0.0.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.8"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.9"
       ],
       "appliedPatches": [
         "Disable analytics",
         "Disable call debug upload",
         "Disable chat swipe actions",
+        "Disable double-tap reactions",
         "Disable draft link previews",
         "Disable pull to next channel",
         "Disable update checks",
@@ -19767,10 +19771,12 @@
         "Open links externally",
         "Quiet contacts nag",
         "Repair Firebase push registration",
-        "Strip link tracking"
+        "Show user and chat IDs",
+        "Strip link tracking",
+        "Use normal paste"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     },
     "threads-hushthreads-v449.0.0.54.82-arm64-v8a.apk": {
       "name": "threads-hushthreads",
@@ -19976,6 +19982,117 @@
       ],
       "originBuild": "260180",
       "publishedAt": "2026-10-04T20:07:08Z"
+    },
+    "messenger-hushmessenger-material-you-v581.0.0.49.91-arm64-v8a.apk": {
+      "name": "messenger-hushmessenger-material-you",
+      "version": "581.0.0.49.91",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushmessenger",
+      "brandName": "HushMessenger",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "SysAdminDoc/patches-0.21.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.21.0"
+      ],
+      "appliedPatches": [
+        "Allow chat bubbles",
+        "Allow screenshots",
+        "Hide AI sticker tools",
+        "Hide Chat Moments",
+        "Hide Facebook shortcuts",
+        "Hide Meta AI",
+        "Hide People You May Know",
+        "Hide Reels badge",
+        "Hide avatar stickers",
+        "Hide business reply suggestions",
+        "Hide business typing suggestions",
+        "Hide chat promotions",
+        "Hide event prompts",
+        "Hide friend request cards",
+        "Hide growth prompts",
+        "Hide inbox ads",
+        "Hide inbox promotions",
+        "Hide inbox tabs",
+        "Hide joined community chats",
+        "Hide read receipts",
+        "Hide stories and notes",
+        "Hide typing indicator",
+        "Install beside Meta apps",
+        "Keep unsent messages",
+        "Material You theme",
+        "Open settings from menu",
+        "Open web links externally",
+        "Restore screens on re-signed builds",
+        "Save any story",
+        "Send photos at original quality",
+        "Slide chats in and out",
+        "Use system emoji",
+        "View stories anonymously"
+      ],
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
+    },
+    "messenger-hushmessenger-v581.0.0.49.91-arm64-v8a.apk": {
+      "name": "messenger-hushmessenger",
+      "version": "581.0.0.49.91",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushmessenger",
+      "brandName": "HushMessenger",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "SysAdminDoc/patches-0.21.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.21.0"
+      ],
+      "appliedPatches": [
+        "Allow chat bubbles",
+        "Allow screenshots",
+        "Hide AI sticker tools",
+        "Hide Chat Moments",
+        "Hide Facebook shortcuts",
+        "Hide Meta AI",
+        "Hide People You May Know",
+        "Hide Reels badge",
+        "Hide avatar stickers",
+        "Hide business reply suggestions",
+        "Hide business typing suggestions",
+        "Hide chat promotions",
+        "Hide event prompts",
+        "Hide friend request cards",
+        "Hide growth prompts",
+        "Hide inbox ads",
+        "Hide inbox promotions",
+        "Hide inbox tabs",
+        "Hide joined community chats",
+        "Hide read receipts",
+        "Hide stories and notes",
+        "Hide typing indicator",
+        "Install beside Meta apps",
+        "Keep unsent messages",
+        "Open settings from menu",
+        "Open web links externally",
+        "Restore screens on re-signed builds",
+        "Save any story",
+        "Send photos at original quality",
+        "Slide chats in and out",
+        "Use system emoji",
+        "View stories anonymously"
+      ],
+      "originBuild": "260186",
+      "publishedAt": "2026-10-05T17:21:03Z"
     }
   }
 }
