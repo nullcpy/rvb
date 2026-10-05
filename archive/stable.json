@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-04T20:07:52Z"
+    "publishedAt": "2026-10-05T12:13:15Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -7061,18 +7061,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.37.1.mpp"
+        "byehi98/patches-1.39.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.1"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.0"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260177",
-      "publishedAt": "2026-10-04T11:16:14Z"
+      "originBuild": "260184",
+      "publishedAt": "2026-10-05T12:13:07Z"
     },
     "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -7087,18 +7087,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.37.1.mpp"
+        "byehi98/patches-1.39.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.37.1"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.0"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260177",
-      "publishedAt": "2026-10-04T11:16:14Z"
+      "originBuild": "260184",
+      "publishedAt": "2026-10-05T12:13:07Z"
     },
     "youtube-morphe-experimental-module-v21.38.123-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
