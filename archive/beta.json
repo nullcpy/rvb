@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-06T11:37:19Z"
+    "publishedAt": "2026-10-06T15:08:30Z"
   },
   "files": {
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
@@ -6422,10 +6422,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android.brosssh",
       "patchSources": [
-        "brosssh/patches-2.8.3-dev.1.mpp"
+        "brosssh/patches-2.8.3-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.1"
+        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.2"
       ],
       "appliedPatches": [
         "Bypass signature check",
@@ -6441,8 +6441,8 @@
         "Limit feed to following profiles",
         "Remove build expired popup"
       ],
-      "originBuild": "260185",
-      "publishedAt": "2026-10-05T17:14:18Z"
+      "originBuild": "260195",
+      "publishedAt": "2026-10-06T15:08:11Z"
     },
     "instagram-brosssh-clone-v439.0.0.37.89-arm64-v8a.apk": {
       "name": "instagram-brosssh-clone",
@@ -6457,10 +6457,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android.brosssh",
       "patchSources": [
-        "brosssh/patches-2.8.3-dev.1.mpp"
+        "brosssh/patches-2.8.3-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.1"
+        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.2"
       ],
       "appliedPatches": [
         "Bypass signature check",
@@ -6476,8 +6476,8 @@
         "Limit feed to following profiles",
         "Remove build expired popup"
       ],
-      "originBuild": "260185",
-      "publishedAt": "2026-10-05T17:14:18Z"
+      "originBuild": "260195",
+      "publishedAt": "2026-10-06T15:08:11Z"
     },
     "instagram-brosssh-v439.0.0.37.89-arm-v7a.apk": {
       "name": "instagram-brosssh",
@@ -6492,10 +6492,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "brosssh/patches-2.8.3-dev.1.mpp"
+        "brosssh/patches-2.8.3-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.1"
+        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.2"
       ],
       "appliedPatches": [
         "Bypass signature check",
@@ -6510,8 +6510,8 @@
         "Limit feed to following profiles",
         "Remove build expired popup"
       ],
-      "originBuild": "260185",
-      "publishedAt": "2026-10-05T17:14:18Z"
+      "originBuild": "260195",
+      "publishedAt": "2026-10-06T15:08:11Z"
     },
     "instagram-brosssh-v439.0.0.37.89-arm64-v8a.apk": {
       "name": "instagram-brosssh",
@@ -6526,10 +6526,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "brosssh/patches-2.8.3-dev.1.mpp"
+        "brosssh/patches-2.8.3-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.1"
+        "https://github.com/brosssh/morphe-patches/releases/tag/v2.8.3-dev.2"
       ],
       "appliedPatches": [
         "Bypass signature check",
@@ -6544,8 +6544,8 @@
         "Limit feed to following profiles",
         "Remove build expired popup"
       ],
-      "originBuild": "260185",
-      "publishedAt": "2026-10-05T17:14:18Z"
+      "originBuild": "260195",
+      "publishedAt": "2026-10-06T15:08:11Z"
     }
   }
 }
