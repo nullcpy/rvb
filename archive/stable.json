@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-06T15:35:56Z"
+    "publishedAt": "2026-10-06T18:47:42Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -18106,12 +18106,13 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.7.1.mpp"
+        "SysAdminDoc/patches-0.7.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.7.1"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.7.2"
       ],
       "appliedPatches": [
+        "Block Instant Games ads",
         "Block ad telemetry",
         "Block background ad prefetch",
         "Block promotional notifications",
@@ -18135,6 +18136,7 @@
         "Hide sponsored stories",
         "Hide suggested and promoted posts",
         "Hide suggested stories",
+        "Hide tabs",
         "Hide the Feeds header",
         "Hide the Get Messenger card",
         "Hide the Reels tab dot",
@@ -18149,12 +18151,13 @@
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
+        "Show View profile on Marketplace sellers",
         "Start on x86 devices",
         "Stop update prompts",
         "Tab bar at the bottom"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260198",
+      "publishedAt": "2026-10-06T18:47:18Z"
     },
     "tiktok-hushfeed-v47.1.4-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -18169,10 +18172,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.67.1.mpp"
+        "SysAdminDoc/patches-0.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.67.1"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18281,8 +18284,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260198",
+      "publishedAt": "2026-10-06T18:47:18Z"
     },
     "tiktok-hushfeed-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -18297,10 +18300,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.67.1.mpp"
+        "SysAdminDoc/patches-0.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.67.1"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18409,8 +18412,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
+      "originBuild": "260198",
+      "publishedAt": "2026-10-06T18:47:18Z"
     },
     "google-photos-akashsriram-module-v7.95.0.989626323-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -20790,10 +20793,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.4.3.mpp"
+        "bearinmindcat/patches-1.4.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.3"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20830,8 +20833,8 @@
         "Your profile toast",
         "Zoom controls in navigation"
       ],
-      "originBuild": "260197",
-      "publishedAt": "2026-10-06T15:35:42Z"
+      "originBuild": "260198",
+      "publishedAt": "2026-10-06T18:47:18Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -20846,10 +20849,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.4.3.mpp"
+        "bearinmindcat/patches-1.4.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.3"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20886,8 +20889,8 @@
         "Your profile toast",
         "Zoom controls in navigation"
       ],
-      "originBuild": "260197",
-      "publishedAt": "2026-10-06T15:35:42Z"
+      "originBuild": "260198",
+      "publishedAt": "2026-10-06T18:47:18Z"
     }
   }
 }
