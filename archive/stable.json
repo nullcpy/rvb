@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-06T15:14:11Z"
+    "publishedAt": "2026-10-06T15:35:56Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20776,6 +20776,118 @@
       ],
       "originBuild": "260194",
       "publishedAt": "2026-10-06T12:04:08Z"
+    },
+    "google-maps-bearinmindcat-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-1.4.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.3"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Hide AI",
+        "Hide ads",
+        "Hide explore feed",
+        "Hide login promo",
+        "Hide navigation tabs",
+        "Hide section title",
+        "Hide sign-in button",
+        "Hide suggestions",
+        "Keep account sheet open",
+        "Legacy icon",
+        "Location provider toggle",
+        "Network location fallback",
+        "Offline saved places",
+        "Offline timeline",
+        "Power saving mode",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in promo",
+        "Remove telemetry",
+        "Restore map data",
+        "Sign-in toast",
+        "Trim account menu",
+        "Your profile toast",
+        "Zoom controls in navigation"
+      ],
+      "originBuild": "260197",
+      "publishedAt": "2026-10-06T15:35:42Z"
+    },
+    "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-1.4.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.4.3"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Hide AI",
+        "Hide ads",
+        "Hide explore feed",
+        "Hide login promo",
+        "Hide navigation tabs",
+        "Hide section title",
+        "Hide sign-in button",
+        "Hide suggestions",
+        "Keep account sheet open",
+        "Legacy icon",
+        "Location provider toggle",
+        "Network location fallback",
+        "Offline saved places",
+        "Offline timeline",
+        "Power saving mode",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in promo",
+        "Remove telemetry",
+        "Restore map data",
+        "Sign-in toast",
+        "Trim account menu",
+        "Your profile toast",
+        "Zoom controls in navigation"
+      ],
+      "originBuild": "260197",
+      "publishedAt": "2026-10-06T15:35:42Z"
     }
   }
 }
