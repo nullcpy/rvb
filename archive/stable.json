@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-06T05:42:36Z"
+    "publishedAt": "2026-10-06T05:52:30Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20210,6 +20210,126 @@
       ],
       "originBuild": "260189",
       "publishedAt": "2026-10-06T05:42:03Z"
+    },
+    "inshorts-bholeykabhakt-v6.12.15-arm-v7a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.12.15",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.12.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260190",
+      "publishedAt": "2026-10-06T05:52:20Z"
+    },
+    "inshorts-bholeykabhakt-v6.12.18-arm64-v8a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.12.15",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.12.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260190",
+      "publishedAt": "2026-10-06T05:52:20Z"
+    },
+    "proton-vpn-hxreborn-v5.20.57.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.57.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.41.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260190",
+      "publishedAt": "2026-10-06T05:52:20Z"
+    },
+    "proton-vpn-hxreborn-v5.20.57.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.57.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.41.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.41.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260190",
+      "publishedAt": "2026-10-06T05:52:20Z"
     }
   }
 }
