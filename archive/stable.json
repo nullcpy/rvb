@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-06T02:19:21Z"
+    "publishedAt": "2026-10-06T05:42:36Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -7061,18 +7061,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.39.0.mpp"
+        "byehi98/patches-1.39.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260184",
-      "publishedAt": "2026-10-05T12:13:07Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -7087,18 +7087,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.39.0.mpp"
+        "byehi98/patches-1.39.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.1"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260184",
-      "publishedAt": "2026-10-05T12:13:07Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "youtube-morphe-experimental-module-v21.38.123-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -10029,138 +10029,6 @@
       ],
       "originBuild": "260101",
       "publishedAt": "2026-09-22T03:06:50Z"
-    },
-    "instagram-instafel-clone-v448.0.0.52.84-arm64-v8a.apk": {
-      "name": "instagram-instafel-clone",
-      "version": "448.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "com.instafel.android",
-      "patchSources": [
-        "instafel/ifl-patcher-v4.7.0-release.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger",
-        "Clone General",
-        "Replace Instagram Strings"
-      ],
-      "originBuild": "260104",
-      "publishedAt": "2026-09-22T14:30:07Z"
-    },
-    "instagram-instafel-clone-v448.0.0.52.84-arm-v7a.apk": {
-      "name": "instagram-instafel-clone",
-      "version": "448.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "com.instafel.android",
-      "patchSources": [
-        "instafel/ifl-patcher-v4.7.0-release.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger",
-        "Clone General",
-        "Replace Instagram Strings"
-      ],
-      "originBuild": "260104",
-      "publishedAt": "2026-09-22T14:30:07Z"
-    },
-    "instagram-instafel-v448.0.0.52.84-arm64-v8a.apk": {
-      "name": "instagram-instafel",
-      "version": "448.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-v4.7.0-release.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260104",
-      "publishedAt": "2026-09-22T14:30:07Z"
-    },
-    "instagram-instafel-v448.0.0.52.84-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "448.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-v4.7.0-release.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260104",
-      "publishedAt": "2026-09-22T14:30:07Z"
     },
     "discord-revenge-v346.13-Stable-arm64-v8a.apk": {
       "name": "discord-revenge",
@@ -17328,10 +17196,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.4.0.mpp"
+        "kveld9/patches-2.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.4.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date",
@@ -17345,17 +17213,17 @@
         "Custom Offline Videos Limit",
         "Custom Share Sheet",
         "Device Privacy Guard",
-        "Disable Feed Long-Press Actions",
         "Disable Search Video Autoplay",
         "Enable Profile Banner",
         "Feed Ad Blocker",
         "Feed Bloat & Distraction Blocker",
-        "Feed Interface Declutter",
         "Fix Google Login",
+        "Fix Spotify Login",
         "Force Auto-Scroll",
+        "Friends Feed Strict Mutuals",
         "Hide Inbox Promos & Alerts",
-        "Hide Inbox Story & Status Tray",
         "Hide Popular Lives In Search",
+        "Hide Seen Videos",
         "Hide Suggested Searches",
         "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
@@ -17363,14 +17231,15 @@
         "Media Usability & Watermark-Free Downloader",
         "Navigation & Header Declutter",
         "P2P Video Relay & Mesh CDN Blocker",
+        "Popups & Prompts Suppressor",
         "Resource & Battery Governor",
         "Show Seekbar",
         "Skip First-Launch Onboarding",
         "Unified Telemetry & Tracker Silencer",
         "Update Prompt Suppressor"
       ],
-      "originBuild": "260174",
-      "publishedAt": "2026-10-03T22:50:29Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "tiktok-kveld9-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -17385,10 +17254,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.4.0.mpp"
+        "kveld9/patches-2.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.4.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date",
@@ -17402,17 +17271,17 @@
         "Custom Offline Videos Limit",
         "Custom Share Sheet",
         "Device Privacy Guard",
-        "Disable Feed Long-Press Actions",
         "Disable Search Video Autoplay",
         "Enable Profile Banner",
         "Feed Ad Blocker",
         "Feed Bloat & Distraction Blocker",
-        "Feed Interface Declutter",
         "Fix Google Login",
+        "Fix Spotify Login",
         "Force Auto-Scroll",
+        "Friends Feed Strict Mutuals",
         "Hide Inbox Promos & Alerts",
-        "Hide Inbox Story & Status Tray",
         "Hide Popular Lives In Search",
+        "Hide Seen Videos",
         "Hide Suggested Searches",
         "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
@@ -17420,14 +17289,15 @@
         "Media Usability & Watermark-Free Downloader",
         "Navigation & Header Declutter",
         "P2P Video Relay & Mesh CDN Blocker",
+        "Popups & Prompts Suppressor",
         "Resource & Battery Governor",
         "Show Seekbar",
         "Skip First-Launch Onboarding",
         "Unified Telemetry & Tracker Silencer",
         "Update Prompt Suppressor"
       ],
-      "originBuild": "260174",
-      "publishedAt": "2026-10-03T22:50:29Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -19825,10 +19695,10 @@
       "subVariant": null,
       "packageName": "com.brave.browser",
       "patchSources": [
-        "kveld9/patches-2.4.0.mpp"
+        "kveld9/patches-2.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.4.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
       ],
       "appliedPatches": [
         "Block Brave Telemetry",
@@ -19844,8 +19714,8 @@
         "Skip First Run",
         "Suppress In-App Promos & Surveys"
       ],
-      "originBuild": "260174",
-      "publishedAt": "2026-10-03T22:50:29Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "brave-browser-kveld9-v1.96.61-arm-v7a.apk": {
       "name": "brave-browser-kveld9",
@@ -19860,10 +19730,10 @@
       "subVariant": null,
       "packageName": "com.brave.browser",
       "patchSources": [
-        "kveld9/patches-2.4.0.mpp"
+        "kveld9/patches-2.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.4.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
       ],
       "appliedPatches": [
         "Block Brave Telemetry",
@@ -19879,8 +19749,8 @@
         "Skip First Run",
         "Suppress In-App Promos & Surveys"
       ],
-      "originBuild": "260174",
-      "publishedAt": "2026-10-03T22:50:29Z"
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "google-recorder-devanced-module-v4.2.20260823.982886211-arm64-v8a.zip": {
       "name": "google-recorder-devanced",
@@ -20226,6 +20096,120 @@
       ],
       "originBuild": "260188",
       "publishedAt": "2026-10-06T02:18:56Z"
+    },
+    "letterboxd-mvaishak-material-you-v3.5.8-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.5.8",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-2.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Denser poster grid",
+        "Hide ads",
+        "Material You theme",
+        "Mod settings"
+      ],
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
+    },
+    "letterboxd-mvaishak-material-you-v3.5.8-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.5.8",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-2.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Denser poster grid",
+        "Hide ads",
+        "Material You theme",
+        "Mod settings"
+      ],
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
+    },
+    "letterboxd-mvaishak-v3.5.8-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.5.8",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-2.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Denser poster grid",
+        "Hide ads",
+        "Mod settings"
+      ],
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
+    },
+    "letterboxd-mvaishak-v3.5.8-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.5.8",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-2.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Denser poster grid",
+        "Hide ads",
+        "Mod settings"
+      ],
+      "originBuild": "260189",
+      "publishedAt": "2026-10-06T05:42:03Z"
     }
   }
 }
