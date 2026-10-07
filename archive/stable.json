@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-07T15:35:01Z"
+    "publishedAt": "2026-10-07T19:13:01Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20705,10 +20705,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.6.0.mpp"
+        "bearinmindcat/patches-1.7.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.6.0"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20724,17 +20724,17 @@
         "Legacy icon",
         "Location provider toggle",
         "Offline saved places",
-        "Power saving mode",
         "Proxy",
         "Rectangle shapes",
         "Remove permissions",
         "Remove sign-in prompts",
         "Remove telemetry",
         "Trim account menu",
-        "Zoom controls in navigation"
+        "Zoom controls in navigation",
+        "Power saving mode"
       ],
-      "originBuild": "260205",
-      "publishedAt": "2026-10-07T15:34:48Z"
+      "originBuild": "260206",
+      "publishedAt": "2026-10-07T19:12:38Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -20749,10 +20749,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.6.0.mpp"
+        "bearinmindcat/patches-1.7.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.6.0"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20768,17 +20768,17 @@
         "Legacy icon",
         "Location provider toggle",
         "Offline saved places",
-        "Power saving mode",
         "Proxy",
         "Rectangle shapes",
         "Remove permissions",
         "Remove sign-in prompts",
         "Remove telemetry",
         "Trim account menu",
-        "Zoom controls in navigation"
+        "Zoom controls in navigation",
+        "Power saving mode"
       ],
-      "originBuild": "260205",
-      "publishedAt": "2026-10-07T15:34:48Z"
+      "originBuild": "260206",
+      "publishedAt": "2026-10-07T19:12:38Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -20840,11 +20840,11 @@
         "revenge-mod/app-release.apk"
       ],
       "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1700"
       ],
       "appliedPatches": [],
-      "originBuild": "260199",
-      "publishedAt": "2026-10-06T21:12:34Z"
+      "originBuild": "260206",
+      "publishedAt": "2026-10-07T19:12:38Z"
     },
     "discord-revenge-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-revenge",
@@ -20862,11 +20862,109 @@
         "revenge-mod/app-release.apk"
       ],
       "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1700"
       ],
       "appliedPatches": [],
-      "originBuild": "260199",
-      "publishedAt": "2026-10-06T21:12:34Z"
+      "originBuild": "260206",
+      "publishedAt": "2026-10-07T19:12:38Z"
+    },
+    "instagram-hushgram-v450.0.0.50.77-arm64-v8a.apk": {
+      "name": "instagram-hushgram",
+      "version": "450.0.0.50.77",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushgram",
+      "brandName": "HushGram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.6"
+      ],
+      "appliedPatches": [
+        "Allow screenshots",
+        "Ask before a call",
+        "Ask before a like",
+        "Ask before a refresh",
+        "Change the like animation",
+        "Change version code",
+        "Clean up Reels",
+        "Clear the media cache",
+        "Copy comment",
+        "Data saver",
+        "Default playback quality",
+        "Disable analytics",
+        "Don't report screenshots",
+        "Don't save recent searches",
+        "Don't send reel watch history",
+        "Download any reel",
+        "Download any story",
+        "Download any video",
+        "Download voice messages",
+        "Full resolution photos",
+        "Group Instagram's notifications",
+        "Hide Instants",
+        "Hide Meta AI",
+        "Hide Reels in the feed",
+        "Hide ads",
+        "Hide comments",
+        "Hide group buttons on the share sheet",
+        "Hide highlights",
+        "Hide suggested accounts in Reels",
+        "Hide suggested people on profiles",
+        "Hide suggested posts",
+        "Hide suggested stories",
+        "Hide that you're typing",
+        "Hide the Explore grid",
+        "Hide the Reels tab",
+        "Hide the Repost button",
+        "Hide the Share button",
+        "Hide the home feed",
+        "Hide the notes row",
+        "HushGram settings",
+        "Keep Reels auto scroll on",
+        "Keep a seek bar on Reels",
+        "Keep in chat",
+        "Keep the reel speed",
+        "Lock your messages",
+        "Loop a story",
+        "Open developer options",
+        "Open links in external browser",
+        "Pure black dark mode",
+        "Read messages without the seen receipt",
+        "Remove build expired popup",
+        "Remove the advertising ID",
+        "Remove the empty space at the bottom",
+        "Restore trust on re-signed builds",
+        "Resume long videos",
+        "Sanitize sharing links",
+        "Save comment photo",
+        "Save profile picture",
+        "Show a post's exact time",
+        "Show a story's exact time",
+        "Show if a profile follows you",
+        "Spoof location",
+        "Start Home on Following",
+        "Start on x86 devices",
+        "Stop Reels scrolling",
+        "Stop Story auto-advance",
+        "Stop swipe to create",
+        "Stop swiping between tabs",
+        "Story ring size",
+        "Tap to play",
+        "Turn off HDR brightness boosts",
+        "Turn off double tap to like",
+        "View DM photos and videos anonymously",
+        "View live anonymously",
+        "View stories anonymously"
+      ],
+      "originBuild": "260206",
+      "publishedAt": "2026-10-07T19:12:38Z"
     }
   }
 }
