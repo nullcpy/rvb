@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-07T19:13:01Z"
+    "publishedAt": "2026-10-07T21:31:07Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20705,10 +20705,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.7.2.mpp"
+        "bearinmindcat/patches-1.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.2"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20733,8 +20733,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260206",
-      "publishedAt": "2026-10-07T19:12:38Z"
+      "originBuild": "260207",
+      "publishedAt": "2026-10-07T21:30:51Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -20749,10 +20749,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.7.2.mpp"
+        "bearinmindcat/patches-1.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.2"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20777,8 +20777,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260206",
-      "publishedAt": "2026-10-07T19:12:38Z"
+      "originBuild": "260207",
+      "publishedAt": "2026-10-07T21:30:51Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
