@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-06T21:12:54Z"
+    "publishedAt": "2026-10-07T05:58:30Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -9198,50 +9198,6 @@
       "originBuild": "260101",
       "publishedAt": "2026-09-22T03:06:50Z"
     },
-    "discord-revenge-v346.13-Stable-arm64-v8a.apk": {
-      "name": "discord-revenge",
-      "version": "346.13-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260108",
-      "publishedAt": "2026-09-23T03:10:18Z"
-    },
-    "discord-revenge-v346.13-Stable-arm-v7a.apk": {
-      "name": "discord-revenge",
-      "version": "346.13-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1603"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260108",
-      "publishedAt": "2026-09-23T03:10:18Z"
-    },
     "brave-browser-dh6k-beta-v1.97.47-arm64-v8a.apk": {
       "name": "brave-browser-dh6k-beta",
       "version": "1.97.47",
@@ -11987,16 +11943,16 @@
       "subVariant": null,
       "packageName": "tv.trakt.trakt",
       "patchSources": [
-        "IMXEren/patches-1.7.0.mpp"
+        "IMXEren/patches-1.8.0.mpp"
       ],
       "changelogs": [
-        "https://gitlab.com/IMXEren/mix-patches/-/releases/v1.7.0"
+        "https://gitlab.com/IMXEren/mix-patches/-/releases/v1.8.0"
       ],
       "appliedPatches": [
-        "Unlock pro "
+        "Unlock pro"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-09T01:50:36Z"
+      "originBuild": "260202",
+      "publishedAt": "2026-10-07T05:58:24Z"
     },
     "trakt-tv-imxeren-v3.19.0-arm64-v8a.apk": {
       "name": "trakt-tv-imxeren",
@@ -12011,16 +11967,16 @@
       "subVariant": null,
       "packageName": "tv.trakt.trakt",
       "patchSources": [
-        "IMXEren/patches-1.7.0.mpp"
+        "IMXEren/patches-1.8.0.mpp"
       ],
       "changelogs": [
-        "https://gitlab.com/IMXEren/mix-patches/-/releases/v1.7.0"
+        "https://gitlab.com/IMXEren/mix-patches/-/releases/v1.8.0"
       ],
       "appliedPatches": [
-        "Unlock pro "
+        "Unlock pro"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-09T01:50:36Z"
+      "originBuild": "260202",
+      "publishedAt": "2026-10-07T05:58:24Z"
     },
     "truecaller-bufferk-module-v26.10.6-arm-v7a.zip": {
       "name": "truecaller-bufferk",
@@ -14163,50 +14119,6 @@
       ],
       "originBuild": "260130",
       "publishedAt": "2026-09-27T02:57:31Z"
-    },
-    "discord-rain-v346.13-Stable-arm64-v8a.apk": {
-      "name": "discord-rain",
-      "version": "346.13-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260131",
-      "publishedAt": "2026-09-27T03:15:00Z"
-    },
-    "discord-rain-v346.13-Stable-arm-v7a.apk": {
-      "name": "discord-rain",
-      "version": "346.13-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260131",
-      "publishedAt": "2026-09-27T03:15:00Z"
     },
     "tiktok-hushfeed-v47.1.3-all.apk": {
       "name": "tiktok-hushfeed",
