@@ -1,6 +1,3 @@
-# Same tool as configs/patches/discord.toml. JingMatrix LSPatch reads its bundled
-# JKS keystore through KeyStore.getDefaultType(), so this config needs no
-# BouncyCastle provider on the runner; NPatch would have needed one (BKS).
 cli-source = "JingMatrix/LSPatch"
 
 [Discord-revenge]

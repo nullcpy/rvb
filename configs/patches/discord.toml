@@ -1,9 +1,3 @@
-# Both Discord bundles are injected with JingMatrix LSPatch, the same patcher the
-# reference non-root aggregator uses for RevengeXposed: LSPatch's CLI loads its own
-# bundled JKS keystore through KeyStore.getDefaultType(), so it needs no
-# BouncyCastle provider on the runner (NPatch hard-codes getInstance("BKS")).
-# No patcher-args: LSPatch's signature-bypass default is already 0 (disable), and
-# --injectdex is only for modules that must hook isolated sub-processes.
 cli-source = "JingMatrix/LSPatch"
 
 [Discord-revenge]
