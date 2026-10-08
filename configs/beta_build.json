@@ -1,13 +1,12 @@
 {
   "patches-version": "beta",
   "Discord-revenge": {
-    "cli-source": "7723mod/NPatch",
+    "cli-source": "JingMatrix/LSPatch",
     "enabled": false,
     "patches-source": "revenge-mod/revenge-xposed",
     "brand": "revenge",
     "pkg-name": "com.discord",
     "app-name": "Discord",
-    "patcher-args": "-l 0",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers",
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
@@ -120,7 +119,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
   },
   "Reddit-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -133,7 +132,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -205,7 +204,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -219,7 +218,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
