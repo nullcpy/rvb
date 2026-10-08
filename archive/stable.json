@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-08T12:04:38Z"
+    "publishedAt": "2026-10-08T12:26:04Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13992,134 +13992,6 @@
       "originBuild": "260166",
       "publishedAt": "2026-10-03T02:03:13Z"
     },
-    "google-photos-akashsriram-v7.94.0.984908898-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.94.0.984908898",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.12.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.12.2"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
-    },
-    "google-photos-akashsriram-module-v7.94.0.984908898-arm64-v8a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.94.0.984908898",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.12.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.12.2"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
-    },
-    "google-photos-akashsriram-v7.94.0.984908898-arm-v7a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.94.0.984908898",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.12.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.12.2"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
-    },
-    "google-photos-akashsriram-module-v7.94.0.984908898-arm-v7a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.94.0.984908898",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.12.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.12.2"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
-    },
     "tiktok-hushfeed-v47.1.3-all.apk": {
       "name": "tiktok-hushfeed",
       "version": "47.1.3",
@@ -21141,6 +21013,50 @@
       ],
       "originBuild": "260209",
       "publishedAt": "2026-10-08T12:04:14Z"
+    },
+    "discord-rain-v348.10-Stable-all.apk": {
+      "name": "discord-rain",
+      "version": "348.10-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260210",
+      "publishedAt": "2026-10-08T12:25:25Z"
+    },
+    "discord-revenge-v348.10-Stable-all.apk": {
+      "name": "discord-revenge",
+      "version": "348.10-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1700"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260210",
+      "publishedAt": "2026-10-08T12:25:25Z"
     }
   }
 }
