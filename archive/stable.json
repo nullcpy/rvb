@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-08T19:27:43Z"
+    "publishedAt": "2026-10-08T21:39:42Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -17890,22 +17890,26 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.7.2.mpp"
+        "SysAdminDoc/patches-0.8.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.7.2"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.8.0"
       ],
       "appliedPatches": [
         "Block Instant Games ads",
         "Block ad telemetry",
         "Block background ad prefetch",
         "Block promotional notifications",
+        "Clean up Facebook's chat list",
         "Disable Audience Network",
+        "Download any photo",
         "Download any reel",
         "Download any story",
+        "Following feed on Home",
         "Force dark mode",
         "Hide AI-detected posts",
         "Hide Menu promotions",
+        "Hide Meta AI comment summaries",
         "Hide Meta AI in search",
         "Hide Meta AI questions under posts",
         "Hide affiliate product links",
@@ -17920,6 +17924,7 @@
         "Hide sponsored stories",
         "Hide suggested and promoted posts",
         "Hide suggested stories",
+        "Hide tab badges",
         "Hide tabs",
         "Hide the Feeds header",
         "Hide the Get Messenger card",
@@ -17928,6 +17933,7 @@
         "Hushfacebook settings",
         "Install beside Meta's apps",
         "Keep post dates",
+        "Keep the progress bar",
         "Keep the reel speed",
         "Marketplace only",
         "Open Messenger from the top bar",
@@ -17935,13 +17941,15 @@
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
+        "Send chat photos and videos at original quality",
         "Show View profile on Marketplace sellers",
         "Start on x86 devices",
         "Stop update prompts",
-        "Tab bar at the bottom"
+        "Tab bar at the bottom",
+        "Turn off auto-translation"
       ],
-      "originBuild": "260198",
-      "publishedAt": "2026-10-06T18:47:18Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "tiktok-hushfeed-v47.1.4-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -17956,10 +17964,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.68.0.mpp"
+        "SysAdminDoc/patches-0.69.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.68.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.69.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17967,11 +17975,14 @@
         "Allow Duet and Stitch",
         "Allow screenshots and Circle to Search",
         "Always show publish date",
+        "Always upload in HD",
+        "App lock",
         "Automatic video advance",
         "Block P2P video relay",
         "Block author button",
         "Block contact list access",
         "Block installed app scanning",
+        "Block popups",
         "Block suggested video notifications",
         "Camera and microphone indicator",
         "Change app name",
@@ -17980,7 +17991,9 @@
         "Comment sort controls",
         "Comment tools",
         "Confirm feed interactions",
+        "Copy bio and IDs",
         "Copy comments without username",
+        "Custom launcher icon",
         "Custom offline videos limit",
         "Device privacy guard",
         "Diagnostic tools",
@@ -18026,50 +18039,69 @@
         "In-app browser privacy guard",
         "Keep a streak going",
         "Keep playing in the background",
+        "Keep pulled sounds",
         "Keep the Favorites tab",
         "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
         "Limit background traffic",
         "Location access governor",
         "Long-press controls",
         "Look like the store app",
         "Mute feed videos",
+        "Network proxy",
         "Network request report",
         "Not interested button",
         "Notification controls",
         "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
         "Playback quality",
         "Playback speed",
+        "Prefer H.264 playback",
         "Region spoof",
         "Remember clear display",
         "Remove LIVE extras",
+        "Remove avatar rings",
         "Remove content credential and card scanner assets",
         "Remove creation tools",
         "Repost diagnostics",
         "Resource and battery governor",
         "Resume videos after scrolling",
+        "Run beside the store app",
         "SIM spoof",
         "Sanitize sharing links",
         "Settings",
         "Share sheet tools",
         "Show LIVE search",
         "Show author region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
         "Show the progress bar",
         "Show the progress bar thumbnail",
         "Skip content warnings",
+        "Skip first-launch setup",
         "Skip the splash ad",
         "Skip update checks",
         "Stay on the video in full screen",
         "Stop on-device AI profiling",
+        "Stop recording watch history",
         "Stop saving search history",
+        "Stop search autoplay",
         "Stop video looping",
+        "Story controls",
         "Subtitle tools",
         "Swipe-left controls",
         "Translate comments",
+        "Trust user certificates",
+        "Turn off haptics",
+        "Turn off screen transitions",
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260198",
-      "publishedAt": "2026-10-06T18:47:18Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "tiktok-hushfeed-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -18084,10 +18116,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.68.0.mpp"
+        "SysAdminDoc/patches-0.69.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.68.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.69.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18095,11 +18127,14 @@
         "Allow Duet and Stitch",
         "Allow screenshots and Circle to Search",
         "Always show publish date",
+        "Always upload in HD",
+        "App lock",
         "Automatic video advance",
         "Block P2P video relay",
         "Block author button",
         "Block contact list access",
         "Block installed app scanning",
+        "Block popups",
         "Block suggested video notifications",
         "Camera and microphone indicator",
         "Change app name",
@@ -18108,7 +18143,9 @@
         "Comment sort controls",
         "Comment tools",
         "Confirm feed interactions",
+        "Copy bio and IDs",
         "Copy comments without username",
+        "Custom launcher icon",
         "Custom offline videos limit",
         "Device privacy guard",
         "Diagnostic tools",
@@ -18154,50 +18191,69 @@
         "In-app browser privacy guard",
         "Keep a streak going",
         "Keep playing in the background",
+        "Keep pulled sounds",
         "Keep the Favorites tab",
         "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
         "Limit background traffic",
         "Location access governor",
         "Long-press controls",
         "Look like the store app",
         "Mute feed videos",
+        "Network proxy",
         "Network request report",
         "Not interested button",
         "Notification controls",
         "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
         "Playback quality",
         "Playback speed",
+        "Prefer H.264 playback",
         "Region spoof",
         "Remember clear display",
         "Remove LIVE extras",
+        "Remove avatar rings",
         "Remove content credential and card scanner assets",
         "Remove creation tools",
         "Repost diagnostics",
         "Resource and battery governor",
         "Resume videos after scrolling",
+        "Run beside the store app",
         "SIM spoof",
         "Sanitize sharing links",
         "Settings",
         "Share sheet tools",
         "Show LIVE search",
         "Show author region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
         "Show the progress bar",
         "Show the progress bar thumbnail",
         "Skip content warnings",
+        "Skip first-launch setup",
         "Skip the splash ad",
         "Skip update checks",
         "Stay on the video in full screen",
         "Stop on-device AI profiling",
+        "Stop recording watch history",
         "Stop saving search history",
+        "Stop search autoplay",
         "Stop video looping",
+        "Story controls",
         "Subtitle tools",
         "Swipe-left controls",
         "Translate comments",
+        "Trust user certificates",
+        "Turn off haptics",
+        "Turn off screen transitions",
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260198",
-      "publishedAt": "2026-10-06T18:47:18Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "google-photos-akashsriram-module-v7.95.0.989626323-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -20755,10 +20811,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.6.mpp"
+        "SysAdminDoc/patches-0.0.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.6"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.7"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -20780,6 +20836,7 @@
         "Download any story",
         "Download any video",
         "Download voice messages",
+        "Emoji style",
         "Full resolution photos",
         "Group Instagram's notifications",
         "Hide Instants",
@@ -20798,6 +20855,7 @@
         "Hide the Reels tab",
         "Hide the Repost button",
         "Hide the Share button",
+        "Hide the Threads button",
         "Hide the home feed",
         "Hide the notes row",
         "HushGram settings",
@@ -20819,6 +20877,7 @@
         "Sanitize sharing links",
         "Save comment photo",
         "Save profile picture",
+        "See who a story mentions",
         "Show a post's exact time",
         "Show a story's exact time",
         "Show if a profile follows you",
@@ -20837,8 +20896,8 @@
         "View live anonymously",
         "View stories anonymously"
       ],
-      "originBuild": "260206",
-      "publishedAt": "2026-10-07T19:12:38Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -20901,10 +20960,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.1.mpp"
+        "Akash-Sriram/patches-1.14.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.1"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20917,8 +20976,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "google-photos-akashsriram-v7.96.0.993165104-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -20933,10 +20992,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.1.mpp"
+        "Akash-Sriram/patches-1.14.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.1"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20949,8 +21008,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "google-photos-akashsriram-v7.96.0.993165104-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -20965,10 +21024,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.1.mpp"
+        "Akash-Sriram/patches-1.14.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.1"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20981,8 +21040,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     },
     "google-photos-akashsriram-module-v7.96.0.993165104-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -20997,10 +21056,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.1.mpp"
+        "Akash-Sriram/patches-1.14.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.1"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21013,8 +21072,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260216",
+      "publishedAt": "2026-10-08T21:39:07Z"
     }
   }
 }
