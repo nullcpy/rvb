@@ -3,7 +3,7 @@ cli-source = "JingMatrix/LSPatch"
 [Discord-revenge]
 enabled = true
 patches-source = "revenge-mod/revenge-xposed"
-patches-version = "both"
+patches-version = "stable"
 brand = "revenge"
 pkg-name = "com.discord"
 app-name = "Discord"
