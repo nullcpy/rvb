@@ -1,4 +1,7 @@
-cli-source = "7723mod/NPatch"
+# Same tool as configs/patches/discord.toml. JingMatrix LSPatch reads its bundled
+# JKS keystore through KeyStore.getDefaultType(), so this config needs no
+# BouncyCastle provider on the runner; NPatch would have needed one (BKS).
+cli-source = "JingMatrix/LSPatch"
 
 [Discord-revenge]
 enabled = true
@@ -8,7 +11,6 @@ arch = "all"
 brand = "revenge"
 pkg-name = "com.discord"
 app-name = "Discord"
-patcher-args = "-l 0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 
@@ -21,6 +23,5 @@ patches-version = "stable"
 brand = "rain"
 pkg-name = "com.discord"
 app-name = "Discord"
-patcher-args = "-l 0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"

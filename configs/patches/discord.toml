@@ -1,4 +1,10 @@
-cli-source = "7723mod/NPatch"
+# Both Discord bundles are injected with JingMatrix LSPatch, the same patcher the
+# reference non-root aggregator uses for RevengeXposed: LSPatch's CLI loads its own
+# bundled JKS keystore through KeyStore.getDefaultType(), so it needs no
+# BouncyCastle provider on the runner (NPatch hard-codes getInstance("BKS")).
+# No patcher-args: LSPatch's signature-bypass default is already 0 (disable), and
+# --injectdex is only for modules that must hook isolated sub-processes.
+cli-source = "JingMatrix/LSPatch"
 
 [Discord-revenge]
 enabled = true
@@ -8,7 +14,6 @@ arch = "all"
 brand = "revenge"
 pkg-name = "com.discord"
 app-name = "Discord"
-patcher-args = "-l 0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 
@@ -21,6 +26,5 @@ patches-version = "stable"
 brand = "rain"
 pkg-name = "com.discord"
 app-name = "Discord"
-patcher-args = "-l 0"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
 apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
