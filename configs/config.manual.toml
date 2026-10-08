@@ -1,24 +1,26 @@
-[GoogleMaps-bearinmindcat]
-enabled = true
-pkg-name = "com.google.android.apps.maps"
-app-name = "Google Maps"
-patches-source = "bearinmindcat/morphe-patches"
-brand = "bearinmindcat"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/maps"
-uptodown-dlurl = "https://google-maps.en.uptodown.com/android/download"
-apkpure-dlurl = "https://apkpure.com/google-maps-app/com.google.android.apps.maps"
-apkcombo-dlurl = "https://apkcombo.com/google-maps/com.google.android.apps.maps"
+cli-source = "7723mod/NPatch"
 
-[ProtonMail-hxreborn]
+[Discord-revenge]
 enabled = true
-pkg-name = "ch.protonmail.android"
-app-name = "Proton Mail"
-brand = "hxreborn"
-patches-source = "hxreborn/morphe-patches"
+patches-source = "revenge-mod/revenge-xposed"
+patches-version = "both"
 arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/proton-mail-encrypted-email/ch.protonmail.android"
-apkcombo-dlurl = "https://apkcombo.com/proton-mail/ch.protonmail.android"
-archive-dlurl = "https://archive.org/download/geologically/apks/ch.protonmail.android"
+brand = "revenge"
+pkg-name = "com.discord"
+app-name = "Discord"
+patcher-args = "-l 0"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
 
+[Discord-rain]
+enabled = true
+patches-source = "raincord/rainXposed"
+patches-source-host = "codeberg"
+arch = "all"
+patches-version = "stable"
+brand = "rain"
+pkg-name = "com.discord"
+app-name = "Discord"
+patcher-args = "-l 0"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
+apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
