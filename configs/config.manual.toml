@@ -1,22 +1,10 @@
-cli-source = "JingMatrix/LSPatch"
-
-[Discord-revenge]
+[Flipkart-debakarr]
 enabled = true
-patches-source = "revenge-mod/revenge-xposed"
-patches-version = "both"
-brand = "revenge"
-pkg-name = "com.discord"
-app-name = "Discord"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
-
-[Discord-rain]
-enabled = true
-patches-source = "raincord/rainXposed"
-patches-source-host = "codeberg"
-patches-version = "stable"
-brand = "rain"
-pkg-name = "com.discord"
-app-name = "Discord"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers"
-apkcombo-dlurl = "https://apkcombo.com/discord/com.discord"
+pkg-name = "com.flipkart.android"
+app-name = "Flipkart"
+brand = "debakarr"
+patches-source = "debakarr/morphe-patches"
+included-patches = "'Sort by number of ratings'"
+excluded-patches = "'Install alongside original'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flipkart-inc/flipkart-online-shopping"
+apkpure-dlurl = "https://apkpure.com/flipkart-online-shopping-app/com.flipkart.android"
