@@ -111,6 +111,14 @@
       "shared": "b6714c5dbdf40c5dc2eb2bfd60c3667e"
     }
   },
+  "debakarr/morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.flipkart.android": "ab4c5b57b71f699ba6c04baf8b976823",
+      "com.meesho.supply": "4350416ea3cca7744b513cb6c3cc0702",
+      "shared": "f7d67a8eae03b585e869dd860cba63fe"
+    }
+  },
   "dh6k/morphe-patches": {
     "beta": {},
     "stable": {
@@ -260,6 +268,13 @@
     "beta": {},
     "stable": {}
   },
+  "ispacecase/patchweaver": {
+    "beta": {},
+    "stable": {
+      "org.fdroid.fdroid": "c0ba98882a8920bfcee663d5eda4ba18",
+      "shared": "8df4e5dc87993591a38292ccbd6d1f19"
+    }
+  },
   "jasonwu1994/gboard-patches": {
     "beta": {
       "com.google.android.inputmethod.latin": "3145677ffb932a16336cd1440ef67e44",
@@ -311,8 +326,8 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "d990c9328f48460ca0fde446b1bfc897",
-      "com.google.android.youtube": "1aceea11edd0189df1f2489248c667ea",
+      "com.google.android.apps.youtube.music": "01cdef4cc48f86e926bd02d8ba8937ee",
+      "com.google.android.youtube": "c1387ab86d4e63a83f64b2637a2414f2",
       "com.reddit.frontpage": "bf8064c64318d9fd58308488a1ce7a0d",
       "shared": "c1967db32611545111e0ab6962a8cda4"
     },

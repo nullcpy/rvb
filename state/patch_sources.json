@@ -54,8 +54,8 @@
     "stable_date": "2026-10-07T04:17:11.999Z"
   },
   "MorpheApp/morphe-patches": {
-    "beta": "v1.47.0-dev.10",
-    "beta_date": "2026-10-09T13:46:59Z",
+    "beta": "v1.47.0-dev.11",
+    "beta_date": "2026-10-09T15:29:13Z",
     "blocked": false,
     "host": "github",
     "repo": "MorpheApp/morphe-patches",
@@ -269,6 +269,15 @@
     "stable": "v3.9.0",
     "stable_date": "2026-08-31T02:40:04Z"
   },
+  "debakarr/morphe-patches": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "debakarr/morphe-patches",
+    "stable": "v1.8.0",
+    "stable_date": "2026-10-06T06:26:09Z"
+  },
   "dh6k/morphe-patches": {
     "beta": "v1.9.0-dev.4",
     "beta_date": "2026-10-05T19:15:22Z",
@@ -368,6 +377,15 @@
     "stable": "db441b9-4.7.0",
     "stable_date": "2026-09-16T15:07:16Z"
   },
+  "ispacecase/patchweaver": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "ispacecase/patchweaver",
+    "stable": "v1.0.0",
+    "stable_date": "2026-09-10T16:33:50Z"
+  },
   "jasonwu1994/Gboard-patches": {
     "beta": "v3.12.0-dev.5",
     "beta_date": "2026-09-26T17:41:56Z",
@@ -405,8 +423,8 @@
     "stable_date": "2026-09-26T13:40:35Z"
   },
   "kveld9/kveld-morphe-patches": {
-    "beta": "v2.6.0-experimental.13",
-    "beta_date": "2026-10-09T06:42:08Z",
+    "beta": "v2.6.0-experimental.14",
+    "beta_date": "2026-10-09T15:30:34Z",
     "blocked": false,
     "host": "github",
     "repo": "kveld9/kveld-morphe-patches",

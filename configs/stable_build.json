@@ -243,7 +243,7 @@
   "GoogleMaps-bearinmindcat": {
     "patches-source": "bearinmindcat/morphe-patches",
     "brand": "bearinmindcat",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/maps",
@@ -319,6 +319,27 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
     "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
     "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+  },
+  "Meesho-debakarr": {
+    "enabled": true,
+    "pkg-name": "com.meesho.supply",
+    "app-name": "Meesho",
+    "brand": "debakarr",
+    "patches-source": "debakarr/morphe-patches",
+    "included-patches": "'Sort by number of ratings'",
+    "excluded-patches": "'Install alongside original'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/meesho/meesho-shopping"
+  },
+  "Flipkart-debakarr": {
+    "enabled": true,
+    "pkg-name": "com.flipkart.android",
+    "app-name": "Flipkart",
+    "brand": "debakarr",
+    "patches-source": "debakarr/morphe-patches",
+    "included-patches": "'Sort by number of ratings'",
+    "excluded-patches": "'Install alongside original'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/flipkart-inc/flipkart-online-shopping",
+    "apkpure-dlurl": "https://apkpure.com/flipkart-online-shopping-app/com.flipkart.android"
   },
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
@@ -1251,6 +1272,15 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fing-limited/fing-network-tools",
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
+  "Fdroid-patchweaver": {
+    "enabled": true,
+    "pkg-name": "org.fdroid.fdroid",
+    "app-name": "F-Droid",
+    "brand": "patchweaver",
+    "patches-source": "ispacecase/patchweaver",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/f-droid-limited/f-droid",
+    "apkpure-dlurl": "https://apkpure.com/f-droid/org.fdroid.fdroid"
+  },
   "GooglePhotos-DeVanced": {
     "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
@@ -1971,8 +2001,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
     "enabled": false,
@@ -1987,8 +2016,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "youtube-music-anddea": {
     "enabled": false,
@@ -2000,8 +2028,7 @@
     "patch-folder": "music",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "youtube-music-anddea-nord": {
     "enabled": false,
@@ -2014,8 +2041,7 @@
     "variant": "Nord Theme",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "youtube-music-anddea-mocha": {
     "enabled": false,
@@ -2028,8 +2054,7 @@
     "variant": "Mocha Theme",
     "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA",
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
     "enabled": false,
@@ -2042,8 +2067,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-NordTheme": {
     "enabled": false,
@@ -2058,8 +2082,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-MochaTheme": {
     "enabled": false,
@@ -2074,8 +2097,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
     "enabled": false,
@@ -2090,8 +2112,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-anddea": {
     "enabled": false,
@@ -2103,8 +2124,7 @@
     "patch-folder": "youtube",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "youtube-anddea-nord": {
     "enabled": false,
@@ -2118,8 +2138,7 @@
     "included-patches": "'MaterialYou'",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "youtube-anddea-mocha": {
     "enabled": false,
@@ -2133,7 +2152,6 @@
     "included-patches": "'MaterialYou'",
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   }
 }
