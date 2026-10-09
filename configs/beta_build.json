@@ -23,7 +23,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-Piko": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "crimera/piko",
@@ -34,7 +34,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-Piko-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "sub-variant": "Clone",
@@ -170,7 +170,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.truecaller"
   },
   "Twitter-Piko": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko",
@@ -181,7 +181,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-MaterialYou": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "variant": "Material You",
@@ -194,7 +194,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -208,7 +208,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -237,7 +237,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.apps.youtube.music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -251,7 +251,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
