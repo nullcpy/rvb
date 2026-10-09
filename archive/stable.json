@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-09T15:32:36Z"
+    "publishedAt": "2026-10-09T15:50:45Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -21190,6 +21190,102 @@
       ],
       "originBuild": "260217",
       "publishedAt": "2026-10-09T00:16:08Z"
+    },
+    "f-droid-patchweaver-v1.23.2-arm64-v8a.apk": {
+      "name": "f-droid-patchweaver",
+      "version": "1.23.2",
+      "appKey": "fdroid",
+      "appName": "F-Droid",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "patchweaver",
+      "brandName": "patchweaver",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.fdroid.fdroid",
+      "patchSources": [
+        "ispacecase/patches-1.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ispacecase/patchweaver/releases/tag/v1.0.0"
+      ],
+      "appliedPatches": [
+        "Selectable install backend"
+      ],
+      "originBuild": "260225",
+      "publishedAt": "2026-10-09T15:50:36Z"
+    },
+    "f-droid-patchweaver-v1.23.2-arm-v7a.apk": {
+      "name": "f-droid-patchweaver",
+      "version": "1.23.2",
+      "appKey": "fdroid",
+      "appName": "F-Droid",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "patchweaver",
+      "brandName": "patchweaver",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.fdroid.fdroid",
+      "patchSources": [
+        "ispacecase/patches-1.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ispacecase/patchweaver/releases/tag/v1.0.0"
+      ],
+      "appliedPatches": [
+        "Selectable install backend"
+      ],
+      "originBuild": "260225",
+      "publishedAt": "2026-10-09T15:50:36Z"
+    },
+    "meesho-debakarr-v29.6-arm64-v8a.apk": {
+      "name": "meesho-debakarr",
+      "version": "29.6",
+      "appKey": "meesho",
+      "appName": "Meesho",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "debakarr",
+      "brandName": "debakarr",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.meesho.supply",
+      "patchSources": [
+        "debakarr/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/debakarr/morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Sort by number of ratings"
+      ],
+      "originBuild": "260225",
+      "publishedAt": "2026-10-09T15:50:36Z"
+    },
+    "meesho-debakarr-v29.6-arm-v7a.apk": {
+      "name": "meesho-debakarr",
+      "version": "29.6",
+      "appKey": "meesho",
+      "appName": "Meesho",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "debakarr",
+      "brandName": "debakarr",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.meesho.supply",
+      "patchSources": [
+        "debakarr/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/debakarr/morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Sort by number of ratings"
+      ],
+      "originBuild": "260225",
+      "publishedAt": "2026-10-09T15:50:36Z"
     }
   }
 }
