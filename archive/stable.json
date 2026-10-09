@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-09T15:50:45Z"
+    "publishedAt": "2026-10-09T18:22:46Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -21286,6 +21286,54 @@
       ],
       "originBuild": "260225",
       "publishedAt": "2026-10-09T15:50:36Z"
+    },
+    "flipkart-debakarr-v9.15-arm64-v8a.apk": {
+      "name": "flipkart-debakarr",
+      "version": "9.15",
+      "appKey": "flipkart",
+      "appName": "Flipkart",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "debakarr",
+      "brandName": "debakarr",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.flipkart.android",
+      "patchSources": [
+        "debakarr/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/debakarr/morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Sort by number of ratings"
+      ],
+      "originBuild": "260226",
+      "publishedAt": "2026-10-09T18:22:35Z"
+    },
+    "flipkart-debakarr-v9.15-arm-v7a.apk": {
+      "name": "flipkart-debakarr",
+      "version": "9.15",
+      "appKey": "flipkart",
+      "appName": "Flipkart",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "debakarr",
+      "brandName": "debakarr",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.flipkart.android",
+      "patchSources": [
+        "debakarr/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/debakarr/morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Sort by number of ratings"
+      ],
+      "originBuild": "260226",
+      "publishedAt": "2026-10-09T18:22:35Z"
     }
   }
 }
