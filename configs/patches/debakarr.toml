@@ -1,0 +1,24 @@
+patches-source = "debakarr/morphe-patches"
+brand = "debakarr"
+
+[Meesho-debakarr]
+enabled = true
+pkg-name = "com.meesho.supply"
+app-name = "Meesho"
+included-patches = "'Sort by number of ratings'"
+excluded-patches = "'Install alongside original'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/meesho/meesho-shopping"
+
+[Flipkart-debakarr]
+enabled = true
+pkg-name = "com.flipkart.android"
+app-name = "Flipkart"
+included-patches = "'Sort by number of ratings'"
+excluded-patches = "'Install alongside original'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/flipkart-inc/flipkart-online-shopping"
+apkpure-dlurl = "https://apkpure.com/flipkart-online-shopping-app/com.flipkart.android"
+
+
+
+
+
