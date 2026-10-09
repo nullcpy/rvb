@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-09T00:16:25Z"
+    "publishedAt": "2026-10-09T06:09:16Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -7065,18 +7065,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.39.1.mpp"
+        "byehi98/patches-1.40.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.1"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.40.0"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -7091,18 +7091,18 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.39.1.mpp"
+        "byehi98/patches-1.40.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.39.1"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.40.0"
       ],
       "appliedPatches": [
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "chess-com-prathxm-v4.10.0-arm-v7a.apk": {
       "name": "chess-com-prathxm",
@@ -18938,10 +18938,10 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "SysAdminDoc/patches-0.21.0.mpp"
+        "SysAdminDoc/patches-0.22.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.21.0"
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.22.0"
       ],
       "appliedPatches": [
         "Allow chat bubbles",
@@ -18967,19 +18967,26 @@
         "Hide stories and notes",
         "Hide typing indicator",
         "Install beside Meta apps",
+        "Keep a message log",
+        "Keep emoji search on emoji",
         "Keep unsent messages",
         "Material You theme",
         "Open settings from menu",
         "Open web links externally",
+        "Restore old emoji drawer",
         "Restore screens on re-signed builds",
         "Save any story",
         "Send photos at original quality",
+        "Send videos without re-encoding",
         "Slide chats in and out",
+        "Stop analytics uploads",
+        "Unlock app icons",
         "Use system emoji",
+        "Use the phone's camera app",
         "View stories anonymously"
       ],
-      "originBuild": "260186",
-      "publishedAt": "2026-10-05T17:21:03Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "messenger-hushmessenger-v581.0.0.49.91-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
@@ -18994,10 +19001,10 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "SysAdminDoc/patches-0.21.0.mpp"
+        "SysAdminDoc/patches-0.22.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.21.0"
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.22.0"
       ],
       "appliedPatches": [
         "Allow chat bubbles",
@@ -19023,18 +19030,25 @@
         "Hide stories and notes",
         "Hide typing indicator",
         "Install beside Meta apps",
+        "Keep a message log",
+        "Keep emoji search on emoji",
         "Keep unsent messages",
         "Open settings from menu",
         "Open web links externally",
+        "Restore old emoji drawer",
         "Restore screens on re-signed builds",
         "Save any story",
         "Send photos at original quality",
+        "Send videos without re-encoding",
         "Slide chats in and out",
+        "Stop analytics uploads",
+        "Unlock app icons",
         "Use system emoji",
+        "Use the phone's camera app",
         "View stories anonymously"
       ],
-      "originBuild": "260186",
-      "publishedAt": "2026-10-05T17:21:03Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "instagram-instafel-clone-v450.0.0.50.77-arm64-v8a.apk": {
       "name": "instagram-instafel-clone",
@@ -20695,14 +20709,15 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.7.6.mpp"
+        "bearinmindcat/patches-1.7.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
         "Account sheet cleanup",
+        "Any media app",
         "Better offline maps",
         "Black theme",
         "Blue pin",
@@ -20723,8 +20738,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -20739,14 +20754,15 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-1.7.6.mpp"
+        "bearinmindcat/patches-1.7.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v1.7.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
         "Account sheet cleanup",
+        "Any media app",
         "Better offline maps",
         "Black theme",
         "Blue pin",
@@ -20767,8 +20783,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260215",
-      "publishedAt": "2026-10-08T19:27:14Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -21020,10 +21036,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.2.mpp"
+        "Akash-Sriram/patches-1.14.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21036,8 +21052,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "google-photos-akashsriram-v7.96.0.993165104-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -21052,10 +21068,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.2.mpp"
+        "Akash-Sriram/patches-1.14.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21068,8 +21084,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "google-photos-akashsriram-v7.96.0.993165104-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -21084,10 +21100,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.2.mpp"
+        "Akash-Sriram/patches-1.14.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21100,8 +21116,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "google-photos-akashsriram-module-v7.96.0.993165104-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -21116,10 +21132,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.14.2.mpp"
+        "Akash-Sriram/patches-1.14.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21132,8 +21148,8 @@
         "Model Readiness Gates",
         "Spoof features"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260218",
+      "publishedAt": "2026-10-09T06:08:54Z"
     },
     "threads-hushthreads-v450.0.0.51.78-arm64-v8a.apk": {
       "name": "threads-hushthreads",
