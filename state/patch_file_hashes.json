@@ -96,7 +96,7 @@
     "beta": {},
     "stable": {
       "org.swiftapps.swiftbackup": "19f8e7d3f7903d93d21919ae4e0b5bc2",
-      "shared": "a4df24417539a639b9ae6b414a9927c9"
+      "shared": "2d38e281262a2e6d7e8ec39c97410315"
     }
   },
   "crimera/piko": {
@@ -238,13 +238,13 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "86a2b5a4b849d1998566710e360d10c3",
-      "ch.protonvpn.android": "f6d2ac69ae3d66c74fc261f1603fe7af",
-      "com.dubox.drive": "d4558f604c8eb4597ba4cf2f3bde758a",
-      "com.greenstone.pocketwhip": "4bc61541ceebe4346996ffb76924f2af",
-      "com.michaldrabik.showly2": "56afca2249008d5e59c7421865830473",
-      "dev.vodik7.atvtools": "c82ec3cad132164997eeb3694048f80b",
-      "shared": "bc64edbb05e3ff17f0cc6192de66ae86"
+      "ch.protonmail.android": "1e5135f68c1d25d2695ce0906f31f5e0",
+      "ch.protonvpn.android": "653c4cacf643142ecefe61189f9aca5e",
+      "com.dubox.drive": "5625701c5e5ff470fa6934e751a898e2",
+      "com.greenstone.pocketwhip": "b844801360b05041b747c0eee363ac84",
+      "com.michaldrabik.showly2": "028e4ba3a59f98935871a6465c551209",
+      "dev.vodik7.atvtools": "21ab77349817afca4695cab217174e53",
+      "shared": "9846b36b9e8f88b4f9afd0fea7573f2e"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -303,7 +303,7 @@
   "kondratjev/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.fatsecret.android": "2aa92575abb437685695987f5cc8e88a",
+      "com.fatsecret.android": "145aa87a5b27f90614580024db6ccad3",
       "com.soundcloud.android": "807fb8391bddea511afc7898a95f679d",
       "shared": "e6de59c97fa94ca506628d9c90047fe9"
     }
@@ -327,7 +327,7 @@
   "morpheapp/morphe-patches": {
     "beta": {
       "com.google.android.apps.youtube.music": "01cdef4cc48f86e926bd02d8ba8937ee",
-      "com.google.android.youtube": "c1387ab86d4e63a83f64b2637a2414f2",
+      "com.google.android.youtube": "61485dcbccdfcf6a9a8f9802810ace7c",
       "com.reddit.frontpage": "bf8064c64318d9fd58308488a1ce7a0d",
       "shared": "c1967db32611545111e0ab6962a8cda4"
     },

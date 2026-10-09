@@ -310,7 +310,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -321,7 +321,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
   },
   "Meesho-debakarr": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.meesho.supply",
     "app-name": "Meesho",
     "brand": "debakarr",
@@ -331,14 +331,13 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/meesho/meesho-shopping"
   },
   "Flipkart-debakarr": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.flipkart.android",
     "app-name": "Flipkart",
     "brand": "debakarr",
     "patches-source": "debakarr/morphe-patches",
     "included-patches": "'Sort by number of ratings'",
     "excluded-patches": "'Install alongside original'",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/flipkart-inc/flipkart-online-shopping",
     "apkpure-dlurl": "https://apkpure.com/flipkart-online-shopping-app/com.flipkart.android"
   },
   "GoogleRecorder-DeVanced": {
@@ -428,7 +427,7 @@
   },
   "Discord-revenge": {
     "cli-source": "JingMatrix/LSPatch",
-    "enabled": false,
+    "enabled": true,
     "patches-source": "revenge-mod/revenge-xposed",
     "brand": "revenge",
     "pkg-name": "com.discord",
@@ -889,7 +888,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -900,7 +899,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -909,7 +908,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -919,7 +918,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup",
@@ -1049,7 +1048,7 @@
   "CalorieCounter-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.fatsecret.android",
     "app-name": "Calorie Counter",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
@@ -1273,7 +1272,7 @@
     "uptodown-dlurl": "https://fing-network-tools.en.uptodown.com/android"
   },
   "Fdroid-patchweaver": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.fdroid.fdroid",
     "app-name": "F-Droid",
     "brand": "patchweaver",
@@ -1364,7 +1363,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1422,7 +1421,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
