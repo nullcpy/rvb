@@ -100,9 +100,18 @@ authoritative exactly when its artifact is live. Outputs
 `STATE_UPDATED=true|false`; the following `commit_data_branch.sh` step pushes
 the file to `data` when, and only when, it changed.
 
+### `cleanup_artifact_hashes.sh`
+Cleanup-side counterpart: prunes entries whose published file (`<stem>.apk` or
+`<…>-module-v<…>.zip`, case-insensitive) no longer exists on any release — a
+state entry may only suppress a rebuild while its artifact is actually
+downloadable. Runs after the asset deleters; a failed `gh api` releases
+listing aborts it instead of pruning against a partial list. Writes
+`STATE_PRUNED` to `temp/gh_outputs/cleanup_hashes.env` for the commit step.
+
 Regression test: `temp/_deduptest/run.sh` (fixture APKs with differing
 timestamps/signature entries, all three scripts + the engine gate across
-`off`/`log`/`enforce`; Git Bash).
+`off`/`log`/`enforce`; Git Bash) and `temp/_deduptest/run2.sh` (stubbed `gh`
+asset list: survivor/prune/idempotence/fail-loud cases; Git Bash).
 
 ## Archive maintenance
 

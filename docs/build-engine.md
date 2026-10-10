@@ -72,6 +72,9 @@ an identical APK under a new build number falsely notifies every updater
   gain no keys. The engine only ever updates the local copy (enforce mode, so
   the two arches of one run agree); CI publishes it after the upload chain
   succeeded — a hash becomes authoritative exactly when its artifact is live.
+  Lifecycle: `cleanup_artifact_hashes.sh` drops any entry whose file is gone
+  from all releases, so a suppression guard never outlives the artifact it
+  vouches for (see [ci-pipelines.md](ci-pipelines.md)).
 - **Scopes:** CI-only (`GITHUB_REPOSITORY` set), revanced/morphe tools only
   (`PATCHER_HASH_DEDUP_ELIGIBLE` in the patchers registry — cross-run hash
   stability for the other tools is unmeasured), `python3` present, channel

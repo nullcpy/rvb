@@ -198,6 +198,16 @@ Step order, with the reason each is where it is:
 3. `cleanup_update_branch.sh` drops update pointers and changelogs whose release is
    gone; `cleanup_website_branch.sh` drops `manifests/<tag>.json` for deleted
    releases.
+3b. `cleanup_artifact_hashes.sh` drops `state/build_content_hashes.json` entries
+   whose artifact no longer lives on ANY release (matching both the `<stem>.apk`
+   and `<…>-module-v<…>.zip` spellings, case-insensitively). This is a guard on
+   the duplicate-build check, not tidying: an entry is the evidence that lets a
+   rebuild be suppressed, so evidence for a deleted file must go with the file —
+   otherwise a pinned rebuild would be "skipped" as identical to something
+   nobody can download. It runs **after** the asset deleters so entries pruned
+   in the same pass lose their guard in that pass; a failed releases listing
+   aborts it loudly rather than pruning against an empty set. When it changed
+   the file, `commit_data_branch.sh` pushes the pruned state to `data`.
 4. A `catalog-updated` `repository_dispatch` to `vars.WEBSITE_REPO`
    (default `nullcpy/nullcpy.github.io`), authenticated with
    `WEBSITE_DISPATCH_TOKEN` falling back to `APKS_REPO_TOKEN`. `continue-on-error`,
