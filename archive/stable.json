@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-10T20:35:37Z"
+    "publishedAt": "2026-10-10T23:38:29Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14111,18 +14111,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.48.6.mpp"
+        "SatanMerde/patches-1.49.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.48.6"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.49.0"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260237",
-      "publishedAt": "2026-10-10T16:29:45Z"
+      "originBuild": "260241",
+      "publishedAt": "2026-10-10T23:38:15Z"
     },
     "proton-mail-satanmerde-v7.11.6-arm-v7a.apk": {
       "name": "proton-mail-satanmerde",
@@ -14137,18 +14137,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.48.6.mpp"
+        "SatanMerde/patches-1.49.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.48.6"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.49.0"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260237",
-      "publishedAt": "2026-10-10T16:29:45Z"
+      "originBuild": "260241",
+      "publishedAt": "2026-10-10T23:38:15Z"
     },
     "ibis-paint-x-hoodles-v14.1.0-arm64-v8a.apk": {
       "name": "ibis-paint-x-hoodles",
@@ -21673,6 +21673,114 @@
       ],
       "originBuild": "260237",
       "publishedAt": "2026-10-10T16:29:45Z"
+    },
+    "pinterest-browzomje-v14.39.0-arm64-v8a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.39.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.11.0"
+      ],
+      "appliedPatches": [
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260241",
+      "publishedAt": "2026-10-10T23:38:15Z"
+    },
+    "pinterest-browzomje-v14.39.0-arm-v7a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.39.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.11.0"
+      ],
+      "appliedPatches": [
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260241",
+      "publishedAt": "2026-10-10T23:38:15Z"
     }
   }
 }
