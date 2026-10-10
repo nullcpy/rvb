@@ -127,9 +127,13 @@ Step order, with the reason each is where it is:
    runs as a job `service` on `:8000`.
 7. `scripts/build.sh <config>` — the engine ([build-engine.md](build-engine.md)).
    `UPLOAD_APKS_REPO` + `APKS_REPO_TOKEN` turn on the shared cache repo;
-   `RVB_MORPHE_PASSTHROUGH` and the `RELEASE_NOTES_*_LINK` vars are passed here.
-   On any per-app failure the engine writes a record to `temp/failures/` (kept
-   across the run's end, wiped at start), which the next step consumes.
+   `RVB_MORPHE_PASSTHROUGH`, `RVB_DEDUP_MODE` and the `RELEASE_NOTES_*_LINK`
+   vars are passed here. On any per-app failure the engine writes a record to
+   `temp/failures/` (kept across the run's end, wiped at start), which the next
+   step consumes. An app whose freshly patched APK matches its published
+   fingerprint (`state/build_content_hashes.json`, `RVB_DEDUP_MODE=enforce`) is
+   skipped before module packaging and recorded under `temp/unchanged/` — a
+   skip, not a failure; it never reaches the failure report.
 7b. **Report build failures** (`build_report_failures.sh`, `if: always()`,
    `continue-on-error`): reads `temp/failures/`, uploads each build log to
    `xi.pe`, and posts ONE batched Markdown message to the failure topic
@@ -140,6 +144,16 @@ Step order, with the reason each is where it is:
    `trigger_notify_failure` forwards as `already_reported` so
    `notify_send_telegram.sh` skips the generic "🔴 CI #N failed" alert for that
    run (Route B) — non-build failures still notify normally.
+7c. **Check whether anything needs publishing** (`build_check_no_change.sh`):
+   `build/` empty plus `temp/unchanged/all.txt` (every artifact this pool built
+   was an unchanged duplicate) → `HAS_NEW_FILES=false`, and steps 9–16 are all
+   skipped — no numbered release, no manifest, no pointers, no archive upload,
+   no website merge, no notification. The build number reserved in step 5 is
+   simply unused: the counter reads existing releases/tags, so a no-change run
+   leaves no gap. Anything else (including a failed build, which aborts before
+   this step) keeps the chain enabled — the guard fails toward publishing,
+   never toward silence. A no-change run also publishes no fingerprints: the
+   already-live files match the state entries that suppressed them.
 8. `update_usage_tracker.py` (`|| true`), `build_cache_cleanup.sh`, then the cache
    manifest (`size name` pairs) is hashed into the save key so a run that changed
    nothing does not re-upload 8 GB.
@@ -163,7 +177,16 @@ Step order, with the reason each is where it is:
     branch. Must run **after** the archive upload so its live-asset filter sees the
     new files. Why manifests live on a branch at all:
     [decisions/0002](decisions/0002-manifests-live-on-a-branch.md).
-16. `build_notify_telegram.sh` posts the release to the channel's thread.
+16. **Merge published content hashes into state** (`build_merge_hashes.sh`):
+    folds the fingerprints the engine recorded in `temp/hashes/append.*.tsv`
+    into `state/build_content_hashes.json` — but only when the upload chain
+    got through (the step also requires the archive upload not to have failed):
+    a hash becomes authoritative exactly when its artifact is live, so a run
+    that built but did not publish can never suppress the real file later.
+    `commit_data_branch.sh` then pushes the state file to `data` (only when the
+    merge changed it; a failed data push is a warning, not a failure — the next
+    run's fetch converges and the worst case is one redundant republish).
+17. `build_notify_telegram.sh` posts the release to the channel's thread.
 
 ## Cleanup (`cleanup.yml`)
 

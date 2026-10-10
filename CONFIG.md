@@ -17,6 +17,11 @@ There exists an example below with all defaults shown and all the keys explicitl
 
 ```toml
 compression-level = 9                # module zip compression level
+# duplicate-build suppression: off | log | enforce (default: log). CI-only effect:
+# enforce skips publishing an app whose freshly patched APK hashes identical to the
+# published one (state/build_content_hashes.json on `data`) and stops before module
+# packaging. log measures and prints without skipping; local builds never skip.
+dedup-mode = "log"
 remove-rv-integrations-checks = true # remove checks from the revanced integrations
 dpi = "320dpi nodpi"            # dpi packages to be searched in order. 'auto' matches whatever is available. default: "nodpi anydpi auto"
 

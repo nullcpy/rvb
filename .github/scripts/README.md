@@ -70,6 +70,40 @@ Regression tests: `temp/test_merge_archive_branch.sh` (stubbed `gh`, local
 bare `origin`; run from Git Bash — `temp/` is gitignored, keep a copy
 alongside the other local tests).
 
+## Duplicate-build suppression (state branch, not the manifest)
+
+The engine's `check_duplicate_build` (`scripts/utils.sh`) decides whether a
+rebuilt app is identical to the published one. These scripts implement the
+fingerprint and the CI side of the contract; behaviour belongs to
+[build-engine.md](../../docs/build-engine.md#duplicate-build-suppression-tempunchanged-statebuild_content_hashesjson)
+and nothing here touches `build.json` or the website manifest.
+
+### `content_hash.py`
+md5 over an APK's zip central directory (`name+CRC32+size`, sorted, `META-INF/*`
+ignored — v2/v3 signatures live outside it). Stdlib-only. Raw file bytes are
+never compared: every rebuild rezips and re-signs. CLI prints the digest; a
+non-zip input exits non-zero without printing, which the engine reads as
+"no verdict → publish".
+
+### `build_check_no_change.sh`
+Post-build guard. `build/` empty + `temp/unchanged/all.txt` →
+`HAS_NEW_FILES=false` and `build.yml` skips the whole publish chain (no empty
+numbered release — the flaw that closed PR #171). Any other state, including
+unknown, keeps the chain enabled: the guard fails toward publishing.
+
+### `build_merge_hashes.sh`
+Folds `temp/hashes/append.*.tsv` (`channel<TAB>key<TAB>md5` lines written by
+the engine for every eligible build) into
+`state/build_content_hashes.json`, dropping malformed lines and foreign
+channels. Runs **only after the upload chain succeeded** — a hash becomes
+authoritative exactly when its artifact is live. Outputs
+`STATE_UPDATED=true|false`; the following `commit_data_branch.sh` step pushes
+the file to `data` when, and only when, it changed.
+
+Regression test: `temp/_deduptest/run.sh` (fixture APKs with differing
+timestamps/signature entries, all three scripts + the engine gate across
+`off`/`log`/`enforce`; Git Bash).
+
 ## Archive maintenance
 
 ### `cleanup-archive-assets.py`

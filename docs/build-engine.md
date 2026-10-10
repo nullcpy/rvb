@@ -45,6 +45,49 @@ end-of-run sweep, so the `build.yml` "Report build failures" step can read it.
 The engine itself makes no network calls for this — see
 [ci-pipelines.md](ci-pipelines.md#the-build-job-buildyml).
 
+## Duplicate-build suppression (`temp/unchanged/`, `state/build_content_hashes.json`)
+
+A patch source that bumps its `shared/` folder triggers every app of that
+source, but most of those apps patch to logically identical bytes. Republishing
+an identical APK under a new build number falsely notifies every updater
+(issue #165), so `build_rv` asks `check_duplicate_build` the moment a mode's
+`patch_apk` returns — before the copy to `build/` and before module packing:
+
+- **Fingerprint:** md5 over the zip central directory (`name + CRC32 + size`,
+  sorted, `META-INF/*` skipped) via `.github/scripts/content_hash.py`. Raw file
+  bytes never match across rebuilds (rezipping, re-signing); v2/v3 signatures
+  live outside the central directory, so they are invisible to the digest for
+  free. md5 is deliberate: this answers "did our own pipeline repeat itself",
+  the same non-adversarial question `ci_check_app_patches.py` hashes bundles
+  with md5 for.
+- **One verdict per app+arch**, taken from the first patched APK of the
+  `for build_mode` loop (the apk-mode APK for `apk`/`both`, the module APK
+  when module is the only mode): apk and module patching differ only in microG
+  handling, so a match terminates the whole table build — the module stage is
+  never patched or packed, nothing lands in `build/`, and no `write_build_info`
+  fragment is written, so notes and manifest need no post-hoc filtering.
+- **Reference:** `state/build_content_hashes.json` on `data`, keyed
+  `channel → "<prefix>-v<version>-<arch>-build" → md5`. It is build bookkeeping,
+  not metadata: `build.json`, the numbered manifest and the website contract
+  gain no keys. The engine only ever updates the local copy (enforce mode, so
+  the two arches of one run agree); CI publishes it after the upload chain
+  succeeded — a hash becomes authoritative exactly when its artifact is live.
+- **Scopes:** CI-only (`GITHUB_REPOSITORY` set), revanced/morphe tools only
+  (`PATCHER_HASH_DEDUP_ELIGIBLE` in the patchers registry — cross-run hash
+  stability for the other tools is unmeasured), `python3` present, channel
+  recognised. Anything missing publishes as today: the check fails toward
+  redundancy, never toward a silent drop.
+- **`RVB_DEDUP_MODE`** (`off|log|enforce`, also settable as the `dedup-mode`
+  file-level config key; `build.yml` env is the pool default, which is `log`
+  until the measurement runs prove zero false duplicates). `log` computes and
+  compares but skips nothing and mutates no reference.
+- Records: `temp/unchanged/<slug>.json` per skipped app (same survive-the-sweep
+  rule as `temp/failures/`), and `temp/hashes/append.<pid>.tsv` lines per fresh
+  fingerprint — consumed by `build_check_no_change.sh` and
+  `build_merge_hashes.sh`. An all-duplicate run exits 0 with
+  `temp/unchanged/all.txt` instead of aborting `All builds failed.` — that
+  marker is what stops the publish chain from creating an empty release.
+
 ## From config to a build request
 
 `toml_prep` converts the config to JSON (native `tq` binary, `python3` fallback)
@@ -149,7 +192,9 @@ for adding surface without a measured gain
    `update_json_path()`. Output: `<file-prefix>-module-v<version>-<arch>.zip`.
 9. **Finalisation** — `merge_build_info` folds per-job fragments into
    `build.json`, scratch state is swept, `generate_release_notes.py` writes
-   `build.md` for the release body. Because fragments share one key across arches,
+   `build.md` for the release body. A skipped duplicate (see
+   [Duplicate-build suppression](#duplicate-build-suppression-tempunchanged-statebuild_content_hashesjson))
+   never reaches this point: it writes no fragment. Because fragments share one key across arches,
    the fold keeps the first-wins scalars (`version`, `applied_patches`) for
    backward compatibility **and** records an additive `archVersion` / `archApplied`
    map keyed by the filename arch token, so a mixed-version build retains each

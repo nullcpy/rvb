@@ -9,7 +9,7 @@ single-writer lives on another branch, so `main`'s history stays human.
 | Branch | Contents | Sole writer(s) | Readers |
 |---|---|---|---|
 | `main` | engine, workflows, scripts, `module/`, `bin/`, `docs/`, `CONFIG.md` | maintainer, via PRs | every CI job (checked out first) |
-| `data` | `configs/` (human TOMLs + generated pool JSON), `state/` (watcher JSONs) | `commit_data_branch.sh` (CI, `*.json`), `push_data_configs.sh` (maintainer, `*.toml`) | watcher + build jobs through `fetch_data_branch.sh` |
+| `data` | `configs/` (human TOMLs + generated pool JSON), `state/` (watcher JSONs) | `commit_data_branch.sh` (CI, `*.json` — run by the watcher, and by the build job for `build_content_hashes.json` after a successful upload), `push_data_configs.sh` (maintainer, `*.toml`) | watcher + build jobs through `fetch_data_branch.sh` |
 | `website` | `manifests/<tag>.json`, `archive/{stable,beta}.json` | `merge_archive_branch.sh`; pruned by `cleanup_website_branch.sh` | the site's `rebuild_catalog.py` |
 | `update` | `changelogs/<code>.md`, `<channel>/<module-id>.json` | `build_update_changelog.sh`; pruned by `cleanup_update_branch.sh` | KernelSU / Magisk module updaters on phones |
 | `notify-queue` | `queue.jsonl` (pending debounced issue/PR alerts) | `notify_enqueue.sh` (append) + `notify_drain.sh` (prune), both via `notify_queue.sh` | the drain job only |
@@ -35,6 +35,8 @@ state/
   patch_sources.json          per source: host, repo, stable tag+date, beta tag+date, blocked
   app_versions.json           app: {keys: […], version}; "_check_only_listed": true
   patch_file_hashes.json      source → channel → package → bundle content hash
+  build_content_hashes.json   channel → built-artifact key → content md5 (duplicate-build
+                              check; written by the build job after a successful upload)
 ```
 
 - Both directories are ignored on `main` ([.gitignore](../.gitignore)) and exist
