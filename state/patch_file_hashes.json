@@ -81,7 +81,7 @@
   "browzomje/browzomje-patches": {
     "beta": {},
     "stable": {
-      "com.pinterest": "016b5d27994c589f47c4a2fc826f13f1",
+      "com.pinterest": "54d02758e3dd11b35684c5b581a522ee",
       "shared": "ec5f048a8a5ad03aa9307ed5590d13e8"
     }
   },
@@ -325,10 +325,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "85cc05ef5c59f39524e30d9bbc273781",
-      "com.google.android.youtube": "c5d3ef4d80c611078bb5a9929452d716",
-      "com.reddit.frontpage": "5148d1bcf83e788f6a7d366b7b4c6716",
-      "shared": "c627d41a8c8d6229c3d3b922511e5f3c"
+      "com.google.android.apps.youtube.music": "784741f1da5d3f857a3f57bbb60f4d23",
+      "com.google.android.youtube": "64adc7a70531abd815467475bd02e40b",
+      "com.reddit.frontpage": "59f4197c376045a317af241fe538c7eb",
+      "shared": "37419c431fbdcfb2c425a66d42d8aaba"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "3327ea672455ad2775caead711a576d1",
@@ -462,8 +462,8 @@
   "satanmerde/d-moniakpatches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "9e27f20fb387300f3c27dec2b65af495",
-      "shared": "1deb8a6ca95865942246fd13345a477e"
+      "ch.protonmail.android": "2f553e25d2582ea1b4ff3f1f26526f59",
+      "shared": "1973a8bff34f351dcd6ed13f665701ea"
     }
   },
   "sysadmindoc/hushfacebook": {
