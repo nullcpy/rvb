@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-10T00:11:41Z"
+    "publishedAt": "2026-10-10T05:53:11Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -16148,10 +16148,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.5.0.mpp"
+        "kveld9/patches-2.6.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date",
@@ -16169,6 +16169,7 @@
         "Enable Profile Banner",
         "Feed Ad Blocker",
         "Feed Bloat & Distraction Blocker",
+        "Feed Content Filter",
         "Fix Google Login",
         "Fix Spotify Login",
         "Force Auto-Scroll",
@@ -16176,22 +16177,25 @@
         "Hide Inbox Promos & Alerts",
         "Hide Popular Lives In Search",
         "Hide Seen Videos",
+        "Hide Suggested Accounts",
         "Hide Suggested Searches",
         "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
         "Instant Launch & Splash Blocker",
         "Media Usability & Watermark-Free Downloader",
         "Navigation & Header Declutter",
+        "Non-Personalized Search",
         "P2P Video Relay & Mesh CDN Blocker",
         "Popups & Prompts Suppressor",
+        "Remember Clear Display",
         "Resource & Battery Governor",
         "Show Seekbar",
         "Skip First-Launch Onboarding",
         "Unified Telemetry & Tracker Silencer",
         "Update Prompt Suppressor"
       ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "tiktok-kveld9-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -16206,10 +16210,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.5.0.mpp"
+        "kveld9/patches-2.6.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
       ],
       "appliedPatches": [
         "Always Show Publish Date",
@@ -16227,6 +16231,7 @@
         "Enable Profile Banner",
         "Feed Ad Blocker",
         "Feed Bloat & Distraction Blocker",
+        "Feed Content Filter",
         "Fix Google Login",
         "Fix Spotify Login",
         "Force Auto-Scroll",
@@ -16234,22 +16239,25 @@
         "Hide Inbox Promos & Alerts",
         "Hide Popular Lives In Search",
         "Hide Seen Videos",
+        "Hide Suggested Accounts",
         "Hide Suggested Searches",
         "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
         "Instant Launch & Splash Blocker",
         "Media Usability & Watermark-Free Downloader",
         "Navigation & Header Declutter",
+        "Non-Personalized Search",
         "P2P Video Relay & Mesh CDN Blocker",
         "Popups & Prompts Suppressor",
+        "Remember Clear Display",
         "Resource & Battery Governor",
         "Show Seekbar",
         "Skip First-Launch Onboarding",
         "Unified Telemetry & Tracker Silencer",
         "Update Prompt Suppressor"
       ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -17964,10 +17972,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.69.0.mpp"
+        "SysAdminDoc/patches-0.70.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.69.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.70.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18100,8 +18108,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "tiktok-hushfeed-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -18116,10 +18124,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.69.0.mpp"
+        "SysAdminDoc/patches-0.70.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.69.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.70.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18252,8 +18260,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "google-photos-akashsriram-module-v7.95.0.989626323-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -18580,10 +18588,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.11.mpp"
+        "SysAdminDoc/patches-0.0.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.11"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.12"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -18634,14 +18642,15 @@
         "Start the camera on the rear lens",
         "Strip link tracking",
         "Swipe back on profiles",
+        "Turn off beta debug logs",
         "Turn off haptic feedback",
         "Turn off reaction effects",
         "Use normal paste",
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260217",
-      "publishedAt": "2026-10-09T00:16:08Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "telegram-hushtelegram-foss-v12.10.6-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -18656,10 +18665,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.11.mpp"
+        "SysAdminDoc/patches-0.0.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.11"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.12"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -18710,14 +18719,15 @@
         "Start the camera on the rear lens",
         "Strip link tracking",
         "Swipe back on profiles",
+        "Turn off beta debug logs",
         "Turn off haptic feedback",
         "Turn off reaction effects",
         "Use normal paste",
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260217",
-      "publishedAt": "2026-10-09T00:16:08Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "threads-hushthreads-v449.0.0.54.82-arm64-v8a.apk": {
       "name": "threads-hushthreads",
@@ -20887,10 +20897,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.7.mpp"
+        "SysAdminDoc/patches-0.0.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.7"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.8"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -20922,6 +20932,7 @@
         "Hide comments",
         "Hide group buttons on the share sheet",
         "Hide highlights",
+        "Hide suggested accounts in DMs",
         "Hide suggested accounts in Reels",
         "Hide suggested people on profiles",
         "Hide suggested posts",
@@ -20972,8 +20983,8 @@
         "View live anonymously",
         "View stories anonymously"
       ],
-      "originBuild": "260216",
-      "publishedAt": "2026-10-08T21:39:07Z"
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -21386,6 +21397,80 @@
       ],
       "originBuild": "260228",
       "publishedAt": "2026-10-09T18:48:18Z"
+    },
+    "brave-browser-kveld9-v1.97.56-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.97.56",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
+      ],
+      "appliedPatches": [
+        "Block Brave Telemetry",
+        "Brave In-Product & Commercial Notification Optimizer",
+        "Brave Origin",
+        "Brave Startup Performance Optimization",
+        "Clean New Tab Page",
+        "Clean Share URL",
+        "Disable Background Sync & Periodic Sync",
+        "Disable Battery Status API & OS Listener",
+        "Disable Content Capture",
+        "Disable Tab Auto-Minimization",
+        "Sensor Privacy Guard",
+        "Skip First Run",
+        "Suppress In-App Promos & Surveys",
+        "Tab Group Close Selection"
+      ],
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
+    },
+    "brave-browser-kveld9-v1.97.56-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.97.56",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
+      ],
+      "appliedPatches": [
+        "Block Brave Telemetry",
+        "Brave In-Product & Commercial Notification Optimizer",
+        "Brave Origin",
+        "Brave Startup Performance Optimization",
+        "Clean New Tab Page",
+        "Clean Share URL",
+        "Disable Background Sync & Periodic Sync",
+        "Disable Battery Status API & OS Listener",
+        "Disable Content Capture",
+        "Disable Tab Auto-Minimization",
+        "Sensor Privacy Guard",
+        "Skip First Run",
+        "Suppress In-App Promos & Surveys",
+        "Tab Group Close Selection"
+      ],
+      "originBuild": "260232",
+      "publishedAt": "2026-10-10T05:52:44Z"
     }
   }
 }
