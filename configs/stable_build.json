@@ -482,7 +482,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -1375,7 +1375,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
