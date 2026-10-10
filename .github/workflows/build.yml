@@ -50,6 +50,12 @@ jobs:
       PARALLEL_JOBS: "6"
       # How many files upload at the same time.
       UPLOAD_CONCURRENCY: "12"
+      # Duplicate-build suppression: log measures and still publishes every
+      # artifact; enforce withholds an unchanged rebuild from the release and
+      # lets an all-unchanged run skip the publish chain (never an empty
+      # release - see docs/ci-pipelines.md). Flip to "enforce" only after the
+      # log runs showed zero false duplicates.
+      RVB_DEDUP_MODE: "log"
     services:
       cf_solver:
         image: ghcr.io/sarperavci/cloudflarebypassforscraping:latest
@@ -143,6 +149,7 @@ jobs:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           CF_SOLVER_URL: "http://localhost:8000"
           RVB_MORPHE_PASSTHROUGH: "${{ vars.RVB_MORPHE_PASSTHROUGH || 'true' }}"
+          RVB_DEDUP_MODE: ${{ env.RVB_DEDUP_MODE }}
           RELEASE_NOTES_TG_LINK: "${{ vars.RELEASE_NOTES_TG_LINK || 'https://t.me/rvb27' }}"
           RELEASE_NOTES_DONATE_LINK: "${{ vars.RELEASE_NOTES_DONATE_LINK || 'https://fahim-ahmed05.github.io/donate' }}"
           RELEASE_NOTES_WEBSITE_LINK: "${{ vars.RELEASE_NOTES_WEBSITE_LINK || 'https://nullcpy.github.io' }}"
@@ -163,6 +170,12 @@ jobs:
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_RUN_ID: ${{ github.run_id }}
         run: bash .github/scripts/build_report_failures.sh
+
+      - name: Check whether anything needs publishing
+        id: no_change
+        env:
+          RVB_DEDUP_MODE: ${{ env.RVB_DEDUP_MODE }}
+        run: bash .github/scripts/build_check_no_change.sh
 
       - name: Update Usage Tracker
         env:
@@ -189,15 +202,18 @@ jobs:
 
       - name: Get output
         id: get_output
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         run: bash .github/scripts/build_get_output.sh
 
       - name: Generate release manifest
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         env:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           IS_PRERELEASE: ${{ steps.context.outputs.IS_PRERELEASE }}
         run: python3 .github/scripts/build_make_manifest.py
 
       - name: Upload to release
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
@@ -210,6 +226,7 @@ jobs:
 
       - name: Update changelog and module update files
         id: update_changelog
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         env:
           NEXT_VER_CODE: ${{ steps.version.outputs.NEXT_VER_CODE }}
           ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
@@ -218,7 +235,7 @@ jobs:
         run: bash .github/scripts/build_update_changelog.sh
 
       - name: Commit updated build and module update files
-        if: steps.update_changelog.outputs.has_modules == 'true'
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true' && steps.update_changelog.outputs.has_modules == 'true'
         # Explicit staging (the auto-commit action's default would sweep in
         # unrelated dirt): pointers listed by build_update_changelog.sh plus
         # this build's changelog. Branch already checked out by that script.
@@ -235,12 +252,14 @@ jobs:
           fi
 
       - name: Remove frequently updated apps
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         run: |
           git checkout -f main
           bash .github/scripts/build_exclude_from_archive.sh
 
       - name: Upload to release (Archive)
         id: archive_upload
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -254,6 +273,7 @@ jobs:
         run: bash .github/scripts/build_upload_release.sh
 
       - name: Merge archive manifest into website branch
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
@@ -261,7 +281,32 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bash .github/scripts/merge_archive_branch.sh
 
+      - name: Merge published content hashes into state
+        id: merge_hashes
+        # Runs only when the upload chain got through: a fingerprint becomes
+        # authoritative precisely when its artifact is live. archive_upload is
+        # continue-on-error, so gate on its outcome too - a run whose assets
+        # never landed must not record hashes it did not publish.
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true' && steps.archive_upload.outcome != 'failure'
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: bash .github/scripts/build_merge_hashes.sh
+
+      - name: Commit artifact hashes to data branch
+        # Plumbing writer for state/build_content_hashes.json (and any other
+        # generated JSON this run legitimately touched). Runs only when the
+        # merge step actually changed the file. A failed data push is not
+        # fatal: the next run's fetch converges, the worst case is one
+        # redundant republish - never a wrong skip.
+        if: always() && steps.merge_hashes.outputs.STATE_UPDATED == 'true'
+        id: commit_hashes
+        run: |
+          DATA_COMMIT_MSG="chore: record artifact hashes for build ${{ steps.version.outputs.NEXT_VER_CODE }}" \
+            bash .github/scripts/commit_data_branch.sh || \
+            echo "::warning::Could not push artifact hashes to data (next run converges)"
+
       - name: Notify telegram
+        if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: "${{ vars.TG_CHAT_ID || '@rvb27' }}"
