@@ -3672,6 +3672,127 @@ write_build_info() {
 		} }' >"${frag_dir}/${fid}.$$.json"
 }
 
+# -- Duplicate-build detection (temp/hashes, temp/unchanged, state JSON) -----
+# Rebuilding an app whose patch inputs did not really change (a patch source
+# touching only shared/ — see issue #165) produces a logically identical APK,
+# and republishing it under a new build number falsely notifies updaters.
+# build_rv asks check_duplicate_build right after patch_apk: a verdict of
+# "unchanged" ends the table build before module packaging, and nothing is
+# copied to $BUILD_DIR, so no release record, note or manifest entry exists
+# for a duplicate. The reference store is state/build_content_hashes.json
+# on the data branch (fetch_data_branch.sh materialises it, the CI merge
+# step and commit_data_branch.sh publish it after a successful upload) —
+# deliberately NOT build.json or the website manifest: the hash is dedup
+# bookkeeping, not published metadata. The engine itself makes no network
+# calls for any of this, same stance as temp/failures.
+
+# Content fingerprint of an APK (md5 over the zip central directory, signing
+# and timestamps excluded — see .github/scripts/content_hash.py). Prints the
+# digest; empty rc=1 means "no verdict" (no python, unreadable archive).
+content_hash() { # $1=apk
+	local py=""
+	if command -v python3 >/dev/null 2>&1; then
+		py="python3"
+	elif command -v python >/dev/null 2>&1; then
+		py="python"
+	fi
+	[ -n "$py" ] || { printf ''; return 1; }
+	"$py" "${CWD}/.github/scripts/content_hash.py" "$1" 2>/dev/null || printf ''
+}
+
+# Published fingerprint for one dedup key, "" when the state file or the key
+# is absent (first build of that app+arch ever → publish, never guess).
+_dedup_recorded_hash() { # $1=channel $2=key
+	local sf="state/build_content_hashes.json"
+	[ -f "$sf" ] || return 0
+	jq -r --arg chan "$1" --arg key "$2" '(.[$chan][$key] // "")' "$sf" 2>/dev/null || true
+}
+
+# Record a freshly built fingerprint for the CI merge step (tab-separated
+# channel/key/hash lines). Each process appends to its own file —
+# RVB_HASH_APPEND is pid-named by build.sh, so parallel children never share
+# an fd and no lock is needed; lines are short enough to stay atomic.
+_dedup_record_hash() { # $1=channel $2=key $3=hash
+	[ -n "${RVB_HASH_APPEND:-}" ] || return 0
+	printf '%s\t%s\t%s\n' "$1" "$2" "$3" >>"$RVB_HASH_APPEND" 2>/dev/null || true
+}
+
+# Merge this build's hashes into the local state JSON. Only the ENFORCE mode
+# calls this: the local file doubles as the reference for later arch jobs in
+# the same run, and mutating it while merely measuring (log mode) would let
+# the observation period pollute its own baseline. The published copy on the
+# data branch still comes only from a successful-upload run (CI merge step).
+_dedup_store_hash() { # $1=channel $2=key $3=hash
+	local sf="state/build_content_hashes.json" tmp
+	mkdir -p "${sf%/*}" 2>/dev/null || return 0
+	[ -f "$sf" ] || echo '{}' >"$sf"
+	tmp="${sf}.tmp.$$"
+	if jq --arg chan "$1" --arg key "$2" --arg hash "$3" \
+		'.[$chan][$key] = $hash' "$sf" >"$tmp" 2>/dev/null; then
+		mv -f "$tmp" "$sf"
+	else
+		rm -f "$tmp"
+	fi
+}
+
+# Append the unchanged record the parent build.sh and the CI steps read
+# (temp/unchanged/<slug>.json, upserted so both arches of one app agree).
+_dedup_write_unchanged() { # $1=label $2=app $3=version $4=arch $5=key $6=hash
+	local dir="${RVB_UNCHANGED_DIR:-${TEMP_DIR}/unchanged}" slug
+	mkdir -p "$dir" 2>/dev/null || return 0
+	slug=$(failure_slug "$1")
+	local f="$dir/$slug.json" tmp
+	[ -f "$f" ] || echo '{}' >"$f"
+	tmp="${f}.tmp.$$"
+	if jq --arg type "unchanged" --arg app "$2" --arg version "$3" --arg arch "$4" \
+		--arg key "$5" --arg hash "$6" \
+		'. + {type:$type, app:$app, version:$version, arch:$arch, key:$key, hash:$hash}' \
+		"$f" >"$tmp" 2>/dev/null; then
+		mv -f "$tmp" "$f"
+	else
+		rm -f "$tmp"
+	fi
+}
+
+# Verdict for one finished patched APK. rc 0 = identical to published (caller
+# skips the rest of the table build), rc 1 = changed / no verdict (publish).
+# Never touches the failure records: a duplicate is a skip, like the
+# download-exhaustion precedent, not something to report.
+check_duplicate_build() { # $1=apk $2=stem $3=label $4=app $5=version $6=arch
+	# off / local builds / a tool the registry deems hash-unstable: no check.
+	# A hash that wobbles across rebuilds of unchanged input would only ever
+	# say "changed" (dead weight), so eligibility is measured per tool before
+	# granting it the power to suppress a release.
+	[ "${RVB_DEDUP_MODE:-log}" != "off" ] || return 1
+	[ -n "${GITHUB_REPOSITORY:-}" ] || return 1
+	[ "${PATCHER_HASH_DEDUP_ELIGIBLE:-false}" = true ] || return 1
+	local chan="${10:-${args[dup_channel]:-}}" key="$2" hash rec
+	case "$chan" in stable | beta) ;; *) return 1 ;; esac
+	hash=$(content_hash "$1")
+	if [ -z "$hash" ]; then
+		wpr "No content hash for '$key' (python3 unavailable or unreadable APK) — publishing."
+		return 1
+	fi
+	rec=$(_dedup_recorded_hash "$chan" "$key")
+	if [ -n "$rec" ] && [ "$rec" = "$hash" ]; then
+		if [ "${RVB_DEDUP_MODE:-log}" = enforce ]; then
+			pr "Unchanged build: '$key' matches published content hash — skipping release."
+			_dedup_write_unchanged "$3" "$4" "$5" "$6" "$key" "$hash"
+			return 0
+		fi
+		# Measurement phase: report what WOULD be skipped, keep publishing,
+		# and do not append — the reference set must stay exactly the
+		# published one while the numbers are being watched.
+		pr "Dedup [log]: '$key' identical to published hash ${rec} (would skip)."
+		return 1
+	fi
+	if [ "${RVB_DEDUP_MODE:-log}" = enforce ]; then
+		_dedup_store_hash "$chan" "$key" "$hash"
+	fi
+	_dedup_record_hash "$chan" "$key" "$hash"
+	return 1
+}
+
 # Recombine the per-write fragments from $TEMP_DIR/build_info into
 # $BUILD_JSON_FILE. Called once by build.sh after all builds (serial or
 # pooled) finish; fragment filenames sort in creation order, so the first
@@ -4880,6 +5001,25 @@ build_rv() {
 		if [ "${NORB:-}" != true ] || { [ ! -f "$patched_apk" ] && [ ! -f "$apk_output" ]; }; then
 			if ! patch_apk "$stock_apk_to_patch" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}" "${args[cli_source]}" "$per_bundle_ed_joined"; then
 				epr "Building '${table}' failed!"
+				return 0
+			fi
+		fi
+
+		# Duplicate-build verdict on the first patched APK of this table build.
+		# Owner premise: apk- and module-mode patching of one app differ only in
+		# microG handling, so the apk-mode APK (or the module APK when module is
+		# the only mode) is a valid fingerprint for every artifact this app+arch
+		# would publish; on a match the module stage is never patched or packed.
+		# NORB reuse can leave the fresh bytes only in $apk_output, so hash
+		# whichever file this iteration just produced.
+		if [ "$build_mode" = apk ] || [ ${#build_mode_arr[@]} -eq 1 ]; then
+			local _dedup_apk="$patched_apk"
+			[ -f "$_dedup_apk" ] || _dedup_apk="$apk_output"
+			if [ -f "$_dedup_apk" ] &&
+				check_duplicate_build "$_dedup_apk" "${file_prefix}-v${version_f}-${arch_f}" \
+					"$table" "$app_name" "$version_f" "$arch_f"; then
+				# rc 0 is the skip itself: nothing copied to BUILD_DIR, no
+				# write_build_info fragment, notes and manifest stay truthful.
 				return 0
 			fi
 		fi

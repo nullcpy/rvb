@@ -33,6 +33,16 @@ vtf() { if ! isoneof "${1}" "true" "false"; then abort "ERROR: '${1}' is not a v
 toml_prep "${1:-config.toml}" || abort "could not find config file '${1:-config.toml}'\n\tUsage: $0 <config.toml>"
 main_config_t=$(toml_get_table_main)
 COMPRESSION_LEVEL=$(toml_get "$main_config_t" compression-level) || COMPRESSION_LEVEL="9"
+# Duplicate-build suppression mode (CI-only, see check_duplicate_build in
+# utils.sh): "log" measures and publishes everything, "enforce" withholds an
+# unchanged rebuild from the release, "off" disables the check. The pool
+# workflow names the active mode (build.yml env); a config that sets nothing
+# gets "log", so a local or unpatched run can never skip a release by surprise.
+DEDUP_MODE=$(toml_get "$main_config_t" dedup-mode) || DEDUP_MODE="log"
+if ! isoneof "$DEDUP_MODE" off log enforce; then
+	abort "ERROR: dedup-mode '$DEDUP_MODE' is not a valid option: only 'off', 'log' or 'enforce' are allowed"
+fi
+RVB_DEDUP_MODE="$DEDUP_MODE"
 REMOVE_RV_INTEGRATIONS_CHECKS=$(toml_get "$main_config_t" remove-rv-integrations-checks) || REMOVE_RV_INTEGRATIONS_CHECKS="false"
 DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER="stable"
 # "both" means "whichever pool this config is for", and the only signal for that is
@@ -67,6 +77,20 @@ mkdir -p "$TEMP_DIR" "$BUILD_DIR"
 FAILURES_DIR="$TEMP_DIR/failures"
 rm -rf "$FAILURES_DIR"
 mkdir -p "$FAILURES_DIR"
+# Same survival rule for the duplicate-build records: the no-change guard and
+# the hash-merge step in build.yml read them after the run, so they are wiped
+# at START only.
+UNCHANGED_DIR="$TEMP_DIR/unchanged"
+rm -rf "$UNCHANGED_DIR"
+mkdir -p "$UNCHANGED_DIR"
+RVB_UNCHANGED_DIR="$UNCHANGED_DIR"
+# Freshly computed fingerprints (channel/key/hash lines). pid-named because
+# every pooled child appends through the same exported path; merged into
+# state/build_content_hashes.json by CI only after the upload succeeded.
+rm -rf "$TEMP_DIR/hashes"
+mkdir -p "$TEMP_DIR/hashes"
+RVB_HASH_APPEND="$TEMP_DIR/hashes/append.$$.tsv"
+export RVB_DEDUP_MODE RVB_UNCHANGED_DIR RVB_HASH_APPEND
 
 # Attach the captured child log to a build-failure descriptor, keyed by the same
 # slug build_rv used. No-op when the descriptor is absent (clean skip, or the
@@ -215,6 +239,13 @@ for table_name in $(toml_get_table_names); do
 	# "both" is not a channel — it is routing, resolved here from the config being
 	# built: a beta-named file, or a file-level default already set to beta.
 	[ "$patches_ver" = "both" ] && { if [[ "${1:-}" == *"beta"* ]] || [ "$DEF_PATCHES_VER" = "beta" ]; then patches_ver="beta"; else patches_ver="stable"; fi; }
+	# The dedup namespace check_duplicate_build reads from args: the channel this
+	# pool file is built for, resolved once here from the same signals the
+	# module-id -beta suffix uses — never inferred per app inside the child.
+	dup_channel=stable
+	if [[ "${1:-}" == *"beta"* ]] || [ "$DEF_PATCHES_VER" = "beta" ] || [ "$patches_ver" = "beta" ]; then
+		dup_channel=beta
+	fi
 	cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
 	cli_src_host=$(toml_get "$t" cli-source-host) || cli_src_host=$DEF_CLI_SRC_HOST
 	cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
@@ -279,6 +310,7 @@ for table_name in $(toml_get_table_names); do
 		fi
 	done
 	app_args[patches_src]=${p_srcs[0]}
+	app_args[dup_channel]="$dup_channel"
 	app_args[patches_ref]="${patches_ref_all% }"
 	app_args[changelog_url]="${changelog_url_all% }"
 	app_args[brand]=$(toml_get "$t" brand) || app_args[brand]="${DEF_BRAND:-${p_srcs[0]%%/*}}"
@@ -379,7 +411,18 @@ while ((PAR_JOBS > 1 && ${#JOB_PID[@]} > 0)); do
 done
 merge_build_info
 rm -rf temp/tmp.* "$TEMP_DIR"/*-merge-tmp* "$TEMP_DIR"/*/*-merge-tmp* "$QUEUE_DIR" "$TEMP_DIR/dllocks" "$TEMP_DIR/apkslocks" "$TEMP_DIR/urlindex" "${TEMP_DIR}"/morphe-stage-*
-if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
+if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then
+	# An empty build dir with unchanged records is not a failed run: every
+	# artifact this pool produced was identical to what is already published.
+	# The marker (not a build number) is what build.yml's no-change guard
+	# reads to skip the whole publish chain — never create an empty release.
+	if [ -n "$(ls -A1 "$UNCHANGED_DIR" 2>/dev/null)" ]; then
+		pr "No new artifacts — every build identical to published; nothing to release."
+		: >"$UNCHANGED_DIR/all.txt"
+		exit 0
+	fi
+	abort "All builds failed."
+fi
 
 if command -v python3 >/dev/null 2>&1; then
 	python3 .github/scripts/generate_release_notes.py
