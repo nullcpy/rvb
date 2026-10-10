@@ -45,6 +45,36 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/cleanup_website_branch.sh
 
+      - name: Prune stale artifact hashes
+        # AFTER the asset deleters on purpose: entries whose files were
+        # legitimately pruned this pass lose their suppression guard in the
+        # same run, so a pinned rebuild can never be skipped against a file
+        # that no longer exists anywhere. state/ is gitignored on main, so
+        # the current data-branch copy must be materialised first.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          git fetch -q origin data
+          git checkout -q FETCH_HEAD -- state/
+          git reset -q -- state/
+          bash .github/scripts/cleanup_artifact_hashes.sh
+
+      - name: Commit pruned hashes to data branch
+        # The prune script records whether it actually changed the file.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ ! -f temp/gh_outputs/cleanup_hashes.env ]; then echo "nothing to commit"; exit 0; fi
+          . temp/gh_outputs/cleanup_hashes.env
+          if [ "${STATE_PRUNED:-false}" != "true" ]; then
+            echo "No stale hashes pruned; skipping the data push."
+            exit 0
+          fi
+          DATA_COMMIT_MSG="chore: prune stale artifact hashes (cleanup)" \
+            bash .github/scripts/commit_data_branch.sh || \
+            echo "::warning::Could not push pruned hashes to data (next run converges)"
+
       - name: Notify website catalog rebuild
         continue-on-error: true
         env:
