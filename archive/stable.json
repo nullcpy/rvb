@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-10T11:15:49Z"
+    "publishedAt": "2026-10-10T14:30:01Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13930,68 +13930,6 @@
       "originBuild": "260228",
       "publishedAt": "2026-10-09T18:48:18Z"
     },
-    "facebook-hushfacebook-v580.0.0.51.74-arm64-v8a.apk": {
-      "name": "facebook-hushfacebook",
-      "version": "580.0.0.51.74",
-      "appKey": "facebook",
-      "appName": "Facebook",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushfacebook",
-      "brandName": "HushFacebook",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.facebook.katana",
-      "patchSources": [
-        "SysAdminDoc/patches-0.6.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.6.0"
-      ],
-      "appliedPatches": [
-        "Block ad telemetry",
-        "Block background ad prefetch",
-        "Block promotional notifications",
-        "Disable Audience Network",
-        "Download any reel",
-        "Download any story",
-        "Hide AI-detected posts",
-        "Hide Menu promotions",
-        "Hide Meta AI in search",
-        "Hide Meta AI questions under posts",
-        "Hide affiliate product links",
-        "Hide post prompts",
-        "Hide posts by words",
-        "Hide reel interest prompts",
-        "Hide sponsored Marketplace listings",
-        "Hide sponsored posts",
-        "Hide sponsored profile posts",
-        "Hide sponsored reels",
-        "Hide sponsored search results",
-        "Hide sponsored stories",
-        "Hide suggested and promoted posts",
-        "Hide suggested stories",
-        "Hide the Feeds header",
-        "Hide the Get Messenger card",
-        "Hide the Reels tab dot",
-        "Hushfacebook in the Menu",
-        "Hushfacebook settings",
-        "Install beside Meta's apps",
-        "Keep post dates",
-        "Keep the reel speed",
-        "Marketplace only",
-        "Open Messenger from the top bar",
-        "Open links in external browser",
-        "Restore screens on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Start on x86 devices",
-        "Stop update prompts",
-        "Tab bar at the bottom"
-      ],
-      "originBuild": "260166",
-      "publishedAt": "2026-10-03T02:03:13Z"
-    },
     "tiktok-hushfeed-v47.1.3-all.apk": {
       "name": "tiktok-hushfeed",
       "version": "47.1.3",
@@ -14173,18 +14111,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.46.1.mpp"
+        "SatanMerde/patches-1.48.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.46.1"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.48.4"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260173",
-      "publishedAt": "2026-10-03T19:23:40Z"
+      "originBuild": "260235",
+      "publishedAt": "2026-10-10T14:29:52Z"
     },
     "proton-mail-satanmerde-v7.11.6-arm-v7a.apk": {
       "name": "proton-mail-satanmerde",
@@ -14199,18 +14137,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.46.1.mpp"
+        "SatanMerde/patches-1.48.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.46.1"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.48.4"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260173",
-      "publishedAt": "2026-10-03T19:23:40Z"
+      "originBuild": "260235",
+      "publishedAt": "2026-10-10T14:29:52Z"
     },
     "ibis-paint-x-hoodles-v14.1.0-arm64-v8a.apk": {
       "name": "ibis-paint-x-hoodles",
