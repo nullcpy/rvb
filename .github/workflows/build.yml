@@ -187,6 +187,11 @@ jobs:
           path: temp/apks
           key: apks-${{ hashFiles('temp/cache_manifest.txt') }}
 
+      - name: Filter unchanged builds
+        env:
+          ARCHIVE_TAG: ${{ steps.context.outputs.ARCHIVE_TAG }}
+        run: python3 .github/scripts/build_filter_unchanged.py
+
       - name: Get output
         id: get_output
         run: bash .github/scripts/build_get_output.sh

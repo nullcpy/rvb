@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from naming import extract_arch, extract_version, normalize_arch, normalize_key, parse_patch_info  # noqa: E402
+from content_hash import compute_content_hash  # noqa: E402
 
 
 def main():
@@ -108,6 +109,7 @@ def main():
                 "patchSources": patches_ref.split() if patches_ref else [],
                 "changelogs": changelog_url.split() if changelog_url else [],
                 "appliedPatches": file_applied,
+                "contentHash": compute_content_hash(f),
                 "originBuild": next_ver_code,
                 "publishedAt": now_iso,
             }
