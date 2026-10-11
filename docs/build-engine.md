@@ -85,8 +85,10 @@ an identical APK under a new build number falsely notifies every updater
   recognised. Anything missing publishes as today: the check fails toward
   redundancy, never toward a silent drop.
 - **`RVB_DEDUP_MODE`** (`off|log|enforce`, also settable as the `dedup-mode`
-  file-level config key; `build.yml` env is the pool default, which is `log`
-  until the measurement runs prove zero false duplicates). `log` computes and
+  file-level config key; the pool default comes from the `build.yml` env, which
+  runs **`enforce`** since the 1388-1391 log phase found one true duplicate,
+  zero false matches and no stale state; a config naming nothing falls back to
+  `log`, so local and hand-run builds still only measure). `log` computes and
   compares but skips nothing and mutates no reference.
 - Records: `temp/unchanged/<slug>.json` per skipped app (same survive-the-sweep
   rule as `temp/failures/`), and `temp/hashes/append.<pid>.tsv` lines per fresh

@@ -53,9 +53,11 @@ jobs:
       # Duplicate-build suppression: log measures and still publishes every
       # artifact; enforce withholds an unchanged rebuild from the release and
       # lets an all-unchanged run skip the publish chain (never an empty
-      # release - see docs/ci-pipelines.md). Flip to "enforce" only after the
-      # log runs showed zero false duplicates.
-      RVB_DEDUP_MODE: "log"
+      # release - see docs/ci-pipelines.md). Flipped to enforce after the
+      # 1388-1391 log runs: one true duplicate detected (proton-mail), zero
+      # false matches, zero hash-unavailable warnings, state fully backed by
+      # live release assets.
+      RVB_DEDUP_MODE: "enforce"
     services:
       cf_solver:
         image: ghcr.io/sarperavci/cloudflarebypassforscraping:latest
