@@ -67,11 +67,15 @@ an identical APK under a new build number falsely notifies every updater
   never patched or packed, nothing lands in `build/`, and no `write_build_info`
   fragment is written, so notes and manifest need no post-hoc filtering.
 - **Reference:** `state/build_content_hashes.json` on `data`, keyed
-  `channel → "<prefix>-v<version>-<arch>-build" → md5`. It is build bookkeeping,
+  `channel → "<prefix>-v<version>-<arch>" → md5`. It is build bookkeeping,
   not metadata: `build.json`, the numbered manifest and the website contract
   gain no keys. The engine only ever updates the local copy (enforce mode, so
   the two arches of one run agree); CI publishes it after the upload chain
-  succeeded — a hash becomes authoritative exactly when its artifact is live.
+  succeeded, and the merge additionally refuses a recorded stem whose artifact
+  never reached `build/` — the patch-time record must not outrun a later
+  per-app failure (a run can fail an app after hashing it; run 1390 observed
+  exactly that). A hash becomes authoritative only when its own artifact is
+  live.
   Lifecycle: `cleanup_artifact_hashes.sh` drops any entry whose file is gone
   from all releases, so a suppression guard never outlives the artifact it
   vouches for (see [ci-pipelines.md](ci-pipelines.md)).

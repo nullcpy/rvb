@@ -95,10 +95,13 @@ unknown, keeps the chain enabled: the guard fails toward publishing.
 Folds `temp/hashes/append.*.tsv` (`channel<TAB>key<TAB>md5` lines written by
 the engine for every eligible build) into
 `state/build_content_hashes.json`, dropping malformed lines and foreign
-channels. Runs **only after the upload chain succeeded** — a hash becomes
-authoritative exactly when its artifact is live. Outputs
-`STATE_UPDATED=true|false`; the following `commit_data_branch.sh` step pushes
-the file to `data` when, and only when, it changed.
+channels. Runs **only after the upload chain succeeded** — and filters **per
+line**: a stem is adopted only when `build/` holds the artifact it stands for
+(`.apk` or the module-`.zip` spelling) or the key already has a state entry.
+The engine records at patch time; a later per-app failure (module pack, stock
+merge) must not leave a fingerprint for a file that was never published.
+Outputs `STATE_UPDATED=true|false`; the following `commit_data_branch.sh` step
+pushes the file to `data` when, and only when, it changed.
 
 ### `cleanup_artifact_hashes.sh`
 Cleanup-side counterpart: prunes entries whose published file (`<stem>.apk` or

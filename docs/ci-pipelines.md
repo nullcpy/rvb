@@ -180,9 +180,14 @@ Step order, with the reason each is where it is:
 16. **Merge published content hashes into state** (`build_merge_hashes.sh`):
     folds the fingerprints the engine recorded in `temp/hashes/append.*.tsv`
     into `state/build_content_hashes.json` — but only when the upload chain
-    got through (the step also requires the archive upload not to have failed):
-    a hash becomes authoritative exactly when its artifact is live, so a run
-    that built but did not publish can never suppress the real file later.
+    got through (the step also requires the archive upload not to have failed),
+    and **per line**: a stem is adopted only when the artifact it stands for
+    actually shipped (`build/` holds its `.apk` or module-`.zip` spelling) or it
+    already has a state entry. The engine hashes at patch time, and a per-app
+    stage after it (module packing, stock merge) can still fail while the run
+    overall succeeds — without this filter a failed build would seed a
+    fingerprint for a file nobody published. A hash becomes authoritative
+    exactly when its artifact is live, per app, not per run.
     `commit_data_branch.sh` then pushes the state file to `data` (only when the
     merge changed it; a failed data push is a warning, not a failure — the next
     run's fetch converges and the worst case is one redundant republish).
