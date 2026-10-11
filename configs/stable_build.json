@@ -482,7 +482,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -1319,7 +1319,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "Pinterest-browzomje": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "browzomje/browzomje-patches",
@@ -1375,7 +1375,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1861,7 +1861,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
