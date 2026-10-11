@@ -73,9 +73,9 @@ an identical APK under a new build number falsely notifies every updater
   the two arches of one run agree); CI publishes it after the upload chain
   succeeded, and the merge additionally refuses a recorded stem whose artifact
   never reached `build/` — the patch-time record must not outrun a later
-  per-app failure (a run can fail an app after hashing it; run 1390 observed
-  exactly that). A hash becomes authoritative only when its own artifact is
-  live.
+  per-app failure (a run can fail an app after hashing it; the state has never
+  actually held such an entry, but nothing prevented one until this filter).
+  A hash becomes authoritative only when its own artifact is live.
   Lifecycle: `cleanup_artifact_hashes.sh` drops any entry whose file is gone
   from all releases, so a suppression guard never outlives the artifact it
   vouches for (see [ci-pipelines.md](ci-pipelines.md)).

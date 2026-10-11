@@ -10,8 +10,9 @@ set -euo pipefail
 # local reference. That record happens at patch time, BEFORE the artifact has
 # necessarily reached build/: a later stage of the same app (module packing,
 # stock merge) can still fail and return, leaving a fingerprint whose file was
-# never published. Run 1390 proved it reachable (apps whose build failed after
-# a successful patch still contributed their line to the merge).
+# never published. The hazard is structural (run 1390 had post-patch failures
+# while its stems were already recorded by earlier good builds — no wrong
+# entry resulted, but only because those keys had shipped before).
 #
 # So this step — the only writer of the state file — filters every line by
 # PUBLISHED PRESENCE: the recorded stem is merged only when the artifact it
