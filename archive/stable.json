@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-10T23:38:29Z"
+    "publishedAt": "2026-10-11T05:42:16Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -21045,10 +21045,10 @@
       "subVariant": null,
       "packageName": "com.instagram.barcelona",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.12.mpp"
+        "SysAdminDoc/patches-0.0.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.12"
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.13"
       ],
       "appliedPatches": [
         "Block background-return feed refresh",
@@ -21057,7 +21057,9 @@
         "Disable screenshot detection",
         "Disable video autoplay",
         "Hide ads",
+        "Hide ghost post bubbles",
         "Hide suggested users",
+        "Hide the Instagram button",
         "HushThreads settings",
         "Max image quality",
         "Open links in browser",
@@ -21069,8 +21071,8 @@
         "Save photos and videos",
         "Trust user-added certificates"
       ],
-      "originBuild": "260217",
-      "publishedAt": "2026-10-09T00:16:08Z"
+      "originBuild": "260242",
+      "publishedAt": "2026-10-11T05:42:00Z"
     },
     "f-droid-patchweaver-v1.23.2-arm64-v8a.apk": {
       "name": "f-droid-patchweaver",
@@ -21355,10 +21357,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.9.0.mpp"
+        "SysAdminDoc/patches-0.10.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.9.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.10.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -21440,13 +21442,14 @@
         "Turn off double tap to like",
         "Turn off haptics",
         "Turn off screen transitions",
+        "Unlock app icons",
         "Use the phone's emoji",
         "Use the system font",
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260234",
-      "publishedAt": "2026-10-10T11:15:32Z"
+      "originBuild": "260242",
+      "publishedAt": "2026-10-11T05:42:00Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
