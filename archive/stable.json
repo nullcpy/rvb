@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-14T20:48:56Z"
+    "publishedAt": "2026-10-14T23:04:05Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -8308,68 +8308,6 @@
       "originBuild": null,
       "publishedAt": "2026-09-08T08:45:24Z"
     },
-    "amazon-india-rushiranpise-v32.16.2.300-arm-v7a.apk": {
-      "name": "amazon-india-rushiranpise",
-      "version": "32.16.2.300",
-      "appKey": "amazonindia",
-      "appName": "Amazon India",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "in.amazon.mShop.android.shopping",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "Dark mode ",
-        "Disable search suggestions tracking ",
-        "Disable video autoplay ",
-        "Fix Amazon manifest conflicts ",
-        "Hide Rufus tab ",
-        "Open links in browser ",
-        "Price history charts ",
-        "Remove ads "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
-    },
-    "amazon-india-rushiranpise-v32.16.2.300-arm64-v8a.apk": {
-      "name": "amazon-india-rushiranpise",
-      "version": "32.16.2.300",
-      "appKey": "amazonindia",
-      "appName": "Amazon India",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "in.amazon.mShop.android.shopping",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "Dark mode ",
-        "Disable search suggestions tracking ",
-        "Disable video autoplay ",
-        "Fix Amazon manifest conflicts ",
-        "Hide Rufus tab ",
-        "Open links in browser ",
-        "Price history charts ",
-        "Remove ads "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
-    },
     "at4k-launcher-hooman-android-tv-v0.99-all.apk": {
       "name": "at4k-launcher-hooman-android-tv",
       "version": "0.99",
@@ -9059,64 +8997,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T14:33:19Z"
-    },
-    "google-photos-rushiranpise-v7.90.0.971743778-arm-v7a.apk": {
-      "name": "google-photos-rushiranpise",
-      "version": "7.90.0.971743778",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme ",
-        "Change package name ",
-        "Enable DCIM folders backup control ",
-        "Fix DCIM folder classification ",
-        "GmsCore support ",
-        "Spoof features "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
-    },
-    "google-photos-rushiranpise-v7.90.0.971743778-arm64-v8a.apk": {
-      "name": "google-photos-rushiranpise",
-      "version": "7.90.0.971743778",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme ",
-        "Change package name ",
-        "Enable DCIM folders backup control ",
-        "Fix DCIM folder classification ",
-        "GmsCore support ",
-        "Spoof features "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
     },
     "hermit-lain-v31.6.1-arm-v7a.apk": {
       "name": "hermit-lain",
@@ -10303,54 +10183,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T11:26:01Z"
-    },
-    "the-weather-channel-rushiranpise-v16.19.1-arm-v7a.apk": {
-      "name": "the-weather-channel-rushiranpise",
-      "version": "16.19.1",
-      "appKey": "theweatherchannel",
-      "appName": "The Weather Channel",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.weather.Weather",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "Unlock Premium "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
-    },
-    "the-weather-channel-rushiranpise-v16.19.1-arm64-v8a.apk": {
-      "name": "the-weather-channel-rushiranpise",
-      "version": "16.19.1",
-      "appKey": "theweatherchannel",
-      "appName": "The Weather Channel",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rushiranpise",
-      "brandName": "rushiranpise",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.weather.Weather",
-      "patchSources": [
-        "rushiranpise/patches-1.21.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/rushiranpise/morphe-patches/releases/tag/v1.21.5"
-      ],
-      "appliedPatches": [
-        "Unlock Premium "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T20:43:34Z"
     },
     "ticktick-paresh-v8.1.3.3-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -21594,12 +21426,13 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.11.0.mpp"
+        "VenusIsJaded/patches-1.12.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.11.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.12.0"
       ],
       "appliedPatches": [
+        "Account switcher",
         "Complete Quests automatically",
         "Copy profile bios",
         "Disable advertising identifiers",
@@ -21627,14 +21460,16 @@
         "Skip delete confirmation",
         "Spaces in channel names",
         "Translate messages",
+        "Unlock app icons",
         "Use your phone's emojis",
         "Use your phone's font",
+        "User activity notifications",
         "User and server reviews",
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260265",
-      "publishedAt": "2026-10-13T21:28:11Z"
+      "originBuild": "260278",
+      "publishedAt": "2026-10-14T23:03:40Z"
     },
     "discord-venus-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-venus",
@@ -21649,12 +21484,13 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.11.0.mpp"
+        "VenusIsJaded/patches-1.12.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.11.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.12.0"
       ],
       "appliedPatches": [
+        "Account switcher",
         "Complete Quests automatically",
         "Copy profile bios",
         "Disable advertising identifiers",
@@ -21682,14 +21518,16 @@
         "Skip delete confirmation",
         "Spaces in channel names",
         "Translate messages",
+        "Unlock app icons",
         "Use your phone's emojis",
         "Use your phone's font",
+        "User activity notifications",
         "User and server reviews",
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260265",
-      "publishedAt": "2026-10-13T21:28:11Z"
+      "originBuild": "260278",
+      "publishedAt": "2026-10-14T23:03:40Z"
     },
     "linkedin-michii-v4.1.1259-arm64-v8a.apk": {
       "name": "linkedin-michii",
