@@ -24,4 +24,15 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
 
+[Twitter-Piko-NewX]
+enabled = true
+pkg-name = "com.twitter.android"
+app-name = "Twitter"
+patches-source = "crimera/piko-newx"
+brand = "Piko"
+variant = "NewX"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+
 
