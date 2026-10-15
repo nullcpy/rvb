@@ -131,8 +131,8 @@
     "blocked": false,
     "host": "github",
     "repo": "SysAdminDoc/HushGram",
-    "stable": "v0.0.9",
-    "stable_date": "2026-10-11T22:21:55Z"
+    "stable": "v0.0.11",
+    "stable_date": "2026-10-15T14:22:42Z"
   },
   "SysAdminDoc/HushMessenger": {
     "beta": "",
@@ -278,6 +278,15 @@
     "stable": "v3.10.0",
     "stable_date": "2026-10-10T14:58:13Z"
   },
+  "crimera/piko-newx": {
+    "beta": "12.22.0-beta.01-dfc8c56",
+    "beta_date": "2026-09-01T09:09:56Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "crimera/piko-newx",
+    "stable": "v3.56.1",
+    "stable_date": "2026-10-12T01:13:43Z"
+  },
   "debakarr/morphe-patches": {
     "beta": "",
     "beta_date": "",
@@ -342,8 +351,8 @@
     "stable_date": "2026-09-27T13:12:56Z"
   },
   "heval99/Heval-Morphe-Patches": {
-    "beta": "v1.15.0-dev.11",
-    "beta_date": "2026-10-15T09:03:26Z",
+    "beta": "v1.15.0-dev.12",
+    "beta_date": "2026-10-15T14:14:56Z",
     "blocked": false,
     "host": "github",
     "repo": "heval99/Heval-Morphe-Patches",

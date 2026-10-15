@@ -111,6 +111,13 @@
       "shared": "af8e6b25a156bf0a8dd0cc8a238f9f09"
     }
   },
+  "crimera/piko-newx": {
+    "beta": {},
+    "stable": {
+      "com.twitter.android": "1dd168156be6d02122f87b2803d6ca36",
+      "shared": "8a005c08357b2dd55a66590b2ed94a6d"
+    }
+  },
   "debakarr/morphe-patches": {
     "beta": {},
     "stable": {
@@ -176,7 +183,7 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "3840e779782878c363c64fa4c32cedd2",
+      "com.truecaller": "22bafb95f9650fe556eec813d5ca2439",
       "shared": "bae959b0d1344b8804d8a39ed0e98880"
     },
     "stable": {
@@ -506,8 +513,8 @@
   "sysadmindoc/hushgram": {
     "beta": {},
     "stable": {
-      "com.instagram.android": "ff7cdd27e9f9a6172a5baee54f5a6baf",
-      "shared": "577da86092db83be6d091d779bdb5a09"
+      "com.instagram.android": "e6a19083ab9213738f5b089fc149a720",
+      "shared": "ebbc31edca73bc601d4ae9f648917a84"
     }
   },
   "sysadmindoc/hushmessenger": {
