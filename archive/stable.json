@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-15T20:22:08Z"
+    "publishedAt": "2026-10-15T23:03:30Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14084,72 +14084,6 @@
       "originBuild": "260180",
       "publishedAt": "2026-10-04T20:07:08Z"
     },
-    "instagram-instafel-clone-v449.0.0.52.84-arm-v7a.apk": {
-      "name": "instagram-instafel-clone",
-      "version": "449.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "com.instafel.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-db441b9.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger",
-        "Clone General",
-        "Replace Instagram Strings"
-      ],
-      "originBuild": "260141",
-      "publishedAt": "2026-09-29T03:19:45Z"
-    },
-    "instagram-instafel-v449.0.0.52.84-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "449.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-db441b9.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260141",
-      "publishedAt": "2026-09-29T03:19:45Z"
-    },
     "pandora-hoodles-v2609.2-arm-v7a.apk": {
       "name": "pandora-hoodles",
       "version": "2609.2",
@@ -14598,54 +14532,42 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.6.0.mpp"
+        "kveld9/patches-2.7.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
       ],
       "appliedPatches": [
+        "Allow Screenshots",
         "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
         "Bypass Mandatory Login",
-        "Bypass Screen Capture Detection",
-        "Clean Share Panel",
-        "Clean Share URL",
-        "Client-Side AI & Behavioral Profiling Governor",
+        "Clean Share Links",
         "Comment Customizer",
-        "Core Asset De-bloat",
-        "Custom Offline Videos Limit",
         "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
         "Device Privacy Guard",
-        "Disable Search Video Autoplay",
+        "Disable On-Device AI",
+        "Download Without Watermark",
         "Enable Profile Banner",
-        "Feed Ad Blocker",
-        "Feed Bloat & Distraction Blocker",
-        "Feed Content Filter",
-        "Fix Google Login",
-        "Fix Spotify Login",
+        "Feed Ads & Content Filter",
         "Force Auto-Scroll",
-        "Friends Feed Strict Mutuals",
+        "Friends & Suggestions Filter",
         "Hide Inbox Promos & Alerts",
-        "Hide Popular Lives In Search",
-        "Hide Seen Videos",
-        "Hide Suggested Accounts",
-        "Hide Suggested Searches",
-        "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
-        "Instant Launch & Splash Blocker",
-        "Media Usability & Watermark-Free Downloader",
-        "Navigation & Header Declutter",
-        "Non-Personalized Search",
-        "P2P Video Relay & Mesh CDN Blocker",
-        "Popups & Prompts Suppressor",
-        "Remember Clear Display",
-        "Resource & Battery Governor",
-        "Show Seekbar",
-        "Skip First-Launch Onboarding",
-        "Unified Telemetry & Tracker Silencer",
-        "Update Prompt Suppressor"
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
       ],
-      "originBuild": "260232",
-      "publishedAt": "2026-10-10T05:52:44Z"
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
     },
     "tiktok-kveld9-v47.1.4-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -14660,54 +14582,42 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "kveld9/patches-2.6.0.mpp"
+        "kveld9/patches-2.7.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.6.0"
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
       ],
       "appliedPatches": [
+        "Allow Screenshots",
         "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
         "Bypass Mandatory Login",
-        "Bypass Screen Capture Detection",
-        "Clean Share Panel",
-        "Clean Share URL",
-        "Client-Side AI & Behavioral Profiling Governor",
+        "Clean Share Links",
         "Comment Customizer",
-        "Core Asset De-bloat",
-        "Custom Offline Videos Limit",
         "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
         "Device Privacy Guard",
-        "Disable Search Video Autoplay",
+        "Disable On-Device AI",
+        "Download Without Watermark",
         "Enable Profile Banner",
-        "Feed Ad Blocker",
-        "Feed Bloat & Distraction Blocker",
-        "Feed Content Filter",
-        "Fix Google Login",
-        "Fix Spotify Login",
+        "Feed Ads & Content Filter",
         "Force Auto-Scroll",
-        "Friends Feed Strict Mutuals",
+        "Friends & Suggestions Filter",
         "Hide Inbox Promos & Alerts",
-        "Hide Popular Lives In Search",
-        "Hide Seen Videos",
-        "Hide Suggested Accounts",
-        "Hide Suggested Searches",
-        "Hide TikTok Shop & Mall",
         "In-App Browser Privacy Guard",
-        "Instant Launch & Splash Blocker",
-        "Media Usability & Watermark-Free Downloader",
-        "Navigation & Header Declutter",
-        "Non-Personalized Search",
-        "P2P Video Relay & Mesh CDN Blocker",
-        "Popups & Prompts Suppressor",
-        "Remember Clear Display",
-        "Resource & Battery Governor",
-        "Show Seekbar",
-        "Skip First-Launch Onboarding",
-        "Unified Telemetry & Tracker Silencer",
-        "Update Prompt Suppressor"
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
       ],
-      "originBuild": "260232",
-      "publishedAt": "2026-10-10T05:52:44Z"
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -16402,138 +16312,6 @@
       ],
       "originBuild": "260279",
       "publishedAt": "2026-10-15T04:38:27Z"
-    },
-    "google-photos-akashsriram-module-v7.95.0.989626323-arm64-v8a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.95.0.989626323",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.13.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.13.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
-    },
-    "google-photos-akashsriram-v7.95.0.989626323-arm-v7a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.95.0.989626323",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.13.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.13.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
-    },
-    "google-photos-akashsriram-v7.95.0.989626323-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.95.0.989626323",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.13.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.13.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
-    },
-    "google-photos-akashsriram-module-v7.95.0.989626323-arm-v7a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.95.0.989626323",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.13.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.13.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "GmsCore support",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
     },
     "telegram-hushtelegram-foss-v12.10.6-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -23636,6 +23414,210 @@
       ],
       "originBuild": "260285",
       "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "brave-browser-kveld9-v1.97.57-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.97.57",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Shared Links",
+        "Clean Start Page",
+        "Faster Startup",
+        "Hide Battery Status",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
+    },
+    "brave-browser-kveld9-v1.97.57-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.97.57",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Shared Links",
+        "Clean Start Page",
+        "Faster Startup",
+        "Hide Battery Status",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
+    },
+    "twitter-piko-newx-v12.34.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.34.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.57.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.57.0"
+      ],
+      "appliedPatches": [
+        "NewX: Classic inline action spacing",
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
+    },
+    "twitter-piko-newx-v12.34.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.34.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.57.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.57.0"
+      ],
+      "appliedPatches": [
+        "NewX: Classic inline action spacing",
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260286",
+      "publishedAt": "2026-10-15T23:03:01Z"
     }
   }
 }
