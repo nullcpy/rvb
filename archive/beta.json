@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-14T20:23:11Z"
+    "publishedAt": "2026-10-15T09:33:23Z"
   },
   "files": {
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
@@ -6828,10 +6828,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.10.mpp"
+        "heval99/patches-1.15.0-dev.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.10"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6840,12 +6840,13 @@
         "Enable Premium",
         "Hide Premium tab",
         "Hide Scam feed",
+        "Hide Wear OS settings",
         "Hide family button",
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260274",
-      "publishedAt": "2026-10-14T17:44:37Z"
+      "originBuild": "260280",
+      "publishedAt": "2026-10-15T09:33:04Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -6860,10 +6861,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.10.mpp"
+        "heval99/patches-1.15.0-dev.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.10"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6872,12 +6873,13 @@
         "Enable Premium",
         "Hide Premium tab",
         "Hide Scam feed",
+        "Hide Wear OS settings",
         "Hide family button",
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260274",
-      "publishedAt": "2026-10-14T17:44:37Z"
+      "originBuild": "260280",
+      "publishedAt": "2026-10-15T09:33:04Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -6892,24 +6894,26 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.10.mpp"
+        "heval99/patches-1.15.0-dev.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.10"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
       ],
       "appliedPatches": [
         "Disable ads",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "GmsCore support",
         "Hide Premium tab",
         "Hide Scam feed",
+        "Hide Wear OS settings",
         "Hide family button",
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260274",
-      "publishedAt": "2026-10-14T17:44:37Z"
+      "originBuild": "260280",
+      "publishedAt": "2026-10-15T09:33:04Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -6924,24 +6928,26 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.10.mpp"
+        "heval99/patches-1.15.0-dev.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.10"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
       ],
       "appliedPatches": [
         "Disable ads",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "GmsCore support",
         "Hide Premium tab",
         "Hide Scam feed",
+        "Hide Wear OS settings",
         "Hide family button",
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260274",
-      "publishedAt": "2026-10-14T17:44:37Z"
+      "originBuild": "260280",
+      "publishedAt": "2026-10-15T09:33:04Z"
     }
   }
 }
