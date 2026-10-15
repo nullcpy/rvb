@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-15T16:46:52Z"
+    "publishedAt": "2026-10-15T20:22:08Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -1850,10 +1850,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.8.0.mpp"
+        "icysymmetra/patches-0.8.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.8.0"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.8.1"
       ],
       "appliedPatches": [
         "Always show publish date",
@@ -1898,8 +1898,8 @@
         "Translate comments",
         "Disable screen capture detection"
       ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
     },
     "tiktok-icysymmetra-v46.2.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -1914,10 +1914,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.8.0.mpp"
+        "icysymmetra/patches-0.8.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.8.0"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.8.1"
       ],
       "appliedPatches": [
         "Always show publish date",
@@ -1962,8 +1962,8 @@
         "Translate comments",
         "Disable screen capture detection"
       ],
-      "originBuild": "260130",
-      "publishedAt": "2026-09-27T02:57:31Z"
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
     },
     "showly-hxreborn-v3.70.0-arm64-v8a.apk": {
       "name": "showly-hxreborn",
@@ -16535,77 +16535,6 @@
       "originBuild": "260175",
       "publishedAt": "2026-10-04T04:48:03Z"
     },
-    "instagram-hushgram-v449.0.0.52.84-arm64-v8a.apk": {
-      "name": "instagram-hushgram",
-      "version": "449.0.0.52.84",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushgram",
-      "brandName": "HushGram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "SysAdminDoc/patches-0.0.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.5"
-      ],
-      "appliedPatches": [
-        "Clean up Reels",
-        "Copy comment",
-        "Default playback quality",
-        "Disable analytics",
-        "Don't send reel watch history",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Hide Meta AI",
-        "Hide Reels in the feed",
-        "Hide ads",
-        "Hide group buttons on the share sheet",
-        "Hide highlights",
-        "Hide suggested accounts in Reels",
-        "Hide suggested people on profiles",
-        "Hide suggested posts",
-        "Hide suggested stories",
-        "Hide the Explore grid",
-        "Hide the Reels tab",
-        "Hide the Repost button",
-        "Hide the notes row",
-        "HushGram settings",
-        "Keep Reels auto scroll on",
-        "Keep a seek bar on Reels",
-        "Keep the reel speed",
-        "Loop a story",
-        "Open developer options",
-        "Open links in external browser",
-        "Pure black dark mode",
-        "Remove build expired popup",
-        "Remove the advertising ID",
-        "Remove the empty space at the bottom",
-        "Restore trust on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Save comment photo",
-        "Show a story's exact time",
-        "Show if a profile follows you",
-        "Start Home on Following",
-        "Start on x86 devices",
-        "Stop Reels scrolling",
-        "Stop Story auto-advance",
-        "Stop swipe to create",
-        "Story ring size",
-        "Tap to play",
-        "Turn off double tap to like",
-        "View DM photos and videos anonymously",
-        "View stories anonymously"
-      ],
-      "originBuild": "260175",
-      "publishedAt": "2026-10-04T04:48:03Z"
-    },
     "telegram-hushtelegram-foss-v12.10.6-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
       "version": "12.10.6",
@@ -21950,10 +21879,10 @@
       "subVariant": null,
       "packageName": "com.instafel.android",
       "patchSources": [
-        "instafel/ifl-patcher-core-db441b9.jar"
+        "instafel/ifl-patcher-core-ce49607.jar"
       ],
       "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
       ],
       "appliedPatches": [
         "Unlock Developer Options",
@@ -21968,8 +21897,8 @@
         "Clone General",
         "Replace Instagram Strings"
       ],
-      "originBuild": "260261",
-      "publishedAt": "2026-10-13T06:53:40Z"
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
     },
     "instagram-instafel-v451.0.0.53.80-arm64-v8a.apk": {
       "name": "instagram-instafel",
@@ -21984,10 +21913,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "instafel/ifl-patcher-core-db441b9.jar"
+        "instafel/ifl-patcher-core-ce49607.jar"
       ],
       "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/db441b9-4.7.0"
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
       ],
       "appliedPatches": [
         "Unlock Developer Options",
@@ -22000,8 +21929,8 @@
         "Change Home Long Click",
         "Add App Trigger"
       ],
-      "originBuild": "260261",
-      "publishedAt": "2026-10-13T06:53:40Z"
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
     },
     "instagram-hushgram-clone-v450.0.0.50.77-arm64-v8a.apk": {
       "name": "instagram-hushgram-clone",
@@ -23527,6 +23456,186 @@
       ],
       "originBuild": "260284",
       "publishedAt": "2026-10-15T16:46:29Z"
+    },
+    "google-photos-akashsriram-v7.97.0.997578476-arm-v7a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.97.0.997578476",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "GmsCore support",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Flag manager & Toolkit"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "google-photos-akashsriram-module-v7.97.0.997578476-arm64-v8a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.97.0.997578476",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Flag manager & Toolkit"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "google-photos-akashsriram-module-v7.97.0.997578476-arm-v7a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.97.0.997578476",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Flag manager & Toolkit"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "google-photos-akashsriram-v7.97.0.997578476-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.97.0.997578476",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "GmsCore support",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Flag manager & Toolkit"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "instagram-instafel-clone-v451.0.0.53.80-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "451.0.0.53.80",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
+    },
+    "instagram-instafel-v451.0.0.53.80-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "451.0.0.53.80",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260285",
+      "publishedAt": "2026-10-15T20:21:24Z"
     }
   }
 }
