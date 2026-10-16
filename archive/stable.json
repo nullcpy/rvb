@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-16T13:21:50Z"
+    "publishedAt": "2026-10-16T17:19:32Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -3809,10 +3809,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.7.0.mpp"
+        "andrewliang25/patches-3.8.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.7.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.8.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3832,8 +3832,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260287",
-      "publishedAt": "2026-10-16T04:27:13Z"
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
       "name": "facebook-andrewliang25",
@@ -3848,10 +3848,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.7.0.mpp"
+        "andrewliang25/patches-3.8.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.7.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.8.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3871,8 +3871,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260287",
-      "publishedAt": "2026-10-16T04:27:13Z"
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
     },
     "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
       "name": "pixiv-fripe070",
@@ -21208,10 +21208,10 @@
       "subVariant": null,
       "packageName": "com.sofascore.results",
       "patchSources": [
-        "heval99/patches-1.14.0.mpp"
+        "heval99/patches-1.15.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
       ],
       "appliedPatches": [
         "Block marketing notifications",
@@ -21220,8 +21220,8 @@
         "Disable telemetry",
         "Enable Premium"
       ],
-      "originBuild": "260271",
-      "publishedAt": "2026-10-14T13:43:02Z"
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
     },
     "sofascore-heval99-v26.09.28-arm-v7a.apk": {
       "name": "sofascore-heval99",
@@ -23629,6 +23629,140 @@
       ],
       "originBuild": "260289",
       "publishedAt": "2026-10-16T09:44:16Z"
+    },
+    "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
+    },
+    "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
+    },
+    "truecaller-heval99-v26.40.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
+    },
+    "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260292",
+      "publishedAt": "2026-10-16T17:19:07Z"
     }
   }
 }
