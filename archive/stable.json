@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-15T23:03:30Z"
+    "publishedAt": "2026-10-16T04:27:32Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -3809,10 +3809,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.6.0.mpp"
+        "andrewliang25/patches-3.7.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.6.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.7.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3832,8 +3832,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260275",
-      "publishedAt": "2026-10-14T17:52:38Z"
+      "originBuild": "260287",
+      "publishedAt": "2026-10-16T04:27:13Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
       "name": "facebook-andrewliang25",
@@ -3848,10 +3848,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.6.0.mpp"
+        "andrewliang25/patches-3.7.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.6.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.7.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3871,8 +3871,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260275",
-      "publishedAt": "2026-10-14T17:52:38Z"
+      "originBuild": "260287",
+      "publishedAt": "2026-10-16T04:27:13Z"
     },
     "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
       "name": "pixiv-fripe070",
@@ -16466,76 +16466,6 @@
       ],
       "originBuild": "260232",
       "publishedAt": "2026-10-10T05:52:44Z"
-    },
-    "brave-browser-kveld9-v1.96.61-arm64-v8a.apk": {
-      "name": "brave-browser-kveld9",
-      "version": "1.96.61",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.brave.browser",
-      "patchSources": [
-        "kveld9/patches-2.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
-      ],
-      "appliedPatches": [
-        "Block Brave Telemetry",
-        "Brave In-Product & Commercial Notification Optimizer",
-        "Brave Origin",
-        "Brave Startup Performance Optimization",
-        "Clean New Tab Page",
-        "Clean Share URL",
-        "Disable Background Sync & Periodic Sync",
-        "Disable Battery Status API & OS Listener",
-        "Disable Tab Auto-Minimization",
-        "Sensor Privacy Guard",
-        "Skip First Run",
-        "Suppress In-App Promos & Surveys"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
-    },
-    "brave-browser-kveld9-v1.96.61-arm-v7a.apk": {
-      "name": "brave-browser-kveld9",
-      "version": "1.96.61",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.brave.browser",
-      "patchSources": [
-        "kveld9/patches-2.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.5.0"
-      ],
-      "appliedPatches": [
-        "Block Brave Telemetry",
-        "Brave In-Product & Commercial Notification Optimizer",
-        "Brave Origin",
-        "Brave Startup Performance Optimization",
-        "Clean New Tab Page",
-        "Clean Share URL",
-        "Disable Background Sync & Periodic Sync",
-        "Disable Battery Status API & OS Listener",
-        "Disable Tab Auto-Minimization",
-        "Sensor Privacy Guard",
-        "Skip First Run",
-        "Suppress In-App Promos & Surveys"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "google-recorder-devanced-module-v4.2.20260823.982886211-arm64-v8a.zip": {
       "name": "google-recorder-devanced",
