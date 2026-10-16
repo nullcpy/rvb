@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-16T17:19:32Z"
+    "publishedAt": "2026-10-16T19:46:23Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -22750,10 +22750,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.hush",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.11.mpp"
+        "SysAdminDoc/patches-0.0.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.11"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.12"
       ],
       "appliedPatches": [
         "Accent color",
@@ -22796,6 +22796,7 @@
         "Hide group buttons on the share sheet",
         "Hide highlights",
         "Hide paid partnership Reels",
+        "Hide reels by caption words",
         "Hide suggested accounts in DMs",
         "Hide suggested accounts in Reels",
         "Hide suggested people on profiles",
@@ -22862,8 +22863,8 @@
         "View stories anonymously",
         "Install next to Instagram"
       ],
-      "originBuild": "260284",
-      "publishedAt": "2026-10-15T16:46:29Z"
+      "originBuild": "260293",
+      "publishedAt": "2026-10-16T19:45:57Z"
     },
     "instagram-hushgram-v451.0.0.53.80-arm64-v8a.apk": {
       "name": "instagram-hushgram",
@@ -22878,10 +22879,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.11.mpp"
+        "SysAdminDoc/patches-0.0.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.11"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.12"
       ],
       "appliedPatches": [
         "Accent color",
@@ -22924,6 +22925,7 @@
         "Hide group buttons on the share sheet",
         "Hide highlights",
         "Hide paid partnership Reels",
+        "Hide reels by caption words",
         "Hide suggested accounts in DMs",
         "Hide suggested accounts in Reels",
         "Hide suggested people on profiles",
@@ -22989,8 +22991,8 @@
         "View live anonymously",
         "View stories anonymously"
       ],
-      "originBuild": "260284",
-      "publishedAt": "2026-10-15T16:46:29Z"
+      "originBuild": "260293",
+      "publishedAt": "2026-10-16T19:45:57Z"
     },
     "twitter-piko-newx-v12.33.1-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -23763,6 +23765,74 @@
       ],
       "originBuild": "260292",
       "publishedAt": "2026-10-16T17:19:07Z"
+    },
+    "linkedin-michii-v4.1.1261-arm-v7a.apk": {
+      "name": "linkedin-michii",
+      "version": "4.1.1261",
+      "appKey": "linkedin",
+      "appName": "LinkedIn",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "michii",
+      "brandName": "michii",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.linkedin.android",
+      "patchSources": [
+        "heyymichii/patches-1.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.1.1"
+      ],
+      "appliedPatches": [
+        "Block tracking",
+        "Disable double-tap like",
+        "Download media",
+        "Feed filters",
+        "Hide Premium upsells",
+        "Hide ads",
+        "Hide promoted jobs",
+        "Hide suggested posts",
+        "Messaging",
+        "Open links directly",
+        "Sanitize share links"
+      ],
+      "originBuild": "260293",
+      "publishedAt": "2026-10-16T19:45:57Z"
+    },
+    "linkedin-michii-v4.1.1261-arm64-v8a.apk": {
+      "name": "linkedin-michii",
+      "version": "4.1.1261",
+      "appKey": "linkedin",
+      "appName": "LinkedIn",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "michii",
+      "brandName": "michii",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.linkedin.android",
+      "patchSources": [
+        "heyymichii/patches-1.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.1.1"
+      ],
+      "appliedPatches": [
+        "Block tracking",
+        "Disable double-tap like",
+        "Download media",
+        "Feed filters",
+        "Hide Premium upsells",
+        "Hide ads",
+        "Hide promoted jobs",
+        "Hide suggested posts",
+        "Messaging",
+        "Open links directly",
+        "Sanitize share links"
+      ],
+      "originBuild": "260293",
+      "publishedAt": "2026-10-16T19:45:57Z"
     }
   }
 }
