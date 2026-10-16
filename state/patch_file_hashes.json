@@ -23,9 +23,9 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "7aee0cb611fa90d3471f3578f5d3b6d6",
-      "com.google.android.youtube": "ec7182d2ed21c8a3e332948439216639",
-      "shared": "e71ecbd90108c6a231e797ca134c7838"
+      "com.google.android.apps.youtube.music": "e4ae30fc04a75dd0b14ee1dcda5c0b10",
+      "com.google.android.youtube": "5a763e546922fc681347b7977c54a6b7",
+      "shared": "f6805d4755f1d4dc6f2355f627172194"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "38f7dee029d8d691d4d374f1f5bf7718",
@@ -36,7 +36,7 @@
   "andrewliang25/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.facebook.katana": "230b7f80c7060554f7a5d8f4a17b3e52",
+      "com.facebook.katana": "174ee968f563748efd4f4f8063e22b9b",
       "shared": "b31e48f28e09284c8b8d893819c8041f"
     }
   },
@@ -183,13 +183,14 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "22bafb95f9650fe556eec813d5ca2439",
+      "com.truecaller": "2f540684a6632266730c3ec9203685c6",
       "shared": "bae959b0d1344b8804d8a39ed0e98880"
     },
     "stable": {
-      "com.sofascore.results": "04597f5c292ceca86e3cd75f61a67b1a",
-      "eu.faircode.email": "bf8c03cda371df72f7030e78b2274447",
-      "shared": "4424283b4cbe93812c2225979b7e2fb0"
+      "com.sofascore.results": "9412508fb41f5ff62f8169693a39e730",
+      "com.truecaller": "22bafb95f9650fe556eec813d5ca2439",
+      "eu.faircode.email": "ac0aecce54eb630afbb33f650c4b9184",
+      "shared": "bae959b0d1344b8804d8a39ed0e98880"
     }
   },
   "heyymichii/michii-patches": {
