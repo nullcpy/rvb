@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-16T04:27:32Z"
+    "publishedAt": "2026-10-16T09:44:52Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -16950,10 +16950,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.52.0.mpp"
+        "hxreborn/patches-1.53.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.52.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -16963,8 +16963,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260279",
-      "publishedAt": "2026-10-15T04:38:27Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -16979,10 +16979,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.52.0.mpp"
+        "hxreborn/patches-1.53.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.52.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -16992,8 +16992,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260279",
-      "publishedAt": "2026-10-15T04:38:27Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "termius-rushiranpise-v7.9.0-arm64-v8a.apk": {
       "name": "termius-rushiranpise",
@@ -21065,15 +21065,16 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.12.0.mpp"
+        "VenusIsJaded/patches-1.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.12.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.13.0"
       ],
       "appliedPatches": [
         "Account switcher",
         "Complete Quests automatically",
         "Copy profile bios",
+        "Custom themes",
         "Disable advertising identifiers",
         "Disable analytics",
         "Disable crash reporting",
@@ -21088,6 +21089,7 @@
         "Hide typing indicator",
         "Jump to first message",
         "Keep deleted messages",
+        "Message highlights",
         "Pastel name colors",
         "Read all button",
         "Send Nitro stickers and emojis as links",
@@ -21107,8 +21109,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260278",
-      "publishedAt": "2026-10-14T23:03:40Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "discord-venus-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-venus",
@@ -21123,15 +21125,16 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.12.0.mpp"
+        "VenusIsJaded/patches-1.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.12.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.13.0"
       ],
       "appliedPatches": [
         "Account switcher",
         "Complete Quests automatically",
         "Copy profile bios",
+        "Custom themes",
         "Disable advertising identifiers",
         "Disable analytics",
         "Disable crash reporting",
@@ -21146,6 +21149,7 @@
         "Hide typing indicator",
         "Jump to first message",
         "Keep deleted messages",
+        "Message highlights",
         "Pastel name colors",
         "Read all button",
         "Send Nitro stickers and emojis as links",
@@ -21165,8 +21169,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260278",
-      "publishedAt": "2026-10-14T23:03:40Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "linkedin-michii-v4.1.1259-arm64-v8a.apk": {
       "name": "linkedin-michii",
@@ -22101,10 +22105,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.52.0.mpp"
+        "hxreborn/patches-1.53.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.52.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22114,8 +22118,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260279",
-      "publishedAt": "2026-10-15T04:38:27Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "proton-pass-hxreborn-v1.41.3-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -22130,10 +22134,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.52.0.mpp"
+        "hxreborn/patches-1.53.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.52.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22143,8 +22147,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260279",
-      "publishedAt": "2026-10-15T04:38:27Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "truecaller-heval99-v26.39.6-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -23178,21 +23182,21 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.0.mpp"
+        "Akash-Sriram/patches-1.15.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
-        "GmsCore support",
         "Media engine & AI fixes",
         "Spoof features",
+        "GmsCore support",
         "Flag manager & Toolkit"
       ],
-      "originBuild": "260285",
-      "publishedAt": "2026-10-15T20:21:24Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "google-photos-akashsriram-module-v7.97.0.997578476-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -23207,10 +23211,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.0.mpp"
+        "Akash-Sriram/patches-1.15.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23219,8 +23223,8 @@
         "Spoof features",
         "Flag manager & Toolkit"
       ],
-      "originBuild": "260285",
-      "publishedAt": "2026-10-15T20:21:24Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "google-photos-akashsriram-module-v7.97.0.997578476-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -23235,10 +23239,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.0.mpp"
+        "Akash-Sriram/patches-1.15.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23247,8 +23251,8 @@
         "Spoof features",
         "Flag manager & Toolkit"
       ],
-      "originBuild": "260285",
-      "publishedAt": "2026-10-15T20:21:24Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "google-photos-akashsriram-v7.97.0.997578476-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -23263,21 +23267,21 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.0.mpp"
+        "Akash-Sriram/patches-1.15.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.0"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.2"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
-        "GmsCore support",
         "Media engine & AI fixes",
         "Spoof features",
+        "GmsCore support",
         "Flag manager & Toolkit"
       ],
-      "originBuild": "260285",
-      "publishedAt": "2026-10-15T20:21:24Z"
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     },
     "instagram-instafel-clone-v451.0.0.53.80-arm-v7a.apk": {
       "name": "instagram-instafel-clone",
@@ -23548,6 +23552,128 @@
       ],
       "originBuild": "260286",
       "publishedAt": "2026-10-15T23:03:01Z"
+    },
+    "byair-franticg33k-v2.41.0-arm64-v8a.apk": {
+      "name": "byair-franticg33k",
+      "version": "2.41.0",
+      "appKey": "byair",
+      "appName": "ByAir",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "franticg33k",
+      "brandName": "franticg33k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.byairapp.android",
+      "patchSources": [
+        "franticg33k/patches-1.5.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.5.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro",
+        "Remove Update Prompt"
+      ],
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
+    },
+    "byair-franticg33k-v2.41.0-arm-v7a.apk": {
+      "name": "byair-franticg33k",
+      "version": "2.41.0",
+      "appKey": "byair",
+      "appName": "ByAir",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "franticg33k",
+      "brandName": "franticg33k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.byairapp.android",
+      "patchSources": [
+        "franticg33k/patches-1.5.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.5.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro",
+        "Remove Update Prompt"
+      ],
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
+    },
+    "proton-vpn-hxreborn-v5.20.74.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.74.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.53.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
+    },
+    "proton-vpn-hxreborn-v5.20.74.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.74.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.53.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.53.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260289",
+      "publishedAt": "2026-10-16T09:44:16Z"
     }
   }
 }
