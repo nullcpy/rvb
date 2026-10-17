@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-17T12:27:26Z"
+    "publishedAt": "2026-10-17T16:03:52Z"
   },
   "files": {
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
@@ -6232,10 +6232,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.11.mpp"
+        "heval99/patches-1.17.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6249,8 +6249,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260280",
-      "publishedAt": "2026-10-15T09:33:04Z"
+      "originBuild": "260301",
+      "publishedAt": "2026-10-17T16:03:36Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -6265,10 +6265,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.11.mpp"
+        "heval99/patches-1.17.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6282,8 +6282,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260280",
-      "publishedAt": "2026-10-15T09:33:04Z"
+      "originBuild": "260301",
+      "publishedAt": "2026-10-17T16:03:36Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -6298,10 +6298,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.11.mpp"
+        "heval99/patches-1.17.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6316,8 +6316,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260280",
-      "publishedAt": "2026-10-15T09:33:04Z"
+      "originBuild": "260301",
+      "publishedAt": "2026-10-17T16:03:36Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -6332,10 +6332,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0-dev.11.mpp"
+        "heval99/patches-1.17.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0-dev.11"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6350,8 +6350,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260280",
-      "publishedAt": "2026-10-15T09:33:04Z"
+      "originBuild": "260301",
+      "publishedAt": "2026-10-17T16:03:36Z"
     },
     "reddit-morphe-experimental-v2026.42.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
