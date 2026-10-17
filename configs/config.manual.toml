@@ -1,14 +1,10 @@
-[Truecaller-heval99]
+[Telegram-HushTelegram-FOSS]
 enabled = true
-pkg-name = "com.truecaller"
-app-name = "Truecaller"
-brand = "heval99"
-patches-source = "heval99/Heval-Morphe-Patches"
-patches-version = "both"
-build-mode = "both"
-included-patches = "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
-
-
+pkg-name = "org.telegram.messenger.web"
+app-name = "Telegram"
+variant = "FOSS"
+patches-source = "SysAdminDoc/HushTelegram"
+brand = "HushTelegram"
+uptodown-dlurl = "https://telegram.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+direct-dlurl = "https://telegram.org/dl/android/apk"
