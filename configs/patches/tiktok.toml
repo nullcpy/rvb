@@ -9,7 +9,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
 apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
 inclusive-patches = true
-excluded-patches = "'Remove unused language packs'"
+excluded-patches = "'Remove unused language packs' 'Change app name'"
 
 [TikTok-hxreborn]
 enabled = true
