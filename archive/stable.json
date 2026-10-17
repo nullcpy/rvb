@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-17T07:27:21Z"
+    "publishedAt": "2026-10-17T08:59:40Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20792,10 +20792,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.14.0.mpp"
+        "VenusIsJaded/patches-1.15.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.14.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.15.0"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -20836,8 +20836,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260295",
-      "publishedAt": "2026-10-17T04:22:41Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "discord-venus-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-venus",
@@ -20852,10 +20852,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.14.0.mpp"
+        "VenusIsJaded/patches-1.15.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.14.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.15.0"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -20896,8 +20896,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260295",
-      "publishedAt": "2026-10-17T04:22:41Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "linkedin-michii-v4.1.1259-arm64-v8a.apk": {
       "name": "linkedin-michii",
@@ -22779,21 +22779,21 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.3.mpp"
+        "Akash-Sriram/patches-1.15.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.3"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
+        "Flag manager & Toolkit",
         "Media engine & AI fixes",
         "Spoof features",
-        "GmsCore support",
-        "Flag manager & Toolkit"
+        "GmsCore support"
       ],
-      "originBuild": "260290",
-      "publishedAt": "2026-10-16T13:21:12Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "google-photos-akashsriram-module-v7.97.0.997578476-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -22808,20 +22808,20 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.3.mpp"
+        "Akash-Sriram/patches-1.15.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.3"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
+        "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "Flag manager & Toolkit"
+        "Spoof features"
       ],
-      "originBuild": "260290",
-      "publishedAt": "2026-10-16T13:21:12Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "google-photos-akashsriram-module-v7.97.0.997578476-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -22836,20 +22836,20 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.3.mpp"
+        "Akash-Sriram/patches-1.15.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.3"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
+        "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "Flag manager & Toolkit"
+        "Spoof features"
       ],
-      "originBuild": "260290",
-      "publishedAt": "2026-10-16T13:21:12Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "google-photos-akashsriram-v7.97.0.997578476-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -22864,21 +22864,21 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.15.3.mpp"
+        "Akash-Sriram/patches-1.15.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.3"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
+        "Flag manager & Toolkit",
         "Media engine & AI fixes",
         "Spoof features",
-        "GmsCore support",
-        "Flag manager & Toolkit"
+        "GmsCore support"
       ],
-      "originBuild": "260290",
-      "publishedAt": "2026-10-16T13:21:12Z"
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     },
     "instagram-instafel-clone-v451.0.0.53.80-arm-v7a.apk": {
       "name": "instagram-instafel-clone",
@@ -24047,6 +24047,94 @@
       ],
       "originBuild": "260297",
       "publishedAt": "2026-10-17T07:27:12Z"
+    },
+    "discord-rain-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
+    },
+    "discord-rain-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
+    },
+    "discord-revenge-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1801"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
+    },
+    "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1801"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260298",
+      "publishedAt": "2026-10-17T08:59:12Z"
     }
   }
 }
