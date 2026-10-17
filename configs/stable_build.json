@@ -449,7 +449,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -494,7 +494,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -1900,7 +1900,8 @@
     "patches-source": "SysAdminDoc/HushTelegram",
     "brand": "HushTelegram",
     "uptodown-dlurl": "https://telegram.en.uptodown.com/android",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version",
+    "direct-dlurl": "https://telegram.org/dl/android/apk"
   },
   "Threads-chiggi": {
     "enabled": false,
@@ -1942,7 +1943,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
@@ -2069,7 +2070,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
