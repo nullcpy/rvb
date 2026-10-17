@@ -426,7 +426,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -437,7 +437,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -449,7 +449,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -784,7 +784,7 @@
   "MyExpenses-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.totschnig.myexpenses",
     "app-name": "My Expenses",
     "fdroid-dlurl": "https://f-droid.org/en/packages/org.totschnig.myexpenses/"
@@ -1376,7 +1376,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1901,7 +1901,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Telegram-HushTelegram-FOSS": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.telegram.messenger.web",
     "app-name": "Telegram",
     "variant": "FOSS",
