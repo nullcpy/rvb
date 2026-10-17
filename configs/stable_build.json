@@ -449,7 +449,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -780,6 +780,14 @@
     "uptodown-dlurl": "https://xodo-docs.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/xodo-pdf-reader-editor/com.xodo.pdf.reader",
     "apkcombo-dlurl": "https://apkcombo.com/pdf-reader-editor-xodo/com.xodo.pdf.reader"
+  },
+  "MyExpenses-hoodles": {
+    "patches-source": "hoo-dles/morphe-patches",
+    "brand": "hoodles",
+    "enabled": true,
+    "pkg-name": "org.totschnig.myexpenses",
+    "app-name": "My Expenses",
+    "fdroid-dlurl": "https://f-droid.org/en/packages/org.totschnig.myexpenses/"
   },
   "Rumble-hooman": {
     "patches-source": "arandomhooman/hoomans-morphe-patches",
@@ -1953,7 +1961,7 @@
     "apkpure-dlurl": "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically",
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically",
     "inclusive-patches": true,
-    "excluded-patches": "'Remove unused language packs'"
+    "excluded-patches": "'Remove unused language packs' 'Change app name'"
   },
   "TikTok-hxreborn": {
     "enabled": false,
@@ -2070,7 +2078,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
