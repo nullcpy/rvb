@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260303",
+    "channel": "stable",
+    "publishedAt": "2026-10-17T18:58:34Z"
+  },
+  "files": {
+    "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+      "name": "netflix-ajstrick81-android-tv",
+      "version": "13.0.1build25028",
+      "appKey": "netflix",
+      "appName": "Netflix",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.netflix.ninja.clone",
+      "patchSources": [
+        "ajstrick81/patches-1.42.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.42.2"
+      ],
+      "appliedPatches": [
+        "Disable Netflix CertCheck",
+        "Remove Netflix ads (bundle engine)",
+        "Remove Netflix ads (loader)",
+        "Clone Netflix"
+      ],
+      "originBuild": "260303",
+      "publishedAt": "2026-10-17T18:58:34Z"
+    }
+  }
+}
