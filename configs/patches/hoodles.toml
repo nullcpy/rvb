@@ -184,3 +184,9 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/apryse-software-inc/xodo-pdf-re
 uptodown-dlurl = "https://xodo-docs.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/xodo-pdf-reader-editor/com.xodo.pdf.reader"
 apkcombo-dlurl = "https://apkcombo.com/pdf-reader-editor-xodo/com.xodo.pdf.reader"
+
+[MyExpenses-hoodles]
+enabled = true
+pkg-name = "org.totschnig.myexpenses"
+app-name = "My Expenses"
+fdroid-dlurl = "https://f-droid.org/en/packages/org.totschnig.myexpenses/"
