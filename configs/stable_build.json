@@ -232,7 +232,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
@@ -310,7 +310,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
