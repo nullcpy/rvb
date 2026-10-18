@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-17T18:55:39Z"
+    "publishedAt": "2026-10-18T12:53:01Z"
   },
   "files": {
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
@@ -3552,10 +3552,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -3579,6 +3579,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -3586,8 +3587,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-module-v2026.24.0-arm64-v8a.zip": {
       "name": "reddit-morphe",
@@ -3602,10 +3603,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -3629,6 +3630,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -3636,8 +3638,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-module-v2026.24.0-arm-v7a.zip": {
       "name": "reddit-morphe",
@@ -3652,10 +3654,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -3679,6 +3681,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -3686,8 +3689,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-v2026.24.0-arm64-v8a.apk": {
       "name": "reddit-morphe",
@@ -3702,10 +3705,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -3729,6 +3732,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -3736,8 +3740,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm-v7a.zip": {
       "name": "youtube-music-morphe",
@@ -3752,10 +3756,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3806,8 +3810,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -3822,10 +3826,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3877,8 +3881,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-v9.20.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -3893,10 +3897,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3948,8 +3952,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -3964,10 +3968,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -4018,8 +4022,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -4794,10 +4798,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4900,8 +4904,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-module-v21.20.405-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -4916,10 +4920,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5021,8 +5025,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-module-v21.20.405-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -5037,10 +5041,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5142,8 +5146,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-v21.20.405-arm-v7a.apk": {
       "name": "youtube-morphe",
@@ -5158,10 +5162,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5264,8 +5268,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-experimental-v2026.41.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -5954,10 +5958,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6008,8 +6012,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-experimental-v9.41.52-arm64-v8a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -6024,10 +6028,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6079,8 +6083,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-experimental-v9.41.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -6095,10 +6099,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6150,8 +6154,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-music-morphe-experimental-module-v9.41.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -6166,10 +6170,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6220,8 +6224,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -6370,10 +6374,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -6397,6 +6401,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -6404,8 +6409,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm-v7a.zip": {
       "name": "reddit-morphe-experimental",
@@ -6420,10 +6425,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -6447,6 +6452,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -6454,8 +6460,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-experimental-v2026.42.0-arm-v7a.apk": {
       "name": "reddit-morphe-experimental",
@@ -6470,10 +6476,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -6497,6 +6503,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -6504,8 +6511,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
@@ -6520,10 +6527,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "App icon",
@@ -6547,6 +6554,7 @@
         "Media viewer fade",
         "Open links directly",
         "Open links externally",
+        "Redgifs audio",
         "Remember collapsed comments",
         "Remove subreddit dialog",
         "Sanitize sharing links",
@@ -6554,8 +6562,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -6570,10 +6578,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6675,8 +6683,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6691,10 +6699,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6797,8 +6805,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm-v7a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6813,10 +6821,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6919,8 +6927,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -6935,10 +6943,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.11.mpp"
+        "MorpheApp/patches-1.48.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -7040,8 +7048,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260302",
-      "publishedAt": "2026-10-17T18:55:00Z"
+      "originBuild": "260307",
+      "publishedAt": "2026-10-18T12:52:21Z"
     }
   }
 }
