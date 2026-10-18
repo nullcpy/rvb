@@ -1395,7 +1395,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "Pinterest-browzomje": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "browzomje/browzomje-patches",
@@ -1451,7 +1451,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1566,7 +1566,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
   },
   "Reddit-adobo": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "jkennethcarino/adobo",
@@ -1580,7 +1580,7 @@
   "CapCut-riky": {
     "patches-source": "riky-dev/morphe-patches",
     "brand": "riky",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.lemon.lvoverseas",
     "app-name": "CapCut",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
@@ -2088,7 +2088,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
