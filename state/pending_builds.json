@@ -1,4 +1,15 @@
 {
-  "stable": {},
+  "stable": {
+    "aCalendar-hxreborn": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "925ce1f0f7b6d0776d09cd28dac2dab0f5f7745e"
+    }
+  },
   "beta": {}
 }

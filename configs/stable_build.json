@@ -94,6 +94,24 @@
     "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
+  "aCalendar-binarymend": {
+    "enabled": false,
+    "pkg-name": "org.withouthat.acalendar",
+    "app-name": "aCalendar",
+    "patches-source": "binarymend/morphe-patches",
+    "brand": "binarymend",
+    "uptodown-dlurl": "https://acalendar.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+  },
+  "aCalendar-hxreborn": {
+    "enabled": true,
+    "pkg-name": "org.withouthat.acalendar",
+    "app-name": "aCalendar",
+    "patches-source": "hxreborn/morphe-patches",
+    "brand": "hxreborn",
+    "uptodown-dlurl": "https://acalendar.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+  },
   "AdGuard-hoodles": {
     "enabled": false,
     "pkg-name": "com.adguard.android",
@@ -240,17 +258,6 @@
     "apkpure-dlurl": "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja",
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
-  "GoogleMaps-bearinmindcat": {
-    "patches-source": "bearinmindcat/morphe-patches",
-    "brand": "bearinmindcat",
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.maps",
-    "app-name": "Google Maps",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/maps",
-    "uptodown-dlurl": "https://google-maps.en.uptodown.com/android/download",
-    "apkpure-dlurl": "https://apkpure.com/google-maps-app/com.google.android.apps.maps",
-    "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
-  },
   "MoonPlusReader-binarymend": {
     "patches-source": "binarymend/morphe-patches",
     "brand": "binarymend",
@@ -278,15 +285,6 @@
     "app-name": "CalcNote",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator",
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
-  },
-  "aCalendar-binarymend": {
-    "patches-source": "binarymend/morphe-patches",
-    "brand": "binarymend",
-    "enabled": false,
-    "pkg-name": "org.withouthat.acalendar",
-    "app-name": "aCalendar",
-    "uptodown-dlurl": "https://acalendar.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "komoot-brosssh": {
     "patches-source": "brosssh/morphe-patches",
@@ -535,6 +533,18 @@
     "uptodown-dlurl": "https://offline-games-no-wifi-games.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/jindoblu/offline-games-no-wifi-games",
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
+  },
+  "GoogleMaps-bearinmindcat": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.maps",
+    "app-name": "Google Maps",
+    "brand": "bearinmindcat",
+    "patches-source": "bearinmindcat/morphe-patches",
+    "build-mode": "both",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/maps",
+    "uptodown-dlurl": "https://google-maps.en.uptodown.com/android/download",
+    "apkpure-dlurl": "https://apkpure.com/google-maps-app/com.google.android.apps.maps",
+    "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
     "enabled": false,
@@ -1395,7 +1405,7 @@
     "uptodown-dlurl": "https://pinterest.en.uptodown.com/android"
   },
   "Pinterest-browzomje": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "browzomje/browzomje-patches",
@@ -1451,7 +1461,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1566,7 +1576,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
   },
   "Reddit-adobo": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "jkennethcarino/adobo",
@@ -1580,7 +1590,7 @@
   "CapCut-riky": {
     "patches-source": "riky-dev/morphe-patches",
     "brand": "riky",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.lemon.lvoverseas",
     "app-name": "CapCut",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
@@ -1948,7 +1958,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
