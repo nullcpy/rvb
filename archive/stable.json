@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-18T09:20:15Z"
+    "publishedAt": "2026-10-18T12:56:40Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -23707,10 +23707,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.58.0.mpp"
+        "crimera/patches-3.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.58.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.59.0"
       ],
       "appliedPatches": [
         "NewX: Classic inline action spacing",
@@ -23736,6 +23736,7 @@
         "NewX: Hide Spaces bar",
         "NewX: Hide compose button",
         "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
         "NewX: Hide post reply bar",
         "NewX: Hide posts by verified account type",
         "NewX: Hide premium upsell",
@@ -23756,8 +23757,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260304",
-      "publishedAt": "2026-10-18T04:27:26Z"
+      "originBuild": "260308",
+      "publishedAt": "2026-10-18T12:56:22Z"
     },
     "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -23772,10 +23773,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.58.0.mpp"
+        "crimera/patches-3.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.58.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.59.0"
       ],
       "appliedPatches": [
         "NewX: Classic inline action spacing",
@@ -23801,6 +23802,7 @@
         "NewX: Hide Spaces bar",
         "NewX: Hide compose button",
         "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
         "NewX: Hide post reply bar",
         "NewX: Hide posts by verified account type",
         "NewX: Hide premium upsell",
@@ -23821,8 +23823,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260304",
-      "publishedAt": "2026-10-18T04:27:26Z"
+      "originBuild": "260308",
+      "publishedAt": "2026-10-18T12:56:22Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
