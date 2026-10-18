@@ -96,3 +96,14 @@ brand = "HushTelegram"
 uptodown-dlurl = "https://telegram.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
 direct-dlurl = "https://telegram.org/dl/android/apk"
+
+[Telegram-HushTelegram-GooglePlay]
+enabled = true
+pkg-name = "org.telegram.messenger"
+app-name = "Telegram"
+variant = "Google Play"
+patches-source = "SysAdminDoc/HushTelegram"
+brand = "HushTelegram"
+uptodown-dlurl = "https://telegram-google-play-version.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram"
+
