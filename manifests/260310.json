@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260310",
+    "channel": "stable",
+    "publishedAt": "2026-10-18T18:07:41Z"
+  },
+  "files": {
+    "threads-hushthreads-v451.0.0.51.80-arm64-v8a.apk": {
+      "name": "threads-hushthreads",
+      "version": "451.0.0.51.80",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushthreads",
+      "brandName": "HushThreads",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.15.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.15"
+      ],
+      "appliedPatches": [
+        "Block background-return feed refresh",
+        "Change version code",
+        "Disable analytics",
+        "Disable screenshot detection",
+        "Disable video autoplay",
+        "Hide ads",
+        "Hide ghost post bubbles",
+        "Hide suggested users",
+        "Hide the Instagram button",
+        "HushThreads settings",
+        "Max image quality",
+        "Open links in browser",
+        "Pure black dark mode",
+        "Remove share targets",
+        "Remove the advertising ID",
+        "Restore screens on re-signed builds",
+        "Sanitize sharing links",
+        "Save photos and videos",
+        "Trust user-added certificates"
+      ],
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
+    },
+    "acalendar-hxreborn-v2.9.5-arm64-v8a.apk": {
+      "name": "acalendar-hxreborn",
+      "version": "2.9.5",
+      "appKey": "acalendar",
+      "appName": "aCalendar",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.withouthat.acalendar",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "Unlock aCalendar+"
+      ],
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
+    },
+    "acalendar-hxreborn-v2.9.5-arm-v7a.apk": {
+      "name": "acalendar-hxreborn",
+      "version": "2.9.5",
+      "appKey": "acalendar",
+      "appName": "aCalendar",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.withouthat.acalendar",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "Unlock aCalendar+"
+      ],
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
+    }
+  }
+}

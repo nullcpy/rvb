@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-18T16:16:51Z"
+    "publishedAt": "2026-10-18T18:07:58Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -9816,68 +9816,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T20:43:34Z"
-    },
-    "reddit-adobo-v2026.35.0-arm-v7a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.35.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.4.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.4.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines ",
-        "Disable home screen redirect ",
-        "Disable screenshot banner ",
-        "Hide community menu badge ",
-        "Hide post view counts ",
-        "Open external links directly ",
-        "Remove ads and telemetry ",
-        "Sanitize share links "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T10:42:38Z"
-    },
-    "reddit-adobo-v2026.35.0-arm64-v8a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.35.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.4.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.4.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines ",
-        "Disable home screen redirect ",
-        "Disable screenshot banner ",
-        "Hide community menu badge ",
-        "Hide post view counts ",
-        "Open external links directly ",
-        "Remove ads and telemetry ",
-        "Sanitize share links "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T10:42:38Z"
     },
     "rumble-hooman-v3.14.5-arm-v7a.apk": {
       "name": "rumble-hooman",
@@ -21598,10 +21536,10 @@
       "subVariant": null,
       "packageName": "com.instagram.barcelona",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.14.mpp"
+        "SysAdminDoc/patches-0.0.15.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.14"
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.15"
       ],
       "appliedPatches": [
         "Block background-return feed refresh",
@@ -21624,8 +21562,8 @@
         "Save photos and videos",
         "Trust user-added certificates"
       ],
-      "originBuild": "260268",
-      "publishedAt": "2026-10-14T04:59:55Z"
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
     },
     "facebook-hushfacebook-v582.0.0.50.54-arm-v7a.apk": {
       "name": "facebook-hushfacebook",
@@ -24445,6 +24383,54 @@
       ],
       "originBuild": "260309",
       "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "acalendar-hxreborn-v2.9.5-arm64-v8a.apk": {
+      "name": "acalendar-hxreborn",
+      "version": "2.9.5",
+      "appKey": "acalendar",
+      "appName": "aCalendar",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.withouthat.acalendar",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "Unlock aCalendar+"
+      ],
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
+    },
+    "acalendar-hxreborn-v2.9.5-arm-v7a.apk": {
+      "name": "acalendar-hxreborn",
+      "version": "2.9.5",
+      "appKey": "acalendar",
+      "appName": "aCalendar",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.withouthat.acalendar",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "Unlock aCalendar+"
+      ],
+      "originBuild": "260310",
+      "publishedAt": "2026-10-18T18:07:41Z"
     }
   }
 }
