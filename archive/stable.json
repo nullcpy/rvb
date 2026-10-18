@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-18T12:56:40Z"
+    "publishedAt": "2026-10-18T16:16:51Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -19104,10 +19104,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.12.0.mpp"
+        "browzomje/patches-1.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.12.0"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.13.0"
       ],
       "appliedPatches": [
         "Copy direct link",
@@ -19128,8 +19128,10 @@
         "Hide ad views",
         "Hide comments",
         "Hide greeting header buttons",
+        "Hide save for later tooltip",
         "Hide screenshot share menu",
         "Hide search history",
+        "Keep Home feed",
         "Morphe runtime names",
         "Morphe settings entry",
         "Morphe settings screen (label)",
@@ -19142,8 +19144,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260247",
-      "publishedAt": "2026-10-11T18:05:47Z"
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
     },
     "pinterest-browzomje-v14.39.0-arm-v7a.apk": {
       "name": "pinterest-browzomje",
@@ -19158,10 +19160,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.12.0.mpp"
+        "browzomje/patches-1.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.12.0"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.13.0"
       ],
       "appliedPatches": [
         "Copy direct link",
@@ -19182,8 +19184,10 @@
         "Hide ad views",
         "Hide comments",
         "Hide greeting header buttons",
+        "Hide save for later tooltip",
         "Hide screenshot share menu",
         "Hide search history",
+        "Keep Home feed",
         "Morphe runtime names",
         "Morphe settings entry",
         "Morphe settings screen (label)",
@@ -19196,8 +19200,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260247",
-      "publishedAt": "2026-10-11T18:05:47Z"
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
     },
     "reddit-morphe-experimental-v2026.41.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -24277,6 +24281,170 @@
       ],
       "originBuild": "260306",
       "publishedAt": "2026-10-18T09:19:58Z"
+    },
+    "capcut-riky-v9.0.0-arm64-v8a.apk": {
+      "name": "capcut-riky",
+      "version": "9.0.0",
+      "appKey": "capcut",
+      "appName": "CapCut",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "riky",
+      "brandName": "riky",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.lemon.lvoverseas",
+      "patchSources": [
+        "riky-dev/patches-2.3.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/riky-dev/morphe-patches/releases/tag/v2.3.2"
+      ],
+      "appliedPatches": [
+        "Bypass effects region restriction",
+        "Unlock Premium"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "capcut-riky-v9.0.0-arm-v7a.apk": {
+      "name": "capcut-riky",
+      "version": "9.0.0",
+      "appKey": "capcut",
+      "appName": "CapCut",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "riky",
+      "brandName": "riky",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.lemon.lvoverseas",
+      "patchSources": [
+        "riky-dev/patches-2.3.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/riky-dev/morphe-patches/releases/tag/v2.3.2"
+      ],
+      "appliedPatches": [
+        "Bypass effects region restriction",
+        "Unlock Premium"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "proton-mail-satanmerde-v7.11.10-arm64-v8a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.52.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.1"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "proton-mail-satanmerde-v7.11.10-arm-v7a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.52.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.1"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "reddit-adobo-v2026.42.0-arm64-v8a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.42.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
+    },
+    "reddit-adobo-v2026.42.0-arm-v7a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.42.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260309",
+      "publishedAt": "2026-10-18T16:16:27Z"
     }
   }
 }
