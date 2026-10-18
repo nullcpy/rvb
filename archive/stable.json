@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-18T08:22:51Z"
+    "publishedAt": "2026-10-18T09:20:15Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -16677,10 +16677,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.54.0.mpp"
+        "hxreborn/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.54.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -16690,8 +16690,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260300",
-      "publishedAt": "2026-10-17T12:34:53Z"
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
     },
     "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -16706,10 +16706,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.54.0.mpp"
+        "hxreborn/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.54.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -16719,8 +16719,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260300",
-      "publishedAt": "2026-10-17T12:34:53Z"
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
     },
     "termius-rushiranpise-v7.9.0-arm64-v8a.apk": {
       "name": "termius-rushiranpise",
@@ -23125,10 +23125,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.54.0.mpp"
+        "hxreborn/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.54.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23145,8 +23145,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260300",
-      "publishedAt": "2026-10-17T12:34:53Z"
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
     },
     "proton-vpn-hxreborn-v5.20.74.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -23161,10 +23161,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.54.0.mpp"
+        "hxreborn/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.54.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23181,8 +23181,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260300",
-      "publishedAt": "2026-10-17T12:34:53Z"
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
     },
     "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -24217,6 +24217,64 @@
       ],
       "originBuild": "260305",
       "publishedAt": "2026-10-18T08:22:43Z"
+    },
+    "proton-pass-hxreborn-v1.41.4-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.4",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 switches"
+      ],
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
+    },
+    "proton-pass-hxreborn-v1.41.4-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.4",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.55.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.55.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 switches"
+      ],
+      "originBuild": "260306",
+      "publishedAt": "2026-10-18T09:19:58Z"
     }
   }
 }
