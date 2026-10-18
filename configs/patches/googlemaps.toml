@@ -1,10 +1,10 @@
-patches-source = "bearinmindcat/morphe-patches"
-brand = "bearinmindcat"
-
 [GoogleMaps-bearinmindcat]
 enabled = true
 pkg-name = "com.google.android.apps.maps"
 app-name = "Google Maps"
+brand = "bearinmindcat"
+patches-source = "bearinmindcat/morphe-patches"
+build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/maps"
 uptodown-dlurl = "https://google-maps.en.uptodown.com/android/download"
 apkpure-dlurl = "https://apkpure.com/google-maps-app/com.google.android.apps.maps"

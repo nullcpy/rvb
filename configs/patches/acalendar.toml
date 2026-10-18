@@ -1,0 +1,19 @@
+[aCalendar-binarymend]
+enabled = true
+pkg-name = "org.withouthat.acalendar"
+app-name = "aCalendar"
+patches-source = "binarymend/morphe-patches"
+brand = "binarymend"
+uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+
+[aCalendar-hxreborn]
+enabled = true
+pkg-name = "org.withouthat.acalendar"
+app-name = "aCalendar"
+patches-source = "hxreborn/morphe-patches"
+brand = "hxreborn"
+uptodown-dlurl = "https://acalendar.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
+
+
