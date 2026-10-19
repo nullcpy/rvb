@@ -1,10 +1,23 @@
-[Telegram-HushTelegram-FOSS]
+[GoogleMaps-bearinmindcat]
 enabled = true
-pkg-name = "org.telegram.messenger.web"
-app-name = "Telegram"
-variant = "FOSS"
-patches-source = "SysAdminDoc/HushTelegram"
-brand = "HushTelegram"
-uptodown-dlurl = "https://telegram.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version"
-direct-dlurl = "https://telegram.org/dl/android/apk"
+pkg-name = "com.google.android.apps.maps"
+app-name = "Google Maps"
+brand = "bearinmindcat"
+patches-source = "bearinmindcat/morphe-patches"
+build-mode = "both"
+included-patches = "'Add microG support'"
+excluded-patches = "'Change app name' 'Change package name'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/maps"
+uptodown-dlurl = "https://google-maps.en.uptodown.com/android/download"
+apkpure-dlurl = "https://apkpure.com/google-maps-app/com.google.android.apps.maps"
+apkcombo-dlurl = "https://apkcombo.com/google-maps/com.google.android.apps.maps"
+
+[RikardoNemlopot-Smart123s]
+enabled = true
+pkg-name = "ricardonemlopot.nemlopot"
+app-name = "Rikardo Nemlopot"
+patches-source = "Smart123s/morphe-patches"
+brand = "Smart123s"
+arch = "all"
+apkpure-dlurl = "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
+
