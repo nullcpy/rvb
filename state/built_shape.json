@@ -2941,6 +2941,66 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "GoogleMaps-bearinmindcat-UnGoogled": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "variant": "UnGoogled",
+        "app-name": "Google Maps",
+        "pkg-name": "com.google.android.apps.maps",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "variant": "UnGoogled",
+        "sub-variant": "MicroG",
+        "app-name": "Google Maps",
+        "pkg-name": "com.google.android.apps.maps",
+        "included-patches": "'Add microG support'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleKeyboard-jasonwu1994": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "app-name": "Google Keyboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "excluded-patches": "'Package Rename'",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "GoogleKeyboard-jasonwu1994-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "variant": "Clone",
+        "app-name": "Google Keyboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
