@@ -2926,7 +2926,7 @@
         "pkg-name": "com.google.android.apps.maps",
         "included-patches": "'Add microG support'",
         "arch": "both",
-        "build-mode": "both"
+        "build-mode": "apk"
       }
     },
     "RikardoNemlopot-Smart123s": {
