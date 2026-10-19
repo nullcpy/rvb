@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-19T04:41:23Z"
+    "publishedAt": "2026-10-19T10:27:27Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -18220,16 +18220,16 @@
       "subVariant": null,
       "packageName": "eu.faircode.email",
       "patchSources": [
-        "heval99/patches-1.13.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.13.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Enable Pro"
       ],
-      "originBuild": "260244",
-      "publishedAt": "2026-10-11T11:20:50Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "fairemail-heval99-v1.2338-arm-v7a.apk": {
       "name": "fairemail-heval99",
@@ -18244,16 +18244,16 @@
       "subVariant": null,
       "packageName": "eu.faircode.email",
       "patchSources": [
-        "heval99/patches-1.13.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.13.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Enable Pro"
       ],
-      "originBuild": "260244",
-      "publishedAt": "2026-10-11T11:20:50Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "google-photos-akashsriram-module-v7.96.0.993165104-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -23155,10 +23155,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -23172,8 +23172,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -23188,10 +23188,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -23205,8 +23205,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -23221,10 +23221,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -23239,8 +23239,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -23255,10 +23255,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.15.0.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -23273,8 +23273,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     },
     "linkedin-michii-v4.1.1261-arm-v7a.apk": {
       "name": "linkedin-michii",
@@ -24571,6 +24571,64 @@
       ],
       "originBuild": "260312",
       "publishedAt": "2026-10-18T22:24:47Z"
+    },
+    "sofascore-heval99-v26.10.05-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.05",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
+    },
+    "sofascore-heval99-v26.10.05-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.05",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260314",
+      "publishedAt": "2026-10-19T10:27:08Z"
     }
   }
 }
