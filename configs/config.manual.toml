@@ -12,24 +12,24 @@ uptodown-dlurl = "https://google-maps.en.uptodown.com/android/download"
 apkpure-dlurl = "https://apkpure.com/google-maps-app/com.google.android.apps.maps"
 apkcombo-dlurl = "https://apkcombo.com/google-maps/com.google.android.apps.maps"
 
-[GoogleMaps-bearinmindcat-Clone]
+[GoogleMaps-bearinmindcat-UnGoogled]
 enabled = true
 pkg-name = "com.google.android.apps.maps"
 app-name = "Google Maps"
 brand = "bearinmindcat"
-variant = "Clone"
+variant = "UnGoogled"
 patches-source = "bearinmindcat/morphe-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/maps"
 uptodown-dlurl = "https://google-maps.en.uptodown.com/android/download"
 apkpure-dlurl = "https://apkpure.com/google-maps-app/com.google.android.apps.maps"
 apkcombo-dlurl = "https://apkcombo.com/google-maps/com.google.android.apps.maps"
 
-[GoogleMaps-bearinmindcat-Clone-MicroG]
+[GoogleMaps-bearinmindcat-UnGoogled-MicroG]
 enabled = true
 pkg-name = "com.google.android.apps.maps"
 app-name = "Google Maps"
 brand = "bearinmindcat"
-variant = "Clone"
+variant = "UnGoogled"
 sub-variant = "MicroG"
 patches-source = "bearinmindcat/morphe-patches"
 included-patches = "'Add microG support'"
