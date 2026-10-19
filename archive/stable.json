@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-19T10:27:27Z"
+    "publishedAt": "2026-10-19T11:12:05Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -17943,8 +17943,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260277",
-      "publishedAt": "2026-10-14T20:47:54Z"
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -17993,8 +17993,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260277",
-      "publishedAt": "2026-10-14T20:47:54Z"
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -24465,10 +24465,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.16.0.mpp"
+        "VenusIsJaded/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -24509,8 +24509,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260312",
-      "publishedAt": "2026-10-18T22:24:47Z"
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
     },
     "discord-venus-v349.9-Stable-arm64-v8a.apk": {
       "name": "discord-venus",
@@ -24525,10 +24525,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.16.0.mpp"
+        "VenusIsJaded/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.0"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -24569,8 +24569,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260312",
-      "publishedAt": "2026-10-18T22:24:47Z"
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
     },
     "sofascore-heval99-v26.10.05-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -24629,6 +24629,106 @@
       ],
       "originBuild": "260314",
       "publishedAt": "2026-10-19T10:27:08Z"
+    },
+    "google-maps-bearinmindcat-module-v26.36.04.973607363-arm-v7a.zip": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
+    },
+    "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260315",
+      "publishedAt": "2026-10-19T11:11:38Z"
     }
   }
 }
