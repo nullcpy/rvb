@@ -308,7 +308,7 @@
         "app-name": "Google Maps",
         "pkg-name": "com.google.android.apps.maps",
         "arch": "both",
-        "build-mode": "apk"
+        "build-mode": "both"
       }
     },
     "MoonPlusReader-binarymend": {
@@ -1242,6 +1242,7 @@
       ],
       "cfg": {
         "patches-source": "hxreborn/morphe-patches",
+        "patch-folder": "terabox",
         "brand": "hxreborn",
         "app-name": "TeraBox",
         "pkg-name": "com.dubox.drive",
@@ -1256,6 +1257,7 @@
       ],
       "cfg": {
         "patches-source": "hxreborn/morphe-patches",
+        "patch-folder": "protonpass",
         "brand": "hxreborn",
         "app-name": "Proton Pass",
         "pkg-name": "proton.android.pass",
