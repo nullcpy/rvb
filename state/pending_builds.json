@@ -1,4 +1,35 @@
 {
-  "stable": {},
+  "stable": {
+    "GoogleMaps-bearinmindcat": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "4099c9d5319b9b0ac887067bc3132e0212fac686"
+    },
+    "Terabox-hxreborn": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "2f581881fa157589443eb614521c6f88d83e0b7b"
+    },
+    "ProtonPass-hxreborn": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "194cf1c715d1d0e9df246edcc328b546b69fe5a1"
+    }
+  },
   "beta": {}
 }

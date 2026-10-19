@@ -447,7 +447,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -535,7 +535,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -547,7 +547,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -558,7 +558,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -968,10 +968,10 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
-    "folder-name": "terabox",
+    "patch-folder": "terabox",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/flextech-inc/terabox-cloud-storage-cloud-backup-data-backup",
     "apkpure-dlurl": "https://apkpure.com/terabox-1tb-cloud-ai-space-app/com.dubox.drive",
     "apkcombo-dlurl": "https://apkcombo.com/terabox/com.dubox.drive"
@@ -979,10 +979,10 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
-    "folder-name": "protonpass",
+    "patch-folder": "protonpass",
     "uptodown-dlurl": "https://proton-pass.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/proton-pass-password-manager",
     "apkpure-dlurl": "https://apkpure.com/password-manager-proton-pass/proton.android.pass"
@@ -2040,7 +2040,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
