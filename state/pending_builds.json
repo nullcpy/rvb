@@ -1,34 +1,4 @@
 {
-  "stable": {
-    "GoogleMaps-bearinmindcat": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "e7fa4f32c1bf81b5f8baaf8796133c34520ac878"
-    },
-    "GoogleMaps-bearinmindcat-Clone": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "b5e8d7147bfe70c5bf8d20bef547057eab7ba18f"
-    },
-    "RikardoNemlopot-Smart123s": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "be159a201d76228fe207b98bc9ae608831360a07"
-    }
-  },
+  "stable": {},
   "beta": {}
 }

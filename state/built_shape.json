@@ -306,6 +306,8 @@
         "brand": "bearinmindcat",
         "app-name": "Google Maps",
         "pkg-name": "com.google.android.apps.maps",
+        "included-patches": "'Add microG support'",
+        "excluded-patches": "'Change app name' 'Change package name'",
         "arch": "both",
         "build-mode": "both"
       }
@@ -2908,6 +2910,35 @@
         "app-name": "aCalendar",
         "pkg-name": "org.withouthat.acalendar",
         "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleMaps-bearinmindcat-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "variant": "Clone",
+        "app-name": "Google Maps",
+        "pkg-name": "com.google.android.apps.maps",
+        "included-patches": "'Add microG support'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "RikardoNemlopot-Smart123s": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "Smart123s/morphe-patches",
+        "brand": "Smart123s",
+        "app-name": "Rikardo Nemlopot",
+        "pkg-name": "ricardonemlopot.nemlopot",
+        "arch": "all",
         "build-mode": "apk"
       }
     }
