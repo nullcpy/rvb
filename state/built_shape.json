@@ -1,866 +1,3292 @@
 {
   "stable": {
-    "Automate-BholeyKaBhakt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Speedtest-BholeyKaBhakt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Autosync-BholeyKaBhakt": [
-      "arm64-v8a"
-    ],
-    "Inshorts-BholeyKaBhakt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "VPNify-BholeyKaBhakt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Backdrops-BholeyKaBhakt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AppSales-Entree3k": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "NiagaraLauncher-Entree3k": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TraktTV-IMXEren": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AdGuard-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AdGuard-rushiranpise-Nightly": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "IMDb-adobo": [
-      "all"
-    ],
-    "DisneyPlus-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "PrimeVideo-ajstrick81-AndroidTV": [
-      "arm-v7a"
-    ],
-    "PrimeVideo-ajstrick81-AndroidTV-Clone": [
-      "arm-v7a"
-    ],
-    "HBOMax-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "Peacock-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "Tubi-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "ViX-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "PlutoTV-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "Netflix-ajstrick81-AndroidTV": [
-      "arm-v7a"
-    ],
-    "GoogleMaps-bearinmindcat": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MoonPlusReader-binarymend": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Symfonium-binarymend": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "CalcNote-binarymend": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "aCalendar-binarymend": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "komoot-brosssh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Medium-bufferk": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SwiftBackup-byehi98": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Meesho-debakarr": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Flipkart-debakarr": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GoogleRecorder-DeVanced": [
-      "arm64-v8a"
-    ],
-    "MicrosoftLens-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Photomath-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Viber-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Strava-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BraveBrowser-dh6k-Beta": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BraveBrowser-dh6k-Nightly": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TitaniumBrowser-dh6k": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Discord-revenge": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Discord-rain": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Discord-Venus": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GoogleNews-docbt": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Facebook-Froggo": [
-      "arm64-v8a"
-    ],
-    "Facebook-andrewliang25": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Facebook-HushFacebook": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Facebook-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ByAir-franticg33k": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "OfflineGames-ggYasin": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "FairEmail-heval99": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Sofascore-heval99": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Duolingo-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "WPSOffice-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Wallcraft-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SolidExplorer-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "IconPacker-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PodcastAddict-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SmartLauncher6-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MerriamWebsterDictionary-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Pandora-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "XRecorder-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "NovaLauncher-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Ventusky-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "CamScanner-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GitHub-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "HelloChinese-hoodles": [
-      "arm64-v8a"
-    ],
-    "MyFitnessPal-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PrimeVideo-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Goodreads-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AdobeLightroom-hoodles": [
-      "arm64-v8a"
-    ],
-    "Xodo-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Rumble-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BatteryGuru-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MoneyManager-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Poweramp-hooman": [
-      "all"
-    ],
-    "AT4KLauncher-hooman-AndroidTV": [
-      "all"
-    ],
-    "ProjectivyLauncher-hooman-AndroidTV": [
-      "all"
-    ],
-    "AdobeAcrobat-hooman": [
-      "arm64-v8a"
-    ],
-    "InShot-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Todoist-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Tumblr-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GooglePhone-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MicrosoftSwiftKey-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "FolderSync-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Showly-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AtvTools-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PocketWhip-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Terabox-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonPass-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-Aunali321": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-brosssh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-brosssh-Clone": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-InstaFel": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-InstaFel-Clone": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-Piko": [
-      "arm64-v8a"
-    ],
-    "Instagram-Piko-Clone": [
-      "arm64-v8a"
-    ],
-    "Instagram-HushGram": [
-      "arm64-v8a"
-    ],
-    "Instagram-HushGram-Clone": [
-      "arm64-v8a"
-    ],
-    "Gboard-jasonwu1994": [
-      "arm64-v8a"
-    ],
-    "Gboard-jasonwu1994-Clone": [
-      "arm64-v8a"
-    ],
-    "CalorieCounter-kondratjev": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BraveBrowser-kveld9": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Hermit-Lain": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Letterboxd-mvaishak": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Letterboxd-mvaishak-MaterialYou": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Nuvio-liongalahad-AndroidTV": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Nuvio-liongalahad-AndroidTV-Clone": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MacroDroid-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MacroDroid-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Messenger-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Messenger-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Messenger-HushMessenger": [
-      "arm64-v8a"
-    ],
-    "Messenger-HushMessenger-MaterialYou": [
-      "arm64-v8a"
-    ],
-    "LinkedIn-michii": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Cricbuzz-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "LuminaWallpapers-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Eyecon-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TickTick-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SDMaid-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Fing-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Fdroid-patchweaver": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GooglePhotos-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GooglePhotos-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GooglePhotos-AkashSriram": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Pinterest-binarymend": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Pinterest-browzomje": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "pixiv-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "pixiv-Fripe070": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ChessDotCom-Prathxm": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonMail-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonMail-SatanMerde": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonMail-dhrubonai": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonMail-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonVPN-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonVPN-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "ProtonVPN-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MicrosoftEdge-quantavil": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AliExpress-Quantro100": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Reddit-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Reddit-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Reddit-adobo": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "CapCut-riky": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Cloudflare-WARP-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "HolaVPN-rushiranpise": [
-      "arm64-v8a"
-    ],
-    "NinjaVPN-rushiranpise": [
-      "arm64-v8a"
-    ],
-    "WindscribeVPN-rushiranpise": [
-      "all"
-    ],
-    "AccuWeather-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TheWeatherChannel-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BetaManiac-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PocketCasts-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "RAR-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AmazonIndia-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Calm-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "BluetoothKeyboardAndMouse-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SendFilesToTV-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PicsArt-rushiranpise": [
-      "all"
-    ],
-    "AdobeScan-rushiranpise": [
-      "arm64-v8a"
-    ],
-    "Citymapper-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "AmazonShopping-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Termius-rushiranpise": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "KineStop-ShaunTheSheep": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SoundCloud-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "SoundCloud-kondratjev": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-Aunali321-GooglePlay": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-Aunali321-FOSS": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-Paresh-FOSS": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PlusMessenger-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-rushiranpise-GooglePlay": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-newuser7171-GooglePlay": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-newuser7171-FOSS": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "PlusMessenger-newuser7171": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-HushTelegram-FOSS": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Threads-chiggi": [
-      "arm64-v8a"
-    ],
-    "Threads-chiggi-Clone": [
-      "arm64-v8a"
-    ],
-    "Threads-HushThreads": [
-      "arm64-v8a"
-    ],
-    "TikTok-hushfeed": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TikTok-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TikTok-icysymmetra": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TikTok-kveld9": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Truecaller-Paresh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Truecaller-bufferk": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Truecaller-heval99": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitch-hooman": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitch-ajstrick81-AndroidTV": [
-      "all"
-    ],
-    "Twitter-Piko": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitter-Piko-MaterialYou": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTubeMusic-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTubeMusic-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-music-anddea": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-music-anddea-nord": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-music-anddea-mocha": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe-NordTheme": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe-MochaTheme": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-anddea": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-anddea-nord": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-anddea-mocha": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitter-Piko-NewX": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "MyExpenses-hoodles": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Telegram-HushTelegram-GooglePlay": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "aCalendar-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ]
+    "Automate-BholeyKaBhakt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "Automate",
+        "pkg-name": "com.llamalab.automate",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Speedtest-BholeyKaBhakt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "Speedtest",
+        "pkg-name": "org.zwanoo.android.speedtest",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Autosync-BholeyKaBhakt": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "Autosync",
+        "pkg-name": "com.ttxapps.autosync",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Inshorts-BholeyKaBhakt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "Inshorts",
+        "pkg-name": "com.nis.app",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "VPNify-BholeyKaBhakt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "VPNify",
+        "pkg-name": "com.vpn.free.hotspot.secure.vpnify",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Backdrops-BholeyKaBhakt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
+        "brand": "BholeyKaBhakt",
+        "app-name": "Backdrops",
+        "pkg-name": "com.backdrops.wallpapers",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AppSales-Entree3k": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Entree3k/Morning-Entree-Patches",
+        "brand": "Entree3k",
+        "app-name": "AppSales",
+        "pkg-name": "net.tsapps.appsales",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "NiagaraLauncher-Entree3k": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Entree3k/Morning-Entree-Patches",
+        "patch-folder": "niagara",
+        "brand": "Entree3k",
+        "app-name": "Niagara Launcher",
+        "pkg-name": "bitpit.launcher",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "TraktTV-IMXEren": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "IMXEren/mix-patches",
+        "patches-source-host": "gitlab",
+        "brand": "IMXEren",
+        "app-name": "trakt.TV",
+        "pkg-name": "tv.trakt.trakt",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AdGuard-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "AdGuard",
+        "pkg-name": "com.adguard.android",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "AdGuard-rushiranpise-Nightly": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "variant": "Nightly",
+        "app-name": "AdGuard",
+        "pkg-name": "com.adguard.android",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "IMDb-adobo": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "jkennethcarino/adobo",
+        "brand": "adobo",
+        "app-name": "IMDb",
+        "pkg-name": "com.imdb.mobile",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "DisneyPlus-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Disney+",
+        "pkg-name": "com.disney.disneyplus",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "PrimeVideo-ajstrick81-AndroidTV": {
+      "arches": [
+        "arm-v7a"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Prime Video",
+        "pkg-name": "com.amazon.amazonvideo.livingroom",
+        "arch": "arm-v7a",
+        "build-mode": "apk"
+      }
+    },
+    "PrimeVideo-ajstrick81-AndroidTV-Clone": {
+      "arches": [
+        "arm-v7a"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "sub-variant": "Clone",
+        "app-name": "Prime Video",
+        "pkg-name": "com.amazon.amazonvideo.livingroom",
+        "included-patches": "'Clone Prime Video'",
+        "arch": "arm-v7a",
+        "build-mode": "apk"
+      }
+    },
+    "HBOMax-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "HBO Max",
+        "pkg-name": "com.wbd.hbomax",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Peacock-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Peacock",
+        "pkg-name": "com.peacocktv.peacockandroid",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Tubi-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Tubi",
+        "pkg-name": "com.tubitv",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "ViX-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "ViX",
+        "pkg-name": "com.univision.prendetv",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "PlutoTV-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "PlutoTV",
+        "pkg-name": "tv.pluto.android",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Netflix-ajstrick81-AndroidTV": {
+      "arches": [
+        "arm-v7a"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Netflix",
+        "pkg-name": "com.netflix.ninja",
+        "arch": "arm-v7a",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleMaps-bearinmindcat": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "app-name": "Google Maps",
+        "pkg-name": "com.google.android.apps.maps",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "MoonPlusReader-binarymend": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "binarymend/morphe-patches",
+        "brand": "binarymend",
+        "app-name": "Moon+ Reader",
+        "pkg-name": "com.flyersoft.moonreader",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Symfonium-binarymend": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "binarymend/morphe-patches",
+        "brand": "binarymend",
+        "app-name": "Symfonium",
+        "pkg-name": "app.symfonik.music.player",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "CalcNote-binarymend": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "binarymend/morphe-patches",
+        "brand": "binarymend",
+        "app-name": "CalcNote",
+        "pkg-name": "com.appumstudios.calcnote",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "aCalendar-binarymend": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "binarymend/morphe-patches",
+        "brand": "binarymend",
+        "app-name": "aCalendar",
+        "pkg-name": "org.withouthat.acalendar",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "komoot-brosssh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "brosssh/morphe-patches",
+        "brand": "brosssh",
+        "app-name": "Komoot",
+        "pkg-name": "de.komoot.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Medium-bufferk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bufferk/morphe-patches",
+        "brand": "bufferk",
+        "app-name": "Medium",
+        "pkg-name": "com.medium.reader",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SwiftBackup-byehi98": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "byehi98/okish-morphe-patches",
+        "brand": "byehi98",
+        "app-name": "Swift Backup",
+        "pkg-name": "org.swiftapps.swiftbackup",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Meesho-debakarr": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "debakarr/morphe-patches",
+        "brand": "debakarr",
+        "app-name": "Meesho",
+        "pkg-name": "com.meesho.supply",
+        "included-patches": "'Sort by number of ratings'",
+        "excluded-patches": "'Install alongside original'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Flipkart-debakarr": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "debakarr/morphe-patches",
+        "brand": "debakarr",
+        "app-name": "Flipkart",
+        "pkg-name": "com.flipkart.android",
+        "included-patches": "'Sort by number of ratings'",
+        "excluded-patches": "'Install alongside original'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleRecorder-DeVanced": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Google Recorder",
+        "pkg-name": "com.google.android.apps.recorder",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "MicrosoftLens-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Microsoft Lens",
+        "pkg-name": "com.microsoft.office.officelens",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Photomath-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Photomath",
+        "pkg-name": "com.microblink.photomath",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Viber-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Viber",
+        "pkg-name": "com.viber.voip",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Strava-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Strava",
+        "pkg-name": "com.strava",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "BraveBrowser-dh6k-Beta": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "dh6k/morphe-patches",
+        "brand": "dh6k",
+        "variant": "Beta",
+        "app-name": "Brave Browser",
+        "pkg-name": "com.brave.browser_beta",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
+      }
+    },
+    "BraveBrowser-dh6k-Nightly": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "dh6k/morphe-patches",
+        "brand": "dh6k",
+        "variant": "Nightly",
+        "app-name": "Brave Browser",
+        "pkg-name": "com.brave.browser_nightly",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
+      }
+    },
+    "TitaniumBrowser-dh6k": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "dh6k/morphe-patches",
+        "brand": "dh6k",
+        "app-name": "Titanium Browser",
+        "pkg-name": "io.github.jqssun.helium",
+        "included-patches": "'Keep Titanium Extensions Child Processes Alive' 'Force highest refresh rate'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Discord-revenge": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "revenge-mod/revenge-xposed",
+        "cli-source": "JingMatrix/LSPatch",
+        "brand": "revenge",
+        "app-name": "Discord",
+        "pkg-name": "com.discord",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Discord-rain": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "raincord/rainXposed",
+        "patches-source-host": "codeberg",
+        "cli-source": "JingMatrix/LSPatch",
+        "brand": "rain",
+        "app-name": "Discord",
+        "pkg-name": "com.discord",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Discord-Venus": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "VenusIsJaded/Venus-Patches",
+        "brand": "Venus",
+        "app-name": "Discord",
+        "pkg-name": "com.discord",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GoogleNews-docbt": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "docbt/patched-up",
+        "brand": "docbt",
+        "app-name": "Google News",
+        "pkg-name": "com.google.android.apps.magazines",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Facebook-Froggo": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SapitoSucio/FroggoMorphePatches",
+        "brand": "Froggo",
+        "app-name": "Facebook",
+        "pkg-name": "com.facebook.katana",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Facebook-andrewliang25": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "andrewliang25/morphe-patches",
+        "brand": "andrewliang25",
+        "app-name": "Facebook",
+        "pkg-name": "com.facebook.katana",
+        "included-patches": "'[General] AMOLED black theme' '[Reels] Download any reel'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Facebook-HushFacebook": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushFacebook",
+        "brand": "HushFacebook",
+        "app-name": "Facebook",
+        "pkg-name": "com.facebook.katana",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Facebook-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Facebook",
+        "pkg-name": "com.facebook.katana",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ByAir-franticg33k": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "franticg33k/morphe-patches",
+        "brand": "franticg33k",
+        "app-name": "ByAir",
+        "pkg-name": "com.byairapp.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "OfflineGames-ggYasin": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "ggYasin/ggyasin-morphe-patches",
+        "brand": "ggYasin",
+        "app-name": "Offline Games",
+        "pkg-name": "com.JindoBlu.OfflineGames",
+        "included-patches": "'Fast Offline Games startup' 'In-house ad not clickable' 'In-house ad only' 'Instant in-house ad close'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "FairEmail-heval99": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heval99/Heval-Morphe-Patches",
+        "brand": "heval99",
+        "app-name": "FairEmail",
+        "pkg-name": "eu.faircode.email",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Sofascore-heval99": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heval99/Heval-Morphe-Patches",
+        "brand": "heval99",
+        "app-name": "Sofascore",
+        "pkg-name": "com.sofascore.results",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Duolingo-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Duolingo",
+        "pkg-name": "com.duolingo",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "WPSOffice-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "WPS Office",
+        "pkg-name": "cn.wps.moffice_eng",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Wallcraft-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Wallcraft",
+        "pkg-name": "com.wallpaperscraft.wallpaper",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SolidExplorer-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Solid Explorer",
+        "pkg-name": "pl.solidexplorer2",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "IconPacker-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Icon Packer",
+        "pkg-name": "cn.ommiao.iconpacker",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PodcastAddict-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Podcast Addict",
+        "pkg-name": "com.bambuna.podcastaddict",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SmartLauncher6-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "patch-folder": "smartlauncher",
+        "brand": "hoodles",
+        "app-name": "Smart Launcher 6",
+        "pkg-name": "ginlemon.flowerfree",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "MerriamWebsterDictionary-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "patch-folder": "webster",
+        "brand": "hoodles",
+        "app-name": "Merriam Webster Dictionary",
+        "pkg-name": "com.merriamwebster",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Pandora-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Pandora",
+        "pkg-name": "com.pandora.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "XRecorder-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "XRecorder",
+        "pkg-name": "videoeditor.videorecorder.screenrecorder",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "NovaLauncher-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "patch-folder": "nova",
+        "brand": "hoodles",
+        "app-name": "Nova Launcher",
+        "pkg-name": "com.teslacoilsw.launcher",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Ventusky-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Ventusky",
+        "pkg-name": "cz.ackee.ventusky",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "CamScanner-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "CamScanner",
+        "pkg-name": "com.intsig.camscanner",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GitHub-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "GitHub",
+        "pkg-name": "com.github.android",
+        "included-patches": "'AMOLED dark theme'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "HelloChinese-hoodles": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "HelloChinese",
+        "pkg-name": "com.hellochinese",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "MyFitnessPal-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "MyFitnessPal",
+        "pkg-name": "com.myfitnesspal.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PrimeVideo-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Prime Video",
+        "pkg-name": "com.amazon.avod.thirdpartyclient",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Goodreads-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Goodreads",
+        "pkg-name": "com.goodreads",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AdobeLightroom-hoodles": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "patch-folder": "lightroom",
+        "brand": "hoodles",
+        "app-name": "Adobe Lightroom",
+        "pkg-name": "com.adobe.lrmobile",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Xodo-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Xodo",
+        "pkg-name": "com.xodo.pdf.reader",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Rumble-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Rumble",
+        "pkg-name": "com.rumble.battles",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "BatteryGuru-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Battery Guru",
+        "pkg-name": "com.paget96.batteryguru",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "MoneyManager-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Money Manager",
+        "pkg-name": "com.realbyteapps.moneymanagerfree",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Poweramp-hooman": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Poweramp",
+        "pkg-name": "com.maxmpz.audioplayer",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "AT4KLauncher-hooman-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "variant": "Android TV",
+        "app-name": "AT4K Launcher",
+        "pkg-name": "com.overdevs.at4k",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "ProjectivyLauncher-hooman-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "variant": "Android TV",
+        "app-name": "Projectivy Launcher",
+        "pkg-name": "com.spocky.projengmenu",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "AdobeAcrobat-hooman": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "patch-folder": "acrobat",
+        "brand": "hooman",
+        "app-name": "Adobe Acrobat",
+        "pkg-name": "com.adobe.reader",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "InShot-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "InShot",
+        "pkg-name": "com.camerasideas.instashot",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Todoist-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Todoist",
+        "pkg-name": "com.todoist",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Tumblr-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Tumblr",
+        "pkg-name": "com.tumblr",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GooglePhone-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Google Phone",
+        "pkg-name": "com.google.android.dialer",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "MicrosoftSwiftKey-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Microsoft Swiftkey",
+        "pkg-name": "com.touchtype.swiftkey",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "FolderSync-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "FolderSync",
+        "pkg-name": "dk.tacit.android.foldersync.lite",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Showly-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Showly",
+        "pkg-name": "com.michaldrabik.showly2",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AtvTools-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "atvTools",
+        "pkg-name": "dev.vodik7.atvtools",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PocketWhip-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Pocket Whip",
+        "pkg-name": "com.greenstone.pocketwhip",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Terabox-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "TeraBox",
+        "pkg-name": "com.dubox.drive",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonPass-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Proton Pass",
+        "pkg-name": "proton.android.pass",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-Aunali321": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Aunali321/ReVancedExperiments",
+        "cli-source": "ReVanced/revanced-cli",
+        "brand": "Aunali321",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-brosssh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "brosssh/morphe-patches",
+        "brand": "brosssh",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-brosssh-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "brosssh/morphe-patches",
+        "brand": "brosssh",
+        "variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'Clone'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-InstaFel": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "instafel/pc-rel",
+        "cli-source": "instafel/p-rel",
+        "brand": "Instafel",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel'",
+        "arch": "both",
+        "build-mode": "apk",
+        "dpi": "480dpi nodpi anydpi auto"
+      }
+    },
+    "Instagram-InstaFel-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "instafel/pc-rel",
+        "cli-source": "instafel/p-rel",
+        "brand": "Instafel",
+        "variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'unlock_developer_options' 'remove_snooze_warning' 'remove_ads' 'amoled_theme' 'instafel' 'clone'",
+        "arch": "both",
+        "build-mode": "apk",
+        "dpi": "480dpi nodpi anydpi auto"
+      }
+    },
+    "Instagram-Piko": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "Instagram-Piko-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "sub-variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'Clone'",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-HushGram": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushGram",
+        "brand": "HushGram",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "excluded-patches": "'Install next to Instagram'",
+        "inclusive-patches": "true",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-HushGram-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushGram",
+        "brand": "HushGram",
+        "sub-variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "inclusive-patches": "true",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Gboard-jasonwu1994": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "app-name": "Gboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "excluded-patches": "'Package Rename'",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "Gboard-jasonwu1994-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "variant": "Clone",
+        "app-name": "Gboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "CalorieCounter-kondratjev": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kondratjev/morphe-patches",
+        "brand": "kondratjev",
+        "app-name": "Calorie Counter",
+        "pkg-name": "com.fatsecret.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "BraveBrowser-kveld9": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kveld9/kveld-morphe-patches",
+        "brand": "kveld9",
+        "app-name": "Brave Browser",
+        "pkg-name": "com.brave.browser",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
+      }
+    },
+    "Hermit-Lain": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kiraio-moe/Lain-Patches",
+        "patch-folder": "hermit",
+        "brand": "Lain",
+        "app-name": "Hermit",
+        "pkg-name": "com.chimbori.hermitcrab",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Letterboxd-mvaishak": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "mvaishak/letterboxd-morphe-patches",
+        "brand": "mvaishak",
+        "app-name": "Letterboxd",
+        "pkg-name": "com.letterboxd.letterboxd",
+        "excluded-patches": "'Material You theme'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Letterboxd-mvaishak-MaterialYou": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "mvaishak/letterboxd-morphe-patches",
+        "brand": "mvaishak",
+        "variant": "Material You",
+        "app-name": "Letterboxd",
+        "pkg-name": "com.letterboxd.letterboxd",
+        "included-patches": "'Material You theme'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Nuvio-liongalahad-AndroidTV": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "liongalahad/nuviotv-morphe-patches",
+        "brand": "liongalahad",
+        "variant": "Android TV",
+        "app-name": "Nuvio",
+        "pkg-name": "com.nuvio.tv",
+        "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
+        "excluded-patches": "'Side-by-side installation'",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "app-full-universal-release\\.apk"
+      }
+    },
+    "Nuvio-liongalahad-AndroidTV-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "liongalahad/nuviotv-morphe-patches",
+        "brand": "liongalahad",
+        "variant": "Android TV",
+        "sub-variant": "Clone",
+        "app-name": "Nuvio",
+        "pkg-name": "com.nuvio.tv",
+        "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "app-full-universal-release\\.apk"
+      }
+    },
+    "MacroDroid-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "MacroDroid",
+        "pkg-name": "com.arlosoft.macrodroid",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "MacroDroid-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "MacroDroid",
+        "pkg-name": "com.arlosoft.macrodroid",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Messenger-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Messenger",
+        "pkg-name": "com.facebook.orca",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Messenger-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Messenger",
+        "pkg-name": "com.facebook.orca",
+        "excluded-patches": "'Remove Meta AI' 'Hide inbox stories and notes tray' 'Hide inbox subtabs' 'Hide Facebook buttons'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Messenger-HushMessenger": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushMessenger",
+        "brand": "HushMessenger",
+        "app-name": "Messenger",
+        "pkg-name": "com.facebook.orca",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Messenger-HushMessenger-MaterialYou": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushMessenger",
+        "brand": "HushMessenger",
+        "variant": "Material You",
+        "app-name": "Messenger",
+        "pkg-name": "com.facebook.orca",
+        "included-patches": "'Material You theme'",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "LinkedIn-michii": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heyymichii/michii-patches",
+        "brand": "michii",
+        "app-name": "LinkedIn",
+        "pkg-name": "com.linkedin.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Cricbuzz-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Cricbuzz",
+        "pkg-name": "com.cricbuzz.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "LuminaWallpapers-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Lumina Wallpapers",
+        "pkg-name": "com.lumina.wallpapers",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Eyecon-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Eyecon",
+        "pkg-name": "com.eyecon.global",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TickTick-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "TickTick",
+        "pkg-name": "com.ticktick.task",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SDMaid-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "patch-folder": "sdmaidse",
+        "brand": "Paresh",
+        "app-name": "SD Maid 2/SE",
+        "pkg-name": "eu.darken.sdmse",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Fing-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Fing",
+        "pkg-name": "com.overlook.android.fing",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Fdroid-patchweaver": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "ispacecase/patchweaver",
+        "brand": "patchweaver",
+        "app-name": "F-Droid",
+        "pkg-name": "org.fdroid.fdroid",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GooglePhotos-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "GooglePhotos-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "included-patches": "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "GooglePhotos-AkashSriram": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Akash-Sriram/morphe-google-photos",
+        "brand": "AkashSriram",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Pinterest-binarymend": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "binarymend/morphe-patches",
+        "brand": "binarymend",
+        "app-name": "Pinterest",
+        "pkg-name": "com.pinterest",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Pinterest-browzomje": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "browzomje/browzomje-patches",
+        "brand": "browzomje",
+        "app-name": "Pinterest",
+        "pkg-name": "com.pinterest",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "pixiv-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "pixiv",
+        "pkg-name": "jp.pxv.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "pixiv-Fripe070": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Fripe070/PixivPatches",
+        "brand": "Fripe070",
+        "app-name": "pixiv",
+        "pkg-name": "jp.pxv.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ChessDotCom-Prathxm": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "PrathxmOp/Prathxm-Patches",
+        "brand": "Prathxm",
+        "app-name": "Chess.com",
+        "pkg-name": "com.chess",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonMail-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Proton Mail",
+        "pkg-name": "ch.protonmail.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonMail-SatanMerde": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SatanMerde/D-moniakPatches",
+        "brand": "SatanMerde",
+        "app-name": "Proton Mail",
+        "pkg-name": "ch.protonmail.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonMail-dhrubonai": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "dhrubonai/morphe-patches",
+        "brand": "dhrubonai",
+        "app-name": "Proton Mail",
+        "pkg-name": "ch.protonmail.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonMail-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Proton Mail",
+        "pkg-name": "ch.protonmail.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonVPN-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "Proton VPN",
+        "pkg-name": "ch.protonvpn.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonVPN-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Proton VPN",
+        "pkg-name": "ch.protonvpn.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProtonVPN-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Proton VPN",
+        "pkg-name": "ch.protonvpn.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "MicrosoftEdge-quantavil": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "quantavil/edge-morphe-patches",
+        "brand": "quantavil",
+        "app-name": "Microsoft Edge",
+        "pkg-name": "com.microsoft.emmx",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AliExpress-Quantro100": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Quantro100/Morphe-patches",
+        "brand": "Quantro100",
+        "app-name": "AliExpress",
+        "pkg-name": "com.alibaba.aliexpresshd",
+        "included-patches": "'Enable image saving' 'Disable splash screen'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Reddit-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "brand": "Morphe",
+        "app-name": "Reddit",
+        "pkg-name": "com.reddit.frontpage",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Reddit-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "Reddit",
+        "pkg-name": "com.reddit.frontpage",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "Reddit-adobo": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jkennethcarino/adobo",
+        "brand": "adobo",
+        "app-name": "Reddit",
+        "pkg-name": "com.reddit.frontpage",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "CapCut-riky": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "riky-dev/morphe-patches",
+        "brand": "riky",
+        "app-name": "CapCut",
+        "pkg-name": "com.lemon.lvoverseas",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Cloudflare-WARP-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Cloudflare WARP",
+        "pkg-name": "com.cloudflare.onedotonedotonedotone",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "HolaVPN-rushiranpise": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Hola VPN",
+        "pkg-name": "org.hola.play",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "NinjaVPN-rushiranpise": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "patch-folder": "ninjvapn",
+        "brand": "rushiranpise",
+        "app-name": "Ninja VPN",
+        "pkg-name": "app.ninjavpn.android",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "WindscribeVPN-rushiranpise": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Windscribe VPN",
+        "pkg-name": "com.windscribe.vpn",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "AccuWeather-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "AccuWeather",
+        "pkg-name": "com.accuweather.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TheWeatherChannel-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "The Weather Channel",
+        "pkg-name": "com.weather.Weather",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "BetaManiac-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Beta Maniac",
+        "pkg-name": "it.mirko.beta",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PocketCasts-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Pocket Casts",
+        "pkg-name": "au.com.shiftyjelly.pocketcasts",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "RAR-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "RAR",
+        "pkg-name": "com.rarlab.rar",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AmazonIndia-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Amazon India",
+        "pkg-name": "in.amazon.mShop.android.shopping",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Calm-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Calm",
+        "pkg-name": "com.calm.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "BluetoothKeyboardAndMouse-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Bluetooth Keyboard & Mouse",
+        "pkg-name": "io.appground.blek",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SendFilesToTV-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Send Files to TV",
+        "pkg-name": "com.yablio.sendfilestotv",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PicsArt-rushiranpise": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "PicsArt",
+        "pkg-name": "com.picsart.studio",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "AdobeScan-rushiranpise": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Adobe Scan",
+        "pkg-name": "com.adobe.scan.android",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Citymapper-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Citymapper",
+        "pkg-name": "com.citymapper.app.release",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "AmazonShopping-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Amazon Shopping",
+        "pkg-name": "com.amazon.mShop.android.shopping",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Termius-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "patch-folder": "serverauditor",
+        "brand": "rushiranpise",
+        "app-name": "Termius",
+        "pkg-name": "com.server.auditor.ssh.client",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "KineStop-ShaunTheSheep": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "shaun-the-sheep-patches/morphe-patches",
+        "brand": "ShaunTheSheep",
+        "app-name": "KineStop",
+        "pkg-name": "com.urbandroid.kinestop",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SoundCloud-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "SoundCloud",
+        "pkg-name": "com.soundcloud.android",
+        "included-patches": "'AMOLED dark theme'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SoundCloud-kondratjev": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kondratjev/morphe-patches",
+        "brand": "kondratjev",
+        "app-name": "SoundCloud",
+        "pkg-name": "com.soundcloud.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-Aunali321-GooglePlay": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Aunali321/ReVancedExperiments",
+        "cli-source": "ReVanced/revanced-cli",
+        "brand": "Aunali321",
+        "variant": "Google Play",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-Aunali321-FOSS": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Aunali321/ReVancedExperiments",
+        "cli-source": "ReVanced/revanced-cli",
+        "brand": "Aunali321",
+        "variant": "FOSS",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger.web",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-Paresh-FOSS": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "variant": "FOSS",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger.web",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PlusMessenger-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Plus Messenger",
+        "pkg-name": "org.telegram.plus",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-rushiranpise-GooglePlay": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "variant": "Google Play",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-newuser7171-GooglePlay": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "newuser7171/telegram-morphe-patches-",
+        "brand": "newuser7171",
+        "variant": "Google Play",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-newuser7171-FOSS": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "newuser7171/telegram-morphe-patches-",
+        "brand": "newuser7171",
+        "variant": "FOSS",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger.web",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "PlusMessenger-newuser7171": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "newuser7171/telegram-morphe-patches-",
+        "brand": "newuser7171",
+        "app-name": "Plus Messenger",
+        "pkg-name": "org.telegram.plus",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-HushTelegram-FOSS": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushTelegram",
+        "brand": "HushTelegram",
+        "variant": "FOSS",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger.web",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Threads-chiggi": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "durgesh0505/chiggi_morphe_patches",
+        "patch-folder": "threads",
+        "brand": "chiggi",
+        "app-name": "Threads",
+        "pkg-name": "com.instagram.barcelona",
+        "excluded-patches": "'Change app name' 'Change package name'",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Threads-chiggi-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "durgesh0505/chiggi_morphe_patches",
+        "patch-folder": "threads",
+        "brand": "chiggi",
+        "variant": "Clone",
+        "app-name": "Threads",
+        "pkg-name": "com.instagram.barcelona",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Threads-HushThreads": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushThreads",
+        "patch-folder": "threads",
+        "brand": "HushThreads",
+        "app-name": "Threads",
+        "pkg-name": "com.instagram.barcelona",
+        "inclusive-patches": "true",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "TikTok-hushfeed": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/hushfeed",
+        "brand": "hushfeed",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "excluded-patches": "'Remove unused language packs' 'Change app name'",
+        "inclusive-patches": "true",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TikTok-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/hxreborn-tiktok-patches",
+        "brand": "hxreborn",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TikTok-icysymmetra": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "icysymmetra/tiktok-patches-for-morphe",
+        "brand": "icysymmetra",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TikTok-kveld9": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kveld9/kveld-morphe-patches",
+        "brand": "kveld9",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Truecaller-Paresh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "Truecaller",
+        "pkg-name": "com.truecaller",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Truecaller-bufferk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bufferk/morphe-patches",
+        "brand": "bufferk",
+        "app-name": "Truecaller",
+        "pkg-name": "com.truecaller",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Truecaller-heval99": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heval99/Heval-Morphe-Patches",
+        "brand": "heval99",
+        "app-name": "Truecaller",
+        "pkg-name": "com.truecaller",
+        "included-patches": "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Twitch-hooman": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "arandomhooman/hoomans-morphe-patches",
+        "brand": "hooman",
+        "app-name": "Twitch",
+        "pkg-name": "tv.twitch.android.app",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Twitch-ajstrick81-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "ajstrick81/morphe-androidtv-patches",
+        "patch-folder": "twitchatv",
+        "brand": "ajstrick81",
+        "variant": "Android TV",
+        "app-name": "Twitch",
+        "pkg-name": "tv.twitch.android.app",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Twitter-Piko": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "app-name": "Twitter",
+        "pkg-name": "com.twitter.android",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Twitter-Piko-MaterialYou": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "variant": "Material You",
+        "app-name": "Twitter",
+        "pkg-name": "com.twitter.android",
+        "included-patches": "'Bring back twitter' 'Dynamic color'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "music",
+        "brand": "Morphe",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "music",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "youtube-music-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "music",
+        "brand": "anddea",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "youtube-music-anddea-nord": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "music",
+        "brand": "anddea",
+        "variant": "Nord Theme",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "youtube-music-anddea-mocha": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "music",
+        "brand": "anddea",
+        "variant": "Mocha Theme",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe-NordTheme": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "variant": "Nord Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe-MochaTheme": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "variant": "Mocha Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "youtube-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "youtube",
+        "brand": "anddea",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "youtube-anddea-nord": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "youtube",
+        "brand": "anddea",
+        "variant": "Nord Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "included-patches": "'MaterialYou'",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "youtube-anddea-mocha": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "youtube",
+        "brand": "anddea",
+        "variant": "Mocha Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "included-patches": "'MaterialYou'",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Twitter-Piko-NewX": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko-newx",
+        "brand": "Piko",
+        "variant": "NewX",
+        "app-name": "Twitter",
+        "pkg-name": "com.twitter.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "MyExpenses-hoodles": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hoo-dles/morphe-patches",
+        "brand": "hoodles",
+        "app-name": "My Expenses",
+        "pkg-name": "org.totschnig.myexpenses",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Telegram-HushTelegram-GooglePlay": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushTelegram",
+        "brand": "HushTelegram",
+        "variant": "Google Play",
+        "app-name": "Telegram",
+        "pkg-name": "org.telegram.messenger",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "aCalendar-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "aCalendar",
+        "pkg-name": "org.withouthat.acalendar",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    }
   },
   "beta": {
-    "Instagram-brosssh": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-brosssh-Clone": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Instagram-Piko": [
-      "arm64-v8a"
-    ],
-    "Instagram-Piko-Clone": [
-      "arm64-v8a"
-    ],
-    "Gboard-jasonwu1994": [
-      "arm64-v8a"
-    ],
-    "Gboard-jasonwu1994-Clone": [
-      "arm64-v8a"
-    ],
-    "Nuvio-liongalahad-AndroidTV": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Nuvio-liongalahad-AndroidTV-Clone": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "GooglePhotos-DeVanced": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Reddit-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Reddit-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TikTok-hxreborn": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "TikTok-icysymmetra": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Truecaller-bufferk": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Truecaller-heval99": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitter-Piko": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "Twitter-Piko-MaterialYou": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTubeMusic-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTubeMusic-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-music-anddea": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "YouTube-Morphe-Experimental": [
-      "arm-v7a",
-      "arm64-v8a"
-    ],
-    "youtube-anddea": [
-      "arm-v7a",
-      "arm64-v8a"
-    ]
+    "Instagram-brosssh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "brosssh/morphe-patches",
+        "brand": "brosssh",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-brosssh-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "brosssh/morphe-patches",
+        "brand": "brosssh",
+        "variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'Clone'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Instagram-Piko": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "Instagram-Piko-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "sub-variant": "Clone",
+        "app-name": "Instagram",
+        "pkg-name": "com.instagram.android",
+        "included-patches": "'Clone'",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Gboard-jasonwu1994": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "app-name": "Gboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "excluded-patches": "'Package Rename'",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "Gboard-jasonwu1994-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "variant": "Clone",
+        "app-name": "Gboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "Nuvio-liongalahad-AndroidTV": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "liongalahad/nuviotv-morphe-patches",
+        "brand": "liongalahad",
+        "variant": "Android TV",
+        "app-name": "Nuvio",
+        "pkg-name": "com.nuvio.tv",
+        "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
+        "excluded-patches": "'Side-by-side installation'",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "app-full-universal-release\\.apk"
+      }
+    },
+    "Nuvio-liongalahad-AndroidTV-Clone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "liongalahad/nuviotv-morphe-patches",
+        "brand": "liongalahad",
+        "variant": "Android TV",
+        "sub-variant": "Clone",
+        "app-name": "Nuvio",
+        "pkg-name": "com.nuvio.tv",
+        "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
+        "arch": "both",
+        "build-mode": "apk",
+        "github-regex": "app-full-universal-release\\.apk"
+      }
+    },
+    "GooglePhotos-DeVanced": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "RookieEnough/De-Vanced",
+        "brand": "DeVanced",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Reddit-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "brand": "Morphe",
+        "app-name": "Reddit",
+        "pkg-name": "com.reddit.frontpage",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Reddit-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "Reddit",
+        "pkg-name": "com.reddit.frontpage",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "TikTok-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/hxreborn-tiktok-patches",
+        "brand": "hxreborn",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TikTok-icysymmetra": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "icysymmetra/tiktok-patches-for-morphe",
+        "brand": "icysymmetra",
+        "app-name": "TikTok",
+        "pkg-name": "com.zhiliaoapp.musically",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Truecaller-bufferk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "bufferk/morphe-patches",
+        "brand": "bufferk",
+        "app-name": "Truecaller",
+        "pkg-name": "com.truecaller",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Truecaller-heval99": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heval99/Heval-Morphe-Patches",
+        "brand": "heval99",
+        "app-name": "Truecaller",
+        "pkg-name": "com.truecaller",
+        "included-patches": "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Twitter-Piko": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "app-name": "Twitter",
+        "pkg-name": "com.twitter.android",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Twitter-Piko-MaterialYou": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "crimera/piko",
+        "brand": "Piko",
+        "variant": "Material You",
+        "app-name": "Twitter",
+        "pkg-name": "com.twitter.android",
+        "included-patches": "'Bring back twitter' 'Dynamic color'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "music",
+        "brand": "Morphe",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "music",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "youtube-music-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "music",
+        "brand": "anddea",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-Morphe-Experimental": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "MorpheApp/morphe-patches",
+        "patch-folder": "youtube",
+        "brand": "Morphe",
+        "variant": "Experimental",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "arch": "both",
+        "build-mode": "both",
+        "version": "exp"
+      }
+    },
+    "youtube-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "patch-folder": "youtube",
+        "brand": "anddea",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    }
   }
 }

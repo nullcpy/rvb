@@ -492,7 +492,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -547,7 +547,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -558,7 +558,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -1067,7 +1067,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-HushGram": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
@@ -1080,7 +1080,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-HushGram-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
@@ -1252,7 +1252,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1264,7 +1264,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1971,7 +1971,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
@@ -2040,7 +2040,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
