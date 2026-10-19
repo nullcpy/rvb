@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-19T14:24:31Z"
+    "publishedAt": "2026-10-19T16:29:57Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -17907,7 +17907,7 @@
       "brandName": "bearinmindcat",
       "variant": null,
       "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "com.google.android.apps.maps",
       "patchSources": [
         "bearinmindcat/patches-2.5.5.mpp"
       ],
@@ -17923,8 +17923,6 @@
         "Black theme",
         "Blue pin",
         "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
         "Customization screen",
         "Flock cameras",
         "Hide ads and clutter",
@@ -17941,10 +17939,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG support"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -17957,7 +17956,7 @@
       "brandName": "bearinmindcat",
       "variant": null,
       "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "com.google.android.apps.maps",
       "patchSources": [
         "bearinmindcat/patches-2.5.5.mpp"
       ],
@@ -17973,8 +17972,6 @@
         "Black theme",
         "Blue pin",
         "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
         "Customization screen",
         "Flock cameras",
         "Hide ads and clutter",
@@ -17991,10 +17988,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG support"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -24641,7 +24639,7 @@
       "brandName": "bearinmindcat",
       "variant": null,
       "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "com.google.android.apps.maps",
       "patchSources": [
         "bearinmindcat/patches-2.5.5.mpp"
       ],
@@ -24657,8 +24655,6 @@
         "Black theme",
         "Blue pin",
         "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
         "Customization screen",
         "Flock cameras",
         "Hide ads and clutter",
@@ -24677,8 +24673,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -24691,7 +24687,7 @@
       "brandName": "bearinmindcat",
       "variant": null,
       "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "com.google.android.apps.maps",
       "patchSources": [
         "bearinmindcat/patches-2.5.5.mpp"
       ],
@@ -24707,8 +24703,6 @@
         "Black theme",
         "Blue pin",
         "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
         "Customization screen",
         "Flock cameras",
         "Hide ads and clutter",
@@ -24727,110 +24721,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
-    },
-    "google-maps-bearinmindcat-clone-v26.36.04.973607363-arm-v7a.apk": {
-      "name": "google-maps-bearinmindcat-clone",
-      "version": "26.36.04.973607363",
-      "appKey": "googlemaps",
-      "appName": "Google Maps",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "bearinmindcat",
-      "brandName": "bearinmindcat",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps.microg",
-      "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
-      ],
-      "appliedPatches": [
-        "120 refresh rate",
-        "Account sheet cleanup",
-        "Any media app",
-        "Avoid Flock cameras",
-        "Better offline maps",
-        "Black theme",
-        "Blue pin",
-        "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
-        "Customization screen",
-        "Flock cameras",
-        "Hide ads and clutter",
-        "Legacy icon",
-        "Location provider toggle",
-        "Offline saved places",
-        "Proxy",
-        "Rectangle shapes",
-        "Remove permissions",
-        "Remove sign-in prompts",
-        "Remove telemetry",
-        "Speed cameras",
-        "Speeding chime",
-        "Trim account menu",
-        "Waze alerts",
-        "Zoom controls in navigation",
-        "Power saving mode",
-        "Add microG support"
-      ],
-      "originBuild": "260316",
-      "publishedAt": "2026-10-19T14:24:16Z"
-    },
-    "google-maps-bearinmindcat-clone-v26.36.04.973607363-arm64-v8a.apk": {
-      "name": "google-maps-bearinmindcat-clone",
-      "version": "26.36.04.973607363",
-      "appKey": "googlemaps",
-      "appName": "Google Maps",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "bearinmindcat",
-      "brandName": "bearinmindcat",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "org.ungoogled.android.apps.maps.microg",
-      "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
-      ],
-      "appliedPatches": [
-        "120 refresh rate",
-        "Account sheet cleanup",
-        "Any media app",
-        "Avoid Flock cameras",
-        "Better offline maps",
-        "Black theme",
-        "Blue pin",
-        "Bypass Play Services checks",
-        "Change app name",
-        "Change package name",
-        "Customization screen",
-        "Flock cameras",
-        "Hide ads and clutter",
-        "Legacy icon",
-        "Location provider toggle",
-        "Offline saved places",
-        "Proxy",
-        "Rectangle shapes",
-        "Remove permissions",
-        "Remove sign-in prompts",
-        "Remove telemetry",
-        "Speed cameras",
-        "Speeding chime",
-        "Trim account menu",
-        "Waze alerts",
-        "Zoom controls in navigation",
-        "Power saving mode",
-        "Add microG support"
-      ],
-      "originBuild": "260316",
-      "publishedAt": "2026-10-19T14:24:16Z"
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -24859,6 +24751,208 @@
       ],
       "originBuild": "260316",
       "publishedAt": "2026-10-19T14:24:16Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled-microg",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": "MicroG",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled-microg",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": "MicroG",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260317",
+      "publishedAt": "2026-10-19T16:29:33Z"
     }
   }
 }
