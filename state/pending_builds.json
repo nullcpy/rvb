@@ -1,4 +1,62 @@
 {
-  "stable": {},
-  "beta": {}
+  "stable": {
+    "GoogleMaps-bearinmindcat-UnGoogled": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "f2f92b3e00879e60164d7d59a102e204cb3aaaef"
+    },
+    "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "a0457834e4f56b4687fede695eb0d914f58cfc56"
+    },
+    "GoogleKeyboard-jasonwu1994": {
+      "reason": "new",
+      "arches": [
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "d51c1c93bb9e8ea28dde00a8ee40981112172d37"
+    },
+    "GoogleKeyboard-jasonwu1994-Clone": {
+      "reason": "new",
+      "arches": [
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "a97e08ad479d9543bdf148a8d564583614979a67"
+    }
+  },
+  "beta": {
+    "GoogleKeyboard-jasonwu1994": {
+      "reason": "new",
+      "arches": [
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "d51c1c93bb9e8ea28dde00a8ee40981112172d37"
+    },
+    "GoogleKeyboard-jasonwu1994-Clone": {
+      "reason": "new",
+      "arches": [
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "a97e08ad479d9543bdf148a8d564583614979a67"
+    }
+  }
 }
