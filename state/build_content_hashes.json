@@ -52,8 +52,18 @@
     "pinterest-browzomje-v14.39.0-arm-v7a": "f16dac138ca0545befb617c16b2a41ea",
     "threads-hushthreads-v450.0.0.51.78-arm64-v8a": "3305039720ee8d3ca3d2ff1b8a6ebc12",
     "facebook-hushfacebook-v582.0.0.50.54-arm64-v8a": "81d6cec71150b24902e13106a03237ba",
-    "fairemail-heval99-v1.2338-arm-v7a": "9237046705640c28b9819eb04c435557",
-    "fairemail-heval99-v1.2338-arm64-v8a": "f8ef6700595633e92c01c56957b763cd",
+    "fairemail-heval99-v1.2338-arm-v7a": {
+      "hash": "9237046705640c28b9819eb04c435557",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "fairemail-heval99-v1.2338-arm64-v8a": {
+      "hash": "f8ef6700595633e92c01c56957b763cd",
+      "kinds": [
+        "apk"
+      ]
+    },
     "swift-backup-byehi98-v5.1.0-arm64-v8a": "9da253e6e2227294b8333bf1ced6ab0b",
     "swift-backup-byehi98-v5.1.0-arm-v7a": "6e2aea76e5aaba2ee772d2ef5369e0c2",
     "google-maps-bearinmindcat-v26.36.04.973607363-arm-v7a": "a470d8fcfe08bdaeaa6647b045912092",
@@ -165,8 +175,20 @@
     "proton-vpn-hxreborn-v5.20.74.0-arm-v7a": "a994eb2f08057d8a84d3cc3134f7b002",
     "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a": "6130e7e6050b642bf7a3ee517907b132",
     "gboard-jasonwu1994-v18.0.3.954559732-release-arm64-v8a-arm64-v8a": "e2c9c881633618cf49c43cadf10cca49",
-    "truecaller-heval99-v26.40.5-arm64-v8a": "5b400dde59a88e9043a0bb10f6bb0fed",
-    "truecaller-heval99-v26.40.5-arm-v7a": "0630cb3a7c6dd3d66ef24d6ec994f945",
+    "truecaller-heval99-v26.40.5-arm64-v8a": {
+      "hash": "b4e245473baf9adee31d4b930c1d6cd6",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.40.5-arm-v7a": {
+      "hash": "97d83f9bd6b49d49b70ae311253f2b94",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
     "linkedin-michii-v4.1.1261-arm-v7a": "23ec49d5fb6631dbd24e9aeb28740581",
     "linkedin-michii-v4.1.1261-arm64-v8a": "c0df02391547f2da91e56ebce482200c",
     "facebook-hushfacebook-v583.0.0.39.55-arm64-v8a": "35077a932e5f17c65e88b4c9ddf6de08",
@@ -193,6 +215,18 @@
     "acalendar-hxreborn-v2.9.5-arm64-v8a": "51127fc8c37b563a6d16dbecb106ca35",
     "acalendar-hxreborn-v2.9.5-arm-v7a": "51127fc8c37b563a6d16dbecb106ca35",
     "discord-venus-v349.9-Stable-arm64-v8a": "773effcb9a4fbee1e6e3c9d8de33091b",
-    "discord-venus-v349.9-Stable-arm-v7a": "fb13838e15f9147381dbe7e0a5032bf5"
+    "discord-venus-v349.9-Stable-arm-v7a": "fb13838e15f9147381dbe7e0a5032bf5",
+    "sofascore-heval99-v26.10.05-arm-v7a": {
+      "hash": "e5519adb6e81e128e7802009af5d3e1b",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.05-arm64-v8a": {
+      "hash": "33d3d5d77e1170418beb00db5a6cae07",
+      "kinds": [
+        "apk"
+      ]
+    }
   }
 }
