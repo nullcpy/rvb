@@ -104,7 +104,6 @@
       ],
       "cfg": {
         "patches-source": "Entree3k/Morning-Entree-Patches",
-        "patch-folder": "niagara",
         "brand": "Entree3k",
         "app-name": "Niagara Launcher",
         "pkg-name": "bitpit.launcher",
@@ -820,7 +819,6 @@
       ],
       "cfg": {
         "patches-source": "hoo-dles/morphe-patches",
-        "patch-folder": "smartlauncher",
         "brand": "hoodles",
         "app-name": "Smart Launcher 6",
         "pkg-name": "ginlemon.flowerfree",
@@ -835,7 +833,6 @@
       ],
       "cfg": {
         "patches-source": "hoo-dles/morphe-patches",
-        "patch-folder": "webster",
         "brand": "hoodles",
         "app-name": "Merriam Webster Dictionary",
         "pkg-name": "com.merriamwebster",
@@ -878,7 +875,6 @@
       ],
       "cfg": {
         "patches-source": "hoo-dles/morphe-patches",
-        "patch-folder": "nova",
         "brand": "hoodles",
         "app-name": "Nova Launcher",
         "pkg-name": "com.teslacoilsw.launcher",
@@ -990,7 +986,6 @@
       ],
       "cfg": {
         "patches-source": "hoo-dles/morphe-patches",
-        "patch-folder": "lightroom",
         "brand": "hoodles",
         "app-name": "Adobe Lightroom",
         "pkg-name": "com.adobe.lrmobile",
@@ -1101,7 +1096,6 @@
       ],
       "cfg": {
         "patches-source": "arandomhooman/hoomans-morphe-patches",
-        "patch-folder": "acrobat",
         "brand": "hooman",
         "app-name": "Adobe Acrobat",
         "pkg-name": "com.adobe.reader",
@@ -1242,7 +1236,6 @@
       ],
       "cfg": {
         "patches-source": "hxreborn/morphe-patches",
-        "patch-folder": "terabox",
         "brand": "hxreborn",
         "app-name": "TeraBox",
         "pkg-name": "com.dubox.drive",
@@ -1257,7 +1250,6 @@
       ],
       "cfg": {
         "patches-source": "hxreborn/morphe-patches",
-        "patch-folder": "protonpass",
         "brand": "hxreborn",
         "app-name": "Proton Pass",
         "pkg-name": "proton.android.pass",
@@ -1467,7 +1459,6 @@
       ],
       "cfg": {
         "patches-source": "kiraio-moe/Lain-Patches",
-        "patch-folder": "hermit",
         "brand": "Lain",
         "app-name": "Hermit",
         "pkg-name": "com.chimbori.hermitcrab",
@@ -1710,7 +1701,6 @@
       "cfg": {
         "patches-source": "Paresh-Maheshwari/paresh-patches",
         "patches-source-host": "gitlab",
-        "patch-folder": "sdmaidse",
         "brand": "Paresh",
         "app-name": "SD Maid 2/SE",
         "pkg-name": "eu.darken.sdmse",
@@ -2079,7 +2069,6 @@
       ],
       "cfg": {
         "patches-source": "rushiranpise/morphe-patches",
-        "patch-folder": "ninjvapn",
         "brand": "rushiranpise",
         "app-name": "Ninja VPN",
         "pkg-name": "app.ninjavpn.android",
@@ -2287,7 +2276,6 @@
       ],
       "cfg": {
         "patches-source": "rushiranpise/morphe-patches",
-        "patch-folder": "serverauditor",
         "brand": "rushiranpise",
         "app-name": "Termius",
         "pkg-name": "com.server.auditor.ssh.client",
@@ -2481,7 +2469,6 @@
       ],
       "cfg": {
         "patches-source": "durgesh0505/chiggi_morphe_patches",
-        "patch-folder": "threads",
         "brand": "chiggi",
         "app-name": "Threads",
         "pkg-name": "com.instagram.barcelona",
@@ -2496,7 +2483,6 @@
       ],
       "cfg": {
         "patches-source": "durgesh0505/chiggi_morphe_patches",
-        "patch-folder": "threads",
         "brand": "chiggi",
         "variant": "Clone",
         "app-name": "Threads",
@@ -2511,7 +2497,6 @@
       ],
       "cfg": {
         "patches-source": "SysAdminDoc/HushThreads",
-        "patch-folder": "threads",
         "brand": "HushThreads",
         "app-name": "Threads",
         "pkg-name": "com.instagram.barcelona",
@@ -2642,7 +2627,6 @@
       ],
       "cfg": {
         "patches-source": "ajstrick81/morphe-androidtv-patches",
-        "patch-folder": "twitchatv",
         "brand": "ajstrick81",
         "variant": "Android TV",
         "app-name": "Twitch",
@@ -2688,7 +2672,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "music",
         "brand": "Morphe",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
@@ -2703,7 +2686,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "music",
         "brand": "Morphe",
         "variant": "Experimental",
         "app-name": "YouTube Music",
@@ -2720,7 +2702,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "music",
         "brand": "anddea",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
@@ -2736,7 +2717,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "music",
         "brand": "anddea",
         "variant": "Nord Theme",
         "app-name": "YouTube Music",
@@ -2753,7 +2733,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "music",
         "brand": "anddea",
         "variant": "Mocha Theme",
         "app-name": "YouTube Music",
@@ -2770,7 +2749,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
@@ -2785,7 +2763,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "variant": "Nord Theme",
         "app-name": "YouTube",
@@ -2802,7 +2779,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "variant": "Mocha Theme",
         "app-name": "YouTube",
@@ -2819,7 +2795,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "variant": "Experimental",
         "app-name": "YouTube",
@@ -2836,7 +2811,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "youtube",
         "brand": "anddea",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
@@ -2852,7 +2826,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "youtube",
         "brand": "anddea",
         "variant": "Nord Theme",
         "app-name": "YouTube",
@@ -2870,7 +2843,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "youtube",
         "brand": "anddea",
         "variant": "Mocha Theme",
         "app-name": "YouTube",
@@ -3201,7 +3173,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "music",
         "brand": "Morphe",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
@@ -3216,7 +3187,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "music",
         "brand": "Morphe",
         "variant": "Experimental",
         "app-name": "YouTube Music",
@@ -3233,7 +3203,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "music",
         "brand": "anddea",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
@@ -3249,7 +3218,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
@@ -3264,7 +3232,6 @@
       ],
       "cfg": {
         "patches-source": "MorpheApp/morphe-patches",
-        "patch-folder": "youtube",
         "brand": "Morphe",
         "variant": "Experimental",
         "app-name": "YouTube",
@@ -3281,7 +3248,6 @@
       ],
       "cfg": {
         "patches-source": "anddea/revanced-patches",
-        "patch-folder": "youtube",
         "brand": "anddea",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
