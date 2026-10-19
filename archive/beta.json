@@ -4,208 +4,9 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-18T22:20:57Z"
+    "publishedAt": "2026-10-19T17:49:39Z"
   },
   "files": {
-    "gboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
-      "name": "gboard-jasonwu1994-clone",
-      "version": "18.0.3.954559732-release-arm64-v8a",
-      "appKey": "gboard",
-      "appName": "Gboard",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "jasonwu1994",
-      "brandName": "jasonwu1994",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "dev.jason.com.google.android.inputmethod.latin",
-      "patchSources": [
-        "jasonwu1994/patches-3.13.0-dev.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
-      ],
-      "appliedPatches": [
-        "AI Writing Tools",
-        "Access Points menu style",
-        "Add Gboard Signature Bypass",
-        "Advanced Voice Typing",
-        "Backup & Restore",
-        "Change emoji size",
-        "Clipboard Custom Character Limit",
-        "Clipboard Enhancements",
-        "Close Proactive Suggestions",
-        "Custom Symbols",
-        "Custom Theme",
-        "Developer options",
-        "Emojis, stickers & GIFs Tab Order",
-        "Enable Inline Autofill Suggestions",
-        "Enable OCR / Scan Text",
-        "Enable accessibility layout",
-        "Enable cursor trackpad mode",
-        "Enable split keyboard",
-        "English QWERTY Up-Flick Uppercase",
-        "FTP Server",
-        "Floating Web Search",
-        "Frosted Glass",
-        "G Logo on Spacebar",
-        "Grammar Checker",
-        "Hyperspeed Typing Animation",
-        "Incognito Mode Toggle",
-        "Inline Suggestions",
-        "Key Shape Selection",
-        "Latin Globe Key Ignore Interval",
-        "Long-Press Editing Shortcuts",
-        "Quick Insert",
-        "Rounded Keyboard Panel",
-        "Settings Homepage Override",
-        "Simple Calculator",
-        "Swipe Down to Dismiss Keyboard",
-        "Swipeable Custom Top Row",
-        "Toolbar Editing Buttons",
-        "Top Toolbar Item Count",
-        "Use Bluetooth Microphone",
-        "Web Clipboard",
-        "Zhuyin Bottom Row Key Sizes",
-        "Zhuyin Quick Traditional/Simplified Toggle",
-        "Zhuyin Slide Input",
-        "Package Rename"
-      ],
-      "originBuild": "260276",
-      "publishedAt": "2026-10-14T20:22:51Z"
-    },
-    "gboard-jasonwu1994-module-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.zip": {
-      "name": "gboard-jasonwu1994",
-      "version": "18.0.3.954559732-release-arm64-v8a",
-      "appKey": "gboard",
-      "appName": "Gboard",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "jasonwu1994",
-      "brandName": "jasonwu1994",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.google.android.inputmethod.latin",
-      "patchSources": [
-        "jasonwu1994/patches-3.13.0-dev.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
-      ],
-      "appliedPatches": [
-        "AI Writing Tools",
-        "Access Points menu style",
-        "Add Gboard Signature Bypass",
-        "Advanced Voice Typing",
-        "Backup & Restore",
-        "Change emoji size",
-        "Clipboard Custom Character Limit",
-        "Clipboard Enhancements",
-        "Close Proactive Suggestions",
-        "Custom Symbols",
-        "Custom Theme",
-        "Developer options",
-        "Emojis, stickers & GIFs Tab Order",
-        "Enable Inline Autofill Suggestions",
-        "Enable OCR / Scan Text",
-        "Enable accessibility layout",
-        "Enable cursor trackpad mode",
-        "Enable split keyboard",
-        "English QWERTY Up-Flick Uppercase",
-        "FTP Server",
-        "Floating Web Search",
-        "Frosted Glass",
-        "G Logo on Spacebar",
-        "Grammar Checker",
-        "Hyperspeed Typing Animation",
-        "Incognito Mode Toggle",
-        "Inline Suggestions",
-        "Key Shape Selection",
-        "Latin Globe Key Ignore Interval",
-        "Long-Press Editing Shortcuts",
-        "Quick Insert",
-        "Rounded Keyboard Panel",
-        "Settings Homepage Override",
-        "Simple Calculator",
-        "Swipe Down to Dismiss Keyboard",
-        "Swipeable Custom Top Row",
-        "Toolbar Editing Buttons",
-        "Top Toolbar Item Count",
-        "Use Bluetooth Microphone",
-        "Web Clipboard",
-        "Zhuyin Bottom Row Key Sizes",
-        "Zhuyin Quick Traditional/Simplified Toggle",
-        "Zhuyin Slide Input"
-      ],
-      "originBuild": "260276",
-      "publishedAt": "2026-10-14T20:22:51Z"
-    },
-    "gboard-jasonwu1994-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
-      "name": "gboard-jasonwu1994",
-      "version": "18.0.3.954559732-release-arm64-v8a",
-      "appKey": "gboard",
-      "appName": "Gboard",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "jasonwu1994",
-      "brandName": "jasonwu1994",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.google.android.inputmethod.latin",
-      "patchSources": [
-        "jasonwu1994/patches-3.13.0-dev.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
-      ],
-      "appliedPatches": [
-        "AI Writing Tools",
-        "Access Points menu style",
-        "Add Gboard Signature Bypass",
-        "Advanced Voice Typing",
-        "Backup & Restore",
-        "Change emoji size",
-        "Clipboard Custom Character Limit",
-        "Clipboard Enhancements",
-        "Close Proactive Suggestions",
-        "Custom Symbols",
-        "Custom Theme",
-        "Developer options",
-        "Emojis, stickers & GIFs Tab Order",
-        "Enable Inline Autofill Suggestions",
-        "Enable OCR / Scan Text",
-        "Enable accessibility layout",
-        "Enable cursor trackpad mode",
-        "Enable split keyboard",
-        "English QWERTY Up-Flick Uppercase",
-        "FTP Server",
-        "Floating Web Search",
-        "Frosted Glass",
-        "G Logo on Spacebar",
-        "Grammar Checker",
-        "Hyperspeed Typing Animation",
-        "Incognito Mode Toggle",
-        "Inline Suggestions",
-        "Key Shape Selection",
-        "Latin Globe Key Ignore Interval",
-        "Long-Press Editing Shortcuts",
-        "Quick Insert",
-        "Rounded Keyboard Panel",
-        "Settings Homepage Override",
-        "Simple Calculator",
-        "Swipe Down to Dismiss Keyboard",
-        "Swipeable Custom Top Row",
-        "Toolbar Editing Buttons",
-        "Top Toolbar Item Count",
-        "Use Bluetooth Microphone",
-        "Web Clipboard",
-        "Zhuyin Bottom Row Key Sizes",
-        "Zhuyin Quick Traditional/Simplified Toggle",
-        "Zhuyin Slide Input"
-      ],
-      "originBuild": "260276",
-      "publishedAt": "2026-10-14T20:22:51Z"
-    },
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
       "name": "google-photos-devanced",
       "version": "7.92.0.977185651",
@@ -3552,10 +3353,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -3564,6 +3365,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -3587,8 +3389,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-module-v2026.24.0-arm64-v8a.zip": {
       "name": "reddit-morphe",
@@ -3603,10 +3405,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -3615,6 +3417,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -3638,8 +3441,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-module-v2026.24.0-arm-v7a.zip": {
       "name": "reddit-morphe",
@@ -3654,10 +3457,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -3666,6 +3469,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -3689,8 +3493,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-v2026.24.0-arm64-v8a.apk": {
       "name": "reddit-morphe",
@@ -3705,10 +3509,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -3717,6 +3521,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -3740,8 +3545,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm-v7a.zip": {
       "name": "youtube-music-morphe",
@@ -3756,10 +3561,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3810,8 +3615,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -3826,10 +3631,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3881,8 +3686,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-v9.20.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -3897,10 +3702,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3952,8 +3757,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -3968,10 +3773,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -4022,8 +3827,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -4798,10 +4603,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4844,6 +4649,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -4904,8 +4711,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-module-v21.20.405-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -4920,10 +4727,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4966,6 +4773,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -5025,8 +4834,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-module-v21.20.405-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -5041,10 +4850,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5087,6 +4896,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -5146,8 +4957,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-v21.20.405-arm-v7a.apk": {
       "name": "youtube-morphe",
@@ -5162,10 +4973,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5208,6 +5019,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -5268,8 +5081,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-experimental-v2026.41.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -5958,10 +5771,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6012,8 +5825,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-experimental-v9.41.52-arm64-v8a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -6028,10 +5841,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6083,8 +5896,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-experimental-v9.41.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -6099,10 +5912,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6154,8 +5967,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-music-morphe-experimental-module-v9.41.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -6170,10 +5983,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6224,8 +6037,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -6240,10 +6053,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0-dev.4.mpp"
+        "heval99/patches-1.17.1-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.1-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6257,8 +6070,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260311",
-      "publishedAt": "2026-10-18T22:20:42Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -6273,10 +6086,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0-dev.4.mpp"
+        "heval99/patches-1.17.1-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.1-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6290,8 +6103,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260311",
-      "publishedAt": "2026-10-18T22:20:42Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -6306,10 +6119,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0-dev.4.mpp"
+        "heval99/patches-1.17.1-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.1-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6324,8 +6137,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260311",
-      "publishedAt": "2026-10-18T22:20:42Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -6340,10 +6153,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0-dev.4.mpp"
+        "heval99/patches-1.17.1-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.1-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -6358,8 +6171,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260311",
-      "publishedAt": "2026-10-18T22:20:42Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-experimental-v2026.42.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -6374,10 +6187,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -6386,6 +6199,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -6409,8 +6223,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm-v7a.zip": {
       "name": "reddit-morphe-experimental",
@@ -6425,10 +6239,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -6437,6 +6251,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -6460,8 +6275,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-experimental-v2026.42.0-arm-v7a.apk": {
       "name": "reddit-morphe-experimental",
@@ -6476,10 +6291,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -6488,6 +6303,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -6511,8 +6327,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
@@ -6527,10 +6343,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "App icon",
@@ -6539,6 +6355,7 @@
         "Customize post layout",
         "Disable modern home",
         "Disable screenshot popup",
+        "Download location",
         "Feed media max height",
         "Force system font",
         "Full width feed media",
@@ -6562,8 +6379,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -6578,10 +6395,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6624,6 +6441,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -6683,8 +6502,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6699,10 +6518,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6745,6 +6564,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -6805,8 +6626,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm-v7a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6821,10 +6642,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6867,6 +6688,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -6927,8 +6750,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -6943,10 +6766,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.12.mpp"
+        "MorpheApp/patches-1.48.0-dev.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.12"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.13"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6989,6 +6812,8 @@
         "Exit fullscreen mode",
         "Feed card layout",
         "Feed video actions",
+        "Feed view count",
+        "Force animations",
         "Force fullscreen landscape",
         "Force original audio",
         "Fullscreen video scale",
@@ -7048,8 +6873,207 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260307",
-      "publishedAt": "2026-10-18T12:52:21Z"
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
+    },
+    "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994-clone",
+      "version": "18.0.3.954559732-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "dev.jason.com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-3.13.0-dev.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Hyperspeed Typing Animation",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input",
+        "Package Rename"
+      ],
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
+    },
+    "google-keyboard-jasonwu1994-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.0.3.954559732-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-3.13.0-dev.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Hyperspeed Typing Animation",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
+    },
+    "google-keyboard-jasonwu1994-module-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.zip": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.0.3.954559732-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-3.13.0-dev.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v3.13.0-dev.2"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Hyperspeed Typing Animation",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260319",
+      "publishedAt": "2026-10-19T17:48:37Z"
     }
   }
 }
