@@ -3286,6 +3286,34 @@
         "arch": "both",
         "build-mode": "both"
       }
+    },
+    "GoogleKeyboard-jasonwu1994": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "app-name": "Google Keyboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "excluded-patches": "'Package Rename'",
+        "arch": "arm64-v8a",
+        "build-mode": "both"
+      }
+    },
+    "GoogleKeyboard-jasonwu1994-Clone": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jasonwu1994/Gboard-patches",
+        "brand": "jasonwu1994",
+        "variant": "Clone",
+        "app-name": "Google Keyboard",
+        "pkg-name": "com.google.android.inputmethod.latin",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
     }
   }
 }

@@ -39,24 +39,5 @@
       "cfg": "a97e08ad479d9543bdf148a8d564583614979a67"
     }
   },
-  "beta": {
-    "GoogleKeyboard-jasonwu1994": {
-      "reason": "new",
-      "arches": [
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "d51c1c93bb9e8ea28dde00a8ee40981112172d37"
-    },
-    "GoogleKeyboard-jasonwu1994-Clone": {
-      "reason": "new",
-      "arches": [
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "a97e08ad479d9543bdf148a8d564583614979a67"
-    }
-  }
+  "beta": {}
 }
