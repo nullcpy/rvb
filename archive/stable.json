@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-19T17:19:53Z"
+    "publishedAt": "2026-10-19T21:29:03Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -24953,6 +24953,138 @@
       ],
       "originBuild": "260318",
       "publishedAt": "2026-10-19T17:19:35Z"
+    },
+    "instagram-instafel-clone-v452.0.0.48.64-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "452.0.0.48.64",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260320",
+      "publishedAt": "2026-10-19T21:28:44Z"
+    },
+    "instagram-instafel-clone-v452.0.0.48.64-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "452.0.0.48.64",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260320",
+      "publishedAt": "2026-10-19T21:28:44Z"
+    },
+    "instagram-instafel-v452.0.0.48.64-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "452.0.0.48.64",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260320",
+      "publishedAt": "2026-10-19T21:28:44Z"
+    },
+    "instagram-instafel-v452.0.0.48.64-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "452.0.0.48.64",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260320",
+      "publishedAt": "2026-10-19T21:28:44Z"
     }
   }
 }
