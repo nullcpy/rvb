@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-18T22:25:05Z"
+    "publishedAt": "2026-10-19T04:41:23Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -21874,17 +21874,17 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "SysAdminDoc/patches-0.24.0.mpp"
+        "SysAdminDoc/patches-0.25.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.24.0"
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.25.0"
       ],
       "appliedPatches": [
         "Allow chat bubbles",
         "Allow screenshots",
         "Auto reply",
         "Bold and italic text",
-        "Fix shared videos with xHE-AAC sound",
+        "Fix videos that won't send",
         "Hide AI sticker tools",
         "Hide Chat Moments",
         "Hide Facebook shortcuts",
@@ -21909,13 +21909,16 @@
         "Hide read receipts",
         "Hide stories and notes",
         "Hide typing indicator",
+        "Hold stories at the end",
         "Install beside Meta apps",
         "Keep a message log",
         "Keep emoji search on emoji",
         "Keep unsent messages",
+        "Mark as read button",
         "Material You theme",
         "Open settings from menu",
         "Open web links externally",
+        "Open your gallery app",
         "Pin more chats",
         "Restore old emoji drawer",
         "Restore screens on re-signed builds",
@@ -21926,6 +21929,7 @@
         "Stop MQTT logging",
         "Stop ad attribution uploads",
         "Stop analytics uploads",
+        "Stop app list and device ID sharing",
         "Stop inbox and ad link logging",
         "Stop nearby scans",
         "Turn off the swipe up for disappearing messages",
@@ -21935,8 +21939,8 @@
         "Use your own font",
         "View stories anonymously"
       ],
-      "originBuild": "260275",
-      "publishedAt": "2026-10-14T17:52:38Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "messenger-hushmessenger-v583.0.0.29.95-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
@@ -21951,17 +21955,17 @@
       "subVariant": null,
       "packageName": "com.facebook.orca",
       "patchSources": [
-        "SysAdminDoc/patches-0.24.0.mpp"
+        "SysAdminDoc/patches-0.25.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.24.0"
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.25.0"
       ],
       "appliedPatches": [
         "Allow chat bubbles",
         "Allow screenshots",
         "Auto reply",
         "Bold and italic text",
-        "Fix shared videos with xHE-AAC sound",
+        "Fix videos that won't send",
         "Hide AI sticker tools",
         "Hide Chat Moments",
         "Hide Facebook shortcuts",
@@ -21986,13 +21990,16 @@
         "Hide read receipts",
         "Hide stories and notes",
         "Hide typing indicator",
+        "Hold stories at the end",
         "Install beside Meta apps",
         "Keep a message log",
         "Keep emoji search on emoji",
         "Keep unsent messages",
+        "Mark as read button",
         "Material You theme",
         "Open settings from menu",
         "Open web links externally",
+        "Open your gallery app",
         "Pin more chats",
         "Restore old emoji drawer",
         "Restore screens on re-signed builds",
@@ -22003,6 +22010,7 @@
         "Stop MQTT logging",
         "Stop ad attribution uploads",
         "Stop analytics uploads",
+        "Stop app list and device ID sharing",
         "Stop inbox and ad link logging",
         "Stop nearby scans",
         "Turn off the swipe up for disappearing messages",
@@ -22012,8 +22020,8 @@
         "Use your own font",
         "View stories anonymously"
       ],
-      "originBuild": "260275",
-      "publishedAt": "2026-10-14T17:52:38Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "amazon-india-rushiranpise-v32.18.0.300-arm64-v8a.apk": {
       "name": "amazon-india-rushiranpise",
@@ -22378,10 +22386,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.hush",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.12.mpp"
+        "SysAdminDoc/patches-0.0.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.12"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.13"
       ],
       "appliedPatches": [
         "Accent color",
@@ -22415,6 +22423,8 @@
         "Glass tab bar",
         "Group Instagram's notifications",
         "Hide AI-labeled reels",
+        "Hide Follow on feed posts",
+        "Hide Follow on stories",
         "Hide Instants",
         "Hide Meta AI",
         "Hide Notes on profile pictures",
@@ -22436,6 +22446,7 @@
         "Hide the Repost button",
         "Hide the Share button",
         "Hide the Threads button",
+        "Hide the comment emoji row",
         "Hide the home feed",
         "Hide the notes row",
         "Hide your active status",
@@ -22491,8 +22502,8 @@
         "View stories anonymously",
         "Install next to Instagram"
       ],
-      "originBuild": "260293",
-      "publishedAt": "2026-10-16T19:45:57Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "instagram-hushgram-v451.0.0.53.80-arm64-v8a.apk": {
       "name": "instagram-hushgram",
@@ -22507,10 +22518,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.12.mpp"
+        "SysAdminDoc/patches-0.0.13.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.12"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.13"
       ],
       "appliedPatches": [
         "Accent color",
@@ -22544,6 +22555,8 @@
         "Glass tab bar",
         "Group Instagram's notifications",
         "Hide AI-labeled reels",
+        "Hide Follow on feed posts",
+        "Hide Follow on stories",
         "Hide Instants",
         "Hide Meta AI",
         "Hide Notes on profile pictures",
@@ -22565,6 +22578,7 @@
         "Hide the Repost button",
         "Hide the Share button",
         "Hide the Threads button",
+        "Hide the comment emoji row",
         "Hide the home feed",
         "Hide the notes row",
         "Hide your active status",
@@ -22619,8 +22633,8 @@
         "View live anonymously",
         "View stories anonymously"
       ],
-      "originBuild": "260293",
-      "publishedAt": "2026-10-16T19:45:57Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "google-photos-akashsriram-v7.97.0.997578476-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -23343,10 +23357,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.14.0.mpp"
+        "SysAdminDoc/patches-0.15.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.14.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.15.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -23410,6 +23424,8 @@
         "Keep the reel speed",
         "Marketplace only",
         "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
@@ -23438,8 +23454,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260294",
-      "publishedAt": "2026-10-16T22:46:53Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "facebook-hushfacebook-v583.0.0.39.55-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -23454,10 +23470,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.14.0.mpp"
+        "SysAdminDoc/patches-0.15.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.14.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.15.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -23521,6 +23537,8 @@
         "Keep the reel speed",
         "Marketplace only",
         "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
@@ -23549,8 +23567,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260294",
-      "publishedAt": "2026-10-16T22:46:53Z"
+      "originBuild": "260313",
+      "publishedAt": "2026-10-19T04:41:01Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
