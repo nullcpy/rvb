@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-20T14:50:56Z"
+    "publishedAt": "2026-10-20T17:46:12Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -22822,14 +22822,13 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.18.0-dev.1.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
-        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -22841,8 +22840,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260326",
-      "publishedAt": "2026-10-20T14:50:32Z"
+      "originBuild": "260327",
+      "publishedAt": "2026-10-20T17:45:49Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -22857,14 +22856,13 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.18.0-dev.1.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
-        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -22876,8 +22874,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260326",
-      "publishedAt": "2026-10-20T14:50:32Z"
+      "originBuild": "260327",
+      "publishedAt": "2026-10-20T17:45:49Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -22892,14 +22890,13 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.18.0-dev.1.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
-        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -22912,8 +22909,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260326",
-      "publishedAt": "2026-10-20T14:50:32Z"
+      "originBuild": "260327",
+      "publishedAt": "2026-10-20T17:45:49Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -22928,14 +22925,13 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.18.0-dev.1.mpp"
+        "heval99/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Disable ads",
-        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -22948,8 +22944,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260326",
-      "publishedAt": "2026-10-20T14:50:32Z"
+      "originBuild": "260327",
+      "publishedAt": "2026-10-20T17:45:49Z"
     },
     "linkedin-michii-v4.1.1261-arm-v7a.apk": {
       "name": "linkedin-michii",
