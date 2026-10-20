@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-20T13:12:26Z"
+    "publishedAt": "2026-10-20T14:50:56Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -22822,16 +22822,18 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0.mpp"
+        "heval99/patches-1.18.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
+        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
         "Hide Wear OS settings",
@@ -22839,8 +22841,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260314",
-      "publishedAt": "2026-10-19T10:27:08Z"
+      "originBuild": "260326",
+      "publishedAt": "2026-10-20T14:50:32Z"
     },
     "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -22855,16 +22857,18 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0.mpp"
+        "heval99/patches-1.18.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
+        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
         "Hide Wear OS settings",
@@ -22872,8 +22876,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260314",
-      "publishedAt": "2026-10-19T10:27:08Z"
+      "originBuild": "260326",
+      "publishedAt": "2026-10-20T14:50:32Z"
     },
     "truecaller-heval99-v26.40.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -22888,17 +22892,19 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0.mpp"
+        "heval99/patches-1.18.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
+        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
         "GmsCore support",
+        "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
         "Hide Wear OS settings",
@@ -22906,8 +22912,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260314",
-      "publishedAt": "2026-10-19T10:27:08Z"
+      "originBuild": "260326",
+      "publishedAt": "2026-10-20T14:50:32Z"
     },
     "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -22922,17 +22928,19 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-1.17.0.mpp"
+        "heval99/patches-1.18.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.17.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
+        "Disable contact upload",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
         "GmsCore support",
+        "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
         "Hide Wear OS settings",
@@ -22940,8 +22948,8 @@
         "Spoof signature",
         "Use SMS for verification codes"
       ],
-      "originBuild": "260314",
-      "publishedAt": "2026-10-19T10:27:08Z"
+      "originBuild": "260326",
+      "publishedAt": "2026-10-20T14:50:32Z"
     },
     "linkedin-michii-v4.1.1261-arm-v7a.apk": {
       "name": "linkedin-michii",
