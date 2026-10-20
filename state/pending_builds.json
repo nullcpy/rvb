@@ -1,14 +1,15 @@
 {
   "stable": {
-    "Truecaller-heval99": {
-      "reason": "config",
+    "ProtonMail-dhrubonai": {
+      "reason": "retry",
       "arches": [
         "arm-v7a",
         "arm64-v8a"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "parked": false,
-      "cfg": "945568d6f90df4fbdec5961b1eb56553201062d7"
+      "run": 39467119153,
+      "ts": "2026-10-20T17:44:48Z"
     }
   },
   "beta": {}
