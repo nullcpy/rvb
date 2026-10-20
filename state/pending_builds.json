@@ -11,16 +11,5 @@
       "cfg": "945568d6f90df4fbdec5961b1eb56553201062d7"
     }
   },
-  "beta": {
-    "Truecaller-heval99": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "945568d6f90df4fbdec5961b1eb56553201062d7"
-    }
-  }
+  "beta": {}
 }

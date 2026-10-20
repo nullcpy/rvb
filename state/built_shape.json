@@ -3222,7 +3222,7 @@
         "brand": "heval99",
         "app-name": "Truecaller",
         "pkg-name": "com.truecaller",
-        "included-patches": "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes'",
+        "included-patches": "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab'",
         "arch": "both",
         "build-mode": "both"
       }
