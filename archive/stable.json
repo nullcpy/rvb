@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-20T17:46:12Z"
+    "publishedAt": "2026-10-20T23:05:32Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -24136,10 +24136,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.16.1.mpp"
+        "VenusIsJaded/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.1"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -24158,6 +24158,7 @@
         "Hide the call button",
         "Hide the gift button",
         "Hide typing indicator",
+        "Icon packs",
         "Jump to first message",
         "Keep deleted messages",
         "Message highlights",
@@ -24166,6 +24167,7 @@
         "Send Nitro stickers and emojis as links",
         "Send audio as voice messages",
         "Send long messages",
+        "Server info",
         "Show device indicators",
         "Show file sizes when attaching",
         "Show hidden channels",
@@ -24180,8 +24182,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
+      "originBuild": "260328",
+      "publishedAt": "2026-10-20T23:05:12Z"
     },
     "discord-venus-v349.9-Stable-arm64-v8a.apk": {
       "name": "discord-venus",
@@ -24196,10 +24198,10 @@
       "subVariant": null,
       "packageName": "com.discord",
       "patchSources": [
-        "VenusIsJaded/patches-1.16.1.mpp"
+        "VenusIsJaded/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.16.1"
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "Account switcher",
@@ -24218,6 +24220,7 @@
         "Hide the call button",
         "Hide the gift button",
         "Hide typing indicator",
+        "Icon packs",
         "Jump to first message",
         "Keep deleted messages",
         "Message highlights",
@@ -24226,6 +24229,7 @@
         "Send Nitro stickers and emojis as links",
         "Send audio as voice messages",
         "Send long messages",
+        "Server info",
         "Show device indicators",
         "Show file sizes when attaching",
         "Show hidden channels",
@@ -24240,8 +24244,8 @@
         "Venus button on profile bar",
         "Venus settings"
       ],
-      "originBuild": "260315",
-      "publishedAt": "2026-10-19T11:11:38Z"
+      "originBuild": "260328",
+      "publishedAt": "2026-10-20T23:05:12Z"
     },
     "sofascore-heval99-v26.10.05-arm64-v8a.apk": {
       "name": "sofascore-heval99",
