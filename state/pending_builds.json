@@ -13,5 +13,17 @@
       "cfg": "096a41f62f1c96bad59db56854da62dbc2b7969b"
     }
   },
-  "beta": {}
+  "beta": {
+    "YouTubeMusic-Morphe-Experimental": {
+      "reason": "retry",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 1,
+      "parked": false,
+      "run": 39544711981,
+      "ts": "2026-10-21T04:51:16Z"
+    }
+  }
 }
