@@ -1,14 +1,13 @@
-[Truecaller-heval99]
+[TikTok-hushfeed]
 enabled = true
-pkg-name = "com.truecaller"
-app-name = "Truecaller"
-brand = "heval99"
-patches-source = "heval99/Heval-Morphe-Patches"
-patches-version = "beta"
-build-mode = "both"
-included-patches = "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab'"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
-uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
-
-
+pkg-name = "com.zhiliaoapp.musically"
+app-name = "TikTok"
+patches-source = "SysAdminDoc/hushfeed"
+brand = "hushfeed"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
+apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
+inclusive-patches = true
+excluded-patches = "'Remove unused language packs' 'Change app name'"
+preferred-format = "apk"
