@@ -2018,7 +2018,8 @@
     "apkpure-dlurl": "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically",
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically",
     "inclusive-patches": true,
-    "excluded-patches": "'Remove unused language packs' 'Change app name'"
+    "excluded-patches": "'Remove unused language packs' 'Change app name'",
+    "preferred-format": "apk"
   },
   "TikTok-hxreborn": {
     "enabled": false,
