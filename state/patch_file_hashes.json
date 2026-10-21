@@ -353,10 +353,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "20f42594ca52d6b2f92a249e0a303a45",
-      "com.google.android.youtube": "6acd4c01923a0dd6608147cd862f709d",
+      "com.google.android.apps.youtube.music": "dd682e0b2b65f7990d3af8b379d48ae5",
+      "com.google.android.youtube": "89a855da3f47b0f3dc62ce25ffb7bd52",
       "com.reddit.frontpage": "477510e3907120e6b36465c200085bcd",
-      "shared": "9e0745eb1182bb8c487a7de0ec58673f"
+      "shared": "a6532813b5b7f89497d9859fb6dd14f0"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "1e4aadd260009e9cc452874a2de1018d",
@@ -508,8 +508,8 @@
   "sysadmindoc/hushfacebook": {
     "beta": {},
     "stable": {
-      "com.facebook.katana": "002c84512dc79657b4794288d89e8048",
-      "shared": "90483cb225e45b930727748629cc015f"
+      "com.facebook.katana": "c1074a11f6962193b073fc03bbceeda1",
+      "shared": "0f1c733462fdcc5d69550bcfb2d7bafc"
     }
   },
   "sysadmindoc/hushfeed": {
