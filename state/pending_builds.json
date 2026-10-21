@@ -1,16 +1,15 @@
 {
   "stable": {
-    "ProtonMail-dhrubonai": {
+    "TikTok-hushfeed": {
       "reason": "retry",
       "arches": [
         "arm-v7a",
         "arm64-v8a"
       ],
-      "attempts": 3,
-      "parked": true,
-      "run": 39511652116,
-      "ts": "2026-10-20T23:04:32Z",
-      "cfg": "096a41f62f1c96bad59db56854da62dbc2b7969b"
+      "attempts": 1,
+      "parked": false,
+      "run": 39544711981,
+      "ts": "2026-10-21T04:56:45Z"
     }
   },
   "beta": {
