@@ -156,3 +156,14 @@ patch-folder = "serverauditor"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/termius-corporation/termius-ssh-telnet-client"
 uptodown-dlurl = "https://serverauditor.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/termius-modern-ssh-client/com.server.auditor.ssh.client"
+
+[MicrosoftWord-rushiranpise]
+enabled = true
+pkg-name = "com.microsoft.office.word"
+app-name = "Microsoft Word"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/word"
+uptodown-dlurl = "https://microsoft-word.en.uptodown.com/windows"
+apkpure-dlurl = "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
+
+
+
