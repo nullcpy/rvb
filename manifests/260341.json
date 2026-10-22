@@ -1,0 +1,403 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260341",
+    "channel": "stable",
+    "publishedAt": "2026-10-22T17:54:51Z"
+  },
+  "files": {
+    "brave-browser-dh6k-beta-v1.99.49-arm-v7a.apk": {
+      "name": "brave-browser-dh6k-beta",
+      "version": "1.99.49",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "dh6k",
+      "brandName": "dh6k",
+      "variant": "Beta",
+      "subVariant": null,
+      "packageName": "com.brave.browser_beta",
+      "patchSources": [
+        "dh6k/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dh6k/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Brave Origin",
+        "Brave Startup Performance Optimization"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "brave-browser-dh6k-beta-v1.99.49-arm64-v8a.apk": {
+      "name": "brave-browser-dh6k-beta",
+      "version": "1.99.49",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "dh6k",
+      "brandName": "dh6k",
+      "variant": "Beta",
+      "subVariant": null,
+      "packageName": "com.brave.browser_beta",
+      "patchSources": [
+        "dh6k/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dh6k/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Brave Origin",
+        "Brave Startup Performance Optimization"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1903"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "discord-revenge-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1903"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "fairemail-heval99-v1.2338-arm-v7a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2338",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "fairemail-heval99-v1.2338-arm64-v8a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2338",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "sofascore-heval99-v26.10.05-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.05",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "sofascore-heval99-v26.10.05-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.05",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "titanium-browser-dh6k-v155.0.8059.79-arm-v7a.apk": {
+      "name": "titanium-browser-dh6k",
+      "version": "155.0.8059.79",
+      "appKey": "titaniumbrowser",
+      "appName": "Titanium Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "dh6k",
+      "brandName": "dh6k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "io.github.jqssun.helium",
+      "patchSources": [
+        "dh6k/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dh6k/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Force highest refresh rate",
+        "Keep Titanium Extensions Child Processes Alive"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "titanium-browser-dh6k-v155.0.8059.79-arm64-v8a.apk": {
+      "name": "titanium-browser-dh6k",
+      "version": "155.0.8059.79",
+      "appKey": "titaniumbrowser",
+      "appName": "Titanium Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "dh6k",
+      "brandName": "dh6k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "io.github.jqssun.helium",
+      "patchSources": [
+        "dh6k/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dh6k/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Force highest refresh rate",
+        "Keep Titanium Extensions Child Processes Alive"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "truecaller-heval99-v26.40.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable contact upload",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable contact upload",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable contact upload",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.40.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable contact upload",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260341",
+      "publishedAt": "2026-10-22T17:54:51Z"
+    }
+  }
+}
