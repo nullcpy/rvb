@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260343",
+    "channel": "stable",
+    "publishedAt": "2026-10-22T20:36:16Z"
+  },
+  "files": {
+    "brave-browser-kveld9-v1.98.60-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "brave-browser-kveld9-v1.98.60-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "tiktok-kveld9-v47.4.3-arm-v7a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "tiktok-kveld9-v47.4.3-arm64-v8a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    }
+  }
+}

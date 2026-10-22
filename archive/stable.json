@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-22T17:55:29Z"
+    "publishedAt": "2026-10-22T20:36:49Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -6046,54 +6046,6 @@
       "originBuild": "260089",
       "publishedAt": "2026-09-20T08:19:54Z"
     },
-    "brave-browser-dh6k-beta-v1.97.43-arm-v7a.apk": {
-      "name": "brave-browser-dh6k-beta",
-      "version": "1.97.43",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "dh6k",
-      "brandName": "dh6k",
-      "variant": "Beta",
-      "subVariant": null,
-      "packageName": "com.brave.browser_beta",
-      "patchSources": [
-        "dh6k/patches-1.6.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/dh6k/morphe-patches/releases/tag/v1.6.0"
-      ],
-      "appliedPatches": [
-        "Brave Origin "
-      ],
-      "originBuild": "260091",
-      "publishedAt": "2026-09-20T15:27:20Z"
-    },
-    "brave-browser-dh6k-beta-v1.97.43-arm64-v8a.apk": {
-      "name": "brave-browser-dh6k-beta",
-      "version": "1.97.43",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "dh6k",
-      "brandName": "dh6k",
-      "variant": "Beta",
-      "subVariant": null,
-      "packageName": "com.brave.browser_beta",
-      "patchSources": [
-        "dh6k/patches-1.6.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/dh6k/morphe-patches/releases/tag/v1.6.0"
-      ],
-      "appliedPatches": [
-        "Brave Origin "
-      ],
-      "originBuild": "260091",
-      "publishedAt": "2026-09-20T15:27:20Z"
-    },
     "tiktok-kveld9-asia-v47.0.3-arm-v7a.apk": {
       "name": "tiktok-kveld9-asia",
       "version": "47.0.3",
@@ -9835,50 +9787,6 @@
       ],
       "originBuild": "260136",
       "publishedAt": "2026-09-27T23:05:01Z"
-    },
-    "titanium-browser-dh6k-v152.0.7977.64-arm-v7a.apk": {
-      "name": "titanium-browser-dh6k",
-      "version": "152.0.7977.64",
-      "appKey": "titaniumbrowser",
-      "appName": "Titanium Browser",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "dh6k",
-      "brandName": "dh6k",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "io.github.jqssun.helium",
-      "patchSources": [
-        "dh6k/patches-1.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/dh6k/morphe-patches/releases/tag/v1.5.0"
-      ],
-      "appliedPatches": [],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T10:42:38Z"
-    },
-    "titanium-browser-dh6k-v152.0.7977.64-arm64-v8a.apk": {
-      "name": "titanium-browser-dh6k",
-      "version": "152.0.7977.64",
-      "appKey": "titaniumbrowser",
-      "appName": "Titanium Browser",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "dh6k",
-      "brandName": "dh6k",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "io.github.jqssun.helium",
-      "patchSources": [
-        "dh6k/patches-1.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/dh6k/morphe-patches/releases/tag/v1.5.0"
-      ],
-      "appliedPatches": [],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T10:42:38Z"
     },
     "todoist-hooman-v12190-arm-v7a.apk": {
       "name": "todoist-hooman",
@@ -25539,6 +25447,174 @@
       ],
       "originBuild": "260341",
       "publishedAt": "2026-10-22T17:54:51Z"
+    },
+    "brave-browser-kveld9-v1.98.60-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "brave-browser-kveld9-v1.98.60-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "tiktok-kveld9-v47.4.3-arm-v7a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
+    },
+    "tiktok-kveld9-v47.4.3-arm64-v8a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260343",
+      "publishedAt": "2026-10-22T20:36:16Z"
     }
   }
 }
