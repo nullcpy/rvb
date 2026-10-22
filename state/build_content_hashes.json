@@ -113,28 +113,28 @@
       ]
     },
     "youtube-music-anddea-v9.15.51-arm64-v8a": {
-      "hash": "65574a3df804f5402d19b48ec351a004",
+      "hash": "466b9e0f5b9bdf3f12f5187c4052cdbd",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-anddea-v9.15.51-arm-v7a": {
-      "hash": "920f0f67f060589c45f5662da1524618",
+      "hash": "11f5c80faf048f862dca9a5d9867395c",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-anddea-v21.13.164-arm64-v8a": {
-      "hash": "d9172ce985d19b6d2d37f863dae3b70b",
+      "hash": "02fd37f2dc73411f29d04fefc80d542b",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-anddea-v21.13.164-arm-v7a": {
-      "hash": "02e49ff984d686992c434e15a47b2065",
+      "hash": "654ce4d242599dce43a6ceb2b370c90b",
       "kinds": [
         "apk",
         "module"
@@ -207,6 +207,19 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "google-keyboard-jasonwu1994-v18.5.3.993608717-release-arm64-v8a-arm64-v8a": {
+      "hash": "1352b57a0f295cbef5acb50ad8432c43",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-keyboard-jasonwu1994-clone-v18.5.3.993608717-release-arm64-v8a-arm64-v8a": {
+      "hash": "e182519f384b4b7481bdc28000b5b915",
+      "kinds": [
+        "apk"
       ]
     }
   },
