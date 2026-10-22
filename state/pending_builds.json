@@ -1,15 +1,4 @@
 {
-  "stable": {
-    "MicrosoftWord-rushiranpise": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "29cef708268dea873832ba79bfd54156513deda0"
-    }
-  },
+  "stable": {},
   "beta": {}
 }

@@ -3001,6 +3001,20 @@
         "arch": "arm64-v8a",
         "build-mode": "apk"
       }
+    },
+    "MicrosoftWord-rushiranpise": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "rushiranpise/morphe-patches",
+        "brand": "rushiranpise",
+        "app-name": "Microsoft Word",
+        "pkg-name": "com.microsoft.office.word",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
