@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -388,7 +388,7 @@
   "BraveBrowser-dh6k-Beta": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "Brave Browser",
     "variant": "Beta",
@@ -402,7 +402,7 @@
   "BraveBrowser-dh6k-Nightly": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser_nightly",
     "app-name": "Brave Browser",
     "variant": "Nightly",
@@ -416,7 +416,7 @@
   "TitaniumBrowser-dh6k": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "Titanium Browser",
     "included-patches": "'Keep Titanium Extensions Child Processes Alive' 'Force highest refresh rate'",
@@ -424,7 +424,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -575,7 +575,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -586,7 +586,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -966,7 +966,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -977,7 +977,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -986,7 +986,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -996,7 +996,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1007,7 +1007,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1477,7 +1477,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1535,7 +1535,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1577,7 +1577,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "Reddit-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1590,7 +1590,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2088,7 +2088,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
@@ -2157,7 +2157,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2170,7 +2170,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2223,7 +2223,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2236,7 +2236,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-NordTheme": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2251,7 +2251,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-MochaTheme": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2266,7 +2266,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
