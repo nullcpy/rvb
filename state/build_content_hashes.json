@@ -349,13 +349,13 @@
       ]
     },
     "fairemail-heval99-v1.2338-arm-v7a": {
-      "hash": "9237046705640c28b9819eb04c435557",
+      "hash": "a792f6f344b300beabf3a34ee8341880",
       "kinds": [
         "apk"
       ]
     },
     "fairemail-heval99-v1.2338-arm64-v8a": {
-      "hash": "f8ef6700595633e92c01c56957b763cd",
+      "hash": "dc297149261b7b3d5ad1259cc7934db3",
       "kinds": [
         "apk"
       ]
@@ -1041,14 +1041,14 @@
       ]
     },
     "truecaller-heval99-v26.40.5-arm64-v8a": {
-      "hash": "3d89d6f454dc8e3cf4155986951e1209",
+      "hash": "dd717ae861064d5ee4bed752dd9bb3fc",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "truecaller-heval99-v26.40.5-arm-v7a": {
-      "hash": "083238da9759d65e150cf5277a270b66",
+      "hash": "0ac2b132d1c1def37b9df0c4da76e0f2",
       "kinds": [
         "apk",
         "module"
@@ -1217,13 +1217,13 @@
       ]
     },
     "sofascore-heval99-v26.10.05-arm-v7a": {
-      "hash": "e5519adb6e81e128e7802009af5d3e1b",
+      "hash": "f51419f8e24c2b7e7a9a6b965bcefd1d",
       "kinds": [
         "apk"
       ]
     },
     "sofascore-heval99-v26.10.05-arm64-v8a": {
-      "hash": "33d3d5d77e1170418beb00db5a6cae07",
+      "hash": "33af1efdcb7240b2e8b852d9fcf32a66",
       "kinds": [
         "apk"
       ]
@@ -1383,6 +1383,30 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "titanium-browser-dh6k-v155.0.8059.79-arm-v7a": {
+      "hash": "4ddd407e0d3fc48556ee7e231a6db6e9",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "titanium-browser-dh6k-v155.0.8059.79-arm64-v8a": {
+      "hash": "e2c0b4d4c3940a84d7fe27441dc25279",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "brave-browser-dh6k-beta-v1.99.49-arm-v7a": {
+      "hash": "912da9ba6122482fa90bdde88bbb5d7b",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "brave-browser-dh6k-beta-v1.99.49-arm64-v8a": {
+      "hash": "e76c587b46bd951a3d758d421a0eb0d7",
+      "kinds": [
+        "apk"
       ]
     }
   }
