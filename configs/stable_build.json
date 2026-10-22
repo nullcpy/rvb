@@ -388,7 +388,7 @@
   "BraveBrowser-dh6k-Beta": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.brave.browser_beta",
     "app-name": "Brave Browser",
     "variant": "Beta",
@@ -416,7 +416,7 @@
   "TitaniumBrowser-dh6k": {
     "patches-source": "dh6k/morphe-patches",
     "brand": "dh6k",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "io.github.jqssun.helium",
     "app-name": "Titanium Browser",
     "included-patches": "'Keep Titanium Extensions Child Processes Alive' 'Force highest refresh rate'",
@@ -424,7 +424,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -575,7 +575,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -586,7 +586,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -1163,7 +1163,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -2054,7 +2054,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -2088,7 +2088,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",

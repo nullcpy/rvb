@@ -23,9 +23,9 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "e4ae30fc04a75dd0b14ee1dcda5c0b10",
-      "com.google.android.youtube": "5a763e546922fc681347b7977c54a6b7",
-      "shared": "f6805d4755f1d4dc6f2355f627172194"
+      "com.google.android.apps.youtube.music": "3101fcd7f73265c53720dfca7a77755c",
+      "com.google.android.youtube": "3539e4db8de85c5cda79acbadbd49c51",
+      "shared": "7617ccc5c2cd8887b900c59e43c3000f"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "38f7dee029d8d691d4d374f1f5bf7718",
@@ -305,8 +305,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "aa31afbadc7fdbac2ba302a8dccb9cbf",
-      "shared": "fbc47d291242fd807dae3d2a6ebd0408"
+      "com.google.android.inputmethod.latin": "1cc33128713c373919dceb8c6b001863",
+      "shared": "fe7510a2df70f5bbb41e8bb2b21726c0"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "2b386956fca774c631a6b373b7758be8",
@@ -339,9 +339,9 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "d1e3e4e15a528fa4de45edcdb898fda8",
-      "com.zhiliaoapp.musically": "eeb17b1f6f32ac783c3e2ff9aed48f5c",
-      "shared": "85cc7bd5453ddd34676aeef3c17c608c"
+      "com.brave.browser": "1679caaf244ee91d4db5525ec71971df",
+      "com.zhiliaoapp.musically": "548281fe80158ffb514140cf0076a935",
+      "shared": "c02ef9d0166b1af11d6153922aaac10a"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {

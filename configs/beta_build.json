@@ -50,7 +50,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -65,7 +65,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -233,7 +233,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "youtube-music-anddea": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -273,7 +273,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "youtube-anddea": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",
