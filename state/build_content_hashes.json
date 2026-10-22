@@ -387,14 +387,14 @@
       ]
     },
     "reddit-morphe-v2026.24.0-arm64-v8a": {
-      "hash": "65bd806af930987762743d7df604120a",
+      "hash": "95fc0d90314664eb2927c235c2fdaf30",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-v2026.24.0-arm-v7a": {
-      "hash": "a86b3d46e938c96cebcf57d206f51435",
+      "hash": "c8b9d02ecd1c2a97aebb941a27cd35ac",
       "kinds": [
         "apk",
         "module"
@@ -415,14 +415,14 @@
       ]
     },
     "youtube-music-morphe-v9.20.53-arm-v7a": {
-      "hash": "d63ab17e3a8681f2d2e7f18ba51a1c81",
+      "hash": "fa473d6ab5ed622f3cefa92128114291",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a": {
-      "hash": "85794d6ab2ad6ac70c4a831744954cd4",
+      "hash": "df2554259ac8b4a0613581fa132d9aa2",
       "kinds": [
         "apk",
         "module"
@@ -443,42 +443,42 @@
       ]
     },
     "youtube-morphe-v21.20.405-arm64-v8a": {
-      "hash": "53218f667e4fd62e33e081a57ec8c69e",
+      "hash": "61d4cc0671a5cfee0fbc6504e83e2a3c",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-v21.20.405-arm-v7a": {
-      "hash": "2aee79d54baf005f944ce172d97d0416",
+      "hash": "fed1705e4de368c4003be76971687a72",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-nord-theme-v21.20.405-arm64-v8a": {
-      "hash": "badf6390838e4dd7de9fde3e5a04411e",
+      "hash": "61d4cc0671a5cfee0fbc6504e83e2a3c",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-nord-theme-v21.20.405-arm-v7a": {
-      "hash": "1ea6601387af7f7a7eb8083d25d853e3",
+      "hash": "fed1705e4de368c4003be76971687a72",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-mocha-theme-v21.20.405-arm64-v8a": {
-      "hash": "d1b7071b3e1276884b2a348da96f3ae1",
+      "hash": "61d4cc0671a5cfee0fbc6504e83e2a3c",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-mocha-theme-v21.20.405-arm-v7a": {
-      "hash": "9c665d2fb9c94aacecc82232e0e37c9f",
+      "hash": "fed1705e4de368c4003be76971687a72",
       "kinds": [
         "apk",
         "module"
@@ -1341,6 +1341,48 @@
       "hash": "0a18e10de9f2c6adc7069ba9933e0b53",
       "kinds": [
         "apk"
+      ]
+    },
+    "reddit-morphe-experimental-v2026.42.0-arm64-v8a": {
+      "hash": "7eed024a1d00c1c612a193e28996bc59",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "reddit-morphe-experimental-v2026.42.0-arm-v7a": {
+      "hash": "67173789a5a862853a5cd6b9d0f57d24",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-music-morphe-experimental-v9.42.52-arm64-v8a": {
+      "hash": "d35417e953a066608b66b0a67dd83bf5",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-music-morphe-experimental-v9.42.52-arm-v7a": {
+      "hash": "b5bd1643de6f11edc6e2544ebc4533b2",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-morphe-experimental-v21.42.241-arm64-v8a": {
+      "hash": "dadf7cc5241b4127f873720c467d3a87",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-morphe-experimental-v21.42.241-arm-v7a": {
+      "hash": "7750e3ade59d2870cb12753b9f88c46b",
+      "kinds": [
+        "apk",
+        "module"
       ]
     }
   }
