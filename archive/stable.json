@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-23T17:52:49Z"
+    "publishedAt": "2026-10-23T20:13:05Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -3785,10 +3785,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.8.0.mpp"
+        "andrewliang25/patches-3.9.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.8.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.9.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3808,8 +3808,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260354",
+      "publishedAt": "2026-10-23T20:12:43Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
       "name": "facebook-andrewliang25",
@@ -3824,10 +3824,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.8.0.mpp"
+        "andrewliang25/patches-3.9.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.8.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.9.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3847,8 +3847,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
+      "originBuild": "260354",
+      "publishedAt": "2026-10-23T20:12:43Z"
     },
     "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
       "name": "pixiv-fripe070",
