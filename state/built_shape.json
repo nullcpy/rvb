@@ -3018,6 +3018,7 @@
     },
     "BlockBlast-ImNoammm": {
       "arches": [
+        "all",
         "arm-v7a",
         "arm64-v8a"
       ],
@@ -3026,7 +3027,7 @@
         "brand": "ImNoammm",
         "app-name": "Block Blast",
         "pkg-name": "com.block.juggle",
-        "arch": "both",
+        "arch": "all",
         "build-mode": "apk"
       }
     }
