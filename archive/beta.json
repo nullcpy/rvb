@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-23T09:26:33Z"
+    "publishedAt": "2026-10-23T14:04:00Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -3110,10 +3110,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -3146,8 +3146,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-module-v2026.24.0-arm64-v8a.zip": {
       "name": "reddit-morphe",
@@ -3162,10 +3162,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -3198,8 +3198,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-module-v2026.24.0-arm-v7a.zip": {
       "name": "reddit-morphe",
@@ -3214,10 +3214,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -3250,8 +3250,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-v2026.24.0-arm64-v8a.apk": {
       "name": "reddit-morphe",
@@ -3266,10 +3266,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -3302,8 +3302,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm-v7a.zip": {
       "name": "youtube-music-morphe",
@@ -3318,10 +3318,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3372,8 +3372,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -3388,10 +3388,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3443,8 +3443,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-v9.20.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -3459,10 +3459,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3514,8 +3514,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -3530,10 +3530,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3584,8 +3584,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -5684,10 +5684,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -5720,8 +5720,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm-v7a.zip": {
       "name": "reddit-morphe-experimental",
@@ -5736,10 +5736,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -5772,8 +5772,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-experimental-v2026.42.0-arm-v7a.apk": {
       "name": "reddit-morphe-experimental",
@@ -5788,10 +5788,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -5824,8 +5824,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "reddit-morphe-experimental-module-v2026.42.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
@@ -5840,10 +5840,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "App icon",
@@ -5876,8 +5876,8 @@
         "Spoof signature",
         "Start as guest"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -5892,10 +5892,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5983,6 +5983,7 @@
         "Return YouTube Dislike",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar",
         "Series tracking",
         "Settings menu filter",
@@ -6002,8 +6003,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6018,10 +6019,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6110,6 +6111,7 @@
         "Return YouTube Dislike",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar",
         "Series tracking",
         "Settings menu filter",
@@ -6129,8 +6131,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-morphe-experimental-v21.42.241-arm-v7a.apk": {
       "name": "youtube-morphe-experimental",
@@ -6145,10 +6147,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6237,6 +6239,7 @@
         "Return YouTube Dislike",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar",
         "Series tracking",
         "Settings menu filter",
@@ -6256,8 +6259,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-morphe-experimental-module-v21.42.241-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -6272,10 +6275,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -6363,6 +6366,7 @@
         "Return YouTube Dislike",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar",
         "Series tracking",
         "Settings menu filter",
@@ -6382,8 +6386,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -6597,10 +6601,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6652,8 +6656,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-experimental-module-v9.42.52-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -6668,10 +6672,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6722,8 +6726,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-experimental-module-v9.42.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -6738,10 +6742,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6792,8 +6796,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "youtube-music-morphe-experimental-v9.42.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -6808,10 +6812,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.19.mpp"
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.19"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -6863,8 +6867,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260337",
-      "publishedAt": "2026-10-22T11:19:07Z"
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -7450,6 +7454,798 @@
       ],
       "originBuild": "260348",
       "publishedAt": "2026-10-23T09:26:02Z"
+    },
+    "tiktok-icysymmetra-v47.4.3-arm64-v8a.apk": {
+      "name": "tiktok-icysymmetra",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "icysymmetra",
+      "brandName": "icysymmetra",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "icysymmetra/patches-0.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Advanced downloads",
+        "Allow Duet and Stitch",
+        "Allow screenshots and Circle to Search",
+        "Always show publish date",
+        "Always upload in HD",
+        "App lock",
+        "Automatic video advance",
+        "Block author button",
+        "Block contact list access",
+        "Block installed app scanning",
+        "Block popups",
+        "Block suggested video notifications",
+        "Camera and microphone indicator",
+        "Comment publish diagnostics",
+        "Comment send fix",
+        "Comment sort controls",
+        "Comment tools",
+        "Confirm feed interactions",
+        "Copy bio and IDs",
+        "Copy comments without username",
+        "Custom offline videos limit",
+        "Device privacy guard",
+        "Diagnostic tools",
+        "Disable login requirement",
+        "Disable screen capture detection",
+        "Disable telemetry",
+        "Disable the long press quick share",
+        "Disable the long press repost",
+        "Double-tap controls",
+        "Downloads",
+        "Drop the animated image cache",
+        "Enable voice comments",
+        "Expand activity list",
+        "Feature Gate Lab",
+        "Feed filter",
+        "Feed tab navigation",
+        "Feed text sizes",
+        "Fit the video to the screen",
+        "Fix Google login",
+        "Foldable split comment view",
+        "Follow diagnostics",
+        "Force show Auto scroll",
+        "Ghost mode",
+        "Hide CAPTCHA popups",
+        "Hide already seen videos",
+        "Hide comment popup ads",
+        "Hide comment typing suggestions",
+        "Hide feed LIVE button",
+        "Hide feed follow button",
+        "Hide feed save button",
+        "Hide feed search button",
+        "Hide floating promotions",
+        "Hide inbox items",
+        "Hide inbox stories",
+        "Hide profile shortcuts",
+        "Hide search suggestions",
+        "Hide suggested accounts",
+        "Hide the launcher shortcuts",
+        "Hide video overlays",
+        "Hold-and-slide 2x lock",
+        "In-app browser privacy guard",
+        "Keep a streak going",
+        "Keep playing in the background",
+        "Keep pulled sounds",
+        "Keep the Favorites tab",
+        "Keep the app language",
+        "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
+        "Limit background traffic",
+        "Location access governor",
+        "Long-press controls",
+        "Mute feed videos",
+        "Network proxy",
+        "Not interested button",
+        "Notification controls",
+        "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
+        "Playback quality",
+        "Playback speed",
+        "Prefer H.264 playback",
+        "Profile background",
+        "Remember clear display",
+        "Remove avatar rings",
+        "Repost diagnostics",
+        "Resource and battery governor",
+        "Resume videos after scrolling",
+        "SIM spoof",
+        "Sanitize sharing links",
+        "Settings",
+        "Share sheet tools",
+        "Show LIVE search",
+        "Show author region",
+        "Show commenter handle and region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
+        "Show the progress bar",
+        "Show the progress bar thumbnail",
+        "Skip content warnings",
+        "Skip passkey sign-in",
+        "Skip the splash ad",
+        "Skip update checks",
+        "Stay on the video in full screen",
+        "Stop on-device AI profiling",
+        "Stop recording watch history",
+        "Stop saving search history",
+        "Stop search autoplay",
+        "Stop video looping",
+        "Story controls",
+        "Subtitle tools",
+        "Swipe-left controls",
+        "Translate comments",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Use non-personalized search",
+        "Use system font"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
+    },
+    "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
+      "name": "tiktok-icysymmetra",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "icysymmetra",
+      "brandName": "icysymmetra",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "icysymmetra/patches-0.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Advanced downloads",
+        "Allow Duet and Stitch",
+        "Allow screenshots and Circle to Search",
+        "Always show publish date",
+        "Always upload in HD",
+        "App lock",
+        "Automatic video advance",
+        "Block author button",
+        "Block contact list access",
+        "Block installed app scanning",
+        "Block popups",
+        "Block suggested video notifications",
+        "Camera and microphone indicator",
+        "Comment publish diagnostics",
+        "Comment send fix",
+        "Comment sort controls",
+        "Comment tools",
+        "Confirm feed interactions",
+        "Copy bio and IDs",
+        "Copy comments without username",
+        "Custom offline videos limit",
+        "Device privacy guard",
+        "Diagnostic tools",
+        "Disable login requirement",
+        "Disable screen capture detection",
+        "Disable telemetry",
+        "Disable the long press quick share",
+        "Disable the long press repost",
+        "Double-tap controls",
+        "Downloads",
+        "Drop the animated image cache",
+        "Enable voice comments",
+        "Expand activity list",
+        "Feature Gate Lab",
+        "Feed filter",
+        "Feed tab navigation",
+        "Feed text sizes",
+        "Fit the video to the screen",
+        "Fix Google login",
+        "Foldable split comment view",
+        "Follow diagnostics",
+        "Force show Auto scroll",
+        "Ghost mode",
+        "Hide CAPTCHA popups",
+        "Hide already seen videos",
+        "Hide comment popup ads",
+        "Hide comment typing suggestions",
+        "Hide feed LIVE button",
+        "Hide feed follow button",
+        "Hide feed save button",
+        "Hide feed search button",
+        "Hide floating promotions",
+        "Hide inbox items",
+        "Hide inbox stories",
+        "Hide profile shortcuts",
+        "Hide search suggestions",
+        "Hide suggested accounts",
+        "Hide the launcher shortcuts",
+        "Hide video overlays",
+        "Hold-and-slide 2x lock",
+        "In-app browser privacy guard",
+        "Keep a streak going",
+        "Keep playing in the background",
+        "Keep pulled sounds",
+        "Keep the Favorites tab",
+        "Keep the app language",
+        "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
+        "Limit background traffic",
+        "Location access governor",
+        "Long-press controls",
+        "Mute feed videos",
+        "Network proxy",
+        "Not interested button",
+        "Notification controls",
+        "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
+        "Playback quality",
+        "Playback speed",
+        "Prefer H.264 playback",
+        "Profile background",
+        "Remember clear display",
+        "Remove avatar rings",
+        "Repost diagnostics",
+        "Resource and battery governor",
+        "Resume videos after scrolling",
+        "SIM spoof",
+        "Sanitize sharing links",
+        "Settings",
+        "Share sheet tools",
+        "Show LIVE search",
+        "Show author region",
+        "Show commenter handle and region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
+        "Show the progress bar",
+        "Show the progress bar thumbnail",
+        "Skip content warnings",
+        "Skip passkey sign-in",
+        "Skip the splash ad",
+        "Skip update checks",
+        "Stay on the video in full screen",
+        "Stop on-device AI profiling",
+        "Stop recording watch history",
+        "Stop saving search history",
+        "Stop search autoplay",
+        "Stop video looping",
+        "Story controls",
+        "Subtitle tools",
+        "Swipe-left controls",
+        "Translate comments",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Use non-personalized search",
+        "Use system font"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
+    },
+    "youtube-morphe-module-v21.23.492-arm-v7a.zip": {
+      "name": "youtube-morphe",
+      "version": "21.23.492",
+      "appKey": "youtube",
+      "appName": "YouTube",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "morphe",
+      "brandName": "Morphe",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.youtube",
+      "patchSources": [
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
+      ],
+      "appliedPatches": [
+        "AI channel filter",
+        "Add to queue",
+        "Ambient mode",
+        "App refresh rate",
+        "Ask flyout menu",
+        "Bypass image region restrictions",
+        "Bypass link redirects",
+        "Captions",
+        "Change form factor",
+        "Change header",
+        "Change start page",
+        "Channel search",
+        "Channel whitelist",
+        "Check watch history domain name resolution",
+        "Copy text",
+        "Copy video link",
+        "Custom branding",
+        "Custom font",
+        "Custom player overlay opacity",
+        "DeArrow",
+        "Disable DRC audio",
+        "Disable QUIC protocol",
+        "Disable Shorts resuming on startup",
+        "Disable auto feed refresh",
+        "Disable continue watching prompt",
+        "Disable double tap actions",
+        "Disable fullscreen gestures",
+        "Disable haptic feedback",
+        "Disable layout updates",
+        "Disable player popup panels",
+        "Disable playlist autoplay",
+        "Disable rolling number animations",
+        "Disable scrolling speed limit",
+        "Disable sign in to TV popup",
+        "Disable video codecs",
+        "Double tap to seek",
+        "Downloads",
+        "Enable debugging",
+        "Exit fullscreen mode",
+        "Feed card layout",
+        "Feed video actions",
+        "Feed view count",
+        "Force animations",
+        "Force fullscreen landscape",
+        "Force original audio",
+        "Fullscreen video scale",
+        "Hide Shorts components",
+        "Hide ads",
+        "Hide autoplay preview",
+        "Hide end screen cards",
+        "Hide end screen suggested video",
+        "Hide info cards",
+        "Hide layout components",
+        "Hide player flyout menu components",
+        "Hide player overlay buttons",
+        "Hide related video overlay",
+        "Hide related videos",
+        "Hide status bar",
+        "Hide timestamp",
+        "Hide video action buttons",
+        "Loop video",
+        "Media notification controls",
+        "Miniplayer",
+        "Mute button",
+        "Navigation bar",
+        "Open Shorts in regular player",
+        "Open channel of live avatar",
+        "Open links externally",
+        "Open system share sheet",
+        "Open videos fullscreen",
+        "Override YouTube Music buttons",
+        "Picture-in-picture button",
+        "Play all",
+        "Playback buffer",
+        "Playback in feeds",
+        "Playback speed",
+        "PoToken provider",
+        "Reload video",
+        "Remember live stream playback position",
+        "Remove background playback restrictions",
+        "Remove viewer discretion dialog",
+        "Restore original titles",
+        "Return YouTube Dislike",
+        "Sanitize sharing links",
+        "Save to Watch later",
+        "Search comments",
+        "Seekbar",
+        "Series tracking",
+        "Settings menu filter",
+        "Shorts autoplay",
+        "Skip live Shorts",
+        "Skip silence",
+        "SponsorBlock",
+        "Spoof app version",
+        "Spoof device dimensions",
+        "Spoof video streams",
+        "Swipe controls",
+        "Theme",
+        "Video delay",
+        "Video quality",
+        "Voice over translation",
+        "Wide search bar",
+        "Shorts icon style",
+        "Player icon style"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
+    },
+    "youtube-morphe-v21.23.492-arm64-v8a.apk": {
+      "name": "youtube-morphe",
+      "version": "21.23.492",
+      "appKey": "youtube",
+      "appName": "YouTube",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "morphe",
+      "brandName": "Morphe",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.youtube",
+      "patchSources": [
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
+      ],
+      "appliedPatches": [
+        "AI channel filter",
+        "Add to queue",
+        "Ambient mode",
+        "App refresh rate",
+        "Ask flyout menu",
+        "Bypass image region restrictions",
+        "Bypass link redirects",
+        "Captions",
+        "Change form factor",
+        "Change header",
+        "Change start page",
+        "Channel search",
+        "Channel whitelist",
+        "Check watch history domain name resolution",
+        "Copy text",
+        "Copy video link",
+        "Custom branding",
+        "Custom font",
+        "Custom player overlay opacity",
+        "DeArrow",
+        "Disable DRC audio",
+        "Disable QUIC protocol",
+        "Disable Shorts resuming on startup",
+        "Disable auto feed refresh",
+        "Disable continue watching prompt",
+        "Disable double tap actions",
+        "Disable fullscreen gestures",
+        "Disable haptic feedback",
+        "Disable layout updates",
+        "Disable player popup panels",
+        "Disable playlist autoplay",
+        "Disable rolling number animations",
+        "Disable scrolling speed limit",
+        "Disable sign in to TV popup",
+        "Disable video codecs",
+        "Double tap to seek",
+        "Downloads",
+        "Enable debugging",
+        "Exit fullscreen mode",
+        "Feed card layout",
+        "Feed video actions",
+        "Feed view count",
+        "Force animations",
+        "Force fullscreen landscape",
+        "Force original audio",
+        "Fullscreen video scale",
+        "GmsCore support",
+        "Hide Shorts components",
+        "Hide ads",
+        "Hide autoplay preview",
+        "Hide end screen cards",
+        "Hide end screen suggested video",
+        "Hide info cards",
+        "Hide layout components",
+        "Hide player flyout menu components",
+        "Hide player overlay buttons",
+        "Hide related video overlay",
+        "Hide related videos",
+        "Hide status bar",
+        "Hide timestamp",
+        "Hide video action buttons",
+        "Loop video",
+        "Media notification controls",
+        "Miniplayer",
+        "Mute button",
+        "Navigation bar",
+        "Open Shorts in regular player",
+        "Open channel of live avatar",
+        "Open links externally",
+        "Open system share sheet",
+        "Open videos fullscreen",
+        "Override YouTube Music buttons",
+        "Picture-in-picture button",
+        "Play all",
+        "Playback buffer",
+        "Playback in feeds",
+        "Playback speed",
+        "PoToken provider",
+        "Reload video",
+        "Remember live stream playback position",
+        "Remove background playback restrictions",
+        "Remove viewer discretion dialog",
+        "Restore original titles",
+        "Return YouTube Dislike",
+        "Sanitize sharing links",
+        "Save to Watch later",
+        "Search comments",
+        "Seekbar",
+        "Series tracking",
+        "Settings menu filter",
+        "Shorts autoplay",
+        "Skip live Shorts",
+        "Skip silence",
+        "SponsorBlock",
+        "Spoof app version",
+        "Spoof device dimensions",
+        "Spoof video streams",
+        "Swipe controls",
+        "Theme",
+        "Video delay",
+        "Video quality",
+        "Voice over translation",
+        "Wide search bar",
+        "Shorts icon style",
+        "Player icon style"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
+    },
+    "youtube-morphe-v21.23.492-arm-v7a.apk": {
+      "name": "youtube-morphe",
+      "version": "21.23.492",
+      "appKey": "youtube",
+      "appName": "YouTube",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "morphe",
+      "brandName": "Morphe",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.youtube",
+      "patchSources": [
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
+      ],
+      "appliedPatches": [
+        "AI channel filter",
+        "Add to queue",
+        "Ambient mode",
+        "App refresh rate",
+        "Ask flyout menu",
+        "Bypass image region restrictions",
+        "Bypass link redirects",
+        "Captions",
+        "Change form factor",
+        "Change header",
+        "Change start page",
+        "Channel search",
+        "Channel whitelist",
+        "Check watch history domain name resolution",
+        "Copy text",
+        "Copy video link",
+        "Custom branding",
+        "Custom font",
+        "Custom player overlay opacity",
+        "DeArrow",
+        "Disable DRC audio",
+        "Disable QUIC protocol",
+        "Disable Shorts resuming on startup",
+        "Disable auto feed refresh",
+        "Disable continue watching prompt",
+        "Disable double tap actions",
+        "Disable fullscreen gestures",
+        "Disable haptic feedback",
+        "Disable layout updates",
+        "Disable player popup panels",
+        "Disable playlist autoplay",
+        "Disable rolling number animations",
+        "Disable scrolling speed limit",
+        "Disable sign in to TV popup",
+        "Disable video codecs",
+        "Double tap to seek",
+        "Downloads",
+        "Enable debugging",
+        "Exit fullscreen mode",
+        "Feed card layout",
+        "Feed video actions",
+        "Feed view count",
+        "Force animations",
+        "Force fullscreen landscape",
+        "Force original audio",
+        "Fullscreen video scale",
+        "GmsCore support",
+        "Hide Shorts components",
+        "Hide ads",
+        "Hide autoplay preview",
+        "Hide end screen cards",
+        "Hide end screen suggested video",
+        "Hide info cards",
+        "Hide layout components",
+        "Hide player flyout menu components",
+        "Hide player overlay buttons",
+        "Hide related video overlay",
+        "Hide related videos",
+        "Hide status bar",
+        "Hide timestamp",
+        "Hide video action buttons",
+        "Loop video",
+        "Media notification controls",
+        "Miniplayer",
+        "Mute button",
+        "Navigation bar",
+        "Open Shorts in regular player",
+        "Open channel of live avatar",
+        "Open links externally",
+        "Open system share sheet",
+        "Open videos fullscreen",
+        "Override YouTube Music buttons",
+        "Picture-in-picture button",
+        "Play all",
+        "Playback buffer",
+        "Playback in feeds",
+        "Playback speed",
+        "PoToken provider",
+        "Reload video",
+        "Remember live stream playback position",
+        "Remove background playback restrictions",
+        "Remove viewer discretion dialog",
+        "Restore original titles",
+        "Return YouTube Dislike",
+        "Sanitize sharing links",
+        "Save to Watch later",
+        "Search comments",
+        "Seekbar",
+        "Series tracking",
+        "Settings menu filter",
+        "Shorts autoplay",
+        "Skip live Shorts",
+        "Skip silence",
+        "SponsorBlock",
+        "Spoof app version",
+        "Spoof device dimensions",
+        "Spoof video streams",
+        "Swipe controls",
+        "Theme",
+        "Video delay",
+        "Video quality",
+        "Voice over translation",
+        "Wide search bar",
+        "Shorts icon style",
+        "Player icon style"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
+    },
+    "youtube-morphe-module-v21.23.492-arm64-v8a.zip": {
+      "name": "youtube-morphe",
+      "version": "21.23.492",
+      "appKey": "youtube",
+      "appName": "YouTube",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "morphe",
+      "brandName": "Morphe",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.youtube",
+      "patchSources": [
+        "MorpheApp/patches-1.49.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1"
+      ],
+      "appliedPatches": [
+        "AI channel filter",
+        "Add to queue",
+        "Ambient mode",
+        "App refresh rate",
+        "Ask flyout menu",
+        "Bypass image region restrictions",
+        "Bypass link redirects",
+        "Captions",
+        "Change form factor",
+        "Change header",
+        "Change start page",
+        "Channel search",
+        "Channel whitelist",
+        "Check watch history domain name resolution",
+        "Copy text",
+        "Copy video link",
+        "Custom branding",
+        "Custom font",
+        "Custom player overlay opacity",
+        "DeArrow",
+        "Disable DRC audio",
+        "Disable QUIC protocol",
+        "Disable Shorts resuming on startup",
+        "Disable auto feed refresh",
+        "Disable continue watching prompt",
+        "Disable double tap actions",
+        "Disable fullscreen gestures",
+        "Disable haptic feedback",
+        "Disable layout updates",
+        "Disable player popup panels",
+        "Disable playlist autoplay",
+        "Disable rolling number animations",
+        "Disable scrolling speed limit",
+        "Disable sign in to TV popup",
+        "Disable video codecs",
+        "Double tap to seek",
+        "Downloads",
+        "Enable debugging",
+        "Exit fullscreen mode",
+        "Feed card layout",
+        "Feed video actions",
+        "Feed view count",
+        "Force animations",
+        "Force fullscreen landscape",
+        "Force original audio",
+        "Fullscreen video scale",
+        "Hide Shorts components",
+        "Hide ads",
+        "Hide autoplay preview",
+        "Hide end screen cards",
+        "Hide end screen suggested video",
+        "Hide info cards",
+        "Hide layout components",
+        "Hide player flyout menu components",
+        "Hide player overlay buttons",
+        "Hide related video overlay",
+        "Hide related videos",
+        "Hide status bar",
+        "Hide timestamp",
+        "Hide video action buttons",
+        "Loop video",
+        "Media notification controls",
+        "Miniplayer",
+        "Mute button",
+        "Navigation bar",
+        "Open Shorts in regular player",
+        "Open channel of live avatar",
+        "Open links externally",
+        "Open system share sheet",
+        "Open videos fullscreen",
+        "Override YouTube Music buttons",
+        "Picture-in-picture button",
+        "Play all",
+        "Playback buffer",
+        "Playback in feeds",
+        "Playback speed",
+        "PoToken provider",
+        "Reload video",
+        "Remember live stream playback position",
+        "Remove background playback restrictions",
+        "Remove viewer discretion dialog",
+        "Restore original titles",
+        "Return YouTube Dislike",
+        "Sanitize sharing links",
+        "Save to Watch later",
+        "Search comments",
+        "Seekbar",
+        "Series tracking",
+        "Settings menu filter",
+        "Shorts autoplay",
+        "Skip live Shorts",
+        "Skip silence",
+        "SponsorBlock",
+        "Spoof app version",
+        "Spoof device dimensions",
+        "Spoof video streams",
+        "Swipe controls",
+        "Theme",
+        "Video delay",
+        "Video quality",
+        "Voice over translation",
+        "Wide search bar",
+        "Shorts icon style",
+        "Player icon style"
+      ],
+      "originBuild": "260350",
+      "publishedAt": "2026-10-23T14:03:09Z"
     }
   }
 }
