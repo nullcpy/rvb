@@ -213,7 +213,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "Tubi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
@@ -291,6 +291,7 @@
     "pkg-name": "com.block.juggle",
     "app-name": "Block Blast",
     "brand": "ImNoammm",
+    "arch": "all",
     "patches-source": "ImNoammm/Noams-Morphe-Patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/hungrystudio/block-blast-puzzle-games",
     "uptodown-dlurl": "https://block-blast-adventure-master.en.uptodown.com/android",
@@ -318,7 +319,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -2015,7 +2016,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",

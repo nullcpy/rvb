@@ -1,4 +1,14 @@
 {
-  "stable": {},
+  "stable": {
+    "BlockBlast-ImNoammm": {
+      "reason": "config",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "834f3817c4aada5a46b26d94d57cefc21833fd87"
+    }
+  },
   "beta": {}
 }
