@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260349",
+    "channel": "stable",
+    "publishedAt": "2026-10-23T09:30:44Z"
+  },
+  "files": {
+    "block-blast-imnoammm-v10.8.1-all.apk": {
+      "name": "block-blast-imnoammm",
+      "version": "10.8.1",
+      "appKey": "blockblast",
+      "appName": "Block Blast",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "imnoammm",
+      "brandName": "ImNoammm",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.block.juggle",
+      "patchSources": [
+        "ImNoammm/noams-morphe-patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Animation theme",
+        "Block ads",
+        "Block themes",
+        "Colour theme",
+        "Disable impossible levels",
+        "Disable revive",
+        "Extra effects",
+        "Fake best score",
+        "Faster game over",
+        "Fresh Classic games",
+        "Hide percent-of-players popups",
+        "Menu theme",
+        "Remove startup credits",
+        "Tidy settings menu",
+        "iOS generation algorithm"
+      ],
+      "originBuild": "260349",
+      "publishedAt": "2026-10-23T09:30:44Z"
+    }
+  }
+}
