@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260347",
+    "channel": "stable",
+    "publishedAt": "2026-10-23T08:44:38Z"
+  },
+  "files": {
+    "block-blast-imnoammm-v10.8.1-arm64-v8a.apk": {
+      "name": "block-blast-imnoammm",
+      "version": "10.8.1",
+      "appKey": "blockblast",
+      "appName": "Block Blast",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "imnoammm",
+      "brandName": "ImNoammm",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.block.juggle",
+      "patchSources": [
+        "ImNoammm/noams-morphe-patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Animation theme",
+        "Block ads",
+        "Block themes",
+        "Colour theme",
+        "Disable impossible levels",
+        "Disable revive",
+        "Extra effects",
+        "Fake best score",
+        "Faster game over",
+        "Fresh Classic games",
+        "Hide percent-of-players popups",
+        "Menu theme",
+        "Remove startup credits",
+        "Tidy settings menu",
+        "iOS generation algorithm"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    },
+    "block-blast-imnoammm-v10.8.1-arm-v7a.apk": {
+      "name": "block-blast-imnoammm",
+      "version": "10.8.1",
+      "appKey": "blockblast",
+      "appName": "Block Blast",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "imnoammm",
+      "brandName": "ImNoammm",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.block.juggle",
+      "patchSources": [
+        "ImNoammm/noams-morphe-patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Animation theme",
+        "Block ads",
+        "Block themes",
+        "Colour theme",
+        "Disable impossible levels",
+        "Disable revive",
+        "Extra effects",
+        "Fake best score",
+        "Faster game over",
+        "Fresh Classic games",
+        "Hide percent-of-players popups",
+        "Menu theme",
+        "Remove startup credits",
+        "Tidy settings menu",
+        "iOS generation algorithm"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    },
+    "swift-backup-byehi98-v5.1.0-arm-v7a.apk": {
+      "name": "swift-backup-byehi98",
+      "version": "5.1.0",
+      "appKey": "swiftbackup",
+      "appName": "Swift Backup",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "byehi98",
+      "brandName": "byehi98",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.swiftapps.swiftbackup",
+      "patchSources": [
+        "byehi98/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Swift Backup Local Cloud Metadata",
+        "Swift Backup Premium Unlock",
+        "Swift Backup Tamper Protection",
+        "Swift Backup Web Login"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    },
+    "swift-backup-byehi98-v5.1.0-arm64-v8a.apk": {
+      "name": "swift-backup-byehi98",
+      "version": "5.1.0",
+      "appKey": "swiftbackup",
+      "appName": "Swift Backup",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "byehi98",
+      "brandName": "byehi98",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.swiftapps.swiftbackup",
+      "patchSources": [
+        "byehi98/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Swift Backup Local Cloud Metadata",
+        "Swift Backup Premium Unlock",
+        "Swift Backup Tamper Protection",
+        "Swift Backup Web Login"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    },
+    "threads-hushthreads-v452.0.0.50.64-arm64-v8a.apk": {
+      "name": "threads-hushthreads",
+      "version": "452.0.0.50.64",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushthreads",
+      "brandName": "HushThreads",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.16.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.16"
+      ],
+      "appliedPatches": [
+        "Block background-return feed refresh",
+        "Change version code",
+        "Disable analytics",
+        "Disable screenshot detection",
+        "Disable swipe to Search",
+        "Disable video autoplay",
+        "Hide ads",
+        "Hide ghost post bubbles",
+        "Hide suggested users",
+        "Hide the Instagram button",
+        "HushThreads settings",
+        "Max image quality",
+        "Open links in browser",
+        "Pure black dark mode",
+        "Remove share targets",
+        "Remove the advertising ID",
+        "Restore screens on re-signed builds",
+        "Sanitize sharing links",
+        "Save photos and videos",
+        "Trust user-added certificates"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    },
+    "tubi-ajstrick81-android-tv-v10.40.5000-all.apk": {
+      "name": "tubi-ajstrick81-android-tv",
+      "version": "10.40.5000",
+      "appKey": "tubi",
+      "appName": "Tubi",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.tubitv",
+      "patchSources": [
+        "ajstrick81/patches-1.42.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.42.3"
+      ],
+      "appliedPatches": [
+        "Skip ads"
+      ],
+      "originBuild": "260347",
+      "publishedAt": "2026-10-23T08:44:38Z"
+    }
+  }
+}
