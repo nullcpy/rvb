@@ -3043,7 +3043,7 @@
         "variant": "Material You",
         "app-name": "Facebook",
         "pkg-name": "com.facebook.katana",
-        "included-patches": "'AMOLED black theme' 'Material You theme'",
+        "included-patches": "'Material You theme'",
         "arch": "both",
         "build-mode": "apk"
       }

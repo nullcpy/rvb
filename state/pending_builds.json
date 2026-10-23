@@ -1,15 +1,4 @@
 {
-  "stable": {
-    "Facebook-HushFacebook-MaterialYou": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "00838746de3b05205a6b7efc9064f6087f6678bf"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
