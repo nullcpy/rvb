@@ -1,16 +1,14 @@
 {
   "stable": {
-    "BraveBrowser-dh6k-Nightly": {
+    "Tubi-ajstrick81-AndroidTV": {
       "reason": "retry",
       "arches": [
-        "arm-v7a",
-        "arm64-v8a"
+        "all"
       ],
-      "attempts": 3,
-      "parked": true,
-      "run": 39870173321,
-      "ts": "2026-10-22T23:32:03Z",
-      "cfg": "97d75cb768c8d57defa35f79d15332b5184cf714"
+      "attempts": 1,
+      "parked": false,
+      "run": 39901278132,
+      "ts": "2026-10-23T04:46:17Z"
     }
   },
   "beta": {}
