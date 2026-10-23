@@ -503,7 +503,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -521,7 +521,7 @@
     "patches-source": "SysAdminDoc/HushFacebook",
     "brand": "HushFacebook",
     "variant": "Material You",
-    "included-patches": "'AMOLED black theme' 'Material You theme'",
+    "included-patches": "'Material You theme'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/facebook-2/facebook",
     "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana",
@@ -1969,7 +1969,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Telegram-HushTelegram-FOSS": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.telegram.messenger.web",
     "app-name": "Telegram",
     "variant": "FOSS",
@@ -1980,7 +1980,7 @@
     "direct-dlurl": "https://telegram.org/dl/android/apk"
   },
   "Telegram-HushTelegram-GooglePlay": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.telegram.messenger",
     "app-name": "Telegram",
     "variant": "Google Play",
@@ -2157,7 +2157,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
