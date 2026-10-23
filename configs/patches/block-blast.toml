@@ -3,6 +3,7 @@ enabled = true
 pkg-name = "com.block.juggle"
 app-name = "Block Blast"
 brand = "ImNoammm"
+arch = "all"
 patches-source = "ImNoammm/Noams-Morphe-Patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/hungrystudio/block-blast-puzzle-games"
 uptodown-dlurl = "https://block-blast-adventure-master.en.uptodown.com/android"
