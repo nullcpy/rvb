@@ -1,13 +1,10 @@
-[TikTok-hushfeed]
+[BlockBlast-ImNoammm]
 enabled = true
-pkg-name = "com.zhiliaoapp.musically"
-app-name = "TikTok"
-patches-source = "SysAdminDoc/hushfeed"
-brand = "hushfeed"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically"
-apkcombo-dlurl = "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
-inclusive-patches = true
-excluded-patches = "'Remove unused language packs' 'Change app name'"
-preferred-format = "apk"
+pkg-name = "com.block.juggle"
+app-name = "Block Blast"
+brand = "ImNoammm"
+arch = "all"
+patches-source = "ImNoammm/Noams-Morphe-Patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/hungrystudio/block-blast-puzzle-games"
+uptodown-dlurl = "https://block-blast-adventure-master.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/block-blast/com.block.juggle"
