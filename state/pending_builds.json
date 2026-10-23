@@ -1,25 +1,4 @@
 {
-  "stable": {
-    "Facebook-HushFacebook": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "76645c4e896cda59e1affef4e8a43f4dd7bb6066"
-    },
-    "Facebook-HushFacebook-MaterialYou": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "3127ffc20707cd1d43acf8cdfc99c66519b3c73f"
-    }
-  },
+  "stable": {},
   "beta": {}
 }

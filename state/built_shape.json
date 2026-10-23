@@ -655,6 +655,7 @@
         "brand": "HushFacebook",
         "app-name": "Facebook",
         "pkg-name": "com.facebook.katana",
+        "included-patches": "'AMOLED black theme'",
         "arch": "both",
         "build-mode": "apk"
       }
@@ -3028,6 +3029,22 @@
         "app-name": "Block Blast",
         "pkg-name": "com.block.juggle",
         "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Facebook-HushFacebook-MaterialYou": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushFacebook",
+        "brand": "HushFacebook",
+        "variant": "Material You",
+        "app-name": "Facebook",
+        "pkg-name": "com.facebook.katana",
+        "included-patches": "'AMOLED black theme' 'Material You theme'",
+        "arch": "both",
         "build-mode": "apk"
       }
     }
