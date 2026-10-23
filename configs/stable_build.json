@@ -286,6 +286,16 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/burton999/calcnote-notepad-calculator",
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
+  "BlockBlast-ImNoammm": {
+    "enabled": true,
+    "pkg-name": "com.block.juggle",
+    "app-name": "Block Blast",
+    "brand": "ImNoammm",
+    "patches-source": "ImNoammm/Noams-Morphe-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/hungrystudio/block-blast-puzzle-games",
+    "uptodown-dlurl": "https://block-blast-adventure-master.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
+  },
   "komoot-brosssh": {
     "patches-source": "brosssh/morphe-patches",
     "brand": "brosssh",
@@ -308,7 +318,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -492,7 +502,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -2005,7 +2015,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
@@ -2018,7 +2028,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
