@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-23T09:31:29Z"
+    "publishedAt": "2026-10-23T14:15:00Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14762,10 +14762,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -14775,8 +14775,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -14791,10 +14791,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -14804,8 +14804,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "termius-rushiranpise-v7.9.0-arm64-v8a.apk": {
       "name": "termius-rushiranpise",
@@ -15898,10 +15898,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -15931,8 +15931,8 @@
         "Power saving mode",
         "Add microG support"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -15947,10 +15947,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -15980,8 +15980,8 @@
         "Power saving mode",
         "Add microG support"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "discord-rain-v348.10-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -21574,10 +21574,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21606,8 +21606,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -21622,10 +21622,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21654,8 +21654,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -21698,10 +21698,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21733,8 +21733,8 @@
         "Power saving mode",
         "Add microG support"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -21749,10 +21749,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21784,8 +21784,8 @@
         "Power saving mode",
         "Add microG support"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -21800,10 +21800,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21834,8 +21834,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -21850,10 +21850,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.5.5.mpp"
+        "bearinmindcat/patches-2.5.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.5"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -21884,8 +21884,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260317",
-      "publishedAt": "2026-10-19T16:29:33Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -22998,10 +22998,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23011,8 +23011,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -23027,10 +23027,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23040,8 +23040,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -23056,10 +23056,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23076,8 +23076,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -23092,10 +23092,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.59.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23112,8 +23112,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
     },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",

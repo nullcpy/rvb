@@ -1,0 +1,595 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260351",
+    "channel": "stable",
+    "publishedAt": "2026-10-23T14:14:15Z"
+  },
+  "files": {
+    "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled-microg",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": "MicroG",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled-microg",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": "MicroG",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat-ungoogled",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": "UnGoogled",
+      "subVariant": null,
+      "packageName": "org.ungoogled.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Change app name",
+        "Change package name",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-v26.36.04.973607363-arm-v7a.apk": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode",
+        "Add microG support"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-module-v26.36.04.973607363-arm-v7a.zip": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
+      "name": "google-maps-bearinmindcat",
+      "version": "26.36.04.973607363",
+      "appKey": "googlemaps",
+      "appName": "Google Maps",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.maps",
+      "patchSources": [
+        "bearinmindcat/patches-2.5.6.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.5.6"
+      ],
+      "appliedPatches": [
+        "120 refresh rate",
+        "Account sheet cleanup",
+        "Any media app",
+        "Avoid Flock cameras",
+        "Better offline maps",
+        "Black theme",
+        "Blue pin",
+        "Bypass Play Services checks",
+        "Customization screen",
+        "Flock cameras",
+        "Hide ads and clutter",
+        "Legacy icon",
+        "Location provider toggle",
+        "Offline saved places",
+        "Proxy",
+        "Rectangle shapes",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Speed cameras",
+        "Speeding chime",
+        "Trim account menu",
+        "Waze alerts",
+        "Zoom controls in navigation",
+        "Power saving mode"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 switches"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 switches"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "terabox-hxreborn-v4.26.5-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.26.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    },
+    "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.26.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.59.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260351",
+      "publishedAt": "2026-10-23T14:14:15Z"
+    }
+  }
+}
