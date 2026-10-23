@@ -3015,6 +3015,20 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "BlockBlast-ImNoammm": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "ImNoammm/Noams-Morphe-Patches",
+        "brand": "ImNoammm",
+        "app-name": "Block Blast",
+        "pkg-name": "com.block.juggle",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
