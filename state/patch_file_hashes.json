@@ -114,8 +114,8 @@
   "crimera/piko-newx": {
     "beta": {},
     "stable": {
-      "com.twitter.android": "b9874b170c3034b60f216875b72fb2cd",
-      "shared": "732569d1e1cb5d91dd5a444ed052932e"
+      "com.twitter.android": "f0cb228022c7d869e52cc95b46ae06dd",
+      "shared": "fa253997acd1670aec1905dbe057174c"
     }
   },
   "debakarr/morphe-patches": {
@@ -183,8 +183,8 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "4418053d834c5c665a2cfad15532a3da",
-      "shared": "0e26988669f2caa4613084e845dcdafb"
+      "com.truecaller": "28b7a67d5256205acfef906efca80a5c",
+      "shared": "a24337d8ff2461e261b6cd21a582dbb8"
     },
     "stable": {
       "com.sofascore.results": "eb7e3ef2368796082330f145aaafb57e",
@@ -543,8 +543,9 @@
   "sysadmindoc/hushtelegram": {
     "beta": {},
     "stable": {
-      "org.telegram.messenger.web": "59dd1d58f73e698329d6e4073e8da1e6",
-      "shared": "b7ec28105a4cea05a13a7caa76681979"
+      "org.telegram.messenger": "fe59349aec5a62eebeb7fc87146abec2",
+      "org.telegram.messenger.web": "fe59349aec5a62eebeb7fc87146abec2",
+      "shared": "1cbb0d9c002e86bb6403698a365c7852"
     }
   },
   "sysadmindoc/hushthreads": {
