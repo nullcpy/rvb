@@ -63,7 +63,7 @@
   "bearinmindcat/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.maps": "d1a946951921b8e51d00a34c663ad951",
+      "com.google.android.apps.maps": "f9618d17c16b011a631a840658d45a20",
       "shared": "ccad433d728a8fca2434563b046d8fc7"
     }
   },
@@ -264,21 +264,21 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "cf2bca95e76e640a41d905d4df25c389",
-      "ch.protonvpn.android": "b37ea82fb4d1929efea42d6a46066524",
-      "com.dubox.drive": "fe860b1c539e21968b78337029f8c3e1",
-      "com.greenstone.pocketwhip": "9954db86d5bb94a9aa1c95e67632b0c6",
-      "com.michaldrabik.showly2": "6b4a01452170fcd04ad907e47a5384de",
-      "dev.vodik7.atvtools": "fe7be8fd56e1a019fad025881788e865",
-      "org.withouthat.acalendar": "0c3c5b688b38220f561a7048329a2159",
-      "proton.android.pass": "29febb5bf995bf924d163258093564e4",
-      "shared": "155058ea02b2d2678285686c86ed89ad"
+      "ch.protonmail.android": "68b625de292bc2f0b7ab2ca78f60dfb5",
+      "ch.protonvpn.android": "70d43556e8e434f99e35bf7f9e2719c8",
+      "com.dubox.drive": "ed14e8ce8b834719f932097baba578e4",
+      "com.greenstone.pocketwhip": "975bd819a8e8925d22bd605fd0170543",
+      "com.michaldrabik.showly2": "40d8ed6031f0d68e2d145ed7911efa7f",
+      "dev.vodik7.atvtools": "d8acb03ac56f5d16727be5ae2efd802e",
+      "org.withouthat.acalendar": "65534b01cf3b5666c9b0e1388e83fd58",
+      "proton.android.pass": "9b17d5934b4e04385c4d353afb4d9db9",
+      "shared": "26538d3dc9831a74538a241137632080"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": {
-      "com.zhiliaoapp.musically": "3153d9b7096bf51034d7b5e20d70fb1f",
-      "shared": "4c8e9750b338baa9b2956091fbe5841a"
+      "com.zhiliaoapp.musically": "40927fa15e1439de14ba40c1020f490b",
+      "shared": "999940beba9ae3e33368c32b0650a6d5"
     },
     "stable": {
       "com.zhiliaoapp.musically": "3153d9b7096bf51034d7b5e20d70fb1f",
@@ -360,10 +360,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "5c699e38afa2b27c65f4d4cc10bd92d7",
-      "com.google.android.youtube": "9afc212e5ee6e7e41d12c397b48353dc",
-      "com.reddit.frontpage": "acd05fd6faa2ee4b86716a822759f192",
-      "shared": "986a989b1f52ce1f548dd08c65941d53"
+      "com.google.android.apps.youtube.music": "5bee59734ef82de01482085b4df7850d",
+      "com.google.android.youtube": "fae8d31808a389a2d0f3c933421db473",
+      "com.reddit.frontpage": "1424249dda444b9f46d8f68ee16c2347",
+      "shared": "201a374ebc6030a4126c3d4f241718f2"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "5c699e38afa2b27c65f4d4cc10bd92d7",
