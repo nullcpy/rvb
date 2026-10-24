@@ -352,7 +352,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -373,7 +373,7 @@
   "Photomath-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
@@ -382,7 +382,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -391,7 +391,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -435,7 +435,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -458,7 +458,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -528,7 +528,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "RookieEnough/De-Vanced",
@@ -600,7 +600,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "FairEmail-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -611,7 +611,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -1177,7 +1177,7 @@
   "CalorieCounter-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.fatsecret.android",
     "app-name": "Calorie Counter",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
@@ -1282,7 +1282,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
   },
   "Messenger-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1406,7 +1406,7 @@
     "apkpure-dlurl": "https://apkpure.com/f-droid/org.fdroid.fdroid"
   },
   "GooglePhotos-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "DeVanced",
@@ -1455,7 +1455,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pinterest/com.pinterest"
   },
   "pixiv-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1500,7 +1500,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1870,7 +1870,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
   "SoundCloud-kondratjev": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.soundcloud.android",
     "app-name": "SoundCloud",
     "patches-source": "kondratjev/morphe-patches",
@@ -2099,7 +2099,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
@@ -2157,7 +2157,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
