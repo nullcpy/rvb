@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-24T19:10:06Z"
+    "publishedAt": "2026-10-24T22:30:39Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -24297,10 +24297,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.78.0.mpp"
+        "SysAdminDoc/patches-0.79.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.78.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.79.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24380,6 +24380,7 @@
         "LIVE controls",
         "Lift text length limits",
         "Limit background traffic",
+        "Load all saved stickers",
         "Location access governor",
         "Long-press controls",
         "Look like the store app",
@@ -24403,6 +24404,7 @@
         "Remove content credential and card scanner assets",
         "Remove creation tools",
         "Remove voice tools",
+        "Report a newer phone to effects",
         "Repost diagnostics",
         "Resource and battery governor",
         "Resume videos after scrolling",
@@ -24440,8 +24442,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260346",
-      "publishedAt": "2026-10-23T04:47:22Z"
+      "originBuild": "260366",
+      "publishedAt": "2026-10-24T22:30:04Z"
     },
     "tiktok-hushfeed-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -24456,10 +24458,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.78.0.mpp"
+        "SysAdminDoc/patches-0.79.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.78.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.79.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24539,6 +24541,7 @@
         "LIVE controls",
         "Lift text length limits",
         "Limit background traffic",
+        "Load all saved stickers",
         "Location access governor",
         "Long-press controls",
         "Look like the store app",
@@ -24562,6 +24565,7 @@
         "Remove content credential and card scanner assets",
         "Remove creation tools",
         "Remove voice tools",
+        "Report a newer phone to effects",
         "Repost diagnostics",
         "Resource and battery governor",
         "Resume videos after scrolling",
@@ -24599,8 +24603,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260346",
-      "publishedAt": "2026-10-23T04:47:22Z"
+      "originBuild": "260366",
+      "publishedAt": "2026-10-24T22:30:04Z"
     },
     "threads-hushthreads-v452.0.0.50.64-arm64-v8a.apk": {
       "name": "threads-hushthreads",
