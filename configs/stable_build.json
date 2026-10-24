@@ -352,7 +352,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -364,7 +364,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-lens-pdf-scanner",
@@ -373,7 +373,7 @@
   "Photomath-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
@@ -382,7 +382,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -391,7 +391,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -458,7 +458,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-Venus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
@@ -528,7 +528,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1177,7 +1177,7 @@
   "CalorieCounter-kondratjev": {
     "patches-source": "kondratjev/morphe-patches",
     "brand": "kondratjev",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.fatsecret.android",
     "app-name": "Calorie Counter",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/fatsecret/calorie-counter-by-fatsecret/",
@@ -1282,7 +1282,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
   },
   "Messenger-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1406,7 +1406,7 @@
     "apkpure-dlurl": "https://apkpure.com/f-droid/org.fdroid.fdroid"
   },
   "GooglePhotos-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "DeVanced",
@@ -1455,7 +1455,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pinterest/com.pinterest"
   },
   "pixiv-DeVanced": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1870,7 +1870,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
   "SoundCloud-kondratjev": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.soundcloud.android",
     "app-name": "SoundCloud",
     "patches-source": "kondratjev/morphe-patches",
@@ -2157,7 +2157,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
