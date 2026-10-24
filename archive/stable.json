@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-24T12:58:00Z"
+    "publishedAt": "2026-10-24T16:44:13Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13988,17 +13988,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
       "name": "showly-hxreborn",
@@ -14271,17 +14271,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "facebook-devanced-v580.0.0.51.74-arm64-v8a.apk": {
       "name": "facebook-devanced",
@@ -14660,10 +14660,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -14673,8 +14673,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -14689,10 +14689,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -14702,8 +14702,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "termius-rushiranpise-v7.9.0-arm64-v8a.apk": {
       "name": "termius-rushiranpise",
@@ -18343,62 +18343,6 @@
       "originBuild": "260248",
       "publishedAt": "2026-10-11T18:51:59Z"
     },
-    "sofascore-heval99-v26.09.28-arm64-v8a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.09.28",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-1.15.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.15.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260292",
-      "publishedAt": "2026-10-16T17:19:07Z"
-    },
-    "sofascore-heval99-v26.09.28-arm-v7a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.09.28",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-1.14.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260271",
-      "publishedAt": "2026-10-14T13:43:02Z"
-    },
     "offline-games-ggyasin-v3.14.1-arm-v7a.apk": {
       "name": "offline-games-ggyasin",
       "version": "3.14.1",
@@ -18494,134 +18438,6 @@
       ],
       "originBuild": "260310",
       "publishedAt": "2026-10-18T18:07:41Z"
-    },
-    "truecaller-heval99-v26.39.6-arm64-v8a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.39.6",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.14.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260273",
-      "publishedAt": "2026-10-14T16:50:15Z"
-    },
-    "truecaller-heval99-module-v26.39.6-arm64-v8a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.39.6",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.14.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260273",
-      "publishedAt": "2026-10-14T16:50:15Z"
-    },
-    "truecaller-heval99-module-v26.39.6-arm-v7a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.39.6",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.14.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260273",
-      "publishedAt": "2026-10-14T16:50:15Z"
-    },
-    "truecaller-heval99-v26.39.6-arm-v7a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.39.6",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.14.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.14.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260273",
-      "publishedAt": "2026-10-14T16:50:15Z"
     },
     "messenger-hushmessenger-v583.0.0.29.95-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
@@ -22431,10 +22247,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22444,8 +22260,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -22460,10 +22276,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22473,8 +22289,8 @@
         "Hide upgrade promotions",
         "Material 3 switches"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22489,10 +22305,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22509,8 +22325,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22525,10 +22341,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.59.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.59.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22545,8 +22361,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260351",
-      "publishedAt": "2026-10-23T14:14:15Z"
+      "originBuild": "260363",
+      "publishedAt": "2026-10-24T16:43:37Z"
     },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",
