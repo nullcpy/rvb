@@ -1,0 +1,931 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260359",
+    "channel": "stable",
+    "publishedAt": "2026-10-24T09:35:38Z"
+  },
+  "files": {
+    "calorie-counter-kondratjev-v11.8.2.1-arm64-v8a.apk": {
+      "name": "calorie-counter-kondratjev",
+      "version": "11.8.2.1",
+      "appKey": "caloriecounter",
+      "appName": "Calorie Counter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.fatsecret.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.0"
+      ],
+      "appliedPatches": [
+        "Disable community tab",
+        "Disable force update dialog",
+        "Unlock Premium"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "calorie-counter-kondratjev-v11.8.2.1-arm-v7a.apk": {
+      "name": "calorie-counter-kondratjev",
+      "version": "11.8.2.1",
+      "appKey": "caloriecounter",
+      "appName": "Calorie Counter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.fatsecret.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.0"
+      ],
+      "appliedPatches": [
+        "Disable community tab",
+        "Disable force update dialog",
+        "Unlock Premium"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-venus-v350.8-Stable-arm-v7a.apk": {
+      "name": "discord-venus",
+      "version": "350.8-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "venus",
+      "brandName": "Venus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "VenusIsJaded/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Account switcher",
+        "Bring back Tenor GIFs",
+        "Complete Quests automatically",
+        "Complete badges automatically",
+        "Copy profile bios",
+        "Custom themes",
+        "Disable advertising identifiers",
+        "Disable analytics",
+        "Disable crash reporting",
+        "Disable install attribution",
+        "Disable telemetry and touch logging",
+        "Double-tap to reply",
+        "Favourite any image or video",
+        "Fix link previews",
+        "Fix unknown mentions",
+        "Hide extra buttons",
+        "Hide the Quests banner",
+        "Hide the call button",
+        "Hide the gift button",
+        "Hide typing indicator",
+        "Icon packs",
+        "Jump to first message",
+        "Keep deleted messages",
+        "Message highlights",
+        "Pastel name colors",
+        "Read all button",
+        "Send Nitro stickers and emojis as links",
+        "Send audio as voice messages",
+        "Send long messages",
+        "Server info",
+        "Show device indicators",
+        "Show file sizes when attaching",
+        "Show hidden channels",
+        "Skip delete confirmation",
+        "Spaces in channel names",
+        "Translate messages",
+        "Unlock Nitro themes",
+        "Unlock app icons",
+        "Use your phone's emojis",
+        "Use your phone's font",
+        "User activity notifications",
+        "User and server reviews",
+        "Venus button on profile bar",
+        "Venus settings"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-venus-v350.8-Stable-arm64-v8a.apk": {
+      "name": "discord-venus",
+      "version": "350.8-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "venus",
+      "brandName": "Venus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "VenusIsJaded/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Account switcher",
+        "Bring back Tenor GIFs",
+        "Complete Quests automatically",
+        "Complete badges automatically",
+        "Copy profile bios",
+        "Custom themes",
+        "Disable advertising identifiers",
+        "Disable analytics",
+        "Disable crash reporting",
+        "Disable install attribution",
+        "Disable telemetry and touch logging",
+        "Double-tap to reply",
+        "Favourite any image or video",
+        "Fix link previews",
+        "Fix unknown mentions",
+        "Hide extra buttons",
+        "Hide the Quests banner",
+        "Hide the call button",
+        "Hide the gift button",
+        "Hide typing indicator",
+        "Icon packs",
+        "Jump to first message",
+        "Keep deleted messages",
+        "Message highlights",
+        "Pastel name colors",
+        "Read all button",
+        "Send Nitro stickers and emojis as links",
+        "Send audio as voice messages",
+        "Send long messages",
+        "Server info",
+        "Show device indicators",
+        "Show file sizes when attaching",
+        "Show hidden channels",
+        "Skip delete confirmation",
+        "Spaces in channel names",
+        "Translate messages",
+        "Unlock Nitro themes",
+        "Unlock app icons",
+        "Use your phone's emojis",
+        "Use your phone's font",
+        "User activity notifications",
+        "User and server reviews",
+        "Venus button on profile bar",
+        "Venus settings"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-rain-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-rain-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-revenge-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "facebook-devanced-v580.0.0.51.74-arm64-v8a.apk": {
+      "name": "facebook-devanced",
+      "version": "580.0.0.51.74",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Clean Home feed",
+        "De-Vanced Settings",
+        "Disable all ads",
+        "Disable analytics and telemetry",
+        "Disable auto refresh",
+        "Download Media",
+        "Facebook signature compatibility",
+        "Material You theme",
+        "Media quality controls",
+        "Open Marketplace on launch",
+        "Optimize Facebook",
+        "Picture-in-picture",
+        "Reels 2x speed",
+        "Messenger install compatibility"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-recorder-devanced-module-v4.2.20260823.992025916-arm64-v8a.zip": {
+      "name": "google-recorder-devanced",
+      "version": "4.2.20260823.992025916",
+      "appKey": "googlerecorder",
+      "appName": "Google Recorder",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.recorder",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Remove device restrictions"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "google-recorder-devanced-v4.2.20260823.992025916-arm64-v8a.apk": {
+      "name": "google-recorder-devanced",
+      "version": "4.2.20260823.992025916",
+      "appKey": "googlerecorder",
+      "appName": "Google Recorder",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.recorder",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Remove device restrictions"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm64-v8a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm-v7a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "photomath-devanced-v8.48.0-arm-v7a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "photomath-devanced-v8.48.0-arm64-v8a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "soundcloud-kondratjev-v2026.09.09-release-arm-v7a.apk": {
+      "name": "soundcloud-kondratjev",
+      "version": "2026.09.09-release",
+      "appKey": "soundcloud",
+      "appName": "SoundCloud",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.soundcloud.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable consent popup",
+        "Enable SoundCloud Go"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "soundcloud-kondratjev-v2026.09.09-release-arm64-v8a.apk": {
+      "name": "soundcloud-kondratjev",
+      "version": "2026.09.09-release",
+      "appKey": "soundcloud",
+      "appName": "SoundCloud",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.soundcloud.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable consent popup",
+        "Enable SoundCloud Go"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "strava-devanced-v477.14-arm-v7a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "strava-devanced-v477.14-arm64-v8a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "twitter-piko-newx-v12.35.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.35.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.64.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.35.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.64.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "viber-devanced-v26.1.2.0-arm-v7a.apk": {
+      "name": "viber-devanced",
+      "version": "26.1.2.0",
+      "appKey": "viber",
+      "appName": "Viber",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.viber.voip",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide Ads"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "viber-devanced-v26.1.2.0-arm64-v8a.apk": {
+      "name": "viber-devanced",
+      "version": "26.1.2.0",
+      "appKey": "viber",
+      "appName": "Viber",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.viber.voip",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide Ads"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "pixiv-devanced-v6.196.0-arm64-v8a.apk": {
+      "name": "pixiv-devanced",
+      "version": "6.196.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide ads",
+        "Remove popular search time limit"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "pixiv-devanced-v6.196.0-arm-v7a.apk": {
+      "name": "pixiv-devanced",
+      "version": "6.196.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide ads",
+        "Remove popular search time limit"
+      ],
+      "originBuild": "260359",
+      "publishedAt": "2026-10-24T09:35:38Z"
+    }
+  }
+}
