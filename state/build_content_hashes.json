@@ -1247,13 +1247,13 @@
       ]
     },
     "proton-mail-satanmerde-v7.11.10-arm-v7a": {
-      "hash": "f2883f407aa68e565e99870df0076167",
+      "hash": "f1fa335db14b8217f40bf3875aa43db0",
       "kinds": [
         "apk"
       ]
     },
     "proton-mail-satanmerde-v7.11.10-arm64-v8a": {
-      "hash": "62b5abcf4433edd237fd5748f6c8380d",
+      "hash": "0195e8932e2d6116a15c45e5be7efa5f",
       "kinds": [
         "apk"
       ]
@@ -1758,6 +1758,44 @@
       "hash": "b4842fa7f53c322aabf2d1f54ee6fb09",
       "kinds": [
         "apk"
+      ]
+    },
+    "microsoft-lens-devanced-v16.0.19628.20008-arm-v7a": {
+      "hash": "d28d4f25f41c912bdee061bef41920aa",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.41.5-arm64-v8a": {
+      "hash": "ed64e903c17a3a46e74d9a9ce2ee8e17",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a": {
+      "hash": "d29112eee2396261a4147faa0107f66f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.12-arm-v7a": {
+      "hash": "0add51458248a8af07cda7e8c766481f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.12-arm64-v8a": {
+      "hash": "58c98aeb88cdcabb6ed715a3d9ed699f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.41.5-arm-v7a": {
+      "hash": "5acc24373fe539a9e25e89a2a7f7ecc4",
+      "kinds": [
+        "apk",
+        "module"
       ]
     }
   }

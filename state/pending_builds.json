@@ -1,17 +1,4 @@
 {
-  "stable": {
-    "MicrosoftLens-DeVanced": {
-      "reason": "retry",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 1,
-      "parked": false,
-      "run": 40080743353,
-      "ts": "2026-10-24T09:34:31Z",
-      "cfg": "5e576ad0e12339c924836f74bfdbed33a2b602f8"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
