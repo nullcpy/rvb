@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-24T09:36:40Z"
+    "publishedAt": "2026-10-24T12:58:00Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -1013,58 +1013,6 @@
       "originBuild": "260237",
       "publishedAt": "2026-10-10T16:29:45Z"
     },
-    "calorie-counter-kondratjev-v11.8.0.5-arm64-v8a.apk": {
-      "name": "calorie-counter-kondratjev",
-      "version": "11.8.0.5",
-      "appKey": "caloriecounter",
-      "appName": "Calorie Counter",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kondratjev",
-      "brandName": "kondratjev",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.fatsecret.android",
-      "patchSources": [
-        "kondratjev/patches-1.24.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.24.0"
-      ],
-      "appliedPatches": [
-        "Disable community tab ",
-        "Disable force update dialog ",
-        "Unlock Premium "
-      ],
-      "originBuild": "260058",
-      "publishedAt": "2026-09-15T16:50:12Z"
-    },
-    "calorie-counter-kondratjev-v11.8.0.5-arm-v7a.apk": {
-      "name": "calorie-counter-kondratjev",
-      "version": "11.8.0.5",
-      "appKey": "caloriecounter",
-      "appName": "Calorie Counter",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kondratjev",
-      "brandName": "kondratjev",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.fatsecret.android",
-      "patchSources": [
-        "kondratjev/patches-1.24.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.24.0"
-      ],
-      "appliedPatches": [
-        "Disable community tab ",
-        "Disable force update dialog ",
-        "Unlock Premium "
-      ],
-      "originBuild": "260058",
-      "publishedAt": "2026-09-15T16:50:12Z"
-    },
     "soundcloud-kondratjev-v2026.08.26-release-arm64-v8a.apk": {
       "name": "soundcloud-kondratjev",
       "version": "2026.08.26-release",
@@ -1553,54 +1501,6 @@
       "originBuild": "260159",
       "publishedAt": "2026-10-02T13:00:03Z"
     },
-    "google-recorder-devanced-v4.2.20260709.976121876-arm64-v8a.apk": {
-      "name": "google-recorder-devanced",
-      "version": "4.2.20260709.976121876",
-      "appKey": "googlerecorder",
-      "appName": "Google Recorder",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "devanced",
-      "brandName": "DeVanced",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.google.android.apps.recorder",
-      "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
-      ],
-      "appliedPatches": [
-        "Remove device restrictions "
-      ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
-    },
-    "google-recorder-devanced-module-v4.2.20260709.976121876-arm64-v8a.zip": {
-      "name": "google-recorder-devanced",
-      "version": "4.2.20260709.976121876",
-      "appKey": "googlerecorder",
-      "appName": "Google Recorder",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "devanced",
-      "brandName": "DeVanced",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.google.android.apps.recorder",
-      "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
-      ],
-      "appliedPatches": [
-        "Remove device restrictions "
-      ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
-    },
     "pixiv-devanced-v6.141.1-arm64-v8a.apk": {
       "name": "pixiv-devanced",
       "version": "6.141.1",
@@ -1778,16 +1678,16 @@
       "subVariant": null,
       "packageName": "com.microsoft.office.officelens",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.6.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
       ],
       "appliedPatches": [
-        "Hide OneDrive migration "
+        "Hide OneDrive migration"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
     },
     "microsoft-lens-devanced-v16.0.19628.20008-arm-v7a.apk": {
       "name": "microsoft-lens-devanced",
@@ -1802,16 +1702,16 @@
       "subVariant": null,
       "packageName": "com.microsoft.office.officelens",
       "patchSources": [
-        "RookieEnough/patches-1.4.4.mpp"
+        "RookieEnough/patches-1.6.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.4"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
       ],
       "appliedPatches": [
-        "Hide OneDrive migration "
+        "Hide OneDrive migration"
       ],
-      "originBuild": "260094",
-      "publishedAt": "2026-09-21T03:38:24Z"
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
     },
     "adobe-scan-rushiranpise-v26.08.01-arm64-v8a.apk": {
       "name": "adobe-scan-rushiranpise",
@@ -18375,126 +18275,6 @@
       "originBuild": "260340",
       "publishedAt": "2026-10-22T17:02:14Z"
     },
-    "discord-venus-v348.10-Stable-arm-v7a.apk": {
-      "name": "discord-venus",
-      "version": "348.10-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "venus",
-      "brandName": "Venus",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "VenusIsJaded/patches-1.15.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.15.0"
-      ],
-      "appliedPatches": [
-        "Account switcher",
-        "Complete Quests automatically",
-        "Copy profile bios",
-        "Custom themes",
-        "Disable advertising identifiers",
-        "Disable analytics",
-        "Disable crash reporting",
-        "Disable install attribution",
-        "Disable telemetry and touch logging",
-        "Double-tap to reply",
-        "Favourite any image or video",
-        "Fix unknown mentions",
-        "Hide the Quests banner",
-        "Hide the call button",
-        "Hide the gift button",
-        "Hide typing indicator",
-        "Jump to first message",
-        "Keep deleted messages",
-        "Message highlights",
-        "Pastel name colors",
-        "Read all button",
-        "Send Nitro stickers and emojis as links",
-        "Send audio as voice messages",
-        "Send long messages",
-        "Show device indicators",
-        "Show file sizes when attaching",
-        "Show hidden channels",
-        "Skip delete confirmation",
-        "Spaces in channel names",
-        "Translate messages",
-        "Unlock app icons",
-        "Use your phone's emojis",
-        "Use your phone's font",
-        "User activity notifications",
-        "User and server reviews",
-        "Venus button on profile bar",
-        "Venus settings"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
-    "discord-venus-v348.10-Stable-arm64-v8a.apk": {
-      "name": "discord-venus",
-      "version": "348.10-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "venus",
-      "brandName": "Venus",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "VenusIsJaded/patches-1.15.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.15.0"
-      ],
-      "appliedPatches": [
-        "Account switcher",
-        "Complete Quests automatically",
-        "Copy profile bios",
-        "Custom themes",
-        "Disable advertising identifiers",
-        "Disable analytics",
-        "Disable crash reporting",
-        "Disable install attribution",
-        "Disable telemetry and touch logging",
-        "Double-tap to reply",
-        "Favourite any image or video",
-        "Fix unknown mentions",
-        "Hide the Quests banner",
-        "Hide the call button",
-        "Hide the gift button",
-        "Hide typing indicator",
-        "Jump to first message",
-        "Keep deleted messages",
-        "Message highlights",
-        "Pastel name colors",
-        "Read all button",
-        "Send Nitro stickers and emojis as links",
-        "Send audio as voice messages",
-        "Send long messages",
-        "Show device indicators",
-        "Show file sizes when attaching",
-        "Show hidden channels",
-        "Skip delete confirmation",
-        "Spaces in channel names",
-        "Translate messages",
-        "Unlock app icons",
-        "Use your phone's emojis",
-        "Use your phone's font",
-        "User activity notifications",
-        "User and server reviews",
-        "Venus button on profile bar",
-        "Venus settings"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
     "linkedin-michii-v4.1.1259-arm64-v8a.apk": {
       "name": "linkedin-michii",
       "version": "4.1.1259",
@@ -20883,18 +20663,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.52.1.mpp"
+        "SatanMerde/patches-1.52.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.1"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.9"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260309",
-      "publishedAt": "2026-10-18T16:16:27Z"
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
     },
     "proton-mail-satanmerde-v7.11.10-arm-v7a.apk": {
       "name": "proton-mail-satanmerde",
@@ -20909,18 +20689,18 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "SatanMerde/patches-1.52.1.mpp"
+        "SatanMerde/patches-1.52.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.1"
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.9"
       ],
       "appliedPatches": [
         "AMOLED Black Theme - Proton Mail (Experimental)",
         "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
         "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
       ],
-      "originBuild": "260309",
-      "publishedAt": "2026-10-18T16:16:27Z"
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
     },
     "reddit-adobo-v2026.42.0-arm64-v8a.apk": {
       "name": "reddit-adobo",
@@ -26040,6 +25820,218 @@
       ],
       "originBuild": "260359",
       "publishedAt": "2026-10-24T09:35:38Z"
+    },
+    "sofascore-heval99-v26.10.12-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "sofascore-heval99-v26.10.12-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-v26.41.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-v26.41.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
     }
   }
 }

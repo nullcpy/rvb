@@ -1,0 +1,323 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260361",
+    "channel": "stable",
+    "publishedAt": "2026-10-24T12:57:28Z"
+  },
+  "files": {
+    "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a.apk": {
+      "name": "microsoft-lens-devanced",
+      "version": "16.0.19628.20008",
+      "appKey": "microsoftlens",
+      "appName": "Microsoft Lens",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.officelens",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide OneDrive migration"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "microsoft-lens-devanced-v16.0.19628.20008-arm-v7a.apk": {
+      "name": "microsoft-lens-devanced",
+      "version": "16.0.19628.20008",
+      "appKey": "microsoftlens",
+      "appName": "Microsoft Lens",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.officelens",
+      "patchSources": [
+        "RookieEnough/patches-1.6.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.0"
+      ],
+      "appliedPatches": [
+        "Hide OneDrive migration"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "proton-mail-satanmerde-v7.11.10-arm64-v8a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.52.9.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.9"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "proton-mail-satanmerde-v7.11.10-arm-v7a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.52.9.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.52.9"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "sofascore-heval99-v26.10.12-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "sofascore-heval99-v26.10.12-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-v26.41.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    },
+    "truecaller-heval99-v26.41.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260361",
+      "publishedAt": "2026-10-24T12:57:28Z"
+    }
+  }
+}
