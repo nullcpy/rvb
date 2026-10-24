@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-24T16:44:13Z"
+    "publishedAt": "2026-10-24T19:10:06Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -23689,10 +23689,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.hush",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.15.mpp"
+        "SysAdminDoc/patches-0.0.16.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.15"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.16"
       ],
       "appliedPatches": [
         "Accent color",
@@ -23738,6 +23738,7 @@
         "Hide paid partnership Reels",
         "Hide profile tabs",
         "Hide reels by caption words",
+        "Hide rows in Instagram's settings",
         "Hide suggested accounts in DMs",
         "Hide suggested accounts in Reels",
         "Hide suggested people on profiles",
@@ -23766,6 +23767,7 @@
         "Message box buttons",
         "Open comments without the keyboard",
         "Open links in external browser",
+        "Pick the app icon",
         "Profile posts as a list",
         "Pure black dark mode",
         "Read messages without the seen receipt",
@@ -23799,6 +23801,7 @@
         "Stop swipe up to reply",
         "Stop swiping between tabs",
         "Story ring size",
+        "Story text fonts",
         "Swipe left to open the profile",
         "Tap a feed video to pause it",
         "Tap to play",
@@ -23810,8 +23813,8 @@
         "View stories anonymously",
         "Install next to Instagram"
       ],
-      "originBuild": "260345",
-      "publishedAt": "2026-10-22T23:32:51Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "instagram-hushgram-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-hushgram",
@@ -23826,10 +23829,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.15.mpp"
+        "SysAdminDoc/patches-0.0.16.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.15"
+        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.16"
       ],
       "appliedPatches": [
         "Accent color",
@@ -23875,6 +23878,7 @@
         "Hide paid partnership Reels",
         "Hide profile tabs",
         "Hide reels by caption words",
+        "Hide rows in Instagram's settings",
         "Hide suggested accounts in DMs",
         "Hide suggested accounts in Reels",
         "Hide suggested people on profiles",
@@ -23903,6 +23907,7 @@
         "Message box buttons",
         "Open comments without the keyboard",
         "Open links in external browser",
+        "Pick the app icon",
         "Profile posts as a list",
         "Pure black dark mode",
         "Read messages without the seen receipt",
@@ -23936,6 +23941,7 @@
         "Stop swipe up to reply",
         "Stop swiping between tabs",
         "Story ring size",
+        "Story text fonts",
         "Swipe left to open the profile",
         "Tap a feed video to pause it",
         "Tap to play",
@@ -23946,8 +23952,8 @@
         "View live anonymously",
         "View stories anonymously"
       ],
-      "originBuild": "260345",
-      "publishedAt": "2026-10-22T23:32:51Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "messenger-hushmessenger-v584.0.0.49.98-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
@@ -24045,10 +24051,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.17.0.mpp"
+        "SysAdminDoc/patches-0.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.17.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -24067,6 +24073,7 @@
         "Disable Audience Network",
         "Don't save search history",
         "Don't send reel watch history",
+        "Double tap to skip",
         "Download any photo",
         "Download any reel",
         "Download any story",
@@ -24086,6 +24093,7 @@
         "Hide carrier data banners",
         "Hide post prompts",
         "Hide posts by words",
+        "Hide profile notes",
         "Hide read receipts",
         "Hide reel interest prompts",
         "Hide seen posts",
@@ -24106,6 +24114,7 @@
         "Hide typing indicator",
         "Hold a reel for 2x",
         "Hold back analytics uploads",
+        "Home header text",
         "Hushfacebook in the Menu",
         "Hushfacebook settings",
         "Install beside Meta's apps",
@@ -24113,13 +24122,16 @@
         "Keep post dates",
         "Keep the progress bar",
         "Keep the reel speed",
+        "Longer music on photo stories",
         "Marketplace only",
+        "Newest reels first",
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
+        "Pinch to zoom",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
@@ -24132,6 +24144,7 @@
         "Stop update prompts",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
+        "Tap shows the controls",
         "Tap to play",
         "Turn off HDR brightness",
         "Turn off auto-translation",
@@ -24145,8 +24158,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260352",
-      "publishedAt": "2026-10-23T16:35:56Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "facebook-hushfacebook-v584.0.0.51.56-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -24161,10 +24174,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.17.0.mpp"
+        "SysAdminDoc/patches-0.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.17.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -24183,6 +24196,7 @@
         "Disable Audience Network",
         "Don't save search history",
         "Don't send reel watch history",
+        "Double tap to skip",
         "Download any photo",
         "Download any reel",
         "Download any story",
@@ -24202,6 +24216,7 @@
         "Hide carrier data banners",
         "Hide post prompts",
         "Hide posts by words",
+        "Hide profile notes",
         "Hide read receipts",
         "Hide reel interest prompts",
         "Hide seen posts",
@@ -24222,6 +24237,7 @@
         "Hide typing indicator",
         "Hold a reel for 2x",
         "Hold back analytics uploads",
+        "Home header text",
         "Hushfacebook in the Menu",
         "Hushfacebook settings",
         "Install beside Meta's apps",
@@ -24229,13 +24245,16 @@
         "Keep post dates",
         "Keep the progress bar",
         "Keep the reel speed",
+        "Longer music on photo stories",
         "Marketplace only",
+        "Newest reels first",
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
+        "Pinch to zoom",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
@@ -24248,6 +24267,7 @@
         "Stop update prompts",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
+        "Tap shows the controls",
         "Tap to play",
         "Turn off HDR brightness",
         "Turn off auto-translation",
@@ -24261,8 +24281,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260352",
-      "publishedAt": "2026-10-23T16:35:56Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "tiktok-hushfeed-v47.5.3-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -24700,10 +24720,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.17.0.mpp"
+        "SysAdminDoc/patches-0.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.17.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -24721,6 +24741,7 @@
         "Disable Audience Network",
         "Don't save search history",
         "Don't send reel watch history",
+        "Double tap to skip",
         "Download any photo",
         "Download any reel",
         "Download any story",
@@ -24740,6 +24761,7 @@
         "Hide carrier data banners",
         "Hide post prompts",
         "Hide posts by words",
+        "Hide profile notes",
         "Hide read receipts",
         "Hide reel interest prompts",
         "Hide seen posts",
@@ -24760,6 +24782,7 @@
         "Hide typing indicator",
         "Hold a reel for 2x",
         "Hold back analytics uploads",
+        "Home header text",
         "Hushfacebook in the Menu",
         "Hushfacebook settings",
         "Install beside Meta's apps",
@@ -24767,13 +24790,16 @@
         "Keep post dates",
         "Keep the progress bar",
         "Keep the reel speed",
+        "Longer music on photo stories",
         "Marketplace only",
+        "Newest reels first",
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
+        "Pinch to zoom",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
@@ -24786,6 +24812,7 @@
         "Stop update prompts",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
+        "Tap shows the controls",
         "Tap to play",
         "Turn off HDR brightness",
         "Turn off auto-translation",
@@ -24800,8 +24827,8 @@
         "Material You theme",
         "Accent color"
       ],
-      "originBuild": "260353",
-      "publishedAt": "2026-10-23T17:52:23Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "facebook-hushfacebook-material-you-v584.0.0.51.56-arm-v7a.apk": {
       "name": "facebook-hushfacebook-material-you",
@@ -24816,10 +24843,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.17.0.mpp"
+        "SysAdminDoc/patches-0.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.17.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -24837,6 +24864,7 @@
         "Disable Audience Network",
         "Don't save search history",
         "Don't send reel watch history",
+        "Double tap to skip",
         "Download any photo",
         "Download any reel",
         "Download any story",
@@ -24856,6 +24884,7 @@
         "Hide carrier data banners",
         "Hide post prompts",
         "Hide posts by words",
+        "Hide profile notes",
         "Hide read receipts",
         "Hide reel interest prompts",
         "Hide seen posts",
@@ -24876,6 +24905,7 @@
         "Hide typing indicator",
         "Hold a reel for 2x",
         "Hold back analytics uploads",
+        "Home header text",
         "Hushfacebook in the Menu",
         "Hushfacebook settings",
         "Install beside Meta's apps",
@@ -24883,13 +24913,16 @@
         "Keep post dates",
         "Keep the progress bar",
         "Keep the reel speed",
+        "Longer music on photo stories",
         "Marketplace only",
+        "Newest reels first",
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
         "Open links in external browser",
         "Open on a chosen tab",
         "Picture-in-picture",
+        "Pinch to zoom",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Sanitize sharing links",
@@ -24902,6 +24935,7 @@
         "Stop update prompts",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
+        "Tap shows the controls",
         "Tap to play",
         "Turn off HDR brightness",
         "Turn off auto-translation",
@@ -24916,8 +24950,8 @@
         "Material You theme",
         "Accent color"
       ],
-      "originBuild": "260353",
-      "publishedAt": "2026-10-23T17:52:23Z"
+      "originBuild": "260365",
+      "publishedAt": "2026-10-24T19:09:34Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
