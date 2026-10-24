@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-23T23:09:36Z"
+    "publishedAt": "2026-10-24T04:34:28Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -6415,10 +6415,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.1.mpp"
+        "jasonwu1994/patches-4.0.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.2"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -6466,8 +6466,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260357",
+      "publishedAt": "2026-10-24T04:34:09Z"
     },
     "google-keyboard-jasonwu1994-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -6482,10 +6482,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.1.mpp"
+        "jasonwu1994/patches-4.0.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.2"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -6532,8 +6532,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260357",
+      "publishedAt": "2026-10-24T04:34:09Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -6548,10 +6548,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.1.mpp"
+        "jasonwu1994/patches-4.0.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.2"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -6598,8 +6598,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260357",
+      "publishedAt": "2026-10-24T04:34:09Z"
     },
     "instagram-piko-clone-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
