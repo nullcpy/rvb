@@ -3,6 +3,7 @@ enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
 patches-source = "MorpheApp/morphe-patches"
+patcher-args = "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\""
 brand = "Morphe"
 patches-version = "both"
 build-mode = "both"
@@ -22,7 +23,7 @@ build-mode = "both"
 variant = "Nord Theme"
 patch-folder = "youtube"
 patches-version = "stable"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
+patcher-args = "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
@@ -38,7 +39,7 @@ build-mode = "both"
 variant = "Mocha Theme"
 patch-folder = "youtube"
 patches-version = "stable"
-patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
+patcher-args = "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
@@ -49,6 +50,7 @@ enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
 patches-source = "MorpheApp/morphe-patches"
+patcher-args = "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\""
 brand = "Morphe"
 patches-version = "both"
 build-mode = "both"
@@ -60,7 +62,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/youtube-app/com.google.android.youtube"
 apkcombo-dlurl = "https://apkcombo.com/youtube/com.google.android.youtube"
 
-[youtube-anddea]
+[YouTube-anddea]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -73,7 +75,7 @@ patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 
-[youtube-anddea-nord]
+[YouTube-anddea-nord]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
@@ -87,7 +89,7 @@ patcher-args = "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgr
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 
-[youtube-anddea-mocha]
+[YouTube-anddea-mocha]
 enabled = true
 pkg-name = "com.google.android.youtube"
 app-name = "YouTube"
