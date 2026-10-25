@@ -2678,6 +2678,7 @@
         "brand": "Morphe",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
         "arch": "both",
         "build-mode": "both"
       }
@@ -2693,6 +2694,7 @@
         "variant": "Experimental",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
         "arch": "both",
         "build-mode": "both",
         "version": "exp"
@@ -2755,6 +2757,7 @@
         "brand": "Morphe",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
         "arch": "both",
         "build-mode": "both"
       }
@@ -2770,7 +2773,7 @@
         "variant": "Nord Theme",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
-        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
+        "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
         "arch": "both",
         "build-mode": "both"
       }
@@ -2786,7 +2789,7 @@
         "variant": "Mocha Theme",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
-        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
+        "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
         "arch": "both",
         "build-mode": "both"
       }
@@ -2802,6 +2805,7 @@
         "variant": "Experimental",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
         "arch": "both",
         "build-mode": "both",
         "version": "exp"
@@ -3046,6 +3050,118 @@
         "included-patches": "'Material You theme'",
         "arch": "both",
         "build-mode": "apk"
+      }
+    },
+    "GooglePhotos-AkashSriram-Unclone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Akash-Sriram/morphe-google-photos",
+        "brand": "AkashSriram",
+        "variant": "Unclone",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "included-patches": "'Official package name'",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-anddea-nord": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "variant": "Nord Theme",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou=#5E81AC",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTubeMusic-anddea-mocha": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "variant": "Mocha Theme",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=#FF181825 -OmaterialYou=#89B4FA",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-anddea-nord": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "variant": "Nord Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "included-patches": "'MaterialYou'",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-anddea-mocha": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "variant": "Mocha Theme",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "included-patches": "'MaterialYou'",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
+        "arch": "both",
+        "build-mode": "both"
       }
     }
   },
