@@ -3065,7 +3065,7 @@
         "pkg-name": "com.google.android.apps.photos",
         "included-patches": "'Official package name'",
         "arch": "both",
-        "build-mode": "both"
+        "build-mode": "apk"
       }
     },
     "YouTubeMusic-anddea": {
@@ -3162,6 +3162,20 @@
         "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
         "arch": "both",
         "build-mode": "both"
+      }
+    },
+    "MyFitnessPal-heval99": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "heval99/Heval-Morphe-Patches",
+        "brand": "heval99",
+        "app-name": "MyFitnessPal",
+        "pkg-name": "com.myfitnesspal.android",
+        "arch": "both",
+        "build-mode": "apk"
       }
     }
   },
