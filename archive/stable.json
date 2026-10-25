@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-25T13:21:44Z"
+    "publishedAt": "2026-10-25T13:50:23Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14001,17 +14001,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -14026,17 +14026,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.58.0.mpp"
+        "hxreborn/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.58.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260339",
-      "publishedAt": "2026-10-22T14:17:48Z"
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -25982,6 +25982,130 @@
       ],
       "originBuild": "260369",
       "publishedAt": "2026-10-25T08:53:50Z"
+    },
+    "proton-mail-dhrubonai-v7.11.5-arm-v7a.apk": {
+      "name": "proton-mail-dhrubonai",
+      "version": "7.11.5",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "dhrubonai",
+      "brandName": "dhrubonai",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "dhrubonai/patches-1.31.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dhrubonai/morphe-patches/releases/tag/v1.31.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Hide upgrade upselling",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
+    },
+    "proton-mail-dhrubonai-v7.11.5-arm64-v8a.apk": {
+      "name": "proton-mail-dhrubonai",
+      "version": "7.11.5",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "dhrubonai",
+      "brandName": "dhrubonai",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "dhrubonai/patches-1.31.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/dhrubonai/morphe-patches/releases/tag/v1.31.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Hide upgrade upselling",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
+    },
+    "proton-mail-hxreborn-v7.11.10-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.60.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
+    },
+    "proton-mail-hxreborn-v7.11.10-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.10",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.60.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260372",
+      "publishedAt": "2026-10-25T13:49:55Z"
     }
   }
 }
