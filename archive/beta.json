@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-25T04:37:54Z"
+    "publishedAt": "2026-10-25T08:31:59Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -534,10 +534,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -615,8 +615,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko-material-you",
@@ -631,10 +631,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -712,8 +712,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko-material-you",
@@ -728,10 +728,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -809,8 +809,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko-material-you",
@@ -825,10 +825,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -906,8 +906,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko",
@@ -922,10 +922,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1001,8 +1001,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko",
@@ -1017,10 +1017,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1096,8 +1096,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko",
@@ -1112,10 +1112,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1191,8 +1191,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "twitter-piko-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko",
@@ -1207,10 +1207,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1286,8 +1286,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-anddea-v21.07.247-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -2008,8 +2008,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-anddea-v9.15.51-arm64-v8a.apk": {
       "name": "youtube-music-anddea",
@@ -2075,8 +2075,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-anddea-module-v9.15.51-arm-v7a.zip": {
       "name": "youtube-music-anddea",
@@ -2141,8 +2141,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-anddea-v9.15.51-arm-v7a.apk": {
       "name": "youtube-music-anddea",
@@ -2208,8 +2208,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-anddea-v21.13.164-arm-v7a.apk": {
       "name": "youtube-anddea",
@@ -2313,8 +2313,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-anddea-v21.13.164-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -2418,8 +2418,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-anddea-module-v21.13.164-arm-v7a.zip": {
       "name": "youtube-anddea",
@@ -2522,8 +2522,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-anddea-module-v21.13.164-arm64-v8a.zip": {
       "name": "youtube-anddea",
@@ -2626,8 +2626,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260342",
-      "publishedAt": "2026-10-22T20:28:08Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -2850,10 +2850,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -2904,8 +2904,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -2920,10 +2920,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -2975,8 +2975,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-v9.20.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -2991,10 +2991,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3046,8 +3046,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-module-v9.20.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -3062,10 +3062,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -3116,8 +3116,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -5655,10 +5655,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -5710,8 +5710,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-experimental-module-v9.42.52-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -5726,10 +5726,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -5780,8 +5780,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-experimental-module-v9.42.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -5796,10 +5796,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -5850,8 +5850,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-music-morphe-experimental-v9.42.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -5866,10 +5866,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.4.mpp"
+        "MorpheApp/patches-1.49.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5"
       ],
       "appliedPatches": [
         "Android Auto",
@@ -5921,8 +5921,8 @@
         "Theme",
         "Third-party lyrics"
       ],
-      "originBuild": "260362",
-      "publishedAt": "2026-10-24T16:36:38Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -6133,16 +6133,15 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.piko",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
         "Change like animation",
         "Change version code",
-        "Clone",
         "Copy comment",
         "Custom font",
         "Custom sharing domain",
@@ -6169,6 +6168,7 @@
         "Friendship status indicator",
         "Hidden chats",
         "Hide Reels follow button",
+        "Hide feed posts",
         "Hide group creation button on sharesheet",
         "Hide hidden requests",
         "Hide notes tray",
@@ -6176,11 +6176,13 @@
         "Hide save buttons",
         "Hide share button",
         "Hide stories tray",
+        "Hide story follow button",
         "Hide suggested content",
         "Improve image viewing",
         "Inbox lock",
         "Limit feed to following profiles",
         "Loop story",
+        "Mark as read after reply",
         "Mark chat as read manually",
         "More options on post",
         "More options on profile",
@@ -6193,10 +6195,11 @@
         "Save media comment",
         "Theme",
         "Unlock developer options",
-        "View story mentions"
+        "View story mentions",
+        "Clone"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "instagram-piko-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko",
@@ -6211,10 +6214,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
@@ -6246,6 +6249,7 @@
         "Friendship status indicator",
         "Hidden chats",
         "Hide Reels follow button",
+        "Hide feed posts",
         "Hide group creation button on sharesheet",
         "Hide hidden requests",
         "Hide notes tray",
@@ -6253,11 +6257,13 @@
         "Hide save buttons",
         "Hide share button",
         "Hide stories tray",
+        "Hide story follow button",
         "Hide suggested content",
         "Improve image viewing",
         "Inbox lock",
         "Limit feed to following profiles",
         "Loop story",
+        "Mark as read after reply",
         "Mark chat as read manually",
         "More options on post",
         "More options on profile",
@@ -6272,8 +6278,8 @@
         "Unlock developer options",
         "View story mentions"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "instagram-piko-module-v452.1.0.53.64-arm64-v8a.zip": {
       "name": "instagram-piko",
@@ -6288,10 +6294,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.1.mpp"
+        "crimera/patches-3.11.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
@@ -6323,6 +6329,7 @@
         "Friendship status indicator",
         "Hidden chats",
         "Hide Reels follow button",
+        "Hide feed posts",
         "Hide group creation button on sharesheet",
         "Hide hidden requests",
         "Hide notes tray",
@@ -6330,11 +6337,13 @@
         "Hide save buttons",
         "Hide share button",
         "Hide stories tray",
+        "Hide story follow button",
         "Hide suggested content",
         "Improve image viewing",
         "Inbox lock",
         "Limit feed to following profiles",
         "Loop story",
+        "Mark as read after reply",
         "Mark chat as read manually",
         "More options on post",
         "More options on profile",
@@ -6349,8 +6358,8 @@
         "Unlock developer options",
         "View story mentions"
       ],
-      "originBuild": "260344",
-      "publishedAt": "2026-10-22T23:21:13Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -6912,8 +6921,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-v21.23.492-arm64-v8a.apk": {
       "name": "youtube-morphe",
@@ -7040,8 +7049,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-v21.23.492-arm-v7a.apk": {
       "name": "youtube-morphe",
@@ -7168,8 +7177,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-module-v21.23.492-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -7295,8 +7304,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-experimental-module-v21.43.523-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -7422,8 +7431,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-experimental-v21.43.523-arm-v7a.apk": {
       "name": "youtube-morphe-experimental",
@@ -7550,8 +7559,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-experimental-v21.43.523-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -7678,8 +7687,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     },
     "youtube-morphe-experimental-module-v21.43.523-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -7805,8 +7814,8 @@
         "Shorts icon style",
         "Player icon style"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260368",
+      "publishedAt": "2026-10-25T08:30:39Z"
     }
   }
 }
