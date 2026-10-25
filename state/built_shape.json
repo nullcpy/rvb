@@ -3313,6 +3313,7 @@
         "brand": "Morphe",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
         "arch": "both",
         "build-mode": "both"
       }
@@ -3328,6 +3329,7 @@
         "variant": "Experimental",
         "app-name": "YouTube Music",
         "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
         "arch": "both",
         "build-mode": "both",
         "version": "exp"
@@ -3358,6 +3360,7 @@
         "brand": "Morphe",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
         "arch": "both",
         "build-mode": "both"
       }
@@ -3373,6 +3376,7 @@
         "variant": "Experimental",
         "app-name": "YouTube",
         "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
         "arch": "both",
         "build-mode": "both",
         "version": "exp"
@@ -3419,6 +3423,36 @@
         "pkg-name": "com.google.android.inputmethod.latin",
         "arch": "arm64-v8a",
         "build-mode": "apk"
+      }
+    },
+    "YouTubeMusic-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "app-name": "YouTube Music",
+        "pkg-name": "com.google.android.apps.youtube.music",
+        "patcher-args": "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "YouTube-anddea": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "anddea/revanced-patches",
+        "brand": "anddea",
+        "app-name": "YouTube",
+        "pkg-name": "com.google.android.youtube",
+        "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=@android:color/black",
+        "arch": "both",
+        "build-mode": "both"
       }
     }
   }
