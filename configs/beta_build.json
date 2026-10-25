@@ -1,5 +1,14 @@
 {
   "patches-version": "beta",
+  "GooglePhotos-DeVanced": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "DeVanced",
+    "build-mode": "both",
+    "patches-source": "RookieEnough/De-Vanced",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
+  },
   "Instagram-brosssh": {
     "enabled": false,
     "pkg-name": "com.instagram.android",
@@ -23,7 +32,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-Piko": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "crimera/piko",
@@ -34,7 +43,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-Piko-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "sub-variant": "Clone",
@@ -50,7 +59,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -65,7 +74,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -98,15 +107,6 @@
     "included-patches": "'Allow Importing Subs from Local Storage' 'Library Mode Focus Fix' 'Local Downloads' 'Local Media' 'Mark SDH Subtitles' 'Random Episode' 'Remove SDH Annotations' 'Restore Source Selection'",
     "github-dlurl": "https://github.com/NuvioMedia/NuvioTV",
     "github-regex": "app-full-universal-release\\.apk"
-  },
-  "GooglePhotos-DeVanced": {
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.photos",
-    "app-name": "Google Photos",
-    "brand": "DeVanced",
-    "build-mode": "both",
-    "patches-source": "RookieEnough/De-Vanced",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
   },
   "Reddit-Morphe": {
     "enabled": false,
@@ -169,7 +169,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
@@ -181,7 +181,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Twitter-Piko": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko",
@@ -192,7 +192,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-MaterialYou": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "variant": "Material You",
@@ -205,10 +205,11 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
     "brand": "Morphe",
     "build-mode": "both",
     "patch-folder": "music",
@@ -218,10 +219,11 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
     "brand": "Morphe",
     "build-mode": "both",
     "variant": "Experimental",
@@ -232,8 +234,8 @@
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
-  "youtube-music-anddea": {
-    "enabled": false,
+  "YouTubeMusic-anddea": {
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -245,10 +247,11 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
     "brand": "Morphe",
     "build-mode": "both",
     "patch-folder": "youtube",
@@ -258,10 +261,11 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
     "brand": "Morphe",
     "build-mode": "both",
     "variant": "Experimental",
@@ -272,8 +276,8 @@
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
-  "youtube-anddea": {
-    "enabled": false,
+  "YouTube-anddea": {
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",

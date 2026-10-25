@@ -310,7 +310,7 @@
   "Medium-bufferk": {
     "patches-source": "bufferk/morphe-patches",
     "brand": "bufferk",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.medium.reader",
     "app-name": "Medium",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/a-medium-corporation/medium",
@@ -435,7 +435,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -598,6 +598,47 @@
     "uptodown-dlurl": "https://google-maps.en.uptodown.com/android/download",
     "apkpure-dlurl": "https://apkpure.com/google-maps-app/com.google.android.apps.maps",
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
+  },
+  "GooglePhotos-DeVanced": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "DeVanced",
+    "build-mode": "both",
+    "patches-source": "RookieEnough/De-Vanced",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
+  },
+  "GooglePhotos-rushiranpise": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "rushiranpise",
+    "patches-source": "rushiranpise/morphe-patches",
+    "included-patches": "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
+  },
+  "GooglePhotos-AkashSriram": {
+    "enabled": false,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "AkashSriram",
+    "build-mode": "both",
+    "patches-source": "Akash-Sriram/morphe-google-photos",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
+  },
+  "GooglePhotos-AkashSriram-Unclone": {
+    "enabled": true,
+    "pkg-name": "com.google.android.apps.photos",
+    "app-name": "Google Photos",
+    "brand": "AkashSriram",
+    "variant": "Unclone",
+    "build-mode": "both",
+    "included-patches": "'Official package name'",
+    "patches-source": "Akash-Sriram/morphe-google-photos",
+    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
+    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "FairEmail-heval99": {
     "enabled": false,
@@ -1405,35 +1446,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/f-droid-limited/f-droid",
     "apkpure-dlurl": "https://apkpure.com/f-droid/org.fdroid.fdroid"
   },
-  "GooglePhotos-DeVanced": {
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.photos",
-    "app-name": "Google Photos",
-    "brand": "DeVanced",
-    "build-mode": "both",
-    "patches-source": "RookieEnough/De-Vanced",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos"
-  },
-  "GooglePhotos-rushiranpise": {
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.photos",
-    "app-name": "Google Photos",
-    "brand": "rushiranpise",
-    "patches-source": "rushiranpise/morphe-patches",
-    "included-patches": "'AMOLED dark theme' 'Change package name' 'Enable DCIM folders backup control' 'Fix DCIM folder classification'",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
-  },
-  "GooglePhotos-AkashSriram": {
-    "enabled": false,
-    "pkg-name": "com.google.android.apps.photos",
-    "app-name": "Google Photos",
-    "brand": "AkashSriram",
-    "build-mode": "both",
-    "patches-source": "Akash-Sriram/morphe-google-photos",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
-    "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
-  },
   "Pinterest-binarymend": {
     "enabled": false,
     "pkg-name": "com.pinterest",
@@ -2029,7 +2041,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
@@ -2088,7 +2100,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-bufferk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "patches-source": "bufferk/morphe-patches",
@@ -2168,10 +2180,11 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
     "brand": "Morphe",
     "build-mode": "both",
     "patch-folder": "music",
@@ -2181,10 +2194,11 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e 'Custom branding' -OcustomName='YouTube Music' -OappIcon=original",
     "brand": "Morphe",
     "build-mode": "both",
     "variant": "Experimental",
@@ -2195,8 +2209,8 @@
     "apkpure-dlurl": "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music",
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
-  "youtube-music-anddea": {
-    "enabled": false,
+  "YouTubeMusic-anddea": {
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -2207,8 +2221,8 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
-  "youtube-music-anddea-nord": {
-    "enabled": false,
+  "YouTubeMusic-anddea-nord": {
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -2220,8 +2234,8 @@
     "uptodown-dlurl": "https://youtube-music.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
-  "youtube-music-anddea-mocha": {
-    "enabled": false,
+  "YouTubeMusic-anddea-mocha": {
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -2234,10 +2248,11 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
     "brand": "Morphe",
     "build-mode": "both",
     "patch-folder": "youtube",
@@ -2247,7 +2262,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-NordTheme": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2255,14 +2270,14 @@
     "build-mode": "both",
     "variant": "Nord Theme",
     "patch-folder": "youtube",
-    "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
+    "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-MochaTheme": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2270,17 +2285,18 @@
     "build-mode": "both",
     "variant": "Mocha Theme",
     "patch-folder": "youtube",
-    "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
+    "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
+    "patcher-args": "-e \"Custom branding\" -OcustomName=\"YouTube\" -OappIcon=\"original\"",
     "brand": "Morphe",
     "build-mode": "both",
     "variant": "Experimental",
@@ -2291,8 +2307,8 @@
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
-  "youtube-anddea": {
-    "enabled": false,
+  "YouTube-anddea": {
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",
@@ -2303,8 +2319,8 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
-  "youtube-anddea-nord": {
-    "enabled": false,
+  "YouTube-anddea-nord": {
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",
@@ -2317,8 +2333,8 @@
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
-  "youtube-anddea-mocha": {
-    "enabled": false,
+  "YouTube-anddea-mocha": {
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",
