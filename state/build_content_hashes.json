@@ -379,13 +379,13 @@
       ]
     },
     "showly-hxreborn-v3.72.0-arm-v7a": {
-      "hash": "6bbf54e854ee1ad6407451e3c895e39f",
+      "hash": "f3be5b8c95b9f2178d89ff30dd1b780b",
       "kinds": [
         "apk"
       ]
     },
     "showly-hxreborn-v3.72.0-arm64-v8a": {
-      "hash": "ccefaa59090e0de55082b7e8dfe8f687",
+      "hash": "78d46d20e52d3d37b2432a0960ab13a8",
       "kinds": [
         "apk"
       ]
@@ -1876,6 +1876,30 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "proton-mail-dhrubonai-v7.11.5-arm-v7a": {
+      "hash": "6ce88b8da0f1535df503649304525d10",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "proton-mail-dhrubonai-v7.11.5-arm64-v8a": {
+      "hash": "715bc892b833954692af44a6d60c4568",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "proton-mail-hxreborn-v7.11.10-arm64-v8a": {
+      "hash": "c424a9c1686908fad1fb555487261a2b",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "proton-mail-hxreborn-v7.11.10-arm-v7a": {
+      "hash": "c286f9513eb5a0cd10d7a38d0e642be5",
+      "kinds": [
+        "apk"
       ]
     }
   }
