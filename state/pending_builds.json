@@ -1,4 +1,15 @@
 {
-  "stable": {},
+  "stable": {
+    "MyFitnessPal-heval99": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "3a34f655ce2c697ebc3d46e1b84c27ce0bd0c358"
+    }
+  },
   "beta": {}
 }

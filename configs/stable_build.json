@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -137,7 +137,7 @@
   "IMDb-adobo": {
     "patches-source": "jkennethcarino/adobo",
     "brand": "adobo",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.imdb.mobile",
     "app-name": "IMDb",
     "arch": "all",
@@ -435,7 +435,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -634,7 +634,6 @@
     "app-name": "Google Photos",
     "brand": "AkashSriram",
     "variant": "Unclone",
-    "build-mode": "both",
     "included-patches": "'Official package name'",
     "patches-source": "Akash-Sriram/morphe-google-photos",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
@@ -833,15 +832,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese",
     "uptodown-dlurl": "https://hellochinese.en.uptodown.com/android"
   },
-  "MyFitnessPal-hoodles": {
-    "patches-source": "hoo-dles/morphe-patches",
-    "brand": "hoodles",
-    "enabled": false,
-    "pkg-name": "com.myfitnesspal.android",
-    "app-name": "MyFitnessPal",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
-    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
-  },
   "PrimeVideo-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
@@ -1032,7 +1022,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1043,7 +1033,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1052,7 +1042,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1062,7 +1052,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1073,7 +1063,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1367,6 +1357,26 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/linkedin/linkedin-linkedin",
     "apkpure-dlurl": "https://apkpure.com/linkedin-network-job-finder/com.linkedin.android"
   },
+  "MyFitnessPal-hoodles": {
+    "enabled": false,
+    "pkg-name": "com.myfitnesspal.android",
+    "app-name": "MyFitnessPal",
+    "brand": "hoodles",
+    "patches-source": "hoo-dles/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
+    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
+  },
+  "MyFitnessPal-heval99": {
+    "enabled": true,
+    "pkg-name": "com.myfitnesspal.android",
+    "app-name": "MyFitnessPal",
+    "brand": "heval99",
+    "patches-source": "heval99/Heval-Morphe-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal",
+    "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
+  },
   "Cricbuzz-Paresh": {
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
@@ -1500,7 +1510,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1512,7 +1522,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1558,7 +1568,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1627,7 +1637,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
   },
   "Reddit-adobo": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "jkennethcarino/adobo",
@@ -2100,7 +2110,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-bufferk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "patches-source": "bufferk/morphe-patches",
@@ -2256,36 +2266,6 @@
     "brand": "Morphe",
     "build-mode": "both",
     "patch-folder": "youtube",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
-  },
-  "YouTube-Morphe-NordTheme": {
-    "enabled": false,
-    "pkg-name": "com.google.android.youtube",
-    "app-name": "YouTube",
-    "patches-source": "MorpheApp/morphe-patches",
-    "brand": "Morphe",
-    "build-mode": "both",
-    "variant": "Nord Theme",
-    "patch-folder": "youtube",
-    "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#2E3440 -OlightThemeBackgroundColor=#E5E9F0",
-    "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
-    "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
-    "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
-  },
-  "YouTube-Morphe-MochaTheme": {
-    "enabled": false,
-    "pkg-name": "com.google.android.youtube",
-    "app-name": "YouTube",
-    "patches-source": "MorpheApp/morphe-patches",
-    "brand": "Morphe",
-    "build-mode": "both",
-    "variant": "Mocha Theme",
-    "patch-folder": "youtube",
-    "patcher-args": "-e 'Custom branding' -OcustomName=YouTube -OappIcon=original Theme -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/youtube-app/com.google.android.youtube",
