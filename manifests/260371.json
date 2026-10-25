@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260371",
+    "channel": "stable",
+    "publishedAt": "2026-10-25T13:21:05Z"
+  },
+  "files": {
+    "truecaller-bufferk-v26.10.6-arm64-v8a.apk": {
+      "name": "truecaller-bufferk",
+      "version": "26.10.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bufferk",
+      "brandName": "bufferk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "bufferk/patches-1.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bufferk/morphe-patches/releases/tag/v1.8.1"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Enable premium features",
+        "Hide 'Get Premium' banners",
+        "Hide ads",
+        "Hide premium upgrade prompts",
+        "Mock premium",
+        "Remove Premium UI"
+      ],
+      "originBuild": "260371",
+      "publishedAt": "2026-10-25T13:21:05Z"
+    },
+    "truecaller-bufferk-module-v26.10.6-arm64-v8a.zip": {
+      "name": "truecaller-bufferk",
+      "version": "26.10.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "bufferk",
+      "brandName": "bufferk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "bufferk/patches-1.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bufferk/morphe-patches/releases/tag/v1.8.1"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Enable premium features",
+        "Hide 'Get Premium' banners",
+        "Hide ads",
+        "Hide premium upgrade prompts",
+        "Mock premium",
+        "Remove Premium UI"
+      ],
+      "originBuild": "260371",
+      "publishedAt": "2026-10-25T13:21:05Z"
+    },
+    "truecaller-bufferk-v26.10.6-arm-v7a.apk": {
+      "name": "truecaller-bufferk",
+      "version": "26.10.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bufferk",
+      "brandName": "bufferk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "bufferk/patches-1.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bufferk/morphe-patches/releases/tag/v1.8.1"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Enable premium features",
+        "Hide 'Get Premium' banners",
+        "Hide ads",
+        "Hide premium upgrade prompts",
+        "Mock premium",
+        "Remove Premium UI"
+      ],
+      "originBuild": "260371",
+      "publishedAt": "2026-10-25T13:21:05Z"
+    },
+    "truecaller-bufferk-module-v26.10.6-arm-v7a.zip": {
+      "name": "truecaller-bufferk",
+      "version": "26.10.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "bufferk",
+      "brandName": "bufferk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "bufferk/patches-1.8.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bufferk/morphe-patches/releases/tag/v1.8.1"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Enable premium features",
+        "Hide 'Get Premium' banners",
+        "Hide ads",
+        "Hide premium upgrade prompts",
+        "Mock premium",
+        "Remove Premium UI"
+      ],
+      "originBuild": "260371",
+      "publishedAt": "2026-10-25T13:21:05Z"
+    }
+  }
+}
