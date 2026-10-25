@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-25T15:57:07Z"
+    "publishedAt": "2026-10-25T17:03:52Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -5585,68 +5585,6 @@
       ],
       "originBuild": "260141",
       "publishedAt": "2026-09-29T03:19:45Z"
-    },
-    "reddit-adobo-v2026.38.0-arm-v7a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.5.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines ",
-        "Disable home screen redirect ",
-        "Disable screenshot banner ",
-        "Hide community menu badge ",
-        "Hide post view counts ",
-        "Open external links directly ",
-        "Remove ads and telemetry ",
-        "Sanitize share links "
-      ],
-      "originBuild": "260087",
-      "publishedAt": "2026-09-19T20:23:33Z"
-    },
-    "reddit-adobo-v2026.38.0-arm64-v8a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.38.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.5.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.5.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines ",
-        "Disable home screen redirect ",
-        "Disable screenshot banner ",
-        "Hide community menu badge ",
-        "Hide post view counts ",
-        "Open external links directly ",
-        "Remove ads and telemetry ",
-        "Sanitize share links "
-      ],
-      "originBuild": "260087",
-      "publishedAt": "2026-09-19T20:23:33Z"
     },
     "microsoft-swiftkey-hooman-v9.13.13.5-arm-v7a.apk": {
       "name": "microsoft-swiftkey-hooman",
@@ -20105,8 +20043,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260370",
-      "publishedAt": "2026-10-25T09:34:23Z"
+      "originBuild": "260376",
+      "publishedAt": "2026-10-25T17:03:14Z"
     },
     "discord-rain-v349.9-Stable-arm-v7a.apk": {
       "name": "discord-rain",
@@ -20127,8 +20065,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260370",
-      "publishedAt": "2026-10-25T09:34:23Z"
+      "originBuild": "260376",
+      "publishedAt": "2026-10-25T17:03:14Z"
     },
     "discord-revenge-v349.9-Stable-arm-v7a.apk": {
       "name": "discord-revenge",
@@ -20149,8 +20087,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260370",
-      "publishedAt": "2026-10-25T09:34:23Z"
+      "originBuild": "260376",
+      "publishedAt": "2026-10-25T17:03:14Z"
     },
     "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
       "name": "discord-revenge",
@@ -20171,8 +20109,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260370",
-      "publishedAt": "2026-10-25T09:34:23Z"
+      "originBuild": "260376",
+      "publishedAt": "2026-10-25T17:03:14Z"
     },
     "telegram-hushtelegram-google-play-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-google-play",
