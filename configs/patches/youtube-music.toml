@@ -28,7 +28,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/youtube-music/com.google.android.apps.youtube.music"
 apkcombo-dlurl = "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
 
-[youtube-music-anddea]
+[YouTubeMusic-anddea]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
 app-name = "YouTube Music"
@@ -41,7 +41,7 @@ patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=@android:color/black"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 
-[youtube-music-anddea-nord]
+[YouTubeMusic-anddea-nord]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
 app-name = "YouTube Music"
@@ -54,7 +54,7 @@ patcher-args = "-e 'Dark theme' -OdarkThemeBackgroundColor=#2E3440 -OmaterialYou
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music"
 
-[youtube-music-anddea-mocha]
+[YouTubeMusic-anddea-mocha]
 enabled = true
 pkg-name = "com.google.android.apps.youtube.music"
 app-name = "YouTube Music"
