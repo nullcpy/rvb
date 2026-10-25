@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-24T19:02:29Z"
+    "publishedAt": "2026-10-25T04:37:54Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -5937,10 +5937,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.3.mpp"
+        "jasonwu1994/patches-4.0.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -5967,7 +5967,6 @@
         "Frosted Glass",
         "G Logo on Spacebar",
         "Grammar Checker",
-        "Hyperspeed Typing Animation",
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
@@ -5988,8 +5987,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260358",
-      "publishedAt": "2026-10-24T09:23:25Z"
+      "originBuild": "260367",
+      "publishedAt": "2026-10-25T04:37:35Z"
     },
     "google-keyboard-jasonwu1994-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -6004,10 +6003,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.3.mpp"
+        "jasonwu1994/patches-4.0.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -6034,7 +6033,6 @@
         "Frosted Glass",
         "G Logo on Spacebar",
         "Grammar Checker",
-        "Hyperspeed Typing Animation",
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
@@ -6054,8 +6052,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260358",
-      "publishedAt": "2026-10-24T09:23:25Z"
+      "originBuild": "260367",
+      "publishedAt": "2026-10-25T04:37:35Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -6070,10 +6068,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.3.mpp"
+        "jasonwu1994/patches-4.0.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -6100,7 +6098,6 @@
         "Frosted Glass",
         "G Logo on Spacebar",
         "Grammar Checker",
-        "Hyperspeed Typing Animation",
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
@@ -6120,8 +6117,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260358",
-      "publishedAt": "2026-10-24T09:23:25Z"
+      "originBuild": "260367",
+      "publishedAt": "2026-10-25T04:37:35Z"
     },
     "instagram-piko-clone-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
