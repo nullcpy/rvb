@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -137,7 +137,7 @@
   "IMDb-adobo": {
     "patches-source": "jkennethcarino/adobo",
     "brand": "adobo",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.imdb.mobile",
     "app-name": "IMDb",
     "arch": "all",
@@ -1022,7 +1022,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1033,7 +1033,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1042,7 +1042,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1052,7 +1052,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1063,7 +1063,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1368,7 +1368,7 @@
     "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
   },
   "MyFitnessPal-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "MyFitnessPal",
     "brand": "heval99",
@@ -1510,7 +1510,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1568,7 +1568,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1637,7 +1637,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
   },
   "Reddit-adobo": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "jkennethcarino/adobo",
