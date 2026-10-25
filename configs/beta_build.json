@@ -32,7 +32,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-Piko": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "crimera/piko",
@@ -43,7 +43,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-Piko-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "sub-variant": "Clone",
@@ -181,7 +181,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Twitter-Piko": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko",
@@ -192,7 +192,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "variant": "Material You",
@@ -205,7 +205,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -219,7 +219,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -235,7 +235,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-anddea": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "anddea/revanced-patches",
@@ -247,7 +247,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -261,7 +261,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -277,7 +277,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-anddea": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "anddea/revanced-patches",
