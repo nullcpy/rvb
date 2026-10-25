@@ -50,7 +50,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -65,7 +65,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -169,7 +169,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
