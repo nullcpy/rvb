@@ -28,6 +28,16 @@ patches-source = "Akash-Sriram/morphe-google-photos"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
-
+[GooglePhotos-AkashSriram-UnClone]
+enabled = true
+pkg-name = "com.google.android.apps.photos"
+app-name = "Google Photos"
+brand = "AkashSriram"
+variant = "UnClone"
+build-mode = "both"
+included-patches = "'Official package name'"
+patches-source = "Akash-Sriram/morphe-google-photos"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 
