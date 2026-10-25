@@ -143,13 +143,6 @@ arch = "arm64-v8a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/hellochinese-learn-chinese-mandarin/hellochinese-learn-chinese"
 uptodown-dlurl = "https://hellochinese.en.uptodown.com/android"
 
-[MyFitnessPal-hoodles]
-enabled = true
-pkg-name = "com.myfitnesspal.android"
-app-name = "MyFitnessPal"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
-uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
-
 [PrimeVideo-hoodles]
 enabled = true
 pkg-name = "com.amazon.avod.thirdpartyclient"

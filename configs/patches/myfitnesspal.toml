@@ -1,0 +1,19 @@
+[MyFitnessPal-hoodles]
+enabled = true
+pkg-name = "com.myfitnesspal.android"
+app-name = "MyFitnessPal"
+brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
+uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
+
+[MyFitnessPal-heval99]
+enabled = true
+pkg-name = "com.myfitnesspal.android"
+app-name = "MyFitnessPal"
+brand = "heval99"
+patches-source = "heval99/Heval-Morphe-Patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal"
+uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
