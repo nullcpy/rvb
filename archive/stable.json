@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-25T13:50:23Z"
+    "publishedAt": "2026-10-25T15:57:07Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -14001,17 +14001,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260372",
-      "publishedAt": "2026-10-25T13:49:55Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -14026,17 +14026,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260372",
-      "publishedAt": "2026-10-25T13:49:55Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -22235,10 +22235,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22246,10 +22246,11 @@
         "Hide layout components",
         "Hide promotional messages",
         "Hide upgrade promotions",
+        "Material 3 loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -22264,10 +22265,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22275,10 +22276,11 @@
         "Hide layout components",
         "Hide promotional messages",
         "Hide upgrade promotions",
+        "Material 3 loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22293,10 +22295,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22313,8 +22315,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22329,10 +22331,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
+        "hxreborn/patches-1.61.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22349,8 +22351,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",
@@ -25308,8 +25310,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "discord-rain-v350.8-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -25330,8 +25332,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "discord-revenge-v350.8-Stable-arm-v7a.apk": {
       "name": "discord-revenge",
@@ -25352,8 +25354,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "discord-revenge-v350.8-Stable-arm64-v8a.apk": {
       "name": "discord-revenge",
@@ -25374,8 +25376,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     },
     "calorie-counter-kondratjev-v11.8.2.1-arm64-v8a.apk": {
       "name": "calorie-counter-kondratjev",
@@ -26106,6 +26108,270 @@
       ],
       "originBuild": "260372",
       "publishedAt": "2026-10-25T13:49:55Z"
+    },
+    "imdb-adobo-v9.3.6-all.apk": {
+      "name": "imdb-adobo",
+      "version": "9.3.6",
+      "appKey": "imdb",
+      "appName": "IMDb",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.imdb.mobile",
+      "patchSources": [
+        "jkennethcarino/patches-1.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v1.7.0"
+      ],
+      "appliedPatches": [
+        "Remove IMDb's ads, trackers, and analytics"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "myfitnesspal-heval99-v26.41.0-arm-v7a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.41.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "myfitnesspal-heval99-v26.41.0-arm64-v8a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.41.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.61.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.61.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "reddit-adobo-v2026.43.0-arm-v7a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.43.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-1.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v1.7.0"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "reddit-adobo-v2026.43.0-arm64-v8a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.43.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-1.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v1.7.0"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.61.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.61.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.61.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260374",
+      "publishedAt": "2026-10-25T15:56:22Z"
     }
   }
 }
