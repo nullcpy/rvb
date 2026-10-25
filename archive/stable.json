@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-25T08:55:23Z"
+    "publishedAt": "2026-10-25T09:34:53Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20105,8 +20105,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
     },
     "discord-rain-v349.9-Stable-arm-v7a.apk": {
       "name": "discord-rain",
@@ -20127,8 +20127,8 @@
         "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
       ],
       "appliedPatches": [],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
     },
     "discord-revenge-v349.9-Stable-arm-v7a.apk": {
       "name": "discord-revenge",
@@ -20149,8 +20149,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
     },
     "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
       "name": "discord-revenge",
@@ -20171,8 +20171,8 @@
         "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
       ],
       "appliedPatches": [],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
     },
     "telegram-hushtelegram-google-play-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -25931,64 +25931,6 @@
         "Spoof features",
         "Official package name",
         "GmsCore support"
-      ],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
-    },
-    "google-photos-akashsriram-unclone-module-v7.97.0.997578476-arm-v7a.zip": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "com.google.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name"
-      ],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
-    },
-    "google-photos-akashsriram-unclone-module-v7.97.0.997578476-arm64-v8a.zip": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "com.google.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name"
       ],
       "originBuild": "260369",
       "publishedAt": "2026-10-25T08:53:50Z"

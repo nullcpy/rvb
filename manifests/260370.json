@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260370",
+    "channel": "stable",
+    "publishedAt": "2026-10-25T09:34:23Z"
+  },
+  "files": {
+    "discord-rain-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
+    },
+    "discord-rain-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
+    },
+    "discord-revenge-v349.9-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
+    },
+    "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "349.9-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260370",
+      "publishedAt": "2026-10-25T09:34:23Z"
+    }
+  }
+}
