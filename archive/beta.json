@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-25T15:47:37Z"
+    "publishedAt": "2026-10-25T16:59:57Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -228,170 +228,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-09T10:46:22Z"
-    },
-    "reddit-morphe-v2026.14.0-arm64-v8a.apk": {
-      "name": "reddit-morphe",
-      "version": "2026.14.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-module-v2026.14.0-arm64-v8a.zip": {
-      "name": "reddit-morphe",
-      "version": "2026.14.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-module-v2026.14.0-arm-v7a.zip": {
-      "name": "reddit-morphe",
-      "version": "2026.14.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
-    },
-    "reddit-morphe-v2026.14.0-arm-v7a.apk": {
-      "name": "reddit-morphe",
-      "version": "2026.14.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.45.0-dev.12.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12"
-      ],
-      "appliedPatches": [
-        "App icon ",
-        "Custom font ",
-        "Disable modern home ",
-        "Disable screenshot popup ",
-        "Force system font ",
-        "Hide Ask button ",
-        "Hide Trending shelves ",
-        "Hide ads ",
-        "Hide communities shelf ",
-        "Hide navigation buttons ",
-        "Hide sidebar components ",
-        "Open links directly ",
-        "Open links externally ",
-        "Remove subreddit dialog ",
-        "Sanitize sharing links ",
-        "Show view count ",
-        "Spoof signature ",
-        "Start as guest "
-      ],
-      "originBuild": "260116",
-      "publishedAt": "2026-09-24T16:38:38Z"
     },
     "tiktok-icysymmetra-v46.2.3-arm64-v8a.apk": {
       "name": "tiktok-icysymmetra",
@@ -4109,202 +3945,6 @@
       "originBuild": "260337",
       "publishedAt": "2026-10-22T11:19:07Z"
     },
-    "reddit-morphe-experimental-v2026.41.0-arm64-v8a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.41.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.8"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260282",
-      "publishedAt": "2026-10-15T13:38:19Z"
-    },
-    "reddit-morphe-experimental-module-v2026.41.0-arm64-v8a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.41.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.8"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260282",
-      "publishedAt": "2026-10-15T13:38:19Z"
-    },
-    "reddit-morphe-experimental-module-v2026.41.0-arm-v7a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.41.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.8"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260282",
-      "publishedAt": "2026-10-15T13:38:19Z"
-    },
-    "reddit-morphe-experimental-v2026.41.0-arm-v7a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.41.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-1.48.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.8"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260282",
-      "publishedAt": "2026-10-15T13:38:19Z"
-    },
     "youtube-music-morphe-experimental-module-v9.41.52-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
       "version": "9.41.52",
@@ -6528,10 +6168,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0-dev.3.mpp"
+        "icysymmetra/patches-0.9.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.3"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.4"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -6653,8 +6293,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260375",
+      "publishedAt": "2026-10-25T16:59:07Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -6669,10 +6309,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0-dev.3.mpp"
+        "icysymmetra/patches-0.9.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.3"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.4"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -6794,8 +6434,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260364",
-      "publishedAt": "2026-10-24T19:01:44Z"
+      "originBuild": "260375",
+      "publishedAt": "2026-10-25T16:59:07Z"
     },
     "youtube-morphe-module-v21.23.492-arm-v7a.zip": {
       "name": "youtube-morphe",
