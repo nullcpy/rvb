@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-25T19:01:38Z"
+    "publishedAt": "2026-10-26T04:41:12Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -2493,10 +2493,10 @@
       "subVariant": null,
       "packageName": "com.netflix.ninja.clone",
       "patchSources": [
-        "ajstrick81/patches-1.42.2.mpp"
+        "ajstrick81/patches-1.44.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.42.2"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.44.0"
       ],
       "appliedPatches": [
         "Disable Netflix CertCheck",
@@ -2504,8 +2504,8 @@
         "Remove Netflix ads (loader)",
         "Clone Netflix"
       ],
-      "originBuild": "260303",
-      "publishedAt": "2026-10-17T18:58:34Z"
+      "originBuild": "260379",
+      "publishedAt": "2026-10-26T04:40:50Z"
     },
     "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv-clone",
@@ -15855,134 +15855,6 @@
       "originBuild": "260341",
       "publishedAt": "2026-10-22T17:54:51Z"
     },
-    "google-photos-akashsriram-module-v7.96.0.993165104-arm-v7a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.96.0.993165104",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.14.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260256",
-      "publishedAt": "2026-10-12T12:58:01Z"
-    },
-    "google-photos-akashsriram-v7.96.0.993165104-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.96.0.993165104",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.14.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260256",
-      "publishedAt": "2026-10-12T12:58:01Z"
-    },
-    "google-photos-akashsriram-v7.96.0.993165104-arm-v7a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.96.0.993165104",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.14.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260256",
-      "publishedAt": "2026-10-12T12:58:01Z"
-    },
-    "google-photos-akashsriram-module-v7.96.0.993165104-arm64-v8a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.96.0.993165104",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.14.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.14.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Account avatar",
-        "Enable DCIM folders backup control",
-        "Enable Phenotype flag manager",
-        "Fix memory style font loading",
-        "Google One Bento Badge",
-        "Local creation downloader",
-        "Model Readiness Gates",
-        "Spoof features"
-      ],
-      "originBuild": "260256",
-      "publishedAt": "2026-10-12T12:58:01Z"
-    },
     "f-droid-patchweaver-v1.23.2-arm64-v8a.apk": {
       "name": "f-droid-patchweaver",
       "version": "1.23.2",
@@ -19773,10 +19645,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.64.0.mpp"
+        "crimera/patches-3.64.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.64.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.64.1"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19822,8 +19694,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260379",
+      "publishedAt": "2026-10-26T04:40:50Z"
     },
     "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -19838,10 +19710,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.64.0.mpp"
+        "crimera/patches-3.64.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.64.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.64.1"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19887,8 +19759,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260379",
+      "publishedAt": "2026-10-26T04:40:50Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
