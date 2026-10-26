@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-26T19:09:13Z"
+    "publishedAt": "2026-10-26T21:14:08Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -18104,10 +18104,10 @@
       "subVariant": null,
       "packageName": "com.JindoBlu.OfflineGames",
       "patchSources": [
-        "ggYasin/patches-1.6.0.mpp"
+        "ggYasin/patches-1.8.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.6.0"
+        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.8.0"
       ],
       "appliedPatches": [
         "Fast Offline Games startup",
@@ -18115,8 +18115,8 @@
         "In-house ad only",
         "Instant in-house ad close"
       ],
-      "originBuild": "260251",
-      "publishedAt": "2026-10-11T21:01:22Z"
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
     },
     "offline-games-ggyasin-v3.15.3-arm64-v8a.apk": {
       "name": "offline-games-ggyasin",
@@ -18131,10 +18131,10 @@
       "subVariant": null,
       "packageName": "com.JindoBlu.OfflineGames",
       "patchSources": [
-        "ggYasin/patches-1.6.0.mpp"
+        "ggYasin/patches-1.8.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.6.0"
+        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.8.0"
       ],
       "appliedPatches": [
         "Fast Offline Games startup",
@@ -18142,8 +18142,8 @@
         "In-house ad only",
         "Instant in-house ad close"
       ],
-      "originBuild": "260251",
-      "publishedAt": "2026-10-11T21:01:22Z"
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
     },
     "threads-hushthreads-v451.0.0.51.80-arm64-v8a.apk": {
       "name": "threads-hushthreads",
@@ -24436,10 +24436,10 @@
       "subVariant": null,
       "packageName": "com.block.juggle",
       "patchSources": [
-        "ImNoammm/noams-morphe-patches-1.3.0.mpp"
+        "ImNoammm/noams-morphe-patches-1.4.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.3.0"
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.4.1"
       ],
       "appliedPatches": [
         "Animation theme",
@@ -24458,8 +24458,8 @@
         "Tidy settings menu",
         "iOS generation algorithm"
       ],
-      "originBuild": "260349",
-      "publishedAt": "2026-10-23T09:30:44Z"
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
     },
     "facebook-hushfacebook-material-you-v584.0.0.51.56-arm64-v8a.apk": {
       "name": "facebook-hushfacebook-material-you",

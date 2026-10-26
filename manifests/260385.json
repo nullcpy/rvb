@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260385",
+    "channel": "stable",
+    "publishedAt": "2026-10-26T21:13:33Z"
+  },
+  "files": {
+    "block-blast-imnoammm-v10.8.1-all.apk": {
+      "name": "block-blast-imnoammm",
+      "version": "10.8.1",
+      "appKey": "blockblast",
+      "appName": "Block Blast",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "imnoammm",
+      "brandName": "ImNoammm",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.block.juggle",
+      "patchSources": [
+        "ImNoammm/noams-morphe-patches-1.4.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.4.1"
+      ],
+      "appliedPatches": [
+        "Animation theme",
+        "Block ads",
+        "Block themes",
+        "Colour theme",
+        "Disable impossible levels",
+        "Disable revive",
+        "Extra effects",
+        "Fake best score",
+        "Faster game over",
+        "Fresh Classic games",
+        "Hide percent-of-players popups",
+        "Menu theme",
+        "Remove startup credits",
+        "Tidy settings menu",
+        "iOS generation algorithm"
+      ],
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
+    },
+    "offline-games-ggyasin-v3.14.1-arm-v7a.apk": {
+      "name": "offline-games-ggyasin",
+      "version": "3.14.1",
+      "appKey": "offlinegames",
+      "appName": "Offline Games",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ggyasin",
+      "brandName": "ggYasin",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.JindoBlu.OfflineGames",
+      "patchSources": [
+        "ggYasin/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Fast Offline Games startup",
+        "In-house ad not clickable",
+        "In-house ad only",
+        "Instant in-house ad close"
+      ],
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
+    },
+    "offline-games-ggyasin-v3.15.3-arm64-v8a.apk": {
+      "name": "offline-games-ggyasin",
+      "version": "3.15.3",
+      "appKey": "offlinegames",
+      "appName": "Offline Games",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "ggyasin",
+      "brandName": "ggYasin",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.JindoBlu.OfflineGames",
+      "patchSources": [
+        "ggYasin/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ggYasin/ggyasin-morphe-patches/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Fast Offline Games startup",
+        "In-house ad not clickable",
+        "In-house ad only",
+        "Instant in-house ad close"
+      ],
+      "originBuild": "260385",
+      "publishedAt": "2026-10-26T21:13:33Z"
+    }
+  }
+}
