@@ -17,7 +17,7 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "053c252b711749b103b067a8faebaf3b",
+      "com.google.android.apps.photos": "2c174f1b21a7d7ac55624bb7b0d87738",
       "shared": "4896b91072faee9736005cde611b031d"
     }
   },
@@ -81,7 +81,7 @@
   "browzomje/browzomje-patches": {
     "beta": {},
     "stable": {
-      "com.pinterest": "2836f3449a571a1a7c7e444ca6ac5a26",
+      "com.pinterest": "f1869bac9d36ff020561d95661a870fa",
       "shared": "ec5f048a8a5ad03aa9307ed5590d13e8"
     }
   },
@@ -191,10 +191,11 @@
       "shared": "4d927554f35a558cf0b43a28d3c560e2"
     },
     "stable": {
-      "com.sofascore.results": "04816a813e6d0ec7371782fe68e346ba",
-      "com.truecaller": "1ccdc5dd19fe2c131e9d7e2b99417fca",
-      "eu.faircode.email": "a8cbfe95c9d12bd5a8223249163310cb",
-      "shared": "a24337d8ff2461e261b6cd21a582dbb8"
+      "com.myfitnesspal.android": "dddb7700ba6100f38109515fb7c8f9bd",
+      "com.sofascore.results": "26040acf67679c5702e2bab1ba889d99",
+      "com.truecaller": "8a714b34f84ca95da973ae9d2d4147a9",
+      "eu.faircode.email": "8c62a8c2c32e4761e26c5dd587360fff",
+      "shared": "9559484535a8399740bc1d5c127a6356"
     }
   },
   "heyymichii/michii-patches": {
@@ -268,15 +269,15 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "ae275612dd8a9b8665ce8c281adc7f68",
-      "ch.protonvpn.android": "983ff3e66ecd7133246e102b6b374a17",
-      "com.dubox.drive": "1a33943ad3e6eecb083411df6345741d",
-      "com.greenstone.pocketwhip": "84969d6ef084c200567b8a5d8a9adcfb",
-      "com.michaldrabik.showly2": "1516c9fd219f652051db100766d64a3d",
-      "dev.vodik7.atvtools": "5ccd22de16377fc4b76f4a4bfc07c779",
-      "org.withouthat.acalendar": "ae3b1d9573d69f77ee4d290d69623904",
-      "proton.android.pass": "0adf6adf57071f3dc2f5d5c959e66bd0",
-      "shared": "6121deeb89d1b880b91c06f0a77b6c18"
+      "ch.protonmail.android": "322693bd0141f18cb9756c66ee857cb0",
+      "ch.protonvpn.android": "01eda6e6ce9f0b10d2f237c5c024e5c3",
+      "com.dubox.drive": "708a63e59fcd03d1fe6726d692b41526",
+      "com.greenstone.pocketwhip": "4310c3b12b9f274dd59d4d1d50fbbe4c",
+      "com.michaldrabik.showly2": "acd521a8f6ad7f0e0d236812dce21615",
+      "dev.vodik7.atvtools": "21c486558be2290bd5a0d97cab925f17",
+      "org.withouthat.acalendar": "38bb9207571bea02e4ca4911e9c87e68",
+      "proton.android.pass": "7b7df2cc59416c01333a0244793c0000",
+      "shared": "4ed8726f0bb89e289301fc3a10c04e78"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -316,8 +317,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "411646ee3a7c1a61e496cc592895348a",
-      "shared": "cf384d82c95f32f1aec1115169f2ffd7"
+      "com.google.android.inputmethod.latin": "b8e8852930030949190cf4527a02f70f",
+      "shared": "c12717b4bf6cf673c82a0cde2e9625df"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "2b386956fca774c631a6b373b7758be8",
@@ -364,10 +365,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "892f63414067e916a492989157bc51c4",
-      "com.google.android.youtube": "ed2b631d7f85c8fdb23e2ae930e71caa",
-      "com.reddit.frontpage": "ded42ffe683daa0fad763fbe7ee8abff",
-      "shared": "a2de5f3987f907be59b9056d97c58ac7"
+      "com.google.android.apps.youtube.music": "48dd1aa16da31a3136ba999962bd95f2",
+      "com.google.android.youtube": "0db44bd1e52d1f9ccfb74ac6d2a93d49",
+      "com.reddit.frontpage": "a76b5a4668c8bdfbb8e1c72587e99870",
+      "shared": "0dba20569faa3eba2ebcde378f8a49db"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "5c699e38afa2b27c65f4d4cc10bd92d7",
