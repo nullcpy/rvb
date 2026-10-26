@@ -1,0 +1,919 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260381",
+    "channel": "stable",
+    "publishedAt": "2026-10-26T11:06:43Z"
+  },
+  "files": {
+    "fairemail-heval99-v1.2339-arm64-v8a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2339",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "fairemail-heval99-v1.2339-arm-v7a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2339",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-v7.98.0.1001971222-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-v7.98.0.1001971222-arm-v7a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-module-v7.98.0.1001971222-arm64-v8a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-photos-akashsriram-module-v7.98.0.1001971222-arm-v7a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "myfitnesspal-heval99-v26.42.0-arm64-v8a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.42.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "myfitnesspal-heval99-v26.42.0-arm-v7a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.42.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "pinterest-browzomje-v14.39.0-arm64-v8a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.39.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.14.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.14.1"
+      ],
+      "appliedPatches": [
+        "Choose startup tab",
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide save for later tooltip",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Keep Home feed",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "pinterest-browzomje-v14.39.0-arm-v7a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.39.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.14.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.14.1"
+      ],
+      "appliedPatches": [
+        "Choose startup tab",
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide save for later tooltip",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Keep Home feed",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "showly-hxreborn-v3.72.0-arm-v7a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "sofascore-heval99-v26.10.12-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "sofascore-heval99-v26.10.12-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.12",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.62.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.62.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "truecaller-heval99-module-v26.41.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "truecaller-heval99-v26.41.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "truecaller-heval99-v26.41.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.41.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260381",
+      "publishedAt": "2026-10-26T11:06:43Z"
+    }
+  }
+}
