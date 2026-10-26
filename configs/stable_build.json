@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -287,7 +287,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "BlockBlast-ImNoammm": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.block.juggle",
     "app-name": "Block Blast",
     "brand": "ImNoammm",
@@ -549,7 +549,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/byair-flight-tracker-status/com.byairapp.android"
   },
   "OfflineGames-ggYasin": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.JindoBlu.OfflineGames",
     "app-name": "Offline Games",
     "brand": "ggYasin",
@@ -560,7 +560,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -574,7 +574,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -586,7 +586,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1026,7 +1026,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1037,7 +1037,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1046,7 +1046,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1056,7 +1056,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1067,7 +1067,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1514,7 +1514,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1572,7 +1572,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
