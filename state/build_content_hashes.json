@@ -29,7 +29,7 @@
       ]
     },
     "youtube-music-morphe-v9.20.53-arm-v7a": {
-      "hash": "8a3c5f5384630d23cd355e4b182d169d",
+      "hash": "39a551bcd901d02bfb05a32c7cf0b152",
       "kinds": [
         "apk",
         "module"
@@ -50,7 +50,7 @@
       ]
     },
     "youtube-music-morphe-v9.20.53-arm64-v8a": {
-      "hash": "46818c607825415958918c9a932e36cd",
+      "hash": "6367dc95e566826e4b5883be15af4276",
       "kinds": [
         "apk",
         "module"
@@ -196,14 +196,14 @@
       ]
     },
     "youtube-music-morphe-experimental-v9.42.52-arm64-v8a": {
-      "hash": "5a7b6ed1f96db83fe61e6ffd5d1fc55a",
+      "hash": "5b7a95f6d9ae7cd8bde573557bed2c38",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-experimental-v9.42.52-arm-v7a": {
-      "hash": "125705a3f2a0755a21805151dae4e2a1",
+      "hash": "3cbfeea191e8aad04c9fb232b9f5be60",
       "kinds": [
         "apk",
         "module"
@@ -290,59 +290,72 @@
       ]
     },
     "youtube-morphe-v21.23.492-arm64-v8a": {
-      "hash": "1cc9f52a30ab2411d6f029b54f4df903",
+      "hash": "36be3608280a8414d56af1509936d84e",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-v21.23.492-arm-v7a": {
-      "hash": "e58e8ed14fb6914764726e3f13a20f7d",
+      "hash": "35e9fb7de3c1a1f9fe75d895dc0b51f1",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-experimental-v21.43.523-arm64-v8a": {
-      "hash": "91416582a62e952bad1eade1b45c4f0b",
+      "hash": "5b811470b91e430d69701782731e151d",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-experimental-v21.43.523-arm-v7a": {
-      "hash": "69447ad16d6f6fedd638ab9fba25ceed",
+      "hash": "f1c5d9505dc64a6d5a44590f0c534b5b",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-v2026.40.0-arm64-v8a": {
-      "hash": "909cdee993589b1c101dcdec8e9f2ce2",
+      "hash": "7399574e1379ca4640aac4f548eed631",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-v2026.40.0-arm-v7a": {
-      "hash": "20a24d2ac80d045a01a62291c26996c1",
+      "hash": "b6cbfdd835f363b00fe1bba31cd51635",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-experimental-v2026.43.0-arm64-v8a": {
-      "hash": "b51d8fc8f2338f3275670b91d64a7f3b",
+      "hash": "876f22af79037d430fa3ea5a14a20e2a",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-experimental-v2026.43.0-arm-v7a": {
-      "hash": "8bd3c048b2535a6527651702a00ebefb",
+      "hash": "664d39020f65d726c91610bc41af0072",
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
+      "hash": "5fdfc3f303c2c6a65692d3d786924b9f",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
+      "hash": "d7feb460db406f78ae83f081418f4921",
+      "kinds": [
+        "apk"
       ]
     }
   },
