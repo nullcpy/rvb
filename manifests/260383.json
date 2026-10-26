@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260383",
+    "channel": "stable",
+    "publishedAt": "2026-10-26T15:36:08Z"
+  },
+  "files": {
+    "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    },
+    "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    },
+    "google-photos-akashsriram-v7.98.0.1001971222-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    },
+    "google-photos-akashsriram-v7.98.0.1001971222-arm-v7a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    },
+    "google-photos-akashsriram-module-v7.98.0.1001971222-arm64-v8a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    },
+    "google-photos-akashsriram-module-v7.98.0.1001971222-arm-v7a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.98.0.1001971222",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.16.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.16.1"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260383",
+      "publishedAt": "2026-10-26T15:36:08Z"
+    }
+  }
+}
