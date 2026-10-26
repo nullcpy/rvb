@@ -560,7 +560,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -574,7 +574,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -586,7 +586,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -619,21 +619,25 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
     "build-mode": "both",
+    "preferred-format": "apk",
+    "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
     "patches-source": "Akash-Sriram/morphe-google-photos",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
     "variant": "Unclone",
+    "preferred-format": "apk",
+    "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
     "included-patches": "'Official package name'",
     "patches-source": "Akash-Sriram/morphe-google-photos",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",

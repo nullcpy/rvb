@@ -1,4 +1,25 @@
 {
-  "stable": {},
+  "stable": {
+    "GooglePhotos-AkashSriram": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "aafb13895b66240168002849d1d89cf81dfcf4d2"
+    },
+    "GooglePhotos-AkashSriram-Unclone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "6ec9a7c7d02b20d3dee6df150d7331940b5c8c4c"
+    }
+  },
   "beta": {}
 }
