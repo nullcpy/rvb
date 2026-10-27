@@ -8,10 +8,10 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/krosbits/musicolet-music-player
 uptodown-dlurl = "https://musicolet.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
 
-[CastPluginforMusicolet-hxreborn]
+[MusicoletCastPlugin-hxreborn]
 enabled = true
 pkg-name = "in.krosbits.castplugin"
-app-name = "Cast Plug-in for Musicolet"
+app-name = "Musicolet Cast Plugin"
 brand = "hxreborn"
 patches-source = "hxreborn/morphe-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/krosbits/cast-plug-in-for-musicolet"
