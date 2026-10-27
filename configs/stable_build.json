@@ -1581,7 +1581,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-dhrubonai": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "dhrubonai/morphe-patches",
