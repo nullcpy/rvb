@@ -1,0 +1,487 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260387",
+    "channel": "stable",
+    "publishedAt": "2026-10-27T04:25:16Z"
+  },
+  "files": {
+    "brave-browser-kveld9-v1.98.60-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.9.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "brave-browser-kveld9-v1.98.60-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.60",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.9.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Rating Requests",
+        "Block Trackers",
+        "Brave Origin",
+        "Clean Start Page",
+        "Keep Tabs Open",
+        "Select Previous Tab on Close",
+        "Silence Promo Notifications",
+        "Skip Welcome Screens",
+        "Stop Background Sync",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "discord-venus-v350.8-Stable-arm-v7a.apk": {
+      "name": "discord-venus",
+      "version": "350.8-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "venus",
+      "brandName": "Venus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "VenusIsJaded/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Account switcher",
+        "Bring back Tenor GIFs",
+        "Bulk delete messages",
+        "Clean channel names",
+        "Complete Quests automatically",
+        "Complete badges automatically",
+        "Copy profile bios",
+        "Custom themes",
+        "Disable advertising identifiers",
+        "Disable analytics",
+        "Disable crash reporting",
+        "Disable install attribution",
+        "Disable telemetry and touch logging",
+        "Double-tap to reply",
+        "Favourite any image or video",
+        "Fix link previews",
+        "Fix unknown mentions",
+        "Hide blocked or ignored messages",
+        "Hide extra buttons",
+        "Hide the Quests banner",
+        "Hide the call button",
+        "Hide the gift button",
+        "Hide typing indicator",
+        "Icon packs",
+        "Jump to first message",
+        "Keep Bluetooth audio clear in calls",
+        "Keep deleted messages",
+        "Material You colors",
+        "Message highlights",
+        "Pastel name colors",
+        "Read all button",
+        "Send Nitro stickers and emojis as links",
+        "Send audio as voice messages",
+        "Send long messages",
+        "Server info",
+        "Show device indicators",
+        "Show file sizes when attaching",
+        "Show hidden channels",
+        "Skip delete confirmation",
+        "Spaces in channel names",
+        "Translate messages",
+        "Unlock Discord experiments",
+        "Unlock Nitro themes",
+        "Unlock app icons",
+        "Use your phone's emojis",
+        "Use your phone's font",
+        "User activity notifications",
+        "User and server reviews",
+        "Venus button on profile bar",
+        "Venus settings"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "discord-venus-v350.8-Stable-arm64-v8a.apk": {
+      "name": "discord-venus",
+      "version": "350.8-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "venus",
+      "brandName": "Venus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "VenusIsJaded/patches-1.19.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/VenusIsJaded/Venus-Patches/releases/tag/v1.19.0"
+      ],
+      "appliedPatches": [
+        "Account switcher",
+        "Bring back Tenor GIFs",
+        "Bulk delete messages",
+        "Clean channel names",
+        "Complete Quests automatically",
+        "Complete badges automatically",
+        "Copy profile bios",
+        "Custom themes",
+        "Disable advertising identifiers",
+        "Disable analytics",
+        "Disable crash reporting",
+        "Disable install attribution",
+        "Disable telemetry and touch logging",
+        "Double-tap to reply",
+        "Favourite any image or video",
+        "Fix link previews",
+        "Fix unknown mentions",
+        "Hide blocked or ignored messages",
+        "Hide extra buttons",
+        "Hide the Quests banner",
+        "Hide the call button",
+        "Hide the gift button",
+        "Hide typing indicator",
+        "Icon packs",
+        "Jump to first message",
+        "Keep Bluetooth audio clear in calls",
+        "Keep deleted messages",
+        "Material You colors",
+        "Message highlights",
+        "Pastel name colors",
+        "Read all button",
+        "Send Nitro stickers and emojis as links",
+        "Send audio as voice messages",
+        "Send long messages",
+        "Server info",
+        "Show device indicators",
+        "Show file sizes when attaching",
+        "Show hidden channels",
+        "Skip delete confirmation",
+        "Spaces in channel names",
+        "Translate messages",
+        "Unlock Discord experiments",
+        "Unlock Nitro themes",
+        "Unlock app icons",
+        "Use your phone's emojis",
+        "Use your phone's font",
+        "User activity notifications",
+        "User and server reviews",
+        "Venus button on profile bar",
+        "Venus settings"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "instagram-instafel-v453.0.0.55.79-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "musicolet-hxreborn-v6.14.1build540-arm-v7a.apk": {
+      "name": "musicolet-hxreborn",
+      "version": "6.14.1build540",
+      "appKey": "musicolet",
+      "appName": "Musicolet",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.musicolet",
+      "patchSources": [
+        "hxreborn/patches-1.63.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.63.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "musicolet-hxreborn-v6.14.1build540-arm64-v8a.apk": {
+      "name": "musicolet-hxreborn",
+      "version": "6.14.1build540",
+      "appKey": "musicolet",
+      "appName": "Musicolet",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.musicolet",
+      "patchSources": [
+        "hxreborn/patches-1.63.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.63.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.63.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.63.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.63.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.63.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.5.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.9.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "tiktok-kveld9-v47.5.3-arm64-v8a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.5.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.9.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260387",
+      "publishedAt": "2026-10-27T04:25:16Z"
+    }
+  }
+}
