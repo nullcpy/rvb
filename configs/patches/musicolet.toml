@@ -13,6 +13,7 @@ enabled = true
 pkg-name = "in.krosbits.castplugin"
 app-name = "Musicolet Cast Plugin"
 brand = "hxreborn"
+patch-folder = "musicoletcastplugin"
 patches-source = "hxreborn/morphe-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/krosbits/cast-plug-in-for-musicolet"
 uptodown-dlurl = "https://cast-plug-in-for-musicolet.en.uptodown.com/android"
