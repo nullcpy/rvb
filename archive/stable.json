@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-26T21:14:08Z"
+    "publishedAt": "2026-10-27T00:06:26Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -23801,10 +23801,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.18.0.mpp"
+        "SysAdminDoc/patches-0.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.1"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -23908,8 +23908,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260365",
-      "publishedAt": "2026-10-24T19:09:34Z"
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
     },
     "facebook-hushfacebook-v584.0.0.51.56-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -23924,10 +23924,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.18.0.mpp"
+        "SysAdminDoc/patches-0.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.1"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -24031,8 +24031,8 @@
         "View stories anonymously",
         "Accent color"
       ],
-      "originBuild": "260365",
-      "publishedAt": "2026-10-24T19:09:34Z"
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
     },
     "tiktok-hushfeed-v47.5.3-arm64-v8a.apk": {
       "name": "tiktok-hushfeed",
@@ -24474,10 +24474,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.18.0.mpp"
+        "SysAdminDoc/patches-0.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.1"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -24581,8 +24581,8 @@
         "Material You theme",
         "Accent color"
       ],
-      "originBuild": "260365",
-      "publishedAt": "2026-10-24T19:09:34Z"
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
     },
     "facebook-hushfacebook-material-you-v584.0.0.51.56-arm-v7a.apk": {
       "name": "facebook-hushfacebook-material-you",
@@ -24597,10 +24597,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.18.0.mpp"
+        "SysAdminDoc/patches-0.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.18.1"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -24704,8 +24704,8 @@
         "Material You theme",
         "Accent color"
       ],
-      "originBuild": "260365",
-      "publishedAt": "2026-10-24T19:09:34Z"
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -26404,6 +26404,268 @@
       ],
       "originBuild": "260381",
       "publishedAt": "2026-10-26T11:06:43Z"
+    },
+    "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994-clone",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "dev.jason.com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input",
+        "Package Rename"
+      ],
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
+    },
+    "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
+    },
+    "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
+    },
+    "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
+    },
+    "instagram-instafel-v453.0.0.55.79-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260386",
+      "publishedAt": "2026-10-27T00:06:00Z"
     }
   }
 }
