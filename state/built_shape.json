@@ -3190,8 +3190,9 @@
         "brand": "kveld9",
         "app-name": "Microsoft Word",
         "pkg-name": "com.microsoft.office.word",
-        "arch": "both",
-        "build-mode": "apk"
+        "arch": "arm64-v8a",
+        "build-mode": "apk",
+        "version-code": "arm64-v8a: 2005437911"
       }
     },
     "Musicolet-hxreborn": {

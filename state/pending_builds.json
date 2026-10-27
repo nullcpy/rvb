@@ -1,14 +1,4 @@
 {
-  "stable": {
-    "MicrosoftWord-kveld9": {
-      "reason": "config",
-      "arches": [
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "0f8d7a98b6c75e51f9eb2bb0abaebb6ac8287ffa"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
