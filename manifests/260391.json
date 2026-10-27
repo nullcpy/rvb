@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260391",
+    "channel": "stable",
+    "publishedAt": "2026-10-27T09:23:33Z"
+  },
+  "files": {
+    "microsoft-word-kveld9-v16.0.20527.20034-arm64-v8a.apk": {
+      "name": "microsoft-word-kveld9",
+      "version": "16.0.20527.20034",
+      "appKey": "microsoftword",
+      "appName": "Microsoft Word",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.word",
+      "patchSources": [
+        "kveld9/patches-1.30.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-extra-morphe-patches/releases/tag/v1.30.0"
+      ],
+      "appliedPatches": [
+        "Block Telemetry & Trackers",
+        "Bypass Code Transparency",
+        "Disable Login Requirement",
+        "Remove Shared User ID",
+        "Unlock 365 Family"
+      ],
+      "originBuild": "260391",
+      "publishedAt": "2026-10-27T09:23:33Z"
+    }
+  }
+}
