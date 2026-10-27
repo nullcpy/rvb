@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-27T04:26:21Z"
+    "publishedAt": "2026-10-27T05:12:21Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13533,106 +13533,6 @@
       "originBuild": "260199",
       "publishedAt": "2026-10-06T21:12:34Z"
     },
-    "tiktok-kveld9-v47.1.4-arm64-v8a.apk": {
-      "name": "tiktok-kveld9",
-      "version": "47.1.4",
-      "appKey": "tiktok",
-      "appName": "TikTok",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.zhiliaoapp.musically",
-      "patchSources": [
-        "kveld9/patches-2.7.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
-      ],
-      "appliedPatches": [
-        "Allow Screenshots",
-        "Always Show Publish Date",
-        "Battery & Resource Saver",
-        "Block P2P Video Relay",
-        "Block Popups & Prompts",
-        "Block Trackers",
-        "Block Trackers (Setup)",
-        "Bypass Mandatory Login",
-        "Clean Share Links",
-        "Comment Customizer",
-        "Custom Share Sheet",
-        "Customize Search",
-        "Declutter Navigation Bar",
-        "Device Privacy Guard",
-        "Disable On-Device AI",
-        "Download Without Watermark",
-        "Enable Profile Banner",
-        "Feed Ads & Content Filter",
-        "Force Auto-Scroll",
-        "Friends & Suggestions Filter",
-        "Hide Inbox Promos & Alerts",
-        "In-App Browser Privacy Guard",
-        "Instant Launch",
-        "Login Compatibility Fix",
-        "Offline Video Limit",
-        "Remove Extra Files",
-        "Show Seekbar"
-      ],
-      "originBuild": "260286",
-      "publishedAt": "2026-10-15T23:03:01Z"
-    },
-    "tiktok-kveld9-v47.1.4-arm-v7a.apk": {
-      "name": "tiktok-kveld9",
-      "version": "47.1.4",
-      "appKey": "tiktok",
-      "appName": "TikTok",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.zhiliaoapp.musically",
-      "patchSources": [
-        "kveld9/patches-2.7.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
-      ],
-      "appliedPatches": [
-        "Allow Screenshots",
-        "Always Show Publish Date",
-        "Battery & Resource Saver",
-        "Block P2P Video Relay",
-        "Block Popups & Prompts",
-        "Block Trackers",
-        "Block Trackers (Setup)",
-        "Bypass Mandatory Login",
-        "Clean Share Links",
-        "Comment Customizer",
-        "Custom Share Sheet",
-        "Customize Search",
-        "Declutter Navigation Bar",
-        "Device Privacy Guard",
-        "Disable On-Device AI",
-        "Download Without Watermark",
-        "Enable Profile Banner",
-        "Feed Ads & Content Filter",
-        "Force Auto-Scroll",
-        "Friends & Suggestions Filter",
-        "Hide Inbox Promos & Alerts",
-        "In-App Browser Privacy Guard",
-        "Instant Launch",
-        "Login Compatibility Fix",
-        "Offline Video Limit",
-        "Remove Extra Files",
-        "Show Seekbar"
-      ],
-      "originBuild": "260286",
-      "publishedAt": "2026-10-15T23:03:01Z"
-    },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
       "version": "10.36.5000",
@@ -26578,8 +26478,8 @@
         "Clone General",
         "Replace Instagram Strings"
       ],
-      "originBuild": "260387",
-      "publishedAt": "2026-10-27T04:25:16Z"
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
     },
     "instagram-instafel-v453.0.0.55.79-arm64-v8a.apk": {
       "name": "instagram-instafel",
@@ -26610,8 +26510,8 @@
         "Change Home Long Click",
         "Add App Trigger"
       ],
-      "originBuild": "260387",
-      "publishedAt": "2026-10-27T04:25:16Z"
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
     },
     "musicolet-hxreborn-v6.14.1build540-arm-v7a.apk": {
       "name": "musicolet-hxreborn",
@@ -26808,6 +26708,128 @@
       ],
       "originBuild": "260387",
       "publishedAt": "2026-10-27T04:25:16Z"
+    },
+    "instagram-instafel-clone-v453.0.0.55.79-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
+    },
+    "instagram-instafel-v453.0.0.55.79-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.55.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
+    },
+    "microsoft-word-kveld9-v16.0.20527.20034-arm-v7a.apk": {
+      "name": "microsoft-word-kveld9",
+      "version": "16.0.20527.20034",
+      "appKey": "microsoftword",
+      "appName": "Microsoft Word",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.word",
+      "patchSources": [
+        "kveld9/patches-1.30.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-extra-morphe-patches/releases/tag/v1.30.0"
+      ],
+      "appliedPatches": [
+        "Block Telemetry & Trackers",
+        "Bypass Code Transparency",
+        "Disable Login Requirement",
+        "Remove Shared User ID",
+        "Unlock 365 Family"
+      ],
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
+    },
+    "microsoft-word-kveld9-v16.0.20527.20034-arm64-v8a.apk": {
+      "name": "microsoft-word-kveld9",
+      "version": "16.0.20527.20034",
+      "appKey": "microsoftword",
+      "appName": "Microsoft Word",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.word",
+      "patchSources": [
+        "kveld9/patches-1.30.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-extra-morphe-patches/releases/tag/v1.30.0"
+      ],
+      "appliedPatches": [
+        "Block Telemetry & Trackers",
+        "Bypass Code Transparency",
+        "Disable Login Requirement",
+        "Remove Shared User ID",
+        "Unlock 365 Family"
+      ],
+      "originBuild": "260388",
+      "publishedAt": "2026-10-27T05:11:50Z"
     }
   }
 }
