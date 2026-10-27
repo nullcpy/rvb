@@ -1,0 +1,417 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260390",
+    "channel": "stable",
+    "publishedAt": "2026-10-27T09:01:53Z"
+  },
+  "files": {
+    "musicolet-hxreborn-v6.14.1build540-arm-v7a.apk": {
+      "name": "musicolet-hxreborn",
+      "version": "6.14.1build540",
+      "appKey": "musicolet",
+      "appName": "Musicolet",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.musicolet",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "musicolet-hxreborn-v6.14.1build540-arm64-v8a.apk": {
+      "name": "musicolet-hxreborn",
+      "version": "6.14.1build540",
+      "appKey": "musicolet",
+      "appName": "Musicolet",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.musicolet",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-mail-hxreborn-v7.11.11-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.11",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "Material 3 loading indicator",
+        "Material 3 switches"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.20.98.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "showly-hxreborn-v3.72.0-arm-v7a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.64.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.64.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Hide ads",
+        "Hide consent form",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260390",
+      "publishedAt": "2026-10-27T09:01:53Z"
+    }
+  }
+}
