@@ -351,9 +351,10 @@
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "1679caaf244ee91d4db5525ec71971df",
-      "com.zhiliaoapp.musically": "548281fe80158ffb514140cf0076a935",
-      "shared": "c02ef9d0166b1af11d6153922aaac10a"
+      "com.brave.browser": "1cb64511e3a97939106796f275d4efda",
+      "com.microsoft.office.word": "d41d8cd98f00b204e9800998ecf8427e",
+      "com.zhiliaoapp.musically": "157331b25315c655491a5d0e67704cec",
+      "shared": "d0abc65e69ba0b1af9bd47a8f8420731"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
@@ -563,8 +564,8 @@
   "venusisjaded/venus-patches": {
     "beta": {},
     "stable": {
-      "com.discord": "bed57294995c2d65e29fe4741477cf78",
-      "shared": "0f718e329d05bc04eb43f3d88e8d39e9"
+      "com.discord": "066d86666be54d40457d95e0b037ef63",
+      "shared": "8c8125f8f58cef17c4cae7240812da7c"
     }
   }
 }
