@@ -21,6 +21,16 @@
       "run": 40448041591,
       "ts": "2026-10-27T04:23:33Z",
       "cfg": "4d1a39efaface545516aecba45e2e2dce44df6b6"
+    },
+    "MicrosoftWord-kveld9": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "7c485cc0a55db014ab999825907a18762ec51ce7"
     }
   },
   "beta": {}

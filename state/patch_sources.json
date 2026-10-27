@@ -279,8 +279,8 @@
     "stable_date": "2026-10-25T06:39:44Z"
   },
   "byehi98/okish-morphe-patches": {
-    "beta": "v1.47.0-dev.2",
-    "beta_date": "2026-10-27T02:03:00Z",
+    "beta": "v1.47.0-dev.3",
+    "beta_date": "2026-10-27T04:24:39Z",
     "blocked": false,
     "host": "github",
     "repo": "byehi98/okish-morphe-patches",
@@ -475,6 +475,15 @@
     "repo": "kondratjev/morphe-patches",
     "stable": "v1.28.0",
     "stable_date": "2026-10-24T07:59:20Z"
+  },
+  "kveld9/kveld-extra-morphe-patches": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "kveld9/kveld-extra-morphe-patches",
+    "stable": "v1.30.0",
+    "stable_date": "2026-10-27T02:30:53Z"
   },
   "kveld9/kveld-morphe-patches": {
     "beta": "v2.9.0-experimental.5",
