@@ -3179,6 +3179,48 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "MicrosoftWord-kveld9": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kveld9/kveld-morphe-patches",
+        "brand": "kveld9",
+        "app-name": "Microsoft Word",
+        "pkg-name": "com.microsoft.office.word",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Musicolet-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Musicolet",
+        "pkg-name": "in.krosbits.musicolet",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "MusicoletCastPlugin-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Musicolet Cast Plugin",
+        "pkg-name": "in.krosbits.castplugin",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
