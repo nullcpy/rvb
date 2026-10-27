@@ -1,0 +1,19 @@
+[Musicolet-hxreborn]
+enabled = true
+pkg-name = "in.krosbits.musicolet"
+app-name = "Musicolet"
+brand = "hxreborn"
+patches-source = "hxreborn/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/krosbits/musicolet-music-player-free-no-ads"
+uptodown-dlurl = "https://musicolet.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
+
+[CastPluginforMusicolet-hxreborn]
+enabled = true
+pkg-name = "in.krosbits.castplugin"
+app-name = "Cast Plug-in for Musicolet"
+brand = "hxreborn"
+patches-source = "hxreborn/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/krosbits/cast-plug-in-for-musicolet"
+uptodown-dlurl = "https://cast-plug-in-for-musicolet.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/cast-plug-in-for-musicolet/in.krosbits.castplugin"
