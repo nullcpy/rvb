@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-27T18:36:08Z"
+    "publishedAt": "2026-10-27T23:49:17Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -19495,10 +19495,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.64.1.mpp"
+        "crimera/patches-3.65.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.64.1"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.65.0"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19514,6 +19514,7 @@
         "NewX: Disable automatic timeline refresh",
         "NewX: Disable blur effects",
         "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
         "NewX: Feature switch overrides",
         "NewX: Filter For You by topic",
         "NewX: Filter posts by keyword",
@@ -19544,8 +19545,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260379",
-      "publishedAt": "2026-10-26T04:40:50Z"
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
     },
     "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -19560,10 +19561,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.64.1.mpp"
+        "crimera/patches-3.65.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.64.1"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.65.0"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19579,6 +19580,7 @@
         "NewX: Disable automatic timeline refresh",
         "NewX: Disable blur effects",
         "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
         "NewX: Feature switch overrides",
         "NewX: Filter For You by topic",
         "NewX: Filter posts by keyword",
@@ -19609,8 +19611,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260379",
-      "publishedAt": "2026-10-26T04:40:50Z"
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -24488,10 +24490,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.20.mpp"
+        "SysAdminDoc/patches-0.0.21.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.20"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -24558,8 +24560,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260352",
-      "publishedAt": "2026-10-23T16:35:56Z"
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -24574,10 +24576,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.20.mpp"
+        "SysAdminDoc/patches-0.0.21.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.20"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -24644,8 +24646,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260352",
-      "publishedAt": "2026-10-23T16:35:56Z"
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
     },
     "telegram-hushtelegram-google-play-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -26736,6 +26738,178 @@
       ],
       "originBuild": "260391",
       "publishedAt": "2026-10-27T09:23:33Z"
+    },
+    "telegram-hushtelegram-google-play-v13.1.1-arm64-v8a.apk": {
+      "name": "telegram-hushtelegram-google-play",
+      "version": "13.1.1",
+      "appKey": "telegram",
+      "appName": "Telegram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushtelegram",
+      "brandName": "HushTelegram",
+      "variant": "Google Play",
+      "subVariant": null,
+      "packageName": "org.telegram.messenger",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.21.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Add Repeat to the message menu",
+        "Allow chat blur on slower phones",
+        "Ask before sending a sticker",
+        "Change sticker size",
+        "Disable analytics",
+        "Disable call debug upload",
+        "Disable chat swipe actions",
+        "Disable double-tap reactions",
+        "Disable draft link previews",
+        "Disable pull to archive",
+        "Disable pull to next channel",
+        "Disable update checks",
+        "Exact numbers",
+        "Faster downloads",
+        "Folders by chat type",
+        "Gallery camera on tap",
+        "Hide Contacts tab",
+        "Hide Premium, gifts and Stars",
+        "Hide Send as button",
+        "Hide Stories",
+        "Hide Telegram Features and Invite Friends",
+        "Hide ads",
+        "Hide blocked users in groups",
+        "Hide channel bar buttons",
+        "Hide contacts on Telegram",
+        "Hide folder tab counters",
+        "Hide gallery camera tile",
+        "Hide greeting stickers",
+        "Hide keyboard on scroll",
+        "Hide messages by keyword",
+        "Hide phone number",
+        "Hide popular apps",
+        "Hide promotional banners",
+        "Hide recommendations",
+        "Hide sender names when forwarding",
+        "Hide sponsored proxy channel",
+        "Hide time on stickers",
+        "Hide translate bar",
+        "Holiday look all year",
+        "HushTelegram settings",
+        "Ignore mentions in muted chats",
+        "Keep deleted messages",
+        "Keep videos muted on volume keys",
+        "Message times with seconds",
+        "Open links externally",
+        "Play voice messages one at a time",
+        "Quiet contacts nag",
+        "Repair Firebase push registration",
+        "Reveal spoilers",
+        "Save downloaded files",
+        "Show user and chat IDs",
+        "Silence people outside your contacts",
+        "Start the camera on the rear lens",
+        "Strip link tracking",
+        "Swipe back on profiles",
+        "Translate with an outside service",
+        "Turn off haptic feedback",
+        "Turn off reaction effects",
+        "UnifiedPush notifications",
+        "Use normal paste",
+        "Use system font",
+        "Voice messages in the music player"
+      ],
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
+    },
+    "telegram-hushtelegram-google-play-v13.1.1-arm-v7a.apk": {
+      "name": "telegram-hushtelegram-google-play",
+      "version": "13.1.1",
+      "appKey": "telegram",
+      "appName": "Telegram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hushtelegram",
+      "brandName": "HushTelegram",
+      "variant": "Google Play",
+      "subVariant": null,
+      "packageName": "org.telegram.messenger",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.21.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Add Repeat to the message menu",
+        "Allow chat blur on slower phones",
+        "Ask before sending a sticker",
+        "Change sticker size",
+        "Disable analytics",
+        "Disable call debug upload",
+        "Disable chat swipe actions",
+        "Disable double-tap reactions",
+        "Disable draft link previews",
+        "Disable pull to archive",
+        "Disable pull to next channel",
+        "Disable update checks",
+        "Exact numbers",
+        "Faster downloads",
+        "Folders by chat type",
+        "Gallery camera on tap",
+        "Hide Contacts tab",
+        "Hide Premium, gifts and Stars",
+        "Hide Send as button",
+        "Hide Stories",
+        "Hide Telegram Features and Invite Friends",
+        "Hide ads",
+        "Hide blocked users in groups",
+        "Hide channel bar buttons",
+        "Hide contacts on Telegram",
+        "Hide folder tab counters",
+        "Hide gallery camera tile",
+        "Hide greeting stickers",
+        "Hide keyboard on scroll",
+        "Hide messages by keyword",
+        "Hide phone number",
+        "Hide popular apps",
+        "Hide promotional banners",
+        "Hide recommendations",
+        "Hide sender names when forwarding",
+        "Hide sponsored proxy channel",
+        "Hide time on stickers",
+        "Hide translate bar",
+        "Holiday look all year",
+        "HushTelegram settings",
+        "Ignore mentions in muted chats",
+        "Keep deleted messages",
+        "Keep videos muted on volume keys",
+        "Message times with seconds",
+        "Open links externally",
+        "Play voice messages one at a time",
+        "Quiet contacts nag",
+        "Repair Firebase push registration",
+        "Reveal spoilers",
+        "Save downloaded files",
+        "Show user and chat IDs",
+        "Silence people outside your contacts",
+        "Start the camera on the rear lens",
+        "Strip link tracking",
+        "Swipe back on profiles",
+        "Translate with an outside service",
+        "Turn off haptic feedback",
+        "Turn off reaction effects",
+        "UnifiedPush notifications",
+        "Use normal paste",
+        "Use system font",
+        "Voice messages in the music player"
+      ],
+      "originBuild": "260396",
+      "publishedAt": "2026-10-27T23:48:46Z"
     }
   }
 }
