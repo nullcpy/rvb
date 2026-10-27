@@ -3186,7 +3186,7 @@
         "arm64-v8a"
       ],
       "cfg": {
-        "patches-source": "kveld9/kveld-morphe-patches",
+        "patches-source": "kveld9/kveld-extra-morphe-patches",
         "brand": "kveld9",
         "app-name": "Microsoft Word",
         "pkg-name": "com.microsoft.office.word",

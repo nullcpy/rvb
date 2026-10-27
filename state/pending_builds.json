@@ -1,37 +1,4 @@
 {
-  "stable": {
-    "Instagram-InstaFel": {
-      "reason": "retry",
-      "arches": [
-        "arm-v7a"
-      ],
-      "attempts": 2,
-      "parked": false,
-      "run": 40448041591,
-      "ts": "2026-10-27T04:23:33Z",
-      "cfg": "60895a20f827eba314889bdb42d3498d8b7a88b5"
-    },
-    "Instagram-InstaFel-Clone": {
-      "reason": "retry",
-      "arches": [
-        "arm-v7a"
-      ],
-      "attempts": 2,
-      "parked": false,
-      "run": 40448041591,
-      "ts": "2026-10-27T04:23:33Z",
-      "cfg": "4d1a39efaface545516aecba45e2e2dce44df6b6"
-    },
-    "MicrosoftWord-kveld9": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "7c485cc0a55db014ab999825907a18762ec51ce7"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
