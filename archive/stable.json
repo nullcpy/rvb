@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-28T11:18:56Z"
+    "publishedAt": "2026-10-28T15:15:58Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -15574,10 +15574,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -15606,8 +15606,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -15622,10 +15622,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -15654,8 +15654,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -20220,10 +20220,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20252,8 +20252,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -20268,10 +20268,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20300,8 +20300,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -20344,10 +20344,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20378,8 +20378,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -20394,10 +20394,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20428,8 +20428,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -20444,10 +20444,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20478,8 +20478,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -20494,10 +20494,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.1.mpp"
+        "bearinmindcat/patches-2.7.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -20528,8 +20528,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260394",
-      "publishedAt": "2026-10-27T18:35:38Z"
+      "originBuild": "260400",
+      "publishedAt": "2026-10-28T15:15:21Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -20729,279 +20729,6 @@
       ],
       "originBuild": "260318",
       "publishedAt": "2026-10-19T17:19:35Z"
-    },
-    "instagram-hushgram-clone-v452.0.0.48.64-arm64-v8a.apk": {
-      "name": "instagram-hushgram-clone",
-      "version": "452.0.0.48.64",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushgram",
-      "brandName": "HushGram",
-      "variant": null,
-      "subVariant": "Clone",
-      "packageName": "com.instagram.android.hush",
-      "patchSources": [
-        "SysAdminDoc/patches-0.0.14.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.14"
-      ],
-      "appliedPatches": [
-        "Accent color",
-        "Allow screenshots",
-        "Ask before a call",
-        "Ask before a like",
-        "Ask before a refresh",
-        "Back leaves Home",
-        "Blur the bars around Reels",
-        "Change the like animation",
-        "Change version code",
-        "Clean up Reels",
-        "Clear the media cache",
-        "Control taps and volume on Reels",
-        "Copy comment",
-        "Data saver",
-        "Default playback quality",
-        "Don't report screenshots",
-        "Don't save recent searches",
-        "Don't send reel watch history",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Download voice messages",
-        "Emoji style",
-        "Find the reel you came from",
-        "Font",
-        "Full resolution photos",
-        "Full screen Reels and Home",
-        "Glass tab bar",
-        "Group Instagram's notifications",
-        "Hide AI-labeled reels",
-        "Hide Follow on feed posts",
-        "Hide Follow on stories",
-        "Hide Instants",
-        "Hide Meta AI",
-        "Hide Notes on profile pictures",
-        "Hide Reels in the feed",
-        "Hide ads",
-        "Hide comments",
-        "Hide group buttons on the share sheet",
-        "Hide highlights",
-        "Hide paid partnership Reels",
-        "Hide profile tabs",
-        "Hide reels by caption words",
-        "Hide suggested accounts in DMs",
-        "Hide suggested accounts in Reels",
-        "Hide suggested people on profiles",
-        "Hide suggested posts",
-        "Hide suggested stories",
-        "Hide that you're typing",
-        "Hide the Explore grid",
-        "Hide the Reels tab",
-        "Hide the Repost button",
-        "Hide the Share button",
-        "Hide the Threads button",
-        "Hide the comment emoji row",
-        "Hide the home feed",
-        "Hide the notes row",
-        "Hide the search bar in Messages",
-        "Hide your active status",
-        "HushGram launch screen",
-        "HushGram settings",
-        "Keep Reels auto scroll on",
-        "Keep a seek bar on Reels",
-        "Keep in chat",
-        "Keep the reel speed",
-        "Lock your messages",
-        "Long press to zoom",
-        "Loop a story",
-        "Message box buttons",
-        "Open comments without the keyboard",
-        "Open links in external browser",
-        "Profile posts as a list",
-        "Pure black dark mode",
-        "Read messages without the seen receipt",
-        "Remove build expired popup",
-        "Remove the advertising ID",
-        "Remove the empty space at the bottom",
-        "Restore trust on re-signed builds",
-        "Resume long videos",
-        "Rounded post corners",
-        "Sanitize sharing links",
-        "Save comment photo",
-        "Save profile picture",
-        "Saved on your profile",
-        "See who a story mentions",
-        "Show a post's exact time",
-        "Show a reel's exact time",
-        "Show a story's exact time",
-        "Show all recent searches",
-        "Show hidden like counts",
-        "Show if a profile follows you",
-        "Show when someone was last active",
-        "Spoof location",
-        "Start Home on Following",
-        "Start feed videos with sound",
-        "Start on x86 devices",
-        "Start stories with sound",
-        "Stop Reels scrolling",
-        "Stop Story auto-advance",
-        "Stop background wake-ups",
-        "Stop swipe to create",
-        "Stop swipe up to reply",
-        "Stop swiping between tabs",
-        "Story ring size",
-        "Swipe left to open the profile",
-        "Tap a feed video to pause it",
-        "Tap to play",
-        "Turn off HDR brightness boosts",
-        "Turn off double tap to like",
-        "Upload stories at full quality",
-        "View DM photos and videos anonymously",
-        "View live anonymously",
-        "View stories anonymously",
-        "Install next to Instagram"
-      ],
-      "originBuild": "260330",
-      "publishedAt": "2026-10-21T04:57:40Z"
-    },
-    "instagram-hushgram-v452.0.0.48.64-arm64-v8a.apk": {
-      "name": "instagram-hushgram",
-      "version": "452.0.0.48.64",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushgram",
-      "brandName": "HushGram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "SysAdminDoc/patches-0.0.14.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushGram/releases/tag/v0.0.14"
-      ],
-      "appliedPatches": [
-        "Accent color",
-        "Allow screenshots",
-        "Ask before a call",
-        "Ask before a like",
-        "Ask before a refresh",
-        "Back leaves Home",
-        "Blur the bars around Reels",
-        "Change the like animation",
-        "Change version code",
-        "Clean up Reels",
-        "Clear the media cache",
-        "Control taps and volume on Reels",
-        "Copy comment",
-        "Data saver",
-        "Default playback quality",
-        "Don't report screenshots",
-        "Don't save recent searches",
-        "Don't send reel watch history",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Download voice messages",
-        "Emoji style",
-        "Find the reel you came from",
-        "Font",
-        "Full resolution photos",
-        "Full screen Reels and Home",
-        "Glass tab bar",
-        "Group Instagram's notifications",
-        "Hide AI-labeled reels",
-        "Hide Follow on feed posts",
-        "Hide Follow on stories",
-        "Hide Instants",
-        "Hide Meta AI",
-        "Hide Notes on profile pictures",
-        "Hide Reels in the feed",
-        "Hide ads",
-        "Hide comments",
-        "Hide group buttons on the share sheet",
-        "Hide highlights",
-        "Hide paid partnership Reels",
-        "Hide profile tabs",
-        "Hide reels by caption words",
-        "Hide suggested accounts in DMs",
-        "Hide suggested accounts in Reels",
-        "Hide suggested people on profiles",
-        "Hide suggested posts",
-        "Hide suggested stories",
-        "Hide that you're typing",
-        "Hide the Explore grid",
-        "Hide the Reels tab",
-        "Hide the Repost button",
-        "Hide the Share button",
-        "Hide the Threads button",
-        "Hide the comment emoji row",
-        "Hide the home feed",
-        "Hide the notes row",
-        "Hide the search bar in Messages",
-        "Hide your active status",
-        "HushGram launch screen",
-        "HushGram settings",
-        "Keep Reels auto scroll on",
-        "Keep a seek bar on Reels",
-        "Keep in chat",
-        "Keep the reel speed",
-        "Lock your messages",
-        "Long press to zoom",
-        "Loop a story",
-        "Message box buttons",
-        "Open comments without the keyboard",
-        "Open links in external browser",
-        "Profile posts as a list",
-        "Pure black dark mode",
-        "Read messages without the seen receipt",
-        "Remove build expired popup",
-        "Remove the advertising ID",
-        "Remove the empty space at the bottom",
-        "Restore trust on re-signed builds",
-        "Resume long videos",
-        "Rounded post corners",
-        "Sanitize sharing links",
-        "Save comment photo",
-        "Save profile picture",
-        "Saved on your profile",
-        "See who a story mentions",
-        "Show a post's exact time",
-        "Show a reel's exact time",
-        "Show a story's exact time",
-        "Show all recent searches",
-        "Show hidden like counts",
-        "Show if a profile follows you",
-        "Show when someone was last active",
-        "Spoof location",
-        "Start Home on Following",
-        "Start feed videos with sound",
-        "Start on x86 devices",
-        "Start stories with sound",
-        "Stop Reels scrolling",
-        "Stop Story auto-advance",
-        "Stop background wake-ups",
-        "Stop swipe to create",
-        "Stop swipe up to reply",
-        "Stop swiping between tabs",
-        "Story ring size",
-        "Swipe left to open the profile",
-        "Tap a feed video to pause it",
-        "Tap to play",
-        "Turn off HDR brightness boosts",
-        "Turn off double tap to like",
-        "Upload stories at full quality",
-        "View DM photos and videos anonymously",
-        "View live anonymously",
-        "View stories anonymously"
-      ],
-      "originBuild": "260330",
-      "publishedAt": "2026-10-21T04:57:40Z"
     },
     "tiktok-hushfeed-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
