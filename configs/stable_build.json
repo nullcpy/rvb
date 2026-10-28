@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -560,7 +560,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -574,7 +574,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -586,7 +586,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1026,7 +1026,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1037,7 +1037,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1046,7 +1046,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1056,7 +1056,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1067,7 +1067,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1155,7 +1155,7 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-HushGram": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
@@ -1168,7 +1168,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-HushGram-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
@@ -1384,7 +1384,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1394,7 +1394,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1557,7 +1557,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1569,7 +1569,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -1615,7 +1615,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -2216,7 +2216,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
