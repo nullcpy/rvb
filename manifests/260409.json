@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260409",
+    "channel": "stable",
+    "publishedAt": "2026-10-29T12:22:59Z"
+  },
+  "files": {
+    "zalo-zeldrisho-v26.08.01-all.apk": {
+      "name": "zalo-zeldrisho",
+      "version": "26.08.01",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zing.zalo",
+      "patchSources": [
+        "zeldrisho/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Configurable native backup interval",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide chat list ads",
+        "Keep expired media accessible",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260409",
+      "publishedAt": "2026-10-29T12:22:59Z"
+    }
+  }
+}
