@@ -1370,6 +1370,7 @@
     },
     "Instagram-HushGram": {
       "arches": [
+        "arm-v7a",
         "arm64-v8a"
       ],
       "cfg": {
@@ -1379,12 +1380,13 @@
         "pkg-name": "com.instagram.android",
         "excluded-patches": "'Install next to Instagram'",
         "inclusive-patches": "true",
-        "arch": "arm64-v8a",
+        "arch": "both",
         "build-mode": "apk"
       }
     },
     "Instagram-HushGram-Clone": {
       "arches": [
+        "arm-v7a",
         "arm64-v8a"
       ],
       "cfg": {
@@ -1394,7 +1396,7 @@
         "app-name": "Instagram",
         "pkg-name": "com.instagram.android",
         "inclusive-patches": "true",
-        "arch": "arm64-v8a",
+        "arch": "both",
         "build-mode": "apk"
       }
     },
