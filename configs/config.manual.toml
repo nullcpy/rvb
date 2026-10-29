@@ -1,11 +1,14 @@
-[MicrosoftWord-kveld9]
+[Zalo-zeldrisho]
 enabled = true
-pkg-name = "com.microsoft.office.word"
-app-name = "Microsoft Word"
-brand = "kveld9"
-arch = "arm64-v8a"
-version-code = "arm64-v8a: 2005437911"
-patches-source = "kveld9/kveld-extra-morphe-patches"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/microsoft-corporation/word"
-uptodown-dlurl = "https://microsoft-word.en.uptodown.com/windows"
-apkpure-dlurl = "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
+pkg-name = "com.zing.zalo"
+app-name = "Zalo"
+patches-source = "zeldrisho/morphe-patches"
+brand = "zeldrisho"
+arch = "all"
+included-patches = "'Enable Google Drive photo backup'"
+patcher-args = "-e 'Configurable native backup interval' -Ohours='1'"
+uptodown-dlurl = "https://zalo.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/zalo-group/zalo"
+apkpure-dlurl = "https://apkpure.com/zalo/com.zing.zalo"
+
+
