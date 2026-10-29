@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-28T11:07:24Z"
+    "publishedAt": "2026-10-29T05:44:04Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -7583,10 +7583,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.5.mpp"
+        "jasonwu1994/patches-4.1.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -7601,6 +7601,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -7633,8 +7634,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260380",
-      "publishedAt": "2026-10-26T10:52:05Z"
+      "originBuild": "260404",
+      "publishedAt": "2026-10-29T05:43:46Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -7649,10 +7650,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.5.mpp"
+        "jasonwu1994/patches-4.1.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -7667,6 +7668,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -7698,8 +7700,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260380",
-      "publishedAt": "2026-10-26T10:52:05Z"
+      "originBuild": "260404",
+      "publishedAt": "2026-10-29T05:43:46Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -7714,10 +7716,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0-dev.5.mpp"
+        "jasonwu1994/patches-4.1.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -7732,6 +7734,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -7763,8 +7766,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260380",
-      "publishedAt": "2026-10-26T10:52:05Z"
+      "originBuild": "260404",
+      "publishedAt": "2026-10-29T05:43:46Z"
     },
     "youtube-music-morphe-experimental-module-v9.43.51-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
