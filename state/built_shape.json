@@ -306,7 +306,7 @@
         "brand": "bearinmindcat",
         "app-name": "Google Maps",
         "pkg-name": "com.google.android.apps.maps",
-        "included-patches": "'Add microG support'",
+        "included-patches": "'Add microG-RE support'",
         "excluded-patches": "'Change app name' 'Change package name'",
         "arch": "both",
         "build-mode": "both"
@@ -2975,7 +2975,7 @@
         "sub-variant": "MicroG",
         "app-name": "Google Maps",
         "pkg-name": "com.google.android.apps.maps",
-        "included-patches": "'Add microG support'",
+        "included-patches": "'Add microG-RE support'",
         "arch": "both",
         "build-mode": "apk"
       }
@@ -3245,8 +3245,8 @@
         "brand": "zeldrisho",
         "app-name": "Zalo",
         "pkg-name": "com.zing.zalo",
-        "included-patches": "'Enable Google Drive photo backup'",
-        "patcher-args": "-e 'Configurable native backup interval' -Ohours=1",
+        "included-patches": "\"Enable Google Drive photo backup\"",
+        "patcher-args": "-e \"Configurable native backup interval\" -Ohours=\\\"1\\\"",
         "arch": "all",
         "build-mode": "apk"
       }

@@ -1,34 +1,4 @@
 {
-  "stable": {
-    "GoogleMaps-bearinmindcat": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "a829aa0e2a6c822fe8789069eaa2400649e243bc"
-    },
-    "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "c6b10f5694c601462800cfb3f8cd2dabd18020b3"
-    },
-    "Zalo-zeldrisho": {
-      "reason": "config",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "727707696f8d4ac7356af5dae26dba517f4634f1"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
