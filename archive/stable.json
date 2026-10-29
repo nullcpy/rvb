@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-29T12:23:26Z"
+    "publishedAt": "2026-10-29T12:55:01Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -15374,10 +15374,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG-RE support"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -15422,10 +15423,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG-RE support"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -19804,8 +19806,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -19852,8 +19854,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -19894,7 +19896,7 @@
       "brandName": "bearinmindcat",
       "variant": "UnGoogled",
       "subVariant": "MicroG",
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
         "bearinmindcat/patches-2.7.4.mpp"
       ],
@@ -19928,10 +19930,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG-RE support"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -19944,7 +19947,7 @@
       "brandName": "bearinmindcat",
       "variant": "UnGoogled",
       "subVariant": "MicroG",
-      "packageName": "org.ungoogled.android.apps.maps",
+      "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
         "bearinmindcat/patches-2.7.4.mpp"
       ],
@@ -19978,10 +19981,11 @@
         "Trim account menu",
         "Waze alerts",
         "Zoom controls in navigation",
-        "Power saving mode"
+        "Power saving mode",
+        "Add microG-RE support"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -26731,10 +26735,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.71.0.mpp"
+        "crimera/patches-3.71.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.71.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.71.1"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -26784,8 +26788,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260408",
-      "publishedAt": "2026-10-29T11:37:32Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "twitter-piko-newx-v12.38.0-prod.01-arm64-v8a.apk": {
       "name": "twitter-piko-newx",
@@ -26800,10 +26804,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.71.0.mpp"
+        "crimera/patches-3.71.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.71.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.71.1"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -26853,8 +26857,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260408",
-      "publishedAt": "2026-10-29T11:37:32Z"
+      "originBuild": "260410",
+      "publishedAt": "2026-10-29T12:54:26Z"
     },
     "firsty-trimpsuz-v1.8.23-all.apk": {
       "name": "firsty-trimpsuz",
