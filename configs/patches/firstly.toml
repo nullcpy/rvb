@@ -1,0 +1,9 @@
+[Firsty-Trimpsuz]
+enabled = true
+pkg-name = "com.firsty.app"
+app-name = "Firsty"
+patches-source = "Trimpsuz/morphe-patches"
+brand = "Trimpsuz"
+arch = "all"
+uptodown-dlurl = "https://firsty.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/firsty-global-mobile-network-app/com.firsty.app"
