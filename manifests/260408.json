@@ -1,0 +1,429 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260408",
+    "channel": "stable",
+    "publishedAt": "2026-10-29T11:37:32Z"
+  },
+  "files": {
+    "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm-v7a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm64-v8a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "photomath-devanced-v8.48.0-arm64-v8a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "photomath-devanced-v8.48.0-arm-v7a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "strava-devanced-v477.14-arm-v7a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "strava-devanced-v477.14-arm64-v8a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.2"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "twitter-piko-newx-v12.38.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.38.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.71.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.71.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    },
+    "twitter-piko-newx-v12.38.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.38.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.71.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.71.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260408",
+      "publishedAt": "2026-10-29T11:37:32Z"
+    }
+  }
+}
