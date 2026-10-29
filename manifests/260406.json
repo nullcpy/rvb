@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260406",
+    "channel": "stable",
+    "publishedAt": "2026-10-29T06:46:20Z"
+  },
+  "files": {
+    "firsty-trimpsuz-v1.8.23-all.apk": {
+      "name": "firsty-trimpsuz",
+      "version": "1.8.23",
+      "appKey": "firsty",
+      "appName": "Firsty",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "trimpsuz",
+      "brandName": "Trimpsuz",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.firsty.app",
+      "patchSources": [
+        "Trimpsuz/patches-1.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Trimpsuz/morphe-patches/releases/tag/v1.1.0"
+      ],
+      "appliedPatches": [
+        "Auto-claim free data"
+      ],
+      "originBuild": "260406",
+      "publishedAt": "2026-10-29T06:46:20Z"
+    },
+    "zalo-zeldrisho-v26.08.01-all.apk": {
+      "name": "zalo-zeldrisho",
+      "version": "26.08.01",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zing.zalo",
+      "patchSources": [
+        "zeldrisho/patches-1.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.9.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Configurable native backup interval",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide chat list ads",
+        "Keep expired media accessible",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260406",
+      "publishedAt": "2026-10-29T06:46:20Z"
+    }
+  }
+}
