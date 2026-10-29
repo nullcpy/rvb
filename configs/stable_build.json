@@ -151,7 +151,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
@@ -163,7 +163,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv",
@@ -175,7 +175,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "sub-variant": "Clone",
@@ -189,7 +189,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
@@ -201,7 +201,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "Peacock",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv",
@@ -213,7 +213,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "Tubi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
@@ -225,7 +225,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.univision.prendetv",
     "app-name": "ViX",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv",
@@ -237,7 +237,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.pluto.android",
     "app-name": "PlutoTV",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv",
@@ -250,7 +250,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
@@ -537,6 +537,16 @@
     "uptodown-dlurl": "https://facebook.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/facebook-app/com.facebook.katana",
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
+  },
+  "Firsty-Trimpsuz": {
+    "enabled": true,
+    "pkg-name": "com.firsty.app",
+    "app-name": "Firsty",
+    "patches-source": "Trimpsuz/morphe-patches",
+    "brand": "Trimpsuz",
+    "arch": "all",
+    "uptodown-dlurl": "https://firsty.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/firsty-global-mobile-network-app/com.firsty.app"
   },
   "ByAir-franticg33k": {
     "patches-source": "franticg33k/morphe-patches",
@@ -1581,7 +1591,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-dhrubonai": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "dhrubonai/morphe-patches",
@@ -2179,7 +2189,7 @@
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android"
   },
   "Twitch-ajstrick81-AndroidTV": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "variant": "Android TV",
@@ -2216,7 +2226,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
@@ -2363,5 +2373,18 @@
     "patcher-args": "-e 'Theme' -OdarkThemeBackgroundColor=#FF181825 -OlightThemeBackgroundColor=#E6E9EF",
     "uptodown-dlurl": "https://youtube.en.uptodown.com/android",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
+  },
+  "Zalo-zeldrisho": {
+    "enabled": true,
+    "pkg-name": "com.zing.zalo",
+    "app-name": "Zalo",
+    "patches-source": "zeldrisho/morphe-patches",
+    "brand": "zeldrisho",
+    "arch": "all",
+    "included-patches": "'Enable Google Drive photo backup'",
+    "patcher-args": "-e 'Configurable native backup interval' -Ohours=1",
+    "uptodown-dlurl": "https://zalo.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/zalo-group/zalo",
+    "apkpure-dlurl": "https://apkpure.com/zalo/com.zing.zalo"
   }
 }

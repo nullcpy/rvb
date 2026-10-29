@@ -188,6 +188,15 @@
     "stable": "v0.79.0",
     "stable_date": "2026-10-24T20:28:45Z"
   },
+  "Trimpsuz/morphe-patches": {
+    "beta": "v1.1.0-dev.1",
+    "beta_date": "2026-10-27T19:53:51Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "Trimpsuz/morphe-patches",
+    "stable": "v1.1.0",
+    "stable_date": "2026-10-27T20:02:12Z"
+  },
   "VenusIsJaded/Venus-Patches": {
     "beta": "",
     "beta_date": "",
@@ -279,8 +288,8 @@
     "stable_date": "2026-10-25T06:39:44Z"
   },
   "byehi98/okish-morphe-patches": {
-    "beta": "v1.47.0-dev.6",
-    "beta_date": "2026-10-29T05:28:13Z",
+    "beta": "v1.47.0-dev.9",
+    "beta_date": "2026-10-29T06:37:46Z",
     "blocked": false,
     "host": "github",
     "repo": "byehi98/okish-morphe-patches",
@@ -574,5 +583,14 @@
     "repo": "shaun-the-sheep-patches/morphe-patches",
     "stable": "v1.1.0",
     "stable_date": "2026-07-07T18:52:06Z"
+  },
+  "zeldrisho/morphe-patches": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "zeldrisho/morphe-patches",
+    "stable": "v1.9.0",
+    "stable_date": "2026-10-07T16:06:50Z"
   }
 }

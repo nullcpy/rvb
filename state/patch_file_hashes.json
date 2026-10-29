@@ -571,11 +571,25 @@
       "shared": "605224f8ef96512578d570d604b2fb60"
     }
   },
+  "trimpsuz/morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.firsty.app": "8769533c90c1760d0529b303037d36eb",
+      "shared": "0db494da383a51574cf5f5ee93e3b706"
+    }
+  },
   "venusisjaded/venus-patches": {
     "beta": {},
     "stable": {
       "com.discord": "066d86666be54d40457d95e0b037ef63",
       "shared": "8c8125f8f58cef17c4cae7240812da7c"
+    }
+  },
+  "zeldrisho/morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.zing.zalo": "51cebd3e2bc7e1168d2c39544c9354a9",
+      "shared": "ca7780a3750d7630eccfeb6add038e1d"
     }
   }
 }
