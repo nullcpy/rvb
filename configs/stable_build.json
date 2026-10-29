@@ -151,7 +151,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
@@ -163,7 +163,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv",
@@ -175,7 +175,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "sub-variant": "Clone",
@@ -189,7 +189,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
@@ -201,7 +201,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "Peacock",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv",
@@ -213,7 +213,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.tubitv",
     "app-name": "Tubi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
@@ -225,7 +225,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.univision.prendetv",
     "app-name": "ViX",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv",
@@ -237,7 +237,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.pluto.android",
     "app-name": "PlutoTV",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv",
@@ -250,7 +250,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
@@ -352,7 +352,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -364,7 +364,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/office-lens",
@@ -373,7 +373,7 @@
   "Photomath-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
@@ -382,7 +382,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -391,7 +391,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -435,7 +435,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -528,7 +528,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "RookieEnough/De-Vanced",
@@ -600,7 +600,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GooglePhotos-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "DeVanced",
@@ -1108,7 +1108,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-InstaFel": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1119,7 +1119,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram"
   },
   "Instagram-InstaFel-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1317,7 +1317,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
   },
   "Messenger-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1524,7 +1524,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pinterest/com.pinterest"
   },
   "pixiv-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "patches-source": "RookieEnough/De-Vanced",
@@ -2179,7 +2179,7 @@
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android"
   },
   "Twitch-ajstrick81-AndroidTV": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "variant": "Android TV",
