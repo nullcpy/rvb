@@ -1,0 +1,302 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260405",
+    "channel": "stable",
+    "publishedAt": "2026-10-29T05:54:05Z"
+  },
+  "files": {
+    "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+      "name": "hbo-max-ajstrick81-android-tv",
+      "version": "7.9.0.61",
+      "appKey": "hbomax",
+      "appName": "HBO Max",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.wbd.hbomax",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "HBO Max - Disable Ads",
+        "HBO Max - Prefer Ad-Free Stream"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "peacock-ajstrick81-android-tv-v7.10.102-all.apk": {
+      "name": "peacock-ajstrick81-android-tv",
+      "version": "7.10.102",
+      "appKey": "peacock",
+      "appName": "Peacock",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.peacocktv.peacockandroid",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Skip ads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+      "name": "plutotv-ajstrick81-android-tv",
+      "version": "5.66.0-leanback",
+      "appKey": "plutotv",
+      "appName": "PlutoTV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.pluto.android",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Mask live ad breaks (black screen + mute)",
+        "Skip ads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+      "name": "twitch-ajstrick81-android-tv",
+      "version": "13.0.0.2",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "ajstrick81/patches-1.46.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.0"
+      ],
+      "appliedPatches": [
+        "Block TV ads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "twitter-piko-newx-v12.38.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.38.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.70.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.70.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    },
+    "twitter-piko-newx-v12.38.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.38.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.70.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.70.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260405",
+      "publishedAt": "2026-10-29T05:54:05Z"
+    }
+  }
+}
