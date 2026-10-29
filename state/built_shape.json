@@ -3222,6 +3222,34 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "Firsty-Trimpsuz": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "Trimpsuz/morphe-patches",
+        "brand": "Trimpsuz",
+        "app-name": "Firsty",
+        "pkg-name": "com.firsty.app",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Zalo-zeldrisho": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "zeldrisho/morphe-patches",
+        "brand": "zeldrisho",
+        "app-name": "Zalo",
+        "pkg-name": "com.zing.zalo",
+        "included-patches": "'Enable Google Drive photo backup'",
+        "patcher-args": "-e 'Configurable native backup interval' -Ohours=1",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {

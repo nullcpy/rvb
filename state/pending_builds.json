@@ -1,23 +1,4 @@
 {
-  "stable": {
-    "Firsty-Trimpsuz": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "250e14260ea8e5c2bbbd0207615d74d4f77743bd"
-    },
-    "Zalo-zeldrisho": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "9e5265acb952cd4927c062b855cad6a1a621fbd1"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
