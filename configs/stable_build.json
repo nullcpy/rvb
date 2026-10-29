@@ -104,7 +104,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -151,7 +151,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
@@ -163,7 +163,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/amazon-mobile-llc/prime-video-android-tv-android-tv",
@@ -175,7 +175,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.amazon.amazonvideo.livingroom",
     "app-name": "Prime Video",
     "sub-variant": "Clone",
@@ -189,7 +189,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
@@ -201,7 +201,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.peacocktv.peacockandroid",
     "app-name": "Peacock",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/peacock-tv-llc/peacock-tv-android-tv",
@@ -213,7 +213,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.tubitv",
     "app-name": "Tubi",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/tubi-tv/tubi-free-movies-live-tv-android-tv",
@@ -225,7 +225,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.univision.prendetv",
     "app-name": "ViX",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/univision-communications-inc/vix-cine-y-tv-en-espanol-android-tv",
@@ -237,7 +237,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.pluto.android",
     "app-name": "PlutoTV",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pluto-inc/pluto-tv-android-tv",
@@ -250,7 +250,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
@@ -1036,7 +1036,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1047,7 +1047,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1056,7 +1056,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1066,7 +1066,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1077,7 +1077,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1165,12 +1165,11 @@
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android"
   },
   "Instagram-HushGram": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
     "brand": "HushGram",
-    "arch": "arm64-v8a",
     "inclusive-patches": true,
     "excluded-patches": "'Install next to Instagram'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
@@ -1178,13 +1177,12 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-HushGram-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "SysAdminDoc/HushGram",
     "brand": "HushGram",
     "sub-variant": "Clone",
-    "arch": "arm64-v8a",
     "inclusive-patches": true,
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram",
     "uptodown-dlurl": "https://instagram.en.uptodown.com/android",
@@ -1394,7 +1392,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1404,7 +1402,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1567,7 +1565,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1625,7 +1623,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -2189,7 +2187,7 @@
     "uptodown-dlurl": "https://twitch.en.uptodown.com/android"
   },
   "Twitch-ajstrick81-AndroidTV": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "variant": "Android TV",

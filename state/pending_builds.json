@@ -1,4 +1,23 @@
 {
-  "stable": {},
+  "stable": {
+    "Instagram-HushGram": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "47e38ef3ba1b5997988fe5a5954eb938faf0b467"
+    },
+    "Instagram-HushGram-Clone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "f1a9c337b2239c373a87330c8eaf1592b2de551f"
+    }
+  },
   "beta": {}
 }
