@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260403",
+    "channel": "stable",
+    "publishedAt": "2026-10-29T00:22:16Z"
+  },
+  "files": {
+    "instagram-instafel-clone-v453.0.0.57.79-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-clone-v453.0.0.57.79-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-v453.0.0.57.79-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-v453.0.0.57.79-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "twitter-piko-newx-v12.35.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.35.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.68.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.68.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.35.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.68.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.68.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-28T21:23:55Z"
+    "publishedAt": "2026-10-29T00:22:46Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -19184,10 +19184,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.67.0.mpp"
+        "crimera/patches-3.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.67.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.68.0"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19234,8 +19234,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260402",
-      "publishedAt": "2026-10-28T21:22:56Z"
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
     },
     "twitter-piko-newx-v12.35.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -19250,10 +19250,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.67.0.mpp"
+        "crimera/patches-3.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.67.0"
+        "https://github.com/crimera/piko-newx/releases/tag/v3.68.0"
       ],
       "appliedPatches": [
         "NewX: Crash logs",
@@ -19300,8 +19300,8 @@
         "NewX: Unlock color customization",
         "NewX: Unlock downloads"
       ],
-      "originBuild": "260402",
-      "publishedAt": "2026-10-28T21:22:56Z"
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -19436,94 +19436,6 @@
       ],
       "originBuild": "260297",
       "publishedAt": "2026-10-17T07:27:12Z"
-    },
-    "discord-rain-v349.9-Stable-arm64-v8a.apk": {
-      "name": "discord-rain",
-      "version": "349.9-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260376",
-      "publishedAt": "2026-10-25T17:03:14Z"
-    },
-    "discord-rain-v349.9-Stable-arm-v7a.apk": {
-      "name": "discord-rain",
-      "version": "349.9-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260376",
-      "publishedAt": "2026-10-25T17:03:14Z"
-    },
-    "discord-revenge-v349.9-Stable-arm-v7a.apk": {
-      "name": "discord-revenge",
-      "version": "349.9-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260376",
-      "publishedAt": "2026-10-25T17:03:14Z"
-    },
-    "discord-revenge-v349.9-Stable-arm64-v8a.apk": {
-      "name": "discord-revenge",
-      "version": "349.9-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260376",
-      "publishedAt": "2026-10-25T17:03:14Z"
     },
     "proton-pass-hxreborn-v1.41.4-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -26935,6 +26847,138 @@
       ],
       "originBuild": "260402",
       "publishedAt": "2026-10-28T21:22:56Z"
+    },
+    "instagram-instafel-clone-v453.0.0.57.79-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-clone-v453.0.0.57.79-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-v453.0.0.57.79-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
+    },
+    "instagram-instafel-v453.0.0.57.79-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "453.0.0.57.79",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-ce49607.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260403",
+      "publishedAt": "2026-10-29T00:22:16Z"
     }
   }
 }
