@@ -41,8 +41,10 @@ Writes:
 """
 import argparse
 import collections
+import html
 import json
 import os
+import re
 import sys
 
 RELEASES = "https://github.com/nullcpy/archive/releases"
@@ -223,6 +225,21 @@ def render_table(tags, per_build):
     return lines
 
 
+def patch_list_html(tags, patches, per_build):
+    """The folded patch list as raw HTML.
+
+    Tags rather than a markdown list because Jekyll's kramdown leaves markdown
+    inside an HTML block unparsed: a `- patch` list reaches the published site as
+    one run of text. Tags render the same on both surfaces. Escaping happens here
+    so a patch name containing `&` or `<` cannot break the page.
+    """
+    items = [html.escape(p, quote=False) for p in patches]
+    for line in delta_lines(tags, patches, per_build):
+        text = html.escape(line[2:], quote=False)
+        items.append(re.sub(r"`([^`]+)`", r"<code>\1</code>", text))
+    return ["<ul>"] + [f"<li>{item}</li>" for item in items] + ["</ul>"]
+
+
 def render_page(app_name, items, page, total, page_url, front_matter):
     """One page for one surface. page is 0-based; page_url takes a 1-based number."""
     lines = []
@@ -246,10 +263,8 @@ def render_page(app_name, items, page, total, page_url, front_matter):
             last_variant = variant
         lines.append(f"<details><summary><b>Applied patches: {len(patches)}</b>"
                      f" . {len(tags)} build(s)</summary>")
-        lines.append("")
-        lines += [f"- {p}" for p in patches]
-        lines += delta_lines(tags, patches, per_build)
-        lines += ["", "</details>", ""]
+        lines += patch_list_html(tags, patches, per_build)
+        lines += ["</details>", ""]
         lines += render_table(tags, per_build)
         lines.append("")
     return "\n".join(lines) + "\n"

@@ -70,10 +70,18 @@ grep -q 'https://github.com/nullcpy/archive/blob/main/apps/' \
 
 # Delta rule: a kind that deviates uniformly is stated; a kind that deviates for one
 # arch only is left out rather than claimed for the whole kind.
-grep -q '^- Module omit `GmsCore support`$' "$t/a/apps/youtube/README.md" \
+grep -q '<li>Module omit <code>GmsCore support</code></li>' \
+	"$t/a/apps/youtube/README.md" \
 	|| fail "uniform module delta missing from the Standard block"
-grep -q '^- APK' "$t/a/apps/youtube/README.md" \
+grep -q '<li>APK' "$t/a/apps/youtube/README.md" \
 	&& fail "a one-arch APK difference was presented as a whole-kind delta"
+
+# The folded list is HTML on purpose: kramdown leaves markdown inside a <details>
+# block unparsed, which is how the published site showed 108 patches as one run of
+# text. A stray "- " line would mean that regression came back.
+grep -q '<li>' "$t/a/apps/youtube/README.md" || fail "the patch list is not an HTML list"
+grep -q '^- ' "$t/a/apps/youtube/README.md" \
+	&& fail "a markdown list leaked into the details block"
 
 # Variant sections: Standard first, then alphabetical.
 first_two=$(awk '/^### /{print $2}' "$t/a/apps/youtube/README.md" | head -2 | tr '\n' ' ')

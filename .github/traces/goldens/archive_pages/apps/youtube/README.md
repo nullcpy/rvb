@@ -5,12 +5,12 @@
 ### Standard
 
 <details><summary><b>Applied patches: 3</b> . 2 build(s)</summary>
-
-- alpha
-- beta
-- GmsCore support
-- Module omit `GmsCore support`
-
+<ul>
+<li>alpha</li>
+<li>beta</li>
+<li>GmsCore support</li>
+<li>Module omit <code>GmsCore support</code></li>
+</ul>
 </details>
 
 | Build | Date | Version | Downloads |
@@ -21,11 +21,11 @@
 ### Experimental
 
 <details><summary><b>Applied patches: 3</b> . 2 build(s)</summary>
-
-- alpha
-- beta
-- gamma
-
+<ul>
+<li>alpha</li>
+<li>beta</li>
+<li>gamma</li>
+</ul>
 </details>
 
 | Build | Date | Version | Downloads |
