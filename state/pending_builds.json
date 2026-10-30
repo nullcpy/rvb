@@ -1,4 +1,14 @@
 {
-  "stable": {},
+  "stable": {
+    "Discord-Venus": {
+      "reason": "config",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "27ea5ef7fdf68d37e086dea97d05c9c1a701bf0c"
+    }
+  },
   "beta": {}
 }

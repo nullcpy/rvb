@@ -462,6 +462,7 @@
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "Venus",
+    "arch": "all",
     "patches-source": "VenusIsJaded/Venus-Patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/discord/discord-chat-for-gamers",
     "uptodown-dlurl": "https://discord-chat-for-gamers.en.uptodown.com/android",
@@ -1665,7 +1666,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "Reddit-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1678,7 +1679,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2235,7 +2236,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2249,7 +2250,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2303,7 +2304,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2317,7 +2318,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2373,7 +2374,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Zalo-zeldrisho": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
