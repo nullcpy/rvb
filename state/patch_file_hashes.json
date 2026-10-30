@@ -63,7 +63,7 @@
   "bearinmindcat/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.maps": "e74d54fe76f615832b108895c62a5691",
+      "com.google.android.apps.maps": "f8655c64e42285ec913adeca75daf399",
       "shared": "19bc25f6b1b38d8ac29280ed630dc132"
     }
   },
@@ -319,8 +319,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "f902f1a60022d57f9a80bf5c1175d3b3",
-      "shared": "85e97e1f411df3b76373d58d3a14b48b"
+      "com.google.android.inputmethod.latin": "3d3a5d79cf5bffea56241e210c049464",
+      "shared": "9097783394417c92df3199c3b11474f2"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "e8245a912f487e45f5da02c53dbe6749",
@@ -559,9 +559,9 @@
   "sysadmindoc/hushtelegram": {
     "beta": {},
     "stable": {
-      "org.telegram.messenger": "444cfc300ecd8c4377c01808f8c945de",
-      "org.telegram.messenger.web": "444cfc300ecd8c4377c01808f8c945de",
-      "shared": "d03d779f97cdb8e96edae7d2c096f4e4"
+      "org.telegram.messenger": "8798448d92d171327123cfdf50bbc45f",
+      "org.telegram.messenger.web": "8798448d92d171327123cfdf50bbc45f",
+      "shared": "95cf13af2feaf9d8d2ba1addf00048d2"
     }
   },
   "sysadmindoc/hushthreads": {
