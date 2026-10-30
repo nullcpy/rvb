@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-10-30T11:20:52Z"
+    "publishedAt": "2026-10-30T18:29:10Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -1522,10 +1522,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1572,8 +1572,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-music-anddea-v9.15.51-arm64-v8a.apk": {
       "name": "youtube-music-anddea",
@@ -1588,10 +1588,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1639,8 +1639,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-music-anddea-module-v9.15.51-arm-v7a.zip": {
       "name": "youtube-music-anddea",
@@ -1655,10 +1655,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1705,8 +1705,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-music-anddea-v9.15.51-arm-v7a.apk": {
       "name": "youtube-music-anddea",
@@ -1721,10 +1721,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1772,8 +1772,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-anddea-v21.13.164-arm-v7a.apk": {
       "name": "youtube-anddea",
@@ -1788,10 +1788,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -1818,6 +1818,7 @@
         "Disable resuming Shorts on startup",
         "Disable scrolling speed limit",
         "Disable sign in to TV popup",
+        "Download post images",
         "Enable debug logging",
         "Enable gradient loading screen",
         "Feed video actions",
@@ -1855,6 +1856,7 @@
         "Return YouTube Username",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar components",
         "Set transcript cookies",
         "Settings menu filter",
@@ -1877,8 +1879,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-anddea-v21.13.164-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -1893,10 +1895,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -1923,6 +1925,7 @@
         "Disable resuming Shorts on startup",
         "Disable scrolling speed limit",
         "Disable sign in to TV popup",
+        "Download post images",
         "Enable debug logging",
         "Enable gradient loading screen",
         "Feed video actions",
@@ -1960,6 +1963,7 @@
         "Return YouTube Username",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar components",
         "Set transcript cookies",
         "Settings menu filter",
@@ -1982,8 +1986,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-anddea-module-v21.13.164-arm-v7a.zip": {
       "name": "youtube-anddea",
@@ -1998,10 +2002,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -2028,6 +2032,7 @@
         "Disable resuming Shorts on startup",
         "Disable scrolling speed limit",
         "Disable sign in to TV popup",
+        "Download post images",
         "Enable debug logging",
         "Enable gradient loading screen",
         "Feed video actions",
@@ -2064,6 +2069,7 @@
         "Return YouTube Username",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar components",
         "Set transcript cookies",
         "Settings menu filter",
@@ -2086,8 +2092,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "youtube-anddea-module-v21.13.164-arm64-v8a.zip": {
       "name": "youtube-anddea",
@@ -2102,10 +2108,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.3.mpp"
+        "anddea/patches-4.4.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.3"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -2132,6 +2138,7 @@
         "Disable resuming Shorts on startup",
         "Disable scrolling speed limit",
         "Disable sign in to TV popup",
+        "Download post images",
         "Enable debug logging",
         "Enable gradient loading screen",
         "Feed video actions",
@@ -2168,6 +2175,7 @@
         "Return YouTube Username",
         "Sanitize sharing links",
         "Save to Watch later",
+        "Search comments",
         "Seekbar components",
         "Set transcript cookies",
         "Settings menu filter",
@@ -2190,8 +2198,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260368",
-      "publishedAt": "2026-10-25T08:30:39Z"
+      "originBuild": "260418",
+      "publishedAt": "2026-10-30T18:28:23Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
