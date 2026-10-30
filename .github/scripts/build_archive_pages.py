@@ -289,7 +289,7 @@ def surfaces(site_base, pages_base):
         "index": "README.md",
         "page": lambda n: "README.md" if n == 1 else f"{n}.md",
         "url": lambda k, n: f"{site_base}/apps/{k}/"
-                            + ("README.md" if n == 1 else f"{n}.md"),
+        + ("README.md" if n == 1 else f"{n}.md"),
         "front_matter": False,
     }]
     if pages_base:
@@ -297,7 +297,7 @@ def surfaces(site_base, pages_base):
             "index": "index.md",
             "page": lambda n: "index.md" if n == 1 else f"page-{n}.md",
             "url": lambda k, n: f"{pages_base}/apps/{k}/"
-                                + ("" if n == 1 else f"page-{n}.html"),
+            + ("" if n == 1 else f"page-{n}.html"),
             "front_matter": True,
         })
     return out

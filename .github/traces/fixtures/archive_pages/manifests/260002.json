@@ -1,83 +1,102 @@
 {
-  "schema": 1,
-  "kind": "build",
-  "meta": {
-    "build": "260002",
-    "channel": "stable",
-    "publishedAt": "2026-10-08T00:00:00Z"
-  },
-  "files": {
-    "youtube-morphe-v20.0.0-arm64-v8a.apk": {
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "arch": "arm64",
-      "fileType": "APK",
-      "version": "20.0.0",
-      "appliedPatches": ["alpha", "beta", "GmsCore support"]
+    "schema": 1,
+    "kind": "build",
+    "meta": {
+        "build": "260002",
+        "channel": "stable",
+        "publishedAt": "2026-10-08T00:00:00Z"
     },
-    "youtube-morphe-module-v20.0.0-arm64-v8a.zip": {
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": null,
-      "subVariant": null,
-      "arch": "arm64",
-      "fileType": "Module",
-      "version": "20.0.0",
-      "appliedPatches": ["alpha", "beta"]
-    },
-    "youtube-morphe-experimental-v20.2.0-arm64-v8a.apk": {
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "arch": "arm64",
-      "fileType": "APK",
-      "version": "20.2.0",
-      "appliedPatches": ["alpha", "beta", "gamma"]
-    },
-    "youtube-morphe-experimental-v20.2.0-arm-v7a.apk": {
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "arch": "arm",
-      "fileType": "APK",
-      "version": "20.2.0",
-      "appliedPatches": ["alpha", "beta"]
-    },
-    "discord-rain-v1.1.0-arm64-v8a.apk": {
-      "appKey": "discord",
-      "appName": "Discord",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "arch": "arm64",
-      "fileType": "APK",
-      "version": "1.1.0",
-      "appliedPatches": ["x", "y"]
-    },
-    "discord-revenge-v1.1.0-arm-v7a.apk": {
-      "appKey": "discord",
-      "appName": "Discord",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "arch": "arm",
-      "fileType": "APK",
-      "version": "1.1.0",
-      "appliedPatches": ["z"]
+    "files": {
+        "youtube-morphe-v20.0.0-arm64-v8a.apk": {
+            "appKey": "youtube",
+            "appName": "YouTube",
+            "brandKey": "morphe",
+            "brandName": "Morphe",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "20.0.0",
+            "appliedPatches": [
+                "alpha",
+                "beta",
+                "GmsCore support"
+            ]
+        },
+        "youtube-morphe-module-v20.0.0-arm64-v8a.zip": {
+            "appKey": "youtube",
+            "appName": "YouTube",
+            "brandKey": "morphe",
+            "brandName": "Morphe",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "Module",
+            "version": "20.0.0",
+            "appliedPatches": [
+                "alpha",
+                "beta"
+            ]
+        },
+        "youtube-morphe-experimental-v20.2.0-arm64-v8a.apk": {
+            "appKey": "youtube",
+            "appName": "YouTube",
+            "brandKey": "morphe",
+            "brandName": "Morphe",
+            "variant": "Experimental",
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "20.2.0",
+            "appliedPatches": [
+                "alpha",
+                "beta",
+                "gamma"
+            ]
+        },
+        "youtube-morphe-experimental-v20.2.0-arm-v7a.apk": {
+            "appKey": "youtube",
+            "appName": "YouTube",
+            "brandKey": "morphe",
+            "brandName": "Morphe",
+            "variant": "Experimental",
+            "subVariant": null,
+            "arch": "arm",
+            "fileType": "APK",
+            "version": "20.2.0",
+            "appliedPatches": [
+                "alpha",
+                "beta"
+            ]
+        },
+        "discord-rain-v1.1.0-arm64-v8a.apk": {
+            "appKey": "discord",
+            "appName": "Discord",
+            "brandKey": "rain",
+            "brandName": "rain",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "x",
+                "y"
+            ]
+        },
+        "discord-revenge-v1.1.0-arm-v7a.apk": {
+            "appKey": "discord",
+            "appName": "Discord",
+            "brandKey": "revenge",
+            "brandName": "revenge",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm",
+            "fileType": "APK",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "z"
+            ]
+        }
     }
-  }
 }
