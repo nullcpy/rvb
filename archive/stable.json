@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-30T18:35:32Z"
+    "publishedAt": "2026-10-30T23:52:05Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13704,10 +13704,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13737,8 +13737,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -13753,10 +13753,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13786,8 +13786,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -16405,120 +16405,6 @@
       "originBuild": "260401",
       "publishedAt": "2026-10-28T18:46:43Z"
     },
-    "google-photos-akashsriram-v7.97.0.997578476-arm-v7a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
-    "google-photos-akashsriram-module-v7.97.0.997578476-arm64-v8a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
-    "google-photos-akashsriram-module-v7.97.0.997578476-arm-v7a.zip": {
-      "name": "google-photos-akashsriram",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
-    "google-photos-akashsriram-v7.97.0.997578476-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
-      ],
-      "originBuild": "260298",
-      "publishedAt": "2026-10-17T08:59:12Z"
-    },
     "brave-browser-kveld9-v1.97.57-arm-v7a.apk": {
       "name": "brave-browser-kveld9",
       "version": "1.97.57",
@@ -17838,10 +17724,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17870,8 +17756,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -17886,10 +17772,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17918,8 +17804,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -17962,10 +17848,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17997,8 +17883,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -18013,10 +17899,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -18048,8 +17934,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260410",
-      "publishedAt": "2026-10-29T12:54:26Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -18064,10 +17950,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -18098,8 +17984,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -18114,10 +18000,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.4.mpp"
+        "bearinmindcat/patches-2.7.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.4"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -18148,8 +18034,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260400",
-      "publishedAt": "2026-10-28T15:15:21Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -21464,10 +21350,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.21.mpp"
+        "SysAdminDoc/patches-0.0.22.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -21534,8 +21420,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260396",
-      "publishedAt": "2026-10-27T23:48:46Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -21550,10 +21436,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.21.mpp"
+        "SysAdminDoc/patches-0.0.22.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -21620,8 +21506,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260396",
-      "publishedAt": "2026-10-27T23:48:46Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "telegram-hushtelegram-google-play-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -22402,66 +22288,6 @@
       ],
       "originBuild": "260381",
       "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "google-photos-akashsriram-unclone-v7.97.0.997578476-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "com.google.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name",
-        "GmsCore support"
-      ],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
-    },
-    "google-photos-akashsriram-unclone-v7.97.0.997578476-arm-v7a.apk": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.97.0.997578476",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "com.google.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.15.4.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.15.4"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name",
-        "GmsCore support"
-      ],
-      "originBuild": "260369",
-      "publishedAt": "2026-10-25T08:53:50Z"
     },
     "medium-bufferk-v4.5.1784910928-arm64-v8a.apk": {
       "name": "medium-bufferk",
@@ -23736,10 +23562,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.21.mpp"
+        "SysAdminDoc/patches-0.0.22.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23806,8 +23632,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260396",
-      "publishedAt": "2026-10-27T23:48:46Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "telegram-hushtelegram-google-play-v13.1.1-arm-v7a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -23822,10 +23648,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.21.mpp"
+        "SysAdminDoc/patches-0.0.22.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.21"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23892,8 +23718,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260396",
-      "publishedAt": "2026-10-27T23:48:46Z"
+      "originBuild": "260421",
+      "publishedAt": "2026-10-30T23:51:29Z"
     },
     "messenger-hushmessenger-v584.1.0.61.98-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
