@@ -1,4 +1,4 @@
-<h1><span class="accent">Null</span>Store Archive</h1>
+<h1><span class="accent">NullStore</span> Archive</h1>
 
 Every build NullForge has published, kept permanently. For the newest versions and for one-tap Obtainium adds, use [NullStore](https://nullstore.example/hub).
 
