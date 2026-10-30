@@ -35,7 +35,12 @@ to the archive repo's `main`:
   github.com, which is most of the audience.
 - The generator is stdlib-only and is imported through a sparse clone of rvb `main`,
   the same rule as `naming.py` ([0006](0006-filename-parsing-is-imported-not-mirrored.md)).
-- Enabling GitHub Pages later is a `README.md` to `index.md` rename, not a rewrite.
+- Two surfaces come out of one pass. `README.md` is what github.com renders per
+  folder, so it carries no front matter (GitHub would show it as a metadata table)
+  and links at `blob/main`; `index.md` mirrors it for Pages, with front matter
+  (Jekyll ignores a markdown file without it) and links at the published site.
+  Continuation pages differ per surface, `2.md` versus `page-2.html`, because both
+  write into one app directory and a shared name let the second overwrite the first.
 
 ## Rejected alternatives
 

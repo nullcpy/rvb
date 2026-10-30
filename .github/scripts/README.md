@@ -100,7 +100,10 @@ network, and every collection sorted with a tie-break, because unstable order wo
 rewrite files whose data did not change. `NULLSTORE_URL` is required with no
 default, so a hub move cannot leave a stale link advertising itself, and
 `ARCHIVE_SITE_BASE` sets the page links, which are always absolute because a
-relative link 404s for a logged-out reader. Run by the archive repo's own
+relative link 404s for a logged-out reader. When `ARCHIVE_PAGES_BASE` is set it also
+writes the `index.md` mirror that Pages (Jekyll) renders, front matter included,
+linking at that base, with continuation pages named `page-2.md` rather than `2.md` so
+the two surfaces cannot overwrite each other. Run by the archive repo's own
 `pages.yml`, which imports it from a sparse clone of `main` exactly like
 `naming.py` ([0006](../../docs/decisions/0006-filename-parsing-is-imported-not-mirrored.md),
 [0016](../../docs/decisions/0016-archive-pages-are-generated-markdown-on-main.md)).

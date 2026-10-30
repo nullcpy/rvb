@@ -243,7 +243,8 @@ committed to this repo's `website` branch. The two branches carry different thin
 `website` is machine data (`manifests/*.json` and nothing else), while `main` is the
 **browsable site generated from it**, an index README plus one
 `apps/<appKey>/README.md` per app, so visiting the repository shows every app's build
-history with working download links. `build.yml`'s `Upload to archive repo`, `Publish
+history with working download links, and a parallel `index.md` set that GitHub Pages
+publishes from the same branch. `build.yml`'s `Upload to archive repo`, `Publish
 archive manifest` and `Notify archive pages` steps write the data with
 `ARCHIVE_REPO_TOKEN`; the pages themselves are rendered by this repo's own `pages.yml`,
 which reads `website` and commits to `main` with its own `GITHUB_TOKEN`. Nothing on
