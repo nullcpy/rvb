@@ -6,7 +6,7 @@ Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new p
 
 ## 🔗 Links
 
-- 🌐 [Download Website](https://fahim-ahmed05.github.io/nullstore)
+- 🌐 [Download Website](https://nullcpy.github.io/nullstore)
 - 🗄️ [Build Archive](https://github.com/nullcpy/archive) — every build, kept permanently
 - 💬 [Discord Server](https://discord.gg/d4VHpybpQq)
 - 👥 [Telegram Group](https://t.me/nullstoretg)
@@ -19,7 +19,7 @@ Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new p
 <p align="left">
   <a href="https://github.com/nullcpy/nullcpy.github.io"><img alt="Website stars" src="https://img.shields.io/github/stars/nullcpy/nullcpy.github.io?label=Website%20Stars&style=flat&color=007ec6"></a>
   <a href="https://github.com/nullcpy/rvb"><img alt="Builder stars" src="https://img.shields.io/github/stars/nullcpy/rvb?label=Builder%20Stars&style=flat&color=007ec6"></a>
-  <a href="https://fahim-ahmed05.github.io/nullstore"><img alt="Downloads" src="https://img.shields.io/github/downloads/nullcpy/rvb/total?label=Downloads&style=flat&color=007ec6"></a>
+  <a href="https://nullcpy.github.io/nullstore"><img alt="Downloads" src="https://img.shields.io/github/downloads/nullcpy/rvb/total?label=Downloads&style=flat&color=007ec6"></a>
   <a href="https://github.com/nullcpy/archive/releases"><img alt="Archive Downloads" src="https://img.shields.io/github/downloads/nullcpy/archive/total?label=Archive%20Downloads&style=flat&color=007ec6"></a>
   <a href="https://github.com/nullcpy/rvb"><img alt="GitHub visitors" src="https://visitor-badge.laobi.icu/badge?page_id=nullcpy.rvb&left_text=GitHub%20Visitors&right_color=%23007ec6&format=true"></a>
 </p>
@@ -36,7 +36,7 @@ Thank you to everyone who helps keep this project alive!
 
 > [!NOTE]
 >
-> 🌐 **[Visit Download Website](https://fahim-ahmed05.github.io/nullstore)**
+> 🌐 **[Visit Download Website](https://nullcpy.github.io/nullstore)**
 >
 > For the best experience, please download from the website. It features:
 >
