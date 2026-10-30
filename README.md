@@ -7,7 +7,7 @@ Automatically builds and publishes APKs & Magisk/KernelSU Modules whenever new p
 ## 🔗 Links
 
 - 🌐 [Download Website](https://nullcpy.github.io/nullstore)
-- 🗄️ [Build Archive](https://github.com/nullcpy/archive) — every build, kept permanently
+- 🗄️ [Build Archive](https://nullcpy.github.io/archive)
 - 💬 [Discord Server](https://discord.gg/d4VHpybpQq)
 - 👥 [Telegram Group](https://t.me/nullstoretg)
 - 📣 [Telegram Channel](https://t.me/s/nullstore_updates)
