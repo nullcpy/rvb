@@ -3,8 +3,17 @@
 
 Reads `manifests/*.json` (schema v1, written by push_archive_manifest.sh onto the
 archive repo's `website` branch) and writes a browsable markdown tree: an index
-README plus one README per app, each grouped by brand then variant, with every
-distinct applied-patch list folded once above the build table it covers.
+plus one page set per app, grouped by brand then variant, with every distinct
+applied-patch list folded once above the build table it covers.
+
+Two surfaces come out of one pass, because the same tree is read two ways:
+
+- `README.md` is what github.com renders when someone browses a folder, so its
+  links point at `blob/main` and it carries no front matter (GitHub would render
+  front matter as a metadata table above the content).
+- `index.md` is what GitHub Pages (Jekyll) turns into `/` and `/apps/<key>/`, so
+  it carries front matter, which Jekyll requires before it will convert a file at
+  all, and its links point at the published site.
 
 The mirror holds numbered releases only, so this reads the per-build manifests
 directly and never needs the cumulative archive manifest or a live asset check.
@@ -12,20 +21,23 @@ Stdlib only and no network: the archive repo's workflow imports it from a sparse
 clone of this repo's `main`, the same import-not-copy rule as naming.py.
 
 Layout choices that are deliberate, not incidental:
-- One canonical patch list per build (the arm64 APK when present), so a module that
-  drops one patch does not duplicate a 100-item list. The delta is stated once per
-  kind and only when every artifact of that kind agrees; a difference confined to
-  one arch or one build is left out rather than misattributed.
+- One canonical patch list per build (the widest APK arch when present), so a
+  module that drops one patch does not duplicate a 100-item list. The delta is
+  stated once per kind and only when every artifact of that kind agrees; a
+  difference confined to one arch or one build is left out rather than misstated.
 - Builds are listed individually inside a block, never as a range, because a patch
   set can appear, stop, and come back.
 - Everything is sorted, including ties, because an unstable order would make every
   regeneration rewrite files whose data did not change.
 
 Env:
-    ARCHIVE_SITE_BASE  absolute base for page links, default the archive repo's main
-    NULLSTORE_URL      required; the hub the index points live users to
+    ARCHIVE_SITE_BASE   absolute base for README links, default the archive repo's main
+    ARCHIVE_PAGES_BASE  optional published site base; when set, index.md files are
+                        written as well. Unset means GitHub-only output.
+    NULLSTORE_URL       required; the hub the index points live users to
 Writes:
-    <out>/README.md and <out>/apps/<appKey>/{README,2,...}.md
+    <out>/README.md, <out>/apps/<appKey>/README.md
+    and, when ARCHIVE_PAGES_BASE is set, the index.md mirror of each.
 """
 import argparse
 import collections
@@ -36,7 +48,8 @@ import sys
 RELEASES = "https://github.com/nullcpy/archive/releases"
 DEFAULT_SITE = "https://github.com/nullcpy/archive/blob/main"
 # Rendering order for artifact kinds and architectures, and for tie-free sorts.
-ARCH_ORDER = {"arm64": 0, "arm": 1, "all": 2, "universal": 3, "x86_64": 4, "x86": 5}
+ARCH_ORDER = {"arm64": 0, "arm": 1, "all": 2,
+              "universal": 3, "x86_64": 4, "x86": 5}
 KIND_ORDER = {"APK": 0, "Module": 1}
 DEFAULT_VARIANT = "Standard"
 
@@ -101,10 +114,10 @@ def sections(rows):
     brand_names, newest = {}, {}
     for r in rows:
         variant = r["variant"] or r["sub"] or DEFAULT_VARIANT
-        by_brand[r["brand"] or "unknown"][variant][r["tag"]].append(r)
-        brand_names.setdefault(r["brand"] or "unknown", r["brandName"] or r["brand"])
-        newest[r["brand"] or "unknown"] = max(newest.get(r["brand"] or "unknown", ""),
-                                             r["tag"])
+        brand = r["brand"] or "unknown"
+        by_brand[brand][variant][r["tag"]].append(r)
+        brand_names.setdefault(brand, r["brandName"] or brand)
+        newest[brand] = max(newest.get(brand, ""), r["tag"])
     out = []
     # Tie-break on the brand key so two brands first seen in the same build never
     # fall back on dictionary insertion order.
@@ -203,22 +216,25 @@ def render_table(tags, per_build):
             for kind in sorted(by_kind, key=lambda k: KIND_ORDER.get(k, 9)):
                 ordered = sorted(by_kind[kind],
                                  key=lambda r: ARCH_ORDER.get(r["arch"], 9))
-                cells.append(f"{kind}: " + " • ".join(arch_link(r) for r in ordered))
+                cells.append(f"{kind}: " + " • ".join(arch_link(r)
+                             for r in ordered))
             lines.append(f"| {build_link(tag)} | {artifacts[0]['date']} | `{version}` "
                          f"| {' · '.join(cells)} |")
     return lines
 
 
-def render_page(app_name, items, page, total, app_key, site_base):
-    lines = [f"# {app_name}", ""]
+def render_page(app_name, items, page, total, page_url, front_matter):
+    """One page for one surface. page is 0-based; page_url takes a 1-based number."""
+    lines = []
+    if front_matter:
+        lines += ["---", f"title: {app_name}", "---", ""]
+    lines += [f"# {app_name}", ""]
     if total > 1:
-        base = f"{site_base}/apps/{app_key}"
         nav = []
         if page > 0:
-            previous = "README" if page == 1 else str(page)
-            nav.append(f"[newer builds]({base}/{previous}.md)")
+            nav.append(f"[newer builds]({page_url(page)})")
         if page + 1 < total:
-            nav.append(f"[older builds]({base}/{page + 2}.md)")
+            nav.append(f"[older builds]({page_url(page + 2)})")
         lines += [" . ".join(nav), ""]
     last_brand, last_variant = None, None
     for brand, variant, patches, tags, per_build in items:
@@ -239,8 +255,11 @@ def render_page(app_name, items, page, total, app_key, site_base):
     return "\n".join(lines) + "\n"
 
 
-def render_index(app_names, last_build, site_base, nullstore_url):
-    lines = [
+def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
+    lines = []
+    if front_matter:
+        lines += ["---", "title: NullStore Archive", "---", ""]
+    lines += [
         "# NullStore Archive",
         "",
         "Every build NullForge has published, kept permanently. For the newest "
@@ -251,8 +270,8 @@ def render_index(app_names, last_build, site_base, nullstore_url):
         "|---|---|",
     ]
     for app_key, display in app_names:
-        lines.append(f"| [{display}]({site_base}/apps/{app_key}/README.md) "
-                     f"| {last_build[app_key]} |")
+        lines.append(
+            f"| [{display}]({app_url(app_key)}) | {last_build[app_key]} |")
     return "\n".join(lines) + "\n"
 
 
@@ -262,7 +281,29 @@ def write(path, text):
         fh.write(text)
 
 
-def build(manifest_dir, out_dir, cap, site_base, nullstore_url):
+def surfaces(site_base, pages_base):
+    """One entry per rendered surface. Continuation pages must have distinct file
+    names across surfaces: both write into the same app directory, so a shared
+    `2.md` would let whichever surface runs last overwrite the other's page."""
+    out = [{
+        "index": "README.md",
+        "page": lambda n: "README.md" if n == 1 else f"{n}.md",
+        "url": lambda k, n: f"{site_base}/apps/{k}/"
+                            + ("README.md" if n == 1 else f"{n}.md"),
+        "front_matter": False,
+    }]
+    if pages_base:
+        out.append({
+            "index": "index.md",
+            "page": lambda n: "index.md" if n == 1 else f"page-{n}.md",
+            "url": lambda k, n: f"{pages_base}/apps/{k}/"
+                                + ("" if n == 1 else f"page-{n}.html"),
+            "front_matter": True,
+        })
+    return out
+
+
+def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base):
     rows = load_manifests(manifest_dir)
     if not rows:
         raise SystemExit(f"no manifests found in {manifest_dir}")
@@ -271,29 +312,40 @@ def build(manifest_dir, out_dir, cap, site_base, nullstore_url):
         by_app[r["app"]].append(r)
     # Stable, human-sensible index order; ties broken by key so it never depends
     # on filesystem listing order.
-    ordered_apps = sorted(by_app, key=lambda k: (by_app[k][0]["appName"].lower(), k))
+    ordered_apps = sorted(by_app, key=lambda k: (
+        by_app[k][0]["appName"].lower(), k))
     last_build = {k: max(r["date"] for r in by_app[k]) for k in by_app}
 
     written = 0
-    for app_key in ordered_apps:
-        app_rows = by_app[app_key]
-        pages = paginate(block_rows(sections(app_rows)), cap)
-        display = app_rows[0]["appName"]
-        for i, items in enumerate(pages):
-            name = "README.md" if i == 0 else f"{i + 1}.md"
-            write(os.path.join(out_dir, "apps", app_key, name),
-                  render_page(display, items, i, len(pages), app_key, site_base))
-            written += 1
-    write(os.path.join(out_dir, "README.md"),
-          render_index([(k, by_app[k][0]["appName"]) for k in ordered_apps],
-                       last_build, site_base, nullstore_url))
+    for surface in surfaces(site_base, pages_base):
+        for app_key in ordered_apps:
+            app_rows = by_app[app_key]
+            pages = paginate(block_rows(sections(app_rows)), cap)
+            display = app_rows[0]["appName"]
+            for i, items in enumerate(pages):
+                write(os.path.join(out_dir, "apps", app_key,
+                                   surface["page"](i + 1)),
+                      render_page(display, items, i, len(pages),
+                                  lambda n, k=app_key: surface["url"](k, n),
+                                  surface["front_matter"]))
+                written += 1
+        app_link = ((lambda k: f"{site_base}/apps/{k}/README.md")
+                    if not surface["front_matter"]
+                    else (lambda k: f"{pages_base}/apps/{k}/"))
+        write(os.path.join(out_dir, surface["index"]),
+              render_index([(k, by_app[k][0]["appName"]) for k in ordered_apps],
+                           last_build, app_link, nullstore_url,
+                           surface["front_matter"]))
+        written += 1
     return len(ordered_apps), written, len(rows)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--manifests", required=True, help="directory of *.json manifests")
-    ap.add_argument("--out", required=True, help="directory to write the site into")
+    ap.add_argument("--manifests", required=True,
+                    help="directory of *.json manifests")
+    ap.add_argument("--out", required=True,
+                    help="directory to write the site into")
     ap.add_argument("--cap", type=int, default=50, help="table rows per page")
     args = ap.parse_args()
 
@@ -301,13 +353,16 @@ def main():
     # nothing would fail, so an unset one is a hard error instead of a guess.
     nullstore_url = os.environ.get("NULLSTORE_URL", "").strip()
     if not nullstore_url:
-        raise SystemExit("NULLSTORE_URL is not set; refusing to invent a hub link")
+        raise SystemExit(
+            "NULLSTORE_URL is not set; refusing to invent a hub link")
     site_base = os.environ.get("ARCHIVE_SITE_BASE", DEFAULT_SITE).rstrip("/")
+    pages_base = os.environ.get("ARCHIVE_PAGES_BASE", "").strip().rstrip("/")
 
     apps, pages, artifacts = build(args.manifests, args.out, args.cap,
-                                   site_base, nullstore_url)
-    print(f"wrote {pages} pages for {apps} apps from {artifacts} artifacts "
-          f"({args.manifests} -> {args.out})")
+                                   site_base, nullstore_url, pages_base)
+    extra = f", pages base {pages_base}" if pages_base else ", README only"
+    print(f"wrote {pages} pages for {apps} apps from {artifacts} artifacts"
+          f" ({args.manifests} -> {args.out}{extra})")
 
 
 if __name__ == "__main__":

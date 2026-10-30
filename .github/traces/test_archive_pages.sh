@@ -86,4 +86,46 @@ run "$GEN" 1 "$t/split"
 grep -q 'newer builds](https://github.com/nullcpy/archive/blob/main/apps/youtube/README.md)' \
 	"$t/split/apps/youtube/2.md" || fail "page 2 lacks an absolute link back to page 1"
 
+# Second surface: with a pages base set, index.md mirrors each page for Jekyll.
+# GitHub renders front matter as a metadata table, so only the index.md copies may
+# carry it, and only they may link at the published site.
+PAGES="https://pages.example/archive"
+ARCHIVE_PAGES_BASE="$PAGES" run "$GEN" 1 "$t/two"
+[ -f "$t/two/index.md" ] || fail "no root index.md for the pages surface"
+[ -f "$t/two/apps/youtube/index.md" ] || fail "no app index.md for the pages surface"
+[ "$(head -1 "$t/two/apps/youtube/index.md")" = "---" ] \
+	|| fail "index.md lacks the front matter Jekyll needs to render it"
+[ "$(head -1 "$t/two/apps/youtube/README.md")" = "# YouTube" ] \
+	|| fail "README.md gained front matter, which GitHub would render as a table"
+grep -q "($PAGES/apps/youtube/)" "$t/two/index.md" \
+	|| fail "root index.md does not link at the pages base"
+grep -q "($PAGES/apps/youtube/page-2.html)" "$t/two/apps/youtube/index.md" \
+	|| fail "paginated index.md does not use the .html page URL"
+# Both surfaces write into one directory, so their continuation files must differ:
+# a shared 2.md would let the second surface overwrite the first.
+[ -f "$t/two/apps/youtube/2.md" ] && [ -f "$t/two/apps/youtube/page-2.md" ] \
+	|| fail "the two surfaces collide on continuation file names"
+[ "$(head -1 "$t/two/apps/youtube/2.md")" = "# YouTube" ] \
+	|| fail "2.md was overwritten by the pages surface"
+# Each surface must stay on its own host: the README is read on github.com and the
+# index on the published site, so a link crossing over sends the reader elsewhere.
+grep -q "($PAGES" "$t/two/apps/youtube/README.md" \
+	&& fail "README.md leaked pages-base links"
+grep -q 'blob/main' "$t/two/apps/youtube/index.md" \
+	&& fail "index.md leaked blob/main links"
+grep -q 'https://github.com/nullcpy/archive/blob/main/apps/youtube/README.md' \
+	"$t/two/apps/youtube/2.md" || fail "README surface page 2 lacks a link back to page 1"
+grep -q 'https://github.com/nullcpy/archive/releases/download/' \
+	"$t/two/apps/youtube/index.md" || fail "index.md lost the absolute release links"
+
+# The two surfaces must be the same page: strip the front matter and normalise the
+# differing link base, then require the bodies to match. This is what stops the
+# mirror from silently drifting into a second, smaller page.
+sed '1,4d' "$t/two/apps/youtube/index.md" \
+	| sed -e "s#$PAGES/apps/youtube/#BASE#g" \
+	      -e 's#page-\([0-9]*\)\.html#\1.md#g' > "$t/b_index"
+sed -e 's#https://github.com/nullcpy/archive/blob/main/apps/youtube/#BASE#g' \
+	"$t/two/apps/youtube/README.md" > "$t/b_readme"
+cmp -s "$t/b_index" "$t/b_readme" || fail "index.md and README.md bodies diverged"
+
 echo "PASS: archive page generation"
