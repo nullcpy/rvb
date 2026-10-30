@@ -275,7 +275,7 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
     if front_matter:
         lines += ["---", "title: NullStore Archive", "---", ""]
     lines += [
-        "# NullStore Archive",
+        '<h1><span class="accent">Null</span>Store Archive</h1>',
         "",
         "Every build NullForge has published, kept permanently. For the newest "
         "versions and for one-tap Obtainium adds, use "
