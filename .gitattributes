@@ -11,6 +11,9 @@
 *.json text eol=lf
 *.toml text eol=lf
 *.trace text eol=lf
+# Page goldens are byte-compared against generator output, so a CRLF checkout on a
+# Windows box would fail the test that passes on CI.
+.github/traces/goldens/** text eol=lf
 *.md text
 
 *.jar binary

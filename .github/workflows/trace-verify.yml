@@ -49,4 +49,5 @@ jobs:
           bash .github/traces/test_fdroid_source.sh
           bash .github/traces/test_config_rearm.sh
           bash .github/traces/test_archive_mirror.sh
+          bash .github/traces/test_archive_pages.sh
           bash .github/traces/test_version_watch.sh
