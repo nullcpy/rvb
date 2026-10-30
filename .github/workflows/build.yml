@@ -281,17 +281,32 @@ jobs:
         run: bash .github/scripts/build_upload_release.sh
 
       - name: Publish archive manifest
+        id: archive_manifest
         if: steps.no_change.outputs.HAS_NEW_FILES == 'true' && steps.archive_mirror.outcome == 'success'
         continue-on-error: true
-        # Push this build's immutable manifest to nullcpy/archive's website branch so
-        # a future site can be generated from the mirror without touching rvb's own
-        # website branch. Runs only after the mirror landed; a metadata push that fails
-        # warns rather than reddening a run whose files are already live (repo rule 9).
+        # Push this build's immutable manifest to nullcpy/archive's website branch,
+        # the data its browsable markdown pages are rendered from. Runs only after the
+        # mirror landed; a metadata push that fails warns rather than reddening a run
+        # whose files are already live (repo rule 9).
         env:
           GH_TOKEN: ${{ secrets.ARCHIVE_REPO_TOKEN }}
           ARCHIVE_REPO: ${{ vars.ARCHIVE_REPO }}
           BUILD_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
         run: bash .github/scripts/push_archive_manifest.sh
+
+      - name: Notify archive pages
+        if: steps.archive_manifest.outcome == 'success' && steps.archive_manifest.outputs.PUBLISHED == 'true' && vars.ARCHIVE_REPO != ''
+        continue-on-error: true
+        # The archive repo renders its own index and per-app pages on its main branch
+        # from manifests/, and that workflow lives in that repo, not this one. Ask it
+        # to rebuild now that this build's manifest is really there: gating on the
+        # PUBLISHED output means a refused push never triggers a render of data that
+        # never arrived. A lost dispatch only delays the view, because that workflow
+        # also runs on a schedule and regenerates everything from scratch.
+        env:
+          GH_TOKEN: ${{ secrets.ARCHIVE_REPO_TOKEN }}
+          ARCHIVE_REPO: ${{ vars.ARCHIVE_REPO }}
+        run: gh api -X POST "repos/$ARCHIVE_REPO/actions/workflows/pages.yml/dispatches" -f ref=main
 
       - name: Update changelog and module update files
         id: update_changelog

@@ -15,6 +15,9 @@ set -euo pipefail
 # Env: ARCHIVE_REPO (owner/name), BUILD_TAG (this release's tag), GH_TOKEN (PAT with
 #      contents:write on ARCHIVE_REPO). Reads: temp/manifest/build.json.
 # gh performs the cross-repo write because GITHUB_TOKEN cannot reach another repo.
+# Output: appends PUBLISHED=true to $GITHUB_OUTPUT only when the blob actually
+#      landed, so a follower (the archive page rebuild) can gate on real success
+#      rather than on this script exiting 0, which it also does when it gives up.
 
 REPO="${ARCHIVE_REPO:-}"
 TAG="${BUILD_TAG:-}"
@@ -72,4 +75,11 @@ if [ -n "$OLD_SHA" ]; then
 	echo "Updated $PATH_JSON on $REPO#$BRANCH."
 else
 	echo "Published $PATH_JSON on $REPO#$BRANCH."
+fi
+
+# Only now, after the PUT returned, is the manifest real. The page rebuild gates on
+# this, so a run whose push was refused must not ask for a rebuild of a manifest the
+# archive repo never received.
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+	printf 'PUBLISHED=true\n' >>"$GITHUB_OUTPUT"
 fi

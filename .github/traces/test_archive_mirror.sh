@@ -143,7 +143,9 @@ chmod +x "$t3/bin/gh"
 run_push() { # $1 = stub mode; leaves output in $t3/out.<mode>, body in $t3/body.json
 	local out rc
 	: > "$t3/gh.log"
+	: > "$t3/gha.out"
 	out=$( cd "$t3" && PATH="$t3/bin:$PATH" GH_LOG="$t3/gh.log" GH_BODY="$t3/body.json" GH_TOKEN=fake \
+		GITHUB_OUTPUT="$t3/gha.out" \
 		ARCHIVE_REPO=nullcpy/archive BUILD_TAG=260999 GH_STUB_MODE="$1" \
 		bash "$ROOT/.github/scripts/push_archive_manifest.sh" 2>&1 )
 	rc=$?
@@ -161,18 +163,23 @@ hasnt "$t3/put" '-f content='
 have "$t3/body.json" '"content"'
 have "$t3/body.json" 'chore: publish'
 hasnt "$t3/body.json" '"sha"'
+have "$t3/gha.out" 'PUBLISHED=true'
 
 # present: branch and file exist -> do not re-create, update in place with the prior sha
 run_push present || fail "push (present) must exit 0"
 hasnt "$t3/gh.log" '-X POST repos/nullcpy/archive/git/refs'
 have "$t3/body.json" 'OLD123'
 have "$t3/body.json" 'chore: update'
+have "$t3/gha.out" 'PUBLISHED=true'
 
 # fail: the PUT is rejected -> the publisher must stay non-fatal (fail-soft)
 rcf=0
 run_push fail || rcf=$?
 [ "$rcf" = 0 ] || fail "push_archive_manifest did not fail soft (rc=$rcf)"
 have "$t3/out.fail" '::warning::'
+# ... but a refused push must not claim the manifest landed, or the page rebuild
+# would be asked to render a manifest the archive repo never received.
+hasnt "$t3/gha.out" 'PUBLISHED=true'
 
 # oversized: the real 260368 condition. A full-pool manifest's base64 payload
 # overruns MAX_ARG_STRLEN (131072 B, the Linux cap on ONE argument), so passing
