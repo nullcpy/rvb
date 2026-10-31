@@ -93,7 +93,10 @@ download cache (release per package name); `nullcpy/archive` = permanent numbere
 mirror of every build (release per build number): its `website` branch holds the
 per-build manifests, its `main` the github.com README surface and its `site` branch
 the Pages sources the workflow builds from, opt-in via `vars.ARCHIVE_REPO`
-([decisions/0015](decisions/0015-builds-are-mirrored-to-a-permanent-archive-repo.md)).
+([decisions/0015](decisions/0015-builds-are-mirrored-to-a-permanent-archive-repo.md),
+[decisions/0016](decisions/0016-archive-pages-are-generated-markdown-on-main.md));
+`nullcpy/nullstore` = static SEO gateway page that rebuilds nightly from the store's
+public `data.json` and links out to it (rvb never writes there).
 Full detail:
 [storage-and-branches.md](storage-and-branches.md) and
 [cache-repo.md](cache-repo.md).

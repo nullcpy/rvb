@@ -16,10 +16,14 @@ notices, search engine, Obtainium flow) are documented by its own guide:
 | `update` branch pointers | phone → rvb | `module.prop` `updateJson` URL + JSON | baked into installed modules |
 | Numbered/archive release URLs | site → rvb | `releases/download/<tag>/<file>` | filename grammar is the contract |
 | `.github/scripts/naming.py` on `main` | site → rvb | Python module, imported by a sparse clone | one-way; a missing path fails the rebuild loudly |
+| `data.json` (public URL) | site → `nullcpy/nullstore` | the schema-v2 catalogue, fetched read-only each night | the gateway derives its static page from it; it never writes back |
 
 **rvb never writes into the site repository,** and the site never writes into rvb.
 The only file either side edits in the other's name is `data.json`, which the site
-regenerates from rvb's branch.
+regenerates from rvb's branch. The gateway repo (`nullcpy/nullstore`) sits one hop
+further downstream: it reads the deployed `data.json` like any visitor, so the
+store's schema v2 is its only dependency, and its own README owns the page's
+internals.
 
 ## The pipeline across the seam
 

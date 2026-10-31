@@ -1,9 +1,9 @@
 # Project documentation
 
 The root [README](../README.md) speaks to users of the builds. This folder
-describes the **system**: two repositories, four Git branches, GitHub Releases,
-a website catalogue, and the CI that keeps them consistent. It is written for
-people changing the pipeline and for AI agents asked to do so.
+describes the **system**: the repositories behind it, this repo's Git branches,
+GitHub Releases, the site surfaces, and the CI that keeps them consistent. It is
+written for people changing the pipeline and for AI agents asked to do so.
 
 ## Where to start
 
@@ -31,6 +31,8 @@ rots.
 | Offline regression harness (fixtures, goldens, stubs) | [.github/traces/README.md](../.github/traces/README.md) |
 | Website UI, `data.json` schema v2, `script.js` config, Obtainium flow | [`nullcpy.github.io/CONFIG.md`](https://github.com/nullcpy/nullcpy.github.io/blob/main/CONFIG.md) |
 | Contributing APKs to the cache (`upload_apks.*`, write access, renaming) | [`nullcpy/apks/README.md`](https://github.com/nullcpy/apks/blob/main/README.md) |
+| Archive repo's site chrome, page grammar, `pages.yml` | [`nullcpy/archive/README.md`](https://github.com/nullcpy/archive/blob/main/README.md) |
+| Gateway page template, build tokens, domain rotator, deploy setup | [`nullcpy/nullstore/README.md`](https://github.com/nullcpy/nullstore/blob/main/README.md) |
 
 ## How to keep these files honest
 
