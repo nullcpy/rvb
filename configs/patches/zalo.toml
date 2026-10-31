@@ -11,4 +11,19 @@ uptodown-dlurl = "https://zalo.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/zalo-group/zalo"
 apkpure-dlurl = "https://apkpure.com/zalo/com.zing.zalo"
 
+[Zalo-zeldrisho-Clone]
+enabled = true
+pkg-name = "com.zing.zalo"
+app-name = "Zalo"
+patches-source = "zeldrisho/morphe-patches"
+brand = "zeldrisho"
+variant = "Clone"
+arch = "all"
+included-patches = "'Enable Google Drive photo backup' 'Change Zalo app name' 'Change Zalo package name'"
+patcher-args = "-e \"Configurable native backup interval\" -Ohours=\\\"1\\\""
+uptodown-dlurl = "https://zalo.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/zalo-group/zalo"
+apkpure-dlurl = "https://apkpure.com/zalo/com.zing.zalo"
+
+
 
