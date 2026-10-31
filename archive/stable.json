@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-30T23:52:05Z"
+    "publishedAt": "2026-10-31T04:21:11Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -23010,10 +23010,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0.mpp"
+        "jasonwu1994/patches-4.1.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23028,6 +23028,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -23043,6 +23044,7 @@
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
         "Latin Globe Key Ignore Interval",
         "Long-Press Editing Shortcuts",
         "Quick Insert",
@@ -23060,8 +23062,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260386",
-      "publishedAt": "2026-10-27T00:06:00Z"
+      "originBuild": "260422",
+      "publishedAt": "2026-10-31T04:20:52Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -23076,10 +23078,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0.mpp"
+        "jasonwu1994/patches-4.1.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23094,6 +23096,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -23109,6 +23112,7 @@
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
         "Latin Globe Key Ignore Interval",
         "Long-Press Editing Shortcuts",
         "Quick Insert",
@@ -23125,8 +23129,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260386",
-      "publishedAt": "2026-10-27T00:06:00Z"
+      "originBuild": "260422",
+      "publishedAt": "2026-10-31T04:20:52Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -23141,10 +23145,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.0.0.mpp"
+        "jasonwu1994/patches-4.1.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.0.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23159,6 +23163,7 @@
         "Custom Symbols",
         "Custom Theme",
         "Developer options",
+        "Dictionaries & Predictions",
         "Emojis, stickers & GIFs Tab Order",
         "Enable Inline Autofill Suggestions",
         "Enable OCR / Scan Text",
@@ -23174,6 +23179,7 @@
         "Incognito Mode Toggle",
         "Inline Suggestions",
         "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
         "Latin Globe Key Ignore Interval",
         "Long-Press Editing Shortcuts",
         "Quick Insert",
@@ -23190,8 +23196,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260386",
-      "publishedAt": "2026-10-27T00:06:00Z"
+      "originBuild": "260422",
+      "publishedAt": "2026-10-31T04:20:52Z"
     },
     "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
       "name": "instagram-instafel-clone",
@@ -27574,6 +27580,30 @@
       ],
       "originBuild": "260419",
       "publishedAt": "2026-10-30T18:34:50Z"
+    },
+    "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
+      "name": "remote-for-android-tv-xbadfellax",
+      "version": "6.1.0",
+      "appKey": "remoteforandroidtv",
+      "appName": "Remote for Android TV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "xbadfellax",
+      "brandName": "XBadFellaX",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tech.simha.androidtvremote",
+      "patchSources": [
+        "XBadFellaX/patches-1.5.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/XBadFellaX/BadFella-Patches/releases/tag/v1.5.1"
+      ],
+      "appliedPatches": [
+        "Remote ATV ad-free"
+      ],
+      "originBuild": "260422",
+      "publishedAt": "2026-10-31T04:20:52Z"
     }
   }
 }
