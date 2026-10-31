@@ -442,6 +442,19 @@ source_release_asset_url() {
 	esac
 }
 
+# The pre-release marker words of a release tag, as a jq regex, for the forges whose
+# releases carry no pre-release flag. .github/scripts/channels.py owns the
+# vocabulary (the watcher and the config compiler import it); this is the engine's
+# copy, assembled from the same word list so the words appear once here too, and
+# .github/traces/test_channel_markers.sh fails the suite if the two strings stop
+# being identical. The class around the word is what keeps `rc` from firing inside
+# "arch" and `exp` from firing inside "-express".
+RVB_CHANNEL_MARKERS="dev alpha beta rc pre experimental exp"
+channel_beta_re() {
+	local alt=${RVB_CHANNEL_MARKERS// /|}
+	printf '%s%s%s' '[-._](' "$alt" ')([^a-zA-Z]|$)'
+}
+
 source_release_pick_from_list() {
 	# $2 = channel keyword: "beta" or anything else (read as stable). "dev" is not a
 	# keyword any more, so it is not tested here even though a release TAG may
@@ -451,6 +464,8 @@ source_release_pick_from_list() {
 		github | codeberg)
 			# .draft is always false for GitHub (its API omits drafts entirely) but
 			# Forgejo lists them, and an unpublished release is nobody's channel entry.
+			# Both forges carry a per-release pre-release flag, so the flag alone
+			# decides here: a tag name must not override what the publisher ticked.
 			if [ "$mode" = beta ]; then
 				jq -e -c 'map(select(.prerelease == true and .draft != true and .tag_name != null and .tag_name != "")) | sort_by(.published_at // .created_at // "") | reverse | .[0] // empty'
 			else
@@ -458,10 +473,14 @@ source_release_pick_from_list() {
 			fi
 			;;
 		gitlab)
+			# A GitLab release has no pre-release flag, so the tag name is the only
+			# signal there. channel_beta_re is the shell copy of channels.py.
+			local marker_re
+			marker_re=$(channel_beta_re)
 			if [ "$mode" = beta ]; then
-				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
+				jq -e -c --arg re "$marker_re" 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test($re; "i")))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
 			else
-				jq -e -c 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test("(?i)(dev|alpha|beta|rc)") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
+				jq -e -c --arg re "$marker_re" 'map(select(.tag_name != null and .tag_name != "" and (.tag_name | test($re; "i") | not))) | sort_by(.released_at // .created_at // "") | reverse | .[0] // empty'
 			fi
 			;;
 		*) return 1 ;;

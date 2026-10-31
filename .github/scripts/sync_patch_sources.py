@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # it. isort:skip stops the formatter lifting them back over the path setup.
 import jsonfmt  # isort:skip  # noqa: E402
 import derive_source_changes  # isort:skip  # noqa: E402
+import channels  # isort:skip  # noqa: E402
 
 try:
     import tomllib
@@ -192,15 +193,17 @@ def parse_releases(releases, host):
     beta_tag = ""
     beta_date = ""
 
-    beta_pattern = re.compile(r"(dev|alpha|beta|rc)", re.IGNORECASE)
-
+    # channels.py owns the marker words, the engine's GitLab arm mirrors them and
+    # test_channel_markers.sh keeps the two honest. GitLab releases carry no
+    # pre-release flag, so there the tag is the whole signal; GitHub and Forgejo
+    # have the flag, and the tag only names a pre-release the flag forgot.
     if host == "gitlab":
         for rel in releases:
             tag = rel.get("tag_name") or ""
             date = rel.get("released_at") or rel.get("created_at") or ""
             if not tag:
                 continue
-            if beta_pattern.search(tag):
+            if channels.is_pre_release_tag(tag):
                 if not beta_tag or date > beta_date:
                     beta_tag = tag
                     beta_date = date
@@ -216,8 +219,8 @@ def parse_releases(releases, host):
             # release is no one's channel release.
             if rel.get("draft"):
                 continue
-            is_pre = rel.get("prerelease", False) or bool(
-                beta_pattern.search(tag))
+            is_pre = (bool(rel.get("prerelease"))
+                      or channels.is_pre_release_tag(tag))
             if not tag:
                 continue
             if is_pre:

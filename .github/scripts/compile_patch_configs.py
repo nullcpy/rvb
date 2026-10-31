@@ -13,17 +13,19 @@ and generates config.stable.json and config.beta.json with dynamic pool routing:
 
 Which release a channel keyword means is not resolved here: the generated config
 keeps the keyword and the build looks the tag up in state/patch_sources.json. A
-concrete patches-version (a tag instead of a channel) is copied verbatim.
+concrete patches-version (a tag instead of a channel) is copied verbatim, and the
+pool it joins is decided by the pre-release markers in that tag (channels.py), the
+same list the watcher and the release picker read.
 """
 
 import os
 import sys
 import glob
 import json
-import re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import jsonfmt  # isort:skip  # noqa: E402
+import channels  # isort:skip  # noqa: E402
 
 try:
     import tomllib
@@ -180,8 +182,10 @@ def compile_configs(patches_dir="configs/patches"):
             is_pinned = channel not in ("stable", "beta", "both")
             is_beta_pin = False
             if is_pinned:
-                is_beta_pin = bool(re.search(
-                    r"[-._](beta|dev|alpha|rc|pre)", channel, re.IGNORECASE)) or (file_pv == "beta")
+                # Same marker list the watcher and the release picker read the tag
+                # with, so a pin routes to the pool its tag would resolve from.
+                is_beta_pin = channels.is_pre_release_tag(
+                    channel) or (file_pv == "beta")
 
             # Route to stable pool
             if channel in ("stable", "both") or (is_pinned and not is_beta_pin):
