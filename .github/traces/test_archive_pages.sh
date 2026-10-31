@@ -94,6 +94,22 @@ first_two=$(awk '/^### /{print $2}' "$t/a/apps/youtube/README.md" | head -2 | tr
 [ "$first_two" = "Standard Experimental " ] \
 	|| fail "variants not Standard-first then alphabetical: [$first_two]"
 
+# Sub-variants keep their own table and sit one heading level down, below the
+# variant. The base build is the variant itself, so it gets no sub heading, and a
+# null variant must never turn a sub into a top-level variant.
+grep -q '^### Android TV$' "$t/a/apps/primevideo/README.md" \
+	|| fail "the variant heading is missing"
+grep -q '^#### Clone$' "$t/a/apps/primevideo/README.md" \
+	|| fail "the named sub-variant is not an h4 under its variant"
+grep -q '^#### Standard$' "$t/a/apps/primevideo/README.md" \
+	&& fail "the base build gained a sub-variant heading"
+grep -q '^### Standard$' "$t/a/apps/instagram/README.md" \
+	|| fail "a null variant did not fall back to Standard"
+grep -q '^#### Clone$' "$t/a/apps/instagram/README.md" \
+	|| fail "a null variant did not keep its sub as an h4"
+grep -q '^### Clone$' "$t/a/apps/instagram/README.md" \
+	&& fail "a sub-variant was promoted to its own variant"
+
 # Pagination splits on block boundaries and navigates absolutely.
 run "$GEN" 1 "$t/split"
 [ -f "$t/split/apps/youtube/2.md" ] || fail "cap 1 did not paginate the YouTube app"

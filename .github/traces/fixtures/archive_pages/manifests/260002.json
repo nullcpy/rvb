@@ -97,6 +97,36 @@
             "appliedPatches": [
                 "z"
             ]
+        },
+        "prime-video-ajstrick81-android-tv-clone-v1.1.0-arm-v7a.apk": {
+            "appKey": "primevideo",
+            "appName": "Prime Video",
+            "brandKey": "ajstrick81",
+            "brandName": "ajstrick81",
+            "variant": "Android TV",
+            "subVariant": "Clone",
+            "arch": "arm",
+            "fileType": "APK",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "Skip ads",
+                "Clone Prime Video"
+            ]
+        },
+        "instagram-hushgram-clone-v10.1.0-arm64-v8a.apk": {
+            "appKey": "instagram",
+            "appName": "Instagram",
+            "brandKey": "hushgram",
+            "brandName": "hushgram",
+            "variant": null,
+            "subVariant": "Clone",
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "10.1.0",
+            "appliedPatches": [
+                "Hide ads",
+                "Clone Instagram"
+            ]
         }
     }
 }

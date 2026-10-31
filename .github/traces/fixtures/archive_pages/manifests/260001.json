@@ -83,6 +83,34 @@
             "appliedPatches": [
                 "x"
             ]
+        },
+        "prime-video-ajstrick81-android-tv-v1.0.0-arm-v7a.apk": {
+            "appKey": "primevideo",
+            "appName": "Prime Video",
+            "brandKey": "ajstrick81",
+            "brandName": "ajstrick81",
+            "variant": "Android TV",
+            "subVariant": null,
+            "arch": "arm",
+            "fileType": "APK",
+            "version": "1.0.0",
+            "appliedPatches": [
+                "Skip ads"
+            ]
+        },
+        "instagram-hushgram-v10.0.0-arm64-v8a.apk": {
+            "appKey": "instagram",
+            "appName": "Instagram",
+            "brandKey": "hushgram",
+            "brandName": "hushgram",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "10.0.0",
+            "appliedPatches": [
+                "Hide ads"
+            ]
         }
     }
 }

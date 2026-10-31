@@ -110,15 +110,25 @@ def variant_sort_key(name):
     return (0, "") if name == DEFAULT_VARIANT else (1, name.lower())
 
 
+def sub_sort_key(name):
+    """The unnamed sub-group is the base build: Standard first, then alphabetical."""
+    return (0, "") if name is None else (1, name.lower())
+
+
 def sections(rows):
-    """brand -> variant -> patch list -> builds, each newest build first."""
+    """brand -> variant -> sub-variant -> patch list -> builds, newest first."""
     by_brand = collections.defaultdict(lambda: collections.defaultdict(
-        lambda: collections.defaultdict(list)))
+        lambda: collections.defaultdict(
+            lambda: collections.defaultdict(list))))
     brand_names, newest = {}, {}
     for r in rows:
-        variant = r["variant"] or r["sub"] or DEFAULT_VARIANT
+        # Never promote a sub-variant: a null variant is Standard and the sub stays
+        # a sub, shown in the heading as "Variant · Sub". Instagram's Clone then
+        # reads as Standard · Clone instead of masquerading as its own variant.
+        variant = r["variant"] or DEFAULT_VARIANT
+        sub = r["sub"]
         brand = r["brand"] or "unknown"
-        by_brand[brand][variant][r["tag"]].append(r)
+        by_brand[brand][variant][sub][r["tag"]].append(r)
         brand_names.setdefault(brand, r["brandName"] or brand)
         newest[brand] = max(newest.get(brand, ""), r["tag"])
     out = []
@@ -127,28 +137,34 @@ def sections(rows):
     for brand in sorted(by_brand, key=lambda b: (newest[b], b), reverse=True):
         variants = []
         for variant in sorted(by_brand[brand], key=variant_sort_key):
-            builds = by_brand[brand][variant]
-            # Scoped to this variant: one build carries artifacts for several
-            # variants, and a shared map would let the last variant answer for all.
-            per_build = {}
-            blocks = collections.defaultdict(list)
-            for tag in sorted(builds, reverse=True):
-                blocks[canonical(builds[tag])].append(tag)
-                per_build[tag] = builds[tag]
-            ordered = collections.OrderedDict(
-                sorted(blocks.items(), key=lambda kv: max(kv[1]), reverse=True))
-            variants.append((variant, ordered, per_build))
+            subs = []
+            for sub in sorted(by_brand[brand][variant], key=sub_sort_key):
+                builds = by_brand[brand][variant][sub]
+                # Scoped to this sub-group: one build carries artifacts for
+                # several groups, and a shared map would let the last one answer
+                # for all. It also keeps Clone's patch list off the base build.
+                per_build = {}
+                blocks = collections.defaultdict(list)
+                for tag in sorted(builds, reverse=True):
+                    blocks[canonical(builds[tag])].append(tag)
+                    per_build[tag] = builds[tag]
+                ordered = collections.OrderedDict(
+                    sorted(blocks.items(), key=lambda kv: max(kv[1]),
+                           reverse=True))
+                subs.append((sub, ordered, per_build))
+            variants.append((variant, subs))
         out.append((brand_names[brand], variants))
     return out
 
 
 def block_rows(items):
-    """Flatten to renderable items, keeping brand and variant labels attached."""
+    """Flatten to renderable items, keeping brand, variant and sub labels."""
     flat = []
     for brand, variants in items:
-        for variant, blocks, per_build in variants:
-            for patches, tags in blocks.items():
-                flat.append((brand, variant, patches, tags, per_build))
+        for variant, subs in variants:
+            for sub, blocks, per_build in subs:
+                for patches, tags in blocks.items():
+                    flat.append((brand, variant, sub, patches, tags, per_build))
     return flat
 
 
@@ -160,7 +176,7 @@ def paginate(flat, cap):
     """
     pages, current, used = [], [], 0
     for item in flat:
-        rows_in_item = len(item[3])
+        rows_in_item = len(item[4])
         if current and used + rows_in_item > cap:
             pages.append(current)
             current, used = [], 0
@@ -254,14 +270,19 @@ def render_page(app_name, items, page, total, page_url, front_matter):
         if page + 1 < total:
             nav.append(f"[older builds]({page_url(page + 2)})")
         lines += [" . ".join(nav), ""]
-    last_brand, last_variant = None, None
-    for brand, variant, patches, tags, per_build in items:
+    last_brand, last_variant, last_sub = None, None, None
+    for brand, variant, sub, patches, tags, per_build in items:
         if brand != last_brand:
             lines += [f"## {brand}", ""]
-            last_brand, last_variant = brand, None
+            last_brand, last_variant, last_sub = brand, None, None
         if variant != last_variant:
             lines += [f"### {variant}", ""]
-            last_variant = variant
+            last_variant, last_sub = variant, None
+        # The base build is the variant itself and needs no heading. A named
+        # sub-variant sits one level down, so Clone never reads as its own app.
+        if sub and sub != last_sub:
+            lines += [f"#### {sub}", ""]
+            last_sub = sub
         lines.append(f"<details><summary><b>Applied patches: {len(patches)}</b>"
                      f" . {len(tags)} build(s)</summary>")
         lines += patch_list_html(tags, patches, per_build)
