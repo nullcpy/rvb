@@ -552,7 +552,7 @@
   "ByAir-franticg33k": {
     "patches-source": "franticg33k/morphe-patches",
     "brand": "franticg33k",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.byairapp.android",
     "app-name": "ByAir",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/byairapp-s-l/byair-flight-tracker-status",
@@ -1349,7 +1349,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1578,7 +1578,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -2047,7 +2047,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Telegram-HushTelegram-FOSS": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.telegram.messenger.web",
     "app-name": "Telegram",
     "variant": "FOSS",
@@ -2058,7 +2058,7 @@
     "direct-dlurl": "https://telegram.org/dl/android/apk"
   },
   "Telegram-HushTelegram-GooglePlay": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.telegram.messenger",
     "app-name": "Telegram",
     "variant": "Google Play",

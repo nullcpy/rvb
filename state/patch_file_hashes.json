@@ -167,8 +167,8 @@
       "shared": "cf16eb2095610d4843c17c9cc833b2d0"
     },
     "stable": {
-      "com.byairapp.android": "0b4917c7ad1eda1737c222121080d0b7",
-      "shared": "cf16eb2095610d4843c17c9cc833b2d0"
+      "com.byairapp.android": "157660c3c12693836ea1920e2f198f8f",
+      "shared": "9408b2b0b819dd9d8f5191e82aeecd9b"
     }
   },
   "fripe070/pixivpatches": {
@@ -375,10 +375,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "305a4d8c00c35c134dbd53e8d3487786",
-      "com.google.android.youtube": "54214a8015035246f2a311116f4102fa",
-      "com.reddit.frontpage": "35aa06d91f6e404d49d20501ccf20c62",
-      "shared": "0be2590917eba02d4b0a6618ae2e8519"
+      "com.google.android.apps.youtube.music": "9f1ce862a8cc49cfe8a71fabdf1dc5f5",
+      "com.google.android.youtube": "3f043dc8e490c773582d23a8fc57d225",
+      "com.reddit.frontpage": "d0a206dae9b1e575e55e6aeaa8c7e1ee",
+      "shared": "473229ba612fe8bd97b5d50f5f355add"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "5997a31d4f87678f5b659cf4e0b83a6e",
@@ -552,16 +552,16 @@
   "sysadmindoc/hushmessenger": {
     "beta": {},
     "stable": {
-      "com.facebook.orca": "e613ef705d8cb4f419514b5090ea1965",
+      "com.facebook.orca": "ef2a67a2f30fac849a419ee4e8f9c284",
       "shared": "d41d8cd98f00b204e9800998ecf8427e"
     }
   },
   "sysadmindoc/hushtelegram": {
     "beta": {},
     "stable": {
-      "org.telegram.messenger": "8798448d92d171327123cfdf50bbc45f",
-      "org.telegram.messenger.web": "8798448d92d171327123cfdf50bbc45f",
-      "shared": "95cf13af2feaf9d8d2ba1addf00048d2"
+      "org.telegram.messenger": "bba4c012bd356ac6ea93c3e63e8d7645",
+      "org.telegram.messenger.web": "bba4c012bd356ac6ea93c3e63e8d7645",
+      "shared": "7ba2d4f19614388c7ee4a39ac7dab2ab"
     }
   },
   "sysadmindoc/hushthreads": {
