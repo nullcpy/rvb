@@ -1,0 +1,9 @@
+[RemoteforAndroidTV-XBadFellaX]
+enabled = true
+pkg-name = "tech.simha.androidtvremote"
+app-name = "Remote for Android TV"
+brand = "XBadFellaX"
+arch = "all"
+patches-source = "XBadFellaX/BadFella-Patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/simha-software/remote-for-android-tv"
+apkpure-dlurl = "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
