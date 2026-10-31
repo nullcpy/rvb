@@ -1,4 +1,14 @@
 {
-  "stable": {},
+  "stable": {
+    "RemoteforAndroidTV-XBadFellaX": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "e3fb88beff2888227e4a4a5b8bf0d8b4df85efba"
+    }
+  },
   "beta": {}
 }

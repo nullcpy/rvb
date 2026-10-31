@@ -319,12 +319,12 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "3d3a5d79cf5bffea56241e210c049464",
-      "shared": "9097783394417c92df3199c3b11474f2"
+      "com.google.android.inputmethod.latin": "e85dff9635aad40d6a48febe27510321",
+      "shared": "b76accaa22531a1ea9f35e01cc0d032c"
     },
     "stable": {
-      "com.google.android.inputmethod.latin": "e8245a912f487e45f5da02c53dbe6749",
-      "shared": "507c4dfa7132443d1df0ab72dd03ffaf"
+      "com.google.android.inputmethod.latin": "8b0d72d5c9851622f941c1fa9cb8fbd3",
+      "shared": "49dc42ca40207d9aa2225283728cb5cb"
     }
   },
   "jkennethcarino/adobo": {
@@ -583,6 +583,13 @@
     "stable": {
       "com.discord": "ebde1e69e865b279446c373440e77bf1",
       "shared": "7ee2096be64da2edf17361c62f0938bf"
+    }
+  },
+  "xbadfellax/badfella-patches": {
+    "beta": {},
+    "stable": {
+      "shared": "cfc2a5c68e9a564c8e7eaab1d5bc2ae0",
+      "tech.simha.androidtvremote": "0fafec2572cdef2764424197e4ba9e5a"
     }
   },
   "zeldrisho/morphe-patches": {

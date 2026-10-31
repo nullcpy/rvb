@@ -571,7 +571,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -585,7 +585,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -597,7 +597,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1193,7 +1193,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -1208,7 +1208,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -1704,6 +1704,16 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
+  "RemoteforAndroidTV-XBadFellaX": {
+    "enabled": true,
+    "pkg-name": "tech.simha.androidtvremote",
+    "app-name": "Remote for Android TV",
+    "brand": "XBadFellaX",
+    "arch": "all",
+    "patches-source": "XBadFellaX/BadFella-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/simha-software/remote-for-android-tv",
+    "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
+  },
   "CapCut-riky": {
     "patches-source": "riky-dev/morphe-patches",
     "brand": "riky",
@@ -2037,7 +2047,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Telegram-HushTelegram-FOSS": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.telegram.messenger.web",
     "app-name": "Telegram",
     "variant": "FOSS",
@@ -2048,7 +2058,7 @@
     "direct-dlurl": "https://telegram.org/dl/android/apk"
   },
   "Telegram-HushTelegram-GooglePlay": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.telegram.messenger",
     "app-name": "Telegram",
     "variant": "Google Play",
