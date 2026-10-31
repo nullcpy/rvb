@@ -83,6 +83,11 @@ grep -q '<li>' "$t/a/apps/youtube/README.md" || fail "the patch list is not an H
 grep -q '^- ' "$t/a/apps/youtube/README.md" \
 	&& fail "a markdown list leaked into the details block"
 
+# The home table marks each date so the site's script can render a relative label.
+# Without JS the absolute date must stay readable, so the text is the date itself.
+grep -q '<time datetime="[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" data-relative>' \
+	"$t/a/README.md" || fail "index dates are not marked for relative rendering"
+
 # Variant sections: Standard first, then alphabetical.
 first_two=$(awk '/^### /{print $2}' "$t/a/apps/youtube/README.md" | head -2 | tr '\n' ' ')
 [ "$first_two" = "Standard Experimental " ] \

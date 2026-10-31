@@ -285,8 +285,12 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
         "|---|---|",
     ]
     for app_key, display in app_names:
+        # The date stays in the markup so github.com and a JS-less reader see it;
+        # the archive site's script swaps in a label relative to the viewer's clock.
+        date = last_build[app_key]
         lines.append(
-            f"| [{display}]({app_url(app_key)}) | {last_build[app_key]} |")
+            f"| [{display}]({app_url(app_key)}) "
+            f'| <time datetime="{date}" data-relative>{date}</time> |')
     return "\n".join(lines) + "\n"
 
 
