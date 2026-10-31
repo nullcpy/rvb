@@ -1840,14 +1840,14 @@
       ]
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
-      "hash": "e33fa728a96bb45b0d95cf5b9ca013a7",
+      "hash": "61f10c8bd90fcdc459f733ac894a7bbb",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
-      "hash": "47c844441534493b9f14bfc3445251b0",
+      "hash": "7f847e98d79b8ce7adf3aa110491195c",
       "kinds": [
         "apk"
       ]
@@ -2206,6 +2206,12 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "remote-for-android-tv-xbadfellax-v6.1.0-all": {
+      "hash": "8310539882a0aa38a130e3de4c993b8e",
+      "kinds": [
+        "apk"
       ]
     }
   }

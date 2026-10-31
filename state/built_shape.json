@@ -3253,6 +3253,19 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "RemoteforAndroidTV-XBadFellaX": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "XBadFellaX/BadFella-Patches",
+        "brand": "XBadFellaX",
+        "app-name": "Remote for Android TV",
+        "pkg-name": "tech.simha.androidtvremote",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
