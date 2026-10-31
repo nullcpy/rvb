@@ -66,10 +66,11 @@ def load_manifests(src_dir):
             manifest = json.load(fh)
         meta = manifest.get("meta") or {}
         tag = str(meta.get("build") or name[:-5])
-        date = (meta.get("publishedAt") or "")[:10]
+        stamp = meta.get("publishedAt") or ""
+        date = stamp[:10]
         for fname, entry in (manifest.get("files") or {}).items():
             rows.append({
-                "tag": tag, "date": date,
+                "tag": tag, "date": date, "stamp": stamp,
                 "app": entry.get("appKey") or "?",
                 "appName": entry.get("appName") or "?",
                 "brand": entry.get("brandKey") or "",
@@ -285,12 +286,13 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
         "|---|---|",
     ]
     for app_key, display in app_names:
-        # The date stays in the markup so github.com and a JS-less reader see it;
-        # the archive site's script swaps in a label relative to the viewer's clock.
-        date = last_build[app_key]
+        # The timestamp stays in the markup so github.com and a JS-less reader see
+        # the date; the archive site's script computes the local relative label.
+        stamp = last_build[app_key]
+        date = stamp[:10]
         lines.append(
             f"| [{display}]({app_url(app_key)}) "
-            f'| <time datetime="{date}" data-relative>{date}</time> |')
+            f'| <time datetime="{stamp}" data-relative>{date}</time> |')
     return "\n".join(lines) + "\n"
 
 
@@ -333,7 +335,11 @@ def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base):
     # on filesystem listing order.
     ordered_apps = sorted(by_app, key=lambda k: (
         by_app[k][0]["appName"].lower(), k))
-    last_build = {k: max(r["date"] for r in by_app[k]) for k in by_app}
+    # The full timestamp, not the UTC date slice: the reader's script turns it
+    # into a local day, so a build late in the UTC day still lands on the right
+    # local date.
+    last_build = {k: max((r["stamp"] or r["date"] for r in by_app[k]))
+                  for k in by_app}
 
     written = 0
     for surface in surfaces(site_base, pages_base):

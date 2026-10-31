@@ -83,9 +83,10 @@ grep -q '<li>' "$t/a/apps/youtube/README.md" || fail "the patch list is not an H
 grep -q '^- ' "$t/a/apps/youtube/README.md" \
 	&& fail "a markdown list leaked into the details block"
 
-# The home table marks each date so the site's script can render a relative label.
-# Without JS the absolute date must stay readable, so the text is the date itself.
-grep -q '<time datetime="[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" data-relative>' \
+# The home table marks each date so the site's script can render a label in the
+# reader's time zone. Without JS the UTC date must stay readable, so the text is
+# the date part of the timestamp.
+grep -q '<time datetime="[^"]*" data-relative>[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]</time>' \
 	"$t/a/README.md" || fail "index dates are not marked for relative rendering"
 
 # Variant sections: Standard first, then alphabetical.
