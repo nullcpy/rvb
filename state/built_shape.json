@@ -3266,6 +3266,22 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "Zalo-zeldrisho-Clone": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "zeldrisho/morphe-patches",
+        "brand": "zeldrisho",
+        "variant": "Clone",
+        "app-name": "Zalo",
+        "pkg-name": "com.zing.zalo",
+        "included-patches": "'Enable Google Drive photo backup' 'Change Zalo app name' 'Change Zalo package name'",
+        "patcher-args": "-e \"Configurable native backup interval\" -Ohours=\\\"1\\\"",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
