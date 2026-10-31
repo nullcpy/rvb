@@ -1,9 +1,10 @@
-# 0016 — The archive is browsed as generated markdown on its own main branch
+# 0016 — The archive is generated markdown on its own branches
 
 **Status:** accepted (2026-10-30)
-**Affects:** `nullcpy/archive` `main` (`README.md`, `apps/<appKey>/README.md`) and
-its `pages.yml`, the role of that repo's `website` branch, rvb `build.yml`'s
-`Notify archive pages` step, `.github/scripts/build_archive_pages.py`.
+**Affects:** `nullcpy/archive` `main` (README surface plus chrome) and its `site`
+branch (Pages surface plus a synced chrome copy), that repo's `pages.yml`, the role
+of its `website` branch, rvb `build.yml`'s `Notify archive pages` step,
+`.github/scripts/build_archive_pages.py`.
 
 ## Context
 
@@ -17,8 +18,8 @@ mirror does not have, plus another front end to keep in step with the first.
 
 ## Decision
 
-Do not build a catalogue site for the archive. Generate a markdown tree and commit it
-to the archive repo's `main`:
+Do not build a catalogue site for the archive. Generate a markdown tree and commit each
+surface to its own branch:
 
 - `README.md` is the index: a table of apps with each one's last build date, and a
   line sending anyone after the newest versions or one-tap Obtainium adds to
@@ -37,10 +38,12 @@ to the archive repo's `main`:
   the same rule as `naming.py` ([0006](0006-filename-parsing-is-imported-not-mirrored.md)).
 - Two surfaces come out of one pass. `README.md` is what github.com renders per
   folder, so it carries no front matter (GitHub would show it as a metadata table)
-  and links at `blob/main`; `index.md` mirrors it for Pages, with front matter
-  (Jekyll ignores a markdown file without it) and links at the published site.
-  Continuation pages differ per surface, `2.md` versus `page-2.html`, because both
-  write into one app directory and a shared name let the second overwrite the first.
+  and links at `blob/main`; it is committed to `main`. `index.md` mirrors it for
+  Pages, with front matter (Jekyll ignores a markdown file without it) and links at
+  the published site; it is committed to `site`, which also carries a synced copy of
+  the chrome and is the only source the Jekyll build reads. Continuation pages differ
+  per surface, `2.md` versus `page-2.html`, because both write into one app directory
+  and a shared name let the second overwrite the first.
 
 ## Rejected alternatives
 
@@ -58,15 +61,15 @@ to the archive repo's `main`:
 
 ## Consequences
 
-- `main` of the archive repo is CI-owned. Hand-written prose belongs in `ABOUT.md` or
-  in the generator's template, never in the generated README.
+- The archive repo's `main` and `site` branches are CI-owned. Hand-written prose
+  belongs in `ABOUT.md` or in the generator's template, never in a generated page.
 - A rebuild commits, so history grows. Commit-only-if-changed plus the golden
   determinism test is what keeps that from becoming noise; the same ordering rules are
   why every collection in the generator is sorted with a tie-break.
 - Pages are as fresh as the last dispatch, with a weekly schedule as the backstop for a
   lost one.
 - A wrong page is fixed by rerunning the generator over `manifests/`, never by editing
-  a file on `main`.
+  a file on either branch.
 
 ## Verification
 

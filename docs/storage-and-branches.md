@@ -239,16 +239,18 @@ build, so a release note or a Telegram/Discord link keeps resolving long after r
 prunes its own numbered releases (newest 98). After the numbered upload the same
 `./build/*` set is pushed here under the identical build-number tag, its body is
 the archive-linked `build.archive.md`, and this build's `manifests/<tag>.json` is
-committed to this repo's `website` branch. The two branches carry different things:
-`website` is machine data (`manifests/*.json` and nothing else), while `main` is the
-**browsable site generated from it**, an index README plus one
-`apps/<appKey>/README.md` per app, so visiting the repository shows every app's build
-history with working download links, and a parallel `index.md` set that GitHub Pages
-publishes from the same branch. `build.yml`'s `Upload to archive repo`, `Publish
-archive manifest` and `Notify archive pages` steps write the data with
+committed to this repo's `website` branch. Three branches carry different things:
+`website` is machine data (`manifests/*.json` and nothing else); `main` carries the
+**github.com README surface**, an index README plus one `apps/<appKey>/README.md` per
+app, so visiting the repository shows every app's build history with working download
+links; `site` carries the **Pages surface**, `index.md` and `apps/<appKey>/index.md`,
+plus a copy of the chrome (`_config.yml`, `_layouts/`, `assets/`, `favicon.svg`) that
+the workflow syncs from `main` each run. `build.yml`'s `Upload to archive repo`,
+`Publish archive manifest` and `Notify archive pages` steps write the data with
 `ARCHIVE_REPO_TOKEN`; the pages themselves are rendered by this repo's own `pages.yml`,
-which reads `website` and commits to `main` with its own `GITHUB_TOKEN`. Nothing on
-`main` links into `website`, which makes the generator the only reader of the data
+which reads `website`, commits the README surface to `main` and the Pages surface to
+`site` with its own `GITHUB_TOKEN`, then builds Jekyll from `site`. Nothing on either
+branch links into `website`, which makes the generator the only reader of the data
 layer, so that layer can change shape without breaking a visible link
 ([decisions/0016](decisions/0016-archive-pages-are-generated-markdown-on-main.md)).
 

@@ -255,8 +255,8 @@ Step order, with the reason each is where it is:
     It appends `PUBLISHED=true` to its step output only after the PUT returns.
 11d. **Notify archive pages** (`gh api .../actions/workflows/pages.yml/dispatches`,
     gated on that `PUBLISHED` output, `continue-on-error`): asks `nullcpy/archive` to
-    re-render its browsable site (the index plus `apps/<appKey>/` README and index
-    pages on that repo's `main`) from the manifests. The rendering workflow lives in the archive
+    re-render its browsable site (the README surface on `main`, the Pages sources on
+    `site`) from the manifests. The rendering workflow lives in the archive
     repo rather than here, and also runs on a schedule, so a lost dispatch delays the
     view instead of breaking it
     ([decisions/0016](decisions/0016-archive-pages-are-generated-markdown-on-main.md)).

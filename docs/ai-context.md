@@ -91,8 +91,8 @@ Releases: numbered (`260141`) = immutable per-build; `stable`/`beta` = rolling
 archives whose metadata CI never touches. External: `nullcpy/apks` = shared
 download cache (release per package name); `nullcpy/archive` = permanent numbered
 mirror of every build (release per build number): its `website` branch holds the
-per-build manifests, its `main` the browsable markdown site generated from them,
-opt-in via `vars.ARCHIVE_REPO`
+per-build manifests, its `main` the github.com README surface and its `site` branch
+the Pages sources the workflow builds from, opt-in via `vars.ARCHIVE_REPO`
 ([decisions/0015](decisions/0015-builds-are-mirrored-to-a-permanent-archive-repo.md)).
 Full detail:
 [storage-and-branches.md](storage-and-branches.md) and

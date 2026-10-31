@@ -103,8 +103,10 @@ default, so a hub move cannot leave a stale link advertising itself, and
 relative link 404s for a logged-out reader. When `ARCHIVE_PAGES_BASE` is set it also
 writes the `index.md` mirror that Pages (Jekyll) renders, front matter included,
 linking at that base, with continuation pages named `page-2.md` rather than `2.md` so
-the two surfaces cannot overwrite each other. Run by the archive repo's own
-`pages.yml`, which imports it from a sparse clone of `main` exactly like
+the two surfaces cannot overwrite each other. The archive workflow commits the README
+surface to `main`, the index surface plus a synced copy of the chrome to `site`, and
+builds Jekyll from `site`. Run by the archive repo's own `pages.yml`, which imports it
+from a sparse clone of `main` exactly like
 `naming.py` ([0006](../../docs/decisions/0006-filename-parsing-is-imported-not-mirrored.md),
 [0016](../../docs/decisions/0016-archive-pages-are-generated-markdown-on-main.md)).
 Regression test: `.github/traces/test_archive_pages.sh` (goldens, two-run
