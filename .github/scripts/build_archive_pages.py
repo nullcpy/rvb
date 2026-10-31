@@ -164,7 +164,8 @@ def block_rows(items):
         for variant, subs in variants:
             for sub, blocks, per_build in subs:
                 for patches, tags in blocks.items():
-                    flat.append((brand, variant, sub, patches, tags, per_build))
+                    flat.append(
+                        (brand, variant, sub, patches, tags, per_build))
     return flat
 
 
