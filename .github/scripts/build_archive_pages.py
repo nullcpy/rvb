@@ -122,11 +122,11 @@ def sections(rows):
             lambda: collections.defaultdict(list))))
     brand_names, newest = {}, {}
     for r in rows:
-        # Never promote a sub-variant: a null variant is Standard and the sub stays
-        # a sub, shown in the heading as "Variant · Sub". Instagram's Clone then
-        # reads as Standard · Clone instead of masquerading as its own variant.
-        variant = r["variant"] or DEFAULT_VARIANT
-        sub = r["sub"]
+        # A lone sub-variant is the app's variant: Piko's Clone gets the same h3 as
+        # Instafel's variant Clone. When a variant exists, the sub stays below it as
+        # an h4 (Prime Video's Android TV, then Clone).
+        variant = r["variant"] or r["sub"] or DEFAULT_VARIANT
+        sub = r["sub"] if r["variant"] else None
         brand = r["brand"] or "unknown"
         by_brand[brand][variant][sub][r["tag"]].append(r)
         brand_names.setdefault(brand, r["brandName"] or brand)
