@@ -248,6 +248,28 @@ across the repo boundary; a change here is live on the site at the next catalogu
 rebuild, so run `rebuild-catalog.yml` with `dry_run: true` before merging one.
 See [docs/decisions/0006](../../docs/decisions/0006-filename-parsing-is-imported-not-mirrored.md).
 
+### `channels.py`
+Single source of truth for the pre-release marker words of a source's release tag
+(`PRE_RELEASE_MARKERS`, `TAG_MARKER_PATTERN`, `is_pre_release_tag`). Imported by
+`sync_patch_sources.py` (which release of a source is its stable head and which is
+its beta head) and by `compile_patch_configs.py` (which pool a pinned
+`patches-version` joins), so a tag and a pin of that same tag cannot be read by two
+different lists. `scripts/utils.sh` cannot import Python and mirrors the words in
+`RVB_CHANNEL_MARKERS`, assembled by `channel_beta_re()`. A marker counts only as its
+own component of the tag, `[-._]` before it and no letter after, which is what keeps
+`rc` from firing inside `-arch` and a short word like `exp` from firing inside
+`-express`. Forge precedence is the caller's decision, not this module's: a GitLab
+release carries no pre-release flag so its tag is the whole signal, while on GitHub
+and Forgejo the flag outranks the name, and the engine reads the flag alone there so
+a tag never overrides what the publisher ticked. Keep it stdlib-only, like
+`naming.py`.
+
+Guard: `.github/traces/test_channel_markers.sh` (Git Bash) asserts the shell and the
+module build the identical pattern string and classify the same tags, then drives
+both consumers and the engine's picker for real. Its controls mutate each copy back
+toward the old loose filter and require the suite to go red, so the green run means
+something.
+
 ### `jsonfmt.py`
 The one serialization for every JSON **document** this pipeline persists: the
 `website` branch's `manifests/<tag>.json` and `archive/<channel>.json`, the
