@@ -16,6 +16,13 @@ on:
       # the suite rather than only reach the next scheduled watcher tick.
       - ".github/scripts/ci_fetch_app_versions.sh"
       - ".github/scripts/ci_compare_app_versions.sh"
+      # The pre-release marker list is owned by .github/scripts/channels.py and
+      # mirrored by the engine, so a change on either side must run the parity suite
+      # rather than surface as a source whose pre-release tags get recorded as its
+      # stable head.
+      - ".github/scripts/channels.py"
+      - ".github/scripts/sync_patch_sources.py"
+      - ".github/scripts/compile_patch_configs.py"
       - ".github/traces/**"
   workflow_dispatch:
 
@@ -48,6 +55,7 @@ jobs:
           bash .github/traces/test_direct_source.sh
           bash .github/traces/test_fdroid_source.sh
           bash .github/traces/test_config_rearm.sh
+          bash .github/traces/test_channel_markers.sh
           bash .github/traces/test_archive_mirror.sh
           bash .github/traces/test_archive_pages.sh
           bash .github/traces/test_version_watch.sh
