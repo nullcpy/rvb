@@ -1,0 +1,397 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260428",
+    "channel": "stable",
+    "publishedAt": "2026-10-31T20:14:45Z"
+  },
+  "files": {
+    "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994-clone",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "dev.jason.com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Dictionaries & Predictions",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input",
+        "Package Rename"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Dictionaries & Predictions",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
+      "name": "google-keyboard-jasonwu1994",
+      "version": "18.5.4.993608717-release-arm64-v8a",
+      "appKey": "googlekeyboard",
+      "appName": "Google Keyboard",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "jasonwu1994",
+      "brandName": "jasonwu1994",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.inputmethod.latin",
+      "patchSources": [
+        "jasonwu1994/patches-4.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+      ],
+      "appliedPatches": [
+        "AI Writing Tools",
+        "Access Points menu style",
+        "Add Gboard Signature Bypass",
+        "Advanced Voice Typing",
+        "Backup & Restore",
+        "Change emoji size",
+        "Clipboard Custom Character Limit",
+        "Clipboard Enhancements",
+        "Close Proactive Suggestions",
+        "Custom Symbols",
+        "Custom Theme",
+        "Developer options",
+        "Dictionaries & Predictions",
+        "Emojis, stickers & GIFs Tab Order",
+        "Enable Inline Autofill Suggestions",
+        "Enable OCR / Scan Text",
+        "Enable accessibility layout",
+        "Enable cursor trackpad mode",
+        "Enable split keyboard",
+        "English QWERTY Up-Flick Uppercase",
+        "FTP Server",
+        "Floating Web Search",
+        "Frosted Glass",
+        "G Logo on Spacebar",
+        "Grammar Checker",
+        "Incognito Mode Toggle",
+        "Inline Suggestions",
+        "Key Shape Selection",
+        "Keypress Vibration Intensity Control",
+        "Latin Globe Key Ignore Interval",
+        "Long-Press Editing Shortcuts",
+        "Quick Insert",
+        "Rounded Keyboard Panel",
+        "Settings Homepage Override",
+        "Simple Calculator",
+        "Swipe Down to Dismiss Keyboard",
+        "Swipeable Custom Top Row",
+        "Toolbar Editing Buttons",
+        "Top Toolbar Item Count",
+        "Use Bluetooth Microphone",
+        "Web Clipboard",
+        "Zhuyin Bottom Row Key Sizes",
+        "Zhuyin Quick Traditional/Simplified Toggle",
+        "Zhuyin Slide Input"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+      "name": "hbo-max-ajstrick81-android-tv",
+      "version": "7.9.0.61",
+      "appKey": "hbomax",
+      "appName": "HBO Max",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.wbd.hbomax",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "HBO Max - Disable Ads",
+        "HBO Max - Prefer Ad-Free Stream"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+      "name": "netflix-ajstrick81-android-tv",
+      "version": "13.0.1build25028",
+      "appKey": "netflix",
+      "appName": "Netflix",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.netflix.ninja.clone",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Disable Netflix CertCheck",
+        "Remove Netflix ads (bundle engine)",
+        "Remove Netflix ads (loader)",
+        "Clone Netflix"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "peacock-ajstrick81-android-tv-v7.10.102-all.apk": {
+      "name": "peacock-ajstrick81-android-tv",
+      "version": "7.10.102",
+      "appKey": "peacock",
+      "appName": "Peacock",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.peacocktv.peacockandroid",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Skip ads"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+      "name": "plutotv-ajstrick81-android-tv",
+      "version": "5.66.0-leanback",
+      "appKey": "plutotv",
+      "appName": "PlutoTV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.pluto.android",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Mask live ad breaks (black screen + mute)",
+        "Skip ads"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    },
+    "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+      "name": "twitch-ajstrick81-android-tv",
+      "version": "13.0.0.2",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "ajstrick81/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Block TV ads"
+      ],
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
+    }
+  }
+}

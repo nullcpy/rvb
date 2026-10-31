@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-31T17:47:22Z"
+    "publishedAt": "2026-10-31T20:15:14Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -2008,17 +2008,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -2057,10 +2057,10 @@
       "subVariant": null,
       "packageName": "com.netflix.ninja.clone",
       "patchSources": [
-        "ajstrick81/patches-1.44.0.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.44.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Disable Netflix CertCheck",
@@ -2068,8 +2068,8 @@
         "Remove Netflix ads (loader)",
         "Clone Netflix"
       ],
-      "originBuild": "260379",
-      "publishedAt": "2026-10-26T04:40:50Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv-clone",
@@ -2084,10 +2084,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -2097,8 +2097,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv",
@@ -2113,10 +2113,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -2125,8 +2125,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -3027,18 +3027,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -3053,16 +3053,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -10642,54 +10642,6 @@
       "originBuild": "260139",
       "publishedAt": "2026-09-28T17:40:57Z"
     },
-    "byair-franticg33k-v2.39.2-arm64-v8a.apk": {
-      "name": "byair-franticg33k",
-      "version": "2.39.2",
-      "appKey": "byair",
-      "appName": "ByAir",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "franticg33k",
-      "brandName": "franticg33k",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.byairapp.android",
-      "patchSources": [
-        "franticg33k/patches-1.3.10.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.3.10"
-      ],
-      "appliedPatches": [
-        "Enable Pro"
-      ],
-      "originBuild": "260132",
-      "publishedAt": "2026-09-27T10:38:51Z"
-    },
-    "byair-franticg33k-v2.39.2-arm-v7a.apk": {
-      "name": "byair-franticg33k",
-      "version": "2.39.2",
-      "appKey": "byair",
-      "appName": "ByAir",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "franticg33k",
-      "brandName": "franticg33k",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.byairapp.android",
-      "patchSources": [
-        "franticg33k/patches-1.3.10.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.3.10"
-      ],
-      "appliedPatches": [
-        "Enable Pro"
-      ],
-      "originBuild": "260132",
-      "publishedAt": "2026-09-27T10:38:51Z"
-    },
     "proton-mail-satanmerde-v7.11.6-arm64-v8a.apk": {
       "name": "proton-mail-satanmerde",
       "version": "7.11.6",
@@ -12399,17 +12351,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.46.1.mpp"
+        "ajstrick81/patches-1.48.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.46.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260413",
-      "publishedAt": "2026-10-29T19:09:01Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -20287,89 +20239,6 @@
       "originBuild": "260365",
       "publishedAt": "2026-10-24T19:09:34Z"
     },
-    "messenger-hushmessenger-v584.0.0.49.98-arm64-v8a.apk": {
-      "name": "messenger-hushmessenger",
-      "version": "584.0.0.49.98",
-      "appKey": "messenger",
-      "appName": "Messenger",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushmessenger",
-      "brandName": "HushMessenger",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.facebook.orca",
-      "patchSources": [
-        "SysAdminDoc/patches-0.26.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.26.0"
-      ],
-      "appliedPatches": [
-        "Allow chat bubbles",
-        "Allow screenshots",
-        "Auto reply",
-        "Bold and italic text",
-        "Fix videos that won't send",
-        "Hide AI sticker tools",
-        "Hide Chat Moments",
-        "Hide Facebook shortcuts",
-        "Hide Mark as read",
-        "Hide Meta AI",
-        "Hide Notifications tab",
-        "Hide People You May Know",
-        "Hide People tab",
-        "Hide Reels badge",
-        "Hide ad banners in business chats",
-        "Hide avatar stickers",
-        "Hide business reply suggestions",
-        "Hide business typing suggestions",
-        "Hide chat promotions",
-        "Hide event prompts",
-        "Hide friend request cards",
-        "Hide growth prompts",
-        "Hide inbox promotions",
-        "Hide inbox tabs",
-        "Hide joined community chats",
-        "Hide read receipts",
-        "Hide stories and notes",
-        "Hide tab badges",
-        "Hide the recent photo card",
-        "Hide typing indicator",
-        "Hold stories at the end",
-        "Ignore the swipe up for disappearing messages",
-        "Install beside Meta apps",
-        "Keep a message log",
-        "Keep emoji search on emoji",
-        "Keep unsent messages",
-        "Mark as read button",
-        "Material You theme",
-        "Open settings from menu",
-        "Open web links externally",
-        "Open your gallery app",
-        "Pin more chats",
-        "Quiet incoming calls",
-        "Restore old emoji drawer",
-        "Restore screens on re-signed builds",
-        "Save any story",
-        "Send photos at original quality",
-        "Send videos without re-encoding",
-        "Slide chats in and out",
-        "Stop ad attribution uploads",
-        "Stop analytics uploads",
-        "Stop app list and device ID sharing",
-        "Stop inbox and ad link logging",
-        "Stop live connection logging",
-        "Stop nearby scans",
-        "Unlock app icons",
-        "Use system emoji",
-        "Use the phone's camera app",
-        "Use your own font",
-        "View stories anonymously"
-      ],
-      "originBuild": "260345",
-      "publishedAt": "2026-10-22T23:32:51Z"
-    },
     "facebook-hushfacebook-v584.0.0.51.56-arm-v7a.apk": {
       "name": "facebook-hushfacebook",
       "version": "584.0.0.51.56",
@@ -22976,10 +22845,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.0.mpp"
+        "jasonwu1994/patches-4.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23028,8 +22897,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260422",
-      "publishedAt": "2026-10-31T04:20:52Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -23044,10 +22913,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.0.mpp"
+        "jasonwu1994/patches-4.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23095,8 +22964,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260422",
-      "publishedAt": "2026-10-31T04:20:52Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -23111,10 +22980,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.0.mpp"
+        "jasonwu1994/patches-4.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -23162,8 +23031,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260422",
-      "publishedAt": "2026-10-31T04:20:52Z"
+      "originBuild": "260428",
+      "publishedAt": "2026-10-31T20:14:45Z"
     },
     "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
       "name": "instagram-instafel-clone",
