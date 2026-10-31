@@ -1,4 +1,15 @@
 {
-  "stable": {},
+  "stable": {
+    "ProtonVPN-hxreborn": {
+      "reason": "retry",
+      "arches": [
+        "arm-v7a"
+      ],
+      "attempts": 1,
+      "parked": false,
+      "run": 41193483766,
+      "ts": "2026-10-31T11:00:37Z"
+    }
+  },
   "beta": {}
 }
