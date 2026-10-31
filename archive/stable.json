@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-10-31T11:02:28Z"
+    "publishedAt": "2026-10-31T17:47:22Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -16565,42 +16565,6 @@
       "originBuild": "260321",
       "publishedAt": "2026-10-20T04:47:41Z"
     },
-    "proton-vpn-hxreborn-v5.20.74.0-arm64-v8a.apk": {
-      "name": "proton-vpn-hxreborn",
-      "version": "5.20.74.0",
-      "appKey": "protonvpn",
-      "appName": "Proton VPN",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "ch.protonvpn.android",
-      "patchSources": [
-        "hxreborn/patches-1.56.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.56.0"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Custom accent color",
-        "Disable telemetry",
-        "Hide upgrade promotions",
-        "Material 3 switches",
-        "Remove server change delay",
-        "Show free server locations",
-        "Unlock LAN connections",
-        "Unlock NetShield",
-        "Unlock connection preferences",
-        "Unlock custom DNS",
-        "Unlock profiles",
-        "Unlock split tunneling"
-      ],
-      "originBuild": "260321",
-      "publishedAt": "2026-10-20T04:47:41Z"
-    },
     "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
       "version": "26.40.5",
@@ -21350,10 +21314,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.22.mpp"
+        "SysAdminDoc/patches-0.0.23.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.23"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -21420,8 +21384,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -21436,10 +21400,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger.web",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.22.mpp"
+        "SysAdminDoc/patches-0.0.23.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.23"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -21506,8 +21470,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
     },
     "telegram-hushtelegram-google-play-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -23570,10 +23534,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.22.mpp"
+        "SysAdminDoc/patches-0.0.23.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.23"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23640,8 +23604,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
     },
     "telegram-hushtelegram-google-play-v13.1.1-arm-v7a.apk": {
       "name": "telegram-hushtelegram-google-play",
@@ -23656,10 +23620,10 @@
       "subVariant": null,
       "packageName": "org.telegram.messenger",
       "patchSources": [
-        "SysAdminDoc/patches-0.0.22.mpp"
+        "SysAdminDoc/patches-0.0.23.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.22"
+        "https://github.com/SysAdminDoc/HushTelegram/releases/tag/v0.0.23"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23726,8 +23690,8 @@
         "Use system font",
         "Voice messages in the music player"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
     },
     "messenger-hushmessenger-v584.1.0.61.98-arm64-v8a.apk": {
       "name": "messenger-hushmessenger",
@@ -27642,6 +27606,145 @@
       ],
       "originBuild": "260424",
       "publishedAt": "2026-10-31T11:01:53Z"
+    },
+    "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
+      "name": "byair-franticg33k",
+      "version": "2.42.0",
+      "appKey": "byair",
+      "appName": "ByAir",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "franticg33k",
+      "brandName": "franticg33k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.byairapp.android",
+      "patchSources": [
+        "franticg33k/patches-1.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.7.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro",
+        "Remove Update Prompt"
+      ],
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
+    },
+    "byair-franticg33k-v2.42.0-arm-v7a.apk": {
+      "name": "byair-franticg33k",
+      "version": "2.42.0",
+      "appKey": "byair",
+      "appName": "ByAir",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "franticg33k",
+      "brandName": "franticg33k",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.byairapp.android",
+      "patchSources": [
+        "franticg33k/patches-1.7.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/franticg33k/morphe-patches/releases/tag/v1.7.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro",
+        "Remove Update Prompt"
+      ],
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
+    },
+    "messenger-hushmessenger-v585.0.0.53.94-arm64-v8a.apk": {
+      "name": "messenger-hushmessenger",
+      "version": "585.0.0.53.94",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushmessenger",
+      "brandName": "HushMessenger",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "SysAdminDoc/patches-0.28.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.28.0"
+      ],
+      "appliedPatches": [
+        "Allow chat bubbles",
+        "Allow screenshots",
+        "Android Auto messages",
+        "Auto reply",
+        "Bold and italic text",
+        "Fix videos that won't send",
+        "Hide AI sticker tools",
+        "Hide Chat Moments",
+        "Hide Facebook shortcuts",
+        "Hide Mark as read",
+        "Hide Meta AI",
+        "Hide Notifications tab",
+        "Hide People You May Know",
+        "Hide People tab",
+        "Hide Reels badge",
+        "Hide Your story when sharing",
+        "Hide ad banners in business chats",
+        "Hide avatar stickers",
+        "Hide business reply suggestions",
+        "Hide business typing suggestions",
+        "Hide chat promotions",
+        "Hide event prompts",
+        "Hide friend request cards",
+        "Hide growth prompts",
+        "Hide inbox promotions",
+        "Hide inbox tabs",
+        "Hide joined community chats",
+        "Hide read receipts",
+        "Hide stories and notes",
+        "Hide tab badges",
+        "Hide the Instants button",
+        "Hide the recent photo card",
+        "Hide typing indicator",
+        "Hold stories at the end",
+        "Ignore the swipe up for disappearing messages",
+        "Install beside Meta apps",
+        "Keep a message log",
+        "Keep emoji search on emoji",
+        "Keep unsent messages",
+        "Mark as read button",
+        "Material You theme",
+        "Open settings from menu",
+        "Open web links externally",
+        "Open your gallery app",
+        "Pin more chats",
+        "Put gallery picks in the chat",
+        "Quiet incoming calls",
+        "Restore old emoji drawer",
+        "Restore screens on re-signed builds",
+        "Save any story",
+        "Save voice messages you play",
+        "Send photos at original quality",
+        "Send videos without re-encoding",
+        "Slide chats in and out",
+        "Square profile pictures",
+        "Stop ad attribution uploads",
+        "Stop analytics uploads",
+        "Stop app list and device ID sharing",
+        "Stop inbox and ad link logging",
+        "Stop live connection logging",
+        "Stop nearby scans",
+        "Unlock app icons",
+        "Use system emoji",
+        "Use the phone's camera app",
+        "Use your own font",
+        "View stories anonymously"
+      ],
+      "originBuild": "260427",
+      "publishedAt": "2026-10-31T17:47:02Z"
     }
   }
 }
