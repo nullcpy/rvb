@@ -453,50 +453,6 @@
       "originBuild": "260435",
       "publishedAt": "2026-11-01T14:43:11Z"
     },
-    "proton-lumo-hxreborn-v2.1.5-nogms-arm64-v8a.apk": {
-      "name": "proton-lumo-hxreborn",
-      "version": "2.1.5-nogms",
-      "appKey": "protonlumo",
-      "appName": "Proton Lumo",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "me.proton.android.lumo",
-      "patchSources": [
-        "hxreborn/patches-1.68.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
-    "proton-lumo-hxreborn-v2.1.5-nogms-arm-v7a.apk": {
-      "name": "proton-lumo-hxreborn",
-      "version": "2.1.5-nogms",
-      "appKey": "protonlumo",
-      "appName": "Proton Lumo",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "me.proton.android.lumo",
-      "patchSources": [
-        "hxreborn/patches-1.68.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
     "rumble-lurk-v3.21.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
       "version": "3.21.0",
