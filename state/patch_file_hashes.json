@@ -60,6 +60,13 @@
       "tv.twitch.android.app": "ae990bd92ef0f6fb56cab8da0398e711"
     }
   },
+  "balu100/googledialerenablecallrecording": {
+    "beta": {},
+    "stable": {
+      "com.google.android.dialer": "e6347d7f68a9bda9bcd98b8530702879",
+      "shared": "a7dca3f12acb91329db36432eef357de"
+    }
+  },
   "bearinmindcat/morphe-patches": {
     "beta": {},
     "stable": {
@@ -105,9 +112,9 @@
   },
   "crimera/piko": {
     "beta": {
-      "com.instagram.android": "74e205b3d2d1660e1448088296b14918",
-      "com.twitter.android": "cdc54c718e4fb37394a6c291281b2092",
-      "shared": "221135cfb774e1d17ecaeaa7e2e1e946"
+      "com.instagram.android": "a982ca1f1f7e11cf8f6e324186bf915c",
+      "com.twitter.android": "defec6088d45e9604dc18ccf727e6ece",
+      "shared": "4190f095983e3deac0e70dd851523d6c"
     },
     "stable": {
       "com.instagram.android": "90b1539aa4fd996d64df92684f5747b4",
@@ -144,6 +151,13 @@
     "stable": {
       "ch.protonmail.android": "fea16c6783ff59deb5da1508d4585a65",
       "shared": "1452493b95030fea86f02510b3f23c33"
+    }
+  },
+  "dunecache/oyasumi-patches": {
+    "beta": {},
+    "stable": {
+      "com.dv.adm": "fb47cf38934f8270ae4df4b40bb61631",
+      "shared": "fbee5a785a82a63248d5df47012ae29b"
     }
   },
   "durgesh0505/chiggi_morphe_patches": {
@@ -336,6 +350,15 @@
       "com.imdb.mobile": "c65259fcffa441f5478aa8c0921507af",
       "com.reddit.frontpage": "b76b8a5a86c6a120ebc8fdc786c5094e",
       "shared": "042b69840c096850d7e038c0a4da8751"
+    }
+  },
+  "jordanwoodson/lurk-morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.kick.mobile": "56856f1bf78dd013bbc965c179472afb",
+      "com.rumble.battles": "db236aa05aa2aa626de24a1bf78f047c",
+      "shared": "967c8443b89a529ea46ef48a8af41752",
+      "tv.twitch.android.app": "9e255b4aa8e1726c965bcbf46bae89c2"
     }
   },
   "kiraio-moe/lain-patches": {
@@ -552,6 +575,13 @@
     "stable": {
       "com.facebook.orca": "ef2a67a2f30fac849a419ee4e8f9c284",
       "shared": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  },
+  "sysadmindoc/hushpinterest": {
+    "beta": {},
+    "stable": {
+      "com.pinterest": "64ff47333a775d63ef6dd1474d3f5a02",
+      "shared": "d246c221571536531c21fad1049ab61f"
     }
   },
   "sysadmindoc/hushtelegram": {

@@ -161,6 +161,15 @@
     "stable": "v0.28.0",
     "stable_date": "2026-10-31T15:55:32Z"
   },
+  "SysAdminDoc/HushPinterest": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "SysAdminDoc/HushPinterest",
+    "stable": "v0.0.13",
+    "stable_date": "2026-10-23T04:10:04Z"
+  },
   "SysAdminDoc/HushTelegram": {
     "beta": "",
     "beta_date": "",
@@ -251,6 +260,15 @@
     "stable": "v1.53.0",
     "stable_date": "2026-09-21T00:23:19Z"
   },
+  "balu100/GoogleDialerEnableCallRecording": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "balu100/GoogleDialerEnableCallRecording",
+    "stable": "v1.1.0",
+    "stable_date": "2026-10-14T15:38:10Z"
+  },
   "bearinmindcat/morphe-patches": {
     "beta": "",
     "beta_date": "",
@@ -306,8 +324,8 @@
     "stable_date": "2026-10-29T11:15:19Z"
   },
   "crimera/piko": {
-    "beta": "v3.11.0-dev.3",
-    "beta_date": "2026-10-25T17:20:44Z",
+    "beta": "v3.11.0-dev.4",
+    "beta_date": "2026-11-01T13:26:43Z",
     "blocked": false,
     "host": "github",
     "repo": "crimera/piko",
@@ -358,6 +376,15 @@
     "repo": "docbt/patched-up",
     "stable": "v1.10.0",
     "stable_date": "2026-07-18T01:55:19Z"
+  },
+  "dunecache/oyasumi-patches": {
+    "beta": "v0.6.0-dev.40",
+    "beta_date": "2026-10-15T21:55:41Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "dunecache/oyasumi-patches",
+    "stable": "v0.5.3",
+    "stable_date": "2026-09-30T21:30:22Z"
   },
   "durgesh0505/chiggi_morphe_patches": {
     "beta": "",
@@ -446,8 +473,8 @@
     "blocked": false,
     "host": "github",
     "repo": "instafel/pc-rel",
-    "stable": "ce49607-4.7.0",
-    "stable_date": "2026-10-15T17:48:51Z"
+    "stable": "b7764c7-4.7.0",
+    "stable_date": "2026-11-01T13:27:24Z"
   },
   "ispacecase/patchweaver": {
     "beta": "v1.1.0-dev.1",
@@ -475,6 +502,15 @@
     "repo": "jkennethcarino/adobo",
     "stable": "v1.7.0",
     "stable_date": "2026-10-25T14:41:12Z"
+  },
+  "jordanwoodson/lurk-morphe-patches": {
+    "beta": "v1.15.1-dev.1",
+    "beta_date": "2026-10-29T08:02:58Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "jordanwoodson/lurk-morphe-patches",
+    "stable": "v1.15.1",
+    "stable_date": "2026-10-29T08:07:57Z"
   },
   "kiraio-moe/Lain-Patches": {
     "beta": "v1.4.0-dev.3",

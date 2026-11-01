@@ -8,7 +8,85 @@
       "attempts": 1,
       "parked": false,
       "run": 41302135757,
-      "ts": "2026-11-01T12:02:17Z"
+      "ts": "2026-11-01T12:02:17Z",
+      "cfg": "1cb3030b1678383af5bd3eabc6a86185c7234341"
+    },
+    "AdvancedDownloadManager-oyasumi": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "9637e67567af4ae97d5f614296e5a39726420ff1"
+    },
+    "GooglePhone-balu100": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "47564dde770c3a5903c8c84499290e5dcdf422d8"
+    },
+    "InternetSpeedMeterLite-hxreborn": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "7f8a794ba1e8bbacba28d252f11345a68d1efd80"
+    },
+    "Kick-Lurk": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "2bc3eb05bc2bf6e4b5706c5a4df33601a419de20"
+    },
+    "Pinterest-HushPinterest": {
+      "reason": "new",
+      "arches": [
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "ded40d9d03542c8532ee0eab93f2df9b32f7bb9f"
+    },
+    "ProtonLumo-hxreborn": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "213e70d159e1d0c3927279dc67e7291a3111a096"
+    },
+    "Rumble-Lurk": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "31f446a1ca5e58c786b9d52ee64975f0de023bc6"
+    },
+    "Twitch-Lurk": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "d34d8dfb5b7186164b4d54a590903c9321af482d"
     }
   },
   "beta": {}
