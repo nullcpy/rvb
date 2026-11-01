@@ -3394,6 +3394,32 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "TikTokLite-kurageno8156": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "kurageno8156-lgtm/tiktok-lite-patches",
+        "brand": "kurageno8156",
+        "app-name": "TikTok Lite",
+        "pkg-name": "com.ss.android.ugc.tiktok.lite",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "XiaomiRecorder-bearinmindcat": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "app-name": "TikTok",
+        "pkg-name": "com.android.soundrecorder",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {

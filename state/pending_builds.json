@@ -1,23 +1,4 @@
 {
-  "stable": {
-    "TikTokLite-kurageno8156": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "d6e1c77c57d6498983ed0fe36c88540b112b2ca4"
-    },
-    "XiaomiRecorder-bearinmindcat": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "69a6f1570bbe24255bfc8cf6efbcfe4541c8768d"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
