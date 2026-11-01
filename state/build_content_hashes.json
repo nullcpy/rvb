@@ -448,13 +448,13 @@
       ]
     },
     "showly-hxreborn-v3.72.0-arm-v7a": {
-      "hash": "d453258b189c347ff3f0701b0ea60770",
+      "hash": "84f788f04717fe7058f2ae5c5c04e9a7",
       "kinds": [
         "apk"
       ]
     },
     "showly-hxreborn-v3.72.0-arm64-v8a": {
-      "hash": "6b3b45540788087476e601ce19e552d4",
+      "hash": "d13bdb3035d272dcfcf1076a9e873569",
       "kinds": [
         "apk"
       ]
@@ -1197,13 +1197,13 @@
       ]
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a": {
-      "hash": "4c871888a73e2d211e5a5ee9d26f139a",
+      "hash": "957f465718a842ade5ba9241c1eee809",
       "kinds": [
         "apk"
       ]
     },
     "proton-pass-hxreborn-v1.41.5-arm-v7a": {
-      "hash": "86e2b5e1ef917a604676774eb0e0323e",
+      "hash": "eae13ec5ca6540af67e4d455db32134e",
       "kinds": [
         "apk"
       ]
@@ -1764,13 +1764,13 @@
       ]
     },
     "terabox-hxreborn-v4.27.5-arm64-v8a": {
-      "hash": "6a08a21c22bfa2e070ab3a30f0ed6a0a",
+      "hash": "5908bf4c0914df93d70be24835062ea8",
       "kinds": [
         "apk"
       ]
     },
     "terabox-hxreborn-v4.27.5-arm-v7a": {
-      "hash": "fc8fc5536ccf83ebd50cc96231b05fdc",
+      "hash": "ea7d459e2c5a8d0e20c36bfaf4c3e286",
       "kinds": [
         "apk"
       ]
@@ -1863,19 +1863,19 @@
       ]
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a": {
-      "hash": "e7ffbdf8f1d2b451e9791a06e133da13",
+      "hash": "101bf15c7135641b021ec0b6ba4d3961",
       "kinds": [
         "apk"
       ]
     },
     "musicolet-hxreborn-v6.14.1build540-arm64-v8a": {
-      "hash": "c96d00c3626bfcc1fc3a4dde79778be6",
+      "hash": "942907bba321018a20faa45d7322b292",
       "kinds": [
         "apk"
       ]
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a": {
-      "hash": "950aae89e3b2eda327342baff0b22c54",
+      "hash": "dace02e5cfe68b44850b7fccd9d8df77",
       "kinds": [
         "apk"
       ]
@@ -2193,26 +2193,26 @@
       ]
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm-v7a": {
-      "hash": "42c925d60545ee635661b96f742b22ab",
+      "hash": "7a64ef9539e050b230dbc467f4870b5d",
       "kinds": [
         "apk"
       ]
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a": {
-      "hash": "2f022832304c96ed415298d6e0acb18f",
+      "hash": "be7019c480526f5458403b9c5b2df6b4",
       "kinds": [
         "apk"
       ]
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a": {
-      "hash": "9721687b951bd989d130948b39c586af",
+      "hash": "bc1c3e504b12b54d35a5d51d6c590cb0",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a": {
-      "hash": "69d5a26ab2cb509eb1d581c09cc1d65a",
+      "hash": "6cf93b2ddda6614a4be5899b1e537888",
       "kinds": [
         "apk",
         "module"
@@ -2225,7 +2225,7 @@
       ]
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm64-v8a": {
-      "hash": "76350cc77162b0e88b93049071d3ebec",
+      "hash": "1d480496e12bfb53a07eb95f05b1eb3e",
       "kinds": [
         "apk"
       ]
@@ -2268,6 +2268,66 @@
     },
     "instagram-hushgram-v453.0.0.57.79-arm64-v8a": {
       "hash": "c0314bdda4ad3a5603cbdbecbe7c2d49",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "facebook-hushfacebook-v585.0.0.47.54-arm64-v8a": {
+      "hash": "693dee0093df9b4ed3e9df7020d3fe97",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "facebook-hushfacebook-v585.0.0.47.54-arm-v7a": {
+      "hash": "e1fb6c2cf0f3ff16fc812fe0b10dd12a",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "facebook-hushfacebook-material-you-v585.0.0.47.54-arm64-v8a": {
+      "hash": "bf584970bde3a44585de6a3a3a641929",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "facebook-hushfacebook-material-you-v585.0.0.47.54-arm-v7a": {
+      "hash": "743dc090b5d08d74f6f0913f3f6b2574",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "ticktick-paresh-v8.2.4.0-arm-v7a": {
+      "hash": "141e95220da39ec7b3efe6754d5b4972",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "ticktick-paresh-v8.2.4.0-arm64-v8a": {
+      "hash": "fe84f99ff68308b1d8f0ec0a65318db5",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "proton-mail-hxreborn-v7.11.12-arm-v7a": {
+      "hash": "51cd346abf8d1b282e6a7834a186d8aa",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "proton-mail-hxreborn-v7.11.12-arm64-v8a": {
+      "hash": "0f41fb6a743e123eaf7bb40c194b8c50",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "twitter-piko-newx-v12.39.0-prod.01-arm64-v8a": {
+      "hash": "3e1e24ce339896885b9e9e1ae92998e4",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "twitter-piko-newx-v12.39.0-prod.01-arm-v7a": {
+      "hash": "af266dafdbde09285624995b6c148cda",
       "kinds": [
         "apk"
       ]
