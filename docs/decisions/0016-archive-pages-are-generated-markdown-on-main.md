@@ -21,8 +21,9 @@ mirror does not have, plus another front end to keep in step with the first.
 Do not build a catalogue site for the archive. Generate a markdown tree and commit each
 surface to its own branch:
 
-- `README.md` is the index: a table of apps with each one's last build date and its
-  download total, and a line sending anyone after the newest versions or one-tap
+- `README.md` is the index: a totals line under the title (apps, and downloads when
+  the counters came in), then a table of apps with each one's last build date and its
+  download total, then a line sending anyone after the newest versions or one-tap
   Obtainium adds to NullStore.
 - `apps/<appKey>/README.md`: brand section, then variant (`Standard` first, then
   alphabetical), then one folded block per distinct patch scope, that block's own build
@@ -43,10 +44,11 @@ surface to its own branch:
   workflow into a `{tag: {asset: downloads}}` file and handed to the generator as
   `--counts`, so the generator stays network-free like the manifests it reads. The
   column is collapsed per app over every artifact on its own release and printed
-  compactly (`1.2k`, `2k`, `999`). A failed fetch costs the column and nothing else,
-  and an app missing from the map gets an empty cell, never a `0`: the mirror never
-  prunes, so an asset with no counter is an asset nobody listed, not a build nobody
-  downloaded.
+  compactly (`1.2k`, `2k`, `999`), while the header's total is written out in full: a
+  row has to stay narrow, a summary does not. A failed fetch costs the column and
+  nothing else, and an app missing from the map gets an empty cell, never a `0`: the
+  mirror never prunes, so an asset with no counter is an asset nobody listed, not a
+  build nobody downloaded.
 - Two surfaces come out of one pass. `README.md` is what github.com renders per
   folder, so it carries no front matter (GitHub would show it as a metadata table)
   and links at `blob/main`; it is committed to `main`. `index.md` mirrors it for

@@ -1,5 +1,7 @@
 <h1><span class="accent">NullStore</span> Archive</h1>
 
+<p class="stats"><b>5</b> apps · <b>4,203</b> downloads</p>
+
 Every build NullForge has published, kept permanently. For the newest versions and for one-tap Obtainium adds, use [NullStore](https://nullstore.example/hub).
 
 | App | Last build | Downloads |

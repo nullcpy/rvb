@@ -38,7 +38,9 @@ Layout choices that are deliberate, not incidental:
 - The index's Downloads column only appears with `--counts`, a JSON map the render
   workflow writes after reading the mirror's own release counters. An app missing
   from it gets an empty cell, never a 0: no data is not the same as nobody
-  downloading, and a guessed number is a claim about people we never saw.
+  downloading, and a guessed number is a claim about people we never saw. The header
+  line under the title reports the two totals the table adds up to, and drops the
+  downloads figure for the same reason the column does.
 
 CLI:
     --manifests DIR     required
@@ -384,11 +386,19 @@ def render_page(app_name, items, page, total, page_url, front_matter):
 def render_index(app_names, last_build, app_url, nullstore_url, front_matter,
                  downloads=None):
     counted = downloads is not None
+    # The totals ride under the title so the table does not have to be scrolled to
+    # learn the size of the mirror. The downloads figure only exists when the
+    # counters came in: a made-up zero beside a real app count reads as a fact.
+    stats = [f"<b>{len(app_names)}</b> apps"]
+    if counted:
+        stats.append(f"<b>{sum(downloads.values()):,}</b> downloads")
     lines = []
     if front_matter:
         lines += ["---", "title: NullStore Archive", "---", ""]
     lines += [
         '<h1><span class="accent">NullStore</span> Archive</h1>',
+        "",
+        '<p class="stats">' + " · ".join(stats) + "</p>",
         "",
         "Every build NullForge has published, kept permanently. For the newest "
         "versions and for one-tap Obtainium adds, use "

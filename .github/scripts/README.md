@@ -92,9 +92,9 @@ Why the mirror exists: [decisions/0015](../../docs/decisions/0015-builds-are-mir
 
 ### `build_archive_pages.py`
 Renders the archive repo's browsable site from its `manifests/*.json`: an index
-README (an apps table with each app's last build date and, when `--counts` is given,
-its download total, plus a line pointing anyone after the newest versions or Obtainium
-adds at NullStore) and one
+README (a totals line of app and download counts under the title, an apps table with
+each app's last build date and, when `--counts` is given, its download total, plus a
+line pointing anyone after the newest versions or Obtainium adds at NullStore) and one
 `apps/<appKey>/README.md` per app, grouped brand then variant, with each distinct patch
 scope folded once above the build table it covers. A block is keyed by the patch set of
 every kind and arch in the build, so a patch line can carry a scope tag (`module omit`,
