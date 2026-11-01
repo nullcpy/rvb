@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260440",
+    "channel": "stable",
+    "publishedAt": "2026-11-01T20:40:46Z"
+  },
+  "files": {
+    "proton-lumo-hxreborn-v2.1.5-nogms-all.apk": {
+      "name": "proton-lumo-hxreborn",
+      "version": "2.1.5-nogms",
+      "appKey": "protonlumo",
+      "appName": "Proton Lumo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "me.proton.android.lumo",
+      "patchSources": [
+        "hxreborn/patches-1.68.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
+      ],
+      "appliedPatches": [
+        "Material 3 switches",
+        "Remove tap highlight",
+        "Store encryption key in TEE",
+        "Unlock premium"
+      ],
+      "originBuild": "260440",
+      "publishedAt": "2026-11-01T20:40:46Z"
+    }
+  }
+}
