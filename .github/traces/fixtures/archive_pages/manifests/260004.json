@@ -1,0 +1,70 @@
+{
+    "schema": 1,
+    "kind": "build",
+    "meta": {
+        "build": "260004",
+        "channel": "stable",
+        "publishedAt": "2026-10-16T00:00:00Z"
+    },
+    "files": {
+        "scope-b-v1.1.0-arm64-v8a.apk": {
+            "appKey": "scope",
+            "appName": "Scope",
+            "brandKey": "b",
+            "brandName": "B",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "APK",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "Alpha",
+                "Delta",
+                "Echo"
+            ]
+        },
+        "scope-b-v1.1.0-arm-v7a.apk": {
+            "appKey": "scope",
+            "appName": "Scope",
+            "brandKey": "b",
+            "brandName": "B",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm",
+            "fileType": "APK",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "Alpha"
+            ]
+        },
+        "scope-b-module-v1.1.0-arm64-v8a.zip": {
+            "appKey": "scope",
+            "appName": "Scope",
+            "brandKey": "b",
+            "brandName": "B",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm64",
+            "fileType": "Module",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "Alpha"
+            ]
+        },
+        "scope-b-module-v1.1.0-arm-v7a.zip": {
+            "appKey": "scope",
+            "appName": "Scope",
+            "brandKey": "b",
+            "brandName": "B",
+            "variant": null,
+            "subVariant": null,
+            "arch": "arm",
+            "fileType": "Module",
+            "version": "1.1.0",
+            "appliedPatches": [
+                "Alpha",
+                "Echo"
+            ]
+        }
+    }
+}

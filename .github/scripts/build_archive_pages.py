@@ -3,8 +3,8 @@
 
 Reads `manifests/*.json` (schema v1, written by push_archive_manifest.sh onto the
 archive repo's `website` branch) and writes a browsable markdown tree: an index
-plus one page set per app, grouped by brand then variant, with every distinct
-applied-patch list folded once above the build table it covers.
+plus one page set per app, grouped by brand then variant, with the union of applied
+patches folded once above the build table that shares that exact scope.
 
 Two surfaces come out of one pass, because the same tree is read two ways:
 
@@ -21,10 +21,13 @@ Stdlib only and no network: the archive repo's workflow imports it from a sparse
 clone of this repo's `main`, the same import-not-copy rule as naming.py.
 
 Layout choices that are deliberate, not incidental:
-- One canonical patch list per build (the widest APK arch when present), so a
-  module that drops one patch does not duplicate a 100-item list. The delta is
-  stated once per kind and only when every artifact of that kind agrees; a
-  difference confined to one arch or one build is left out rather than misstated.
+- Blocks are keyed by the whole scope signature, the patch set of every kind and
+  arch in the build, not by one reference list. That is what lets a patch carry a
+  marker: inside a block the marker holds for every build in it. Measured on the
+  current archive, 138 blocks become 144.
+- A patch line is tagged only when some artifact lacks it, with the shortest exact
+  phrase: `module omit`, `arm omit`, `arm64 only`, or an explicit list such as
+  `arm apk` `arm64 module omit` when no single phrase covers the lacking set.
 - Builds are listed individually inside a block, never as a range, because a patch
   set can appear, stop, and come back.
 - Everything is sorted, including ties, because an unstable order would make every
@@ -44,7 +47,6 @@ import collections
 import html
 import json
 import os
-import re
 import sys
 
 RELEASES = "https://github.com/nullcpy/archive/releases"
@@ -91,14 +93,10 @@ def load_manifests(src_dir):
     return rows
 
 
-def canonical(rows_of_build):
-    """Reference patch list for one build: the widest APK arch present."""
-    apks = [r for r in rows_of_build if r["kind"] == "APK"]
-    for arch in ARCH_ORDER:
-        for row in apks:
-            if row["arch"] == arch:
-                return row["patches"]
-    return (apks or rows_of_build)[0]["patches"]
+def signature(rows_of_build):
+    """The block key: every artifact's own kind, arch and patch set."""
+    return tuple(sorted((r["kind"], r["arch"], r["patches"])
+                        for r in rows_of_build))
 
 
 def arch_link(row):
@@ -150,7 +148,7 @@ def sections(rows):
                 per_build = {}
                 blocks = collections.defaultdict(list)
                 for tag in sorted(builds, reverse=True):
-                    blocks[canonical(builds[tag])].append(tag)
+                    blocks[signature(builds[tag])].append(tag)
                     per_build[tag] = builds[tag]
                 ordered = collections.OrderedDict(
                     sorted(blocks.items(), key=lambda kv: max(kv[1]),
@@ -167,9 +165,8 @@ def block_rows(items):
     for brand, variants in items:
         for variant, subs in variants:
             for sub, blocks, per_build in subs:
-                for patches, tags in blocks.items():
-                    flat.append(
-                        (brand, variant, sub, patches, tags, per_build))
+                for tags in blocks.values():
+                    flat.append((brand, variant, sub, tags, per_build))
     return flat
 
 
@@ -181,7 +178,7 @@ def paginate(flat, cap):
     """
     pages, current, used = [], [], 0
     for item in flat:
-        rows_in_item = len(item[4])
+        rows_in_item = len(item[3])
         if current and used + rows_in_item > cap:
             pages.append(current)
             current, used = [], 0
@@ -192,37 +189,65 @@ def paginate(flat, cap):
     return pages or [[]]
 
 
-def delta_lines(tags, patches, per_build):
-    """A whole-kind note, and only when that kind deviates identically everywhere.
+def block_artifacts(tags, per_build):
+    """Every artifact of every build in one block."""
+    return [r for tag in tags for r in per_build[tag]]
 
-    A deviation limited to one arch or one build cannot be phrased without naming
-    that arch or build, and the table has no column for it, so it is left out by
-    design rather than stated wrongly.
+
+def audience_word(kind, arch, with_kind):
+    """How an audience reads in a tag: arch first, kind named when it is a module
+    or when several audiences are listed together."""
+    if kind == "Module":
+        return f"{arch} module"
+    return f"{arch} apk" if with_kind else arch
+
+
+def scope_markers(artifacts):
+    """Patch name to the HTML tag naming who lacks it; absent means all have it.
+
+    The block is keyed by the full scope signature, so a tag printed here holds for
+    every build in the block. The phrase is the shortest one that stays exact: a
+    whole kind, then a whole arch, then `only` when a single audience carries the
+    patch, and otherwise an explicit list with the verb on the last audience.
     """
-    artifacts = [r for tag in tags for r in per_build[tag]]
-    lines = []
-    for kind in sorted({r["kind"] for r in artifacts},
-                       key=lambda k: KIND_ORDER.get(k, 9)):
-        of_kind = [r for r in artifacts if r["kind"] == kind]
-        actual = {r["patches"] for r in of_kind}
-        if len(actual) != 1:
+    order = lambda a: (ARCH_ORDER.get(a[1], 9), KIND_ORDER.get(a[0], 9))
+    audiences = sorted({(r["kind"], r["arch"]) for r in artifacts}, key=order)
+    have = {}
+    for kind, arch in audiences:
+        have[(kind, arch)] = {p for r in artifacts
+                              if r["kind"] == kind and r["arch"] == arch
+                              for p in r["patches"]}
+    by_kind = {kind: {a for a in audiences if a[0] == kind}
+               for kind in {k for k, _ in audiences}}
+    by_arch = {arch: {a for a in audiences if a[1] == arch}
+               for arch in {x for _, x in audiences}}
+
+    markers = {}
+    for patch in {p for s in have.values() for p in s}:
+        holders = {a for a in audiences if patch in have[a]}
+        lacking = set(audiences) - holders
+        if not lacking:
             continue
-        only = next(iter(actual))
-        if only == patches:
-            continue
-        missing = sorted(set(patches) - set(only))
-        extra = sorted(set(only) - set(patches))
-        bits = []
-        if missing:
-            bits.append("omit " + ", ".join(f"`{p}`" for p in missing))
-        if extra:
-            bits.append("add " + ", ".join(f"`{p}`" for p in extra))
-        if not bits:
-            continue
-        plural = len({r["arch"] for r in of_kind}) > 1
-        who = f"{kind} artifacts" if plural else kind
-        lines.append(f"- {who} {' and '.join(bits)}")
-    return lines
+        if lacking == by_kind.get("Module"):
+            markers[patch] = "<code>module omit</code>"
+        elif lacking == by_kind.get("APK"):
+            markers[patch] = "<code>apk omit</code>"
+        else:
+            whole_arch = next((arch for arch, group in by_arch.items()
+                               if lacking == group), None)
+            if whole_arch:
+                markers[patch] = f"<code>{whole_arch} omit</code>"
+            elif len(holders) == 1:
+                kind, arch = next(iter(holders))
+                word = audience_word(kind, arch, False)
+                markers[patch] = f"<code>{word} only</code>"
+            else:
+                words = [audience_word(k, a, True)
+                         for k, a in sorted(lacking, key=order)]
+                tags = [f"<code>{w}</code>" for w in words[:-1]]
+                tags.append(f"<code>{words[-1]} omit</code>")
+                markers[patch] = " ".join(tags)
+    return markers
 
 
 def render_table(tags, per_build):
@@ -248,19 +273,21 @@ def render_table(tags, per_build):
     return lines
 
 
-def patch_list_html(tags, patches, per_build):
-    """The folded patch list as raw HTML.
+def patch_list_html(patches, markers):
+    """The folded patch list as raw HTML, each line tagged with its scope.
 
     Tags rather than a markdown list because Jekyll's kramdown leaves markdown
     inside an HTML block unparsed: a `- patch` list reaches the published site as
     one run of text. Tags render the same on both surfaces. Escaping happens here
     so a patch name containing `&` or `<` cannot break the page.
     """
-    items = [html.escape(p, quote=False) for p in patches]
-    for line in delta_lines(tags, patches, per_build):
-        text = html.escape(line[2:], quote=False)
-        items.append(re.sub(r"`([^`]+)`", r"<code>\1</code>", text))
-    return ["<ul>"] + [f"<li>{item}</li>" for item in items] + ["</ul>"]
+    lines = ["<ul>"]
+    for patch in patches:
+        text = html.escape(patch, quote=False)
+        marker = markers.get(patch, "")
+        lines.append(f"<li>{text}{' ' + marker if marker else ''}</li>")
+    lines.append("</ul>")
+    return lines
 
 
 def render_page(app_name, items, page, total, page_url, front_matter):
@@ -277,7 +304,7 @@ def render_page(app_name, items, page, total, page_url, front_matter):
             nav.append(f"[older builds]({page_url(page + 2)})")
         lines += [" . ".join(nav), ""]
     last_brand, last_variant, last_sub = None, None, None
-    for brand, variant, sub, patches, tags, per_build in items:
+    for brand, variant, sub, tags, per_build in items:
         if brand != last_brand:
             lines += [f"## {brand}", ""]
             last_brand, last_variant, last_sub = brand, None, None
@@ -289,9 +316,16 @@ def render_page(app_name, items, page, total, page_url, front_matter):
         if sub and sub != last_sub:
             lines += [f"#### {sub}", ""]
             last_sub = sub
+        artifacts = block_artifacts(tags, per_build)
+        patches = sorted({p for r in artifacts for p in r["patches"]},
+                         key=str.lower)
+        markers = scope_markers(artifacts)
         lines.append(f"<details><summary><b>Applied patches: {len(patches)}</b>"
                      f" . {len(tags)} build(s)</summary>")
-        lines += patch_list_html(tags, patches, per_build)
+        if markers:
+            lines.append('<p class="legend">No marker means every artifact here '
+                         "carries the patch; a tag names what lacks it.</p>")
+        lines += patch_list_html(patches, markers)
         lines += ["</details>", ""]
         lines += render_table(tags, per_build)
         lines.append("")

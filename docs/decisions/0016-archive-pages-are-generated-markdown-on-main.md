@@ -25,8 +25,11 @@ surface to its own branch:
   line sending anyone after the newest versions or one-tap Obtainium adds to
   NullStore.
 - `apps/<appKey>/README.md`: brand section, then variant (`Standard` first, then
-  alphabetical), then one folded block per distinct applied-patch list with that
-  block's own build table beneath it, so the list sits above the builds it covers.
+  alphabetical), then one folded block per distinct patch scope, that block's own build
+  table beneath it, so the list sits above the builds it describes. A block is keyed by
+  the patch set of every kind and arch in the build, which is what lets a patch line
+  carry a scope tag such as `module omit`, `arm omit`, `arm64 only`, or an explicit
+  list like `arm64 module` `arm apk omit` when no single phrase covers it.
 - Data stays on `website` (`manifests/` and nothing else). Nothing on `main` links
   into `website`, so the data layer can change shape without breaking a visible link.
 - rvb triggers a rebuild with a `workflow_dispatch` gated on the manifest script's
@@ -54,10 +57,11 @@ surface to its own branch:
 - **Append one line per build to a growing file.** An append that corrupts once stays
   corrupt, which is the 2026-09-24 lesson in [0002](0002-manifests-live-on-a-branch.md);
   regenerating from scratch converges instead, so a bad run is healed by the next one.
-- **Per-row patch attribution.** A `Patches` column plus per-arch delta wording was
-  built and reviewed, then reverted: it exists for 3 rows in 772. A kind-level delta is
-  now stated only when that kind deviates identically everywhere in the block, and a
-  difference confined to one arch is left unmentioned rather than misattributed.
+- **Per-row patch attribution.** A `Patches` column was built, reviewed and reverted:
+  it exists for 3 rows in 772. Scope is stated on the patch line instead, which needs no
+  extra column. The earlier compromise, a whole-kind delta line that went silent on any
+  arch-specific difference, is what the tags replace. The cost of keying blocks by full
+  scope was measured first: 138 blocks become 144.
 
 ## Consequences
 

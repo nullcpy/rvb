@@ -18,8 +18,8 @@
 
 <details><summary><b>Applied patches: 2</b> . 1 build(s)</summary>
 <ul>
-<li>Skip ads</li>
 <li>Clone Prime Video</li>
+<li>Skip ads</li>
 </ul>
 </details>
 

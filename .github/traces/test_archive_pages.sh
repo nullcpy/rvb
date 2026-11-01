@@ -68,13 +68,25 @@ grep -q 'https://github.com/nullcpy/archive/releases/download/260002/' \
 grep -q 'https://github.com/nullcpy/archive/blob/main/apps/' \
 	"$t/a/README.md" || fail "index links are not absolute blob/main URLs"
 
-# Delta rule: a kind that deviates uniformly is stated; a kind that deviates for one
-# arch only is left out rather than claimed for the whole kind.
-grep -q '<li>Module omit <code>GmsCore support</code></li>' \
+# Scope tags. A patch every module lacks is tagged by kind; a patch one arch of
+# APKs lacks is tagged by arch, the case the old whole-kind rule silently dropped.
+grep -q '<li>GmsCore support <code>module omit</code></li>' \
 	"$t/a/apps/youtube/README.md" \
-	|| fail "uniform module delta missing from the Standard block"
-grep -q '<li>APK' "$t/a/apps/youtube/README.md" \
-	&& fail "a one-arch APK difference was presented as a whole-kind delta"
+	|| fail "the module scope tag is missing"
+grep -q '<li>gamma <code>arm omit</code></li>' "$t/a/apps/youtube/README.md" \
+	|| fail "the arch scope tag is missing"
+
+# The scope app covers the three harder shapes: one audience lacking, one audience
+# carrying, and a lacking set that no single phrase describes.
+grep -q '<li>Beta <code>arm apk omit</code></li>' "$t/a/apps/scope/README.md" \
+	|| fail "a single audience lacking is not named"
+grep -q '<li>Delta <code>arm64 only</code></li>' "$t/a/apps/scope/README.md" \
+	|| fail "a patch carried by one audience is not marked only"
+grep -q '<li>Echo <code>arm64 module</code> <code>arm apk omit</code></li>' \
+	"$t/a/apps/scope/README.md" || fail "the multi-audience list is wrong"
+grep -q 'class="legend"' "$t/a/apps/scope/README.md" \
+	|| fail "the legend explaining the tags is missing"
+grep -q 'class="legend"' "$t/a/README.md" && fail "the index grew a legend"
 
 # The folded list is HTML on purpose: kramdown leaves markdown inside a <details>
 # block unparsed, which is how the published site showed 108 patches as one run of

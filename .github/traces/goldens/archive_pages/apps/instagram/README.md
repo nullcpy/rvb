@@ -18,8 +18,8 @@
 
 <details><summary><b>Applied patches: 2</b> . 1 build(s)</summary>
 <ul>
-<li>Hide ads</li>
 <li>Clone Instagram</li>
+<li>Hide ads</li>
 </ul>
 </details>
 

@@ -94,9 +94,12 @@ Why the mirror exists: [decisions/0015](../../docs/decisions/0015-builds-are-mir
 Renders the archive repo's browsable site from its `manifests/*.json`: an index
 README (an apps table with each app's last build date, plus a line pointing anyone
 after the newest versions or Obtainium adds at NullStore) and one
-`apps/<appKey>/README.md` per app, grouped brand then variant, with each distinct
-applied-patch list folded once above the build table it covers. Stdlib only, no
-network, and every collection sorted with a tie-break, because unstable order would
+`apps/<appKey>/README.md` per app, grouped brand then variant, with each distinct patch
+scope folded once above the build table it covers. A block is keyed by the patch set of
+every kind and arch in the build, so a patch line can carry a scope tag (`module omit`,
+`arm omit`, `arm64 only`, or an explicit audience list) whenever some artifact lacks
+it. Stdlib only, no network, and every collection sorted with a tie-break, because
+unstable order would
 rewrite files whose data did not change. `NULLSTORE_URL` is required with no
 default, so a hub move cannot leave a stale link advertising itself, and
 `ARCHIVE_SITE_BASE` sets the page links, which are always absolute because a
