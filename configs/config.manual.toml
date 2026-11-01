@@ -1,14 +1,13 @@
-[Zalo-zeldrisho]
+[ProtonLumo-hxreborn]
 enabled = true
-pkg-name = "com.zing.zalo"
-app-name = "Zalo"
-patches-source = "zeldrisho/morphe-patches"
-brand = "zeldrisho"
-arch = "all"
-included-patches = "\"Enable Google Drive photo backup\""
-patcher-args = "-e \"Configurable native backup interval\" -Ohours=\\\"1\\\""
-uptodown-dlurl = "https://zalo.en.uptodown.com/android"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/zalo-group/zalo"
-apkpure-dlurl = "https://apkpure.com/zalo/com.zing.zalo"
+pkg-name = "me.proton.android.lumo"
+app-name = "Proton Lumo"
+brand = "hxreborn"
+patches-source = "hxreborn/morphe-patches"
+github-dlurl = "https://github.com/ProtonLumo/android-lumo"
+github-regex = "lumo-v{version}-nogms-release\\.apk"
+
+
+
 
 
