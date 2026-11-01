@@ -3282,6 +3282,117 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "AdvancedDownloadManager-oyasumi": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "dunecache/oyasumi-patches",
+        "brand": "oyasumi",
+        "app-name": "Advanced Download Manager",
+        "pkg-name": "com.dv.adm",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "GooglePhone-balu100": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "balu100/GoogleDialerEnableCallRecording",
+        "brand": "balu100",
+        "app-name": "Google Phone",
+        "pkg-name": "com.google.android.dialer",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "InternetSpeedMeterLite-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Internet Speed Meter Lite",
+        "pkg-name": "com.internet.speed.meter.lite",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Kick-Lurk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jordanwoodson/lurk-morphe-patches",
+        "brand": "Lurk",
+        "app-name": "Kick",
+        "pkg-name": "com.kick.mobile",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Pinterest-HushPinterest": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "SysAdminDoc/HushPinterest",
+        "brand": "HushPinterest",
+        "app-name": "Pinterest",
+        "pkg-name": "com.pinterest",
+        "included-patches": "'Spoof signature for Google sign-in' 'GmsCore support'",
+        "arch": "arm64-v8a",
+        "build-mode": "apk",
+        "dpi": "480dpi"
+      }
+    },
+    "ProtonLumo-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Proton Lumo",
+        "pkg-name": "me.proton.android.lumo",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Rumble-Lurk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jordanwoodson/lurk-morphe-patches",
+        "brand": "Lurk",
+        "app-name": "Rumble",
+        "pkg-name": "com.rumble.battles",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Twitch-Lurk": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "jordanwoodson/lurk-morphe-patches",
+        "brand": "Lurk",
+        "app-name": "Twitch",
+        "pkg-name": "tv.twitch.android.app",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
