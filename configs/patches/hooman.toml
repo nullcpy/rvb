@@ -76,16 +76,6 @@ uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/tumblr-1-for-android-app/com.tumblr"
 apkcombo-dlurl = "https://apkcombo.com/tumblr/com.tumblr"
 
-[GooglePhone-hooman]
-enabled = true
-pkg-name = "com.google.android.dialer"
-app-name = "Google Phone"
-build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
-uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
-apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
-
 [MicrosoftSwiftKey-hooman]
 enabled = true
 pkg-name = "com.touchtype.swiftkey"
