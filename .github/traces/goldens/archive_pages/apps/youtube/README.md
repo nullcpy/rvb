@@ -5,7 +5,6 @@
 ### Standard
 
 <details><summary><b>Applied patches: 3</b> . 1 build(s)</summary>
-<p class="legend">No marker means every artifact here carries the patch; a tag names what lacks it.</p>
 <ul>
 <li>alpha</li>
 <li>beta</li>
@@ -18,7 +17,6 @@
 | [260002](https://github.com/nullcpy/archive/releases/tag/260002) 🧪 | 2026-10-08 | `20.0.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260002/youtube-morphe-v20.0.0-arm64-v8a.apk) · Module: [arm64](https://github.com/nullcpy/archive/releases/download/260002/youtube-morphe-module-v20.0.0-arm64-v8a.zip) |
 
 <details><summary><b>Applied patches: 3</b> . 1 build(s)</summary>
-<p class="legend">No marker means every artifact here carries the patch; a tag names what lacks it.</p>
 <ul>
 <li>alpha</li>
 <li>beta</li>
@@ -33,7 +31,6 @@
 ### Experimental
 
 <details><summary><b>Applied patches: 3</b> . 1 build(s)</summary>
-<p class="legend">No marker means every artifact here carries the patch; a tag names what lacks it.</p>
 <ul>
 <li>alpha</li>
 <li>beta</li>

@@ -84,9 +84,6 @@ grep -q '<li>Delta <code>arm64 only</code></li>' "$t/a/apps/scope/README.md" \
 	|| fail "a patch carried by one audience is not marked only"
 grep -q '<li>Echo <code>arm64 module</code> <code>arm apk omit</code></li>' \
 	"$t/a/apps/scope/README.md" || fail "the multi-audience list is wrong"
-grep -q 'class="legend"' "$t/a/apps/scope/README.md" \
-	|| fail "the legend explaining the tags is missing"
-grep -q 'class="legend"' "$t/a/README.md" && fail "the index grew a legend"
 
 # The folded list is HTML on purpose: kramdown leaves markdown inside a <details>
 # block unparsed, which is how the published site showed 108 patches as one run of

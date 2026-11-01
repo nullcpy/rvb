@@ -5,7 +5,6 @@
 ### Standard
 
 <details><summary><b>Applied patches: 3</b> . 1 build(s)</summary>
-<p class="legend">No marker means every artifact here carries the patch; a tag names what lacks it.</p>
 <ul>
 <li>Alpha</li>
 <li>Delta <code>arm64 only</code></li>
@@ -18,7 +17,6 @@
 | [260004](https://github.com/nullcpy/archive/releases/tag/260004) | 2026-10-16 | `1.1.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260004/scope-b-v1.1.0-arm64-v8a.apk) • [arm](https://github.com/nullcpy/archive/releases/download/260004/scope-b-v1.1.0-arm-v7a.apk) · Module: [arm64](https://github.com/nullcpy/archive/releases/download/260004/scope-b-module-v1.1.0-arm64-v8a.zip) • [arm](https://github.com/nullcpy/archive/releases/download/260004/scope-b-module-v1.1.0-arm-v7a.zip) |
 
 <details><summary><b>Applied patches: 2</b> . 1 build(s)</summary>
-<p class="legend">No marker means every artifact here carries the patch; a tag names what lacks it.</p>
 <ul>
 <li>Alpha</li>
 <li>Beta <code>arm apk omit</code></li>

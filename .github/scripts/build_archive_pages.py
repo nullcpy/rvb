@@ -210,7 +210,7 @@ def scope_markers(artifacts):
     whole kind, then a whole arch, then `only` when a single audience carries the
     patch, and otherwise an explicit list with the verb on the last audience.
     """
-    order = lambda a: (ARCH_ORDER.get(a[1], 9), KIND_ORDER.get(a[0], 9))
+    def order(a): return (ARCH_ORDER.get(a[1], 9), KIND_ORDER.get(a[0], 9))
     audiences = sorted({(r["kind"], r["arch"]) for r in artifacts}, key=order)
     have = {}
     for kind, arch in audiences:
@@ -322,9 +322,6 @@ def render_page(app_name, items, page, total, page_url, front_matter):
         markers = scope_markers(artifacts)
         lines.append(f"<details><summary><b>Applied patches: {len(patches)}</b>"
                      f" . {len(tags)} build(s)</summary>")
-        if markers:
-            lines.append('<p class="legend">No marker means every artifact here '
-                         "carries the patch; a tag names what lacks it.</p>")
         lines += patch_list_html(patches, markers)
         lines += ["</details>", ""]
         lines += render_table(tags, per_build)
