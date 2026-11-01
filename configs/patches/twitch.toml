@@ -6,6 +6,17 @@ patches-source = "arandomhooman/hoomans-morphe-patches"
 brand = "hooman"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
+
+[Twitch-Lurk]
+enabled = true
+pkg-name = "tv.twitch.android.app"
+app-name = "Twitch"
+patches-source = "jordanwoodson/lurk-morphe-patches"
+brand = "Lurk"
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
 
 [Twitch-ajstrick81-AndroidTV]
 enabled = true
