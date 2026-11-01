@@ -70,6 +70,7 @@
   "bearinmindcat/morphe-patches": {
     "beta": {},
     "stable": {
+      "com.android.soundrecorder": "21605bbd93862ea2a8786f99d83236e3",
       "com.google.android.apps.maps": "f8655c64e42285ec913adeca75daf399",
       "shared": "19bc25f6b1b38d8ac29280ed630dc132"
     }
@@ -298,7 +299,7 @@
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": {
-      "com.zhiliaoapp.musically": "c92215413d78735d76c746a621421648",
+      "com.zhiliaoapp.musically": "fc6f4ed7a249b688a6509137c0025edc",
       "shared": "999940beba9ae3e33368c32b0650a6d5"
     },
     "stable": {

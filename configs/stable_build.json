@@ -1616,7 +1616,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -2348,7 +2348,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "TikTok",
     "brand": "bearinmindcat",
