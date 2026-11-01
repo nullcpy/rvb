@@ -61,9 +61,12 @@ bash .github/scripts/fetch_data_branch.sh    # you cannot build or test without 
 Requirements: bash 4+ (the project's tests are written against bash 5.x under Git
 Bash on Windows), GNU `sed`, `jq`, `python3` (3.11+ for `tomllib`), `zip`,
 Java 21 for real builds, and `dos2unix` where CI normalises `utils.sh`.
-Line endings are enforced by [.gitattributes](../.gitattributes): scripts, JSON,
-YAML and TOML are LF everywhere. If your editor writes CRLF into a `.sh`, the
-trace goldens will fail on byte comparison.
+Line endings are enforced by [.gitattributes](../.gitattributes): scripts, JSON, YAML,
+TOML, markdown and the extension-less dotfiles are LF everywhere, including on a
+Windows checkout where `core.autocrlf=true` would otherwise hand the working tree CRLF.
+If your editor writes CRLF into a `.sh`, the trace goldens fail on byte comparison; if
+markdown were left unpinned, an LF editor would leave files that report modified while
+their diff is empty.
 
 [.editorconfig](../.editorconfig) keeps the working copy in that shape rather than
 letting a save undo it: LF, UTF-8, a final newline, tabs for shell (every script here

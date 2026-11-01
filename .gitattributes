@@ -14,7 +14,14 @@
 # Page goldens are byte-compared against generator output, so a CRLF checkout on a
 # Windows box would fail the test that passes on CI.
 .github/traces/goldens/** text eol=lf
-*.md text
+# Markdown is prose, but autocrlf still hands it back with CRLF, and an editor set to LF
+# then rewrites every line the user never touched: git reports the file modified while
+# diffing it finds nothing. Pinning it keeps checkout, editor and repo on one shape.
+*.md text eol=lf
+# Extension-less dotfiles fall through * text=auto and hit the same phantom-diff trap.
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.editorconfig text eol=lf
 
 *.jar binary
 *.keystore binary
