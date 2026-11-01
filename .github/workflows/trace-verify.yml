@@ -53,6 +53,7 @@ jobs:
           bash .github/traces/test_apkmirror_release_lookup.sh
           bash .github/traces/test_preferred_format.sh
           bash .github/traces/test_direct_source.sh
+          bash .github/traces/test_artifact_identity.sh
           bash .github/traces/test_fdroid_source.sh
           bash .github/traces/test_config_rearm.sh
           bash .github/traces/test_channel_markers.sh

@@ -290,14 +290,19 @@ write_dl_failure_descriptor() { # $1=slug $2=app $3=version $4=vc $5=arch $6=pkg
 # it uses its own suffix, because the parent deletes <slug>.json/.log on a clean (rc 0)
 # return and build_rv skips with rc 0 here.
 # $1=slug $2=app $3=versions-tried $4=requested $5=vc $6=arch $7=patches_src $8=pkg $9=patch-release-url
+# $10=versionNames read off fetched artifacts the set then refused (empty when nothing was
+# ever fetched). "tried" stays the versions the gate refused by name; the bytes column is a
+# separate fact, and the report prints it as "file is vX" so a wrong-flavour fetch reads
+# differently from a bundle that simply never covered the version.
 write_no_patches_failure_descriptor() {
 	[ -n "${TEMP_DIR:-}" ] || return 0
 	local dir="$TEMP_DIR/failures"
 	mkdir -p "$dir" 2> /dev/null || return 0
 	jq -n --arg type "no_compatible_patches" --arg app "$2" --arg tried "$3" \
 		--arg version "$4" --arg vc "$5" --arg arch "$6" --arg patches_src "$7" --arg pkg "$8" \
-		--arg patch_url "$9" \
-		'{type:$type, app:$app, tried:$tried, version:$version, vc:$vc, arch:$arch, patches_src:$patches_src, pkg:$pkg, patch_url:$patch_url}' \
+		--arg patch_url "$9" --arg bytes "${10:-}" \
+		'{type:$type, app:$app, tried:$tried, version:$version, vc:$vc, arch:$arch, patches_src:$patches_src, pkg:$pkg, patch_url:$patch_url}
+		+ (if $bytes == "" then {} else {bytesVersion:$bytes} end)' \
 		> "$dir/$1_np.json" 2> /dev/null || true
 }
 
@@ -5072,6 +5077,114 @@ verify_downloaded_apk() {
 	return 0
 }
 
+# _cached_identity_disagrees — does a cached file's own manifest deny the version its name
+# claims? A cache hit skips every fetch gate, so the label on the file is the only thing
+# saying what it is, and _rekey_to_bytes never runs for it: run 41314721427 left APKMirror's
+# 2.1.5-gms Proton Lumo bundle stored as ...-2.1.5-nogms-79-all, which every arch build then
+# adopted and the patcher had nothing to apply.
+# $1=file  $2=label the name claims (the version_f shape)
+# rc 0 the bytes name a different version, rc 1 same version or nothing readable. An
+# unreadable versionName is NOT a mismatch: aapt fails on some vendor bundles, and treating
+# that as a lie would throw away a good cache entry and re-download on every run.
+_cached_identity_disagrees() { # $1=file  $2=label
+	local vn
+	vn=$(_meta_field_of "$1" versionName) || true
+	[ -n "$vn" ] || return 1
+	[ "$(_ver_key "$vn")" = "$(_ver_key "$2")" ] && return 1
+	return 0
+}
+
+# _rekey_to_bytes — prove the version an artifact's name will go on claiming against the
+# bytes themselves, then re-run the patch gate on that proof. Called from build_rv's download
+# loop after the package check has accepted the artifact and after any hand-pinned version
+# code has been honoured, so the staged file (and the bundle it arrived in, if any) is
+# re-keyed to the versionName its own manifest carries and the cache name, the cache-repo
+# upload and the manifest all describe what was fetched instead of what was asked for.
+#
+# This used to run for the direct source only, on the reasoning that a bare URL states
+# nothing about itself. A store shipping several flavours of one number is no better able to
+# answer a suffixed request: run 41314721427 asked Proton Lumo 2.1.5-nogms, APKMirror has no
+# nogms build at all, and its 2.1.5-gms bundle was taken for one because the search drops the
+# suffix and both flavours share versionCode 79. The patch bundle pins version NAMES, so the
+# patcher then found no target and applied zero patches to a re-signed stock app that shipped
+# under the requested label. The mismatch is a property of the file, not of where it came
+# from, so every source goes through here.
+#
+# Reads and writes the caller's build_rv scope (version, version_f, vc_infix,
+# target_version_code, stock_apk, all_apk, cached_stock_apk, cached_all_apk,
+# downloaded_vc, _unsupported_bytes, args): bash's dynamic scope is what lets the rename
+# survive the call. Never invoke it inside a command substitution.
+# $1=source label (names the message; 'direct' alone re-keys the versionCode and drops its
+#    own URL on a miss, because a store keeps serving the version the label asked for)
+# $2=versionName read off the artifact (empty is "cannot judge", and changes nothing)
+# rc 0 the build continues, re-keyed or already honest
+# rc 2 the artifact was discarded because its true version has no patch to apply: the scope
+#    is restored to what was asked for and the caller must move to the next source.
+_rekey_to_bytes() {
+	local dl_p=$1 downloaded_ver=$2
+	[ -n "$downloaded_ver" ] || return 0
+	local _d_ver_f
+	_d_ver_f=$(_ver_key "$downloaded_ver")
+	# Only the direct source re-keys the versionCode: a bare link claims no code, while a
+	# store row has already been checked against the target, and rewriting the infix for every
+	# source would rename the cache entry of any app whose bundle declares no code at all.
+	local _d_vc_infix="$vc_infix"
+	if [ "$dl_p" = direct ]; then
+		downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
+		_d_vc_infix="${downloaded_vc:+-$downloaded_vc}"
+	fi
+	if [ "$_d_ver_f" != "$version_f" ] || [ "$_d_vc_infix" != "$vc_infix" ]; then
+		local _d_keep_version="$version" _d_keep_version_f="$version_f" \
+			_d_keep_vc_infix="$vc_infix" _d_keep_target="$target_version_code" \
+			_d_keep_all="$all_apk" _d_keep_cached="$cached_stock_apk" \
+			_d_keep_cached_all="$cached_all_apk"
+		pr "'${dl_p}' serves '$pkg_name' v${_d_ver_f}${_d_vc_infix:+ (${_d_vc_infix#-})} instead of v${version_f}${vc_infix:+ (${vc_infix#-})}; re-keying the artifact"
+		# Substitute the label inside the staged path instead of composing a .apk name, so the
+		# file keeps the extension it arrived with: morphe passthrough carries the vendor bundle
+		# (.apkm/.xapk/.apks), and a hardcoded .apk would leave that bundle under the old label
+		# for the sidecar scan to adopt as a second artifact.
+		local _d_new="${stock_apk/-${version_f}${vc_infix}-/-${_d_ver_f}${_d_vc_infix}-}"
+		if [ "$_d_new" != "$stock_apk" ]; then
+			mv -f "$stock_apk" "$_d_new" 2> /dev/null || true
+			local _d_base="${stock_apk%.*}" _d_newbase="${_d_new%.*}" _d_bext
+			for _d_bext in xapk apkm apks bundle; do
+				if [ -e "${_d_base}.${_d_bext}" ] && [ "${_d_base}.${_d_bext}" != "$stock_apk" ]; then
+					mv -f "${_d_base}.${_d_bext}" "${_d_newbase}.${_d_bext}" 2> /dev/null || true
+				fi
+			done
+			stock_apk="$_d_new"
+		fi
+		version="$downloaded_ver"
+		version_f="$_d_ver_f"
+		vc_infix="$_d_vc_infix"
+		all_apk="${apk_dl_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
+		cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-${arch_f}.apk"
+		cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
+		if [ "$_vc_pinned_by_config" != true ] && [ "$dl_p" = direct ]; then
+			target_version_code="$downloaded_vc"
+		fi
+		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}" "${args[included_patches]:-}"; then
+			wpr "'${dl_p}' v${version_f} of '$pkg_name' has no compatible patches; dropping the source so another can serve v${_d_keep_version_f}"
+			rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".* "${stock_apk%.*}".*
+			# A version the bytes carry and the patch set refuses is the patch set's news, not
+			# the store's: it goes to the _np record, which names it under bytesVersion, instead
+			# of the download record that asks a human to upload a file that is already on disk.
+			_unsupported_bytes+="${_unsupported_bytes:+ }${version_f}"
+			version="$_d_keep_version"
+			version_f="$_d_keep_version_f"
+			vc_infix="$_d_keep_vc_infix"
+			target_version_code="$_d_keep_target"
+			stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}${vc_infix}-${arch_f}.apk"
+			all_apk="$_d_keep_all"
+			cached_stock_apk="$_d_keep_cached"
+			cached_all_apk="$_d_keep_cached_all"
+			if [ "$dl_p" = direct ]; then args[direct_dlurl]=""; fi
+			return 2
+		fi
+	fi
+	return 0
+}
+
 # Classify the entries of one zip archive into build-arch tokens, one per line, empty
 # when it holds no ABI-specific content. Fails when the file cannot be listed at all.
 _abis_of_listing() { # $1=apk or bundle
@@ -5603,6 +5716,10 @@ build_rv() {
 	# human to upload one is noise; a fetch no source served is exactly that request.
 	local _no_patch_versions=""
 	local _dl_attempted=""
+	# VersionNames that were fetched successfully and then refused because the artifact's own
+	# bytes carry a version no patch covers. Kept apart from _no_patch_versions (which means
+	# the gate refused the *label* before any transfer) so the record can name the difference.
+	local _unsupported_bytes=""
 	
 	for curr_resolved_version in "${all_resolved_versions[@]}"; do
 		resolved_version="$curr_resolved_version"
@@ -5875,14 +5992,24 @@ build_rv() {
 			local check_apk=""
 			[ -f "$stock_apk" ] && check_apk="$stock_apk"
 			[ -z "$check_apk" ] && [ -f "$all_apk" ] && check_apk="$all_apk"
-			if [ -n "$check_apk" ] && [ -n "$target_version_code" ]; then
-				local cached_vc
-				cached_vc=$(_meta_field_of "$check_apk" versionCode) || true
-				if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
-					pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
-					[ "$check_apk" != "$all_apk" ] && rm -f "$check_apk"
+			if [ -n "$check_apk" ]; then
+				# The versionName is judged first because a wrong one is a false name: the entry and
+				# its sidecars go, so no sibling arch adopts the lie either. A wrong versionCode below
+				# only says "not what this target wants", which leaves the file valid for someone else.
+				if _cached_identity_disagrees "$check_apk" "$version_f"; then
+					pr "Cached file for '$pkg_name' is not the '$version_f' its name claims. Cache invalidated."
+					rm -f "$check_apk" "${check_apk%.apk}".* "${check_apk%.*}".*
 					stock_apk=""
 					all_apk=""
+				elif [ -n "$target_version_code" ]; then
+					local cached_vc
+					cached_vc=$(_meta_field_of "$check_apk" versionCode) || true
+					if [ -n "$cached_vc" ] && [ "$cached_vc" != "$target_version_code" ]; then
+						pr "Cached APK for '$pkg_name' has versionCode '$cached_vc', but target requires '$target_version_code'. Cache invalidated."
+						[ "$check_apk" != "$all_apk" ] && rm -f "$check_apk"
+						stock_apk=""
+						all_apk=""
+					fi
 				fi
 			fi
 
@@ -6019,65 +6146,12 @@ build_rv() {
 							fi
 						fi
 
-						# A direct URL carries no identity in its text, so its bytes decide it here,
-						# after the package check has proved the artifact and after any hand-pinned
-						# version code has been honoured: the staged file (and the bundle it arrived
-						# in, if any) is re-keyed to the versionName and versionCode read off it, so the
-						# cache name, the upload and the manifest describe what was actually fetched
-						# instead of what the link's filename claimed. Nothing above this point mutates
-						# state when it rejects, and nothing re-keyed here is left behind if the re-key
-						# turns out to be unbuildable: the version can move out from under the
-						# compatibility gate that ran before the download, so that gate is re-run on the
-						# true version, an unsupported live build is never shipped, its fetch is
-						# discarded, and the version-selecting sources are handed the original version
-						# back to serve.
-						if [[ "$dl_p" == "direct" ]] && [ -n "$downloaded_ver" ]; then
-							downloaded_vc=$(_meta_field_of "$stock_apk" versionCode) || true
-							local _d_ver_f=${downloaded_ver// /}
-							_d_ver_f=${_d_ver_f#v}
-							local _d_vc_infix="${downloaded_vc:+-$downloaded_vc}"
-							if [ "$_d_ver_f" != "$version_f" ] || [ "$_d_vc_infix" != "$vc_infix" ]; then
-								local _d_keep_version="$version" _d_keep_version_f="$version_f" \
-									_d_keep_vc_infix="$vc_infix" _d_keep_target="$target_version_code" \
-									_d_keep_all="$all_apk" _d_keep_cached="$cached_stock_apk" \
-									_d_keep_cached_all="$cached_all_apk"
-								pr "Direct URL serves '$pkg_name' v${_d_ver_f}${_d_vc_infix:+ (${downloaded_vc})} instead of v${version_f}${vc_infix}; re-keying the artifact"
-								local _d_new="${apk_dl_dir}/${pkg_name}-${_d_ver_f}${_d_vc_infix}-${arch_f}.apk"
-								if [ "$_d_new" != "$stock_apk" ]; then
-									mv -f "$stock_apk" "$_d_new" 2>/dev/null || true
-									local _d_bext
-									for _d_bext in xapk apkm apks bundle; do
-										if [ -e "${stock_apk%.apk}.${_d_bext}" ]; then
-											mv -f "${stock_apk%.apk}.${_d_bext}" "${_d_new%.apk}.${_d_bext}" 2>/dev/null || true
-										fi
-									done
-									stock_apk="$_d_new"
-								fi
-								version="$downloaded_ver"
-								version_f="$_d_ver_f"
-								vc_infix="$_d_vc_infix"
-								all_apk="${apk_dl_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
-								cached_stock_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-${arch_f}.apk"
-								cached_all_apk="${apk_cache_dir}/${pkg_name}-${version_f}${vc_infix}-all.apk"
-								if [ "$_vc_pinned_by_config" != true ]; then
-									target_version_code="$downloaded_vc"
-								fi
-								if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}" "${args[included_patches]:-}"; then
-									wpr "The direct URL's v${version_f} of '$pkg_name' has no compatible patches; dropping the source so the versioned sources can serve v${_d_keep_version_f}"
-									rm -f "$stock_apk" "${stock_apk%.apk}".* "${stock_apk}".*
-									version="$_d_keep_version"
-									version_f="$_d_keep_version_f"
-									vc_infix="$_d_keep_vc_infix"
-									target_version_code="$_d_keep_target"
-									stock_apk="${apk_dl_dir}/${pkg_name}-${version_f}${vc_infix}-${arch_f}.apk"
-									all_apk="$_d_keep_all"
-									cached_stock_apk="$_d_keep_cached"
-									cached_all_apk="$_d_keep_cached_all"
-									args[direct_dlurl]=""
-									continue
-								fi
-							fi
-						fi
+						# The name this artifact will go on carrying is decided from its own bytes,
+						# and the patch gate runs again on the version those bytes name: see
+						# _rekey_to_bytes (and docs/build-engine.md, download gates). rc 2 means the file
+						# was discarded because nothing covers the version it really is, so the scope is
+						# already restored and the next source gets its turn at the asked-for version.
+						_rekey_to_bytes "$dl_p" "$downloaded_ver" || continue
 					fi
 					local _vapk="$stock_apk"
 					if ! verify_downloaded_apk "$_vapk" "$pkg_name" "$dl_p"; then
@@ -6216,18 +6290,21 @@ build_rv() {
 	version="$final_version"
 	
 	if [ ! -f "$stock_apk" ]; then
-		if [ -z "$_dl_attempted" ] && [ -n "$_no_patch_versions" ]; then
-			# Nothing was fetched: the patch set refused every supported version (or
-			# annotated none for this arch). Reporting this as an exhausted download
-			# asks a human to upload an APK that was never the problem.
-			local _tried_versions
+		if [ -n "$_no_patch_versions" ] && { [ -z "$_dl_attempted" ] || [ -n "$_unsupported_bytes" ]; }; then
+			# Nothing survived this build because of the patch set: either it refused every
+			# supported version before a transfer (or annotated none for this arch), or a source
+			# answered and its artifact's own versionName was uncovered. Reporting either as an
+			# exhausted download asks a human to upload an APK that was never the problem; the
+			# bytesVersion column says which of the two the reader is looking at.
+			local _tried_versions _bytes_versions
 			_tried_versions=$(printf '%s' "${_no_patch_versions# }" | tr -s ' ' ',')
-			epr "ERROR: No supported version of '${table}' has patches to apply from '${args[patches_src]:-${args[cli_source]:-}}' (tried: ${_tried_versions})."
+			_bytes_versions=$(printf '%s' "${_unsupported_bytes# }" | tr -s ' ' ',')
+			epr "ERROR: No supported version of '${table}' has patches to apply from '${args[patches_src]:-${args[cli_source]:-}}' (tried: ${_tried_versions}${_bytes_versions:+, fetched: ${_bytes_versions}})."
 			write_no_patches_failure_descriptor "$(failure_slug "$table")" "$table" \
 				"$_tried_versions" \
 				"${last_resolved_version:-${resolved_version:-$version_mode}}" "$(parse_arch_mapping "${args[version_code]:-}" "${arch_f:-}")" \
 				"${arch_f:-}" "${args[patches_src]:-${args[cli_source]:-}}" "$pkg_name" \
-				"${args[changelog_url]%% *}"
+				"${args[changelog_url]%% *}" "$_bytes_versions"
 			return 0
 		fi
 		epr "ERROR: Could not download '${table}' after trying all supported versions."

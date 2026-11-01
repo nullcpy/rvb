@@ -186,8 +186,11 @@ Step order, with the reason each is where it is:
    resolved and the build aborts before the plain descriptor exists; rendered in a Patch
    Bundle Unreadable section naming both the bundle and the CLI), apps the patch set
    **refused for every supported version** (`<slug>_np.json`: the tried versions and
-   the bundle link, and deliberately no APK search links, since nothing was ever
-   fetched), and apps whose **download sources were all exhausted**
+   the bundle link, and deliberately no APK search links, since uploading a file is not
+   what fixes it. Its optional `bytesVersion` names a version that was fetched and then
+   refused, rendered as "file is `vY`" so a wrong-flavour store answer reads differently
+   from a bundle that never covered the version), and apps whose **download sources were all
+   exhausted**
    (`<slug>_dl.json`, a request to upload the APK to the cache repo manually), plus a
    link to the run. A slug that has a build record has its `_dl`/`_np`/`_pf`/`_lb` twins
    dropped, so an app is reported once. When it sends, it sets the job output

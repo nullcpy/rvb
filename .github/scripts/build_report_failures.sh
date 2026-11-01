@@ -16,7 +16,9 @@
 #   <slug>_dl.json a build whose download sources were all exhausted
 #   <slug>_np.json a build the patch set refused for every supported version, so no
 #                  APK was ever fetched (the dl record must not cover it: asking for a
-#                  manual upload of a file nobody wanted is noise)
+#                  manual upload of a file nobody wanted is noise). Its optional
+#                  bytesVersion column says a file WAS fetched and its own versionName is
+#                  what the set refuses, which reads differently from a version nobody made.
 #   <slug>_lb.json a build whose patch bundle could not be LISTED at all (the CLI's
 #                  list-patches itself aborted, e.g. the bundle was built against a
 #                  different patcher library than the CLI ships). Unlike _np, no version
@@ -179,7 +181,10 @@ for json in "$FAILURES_DIR"/*_dl.json; do
 done
 
 # Patch-compatibility rejections: no APK was fetched, so the "version" slot carries the
-# versions the bundle refused and the patches slot names the bundle to fix.
+# versions the bundle refused and the patches slot names the bundle to fix. When a source
+# did answer and the artifact's own versionName is what the bundle refuses, the record also
+# carries bytesVersion, and the line says so: "nobody made this build" and "the store served
+# a different flavour of it" need different fixes.
 declare -A NREC NORDERSET
 NORDER=""
 for json in "$FAILURES_DIR"/*_np.json; do
@@ -192,10 +197,11 @@ for json in "$FAILURES_DIR"/*_np.json; do
 	ver="$(printf '%s' "$tried" | tr ',' '\n' | sed -e 's/^v//' -e '/^$/d' -e 's/^/v/' | paste -sd ' ' -)"
 	vc="$(jq -r '.vc // empty' "$json")"
 	patch_url="$(jq -r '.patch_url // empty' "$json")"
+	bytes="$(jq -r '.bytesVersion // empty' "$json")"
 	base="$(app_base "$app" "$arch")"
-	# Columns: arch|ver|vc|log|patches|pkg|patch_url; the log is absent because
+	# Columns: arch|ver|vc|log|patches|pkg|patch_url|bytes; the log is absent because
 	# build_rv returned clean, and patch_url names the bundle release that refused.
-	NREC[$base]+="${arch}|${ver}|${vc}||${patches}|${pkg}|${patch_url}${NL}"
+	NREC[$base]+="${arch}|${ver}|${vc}||${patches}|${pkg}|${patch_url}|${bytes}${NL}"
 	[ -z "${NORDERSET[$base]:-}" ] && { NORDER+="${base}${NL}"; NORDERSET[$base]=1; }
 done
 
@@ -251,9 +257,11 @@ search_links() { # $1=pkg $2=base $3=ver(label, maybe 'vX')
 # modes list each arch as "arch `vX (vc)`: <link>"; build and lb link the log, download
 # links the search engines, np links the patch bundle that refused the versions. Build and
 # lb add a Patches line naming the failing bundle; lb additionally names the CLI, since
-# an unreadable bundle is a CLI↔bundle mismatch.
+# an unreadable bundle is a CLI↔bundle mismatch. An 8th blob column (bytes) is the
+# versionName read off an artifact that was fetched and then refused: it is appended to the
+# version span as ", file is `vY`" and stays empty for every mode that never held a file.
 render_app_group() { # $1=base $2=blob $3=mode
-	local base=$1 blob=$2 mode=$3 out arch ver vc log patches pkg patch_url tok links cli
+	local base=$1 blob=$2 mode=$3 out arch ver vc log patches pkg patch_url bytes tok links cli
 	out="📱 *$(md_clean "$base")*"
 	if [ "$mode" = build ] || [ "$mode" = lb ]; then
 		patches=$(uniq_col 5 "$blob" | head -1)
@@ -265,9 +273,10 @@ render_app_group() { # $1=base $2=blob $3=mode
 			[ -n "${VCFB[$base]:-}" ] && out+="${NL}  ╰ version-code arch fallback already tried; genuine incompatibility (not retried)"
 		fi
 	fi
-	while IFS='|' read -r arch ver vc log patches pkg patch_url; do
+	while IFS='|' read -r arch ver vc log patches pkg patch_url bytes; do
 		[ -z "$arch" ] && continue
 		tok="$(arch_token "$ver" "$vc")"
+		[ -n "${bytes:-}" ] && tok="${tok}, file is \`v${bytes#v}\`"
 		if [ "$mode" = build ] || [ "$mode" = lb ]; then
 			[ -z "$log" ] && { out+="${NL}  ╰ ${arch}${tok:+ ${tok}}"; continue; }
 			links="[Log](${log})"

@@ -49,6 +49,9 @@ abort — see [ci-pipelines.md](ci-pipelines.md#the-build-job-buildyml).
   means the opposite: no source failed and no APK is missing, the patch set has
   nothing to apply for this version set or this arch, so the report names the bundle
   instead of asking for an upload ([decisions/0009](decisions/0009-effective-patch-set-decides-compatibility.md)).
+  Its optional `bytesVersion` column says a file *was* fetched and its own `versionName` is
+  what the set refuses (the `_rekey_to_bytes` discard): the remedy is still the bundle or the
+  source, never a manual upload, so it stays out of `_dl`.
 - **Bundle unreadable** — the patch CLI could not **list** the bundle at all: `list-patches`
   itself aborted (run 39786888211: `MorpheApp/morphe-patches v1.48.0`, compiled against
   `morphe-patcher 2.0.0`, loaded by the `morphe-desktop v1.18.1` CLI that still ships
@@ -244,7 +247,12 @@ for adding surface without a measured gain
    `RVB_MORPHE_PASSTHROUGH=true` (morphe merges natively, and some APKs misbehave
    after `apkeditor`'s rewrite + re-sign); otherwise `merge_splits` flattens them.
    `verify_downloaded_apk` then checks the payload really is the requested
-   package/version/arch before anything is patched. An **arch-honesty gate** follows:
+   package/version/arch before anything is patched. `_rekey_to_bytes` runs at that point
+   for every source: the name the artifact will carry is taken from its own `versionName`
+   and the patch gate re-checks that version, so a store that served a different flavour of
+   the requested number cannot leave a build labelled for a version it is not
+   ([decisions/0012](decisions/0012-direct-source-identity-comes-from-its-artifact.md),
+   widened to all sources). An **arch-honesty gate** follows:
    the artifact's real ABIs are read off its bytes (`_artifact_abis`) and, unless it
    carries the requested arch or is universal/arch-agnostic, the download is rejected
    and the run falls through to the next source — the arch goes unbuilt if no source
@@ -363,15 +371,29 @@ Supporting machinery:
   `nativecode` list — measured over a 1400-app repo: 2964 released entries, no ABI-suffixed
   file names, and only two names deviating from the grammar (author quirks), which is why
   the index form never reconstructs a name ([decisions/0013](decisions/0013-an-fdroid-source-asks-the-repo-what-it-publishes.md)).
-- **A direct link's version belongs to the vendor** — the artifact is re-keyed to the
-  version and versionCode read off its bytes *before* the version-code and arch gates
-  judge it, and the patch-compatibility gate is then re-run on that version (the one
-  that ran before the download judged a version the link never served). A live build the
-  patch bundle does not support therefore drops the direct source, discards the fetch,
-  and leaves the version-selecting sources to serve the resolved version
-  ([decisions/0012](decisions/0012-direct-source-identity-comes-from-its-artifact.md));
-  a versionCode written by hand in `version-code` survives as an order and still
-  rejects the artifact.
+- **An artifact's version belongs to its bytes** — the staged file is re-keyed by
+  `_rekey_to_bytes` to the `versionName` read off its manifest *before* the version-code,
+  signature and arch gates finish judging it, and the patch-compatibility gate is then
+  re-run on that version (the one that ran before the download judged a version the source
+  never served). A build the patch bundle does not support therefore drops that source,
+  discards the fetch, records the version in the `_np` record's `bytesVersion`, and leaves
+  the remaining sources to serve the version the label asked for. This began as the direct
+  source's rule ([decisions/0012](decisions/0012-direct-source-identity-comes-from-its-artifact.md))
+  and now applies to every source, because the mismatch is a property of the file: a patch
+  bundle pins version *names*, and a store shipping two flavours of one number under one
+  versionCode cannot answer a suffixed request. Run 41314721427 is the case — Proton Lumo
+  was asked as `2.1.5-nogms`, APKMirror ships only `2.1.5-gms` (same code 79), and the
+  patcher applied zero patches to an artifact still named `-nogms`. Only `direct` re-keys
+  the versionCode as well, since a bare link claims no code while a store row has already
+  been checked against the target; a versionCode written by hand in `version-code` survives
+  as an order and still rejects the artifact.
+- **A cache hit is judged by the same name test** — `_cached_identity_disagrees` reads the
+  cached file's `versionName` before the loop adopts it (a cache hit skips every fetch
+  gate). A label the bytes deny is a false name, so the entry and its sidecars are deleted
+  and the source loop re-fetches; an unreadable `versionName` is *not* treated as a denial,
+  because aapt fails on some vendor bundles and reading that as a lie would re-download
+  every artifact on every run. A wrong `versionCode` alone stays the softer "not what this
+  target wants" case: the arch copy is dropped, the shared blob is left for a sibling.
 - **Anti-bot routing** — a Cloudflare-bypass sidecar (`CF_SOLVER_URL`, the
   `ghcr.io/sarperavci/cloudflarebypassforscraping` service in `build.yml`), asked
   about the **effective URL after redirects**, not the request URL; `curl_cffi`
