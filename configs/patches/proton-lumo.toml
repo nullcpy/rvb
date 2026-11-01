@@ -6,7 +6,7 @@ brand = "hxreborn"
 arch = "all"
 patches-source = "hxreborn/morphe-patches"
 github-dlurl = "https://github.com/ProtonLumo/android-lumo"
-github-regex = "lumo-v{version}-nogms-release\\.apk"
+github-regex = 'lumo-v{version}-release\.apk'
 
 
 
