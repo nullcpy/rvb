@@ -276,14 +276,14 @@
       ]
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
-      "hash": "67a68b3eacd061b58247c0f9b80835e8",
+      "hash": "1df41a2e06cea9d3fcc89f3f48a3e02d",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a": {
-      "hash": "0e0702ce8592e897fcc65bb5acb32e3c",
+      "hash": "a92c0a29fc6ff4e2ec4806c1c66cd91e",
       "kinds": [
         "apk"
       ]
@@ -367,6 +367,20 @@
     },
     "youtube-morphe-experimental-v21.44.528-arm-v7a": {
       "hash": "f15ed4f2bc825c5234d2da2a223d2ff9",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm-v7a": {
+      "hash": "2e76124bf5aad5b0c3eec9cbacdd9310",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm64-v8a": {
+      "hash": "d73181c8cc7ea31680d597dfa0d7ac2f",
       "kinds": [
         "apk",
         "module"
