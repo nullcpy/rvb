@@ -1,0 +1,14 @@
+[AdvancedDownloadManager-oyasumi]
+enabled = true
+pkg-name = "com.dv.adm"
+app-name = "Advanced Download Manager"
+brand = "oyasumi"
+arch = "all"
+patches-source = "dunecache/oyasumi-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/admtorrent/advanced-download-manager"
+uptodown-dlurl = "https://advanced-download-manager.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/advanced-download-manager-app/com.dv.adm"
+
+
+
+
