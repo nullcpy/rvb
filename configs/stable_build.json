@@ -665,7 +665,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -677,7 +677,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1616,13 +1616,14 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
+    "arch": "all",
     "patches-source": "hxreborn/morphe-patches",
     "github-dlurl": "https://github.com/ProtonLumo/android-lumo",
-    "github-regex": "lumo-v{version}-nogms-release\\.apk"
+    "github-regex": "lumo-v{version}-release\\.apk"
   },
   "ProtonMail-hxreborn": {
     "enabled": false,
@@ -2233,7 +2234,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTokLite-kurageno8156": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ss.android.ugc.tiktok.lite",
     "app-name": "TikTok Lite",
     "patches-source": "kurageno8156-lgtm/tiktok-lite-patches",
@@ -2347,7 +2348,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "TikTok",
     "brand": "bearinmindcat",
