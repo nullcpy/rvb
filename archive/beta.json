@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-01T11:48:41Z"
+    "publishedAt": "2026-11-01T14:18:52Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -368,10 +368,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -449,8 +449,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko-material-you",
@@ -465,10 +465,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -546,8 +546,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko-material-you",
@@ -562,10 +562,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -643,8 +643,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko-material-you",
@@ -659,10 +659,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -740,8 +740,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko",
@@ -756,10 +756,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -835,8 +835,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko",
@@ -851,10 +851,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -930,8 +930,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko",
@@ -946,10 +946,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1025,8 +1025,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "twitter-piko-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko",
@@ -1041,10 +1041,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1120,8 +1120,8 @@
         "Show sensitive media",
         "Support external downloader"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "youtube-anddea-v21.07.247-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -3802,10 +3802,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.piko",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3821,6 +3821,7 @@
         "Disable ads",
         "Disable analytics",
         "Disable comments",
+        "Disable disappearing messages swipe",
         "Disable discover people",
         "Disable double tap like",
         "Disable explore",
@@ -3874,8 +3875,8 @@
         "View story mentions",
         "Clone"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "instagram-piko-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko",
@@ -3890,10 +3891,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3909,6 +3910,7 @@
         "Disable ads",
         "Disable analytics",
         "Disable comments",
+        "Disable disappearing messages swipe",
         "Disable discover people",
         "Disable double tap like",
         "Disable explore",
@@ -3961,8 +3963,8 @@
         "View stories anonymously",
         "View story mentions"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "instagram-piko-module-v452.1.0.53.64-arm64-v8a.zip": {
       "name": "instagram-piko",
@@ -3977,10 +3979,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0-dev.3.mpp"
+        "crimera/patches-3.11.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.11.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3996,6 +3998,7 @@
         "Disable ads",
         "Disable analytics",
         "Disable comments",
+        "Disable disappearing messages swipe",
         "Disable discover people",
         "Disable double tap like",
         "Disable explore",
@@ -4048,8 +4051,8 @@
         "View stories anonymously",
         "View story mentions"
       ],
-      "originBuild": "260377",
-      "publishedAt": "2026-10-25T18:53:20Z"
+      "originBuild": "260434",
+      "publishedAt": "2026-11-01T14:18:04Z"
     },
     "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
