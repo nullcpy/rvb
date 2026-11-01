@@ -6,6 +6,7 @@ patches-source = "binarymend/morphe-patches"
 brand = "binarymend"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
 uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/pinterest/com.pinterest"
 
 [Pinterest-browzomje]
 enabled = true
@@ -17,3 +18,19 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destina
 uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/pinterest/com.pinterest"
 apkcombo-dlurl = "https://apkcombo.com/pinterest/com.pinterest"
+
+[Pinterest-HushPinterest]
+enabled = true
+pkg-name = "com.pinterest"
+app-name = "Pinterest"
+patches-source = "SysAdminDoc/HushPinterest"
+brand = "HushPinterest"
+dpi  = "480dpi"
+included-patches = "'Spoof signature for Google sign-in' 'GmsCore support'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/pinterest/pinterest-one-destination-for-a-world-of-inspiration"
+uptodown-dlurl = "https://pinterest.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/pinterest/com.pinterest"
+apkcombo-dlurl = "https://apkcombo.com/pinterest/com.pinterest"
+
+
+
