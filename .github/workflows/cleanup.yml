@@ -87,3 +87,19 @@ jobs:
             -d '{"event_type": "catalog-updated"}' \
             || echo "::warning::Website catalog dispatch failed; the scheduled rebuild will converge."
 
+      - name: Notify archive pages rebuild
+        continue-on-error: true
+        # One knock per run for the mirror's pages, beside the website one above. Why it
+        # lives here and why it is ungated: docs/ci-pipelines.md, Cleanup step 5.
+        env:
+          GH_TOKEN: ${{ secrets.ARCHIVE_REPO_TOKEN }}
+          ARCHIVE_REPO: ${{ vars.ARCHIVE_REPO }}
+        run: |
+          if [ -z "$ARCHIVE_REPO" ]; then
+            echo "ARCHIVE_REPO is not set; no mirror to notify."
+            exit 0
+          fi
+          gh api -X POST "repos/$ARCHIVE_REPO/actions/workflows/pages.yml/dispatches" \
+            -f ref=main \
+            || echo "::warning::Archive pages dispatch failed; the scheduled rebuild will converge."
+

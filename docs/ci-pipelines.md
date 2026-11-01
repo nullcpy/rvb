@@ -253,13 +253,10 @@ Step order, with the reason each is where it is:
     Numbered-only — no cumulative `archive/<channel>.json` and no live-existence
     filter; a metadata-push miss fails soft, never reddening a run whose files shipped.
     It appends `PUBLISHED=true` to its step output only after the PUT returns.
-11d. **Notify archive pages** (`gh api .../actions/workflows/pages.yml/dispatches`,
-    gated on that `PUBLISHED` output, `continue-on-error`): asks `nullcpy/archive` to
-    re-render its browsable site (the README surface on `main`, the Pages sources on
-    `site`) from the manifests. The rendering workflow lives in the archive
-    repo rather than here, and also runs on a schedule, so a lost dispatch delays the
-    view instead of breaking it
-    ([decisions/0016](decisions/0016-archive-pages-are-generated-markdown-on-main.md)).
+11d. **Notify archive pages** moved to `cleanup.yml` ([below](#cleanup-cleanupyml)).
+    It lived here while only one pool could publish per run; `ci.yml` calls this workflow
+    twice, so a beta and a stable night rebuilt the mirror's whole page tree twice,
+    minutes apart, for one set of manifests.
 12. **Update changelog and module update files**: `build_update_changelog.sh`
     checks out `update`, writes `changelogs/<code>.md` plus one JSON pointer per
     module zip, and lists the exact paths it created in `.updated_pointers`. The
@@ -336,6 +333,15 @@ Step order, with the reason each is where it is:
    `WEBSITE_DISPATCH_TOKEN` falling back to `APKS_REPO_TOKEN`. `continue-on-error`,
    because the site also rebuilds on its own schedule — a lost dispatch delays the
    catalogue, it does not break it.
+5. A `workflow_dispatch` to `pages.yml` on `vars.ARCHIVE_REPO`, with
+   `ARCHIVE_REPO_TOKEN` (the mirror's browsable pages are rendered from its `website`
+   branch by a workflow that lives in that repo). This is the run's single rebuild
+   knock: every manifest this run published is already on that branch by now, whatever
+   pool it came from, and the render regenerates the whole tree, so an unconditional
+   knock costs nothing extra on a quiet night and no commit either. Skipped with a
+   message when `ARCHIVE_REPO` is unset, `continue-on-error` and warning-not-failure on
+   a refused dispatch, exactly like the website knock above
+   ([decisions/0016](decisions/0016-archive-pages-are-generated-markdown-on-main.md)).
 
 ## Notify (`notify.yml`)
 

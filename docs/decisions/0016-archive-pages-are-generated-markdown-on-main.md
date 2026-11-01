@@ -3,7 +3,7 @@
 **Status:** accepted (2026-10-30)
 **Affects:** `nullcpy/archive` `main` (README surface plus chrome) and its `site`
 branch (Pages surface plus a synced chrome copy), that repo's `pages.yml`, the role
-of its `website` branch, rvb `build.yml`'s `Notify archive pages` step,
+of its `website` branch, rvb `cleanup.yml`'s `Notify archive pages rebuild` step,
 `.github/scripts/build_archive_pages.py`.
 
 ## Context
@@ -33,9 +33,13 @@ surface to its own branch:
   list like `arm64 module` `arm apk omit` when no single phrase covers it.
 - Data stays on `website` (`manifests/` and nothing else). Nothing on `main` links
   into `website`, so the data layer can change shape without breaking a visible link.
-- rvb triggers a rebuild with a `workflow_dispatch` gated on the manifest script's
-  `PUBLISHED` output; the archive's own workflow renders and commits with its own
-  `GITHUB_TOKEN`, so no cross-repo token is needed inside it.
+- rvb triggers a rebuild with a `workflow_dispatch`, once per run, from `cleanup.yml`
+  rather than from the build: `ci.yml` runs the build workflow once per pool, and the
+  render regenerates the whole tree from every manifest on `website`, so a per-build
+  knock rebuilt it twice on any night where beta and stable both published. Cleanup
+  already runs after every build, is where the website catalogue knock lives, and needs
+  no gate: the render commits only what changed. The archive's own workflow renders and
+  commits with its own `GITHUB_TOKEN`, so no cross-repo token is needed inside it.
 - Every link is absolute. A relative link 404s for a reader who is logged out of
   github.com, which is most of the audience.
 - The generator is stdlib-only and is imported through a sparse clone of rvb `main`,

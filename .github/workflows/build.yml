@@ -294,20 +294,6 @@ jobs:
           BUILD_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
         run: bash .github/scripts/push_archive_manifest.sh
 
-      - name: Notify archive pages
-        if: steps.archive_manifest.outcome == 'success' && steps.archive_manifest.outputs.PUBLISHED == 'true' && vars.ARCHIVE_REPO != ''
-        continue-on-error: true
-        # The archive repo renders its own index and per-app pages on its main branch
-        # from manifests/, and that workflow lives in that repo, not this one. Ask it
-        # to rebuild now that this build's manifest is really there: gating on the
-        # PUBLISHED output means a refused push never triggers a render of data that
-        # never arrived. A lost dispatch only delays the view, because that workflow
-        # also runs on a schedule and regenerates everything from scratch.
-        env:
-          GH_TOKEN: ${{ secrets.ARCHIVE_REPO_TOKEN }}
-          ARCHIVE_REPO: ${{ vars.ARCHIVE_REPO }}
-        run: gh api -X POST "repos/$ARCHIVE_REPO/actions/workflows/pages.yml/dispatches" -f ref=main
-
       - name: Update changelog and module update files
         id: update_changelog
         if: steps.no_change.outputs.HAS_NEW_FILES == 'true'
