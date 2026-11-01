@@ -89,6 +89,17 @@ grep -q '^- ' "$t/a/apps/youtube/README.md" \
 grep -q '<time datetime="[^"]*" data-relative>[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]</time>' \
 	"$t/a/README.md" || fail "index dates are not marked for relative rendering"
 
+# A beta build gets a test-tube after its link, stable rows stay bare, and the
+# index carries no marker. The emoji is built from bytes, and grep runs under
+# LC_ALL=C because MSYS grep silently fails to match a multibyte pattern in a
+# UTF-8 locale.
+beta=$(printf '\xf0\x9f\xa7\xaa')
+LC_ALL=C grep -q "releases/tag/260002) $beta" "$t/a/apps/youtube/README.md" \
+	|| fail "beta build 260002 is not marked"
+LC_ALL=C grep -q "releases/tag/260001) $beta" "$t/a/apps/youtube/README.md" \
+	&& fail "stable build 260001 was marked"
+LC_ALL=C grep -q "$beta" "$t/a/README.md" && fail "the index carries a beta marker"
+
 # Variant sections: Standard first, then alphabetical.
 first_two=$(awk '/^### /{print $2}' "$t/a/apps/youtube/README.md" | head -2 | tr '\n' ' ')
 [ "$first_two" = "Standard Experimental " ] \

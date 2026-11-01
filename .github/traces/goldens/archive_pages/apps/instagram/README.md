@@ -25,5 +25,5 @@
 
 | Build | Date | Version | Downloads |
 |---|---|---|---|
-| [260002](https://github.com/nullcpy/archive/releases/tag/260002) | 2026-10-08 | `10.1.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260002/instagram-hushgram-clone-v10.1.0-arm64-v8a.apk) |
+| [260002](https://github.com/nullcpy/archive/releases/tag/260002) 🧪 | 2026-10-08 | `10.1.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260002/instagram-hushgram-clone-v10.1.0-arm64-v8a.apk) |
 

@@ -54,6 +54,9 @@ ARCH_ORDER = {"arm64": 0, "arm": 1, "all": 2,
               "universal": 3, "x86_64": 4, "x86": 5}
 KIND_ORDER = {"APK": 0, "Module": 1}
 DEFAULT_VARIANT = "Standard"
+# Written as an escape so the source stays ASCII: a test-tube after the build
+# link marks a build published on the beta channel.
+BETA_MARK = " \U0001F9EA"
 
 
 def load_manifests(src_dir):
@@ -71,6 +74,7 @@ def load_manifests(src_dir):
         for fname, entry in (manifest.get("files") or {}).items():
             rows.append({
                 "tag": tag, "date": date, "stamp": stamp,
+                "channel": meta.get("channel") or "stable",
                 "app": entry.get("appKey") or "?",
                 "appName": entry.get("appName") or "?",
                 "brand": entry.get("brandKey") or "",
@@ -225,6 +229,7 @@ def render_table(tags, per_build):
     lines = ["| Build | Date | Version | Downloads |", "|---|---|---|---|"]
     for tag in sorted(tags, reverse=True):
         artifacts = per_build[tag]
+        mark = BETA_MARK if artifacts[0]["channel"] == "beta" else ""
         by_version = collections.defaultdict(list)
         for row in artifacts:
             by_version[row["version"]].append(row)
@@ -238,8 +243,8 @@ def render_table(tags, per_build):
                                  key=lambda r: ARCH_ORDER.get(r["arch"], 9))
                 cells.append(f"{kind}: " + " • ".join(arch_link(r)
                              for r in ordered))
-            lines.append(f"| {build_link(tag)} | {artifacts[0]['date']} | `{version}` "
-                         f"| {' · '.join(cells)} |")
+            lines.append(f"| {build_link(tag)}{mark} | {artifacts[0]['date']} | "
+                         f"`{version}` | {' · '.join(cells)} |")
     return lines
 
 

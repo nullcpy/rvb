@@ -25,5 +25,5 @@
 
 | Build | Date | Version | Downloads |
 |---|---|---|---|
-| [260002](https://github.com/nullcpy/archive/releases/tag/260002) | 2026-10-08 | `1.1.0` | APK: [arm](https://github.com/nullcpy/archive/releases/download/260002/prime-video-ajstrick81-android-tv-clone-v1.1.0-arm-v7a.apk) |
+| [260002](https://github.com/nullcpy/archive/releases/tag/260002) 🧪 | 2026-10-08 | `1.1.0` | APK: [arm](https://github.com/nullcpy/archive/releases/download/260002/prime-video-ajstrick81-android-tv-clone-v1.1.0-arm-v7a.apk) |
 
