@@ -1,0 +1,24 @@
+[GooglePhone-hooman]
+enabled = true
+pkg-name = "com.google.android.dialer"
+app-name = "Google Phone"
+build-mode = "both"
+brand = "hooman"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
+
+[GooglePhone-balu100]
+enabled = true
+pkg-name = "com.google.android.dialer"
+app-name = "Google Phone"
+build-mode = "both"
+brand = "balu100"
+patches-source = "balu100/GoogleDialerEnableCallRecording"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-phone"
+uptodown-dlurl = "https://google-phone.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/phone-by-google-app/com.google.android.dialer"
+apkcombo-dlurl = "https://apkcombo.com/google-phone/com.google.android.dialer"
+
