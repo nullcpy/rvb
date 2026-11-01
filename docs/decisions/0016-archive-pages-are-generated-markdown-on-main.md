@@ -21,9 +21,9 @@ mirror does not have, plus another front end to keep in step with the first.
 Do not build a catalogue site for the archive. Generate a markdown tree and commit each
 surface to its own branch:
 
-- `README.md` is the index: a table of apps with each one's last build date, and a
-  line sending anyone after the newest versions or one-tap Obtainium adds to
-  NullStore.
+- `README.md` is the index: a table of apps with each one's last build date and its
+  download total, and a line sending anyone after the newest versions or one-tap
+  Obtainium adds to NullStore.
 - `apps/<appKey>/README.md`: brand section, then variant (`Standard` first, then
   alphabetical), then one folded block per distinct patch scope, that block's own build
   table beneath it, so the list sits above the builds it describes. A block is keyed by
@@ -39,6 +39,14 @@ surface to its own branch:
   github.com, which is most of the audience.
 - The generator is stdlib-only and is imported through a sparse clone of rvb `main`,
   the same rule as `naming.py` ([0006](0006-filename-parsing-is-imported-not-mirrored.md)).
+- Download counts are the mirror's own release-asset counters, fetched by the archive
+  workflow into a `{tag: {asset: downloads}}` file and handed to the generator as
+  `--counts`, so the generator stays network-free like the manifests it reads. The
+  column is collapsed per app over every artifact on its own release and printed
+  compactly (`1.2k`, `2k`, `999`). A failed fetch costs the column and nothing else,
+  and an app missing from the map gets an empty cell, never a `0`: the mirror never
+  prunes, so an asset with no counter is an asset nobody listed, not a build nobody
+  downloaded.
 - Two surfaces come out of one pass. `README.md` is what github.com renders per
   folder, so it carries no front matter (GitHub would show it as a metadata table)
   and links at `blob/main`; it is committed to `main`. `index.md` mirrors it for
@@ -77,7 +85,8 @@ surface to its own branch:
 
 ## Verification
 
-`bash .github/traces/test_archive_pages.sh` compares against goldens, asserts two runs
-are identical, and asserts a perturbed sort key changes the output so the comparison
+`bash .github/traces/test_archive_pages.sh` compares against goldens captured with a
+counters fixture, asserts two runs are identical, asserts a run without the fixture
+loses the column, and asserts a perturbed sort key changes the output so the comparison
 cannot pass vacuously. `.github/traces/test_archive_mirror.sh` block (c) covers the
 `PUBLISHED` gate that starts the whole thing.

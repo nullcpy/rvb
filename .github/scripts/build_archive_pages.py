@@ -32,6 +32,16 @@ Layout choices that are deliberate, not incidental:
   set can appear, stop, and come back.
 - Everything is sorted, including ties, because an unstable order would make every
   regeneration rewrite files whose data did not change.
+- The index's Downloads column only appears with `--counts`, a JSON map the render
+  workflow writes after reading the mirror's own release counters. An app missing
+  from it gets an empty cell, never a 0: no data is not the same as nobody
+  downloading, and a guessed number is a claim about people we never saw.
+
+CLI:
+    --manifests DIR     required
+    --out DIR           required
+    --cap N             table rows per page, default 50
+    --counts FILE       optional {tag: {asset name: downloads}}
 
 Env:
     ARCHIVE_SITE_BASE   absolute base for README links, default the archive repo's main
@@ -91,6 +101,45 @@ def load_manifests(src_dir):
             })
     rows.sort(key=lambda r: r["tag"], reverse=True)
     return rows
+
+
+def load_counts(path):
+    """`{release tag: {asset name: downloads}}`, as written by the render workflow.
+
+    A path that cannot be read is a hard error rather than a missing column: the
+    workflow only passes the flag when its own fetch succeeded, so quietly going
+    empty here would publish an index whose numbers are all blank.
+    """
+    try:
+        with open(path, encoding="utf-8") as fh:
+            raw = json.load(fh)
+        return {str(tag): {str(name): int(n) for name, n in files.items()}
+                for tag, files in raw.items()}
+    except (OSError, ValueError, AttributeError, TypeError) as exc:
+        raise SystemExit(f"counts file {path} is unreadable: {exc}")
+
+
+def compact(n):
+    """Downloads as a narrow label: 475, 1.2k, 12.9k, 3.1M.
+
+    Four digits and up collapse to one decimal, and a round thousand drops its
+    `.0`, so 2,000 reads as `2k` rather than `2.0k`.
+    """
+    for unit, suffix in ((1000000, "M"), (1000, "k")):
+        if n >= unit:
+            return f"{n / unit:.1f}".rstrip("0").rstrip(".") + suffix
+    return str(n)
+
+
+def app_downloads(rows, counts):
+    """Downloads per app key, summed over every artifact on its own release."""
+    totals = {}
+    for r in rows:
+        n = counts.get(r["tag"], {}).get(r["fname"])
+        if n is None:
+            continue
+        totals[r["app"]] = totals.get(r["app"], 0) + n
+    return totals
 
 
 def signature(rows_of_build):
@@ -329,7 +378,9 @@ def render_page(app_name, items, page, total, page_url, front_matter):
     return "\n".join(lines) + "\n"
 
 
-def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
+def render_index(app_names, last_build, app_url, nullstore_url, front_matter,
+                 downloads=None):
+    counted = downloads is not None
     lines = []
     if front_matter:
         lines += ["---", "title: NullStore Archive", "---", ""]
@@ -340,17 +391,21 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter):
         "versions and for one-tap Obtainium adds, use "
         f"[NullStore]({nullstore_url}).",
         "",
-        "| App | Last build |",
-        "|---|---|",
+        "| App | Last build |" + (" Downloads |" if counted else ""),
+        "|---|---|" + ("---:|" if counted else ""),
     ]
     for app_key, display in app_names:
         # The timestamp stays in the markup so github.com and a JS-less reader see
         # the date; the archive site's script computes the local relative label.
         stamp = last_build[app_key]
         date = stamp[:10]
+        cell = ""
+        if counted:
+            n = downloads.get(app_key)
+            cell = f" {compact(n)} |" if n is not None else " |"
         lines.append(
             f"| [{display}]({app_url(app_key)}) "
-            f'| <time datetime="{stamp}" data-relative>{date}</time> |')
+            f'| <time datetime="{stamp}" data-relative>{date}</time> |' + cell)
     return "\n".join(lines) + "\n"
 
 
@@ -382,10 +437,13 @@ def surfaces(site_base, pages_base):
     return out
 
 
-def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base):
+def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base,
+           counts_path=None):
     rows = load_manifests(manifest_dir)
     if not rows:
         raise SystemExit(f"no manifests found in {manifest_dir}")
+    downloads = (app_downloads(rows, load_counts(counts_path))
+                 if counts_path else None)
     by_app = collections.defaultdict(list)
     for r in rows:
         by_app[r["app"]].append(r)
@@ -418,7 +476,7 @@ def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base):
         write(os.path.join(out_dir, surface["index"]),
               render_index([(k, by_app[k][0]["appName"]) for k in ordered_apps],
                            last_build, app_link, nullstore_url,
-                           surface["front_matter"]))
+                           surface["front_matter"], downloads))
         written += 1
     return len(ordered_apps), written, len(rows)
 
@@ -430,6 +488,9 @@ def main():
     ap.add_argument("--out", required=True,
                     help="directory to write the site into")
     ap.add_argument("--cap", type=int, default=50, help="table rows per page")
+    ap.add_argument("--counts", help="JSON {tag: {asset: downloads}} for the "
+                                     "index's Downloads column; omit it and the "
+                                     "column is not rendered")
     args = ap.parse_args()
 
     # A written-in hub URL would keep advertising an old host after a move and
@@ -442,8 +503,10 @@ def main():
     pages_base = os.environ.get("ARCHIVE_PAGES_BASE", "").strip().rstrip("/")
 
     apps, pages, artifacts = build(args.manifests, args.out, args.cap,
-                                   site_base, nullstore_url, pages_base)
+                                   site_base, nullstore_url, pages_base,
+                                   args.counts)
     extra = f", pages base {pages_base}" if pages_base else ", README only"
+    extra += ", counted" if args.counts else ", uncounted"
     print(f"wrote {pages} pages for {apps} apps from {artifacts} artifacts"
           f" ({args.manifests} -> {args.out}{extra})")
 

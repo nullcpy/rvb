@@ -4,7 +4,8 @@
 # Fixtures cover the rules that are easy to break silently: brand and variant
 # section order, the folded patch list above its own build table, the whole-kind
 # delta line, a per-arch difference that must NOT be presented as a whole-kind one,
-# and page splitting with absolute navigation.
+# page splitting with absolute navigation, and the index's optional Downloads column
+# with its compact labels.
 #
 # Three separate claims, because a byte comparison alone proves little:
 #   1. output equals the committed goldens;
@@ -19,6 +20,7 @@ set -u
 cd "$(dirname "${BASH_SOURCE[0]}")/../.." || exit 1
 GEN=".github/scripts/build_archive_pages.py"
 FIX=".github/traces/fixtures/archive_pages/manifests"
+COUNTS=".github/traces/fixtures/archive_pages/counts.json"
 GOLD=".github/traces/goldens/archive_pages"
 MODE="${1:-verify}"
 fail() { echo "FAIL: $*"; exit 1; }
@@ -28,13 +30,15 @@ trap 'rm -rf "$t"' EXIT
 # Pinned so the hub URL in the goldens is the test's, not the developer's.
 export NULLSTORE_URL="https://nullstore.example/hub"
 
-run() { # $1 generator, $2 cap, $3 out
-	python3 "$1" --manifests "$FIX" --out "$3" --cap "$2" >/dev/null \
-		|| fail "generator exited non-zero ($1 cap $2)"
+run() { # $1 generator, $2 cap, $3 out, rest goes to the generator
+	local gen=$1 cap=$2 out=$3
+	shift 3
+	python3 "$gen" --manifests "$FIX" --out "$out" --cap "$cap" "$@" >/dev/null \
+		|| fail "generator exited non-zero ($gen cap $cap)"
 }
 
-run "$GEN" 50 "$t/a"
-run "$GEN" 50 "$t/b"
+run "$GEN" 50 "$t/a" --counts "$COUNTS"
+run "$GEN" 50 "$t/b" --counts "$COUNTS"
 
 if [ "$MODE" = "--capture" ]; then
 	rm -rf "$GOLD"
@@ -51,7 +55,7 @@ diff -r "$t/a" "$t/b" || fail "two runs differ; output is not deterministic"
 
 sed 's/ARCH_ORDER = {"arm64": 0, "arm": 1/ARCH_ORDER = {"arm": 0, "arm64": 1/' \
 	"$GEN" > "$t/gen.py"
-run "$t/gen.py" 50 "$t/p"
+run "$t/gen.py" 50 "$t/p" --counts "$COUNTS"
 diff -r "$t/a" "$t/p" >/dev/null \
 	&& fail "swapping the arch order changed nothing; arch sorting is not applied"
 
@@ -108,6 +112,26 @@ LC_ALL=C grep -q "releases/tag/260002) $beta" "$t/a/apps/youtube/README.md" \
 LC_ALL=C grep -q "releases/tag/260001) $beta" "$t/a/apps/youtube/README.md" \
 	&& fail "stable build 260001 was marked"
 LC_ALL=C grep -q "$beta" "$t/a/README.md" && fail "the index carries a beta marker"
+
+# The index's Downloads column, from the counters file. Each row shape is a case:
+# 1,204 collapses to 1.2k, a round 2,000 loses its .0, 999 stays plain digits, a
+# real zero prints 0, and Prime Video, which the fixture never mentions, gets an
+# empty cell rather than a false 0.
+grep -q '^| App | Last build | Downloads |$' "$t/a/README.md" \
+	|| fail "the Downloads column header is missing"
+grep -q '^|---|---|---:|$' "$t/a/README.md" \
+	|| fail "the Downloads column is not right-aligned"
+grep -q '| 1\.2k |$' "$t/a/README.md" || fail "1204 did not render as 1.2k"
+grep -q '| 2k |$' "$t/a/README.md" || fail "2000 kept its .0 instead of reading 2k"
+grep -q '| 999 |$' "$t/a/README.md" || fail "999 was not left as plain digits"
+grep -q '| 0 |$' "$t/a/README.md" || fail "a genuine zero is not printed as 0"
+grep -q '</time> | |$' "$t/a/README.md" \
+	|| fail "an app with no counters did not get a blank cell"
+# Negative control: the column is the flag's doing, not a default someone can drop
+# by accident, and dropping it leaves the index exactly as it was.
+run "$GEN" 50 "$t/nocounts"
+grep -q 'Downloads' "$t/nocounts/README.md" \
+	&& fail "the index grew a Downloads column without --counts"
 
 # Variant sections: Standard first, then alphabetical.
 first_two=$(awk '/^### /{print $2}' "$t/a/apps/youtube/README.md" | head -2 | tr '\n' ' ')

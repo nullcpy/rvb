@@ -92,15 +92,20 @@ Why the mirror exists: [decisions/0015](../../docs/decisions/0015-builds-are-mir
 
 ### `build_archive_pages.py`
 Renders the archive repo's browsable site from its `manifests/*.json`: an index
-README (an apps table with each app's last build date, plus a line pointing anyone
-after the newest versions or Obtainium adds at NullStore) and one
+README (an apps table with each app's last build date and, when `--counts` is given,
+its download total, plus a line pointing anyone after the newest versions or Obtainium
+adds at NullStore) and one
 `apps/<appKey>/README.md` per app, grouped brand then variant, with each distinct patch
 scope folded once above the build table it covers. A block is keyed by the patch set of
 every kind and arch in the build, so a patch line can carry a scope tag (`module omit`,
 `arm omit`, `arm64 only`, or an explicit audience list) whenever some artifact lacks
 it. Stdlib only, no network, and every collection sorted with a tie-break, because
 unstable order would
-rewrite files whose data did not change. `NULLSTORE_URL` is required with no
+rewrite files whose data did not change. The counters are therefore fetched by the
+workflow into a `{tag: {asset: downloads}}` map and passed as `--counts`; without the
+flag the column is not rendered at all, and an app the map never mentions gets an empty
+cell rather than a `0`, because no data is not the same as nobody downloading.
+`NULLSTORE_URL` is required with no
 default, so a hub move cannot leave a stale link advertising itself, and
 `ARCHIVE_SITE_BASE` sets the page links, which are always absolute because a
 relative link 404s for a logged-out reader. When `ARCHIVE_PAGES_BASE` is set it also
@@ -112,8 +117,9 @@ builds Jekyll from `site`. Run by the archive repo's own `pages.yml`, which impo
 from a sparse clone of `main` exactly like
 `naming.py` ([0006](../../docs/decisions/0006-filename-parsing-is-imported-not-mirrored.md),
 [0016](../../docs/decisions/0016-archive-pages-are-generated-markdown-on-main.md)).
-Regression test: `.github/traces/test_archive_pages.sh` (goldens, two-run
-determinism, and a perturbed sort key that must break the comparison).
+Regression test: `.github/traces/test_archive_pages.sh` (goldens captured with a
+counters fixture, two-run determinism, a run without the fixture that must lose the
+column, and a perturbed sort key that must break the comparison).
 
 ### `generate_release_notes.py` — the second note
 Renders `build.md` exactly as before, and when `ARCHIVE_REPO` is set also renders
