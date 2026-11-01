@@ -17,7 +17,7 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "87d2b4b98f7bed23b9b82c3fe5c844f7",
+      "com.google.android.apps.photos": "93b449d9db0044c5f5750a4441e81622",
       "shared": "cb2a7725c3365cbe6e29daf444e8c2b8"
     }
   },
@@ -371,6 +371,13 @@
       "com.fatsecret.android": "040786eb8b3f98c0ebfaa20001296e06",
       "com.soundcloud.android": "838bacba1749fd0a0586d8202441e916",
       "shared": "e6de59c97fa94ca506628d9c90047fe9"
+    }
+  },
+  "kurageno8156-lgtm/tiktok-lite-patches": {
+    "beta": {},
+    "stable": {
+      "com.ss.android.ugc.tiktok.lite": "521b10094b57b77836cd3cbc2546c3ba",
+      "shared": "beb435b015fbf6ff90f5d79ed4f4c420"
     }
   },
   "kveld9/kveld-extra-morphe-patches": {

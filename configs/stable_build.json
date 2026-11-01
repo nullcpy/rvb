@@ -1616,7 +1616,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -2232,6 +2232,17 @@
     "apkpure-dlurl": "https://apkpure.com/tiktok-app/com.zhiliaoapp.musically",
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
+  "TikTokLite-kurageno8156": {
+    "enabled": true,
+    "pkg-name": "com.ss.android.ugc.tiktok.lite",
+    "app-name": "TikTok Lite",
+    "patches-source": "kurageno8156-lgtm/tiktok-lite-patches",
+    "brand": "kurageno8156",
+    "arch": "all",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tiktok-pte-ltd/tiktok-lite-3",
+    "uptodown-dlurl": "https://tiktok-lite-musically-go.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/tiktok-lite-app/com.ss.android.ugc.tiktok.lite"
+  },
   "Truecaller-Paresh": {
     "enabled": false,
     "pkg-name": "com.truecaller",
@@ -2334,6 +2345,17 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+  },
+  "XiaomiRecorder-bearinmindcat": {
+    "enabled": true,
+    "pkg-name": "com.android.soundrecorder",
+    "app-name": "TikTok",
+    "brand": "bearinmindcat",
+    "arch": "all",
+    "patches-source": "bearinmindcat/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/xiaomi-inc/recorder-xiaomi",
+    "uptodown-dlurl": "https://asus-sound-recorder.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "YouTubeMusic-Morphe": {
     "enabled": false,
