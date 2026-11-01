@@ -665,7 +665,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -677,7 +677,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1616,14 +1616,13 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
     "patches-source": "hxreborn/morphe-patches",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/lumo-by-proton",
-    "uptodown-dlurl": "https://lumo-by-proton.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/lumo-by-proton/me.proton.android.lumo"
+    "github-dlurl": "https://github.com/ProtonLumo/android-lumo",
+    "github-regex": "lumo-v{version}-nogms-release\\.apk"
   },
   "ProtonMail-hxreborn": {
     "enabled": false,
@@ -1684,7 +1683,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
