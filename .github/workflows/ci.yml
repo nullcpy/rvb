@@ -9,6 +9,12 @@ on:
     - cron: "29 16 * * *"
     - cron: "03 20 * * *"
   workflow_dispatch:
+    inputs:
+      remove_apks:
+        description: "Optional: stock APKs to drop from the runner APK cache before building (space-separated globs, e.g. me.proton.android.lumo-2.1.5-nogms-79-all.apkm). A mislabeled cached file is otherwise restored and used for every later run. Never set on a scheduled run."
+        required: false
+        type: string
+        default: ""
 
 concurrency:
   group: ci
@@ -180,6 +186,7 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       config_file: "configs/beta_build.json"
+      remove_apks: ${{ inputs.remove_apks }}
     secrets: inherit
 
   build_stable:
@@ -188,6 +195,9 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       config_file: "configs/stable_build.json"
+      # Both pools get it: either can run alone, and the cleaned cache is saved back
+      # under a new content key either way.
+      remove_apks: ${{ inputs.remove_apks }}
     secrets: inherit
 
   trigger_cleanup:

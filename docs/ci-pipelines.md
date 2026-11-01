@@ -6,7 +6,7 @@ GitHub's limits; notify reports failures.
 
 | File | Name | Triggered by | Concurrency group |
 |---|---|---|---|
-| [ci.yml](../.github/workflows/ci.yml) | CI | `schedule` (6 UTC crons: ~4 h windows with randomized minutes), `workflow_dispatch` | `ci` |
+| [ci.yml](../.github/workflows/ci.yml) | CI | `schedule` (6 UTC crons: ~4 h windows with randomized minutes), `workflow_dispatch` (optional `remove_apks`, unset on every scheduled run) | `ci` |
 | [build.yml](../.github/workflows/build.yml) | Build | `workflow_call` only — from `ci.yml` (per pool) or `manual-ci.yml` | `build` |
 | [cleanup.yml](../.github/workflows/cleanup.yml) | Cleanup | `workflow_call`, `workflow_dispatch` | `clean` |
 | [manual-ci.yml](../.github/workflows/manual-ci.yml) | Manual CI | `workflow_dispatch` (config choice, optional `remove_apks`, `disable_dedup` checkbox) | `ci` |
@@ -123,8 +123,9 @@ forge answers again. The deliberate fail-open inside that check is recorded in
 
 ## The build job (`build.yml`)
 
-Called once per pool with `config_file` (and optional `remove_apks`, plus
-`disable_dedup` from Manual CI). Everything it needs to be reproducible lives in
+Called once per pool with `config_file` (and optional `remove_apks`, which both CI
+and Manual CI can pass, plus `disable_dedup` from Manual CI). Everything it needs to
+be reproducible lives in
 that one file, including the tuning knobs —
 `PARALLEL_JOBS: "6"` and `UPLOAD_CONCURRENCY: "12"` are workflow env values, not
 repo variables, so they are visible in PRs, survive forks, and carry git history
