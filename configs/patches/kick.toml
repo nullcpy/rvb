@@ -1,0 +1,9 @@
+[Kick-Lurk]
+enabled = true
+pkg-name = "com.kick.mobile"
+app-name = "Kick"
+brand = "Lurk"
+patches-source = "jordanwoodson/lurk-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/kick-live-streaming/kick-live-streaming"
+uptodown-dlurl = "https://com-kick-mobile.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/kick-live-streaming-app/com.kick.mobile"
