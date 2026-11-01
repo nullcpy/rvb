@@ -1,0 +1,38 @@
+# Editor defaults that match what .gitattributes and the harnesses already enforce.
+#
+# This machine checks out with core.autocrlf=true, so an editor can save a text file
+# back as CRLF and every later diff is whole-file churn that hides the real change.
+# .gitattributes normalizes at commit, so nothing has been reaching the repo wrong;
+# these rules just keep the working copy shaped like the repo and stop a save from
+# reflowing a file nobody edited.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Shell is tab-indented throughout: scripts/, module/ and the trace harnesses.
+[*.{sh,bash}]
+indent_style = tab
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.{json,jsonl,toml,html,css,svg}]
+indent_size = 2
+
+# Two trailing spaces are a markdown line break, so a save must not eat them.
+[*.md]
+trim_trailing_whitespace = false
+
+# Captured fixtures and goldens are compared byte for byte, and they are deliberately
+# imperfect: 21 of them end without a final newline because that is how the upstream
+# response or tool output came, and 5 .trace goldens keep trailing spaces that the
+# runner emitted. Saving one must never tidy it into a different file.
+[.github/traces/**]
+insert_final_newline = false
+trim_trailing_whitespace = false

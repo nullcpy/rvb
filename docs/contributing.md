@@ -65,6 +65,18 @@ Line endings are enforced by [.gitattributes](../.gitattributes): scripts, JSON,
 YAML and TOML are LF everywhere. If your editor writes CRLF into a `.sh`, the
 trace goldens will fail on byte comparison.
 
+[.editorconfig](../.editorconfig) keeps the working copy in that shape rather than
+letting a save undo it: LF, UTF-8, a final newline, tabs for shell (every script here
+is tab-indented), two spaces for YAML, JSON, HTML and CSS, four for Python. Its
+`.github/traces/**` section turns the newline and trailing-space rules off on purpose:
+21 captured fixtures end without a final newline because that is how the upstream
+response arrived, and several `.trace` goldens carry trailing spaces the runner
+emitted, so "tidying" one rewrites a byte-compared file. The part editorconfig cannot
+express is in [.vscode/settings.json](../.vscode/settings.json): the formatter is off
+for markdown, YAML, shell and JSON, where a rewrite changes behaviour rather than
+appearance (JSON state and fixtures are defined to be byte-identical to what `jq`
+writes). Python keeps its formatter.
+
 Run a build locally to see the engine work end to end. It will refuse to start
 without a signing identity, on purpose: every artifact this project produces is
 signed, and the repository ships no keystore (the template's had a public private

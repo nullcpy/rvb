@@ -1,0 +1,26 @@
+{
+  // The whitespace rules live in .editorconfig at the repo root: VS Code reads that
+  // natively and its values win over an equivalent setting here, so nothing is
+  // duplicated. This file only covers what editorconfig cannot express, which is
+  // telling the formatter to stay off file types where a rewrite changes behaviour
+  // rather than appearance. Python keeps its formatter: it corrected a real misaligned
+  // continuation line in build_archive_pages.py.
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  "[shellscript]": {
+    "editor.formatOnSave": false
+  },
+  // State and fixture JSON is byte-compared, and the canonical form is defined as
+  // identical to what jq writes. A formatter that reorders spacing would break a
+  // passing test without changing any value.
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false
+  }
+}
