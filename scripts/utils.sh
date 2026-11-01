@@ -325,6 +325,38 @@ write_patch_failure_record() {
 		> "$dir/$1_pf.json" 2> /dev/null || true
 }
 
+# write_no_applied_patches_record — record a build that the patcher completed without
+# applying anything. Not the same news as _pf (the tool aborted) or _np (the set refused
+# the version before a fetch): here the tool ran the whole pipeline over the stock APK,
+# applied zero patches, re-signed it and returned success. Publishing that ships an
+# unpatched app under a patched name, so build_rv refuses the artifact instead.
+# rc stays 0 (the per-app fail-soft), so this suffix has to survive the parent's
+# clean-return sweep exactly as _pf/_np/_dl/_lb do.
+# Settled, never retried: re-running the same engine over the same bundle and the same
+# stock APK applies the same nothing, and the fix (a bundle release or a config edit)
+# force-enables the app through its own trigger.
+# $1=slug $2=app $3=version $4=vc $5=arch $6=patches_src $7=pkg $8=patch-release-url
+write_no_applied_patches_record() {
+	[ -n "${TEMP_DIR:-}" ] || return 0
+	local dir="$TEMP_DIR/failures"
+	mkdir -p "$dir" 2> /dev/null || return 0
+	jq -n --arg type "no_patches_applied" --arg app "$2" --arg version "$3" \
+		--arg vc "$4" --arg arch "$5" --arg patches_src "$6" --arg pkg "$7" --arg patch_url "$8" \
+		'{type:$type, app:$app, version:$version, vc:$vc, arch:$arch, patches_src:$patches_src, pkg:$pkg, patch_url:$patch_url}' \
+		> "$dir/$1_npa.json" 2> /dev/null || true
+}
+
+# _patchless_build_intended — did the config deliberately ask for a build with no patches?
+# exclusive-patches turns the bundle's default set off and only included-patches can name
+# anything back, so an exclusive build that names none is a re-sign-and-rename request, not
+# a failure. inclusive-patches asks for everything the bundle offers and stays judged.
+# Reads build_rv's args scope.
+_patchless_build_intended() {
+	[ "${args[exclusive_patches]:-false}" != false ] || return 1
+	[ -z "${args[included_patches]:-}" ] || return 1
+	return 0
+}
+
 # write_unlistable_failure_descriptor — record that the patch CLI could not list the
 # patch bundle AT ALL (patches_list itself aborted, e.g. the bundle was built against
 # a different patcher library than the CLI ships, so loading any patch class throws).
@@ -6565,6 +6597,27 @@ build_rv() {
 				write_patch_failure_record "$(failure_slug "$table")" "$table" "$version_f" \
 					"$(parse_arch_mapping "${args[version_code]:-}" "$arch_f")" \
 					"$arch_f" "${args[patches_src]:-${args[cli_source]:-}}"
+				return 0
+			fi
+			# A tool that writes a machine-readable summary answers one question no log line
+			# answers as reliably: what did this run actually apply? An empty list out of that
+			# file is a real signal, not a parse miss (_applied_from_result echoes nothing when
+			# it cannot read the file), and it means the patcher walked the whole pipeline over
+			# the stock APK, applied nothing, re-signed it and returned success. That is how run
+			# 41314721427 published Proton Lumo as a patched app with zero patches on it.
+			# Refuse the artifact, not the run: this app is recorded and reported (settled, never
+			# retried - the same inputs apply the same nothing), every other app in the pool is
+			# untouched, and the unpatched bytes are deleted so neither the module stage of this
+			# build nor a later NORB reuse can adopt them.
+			if [ -n "${PATCH_RESULT_FILE:-}" ] && [ -f "$PATCH_RESULT_FILE" ] &&
+				[ "$(_applied_from_result "$PATCH_RESULT_FILE")" = "[]" ] &&
+				! _patchless_build_intended; then
+				epr "ERROR: '${table}' completed with zero patches applied from '${args[patches_src]:-${args[cli_source]:-}}' - refusing to publish an unpatched artifact."
+				write_no_applied_patches_record "$(failure_slug "$table")" "$table" "$version_f" \
+					"$(parse_arch_mapping "${args[version_code]:-}" "$arch_f")" \
+					"$arch_f" "${args[patches_src]:-${args[cli_source]:-}}" "$pkg_name" \
+					"${args[changelog_url]%% *}"
+				rm -f "$patched_apk"
 				return 0
 			fi
 		fi

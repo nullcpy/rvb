@@ -181,4 +181,39 @@ META_VERSIONNAME=""
 META_VERSIONNAME=" 2.1.5-nogms "
 ! _cached_identity_disagrees "$stock_apk" "2.1.5-nogms" || fail "surrounding spaces fooled the fold"
 
+# --- 9. the zero-patch refusal's testable half ----------------------------------
+# The gate itself sits inside build_rv (documented as not exercised by this harness), so
+# what is pinned here is its two decisions: a build whose config asked for no patches at all
+# is not a failure, and the record that reports one carries the fields the notification
+# needs. A result file listing nothing applied is _applied_from_result's "[]"; an unreadable
+# file is nothing, which must never read as zero patches.
+result="$t/empty-result.json"; printf '{"appliedPatches":[],"failedPatches":[]}\n' > "$result"
+broken="$t/no-result.json"; printf 'not json' > "$broken"
+[ "$(_applied_from_result "$result")" = "[]" ] || fail "empty appliedPatches did not read as []"
+[ -z "$(_applied_from_result "$broken")" ] || fail "unparsable result file invented an applied list"
+[ -z "$(_applied_from_result "$t/absent.json")" ] || fail "absent result file answered anyway"
+
+declare -A args=([exclusive_patches]="false" [included_patches]="")
+! _patchless_build_intended || fail "a normal build was excused from having patches"
+args=([exclusive_patches]="true" [included_patches]="")
+_patchless_build_intended || fail "a deliberate re-sign build was treated as a failure"
+args=([exclusive_patches]="true" [included_patches]="'Rename package'")
+! _patchless_build_intended || fail "an exclusive build that names a patch was excused"
+args=([exclusive_patches]="'jkennethcarino/adobo'" [included_patches]="")
+_patchless_build_intended || fail "a bundle-scoped exclusive build (a source list) was not excused"
+
+TEMP_DIR="$t"
+write_no_applied_patches_record someapp "SomeApp-brand (arm64-v8a)" "3.4.5" "345" "arm64-v8a" \
+	"o/r/morphe-patches" "com.example" "https://github.com/o/r/releases/tag/v1.68.0"
+rec="$TEMP_DIR/failures/someapp_npa.json"
+[ -f "$rec" ] || fail "no _npa record was written"
+jq -e '.type == "no_patches_applied" and .arch == "arm64-v8a" and .patches_src == "o/r/morphe-patches"
+     and (.patch_url | endswith("/v1.68.0"))' "$rec" > /dev/null ||
+	fail "record fields wrong: $(cat "$rec")"
+
+# --- 10. a patcher abort's twin does not hide it ----------------------------------
+# The record suffix is what survives build_rv's rc-0 clean return, so it must be its own
+# file name and not the plain <slug>.json the parent deletes.
+[ ! -e "$TEMP_DIR/failures/someapp.json" ] || fail "_npa record reused the plain build-record name"
+
 echo "artifact identity: all cases passed"

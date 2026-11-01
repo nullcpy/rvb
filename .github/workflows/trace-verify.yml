@@ -21,6 +21,10 @@ on:
       # rather than surface as a source whose pre-release tags get recorded as its
       # stable head.
       - ".github/scripts/channels.py"
+      # The failure report is tested by test_failure_report.sh, which runs the script for
+      # real against a stubbed curl and asserts the sections a maintainer reads, so a change
+      # to it must run the suite rather than only surface in the next build's notification.
+      - ".github/scripts/build_report_failures.sh"
       - ".github/scripts/sync_patch_sources.py"
       - ".github/scripts/compile_patch_configs.py"
       - ".github/traces/**"
@@ -60,4 +64,5 @@ jobs:
           bash .github/traces/test_channel_markers.sh
           bash .github/traces/test_archive_mirror.sh
           bash .github/traces/test_archive_pages.sh
+          bash .github/traces/test_failure_report.sh
           bash .github/traces/test_version_watch.sh

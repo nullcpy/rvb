@@ -19,18 +19,26 @@
 #                  manual upload of a file nobody wanted is noise). Its optional
 #                  bytesVersion column says a file WAS fetched and its own versionName is
 #                  what the set refuses, which reads differently from a version nobody made.
+#   <slug>_npa.json a build the patcher completed while applying **zero** patches, judged
+#                  from its own machine-readable result file. The artifact is refused rather
+#                  than published (an unpatched app under a patched name is worse than no
+#                  build), so this record is the only trace the app left. Settled like _np:
+#                  the same inputs apply the same nothing, so retrying spends a slot to
+#                  learn nothing.
 #   <slug>_lb.json a build whose patch bundle could not be LISTED at all (the CLI's
 #                  list-patches itself aborted, e.g. the bundle was built against a
 #                  different patcher library than the CLI ships). Unlike _np, no version
 #                  is ever resolved, so the build aborts before the plain descriptor is
 #                  written; the parent relocates the captured log to <slug>_lb.log so the
 #                  abort reason (the JVM stack trace) is linkable.
-# Records are regrouped by app base name and rendered in four parts: a Build
+# Records are regrouped by app base name and rendered in five parts: a Build
 # Failed section (per-arch versionCode + the log link; both the <slug>.json and
 # the <slug>_pf.json survivors land here), a Patch Bundle Unreadable section
 # (<slug>_lb.json survivors + the log link), a Download Failures section
-# (per-arch versionCode + search-engine links for the APK) and a Patch Compatibility
-# section (the versions the bundle refused + the bundle link to complain to). Each arch
+# (per-arch versionCode + search-engine links for the APK), a Patch Compatibility
+# section (the versions the bundle refused + the bundle link to complain to) and a CLI
+# Issue section (<slug>_npa.json survivors: the run applied nothing, so nothing shipped).
+# Each arch
 # carries its own version so an app that resolved a different version per arch
 # never renders a wrong shared version. A _pf twin whose plain <slug>.json also
 # survived is dropped: that build aborted hard and is already reported with its log.
@@ -103,7 +111,7 @@ declare -A BREC DREC BORDERSET DORDERSET VCFB
 BORDER=""; DORDER=""
 shopt -s nullglob
 for json in "$FAILURES_DIR"/*.json; do
-	case "$json" in *_dl.json | *_np.json | *_pf.json | *_lb.json) continue ;; esac
+	case "$json" in *_dl.json | *_np.json | *_npa.json | *_pf.json | *_lb.json) continue ;; esac
 	slug="$(basename "${json%.json}")"
 	# A cascaded case (download exhausted, or the patch set refused, then the build
 	# itself failed) is reported once, as the build failure; drop its twins.
@@ -113,6 +121,11 @@ for json in "$FAILURES_DIR"/*.json; do
 	# _pf survivor would render the same app+arch a second time. Remove the pair.
 	if [ -f "$FAILURES_DIR/${slug}_pf.json" ]; then
 		rm -f "$FAILURES_DIR/${slug}_pf.json" "$FAILURES_DIR/${slug}_pf.log"
+	fi
+	# Same reasoning for a zero-patch record: the app is already in the Build Failed
+	# section with its log, and an unpatched build that then aborted outright is one news.
+	if [ -f "$FAILURES_DIR/${slug}_npa.json" ]; then
+		rm -f "$FAILURES_DIR/${slug}_npa.json"
 	fi
 
 	app="$(jq -r '.app // empty' "$json")"
@@ -205,6 +218,24 @@ for json in "$FAILURES_DIR"/*_np.json; do
 	[ -z "${NORDERSET[$base]:-}" ] && { NORDER+="${base}${NL}"; NORDERSET[$base]=1; }
 done
 
+# Zero-patch builds: the tool answered with a result file listing nothing applied, so the
+# engine refused the artifact. Columns match the np case (bundle link, no log, no APK to
+# hunt): the reader's next step is the bundle release or the app's config, never an upload.
+declare -A AREC AORDERSET
+AORDER=""
+for json in "$FAILURES_DIR"/*_npa.json; do
+	app="$(jq -r '.app // empty' "$json")"
+	arch="$(jq -r '.arch // empty' "$json")"
+	patches="$(jq -r '.patches_src // empty' "$json")"
+	pkg="$(jq -r '.pkg // empty' "$json")"
+	ver="$(version_label "$(jq -r '.version // empty' "$json")")"
+	vc="$(jq -r '.vc // empty' "$json")"
+	patch_url="$(jq -r '.patch_url // empty' "$json")"
+	base="$(app_base "$app" "$arch")"
+	AREC[$base]+="${arch}|${ver}|${vc}||${patches}|${pkg}|${patch_url}|${NL}"
+	[ -z "${AORDERSET[$base]:-}" ] && { AORDER+="${base}${NL}"; AORDERSET[$base]=1; }
+done
+
 # Bundle-unreadable rejections: the CLI could not list the bundle at all, so no version
 # was ever resolved and there is nothing to hunt for or complain about per version. Like
 # the build/_pf case the reason lives in the captured log, uploaded here as <slug>_lb.log
@@ -280,7 +311,7 @@ render_app_group() { # $1=base $2=blob $3=mode
 		if [ "$mode" = build ] || [ "$mode" = lb ]; then
 			[ -z "$log" ] && { out+="${NL}  ╰ ${arch}${tok:+ ${tok}}"; continue; }
 			links="[Log](${log})"
-		elif [ "$mode" = np ]; then
+		elif [ "$mode" = np ] || [ "$mode" = npa ]; then
 			# No log, no APK to hunt for: the bundle is the thing that has to change.
 			[ -z "$patches" ] && { out+="${NL}  ╰ ${arch}${tok:+ ${tok}}"; continue; }
 			if [ -n "$patch_url" ]; then
@@ -300,10 +331,10 @@ render_app_group() { # $1=base $2=blob $3=mode
 	printf '%s' "$out"
 }
 
-# ---- Assemble the four parts ----
+# ---- Assemble the five parts ----
 # Render each app block first and count only the ones that produce output, so a
 # part never prints its "(N apps)" header over an empty body.
-build_body=""; lb_body=""; dl_body=""; np_body=""; cbuild=0; clb=0; cdl=0; cnp=0
+build_body=""; lb_body=""; dl_body=""; np_body=""; a_body=""; cbuild=0; clb=0; cdl=0; cnp=0; ca=0
 while IFS= read -r base; do
 	[ -z "$base" ] && continue
 	blk="$(render_app_group "$base" "${BREC[$base]}" build)"
@@ -324,12 +355,19 @@ while IFS= read -r base; do
 done <<< "$NORDER"
 while IFS= read -r base; do
 	[ -z "$base" ] && continue
-	blk="$(render_app_group "$base" "${DREC[$base]}" dl)"
+	blk="$(render_app_group "$base" "${DREC[$base]:-}" dl)"
 	[ -z "${blk//[[:space:]]/}" ] && continue
 	dl_body+="${blk}${NL}${NL}"; cdl=$((cdl + 1))
 done <<< "$DORDER"
 
-if [ "$cbuild" = 0 ] && [ "$clb" = 0 ] && [ "$cdl" = 0 ] && [ "$cnp" = 0 ]; then
+while IFS= read -r base; do
+	[ -z "$base" ] && continue
+	blk="$(render_app_group "$base" "${AREC[$base]:-}" npa)"
+	[ -z "${blk//[[:space:]]/}" ] && continue
+	a_body+="${blk}${NL}${NL}"; ca=$((ca + 1))
+done <<< "$AORDER"
+
+if [ "$cbuild" = 0 ] && [ "$clb" = 0 ] && [ "$cdl" = 0 ] && [ "$cnp" = 0 ] && [ "$ca" = 0 ]; then
 	echo "Failure records present but nothing renderable; no report sent."
 	exit 0
 fi
@@ -349,6 +387,10 @@ fi
 if [ "$cnp" -gt 0 ]; then
 	[ -n "$MSG" ] && MSG+="${NL}${NL}"
 	MSG+="*🧩 Patch Compatibility (${cnp} app$([ "$cnp" = 1 ] && echo '' || echo 's'))*${NL}${NL}$(printf '%s' "$np_body")${NL}${NL}⚠️ These versions have no patch to apply or no patch for that arch."
+fi
+if [ "$ca" -gt 0 ]; then
+	[ -n "$MSG" ] && MSG+="${NL}${NL}"
+	MSG+="*🔩 CLI Issue (${ca} app$([ "$ca" = 1 ] && echo '' || echo 's'))*${NL}${NL}$(printf '%s' "$a_body")${NL}${NL}⚠️ The patcher applied 0 patches to these builds."
 fi
 if [ "$cdl" -gt 0 ]; then
 	[ -n "$MSG" ] && MSG+="${NL}${NL}"

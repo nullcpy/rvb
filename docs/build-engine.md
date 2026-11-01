@@ -52,6 +52,10 @@ abort — see [ci-pipelines.md](ci-pipelines.md#the-build-job-buildyml).
   Its optional `bytesVersion` column says a file *was* fetched and its own `versionName` is
   what the set refuses (the `_rekey_to_bytes` discard): the remedy is still the bundle or the
   source, never a manual upload, so it stays out of `_dl`.
+- **Zero patches applied** — writing `temp/failures/<slug>_npa.json` and returning 0, for a
+  build the patcher completed successfully while its own result file listed nothing applied.
+  The artifact is refused rather than published, so this record is the only trace the app
+  left; it is settled like `_np` (same inputs, same nothing applied).
 - **Bundle unreadable** — the patch CLI could not **list** the bundle at all: `list-patches`
   itself aborted (run 39786888211: `MorpheApp/morphe-patches v1.48.0`, compiled against
   `morphe-patcher 2.0.0`, loaded by the `morphe-desktop v1.18.1` CLI that still ships
@@ -307,7 +311,18 @@ for adding surface without a measured gain
    source. `RVB_MORPHE_STRIPLIBS=false` drops the flag and hands the engine's rewritten
    input back — the bisect switch, at the price of the certificate-reading patches above.
 6. **Patching** — `patch_apk` dispatches on the tool kind resolved by the patcher
-   registry (see below) and records which patches the tool reports as applied.
+   registry (see below) and records which patches the tool reports as applied. Morphe
+   answers with a machine-readable `-r` summary, and a summary that lists **nothing** applied
+   is a real signal rather than a parse miss (`_applied_from_result` echoes nothing when it
+   cannot read the file): the tool ran the whole pipeline over the stock APK, applied zero
+   patches and returned success. `build_rv` then refuses the artifact, deletes the patched
+   file so neither this build's module stage nor a later `NORB` reuse can adopt it, writes
+   `temp/failures/<slug>_npa.json` and returns 0 — the app is reported and settled, the rest
+   of the pool is untouched. A config that asked for nothing is exempt:
+   `exclusive-patches` with no `included-patches` names is a deliberate re-sign-and-rename
+   build, not a failure. Tools without a result file (revanced, xposed, instafel) are never
+   judged this way, because their scrape reports differently by design (run
+   41314721427: Proton Lumo shipped as an unpatched stock app under a patched name).
 7. **Naming and metadata** — `aapt2`/`aapt` re-reads the patched manifest, so a
    patcher that rewrote the package id is recorded honestly; output is
    `<file-prefix>-v<version>-<arch>.apk`; `write_build_info` appends the record

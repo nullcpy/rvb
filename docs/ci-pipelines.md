@@ -189,10 +189,12 @@ Step order, with the reason each is where it is:
    the bundle link, and deliberately no APK search links, since uploading a file is not
    what fixes it. Its optional `bytesVersion` names a version that was fetched and then
    refused, rendered as "file is `vY`" so a wrong-flavour store answer reads differently
-   from a bundle that never covered the version), and apps whose **download sources were all
-   exhausted**
-   (`<slug>_dl.json`, a request to upload the APK to the cache repo manually), plus a
-   link to the run. A slug that has a build record has its `_dl`/`_np`/`_pf`/`_lb` twins
+   from a bundle that never covered the version), apps whose **download sources were all
+   exhausted** (`<slug>_dl.json`, a request to upload the APK to the cache repo manually),
+   and apps the patcher **completed while applying nothing** (`<slug>_npa.json`, rendered in
+   a CLI Issue section with the bundle release link: the artifact was refused, so the bundle
+   or the config is the thing to fix), plus a link to the run. A slug that has a build record
+   has its `_dl`/`_np`/`_pf`/`_lb`/`_npa` twins
    dropped, so an app is reported once. When it sends, it sets the job output
    `reported_failures=true`, which
    `trigger_notify_failure` forwards as `already_reported` so
@@ -203,8 +205,9 @@ Step order, with the reason each is where it is:
    `state/built_shape.json` + `state/pending_builds.json` for this channel. **Only
    download exhaustion (`_dl`) is retried**: a `_dl` arch still requested is re-queued
    as a retry and parked once it hits `RVB_RETRY_MAX`. Every other failure class — a
-   build abort (`<slug>.json`), a patcher abort (`_pf`), a patch-set rejection (`_np`)
-   and a bundle-unreadable abort (`_lb`) — is **settled, not retried**: re-running the
+   build abort (`<slug>.json`), a patcher abort (`_pf`), a patch-set rejection (`_np`),
+   a zero-patch build (`_npa`) and a bundle-unreadable abort (`_lb`) — is **settled, not
+   retried**: re-running the
    same engine over the same
    inputs reproduces the same abort, so it spends a build slot to learn nothing. The
    fix for those is a patch-bundle release or a config edit, and both already
