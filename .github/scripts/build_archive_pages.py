@@ -453,7 +453,7 @@ def surfaces(site_base, pages_base):
 
 
 def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base,
-           counts_path=None):
+          counts_path=None):
     rows = load_manifests(manifest_dir)
     if not rows:
         raise SystemExit(f"no manifests found in {manifest_dir}")
