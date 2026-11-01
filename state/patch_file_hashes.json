@@ -17,7 +17,7 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "c368aa2b261214079983a293f4f00e13",
+      "com.google.android.apps.photos": "b0705fa8786a4fedc39d93263cebf064",
       "shared": "cb2a7725c3365cbe6e29daf444e8c2b8"
     }
   },
@@ -118,7 +118,7 @@
   "crimera/piko-newx": {
     "beta": {},
     "stable": {
-      "com.twitter.android": "7451aa3bdcaccc2741d4ec0177e21a38",
+      "com.twitter.android": "c1dc5583f3070a5ba7778878084399c0",
       "shared": "fa253997acd1670aec1905dbe057174c"
     }
   },
@@ -269,17 +269,17 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "bd3144d43a554a4382ea59351822df0b",
-      "ch.protonvpn.android": "2d279cc1e17d1cb1b8e24897f51003d9",
-      "com.dubox.drive": "b7e26348c4b4cac37103dd900f2cc743",
-      "com.greenstone.pocketwhip": "7caefda8c7c65ac3e54e2593577914df",
-      "com.michaldrabik.showly2": "0688eed6c6207ea6d61108e3e65825e7",
-      "dev.vodik7.atvtools": "414194d652c5e2cedd52cf2b349cbfad",
-      "in.krosbits.castplugin": "1b35ec445ce1b83b17ea086a3c356940",
-      "in.krosbits.musicolet": "bfbc5fae0a6b77080e5202460528ca81",
-      "org.withouthat.acalendar": "485b8d078a6743c54d79b3705d08903b",
-      "proton.android.pass": "444a3bdb84243b0c99b4bb181ba0a205",
-      "shared": "520a1dd26d812cf61ad3b811d70de85a"
+      "ch.protonmail.android": "d160407ee3a55ffa71427ebc01d825a6",
+      "ch.protonvpn.android": "0260eaca96a5845270395c860c4991f7",
+      "com.dubox.drive": "0b1cece8471674614eb5f122eec4712f",
+      "com.greenstone.pocketwhip": "71230b3b013c6c59fb0b57e024a057f5",
+      "com.michaldrabik.showly2": "12fb40a19363591c4d31e382002ed815",
+      "dev.vodik7.atvtools": "8200859059426803e67c1c84a5ca02bb",
+      "in.krosbits.castplugin": "d13955093ae829a43d813b9f5e375836",
+      "in.krosbits.musicolet": "9e2074152b095e689676fcc71cc1c09b",
+      "org.withouthat.acalendar": "1fd603decb6e9c16988cfeadf7812363",
+      "proton.android.pass": "d50c051a8ab7680c9553b3099796a0a6",
+      "shared": "d2e6a2583a84706c0d32f1ddb0d2079f"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -375,10 +375,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "9f1ce862a8cc49cfe8a71fabdf1dc5f5",
-      "com.google.android.youtube": "3f043dc8e490c773582d23a8fc57d225",
-      "com.reddit.frontpage": "d0a206dae9b1e575e55e6aeaa8c7e1ee",
-      "shared": "473229ba612fe8bd97b5d50f5f355add"
+      "com.google.android.apps.youtube.music": "643b444e20518a66dc9c3cf8997eeaf8",
+      "com.google.android.youtube": "871a74f6be4f5858c467b2c7c045408d",
+      "com.reddit.frontpage": "2f8325c3c868e4b68dee69b13186c9a9",
+      "shared": "ba8c143da5fcf0b1e1c7fc8baec09b58"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "5997a31d4f87678f5b659cf4e0b83a6e",
@@ -406,15 +406,13 @@
   "paresh-maheshwari/paresh-patches": {
     "beta": {},
     "stable": {
-      "alldocumentreader.office.viewer.filereader.pdfviewerscanner": "d41d8cd98f00b204e9800998ecf8427e",
       "ch.protonvpn.android": "070b150b4a0e8349c92b34ef53ced15c",
       "com.arlosoft.macrodroid": "b6c935a80266c830553f85ecfa09f270",
       "com.cricbuzz.android": "fb45b341d76e3102a945ca2ff3ec5a22",
       "com.eyecon.global": "be047f0f61610288c570630680d32fd7",
       "com.lumina.wallpapers": "107fc7ebcfae4b563609ab5f2539d1db",
-      "com.mxtech.videoplayer.ad": "d41d8cd98f00b204e9800998ecf8427e",
       "com.overlook.android.fing": "6c0dbc6f6ce9cacf53ea6178feebbf1f",
-      "com.ticktick.task": "6e1cf519d16cdc86dea964188a7c9d70",
+      "com.ticktick.task": "f7d9e96b5e2f732dbcab74ec3522e39b",
       "com.truecaller": "1cadfabcdc2586ef950e4b8edb6620ee",
       "eu.darken.sdmse": "966690fa9aceaa328c1277d83a6c2bd3",
       "org.telegram.messenger.web": "d590bc2abddd94ca5c49a27aa191abfc",
@@ -531,8 +529,8 @@
   "sysadmindoc/hushfacebook": {
     "beta": {},
     "stable": {
-      "com.facebook.katana": "c02ab671c0e280f7c966238a5edc08f9",
-      "shared": "67f7c045172d1a251ebe35c7ea850aef"
+      "com.facebook.katana": "608d4d2d89495a8cff417fa571597559",
+      "shared": "8fdc2a1338470b6bfdb4eae8d0686950"
     }
   },
   "sysadmindoc/hushfeed": {
