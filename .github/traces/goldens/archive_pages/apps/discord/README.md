@@ -10,7 +10,7 @@
 </ul>
 </details>
 
-| Build | Date | Version | Downloads |
+| Build | Date | Version | Download |
 |---|---|---|---|
 | [260002](https://github.com/nullcpy/archive/releases/tag/260002) 🧪 | 2026-10-08 | `1.1.0` | APK: [arm](https://github.com/nullcpy/archive/releases/download/260002/discord-revenge-v1.1.0-arm-v7a.apk) |
 
@@ -25,7 +25,7 @@
 </ul>
 </details>
 
-| Build | Date | Version | Downloads |
+| Build | Date | Version | Download |
 |---|---|---|---|
 | [260002](https://github.com/nullcpy/archive/releases/tag/260002) 🧪 | 2026-10-08 | `1.1.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260002/discord-rain-v1.1.0-arm64-v8a.apk) |
 
@@ -35,7 +35,7 @@
 </ul>
 </details>
 
-| Build | Date | Version | Downloads |
+| Build | Date | Version | Download |
 |---|---|---|---|
 | [260001](https://github.com/nullcpy/archive/releases/tag/260001) | 2026-10-01 | `1.0.0` | APK: [arm64](https://github.com/nullcpy/archive/releases/download/260001/discord-rain-v1.0.0-arm64-v8a.apk) |
 

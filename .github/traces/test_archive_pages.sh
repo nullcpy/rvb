@@ -127,6 +127,13 @@ grep -q '| 999 |$' "$t/a/README.md" || fail "999 was not left as plain digits"
 grep -q '| 0 |$' "$t/a/README.md" || fail "a genuine zero is not printed as 0"
 grep -q '</time> | |$' "$t/a/README.md" \
 	|| fail "an app with no counters did not get a blank cell"
+# The app pages head their link column Download, not Downloads: it offers files,
+# and borrowing the index's word would make a reader look for a number. Matched on
+# the header line, because a real YouTube patch is named `Downloads`.
+grep -q '^| Build | Date | Version | Download |$' "$t/a/apps/youtube/README.md" \
+	|| fail "the build table's link column is not headed Download"
+grep -q '^| Build | Date | Version | Downloads |$' "$t/a/apps/youtube/README.md" \
+	&& fail "an app page still heads its link column Downloads"
 # Negative control: the column is the flag's doing, not a default someone can drop
 # by accident, and dropping it leaves the index exactly as it was.
 run "$GEN" 50 "$t/nocounts"

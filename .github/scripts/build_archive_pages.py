@@ -30,6 +30,9 @@ Layout choices that are deliberate, not incidental:
   `arm apk` `arm64 module omit` when no single phrase covers the lacking set.
 - Builds are listed individually inside a block, never as a range, because a patch
   set can appear, stop, and come back.
+- A build table's link column is headed `Download` while the index heads its count
+  `Downloads`, one letter apart on purpose: the app page offers files, the index
+  reports how often they were taken, and the same word would read as the same thing.
 - Everything is sorted, including ties, because an unstable order would make every
   regeneration rewrite files whose data did not change.
 - The index's Downloads column only appears with `--counts`, a JSON map the render
@@ -300,7 +303,7 @@ def scope_markers(artifacts):
 
 
 def render_table(tags, per_build):
-    lines = ["| Build | Date | Version | Downloads |", "|---|---|---|---|"]
+    lines = ["| Build | Date | Version | Download |", "|---|---|---|---|"]
     for tag in sorted(tags, reverse=True):
         artifacts = per_build[tag]
         mark = BETA_MARK if artifacts[0]["channel"] == "beta" else ""
