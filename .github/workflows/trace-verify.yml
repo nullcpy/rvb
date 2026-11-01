@@ -51,6 +51,7 @@ jobs:
           bash .github/traces/test_arch_strip.sh
           bash .github/traces/test_apkmirror_variants.sh
           bash .github/traces/test_apkmirror_release_lookup.sh
+          bash .github/traces/test_apkmirror_flavor_ranking.sh
           bash .github/traces/test_preferred_format.sh
           bash .github/traces/test_direct_source.sh
           bash .github/traces/test_artifact_identity.sh

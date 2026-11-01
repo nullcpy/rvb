@@ -2530,6 +2530,17 @@ _apkmirror_prefer_listing() {
 	fi
 }
 
+# The flavour tail of a requested version, spelled the way APKMirror writes it inside a
+# slug: "2.1.5-nogms" -> nogms, "4.50.1_tv" -> tv, "348.10 - Stable" -> stable, "14.0.39" ->
+# "". Empty means the request carries no flavour to honour, and every lookup below behaves
+# exactly as it always has.
+_apkmirror_flavor_of() { # $1=version as requested
+	local v=${1,,}
+	v="${v//_/-}"
+	v="${v#v}"
+	printf '%s' "$(sed -E 's/^[0-9][0-9.-]*//; s/^[.-]+//; s/[^a-z0-9].*//' <<<"$v")"
+}
+
 # Which of a page's release links name the requested version, strongest spelling first:
 # the exact slug, then a slug carrying a suffix, then a grouped/short form. Each tier is
 # kept as an ordered candidate list rather than one winner, because the winner used to be
@@ -2808,6 +2819,18 @@ dl_apkmirror() {
 			epr "Resolved APKMirror page is for '$page_pkg', not expected '$pkg_name'. Skipping apkmirror for version $version."
 			return 1
 		fi
+	fi
+
+	# The tiers above prefer a release page whose slug names the requested suffix
+	# (_apkmirror_version_hrefs, exact-spelling tier first), so reaching this point with a
+	# flavour the chosen page does not carry means the store simply does not ship it. Say so
+	# before spending a ~100 MB transfer on the nearest other flavour: _rekey_to_bytes will
+	# judge the bytes and drop the source if the patch set does not cover that version, but
+	# the log should name the store's gap instead of leaving it to look like a served request.
+	local want_flavor
+	want_flavor=$(_apkmirror_flavor_of "$version")
+	if [ -n "$want_flavor" ] && [[ "${release_url,,}" != *"-$want_flavor-"* ]]; then
+		wpr "APKMirror ships no '$version' release of '${pkg_name:-$url}'; settling for $(basename "${release_url%/}") and letting the artifact's own versionName decide"
 	fi
 
 	local node dlurl=""

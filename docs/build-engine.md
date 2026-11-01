@@ -437,8 +437,16 @@ Supporting machinery:
   found matching your query" for `truecaller-caller-id-block 26.10.6`, while
   `truecaller-spam-call-blocker 26.10.6` returns the release. A candidate budget
   (`_APKMIRROR_CANDIDATE_LIMIT`) bounds the requests per field, because a store that throttles
-  datacenter IPs should not be walked six ways at once. Pinned in by
-  `.github/traces/test_apkmirror_release_lookup.sh`.
+  datacenter IPs should not be walked six ways at once. A version carrying a **flavour**
+  (`2.1.5-nogms`, `1.7.0-lite`, `4.50.1_tv`) is ordered by that spelling first: the exact-slug
+  tier runs before the tier that accepts any suffix on the same number, so where the store ships
+  both flavours the requested one wins, and where it ships only the other one the loose tier
+  still answers (that is what keeps `1.7.0-lite` building when the slug is plain `1.7.0`) and
+  `_apkmirror_flavor_of` names the gap in the log before the transfer instead of after the
+  patcher has applied nothing. The flavour is never a veto, because the slug is the store's
+  spelling while the artifact's `versionName` is the fact, and `_rekey_to_bytes` judges that.
+  Pinned in by `.github/traces/test_apkmirror_release_lookup.sh` and
+  `.github/traces/test_apkmirror_flavor_ranking.sh`.
 - **APKMirror variant picking** — one release page lists several uploads of the *same*
   versionCode that differ only in their Architecture / Minimum Version / Screen DPI
   columns, so the row matcher (`scripts/apkmirror_search.py`, mirrored in `utils.sh` for
