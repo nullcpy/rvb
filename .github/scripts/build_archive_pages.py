@@ -39,8 +39,8 @@ Layout choices that are deliberate, not incidental:
   workflow writes after reading the mirror's own release counters. An app missing
   from it gets an empty cell, never a 0: no data is not the same as nobody
   downloading, and a guessed number is a claim about people we never saw. The header
-  line under the title reports the two totals the table adds up to, and drops the
-  downloads figure for the same reason the column does.
+  line under the title reports the two totals the table adds up to, in the same
+  compact form, and drops the downloads figure for the same reason the column does.
 
 CLI:
     --manifests DIR     required
@@ -388,10 +388,12 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter,
     counted = downloads is not None
     # The totals ride under the title so the table does not have to be scrolled to
     # learn the size of the mirror. The downloads figure only exists when the
-    # counters came in: a made-up zero beside a real app count reads as a fact.
+    # counters came in: a made-up zero beside a real app count reads as a fact. It is
+    # compacted like the cells, because the mirror never prunes and that sum is the
+    # one number here guaranteed to outgrow four digits.
     stats = [f"<b>{len(app_names)}</b> apps"]
     if counted:
-        stats.append(f"<b>{sum(downloads.values()):,}</b> downloads")
+        stats.append(f"<b>{compact(sum(downloads.values()))}</b> downloads")
     lines = []
     if front_matter:
         lines += ["---", "title: NullStore Archive", "---", ""]

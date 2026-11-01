@@ -140,11 +140,11 @@ run "$GEN" 50 "$t/nocounts"
 grep -q 'Downloads' "$t/nocounts/README.md" \
 	&& fail "the index grew a Downloads column without --counts"
 # The header totals under the title: the fixture's five apps and the same downloads
-# the table adds up to, 1,204 + 2,000 + 999 + 0 = 4,203. Matched as bytes with -F
-# because the separator is multibyte and MSYS grep mis-handles a multibyte pattern in
-# a UTF-8 locale, and a headline number is written out in full rather than collapsed
-# to 4.2k.
-stats_counted=$(printf '<p class="stats"><b>5</b> apps \xc2\xb7 <b>4,203</b> downloads</p>')
+# the table adds up to, 1,204 + 2,000 + 999 + 0 = 4,203, printed in the same compact
+# form as a cell because the mirror never prunes. Matched as bytes with -F because the
+# separator is multibyte and MSYS grep mis-handles a multibyte pattern in a UTF-8
+# locale.
+stats_counted=$(printf '<p class="stats"><b>5</b> apps \xc2\xb7 <b>4.2k</b> downloads</p>')
 stats_bare=$(printf '<p class="stats"><b>5</b> apps</p>')
 LC_ALL=C grep -qF "$stats_counted" "$t/a/README.md" \
 	|| fail "the header totals are wrong or missing"

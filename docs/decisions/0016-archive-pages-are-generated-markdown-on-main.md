@@ -44,10 +44,10 @@ surface to its own branch:
   workflow into a `{tag: {asset: downloads}}` file and handed to the generator as
   `--counts`, so the generator stays network-free like the manifests it reads. The
   column is collapsed per app over every artifact on its own release and printed
-  compactly (`1.2k`, `2k`, `999`), while the header's total is written out in full: a
-  row has to stay narrow, a summary does not. A failed fetch costs the column and
-  nothing else, and an app missing from the map gets an empty cell, never a `0`: the
-  mirror never prunes, so an asset with no counter is an asset nobody listed, not a
+  compactly (`1.2k`, `2k`, `999`), and so is the header total: nothing here is ever
+  pruned, so that sum is the one number guaranteed to outgrow four digits. A failed
+  fetch costs the column and nothing else, and an app missing from the map gets an
+  empty cell, never a `0`: an asset with no counter is an asset nobody listed, not a
   build nobody downloaded.
 - Two surfaces come out of one pass. `README.md` is what github.com renders per
   folder, so it carries no front matter (GitHub would show it as a metadata table)
