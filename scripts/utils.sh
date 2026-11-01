@@ -628,7 +628,7 @@ _patch_source_state_blocked() {
 _get_prebuilts() {
 	local cli_host=$1 cli_src=$2 cli_ver=$3 patches_host_list=$4 patches_src_list=$5 patches_ver_list=$6
 	resolve_patcher "$cli_src"
-	
+
 	local first_patch_src
 	first_patch_src=$(list_args "$patches_src_list" | tr -d \"\' | head -n 1)
 	# The "Getting prebuilts" header is printed lazily, exactly once, the first
@@ -743,12 +743,12 @@ _get_prebuilts() {
 		local host="${p_hosts[$i]:-${p_hosts[0]}}"
 		local src="${p_srcs[$i]}"
 		local ver="${p_vers[$i]:-${p_vers[0]}}"
-		
+
 		host=${host,,}
 		if ! isoneof "$host" github gitlab codeberg; then abort "source host '$host' is not supported"; fi
 		local tag="Patches" fprefix="patches"
 		local grab_cl=true
-		
+
 		# Reset per-source resolution state. `local` re-declaration does NOT clear a
 		# variable already local to this function, so release would otherwise leak from
 		# the CLI block (or the previous source). The concrete-version branch below is
@@ -758,7 +758,7 @@ _get_prebuilts() {
 		local dir
 		dir=$(rv_release_dir "$host" "$src")
 		[ -d "$dir" ] || mkdir "$dir"
-		
+
 		rv_rel=$(source_release_list_url "$host" "$src") || return 1
 		local channel snap_tag
 		# Gone, taken down or unreachable as far as the forge is concerned: skip the
@@ -886,7 +886,7 @@ _get_prebuilts() {
 			fi
 			rm -r "${file}-zip" || :
 		fi
-		
+
 		echo -n "$file "
 	done
 	echo
@@ -937,7 +937,7 @@ _req() {
 		dlp="$(dirname "$op")/tmp.$(basename "$op")"
 		if [ -f "$dlp" ]; then
 			local wait_c=0
-			while [ -f "$dlp" ] && [ $wait_c -lt 300 ]; do 
+			while [ -f "$dlp" ] && [ $wait_c -lt 300 ]; do
 				sleep 1
 				wait_c=$((wait_c+1))
 			done
@@ -1019,14 +1019,14 @@ log() { echo -e "$1  " >>"build.md"; }
 get_highest_ver() {
 	local vers valid_vers=""
 	vers=$(tee)
-	
+
 	# Try to find the highest valid semver first
 	while IFS= read -r v; do
 		if [ -n "$v" ] && semver_validate "$v"; then
 			valid_vers+="${v}"$'\n'
 		fi
 	done <<<"$vers"
-	
+
 	if [ -n "$valid_vers" ]; then
 		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -1
 	else
@@ -1037,14 +1037,14 @@ get_highest_ver() {
 sort_vers() {
 	local vers valid_vers=""
 	vers=$(tee)
-	
+
 	# Try to find valid semvers first
 	while IFS= read -r v; do
 		if [ -n "$v" ] && semver_validate "$v"; then
 			valid_vers+="${v}"$'\n'
 		fi
 	done <<<"$vers"
-	
+
 	if [ -n "$valid_vers" ]; then
 		sort -s -t- -k1,1Vr <<<"$valid_vers" | head -2
 	else
@@ -2161,7 +2161,7 @@ get_apkmirror_resp() {
 	__DL_RESP_CACHE__["apkmirror_resp_$url"]="$__APKMIRROR_RESP__"
 	__DL_RESP_CACHE__["apkmirror_cat_$url"]="$__APKMIRROR_CAT__"
 	set +u
-	__APKMIRROR_EXAMPLE_URL__="${args[apkmirror_example_url]:-}" 
+	__APKMIRROR_EXAMPLE_URL__="${args[apkmirror_example_url]:-}"
 	set -u
 }
 
@@ -2312,7 +2312,7 @@ _amk_arch_class() { # $1=Architecture column  $2=requested arch token
 
 apkmirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" clean_search_version="$5" search_version="$6" target_vc="${7:-}"
-	
+
 	local py_cmd=""
 	if command -v python3 >/dev/null 2>&1; then
 		py_cmd="python3"
@@ -2348,7 +2348,7 @@ apkmirror_search() {
 	for ((n = 1; n < 100; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" <<<"$resp")
 		if [ -z "$node" ]; then break; fi
-		
+
 		dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div.table-cell:nth-child(1) > a:nth-child(1)" <<<"$node")
 		if [ -z "$dlurl" ]; then continue; fi
 
@@ -2900,10 +2900,10 @@ dl_apkmirror() {
 			fi
 			return 1
 		fi
-		
+
 		_cf_get "$dlurl" || return 1
 		resp="$html"
-		
+
 	fi
 
 	local all_dl_btns btn_url
@@ -4098,7 +4098,7 @@ dl_github() {
         fi
     fi
     local base_url="https://github.com/${repo}/releases/download/${exact_tag}"
-    
+
 local regex=""
     if [ -n "${args[github_regex]:-}" ]; then
         if [[ "${args[github_regex]}" == *":"* ]]; then
@@ -4136,13 +4136,13 @@ local regex=""
             done
         done
     fi
-    
+
     path="${path%$'\r'}"
     if [ -z "$path" ]; then
         epr "Version ${version} with arch ${arch} not found in github"
         return 1
     fi
-    
+
     local ext="${path##*.}"
     case "$ext" in
         apk)
@@ -4174,11 +4174,11 @@ get_github_resp() {
 		return 0
 	fi
 	local repo tag resp endpoint
-	
+
 	repo=$(cut -d/ -f4-5 <<<"$url")
 	tag=${url%/}
 	tag=${tag##*/}
-	
+
 	if [ "$tag" = "${repo##*/}" ]; then
 		if [ -n "${resolved_version:-}" ]; then
 			tag="v${resolved_version#v}"
@@ -4188,13 +4188,13 @@ get_github_resp() {
 			tag="latest"
 		fi
 	fi
-	
+
 	if [ "$tag" = "latest" ]; then
 		endpoint=""
 	else
 		endpoint="tags/${tag}"
 	fi
-	
+
 	if ! resp=$(gh_req "https://api.github.com/repos/${repo}/releases${endpoint:+/$endpoint}" -); then
 		if [ "$tag" != "latest" ] && [[ "$tag" == v* ]]; then
 			tag="${tag#v}"
@@ -4237,14 +4237,14 @@ get_github_resp() {
 	else
 		__GITHUB_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
 	fi
-	
+
 	if [ -z "$__GITHUB_RESP__" ]; then return 1; fi
-	
+
 	# Grab the package name exactly like how get_archive_vers isolates the version
 	__GITHUB_PKG_NAME__=$(get_github_pkg_name)
 	[ -z "$__GITHUB_PKG_NAME__" ] && __GITHUB_PKG_NAME__="${pkg_name:-}"
 	if [ -z "$__GITHUB_PKG_NAME__" ]; then return 1; fi
-	
+
 	local tag_lines
 	tag_lines=$(grep -c . <<<"$tag" || true)
 	if [ "$tag_lines" -eq 1 ]; then
@@ -4253,7 +4253,7 @@ get_github_resp() {
 		__GITHUB_URL__="https://github.com/${repo}/releases/download"
 	fi
 	__GITHUB_TAG__="$tag"
-	
+
 	__DL_RESP_CACHE__["github_resp_$cache_key"]="$__GITHUB_RESP__"
 	__DL_RESP_CACHE__["github_pkg_$cache_key"]="$__GITHUB_PKG_NAME__"
 	__DL_RESP_CACHE__["github_url_$cache_key"]="$__GITHUB_URL__"
@@ -4312,14 +4312,14 @@ get_cache_repo_resp() {
 	# Extract only supported file extensions
 	__CACHE_REPO_RESP__=$(jq -r '.assets[]? | select(.name | test("\\.(apk|apkm|xapk|apks)$")) | .name' <<<"$resp")
 	if [ -z "$__CACHE_REPO_RESP__" ]; then return 1; fi
-	
+
 	# Grab the package name exactly like how get_archive_vers isolates the version
 	__CACHE_REPO_PKGNAME__=$(sed 's/-.*//' <<<"$__CACHE_REPO_RESP__" | head -n 1)
 	if [ -z "$__CACHE_REPO_PKGNAME__" ]; then return 1; fi
-	
+
 	__CACHE_REPO_URL__="https://github.com/${repo}/releases/download/${tag}"
 	__CACHE_REPO_TAG__="$tag"
-	
+
 	__DL_RESP_CACHE__["cache_repo_resp_$url"]="$__CACHE_REPO_RESP__"
 	__DL_RESP_CACHE__["cache_repo_pkg_$url"]="$__CACHE_REPO_PKGNAME__"
 	__DL_RESP_CACHE__["cache_repo_url_$url"]="$__CACHE_REPO_URL__"
@@ -4339,7 +4339,7 @@ dl_cache_repo() {
     local url=$1 version=$2 output=$3 arch=$4 is_bundle=${5:-false} get_latest_ver=${6:-false} version_code=${7:-}
     local path="" version_f=${version// /}
 	local base_url=${__CACHE_REPO_URL__:-$url}
-    
+
     local regex=""
     if [ -n "${args[cache_repo_regex]:-}" ]; then
         if [[ "${args[cache_repo_regex]}" == *":"* ]]; then
@@ -4391,14 +4391,14 @@ dl_cache_repo() {
             done
         fi
     fi
-    
+
     # Strip any \r from path just in case
     path="${path%$'\r'}"
     if [ -z "$path" ]; then
         epr "Version ${version} with arch ${arch} not found in cache_repo"
         return 1
     fi
-    
+
     local ext="${path##*.}"
     case "$ext" in
         apk)
@@ -5102,7 +5102,7 @@ verify_downloaded_apk() {
 		rm -f "$tmpb"
 		return 0
 	fi
-	
+
 	if [ -f "${stock_apk%.apk}.apkm" ]; then
 		rm -rf "${stock_apk}-zip" || :
 		unzip -j "${stock_apk%.apk}.apkm" -d "${stock_apk}-zip" >/dev/null
@@ -5540,7 +5540,7 @@ _resolve_list_and_version() {
 build_rv() {
 	eval "declare -A args=${1#*=}"
 	local version="${args[version]:-}" pkg_name="${args[pkg_name]:-}"
-	
+
 	if [ -z "$pkg_name" ]; then
 		if [ -n "${args[github_dlurl]}" ] && [[ "${args[github_dlurl]}" == *"releases/tag/"* ]]; then
 			local tmp="${args[github_dlurl]%/}"
@@ -5619,7 +5619,7 @@ build_rv() {
 		local -a exc_parts=() inc_parts=()
 		IFS='|' read -ra exc_parts <<< "$exc_str"
 		IFS='|' read -ra inc_parts <<< "$inc_str"
-		
+
 		for ((bi=0; bi<n_bundles; bi++)); do
 			local bundle_ed=""
 			local bp_exc="${exc_parts[$bi]:-}"
@@ -5648,7 +5648,7 @@ build_rv() {
 				if all_patches_op=$(patches_list "$cli_jar" "${p_jars_arr[$bi]}" "$pkg_name" "${args[cli_source]}"); then
 					local all_patches=()
 					mapfile -t all_patches < <(echo "$all_patches_op" | grep -iE '^[[:space:]]*Name:' | sed -E 's/^[[:space:]]*Name:[[:space:]]*//I' | sed 's/[[:space:]]*$//')
-					
+
 					local new_bp_exc="$bp_exc"
 					local -a current_bp_inc=()
 					bp_inc=$(echo "$bp_inc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
@@ -5657,7 +5657,7 @@ build_rv() {
 							[ -n "$p" ] && current_bp_inc+=("$p")
 						done <<< "$(list_args "$bp_inc" | sed -e "s/^'//" -e "s/'$//" -e 's/^"//' -e 's/"$//')"
 					fi
-					
+
 					local new_bp_exc="$bp_exc"
 					for p_name in "${all_patches[@]}"; do
 						local found=false
@@ -5672,7 +5672,7 @@ build_rv() {
 						fi
 					done
 					bp_exc="$new_bp_exc"
-					
+
 					bundle_ed=""
 					bp_exc=$(echo "$bp_exc" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 					if [ -n "$bp_exc" ]; then bundle_ed+=" $(join_args "$bp_exc" -d)"; fi
@@ -5688,7 +5688,7 @@ build_rv() {
 		local global_ed=""
 		if [ -n "$exc_str" ]; then global_ed+=" $(join_args "$exc_str" -d)"; fi
 		if [ -n "$inc_str" ]; then global_ed+=" $(join_args "$inc_str" -e)"; fi
-		
+
 		for ((bi=0; bi<n_bundles; bi++)); do
 			local bundle_ed="$global_ed"
 			local is_exclusive=false
@@ -5775,7 +5775,7 @@ build_rv() {
 	# bytes carry a version no patch covers. Kept apart from _no_patch_versions (which means
 	# the gate refused the *label* before any transfer) so the record can name the difference.
 	local _unsupported_bytes=""
-	
+
 	for curr_resolved_version in "${all_resolved_versions[@]}"; do
 		resolved_version="$curr_resolved_version"
 		skip_dl_source_check=false
@@ -5835,7 +5835,7 @@ build_rv() {
 		fi
 			for dl_p in "${DL_SRCS[@]}"; do
 				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-				
+
 				# If we need to find the latest version, do not use cache repositories as the source of truth
 				if [ -z "$resolved_version" ]; then
 					if [ "$dl_p" = "archive" ] || [ "$dl_p" = "cache_repo" ]; then
@@ -5855,7 +5855,7 @@ build_rv() {
 					fi
 					continue
 				fi
-				
+
 				# If pkg_name is still empty, try to scrape it from the response
 				if [ -z "$pkg_name" ]; then
 					if ! pkg_name=$(get_"${dl_p}"_pkg_name) || [ -z "$pkg_name" ]; then
@@ -5864,7 +5864,7 @@ build_rv() {
 						continue
 					fi
 				fi
-				
+
 				tried_dl+=("$dl_p")
 				dl_from=$dl_p
 				break
@@ -5885,13 +5885,13 @@ build_rv() {
 				epr "ERROR: Could not determine pkg_name for ${table}."
 				return 0
 			fi
-			
+
 			# If we didn't run patches_list earlier because pkg_name was empty
 			local _rstatus=0
 			_resolve_list_and_version "$cli_jar" "$patches_jar" "$pkg_name" "$table" true || _rstatus=$?
 			if [ "$_rstatus" = 1 ]; then return 1; fi
 			if [ "$_rstatus" = 2 ]; then return 0; fi
-			
+
 			version="$resolved_version"
 			[ -z "$version" ] && get_latest_ver=true
 			if [ $get_latest_ver = true ]; then
@@ -6125,7 +6125,7 @@ build_rv() {
 						local downloaded_pkg downloaded_ver downloaded_vc
 						downloaded_pkg=$(_meta_field_of "$stock_apk" package) || true
 						downloaded_ver=$(_meta_field_of "$stock_apk" versionName) || true
-						
+
 						# Every rejection in this loop clears the same artifact set the
 						# download-failure paths above use: the staged apk plus any sibling
 						# extension the source produced (.apkm/.xapk/.apks/.bundle). These are
@@ -6343,7 +6343,7 @@ build_rv() {
 	stock_apk="$final_stock_apk"
 	all_apk="$final_all_apk"
 	version="$final_version"
-	
+
 	if [ ! -f "$stock_apk" ]; then
 		if [ -n "$_no_patch_versions" ] && { [ -z "$_dl_attempted" ] || [ -n "$_unsupported_bytes" ]; }; then
 			# Nothing survived this build because of the patch set: either it refused every
