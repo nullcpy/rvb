@@ -1,0 +1,10 @@
+[XiaomiRecorder-bearinmindcat]
+enabled = true
+pkg-name = "com.android.soundrecorder"
+app-name = "TikTok"
+brand = "bearinmindcat"
+arch = "all"
+patches-source = "bearinmindcat/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/xiaomi-inc/recorder-xiaomi"
+uptodown-dlurl = "https://asus-sound-recorder.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
