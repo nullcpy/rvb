@@ -1,0 +1,19 @@
+[Rumble-hooman]
+enabled = true
+pkg-name = "com.rumble.battles"
+app-name = "Rumble"
+brand = "hooman"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/rumble-app/com.rumble.battles"
+
+[Rumble-Lurk]
+enabled = true
+pkg-name = "com.rumble.battles"
+app-name = "Rumble"
+brand = "Lurk"
+patches-source = "jordanwoodson/lurk-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
+uptodown-dlurl = "https://rumble.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/rumble-app/com.rumble.battles"

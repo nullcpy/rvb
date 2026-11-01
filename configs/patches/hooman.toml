@@ -1,13 +1,6 @@
 patches-source = "arandomhooman/hoomans-morphe-patches"
 brand = "hooman"
 
-[Rumble-hooman]
-enabled = true
-pkg-name = "com.rumble.battles"
-app-name = "Rumble"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/rumble-inc/rumble"
-uptodown-dlurl = "https://rumble.en.uptodown.com/android"
-
 [BatteryGuru-hooman]
 enabled = true
 pkg-name = "com.paget96.batteryguru"
