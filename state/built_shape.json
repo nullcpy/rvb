@@ -3354,6 +3354,7 @@
     },
     "ProtonLumo-hxreborn": {
       "arches": [
+        "all",
         "arm-v7a",
         "arm64-v8a"
       ],
@@ -3362,9 +3363,9 @@
         "brand": "hxreborn",
         "app-name": "Proton Lumo",
         "pkg-name": "me.proton.android.lumo",
-        "arch": "both",
+        "arch": "all",
         "build-mode": "apk",
-        "github-regex": "lumo-v{version}-nogms-release\\.apk"
+        "github-regex": "lumo-v{version}-release\\.apk"
       }
     },
     "Rumble-Lurk": {
