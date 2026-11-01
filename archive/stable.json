@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-01T06:06:03Z"
+    "publishedAt": "2026-11-01T12:04:08Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -12621,17 +12621,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12646,17 +12646,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -18527,10 +18527,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18542,8 +18542,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -18558,10 +18558,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -18573,8 +18573,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22234,10 +22234,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -22248,8 +22248,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -22264,10 +22264,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -22278,8 +22278,8 @@
         "Hide video recommendations",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -22858,16 +22858,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -22882,16 +22882,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -22906,16 +22906,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -26976,10 +26976,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -26990,8 +26990,8 @@
         "Official package name",
         "GmsCore support"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -27006,10 +27006,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27020,8 +27020,8 @@
         "Official package name",
         "GmsCore support"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -27036,10 +27036,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27049,8 +27049,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -27065,10 +27065,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27078,8 +27078,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -27094,10 +27094,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27106,8 +27106,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -27122,10 +27122,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.2.mpp"
+        "Akash-Sriram/patches-1.17.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.4"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27134,8 +27134,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260431",
-      "publishedAt": "2026-11-01T06:05:23Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
       "name": "remote-for-android-tv-xbadfellax",
@@ -27174,10 +27174,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
+        "hxreborn/patches-1.68.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27194,8 +27194,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -27981,6 +27981,784 @@
       ],
       "originBuild": "260429",
       "publishedAt": "2026-10-31T23:24:18Z"
+    },
+    "facebook-hushfacebook-material-you-v585.0.0.47.54-arm64-v8a.apk": {
+      "name": "facebook-hushfacebook-material-you",
+      "version": "585.0.0.47.54",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushfacebook",
+      "brandName": "HushFacebook",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "SysAdminDoc/patches-0.20.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+      ],
+      "appliedPatches": [
+        "Allow screenshots",
+        "Block Instant Games ads",
+        "Block ad telemetry",
+        "Block background ad prefetch",
+        "Block background-return feed refresh",
+        "Block promotional notifications",
+        "Block screenshot detection",
+        "Clean up Facebook's chat list",
+        "Clean up Reels",
+        "Comment sheet options",
+        "Default comment order",
+        "Default playback quality",
+        "Disable Audience Network",
+        "Don't save search history",
+        "Don't send reel watch history",
+        "Double tap to skip",
+        "Download any photo",
+        "Download any reel",
+        "Download any story",
+        "Download any video",
+        "Following feed on Home",
+        "Force dark mode",
+        "Frame step",
+        "Hide AI-detected posts",
+        "Hide Menu promotions",
+        "Hide Meta AI comment summaries",
+        "Hide Meta AI in search",
+        "Hide Meta AI questions under posts",
+        "Hide Meta upsells",
+        "Hide Reels in the feed",
+        "Hide Stories tray",
+        "Hide affiliate product links",
+        "Hide carrier data banners",
+        "Hide post prompts",
+        "Hide posts by words",
+        "Hide profile notes",
+        "Hide read receipts",
+        "Hide reel interest prompts",
+        "Hide seen posts",
+        "Hide sponsored Marketplace listings",
+        "Hide sponsored posts",
+        "Hide sponsored profile posts",
+        "Hide sponsored reels",
+        "Hide sponsored search results",
+        "Hide sponsored stories",
+        "Hide suggested and promoted posts",
+        "Hide suggested stories",
+        "Hide tab badges",
+        "Hide tabs",
+        "Hide the Feeds header",
+        "Hide the Get Messenger card",
+        "Hide the Reels tab",
+        "Hide the Reels tab dot",
+        "Hide typing indicator",
+        "Hold a reel for 2x",
+        "Hold back analytics uploads",
+        "Home header text",
+        "Hushfacebook in the Menu",
+        "Hushfacebook settings",
+        "Install beside Meta's apps",
+        "Keep feed videos muted",
+        "Keep post dates",
+        "Keep the progress bar",
+        "Keep the reel speed",
+        "Local profile counts",
+        "Longer music on photo stories",
+        "Marketplace only",
+        "Newest reels first",
+        "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
+        "Open links in external browser",
+        "Open on a chosen tab",
+        "Picture-in-picture",
+        "Pinch to zoom",
+        "Post action buttons",
+        "Restore screens on re-signed builds",
+        "Resume long videos",
+        "Round stories tray",
+        "Sanitize sharing links",
+        "Search date range",
+        "See who shared",
+        "Send chat photos and videos at original quality",
+        "Share sheet items",
+        "Show View profile on Marketplace sellers",
+        "Show full post text",
+        "Skip silent parts",
+        "Start on x86 devices",
+        "Stop Story auto-advance",
+        "Stop update prompts",
+        "Tab bar at the bottom",
+        "Tag suggestions only after @",
+        "Tap shows the controls",
+        "Tap to play",
+        "Turn off HDR brightness",
+        "Turn off auto-translation",
+        "Turn off double tap to like",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Unlock app icons",
+        "Upload Stories in HD",
+        "Use the phone's emoji",
+        "Use the system font",
+        "View stories anonymously",
+        "Material You theme",
+        "Badge and logo colors",
+        "Accent color"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "facebook-hushfacebook-material-you-v585.0.0.47.54-arm-v7a.apk": {
+      "name": "facebook-hushfacebook-material-you",
+      "version": "585.0.0.47.54",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hushfacebook",
+      "brandName": "HushFacebook",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "SysAdminDoc/patches-0.20.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+      ],
+      "appliedPatches": [
+        "Allow screenshots",
+        "Block Instant Games ads",
+        "Block ad telemetry",
+        "Block background ad prefetch",
+        "Block background-return feed refresh",
+        "Block promotional notifications",
+        "Block screenshot detection",
+        "Clean up Facebook's chat list",
+        "Clean up Reels",
+        "Comment sheet options",
+        "Default comment order",
+        "Default playback quality",
+        "Disable Audience Network",
+        "Don't save search history",
+        "Don't send reel watch history",
+        "Double tap to skip",
+        "Download any photo",
+        "Download any reel",
+        "Download any story",
+        "Download any video",
+        "Following feed on Home",
+        "Force dark mode",
+        "Frame step",
+        "Hide AI-detected posts",
+        "Hide Menu promotions",
+        "Hide Meta AI comment summaries",
+        "Hide Meta AI in search",
+        "Hide Meta AI questions under posts",
+        "Hide Meta upsells",
+        "Hide Reels in the feed",
+        "Hide Stories tray",
+        "Hide affiliate product links",
+        "Hide carrier data banners",
+        "Hide post prompts",
+        "Hide posts by words",
+        "Hide profile notes",
+        "Hide read receipts",
+        "Hide reel interest prompts",
+        "Hide seen posts",
+        "Hide sponsored Marketplace listings",
+        "Hide sponsored posts",
+        "Hide sponsored profile posts",
+        "Hide sponsored reels",
+        "Hide sponsored search results",
+        "Hide sponsored stories",
+        "Hide suggested and promoted posts",
+        "Hide suggested stories",
+        "Hide tab badges",
+        "Hide tabs",
+        "Hide the Feeds header",
+        "Hide the Get Messenger card",
+        "Hide the Reels tab",
+        "Hide the Reels tab dot",
+        "Hide typing indicator",
+        "Hold a reel for 2x",
+        "Hold back analytics uploads",
+        "Home header text",
+        "Hushfacebook in the Menu",
+        "Hushfacebook settings",
+        "Install beside Meta's apps",
+        "Keep feed videos muted",
+        "Keep post dates",
+        "Keep the progress bar",
+        "Keep the reel speed",
+        "Local profile counts",
+        "Longer music on photo stories",
+        "Marketplace only",
+        "Newest reels first",
+        "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
+        "Open links in external browser",
+        "Open on a chosen tab",
+        "Picture-in-picture",
+        "Pinch to zoom",
+        "Post action buttons",
+        "Restore screens on re-signed builds",
+        "Resume long videos",
+        "Round stories tray",
+        "Sanitize sharing links",
+        "Search date range",
+        "See who shared",
+        "Send chat photos and videos at original quality",
+        "Share sheet items",
+        "Show View profile on Marketplace sellers",
+        "Show full post text",
+        "Skip silent parts",
+        "Start on x86 devices",
+        "Stop Story auto-advance",
+        "Stop update prompts",
+        "Tab bar at the bottom",
+        "Tag suggestions only after @",
+        "Tap shows the controls",
+        "Tap to play",
+        "Turn off HDR brightness",
+        "Turn off auto-translation",
+        "Turn off double tap to like",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Unlock app icons",
+        "Upload Stories in HD",
+        "Use the phone's emoji",
+        "Use the system font",
+        "View stories anonymously",
+        "Material You theme",
+        "Badge and logo colors",
+        "Accent color"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "facebook-hushfacebook-v585.0.0.47.54-arm-v7a.apk": {
+      "name": "facebook-hushfacebook",
+      "version": "585.0.0.47.54",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hushfacebook",
+      "brandName": "HushFacebook",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "SysAdminDoc/patches-0.20.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black theme",
+        "Allow screenshots",
+        "Block Instant Games ads",
+        "Block ad telemetry",
+        "Block background ad prefetch",
+        "Block background-return feed refresh",
+        "Block promotional notifications",
+        "Block screenshot detection",
+        "Clean up Facebook's chat list",
+        "Clean up Reels",
+        "Comment sheet options",
+        "Default comment order",
+        "Default playback quality",
+        "Disable Audience Network",
+        "Don't save search history",
+        "Don't send reel watch history",
+        "Double tap to skip",
+        "Download any photo",
+        "Download any reel",
+        "Download any story",
+        "Download any video",
+        "Following feed on Home",
+        "Force dark mode",
+        "Frame step",
+        "Hide AI-detected posts",
+        "Hide Menu promotions",
+        "Hide Meta AI comment summaries",
+        "Hide Meta AI in search",
+        "Hide Meta AI questions under posts",
+        "Hide Meta upsells",
+        "Hide Reels in the feed",
+        "Hide Stories tray",
+        "Hide affiliate product links",
+        "Hide carrier data banners",
+        "Hide post prompts",
+        "Hide posts by words",
+        "Hide profile notes",
+        "Hide read receipts",
+        "Hide reel interest prompts",
+        "Hide seen posts",
+        "Hide sponsored Marketplace listings",
+        "Hide sponsored posts",
+        "Hide sponsored profile posts",
+        "Hide sponsored reels",
+        "Hide sponsored search results",
+        "Hide sponsored stories",
+        "Hide suggested and promoted posts",
+        "Hide suggested stories",
+        "Hide tab badges",
+        "Hide tabs",
+        "Hide the Feeds header",
+        "Hide the Get Messenger card",
+        "Hide the Reels tab",
+        "Hide the Reels tab dot",
+        "Hide typing indicator",
+        "Hold a reel for 2x",
+        "Hold back analytics uploads",
+        "Home header text",
+        "Hushfacebook in the Menu",
+        "Hushfacebook settings",
+        "Install beside Meta's apps",
+        "Keep feed videos muted",
+        "Keep post dates",
+        "Keep the progress bar",
+        "Keep the reel speed",
+        "Local profile counts",
+        "Longer music on photo stories",
+        "Marketplace only",
+        "Newest reels first",
+        "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
+        "Open links in external browser",
+        "Open on a chosen tab",
+        "Picture-in-picture",
+        "Pinch to zoom",
+        "Post action buttons",
+        "Restore screens on re-signed builds",
+        "Resume long videos",
+        "Round stories tray",
+        "Sanitize sharing links",
+        "Search date range",
+        "See who shared",
+        "Send chat photos and videos at original quality",
+        "Share sheet items",
+        "Show View profile on Marketplace sellers",
+        "Show full post text",
+        "Skip silent parts",
+        "Start on x86 devices",
+        "Stop Story auto-advance",
+        "Stop update prompts",
+        "Tab bar at the bottom",
+        "Tag suggestions only after @",
+        "Tap shows the controls",
+        "Tap to play",
+        "Turn off HDR brightness",
+        "Turn off auto-translation",
+        "Turn off double tap to like",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Unlock app icons",
+        "Upload Stories in HD",
+        "Use the phone's emoji",
+        "Use the system font",
+        "View stories anonymously",
+        "Badge and logo colors",
+        "Accent color"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "facebook-hushfacebook-v585.0.0.47.54-arm64-v8a.apk": {
+      "name": "facebook-hushfacebook",
+      "version": "585.0.0.47.54",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushfacebook",
+      "brandName": "HushFacebook",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "SysAdminDoc/patches-0.20.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black theme",
+        "Allow screenshots",
+        "Block Instant Games ads",
+        "Block ad telemetry",
+        "Block background ad prefetch",
+        "Block background-return feed refresh",
+        "Block promotional notifications",
+        "Block screenshot detection",
+        "Clean up Facebook's chat list",
+        "Clean up Reels",
+        "Comment sheet options",
+        "Default comment order",
+        "Default playback quality",
+        "Disable Audience Network",
+        "Don't save search history",
+        "Don't send reel watch history",
+        "Double tap to skip",
+        "Download any photo",
+        "Download any reel",
+        "Download any story",
+        "Download any video",
+        "Following feed on Home",
+        "Force dark mode",
+        "Frame step",
+        "Hide AI-detected posts",
+        "Hide Menu promotions",
+        "Hide Meta AI comment summaries",
+        "Hide Meta AI in search",
+        "Hide Meta AI questions under posts",
+        "Hide Meta upsells",
+        "Hide Reels in the feed",
+        "Hide Stories tray",
+        "Hide affiliate product links",
+        "Hide carrier data banners",
+        "Hide post prompts",
+        "Hide posts by words",
+        "Hide profile notes",
+        "Hide read receipts",
+        "Hide reel interest prompts",
+        "Hide seen posts",
+        "Hide sponsored Marketplace listings",
+        "Hide sponsored posts",
+        "Hide sponsored profile posts",
+        "Hide sponsored reels",
+        "Hide sponsored search results",
+        "Hide sponsored stories",
+        "Hide suggested and promoted posts",
+        "Hide suggested stories",
+        "Hide tab badges",
+        "Hide tabs",
+        "Hide the Feeds header",
+        "Hide the Get Messenger card",
+        "Hide the Reels tab",
+        "Hide the Reels tab dot",
+        "Hide typing indicator",
+        "Hold a reel for 2x",
+        "Hold back analytics uploads",
+        "Home header text",
+        "Hushfacebook in the Menu",
+        "Hushfacebook settings",
+        "Install beside Meta's apps",
+        "Keep feed videos muted",
+        "Keep post dates",
+        "Keep the progress bar",
+        "Keep the reel speed",
+        "Local profile counts",
+        "Longer music on photo stories",
+        "Marketplace only",
+        "Newest reels first",
+        "Open Messenger from the top bar",
+        "Open comments at full height",
+        "Open comments with a gesture",
+        "Open links in external browser",
+        "Open on a chosen tab",
+        "Picture-in-picture",
+        "Pinch to zoom",
+        "Post action buttons",
+        "Restore screens on re-signed builds",
+        "Resume long videos",
+        "Round stories tray",
+        "Sanitize sharing links",
+        "Search date range",
+        "See who shared",
+        "Send chat photos and videos at original quality",
+        "Share sheet items",
+        "Show View profile on Marketplace sellers",
+        "Show full post text",
+        "Skip silent parts",
+        "Start on x86 devices",
+        "Stop Story auto-advance",
+        "Stop update prompts",
+        "Tab bar at the bottom",
+        "Tag suggestions only after @",
+        "Tap shows the controls",
+        "Tap to play",
+        "Turn off HDR brightness",
+        "Turn off auto-translation",
+        "Turn off double tap to like",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Unlock app icons",
+        "Upload Stories in HD",
+        "Use the phone's emoji",
+        "Use the system font",
+        "View stories anonymously",
+        "Badge and logo colors",
+        "Accent color"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "proton-mail-hxreborn-v7.11.12-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.68.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.68.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.68.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
+      "name": "ticktick-paresh",
+      "version": "8.2.4.0",
+      "appKey": "ticktick",
+      "appName": "TickTick",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "paresh",
+      "brandName": "Paresh",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.ticktick.task",
+      "patchSources": [
+        "Paresh-Maheshwari/patches-1.20.1.mpp"
+      ],
+      "changelogs": [
+        "https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.20.1"
+      ],
+      "appliedPatches": [
+        "Restore notifications",
+        "Restore reminder alarms",
+        "TickTick Premium"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "ticktick-paresh-v8.2.4.0-arm64-v8a.apk": {
+      "name": "ticktick-paresh",
+      "version": "8.2.4.0",
+      "appKey": "ticktick",
+      "appName": "TickTick",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "paresh",
+      "brandName": "Paresh",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.ticktick.task",
+      "patchSources": [
+        "Paresh-Maheshwari/patches-1.20.1.mpp"
+      ],
+      "changelogs": [
+        "https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.20.1"
+      ],
+      "appliedPatches": [
+        "Restore notifications",
+        "Restore reminder alarms",
+        "TickTick Premium"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "twitter-piko-newx-v12.39.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.39.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.73.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.73.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
+    },
+    "twitter-piko-newx-v12.39.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.39.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.73.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.73.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260433",
+      "publishedAt": "2026-11-01T12:03:18Z"
     }
   }
 }
