@@ -3363,7 +3363,8 @@
         "app-name": "Proton Lumo",
         "pkg-name": "me.proton.android.lumo",
         "arch": "both",
-        "build-mode": "apk"
+        "build-mode": "apk",
+        "github-regex": "lumo-v{version}-nogms-release\\.apk"
       }
     },
     "Rumble-Lurk": {
