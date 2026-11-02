@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-02T22:05:19Z"
+    "publishedAt": "2026-11-02T23:44:35Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -7855,10 +7855,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.1.0-dev.6.mpp"
+        "heval99/patches-2.2.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0-dev.6"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7875,10 +7875,11 @@
         "Hide family button",
         "Hide promotions",
         "Spoof signature",
-        "Use SMS for verification codes"
+        "Use SMS for verification codes",
+        "Heval Controls"
       ],
-      "originBuild": "260445",
-      "publishedAt": "2026-11-02T18:17:40Z"
+      "originBuild": "260448",
+      "publishedAt": "2026-11-02T23:44:10Z"
     },
     "truecaller-heval99-v26.42.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -7893,10 +7894,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.1.0-dev.6.mpp"
+        "heval99/patches-2.2.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0-dev.6"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7914,10 +7915,11 @@
         "Hide family button",
         "Hide promotions",
         "Spoof signature",
-        "Use SMS for verification codes"
+        "Use SMS for verification codes",
+        "Heval Controls"
       ],
-      "originBuild": "260445",
-      "publishedAt": "2026-11-02T18:17:40Z"
+      "originBuild": "260448",
+      "publishedAt": "2026-11-02T23:44:10Z"
     },
     "truecaller-heval99-module-v26.42.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -7932,10 +7934,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.1.0-dev.6.mpp"
+        "heval99/patches-2.2.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0-dev.6"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7952,10 +7954,11 @@
         "Hide family button",
         "Hide promotions",
         "Spoof signature",
-        "Use SMS for verification codes"
+        "Use SMS for verification codes",
+        "Heval Controls"
       ],
-      "originBuild": "260445",
-      "publishedAt": "2026-11-02T18:17:40Z"
+      "originBuild": "260448",
+      "publishedAt": "2026-11-02T23:44:10Z"
     },
     "truecaller-heval99-v26.42.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -7970,10 +7973,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.1.0-dev.6.mpp"
+        "heval99/patches-2.2.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0-dev.6"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7991,10 +7994,11 @@
         "Hide family button",
         "Hide promotions",
         "Spoof signature",
-        "Use SMS for verification codes"
+        "Use SMS for verification codes",
+        "Heval Controls"
       ],
-      "originBuild": "260445",
-      "publishedAt": "2026-11-02T18:17:40Z"
+      "originBuild": "260448",
+      "publishedAt": "2026-11-02T23:44:10Z"
     }
   }
 }
