@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260446",
+    "channel": "stable",
+    "publishedAt": "2026-11-02T18:20:36Z"
+  },
+  "files": {
+    "xiaomi-recorder-bearinmindcat-v7.7.9-all.apk": {
+      "name": "xiaomi-recorder-bearinmindcat",
+      "version": "7.7.9",
+      "appKey": "xiaomirecorder",
+      "appName": "Xiaomi Recorder",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.android.soundrecorder",
+      "patchSources": [
+        "bearinmindcat/patches-2.8.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.5"
+      ],
+      "appliedPatches": [
+        "Enable non-HyperOS ROM support"
+      ],
+      "originBuild": "260446",
+      "publishedAt": "2026-11-02T18:20:36Z"
+    }
+  }
+}
