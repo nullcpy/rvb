@@ -1,4 +1,23 @@
 {
-  "stable": {},
+  "stable": {
+    "XiaomiRecorder-bearinmindcat": {
+      "reason": "config",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "60cb6b2e292408a5b3bba534fc36117d2bfb9211"
+    },
+    "XiaomiScreenRecorder-bearinmindcat": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "de45af5934be1b8b5db1776309ad5084a6314a20"
+    }
+  },
   "beta": {}
 }
