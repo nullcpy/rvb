@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260442",
+    "channel": "stable",
+    "publishedAt": "2026-11-02T05:56:13Z"
+  },
+  "files": {
+    "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.48.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.2"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260442",
+      "publishedAt": "2026-11-02T05:56:13Z"
+    },
+    "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "patchSources": [
+        "ajstrick81/patches-1.48.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.2"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads"
+      ],
+      "originBuild": "260442",
+      "publishedAt": "2026-11-02T05:56:13Z"
+    }
+  }
+}
