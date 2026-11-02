@@ -87,7 +87,7 @@ apkpure-dlurl = "https://apkpure.com/2025-plus-messenger-questions-tool/org.tele
 apkcombo-dlurl = "https://apkcombo.com/plus-messenger/org.telegram.plus"
 
 [Telegram-HushTelegram-FOSS]
-enabled = true
+enabled = false
 pkg-name = "org.telegram.messenger.web"
 app-name = "Telegram"
 variant = "FOSS"
@@ -98,7 +98,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-ve
 direct-dlurl = "https://telegram.org/dl/android/apk"
 
 [Telegram-HushTelegram-GooglePlay]
-enabled = true
+enabled = false
 pkg-name = "org.telegram.messenger"
 app-name = "Telegram"
 variant = "Google Play"
