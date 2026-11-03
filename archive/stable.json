@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-03T04:50:41Z"
+    "publishedAt": "2026-11-03T07:01:45Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -1061,56 +1061,6 @@
         "Disable analytics ",
         "Disable consent popup ",
         "Enable SoundCloud Go "
-      ],
-      "originBuild": "260058",
-      "publishedAt": "2026-09-15T16:50:12Z"
-    },
-    "pixiv-devanced-v6.141.1-arm64-v8a.apk": {
-      "name": "pixiv-devanced",
-      "version": "6.141.1",
-      "appKey": "pixiv",
-      "appName": "pixiv",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "devanced",
-      "brandName": "DeVanced",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "jp.pxv.android",
-      "patchSources": [
-        "RookieEnough/patches-1.4.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.2"
-      ],
-      "appliedPatches": [
-        "Hide ads ",
-        "Remove popular search time limit "
-      ],
-      "originBuild": "260058",
-      "publishedAt": "2026-09-15T16:50:12Z"
-    },
-    "pixiv-devanced-v6.141.1-arm-v7a.apk": {
-      "name": "pixiv-devanced",
-      "version": "6.141.1",
-      "appKey": "pixiv",
-      "appName": "pixiv",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "devanced",
-      "brandName": "DeVanced",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "jp.pxv.android",
-      "patchSources": [
-        "RookieEnough/patches-1.4.2.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.4.2"
-      ],
-      "appliedPatches": [
-        "Hide ads ",
-        "Remove popular search time limit "
       ],
       "originBuild": "260058",
       "publishedAt": "2026-09-15T16:50:12Z"
@@ -3117,10 +3067,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.9.0.mpp"
+        "andrewliang25/patches-3.10.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.9.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.10.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -3132,6 +3082,7 @@
         "[Feed] Hide sponsored posts",
         "[Fix] Restore screens on re-signed builds",
         "[General] AMOLED black theme",
+        "[General] Andrew's Patch Setting",
         "[General] Hide affiliate product links",
         "[General] Open links in external browser",
         "[Reels] Download any reel",
@@ -3140,8 +3091,8 @@
         "[Stories] Download any story",
         "[Stories] Hide sponsored stories"
       ],
-      "originBuild": "260354",
-      "publishedAt": "2026-10-23T20:12:43Z"
+      "originBuild": "260452",
+      "publishedAt": "2026-11-03T07:01:23Z"
     },
     "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
       "name": "pixiv-fripe070",
@@ -16358,80 +16309,6 @@
       "originBuild": "260401",
       "publishedAt": "2026-10-28T18:46:43Z"
     },
-    "brave-browser-kveld9-v1.97.57-arm-v7a.apk": {
-      "name": "brave-browser-kveld9",
-      "version": "1.97.57",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.brave.browser",
-      "patchSources": [
-        "kveld9/patches-2.7.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
-      ],
-      "appliedPatches": [
-        "Block Motion Sensors",
-        "Block Popups & Rating Requests",
-        "Block Trackers",
-        "Brave Origin",
-        "Clean Shared Links",
-        "Clean Start Page",
-        "Faster Startup",
-        "Hide Battery Status",
-        "Keep Tabs Open",
-        "Select Previous Tab on Close",
-        "Silence Promo Notifications",
-        "Skip Welcome Screens",
-        "Stop Background Sync",
-        "Stop Text Sharing with System"
-      ],
-      "originBuild": "260286",
-      "publishedAt": "2026-10-15T23:03:01Z"
-    },
-    "brave-browser-kveld9-v1.97.57-arm64-v8a.apk": {
-      "name": "brave-browser-kveld9",
-      "version": "1.97.57",
-      "appKey": "bravebrowser",
-      "appName": "Brave Browser",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.brave.browser",
-      "patchSources": [
-        "kveld9/patches-2.7.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.7.0"
-      ],
-      "appliedPatches": [
-        "Block Motion Sensors",
-        "Block Popups & Rating Requests",
-        "Block Trackers",
-        "Brave Origin",
-        "Clean Shared Links",
-        "Clean Start Page",
-        "Faster Startup",
-        "Hide Battery Status",
-        "Keep Tabs Open",
-        "Select Previous Tab on Close",
-        "Silence Promo Notifications",
-        "Skip Welcome Screens",
-        "Stop Background Sync",
-        "Stop Text Sharing with System"
-      ],
-      "originBuild": "260286",
-      "publishedAt": "2026-10-15T23:03:01Z"
-    },
     "byair-franticg33k-v2.41.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
       "version": "2.41.0",
@@ -16481,148 +16358,6 @@
       ],
       "originBuild": "260289",
       "publishedAt": "2026-10-16T09:44:16Z"
-    },
-    "truecaller-heval99-module-v26.40.5-arm64-v8a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.40.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable contact upload",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
-    "truecaller-heval99-module-v26.40.5-arm-v7a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.40.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable contact upload",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
-    "truecaller-heval99-v26.40.5-arm-v7a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.40.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable contact upload",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
-    "truecaller-heval99-v26.40.5-arm64-v8a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.40.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable contact upload",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
     },
     "linkedin-michii-v4.1.1261-arm-v7a.apk": {
       "name": "linkedin-michii",
@@ -17305,64 +17040,6 @@
       ],
       "originBuild": "260328",
       "publishedAt": "2026-10-20T23:05:12Z"
-    },
-    "sofascore-heval99-v26.10.05-arm64-v8a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.10.05",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable rating prompts",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
-    "sofascore-heval99-v26.10.05-arm-v7a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.10.05",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable rating prompts",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm-v7a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -19282,106 +18959,6 @@
       ],
       "originBuild": "260387",
       "publishedAt": "2026-10-27T04:25:16Z"
-    },
-    "tiktok-kveld9-v47.4.3-arm-v7a.apk": {
-      "name": "tiktok-kveld9",
-      "version": "47.4.3",
-      "appKey": "tiktok",
-      "appName": "TikTok",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.zhiliaoapp.musically",
-      "patchSources": [
-        "kveld9/patches-2.8.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
-      ],
-      "appliedPatches": [
-        "Allow Screenshots",
-        "Always Show Publish Date",
-        "Battery & Resource Saver",
-        "Block P2P Video Relay",
-        "Block Popups & Prompts",
-        "Block Trackers",
-        "Block Trackers (Setup)",
-        "Bypass Mandatory Login",
-        "Clean Share Links",
-        "Comment Customizer",
-        "Custom Share Sheet",
-        "Customize Search",
-        "Declutter Navigation Bar",
-        "Device Privacy Guard",
-        "Disable On-Device AI",
-        "Download Without Watermark",
-        "Enable Profile Banner",
-        "Feed Ads & Content Filter",
-        "Force Auto-Scroll",
-        "Friends & Suggestions Filter",
-        "Hide Inbox Promos & Alerts",
-        "In-App Browser Privacy Guard",
-        "Instant Launch",
-        "Login Compatibility Fix",
-        "Offline Video Limit",
-        "Remove Extra Files",
-        "Show Seekbar"
-      ],
-      "originBuild": "260343",
-      "publishedAt": "2026-10-22T20:36:16Z"
-    },
-    "tiktok-kveld9-v47.4.3-arm64-v8a.apk": {
-      "name": "tiktok-kveld9",
-      "version": "47.4.3",
-      "appKey": "tiktok",
-      "appName": "TikTok",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kveld9",
-      "brandName": "kveld9",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.zhiliaoapp.musically",
-      "patchSources": [
-        "kveld9/patches-2.8.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.8.0"
-      ],
-      "appliedPatches": [
-        "Allow Screenshots",
-        "Always Show Publish Date",
-        "Battery & Resource Saver",
-        "Block P2P Video Relay",
-        "Block Popups & Prompts",
-        "Block Trackers",
-        "Block Trackers (Setup)",
-        "Bypass Mandatory Login",
-        "Clean Share Links",
-        "Comment Customizer",
-        "Custom Share Sheet",
-        "Customize Search",
-        "Declutter Navigation Bar",
-        "Device Privacy Guard",
-        "Disable On-Device AI",
-        "Download Without Watermark",
-        "Enable Profile Banner",
-        "Feed Ads & Content Filter",
-        "Force Auto-Scroll",
-        "Friends & Suggestions Filter",
-        "Hide Inbox Promos & Alerts",
-        "In-App Browser Privacy Guard",
-        "Instant Launch",
-        "Login Compatibility Fix",
-        "Offline Video Limit",
-        "Remove Extra Files",
-        "Show Seekbar"
-      ],
-      "originBuild": "260343",
-      "publishedAt": "2026-10-22T20:36:16Z"
     },
     "facebook-hushfacebook-v584.0.0.51.56-arm-v7a.apk": {
       "name": "facebook-hushfacebook",
@@ -21394,56 +20971,6 @@
       "originBuild": "260374",
       "publishedAt": "2026-10-25T15:56:22Z"
     },
-    "myfitnesspal-heval99-v26.41.0-arm-v7a.apk": {
-      "name": "myfitnesspal-heval99",
-      "version": "26.41.0",
-      "appKey": "myfitnesspal",
-      "appName": "MyFitnessPal",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.myfitnesspal.android",
-      "patchSources": [
-        "heval99/patches-1.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
-      ],
-      "appliedPatches": [
-        "Disable Datadog telemetry",
-        "Enable Premium+"
-      ],
-      "originBuild": "260374",
-      "publishedAt": "2026-10-25T15:56:22Z"
-    },
-    "myfitnesspal-heval99-v26.41.0-arm64-v8a.apk": {
-      "name": "myfitnesspal-heval99",
-      "version": "26.41.0",
-      "appKey": "myfitnesspal",
-      "appName": "MyFitnessPal",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.myfitnesspal.android",
-      "patchSources": [
-        "heval99/patches-1.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.19.0"
-      ],
-      "appliedPatches": [
-        "Disable Datadog telemetry",
-        "Enable Premium+"
-      ],
-      "originBuild": "260374",
-      "publishedAt": "2026-10-25T15:56:22Z"
-    },
     "proton-mail-hxreborn-v7.11.11-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
       "version": "7.11.11",
@@ -22144,38 +21671,6 @@
       "originBuild": "260388",
       "publishedAt": "2026-10-27T05:11:50Z"
     },
-    "instagram-instafel-v453.0.0.55.79-arm64-v8a.apk": {
-      "name": "instagram-instafel",
-      "version": "453.0.0.55.79",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-ce49607.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260388",
-      "publishedAt": "2026-10-27T05:11:50Z"
-    },
     "musicolet-hxreborn-v6.14.1build540-arm-v7a.apk": {
       "name": "musicolet-hxreborn",
       "version": "6.14.1build540",
@@ -22402,38 +21897,6 @@
         "Add App Trigger",
         "Clone General",
         "Replace Instagram Strings"
-      ],
-      "originBuild": "260388",
-      "publishedAt": "2026-10-27T05:11:50Z"
-    },
-    "instagram-instafel-v453.0.0.55.79-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "453.0.0.55.79",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-ce49607.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/ce49607-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
       ],
       "originBuild": "260388",
       "publishedAt": "2026-10-27T05:11:50Z"
