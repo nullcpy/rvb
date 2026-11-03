@@ -196,7 +196,7 @@ table per app. For each enabled table `build.sh`:
 ## Parallel pool (`PARALLEL_JOBS`)
 
 The only knob is the env var set in [build.yml](../.github/workflows/build.yml)
-(`PARALLEL_JOBS: "6"`); no config file can change it. `1` — the historical
+(`PARALLEL_JOBS: "3"`); no config file can change it. `1` — the historical
 default — runs the original sequential path untouched. Above that, each table
 build becomes a fresh `bash -c` child that re-sources `utils.sh`:
 
@@ -209,6 +209,14 @@ build becomes a fresh `bash -c` child that re-sources `utils.sh`:
   killed externally without an rc file gets a synthesised `137` rather than
   hanging the drain;
 - `INT` kills in-flight children before running the normal abort sweep.
+
+Width alone is not a bound. Every JVM the engine starts goes through the `java()`
+wrapper, which prepends `-Xmx$RVB_JVM_MAX_HEAP` when that knob is set in the workflow
+env: unset or `0` leaves the JVM default, and a value the JVM would refuse is dropped
+with a warning instead of failing the pool. Without a cap each child may take the JVM
+default of a quarter of physical RAM, and the children then add up to more than the
+hosted runner holds, which is how this job used to be killed mid-pool with SIGTERM -
+the failure and the sizing are in [ci-pipelines.md](ci-pipelines.md) item 1b.
 
 The `=()` initialisers on the job arrays are required: bash 5.3 treats a bare
 `declare -gA` as unset under `set -u`. Why the knob is a workflow env value and not

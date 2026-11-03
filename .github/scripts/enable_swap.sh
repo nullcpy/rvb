@@ -1,24 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Give the build pool swap headroom on the standard hosted runner.
+# Guard the build pool's memory headroom on the standard hosted runner.
 #
-# The build job runs on the free public-repo runner, which is 4-core/16 GB
-# (the shape scripts/build.sh assumes when it caps PARALLEL_JOBS at 8). No
-# `java` call in the engine carries a heap flag, so each morphe pool child gets
-# the JVM default max heap of 1/4 of RAM: 6 concurrent children are a ~24 GB
-# ceiling against 16 GB of real memory, before the Cloudflare sidecar's browsers
-# and the apkeditor/apksigner JVMs. When the machine passes that point the
-# runner agent is torn down and the step dies with SIGTERM, which the log shows
-# as exit 143 plus "The runner has received a shutdown signal" - observed on
-# run 41533052163 (build_stable) and run 41566179123 (Manual CI), both ~13 min
-# into a full pool, both losing every artifact the pool had already built
-# because the abort also skips the publish chain. This class is the hosted
-# runner's own resource limit and has no proper error message
-# (https://github.com/actions/runner-images/issues/6680); larger runners are the
-# other fix but are not available to a personal account and are not free for
-# public repos, so the runner stays as it is and the memory overflow is absorbed
-# here instead. Swap does not make a starved machine fast; it makes it finish.
+# The build job runs on the free public-repo runner, which is 4-core/16 GB (the
+# shape scripts/build.sh assumes when it caps PARALLEL_JOBS at 8). Pool children
+# used to run with no heap flag at all, so each was allowed the JVM default of a
+# quarter of RAM and six of them asked for more memory than the VM has; going over
+# that ceiling is what tears the runner agent down and kills the step with SIGTERM,
+# logged as exit 143 plus "The runner has received a shutdown signal" - observed on
+# run 41533052163 (build_stable) and run 41566179123 (Manual CI), both ~13 min into
+# a full pool, both losing every artifact the pool had already built because the
+# abort also skips the publish chain. The pool is now bounded (PARALLEL_JOBS with
+# RVB_JVM_MAX_HEAP, see docs/ci-pipelines.md item 1b); this step is what is left of
+# the swap idea after learning that today's image already ships its own 3 GiB
+# /swapfile, which the "already active" branch below detects and reports.
+# It remains useful for two things: recording the runner's memory baseline at the
+# start of every run, and covering an image generation that drops that file.
+# Larger runners are the other fix for the ceiling and are not reachable from a
+# personal account, nor free for public repos. Swap does not make a starved machine
+# fast; it only makes it finish.
 #
 # RVB_SWAP_MB (job env in build.yml, per docs/decisions/0005): size in MiB.
 # Unset, non-numeric or 0 means "do not add swap" and the step says so - the

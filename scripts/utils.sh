@@ -386,13 +386,32 @@ clear_patch_failure_record() { # $1=slug
 	[ -n "${TEMP_DIR:-}" ] || return 0
 	rm -f "$TEMP_DIR/failures/$1_pf.json" "$TEMP_DIR/failures/$1_pf.log" 2> /dev/null || true
 }
+# RVB_JVM_MAX_HEAP bounds every JVM the engine starts (job env in build.yml, per
+# decisions/0005). The JVM default max heap is a quarter of physical RAM per
+# process, so an uncapped pool child on the 4-core/16 GB hosted runner is allowed
+# ~4 GB and the pool asks for more than the machine has collectively; going past
+# that ceiling is what gets the runner agent killed mid-build (SIGTERM, exit 143),
+# which loses every artifact the pool had already produced. Unset or 0 keeps the
+# behaviour the engine has always had: the cap is a tuning value, never a size
+# invented here. A value the JVM would refuse is dropped with a warning rather than
+# failing the run, because a typo in a tuning knob must not kill every app.
+RVB_JVM_MEM_ARG=
+if [ -n "${RVB_JVM_MAX_HEAP:-}" ] && [ "${RVB_JVM_MAX_HEAP}" != "0" ]; then
+	if [[ "${RVB_JVM_MAX_HEAP}" =~ ^[0-9]+[kKmMgG]?$ ]]; then
+		RVB_JVM_MEM_ARG="-Xmx${RVB_JVM_MAX_HEAP}"
+	else
+		echo "[!] RVB_JVM_MAX_HEAP '${RVB_JVM_MAX_HEAP}' is not a JVM size such as 3g; running uncapped." >&2
+	fi
+fi
+
 # env -i keeps JVM runs hermetic; XDG_DATA_HOME is forwarded so callers can
 # relocate an app's per-user state dir out of the shared HOME (see the
 # instafel flows) — without it, parallel builds race on $HOME state.
 java() {
 	local -a java_env=(PATH="$PATH" HOME="$HOME" LANG="${LANG:-en_US.UTF-8}")
 	[ -n "${XDG_DATA_HOME:-}" ] && java_env+=(XDG_DATA_HOME="$XDG_DATA_HOME")
-	env -i "${java_env[@]}" java --enable-native-access=ALL-UNNAMED "$@";
+	# shellcheck disable=SC2086  # one fixed token, empty while the knob is off
+	env -i "${java_env[@]}" java ${RVB_JVM_MEM_ARG} --enable-native-access=ALL-UNNAMED "$@";
 }
 
 # Per-forge release API endpoints. $2 is always "owner/repo" (gitlab URL-encodes
