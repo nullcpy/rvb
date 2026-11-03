@@ -4823,7 +4823,14 @@ write_build_info() {
 	# only - tools without a result file scrape less reliably, and an inclusive
 	# expansion lists every name the bundle offered, so "not applied" there can also
 	# mean "applied but unreported".
-	if [ "$applied_json" != "[]" ] && [ -n "${args[included_patches]:-}" ]; then
+	# instafel is excluded, for the same structural reason as the guard below: p-rel
+	# reports display titles (`I: Patch 'Remove Ads' loaded`) while the config names
+	# bundle identifiers (`remove_ads`) and whole module aliases (`instafel`, which
+	# matches no title at all), so the two sides share no namespace. Folding underscores
+	# into spaces would silence a genuine miss whenever a different bundle happened to
+	# title-case the same way, so the comparison is skipped rather than approximated.
+	if [ "$applied_json" != "[]" ] && [ -n "${args[included_patches]:-}" ] &&
+		[ "${PATCHER_FLOW:-}" != instafel-workflow ]; then
 		local inc_name missing_inc=""
 		while IFS= read -r inc_name; do
 			inc_name="${inc_name#\'}"; inc_name="${inc_name%\'}"

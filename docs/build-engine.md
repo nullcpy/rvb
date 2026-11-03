@@ -331,6 +331,13 @@ for adding surface without a measured gain
    build, not a failure. Tools without a result file (revanced, xposed, instafel) are never
    judged this way, because their scrape reports differently by design (run
    41314721427: Proton Lumo shipped as an unpatched stock app under a patched name).
+   The requested-name check shares that carve-out for the same structural reason: it
+   compares the config's `included-patches` against the scraped names, and p-rel reports
+   display titles (`I: Patch 'Remove Ads' loaded`) while the config writes identifiers
+   (`remove_ads`) or whole-module aliases (`instafel`, which matches no title at all). The
+   two sides have no common namespace, so the check is skipped for the `instafel-workflow`
+   flow instead of approximated - folding underscores into spaces would also silence a
+   genuine miss in any other bundle that happened to title-case the same way.
 7. **Naming and metadata** — `aapt2`/`aapt` re-reads the patched manifest, so a
    patcher that rewrote the package id is recorded honestly; output is
    `<file-prefix>-v<version>-<arch>.apk`; `write_build_info` appends the record
