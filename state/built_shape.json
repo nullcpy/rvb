@@ -3431,7 +3431,20 @@
         "brand": "bearinmindcat",
         "app-name": "Xiaomi Screen Recorder",
         "pkg-name": "com.miui.screenrecorder",
-        "arch": "both",
+        "arch": "arm64-v8a",
+        "build-mode": "apk"
+      }
+    },
+    "WebVideoCast-mwbra130": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "mwbra130/Retro-Bowl-College",
+        "brand": "mwbra130",
+        "app-name": "Web Video Cast",
+        "pkg-name": "com.instantbits.cast.webvideo",
+        "arch": "all",
         "build-mode": "apk"
       }
     }
