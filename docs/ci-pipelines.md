@@ -126,8 +126,8 @@ forge answers again. The deliberate fail-open inside that check is recorded in
 Called once per pool with `config_file` (and optional `remove_apks`, which both CI
 and Manual CI can pass, plus `disable_dedup` from Manual CI). Everything it needs to
 be reproducible lives in
-that one file, including the tuning knobs —
-`PARALLEL_JOBS: "6"` and `UPLOAD_CONCURRENCY: "12"` are workflow env values, not
+that one file, including the tuning knobs - `PARALLEL_JOBS: "6"`,
+`UPLOAD_CONCURRENCY: "12"` and `RVB_SWAP_MB: "6144"` are workflow env values, not
 repo variables, so they are visible in PRs, survive forks, and carry git history
 (why: [decisions/0005](decisions/0005-tuning-knobs-live-in-the-workflow.md)).
 
@@ -135,7 +135,28 @@ Step order, with the reason each is where it is:
 
 1. Java 21 (Temurin) → checkout `main` with `fetch-depth: 0` and submodules (full
    history is needed to enumerate existing tags and to commit to other branches) →
-   `fetch_data_branch.sh`.
+   `enable_swap.sh` → `fetch_data_branch.sh`.
+1b. `enable_swap.sh` gives the job swap headroom (`RVB_SWAP_MB`, 6 GiB) before
+   anything can grow. Every pool child patches in its own JVM and no `java` call in
+   the engine carries a heap flag, so each gets the JVM default max heap of a
+   quarter of RAM: `PARALLEL_JOBS: "6"` is a ~24 GB ceiling on the standard
+   4-core/16 GB public-repo runner, before the Cloudflare sidecar's browsers and the
+   apkeditor/apksigner JVMs. Past that ceiling the runner agent itself is torn down
+   and the build step dies with SIGTERM, logged as `Process completed with exit
+   code 143` plus "The runner has received a shutdown signal" - what killed the
+   full pools of runs 41533052163 and 41566179123 about 13 minutes in, taking the
+   failure report, the retry-state commit and the whole publish chain with it, so
+   an already-built pool published nothing. The class is the hosted runner's own
+   resource limit and carries no diagnostic
+   ([actions/runner-images#6680](https://github.com/actions/runner-images/issues/6680)).
+   Larger runners are the other answer and are not reachable from here: they need
+   a Team or Enterprise organization, and are billed per minute even in public
+   repositories, so the job stays on `ubuntu-latest` and the overflow is absorbed
+   as swap. Slow beats aborted. The step is deliberately **soft**: missing sudo,
+   no room on `/`, or a refused `swapon` prints `::warning::` and returns 0, since
+   a build without the safety net is better than a build that never starts. It
+   prints `swapon --show` and `free -h` whenever it acts, so an ineffective swap
+   step can never read as a working one, and `RVB_SWAP_MB: "0"` turns it off.
 2. `build_resolve_context.sh` maps the config file to `ARCHIVE_TAG`,
    `IS_PRERELEASE`, `TITLE_SUFFIX` and the Telegram thread — the single owner of
    "which channel is this run".
