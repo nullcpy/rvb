@@ -3,7 +3,6 @@ enabled = true
 pkg-name = "com.miui.screenrecorder"
 app-name = "Xiaomi Screen Recorder"
 brand = "bearinmindcat"
-arch = "all"
 patches-source = "bearinmindcat/morphe-patches"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/xiaomi-inc/miui-screen-recorder"
 uptodown-dlurl = "https://miui-screen-recorder.en.uptodown.com/android"
