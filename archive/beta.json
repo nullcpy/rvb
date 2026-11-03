@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-03T12:44:29Z"
+    "publishedAt": "2026-11-03T20:02:32Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -1520,10 +1520,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1570,8 +1570,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-music-anddea-v9.15.51-arm64-v8a.apk": {
       "name": "youtube-music-anddea",
@@ -1586,10 +1586,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1637,8 +1637,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-music-anddea-module-v9.15.51-arm-v7a.zip": {
       "name": "youtube-music-anddea",
@@ -1653,10 +1653,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1703,8 +1703,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-music-anddea-v9.15.51-arm-v7a.apk": {
       "name": "youtube-music-anddea",
@@ -1719,10 +1719,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1770,8 +1770,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-anddea-v21.13.164-arm-v7a.apk": {
       "name": "youtube-anddea",
@@ -1786,16 +1786,17 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "Ambient mode control",
         "App refresh rate",
         "Bypass URL redirects",
         "Bypass image region restrictions",
+        "Captions",
         "Change form factor",
         "Change player flyout menu toggles",
         "Change share sheet",
@@ -1868,7 +1869,9 @@
         "Swipe controls",
         "Theme",
         "Toolbar components",
+        "Translate live chat",
         "Translations for YouTube",
+        "Unlock queue",
         "Video playback",
         "Voice Over Translation",
         "Wide search bar",
@@ -1877,8 +1880,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-anddea-v21.13.164-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -1893,16 +1896,17 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "Ambient mode control",
         "App refresh rate",
         "Bypass URL redirects",
         "Bypass image region restrictions",
+        "Captions",
         "Change form factor",
         "Change player flyout menu toggles",
         "Change share sheet",
@@ -1975,7 +1979,9 @@
         "Swipe controls",
         "Theme",
         "Toolbar components",
+        "Translate live chat",
         "Translations for YouTube",
+        "Unlock queue",
         "Video playback",
         "Voice Over Translation",
         "Wide search bar",
@@ -1984,8 +1990,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-anddea-module-v21.13.164-arm-v7a.zip": {
       "name": "youtube-anddea",
@@ -2000,16 +2006,17 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "Ambient mode control",
         "App refresh rate",
         "Bypass URL redirects",
         "Bypass image region restrictions",
+        "Captions",
         "Change form factor",
         "Change player flyout menu toggles",
         "Change share sheet",
@@ -2081,7 +2088,9 @@
         "Swipe controls",
         "Theme",
         "Toolbar components",
+        "Translate live chat",
         "Translations for YouTube",
+        "Unlock queue",
         "Video playback",
         "Voice Over Translation",
         "Wide search bar",
@@ -2090,8 +2099,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-anddea-module-v21.13.164-arm64-v8a.zip": {
       "name": "youtube-anddea",
@@ -2106,16 +2115,17 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.4.mpp"
+        "anddea/patches-4.4.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.4"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.5"
       ],
       "appliedPatches": [
         "Ambient mode control",
         "App refresh rate",
         "Bypass URL redirects",
         "Bypass image region restrictions",
+        "Captions",
         "Change form factor",
         "Change player flyout menu toggles",
         "Change share sheet",
@@ -2187,7 +2197,9 @@
         "Swipe controls",
         "Theme",
         "Toolbar components",
+        "Translate live chat",
         "Translations for YouTube",
+        "Unlock queue",
         "Video playback",
         "Voice Over Translation",
         "Wide search bar",
@@ -2196,8 +2208,8 @@
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260418",
-      "publishedAt": "2026-10-30T18:28:23Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -3031,288 +3043,6 @@
       ],
       "originBuild": "260201",
       "publishedAt": "2026-10-07T05:54:24Z"
-    },
-    "youtube-music-morphe-experimental-v9.42.52-arm64-v8a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.42.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.8"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260392",
-      "publishedAt": "2026-10-27T10:22:40Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.42.52-arm64-v8a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.42.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.8"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260392",
-      "publishedAt": "2026-10-27T10:22:40Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.42.52-arm-v7a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.42.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.10.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.10"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260398",
-      "publishedAt": "2026-10-28T11:06:05Z"
-    },
-    "youtube-music-morphe-experimental-v9.42.52-arm-v7a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.42.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-1.49.0-dev.10.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.10"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260398",
-      "publishedAt": "2026-10-28T11:06:05Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.5.3.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -7855,10 +7585,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.2.0-dev.2.mpp"
+        "heval99/patches-2.2.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.3"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7876,10 +7606,10 @@
         "Hide promotions",
         "Spoof signature",
         "Use SMS for verification codes",
-        "Heval Controls"
+        "Patch settings"
       ],
-      "originBuild": "260448",
-      "publishedAt": "2026-11-02T23:44:10Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "truecaller-heval99-v26.42.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -7894,10 +7624,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.2.0-dev.2.mpp"
+        "heval99/patches-2.2.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.3"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7916,10 +7646,10 @@
         "Hide promotions",
         "Spoof signature",
         "Use SMS for verification codes",
-        "Heval Controls"
+        "Patch settings"
       ],
-      "originBuild": "260448",
-      "publishedAt": "2026-11-02T23:44:10Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "truecaller-heval99-module-v26.42.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -7934,10 +7664,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.2.0-dev.2.mpp"
+        "heval99/patches-2.2.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.3"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7955,10 +7685,10 @@
         "Hide promotions",
         "Spoof signature",
         "Use SMS for verification codes",
-        "Heval Controls"
+        "Patch settings"
       ],
-      "originBuild": "260448",
-      "publishedAt": "2026-11-02T23:44:10Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "truecaller-heval99-v26.42.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -7973,10 +7703,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.2.0-dev.2.mpp"
+        "heval99/patches-2.2.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.2"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.2.0-dev.3"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7995,10 +7725,10 @@
         "Hide promotions",
         "Spoof signature",
         "Use SMS for verification codes",
-        "Heval Controls"
+        "Patch settings"
       ],
-      "originBuild": "260448",
-      "publishedAt": "2026-11-02T23:44:10Z"
+      "originBuild": "260457",
+      "publishedAt": "2026-11-03T20:01:29Z"
     },
     "youtube-music-morphe-experimental-module-v9.44.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
