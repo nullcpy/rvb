@@ -57,9 +57,6 @@ jobs:
       # Per-JVM heap ceiling handed to every engine java call as -Xmx; 0 or unset
       # leaves the JVM default. Why 3 x 3g: docs/ci-pipelines.md item 1b.
       RVB_JVM_MAX_HEAP: "3g"
-      # Swap headroom for the pool, in MiB; 0 disables.
-      # Why: docs/ci-pipelines.md item 1b, .github/scripts/enable_swap.sh.
-      RVB_SWAP_MB: "6144"
       # Duplicate-build suppression: log measures and still publishes every
       # artifact; enforce withholds an unchanged rebuild from the release and
       # lets an all-unchanged run skip the publish chain (never an empty
@@ -88,9 +85,6 @@ jobs:
           ref: main
           fetch-depth: 0
           submodules: true
-
-      - name: Add runner swap file
-        run: bash .github/scripts/enable_swap.sh
 
       - name: Fetch configs & state (data branch)
         # Materializes configs/ (human TOMLs + generated *_build.json) and
@@ -175,13 +169,6 @@ jobs:
         run: |
           set -euo pipefail
           bash scripts/build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
-
-      # Why: docs/ci-pipelines.md item 7a.
-      - name: Report runner memory after pool
-        if: always()
-        run: |
-          swapon --show
-          free -h
 
       - name: Report build failures
         id: failure_report

@@ -127,8 +127,7 @@ Called once per pool with `config_file` (and optional `remove_apks`, which both 
 and Manual CI can pass, plus `disable_dedup` from Manual CI). Everything it needs to
 be reproducible lives in
 that one file, including the tuning knobs - `PARALLEL_JOBS: "3"`,
-`UPLOAD_CONCURRENCY: "12"`, `RVB_JVM_MAX_HEAP: "3g"` and `RVB_SWAP_MB: "6144"` are
-workflow env values, not
+`UPLOAD_CONCURRENCY: "12"` and `RVB_JVM_MAX_HEAP: "3g"` are workflow env values, not
 repo variables, so they are visible in PRs, survive forks, and carry git history
 (why: [decisions/0005](decisions/0005-tuning-knobs-live-in-the-workflow.md)).
 
@@ -136,35 +135,33 @@ Step order, with the reason each is where it is:
 
 1. Java 21 (Temurin) → checkout `main` with `fetch-depth: 0` and submodules (full
    history is needed to enumerate existing tags and to commit to other branches) →
-   `enable_swap.sh` → `fetch_data_branch.sh`.
-1b. `enable_swap.sh` and the pool's two size knobs exist for one failure: the build
-   step dies with SIGTERM, logged as `Process completed with exit code 143` plus
-   "The runner has received a shutdown signal", partway through a full pool - runs
-   41533052163 and 41566179123 both lost the job about 13 minutes in with 25 app/arch
-   builds already reaped, and because the runner agent itself was torn down every
-   later step was skipped, so the run published nothing, filed no failure report and
-   committed no retry state. Each pool child patches in its own JVM and no `java`
-   call used to carry a heap flag, so a child was allowed the JVM default of a
-   quarter of RAM: `PARALLEL_JOBS: "6"` at that ceiling, plus the Cloudflare sidecar's
-   browsers and the apkeditor/apksigner JVMs, asks the standard 4-core/16 GB
-   public-repo runner for more than it can hold. The class is the hosted runner's own
+   `fetch_data_branch.sh`.
+1b. The pool-size knobs answer one failure: the build step dies with SIGTERM, logged
+   as `Process completed with exit code 143` plus "The runner has received a shutdown
+   signal", partway through a full pool. Runs 41533052163 and 41566179123 both lost the
+   job about 13 minutes in with 14 and 25 app/arch builds already reaped, and because
+   the runner agent itself was torn down every later step was skipped, so the run
+   published nothing, filed no failure report and committed no retry state. Each child
+   patches in its own JVM and no `java` call used to carry a heap flag, so a child was
+   allowed the JVM default of a quarter of RAM: six of them is a ~24 GiB ceiling on the
+   standard 4-core/16 GB public-repo runner, before the Cloudflare sidecar's browsers,
+   the apkeditor/apksigner JVMs and the page cache. The class is the hosted runner's own
    resource limit and arrives with no diagnostic
-   ([actions/runner-images#6680](https://github.com/actions/runner-images/issues/6680)).
-   Larger runners are the other answer and are not reachable from here: they need a
-   Team or Enterprise organization and are billed per minute even in public
-   repositories.
+   ([actions/runner-images#6680](https://github.com/actions/runner-images/issues/6680));
+   larger runners would be the other answer and are not reachable from here, needing a
+   Team or Enterprise organization and per-minute billing even in public repositories.
+   `PARALLEL_JOBS: "3"` with `RVB_JVM_MAX_HEAP: "3g"` is a 9 GiB aggregate ceiling
+   against those 15 GiB, applied by the engine's `java()` wrapper
+   ([build-engine.md](build-engine.md)); neither knob alone leaves margin. Both TikTok
+   arches at 482k classes and GooglePhotos with its root modules patched fine under 3g
+   (run 41578120659), so the cap is not yet costing an app.
 
-   So the pool is bounded instead: `PARALLEL_JOBS: "3"` with `RVB_JVM_MAX_HEAP: "3g"`
-   is a 9 GiB aggregate ceiling against 15 GiB of RAM, applied by the engine's
-   `java()` wrapper ([build-engine.md](build-engine.md)). The swap step asks for 6 GiB
-   and steps aside when the image already provides it, which today's `ubuntu-latest`
-   does - it ships its own `/swapfile` of 3 GiB, so the step logs `swap is already
-   active` and changes nothing, remaining as the guard that records the runner's
-   baseline and covers an image generation that drops the file. It is deliberately
-   **soft**: missing sudo, no room on `/`, or a refused `swapon` prints `::warning::`
-   and returns 0, since a build without the safety net beats one that never starts,
-   and `RVB_SWAP_MB: "0"` turns it off. Wherever it acts it prints `swapon --show`
-   and `free -h`, so an ineffective step can never read as a working one.
+   Two mitigations were tried and removed for being worthless. A swap-file step
+   (`enable_swap.sh`, commit 9c68a520) turned out to be inert: `ubuntu-latest` already
+   ships its own `/swapfile` of 3 GiB, so the step only ever printed a baseline. A
+   post-pool `swapon --show`/`free -h` step measured after the drain, which is residue,
+   not peak - a real peak needs sampling **during** the build step. If the 143 returns,
+   that sampler is the first thing to add, not more swap.
 2. `build_resolve_context.sh` maps the config file to `ARCHIVE_TAG`,
    `IS_PRERELEASE`, `TITLE_SUFFIX` and the Telegram thread — the single owner of
    "which channel is this run".
@@ -202,12 +199,6 @@ Step order, with the reason each is where it is:
    suppresses when every artifact kind the build was asked to publish is already
    live on the record, and a bare-md5 entry (kinds unknown) never suppresses at
    all — see [build-engine.md](build-engine.md).
-7a. **Report runner memory after pool** (`if: always()`): prints `swapon --show` and
-   `free -h` immediately after the drain, so a run leaves its measured footprint in
-   the log rather than only the ceiling arithmetic of item 1b. Those two lines are
-   what decides whether the pool is still too wide, whether `RVB_JVM_MAX_HEAP` is
-   cutting a patch too close, and whether the image's own 3 GiB of swap is being
-   consumed at all. Read-only, and `always()` so a pool that failed still reports.
 7b. **Report build failures** (`build_report_failures.sh`, `if: always()`,
    `continue-on-error`): reads `temp/failures/`, uploads each build log to
    `xi.pe`, and posts ONE batched Markdown message to the failure topic
