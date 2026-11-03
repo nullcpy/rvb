@@ -1416,25 +1416,25 @@
       ]
     },
     "strava-devanced-v477.14-arm64-v8a": {
-      "hash": "124e827370e04062f4ad72fcf51a4358",
+      "hash": "3f5fee67e7d55b1d4e5062c543866b48",
       "kinds": [
         "apk"
       ]
     },
     "strava-devanced-v477.14-arm-v7a": {
-      "hash": "474b217a9501fed2a4deea3466d90313",
+      "hash": "00a656e6e0a2a1bd70ed06096f35647d",
       "kinds": [
         "apk"
       ]
     },
     "photomath-devanced-v8.48.0-arm-v7a": {
-      "hash": "cc72d032049b8ef3804c234af9da3a8c",
+      "hash": "0c78049a5fee6d6ea438797e5d0876f5",
       "kinds": [
         "apk"
       ]
     },
     "photomath-devanced-v8.48.0-arm64-v8a": {
-      "hash": "22f3a6fbf0e9ca90c48f54ff2e33bce6",
+      "hash": "36eb681fe4385e3f57b65194e7ed5bd9",
       "kinds": [
         "apk"
       ]
@@ -1465,7 +1465,7 @@
       ]
     },
     "messenger-devanced-v573.0.0.44.88-arm64-v8a": {
-      "hash": "90e60e2535c41722cb252a478be49e22",
+      "hash": "2c94e5cbad0b34f756b0d6ddc3e0bca0",
       "kinds": [
         "apk"
       ]
@@ -1477,7 +1477,7 @@
       ]
     },
     "messenger-devanced-v573.0.0.44.88-arm-v7a": {
-      "hash": "5a6aeba8644172b222ab93324cf76ec1",
+      "hash": "5298039f5d213a50b872e3b528023a54",
       "kinds": [
         "apk"
       ]
@@ -1495,14 +1495,14 @@
       ]
     },
     "google-photos-devanced-v7.92.0.977185651-arm-v7a": {
-      "hash": "f8bbb4f35bcb3dd7ac1788318c3af21d",
+      "hash": "4d0a7f72f860552213c865fee101a3b5",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "google-photos-devanced-v7.92.0.977185651-arm64-v8a": {
-      "hash": "20bdfda2ca3cd460dbc64a6053b9c0d3",
+      "hash": "5e8ae47df973188555f79908dac946d9",
       "kinds": [
         "apk",
         "module"
@@ -1540,7 +1540,7 @@
       ]
     },
     "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a": {
-      "hash": "d29112eee2396261a4147faa0107f66f",
+      "hash": "a9ea9de259348a1dad1b8f9b142e9dee",
       "kinds": [
         "apk"
       ]
@@ -2407,6 +2407,86 @@
       "hash": "ecd338c5df72a3ed2c319444c217abd1",
       "kinds": [
         "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.19-arm64-v8a": {
+      "hash": "33097a028ced7f34acb8cce7e31ef74f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.19-arm-v7a": {
+      "hash": "857d61cd0d3f35fa183d655108ff5704",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "brave-browser-kveld9-v1.98.63-arm64-v8a": {
+      "hash": "84fb38dd54f14cc21aef93e40a5398c4",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "brave-browser-kveld9-v1.98.63-arm-v7a": {
+      "hash": "89b82b5ed46dc4e65e4aa709c293db13",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.43.0-arm64-v8a": {
+      "hash": "edf36e849c5eabd04a6cdca70b87a492",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.43.0-arm-v7a": {
+      "hash": "e4e2d614f94776bfc4a2270fcf92308a",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "pixiv-devanced-v6.202.1-arm64-v8a": {
+      "hash": "8a13eca9043f1f5723ab3f0c19132e78",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "pixiv-devanced-v6.202.1-arm-v7a": {
+      "hash": "c488352b33da0b9e80fa7399dc49b30f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "tiktok-kveld9-v47.6.3-arm-v7a": {
+      "hash": "ffdda246e605a9ab2af7a2d261b5b6cf",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "tiktok-kveld9-v47.6.3-arm64-v8a": {
+      "hash": "2430792e89d8765d2efffdb285e1188f",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.42.5-arm64-v8a": {
+      "hash": "80dca2e8cd0fa7a9fdf81af1f8aea8cc",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "xiaomi-screen-recorder-bearinmindcat-v4.16.2.9.1-arm64-v8a": {
+      "hash": "c6d7f5f2c122c1f8a0324fedc0188445",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.42.5-arm-v7a": {
+      "hash": "184cee0b1a44eb3ad4fc30e7768fffcc",
+      "kinds": [
+        "apk",
+        "module"
       ]
     }
   }

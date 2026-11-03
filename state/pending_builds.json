@@ -3,13 +3,13 @@
     "XiaomiScreenRecorder-bearinmindcat": {
       "reason": "retry",
       "arches": [
-        "all"
+        "arm-v7a"
       ],
-      "attempts": 4,
+      "attempts": 5,
       "parked": true,
       "cfg": "de45af5934be1b8b5db1776309ad5084a6314a20",
-      "run": 41533052163,
-      "ts": "2026-11-03T02:22:27Z"
+      "run": 41578120659,
+      "ts": "2026-11-03T04:47:56Z"
     }
   },
   "beta": {}
