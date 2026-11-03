@@ -16,6 +16,9 @@ on:
       # the suite rather than only reach the next scheduled watcher tick.
       - ".github/scripts/ci_fetch_app_versions.sh"
       - ".github/scripts/ci_compare_app_versions.sh"
+      # The effective-trigger resolver is driven by test_config_rearm.sh with per-channel
+      # state files, so a change to it must run the suite, not just the next watcher tick.
+      - ".github/scripts/ci_resolve_triggers.sh"
       # The pre-release marker list is owned by .github/scripts/channels.py and
       # mirrored by the engine, so a change on either side must run the parity suite
       # rather than surface as a source whose pre-release tags get recorded as its

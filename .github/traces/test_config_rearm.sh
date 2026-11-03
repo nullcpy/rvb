@@ -261,6 +261,11 @@ RES="$t/resolve_after_prune"
 mkdir -p "$RES/configs"
 printf '%s\n' '{"patches-version":"stable","Other-y":{"enabled":false,"pkg-name":"com.o"}}' >"$RES/configs/stable_build.json"
 printf '%s\n' '{"patches-version":"beta"}' >"$RES/configs/beta_build.json"
+# The prune left a non-parked item in the stable queue, so the channel DOES have a
+# reason to build: without this file the run below would be stopped by the new
+# channel-scope test and would pass without ever reaching the enabled-count guard it
+# is here to prove.
+printf '%s\n' '["Other-y"]' >"$RES/pending.stable.json"
 (
 	cd "$RES" || exit 1
 	RAW_TRIGGER_STABLE=0 RAW_TRIGGER_BETA=0 RAW_TRIGGER_APP_UPDATE=0 \
@@ -269,7 +274,81 @@ printf '%s\n' '{"patches-version":"beta"}' >"$RES/configs/beta_build.json"
 ) || fail "12b: ci_resolve_triggers.sh exited non-zero: $(cat "$RES/log")"
 [[ "$(sed -n 's/^TRIGGER_STABLE=//p' "$RES/gho")" == "0" ]] ||
 	fail "12b a state-only write still started a build"
+grep -q "Skipping stable build trigger: no enabled apps" "$RES/log" ||
+	fail "12b was stopped before the enabled-count guard, so it proved nothing: $(cat "$RES/log")"
 ok_12b=1
+
+# run_resolve <dir> [NAME=value ...] — run ci_resolve_triggers.sh in <dir> with the
+# given trigger env; leaves RES_STABLE, RES_BETA, RES_LOG.
+run_resolve() {
+	local dir="$1"
+	shift
+	(
+		cd "$dir" || exit 1
+		env "$@" GITHUB_OUTPUT="$dir/gho" \
+			bash "$REPO/.github/scripts/ci_resolve_triggers.sh" >"$dir/log" 2>&1
+	) || fail "ci_resolve_triggers.sh exited non-zero in $dir: $(cat "$dir/log")"
+	RES_STABLE=$(sed -n 's/^TRIGGER_STABLE=//p' "$dir/gho" | tail -1)
+	RES_BETA=$(sed -n 's/^TRIGGER_BETA=//p' "$dir/gho" | tail -1)
+	RES_LOG=$(cat "$dir/log")
+}
+
+# --- 12c. a config change wakes ONLY the channel that owns it --------------------
+# The hole this shuts: run 41590950846 removed an architecture field from a STABLE app,
+# ci_resolve_triggers.sh read the shared TRIGGER_CONFIG_CHANGE as a reason for BETA too,
+# and both Google Keyboard variants were re-patched from cache, called "Unchanged build"
+# by the content-hash gate and published nothing — while the queue notice named them as
+# queued. The owning channel must still wake, so the pair below is the whole claim.
+RES="$t/resolve_channel_scope"
+mkdir -p "$RES/configs"
+printf '%s\n' '{"patches-version":"stable","App-x":{"enabled":true,"pkg-name":"com.x"}}' >"$RES/configs/stable_build.json"
+printf '%s\n' '{"patches-version":"beta","Gboard-y":{"enabled":true,"pkg-name":"com.k"}}' >"$RES/configs/beta_build.json"
+printf '%s\n' '["App-x"]' >"$RES/pending.stable.json"
+printf '%s\n' '[]' >"$RES/pending.beta.json"
+printf '%s\n' '{"stable":{"App-x":[]},"beta":{}}' >"$RES/changed_apps.json"
+printf '%s\n' '{"stable":[],"beta":[]}' >"$RES/new_apps.json"
+printf '%s\n' '[]' >"$RES/active_apps.json"
+run_resolve "$RES" RAW_TRIGGER_STABLE=0 RAW_TRIGGER_BETA=0 \
+	RAW_TRIGGER_APP_UPDATE=0 RAW_TRIGGER_CONFIG_CHANGE=1
+[[ "$RES_STABLE" == "1" ]] || fail "12c the owning channel was not woken by its own change: $RES_LOG"
+[[ "$RES_BETA" == "0" ]] || fail "12c a stable config change woke the beta pool again"
+ok_12c=1
+
+# And the mirror: the same inputs with the entry on the beta side must wake beta and
+# leave stable down. Without it, 12c could be satisfied by a resolver that simply never
+# wakes anyone on a config change.
+printf '%s\n' '[]' >"$RES/pending.stable.json"
+printf '%s\n' '["Gboard-y"]' >"$RES/pending.beta.json"
+printf '%s\n' '{"stable":{},"beta":{"Gboard-y":[]}}' >"$RES/changed_apps.json"
+run_resolve "$RES" RAW_TRIGGER_STABLE=0 RAW_TRIGGER_BETA=0 \
+	RAW_TRIGGER_APP_UPDATE=0 RAW_TRIGGER_CONFIG_CHANGE=1
+[[ "$RES_BETA" == "1" ]] || fail "12c-mirror a beta entry did not wake beta: $RES_LOG"
+[[ "$RES_STABLE" == "0" ]] || fail "12c-mirror a beta entry woke the stable pool"
+ok_12c_mirror=1
+
+# --- 12d. an app version update is a reason only for a pool that lists the app ----
+# ci_compare_app_versions.sh shares TRIGGER_APP_UPDATE, and one store group can hold
+# keys from both pools, so the intersection with the pool decides. Same pairing: the
+# refusal needs the acceptance beside it or either side could pass by never waking.
+RES="$t/resolve_app_update"
+mkdir -p "$RES/configs"
+printf '%s\n' '{"patches-version":"stable","App-x":{"enabled":true,"pkg-name":"com.x"}}' >"$RES/configs/stable_build.json"
+printf '%s\n' '{"patches-version":"beta","Gboard-y":{"enabled":true,"pkg-name":"com.k"}}' >"$RES/configs/beta_build.json"
+printf '%s\n' '[]' >"$RES/pending.stable.json"
+printf '%s\n' '[]' >"$RES/pending.beta.json"
+printf '%s\n' '{"stable":{},"beta":{}}' >"$RES/changed_apps.json"
+printf '%s\n' '{"stable":[],"beta":[]}' >"$RES/new_apps.json"
+printf '%s\n' '["App-x"]' >"$RES/active_apps.json"
+run_resolve "$RES" RAW_TRIGGER_STABLE=0 RAW_TRIGGER_BETA=0 \
+	RAW_TRIGGER_APP_UPDATE=1 RAW_TRIGGER_CONFIG_CHANGE=0
+[[ "$RES_STABLE" == "1" ]] || fail "12d the pool owning the updated app was not woken: $RES_LOG"
+[[ "$RES_BETA" == "0" ]] || fail "12d an update for a stable-only app woke beta"
+printf '%s\n' '["App-x","Gboard-y"]' >"$RES/active_apps.json"
+run_resolve "$RES" RAW_TRIGGER_STABLE=0 RAW_TRIGGER_BETA=0 \
+	RAW_TRIGGER_APP_UPDATE=1 RAW_TRIGGER_CONFIG_CHANGE=0
+[[ "$RES_BETA" == "1" ]] || fail "12d a group with a beta key did not wake beta: $RES_LOG"
+[[ "$RES_STABLE" == "1" ]] || fail "12d a group spanning pools lost the stable wake"
+ok_12d=1
 
 # --- 13. re-enabling a disabled app is not a build request on its own -----------
 # Disabling pruned its queue entry, and the baseline survived, so the app comes back
@@ -288,6 +367,9 @@ run_case reenable_without_change \
 [[ "$(jqx -c . <<<"$OUT_CHANGED")" == '{"stable":{},"beta":{}}' ]] ||
 	fail "case13 announced a change: $OUT_CHANGED"
 [[ -n "${ok_12b:-}" ]] || fail "case12b did not run"
+[[ -n "${ok_12c:-}" ]] || fail "case12c did not run"
+[[ -n "${ok_12c_mirror:-}" ]] || fail "case12c mirror did not run"
+[[ -n "${ok_12d:-}" ]] || fail "case12d did not run"
 
 # --- 14. an entry with no baseline records one and asks for NOTHING -------------
 # This is the polarity that makes the comparison safe to deploy before the one-shot
