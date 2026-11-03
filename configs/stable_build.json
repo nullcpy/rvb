@@ -503,7 +503,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -2326,6 +2326,17 @@
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
+  "WebVideoCast-mwbra130": {
+    "enabled": true,
+    "pkg-name": "com.instantbits.cast.webvideo",
+    "app-name": "Web Video Cast",
+    "brand": "mwbra130",
+    "arch": "all",
+    "patches-source": "mwbra130/Retro-Bowl-College",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instantbits-inc/web-video-cast-browser-to-tv-chromecastdlna",
+    "uptodown-dlurl": "https://web-video-caster.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
+  },
   "XiaomiRecorder-bearinmindcat": {
     "enabled": false,
     "pkg-name": "com.android.soundrecorder",
@@ -2338,10 +2349,11 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
+    "arch": "arm64-v8a",
     "patches-source": "bearinmindcat/morphe-patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/xiaomi-inc/miui-screen-recorder",
     "uptodown-dlurl": "https://miui-screen-recorder.en.uptodown.com/android",
