@@ -84,7 +84,7 @@ process_channel() { # $1=channel $2=config-file
 	[ -f "$cfg" ] || return 0
 
 	local apps cfg_count bs_count first_run key want want_arr bs_arr pend_json pend_arches kept need added fp rearmed present gone
-	local have_cfg want_cfg cdiff cdiff_other cfg_known want_k have_k widened moved prev_cfg
+	local have_cfg want_cfg cdiff cdiff_other cfg_known want_k have_k widened widened_list moved prev_cfg change_msg
 	local is_new wake
 	apps=$(retry_list_apps "$cfg")
 	cfg_count=$(printf '%s\n' "$apps" | grep -c . || true)
@@ -144,8 +144,15 @@ process_channel() { # $1=channel $2=config-file
 		cdiff_other='[]'
 		moved=0
 		cfg_known=true
+		# One human sentence per woken app, shared by the log line and the announcement.
+		# Built here because this is the only place that knows both the tracked-field diff
+		# and the artifact delta; an empty diff is a real state (the fields match the last
+		# build while the queue still owes artifacts) and must not print as a bare colon.
+		change_msg=""
+		widened_list=""
 		if [ "$have_cfg" = '"NONE"' ]; then
 			cfg_known=false
+			change_msg="no last-built baseline to compare against yet"
 		else
 			cdiff=$(jqx -cn --argjson a "$have_cfg" --argjson b "$want_cfg" '
 				[ ($a | keys_unsorted[]), ($b | keys_unsorted[]) ] | unique
@@ -160,6 +167,10 @@ process_channel() { # $1=channel $2=config-file
 			# new source, a new pin, a changed patch selection — so it always counts.
 			want_k=$(to_arr "$(retry_effective_kinds "$cfg" "$key")")
 			have_k=$(to_arr "$(retry_shape_kinds "$ch" "$key" "$bs")")
+			widened_list=$(jqx -rn --argjson wa "$want_arr" --argjson wk "$want_k" \
+				--argjson ha "$bs_arr" --argjson hk "$have_k" '
+					[ $wa[] as $a | $wk[] as $k | "\($a):\($k)"] -
+					[ $ha[] as $a | $hk[] as $k | "\($a):\($k)"] | join(", ")')
 			widened=$(jqx -cn --argjson wa "$want_arr" --argjson wk "$want_k" \
 				--argjson ha "$bs_arr" --argjson hk "$have_k" '
 					[ $wa[] as $a | $wk[] as $k | "\($a):\($k)"] -
@@ -167,6 +178,18 @@ process_channel() { # $1=channel $2=config-file
 			moved=0
 			if [ "${widened:-0}" -gt 0 ] || [ "$cdiff_other" != "[]" ]; then
 				moved=1
+			fi
+			# Tracked fields identical to the last build yet artifacts still owed is the
+			# common case for an app whose earlier attempt never got past the download, so
+			# the name has to say what is owed instead of printing an empty diff after the
+			# colon (the run that showed it: 41590950846, Xiaomi Screen Recorder).
+			change_msg=$(printf '%s' "$cdiff" | jqx -r 'map("\(.field): \(.from // "-") -> \(.to // "-")") | join(", ")')
+			if [ -z "$change_msg" ]; then
+				if [ -n "$widened_list" ]; then
+					change_msg="no tracked field differs from the last-built baseline; still owed: $widened_list"
+				else
+					change_msg="no tracked field differs from the last-built baseline"
+				fi
 			fi
 		fi
 
@@ -220,7 +243,7 @@ process_channel() { # $1=channel $2=config-file
 					'.[$c][$k] = {reason:"config", arches:$a, attempts:0, parked:false, cfg:$fp}' <<<"$pb")
 				changedjson=$(jqx -c --arg c "$ch" --arg k "$key" --argjson d "$cdiff" \
 					'(.[$c] // {})[$k] = $d' <<<"$changedjson")
-				echo "Config change for '$key' ($ch): $(printf '%s' "$cdiff" | jqx -r 'map("\(.field): \(.from // "-") -> \(.to // "-")") | join(", ")')"
+				echo "Config change for '$key' ($ch): $change_msg"
 				trigger=1
 			fi
 		else
@@ -281,7 +304,7 @@ process_channel() { # $1=channel $2=config-file
 				if [ "$moved" = 1 ] && [ -n "$prev_cfg" ] && [ "$prev_cfg" != "$fp" ]; then
 					changedjson=$(jqx -c --arg c "$ch" --arg k "$key" --argjson d "$cdiff" \
 						'(.[$c] // {})[$k] = $d' <<<"$changedjson")
-					echo "Config change for '$key' ($ch): $(printf '%s' "$cdiff" | jqx -r 'map("\(.field): \(.from // "-") -> \(.to // "-")") | join(", ")')"
+					echo "Config change for '$key' ($ch): $change_msg"
 				fi
 				pb=$rearmed
 			fi

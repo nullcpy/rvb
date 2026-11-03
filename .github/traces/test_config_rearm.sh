@@ -557,4 +557,32 @@ run_case fmt_edit_no_rearm "$CFG_PFMT" '{"stable":{},"beta":{}}' "$SEED_X"
 [[ "$OUT_PENDING" == "[]" ]] || fail "case23 rebuilt for a format-preference edit: $OUT_PENDING"
 [[ "$OUT_TRIGGER" == "0" ]] || fail "case23 a format-preference edit moved state: $OUT_TRIGGER"
 
+# --- 24. a re-arm with no tracked-field change must still say what is owed ---------
+# Run 41590950846 printed `Config change for 'XiaomiScreenRecorder-bearinmindcat'
+# (stable):` and nothing after the colon: the maintainer's edit restored the default
+# arch, so the tracked map equalled the last build's, while the parked retry entry had
+# been written under the earlier one and arm-v7a had never been produced. The sentence
+# now names the owed artifact instead of trailing a colon.
+SHAPE_OWED="{\"stable\":{\"App-x\":{\"arches\":[\"arm64-v8a\"],\"cfg\":$BASE_MAP}},\"beta\":{}}"
+PEND_STALE='{"stable":{"App-x":{"reason":"retry","arches":["arm-v7a"],"attempts":5,"parked":true,"cfg":"stalefingerprint"}},"beta":{}}'
+run_case owed_is_named "$STABLE_CFG" "$PEND_STALE" "$SHAPE_OWED"
+grep -q "Re-armed 'App-x'" <<<"$OUT_LOG" || fail "case24 did not re-arm: $OUT_LOG"
+grep -q "still owed: arm-v7a:apk" <<<"$OUT_LOG" ||
+	fail "case24 named nothing after 'Config change': $OUT_LOG"
+[[ "$(jqx -r '.stable["App-x"].parked' <<<"$OUT_STATE")" == "false" ]] ||
+	fail "case24 re-arm left the entry parked: $OUT_STATE"
+
+# --- 24b. and a real tracked-field change is still printed as the field diff -------
+# Without this the new sentence could be satisfied by always printing the fallback.
+# Same queue entry and same owed arch, but the last build came from another bundle, so
+# the diff has a name to show and the fallback must not appear.
+OLD_MAP=$(jqx -c --arg v 'OldVendor/morphe-patches' '.["patches-source"] = $v' <<<"$BASE_MAP")
+SHAPE_MOVED="{\"stable\":{\"App-x\":{\"arches\":[\"arm64-v8a\"],\"cfg\":$OLD_MAP}},\"beta\":{}}"
+run_case field_diff_still_named "$STABLE_CFG" "$PEND_STALE" "$SHAPE_MOVED"
+grep -q "Config change for 'App-x' (stable): patches-source: OldVendor/morphe-patches -> " <<<"$OUT_LOG" ||
+	fail "case24b lost the field diff: $OUT_LOG"
+if grep -q "no tracked field differs" <<<"$OUT_LOG"; then
+	fail "case24b printed the fallback over a real diff: $OUT_LOG"
+fi
+
 echo "CONFIG RE-ARM TESTS: PASS"
