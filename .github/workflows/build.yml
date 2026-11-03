@@ -51,9 +51,12 @@ jobs:
     env:
       # How many app builds run at the same time. 1 = one at a time (normal).
       # Set to 2-4 to speed up builds (runner has 4 cores).
-      PARALLEL_JOBS: "6"
+      PARALLEL_JOBS: "3"
       # How many files upload at the same time.
       UPLOAD_CONCURRENCY: "12"
+      # Per-JVM heap ceiling handed to every engine java call as -Xmx; 0 or unset
+      # leaves the JVM default. Why 3 x 3g: docs/ci-pipelines.md item 1b.
+      RVB_JVM_MAX_HEAP: "3g"
       # Swap headroom for the pool, in MiB; 0 disables.
       # Why: docs/ci-pipelines.md item 1b, .github/scripts/enable_swap.sh.
       RVB_SWAP_MB: "6144"
@@ -172,6 +175,13 @@ jobs:
         run: |
           set -euo pipefail
           bash scripts/build.sh "${{ steps.context.outputs.CONFIG_FILE }}"
+
+      # Why: docs/ci-pipelines.md item 7a.
+      - name: Report runner memory after pool
+        if: always()
+        run: |
+          swapon --show
+          free -h
 
       - name: Report build failures
         id: failure_report
