@@ -1,0 +1,884 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260451",
+    "channel": "stable",
+    "publishedAt": "2026-11-03T04:49:32Z"
+  },
+  "files": {
+    "brave-browser-kveld9-v1.98.63-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.63",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.10.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.10.1"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Ratings",
+        "Block Telemetry",
+        "Brave Origin",
+        "Clean New Tab",
+        "Close Tab In Group Order",
+        "Keep All Tabs Loaded",
+        "Skip Welcome Screens",
+        "Stop Background Wakeups",
+        "Stop Promo Notifications",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "brave-browser-kveld9-v1.98.63-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.98.63",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.10.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.10.1"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Ratings",
+        "Block Telemetry",
+        "Brave Origin",
+        "Clean New Tab",
+        "Close Tab In Group Order",
+        "Keep All Tabs Loaded",
+        "Skip Welcome Screens",
+        "Stop Background Wakeups",
+        "Stop Promo Notifications",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "instagram-instafel-v454.0.0.54.77-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "454.0.0.54.77",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "instagram-instafel-v454.0.0.54.77-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "454.0.0.54.77",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm-v7a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "messenger-devanced-v573.0.0.44.88-arm64-v8a.apk": {
+      "name": "messenger-devanced",
+      "version": "573.0.0.44.88",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "microsoft-lens-devanced-v16.0.19628.20008-arm64-v8a.apk": {
+      "name": "microsoft-lens-devanced",
+      "version": "16.0.19628.20008",
+      "appKey": "microsoftlens",
+      "appName": "Microsoft Lens",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microsoft.office.officelens",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Hide OneDrive migration",
+        "Prevent native JVM invalidation"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "myfitnesspal-heval99-v26.43.0-arm64-v8a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.43.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "myfitnesspal-heval99-v26.43.0-arm-v7a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.43.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "photomath-devanced-v8.48.0-arm64-v8a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "photomath-devanced-v8.48.0-arm-v7a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "sofascore-heval99-v26.10.19-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.19",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "sofascore-heval99-v26.10.19-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.10.19",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Enable Premium"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "strava-devanced-v477.14-arm-v7a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "strava-devanced-v477.14-arm64-v8a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "tiktok-kveld9-v47.6.3-arm-v7a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.6.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.10.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.10.1"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "tiktok-kveld9-v47.6.3-arm64-v8a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.6.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.10.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.10.1"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ads & Content Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "truecaller-heval99-module-v26.42.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.42.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "truecaller-heval99-v26.42.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.42.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "truecaller-heval99-module-v26.42.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.42.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "truecaller-heval99-v26.42.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.42.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Spoof signature",
+        "Use SMS for verification codes"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "xiaomi-screen-recorder-bearinmindcat-v4.16.2.9.1-arm64-v8a.apk": {
+      "name": "xiaomi-screen-recorder-bearinmindcat",
+      "version": "4.16.2.9.1",
+      "appKey": "xiaomiscreenrecorder",
+      "appName": "Xiaomi Screen Recorder",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.miui.screenrecorder",
+      "patchSources": [
+        "bearinmindcat/patches-2.8.5.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.5"
+      ],
+      "appliedPatches": [
+        "Enable non-HyperOS ROM support"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "pixiv-devanced-v6.202.1-arm64-v8a.apk": {
+      "name": "pixiv-devanced",
+      "version": "6.202.1",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Hide ads",
+        "Remove popular search time limit"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "pixiv-devanced-v6.202.1-arm-v7a.apk": {
+      "name": "pixiv-devanced",
+      "version": "6.202.1",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "RookieEnough/patches-1.6.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.3"
+      ],
+      "appliedPatches": [
+        "Hide ads",
+        "Remove popular search time limit"
+      ],
+      "originBuild": "260451",
+      "publishedAt": "2026-11-03T04:49:32Z"
+    }
+  }
+}
