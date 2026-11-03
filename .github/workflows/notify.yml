@@ -84,8 +84,14 @@ jobs:
       - name: Drain and send batch
         run: bash .github/scripts/notify_drain.sh
 
+  # The alert job answers a call, not an event: inside a called workflow `github` is
+  # the CALLER run's context, so `github.event_name` is `schedule` or
+  # `workflow_dispatch`, never `workflow_call`. The equality form matched nothing and
+  # the generic failure alert never fired once in 28 CI / Manual CI runs, including
+  # three that failed. What separates a call from this file's own triggers is the
+  # absence of the two events handled by the jobs above.
   notify:
-    if: ${{ github.event_name == 'workflow_call' }}
+    if: ${{ github.event_name != 'issues' && github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

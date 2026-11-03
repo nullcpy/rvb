@@ -401,11 +401,16 @@ the switch.
 
 - **`workflow_call` — immediate.** A caller (`ci.yml`/`manual-ci.yml`) invokes it on
   `failure()`; the `notify` job renders the generic "🔴 CI #N failed" alert via
-  `notify_send_telegram.sh` and posts it at once. When the caller passes
-  `already_reported=true` (Route B — the build's own Report-build-failures step
-  already sent a per-app report) the script exits without posting, so a build
-  failure is never double-messaged. Non-build failures (checkout, `check_patch`)
-  never set the flag and still alert.
+  `notify_send_telegram.sh` and posts it at once. Inside a called workflow the `github`
+  context is the **caller run's**, so `github.event_name` is `schedule` or
+  `workflow_dispatch` there, never `workflow_call` - the job gate is therefore
+  `!= 'issues' && != 'pull_request'` (the two events the jobs above answer to), and an
+  `== 'workflow_call'` form would match nothing: written that way, this alert skipped
+  all 28 CI and Manual CI runs checked, including the three that failed. When the caller
+  passes `already_reported=true` (Route B — the build's own Report-build-failures step
+  already sent a per-app report) the script exits without posting, so a build failure is
+  never double-messaged. Non-build failures (checkout, `check_patch`) never set the flag
+  and still alert.
 - **`issues` / `pull_request` — debounced batch.** GitHub fires one run per event and
   runs cannot share memory, so a burst (several issues closing at once) would
   otherwise post one message each. The `enqueue` job instead renders the event and
