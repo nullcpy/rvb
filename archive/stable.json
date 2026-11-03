@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-03T07:01:45Z"
+    "publishedAt": "2026-11-03T07:39:49Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -29121,6 +29121,34 @@
       ],
       "originBuild": "260451",
       "publishedAt": "2026-11-03T04:49:32Z"
+    },
+    "web-video-cast-mwbra130-v6.1.0-all.apk": {
+      "name": "web-video-cast-mwbra130",
+      "version": "6.1.0",
+      "appKey": "webvideocast",
+      "appName": "Web Video Cast",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "mwbra130",
+      "brandName": "mwbra130",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instantbits.cast.webvideo",
+      "patchSources": [
+        "mwbra130/patches-1.48.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.48.0"
+      ],
+      "appliedPatches": [
+        "Bypass PairIP application checks",
+        "Bypass PairIP license check",
+        "Bypass PairIP signature check",
+        "Disable PairIP license activity",
+        "Unlock premium"
+      ],
+      "originBuild": "260453",
+      "publishedAt": "2026-11-03T07:39:27Z"
     }
   }
 }
