@@ -1,0 +1,569 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260465",
+    "channel": "stable",
+    "publishedAt": "2026-11-04T20:25:05Z"
+  },
+  "files": {
+    "facebook-devanced-v580.0.0.51.74-arm64-v8a.apk": {
+      "name": "facebook-devanced",
+      "version": "580.0.0.51.74",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Clean Home feed",
+        "De-Vanced Settings",
+        "Disable all ads",
+        "Disable analytics and telemetry",
+        "Disable auto refresh",
+        "Download Media",
+        "Facebook signature compatibility",
+        "Material You theme",
+        "Media quality controls",
+        "Open Marketplace on launch",
+        "Optimize Facebook",
+        "Picture-in-picture",
+        "Reels 2x speed",
+        "Messenger install compatibility"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "Spoof features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
+      "name": "google-photos-devanced",
+      "version": "7.92.0.977185651",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Fix selected account persistence",
+        "GmsCore support",
+        "Spoof features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "kick-lurk-v40.34.0-arm64-v8a.apk": {
+      "name": "kick-lurk",
+      "version": "40.34.0",
+      "appKey": "kick",
+      "appName": "Kick",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "lurk",
+      "brandName": "Lurk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.kick.mobile",
+      "patchSources": [
+        "jordanwoodson/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Anonymous chat",
+        "Background audio",
+        "Block update prompts",
+        "Chat keywords",
+        "Chat text size",
+        "Chat timestamps",
+        "Clean share links",
+        "Default startup tab",
+        "Disable analytics",
+        "Disable autoplay",
+        "Don't save searches",
+        "Fill screen",
+        "Hide Clips",
+        "Hide Home sections",
+        "Hide KICKs tipping",
+        "Hide chat highlights",
+        "Hide mature-content warning",
+        "Hide rating prompt",
+        "Hide subscription upsells",
+        "Lurk icon",
+        "Lurk in account menu",
+        "Mute stitched live ads",
+        "Normal latency",
+        "Remove tracking permissions",
+        "Seek interval",
+        "Show deleted messages",
+        "Show exact counts",
+        "Show video stats",
+        "Sleep timer",
+        "Stay on channel when it hosts",
+        "Third-party emotes"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "kick-lurk-v40.34.0-arm-v7a.apk": {
+      "name": "kick-lurk",
+      "version": "40.34.0",
+      "appKey": "kick",
+      "appName": "Kick",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "lurk",
+      "brandName": "Lurk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.kick.mobile",
+      "patchSources": [
+        "jordanwoodson/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Anonymous chat",
+        "Background audio",
+        "Block update prompts",
+        "Chat keywords",
+        "Chat text size",
+        "Chat timestamps",
+        "Clean share links",
+        "Default startup tab",
+        "Disable analytics",
+        "Disable autoplay",
+        "Don't save searches",
+        "Fill screen",
+        "Hide Clips",
+        "Hide Home sections",
+        "Hide KICKs tipping",
+        "Hide chat highlights",
+        "Hide mature-content warning",
+        "Hide rating prompt",
+        "Hide subscription upsells",
+        "Lurk icon",
+        "Lurk in account menu",
+        "Mute stitched live ads",
+        "Normal latency",
+        "Remove tracking permissions",
+        "Seek interval",
+        "Show deleted messages",
+        "Show exact counts",
+        "Show video stats",
+        "Sleep timer",
+        "Stay on channel when it hosts",
+        "Third-party emotes"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "messenger-devanced-v586.0.0.55.92-arm64-v8a.apk": {
+      "name": "messenger-devanced",
+      "version": "586.0.0.55.92",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "messenger-devanced-v586.0.0.55.92-arm-v7a.apk": {
+      "name": "messenger-devanced",
+      "version": "586.0.0.55.92",
+      "appKey": "messenger",
+      "appName": "Messenger",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.orca",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Disable typing indicator",
+        "Hide Facebook buttons",
+        "Hide inbox ads",
+        "Hide inbox stories and notes tray",
+        "Hide inbox subtabs",
+        "Open links externally",
+        "Remove Meta AI"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "photomath-devanced-v8.48.0-arm64-v8a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "photomath-devanced-v8.48.0-arm-v7a.apk": {
+      "name": "photomath-devanced",
+      "version": "8.48.0",
+      "appKey": "photomath",
+      "appName": "Photomath",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.microblink.photomath",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Hide update popup",
+        "Spoof device ID",
+        "Unlock plus"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "strava-devanced-v477.14-arm-v7a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "strava-devanced-v477.14-arm64-v8a.apk": {
+      "name": "strava-devanced",
+      "version": "477.14",
+      "appKey": "strava",
+      "appName": "Strava",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "devanced",
+      "brandName": "DeVanced",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.strava",
+      "patchSources": [
+        "RookieEnough/patches-1.6.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4"
+      ],
+      "appliedPatches": [
+        "Add 'Give Kudos' button to 'Group Activity'",
+        "Add activity export",
+        "Add media download",
+        "Add route export",
+        "Block Snowplow tracking",
+        "Disable Quick Edit",
+        "Enable password login",
+        "Hide distractions",
+        "Overwrite media upload parameters",
+        "Unlock subscription features"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "twitch-lurk-v31.9.0-arm64-v8a.apk": {
+      "name": "twitch-lurk",
+      "version": "31.9.0",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "lurk",
+      "brandName": "Lurk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "jordanwoodson/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Anonymous chat",
+        "Auto-claim Drops",
+        "Auto-claim channel points",
+        "Avoid stitched ads",
+        "Background audio",
+        "Block client ads",
+        "Block cookie notice",
+        "Block display ads",
+        "Chat appearance",
+        "Chat keywords",
+        "Chat overlay",
+        "Chat timestamps",
+        "Clean share links",
+        "Clip download",
+        "Compact chat",
+        "Default startup tab",
+        "Disable analytics",
+        "Disable autoplay",
+        "Emote and badge info",
+        "Fill screen",
+        "Fix notifications",
+        "Fix stuck start screen",
+        "Force ExoPlayer",
+        "Force landscape",
+        "Highlight first-time chatters",
+        "Latency badge",
+        "Lurk icon",
+        "Mute stitched ads",
+        "Navigation bar position",
+        "Normal latency",
+        "Player gestures",
+        "Refresh stream",
+        "Remove tracking permissions",
+        "Show deleted messages",
+        "Sleep timer",
+        "Tablet layout",
+        "Third-party badges",
+        "Third-party emotes",
+        "Use native player",
+        "VOD chapters",
+        "Watch without signing in"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    },
+    "twitch-lurk-v31.9.0-arm-v7a.apk": {
+      "name": "twitch-lurk",
+      "version": "31.9.0",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "lurk",
+      "brandName": "Lurk",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "jordanwoodson/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Anonymous chat",
+        "Auto-claim Drops",
+        "Auto-claim channel points",
+        "Avoid stitched ads",
+        "Background audio",
+        "Block client ads",
+        "Block cookie notice",
+        "Block display ads",
+        "Chat appearance",
+        "Chat keywords",
+        "Chat overlay",
+        "Chat timestamps",
+        "Clean share links",
+        "Clip download",
+        "Compact chat",
+        "Default startup tab",
+        "Disable analytics",
+        "Disable autoplay",
+        "Emote and badge info",
+        "Fill screen",
+        "Fix notifications",
+        "Fix stuck start screen",
+        "Force ExoPlayer",
+        "Force landscape",
+        "Highlight first-time chatters",
+        "Latency badge",
+        "Lurk icon",
+        "Mute stitched ads",
+        "Navigation bar position",
+        "Normal latency",
+        "Player gestures",
+        "Refresh stream",
+        "Remove tracking permissions",
+        "Show deleted messages",
+        "Sleep timer",
+        "Tablet layout",
+        "Third-party badges",
+        "Third-party emotes",
+        "Use native player",
+        "VOD chapters",
+        "Watch without signing in"
+      ],
+      "originBuild": "260465",
+      "publishedAt": "2026-11-04T20:25:05Z"
+    }
+  }
+}
