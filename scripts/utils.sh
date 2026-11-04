@@ -4670,6 +4670,18 @@ patch_apk() {
 		fi
 	fi
 
+	# Morphe 2.x merges a bundle by first staging the input into its own patching dir with a
+	# symlink created from the path it was handed, and a symlink target resolves against the
+	# link's directory rather than the process CWD - so a relative input yields a dangling
+	# link, ApkMerger finds something that is neither file nor directory, and reAndroid aborts
+	# with "No such directory: .../patching-<ts>/<name>.stripped.apkm" (run 41830380958 lost all
+	# 15 bundle builds that way; 1.20.0 merged from the original path and never staged). A plain
+	# APK does not go through that step, which is why only the bundles broke. -t below is made
+	# absolute the same way, so hand the input over in the same shape.
+	if [ "${PATCHER_KIND:-}" = morphe ] && [[ "$stock_input" != /* ]]; then
+		stock_input="${CWD}/${stock_input}"
+	fi
+
 	local base_cmd="java -jar '$stage_jar' patch '$stock_input' -t '$tmp_dir' -o '$patched_apk' --keystore=$RVB_KEYSTORE \
 --keystore-entry-password=$RVB_KEYSTORE_PASS --keystore-password=$RVB_KEYSTORE_PASS --signer=$RVB_KEY_ALIAS --keystore-entry-alias=$RVB_KEY_ALIAS"
 

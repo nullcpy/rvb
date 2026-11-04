@@ -338,6 +338,17 @@ for adding surface without a measured gain
    two sides have no common namespace, so the check is skipped for the `instafel-workflow`
    flow instead of approximated - folding underscores into spaces would also silence a
    genuine miss in any other bundle that happened to title-case the same way.
+
+   **Morphe is handed an absolute input path.** morphe-desktop 2.x merges a bundle by first
+   staging the path it was given into its patching dir through a symlink, and a symlink target
+   resolves against the link's own directory rather than the process CWD: the relative
+   `temp/<prefix>-…-<arch>.stripped.<ext>` input became a dangling link, `ApkMerger` found a
+   path that is neither file nor directory, and the run aborted with `No such directory` (run
+   41830380958 lost all fifteen bundle builds that way while 1.20.0, which never staged, built
+   the identical cached artifact). A plain APK does not go through the merge step, so only the
+   passthrough broke. `-t` was already made absolute for the same reason and the input now
+   matches it; other patcher kinds keep the relative path, and the trace goldens pin that
+   difference.
 7. **Naming and metadata** — `aapt2`/`aapt` re-reads the patched manifest, so a
    patcher that rewrote the package id is recorded honestly; output is
    `<file-prefix>-v<version>-<arch>.apk`; `write_build_info` appends the record
