@@ -363,7 +363,7 @@
   "GoogleRecorder-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.recorder",
     "app-name": "Google Recorder",
     "build-mode": "both",
@@ -375,7 +375,7 @@
   "MicrosoftLens-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microsoft.office.officelens",
     "app-name": "Microsoft Lens",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/office-lens",
@@ -384,7 +384,7 @@
   "Photomath-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microblink.photomath",
     "app-name": "Photomath",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/photomath",
@@ -393,7 +393,7 @@
   "Viber-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.viber.voip",
     "app-name": "Viber",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber",
@@ -402,7 +402,7 @@
   "Strava-DeVanced": {
     "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.strava",
     "app-name": "Strava",
     "apkcombo-dlurl": "https://apkcombo.com/it/strava/com.strava"
@@ -540,7 +540,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "RookieEnough/De-Vanced",
@@ -646,7 +646,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-phone/com.google.android.dialer"
   },
   "GooglePhotos-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "DeVanced",
@@ -690,7 +690,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "FairEmail-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -701,7 +701,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -1244,7 +1244,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "Kick-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1361,7 +1361,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/macrodroid/com.arlosoft.macrodroid"
   },
   "Messenger-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "RookieEnough/De-Vanced",
@@ -1459,7 +1459,7 @@
     "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
   },
   "MyFitnessPal-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "MyFitnessPal",
     "brand": "heval99",
@@ -1583,7 +1583,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pinterest/com.pinterest"
   },
   "pixiv-DeVanced": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "patches-source": "RookieEnough/De-Vanced",
@@ -2247,7 +2247,7 @@
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
   },
   "Truecaller-heval99": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.truecaller",
     "app-name": "Truecaller",
     "brand": "heval99",
@@ -2269,7 +2269,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
