@@ -2482,6 +2482,44 @@
       "kinds": [
         "apk"
       ]
+    },
+    "sofascore-heval99-v26.10.26-arm64-v8a": {
+      "hash": "4288bda30aaab89a9dd2b39ee08047e9",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.10.26-arm-v7a": {
+      "hash": "56a17de043cb65c91f3405c55d26f130",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.44.0-arm64-v8a": {
+      "hash": "7a3ec61720ed830b42141ac81f7a1205",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.44.0-arm-v7a": {
+      "hash": "2e7207ce429d09c4250077e7c8bb8139",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.43.5-arm64-v8a": {
+      "hash": "a1314c15e7b04e97652270d1532517a8",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.43.5-arm-v7a": {
+      "hash": "8b2f4357d008b3b0e855b0353e8733b8",
+      "kinds": [
+        "apk",
+        "module"
+      ]
     }
   }
 }
