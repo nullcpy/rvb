@@ -202,7 +202,7 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "2c49383c271641e0ee4faedeb5f3802c",
+      "com.truecaller": "beb27f33322addf610aecc855aa46c5c",
       "shared": "d34c26a61bc73d3dc2fb40582b05774f"
     },
     "stable": {
@@ -358,10 +358,10 @@
   "jordanwoodson/lurk-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.kick.mobile": "56856f1bf78dd013bbc965c179472afb",
-      "com.rumble.battles": "db236aa05aa2aa626de24a1bf78f047c",
-      "shared": "967c8443b89a529ea46ef48a8af41752",
-      "tv.twitch.android.app": "9e255b4aa8e1726c965bcbf46bae89c2"
+      "com.kick.mobile": "3351c438371bbfc4d65a0ce77646cc32",
+      "com.rumble.battles": "583c6c51a1485e52bc52880d8b83f38d",
+      "shared": "9fa7d531fff315e12850898135659d87",
+      "tv.twitch.android.app": "8d606bab5f00f28da608bf33a1f4d372"
     }
   },
   "kiraio-moe/lain-patches": {
@@ -497,20 +497,20 @@
   },
   "rookieenough/de-vanced": {
     "beta": {
-      "com.google.android.apps.photos": "17c55cfef1cf082763e8926fb4e39541",
+      "com.google.android.apps.photos": "63b1209d4e165ee57de3dfe54644cdbc",
       "shared": "30500b6db4f67c18bdb86c102c75eaf3"
     },
     "stable": {
       "com.facebook.katana": "b0a3ce4af6ea682fb6a1b961a8370e56",
-      "com.facebook.orca": "e3e98c8004da2f55aad28ec7e0a13d6b",
-      "com.google.android.apps.photos": "66cc5569c9dfe38d9f5a60be21645a4f",
-      "com.google.android.apps.recorder": "d1a4c8559cfee2fdfc5909462aa06328",
-      "com.microblink.photomath": "36029f114484fbbab535af5f74469d0f",
-      "com.microsoft.office.officelens": "f58ac72b64142ff88e4b2032b3090e7f",
-      "com.strava": "f8541a395a151d8525f2630676c4564a",
-      "com.viber.voip": "1ec6e3a7d0ef5ee982d8f3dffb5ad3cd",
-      "jp.pxv.android": "a921bb7c024018ce6d253379497c8cc6",
-      "shared": "53bc29bd97211283f3f3a9270f0e64bb"
+      "com.facebook.orca": "412cc83cec36396714f71d84e3402043",
+      "com.google.android.apps.photos": "63b1209d4e165ee57de3dfe54644cdbc",
+      "com.google.android.apps.recorder": "ac552c389be29dcef7600eb5ab2e805f",
+      "com.microblink.photomath": "896ec12a4703bf5ae14a7750fa88a292",
+      "com.microsoft.office.officelens": "227ee82134b4259946a2102d4cf290ff",
+      "com.strava": "31302586ae06146266deded74bff2e24",
+      "com.viber.voip": "701e7b5fb3c3fb63a2bdf9d94d2abf6b",
+      "jp.pxv.android": "3e0c58a6d12e8075ddbcd8b22eee453d",
+      "shared": "30500b6db4f67c18bdb86c102c75eaf3"
     }
   },
   "rushiranpise/morphe-patches": {
