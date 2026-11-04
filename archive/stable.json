@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-04T00:39:59Z"
+    "publishedAt": "2026-11-04T06:26:46Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -21448,10 +21448,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.1.mpp"
+        "jasonwu1994/patches-4.2.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -21500,8 +21500,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260428",
-      "publishedAt": "2026-10-31T20:14:45Z"
+      "originBuild": "260460",
+      "publishedAt": "2026-11-04T06:26:26Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -21516,10 +21516,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.1.mpp"
+        "jasonwu1994/patches-4.2.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -21567,8 +21567,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260428",
-      "publishedAt": "2026-10-31T20:14:45Z"
+      "originBuild": "260460",
+      "publishedAt": "2026-11-04T06:26:26Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -21583,10 +21583,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.1.1.mpp"
+        "jasonwu1994/patches-4.2.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.1.1"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -21634,8 +21634,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260428",
-      "publishedAt": "2026-10-31T20:14:45Z"
+      "originBuild": "260460",
+      "publishedAt": "2026-11-04T06:26:26Z"
     },
     "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
       "name": "instagram-instafel-clone",
