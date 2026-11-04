@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-04T06:26:46Z"
+    "publishedAt": "2026-11-04T12:45:08Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -12573,17 +12573,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.70.0.mpp"
+        "hxreborn/patches-1.71.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.70.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260456",
-      "publishedAt": "2026-11-03T16:17:49Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12598,17 +12598,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.70.0.mpp"
+        "hxreborn/patches-1.71.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.70.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260456",
-      "publishedAt": "2026-11-03T16:17:49Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -25656,10 +25656,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25670,8 +25670,8 @@
         "Official package name",
         "GmsCore support"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -25686,10 +25686,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25700,8 +25700,8 @@
         "Official package name",
         "GmsCore support"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -25716,10 +25716,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25729,8 +25729,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -25745,10 +25745,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25758,8 +25758,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -25774,10 +25774,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25786,8 +25786,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -25802,10 +25802,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.9.mpp"
+        "Akash-Sriram/patches-1.17.10.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.9"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.10"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25814,8 +25814,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260458",
-      "publishedAt": "2026-11-04T00:39:09Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
       "name": "remote-for-android-tv-xbadfellax",
@@ -27195,10 +27195,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.70.0.mpp"
+        "hxreborn/patches-1.71.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.70.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27213,8 +27213,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260456",
-      "publishedAt": "2026-11-03T16:17:49Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -27229,10 +27229,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.70.0.mpp"
+        "hxreborn/patches-1.71.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.70.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27247,8 +27247,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260456",
-      "publishedAt": "2026-11-03T16:17:49Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -28051,10 +28051,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.70.0.mpp"
+        "hxreborn/patches-1.71.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.70.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -28062,8 +28062,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260456",
-      "publishedAt": "2026-11-03T16:17:49Z"
+      "originBuild": "260461",
+      "publishedAt": "2026-11-04T12:44:23Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
