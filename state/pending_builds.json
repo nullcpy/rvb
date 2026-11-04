@@ -1,4 +1,16 @@
 {
-  "stable": {},
+  "stable": {
+    "Rumble-Lurk": {
+      "reason": "retry",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 1,
+      "parked": false,
+      "run": 41903306898,
+      "ts": "2026-11-04T20:22:39Z"
+    }
+  },
   "beta": {}
 }
