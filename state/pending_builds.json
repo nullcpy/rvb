@@ -6,10 +6,10 @@
         "arm-v7a",
         "arm64-v8a"
       ],
-      "attempts": 2,
-      "parked": false,
-      "run": 41921135163,
-      "ts": "2026-11-04T22:07:39Z",
+      "attempts": 3,
+      "parked": true,
+      "run": 41944423039,
+      "ts": "2026-11-05T00:57:16Z",
       "cfg": "31f446a1ca5e58c786b9d52ee64975f0de023bc6"
     }
   },
