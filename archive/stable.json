@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-05T06:39:05Z"
+    "publishedAt": "2026-11-05T13:12:45Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -16372,10 +16372,10 @@
       "subVariant": null,
       "packageName": "com.linkedin.android",
       "patchSources": [
-        "heyymichii/patches-1.2.0.mpp"
+        "heyymichii/patches-1.2.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.0"
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.1"
       ],
       "appliedPatches": [
         "Block tracking",
@@ -16390,8 +16390,8 @@
         "Open links directly",
         "Sanitize share links"
       ],
-      "originBuild": "260401",
-      "publishedAt": "2026-10-28T18:46:43Z"
+      "originBuild": "260469",
+      "publishedAt": "2026-11-05T13:11:54Z"
     },
     "linkedin-michii-v4.1.1261-arm64-v8a.apk": {
       "name": "linkedin-michii",
@@ -16406,10 +16406,10 @@
       "subVariant": null,
       "packageName": "com.linkedin.android",
       "patchSources": [
-        "heyymichii/patches-1.2.0.mpp"
+        "heyymichii/patches-1.2.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.0"
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.1"
       ],
       "appliedPatches": [
         "Block tracking",
@@ -16424,8 +16424,8 @@
         "Open links directly",
         "Sanitize share links"
       ],
-      "originBuild": "260401",
-      "publishedAt": "2026-10-28T18:46:43Z"
+      "originBuild": "260469",
+      "publishedAt": "2026-11-05T13:11:54Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -20234,94 +20234,6 @@
       ],
       "originBuild": "260352",
       "publishedAt": "2026-10-23T16:35:56Z"
-    },
-    "discord-rain-v350.8-Stable-arm-v7a.apk": {
-      "name": "discord-rain",
-      "version": "350.8-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260378",
-      "publishedAt": "2026-10-25T19:01:04Z"
-    },
-    "discord-rain-v350.8-Stable-arm64-v8a.apk": {
-      "name": "discord-rain",
-      "version": "350.8-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260378",
-      "publishedAt": "2026-10-25T19:01:04Z"
-    },
-    "discord-revenge-v350.8-Stable-arm-v7a.apk": {
-      "name": "discord-revenge",
-      "version": "350.8-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260378",
-      "publishedAt": "2026-10-25T19:01:04Z"
-    },
-    "discord-revenge-v350.8-Stable-arm64-v8a.apk": {
-      "name": "discord-revenge",
-      "version": "350.8-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260378",
-      "publishedAt": "2026-10-25T19:01:04Z"
     },
     "calorie-counter-kondratjev-v11.8.2.1-arm64-v8a.apk": {
       "name": "calorie-counter-kondratjev",
@@ -29545,6 +29457,144 @@
       "appliedPatches": [],
       "originBuild": "260467",
       "publishedAt": "2026-11-05T06:38:34Z"
+    },
+    "twitter-piko-newx-v12.40.1-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.40.1-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.74.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.74.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260469",
+      "publishedAt": "2026-11-05T13:11:54Z"
+    },
+    "twitter-piko-newx-v12.40.1-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.40.1-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.74.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.74.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260469",
+      "publishedAt": "2026-11-05T13:11:54Z"
     }
   }
 }
