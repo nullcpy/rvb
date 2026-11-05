@@ -330,7 +330,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -457,7 +457,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -1396,7 +1396,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "LinkedIn-michii": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.linkedin.android",
     "app-name": "LinkedIn",
     "brand": "michii",
@@ -2316,7 +2316,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Twitter-Piko-NewX": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.twitter.android",
     "app-name": "Twitter",
     "patches-source": "crimera/piko-newx",
@@ -2349,7 +2349,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
