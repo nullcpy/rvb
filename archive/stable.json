@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-05T13:12:45Z"
+    "publishedAt": "2026-11-05T16:42:50Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -12573,17 +12573,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260461",
-      "publishedAt": "2026-11-04T12:44:23Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12598,17 +12598,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260461",
-      "publishedAt": "2026-11-04T12:44:23Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -16372,10 +16372,10 @@
       "subVariant": null,
       "packageName": "com.linkedin.android",
       "patchSources": [
-        "heyymichii/patches-1.2.1.mpp"
+        "heyymichii/patches-1.2.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.1"
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.2"
       ],
       "appliedPatches": [
         "Block tracking",
@@ -16390,8 +16390,8 @@
         "Open links directly",
         "Sanitize share links"
       ],
-      "originBuild": "260469",
-      "publishedAt": "2026-11-05T13:11:54Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "linkedin-michii-v4.1.1261-arm64-v8a.apk": {
       "name": "linkedin-michii",
@@ -16406,10 +16406,10 @@
       "subVariant": null,
       "packageName": "com.linkedin.android",
       "patchSources": [
-        "heyymichii/patches-1.2.1.mpp"
+        "heyymichii/patches-1.2.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.1"
+        "https://github.com/heyymichii/michii-patches/releases/tag/v1.2.2"
       ],
       "appliedPatches": [
         "Block tracking",
@@ -16424,8 +16424,8 @@
         "Open links directly",
         "Sanitize share links"
       ],
-      "originBuild": "260469",
-      "publishedAt": "2026-11-05T13:11:54Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "telegram-hushtelegram-foss-v13.0.3-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -17627,10 +17627,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17642,8 +17642,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -17658,10 +17658,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17673,8 +17673,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -20816,10 +20816,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -20828,10 +20828,11 @@
         "Hide home shortcuts",
         "Hide promotions",
         "Hide video recommendations",
+        "Remove recent panel",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -20846,10 +20847,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -20858,10 +20859,11 @@
         "Hide home shortcuts",
         "Hide promotions",
         "Hide video recommendations",
+        "Remove recent panel",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -21358,16 +21360,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -21382,16 +21384,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -21406,16 +21408,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -23009,144 +23011,6 @@
       ],
       "originBuild": "260413",
       "publishedAt": "2026-10-29T19:09:01Z"
-    },
-    "twitter-piko-newx-v12.38.1-prod.01-arm-v7a.apk": {
-      "name": "twitter-piko-newx",
-      "version": "12.38.1-prod.01",
-      "appKey": "twitter",
-      "appName": "Twitter",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "piko",
-      "brandName": "Piko",
-      "variant": "NewX",
-      "subVariant": null,
-      "packageName": "com.twitter.android",
-      "patchSources": [
-        "crimera/patches-3.72.3.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.72.3"
-      ],
-      "appliedPatches": [
-        "NewX: Crash logs",
-        "NewX: Custom font",
-        "NewX: Custom sharing domain",
-        "NewX: Customize drawer items",
-        "NewX: Customize inline actions",
-        "NewX: Customize media menu items",
-        "NewX: Customize navigation bar",
-        "NewX: Customize post menu items",
-        "NewX: Customize profile tabs",
-        "NewX: Customize timeline tabs",
-        "NewX: Disable automatic timeline refresh",
-        "NewX: Disable blur effects",
-        "NewX: Disable video player scrolling",
-        "NewX: Enable quality-of-life feature flags",
-        "NewX: Feature switch overrides",
-        "NewX: Filter For You by topic",
-        "NewX: Filter posts by keyword",
-        "NewX: Gallery profile Photos tab",
-        "NewX: Hide AI-generated posts",
-        "NewX: Hide Discover more",
-        "NewX: Hide Spaces bar",
-        "NewX: Hide compose button",
-        "NewX: Hide new posts pill",
-        "NewX: Hide post author actions",
-        "NewX: Hide post reply bar",
-        "NewX: Hide posts by verified account type",
-        "NewX: Hide premium upsell",
-        "NewX: Hide timeline tabs bar",
-        "NewX: Hide who to follow",
-        "NewX: Inline download button",
-        "NewX: Open canonical URLs",
-        "NewX: Permanent share links",
-        "NewX: Redirect downloads to chosen folder",
-        "NewX: Remove ads",
-        "NewX: Remove share tracking parameters",
-        "NewX: Restore pinned home tab",
-        "NewX: Restore timeline position",
-        "NewX: Set default media tab",
-        "NewX: Set default profile post sorting",
-        "NewX: Set default reply sorting",
-        "NewX: Show poll results",
-        "NewX: Show sensitive media",
-        "NewX: Theme",
-        "NewX: Translator",
-        "NewX: Unlock color customization",
-        "NewX: Unlock downloads"
-      ],
-      "originBuild": "260414",
-      "publishedAt": "2026-10-30T00:01:56Z"
-    },
-    "twitter-piko-newx-v12.38.1-prod.01-arm64-v8a.apk": {
-      "name": "twitter-piko-newx",
-      "version": "12.38.1-prod.01",
-      "appKey": "twitter",
-      "appName": "Twitter",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "piko",
-      "brandName": "Piko",
-      "variant": "NewX",
-      "subVariant": null,
-      "packageName": "com.twitter.android",
-      "patchSources": [
-        "crimera/patches-3.72.3.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/crimera/piko-newx/releases/tag/v3.72.3"
-      ],
-      "appliedPatches": [
-        "NewX: Crash logs",
-        "NewX: Custom font",
-        "NewX: Custom sharing domain",
-        "NewX: Customize drawer items",
-        "NewX: Customize inline actions",
-        "NewX: Customize media menu items",
-        "NewX: Customize navigation bar",
-        "NewX: Customize post menu items",
-        "NewX: Customize profile tabs",
-        "NewX: Customize timeline tabs",
-        "NewX: Disable automatic timeline refresh",
-        "NewX: Disable blur effects",
-        "NewX: Disable video player scrolling",
-        "NewX: Enable quality-of-life feature flags",
-        "NewX: Feature switch overrides",
-        "NewX: Filter For You by topic",
-        "NewX: Filter posts by keyword",
-        "NewX: Gallery profile Photos tab",
-        "NewX: Hide AI-generated posts",
-        "NewX: Hide Discover more",
-        "NewX: Hide Spaces bar",
-        "NewX: Hide compose button",
-        "NewX: Hide new posts pill",
-        "NewX: Hide post author actions",
-        "NewX: Hide post reply bar",
-        "NewX: Hide posts by verified account type",
-        "NewX: Hide premium upsell",
-        "NewX: Hide timeline tabs bar",
-        "NewX: Hide who to follow",
-        "NewX: Inline download button",
-        "NewX: Open canonical URLs",
-        "NewX: Permanent share links",
-        "NewX: Redirect downloads to chosen folder",
-        "NewX: Remove ads",
-        "NewX: Remove share tracking parameters",
-        "NewX: Restore pinned home tab",
-        "NewX: Restore timeline position",
-        "NewX: Set default media tab",
-        "NewX: Set default profile post sorting",
-        "NewX: Set default reply sorting",
-        "NewX: Show poll results",
-        "NewX: Show sensitive media",
-        "NewX: Theme",
-        "NewX: Translator",
-        "NewX: Unlock color customization",
-        "NewX: Unlock downloads"
-      ],
-      "originBuild": "260414",
-      "publishedAt": "2026-10-30T00:01:56Z"
     },
     "discord-venus-v350.8-Stable-all.apk": {
       "name": "discord-venus",
@@ -25504,10 +25368,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25524,8 +25388,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -26325,10 +26189,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.20.0.mpp"
+        "SysAdminDoc/patches-0.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.21.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -26340,6 +26204,7 @@
         "Block screenshot detection",
         "Clean up Facebook's chat list",
         "Clean up Reels",
+        "Clean up the story viewer",
         "Comment sheet options",
         "Default comment order",
         "Default playback quality",
@@ -26402,16 +26267,20 @@
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
+        "Open in Facebook from the share menu",
         "Open links in external browser",
         "Open on a chosen tab",
+        "Photo carousel",
         "Picture-in-picture",
         "Pinch to zoom",
         "Post action buttons",
+        "Remove the gap above Marketplace listings",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Round stories tray",
         "Sanitize sharing links",
         "Search date range",
+        "Search posts tab",
         "See who shared",
         "Send chat photos and videos at original quality",
         "Share sheet items",
@@ -26421,10 +26290,12 @@
         "Start on x86 devices",
         "Stop Story auto-advance",
         "Stop update prompts",
+        "Story viewer taps",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
         "Tap shows the controls",
         "Tap to play",
+        "Translate posts",
         "Turn off HDR brightness",
         "Turn off auto-translation",
         "Turn off double tap to like",
@@ -26439,8 +26310,8 @@
         "Badge and logo colors",
         "Accent color"
       ],
-      "originBuild": "260433",
-      "publishedAt": "2026-11-01T12:03:18Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "facebook-hushfacebook-material-you-v585.0.0.47.54-arm-v7a.apk": {
       "name": "facebook-hushfacebook-material-you",
@@ -26455,10 +26326,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.20.0.mpp"
+        "SysAdminDoc/patches-0.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.21.0"
       ],
       "appliedPatches": [
         "Allow screenshots",
@@ -26470,6 +26341,7 @@
         "Block screenshot detection",
         "Clean up Facebook's chat list",
         "Clean up Reels",
+        "Clean up the story viewer",
         "Comment sheet options",
         "Default comment order",
         "Default playback quality",
@@ -26532,16 +26404,20 @@
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
+        "Open in Facebook from the share menu",
         "Open links in external browser",
         "Open on a chosen tab",
+        "Photo carousel",
         "Picture-in-picture",
         "Pinch to zoom",
         "Post action buttons",
+        "Remove the gap above Marketplace listings",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Round stories tray",
         "Sanitize sharing links",
         "Search date range",
+        "Search posts tab",
         "See who shared",
         "Send chat photos and videos at original quality",
         "Share sheet items",
@@ -26551,10 +26427,12 @@
         "Start on x86 devices",
         "Stop Story auto-advance",
         "Stop update prompts",
+        "Story viewer taps",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
         "Tap shows the controls",
         "Tap to play",
+        "Translate posts",
         "Turn off HDR brightness",
         "Turn off auto-translation",
         "Turn off double tap to like",
@@ -26569,8 +26447,8 @@
         "Badge and logo colors",
         "Accent color"
       ],
-      "originBuild": "260433",
-      "publishedAt": "2026-11-01T12:03:18Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "facebook-hushfacebook-v585.0.0.47.54-arm-v7a.apk": {
       "name": "facebook-hushfacebook",
@@ -26585,10 +26463,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.20.0.mpp"
+        "SysAdminDoc/patches-0.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.21.0"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -26601,6 +26479,7 @@
         "Block screenshot detection",
         "Clean up Facebook's chat list",
         "Clean up Reels",
+        "Clean up the story viewer",
         "Comment sheet options",
         "Default comment order",
         "Default playback quality",
@@ -26663,16 +26542,20 @@
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
+        "Open in Facebook from the share menu",
         "Open links in external browser",
         "Open on a chosen tab",
+        "Photo carousel",
         "Picture-in-picture",
         "Pinch to zoom",
         "Post action buttons",
+        "Remove the gap above Marketplace listings",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Round stories tray",
         "Sanitize sharing links",
         "Search date range",
+        "Search posts tab",
         "See who shared",
         "Send chat photos and videos at original quality",
         "Share sheet items",
@@ -26682,10 +26565,12 @@
         "Start on x86 devices",
         "Stop Story auto-advance",
         "Stop update prompts",
+        "Story viewer taps",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
         "Tap shows the controls",
         "Tap to play",
+        "Translate posts",
         "Turn off HDR brightness",
         "Turn off auto-translation",
         "Turn off double tap to like",
@@ -26699,8 +26584,8 @@
         "Badge and logo colors",
         "Accent color"
       ],
-      "originBuild": "260433",
-      "publishedAt": "2026-11-01T12:03:18Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "facebook-hushfacebook-v585.0.0.47.54-arm64-v8a.apk": {
       "name": "facebook-hushfacebook",
@@ -26715,10 +26600,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "SysAdminDoc/patches-0.20.0.mpp"
+        "SysAdminDoc/patches-0.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.20.0"
+        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.21.0"
       ],
       "appliedPatches": [
         "AMOLED black theme",
@@ -26731,6 +26616,7 @@
         "Block screenshot detection",
         "Clean up Facebook's chat list",
         "Clean up Reels",
+        "Clean up the story viewer",
         "Comment sheet options",
         "Default comment order",
         "Default playback quality",
@@ -26793,16 +26679,20 @@
         "Open Messenger from the top bar",
         "Open comments at full height",
         "Open comments with a gesture",
+        "Open in Facebook from the share menu",
         "Open links in external browser",
         "Open on a chosen tab",
+        "Photo carousel",
         "Picture-in-picture",
         "Pinch to zoom",
         "Post action buttons",
+        "Remove the gap above Marketplace listings",
         "Restore screens on re-signed builds",
         "Resume long videos",
         "Round stories tray",
         "Sanitize sharing links",
         "Search date range",
+        "Search posts tab",
         "See who shared",
         "Send chat photos and videos at original quality",
         "Share sheet items",
@@ -26812,10 +26702,12 @@
         "Start on x86 devices",
         "Stop Story auto-advance",
         "Stop update prompts",
+        "Story viewer taps",
         "Tab bar at the bottom",
         "Tag suggestions only after @",
         "Tap shows the controls",
         "Tap to play",
+        "Translate posts",
         "Turn off HDR brightness",
         "Turn off auto-translation",
         "Turn off double tap to like",
@@ -26829,8 +26721,8 @@
         "Badge and logo colors",
         "Accent color"
       ],
-      "originBuild": "260433",
-      "publishedAt": "2026-11-01T12:03:18Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm64-v8a.apk": {
       "name": "proton-mail-hxreborn",
@@ -26845,10 +26737,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -26863,8 +26755,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260461",
-      "publishedAt": "2026-11-04T12:44:23Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -26879,10 +26771,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -26897,8 +26789,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260461",
-      "publishedAt": "2026-11-04T12:44:23Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -27225,18 +27117,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -27417,10 +27309,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -27462,8 +27354,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "rumble-lurk-v3.21.0-arm-v7a.apk": {
       "name": "rumble-lurk",
@@ -27478,10 +27370,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -27523,8 +27415,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "twitch-lurk-v31.8.0-arm-v7a.apk": {
       "name": "twitch-lurk",
@@ -27539,10 +27431,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -27588,8 +27480,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "twitch-lurk-v31.8.0-arm64-v8a.apk": {
       "name": "twitch-lurk",
@@ -27604,10 +27496,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -27653,8 +27545,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "tiktok-lite-kurageno8156-v43.5.3-all.apk": {
       "name": "tiktok-lite-kurageno8156",
@@ -27701,10 +27593,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -27712,8 +27604,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260461",
-      "publishedAt": "2026-11-04T12:44:23Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -27728,10 +27620,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.71.0.mpp"
+        "hxreborn/patches-1.72.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.71.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.72.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -27748,8 +27640,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260462",
-      "publishedAt": "2026-11-04T14:34:34Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "tiktok-hushfeed-v47.6.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -28813,10 +28705,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.16.0.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -28852,8 +28744,8 @@
         "Stay on channel when it hosts",
         "Third-party emotes"
       ],
-      "originBuild": "260465",
-      "publishedAt": "2026-11-04T20:25:05Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "kick-lurk-v40.34.0-arm-v7a.apk": {
       "name": "kick-lurk",
@@ -28868,10 +28760,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.16.0.mpp"
+        "jordanwoodson/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -28907,8 +28799,8 @@
         "Stay on channel when it hosts",
         "Third-party emotes"
       ],
-      "originBuild": "260465",
-      "publishedAt": "2026-11-04T20:25:05Z"
+      "originBuild": "260470",
+      "publishedAt": "2026-11-05T16:41:37Z"
     },
     "messenger-devanced-v586.0.0.55.92-arm64-v8a.apk": {
       "name": "messenger-devanced",
