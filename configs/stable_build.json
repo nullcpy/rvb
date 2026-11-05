@@ -330,7 +330,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -446,7 +446,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -457,7 +457,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -1795,7 +1795,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
