@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-04T22:08:56Z"
+    "publishedAt": "2026-11-05T06:39:05Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -20631,218 +20631,6 @@
       "originBuild": "260359",
       "publishedAt": "2026-10-24T09:35:38Z"
     },
-    "sofascore-heval99-v26.10.12-arm-v7a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.10.12",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable rating prompts",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "sofascore-heval99-v26.10.12-arm64-v8a.apk": {
-      "name": "sofascore-heval99",
-      "version": "26.10.12",
-      "appKey": "sofascore",
-      "appName": "Sofascore",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.sofascore.results",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Block marketing notifications",
-        "Disable Facebook SDK",
-        "Disable ads",
-        "Disable rating prompts",
-        "Disable telemetry",
-        "Enable Premium"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "truecaller-heval99-module-v26.41.5-arm-v7a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.41.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "truecaller-heval99-module-v26.41.5-arm64-v8a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.41.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "truecaller-heval99-v26.41.5-arm64-v8a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.41.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "truecaller-heval99-v26.41.5-arm-v7a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.41.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Spoof signature",
-        "Use SMS for verification codes"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
     "medium-bufferk-v4.5.1784910928-arm64-v8a.apk": {
       "name": "medium-bufferk",
       "version": "4.5.1784910928",
@@ -21381,56 +21169,6 @@
       ],
       "appliedPatches": [
         "Enable Pro"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "myfitnesspal-heval99-v26.42.0-arm64-v8a.apk": {
-      "name": "myfitnesspal-heval99",
-      "version": "26.42.0",
-      "appKey": "myfitnesspal",
-      "appName": "MyFitnessPal",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.myfitnesspal.android",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable Datadog telemetry",
-        "Enable Premium+"
-      ],
-      "originBuild": "260381",
-      "publishedAt": "2026-10-26T11:06:43Z"
-    },
-    "myfitnesspal-heval99-v26.42.0-arm-v7a.apk": {
-      "name": "myfitnesspal-heval99",
-      "version": "26.42.0",
-      "appKey": "myfitnesspal",
-      "appName": "MyFitnessPal",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.myfitnesspal.android",
-      "patchSources": [
-        "heval99/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Disable Datadog telemetry",
-        "Enable Premium+"
       ],
       "originBuild": "260381",
       "publishedAt": "2026-10-26T11:06:43Z"
@@ -29719,6 +29457,94 @@
       ],
       "originBuild": "260466",
       "publishedAt": "2026-11-04T22:08:27Z"
+    },
+    "discord-rain-v352.17-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "352.17-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260467",
+      "publishedAt": "2026-11-05T06:38:34Z"
+    },
+    "discord-rain-v352.17-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "352.17-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260467",
+      "publishedAt": "2026-11-05T06:38:34Z"
+    },
+    "discord-revenge-v352.17-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "352.17-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260467",
+      "publishedAt": "2026-11-05T06:38:34Z"
+    },
+    "discord-revenge-v352.17-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "352.17-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260467",
+      "publishedAt": "2026-11-05T06:38:34Z"
     }
   }
 }
