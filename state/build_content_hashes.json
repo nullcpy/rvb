@@ -971,13 +971,13 @@
       ]
     },
     "linkedin-michii-v4.1.1261-arm-v7a": {
-      "hash": "68dd1c47bd780c34f521b6cae06bc838",
+      "hash": "dbe94bcea45d41e1cd2e42c3138cf00f",
       "kinds": [
         "apk"
       ]
     },
     "linkedin-michii-v4.1.1261-arm64-v8a": {
-      "hash": "1a6c0b3903575168f03b302268b23cb5",
+      "hash": "d15c9a55b2fb67ec7ec818a8b06aedb0",
       "kinds": [
         "apk"
       ]
@@ -2505,6 +2505,18 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "twitter-piko-newx-v12.40.1-prod.01-arm-v7a": {
+      "hash": "e535c2f655da488dd32a6ee1f45b6876",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "twitter-piko-newx-v12.40.1-prod.01-arm64-v8a": {
+      "hash": "e85b8c97b846880ba8b8a0f989b35305",
+      "kinds": [
+        "apk"
       ]
     }
   }
