@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-05T22:12:47Z"
+    "publishedAt": "2026-11-06T01:08:32Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13506,10 +13506,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13522,6 +13522,7 @@
         "Bypass Play Services checks",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -13539,8 +13540,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -13555,10 +13556,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13571,6 +13572,7 @@
         "Bypass Play Services checks",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -13588,8 +13590,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -16958,10 +16960,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16974,6 +16976,7 @@
         "Bypass Play Services checks",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -16990,8 +16993,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -17006,10 +17009,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17022,6 +17025,7 @@
         "Bypass Play Services checks",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -17038,8 +17042,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -17082,10 +17086,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17100,6 +17104,7 @@
         "Change package name",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -17117,8 +17122,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -17133,10 +17138,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17151,6 +17156,7 @@
         "Change package name",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -17168,8 +17174,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -17184,10 +17190,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17202,6 +17208,7 @@
         "Change package name",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -17218,8 +17225,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -17234,10 +17241,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.7.6.mpp"
+        "bearinmindcat/patches-2.8.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.7.6"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.7"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17252,6 +17259,7 @@
         "Change package name",
         "Customization screen",
         "Flock cameras",
+        "Follow playing media",
         "Hide ads and clutter",
         "Legacy icon",
         "Location provider toggle",
@@ -17268,8 +17276,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260421",
-      "publishedAt": "2026-10-30T23:51:29Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -29405,10 +29413,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.16.0.mpp"
+        "browzomje/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.16.0"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "Choose startup tab",
@@ -29447,8 +29455,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260472",
-      "publishedAt": "2026-11-05T22:12:27Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     },
     "pinterest-browzomje-v14.43.0-arm64-v8a.apk": {
       "name": "pinterest-browzomje",
@@ -29463,10 +29471,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.16.0.mpp"
+        "browzomje/patches-1.16.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.16.0"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.16.1"
       ],
       "appliedPatches": [
         "Choose startup tab",
@@ -29505,8 +29513,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260472",
-      "publishedAt": "2026-11-05T22:12:27Z"
+      "originBuild": "260473",
+      "publishedAt": "2026-11-06T01:07:53Z"
     }
   }
 }
