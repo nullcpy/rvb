@@ -1,0 +1,14 @@
+[Spotify-Spicetify]
+enabled = true
+pkg-name = "com.spotify.music"
+app-name = "Spotify"
+patches-source = "spicetify/morphe-patches"
+brand = "Spicetify"
+included-patches = "'Hide Home and Browse ads' 'Hide Premium tab' 'Hide player ad cards' 'Pin shortcuts on Home' 'Spicetify extensions' 'Theme colors'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/spotify-app/com.spotify.music"
+
+
+
+
