@@ -3447,6 +3447,35 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "AliExpress-hxreborn": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "AliExpress",
+        "pkg-name": "com.alibaba.aliexpresshd",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Spotify-Spicetify": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "spicetify/morphe-patches",
+        "brand": "Spicetify",
+        "app-name": "Spotify",
+        "pkg-name": "com.spotify.music",
+        "included-patches": "'Hide Home and Browse ads' 'Hide Premium tab' 'Hide player ad cards' 'Pin shortcuts on Home' 'Spicetify extensions' 'Theme colors'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
