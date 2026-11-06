@@ -269,6 +269,29 @@
     "apkpure-dlurl": "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja",
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
+  "AliExpress-Quantro100": {
+    "enabled": false,
+    "pkg-name": "com.alibaba.aliexpresshd",
+    "app-name": "AliExpress",
+    "patches-source": "Quantro100/Morphe-patches",
+    "brand": "Quantro100",
+    "included-patches": "'Enable image saving' 'Disable splash screen'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app",
+    "uptodown-dlurl": "https://aliexpress.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
+    "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+  },
+  "AliExpress-hxreborn": {
+    "enabled": true,
+    "pkg-name": "com.alibaba.aliexpresshd",
+    "app-name": "AliExpress",
+    "brand": "hxreborn",
+    "patches-source": "hxreborn/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app",
+    "uptodown-dlurl": "https://aliexpress.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
+    "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
+  },
   "MoonPlusReader-binarymend": {
     "patches-source": "binarymend/morphe-patches",
     "brand": "binarymend",
@@ -1384,7 +1407,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1713,20 +1736,8 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge",
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
-  "AliExpress-Quantro100": {
-    "patches-source": "Quantro100/Morphe-patches",
-    "brand": "Quantro100",
-    "enabled": false,
-    "pkg-name": "com.alibaba.aliexpresshd",
-    "app-name": "AliExpress",
-    "included-patches": "'Enable image saving' 'Disable splash screen'",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/alibaba-mobile/aliexpress-shopping-app",
-    "uptodown-dlurl": "https://aliexpress.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
-    "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
-  },
   "Reddit-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1739,7 +1750,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1765,7 +1776,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "RemoteforAndroidTV-XBadFellaX": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tech.simha.androidtvremote",
     "app-name": "Remote for Android TV",
     "brand": "XBadFellaX",
@@ -2038,6 +2049,17 @@
     "apkpure-dlurl": "https://apkpure.com/sound-cloud-android-app/com.soundcloud.android",
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
+  "Spotify-Spicetify": {
+    "enabled": true,
+    "pkg-name": "com.spotify.music",
+    "app-name": "Spotify",
+    "patches-source": "spicetify/morphe-patches",
+    "brand": "Spicetify",
+    "included-patches": "'Hide Home and Browse ads' 'Hide Premium tab' 'Hide player ad cards' 'Pin shortcuts on Home' 'Spicetify extensions' 'Theme colors'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts",
+    "uptodown-dlurl": "https://spotify.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
+  },
   "Telegram-Aunali321-GooglePlay": {
     "enabled": false,
     "pkg-name": "org.telegram.messenger",
@@ -2153,7 +2175,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
@@ -2166,7 +2188,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
@@ -2327,7 +2349,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
@@ -2360,7 +2382,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-screen-recorder-miui/com.miui.screenrecorder"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2374,7 +2396,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2428,7 +2450,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2442,7 +2464,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
