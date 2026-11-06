@@ -23,9 +23,9 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "e44bf0bb24ac56ee874a7a5269607db4",
-      "com.google.android.youtube": "3b47a24e435eda5be16a45e841799fc8",
-      "shared": "3c5db8eea8e767eee962c37031f86799"
+      "com.google.android.apps.youtube.music": "2b2ff8392d2808a4b69d3cdc5977be65",
+      "com.google.android.youtube": "a3aca7fc1a2ebec39ed8a23cf4bab023",
+      "shared": "8728e9fff733b718637c5ff8f60eb34a"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "38f7dee029d8d691d4d374f1f5bf7718",
@@ -71,9 +71,9 @@
     "beta": {},
     "stable": {
       "com.android.soundrecorder": "21605bbd93862ea2a8786f99d83236e3",
-      "com.google.android.apps.maps": "9855895468861edfbc9e9f85b6b707b0",
+      "com.google.android.apps.maps": "12e72a5643c879e2c0d08a8a95454de0",
       "com.miui.screenrecorder": "77415904a7b8640e021e4cfd0659cd63",
-      "shared": "19bc25f6b1b38d8ac29280ed630dc132"
+      "shared": "719877b0df992cce4a249fb190c6c527"
     }
   },
   "brosssh/morphe-patches": {
@@ -203,7 +203,7 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "beb27f33322addf610aecc855aa46c5c",
+      "com.truecaller": "2a7a3d5ee0bd351a55ef3648a2b93419",
       "shared": "d34c26a61bc73d3dc2fb40582b05774f"
     },
     "stable": {

@@ -282,7 +282,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "AliExpress-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "AliExpress",
     "brand": "hxreborn",
@@ -605,7 +605,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -619,7 +619,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -631,7 +631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1407,7 +1407,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1737,7 +1737,7 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Reddit-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1750,7 +1750,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2050,7 +2050,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
   "Spotify-Spicetify": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.spotify.music",
     "app-name": "Spotify",
     "patches-source": "spicetify/morphe-patches",
@@ -2360,7 +2360,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2371,7 +2371,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
@@ -2382,7 +2382,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-screen-recorder-miui/com.miui.screenrecorder"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2396,7 +2396,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2450,7 +2450,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2464,7 +2464,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
