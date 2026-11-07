@@ -70,10 +70,10 @@
   "bearinmindcat/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.android.soundrecorder": "2a5e8c78b7f9c1d273458f305817be0d",
-      "com.google.android.apps.maps": "2a10fe2f3717a27ce299669ac6d08490",
+      "com.android.soundrecorder": "1c735904bcf29bd7fba766c4c4ab7d28",
+      "com.google.android.apps.maps": "612e324233f97e1fc61ba3ca56cdf3f4",
       "com.miui.screenrecorder": "77415904a7b8640e021e4cfd0659cd63",
-      "shared": "719877b0df992cce4a249fb190c6c527"
+      "shared": "f1608f7f64265870d8e42a46a6aa5800"
     }
   },
   "brosssh/morphe-patches": {
@@ -285,19 +285,20 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "8808c6eff8096259b89f0770083f7ff1",
-      "ch.protonvpn.android": "7c3101fe493693f167fcec96a972da65",
-      "com.dubox.drive": "6f9a52102d11f432f8a878456cd0ad15",
-      "com.greenstone.pocketwhip": "3feb8359f955115f8849a1794257eb1b",
-      "com.internet.speed.meter.lite": "22225761ea0270e1141f82048974485d",
-      "com.michaldrabik.showly2": "a433adde4350141f6b309c1855e2f66d",
-      "dev.vodik7.atvtools": "f67651ee055b2793eebd9652c0597324",
-      "in.krosbits.castplugin": "5982fa90a95e773c00ae4f9843ae1486",
-      "in.krosbits.musicolet": "49864ca195b6a729968f663e345301c8",
-      "me.proton.android.lumo": "ac33e73a1c7c59a67c1db0d280b7d89e",
-      "org.withouthat.acalendar": "7b1b5773601c55b43ddad5b0b2064467",
-      "proton.android.pass": "5c00dab347cc05cd0dc15ab482c8e130",
-      "shared": "e634218a7ac0e985b1b0b7b55e47d451"
+      "ch.protonmail.android": "e5e1a990b067c240087fa60ed05124d2",
+      "ch.protonvpn.android": "6fef8caeb2d309d8c5cba5ab1c555e74",
+      "com.alibaba.aliexpresshd": "0db42ed1c4562ad8a6fe2f50fe5303c2",
+      "com.dubox.drive": "346905272a7ef2e26573bcda1d9be014",
+      "com.greenstone.pocketwhip": "0a4bf17da7ad5493bd23680e3d2d22fe",
+      "com.internet.speed.meter.lite": "0aff468aca3c57db442cd7fd048b778b",
+      "com.michaldrabik.showly2": "6e07a58c69d9064a511dfe6456eefa66",
+      "dev.vodik7.atvtools": "0c2b2da54446663e94563a4096db83fd",
+      "in.krosbits.castplugin": "489a0bd0d1a0d2aa3b09b03fd776ab13",
+      "in.krosbits.musicolet": "9840fec92baf890c7e74527ab67ccf44",
+      "me.proton.android.lumo": "7b7f5eeee3506ef0cb8127e9c9d04f35",
+      "org.withouthat.acalendar": "45f22a975bada2fa807d4ccf03f7fbe1",
+      "proton.android.pass": "edf405a6fffd275093269862f7212c64",
+      "shared": "3149df02d95ca16f7f4694ab0555551c"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -590,8 +591,8 @@
   "sysadmindoc/hushgram": {
     "beta": {},
     "stable": {
-      "com.instagram.android": "13ffc3adc663b8f0d85740c420e0880f",
-      "shared": "fd96a32e2357ac51432bb1dd7217cdd8"
+      "com.instagram.android": "7b63c9e714d683cf189f5532af40ef3a",
+      "shared": "06c07fe76178ca6cbc1b2fc1ea7c746d"
     }
   },
   "sysadmindoc/hushmessenger": {
