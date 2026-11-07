@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260485",
+    "channel": "stable",
+    "publishedAt": "2026-11-07T23:41:41Z"
+  },
+  "files": {
+    "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+      "name": "hbo-max-ajstrick81-android-tv",
+      "version": "7.9.0.61",
+      "appKey": "hbomax",
+      "appName": "HBO Max",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.wbd.hbomax",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "HBO Max - Disable Ads",
+        "HBO Max - Prefer Ad-Free Stream"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    },
+    "peacock-ajstrick81-android-tv-v7.10.102-all.apk": {
+      "name": "peacock-ajstrick81-android-tv",
+      "version": "7.10.102",
+      "appKey": "peacock",
+      "appName": "Peacock",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.peacocktv.peacockandroid",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Skip ads"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    },
+    "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+      "name": "plutotv-ajstrick81-android-tv",
+      "version": "5.66.0-leanback",
+      "appKey": "plutotv",
+      "appName": "PlutoTV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.pluto.android",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Mask live ad breaks (black screen + mute)",
+        "Skip ads"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    },
+    "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    },
+    "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    },
+    "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+      "name": "twitch-ajstrick81-android-tv",
+      "version": "13.0.0.2",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "ajstrick81/patches-1.50.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+      ],
+      "appliedPatches": [
+        "Block TV ads"
+      ],
+      "originBuild": "260485",
+      "publishedAt": "2026-11-07T23:41:41Z"
+    }
+  }
+}
