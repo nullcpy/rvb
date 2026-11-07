@@ -3,12 +3,12 @@
     "beta": {},
     "stable": {
       "com.amazon.amazonvideo.livingroom": "35e92aaeb9db7e90edae0c8e4ccf081c",
-      "com.disney.disneyplus": "71adce32d791bc8dd1e54995a7abd5c0",
+      "com.disney.disneyplus": "71fc3a08177e53fa7466175265b0b678",
       "com.netflix.ninja": "53f9941ba7f01b83be5afc5060400dba",
       "com.peacocktv.peacockandroid": "fd369c36ba65c72d7297980fb92ebb83",
       "com.tubitv": "fc311c606f9ce12c99fca616dda555d7",
       "com.univision.prendetv": "c105da71166c302285d93a75a6808212",
-      "com.wbd.hbomax": "b2316dbfe943c0567b78c749e74b8a4e",
+      "com.wbd.hbomax": "9ee44fdffc4eeb96246f41913b255a98",
       "shared": "3a0ed268368b605a9bfd19e616475e2e",
       "tv.pluto.android": "c3edffb29467ad2cd8dd147fd3ea5c62",
       "tv.twitch.android.app": "f9d22f6ef729e0e96c986e57d8883863"
@@ -36,7 +36,7 @@
   "andrewliang25/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.facebook.katana": "2737f91e550d2d5bc3441557f3ab0f35",
+      "com.facebook.katana": "c907d98d5ba4c3594819ae0ebbecc2f4",
       "shared": "b31e48f28e09284c8b8d893819c8041f"
     }
   },
@@ -73,7 +73,7 @@
       "com.android.soundrecorder": "1c735904bcf29bd7fba766c4c4ab7d28",
       "com.google.android.apps.maps": "612e324233f97e1fc61ba3ca56cdf3f4",
       "com.miui.screenrecorder": "77415904a7b8640e021e4cfd0659cd63",
-      "shared": "34a4ba14b20ae078e11d9e940ee863f5"
+      "shared": "e34e9a16b5d90669c5f625401097ac29"
     }
   },
   "brosssh/morphe-patches": {
@@ -314,7 +314,7 @@
   "imnoammm/noams-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.block.juggle": "83d370d7f5a78f5cd4ee4b6eb5628b0b",
+      "com.block.juggle": "d3b960095f14ecd7caad6991def9aeb5",
       "shared": "a578fdb2f9ac6ce73c5e333c6c013e3c"
     }
   },
@@ -373,9 +373,9 @@
   "kondratjev/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.fatsecret.android": "040786eb8b3f98c0ebfaa20001296e06",
+      "com.fatsecret.android": "a3c34d7b9c2f6ee09f01dee83523164e",
       "com.soundcloud.android": "838bacba1749fd0a0586d8202441e916",
-      "shared": "e6de59c97fa94ca506628d9c90047fe9"
+      "shared": "ae3be9fa5d88e33291e4a0f5fc463beb"
     }
   },
   "kurageno8156-lgtm/tiktok-lite-patches": {
