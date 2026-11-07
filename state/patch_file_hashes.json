@@ -17,7 +17,7 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "6e73b85a2f73ad70279eee9e0d435082",
+      "com.google.android.apps.photos": "62f9dc9d010f67152bc324deefc1a6c0",
       "shared": "796c2550311378527b1a1c1d14685ff2"
     }
   },
@@ -73,7 +73,7 @@
       "com.android.soundrecorder": "1c735904bcf29bd7fba766c4c4ab7d28",
       "com.google.android.apps.maps": "612e324233f97e1fc61ba3ca56cdf3f4",
       "com.miui.screenrecorder": "77415904a7b8640e021e4cfd0659cd63",
-      "shared": "f1608f7f64265870d8e42a46a6aa5800"
+      "shared": "34a4ba14b20ae078e11d9e940ee863f5"
     }
   },
   "brosssh/morphe-patches": {
@@ -338,8 +338,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "67dd8e6778a79f181a5a210fbf93687d",
-      "shared": "c401230287caac5cc88ae3e4d2f54ff8"
+      "com.google.android.inputmethod.latin": "65c8bc67da54314499627609aa1b38a5",
+      "shared": "17c9671692884a18816f33cf8b96c448"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "c0ef178cd14c5974d7aad24e0741777b",
@@ -409,10 +409,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "8b1b42785b041acec50d8685f0484d56",
-      "com.google.android.youtube": "502191b95cc0c725e5fd051af5a3b0eb",
-      "com.reddit.frontpage": "0ccbd2d1ffe6a5b4a851834b00fa47cd",
-      "shared": "524bdc55d024f4263ec858843466e574"
+      "com.google.android.apps.youtube.music": "e1bf196ccd8f2eb95a6156108647f388",
+      "com.google.android.youtube": "337a30c98c08c32ecccd9716236039ad",
+      "com.reddit.frontpage": "d084089c1692470274d9c5a0210139b5",
+      "shared": "29e029be4bef57667ea70a574a569785"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "8b1b42785b041acec50d8685f0484d56",
@@ -556,7 +556,7 @@
   "satanmerde/d-moniakpatches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "cb76e5b17fd0e0b48e00bd1f15eb1a2d",
+      "ch.protonmail.android": "97437e95343d65bed270cfb6869e7a8e",
       "shared": "de4a29c48de11673266b52fc9a96fcef"
     }
   },
