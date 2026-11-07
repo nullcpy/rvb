@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260481",
+    "channel": "stable",
+    "publishedAt": "2026-11-07T11:46:09Z"
+  },
+  "files": {
+    "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name",
+        "GmsCore support"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "google-photos-akashsriram-module-v7.99.0.1007655401-arm-v7a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "google-photos-akashsriram-module-v7.99.0.1007655401-arm64-v8a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.17.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "proton-mail-satanmerde-v7.11.12-arm-v7a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.67.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.67.0"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "proton-mail-satanmerde-v7.11.12-arm64-v8a.apk": {
+      "name": "proton-mail-satanmerde",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "satanmerde",
+      "brandName": "SatanMerde",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "SatanMerde/patches-1.67.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SatanMerde/D-moniakPatches/releases/tag/v1.67.0"
+      ],
+      "appliedPatches": [
+        "AMOLED Black Theme - Proton Mail (Experimental)",
+        "Declutter UI & Hide Upsells - Proton Mail (Experimental)",
+        "Enhanced Privacy & Tracker Blocker - Proton Mail (Experimental)"
+      ],
+      "originBuild": "260481",
+      "publishedAt": "2026-11-07T11:46:09Z"
+    }
+  }
+}
