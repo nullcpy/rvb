@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-06T20:05:51Z"
+    "publishedAt": "2026-11-07T00:14:22Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -13365,10 +13365,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13400,8 +13400,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -13416,10 +13416,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13451,8 +13451,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -16779,10 +16779,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16813,8 +16813,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -16829,10 +16829,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16863,8 +16863,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -16907,10 +16907,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16944,8 +16944,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -16960,10 +16960,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16997,8 +16997,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -17013,10 +17013,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17049,8 +17049,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -17065,10 +17065,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.8.mpp"
+        "bearinmindcat/patches-2.8.9.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.8"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.9"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -17101,8 +17101,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260477",
-      "publishedAt": "2026-11-06T20:05:10Z"
+      "originBuild": "260478",
+      "publishedAt": "2026-11-07T00:13:46Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
