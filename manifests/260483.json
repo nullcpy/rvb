@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260483",
+    "channel": "stable",
+    "publishedAt": "2026-11-07T18:05:12Z"
+  },
+  "files": {
+    "block-blast-imnoammm-v10.8.1-all.apk": {
+      "name": "block-blast-imnoammm",
+      "version": "10.8.1",
+      "appKey": "blockblast",
+      "appName": "Block Blast",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "imnoammm",
+      "brandName": "ImNoammm",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.block.juggle",
+      "patchSources": [
+        "ImNoammm/noams-morphe-patches-1.5.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ImNoammm/Noams-Morphe-Patches/releases/tag/v1.5.1"
+      ],
+      "appliedPatches": [
+        "Animation theme",
+        "Block ads",
+        "Block themes",
+        "Colour theme",
+        "Disable impossible levels",
+        "Disable revive",
+        "Extra effects",
+        "Fake best score",
+        "Faster game over",
+        "Fresh Classic games",
+        "Hide percent-of-players popups",
+        "Menu theme",
+        "Remove startup credits",
+        "Tidy settings menu",
+        "iOS generation algorithm"
+      ],
+      "originBuild": "260483",
+      "publishedAt": "2026-11-07T18:05:12Z"
+    },
+    "calorie-counter-kondratjev-v11.8.2.1-arm64-v8a.apk": {
+      "name": "calorie-counter-kondratjev",
+      "version": "11.8.2.1",
+      "appKey": "caloriecounter",
+      "appName": "Calorie Counter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.fatsecret.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.2"
+      ],
+      "appliedPatches": [
+        "Disable community tab",
+        "Disable force update dialog",
+        "Unlock Premium"
+      ],
+      "originBuild": "260483",
+      "publishedAt": "2026-11-07T18:05:12Z"
+    },
+    "calorie-counter-kondratjev-v11.8.2.1-arm-v7a.apk": {
+      "name": "calorie-counter-kondratjev",
+      "version": "11.8.2.1",
+      "appKey": "caloriecounter",
+      "appName": "Calorie Counter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kondratjev",
+      "brandName": "kondratjev",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.fatsecret.android",
+      "patchSources": [
+        "kondratjev/patches-1.28.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.2"
+      ],
+      "appliedPatches": [
+        "Disable community tab",
+        "Disable force update dialog",
+        "Unlock Premium"
+      ],
+      "originBuild": "260483",
+      "publishedAt": "2026-11-07T18:05:12Z"
+    },
+    "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+      "name": "facebook-andrewliang25",
+      "version": "577.0.0.50.72",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "andrewliang25",
+      "brandName": "andrewliang25",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "andrewliang25/patches-3.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.11.0"
+      ],
+      "appliedPatches": [
+        "[Ad] Block ad telemetry",
+        "[Ad] Block background ad prefetch",
+        "[Ad] Disable Audience Network",
+        "[Feed] Block feed auto refresh",
+        "[Feed] Hide page suggestions and promo cards",
+        "[Feed] Hide post prompts",
+        "[Feed] Hide sponsored posts",
+        "[Fix] Restore screens on re-signed builds",
+        "[General] AMOLED black theme",
+        "[General] Andrew's Patch Setting",
+        "[General] Hide affiliate product links",
+        "[General] Open links in external browser",
+        "[Reels] Download any reel",
+        "[Reels] Hide interest prompts",
+        "[Reels] Hide sponsored reels",
+        "[Reels] Picture-in-picture",
+        "[Stories] Disable auto advance",
+        "[Stories] Download any story",
+        "[Stories] Hide sponsored stories",
+        "[Stories] View stories anonymously"
+      ],
+      "originBuild": "260483",
+      "publishedAt": "2026-11-07T18:05:12Z"
+    }
+  }
+}
