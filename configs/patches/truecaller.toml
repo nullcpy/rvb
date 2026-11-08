@@ -30,9 +30,10 @@ brand = "heval99"
 patches-source = "heval99/Heval-Morphe-Patches"
 patches-version = "both"
 build-mode = "both"
-included-patches = "'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab'"
+included-patches = "'Fix T9 contact search 'Hide Assistant tab' 'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab' 'Show caller number in call log' 'Turn off Ad Campaign Analytics'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block"
 uptodown-dlurl = "https://truecaller.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
+
 
 
