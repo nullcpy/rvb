@@ -1,15 +1,4 @@
 {
-  "stable": {
-    "Truecaller-heval99": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "a8bfcfac68ba4dda12a8c8365d6d521fc920e957"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
