@@ -2,14 +2,14 @@
   "ajstrick81/morphe-androidtv-patches": {
     "beta": {},
     "stable": {
-      "com.amazon.amazonvideo.livingroom": "35e92aaeb9db7e90edae0c8e4ccf081c",
+      "com.amazon.amazonvideo.livingroom": "3ad81af66f716c321949386905b011cd",
       "com.disney.disneyplus": "1a5c00d6bbc4ede650082350f3dc7597",
       "com.netflix.ninja": "53f9941ba7f01b83be5afc5060400dba",
       "com.peacocktv.peacockandroid": "fd369c36ba65c72d7297980fb92ebb83",
       "com.tubitv": "fc311c606f9ce12c99fca616dda555d7",
       "com.univision.prendetv": "c105da71166c302285d93a75a6808212",
       "com.wbd.hbomax": "9ee44fdffc4eeb96246f41913b255a98",
-      "shared": "503810ffadb27321ec7e1394cd99c758",
+      "shared": "5cf9d84a34f926b78f994b5e624e7225",
       "tv.pluto.android": "4ed99387abbc8e1246f4f5f12cfaec39",
       "tv.twitch.android.app": "f9d22f6ef729e0e96c986e57d8883863"
     }
@@ -641,7 +641,7 @@
   "xbadfellax/badfella-patches": {
     "beta": {},
     "stable": {
-      "shared": "9ebc44f161ef776f7fad5da6ace98779",
+      "shared": "23b392443cbe4397eeae66fd92308cf0",
       "tech.simha.androidtvremote": "0fafec2572cdef2764424197e4ba9e5a"
     }
   },
