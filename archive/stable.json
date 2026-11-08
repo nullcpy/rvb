@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-08T05:58:58Z"
+    "publishedAt": "2026-11-08T11:51:54Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -12422,17 +12422,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12447,17 +12447,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -17323,10 +17323,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17338,8 +17338,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -17354,10 +17354,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17369,8 +17369,8 @@
         "M3E loading indicator",
         "Material 3 switches"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -19194,10 +19194,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -19208,10 +19208,11 @@
         "Hide promotions",
         "Hide video recommendations",
         "Remove recent panel",
+        "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -19226,10 +19227,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -19240,10 +19241,11 @@
         "Hide promotions",
         "Hide video recommendations",
         "Remove recent panel",
+        "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -19740,16 +19742,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19764,16 +19766,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19788,16 +19790,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -23101,10 +23103,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23121,8 +23123,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -24470,10 +24472,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24488,8 +24490,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -24504,10 +24506,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24522,8 +24524,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -24850,18 +24852,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -25326,10 +25328,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -25337,8 +25339,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -25353,10 +25355,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25373,8 +25375,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "tiktok-hushfeed-v47.6.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -29018,10 +29020,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -29034,8 +29036,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -29050,10 +29052,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.73.0.mpp"
+        "hxreborn/patches-1.74.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.73.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -29066,8 +29068,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -29855,6 +29857,144 @@
       ],
       "originBuild": "260486",
       "publishedAt": "2026-11-08T05:58:46Z"
+    },
+    "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.41.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.75.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.75.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
+    },
+    "twitter-piko-newx-v12.41.0-prod.01-arm64-v8a.apk": {
+      "name": "twitter-piko-newx",
+      "version": "12.41.0-prod.01",
+      "appKey": "twitter",
+      "appName": "Twitter",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piko",
+      "brandName": "Piko",
+      "variant": "NewX",
+      "subVariant": null,
+      "packageName": "com.twitter.android",
+      "patchSources": [
+        "crimera/patches-3.75.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/crimera/piko-newx/releases/tag/v3.75.0"
+      ],
+      "appliedPatches": [
+        "NewX: Crash logs",
+        "NewX: Custom font",
+        "NewX: Custom sharing domain",
+        "NewX: Customize drawer items",
+        "NewX: Customize inline actions",
+        "NewX: Customize media menu items",
+        "NewX: Customize navigation bar",
+        "NewX: Customize post menu items",
+        "NewX: Customize profile tabs",
+        "NewX: Customize timeline tabs",
+        "NewX: Disable automatic timeline refresh",
+        "NewX: Disable blur effects",
+        "NewX: Disable video player scrolling",
+        "NewX: Enable quality-of-life feature flags",
+        "NewX: Feature switch overrides",
+        "NewX: Filter For You by topic",
+        "NewX: Filter posts by keyword",
+        "NewX: Gallery profile Photos tab",
+        "NewX: Hide AI-generated posts",
+        "NewX: Hide Discover more",
+        "NewX: Hide Spaces bar",
+        "NewX: Hide compose button",
+        "NewX: Hide new posts pill",
+        "NewX: Hide post author actions",
+        "NewX: Hide post reply bar",
+        "NewX: Hide posts by verified account type",
+        "NewX: Hide premium upsell",
+        "NewX: Hide timeline tabs bar",
+        "NewX: Hide who to follow",
+        "NewX: Inline download button",
+        "NewX: Open canonical URLs",
+        "NewX: Permanent share links",
+        "NewX: Redirect downloads to chosen folder",
+        "NewX: Remove ads",
+        "NewX: Remove share tracking parameters",
+        "NewX: Restore pinned home tab",
+        "NewX: Restore timeline position",
+        "NewX: Set default media tab",
+        "NewX: Set default profile post sorting",
+        "NewX: Set default reply sorting",
+        "NewX: Show poll results",
+        "NewX: Show sensitive media",
+        "NewX: Theme",
+        "NewX: Translator",
+        "NewX: Unlock color customization",
+        "NewX: Unlock downloads"
+      ],
+      "originBuild": "260488",
+      "publishedAt": "2026-11-08T11:51:07Z"
     }
   }
 }
