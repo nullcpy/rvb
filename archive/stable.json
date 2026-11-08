@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-07T23:42:07Z"
+    "publishedAt": "2026-11-08T05:58:58Z"
   },
   "files": {
     "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
@@ -2064,10 +2064,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.50.3.mpp"
+        "ajstrick81/patches-1.51.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.51.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -2076,8 +2076,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260485",
-      "publishedAt": "2026-11-07T23:41:41Z"
+      "originBuild": "260486",
+      "publishedAt": "2026-11-08T05:58:46Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -29826,6 +29826,35 @@
       ],
       "originBuild": "260481",
       "publishedAt": "2026-11-07T11:46:09Z"
+    },
+    "prime-video-ajstrick81-android-tv-clone-v6.24.13+v16.0.1.93-allAbis-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.24.13+v16.0.1.93-allAbis",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.51.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.51.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260486",
+      "publishedAt": "2026-11-08T05:58:46Z"
     }
   }
 }
