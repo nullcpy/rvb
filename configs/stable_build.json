@@ -2149,7 +2149,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Threads-chiggi": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
@@ -2162,7 +2162,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-chiggi-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
@@ -2349,7 +2349,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
