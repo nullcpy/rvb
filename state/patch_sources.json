@@ -1,7 +1,7 @@
 {
   "Akash-Sriram/morphe-google-photos": {
-    "beta": "v1.18.0-dev.4",
-    "beta_date": "2026-11-07T20:09:48Z",
+    "beta": "v1.18.0-dev.5",
+    "beta_date": "2026-11-09T06:33:06Z",
     "blocked": false,
     "host": "github",
     "repo": "Akash-Sriram/morphe-google-photos",
@@ -117,13 +117,13 @@
     "stable_date": "2026-09-02T22:03:06Z"
   },
   "SatanMerde/D-moniakPatches": {
-    "beta": "v1.68.2-dev.1",
-    "beta_date": "2026-11-08T18:59:00Z",
+    "beta": "v1.69.0-dev.1",
+    "beta_date": "2026-11-09T06:48:02Z",
     "blocked": false,
     "host": "github",
     "repo": "SatanMerde/D-moniakPatches",
-    "stable": "v1.68.2",
-    "stable_date": "2026-11-08T18:59:05Z"
+    "stable": "v1.69.0",
+    "stable_date": "2026-11-09T06:47:46Z"
   },
   "Smart123s/morphe-patches": {
     "beta": "",
@@ -646,6 +646,15 @@
     "repo": "spicetify/morphe-patches",
     "stable": "v1.2.0",
     "stable_date": "2026-10-08T17:58:34Z"
+  },
+  "wchill/patcheddit": {
+    "beta": "v2.1.0-dev.6",
+    "beta_date": "2026-11-07T14:34:25Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "wchill/patcheddit",
+    "stable": "v2.1.0",
+    "stable_date": "2026-11-07T15:12:43Z"
   },
   "zeldrisho/morphe-patches": {
     "beta": "v1.11.0-dev.4",
