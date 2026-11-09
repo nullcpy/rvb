@@ -4,247 +4,9 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-09T13:49:41Z"
+    "publishedAt": "2026-11-09T19:01:30Z"
   },
   "files": {
-    "instagram-piko-clone-v439.0.0.37.89-arm64-v8a.apk": {
-      "name": "instagram-piko-clone",
-      "version": "439.0.0.37.89",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "piko",
-      "brandName": "Piko",
-      "variant": null,
-      "subVariant": "Clone",
-      "packageName": "com.instagram.android.piko",
-      "patchSources": [
-        "crimera/patches-3.10.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.8"
-      ],
-      "appliedPatches": [
-        "Add settings ",
-        "Allow user network certificate ",
-        "Change like animation ",
-        "Change version code ",
-        "Clone ",
-        "Copy comment ",
-        "Custom sharing domain ",
-        "Customise story ring size ",
-        "Customise story timestamp ",
-        "Customize navigation bar ",
-        "Disable Reels scrolling ",
-        "Disable ads ",
-        "Disable analytics ",
-        "Disable comments ",
-        "Disable discover people ",
-        "Disable double tap like ",
-        "Disable explore ",
-        "Disable highlights ",
-        "Disable screenshot detection ",
-        "Disable stories ",
-        "Disable story flipping ",
-        "Disable swipe to create ",
-        "Disable typing status ",
-        "Disable video autoplay ",
-        "Download media ",
-        "Download voice message ",
-        "External downloader ",
-        "Filter stories ",
-        "Friendship status indicator ",
-        "Hide group creation button on sharesheet ",
-        "Hide notes tray ",
-        "Hide reshare button ",
-        "Hide stories tray ",
-        "Hide suggested content ",
-        "Improve image viewing ",
-        "Limit feed to following profiles ",
-        "Loop story ",
-        "Make ephemeral media permanent ",
-        "Mark chat as read manually ",
-        "More options on post ",
-        "More options on profile ",
-        "Open links externally ",
-        "Recommended flags ",
-        "Remove build expired popup ",
-        "Remove empty bottom space ",
-        "Sanitize share links ",
-        "Save deleted messages ",
-        "Save media comment ",
-        "Theme ",
-        "Unlock Plus benefits ",
-        "Unlock developer options ",
-        "Unlock employee options ",
-        "Validate links ",
-        "View DMs anonymously ",
-        "View live anonymously ",
-        "View stories anonymously ",
-        "View story mentions "
-      ],
-      "originBuild": "260048",
-      "publishedAt": "2026-09-14T04:00:19Z"
-    },
-    "instagram-piko-v439.0.0.37.89-arm64-v8a.apk": {
-      "name": "instagram-piko",
-      "version": "439.0.0.37.89",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "piko",
-      "brandName": "Piko",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "crimera/patches-3.10.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.8"
-      ],
-      "appliedPatches": [
-        "Add settings ",
-        "Allow user network certificate ",
-        "Change like animation ",
-        "Change version code ",
-        "Copy comment ",
-        "Custom sharing domain ",
-        "Customise story ring size ",
-        "Customise story timestamp ",
-        "Customize navigation bar ",
-        "Disable Reels scrolling ",
-        "Disable ads ",
-        "Disable analytics ",
-        "Disable comments ",
-        "Disable discover people ",
-        "Disable double tap like ",
-        "Disable explore ",
-        "Disable highlights ",
-        "Disable screenshot detection ",
-        "Disable stories ",
-        "Disable story flipping ",
-        "Disable swipe to create ",
-        "Disable typing status ",
-        "Disable video autoplay ",
-        "Download media ",
-        "Download voice message ",
-        "External downloader ",
-        "Filter stories ",
-        "Friendship status indicator ",
-        "Hide group creation button on sharesheet ",
-        "Hide notes tray ",
-        "Hide reshare button ",
-        "Hide stories tray ",
-        "Hide suggested content ",
-        "Improve image viewing ",
-        "Limit feed to following profiles ",
-        "Loop story ",
-        "Make ephemeral media permanent ",
-        "Mark chat as read manually ",
-        "More options on post ",
-        "More options on profile ",
-        "Open links externally ",
-        "Recommended flags ",
-        "Remove build expired popup ",
-        "Remove empty bottom space ",
-        "Sanitize share links ",
-        "Save deleted messages ",
-        "Save media comment ",
-        "Theme ",
-        "Unlock Plus benefits ",
-        "Unlock developer options ",
-        "Unlock employee options ",
-        "Validate links ",
-        "View DMs anonymously ",
-        "View live anonymously ",
-        "View stories anonymously ",
-        "View story mentions "
-      ],
-      "originBuild": "260048",
-      "publishedAt": "2026-09-14T04:00:19Z"
-    },
-    "instagram-piko-module-v439.0.0.37.89-arm64-v8a.zip": {
-      "name": "instagram-piko",
-      "version": "439.0.0.37.89",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "piko",
-      "brandName": "Piko",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "crimera/patches-3.10.0-dev.8.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.10.0-dev.8"
-      ],
-      "appliedPatches": [
-        "Add settings ",
-        "Allow user network certificate ",
-        "Change like animation ",
-        "Change version code ",
-        "Copy comment ",
-        "Custom sharing domain ",
-        "Customise story ring size ",
-        "Customise story timestamp ",
-        "Customize navigation bar ",
-        "Disable Reels scrolling ",
-        "Disable ads ",
-        "Disable analytics ",
-        "Disable comments ",
-        "Disable discover people ",
-        "Disable double tap like ",
-        "Disable explore ",
-        "Disable highlights ",
-        "Disable screenshot detection ",
-        "Disable stories ",
-        "Disable story flipping ",
-        "Disable swipe to create ",
-        "Disable typing status ",
-        "Disable video autoplay ",
-        "Download media ",
-        "Download voice message ",
-        "External downloader ",
-        "Filter stories ",
-        "Friendship status indicator ",
-        "Hide group creation button on sharesheet ",
-        "Hide notes tray ",
-        "Hide reshare button ",
-        "Hide stories tray ",
-        "Hide suggested content ",
-        "Improve image viewing ",
-        "Limit feed to following profiles ",
-        "Loop story ",
-        "Make ephemeral media permanent ",
-        "Mark chat as read manually ",
-        "More options on post ",
-        "More options on profile ",
-        "Open links externally ",
-        "Recommended flags ",
-        "Remove build expired popup ",
-        "Remove empty bottom space ",
-        "Sanitize share links ",
-        "Save deleted messages ",
-        "Save media comment ",
-        "Theme ",
-        "Unlock Plus benefits ",
-        "Unlock developer options ",
-        "Unlock employee options ",
-        "Validate links ",
-        "View DMs anonymously ",
-        "View live anonymously ",
-        "View stories anonymously ",
-        "View story mentions "
-      ],
-      "originBuild": "260048",
-      "publishedAt": "2026-09-14T04:00:19Z"
-    },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko-material-you",
       "version": "12.19.1-release.0",
@@ -12422,17 +12184,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12447,17 +12209,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -17323,10 +17085,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17336,10 +17098,11 @@
         "Hide promotional messages",
         "Hide upgrade promotions",
         "M3E loading indicator",
-        "Material 3 switches"
+        "Material 3 switches",
+        "Floating navigation bar"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -17354,10 +17117,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17367,10 +17130,11 @@
         "Hide promotional messages",
         "Hide upgrade promotions",
         "M3E loading indicator",
-        "Material 3 switches"
+        "Material 3 switches",
+        "Floating navigation bar"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -19194,10 +18958,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -19211,8 +18975,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -19227,10 +18991,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -19244,8 +19008,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -19742,16 +19506,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19766,16 +19530,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19790,16 +19554,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -23103,15 +22867,16 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Custom accent color",
         "Disable telemetry",
+        "Floating navigation bar",
         "Hide upgrade promotions",
         "Material 3 switches",
         "Remove server change delay",
@@ -23123,8 +22888,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -24472,10 +24237,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24490,8 +24255,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -24506,10 +24271,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24524,8 +24289,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -24714,18 +24479,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -25190,10 +24955,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -25201,8 +24966,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -25217,15 +24982,16 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Custom accent color",
         "Disable telemetry",
+        "Floating navigation bar",
         "Hide upgrade promotions",
         "Material 3 switches",
         "Remove server change delay",
@@ -25237,8 +25003,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "tiktok-hushfeed-v47.6.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -28886,10 +28652,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -28902,8 +28668,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -28918,10 +28684,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.74.0.mpp"
+        "hxreborn/patches-1.75.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.74.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -28934,8 +28700,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260488",
-      "publishedAt": "2026-11-08T11:51:07Z"
+      "originBuild": "260498",
+      "publishedAt": "2026-11-09T19:00:36Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
