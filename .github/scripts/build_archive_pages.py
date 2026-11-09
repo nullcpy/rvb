@@ -356,7 +356,6 @@ def render_page(app_name, items, page, total, page_url, front_matter):
             nav.append(f"[newer builds →]({page_url(page)})")
         if page + 1 < total:
             nav.append(f"[← older builds]({page_url(page + 2)})")
-        lines += [" . ".join(nav), ""]
     last_brand, last_variant, last_sub = None, None, None
     for brand, variant, sub, tags, per_build in items:
         if brand != last_brand:
@@ -380,6 +379,8 @@ def render_page(app_name, items, page, total, page_url, front_matter):
         lines += ["</details>", ""]
         lines += render_table(tags, per_build)
         lines.append("")
+    if total > 1:
+        lines += [" . ".join(nav), ""]
     return "\n".join(lines) + "\n"
 
 
