@@ -57,6 +57,7 @@ Writes:
     <out>/README.md, <out>/apps/<appKey>/README.md
     and, when ARCHIVE_PAGES_BASE is set, the index.md mirror of each.
 """
+
 import argparse
 import collections
 import html
@@ -67,13 +68,12 @@ import sys
 RELEASES = "https://github.com/nullcpy/archive/releases"
 DEFAULT_SITE = "https://github.com/nullcpy/archive/blob/main"
 # Rendering order for artifact kinds and architectures, and for tie-free sorts.
-ARCH_ORDER = {"arm64": 0, "arm": 1, "all": 2,
-              "universal": 3, "x86_64": 4, "x86": 5}
+ARCH_ORDER = {"arm64": 0, "arm": 1, "all": 2, "universal": 3, "x86_64": 4, "x86": 5}
 KIND_ORDER = {"APK": 0, "Module": 1}
 DEFAULT_VARIANT = "Standard"
 # Written as an escape so the source stays ASCII: a test-tube after the build
 # link marks a build published on the beta channel.
-BETA_MARK = " \U0001F9EA"
+BETA_MARK = " \U0001f9ea"
 
 
 def load_manifests(src_dir):
@@ -89,21 +89,25 @@ def load_manifests(src_dir):
         stamp = meta.get("publishedAt") or ""
         date = stamp[:10]
         for fname, entry in (manifest.get("files") or {}).items():
-            rows.append({
-                "tag": tag, "date": date, "stamp": stamp,
-                "channel": meta.get("channel") or "stable",
-                "app": entry.get("appKey") or "?",
-                "appName": entry.get("appName") or "?",
-                "brand": entry.get("brandKey") or "",
-                "brandName": entry.get("brandName") or "",
-                "variant": entry.get("variant"),
-                "sub": entry.get("subVariant"),
-                "arch": entry.get("arch") or "",
-                "kind": entry.get("fileType") or "APK",
-                "version": entry.get("version") or "",
-                "fname": fname,
-                "patches": tuple(dict.fromkeys(entry.get("appliedPatches") or [])),
-            })
+            rows.append(
+                {
+                    "tag": tag,
+                    "date": date,
+                    "stamp": stamp,
+                    "channel": meta.get("channel") or "stable",
+                    "app": entry.get("appKey") or "?",
+                    "appName": entry.get("appName") or "?",
+                    "brand": entry.get("brandKey") or "",
+                    "brandName": entry.get("brandName") or "",
+                    "variant": entry.get("variant"),
+                    "sub": entry.get("subVariant"),
+                    "arch": entry.get("arch") or "",
+                    "kind": entry.get("fileType") or "APK",
+                    "version": entry.get("version") or "",
+                    "fname": fname,
+                    "patches": tuple(dict.fromkeys(entry.get("appliedPatches") or [])),
+                }
+            )
     rows.sort(key=lambda r: r["tag"], reverse=True)
     return rows
 
@@ -118,8 +122,10 @@ def load_counts(path):
     try:
         with open(path, encoding="utf-8") as fh:
             raw = json.load(fh)
-        return {str(tag): {str(name): int(n) for name, n in files.items()}
-                for tag, files in raw.items()}
+        return {
+            str(tag): {str(name): int(n) for name, n in files.items()}
+            for tag, files in raw.items()
+        }
     except (OSError, ValueError, AttributeError, TypeError) as exc:
         raise SystemExit(f"counts file {path} is unreadable: {exc}")
 
@@ -149,8 +155,7 @@ def app_downloads(rows, counts):
 
 def signature(rows_of_build):
     """The block key: every artifact's own kind, arch and patch set."""
-    return tuple(sorted((r["kind"], r["arch"], r["patches"])
-                        for r in rows_of_build))
+    return tuple(sorted((r["kind"], r["arch"], r["patches"]) for r in rows_of_build))
 
 
 def arch_link(row):
@@ -173,9 +178,11 @@ def sub_sort_key(name):
 
 def sections(rows):
     """brand -> variant -> sub-variant -> patch list -> builds, newest first."""
-    by_brand = collections.defaultdict(lambda: collections.defaultdict(
+    by_brand = collections.defaultdict(
         lambda: collections.defaultdict(
-            lambda: collections.defaultdict(list))))
+            lambda: collections.defaultdict(lambda: collections.defaultdict(list))
+        )
+    )
     brand_names, newest = {}, {}
     for r in rows:
         # A lone sub-variant is the app's variant: Piko's Clone gets the same h3 as
@@ -205,8 +212,8 @@ def sections(rows):
                     blocks[signature(builds[tag])].append(tag)
                     per_build[tag] = builds[tag]
                 ordered = collections.OrderedDict(
-                    sorted(blocks.items(), key=lambda kv: max(kv[1]),
-                           reverse=True))
+                    sorted(blocks.items(), key=lambda kv: max(kv[1]), reverse=True)
+                )
                 subs.append((sub, ordered, per_build))
             variants.append((variant, subs))
         out.append((brand_names[brand], variants))
@@ -264,17 +271,27 @@ def scope_markers(artifacts):
     whole kind, then a whole arch, then `only` when a single audience carries the
     patch, and otherwise an explicit list with the verb on the last audience.
     """
-    def order(a): return (ARCH_ORDER.get(a[1], 9), KIND_ORDER.get(a[0], 9))
+
+    def order(a):
+        return (ARCH_ORDER.get(a[1], 9), KIND_ORDER.get(a[0], 9))
+
     audiences = sorted({(r["kind"], r["arch"]) for r in artifacts}, key=order)
     have = {}
     for kind, arch in audiences:
-        have[(kind, arch)] = {p for r in artifacts
-                              if r["kind"] == kind and r["arch"] == arch
-                              for p in r["patches"]}
-    by_kind = {kind: {a for a in audiences if a[0] == kind}
-               for kind in {k for k, _ in audiences}}
-    by_arch = {arch: {a for a in audiences if a[1] == arch}
-               for arch in {x for _, x in audiences}}
+        have[(kind, arch)] = {
+            p
+            for r in artifacts
+            if r["kind"] == kind and r["arch"] == arch
+            for p in r["patches"]
+        }
+    by_kind = {
+        kind: {a for a in audiences if a[0] == kind}
+        for kind in {k for k, _ in audiences}
+    }
+    by_arch = {
+        arch: {a for a in audiences if a[1] == arch}
+        for arch in {x for _, x in audiences}
+    }
 
     markers = {}
     for patch in {p for s in have.values() for p in s}:
@@ -287,8 +304,9 @@ def scope_markers(artifacts):
         elif lacking == by_kind.get("APK"):
             markers[patch] = "<code>apk omit</code>"
         else:
-            whole_arch = next((arch for arch, group in by_arch.items()
-                               if lacking == group), None)
+            whole_arch = next(
+                (arch for arch, group in by_arch.items() if lacking == group), None
+            )
             if whole_arch:
                 markers[patch] = f"<code>{whole_arch} omit</code>"
             elif len(holders) == 1:
@@ -296,8 +314,9 @@ def scope_markers(artifacts):
                 word = audience_word(kind, arch, False)
                 markers[patch] = f"<code>{word} only</code>"
             else:
-                words = [audience_word(k, a, True)
-                         for k, a in sorted(lacking, key=order)]
+                words = [
+                    audience_word(k, a, True) for k, a in sorted(lacking, key=order)
+                ]
                 tags = [f"<code>{w}</code>" for w in words[:-1]]
                 tags.append(f"<code>{words[-1]} omit</code>")
                 markers[patch] = " ".join(tags)
@@ -318,12 +337,14 @@ def render_table(tags, per_build):
                 by_kind[row["kind"]].append(row)
             cells = []
             for kind in sorted(by_kind, key=lambda k: KIND_ORDER.get(k, 9)):
-                ordered = sorted(by_kind[kind],
-                                 key=lambda r: ARCH_ORDER.get(r["arch"], 9))
-                cells.append(f"{kind}: " + " • ".join(arch_link(r)
-                             for r in ordered))
-            lines.append(f"| {build_link(tag)}{mark} | {artifacts[0]['date']} | "
-                         f"`{version}` | {' · '.join(cells)} |")
+                ordered = sorted(
+                    by_kind[kind], key=lambda r: ARCH_ORDER.get(r["arch"], 9)
+                )
+                cells.append(f"{kind}: " + " • ".join(arch_link(r) for r in ordered))
+            lines.append(
+                f"| {build_link(tag)}{mark} | {artifacts[0]['date']} | "
+                f"`{version}` | {' · '.join(cells)} |"
+            )
     return lines
 
 
@@ -370,11 +391,12 @@ def render_page(app_name, items, page, total, page_url, front_matter):
             lines += [f"#### {sub}", ""]
             last_sub = sub
         artifacts = block_artifacts(tags, per_build)
-        patches = sorted({p for r in artifacts for p in r["patches"]},
-                         key=str.lower)
+        patches = sorted({p for r in artifacts for p in r["patches"]}, key=str.lower)
         markers = scope_markers(artifacts)
-        lines.append(f"<details><summary><b>Applied patches: {len(patches)}</b>"
-                     f" . {len(tags)} build(s)</summary>")
+        lines.append(
+            f"<details><summary><b>Applied patches: {len(patches)}</b>"
+            f" . {len(tags)} build(s)</summary>"
+        )
         lines += patch_list_html(patches, markers)
         lines += ["</details>", ""]
         lines += render_table(tags, per_build)
@@ -384,8 +406,9 @@ def render_page(app_name, items, page, total, page_url, front_matter):
     return "\n".join(lines) + "\n"
 
 
-def render_index(app_names, last_build, app_url, nullstore_url, front_matter,
-                 downloads=None):
+def render_index(
+    app_names, last_build, app_url, nullstore_url, front_matter, downloads=None
+):
     counted = downloads is not None
     # The totals ride under the title so the table does not have to be scrolled to
     # learn the size of the mirror. The downloads figure only exists when the
@@ -421,7 +444,8 @@ def render_index(app_names, last_build, app_url, nullstore_url, front_matter,
             cell = f" {compact(n)} |" if n is not None else " |"
         lines.append(
             f"| [{display}]({app_url(app_key)}) "
-            f'| <time datetime="{stamp}" data-relative>{date}</time> |' + cell)
+            f'| <time datetime="{stamp}" data-relative>{date}</time> |' + cell
+        )
     return "\n".join(lines) + "\n"
 
 
@@ -435,43 +459,45 @@ def surfaces(site_base, pages_base):
     """One entry per rendered surface. Continuation pages must have distinct file
     names across surfaces: both write into the same app directory, so a shared
     `2.md` would let whichever surface runs last overwrite the other's page."""
-    out = [{
-        "index": "README.md",
-        "page": lambda n: "README.md" if n == 1 else f"{n}.md",
-        "url": lambda k, n: f"{site_base}/apps/{k}/"
-        + ("README.md" if n == 1 else f"{n}.md"),
-        "front_matter": False,
-    }]
+    out = [
+        {
+            "index": "README.md",
+            "page": lambda n: "README.md" if n == 1 else f"{n}.md",
+            "url": lambda k, n: f"{site_base}/apps/{k}/"
+            + ("README.md" if n == 1 else f"{n}.md"),
+            "front_matter": False,
+        }
+    ]
     if pages_base:
-        out.append({
-            "index": "index.md",
-            "page": lambda n: "index.md" if n == 1 else f"page-{n}.md",
-            "url": lambda k, n: f"{pages_base}/apps/{k}/"
-            + ("" if n == 1 else f"page-{n}.html"),
-            "front_matter": True,
-        })
+        out.append(
+            {
+                "index": "index.md",
+                "page": lambda n: "index.md" if n == 1 else f"page-{n}.md",
+                "url": lambda k, n: f"{pages_base}/apps/{k}/"
+                + ("" if n == 1 else f"page-{n}.html"),
+                "front_matter": True,
+            }
+        )
     return out
 
 
-def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base,
-          counts_path=None):
+def build(
+    manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base, counts_path=None
+):
     rows = load_manifests(manifest_dir)
     if not rows:
         raise SystemExit(f"no manifests found in {manifest_dir}")
-    downloads = (app_downloads(rows, load_counts(counts_path))
-                 if counts_path else None)
+    downloads = app_downloads(rows, load_counts(counts_path)) if counts_path else None
     by_app = collections.defaultdict(list)
     for r in rows:
         by_app[r["app"]].append(r)
     # Stable, human-sensible index order; ties broken by key so it never depends
     # on filesystem listing order.
-    ordered_apps = sorted(by_app, key=lambda k: (
-        by_app[k][0]["appName"].lower(), k))
+    ordered_apps = sorted(by_app, key=lambda k: (by_app[k][0]["appName"].lower(), k))
     # The full timestamp, not the UTC date slice: the reader's script turns it
     # into a local day, so a build late in the UTC day still lands on the right
     # local date.
-    last_build = {k: max((r["stamp"] or r["date"] for r in by_app[k]))
-                  for k in by_app}
+    last_build = {k: max((r["stamp"] or r["date"] for r in by_app[k])) for k in by_app}
 
     written = 0
     for surface in surfaces(site_base, pages_base):
@@ -480,51 +506,74 @@ def build(manifest_dir, out_dir, cap, site_base, nullstore_url, pages_base,
             pages = paginate(block_rows(sections(app_rows)), cap)
             display = app_rows[0]["appName"]
             for i, items in enumerate(pages):
-                write(os.path.join(out_dir, "apps", app_key,
-                                   surface["page"](i + 1)),
-                      render_page(display, items, i, len(pages),
-                                  lambda n, k=app_key: surface["url"](k, n),
-                                  surface["front_matter"]))
+                write(
+                    os.path.join(out_dir, "apps", app_key, surface["page"](i + 1)),
+                    render_page(
+                        display,
+                        items,
+                        i,
+                        len(pages),
+                        lambda n, k=app_key: surface["url"](k, n),
+                        surface["front_matter"],
+                    ),
+                )
                 written += 1
-        app_link = ((lambda k: f"{site_base}/apps/{k}/README.md")
-                    if not surface["front_matter"]
-                    else (lambda k: f"{pages_base}/apps/{k}/"))
-        write(os.path.join(out_dir, surface["index"]),
-              render_index([(k, by_app[k][0]["appName"]) for k in ordered_apps],
-                           last_build, app_link, nullstore_url,
-                           surface["front_matter"], downloads))
+        app_link = (
+            (lambda k: f"{site_base}/apps/{k}/README.md")
+            if not surface["front_matter"]
+            else (lambda k: f"{pages_base}/apps/{k}/")
+        )
+        write(
+            os.path.join(out_dir, surface["index"]),
+            render_index(
+                [(k, by_app[k][0]["appName"]) for k in ordered_apps],
+                last_build,
+                app_link,
+                nullstore_url,
+                surface["front_matter"],
+                downloads,
+            ),
+        )
         written += 1
     return len(ordered_apps), written, len(rows)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--manifests", required=True,
-                    help="directory of *.json manifests")
-    ap.add_argument("--out", required=True,
-                    help="directory to write the site into")
+    ap.add_argument("--manifests", required=True, help="directory of *.json manifests")
+    ap.add_argument("--out", required=True, help="directory to write the site into")
     ap.add_argument("--cap", type=int, default=50, help="table rows per page")
-    ap.add_argument("--counts", help="JSON {tag: {asset: downloads}} for the "
-                                     "index's Downloads column; omit it and the "
-                                     "column is not rendered")
+    ap.add_argument(
+        "--counts",
+        help="JSON {tag: {asset: downloads}} for the "
+        "index's Downloads column; omit it and the "
+        "column is not rendered",
+    )
     args = ap.parse_args()
 
     # A written-in hub URL would keep advertising an old host after a move and
     # nothing would fail, so an unset one is a hard error instead of a guess.
     nullstore_url = os.environ.get("NULLSTORE_URL", "").strip()
     if not nullstore_url:
-        raise SystemExit(
-            "NULLSTORE_URL is not set; refusing to invent a hub link")
+        raise SystemExit("NULLSTORE_URL is not set; refusing to invent a hub link")
     site_base = os.environ.get("ARCHIVE_SITE_BASE", DEFAULT_SITE).rstrip("/")
     pages_base = os.environ.get("ARCHIVE_PAGES_BASE", "").strip().rstrip("/")
 
-    apps, pages, artifacts = build(args.manifests, args.out, args.cap,
-                                   site_base, nullstore_url, pages_base,
-                                   args.counts)
+    apps, pages, artifacts = build(
+        args.manifests,
+        args.out,
+        args.cap,
+        site_base,
+        nullstore_url,
+        pages_base,
+        args.counts,
+    )
     extra = f", pages base {pages_base}" if pages_base else ", README only"
     extra += ", counted" if args.counts else ", uncounted"
-    print(f"wrote {pages} pages for {apps} apps from {artifacts} artifacts"
-          f" ({args.manifests} -> {args.out}{extra})")
+    print(
+        f"wrote {pages} pages for {apps} apps from {artifacts} artifacts"
+        f" ({args.manifests} -> {args.out}{extra})"
+    )
 
 
 if __name__ == "__main__":
