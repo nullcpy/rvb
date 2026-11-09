@@ -175,7 +175,7 @@ grep -q '^#### Clone$' "$t/a/apps/instagram/README.md" \
 # Pagination splits on block boundaries and navigates absolutely.
 run "$GEN" 1 "$t/split"
 [ -f "$t/split/apps/youtube/2.md" ] || fail "cap 1 did not paginate the YouTube app"
-grep -q 'newer builds](https://github.com/nullcpy/archive/blob/main/apps/youtube/README.md)' \
+grep -q 'newer builds →](https://github.com/nullcpy/archive/blob/main/apps/youtube/README.md)' \
 	"$t/split/apps/youtube/2.md" || fail "page 2 lacks an absolute link back to page 1"
 
 # Second surface: with a pages base set, index.md mirrors each page for Jekyll.
