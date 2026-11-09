@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260493",
+    "channel": "stable",
+    "publishedAt": "2026-11-09T06:18:30Z"
+  },
+  "files": {
+    "threads-chiggi-clone-v434.0.0.41.74-arm64-v8a.apk": {
+      "name": "threads-chiggi-clone",
+      "version": "434.0.0.41.74",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "chiggi",
+      "brandName": "chiggi",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona.morphe",
+      "patchSources": [
+        "durgesh0505/patches-1.27.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/durgesh0505/chiggi_morphe_patches/releases/tag/v1.27.4"
+      ],
+      "appliedPatches": [
+        "Change app name",
+        "Hide ads",
+        "Remove AD_ID permission",
+        "Change package name"
+      ],
+      "originBuild": "260493",
+      "publishedAt": "2026-11-09T06:18:30Z"
+    },
+    "threads-chiggi-v434.0.0.41.74-arm64-v8a.apk": {
+      "name": "threads-chiggi",
+      "version": "434.0.0.41.74",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "chiggi",
+      "brandName": "chiggi",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona",
+      "patchSources": [
+        "durgesh0505/patches-1.27.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/durgesh0505/chiggi_morphe_patches/releases/tag/v1.27.4"
+      ],
+      "appliedPatches": [
+        "Hide ads",
+        "Remove AD_ID permission"
+      ],
+      "originBuild": "260493",
+      "publishedAt": "2026-11-09T06:18:30Z"
+    }
+  }
+}
