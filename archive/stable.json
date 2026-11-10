@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-10T16:41:21Z"
+    "publishedAt": "2026-11-10T20:26:33Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.50.3.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260485",
-      "publishedAt": "2026-11-07T23:41:41Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -1826,10 +1826,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.51.0.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.51.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -1838,8 +1838,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260486",
-      "publishedAt": "2026-11-08T05:58:46Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -2740,18 +2740,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.50.3.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260485",
-      "publishedAt": "2026-11-07T23:41:41Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2766,16 +2766,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.50.3.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260485",
-      "publishedAt": "2026-11-07T23:41:41Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11914,17 +11914,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.50.3.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.50.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260485",
-      "publishedAt": "2026-11-07T23:41:41Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -12184,17 +12184,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12209,17 +12209,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -17085,10 +17085,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17101,8 +17101,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -17117,10 +17117,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -17133,8 +17133,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -18958,10 +18958,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -18975,8 +18975,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -18991,10 +18991,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -19008,8 +19008,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -19506,16 +19506,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19530,16 +19530,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19554,16 +19554,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -20989,528 +20989,6 @@
       "originBuild": "260503",
       "publishedAt": "2026-11-10T16:39:50Z"
     },
-    "youtube-morphe-experimental-module-v21.43.523-arm-v7a.zip": {
-      "name": "youtube-morphe-experimental",
-      "version": "21.43.523",
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.youtube",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "AI channel filter",
-        "Add to queue",
-        "Ambient mode",
-        "App refresh rate",
-        "Ask flyout menu",
-        "Bypass image region restrictions",
-        "Bypass link redirects",
-        "Captions",
-        "Change form factor",
-        "Change header",
-        "Change start page",
-        "Channel search",
-        "Channel whitelist",
-        "Check watch history domain name resolution",
-        "Copy text",
-        "Copy video link",
-        "Custom branding",
-        "Custom font",
-        "Custom player overlay opacity",
-        "DeArrow",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable Shorts resuming on startup",
-        "Disable auto feed refresh",
-        "Disable continue watching prompt",
-        "Disable double tap actions",
-        "Disable fullscreen gestures",
-        "Disable haptic feedback",
-        "Disable layout updates",
-        "Disable player popup panels",
-        "Disable playlist autoplay",
-        "Disable rolling number animations",
-        "Disable scrolling speed limit",
-        "Disable sign in to TV popup",
-        "Disable video codecs",
-        "Double tap to seek",
-        "Download post images",
-        "Downloads",
-        "Enable debugging",
-        "Exit fullscreen mode",
-        "Feed card layout",
-        "Feed video actions",
-        "Feed view count",
-        "Force animations",
-        "Force fullscreen landscape",
-        "Force original audio",
-        "Fullscreen video scale",
-        "Hide Shorts components",
-        "Hide ads",
-        "Hide autoplay preview",
-        "Hide end screen cards",
-        "Hide end screen suggested video",
-        "Hide info cards",
-        "Hide layout components",
-        "Hide player flyout menu components",
-        "Hide player overlay buttons",
-        "Hide related video overlay",
-        "Hide related videos",
-        "Hide status bar",
-        "Hide timestamp",
-        "Hide video action buttons",
-        "Loop video",
-        "Media notification controls",
-        "Miniplayer",
-        "Mute button",
-        "Navigation bar",
-        "Niconico comments",
-        "Open Shorts in regular player",
-        "Open channel of live avatar",
-        "Open links externally",
-        "Open system share sheet",
-        "Open videos fullscreen",
-        "Override YouTube Music buttons",
-        "Picture-in-picture button",
-        "Play all",
-        "Playback buffer",
-        "Playback in feeds",
-        "Playback speed",
-        "PoToken provider",
-        "Reload video",
-        "Remember live stream playback position",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Restore original titles",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Save to Watch later",
-        "Search comments",
-        "Seekbar",
-        "Series tracking",
-        "Settings menu filter",
-        "Shorts autoplay",
-        "Skip live Shorts",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof device dimensions",
-        "Spoof video streams",
-        "Swipe controls",
-        "Theme",
-        "Translate posts",
-        "Video delay",
-        "Video quality",
-        "Voice over translation",
-        "Wide search bar",
-        "Shorts icon style",
-        "Player icon style"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-morphe-experimental-module-v21.43.523-arm64-v8a.zip": {
-      "name": "youtube-morphe-experimental",
-      "version": "21.43.523",
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.youtube",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "AI channel filter",
-        "Add to queue",
-        "Ambient mode",
-        "App refresh rate",
-        "Ask flyout menu",
-        "Bypass image region restrictions",
-        "Bypass link redirects",
-        "Captions",
-        "Change form factor",
-        "Change header",
-        "Change start page",
-        "Channel search",
-        "Channel whitelist",
-        "Check watch history domain name resolution",
-        "Copy text",
-        "Copy video link",
-        "Custom branding",
-        "Custom font",
-        "Custom player overlay opacity",
-        "DeArrow",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable Shorts resuming on startup",
-        "Disable auto feed refresh",
-        "Disable continue watching prompt",
-        "Disable double tap actions",
-        "Disable fullscreen gestures",
-        "Disable haptic feedback",
-        "Disable layout updates",
-        "Disable player popup panels",
-        "Disable playlist autoplay",
-        "Disable rolling number animations",
-        "Disable scrolling speed limit",
-        "Disable sign in to TV popup",
-        "Disable video codecs",
-        "Double tap to seek",
-        "Download post images",
-        "Downloads",
-        "Enable debugging",
-        "Exit fullscreen mode",
-        "Feed card layout",
-        "Feed video actions",
-        "Feed view count",
-        "Force animations",
-        "Force fullscreen landscape",
-        "Force original audio",
-        "Fullscreen video scale",
-        "Hide Shorts components",
-        "Hide ads",
-        "Hide autoplay preview",
-        "Hide end screen cards",
-        "Hide end screen suggested video",
-        "Hide info cards",
-        "Hide layout components",
-        "Hide player flyout menu components",
-        "Hide player overlay buttons",
-        "Hide related video overlay",
-        "Hide related videos",
-        "Hide status bar",
-        "Hide timestamp",
-        "Hide video action buttons",
-        "Loop video",
-        "Media notification controls",
-        "Miniplayer",
-        "Mute button",
-        "Navigation bar",
-        "Niconico comments",
-        "Open Shorts in regular player",
-        "Open channel of live avatar",
-        "Open links externally",
-        "Open system share sheet",
-        "Open videos fullscreen",
-        "Override YouTube Music buttons",
-        "Picture-in-picture button",
-        "Play all",
-        "Playback buffer",
-        "Playback in feeds",
-        "Playback speed",
-        "PoToken provider",
-        "Reload video",
-        "Remember live stream playback position",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Restore original titles",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Save to Watch later",
-        "Search comments",
-        "Seekbar",
-        "Series tracking",
-        "Settings menu filter",
-        "Shorts autoplay",
-        "Skip live Shorts",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof device dimensions",
-        "Spoof video streams",
-        "Swipe controls",
-        "Theme",
-        "Translate posts",
-        "Video delay",
-        "Video quality",
-        "Voice over translation",
-        "Wide search bar",
-        "Shorts icon style",
-        "Player icon style"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-morphe-experimental-v21.43.523-arm-v7a.apk": {
-      "name": "youtube-morphe-experimental",
-      "version": "21.43.523",
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.youtube",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "AI channel filter",
-        "Add to queue",
-        "Ambient mode",
-        "App refresh rate",
-        "Ask flyout menu",
-        "Bypass image region restrictions",
-        "Bypass link redirects",
-        "Captions",
-        "Change form factor",
-        "Change header",
-        "Change start page",
-        "Channel search",
-        "Channel whitelist",
-        "Check watch history domain name resolution",
-        "Copy text",
-        "Copy video link",
-        "Custom branding",
-        "Custom font",
-        "Custom player overlay opacity",
-        "DeArrow",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable Shorts resuming on startup",
-        "Disable auto feed refresh",
-        "Disable continue watching prompt",
-        "Disable double tap actions",
-        "Disable fullscreen gestures",
-        "Disable haptic feedback",
-        "Disable layout updates",
-        "Disable player popup panels",
-        "Disable playlist autoplay",
-        "Disable rolling number animations",
-        "Disable scrolling speed limit",
-        "Disable sign in to TV popup",
-        "Disable video codecs",
-        "Double tap to seek",
-        "Download post images",
-        "Downloads",
-        "Enable debugging",
-        "Exit fullscreen mode",
-        "Feed card layout",
-        "Feed video actions",
-        "Feed view count",
-        "Force animations",
-        "Force fullscreen landscape",
-        "Force original audio",
-        "Fullscreen video scale",
-        "GmsCore support",
-        "Hide Shorts components",
-        "Hide ads",
-        "Hide autoplay preview",
-        "Hide end screen cards",
-        "Hide end screen suggested video",
-        "Hide info cards",
-        "Hide layout components",
-        "Hide player flyout menu components",
-        "Hide player overlay buttons",
-        "Hide related video overlay",
-        "Hide related videos",
-        "Hide status bar",
-        "Hide timestamp",
-        "Hide video action buttons",
-        "Loop video",
-        "Media notification controls",
-        "Miniplayer",
-        "Mute button",
-        "Navigation bar",
-        "Niconico comments",
-        "Open Shorts in regular player",
-        "Open channel of live avatar",
-        "Open links externally",
-        "Open system share sheet",
-        "Open videos fullscreen",
-        "Override YouTube Music buttons",
-        "Picture-in-picture button",
-        "Play all",
-        "Playback buffer",
-        "Playback in feeds",
-        "Playback speed",
-        "PoToken provider",
-        "Reload video",
-        "Remember live stream playback position",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Restore original titles",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Save to Watch later",
-        "Search comments",
-        "Seekbar",
-        "Series tracking",
-        "Settings menu filter",
-        "Shorts autoplay",
-        "Skip live Shorts",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof device dimensions",
-        "Spoof video streams",
-        "Swipe controls",
-        "Theme",
-        "Translate posts",
-        "Video delay",
-        "Video quality",
-        "Voice over translation",
-        "Wide search bar",
-        "Shorts icon style",
-        "Player icon style"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-morphe-experimental-v21.43.523-arm64-v8a.apk": {
-      "name": "youtube-morphe-experimental",
-      "version": "21.43.523",
-      "appKey": "youtube",
-      "appName": "YouTube",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.youtube",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "AI channel filter",
-        "Add to queue",
-        "Ambient mode",
-        "App refresh rate",
-        "Ask flyout menu",
-        "Bypass image region restrictions",
-        "Bypass link redirects",
-        "Captions",
-        "Change form factor",
-        "Change header",
-        "Change start page",
-        "Channel search",
-        "Channel whitelist",
-        "Check watch history domain name resolution",
-        "Copy text",
-        "Copy video link",
-        "Custom branding",
-        "Custom font",
-        "Custom player overlay opacity",
-        "DeArrow",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable Shorts resuming on startup",
-        "Disable auto feed refresh",
-        "Disable continue watching prompt",
-        "Disable double tap actions",
-        "Disable fullscreen gestures",
-        "Disable haptic feedback",
-        "Disable layout updates",
-        "Disable player popup panels",
-        "Disable playlist autoplay",
-        "Disable rolling number animations",
-        "Disable scrolling speed limit",
-        "Disable sign in to TV popup",
-        "Disable video codecs",
-        "Double tap to seek",
-        "Download post images",
-        "Downloads",
-        "Enable debugging",
-        "Exit fullscreen mode",
-        "Feed card layout",
-        "Feed video actions",
-        "Feed view count",
-        "Force animations",
-        "Force fullscreen landscape",
-        "Force original audio",
-        "Fullscreen video scale",
-        "GmsCore support",
-        "Hide Shorts components",
-        "Hide ads",
-        "Hide autoplay preview",
-        "Hide end screen cards",
-        "Hide end screen suggested video",
-        "Hide info cards",
-        "Hide layout components",
-        "Hide player flyout menu components",
-        "Hide player overlay buttons",
-        "Hide related video overlay",
-        "Hide related videos",
-        "Hide status bar",
-        "Hide timestamp",
-        "Hide video action buttons",
-        "Loop video",
-        "Media notification controls",
-        "Miniplayer",
-        "Mute button",
-        "Navigation bar",
-        "Niconico comments",
-        "Open Shorts in regular player",
-        "Open channel of live avatar",
-        "Open links externally",
-        "Open system share sheet",
-        "Open videos fullscreen",
-        "Override YouTube Music buttons",
-        "Picture-in-picture button",
-        "Play all",
-        "Playback buffer",
-        "Playback in feeds",
-        "Playback speed",
-        "PoToken provider",
-        "Reload video",
-        "Remember live stream playback position",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Restore original titles",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Save to Watch later",
-        "Search comments",
-        "Seekbar",
-        "Series tracking",
-        "Settings menu filter",
-        "Shorts autoplay",
-        "Skip live Shorts",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof device dimensions",
-        "Spoof video streams",
-        "Swipe controls",
-        "Theme",
-        "Translate posts",
-        "Video delay",
-        "Video quality",
-        "Voice over translation",
-        "Wide search bar",
-        "Shorts icon style",
-        "Player icon style"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
       "version": "21.30.216",
@@ -22052,288 +21530,6 @@
       ],
       "originBuild": "260503",
       "publishedAt": "2026-11-10T16:39:50Z"
-    },
-    "youtube-music-morphe-experimental-v9.43.51-arm-v7a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.43.51-arm64-v8a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-music-morphe-experimental-v9.43.51-arm64-v8a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.43.51-arm-v7a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -22879,10 +22075,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22900,8 +22096,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -24249,10 +23445,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24267,8 +23463,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -24283,10 +23479,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -24301,8 +23497,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -24491,18 +23687,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -24967,10 +24163,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -24978,8 +24174,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -24994,10 +24190,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -25015,8 +24211,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "tiktok-hushfeed-v47.6.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -28668,10 +27864,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -28684,8 +27880,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -28700,10 +27896,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.75.1.mpp"
+        "hxreborn/patches-1.76.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.75.1"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -28716,8 +27912,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260498",
-      "publishedAt": "2026-11-09T19:00:36Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -29490,10 +28686,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.51.0.mpp"
+        "ajstrick81/patches-1.52.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.51.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -29503,8 +28699,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260486",
-      "publishedAt": "2026-11-08T05:58:46Z"
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -31187,6 +30383,183 @@
       ],
       "originBuild": "260503",
       "publishedAt": "2026-11-10T16:39:50Z"
+    },
+    "discord-rain-v353.11-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-rain-v353.11-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-revenge-v353.11-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-revenge-v353.11-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "instagram-instafel-v455.0.0.51.72-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "455.0.0.51.72",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "instagram-instafel-v455.0.0.51.72-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "455.0.0.51.72",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "vix-ajstrick81-android-tv-v4.52.0_tv-all.apk": {
+      "name": "vix-ajstrick81-android-tv",
+      "version": "4.52.0_tv",
+      "appKey": "vix",
+      "appName": "ViX",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.univision.prendetv",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Override certificate pinning",
+        "Skip ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
     }
   }
 }

@@ -1,0 +1,856 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260504",
+    "channel": "stable",
+    "publishedAt": "2026-11-10T20:25:38Z"
+  },
+  "files": {
+    "aliexpress-hxreborn-v8.180.1-arm64-v8a.apk": {
+      "name": "aliexpress-hxreborn",
+      "version": "8.180.1",
+      "appKey": "aliexpress",
+      "appName": "AliExpress",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.alibaba.aliexpresshd",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable update prompts",
+        "Enable image saving",
+        "Fix dark mode",
+        "GmsCore support",
+        "Remove promotional popups",
+        "Remove sponsored items",
+        "Skip splash promotions",
+        "Spoof signature"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
+      "name": "aliexpress-hxreborn",
+      "version": "8.180.1",
+      "appKey": "aliexpress",
+      "appName": "AliExpress",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.alibaba.aliexpresshd",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable update prompts",
+        "Enable image saving",
+        "Fix dark mode",
+        "GmsCore support",
+        "Remove promotional popups",
+        "Remove sponsored items",
+        "Skip splash promotions",
+        "Spoof signature"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-rain-v353.11-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-rain-v353.11-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-revenge-v353.11-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "discord-revenge-v353.11-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "353.11-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "hbo-max-ajstrick81-android-tv-v7.9.0.61-all.apk": {
+      "name": "hbo-max-ajstrick81-android-tv",
+      "version": "7.9.0.61",
+      "appKey": "hbomax",
+      "appName": "HBO Max",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.wbd.hbomax",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "HBO Max - Disable Ads",
+        "HBO Max - Prefer Ad-Free Stream"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "instagram-instafel-v455.0.0.51.72-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "455.0.0.51.72",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "instagram-instafel-v455.0.0.51.72-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "455.0.0.51.72",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "internet-speed-meter-lite-hxreborn-v1.7.0-lite-all.apk": {
+      "name": "internet-speed-meter-lite-hxreborn",
+      "version": "1.7.0-lite",
+      "appKey": "internetspeedmeterlite",
+      "appName": "Internet Speed Meter Lite",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.internet.speed.meter.lite",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Disable tracking",
+        "Remove ads",
+        "Unlock premium"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "musicolet-hxreborn-v6.14.1build540-arm64-v8a.apk": {
+      "name": "musicolet-hxreborn",
+      "version": "6.14.1build540",
+      "appKey": "musicolet",
+      "appName": "Musicolet",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.musicolet",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
+      "name": "musicolet-cast-plugin-hxreborn",
+      "version": "1.9",
+      "appKey": "musicoletcastplugin",
+      "appName": "Musicolet Cast Plugin",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.krosbits.castplugin",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Remove app protection"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "peacock-ajstrick81-android-tv-v7.10.102-all.apk": {
+      "name": "peacock-ajstrick81-android-tv",
+      "version": "7.10.102",
+      "appKey": "peacock",
+      "appName": "Peacock",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.peacocktv.peacockandroid",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Skip ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "plutotv-ajstrick81-android-tv-v5.66.0-leanback-all.apk": {
+      "name": "plutotv-ajstrick81-android-tv",
+      "version": "5.66.0-leanback",
+      "appKey": "plutotv",
+      "appName": "PlutoTV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.pluto.android",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Disable auto-updates",
+        "Mask live ad breaks (black screen + mute)",
+        "Skip ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "prime-video-ajstrick81-android-tv-clone-v6.24.13+v16.0.1.93-allAbis-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv-clone",
+      "version": "6.24.13+v16.0.1.93-allAbis",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": "Clone",
+      "packageName": "com.amazon.amazonvideo.livingroom.mod",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads",
+        "Clone Prime Video"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "prime-video-ajstrick81-android-tv-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
+      "name": "prime-video-ajstrick81-android-tv",
+      "version": "6.23.23+v15.5.0.70-armv7a",
+      "appKey": "primevideo",
+      "appName": "Prime Video",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Bundle native ad-strip hook",
+        "Disable auto-updates",
+        "Load native ad-strip hook",
+        "Prime Video extension",
+        "Skip ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-lumo-hxreborn-v2.1.5-nogms-all.apk": {
+      "name": "proton-lumo-hxreborn",
+      "version": "2.1.5-nogms",
+      "appKey": "protonlumo",
+      "appName": "Proton Lumo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "me.proton.android.lumo",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Material 3 switches",
+        "Remove tap highlight",
+        "Store encryption key in TEE",
+        "Unlock premium"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-mail-hxreborn-v7.11.12-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.11.12",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Floating navigation bar"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Floating navigation bar"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-vpn-hxreborn-v5.21.9.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.21.9.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Floating navigation bar",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.21.9.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Floating navigation bar",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "showly-hxreborn-v3.72.0-arm-v7a.apk": {
+      "name": "showly-hxreborn",
+      "version": "3.72.0",
+      "appKey": "showly",
+      "appName": "Showly",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.michaldrabik.showly2",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Unlock premium"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Fix transfers over VPN",
+        "Hide ads",
+        "Hide consent form",
+        "Hide home shortcuts",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Remove recent panel",
+        "Show backup count",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.27.5",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.76.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.76.0"
+      ],
+      "appliedPatches": [
+        "Fix Google login",
+        "Fix transfers over VPN",
+        "Hide ads",
+        "Hide consent form",
+        "Hide home shortcuts",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Remove recent panel",
+        "Show backup count",
+        "Unlock Premium Plus"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
+      "name": "twitch-ajstrick81-android-tv",
+      "version": "13.0.0.2",
+      "appKey": "twitch",
+      "appName": "Twitch",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "tv.twitch.android.app",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Block TV ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    },
+    "vix-ajstrick81-android-tv-v4.52.0_tv-all.apk": {
+      "name": "vix-ajstrick81-android-tv",
+      "version": "4.52.0_tv",
+      "appKey": "vix",
+      "appName": "ViX",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.univision.prendetv",
+      "patchSources": [
+        "ajstrick81/patches-1.52.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.0"
+      ],
+      "appliedPatches": [
+        "Override certificate pinning",
+        "Skip ads"
+      ],
+      "originBuild": "260504",
+      "publishedAt": "2026-11-10T20:25:38Z"
+    }
+  }
+}
