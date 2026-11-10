@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-09T19:01:30Z"
+    "publishedAt": "2026-11-10T02:43:37Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -29960,6 +29960,60 @@
       ],
       "originBuild": "260496",
       "publishedAt": "2026-11-09T13:48:56Z"
+    },
+    "swift-backup-byehi98-v5.1.1-arm64-v8a.apk": {
+      "name": "swift-backup-byehi98",
+      "version": "5.1.1",
+      "appKey": "swiftbackup",
+      "appName": "Swift Backup",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "byehi98",
+      "brandName": "byehi98",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.swiftapps.swiftbackup",
+      "patchSources": [
+        "byehi98/patches-1.49.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.49.0"
+      ],
+      "appliedPatches": [
+        "Swift Backup Local Cloud Metadata",
+        "Swift Backup Premium Unlock",
+        "Swift Backup Tamper Protection",
+        "Swift Backup Web Login"
+      ],
+      "originBuild": "260500",
+      "publishedAt": "2026-11-10T02:43:28Z"
+    },
+    "swift-backup-byehi98-v5.1.1-arm-v7a.apk": {
+      "name": "swift-backup-byehi98",
+      "version": "5.1.1",
+      "appKey": "swiftbackup",
+      "appName": "Swift Backup",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "byehi98",
+      "brandName": "byehi98",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.swiftapps.swiftbackup",
+      "patchSources": [
+        "byehi98/patches-1.49.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.49.0"
+      ],
+      "appliedPatches": [
+        "Swift Backup Local Cloud Metadata",
+        "Swift Backup Premium Unlock",
+        "Swift Backup Tamper Protection",
+        "Swift Backup Web Login"
+      ],
+      "originBuild": "260500",
+      "publishedAt": "2026-11-10T02:43:28Z"
     }
   }
 }
