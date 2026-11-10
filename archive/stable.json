@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-10T02:43:37Z"
+    "publishedAt": "2026-11-10T13:29:16Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -20,10 +20,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -31,7 +31,6 @@
         "Block update screen",
         "Bring back twitter",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -99,10 +98,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko-material-you",
@@ -117,10 +117,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -128,7 +128,6 @@
         "Block update screen",
         "Bring back twitter",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -196,10 +195,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko-material-you",
@@ -214,10 +214,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -225,7 +225,6 @@
         "Block update screen",
         "Bring back twitter",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -293,10 +292,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko-material-you",
@@ -311,10 +311,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -322,7 +322,6 @@
         "Block update screen",
         "Bring back twitter",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -390,10 +389,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko",
@@ -408,17 +408,16 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
         "Block redirecting to X Lite",
         "Block update screen",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -485,10 +484,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko",
@@ -503,17 +503,16 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
         "Block redirecting to X Lite",
         "Block update screen",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -580,10 +579,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko",
@@ -598,17 +598,16 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
         "Block redirecting to X Lite",
         "Block update screen",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -675,10 +674,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "twitter-piko-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko",
@@ -693,17 +693,16 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
         "Block redirecting to X Lite",
         "Block update screen",
         "Change app icon",
-        "Change version code",
         "Clear tracking params",
         "Control video auto scroll",
         "Custom download folder",
@@ -770,10 +769,11 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
-        "Support external downloader"
+        "Support external downloader",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "soundcloud-kondratjev-v2026.08.26-release-arm64-v8a.apk": {
       "name": "soundcloud-kondratjev",
@@ -29703,15 +29703,14 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.piko",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add settings",
         "Change like animation",
-        "Change version code",
         "Copy comment",
         "Custom font",
         "Custom sharing domain",
@@ -29720,7 +29719,6 @@
         "Customize navigation bar",
         "Disable Reels scrolling",
         "Disable ads",
-        "Disable analytics",
         "Disable comments",
         "Disable disappearing messages swipe",
         "Disable discover people",
@@ -29731,7 +29729,6 @@
         "Disable stories",
         "Disable story flipping",
         "Disable swipe to create",
-        "Disable telemetry",
         "Disable typing status",
         "Disable video autoplay",
         "Download media",
@@ -29776,10 +29773,11 @@
         "View live anonymously",
         "View stories anonymously",
         "View story mentions",
+        "Disable Play Store updates",
         "Clone"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "instagram-piko-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko",
@@ -29794,15 +29792,14 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add settings",
         "Change like animation",
-        "Change version code",
         "Copy comment",
         "Custom font",
         "Custom sharing domain",
@@ -29811,7 +29808,6 @@
         "Customize navigation bar",
         "Disable Reels scrolling",
         "Disable ads",
-        "Disable analytics",
         "Disable comments",
         "Disable disappearing messages swipe",
         "Disable discover people",
@@ -29822,7 +29818,6 @@
         "Disable stories",
         "Disable story flipping",
         "Disable swipe to create",
-        "Disable telemetry",
         "Disable typing status",
         "Disable video autoplay",
         "Download media",
@@ -29866,10 +29861,11 @@
         "View DMs anonymously",
         "View live anonymously",
         "View stories anonymously",
-        "View story mentions"
+        "View story mentions",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "instagram-piko-module-v452.1.0.53.64-arm64-v8a.zip": {
       "name": "instagram-piko",
@@ -29884,15 +29880,14 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.11.0.mpp"
+        "crimera/patches-3.11.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.11.0"
+        "https://github.com/crimera/piko/releases/tag/v3.11.1"
       ],
       "appliedPatches": [
         "Add settings",
         "Change like animation",
-        "Change version code",
         "Copy comment",
         "Custom font",
         "Custom sharing domain",
@@ -29901,7 +29896,6 @@
         "Customize navigation bar",
         "Disable Reels scrolling",
         "Disable ads",
-        "Disable analytics",
         "Disable comments",
         "Disable disappearing messages swipe",
         "Disable discover people",
@@ -29912,7 +29906,6 @@
         "Disable stories",
         "Disable story flipping",
         "Disable swipe to create",
-        "Disable telemetry",
         "Disable typing status",
         "Disable video autoplay",
         "Download media",
@@ -29956,10 +29949,11 @@
         "View DMs anonymously",
         "View live anonymously",
         "View stories anonymously",
-        "View story mentions"
+        "View story mentions",
+        "Disable Play Store updates"
       ],
-      "originBuild": "260496",
-      "publishedAt": "2026-11-09T13:48:56Z"
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     },
     "swift-backup-byehi98-v5.1.1-arm64-v8a.apk": {
       "name": "swift-backup-byehi98",
@@ -30014,6 +30008,288 @@
       ],
       "originBuild": "260500",
       "publishedAt": "2026-11-10T02:43:28Z"
+    },
+    "tiktok-icysymmetra-v47.4.3-arm64-v8a.apk": {
+      "name": "tiktok-icysymmetra",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "icysymmetra",
+      "brandName": "icysymmetra",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "icysymmetra/patches-0.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0"
+      ],
+      "appliedPatches": [
+        "Advanced downloads",
+        "Allow Duet and Stitch",
+        "Allow screenshots and Circle to Search",
+        "Always show publish date",
+        "Always upload in HD",
+        "App lock",
+        "Automatic video advance",
+        "Block author button",
+        "Block contact list access",
+        "Block installed app scanning",
+        "Block popups",
+        "Block suggested video notifications",
+        "Camera and microphone indicator",
+        "Comment publish diagnostics",
+        "Comment send fix",
+        "Comment sort controls",
+        "Comment tools",
+        "Confirm feed interactions",
+        "Copy bio and IDs",
+        "Copy comments without username",
+        "Custom offline videos limit",
+        "Device privacy guard",
+        "Disable login requirement",
+        "Disable screen capture detection",
+        "Disable telemetry",
+        "Disable the long press quick share",
+        "Disable the long press repost",
+        "Double-tap controls",
+        "Downloads",
+        "Drop the animated image cache",
+        "Enable voice comments",
+        "Expand activity list",
+        "Feature Gate Lab",
+        "Feed filter",
+        "Feed tab navigation",
+        "Feed text sizes",
+        "Fit the video to the screen",
+        "Fix Google login",
+        "Foldable split comment view",
+        "Follow diagnostics",
+        "Force show Auto scroll",
+        "Ghost mode",
+        "Hide CAPTCHA popups",
+        "Hide already seen videos",
+        "Hide comment popup ads",
+        "Hide comment typing suggestions",
+        "Hide feed LIVE button",
+        "Hide feed follow button",
+        "Hide feed save button",
+        "Hide feed search button",
+        "Hide floating promotions",
+        "Hide inbox items",
+        "Hide inbox stories",
+        "Hide profile shortcuts",
+        "Hide search suggestions",
+        "Hide suggested accounts",
+        "Hide the launcher shortcuts",
+        "Hide video overlays",
+        "Hold-and-slide 2x lock",
+        "In-app browser privacy guard",
+        "Keep a streak going",
+        "Keep playing in the background",
+        "Keep pulled sounds",
+        "Keep the Favorites tab",
+        "Keep the app language",
+        "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
+        "Limit background traffic",
+        "Location access governor",
+        "Long-press controls",
+        "Mute feed videos",
+        "Network proxy",
+        "Not interested button",
+        "Notification controls",
+        "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
+        "Playback quality",
+        "Playback speed",
+        "Prefer H.264 playback",
+        "Profile background",
+        "Remember clear display",
+        "Remove avatar rings",
+        "Repost diagnostics",
+        "Resource and battery governor",
+        "Resume videos after scrolling",
+        "SIM spoof",
+        "Sanitize sharing links",
+        "Settings",
+        "Share sheet tools",
+        "Show LIVE search",
+        "Show author region",
+        "Show commenter handle and region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
+        "Show the progress bar",
+        "Show the progress bar thumbnail",
+        "Skip content warnings",
+        "Skip passkey sign-in",
+        "Skip the splash ad",
+        "Skip update checks",
+        "Stay on the video in full screen",
+        "Stop on-device AI profiling",
+        "Stop recording watch history",
+        "Stop saving search history",
+        "Stop search autoplay",
+        "Stop video looping",
+        "Story controls",
+        "Subtitle tools",
+        "Swipe-left controls",
+        "Translate comments",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Use non-personalized search",
+        "Use system font",
+        "Diagnostic tools"
+      ],
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
+    },
+    "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
+      "name": "tiktok-icysymmetra",
+      "version": "47.4.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "icysymmetra",
+      "brandName": "icysymmetra",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "icysymmetra/patches-0.9.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0"
+      ],
+      "appliedPatches": [
+        "Advanced downloads",
+        "Allow Duet and Stitch",
+        "Allow screenshots and Circle to Search",
+        "Always show publish date",
+        "Always upload in HD",
+        "App lock",
+        "Automatic video advance",
+        "Block author button",
+        "Block contact list access",
+        "Block installed app scanning",
+        "Block popups",
+        "Block suggested video notifications",
+        "Camera and microphone indicator",
+        "Comment publish diagnostics",
+        "Comment send fix",
+        "Comment sort controls",
+        "Comment tools",
+        "Confirm feed interactions",
+        "Copy bio and IDs",
+        "Copy comments without username",
+        "Custom offline videos limit",
+        "Device privacy guard",
+        "Disable login requirement",
+        "Disable screen capture detection",
+        "Disable telemetry",
+        "Disable the long press quick share",
+        "Disable the long press repost",
+        "Double-tap controls",
+        "Downloads",
+        "Drop the animated image cache",
+        "Enable voice comments",
+        "Expand activity list",
+        "Feature Gate Lab",
+        "Feed filter",
+        "Feed tab navigation",
+        "Feed text sizes",
+        "Fit the video to the screen",
+        "Fix Google login",
+        "Foldable split comment view",
+        "Follow diagnostics",
+        "Force show Auto scroll",
+        "Ghost mode",
+        "Hide CAPTCHA popups",
+        "Hide already seen videos",
+        "Hide comment popup ads",
+        "Hide comment typing suggestions",
+        "Hide feed LIVE button",
+        "Hide feed follow button",
+        "Hide feed save button",
+        "Hide feed search button",
+        "Hide floating promotions",
+        "Hide inbox items",
+        "Hide inbox stories",
+        "Hide profile shortcuts",
+        "Hide search suggestions",
+        "Hide suggested accounts",
+        "Hide the launcher shortcuts",
+        "Hide video overlays",
+        "Hold-and-slide 2x lock",
+        "In-app browser privacy guard",
+        "Keep a streak going",
+        "Keep playing in the background",
+        "Keep pulled sounds",
+        "Keep the Favorites tab",
+        "Keep the app language",
+        "Keep the screen's refresh rate",
+        "LIVE controls",
+        "Lift text length limits",
+        "Limit background traffic",
+        "Location access governor",
+        "Long-press controls",
+        "Mute feed videos",
+        "Network proxy",
+        "Not interested button",
+        "Notification controls",
+        "Open external links directly",
+        "Picture-in-picture",
+        "Play SDR instead of HDR",
+        "Playback quality",
+        "Playback speed",
+        "Prefer H.264 playback",
+        "Profile background",
+        "Remember clear display",
+        "Remove avatar rings",
+        "Repost diagnostics",
+        "Resource and battery governor",
+        "Resume videos after scrolling",
+        "SIM spoof",
+        "Sanitize sharing links",
+        "Settings",
+        "Share sheet tools",
+        "Show LIVE search",
+        "Show author region",
+        "Show commenter handle and region",
+        "Show engagement rate",
+        "Show exact counts",
+        "Show follow status",
+        "Show the progress bar",
+        "Show the progress bar thumbnail",
+        "Skip content warnings",
+        "Skip passkey sign-in",
+        "Skip the splash ad",
+        "Skip update checks",
+        "Stay on the video in full screen",
+        "Stop on-device AI profiling",
+        "Stop recording watch history",
+        "Stop saving search history",
+        "Stop search autoplay",
+        "Stop video looping",
+        "Story controls",
+        "Subtitle tools",
+        "Swipe-left controls",
+        "Translate comments",
+        "Turn off haptics",
+        "Turn off screen transitions",
+        "Use non-personalized search",
+        "Use system font",
+        "Diagnostic tools"
+      ],
+      "originBuild": "260502",
+      "publishedAt": "2026-11-10T13:28:17Z"
     }
   }
 }
