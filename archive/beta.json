@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-10T13:18:19Z"
+    "publishedAt": "2026-11-11T00:41:15Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -3528,10 +3528,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0-dev.8.mpp"
+        "icysymmetra/patches-0.9.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.8"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.10.0-dev.1"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3653,8 +3653,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260487",
-      "publishedAt": "2026-11-08T11:40:04Z"
+      "originBuild": "260506",
+      "publishedAt": "2026-11-11T00:40:26Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -3669,10 +3669,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0-dev.8.mpp"
+        "icysymmetra/patches-0.9.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0-dev.8"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.10.0-dev.1"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3794,8 +3794,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260487",
-      "publishedAt": "2026-11-08T11:40:04Z"
+      "originBuild": "260506",
+      "publishedAt": "2026-11-11T00:40:26Z"
     },
     "youtube-morphe-module-v21.23.492-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -5478,147 +5478,6 @@
       ],
       "originBuild": "260501",
       "publishedAt": "2026-11-10T13:17:15Z"
-    },
-    "youtube-music-morphe-experimental-v9.43.51-arm-v7a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260443",
-      "publishedAt": "2026-11-02T13:08:49Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.43.51-arm-v7a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.43.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260443",
-      "publishedAt": "2026-11-02T13:08:49Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
