@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-11T20:00:41Z"
+    "publishedAt": "2026-11-11T22:58:32Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -29057,10 +29057,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0.mpp"
+        "icysymmetra/patches-0.10.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.10.0"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -29182,8 +29182,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260502",
-      "publishedAt": "2026-11-10T13:28:17Z"
+      "originBuild": "260509",
+      "publishedAt": "2026-11-11T22:57:49Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -29198,10 +29198,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.9.0.mpp"
+        "icysymmetra/patches-0.10.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.9.0"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.10.0"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -29323,8 +29323,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260502",
-      "publishedAt": "2026-11-10T13:28:17Z"
+      "originBuild": "260509",
+      "publishedAt": "2026-11-11T22:57:49Z"
     },
     "youtube-morphe-experimental-module-v21.45.82-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
