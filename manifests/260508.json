@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260508",
+    "channel": "stable",
+    "publishedAt": "2026-11-11T20:00:07Z"
+  },
+  "files": {
+    "netflix-ajstrick81-android-tv-v13.0.1build25028-arm-v7a.apk": {
+      "name": "netflix-ajstrick81-android-tv",
+      "version": "13.0.1build25028",
+      "appKey": "netflix",
+      "appName": "Netflix",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "ajstrick81",
+      "brandName": "ajstrick81",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.netflix.ninja.clone",
+      "patchSources": [
+        "ajstrick81/patches-1.53.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.53.0"
+      ],
+      "appliedPatches": [
+        "Disable Netflix CertCheck",
+        "Remove Netflix ads (bundle engine)",
+        "Remove Netflix ads (loader)",
+        "Clone Netflix"
+      ],
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
+    },
+    "zalo-zeldrisho-clone-v26.10.02-all.apk": {
+      "name": "zalo-zeldrisho-clone",
+      "version": "26.10.02",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.zing.zalo.morphe",
+      "patchSources": [
+        "zeldrisho/patches-1.12.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.12.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Change Zalo app name",
+        "Change Zalo package name",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Enable stranger notifications",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide Newsfeed promotions",
+        "Hide chat list ads",
+        "Hide navigation tabs",
+        "Keep expired media accessible",
+        "Keep recalled messages",
+        "Native backup interval settings",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
+    },
+    "zalo-zeldrisho-v26.10.02-all.apk": {
+      "name": "zalo-zeldrisho",
+      "version": "26.10.02",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zing.zalo",
+      "patchSources": [
+        "zeldrisho/patches-1.12.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.12.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Enable stranger notifications",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide Newsfeed promotions",
+        "Hide chat list ads",
+        "Hide navigation tabs",
+        "Keep expired media accessible",
+        "Keep recalled messages",
+        "Native backup interval settings",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
+    }
+  }
+}

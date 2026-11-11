@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-10T21:58:04Z"
+    "publishedAt": "2026-11-11T20:00:41Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1770,10 +1770,10 @@
       "subVariant": null,
       "packageName": "com.netflix.ninja.clone",
       "patchSources": [
-        "ajstrick81/patches-1.48.0.mpp"
+        "ajstrick81/patches-1.53.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.48.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.53.0"
       ],
       "appliedPatches": [
         "Disable Netflix CertCheck",
@@ -1781,8 +1781,8 @@
         "Remove Netflix ads (loader)",
         "Clone Netflix"
       ],
-      "originBuild": "260428",
-      "publishedAt": "2026-10-31T20:14:45Z"
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
     },
     "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv-clone",
@@ -21653,10 +21653,10 @@
       "subVariant": null,
       "packageName": "com.zing.zalo",
       "patchSources": [
-        "zeldrisho/patches-1.11.0.mpp"
+        "zeldrisho/patches-1.12.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.11.0"
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.12.0"
       ],
       "appliedPatches": [
         "Bypass Zalo Drive Contacts permission gate",
@@ -21684,8 +21684,8 @@
         "Suppress outbound typing status",
         "microG Drive support"
       ],
-      "originBuild": "260503",
-      "publishedAt": "2026-11-10T16:39:50Z"
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm-v7a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -30171,10 +30171,10 @@
       "subVariant": null,
       "packageName": "com.zing.zalo.morphe",
       "patchSources": [
-        "zeldrisho/patches-1.11.0.mpp"
+        "zeldrisho/patches-1.12.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.11.0"
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.12.0"
       ],
       "appliedPatches": [
         "Bypass Zalo Drive Contacts permission gate",
@@ -30204,8 +30204,8 @@
         "Suppress outbound typing status",
         "microG Drive support"
       ],
-      "originBuild": "260503",
-      "publishedAt": "2026-11-10T16:39:50Z"
+      "originBuild": "260508",
+      "publishedAt": "2026-11-11T20:00:07Z"
     },
     "discord-rain-v353.11-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
