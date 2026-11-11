@@ -3492,6 +3492,20 @@
         "build-mode": "apk",
         "github-regex": "^boost-for-reddit-.*\\.apk$"
       }
+    },
+    "WhatsApp-MightyMich": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "mich111discord/MightyMichs-Patches",
+        "brand": "MightyMich",
+        "app-name": "WhatsApp",
+        "pkg-name": "com.whatsapp",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
