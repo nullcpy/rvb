@@ -261,7 +261,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "arm-v7a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.netflix.ninja",
     "app-name": "Netflix",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/netflix-inc/netflix-android-tv",
@@ -1673,7 +1673,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-SatanMerde": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "SatanMerde/D-moniakPatches",
@@ -2225,7 +2225,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-icysymmetra": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "icysymmetra/tiktok-patches-for-morphe",
@@ -2361,7 +2361,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
@@ -2372,7 +2372,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
@@ -2542,7 +2542,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Zalo-zeldrisho": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
@@ -2555,7 +2555,7 @@
     "apkpure-dlurl": "https://apkpure.com/zalo/com.zing.zalo"
   },
   "Zalo-zeldrisho-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
