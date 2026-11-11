@@ -4,7 +4,7 @@
     "stable": {
       "com.amazon.amazonvideo.livingroom": "3ad81af66f716c321949386905b011cd",
       "com.disney.disneyplus": "1a5c00d6bbc4ede650082350f3dc7597",
-      "com.netflix.ninja": "53f9941ba7f01b83be5afc5060400dba",
+      "com.netflix.ninja": "76e540ffbd06d29b1015cd271522b357",
       "com.peacocktv.peacockandroid": "fd369c36ba65c72d7297980fb92ebb83",
       "com.tubitv": "fc311c606f9ce12c99fca616dda555d7",
       "com.univision.prendetv": "639530c7738b9564382d855894b1ccc4",
@@ -407,6 +407,13 @@
     },
     "stable": {}
   },
+  "mich111discord/mightymichs-patches": {
+    "beta": {},
+    "stable": {
+      "com.whatsapp": "4023d6fee627609c00d3283b84f85e55",
+      "shared": "b781de879faa26befba5a6291d4bf143"
+    }
+  },
   "morpheapp/morphe-patches": {
     "beta": {
       "com.google.android.apps.youtube.music": "9144e9645b766707fb13526272293c20",
@@ -432,7 +439,7 @@
     "beta": {},
     "stable": {
       "com.instantbits.cast.webvideo": "37e0a0a4a420ef7aa47c0c0764f8c57a",
-      "shared": "c9d73cb375aea50ad6cdd39a44d08571"
+      "shared": "47673747f16a560249c79024af4ec66e"
     }
   },
   "newuser7171/telegram-morphe-patches-": {
@@ -556,7 +563,7 @@
   "satanmerde/d-moniakpatches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "16c82a0b2bc696e6e37a0a1815543a03",
+      "ch.protonmail.android": "9c26d242265cdfddf84ccae458831b1d",
       "shared": "39486aab96007b3d3c5da786ed13a164"
     }
   },
@@ -655,7 +662,7 @@
   "zeldrisho/morphe-patches": {
     "beta": {},
     "stable": {
-      "com.zing.zalo": "6328b12b7112cd83109bf7ccc302206d",
+      "com.zing.zalo": "12d52fa0ef3b2dfb2c00678fafb04531",
       "shared": "2eec4d9eaac9b6f3db788f4730e4e036"
     }
   }
