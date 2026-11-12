@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260515",
+    "channel": "stable",
+    "publishedAt": "2026-11-12T17:06:08Z"
+  },
+  "files": {
+    "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
+      "name": "remote-for-android-tv-xbadfellax",
+      "version": "6.1.0",
+      "appKey": "remoteforandroidtv",
+      "appName": "Remote for Android TV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "xbadfellax",
+      "brandName": "XBadFellaX",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tech.simha.androidtvremote",
+      "patchSources": [
+        "XBadFellaX/patches-1.4.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/XBadFellaX/BadFella-Patches/releases/tag/v1.4.0"
+      ],
+      "appliedPatches": [
+        "Remote ATV ad-free"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.11.03",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide promo pop-ups",
+        "Spoiler-free mode",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "sofascore-heval99-v26.11.03-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.11.03",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide promo pop-ups",
+        "Spoiler-free mode",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "truecaller-heval99-v26.44.6-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "truecaller-heval99-module-v26.44.6-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "truecaller-heval99-module-v26.44.6-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    },
+    "truecaller-heval99-v26.44.6-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260515",
+      "publishedAt": "2026-11-12T17:06:08Z"
+    }
+  }
+}
