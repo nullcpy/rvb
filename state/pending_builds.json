@@ -1,4 +1,16 @@
 {
-  "stable": {},
+  "stable": {
+    "MyFitnessPal-heval99": {
+      "reason": "retry",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 1,
+      "parked": false,
+      "run": 43262053071,
+      "ts": "2026-11-12T17:05:34Z"
+    }
+  },
   "beta": {}
 }

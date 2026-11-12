@@ -1882,7 +1882,7 @@
       ]
     },
     "remote-for-android-tv-xbadfellax-v6.1.0-all": {
-      "hash": "c447fa16aef150d6d3aac82d9be6676a",
+      "hash": "8310539882a0aa38a130e3de4c993b8e",
       "kinds": [
         "apk"
       ]
@@ -2509,6 +2509,32 @@
       "hash": "85e2930959a1ebe44e606b54bc2f8a73",
       "kinds": [
         "apk"
+      ]
+    },
+    "sofascore-heval99-v26.11.03-arm64-v8a": {
+      "hash": "8fa10300f9ee1ef0698128a6803cba20",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.11.03-arm-v7a": {
+      "hash": "9c4623237f14d85428933a1d5aa0fce2",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.44.6-arm64-v8a": {
+      "hash": "7a3d35256b42dc80c889fe8418c05e9b",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.44.6-arm-v7a": {
+      "hash": "dbad3bbf292d8c233126428d5ea8d1d9",
+      "kinds": [
+        "apk",
+        "module"
       ]
     }
   }
