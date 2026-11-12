@@ -131,13 +131,13 @@
       ]
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a": {
-      "hash": "95cf9ca3197feedffe1bc634575822c3",
+      "hash": "646bf25754629be48eaf3660e41a8bbf",
       "kinds": [
         "apk"
       ]
     },
     "tiktok-icysymmetra-v47.4.3-arm64-v8a": {
-      "hash": "0cd4f2deb4e6fa3c0fece4dcc090d605",
+      "hash": "911d0e11fec88887ead2089fcce232ac",
       "kinds": [
         "apk"
       ]
@@ -367,6 +367,20 @@
     },
     "youtube-music-morphe-experimental-v9.45.51-arm-v7a": {
       "hash": "970b2fa1c1d0ac86d731660e9827ec60",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.44.6-arm64-v8a": {
+      "hash": "02cd1637baf99c1383b94342e35f7909",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.44.6-arm-v7a": {
+      "hash": "52b505f1ada0a4e755d308a62252f730",
       "kinds": [
         "apk",
         "module"
