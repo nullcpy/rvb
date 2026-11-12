@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260513",
+    "channel": "stable",
+    "publishedAt": "2026-11-12T13:26:53Z"
+  },
+  "files": {
+    "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
+      "name": "remote-for-android-tv-xbadfellax",
+      "version": "6.1.0",
+      "appKey": "remoteforandroidtv",
+      "appName": "Remote for Android TV",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "xbadfellax",
+      "brandName": "XBadFellaX",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tech.simha.androidtvremote",
+      "patchSources": [
+        "XBadFellaX/patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/XBadFellaX/BadFella-Patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Remote ATV ad-free"
+      ],
+      "originBuild": "260513",
+      "publishedAt": "2026-11-12T13:26:53Z"
+    }
+  }
+}
