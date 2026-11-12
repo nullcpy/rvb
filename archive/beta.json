@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-12T16:59:54Z"
+    "publishedAt": "2026-11-12T22:29:09Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -3528,10 +3528,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.11.0-dev.2.mpp"
+        "icysymmetra/patches-0.11.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.2"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.3"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3653,8 +3653,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260512",
-      "publishedAt": "2026-11-12T13:23:31Z"
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -3669,10 +3669,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.11.0-dev.2.mpp"
+        "icysymmetra/patches-0.11.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.2"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.3"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3794,8 +3794,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260512",
-      "publishedAt": "2026-11-12T13:23:31Z"
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
     },
     "youtube-morphe-module-v21.23.492-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -8133,6 +8133,176 @@
       ],
       "originBuild": "260514",
       "publishedAt": "2026-11-12T16:58:14Z"
+    },
+    "truecaller-heval99-v26.44.6-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.4.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.4.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
+    },
+    "truecaller-heval99-module-v26.44.6-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.4.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.4.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
+    },
+    "truecaller-heval99-module-v26.44.6-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.4.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.4.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
+    },
+    "truecaller-heval99-v26.44.6-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.44.6",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-2.4.0-dev.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.4.0-dev.1"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260517",
+      "publishedAt": "2026-11-12T22:28:13Z"
     }
   }
 }
