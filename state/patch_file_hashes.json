@@ -203,15 +203,15 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "ca92f32cb57bc72e43866222ef5e6361",
-      "shared": "1572545ccfc18170e7b0b2af35cef2c8"
+      "com.truecaller": "b6aecfbe5e8512e9b2cfb74fc783bf82",
+      "shared": "f4493247a72aabe702c485a2e3726850"
     },
     "stable": {
-      "com.myfitnesspal.android": "f21327087e6ab012745151caf2c00e62",
-      "com.sofascore.results": "0fca7cbfafc53053489643f7e47961cb",
-      "com.truecaller": "beb27f33322addf610aecc855aa46c5c",
-      "eu.faircode.email": "d251e27b9a1765ba2021674fc2e8af6a",
-      "shared": "d34c26a61bc73d3dc2fb40582b05774f"
+      "com.myfitnesspal.android": "844a5ddf0749caa89beec086eb7d173b",
+      "com.sofascore.results": "bea23329c34be17f18c60b258cd57faf",
+      "com.truecaller": "b6aecfbe5e8512e9b2cfb74fc783bf82",
+      "eu.faircode.email": "77f14cde2dc6f6f811871f3d3217f31e",
+      "shared": "f4493247a72aabe702c485a2e3726850"
     }
   },
   "heyymichii/michii-patches": {
@@ -410,16 +410,16 @@
   "mich111discord/mightymichs-patches": {
     "beta": {},
     "stable": {
-      "com.whatsapp": "0b9e585b139cbeb26c87dfca45f8a281",
+      "com.whatsapp": "4023d6fee627609c00d3283b84f85e55",
       "shared": "b781de879faa26befba5a6291d4bf143"
     }
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "9144e9645b766707fb13526272293c20",
-      "com.google.android.youtube": "c56b564197b6e4c7542e22b9bbfa3396",
-      "com.reddit.frontpage": "7651c59bc39ee30946d3821d09cafe17",
-      "shared": "efd1ddd3e920f5ac8d48c9a4a7627794"
+      "com.google.android.apps.youtube.music": "6b35bf7510b45dcb96a9a4b4156761a0",
+      "com.google.android.youtube": "d9645ed8a1b5834a7799741c5a24203d",
+      "com.reddit.frontpage": "e2574334e5d99261589c5154b1330a92",
+      "shared": "fdbcb260b126f5423950105d0ea83eec"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "208e1dacd9e69e1d6ac02d64e1a6c540",
@@ -655,8 +655,8 @@
   "xbadfellax/badfella-patches": {
     "beta": {},
     "stable": {
-      "shared": "0f91a49e41e390df6d13252ea922a5e9",
-      "tech.simha.androidtvremote": "8ea2968d1e2531bba833ec5a509ade6e"
+      "shared": "1f2ad3e21ff9f2c60a0b7d1dedfc51bf",
+      "tech.simha.androidtvremote": "0fafec2572cdef2764424197e4ba9e5a"
     }
   },
   "zeldrisho/morphe-patches": {
