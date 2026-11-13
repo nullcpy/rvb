@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260521",
+    "channel": "stable",
+    "publishedAt": "2026-11-13T07:21:37Z"
+  },
+  "files": {
+    "trakt-tv-proteus-v3.26.1-arm-v7a.apk": {
+      "name": "trakt-tv-proteus",
+      "version": "3.26.1",
+      "appKey": "trakttv",
+      "appName": "trakt.TV",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "proteus",
+      "brandName": "Proteus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.trakt.trakt",
+      "patchSources": [
+        "ineednotitle/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ineednotitle/Proteus-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Unlock VIP"
+      ],
+      "originBuild": "260521",
+      "publishedAt": "2026-11-13T07:21:37Z"
+    },
+    "trakt-tv-proteus-v3.26.1-arm64-v8a.apk": {
+      "name": "trakt-tv-proteus",
+      "version": "3.26.1",
+      "appKey": "trakttv",
+      "appName": "trakt.TV",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "proteus",
+      "brandName": "Proteus",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.trakt.trakt",
+      "patchSources": [
+        "ineednotitle/patches-2.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/ineednotitle/Proteus-Patches/releases/tag/v2.3.0"
+      ],
+      "appliedPatches": [
+        "Unlock VIP"
+      ],
+      "originBuild": "260521",
+      "publishedAt": "2026-11-13T07:21:37Z"
+    },
+    "pixiv-piracola-v6.203.0-arm-v7a.apk": {
+      "name": "pixiv-piracola",
+      "version": "6.203.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piracola",
+      "brandName": "Piracola",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "Piracola/patches-1.7.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Piracola/Pixiv-Patched/releases/tag/v1.7.2"
+      ],
+      "appliedPatches": [
+        "Pixiv AI Work Flagger",
+        "Pixiv Adblocker",
+        "Pixiv Bookmark Threshold",
+        "Pixiv Browsing History",
+        "Pixiv Downloader",
+        "Pixiv Enhanced Viewer & Instant Zoom",
+        "Pixiv Novel Text Copy",
+        "Pixiv OLED Dark Theme",
+        "Pixiv Popular Search Trial",
+        "Pixiv Premium Features",
+        "Pixiv Search Ranking",
+        "Pixiv-Patched Drawer Entry"
+      ],
+      "originBuild": "260521",
+      "publishedAt": "2026-11-13T07:21:37Z"
+    },
+    "pixiv-piracola-v6.203.0-arm64-v8a.apk": {
+      "name": "pixiv-piracola",
+      "version": "6.203.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piracola",
+      "brandName": "Piracola",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "Piracola/patches-1.7.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Piracola/Pixiv-Patched/releases/tag/v1.7.2"
+      ],
+      "appliedPatches": [
+        "Pixiv AI Work Flagger",
+        "Pixiv Adblocker",
+        "Pixiv Bookmark Threshold",
+        "Pixiv Browsing History",
+        "Pixiv Downloader",
+        "Pixiv Enhanced Viewer & Instant Zoom",
+        "Pixiv Novel Text Copy",
+        "Pixiv OLED Dark Theme",
+        "Pixiv Popular Search Trial",
+        "Pixiv Premium Features",
+        "Pixiv Search Ranking",
+        "Pixiv-Patched Drawer Entry"
+      ],
+      "originBuild": "260521",
+      "publishedAt": "2026-11-13T07:21:37Z"
+    }
+  }
+}
