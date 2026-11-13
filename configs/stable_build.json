@@ -320,7 +320,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -2186,7 +2186,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "Threads-HushThreads": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.barcelona",
     "app-name": "Threads",
     "patch-folder": "threads",
@@ -2269,7 +2269,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
   "TraktTV-Proteus": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.trakt.trakt",
     "app-name": "trakt.TV",
     "brand": "Proteus",
@@ -2394,7 +2394,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
