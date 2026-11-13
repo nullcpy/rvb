@@ -1,0 +1,24 @@
+[TraktTV-IMXEren]
+enabled = true
+pkg-name = "tv.trakt.trakt"
+app-name = "trakt.TV"
+brand = "IMXEren"
+patches-source-host = "gitlab"
+patches-source = "IMXEren/mix-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
+apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+
+[TraktTV-Proteus]
+enabled = true
+pkg-name = "tv.trakt.trakt"
+app-name = "trakt.TV"
+brand = "Proteus"
+patches-source = "ineednotitle/Proteus-Patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
+apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+
+
