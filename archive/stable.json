@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-13T13:01:36Z"
+    "publishedAt": "2026-11-13T20:21:21Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -27582,10 +27582,10 @@
       "subVariant": null,
       "packageName": "com.rubenmayayo.reddit",
       "patchSources": [
-        "wchill/patches-2.1.0.mpp"
+        "wchill/patches-2.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/wchill/patcheddit/releases/tag/v2.1.0"
+        "https://github.com/wchill/patcheddit/releases/tag/v2.1.1"
       ],
       "appliedPatches": [
         "Add Boost Search bottom navigation",
@@ -27628,8 +27628,8 @@
         "Tune Boost image dismissal",
         "Use Reddit for image uploads"
       ],
-      "originBuild": "260494",
-      "publishedAt": "2026-11-09T07:20:17Z"
+      "originBuild": "260525",
+      "publishedAt": "2026-11-13T20:20:53Z"
     },
     "instagram-piko-clone-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -30653,6 +30653,55 @@
       ],
       "originBuild": "260523",
       "publishedAt": "2026-11-13T13:01:11Z"
+    },
+    "threads-hushthreads-v455.0.0.55.72-arm64-v8a.apk": {
+      "name": "threads-hushthreads",
+      "version": "455.0.0.55.72",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushthreads",
+      "brandName": "HushThreads",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona.hushthreads",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.18.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.18"
+      ],
+      "appliedPatches": [
+        "Block background-return feed refresh",
+        "Change app name",
+        "Change package name",
+        "Change version code",
+        "Disable analytics",
+        "Disable screenshot detection",
+        "Disable swipe to Search",
+        "Disable video autoplay",
+        "Filter comments",
+        "Full size profile pictures",
+        "Hide ads",
+        "Hide ghost post bubbles",
+        "Hide suggested users",
+        "Hide the Instagram button",
+        "HushThreads settings",
+        "Max image quality",
+        "Open links in browser",
+        "Pure black dark mode",
+        "Remove share targets",
+        "Remove the advertising ID",
+        "Restore screens on re-signed builds",
+        "Sanitize sharing links",
+        "Save photos and videos",
+        "Show exact post times",
+        "Spoof SIM region",
+        "Trust user-added certificates"
+      ],
+      "originBuild": "260525",
+      "publishedAt": "2026-11-13T20:20:53Z"
     }
   }
 }

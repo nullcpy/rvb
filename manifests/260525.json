@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260525",
+    "channel": "stable",
+    "publishedAt": "2026-11-13T20:20:53Z"
+  },
+  "files": {
+    "boost-for-reddit-wchill-v1.14.3-all.apk": {
+      "name": "boost-for-reddit-wchill",
+      "version": "1.14.3",
+      "appKey": "boostforreddit",
+      "appName": "Boost For Reddit",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "wchill",
+      "brandName": "wchill",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.rubenmayayo.reddit",
+      "patchSources": [
+        "wchill/patches-2.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/wchill/patcheddit/releases/tag/v2.1.1"
+      ],
+      "appliedPatches": [
+        "Add Boost Search bottom navigation",
+        "Add archive links to context menu",
+        "Anchor Boost Snackbars above bottom navigation",
+        "Animate media in Boost gallery previews",
+        "Auto-load next page after filtered results",
+        "Automatically undelete Imgur images",
+        "Automatically undelete Reddit content",
+        "Boost Morphe settings",
+        "Boost search default discovery",
+        "Configure editor image hosting",
+        "Disable Boost Crashlytics startup network calls",
+        "Fix /r/all",
+        "Fix /s/ links",
+        "Fix Boost FAB nested scroll",
+        "Fix Boost code block rendering",
+        "Fix Boost image widget click target",
+        "Fix Boost navigation bar overlap",
+        "Fix Hide crash",
+        "Fix Reddit API lookups",
+        "Fix loading more comments",
+        "Fix profile About scrolling",
+        "Import and export OAuth tokens",
+        "Log exceptions",
+        "Modify login WebView",
+        "Prefer high refresh rate",
+        "Preview images in the editor",
+        "Readable Boost flair labels",
+        "Remove obsolete profile tabs",
+        "Restore Boost sidebar Trending today",
+        "Restore GIF URL insertion",
+        "Show end of feed",
+        "Stabilize Boost subreddit bottom navigation surface",
+        "Standardize Boost Home bottom navigation",
+        "Standardize Boost Inbox and Profile bottom navigation",
+        "Standardize Boost bottom navigation",
+        "Standardize Boost bottom-navigation FAB clearance",
+        "Support keyboard GIF insertion",
+        "Tune Boost image dismissal",
+        "Use Reddit for image uploads"
+      ],
+      "originBuild": "260525",
+      "publishedAt": "2026-11-13T20:20:53Z"
+    },
+    "threads-hushthreads-v455.0.0.55.72-arm64-v8a.apk": {
+      "name": "threads-hushthreads",
+      "version": "455.0.0.55.72",
+      "appKey": "threads",
+      "appName": "Threads",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushthreads",
+      "brandName": "HushThreads",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.barcelona.hushthreads",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.18.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushThreads/releases/tag/v0.0.18"
+      ],
+      "appliedPatches": [
+        "Block background-return feed refresh",
+        "Change app name",
+        "Change package name",
+        "Change version code",
+        "Disable analytics",
+        "Disable screenshot detection",
+        "Disable swipe to Search",
+        "Disable video autoplay",
+        "Filter comments",
+        "Full size profile pictures",
+        "Hide ads",
+        "Hide ghost post bubbles",
+        "Hide suggested users",
+        "Hide the Instagram button",
+        "HushThreads settings",
+        "Max image quality",
+        "Open links in browser",
+        "Pure black dark mode",
+        "Remove share targets",
+        "Remove the advertising ID",
+        "Restore screens on re-signed builds",
+        "Sanitize sharing links",
+        "Save photos and videos",
+        "Show exact post times",
+        "Spoof SIM region",
+        "Trust user-added certificates"
+      ],
+      "originBuild": "260525",
+      "publishedAt": "2026-11-13T20:20:53Z"
+    }
+  }
+}
