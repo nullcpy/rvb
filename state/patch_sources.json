@@ -80,6 +80,15 @@
     "stable": "v1.20.1",
     "stable_date": "2026-11-01T05:56:32.681Z"
   },
+  "Piracola/Pixiv-Patched": {
+    "beta": "v1.0.0-dev.1",
+    "beta_date": "2026-11-02T13:47:14Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "Piracola/Pixiv-Patched",
+    "stable": "v1.7.2",
+    "stable_date": "2026-11-12T16:30:41Z"
+  },
   "PrathxmOp/Prathxm-Patches": {
     "beta": "v1.15.0-dev.1",
     "beta_date": "2026-09-28T21:57:54Z",
@@ -458,6 +467,15 @@
     "stable": "v0.10.0",
     "stable_date": "2026-11-11T21:26:37Z"
   },
+  "ineednotitle/Proteus-Patches": {
+    "beta": "v2.2.10",
+    "beta_date": "2026-11-10T12:12:56Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "ineednotitle/Proteus-Patches",
+    "stable": "v2.3.0",
+    "stable_date": "2026-11-12T16:30:32Z"
+  },
   "instafel/pc-rel": {
     "beta": "",
     "beta_date": "",
@@ -567,8 +585,8 @@
     "stable_date": "2026-11-08T08:23:32Z"
   },
   "mvaishak/letterboxd-morphe-patches": {
-    "beta": "v2.3.0-dev.4",
-    "beta_date": "2026-11-11T23:39:10Z",
+    "beta": "v2.3.0-dev.6",
+    "beta_date": "2026-11-13T07:07:49Z",
     "blocked": false,
     "host": "github",
     "repo": "mvaishak/letterboxd-morphe-patches",

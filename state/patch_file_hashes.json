@@ -325,6 +325,13 @@
       "tv.trakt.trakt": "96070b6b79998c52b1785f831bfb27b9"
     }
   },
+  "ineednotitle/proteus-patches": {
+    "beta": {},
+    "stable": {
+      "shared": "5285aaffd1e87478a0a90fd5d1b56c98",
+      "tv.trakt.trakt": "5241aaba332f33917e724860b96b05ac"
+    }
+  },
   "instafel/pc-rel": {
     "beta": {},
     "stable": {}
@@ -466,6 +473,13 @@
       "org.telegram.messenger.web": "d590bc2abddd94ca5c49a27aa191abfc",
       "org.telegram.plus": "abb92126213b44e2d638188fe926c99e",
       "shared": "5b84fc998e5bc59f64763778f064cd4f"
+    }
+  },
+  "piracola/pixiv-patched": {
+    "beta": {},
+    "stable": {
+      "jp.pxv.android": "07dfaa0b857af1fd750db04b03318cc0",
+      "shared": "9e22ed4065016714a9e1bf556b361d82"
     }
   },
   "prathxmop/prathxm-patches": {

@@ -82,18 +82,6 @@
     "apkpure-dlurl": "https://apkpure.com/niagara-launcher-%E2%80%A7-fresh-clean/bitpit.launcher",
     "apkcombo-dlurl": "https://apkcombo.com/niagara-launcher/bitpit.launcher"
   },
-  "TraktTV-IMXEren": {
-    "patches-source": "IMXEren/mix-patches",
-    "patches-source-host": "gitlab",
-    "brand": "IMXEren",
-    "enabled": false,
-    "pkg-name": "tv.trakt.trakt",
-    "app-name": "trakt.TV",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
-    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
-    "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
-  },
   "aCalendar-binarymend": {
     "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
@@ -617,7 +605,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -631,7 +619,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -643,7 +631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1621,8 +1609,8 @@
     "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
-    "patches-source": "RookieEnough/De-Vanced",
     "brand": "DeVanced",
+    "patches-source": "RookieEnough/De-Vanced",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
     "uptodown-dlurl": "https://pixiv.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/pixiv/jp.pxv.android",
@@ -1632,8 +1620,19 @@
     "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
-    "patches-source": "Fripe070/PixivPatches",
     "brand": "Fripe070",
+    "patches-source": "Fripe070/PixivPatches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
+    "uptodown-dlurl": "https://pixiv.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/pixiv/jp.pxv.android",
+    "apkcombo-dlurl": "https://apkcombo.com/pixiv/jp.pxv.android"
+  },
+  "pixiv-Piracola": {
+    "enabled": true,
+    "pkg-name": "jp.pxv.android",
+    "app-name": "pixiv",
+    "brand": "Piracola",
+    "patches-source": "Piracola/Pixiv-Patched",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/pixiv-inc/pixiv",
     "uptodown-dlurl": "https://pixiv.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/pixiv/jp.pxv.android",
@@ -2257,6 +2256,29 @@
     "uptodown-dlurl": "https://tiktok-lite-musically-go.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/tiktok-lite-app/com.ss.android.ugc.tiktok.lite"
   },
+  "TraktTV-IMXEren": {
+    "enabled": false,
+    "pkg-name": "tv.trakt.trakt",
+    "app-name": "trakt.TV",
+    "brand": "IMXEren",
+    "patches-source-host": "gitlab",
+    "patches-source": "IMXEren/mix-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
+    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
+    "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+  },
+  "TraktTV-Proteus": {
+    "enabled": true,
+    "pkg-name": "tv.trakt.trakt",
+    "app-name": "trakt.TV",
+    "brand": "Proteus",
+    "patches-source": "ineednotitle/Proteus-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
+    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
+    "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+  },
   "Truecaller-Paresh": {
     "enabled": false,
     "pkg-name": "com.truecaller",
@@ -2382,7 +2404,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2393,7 +2415,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
