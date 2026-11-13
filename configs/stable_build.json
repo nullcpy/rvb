@@ -162,7 +162,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
@@ -200,7 +200,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
@@ -550,7 +550,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -562,7 +562,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -617,7 +617,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -631,7 +631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -643,7 +643,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1253,7 +1253,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -1268,7 +1268,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
