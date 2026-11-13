@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-12T22:37:04Z"
+    "publishedAt": "2026-11-13T01:12:44Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -13053,10 +13053,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13089,8 +13089,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -13105,10 +13105,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13141,8 +13141,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -16469,10 +16469,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16504,8 +16504,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -16520,10 +16520,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16555,8 +16555,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -16599,10 +16599,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16637,8 +16637,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -16653,10 +16653,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16691,8 +16691,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -16707,10 +16707,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16744,8 +16744,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -16760,10 +16760,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.8.10.mpp"
+        "bearinmindcat/patches-2.9.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.5"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16797,8 +16797,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260479",
-      "publishedAt": "2026-11-07T06:10:02Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -17399,258 +17399,6 @@
       "originBuild": "260387",
       "publishedAt": "2026-10-27T04:25:16Z"
     },
-    "facebook-hushfacebook-v584.0.0.51.56-arm-v7a.apk": {
-      "name": "facebook-hushfacebook",
-      "version": "584.0.0.51.56",
-      "appKey": "facebook",
-      "appName": "Facebook",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hushfacebook",
-      "brandName": "HushFacebook",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.facebook.katana",
-      "patchSources": [
-        "SysAdminDoc/patches-0.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.19.0"
-      ],
-      "appliedPatches": [
-        "AMOLED black theme",
-        "Allow screenshots",
-        "Block Instant Games ads",
-        "Block ad telemetry",
-        "Block background ad prefetch",
-        "Block background-return feed refresh",
-        "Block promotional notifications",
-        "Block screenshot detection",
-        "Clean up Facebook's chat list",
-        "Clean up Reels",
-        "Comment sheet options",
-        "Default comment order",
-        "Default playback quality",
-        "Disable Audience Network",
-        "Don't save search history",
-        "Don't send reel watch history",
-        "Double tap to skip",
-        "Download any photo",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Following feed on Home",
-        "Force dark mode",
-        "Frame step",
-        "Hide AI-detected posts",
-        "Hide Menu promotions",
-        "Hide Meta AI comment summaries",
-        "Hide Meta AI in search",
-        "Hide Meta AI questions under posts",
-        "Hide Meta upsells",
-        "Hide Reels in the feed",
-        "Hide Stories tray",
-        "Hide affiliate product links",
-        "Hide carrier data banners",
-        "Hide post prompts",
-        "Hide posts by words",
-        "Hide profile notes",
-        "Hide read receipts",
-        "Hide reel interest prompts",
-        "Hide seen posts",
-        "Hide sponsored Marketplace listings",
-        "Hide sponsored posts",
-        "Hide sponsored profile posts",
-        "Hide sponsored reels",
-        "Hide sponsored search results",
-        "Hide sponsored stories",
-        "Hide suggested and promoted posts",
-        "Hide suggested stories",
-        "Hide tab badges",
-        "Hide tabs",
-        "Hide the Feeds header",
-        "Hide the Get Messenger card",
-        "Hide the Reels tab",
-        "Hide the Reels tab dot",
-        "Hide typing indicator",
-        "Hold a reel for 2x",
-        "Hold back analytics uploads",
-        "Home header text",
-        "Hushfacebook in the Menu",
-        "Hushfacebook settings",
-        "Install beside Meta's apps",
-        "Keep feed videos muted",
-        "Keep post dates",
-        "Keep the progress bar",
-        "Keep the reel speed",
-        "Longer music on photo stories",
-        "Marketplace only",
-        "Newest reels first",
-        "Open Messenger from the top bar",
-        "Open comments at full height",
-        "Open comments with a gesture",
-        "Open links in external browser",
-        "Open on a chosen tab",
-        "Picture-in-picture",
-        "Pinch to zoom",
-        "Post action buttons",
-        "Restore screens on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Send chat photos and videos at original quality",
-        "Share sheet items",
-        "Show View profile on Marketplace sellers",
-        "Show full post text",
-        "Skip silent parts",
-        "Start on x86 devices",
-        "Stop Story auto-advance",
-        "Stop update prompts",
-        "Tab bar at the bottom",
-        "Tag suggestions only after @",
-        "Tap shows the controls",
-        "Tap to play",
-        "Turn off HDR brightness",
-        "Turn off auto-translation",
-        "Turn off double tap to like",
-        "Turn off haptics",
-        "Turn off screen transitions",
-        "Unlock app icons",
-        "Upload Stories in HD",
-        "Use the phone's emoji",
-        "Use the system font",
-        "View stories anonymously",
-        "Badge and logo colors",
-        "Accent color"
-      ],
-      "originBuild": "260397",
-      "publishedAt": "2026-10-28T05:37:46Z"
-    },
-    "facebook-hushfacebook-v584.0.0.51.56-arm64-v8a.apk": {
-      "name": "facebook-hushfacebook",
-      "version": "584.0.0.51.56",
-      "appKey": "facebook",
-      "appName": "Facebook",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushfacebook",
-      "brandName": "HushFacebook",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.facebook.katana",
-      "patchSources": [
-        "SysAdminDoc/patches-0.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.19.0"
-      ],
-      "appliedPatches": [
-        "AMOLED black theme",
-        "Allow screenshots",
-        "Block Instant Games ads",
-        "Block ad telemetry",
-        "Block background ad prefetch",
-        "Block background-return feed refresh",
-        "Block promotional notifications",
-        "Block screenshot detection",
-        "Clean up Facebook's chat list",
-        "Clean up Reels",
-        "Comment sheet options",
-        "Default comment order",
-        "Default playback quality",
-        "Disable Audience Network",
-        "Don't save search history",
-        "Don't send reel watch history",
-        "Double tap to skip",
-        "Download any photo",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Following feed on Home",
-        "Force dark mode",
-        "Frame step",
-        "Hide AI-detected posts",
-        "Hide Menu promotions",
-        "Hide Meta AI comment summaries",
-        "Hide Meta AI in search",
-        "Hide Meta AI questions under posts",
-        "Hide Meta upsells",
-        "Hide Reels in the feed",
-        "Hide Stories tray",
-        "Hide affiliate product links",
-        "Hide carrier data banners",
-        "Hide post prompts",
-        "Hide posts by words",
-        "Hide profile notes",
-        "Hide read receipts",
-        "Hide reel interest prompts",
-        "Hide seen posts",
-        "Hide sponsored Marketplace listings",
-        "Hide sponsored posts",
-        "Hide sponsored profile posts",
-        "Hide sponsored reels",
-        "Hide sponsored search results",
-        "Hide sponsored stories",
-        "Hide suggested and promoted posts",
-        "Hide suggested stories",
-        "Hide tab badges",
-        "Hide tabs",
-        "Hide the Feeds header",
-        "Hide the Get Messenger card",
-        "Hide the Reels tab",
-        "Hide the Reels tab dot",
-        "Hide typing indicator",
-        "Hold a reel for 2x",
-        "Hold back analytics uploads",
-        "Home header text",
-        "Hushfacebook in the Menu",
-        "Hushfacebook settings",
-        "Install beside Meta's apps",
-        "Keep feed videos muted",
-        "Keep post dates",
-        "Keep the progress bar",
-        "Keep the reel speed",
-        "Longer music on photo stories",
-        "Marketplace only",
-        "Newest reels first",
-        "Open Messenger from the top bar",
-        "Open comments at full height",
-        "Open comments with a gesture",
-        "Open links in external browser",
-        "Open on a chosen tab",
-        "Picture-in-picture",
-        "Pinch to zoom",
-        "Post action buttons",
-        "Restore screens on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Send chat photos and videos at original quality",
-        "Share sheet items",
-        "Show View profile on Marketplace sellers",
-        "Show full post text",
-        "Skip silent parts",
-        "Start on x86 devices",
-        "Stop Story auto-advance",
-        "Stop update prompts",
-        "Tab bar at the bottom",
-        "Tag suggestions only after @",
-        "Tap shows the controls",
-        "Tap to play",
-        "Turn off HDR brightness",
-        "Turn off auto-translation",
-        "Turn off double tap to like",
-        "Turn off haptics",
-        "Turn off screen transitions",
-        "Unlock app icons",
-        "Upload Stories in HD",
-        "Use the phone's emoji",
-        "Use the system font",
-        "View stories anonymously",
-        "Badge and logo colors",
-        "Accent color"
-      ],
-      "originBuild": "260397",
-      "publishedAt": "2026-10-28T05:37:46Z"
-    },
     "threads-hushthreads-v452.0.0.50.64-arm64-v8a.apk": {
       "name": "threads-hushthreads",
       "version": "452.0.0.50.64",
@@ -17755,258 +17503,6 @@
       ],
       "originBuild": "260483",
       "publishedAt": "2026-11-07T18:05:12Z"
-    },
-    "facebook-hushfacebook-material-you-v584.0.0.51.56-arm64-v8a.apk": {
-      "name": "facebook-hushfacebook-material-you",
-      "version": "584.0.0.51.56",
-      "appKey": "facebook",
-      "appName": "Facebook",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushfacebook",
-      "brandName": "HushFacebook",
-      "variant": "Material You",
-      "subVariant": null,
-      "packageName": "com.facebook.katana",
-      "patchSources": [
-        "SysAdminDoc/patches-0.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.19.0"
-      ],
-      "appliedPatches": [
-        "Allow screenshots",
-        "Block Instant Games ads",
-        "Block ad telemetry",
-        "Block background ad prefetch",
-        "Block background-return feed refresh",
-        "Block promotional notifications",
-        "Block screenshot detection",
-        "Clean up Facebook's chat list",
-        "Clean up Reels",
-        "Comment sheet options",
-        "Default comment order",
-        "Default playback quality",
-        "Disable Audience Network",
-        "Don't save search history",
-        "Don't send reel watch history",
-        "Double tap to skip",
-        "Download any photo",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Following feed on Home",
-        "Force dark mode",
-        "Frame step",
-        "Hide AI-detected posts",
-        "Hide Menu promotions",
-        "Hide Meta AI comment summaries",
-        "Hide Meta AI in search",
-        "Hide Meta AI questions under posts",
-        "Hide Meta upsells",
-        "Hide Reels in the feed",
-        "Hide Stories tray",
-        "Hide affiliate product links",
-        "Hide carrier data banners",
-        "Hide post prompts",
-        "Hide posts by words",
-        "Hide profile notes",
-        "Hide read receipts",
-        "Hide reel interest prompts",
-        "Hide seen posts",
-        "Hide sponsored Marketplace listings",
-        "Hide sponsored posts",
-        "Hide sponsored profile posts",
-        "Hide sponsored reels",
-        "Hide sponsored search results",
-        "Hide sponsored stories",
-        "Hide suggested and promoted posts",
-        "Hide suggested stories",
-        "Hide tab badges",
-        "Hide tabs",
-        "Hide the Feeds header",
-        "Hide the Get Messenger card",
-        "Hide the Reels tab",
-        "Hide the Reels tab dot",
-        "Hide typing indicator",
-        "Hold a reel for 2x",
-        "Hold back analytics uploads",
-        "Home header text",
-        "Hushfacebook in the Menu",
-        "Hushfacebook settings",
-        "Install beside Meta's apps",
-        "Keep feed videos muted",
-        "Keep post dates",
-        "Keep the progress bar",
-        "Keep the reel speed",
-        "Longer music on photo stories",
-        "Marketplace only",
-        "Newest reels first",
-        "Open Messenger from the top bar",
-        "Open comments at full height",
-        "Open comments with a gesture",
-        "Open links in external browser",
-        "Open on a chosen tab",
-        "Picture-in-picture",
-        "Pinch to zoom",
-        "Post action buttons",
-        "Restore screens on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Send chat photos and videos at original quality",
-        "Share sheet items",
-        "Show View profile on Marketplace sellers",
-        "Show full post text",
-        "Skip silent parts",
-        "Start on x86 devices",
-        "Stop Story auto-advance",
-        "Stop update prompts",
-        "Tab bar at the bottom",
-        "Tag suggestions only after @",
-        "Tap shows the controls",
-        "Tap to play",
-        "Turn off HDR brightness",
-        "Turn off auto-translation",
-        "Turn off double tap to like",
-        "Turn off haptics",
-        "Turn off screen transitions",
-        "Unlock app icons",
-        "Upload Stories in HD",
-        "Use the phone's emoji",
-        "Use the system font",
-        "View stories anonymously",
-        "Material You theme",
-        "Badge and logo colors",
-        "Accent color"
-      ],
-      "originBuild": "260397",
-      "publishedAt": "2026-10-28T05:37:46Z"
-    },
-    "facebook-hushfacebook-material-you-v584.0.0.51.56-arm-v7a.apk": {
-      "name": "facebook-hushfacebook-material-you",
-      "version": "584.0.0.51.56",
-      "appKey": "facebook",
-      "appName": "Facebook",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hushfacebook",
-      "brandName": "HushFacebook",
-      "variant": "Material You",
-      "subVariant": null,
-      "packageName": "com.facebook.katana",
-      "patchSources": [
-        "SysAdminDoc/patches-0.19.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushFacebook/releases/tag/v0.19.0"
-      ],
-      "appliedPatches": [
-        "Allow screenshots",
-        "Block Instant Games ads",
-        "Block ad telemetry",
-        "Block background ad prefetch",
-        "Block background-return feed refresh",
-        "Block promotional notifications",
-        "Block screenshot detection",
-        "Clean up Facebook's chat list",
-        "Clean up Reels",
-        "Comment sheet options",
-        "Default comment order",
-        "Default playback quality",
-        "Disable Audience Network",
-        "Don't save search history",
-        "Don't send reel watch history",
-        "Double tap to skip",
-        "Download any photo",
-        "Download any reel",
-        "Download any story",
-        "Download any video",
-        "Following feed on Home",
-        "Force dark mode",
-        "Frame step",
-        "Hide AI-detected posts",
-        "Hide Menu promotions",
-        "Hide Meta AI comment summaries",
-        "Hide Meta AI in search",
-        "Hide Meta AI questions under posts",
-        "Hide Meta upsells",
-        "Hide Reels in the feed",
-        "Hide Stories tray",
-        "Hide affiliate product links",
-        "Hide carrier data banners",
-        "Hide post prompts",
-        "Hide posts by words",
-        "Hide profile notes",
-        "Hide read receipts",
-        "Hide reel interest prompts",
-        "Hide seen posts",
-        "Hide sponsored Marketplace listings",
-        "Hide sponsored posts",
-        "Hide sponsored profile posts",
-        "Hide sponsored reels",
-        "Hide sponsored search results",
-        "Hide sponsored stories",
-        "Hide suggested and promoted posts",
-        "Hide suggested stories",
-        "Hide tab badges",
-        "Hide tabs",
-        "Hide the Feeds header",
-        "Hide the Get Messenger card",
-        "Hide the Reels tab",
-        "Hide the Reels tab dot",
-        "Hide typing indicator",
-        "Hold a reel for 2x",
-        "Hold back analytics uploads",
-        "Home header text",
-        "Hushfacebook in the Menu",
-        "Hushfacebook settings",
-        "Install beside Meta's apps",
-        "Keep feed videos muted",
-        "Keep post dates",
-        "Keep the progress bar",
-        "Keep the reel speed",
-        "Longer music on photo stories",
-        "Marketplace only",
-        "Newest reels first",
-        "Open Messenger from the top bar",
-        "Open comments at full height",
-        "Open comments with a gesture",
-        "Open links in external browser",
-        "Open on a chosen tab",
-        "Picture-in-picture",
-        "Pinch to zoom",
-        "Post action buttons",
-        "Restore screens on re-signed builds",
-        "Resume long videos",
-        "Sanitize sharing links",
-        "Send chat photos and videos at original quality",
-        "Share sheet items",
-        "Show View profile on Marketplace sellers",
-        "Show full post text",
-        "Skip silent parts",
-        "Start on x86 devices",
-        "Stop Story auto-advance",
-        "Stop update prompts",
-        "Tab bar at the bottom",
-        "Tag suggestions only after @",
-        "Tap shows the controls",
-        "Tap to play",
-        "Turn off HDR brightness",
-        "Turn off auto-translation",
-        "Turn off double tap to like",
-        "Turn off haptics",
-        "Turn off screen transitions",
-        "Unlock app icons",
-        "Upload Stories in HD",
-        "Use the phone's emoji",
-        "Use the system font",
-        "View stories anonymously",
-        "Material You theme",
-        "Badge and logo colors",
-        "Accent color"
-      ],
-      "originBuild": "260397",
-      "publishedAt": "2026-10-28T05:37:46Z"
     },
     "telegram-hushtelegram-foss-v13.1.0-arm-v7a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -19221,10 +18717,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.2.0.mpp"
+        "jasonwu1994/patches-4.3.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -19273,8 +18769,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260460",
-      "publishedAt": "2026-11-04T06:26:26Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -19289,10 +18785,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.2.0.mpp"
+        "jasonwu1994/patches-4.3.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -19340,8 +18836,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260460",
-      "publishedAt": "2026-11-04T06:26:26Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -19356,10 +18852,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.2.0.mpp"
+        "jasonwu1994/patches-4.3.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.2.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -19407,8 +18903,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260460",
-      "publishedAt": "2026-11-04T06:26:26Z"
+      "originBuild": "260519",
+      "publishedAt": "2026-11-13T01:12:03Z"
     },
     "instagram-instafel-clone-v453.0.0.55.79-arm64-v8a.apk": {
       "name": "instagram-instafel-clone",
