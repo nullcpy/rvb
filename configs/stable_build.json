@@ -162,7 +162,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.disney.disneyplus",
     "app-name": "Disney+",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/disney/disney-android-tv",
@@ -200,7 +200,7 @@
     "brand": "ajstrick81",
     "variant": "Android TV",
     "arch": "all",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.wbd.hbomax",
     "app-name": "HBO Max",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/warnermedia-direct-llc/hbo-max-stream-movies-tv-android-tv",
@@ -1253,7 +1253,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -1268,7 +1268,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -2382,7 +2382,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2393,7 +2393,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
