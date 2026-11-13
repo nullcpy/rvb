@@ -1,25 +1,4 @@
 {
-  "stable": {
-    "pixiv-Piracola": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "304104ab6c5199ea9115c1ab3fa5fdf796b9a16d"
-    },
-    "TraktTV-Proteus": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "cf2652ec203dfc02a4f4ed93c62a6e374092a833"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
