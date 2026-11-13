@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-13T12:57:44Z"
+    "publishedAt": "2026-11-13T20:17:31Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -1520,10 +1520,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1570,8 +1570,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-music-anddea-v9.15.51-arm64-v8a.apk": {
       "name": "youtube-music-anddea",
@@ -1586,10 +1586,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1637,8 +1637,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-music-anddea-module-v9.15.51-arm-v7a.zip": {
       "name": "youtube-music-anddea",
@@ -1653,10 +1653,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1703,8 +1703,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-music-anddea-v9.15.51-arm-v7a.apk": {
       "name": "youtube-music-anddea",
@@ -1719,10 +1719,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube.music",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "App refresh rate",
@@ -1770,8 +1770,8 @@
         "Custom branding for YouTube Music",
         "Settings for YouTube Music"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-anddea-v21.13.164-arm-v7a.apk": {
       "name": "youtube-anddea",
@@ -1786,10 +1786,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -1845,6 +1845,7 @@
         "Playback buffer",
         "Playback in feeds",
         "Player components",
+        "Playlist improvements",
         "PoToken provider",
         "Preferred caption language",
         "Remember livestream playback position",
@@ -1874,15 +1875,14 @@
         "Unlock queue",
         "Video playback",
         "Voice Over Translation",
-        "Watch later improvements",
         "Wide search bar",
         "Visual preferences icons for YouTube",
         "Reload video",
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-anddea-v21.13.164-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -1897,10 +1897,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -1956,6 +1956,7 @@
         "Playback buffer",
         "Playback in feeds",
         "Player components",
+        "Playlist improvements",
         "PoToken provider",
         "Preferred caption language",
         "Remember livestream playback position",
@@ -1985,15 +1986,14 @@
         "Unlock queue",
         "Video playback",
         "Voice Over Translation",
-        "Watch later improvements",
         "Wide search bar",
         "Visual preferences icons for YouTube",
         "Reload video",
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-anddea-module-v21.13.164-arm-v7a.zip": {
       "name": "youtube-anddea",
@@ -2008,10 +2008,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -2066,6 +2066,7 @@
         "Playback buffer",
         "Playback in feeds",
         "Player components",
+        "Playlist improvements",
         "PoToken provider",
         "Preferred caption language",
         "Remember livestream playback position",
@@ -2095,15 +2096,14 @@
         "Unlock queue",
         "Video playback",
         "Voice Over Translation",
-        "Watch later improvements",
         "Wide search bar",
         "Visual preferences icons for YouTube",
         "Reload video",
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-anddea-module-v21.13.164-arm64-v8a.zip": {
       "name": "youtube-anddea",
@@ -2118,10 +2118,10 @@
       "subVariant": null,
       "packageName": "anddea.youtube",
       "patchSources": [
-        "anddea/patches-4.4.0-dev.6.mpp"
+        "anddea/patches-4.4.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.6"
+        "https://github.com/anddea/revanced-patches/releases/tag/v4.4.0-dev.7"
       ],
       "appliedPatches": [
         "Ambient mode control",
@@ -2176,6 +2176,7 @@
         "Playback buffer",
         "Playback in feeds",
         "Player components",
+        "Playlist improvements",
         "PoToken provider",
         "Preferred caption language",
         "Remember livestream playback position",
@@ -2205,15 +2206,14 @@
         "Unlock queue",
         "Video playback",
         "Voice Over Translation",
-        "Watch later improvements",
         "Wide search bar",
         "Visual preferences icons for YouTube",
         "Reload video",
         "Custom branding for YouTube",
         "Settings for YouTube"
       ],
-      "originBuild": "260476",
-      "publishedAt": "2026-11-06T19:53:43Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -3528,10 +3528,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.11.0-dev.4.mpp"
+        "icysymmetra/patches-0.11.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.4"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.5"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3653,8 +3653,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260520",
-      "publishedAt": "2026-11-13T06:35:35Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm-v7a.apk": {
       "name": "tiktok-icysymmetra",
@@ -3669,10 +3669,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "icysymmetra/patches-0.11.0-dev.4.mpp"
+        "icysymmetra/patches-0.11.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.4"
+        "https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.11.0-dev.5"
       ],
       "appliedPatches": [
         "Advanced downloads",
@@ -3794,8 +3794,8 @@
         "Use system font",
         "Diagnostic tools"
       ],
-      "originBuild": "260520",
-      "publishedAt": "2026-11-13T06:35:35Z"
+      "originBuild": "260524",
+      "publishedAt": "2026-11-13T20:16:30Z"
     },
     "youtube-morphe-module-v21.23.492-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -4728,214 +4728,6 @@
       ],
       "originBuild": "260520",
       "publishedAt": "2026-11-13T06:35:35Z"
-    },
-    "reddit-morphe-experimental-module-v2026.44.0-arm64-v8a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
-    },
-    "reddit-morphe-experimental-module-v2026.44.0-arm-v7a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
-    },
-    "reddit-morphe-experimental-v2026.44.0-arm64-v8a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
-    },
-    "reddit-morphe-experimental-v2026.44.0-arm-v7a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
     },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
