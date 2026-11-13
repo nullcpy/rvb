@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260523",
+    "channel": "stable",
+    "publishedAt": "2026-11-13T13:01:11Z"
+  },
+  "files": {
+    "whatsapp-mightymich-v2.26.43.76-arm64-v8a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.43.76",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "Keep deleted messages",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260523",
+      "publishedAt": "2026-11-13T13:01:11Z"
+    },
+    "whatsapp-mightymich-v2.26.43.76-arm-v7a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.43.76",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.16.0"
+      ],
+      "appliedPatches": [
+        "Keep deleted messages",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260523",
+      "publishedAt": "2026-11-13T13:01:11Z"
+    }
+  }
+}
