@@ -1628,7 +1628,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pixiv/jp.pxv.android"
   },
   "pixiv-Piracola": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "brand": "Piracola",
@@ -2394,7 +2394,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
