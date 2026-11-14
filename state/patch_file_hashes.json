@@ -71,8 +71,9 @@
     "beta": {},
     "stable": {
       "com.android.soundrecorder": "1c735904bcf29bd7fba766c4c4ab7d28",
-      "com.google.android.apps.maps": "bada5822a0f451e8526b65f3f5da343c",
+      "com.google.android.apps.maps": "1f67a507ad64cf49bdc2d9603815449a",
       "com.miui.screenrecorder": "77415904a7b8640e021e4cfd0659cd63",
+      "com.sonyericsson.music": "0708582858c9ce095cecc46b5642a0f5",
       "shared": "d81f86bf5726fa729e87bd5956d47f33"
     }
   },
@@ -357,8 +358,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "0edb715d21e87bae7c4101db6b76ed61",
-      "shared": "4bc81fbb5699c0be5f6655e785bbbd81"
+      "com.google.android.inputmethod.latin": "e91f8cc96724620fdc272a37d12b4ffe",
+      "shared": "2fb597bf8d48f7bd3918a73ec88a0d69"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "dd9c8c212e4c5165d5a3b69cda35d53b",
