@@ -9,6 +9,16 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcas
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/spotify-app/com.spotify.music"
 
+[Spotify-pablobaro]
+enabled = true
+pkg-name = "com.spotify.music"
+app-name = "Spotify"
+patches-source = "pablobaro/pablobaro-morphe-patches"
+brand = "pablobaro"
+included-patches = "'Disable ad breaks' 'Hide ad views' 'Hide context menu upsells'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts"
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/spotify-app/com.spotify.music"
 
 
 
