@@ -15,16 +15,6 @@ app-name = "Money Manager"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget"
 uptodown-dlurl = "https://money-manager.en.uptodown.com/android"
 
-[Poweramp-hooman]
-enabled = true
-pkg-name = "com.maxmpz.audioplayer"
-app-name = "Poweramp"
-arch = "all"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
-uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
-apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
-
 [AT4KLauncher-hooman-AndroidTV]
 enabled = true
 pkg-name = "com.overdevs.at4k"

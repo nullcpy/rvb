@@ -1,0 +1,24 @@
+[Poweramp-hooman]
+enabled = true
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "Poweramp"
+brand = "hooman"
+arch = "all"
+patches-source = "arandomhooman/hoomans-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
+[Poweramp-mwbra130]
+enabled = true
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "Poweramp"
+brand = "mwbra130"
+arch = "all"
+patches-source = "mwbra130/Retro-Bowl-College"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+
