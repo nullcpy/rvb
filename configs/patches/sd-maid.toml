@@ -1,0 +1,24 @@
+[SDMaid-Paresh]
+enabled = true
+pkg-name = "eu.darken.sdmse"
+app-name = "SD Maid 2/SE"
+patch-folder = "sdmaidse"
+brand = "Paresh"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+patches-source-host = "gitlab"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
+uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+apkcombo-dlurl = "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+
+[SDMaid-kveld9]
+enabled = true
+pkg-name = "eu.darken.sdmse"
+app-name = "SD Maid 2/SE"
+brand = "kveld9"
+patches-source = "kveld9/kveld-extra-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner"
+uptodown-dlurl = "https://sd-maid-se.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+apkcombo-dlurl = "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+
