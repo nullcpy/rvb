@@ -3534,6 +3534,114 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "Hermit-mwbra130": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "mwbra130/Retro-Bowl-College",
+        "brand": "mwbra130",
+        "app-name": "Hermit",
+        "pkg-name": "com.chimbori.hermitcrab",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Poweramp-mwbra130": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "mwbra130/Retro-Bowl-College",
+        "brand": "mwbra130",
+        "app-name": "Poweramp",
+        "pkg-name": "com.maxmpz.audioplayer",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "RidmikKeyboard-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Ridmik Keyboard",
+        "pkg-name": "ridmik.keyboard",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "SDMaid-kveld9": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "kveld9/kveld-extra-morphe-patches",
+        "brand": "kveld9",
+        "app-name": "SD Maid 2/SE",
+        "pkg-name": "eu.darken.sdmse",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SonyMusic-bearinmindcat": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "app-name": "Sony Music",
+        "pkg-name": "com.sonyericsson.music",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Spotify-pablobaro": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "pablobaro/pablobaro-morphe-patches",
+        "brand": "pablobaro",
+        "app-name": "Spotify",
+        "pkg-name": "com.spotify.music",
+        "included-patches": "'Disable ad breaks' 'Hide ad views' 'Hide context menu upsells'",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "SwampAttack-byehi98": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "byehi98/okish-morphe-patches",
+        "brand": "byehi98",
+        "app-name": "Swamp Attack",
+        "pkg-name": "com.outfit7.movingeye.swampattack",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "SwampAttack2-byehi98": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "byehi98/okish-morphe-patches",
+        "brand": "byehi98",
+        "app-name": "Swamp Attack 2",
+        "pkg-name": "com.hyperdotstudios.swampattack2",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
