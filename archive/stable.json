@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-14T06:30:27Z"
+    "publishedAt": "2026-11-14T12:18:21Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -6107,16 +6107,16 @@
       "subVariant": null,
       "packageName": "com.llamalab.automate",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.12.0.mpp"
+        "BholeyKaBhakt/patches-2.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
       ],
       "appliedPatches": [
-        "Bypass Blocks Limit "
+        "Bypass Blocks Limit"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T13:08:23Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "automate-bholeykabhakt-module-v1.51.1-arm64-v8a.zip": {
       "name": "automate-bholeykabhakt",
@@ -6131,16 +6131,16 @@
       "subVariant": null,
       "packageName": "com.llamalab.automate",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.12.0.mpp"
+        "BholeyKaBhakt/patches-2.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
       ],
       "appliedPatches": [
-        "Bypass Blocks Limit "
+        "Bypass Blocks Limit"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T13:08:23Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "automate-bholeykabhakt-v1.51.1-arm-v7a.apk": {
       "name": "automate-bholeykabhakt",
@@ -6155,16 +6155,16 @@
       "subVariant": null,
       "packageName": "com.llamalab.automate",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.12.0.mpp"
+        "BholeyKaBhakt/patches-2.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
       ],
       "appliedPatches": [
-        "Bypass Blocks Limit "
+        "Bypass Blocks Limit"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T13:08:23Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "automate-bholeykabhakt-v1.51.1-arm64-v8a.apk": {
       "name": "automate-bholeykabhakt",
@@ -6179,16 +6179,16 @@
       "subVariant": null,
       "packageName": "com.llamalab.automate",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.12.0.mpp"
+        "BholeyKaBhakt/patches-2.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
       ],
       "appliedPatches": [
-        "Bypass Blocks Limit "
+        "Bypass Blocks Limit"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T13:08:23Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "autosync-bholeykabhakt-v7.5.10-arm64-v8a.apk": {
       "name": "autosync-bholeykabhakt",
@@ -7257,58 +7257,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T10:42:38Z"
-    },
-    "microsoft-edge-quantavil-v151.0.4129.70-arm-v7a.apk": {
-      "name": "microsoft-edge-quantavil",
-      "version": "151.0.4129.70",
-      "appKey": "microsoftedge",
-      "appName": "Microsoft Edge",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "quantavil",
-      "brandName": "quantavil",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.microsoft.emmx",
-      "patchSources": [
-        "quantavil/patches-1.35.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.35.0"
-      ],
-      "appliedPatches": [
-        "Copilot feature toggle ",
-        "Disable news notifications ",
-        "Telemetry elimination "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T08:45:24Z"
-    },
-    "microsoft-edge-quantavil-v151.0.4129.70-arm64-v8a.apk": {
-      "name": "microsoft-edge-quantavil",
-      "version": "151.0.4129.70",
-      "appKey": "microsoftedge",
-      "appName": "Microsoft Edge",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "quantavil",
-      "brandName": "quantavil",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.microsoft.emmx",
-      "patchSources": [
-        "quantavil/patches-1.35.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/quantavil/edge-morphe-patches/releases/tag/v1.35.0"
-      ],
-      "appliedPatches": [
-        "Copilot feature toggle ",
-        "Disable news notifications ",
-        "Telemetry elimination "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T08:45:24Z"
     },
     "money-manager-hooman-v4.11.1GF-arm-v7a.apk": {
       "name": "money-manager-hooman",
@@ -8453,16 +8401,16 @@
       "subVariant": null,
       "packageName": "com.vpn.free.hotspot.secure.vpnify",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.12.0.mpp"
+        "BholeyKaBhakt/patches-2.13.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.12.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
       ],
       "appliedPatches": [
-        "Unlock Premium "
+        "Unlock Premium"
       ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T13:08:23Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "youtube-anddea-mocha-theme-module-v20.51.39-arm-v7a.zip": {
       "name": "youtube-anddea-mocha-theme",
@@ -12159,17 +12107,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12184,17 +12132,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -16910,10 +16858,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16926,8 +16874,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -16942,10 +16890,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16958,8 +16906,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -18236,10 +18184,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -18253,8 +18201,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -18269,10 +18217,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -18286,8 +18234,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "google-photos-akashsriram-unclone-v7.98.0.1001971222-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -18784,16 +18732,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -18808,16 +18756,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -18832,16 +18780,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "tiktok-kveld9-v47.5.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
@@ -21201,10 +21149,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21223,8 +21171,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -22572,10 +22520,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22590,8 +22538,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -22606,10 +22554,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22624,8 +22572,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -22814,18 +22762,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -23290,10 +23238,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -23301,8 +23249,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -23317,10 +23265,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -23339,8 +23287,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "xiaomi-recorder-bearinmindcat-v7.7.9-all.apk": {
       "name": "xiaomi-recorder-bearinmindcat",
@@ -26402,10 +26350,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -26418,8 +26366,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -26434,10 +26382,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.78.0.mpp"
+        "hxreborn/patches-1.78.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.78.1"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -26450,8 +26398,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -27802,19 +27750,21 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.49.0.mpp"
+        "byehi98/patches-1.50.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.49.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.50.0"
       ],
       "appliedPatches": [
+        "Swift Backup Cloud Backup Without Sign-In",
+        "Swift Backup Local Account Backup",
         "Swift Backup Local Cloud Metadata",
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260500",
-      "publishedAt": "2026-11-10T02:43:28Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "swift-backup-byehi98-v5.1.1-arm-v7a.apk": {
       "name": "swift-backup-byehi98",
@@ -27829,19 +27779,21 @@
       "subVariant": null,
       "packageName": "org.swiftapps.swiftbackup",
       "patchSources": [
-        "byehi98/patches-1.49.0.mpp"
+        "byehi98/patches-1.50.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.49.0"
+        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.50.0"
       ],
       "appliedPatches": [
+        "Swift Backup Cloud Backup Without Sign-In",
+        "Swift Backup Local Account Backup",
         "Swift Backup Local Cloud Metadata",
         "Swift Backup Premium Unlock",
         "Swift Backup Tamper Protection",
         "Swift Backup Web Login"
       ],
-      "originBuild": "260500",
-      "publishedAt": "2026-11-10T02:43:28Z"
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm64-v8a.apk": {
       "name": "tiktok-icysymmetra",
@@ -30951,6 +30903,178 @@
       ],
       "originBuild": "260529",
       "publishedAt": "2026-11-14T06:29:13Z"
+    },
+    "autosync-bholeykabhakt-v7.8.3-arm64-v8a.apk": {
+      "name": "autosync-bholeykabhakt",
+      "version": "7.8.3",
+      "appKey": "autosync",
+      "appName": "Autosync",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.ttxapps.autosync",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "backdrops-bholeykabhakt-v6.6-arm-v7a.apk": {
+      "name": "backdrops-bholeykabhakt",
+      "version": "6.6",
+      "appKey": "backdrops",
+      "appName": "Backdrops",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.backdrops.wallpapers",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "backdrops-bholeykabhakt-v6.6-arm64-v8a.apk": {
+      "name": "backdrops-bholeykabhakt",
+      "version": "6.6",
+      "appKey": "backdrops",
+      "appName": "Backdrops",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.backdrops.wallpapers",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "inshorts-bholeykabhakt-v6.13.04-arm64-v8a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.13.04",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "inshorts-bholeykabhakt-v6.13.04-arm-v7a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.13.04",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "speedtest-bholeykabhakt-v7.1.4-arm64-v8a.apk": {
+      "name": "speedtest-bholeykabhakt",
+      "version": "7.1.4",
+      "appKey": "speedtest",
+      "appName": "Speedtest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.zwanoo.android.speedtest",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "AdFree Account",
+        "Disable Logging(analytics)"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
+    },
+    "speedtest-bholeykabhakt-v7.1.4-arm-v7a.apk": {
+      "name": "speedtest-bholeykabhakt",
+      "version": "7.1.4",
+      "appKey": "speedtest",
+      "appName": "Speedtest",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.zwanoo.android.speedtest",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.13.0"
+      ],
+      "appliedPatches": [
+        "AdFree Account",
+        "Disable Logging(analytics)"
+      ],
+      "originBuild": "260531",
+      "publishedAt": "2026-11-14T12:17:27Z"
     }
   }
 }
