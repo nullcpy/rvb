@@ -1,0 +1,10 @@
+[RidmikKeyboard-hxreborn]
+enabled = true
+pkg-name = "ridmik.keyboard"
+app-name = "Ridmik Keyboard"
+brand = "hxreborn"
+arch = "all"
+patches-source = "hxreborn/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ridmik-labs/ridmik-keyboard"
+uptodown-dlurl = "https://ridmik-keyboard.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/ridmik-keyboard/ridmik.keyboard"
