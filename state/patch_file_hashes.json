@@ -78,7 +78,15 @@
   },
   "bholeykabhakt/revanced-patches-xtra": {
     "beta": {},
-    "stable": {}
+    "stable": {
+      "com.backdrops.wallpapers": "c6a64f6379730ad02fa599b4572fbb83",
+      "com.llamalab.automate": "8f88e7d217de914e2d951b401f9ff22d",
+      "com.nis.app": "f8f254b2deae785be8a6e7ed66630baf",
+      "com.ttxapps.autosync": "12c3c23a81740493ee7711e8770940a9",
+      "com.vpn.free.hotspot.secure.vpnify": "1e62d2c7fc13fe007adbd13f211ec462",
+      "org.zwanoo.android.speedtest": "ca77b2100f20f403b26630eb04cfea70",
+      "shared": "d4a695998163565512c022c986e1f55e"
+    }
   },
   "brosssh/morphe-patches": {
     "beta": {
@@ -112,8 +120,8 @@
   "byehi98/okish-morphe-patches": {
     "beta": {},
     "stable": {
-      "org.swiftapps.swiftbackup": "373ec74c9b3237d138e023165ed4ebba",
-      "shared": "e372a865701bf6c7ae5ce53387a8956b"
+      "org.swiftapps.swiftbackup": "51ad50d97a1c349fe5459b959fec0726",
+      "shared": "b51059115560ea6c92548a7b1d316782"
     }
   },
   "crimera/piko": {
@@ -207,8 +215,8 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "bef2cdb711726fe69b665215d0072413",
-      "shared": "cc731049083cedc164ae718dd0a8cc1a"
+      "com.truecaller": "8bb14e69efdbdae1445b647e804944c6",
+      "shared": "48abc57a15fcf2f8d33adf011db47dd1"
     },
     "stable": {
       "com.myfitnesspal.android": "844a5ddf0749caa89beec086eb7d173b",
@@ -294,7 +302,7 @@
       "com.alibaba.aliexpresshd": "32528236bde20d8f816104425609542e",
       "com.dubox.drive": "fb795ed75f5183926946c44c4b3a4b5c",
       "com.greenstone.pocketwhip": "e773d03b5b35efdcf35985e3b4dd8a7e",
-      "com.internet.speed.meter.lite": "1bd9bb35bc3f379ac1d8981478dbc2da",
+      "com.internet.speed.meter.lite": "833faae081e2085080c16b069764d335",
       "com.michaldrabik.showly2": "4ccd08128ac8e39ca7163ce5faa55d35",
       "dev.vodik7.atvtools": "1df65aabeef60bf7881e257316a01fa2",
       "in.krosbits.castplugin": "842cb18132f57e9f34b981133196bdb6",
@@ -302,7 +310,7 @@
       "me.proton.android.lumo": "14cd2c6f62aa91cf006fdee22393c800",
       "org.withouthat.acalendar": "e0daf67fdcdde01a3d5453d927237df9",
       "proton.android.pass": "7708e7d57f747dc204aae0e481c97e51",
-      "shared": "6c2da7b408cd2d5cb19cb810e3dc7156"
+      "shared": "48c6c70848fb49e5687f363981fcd722"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -427,10 +435,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "1b3955b3436a31b0a8e5d3c4c0625415",
-      "com.google.android.youtube": "fe2e01e2619720fab2620432ff1fc9d5",
-      "com.reddit.frontpage": "693cfe70d1c7a44b522c3064337d9553",
-      "shared": "4f895125eaa9c8e0ea05385d8413bbb9"
+      "com.google.android.apps.youtube.music": "6d84122ca4d63aa698a77f9a2b7545d5",
+      "com.google.android.youtube": "6724c6fe32f4d324ac95b2287eab340c",
+      "com.reddit.frontpage": "12056505f5b27f55a435ad2a31c1ae92",
+      "shared": "07429c752574f3ab298ee5d5d01b683e"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "208e1dacd9e69e1d6ac02d64e1a6c540",

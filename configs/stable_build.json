@@ -3,7 +3,7 @@
   "Automate-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.llamalab.automate",
     "app-name": "Automate",
     "build-mode": "both",
@@ -13,7 +13,7 @@
   "Speedtest-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.zwanoo.android.speedtest",
     "app-name": "Speedtest",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
@@ -22,7 +22,7 @@
   "Autosync-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ttxapps.autosync",
     "app-name": "Autosync",
     "arch": "arm64-v8a",
@@ -32,7 +32,7 @@
   "Inshorts-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.nis.app",
     "app-name": "Inshorts",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
@@ -41,7 +41,7 @@
   "VPNify-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.vpn.free.hotspot.secure.vpnify",
     "app-name": "VPNify",
     "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
@@ -50,7 +50,7 @@
   "Backdrops-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.backdrops.wallpapers",
     "app-name": "Backdrops",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers",
@@ -353,7 +353,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -605,7 +605,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -619,7 +619,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -631,7 +631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -1313,7 +1313,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "Letterboxd-mvaishak": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -1325,7 +1325,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/letterboxd/com.letterboxd.letterboxd"
   },
   "Letterboxd-mvaishak-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -1741,7 +1741,7 @@
   "MicrosoftEdge-quantavil": {
     "patches-source": "quantavil/edge-morphe-patches",
     "brand": "quantavil",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.microsoft.emmx",
     "app-name": "Microsoft Edge",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/microsoft-corporation/microsoft-edge",
@@ -2404,7 +2404,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2415,7 +2415,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
