@@ -10,6 +10,81 @@
       "run": 43607554267,
       "ts": "2026-11-14T15:02:20Z",
       "cfg": "7394d9ba853e8e52f4ea9b4a2d38e2357a2bff6e"
+    },
+    "Hermit-mwbra130": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "82684df73c89289389893c1c8dfa7ff9bae03fbe"
+    },
+    "Poweramp-mwbra130": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "5ffc5631e365b8c8e241255b25a798408f881a89"
+    },
+    "RidmikKeyboard-hxreborn": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "9db841a8e1eff362b8e6b5792dd6e49f56efdb19"
+    },
+    "SDMaid-kveld9": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "46ae04b1003834083149b38dfe925fc485d7a5d9"
+    },
+    "SonyMusic-bearinmindcat": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "9aae8d893b9f5d8c178c26e8e427a0fb40678507"
+    },
+    "Spotify-pablobaro": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "2a86679908f46f450609259c3527789efd1e645f"
+    },
+    "SwampAttack-byehi98": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "8b75e2f645642829afed10c6b60bd642e685f9b3"
+    },
+    "SwampAttack2-byehi98": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "07d01518ef40483efce5d750ef377e87ed470118"
     }
   },
   "beta": {}

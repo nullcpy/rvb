@@ -79,12 +79,12 @@
   "bholeykabhakt/revanced-patches-xtra": {
     "beta": {},
     "stable": {
-      "com.backdrops.wallpapers": "c6a64f6379730ad02fa599b4572fbb83",
-      "com.llamalab.automate": "8f88e7d217de914e2d951b401f9ff22d",
-      "com.nis.app": "f8f254b2deae785be8a6e7ed66630baf",
-      "com.ttxapps.autosync": "12c3c23a81740493ee7711e8770940a9",
-      "com.vpn.free.hotspot.secure.vpnify": "1e62d2c7fc13fe007adbd13f211ec462",
-      "org.zwanoo.android.speedtest": "ca77b2100f20f403b26630eb04cfea70",
+      "com.backdrops.wallpapers": "900d595170d8b3cdee550235c49d7acb",
+      "com.llamalab.automate": "b1c69dd5adf6f3ae429f7b503fb1d8bf",
+      "com.nis.app": "42c3159d4168c0334144d202495364a4",
+      "com.ttxapps.autosync": "16584fb558a482e48f99209250603f4f",
+      "com.vpn.free.hotspot.secure.vpnify": "e860e8daf886336fa22c1d4392882c05",
+      "org.zwanoo.android.speedtest": "a916d91efb765661498dcda92058e549",
       "shared": "d4a695998163565512c022c986e1f55e"
     }
   },
@@ -315,7 +315,7 @@
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": {
-      "com.zhiliaoapp.musically": "dee0198e38e88285db882a539d86bc2d",
+      "com.zhiliaoapp.musically": "6c493867c535b601f61ff6a9f856b7c4",
       "shared": "ca88f5d913390c9f6a799bfe6f166e72"
     },
     "stable": {
@@ -340,8 +340,8 @@
   "ineednotitle/proteus-patches": {
     "beta": {},
     "stable": {
-      "shared": "22a0c3a6be1402ae6390c3ff9878d486",
-      "tv.trakt.trakt": "fe1d72dfde85af10f3e696a5d54f1121"
+      "shared": "fecba1fd5f36abc5acc5e2590734df79",
+      "tv.trakt.trakt": "3faefe6172813b7587851418c3b1f735"
     }
   },
   "instafel/pc-rel": {
@@ -468,6 +468,13 @@
       "org.telegram.messenger.web": "ef339c5b3af321490258dc438d7d7939",
       "org.telegram.plus": "ef339c5b3af321490258dc438d7d7939",
       "shared": "28852793c8ee778cf991bca994ae43fc"
+    }
+  },
+  "pablobaro/pablobaro-morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.spotify.music": "b15e78e1c498086010254641a2033e7e",
+      "shared": "9d6ba55976c4ed752bd7d69c6be19179"
     }
   },
   "paresh-maheshwari/paresh-patches": {

@@ -3,7 +3,7 @@
   "Automate-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.llamalab.automate",
     "app-name": "Automate",
     "build-mode": "both",
@@ -13,7 +13,7 @@
   "Speedtest-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.zwanoo.android.speedtest",
     "app-name": "Speedtest",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
@@ -22,7 +22,7 @@
   "Autosync-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.ttxapps.autosync",
     "app-name": "Autosync",
     "arch": "arm64-v8a",
@@ -32,7 +32,7 @@
   "Inshorts-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.nis.app",
     "app-name": "Inshorts",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
@@ -50,7 +50,7 @@
   "Backdrops-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.backdrops.wallpapers",
     "app-name": "Backdrops",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers",
@@ -712,6 +712,30 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
+  "Hermit-Lain": {
+    "enabled": false,
+    "pkg-name": "com.chimbori.hermitcrab",
+    "app-name": "Hermit",
+    "patch-folder": "hermit",
+    "brand": "Lain",
+    "patches-source": "kiraio-moe/Lain-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser",
+    "uptodown-dlurl": "https://hermit.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab",
+    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+  },
+  "Hermit-mwbra130": {
+    "enabled": true,
+    "pkg-name": "com.chimbori.hermitcrab",
+    "app-name": "Hermit",
+    "patch-folder": "hermit",
+    "brand": "mwbra130",
+    "patches-source": "mwbra130/Retro-Bowl-College",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser",
+    "uptodown-dlurl": "https://hermit.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab",
+    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
+  },
   "FairEmail-heval99": {
     "enabled": false,
     "pkg-name": "eu.faircode.email",
@@ -973,18 +997,6 @@
     "app-name": "Money Manager",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/realbyte-inc/money-manager-expense-budget",
     "uptodown-dlurl": "https://money-manager.en.uptodown.com/android"
-  },
-  "Poweramp-hooman": {
-    "patches-source": "arandomhooman/hoomans-morphe-patches",
-    "brand": "hooman",
-    "enabled": false,
-    "pkg-name": "com.maxmpz.audioplayer",
-    "app-name": "Poweramp",
-    "arch": "all",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/max-mp/poweramp",
-    "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer",
-    "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "AT4KLauncher-hooman-AndroidTV": {
     "patches-source": "arandomhooman/hoomans-morphe-patches",
@@ -1300,18 +1312,6 @@
     "github-dlurl": "https://github.com/brave/brave-browser",
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
-  "Hermit-Lain": {
-    "patches-source": "kiraio-moe/Lain-Patches",
-    "brand": "Lain",
-    "enabled": false,
-    "pkg-name": "com.chimbori.hermitcrab",
-    "app-name": "Hermit",
-    "patch-folder": "hermit",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chimbori/hermit-lite-apps-browser",
-    "uptodown-dlurl": "https://hermit.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/hermit-%E2%80%94-lite-apps-browser/com.chimbori.hermitcrab",
-    "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
-  },
   "Letterboxd-mvaishak": {
     "enabled": false,
     "pkg-name": "com.letterboxd.letterboxd",
@@ -1538,19 +1538,6 @@
     "apkpure-dlurl": "https://apkpure.com/ticktick-to-do-list-calendar/com.ticktick.task",
     "apkcombo-dlurl": "https://apkcombo.com/ticktick/com.ticktick.task"
   },
-  "SDMaid-Paresh": {
-    "patches-source": "Paresh-Maheshwari/paresh-patches",
-    "patches-source-host": "gitlab",
-    "brand": "Paresh",
-    "enabled": false,
-    "pkg-name": "eu.darken.sdmse",
-    "app-name": "SD Maid 2/SE",
-    "patch-folder": "sdmaidse",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner",
-    "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse",
-    "apkcombo-dlurl": "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
-  },
   "Fing-Paresh": {
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
@@ -1637,6 +1624,30 @@
     "uptodown-dlurl": "https://pixiv.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/pixiv/jp.pxv.android",
     "apkcombo-dlurl": "https://apkcombo.com/pixiv/jp.pxv.android"
+  },
+  "Poweramp-hooman": {
+    "enabled": false,
+    "pkg-name": "com.maxmpz.audioplayer",
+    "app-name": "Poweramp",
+    "brand": "hooman",
+    "arch": "all",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/max-mp/poweramp",
+    "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer",
+    "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+  },
+  "Poweramp-mwbra130": {
+    "enabled": true,
+    "pkg-name": "com.maxmpz.audioplayer",
+    "app-name": "Poweramp",
+    "brand": "mwbra130",
+    "arch": "all",
+    "patches-source": "mwbra130/Retro-Bowl-College",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/max-mp/poweramp",
+    "uptodown-dlurl": "https://poweramp-music-player.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer",
+    "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "ChessDotCom-Prathxm": {
     "patches-source": "PrathxmOp/Prathxm-Patches",
@@ -1795,6 +1806,17 @@
     "patches-source": "XBadFellaX/BadFella-Patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/simha-software/remote-for-android-tv",
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
+  },
+  "RidmikKeyboard-hxreborn": {
+    "enabled": true,
+    "pkg-name": "ridmik.keyboard",
+    "app-name": "Ridmik Keyboard",
+    "brand": "hxreborn",
+    "arch": "all",
+    "patches-source": "hxreborn/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/ridmik-labs/ridmik-keyboard",
+    "uptodown-dlurl": "https://ridmik-keyboard.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/ridmik-keyboard/ridmik.keyboard"
   },
   "CapCut-riky": {
     "patches-source": "riky-dev/morphe-patches",
@@ -2018,6 +2040,30 @@
     "uptodown-dlurl": "https://serverauditor.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/termius-modern-ssh-client/com.server.auditor.ssh.client"
   },
+  "SDMaid-Paresh": {
+    "enabled": false,
+    "pkg-name": "eu.darken.sdmse",
+    "app-name": "SD Maid 2/SE",
+    "patch-folder": "sdmaidse",
+    "brand": "Paresh",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "patches-source-host": "gitlab",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner",
+    "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse",
+    "apkcombo-dlurl": "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+  },
+  "SDMaid-kveld9": {
+    "enabled": true,
+    "pkg-name": "eu.darken.sdmse",
+    "app-name": "SD Maid 2/SE",
+    "brand": "kveld9",
+    "patches-source": "kveld9/kveld-extra-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/darken/sd-maid-2-se-system-cleaner",
+    "uptodown-dlurl": "https://sd-maid-se.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse",
+    "apkcombo-dlurl": "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
+  },
   "KineStop-ShaunTheSheep": {
     "patches-source": "shaun-the-sheep-patches/morphe-patches",
     "brand": "ShaunTheSheep",
@@ -2036,6 +2082,17 @@
     "app-name": "Rikardo Nemlopot",
     "arch": "all",
     "apkpure-dlurl": "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
+  },
+  "SonyMusic-bearinmindcat": {
+    "enabled": true,
+    "pkg-name": "com.sonyericsson.music",
+    "app-name": "Sony Music",
+    "brand": "bearinmindcat",
+    "arch": "all",
+    "patches-source": "bearinmindcat/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/sony-corporation/walkman-music",
+    "uptodown-dlurl": "https://sony-mobile-music.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/music/com.sonyericsson.music"
   },
   "SoundCloud-hoodles": {
     "enabled": false,
@@ -2070,6 +2127,38 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts",
     "uptodown-dlurl": "https://spotify.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
+  },
+  "Spotify-pablobaro": {
+    "enabled": true,
+    "pkg-name": "com.spotify.music",
+    "app-name": "Spotify",
+    "patches-source": "pablobaro/pablobaro-morphe-patches",
+    "brand": "pablobaro",
+    "included-patches": "'Disable ad breaks' 'Hide ad views' 'Hide context menu upsells'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/spotify-ab/spotify-music-podcasts",
+    "uptodown-dlurl": "https://spotify.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
+  },
+  "SwampAttack-byehi98": {
+    "enabled": true,
+    "pkg-name": "com.outfit7.movingeye.swampattack",
+    "app-name": "Swamp Attack",
+    "brand": "byehi98",
+    "arch": "all",
+    "patches-source": "byehi98/okish-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/moving-eye/swamp-attack",
+    "uptodown-dlurl": "https://swamp-attack.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
+  },
+  "SwampAttack2-byehi98": {
+    "enabled": true,
+    "pkg-name": "com.hyperdotstudios.swampattack2",
+    "app-name": "Swamp Attack 2",
+    "brand": "byehi98",
+    "arch": "all",
+    "patches-source": "byehi98/okish-morphe-patches",
+    "uptodown-dlurl": "https://swamp-attack-2.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
   },
   "Telegram-Aunali321-GooglePlay": {
     "enabled": false,
@@ -2269,7 +2358,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
   "TraktTV-Proteus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.trakt.trakt",
     "app-name": "trakt.TV",
     "brand": "Proteus",
