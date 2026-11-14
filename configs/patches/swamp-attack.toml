@@ -9,6 +9,16 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/moving-eye/swamp-attack"
 uptodown-dlurl = "https://swamp-attack.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
 
+[SwampAttack2-byehi98]
+enabled = true
+pkg-name = "com.hyperdotstudios.swampattack2"
+app-name = "Swamp Attack 2"
+brand = "byehi98"
+arch = "all"
+patches-source = "byehi98/okish-morphe-patches"
+uptodown-dlurl = "https://swamp-attack-2.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
+
 
 
 
