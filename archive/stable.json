@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-13T22:16:20Z"
+    "publishedAt": "2026-11-14T00:56:57Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -13335,58 +13335,6 @@
       ],
       "originBuild": "260256",
       "publishedAt": "2026-10-12T12:58:01Z"
-    },
-    "calorie-counter-kondratjev-v11.8.1.1-arm64-v8a.apk": {
-      "name": "calorie-counter-kondratjev",
-      "version": "11.8.1.1",
-      "appKey": "caloriecounter",
-      "appName": "Calorie Counter",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "kondratjev",
-      "brandName": "kondratjev",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.fatsecret.android",
-      "patchSources": [
-        "kondratjev/patches-1.27.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.27.0"
-      ],
-      "appliedPatches": [
-        "Disable community tab",
-        "Disable force update dialog",
-        "Unlock Premium"
-      ],
-      "originBuild": "260228",
-      "publishedAt": "2026-10-09T18:48:18Z"
-    },
-    "calorie-counter-kondratjev-v11.8.1.1-arm-v7a.apk": {
-      "name": "calorie-counter-kondratjev",
-      "version": "11.8.1.1",
-      "appKey": "caloriecounter",
-      "appName": "Calorie Counter",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "kondratjev",
-      "brandName": "kondratjev",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.fatsecret.android",
-      "patchSources": [
-        "kondratjev/patches-1.27.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.27.0"
-      ],
-      "appliedPatches": [
-        "Disable community tab",
-        "Disable force update dialog",
-        "Unlock Premium"
-      ],
-      "originBuild": "260228",
-      "publishedAt": "2026-10-09T18:48:18Z"
     },
     "instagram-piko-clone-v447.0.0.55.81-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -30929,6 +30877,124 @@
       ],
       "originBuild": "260526",
       "publishedAt": "2026-11-13T22:15:43Z"
+    },
+    "pinterest-browzomje-v14.44.0-arm-v7a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.44.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Choose startup tab",
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "GmsCore support for Pinterest",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide save for later tooltip",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Keep Home feed",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Repair Firebase registration",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260527",
+      "publishedAt": "2026-11-14T00:56:33Z"
+    },
+    "pinterest-browzomje-v14.44.0-arm64-v8a.apk": {
+      "name": "pinterest-browzomje",
+      "version": "14.44.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "browzomje",
+      "brandName": "browzomje",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "browzomje/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Choose startup tab",
+        "Copy direct link",
+        "Disable AppsFlyer tracking",
+        "Disable Google Engage",
+        "Disable Google Engage worker",
+        "Disable ads",
+        "Disable email confirmation dialog",
+        "Disable third-party trackers",
+        "Download board",
+        "Download images in highest available quality",
+        "Download pin from long press",
+        "Download video",
+        "Filter pin menu actions",
+        "GmsCore support for Pinterest",
+        "Hide Create nav button",
+        "Hide Notifications nav button",
+        "Hide Search nav button",
+        "Hide ad views",
+        "Hide comments",
+        "Hide greeting header buttons",
+        "Hide save for later tooltip",
+        "Hide screenshot share menu",
+        "Hide search history",
+        "Keep Home feed",
+        "Morphe runtime names",
+        "Morphe settings entry",
+        "Morphe settings screen (label)",
+        "Morphe settings screen (manifest)",
+        "Neutralize advertising ID",
+        "Open links in the default browser",
+        "Repair Firebase registration",
+        "Sanitize copied links",
+        "Sanitize shared links",
+        "Set pin as wallpaper",
+        "Show pin image information",
+        "Use the system share sheet"
+      ],
+      "originBuild": "260527",
+      "publishedAt": "2026-11-14T00:56:33Z"
     }
   }
 }
