@@ -3,7 +3,7 @@
   "Automate-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.llamalab.automate",
     "app-name": "Automate",
     "build-mode": "both",
@@ -13,7 +13,7 @@
   "Speedtest-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.zwanoo.android.speedtest",
     "app-name": "Speedtest",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
@@ -22,7 +22,7 @@
   "Autosync-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ttxapps.autosync",
     "app-name": "Autosync",
     "arch": "arm64-v8a",
@@ -32,7 +32,7 @@
   "Inshorts-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.nis.app",
     "app-name": "Inshorts",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
@@ -41,7 +41,7 @@
   "VPNify-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.vpn.free.hotspot.secure.vpnify",
     "app-name": "VPNify",
     "apkpure-dlurl": "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify",
@@ -50,7 +50,7 @@
   "Backdrops-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.backdrops.wallpapers",
     "app-name": "Backdrops",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers",
@@ -725,7 +725,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "Hermit-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.chimbori.hermitcrab",
     "app-name": "Hermit",
     "patch-folder": "hermit",
@@ -1638,7 +1638,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "Poweramp-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "Poweramp",
     "brand": "mwbra130",
@@ -1808,7 +1808,7 @@
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
   },
   "RidmikKeyboard-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ridmik.keyboard",
     "app-name": "Ridmik Keyboard",
     "brand": "hxreborn",
@@ -2054,7 +2054,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
   },
   "SDMaid-kveld9": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "eu.darken.sdmse",
     "app-name": "SD Maid 2/SE",
     "brand": "kveld9",
@@ -2084,7 +2084,7 @@
     "apkpure-dlurl": "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
   },
   "SonyMusic-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sonyericsson.music",
     "app-name": "Sony Music",
     "brand": "bearinmindcat",
@@ -2129,7 +2129,7 @@
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
   },
   "Spotify-pablobaro": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.spotify.music",
     "app-name": "Spotify",
     "patches-source": "pablobaro/pablobaro-morphe-patches",
@@ -2140,7 +2140,7 @@
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
   },
   "SwampAttack-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.outfit7.movingeye.swampattack",
     "app-name": "Swamp Attack",
     "brand": "byehi98",
@@ -2151,7 +2151,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
   },
   "SwampAttack2-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.hyperdotstudios.swampattack2",
     "app-name": "Swamp Attack 2",
     "brand": "byehi98",
