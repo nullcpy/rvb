@@ -1,0 +1,14 @@
+[SonyMusic-bearinmindcat]
+enabled = true
+pkg-name = "com.sonyericsson.music"
+app-name = "Sony Music"
+brand = "bearinmindcat"
+arch = "all"
+patches-source = "bearinmindcat/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/sony-corporation/walkman-music"
+uptodown-dlurl = "https://sony-mobile-music.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/music/com.sonyericsson.music"
+
+
+
+
