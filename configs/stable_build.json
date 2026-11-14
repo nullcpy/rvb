@@ -1407,7 +1407,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook-messenger/com.facebook.orca"
   },
   "Messenger-HushMessenger": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.orca",
     "app-name": "Messenger",
     "patches-source": "SysAdminDoc/HushMessenger",
@@ -1579,7 +1579,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pinterest/com.pinterest"
   },
   "Pinterest-HushPinterest": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "SysAdminDoc/HushPinterest",
@@ -2358,7 +2358,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
   "TraktTV-Proteus": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.trakt.trakt",
     "app-name": "trakt.TV",
     "brand": "Proteus",
