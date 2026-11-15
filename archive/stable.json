@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-14T20:59:34Z"
+    "publishedAt": "2026-11-15T00:04:49Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -13001,10 +13001,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13039,8 +13039,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-maps-bearinmindcat-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -13055,10 +13055,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -13093,8 +13093,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "fairemail-heval99-v1.2338-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -16255,10 +16255,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16292,8 +16292,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-maps-bearinmindcat-module-v26.36.04.973607363-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -16308,10 +16308,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16345,8 +16345,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "rikardo-nemlopot-smart123s-v2.077-all.apk": {
       "name": "rikardo-nemlopot-smart123s",
@@ -16389,10 +16389,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16429,8 +16429,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -16445,10 +16445,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16485,8 +16485,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -16501,10 +16501,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16540,8 +16540,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.36.04.973607363-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -16556,10 +16556,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.7.mpp"
+        "bearinmindcat/patches-2.9.8.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.7"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.8"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -16595,8 +16595,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260529",
-      "publishedAt": "2026-11-14T06:29:13Z"
+      "originBuild": "260537",
+      "publishedAt": "2026-11-15T00:04:14Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.0.3.954559732-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -21220,95 +21220,6 @@
       "appliedPatches": [
         "Enable Pro",
         "Remove Update Prompt"
-      ],
-      "originBuild": "260427",
-      "publishedAt": "2026-10-31T17:47:02Z"
-    },
-    "messenger-hushmessenger-v585.0.0.53.94-arm64-v8a.apk": {
-      "name": "messenger-hushmessenger",
-      "version": "585.0.0.53.94",
-      "appKey": "messenger",
-      "appName": "Messenger",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushmessenger",
-      "brandName": "HushMessenger",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.facebook.orca",
-      "patchSources": [
-        "SysAdminDoc/patches-0.28.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushMessenger/releases/tag/v0.28.0"
-      ],
-      "appliedPatches": [
-        "Allow chat bubbles",
-        "Allow screenshots",
-        "Android Auto messages",
-        "Auto reply",
-        "Bold and italic text",
-        "Fix videos that won't send",
-        "Hide AI sticker tools",
-        "Hide Chat Moments",
-        "Hide Facebook shortcuts",
-        "Hide Mark as read",
-        "Hide Meta AI",
-        "Hide Notifications tab",
-        "Hide People You May Know",
-        "Hide People tab",
-        "Hide Reels badge",
-        "Hide Your story when sharing",
-        "Hide ad banners in business chats",
-        "Hide avatar stickers",
-        "Hide business reply suggestions",
-        "Hide business typing suggestions",
-        "Hide chat promotions",
-        "Hide event prompts",
-        "Hide friend request cards",
-        "Hide growth prompts",
-        "Hide inbox promotions",
-        "Hide inbox tabs",
-        "Hide joined community chats",
-        "Hide read receipts",
-        "Hide stories and notes",
-        "Hide tab badges",
-        "Hide the Instants button",
-        "Hide the recent photo card",
-        "Hide typing indicator",
-        "Hold stories at the end",
-        "Ignore the swipe up for disappearing messages",
-        "Install beside Meta apps",
-        "Keep a message log",
-        "Keep emoji search on emoji",
-        "Keep unsent messages",
-        "Mark as read button",
-        "Material You theme",
-        "Open settings from menu",
-        "Open web links externally",
-        "Open your gallery app",
-        "Pin more chats",
-        "Put gallery picks in the chat",
-        "Quiet incoming calls",
-        "Restore old emoji drawer",
-        "Restore screens on re-signed builds",
-        "Save any story",
-        "Save voice messages you play",
-        "Send photos at original quality",
-        "Send videos without re-encoding",
-        "Slide chats in and out",
-        "Square profile pictures",
-        "Stop ad attribution uploads",
-        "Stop analytics uploads",
-        "Stop app list and device ID sharing",
-        "Stop inbox and ad link logging",
-        "Stop live connection logging",
-        "Stop nearby scans",
-        "Unlock app icons",
-        "Use system emoji",
-        "Use the phone's camera app",
-        "Use your own font",
-        "View stories anonymously"
       ],
       "originBuild": "260427",
       "publishedAt": "2026-10-31T17:47:02Z"
