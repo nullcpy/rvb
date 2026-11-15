@@ -470,7 +470,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -481,7 +481,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -527,7 +527,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -606,7 +606,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -620,7 +620,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -632,7 +632,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -727,7 +727,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "Hermit-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.chimbori.hermitcrab",
     "app-name": "Hermit",
     "patch-folder": "hermit",
@@ -1281,7 +1281,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "Kick-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1640,7 +1640,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "Poweramp-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "Poweramp",
     "brand": "mwbra130",
@@ -1841,7 +1841,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
@@ -2437,7 +2437,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
@@ -2495,7 +2495,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
