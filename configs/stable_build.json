@@ -470,7 +470,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/titanium-browser/io.github.jqssun.helium"
   },
   "Discord-revenge": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "revenge",
@@ -481,7 +481,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/discord/com.discord"
   },
   "Discord-rain": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.discord",
     "app-name": "Discord",
     "brand": "rain",
@@ -527,7 +527,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -727,7 +727,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "Hermit-mwbra130": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.chimbori.hermitcrab",
     "app-name": "Hermit",
     "patch-folder": "hermit",
@@ -1640,7 +1640,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "Poweramp-mwbra130": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "Poweramp",
     "brand": "mwbra130",
@@ -2495,7 +2495,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
