@@ -4049,6 +4049,38 @@
         "arch": "both",
         "build-mode": "both"
       }
+    },
+    "GooglePhotos-AkashSriram": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Akash-Sriram/morphe-google-photos",
+        "brand": "AkashSriram",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "GooglePhotos-AkashSriram-Unclone": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "Akash-Sriram/morphe-google-photos",
+        "brand": "AkashSriram",
+        "variant": "Unclone",
+        "app-name": "Google Photos",
+        "pkg-name": "com.google.android.apps.photos",
+        "included-patches": "'Official package name'",
+        "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
+        "arch": "both",
+        "build-mode": "apk"
+      }
     }
   }
 }
