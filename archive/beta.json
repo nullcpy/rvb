@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-15T12:35:20Z"
+    "publishedAt": "2026-11-15T15:42:47Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -6443,147 +6443,6 @@
       "originBuild": "260495",
       "publishedAt": "2026-11-09T13:41:45Z"
     },
-    "youtube-music-morphe-experimental-module-v9.44.52-arm64-v8a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.44.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
-    },
-    "youtube-music-morphe-experimental-v9.44.52-arm64-v8a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.44.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0-dev.11.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.11"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260468",
-      "publishedAt": "2026-11-05T13:03:39Z"
-    },
     "truecaller-heval99-module-v26.43.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
       "version": "26.43.5",
@@ -8374,6 +8233,176 @@
       ],
       "originBuild": "260539",
       "publishedAt": "2026-11-15T12:34:29Z"
+    },
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
+    },
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
+    },
+    "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
+    },
+    "google-photos-akashsriram-module-v7.99.0.1007655401-arm-v7a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
+    },
+    "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a.apk": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
+    },
+    "google-photos-akashsriram-module-v7.99.0.1007655401-arm64-v8a.zip": {
+      "name": "google-photos-akashsriram",
+      "version": "7.99.0.1007655401",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0-dev.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0-dev.8"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features"
+      ],
+      "originBuild": "260542",
+      "publishedAt": "2026-11-15T15:42:14Z"
     }
   }
 }
