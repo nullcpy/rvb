@@ -320,7 +320,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -605,7 +605,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -619,7 +619,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -631,7 +631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -2084,7 +2084,7 @@
     "apkpure-dlurl": "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
   },
   "SonyMusic-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sonyericsson.music",
     "app-name": "Sony Music",
     "brand": "bearinmindcat",
