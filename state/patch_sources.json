@@ -63,8 +63,8 @@
     "stable_date": "2026-11-07T15:02:12Z"
   },
   "MorpheApp/morphe-patches": {
-    "beta": "v2.3.0-dev.5",
-    "beta_date": "2026-11-14T09:51:20Z",
+    "beta": "v2.3.0-dev.7",
+    "beta_date": "2026-11-15T11:13:07Z",
     "blocked": false,
     "host": "github",
     "repo": "MorpheApp/morphe-patches",
@@ -179,6 +179,15 @@
     "stable": "v0.0.14",
     "stable_date": "2026-11-14T19:25:47Z"
   },
+  "SysAdminDoc/HushTelegram": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": false,
+    "host": "github",
+    "repo": "SysAdminDoc/HushTelegram",
+    "stable": "v0.0.25",
+    "stable_date": "2026-11-12T17:17:57Z"
+  },
   "SysAdminDoc/HushThreads": {
     "beta": "",
     "beta_date": "",
@@ -243,8 +252,8 @@
     "stable_date": "2026-09-28T12:26:39Z"
   },
   "andrewliang25/morphe-patches": {
-    "beta": "v3.12.0-dev.3",
-    "beta_date": "2026-11-14T14:23:00Z",
+    "beta": "v3.12.0-dev.7",
+    "beta_date": "2026-11-15T12:14:40Z",
     "blocked": false,
     "host": "github",
     "repo": "andrewliang25/morphe-patches",
@@ -450,13 +459,13 @@
     "stable_date": "2026-09-27T18:29:23Z"
   },
   "hxreborn/morphe-patches": {
-    "beta": "v1.79.0-dev.5",
-    "beta_date": "2026-11-14T14:31:37Z",
+    "beta": "v1.79.0-dev.7",
+    "beta_date": "2026-11-15T07:42:00Z",
     "blocked": false,
     "host": "github",
     "repo": "hxreborn/morphe-patches",
-    "stable": "v1.78.1",
-    "stable_date": "2026-11-14T10:46:23Z"
+    "stable": "v1.79.0",
+    "stable_date": "2026-11-15T07:52:45Z"
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": "v0.11.0-dev.7",

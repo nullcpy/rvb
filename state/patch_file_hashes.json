@@ -298,20 +298,21 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "179edb2b279d43b3b3ff624dae121e59",
-      "ch.protonvpn.android": "694731a36a683a3eb61495c75265fdd4",
-      "com.alibaba.aliexpresshd": "32528236bde20d8f816104425609542e",
-      "com.dubox.drive": "fb795ed75f5183926946c44c4b3a4b5c",
-      "com.greenstone.pocketwhip": "e773d03b5b35efdcf35985e3b4dd8a7e",
-      "com.internet.speed.meter.lite": "833faae081e2085080c16b069764d335",
-      "com.michaldrabik.showly2": "4ccd08128ac8e39ca7163ce5faa55d35",
-      "dev.vodik7.atvtools": "1df65aabeef60bf7881e257316a01fa2",
-      "in.krosbits.castplugin": "842cb18132f57e9f34b981133196bdb6",
-      "in.krosbits.musicolet": "3617e38d462c61003c0a8c2efde56fe0",
-      "me.proton.android.lumo": "14cd2c6f62aa91cf006fdee22393c800",
-      "org.withouthat.acalendar": "e0daf67fdcdde01a3d5453d927237df9",
-      "proton.android.pass": "7708e7d57f747dc204aae0e481c97e51",
-      "shared": "48c6c70848fb49e5687f363981fcd722"
+      "ch.protonmail.android": "6277989edbe8af7a5ff7dd80534b8d34",
+      "ch.protonvpn.android": "bb4dfd1a0204c6e069dae2d69f6adf49",
+      "com.alibaba.aliexpresshd": "22ab3e39f21a5be141be53771bfe1d73",
+      "com.dubox.drive": "be0906a484e494caa167a81182344bc4",
+      "com.greenstone.pocketwhip": "c0c1acf7648d330ec0f53b43df8e5bb0",
+      "com.internet.speed.meter.lite": "d6a5e6db6e0d026e6e77af2db2fd29ec",
+      "com.michaldrabik.showly2": "aceb482afae3146ba1882bc9856392dc",
+      "dev.vodik7.atvtools": "cae887468b3a11b1e7fb0e9e98eb9d76",
+      "in.krosbits.castplugin": "869f7394e5a6b3c80a0019645ce7402f",
+      "in.krosbits.musicolet": "d4251c18d37eb4ea6b3c73b750ff300b",
+      "me.proton.android.lumo": "2af9c4f0f3309c3e6abb46a89b0a17c3",
+      "org.withouthat.acalendar": "498113413ccb074e15aca26406355f2c",
+      "proton.android.pass": "39c359d0f0e323ebd6287d120d3601d6",
+      "ridmik.keyboard": "a68672e3aa527eb65bc911dc051c5373",
+      "shared": "77f826c31a8d680e21013f572da69183"
     }
   },
   "icysymmetra/tiktok-patches-for-morphe": {
@@ -436,10 +437,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "6d84122ca4d63aa698a77f9a2b7545d5",
-      "com.google.android.youtube": "6724c6fe32f4d324ac95b2287eab340c",
+      "com.google.android.apps.youtube.music": "33c13e2d62913c77d71fc630a16466b0",
+      "com.google.android.youtube": "f612d6a1a515d4064e2e402a6e39e344",
       "com.reddit.frontpage": "12056505f5b27f55a435ad2a31c1ae92",
-      "shared": "07429c752574f3ab298ee5d5d01b683e"
+      "shared": "e67d4782e89f303c802c4bfbde606221"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "208e1dacd9e69e1d6ac02d64e1a6c540",
@@ -653,9 +654,9 @@
   "sysadmindoc/hushtelegram": {
     "beta": {},
     "stable": {
-      "org.telegram.messenger": "bba4c012bd356ac6ea93c3e63e8d7645",
-      "org.telegram.messenger.web": "bba4c012bd356ac6ea93c3e63e8d7645",
-      "shared": "7ba2d4f19614388c7ee4a39ac7dab2ab"
+      "org.telegram.messenger": "9e555e64e5872ac5586f88ab4dfeaf17",
+      "org.telegram.messenger.web": "879324fd42c0c6d2da1346fba267a56b",
+      "shared": "e25533eba00698df667c1238adacd9e2"
     }
   },
   "sysadmindoc/hushthreads": {
