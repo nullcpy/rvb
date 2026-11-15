@@ -1,14 +1,21 @@
-[ProtonLumo-hxreborn]
+[VPNify-BholeyKaBhakt]
 enabled = true
-pkg-name = "me.proton.android.lumo"
-app-name = "Proton Lumo"
-brand = "hxreborn"
+pkg-name = "com.vpn.free.hotspot.secure.vpnify"
+app-name = "VPNify"
+patches-source = "BholeyKaBhakt/revanced-patches-xtra"
+brand = "BholeyKaBhakt"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy"
+apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
+apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
+
+[Poweramp-mwbra130]
+enabled = true
+pkg-name = "com.maxmpz.audioplayer"
+app-name = "Poweramp"
+brand = "mwbra130"
 arch = "all"
-patches-source = "hxreborn/morphe-patches"
-github-dlurl = "https://github.com/ProtonLumo/android-lumo"
-github-regex = 'lumo-v{version}-release\.apk'
-
-
-
-
-
+patches-source = "mwbra130/Retro-Bowl-College"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
+uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
+apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
