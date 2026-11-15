@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260541",
+    "channel": "stable",
+    "publishedAt": "2026-11-15T13:38:55Z"
+  },
+  "files": {
+    "vpnify-bholeykabhakt-v2.2.9-arm-v7a.apk": {
+      "name": "vpnify-bholeykabhakt",
+      "version": "2.2.9",
+      "appKey": "vpnify",
+      "appName": "VPNify",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.vpn.free.hotspot.secure.vpnify",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.14.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.14.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260541",
+      "publishedAt": "2026-11-15T13:38:55Z"
+    },
+    "vpnify-bholeykabhakt-v2.2.9-arm64-v8a.apk": {
+      "name": "vpnify-bholeykabhakt",
+      "version": "2.2.9",
+      "appKey": "vpnify",
+      "appName": "VPNify",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.vpn.free.hotspot.secure.vpnify",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.14.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.14.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260541",
+      "publishedAt": "2026-11-15T13:38:55Z"
+    }
+  }
+}
