@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-15T15:51:17Z"
+    "publishedAt": "2026-11-15T19:21:29Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -2804,10 +2804,10 @@
       "subVariant": null,
       "packageName": "com.facebook.katana",
       "patchSources": [
-        "andrewliang25/patches-3.11.0.mpp"
+        "andrewliang25/patches-3.12.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.11.0"
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v3.12.0"
       ],
       "appliedPatches": [
         "[Ad] Block ad telemetry",
@@ -2831,8 +2831,8 @@
         "[Stories] Hide sponsored stories",
         "[Stories] View stories anonymously"
       ],
-      "originBuild": "260483",
-      "publishedAt": "2026-11-07T18:05:12Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "pixiv-fripe070-v6.196.0-arm-v7a.apk": {
       "name": "pixiv-fripe070",
@@ -23299,10 +23299,10 @@
       "subVariant": null,
       "packageName": "com.instantbits.cast.webvideo",
       "patchSources": [
-        "mwbra130/patches-1.48.0.mpp"
+        "mwbra130/patches-1.75.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.48.0"
+        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.75.0"
       ],
       "appliedPatches": [
         "Bypass PairIP application checks",
@@ -23311,8 +23311,8 @@
         "Disable PairIP license activity",
         "Unlock premium"
       ],
-      "originBuild": "260453",
-      "publishedAt": "2026-11-03T07:39:27Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "kick-lurk-v40.34.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -30654,16 +30654,16 @@
       "subVariant": null,
       "packageName": "com.chimbori.hermitcrab",
       "patchSources": [
-        "mwbra130/patches-1.73.0.mpp"
+        "mwbra130/patches-1.75.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.73.0"
+        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.75.0"
       ],
       "appliedPatches": [
         "Enable Premium"
       ],
-      "originBuild": "260533",
-      "publishedAt": "2026-11-14T16:54:27Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "hermit-mwbra130-v31.8.0-arm64-v8a.apk": {
       "name": "hermit-mwbra130",
@@ -30678,16 +30678,16 @@
       "subVariant": null,
       "packageName": "com.chimbori.hermitcrab",
       "patchSources": [
-        "mwbra130/patches-1.73.0.mpp"
+        "mwbra130/patches-1.75.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.73.0"
+        "https://github.com/mwbra130/Retro-Bowl-College/releases/tag/v1.75.0"
       ],
       "appliedPatches": [
         "Enable Premium"
       ],
-      "originBuild": "260533",
-      "publishedAt": "2026-11-14T16:54:27Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "ridmik-keyboard-hxreborn-v19.1.2-all.apk": {
       "name": "ridmik-keyboard-hxreborn",
@@ -31509,10 +31509,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31549,8 +31549,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -31565,10 +31565,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31605,8 +31605,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.44.06.1006895251-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -31621,10 +31621,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31660,8 +31660,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -31676,10 +31676,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31715,8 +31715,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-module-v26.44.06.1006895251-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -31731,10 +31731,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31768,8 +31768,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-v26.44.06.1006895251-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -31784,10 +31784,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31822,8 +31822,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -31838,10 +31838,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31876,8 +31876,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     },
     "google-maps-bearinmindcat-module-v26.44.06.1006895251-arm-v7a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -31892,10 +31892,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.9.10.mpp"
+        "bearinmindcat/patches-2.9.11.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.10"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -31929,8 +31929,96 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260543",
-      "publishedAt": "2026-11-15T15:50:49Z"
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
+    },
+    "discord-rain-v354.12-Stable-arm64-v8a.apk": {
+      "name": "discord-rain",
+      "version": "354.12-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
+    },
+    "discord-rain-v354.12-Stable-arm-v7a.apk": {
+      "name": "discord-rain",
+      "version": "354.12-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "rain",
+      "brandName": "rain",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "raincord/app-release.apk"
+      ],
+      "changelogs": [
+        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
+    },
+    "discord-revenge-v354.12-Stable-arm-v7a.apk": {
+      "name": "discord-revenge",
+      "version": "354.12-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
+    },
+    "discord-revenge-v354.12-Stable-arm64-v8a.apk": {
+      "name": "discord-revenge",
+      "version": "354.12-Stable",
+      "appKey": "discord",
+      "appName": "Discord",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "revenge",
+      "brandName": "revenge",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.discord",
+      "patchSources": [
+        "revenge-mod/app-release.apk"
+      ],
+      "changelogs": [
+        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
+      ],
+      "appliedPatches": [],
+      "originBuild": "260544",
+      "publishedAt": "2026-11-15T19:20:49Z"
     }
   }
 }
