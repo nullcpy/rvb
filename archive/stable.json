@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-15T00:04:49Z"
+    "publishedAt": "2026-11-15T06:20:11Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -31376,6 +31376,67 @@
       ],
       "originBuild": "260535",
       "publishedAt": "2026-11-14T20:59:10Z"
+    },
+    "boost-for-reddit-wchill-v1.14.4-all.apk": {
+      "name": "boost-for-reddit-wchill",
+      "version": "1.14.4",
+      "appKey": "boostforreddit",
+      "appName": "Boost For Reddit",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "wchill",
+      "brandName": "wchill",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.rubenmayayo.reddit",
+      "patchSources": [
+        "wchill/patches-2.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/wchill/patcheddit/releases/tag/v2.2.0"
+      ],
+      "appliedPatches": [
+        "Add Boost Search bottom navigation",
+        "Add archive links to context menu",
+        "Anchor Boost Snackbars above bottom navigation",
+        "Animate media in Boost gallery previews",
+        "Auto-load next page after filtered results",
+        "Automatically undelete Imgur images",
+        "Automatically undelete Reddit content",
+        "Boost Morphe settings",
+        "Boost search default discovery",
+        "Configure editor image hosting",
+        "Disable Boost Crashlytics startup network calls",
+        "Fix /r/all",
+        "Fix /s/ links",
+        "Fix Boost FAB nested scroll",
+        "Fix Boost code block rendering",
+        "Fix Boost navigation bar overlap",
+        "Fix Hide crash",
+        "Fix Reddit API lookups",
+        "Fix loading more comments",
+        "Fix profile About scrolling",
+        "Import and export OAuth tokens",
+        "Log exceptions",
+        "Modify login WebView",
+        "Prefer high refresh rate",
+        "Preview images in the editor",
+        "Readable Boost flair labels",
+        "Remove obsolete profile tabs",
+        "Restore Boost sidebar Trending today",
+        "Restore GIF URL insertion",
+        "Show end of feed",
+        "Stabilize Boost subreddit bottom navigation surface",
+        "Standardize Boost Home bottom navigation",
+        "Standardize Boost Inbox and Profile bottom navigation",
+        "Standardize Boost bottom navigation",
+        "Standardize Boost bottom-navigation FAB clearance",
+        "Support keyboard GIF insertion",
+        "Tune Boost image dismissal",
+        "Use Reddit for image uploads"
+      ],
+      "originBuild": "260538",
+      "publishedAt": "2026-11-15T06:20:00Z"
     }
   }
 }
