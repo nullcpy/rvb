@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-16T18:42:12Z"
+    "publishedAt": "2026-11-16T22:56:24Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -1770,10 +1770,10 @@
       "subVariant": null,
       "packageName": "com.netflix.ninja.clone",
       "patchSources": [
-        "ajstrick81/patches-1.53.0.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.53.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Disable Netflix CertCheck",
@@ -1781,8 +1781,8 @@
         "Remove Netflix ads (loader)",
         "Clone Netflix"
       ],
-      "originBuild": "260508",
-      "publishedAt": "2026-11-11T20:00:07Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "prime-video-ajstrick81-android-tv-clone-v6.23.23+v15.5.0.70-armv7a-arm-v7a.apk": {
       "name": "prime-video-ajstrick81-android-tv-clone",
@@ -1826,10 +1826,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -1838,8 +1838,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -2715,18 +2715,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2741,16 +2741,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11837,17 +11837,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -16970,16 +16970,16 @@
       "subVariant": null,
       "packageName": "com.tubitv",
       "patchSources": [
-        "ajstrick81/patches-1.42.3.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.42.3"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Skip ads"
       ],
-      "originBuild": "260347",
-      "publishedAt": "2026-10-23T08:44:38Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "block-blast-imnoammm-v10.8.1-all.apk": {
       "name": "block-blast-imnoammm",
@@ -18953,214 +18953,6 @@
         "Venus button on profile bar",
         "Venus settings",
         "Voice channel options"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "reddit-morphe-experimental-module-v2026.44.0-arm64-v8a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "reddit-morphe-experimental-module-v2026.44.0-arm-v7a.zip": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "reddit-morphe-experimental-v2026.44.0-arm64-v8a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
-      ],
-      "originBuild": "260417",
-      "publishedAt": "2026-10-30T15:18:38Z"
-    },
-    "reddit-morphe-experimental-v2026.44.0-arm-v7a.apk": {
-      "name": "reddit-morphe-experimental",
-      "version": "2026.44.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "MorpheApp/patches-2.0.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.0.0"
-      ],
-      "appliedPatches": [
-        "App icon",
-        "Copy text",
-        "Custom font",
-        "Customize post layout",
-        "Disable modern home",
-        "Disable screenshot popup",
-        "Download location",
-        "Feed media max height",
-        "Force system font",
-        "Full width feed media",
-        "Hide Ask button",
-        "Hide Trending shelves",
-        "Hide ads",
-        "Hide communities shelf",
-        "Hide media viewer components",
-        "Hide navigation buttons",
-        "Hide sidebar components",
-        "Keep feed position",
-        "Media viewer black background",
-        "Media viewer fade",
-        "Open links directly",
-        "Open links externally",
-        "Redgifs audio",
-        "Remember collapsed comments",
-        "Remove subreddit dialog",
-        "Sanitize sharing links",
-        "Show flairs in home feed",
-        "Spoof signature",
-        "Start as guest"
       ],
       "originBuild": "260417",
       "publishedAt": "2026-10-30T15:18:38Z"
@@ -25095,151 +24887,6 @@
       "originBuild": "260475",
       "publishedAt": "2026-11-06T16:01:59Z"
     },
-    "youtube-music-morphe-experimental-v9.44.52-arm64-v8a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.44.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist tags",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SoundProof",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260475",
-      "publishedAt": "2026-11-06T16:01:59Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.44.52-arm64-v8a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.44.52",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.1.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0"
-      ],
-      "appliedPatches": [
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist tags",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SoundProof",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260475",
-      "publishedAt": "2026-11-06T16:01:59Z"
-    },
     "youtube-music-morphe-experimental-v9.44.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
       "version": "9.44.52",
@@ -26449,10 +26096,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -26462,8 +26109,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -28344,17 +27991,17 @@
       "subVariant": null,
       "packageName": "com.univision.prendetv",
       "patchSources": [
-        "ajstrick81/patches-1.52.1.mpp"
+        "ajstrick81/patches-1.55.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.52.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
       ],
       "appliedPatches": [
         "Override certificate pinning",
         "Skip ads"
       ],
-      "originBuild": "260505",
-      "publishedAt": "2026-11-10T21:57:43Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -28369,16 +28016,18 @@
       "subVariant": null,
       "packageName": "com.sofascore.results",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Block marketing notifications",
+        "Clean shared links",
         "Disable Facebook SDK",
         "Disable ads",
         "Disable rating prompts",
+        "Disable screenshot prompt",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -28386,8 +28035,8 @@
         "Spoiler-free mode",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "sofascore-heval99-v26.11.03-arm-v7a.apk": {
       "name": "sofascore-heval99",
@@ -28402,16 +28051,18 @@
       "subVariant": null,
       "packageName": "com.sofascore.results",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Block marketing notifications",
+        "Clean shared links",
         "Disable Facebook SDK",
         "Disable ads",
         "Disable rating prompts",
+        "Disable screenshot prompt",
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
@@ -28419,8 +28070,8 @@
         "Spoiler-free mode",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "truecaller-heval99-v26.44.6-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -28435,10 +28086,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -28462,8 +28113,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "truecaller-heval99-module-v26.44.6-arm-v7a.zip": {
       "name": "truecaller-heval99",
@@ -28478,10 +28129,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -28504,8 +28155,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "truecaller-heval99-module-v26.44.6-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -28520,10 +28171,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -28546,8 +28197,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "truecaller-heval99-v26.44.6-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -28562,10 +28213,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -28589,8 +28240,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "myfitnesspal-heval99-v26.45.0-arm64-v8a.apk": {
       "name": "myfitnesspal-heval99",
@@ -28605,17 +28256,17 @@
       "subVariant": null,
       "packageName": "com.myfitnesspal.android",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable Datadog telemetry",
         "Enable Premium+"
       ],
-      "originBuild": "260516",
-      "publishedAt": "2026-11-12T20:36:31Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "myfitnesspal-heval99-v26.45.0-arm-v7a.apk": {
       "name": "myfitnesspal-heval99",
@@ -28630,17 +28281,17 @@
       "subVariant": null,
       "packageName": "com.myfitnesspal.android",
       "patchSources": [
-        "heval99/patches-2.3.0.mpp"
+        "heval99/patches-3.0.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
       ],
       "appliedPatches": [
         "Disable Datadog telemetry",
         "Enable Premium+"
       ],
-      "originBuild": "260516",
-      "publishedAt": "2026-11-12T20:36:31Z"
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     },
     "tiktok-hushfeed-v47.7.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -32464,6 +32115,118 @@
       ],
       "originBuild": "260551",
       "publishedAt": "2026-11-16T18:41:05Z"
+    },
+    "fairemail-heval99-v1.2341-arm64-v8a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2341",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-3.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
+    },
+    "fairemail-heval99-v1.2341-arm-v7a.apk": {
+      "name": "fairemail-heval99",
+      "version": "1.2341",
+      "appKey": "fairemail",
+      "appName": "FairEmail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "eu.faircode.email",
+      "patchSources": [
+        "heval99/patches-3.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
+      ],
+      "appliedPatches": [
+        "Enable Pro"
+      ],
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
+    },
+    "instagram-instafel-v456.0.0.53.78-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "456.0.0.53.78",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
+    },
+    "instagram-instafel-v456.0.0.53.78-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "456.0.0.53.78",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-b7764c7.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260552",
+      "publishedAt": "2026-11-16T22:55:48Z"
     }
   }
 }
