@@ -17,8 +17,8 @@
   "akash-sriram/morphe-google-photos": {
     "beta": {},
     "stable": {
-      "com.google.android.apps.photos": "62f9dc9d010f67152bc324deefc1a6c0",
-      "shared": "796c2550311378527b1a1c1d14685ff2"
+      "com.google.android.apps.photos": "e605462c67660db4932e16e466c992c2",
+      "shared": "38be9df14e7e796bc4be389a6a7c5618"
     }
   },
   "anddea/revanced-patches": {
@@ -410,15 +410,16 @@
     "beta": {},
     "stable": {
       "com.microsoft.office.word": "d41d8cd98f00b204e9800998ecf8427e",
-      "shared": "547dffc24c525c76b0bc1f5a439f736b"
+      "eu.darken.sdmse": "944f5d8b678f931970a80ece8b4b898f",
+      "shared": "8c596826f8268a84fc743ae41ed37d10"
     }
   },
   "kveld9/kveld-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.brave.browser": "a77fafeacb756f4b4d95810c99344083",
-      "com.zhiliaoapp.musically": "26f23adfc7cba6d71be2d19c91b53ebf",
-      "shared": "284d5669d1225b91375cb66107fd7d0d"
+      "com.brave.browser": "61b3e851c7d0d2fd3eda9a7ce9ab08a9",
+      "com.zhiliaoapp.musically": "6dd97a60527f98ca6350a2b4a61d7919",
+      "shared": "aa4b2362020db8b0ef072932d948552e"
     }
   },
   "liongalahad/nuviotv-morphe-patches": {
@@ -692,7 +693,7 @@
   "xbadfellax/badfella-patches": {
     "beta": {},
     "stable": {
-      "shared": "1f2ad3e21ff9f2c60a0b7d1dedfc51bf",
+      "shared": "2ae68aebd03b2ecdb63407c86b6e1523",
       "tech.simha.androidtvremote": "0fafec2572cdef2764424197e4ba9e5a"
     }
   },

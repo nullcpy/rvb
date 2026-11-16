@@ -690,7 +690,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -702,7 +702,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1281,7 +1281,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
   },
   "Kick-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1304,7 +1304,7 @@
   "BraveBrowser-kveld9": {
     "patches-source": "kveld9/kveld-morphe-patches",
     "brand": "kveld9",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.brave.browser",
     "app-name": "Brave Browser",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/brave-software/brave-browser",
@@ -1441,7 +1441,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "MicrosoftWord-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.microsoft.office.word",
     "app-name": "Microsoft Word",
     "brand": "kveld9",
@@ -1800,7 +1800,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "RemoteforAndroidTV-XBadFellaX": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tech.simha.androidtvremote",
     "app-name": "Remote for Android TV",
     "brand": "XBadFellaX",
@@ -1841,7 +1841,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
@@ -2056,7 +2056,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/sd-maid-2-se-system-cleaner/eu.darken.sdmse"
   },
   "SDMaid-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "eu.darken.sdmse",
     "app-name": "SD Maid 2/SE",
     "brand": "kveld9",
@@ -2347,7 +2347,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/tiktok-videos-shop-live/com.zhiliaoapp.musically"
   },
   "TikTok-kveld9": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "kveld9/kveld-morphe-patches",
@@ -2437,7 +2437,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
@@ -2493,6 +2493,18 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/x-corp/twitter",
     "uptodown-dlurl": "https://twitter.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
+  },
+  "Waze-bearinmindcat": {
+    "enabled": true,
+    "pkg-name": "com.waze",
+    "app-name": "Waze",
+    "brand": "bearinmindcat",
+    "arch": "all",
+    "patches-source": "bearinmindcat/morphe-patches",
+    "included-patches": "'Alert distances' 'All moods' 'Average speed zone bar' 'Bigger alert pins' 'Bigger speedometer' 'Change app name' 'Flock cameras' 'Full black' 'Hide Work shortcut' 'Hide ads' 'Map skin' 'Map theme' 'Navigation distances' 'No AI reporting' 'No Google Assistant' 'Open without device location' 'Patched YouTube Music' 'Remove permissions' 'Remove sign-in prompts' 'Remove telemetry' 'Report speed limit' 'Share alerts with Maps' 'Speed camera alerts' 'Speed camera sound at any speed' 'Speed cameras everywhere' 'Speed limit sign' 'Stay awake in the background'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/waze/waze-gps-maps-traffic-alerts-live-navigation/",
+    "uptodown-dlurl": "https://waze.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/waze-navigation-live-traffic/com.waze"
   },
   "WebVideoCast-mwbra130": {
     "enabled": false,

@@ -1,4 +1,14 @@
 {
-  "stable": {},
+  "stable": {
+    "Waze-bearinmindcat": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "72dba7f33cfa99a49ea959d0e4bfc9b57bfb6bbd"
+    }
+  },
   "beta": {}
 }
