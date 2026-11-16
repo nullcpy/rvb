@@ -1,0 +1,14 @@
+[Waze-bearinmindcat]
+enabled = true
+pkg-name = "com.waze"
+app-name = "Waze"
+brand = "bearinmindcat"
+arch = "all"
+patches-source = "bearinmindcat/morphe-patches"
+included-patches = "'Alert distances' 'All moods' 'Average speed zone bar' 'Bigger alert pins' 'Bigger speedometer' 'Change app name' 'Flock cameras' 'Full black' 'Hide Work shortcut' 'Hide ads' 'Map skin' 'Map theme' 'Navigation distances' 'No AI reporting' 'No Google Assistant' 'Open without device location' 'Patched YouTube Music' 'Remove permissions' 'Remove sign-in prompts' 'Remove telemetry' 'Report speed limit' 'Share alerts with Maps' 'Speed camera alerts' 'Speed camera sound at any speed' 'Speed cameras everywhere' 'Speed limit sign' 'Stay awake in the background'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/waze/waze-gps-maps-traffic-alerts-live-navigation/"
+uptodown-dlurl = "https://waze.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/waze-navigation-live-traffic/com.waze"
+
+
+
