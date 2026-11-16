@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-16T00:01:19Z"
+    "publishedAt": "2026-11-16T06:24:35Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -20665,23 +20665,22 @@
       "brandName": "AkashSriram",
       "variant": null,
       "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
+      "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
         "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
+        "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -20694,23 +20693,22 @@
       "brandName": "AkashSriram",
       "variant": null,
       "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
+      "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
         "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
+        "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -20723,12 +20721,12 @@
       "brandName": "AkashSriram",
       "variant": null,
       "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
+      "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20737,8 +20735,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     },
     "google-photos-akashsriram-module-v7.99.0.1007655401-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -20751,12 +20749,12 @@
       "brandName": "AkashSriram",
       "variant": null,
       "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
+      "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20765,8 +20763,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     },
     "remote-for-android-tv-xbadfellax-v6.1.0-all.apk": {
       "name": "remote-for-android-tv-xbadfellax",
@@ -20781,16 +20779,16 @@
       "subVariant": null,
       "packageName": "tech.simha.androidtvremote",
       "patchSources": [
-        "XBadFellaX/patches-1.4.0.mpp"
+        "XBadFellaX/patches-1.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/XBadFellaX/BadFella-Patches/releases/tag/v1.4.0"
+        "https://github.com/XBadFellaX/BadFella-Patches/releases/tag/v1.5.0"
       ],
       "appliedPatches": [
         "Remote ATV ad-free"
       ],
-      "originBuild": "260515",
-      "publishedAt": "2026-11-12T17:06:08Z"
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -31947,6 +31945,286 @@
       "appliedPatches": [],
       "originBuild": "260544",
       "publishedAt": "2026-11-15T19:20:49Z"
+    },
+    "brave-browser-kveld9-v1.99.57-arm-v7a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.99.57",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.11.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Ratings",
+        "Block Telemetry",
+        "Brave Origin",
+        "Clean New Tab",
+        "Close Tab In Group Order",
+        "Keep All Tabs Loaded",
+        "Skip Welcome Screens",
+        "Stop Background Wakeups",
+        "Stop Promo Notifications",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "brave-browser-kveld9-v1.99.57-arm64-v8a.apk": {
+      "name": "brave-browser-kveld9",
+      "version": "1.99.57",
+      "appKey": "bravebrowser",
+      "appName": "Brave Browser",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.brave.browser",
+      "patchSources": [
+        "kveld9/patches-2.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.11.0"
+      ],
+      "appliedPatches": [
+        "Block Motion Sensors",
+        "Block Popups & Ratings",
+        "Block Telemetry",
+        "Brave Origin",
+        "Clean New Tab",
+        "Close Tab In Group Order",
+        "Keep All Tabs Loaded",
+        "Skip Welcome Screens",
+        "Stop Background Wakeups",
+        "Stop Promo Notifications",
+        "Stop Text Sharing with System"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "com.google.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "Official package name"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "tiktok-kveld9-v47.7.3-arm64-v8a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.7.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.11.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ad Blocker",
+        "Feed Content & Bloat Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "Hide Sponsored & Paid Partnership",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "tiktok-kveld9-v47.7.3-arm-v7a.apk": {
+      "name": "tiktok-kveld9",
+      "version": "47.7.3",
+      "appKey": "tiktok",
+      "appName": "TikTok",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "kveld9",
+      "brandName": "kveld9",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zhiliaoapp.musically",
+      "patchSources": [
+        "kveld9/patches-2.11.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kveld9/kveld-morphe-patches/releases/tag/v2.11.0"
+      ],
+      "appliedPatches": [
+        "Allow Screenshots",
+        "Always Show Publish Date",
+        "Battery & Resource Saver",
+        "Block P2P Video Relay",
+        "Block Popups & Prompts",
+        "Block Trackers",
+        "Block Trackers (Setup)",
+        "Bypass Mandatory Login",
+        "Clean Share Links",
+        "Comment Customizer",
+        "Custom Share Sheet",
+        "Customize Search",
+        "Declutter Navigation Bar",
+        "Device Privacy Guard",
+        "Disable On-Device AI",
+        "Download Without Watermark",
+        "Enable Profile Banner",
+        "Feed Ad Blocker",
+        "Feed Content & Bloat Filter",
+        "Force Auto-Scroll",
+        "Friends & Suggestions Filter",
+        "Hide Inbox Promos & Alerts",
+        "Hide Sponsored & Paid Partnership",
+        "In-App Browser Privacy Guard",
+        "Instant Launch",
+        "Login Compatibility Fix",
+        "Offline Video Limit",
+        "Remove Extra Files",
+        "Show Seekbar"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
+    },
+    "waze-bearinmindcat-v5.27.5.0-all.apk": {
+      "name": "waze-bearinmindcat",
+      "version": "5.27.5.0",
+      "appKey": "waze",
+      "appName": "Waze",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.waze",
+      "patchSources": [
+        "bearinmindcat/patches-2.9.11.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.9.11"
+      ],
+      "appliedPatches": [
+        "Alert distances",
+        "All moods",
+        "Average speed zone bar",
+        "Bigger alert pins",
+        "Bigger speedometer",
+        "Change app name",
+        "Flock cameras",
+        "Full black",
+        "Hide Work shortcut",
+        "Hide ads",
+        "Map skin",
+        "Map theme",
+        "Navigation distances",
+        "No AI reporting",
+        "No Google Assistant",
+        "Open without device location",
+        "Patched YouTube Music",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Report speed limit",
+        "Share alerts with Maps",
+        "Speed camera alerts",
+        "Speed camera sound at any speed",
+        "Speed cameras everywhere",
+        "Speed limit sign",
+        "Stay awake in the background"
+      ],
+      "originBuild": "260546",
+      "publishedAt": "2026-11-16T06:23:33Z"
     }
   }
 }
