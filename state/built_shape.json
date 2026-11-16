@@ -1782,7 +1782,7 @@
         "brand": "AkashSriram",
         "app-name": "Google Photos",
         "pkg-name": "com.google.android.apps.photos",
-        "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
+        "included-patches": "'GmsCore support'",
         "arch": "both",
         "build-mode": "both"
       }
@@ -3068,7 +3068,6 @@
         "app-name": "Google Photos",
         "pkg-name": "com.google.android.apps.photos",
         "included-patches": "'Official package name'",
-        "patcher-args": "-e \"Flag manager & Toolkit\" -Ocomponents=\"Both (Flag manager & Toolkit)\"",
         "arch": "both",
         "build-mode": "apk"
       }
