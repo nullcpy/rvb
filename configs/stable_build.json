@@ -93,7 +93,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -271,7 +271,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "AliExpress-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "AliExpress",
     "brand": "hxreborn",
@@ -354,7 +354,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -606,7 +606,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -620,7 +620,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -632,7 +632,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -690,7 +690,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -702,7 +702,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1087,7 +1087,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1098,7 +1098,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1107,7 +1107,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1117,7 +1117,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1128,7 +1128,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1240,7 +1240,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "InternetSpeedMeterLite-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.internet.speed.meter.lite",
     "app-name": "Internet Speed Meter Lite",
     "brand": "hxreborn",
@@ -1452,7 +1452,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1462,7 +1462,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1662,7 +1662,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -1672,7 +1672,7 @@
     "github-regex": "lumo-v{version}-release\\.apk"
   },
   "ProtonMail-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1730,7 +1730,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1760,7 +1760,7 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Reddit-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1773,7 +1773,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "Reddit-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "MorpheApp/morphe-patches",
@@ -1809,7 +1809,7 @@
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
   },
   "RidmikKeyboard-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ridmik.keyboard",
     "app-name": "Ridmik Keyboard",
     "brand": "hxreborn",
@@ -2085,7 +2085,7 @@
     "apkpure-dlurl": "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
   },
   "SonyMusic-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sonyericsson.music",
     "app-name": "Sony Music",
     "brand": "bearinmindcat",
@@ -2141,7 +2141,7 @@
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
   },
   "SwampAttack-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.outfit7.movingeye.swampattack",
     "app-name": "Swamp Attack",
     "brand": "byehi98",
@@ -2152,7 +2152,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
   },
   "SwampAttack2-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.hyperdotstudios.swampattack2",
     "app-name": "Swamp Attack 2",
     "brand": "byehi98",
@@ -2380,7 +2380,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
   "TraktTV-Proteus": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.trakt.trakt",
     "app-name": "trakt.TV",
     "brand": "Proteus",
@@ -2494,7 +2494,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Waze-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.waze",
     "app-name": "Waze",
     "brand": "bearinmindcat",
@@ -2527,7 +2527,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2538,7 +2538,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
@@ -2549,7 +2549,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-screen-recorder-miui/com.miui.screenrecorder"
   },
   "YouTubeMusic-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2563,7 +2563,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube-music/com.google.android.apps.youtube.music"
   },
   "YouTubeMusic-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.youtube.music",
     "app-name": "YouTube Music",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2617,7 +2617,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube-music"
   },
   "YouTube-Morphe": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",
@@ -2631,7 +2631,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/youtube/com.google.android.youtube"
   },
   "YouTube-Morphe-Experimental": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.youtube",
     "app-name": "YouTube",
     "patches-source": "MorpheApp/morphe-patches",

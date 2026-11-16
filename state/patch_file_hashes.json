@@ -125,8 +125,10 @@
   "byehi98/okish-morphe-patches": {
     "beta": {},
     "stable": {
+      "com.hyperdotstudios.swampattack2": "8c7c8655ea5ff29901756eeaf4a97155",
+      "com.outfit7.movingeye.swampattack": "b6d21345776e3a0ed7cd95f63841af48",
       "org.swiftapps.swiftbackup": "51ad50d97a1c349fe5459b959fec0726",
-      "shared": "b51059115560ea6c92548a7b1d316782"
+      "shared": "840510c9fc2fb7dd88d688531ad9a845"
     }
   },
   "crimera/piko": {
@@ -220,8 +222,8 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "72ac5c56d2a789ab8f8cc5824f765009",
-      "shared": "d1c87387b1ce0c2088ec760a9a0e82c1"
+      "com.truecaller": "8cbabf0ea0d56903cba0ed140168ff25",
+      "shared": "7b517c65f3c59ee8f1ace3f39a90c2ba"
     },
     "stable": {
       "com.myfitnesspal.android": "844a5ddf0749caa89beec086eb7d173b",
@@ -346,8 +348,8 @@
   "ineednotitle/proteus-patches": {
     "beta": {},
     "stable": {
-      "shared": "22a0c3a6be1402ae6390c3ff9878d486",
-      "tv.trakt.trakt": "fe1d72dfde85af10f3e696a5d54f1121"
+      "shared": "162153fffae725be3b9199e8e6306e6b",
+      "tv.trakt.trakt": "4c77c75993492f87f22aa12c550aee87"
     }
   },
   "instafel/pc-rel": {
@@ -448,10 +450,10 @@
       "shared": "19c080895fc4849a352c98f64dc0d767"
     },
     "stable": {
-      "com.google.android.apps.youtube.music": "208e1dacd9e69e1d6ac02d64e1a6c540",
-      "com.google.android.youtube": "b0d90012b8e172e6665dbaa32cf1b246",
-      "com.reddit.frontpage": "7651c59bc39ee30946d3821d09cafe17",
-      "shared": "a6f067af81f0c9d47e6d1db136df2db8"
+      "com.google.android.apps.youtube.music": "e46398df179c37761aa86ad25912e086",
+      "com.google.android.youtube": "bfda500df262da1a9f05dda701214434",
+      "com.reddit.frontpage": "4146a108c15067fae73312586efc2dde",
+      "shared": "19c080895fc4849a352c98f64dc0d767"
     }
   },
   "mvaishak/letterboxd-morphe-patches": {
