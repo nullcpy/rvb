@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-15T19:21:29Z"
+    "publishedAt": "2026-11-16T00:01:19Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -22520,13 +22520,14 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
+        "Anonymous chat",
         "Background audio by default",
         "Block ads",
         "Block cookie notice",
@@ -22562,11 +22563,12 @@
         "Seek interval",
         "Show deleted messages",
         "Show exact counts",
+        "Show video stats",
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "rumble-lurk-v3.21.0-arm-v7a.apk": {
       "name": "rumble-lurk",
@@ -22581,13 +22583,14 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
+        "Anonymous chat",
         "Background audio by default",
         "Block ads",
         "Block cookie notice",
@@ -22623,11 +22626,12 @@
         "Seek interval",
         "Show deleted messages",
         "Show exact counts",
+        "Show video stats",
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "twitch-lurk-v31.8.0-arm-v7a.apk": {
       "name": "twitch-lurk",
@@ -22642,10 +22646,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -22657,6 +22661,7 @@
         "Block client ads",
         "Block cookie notice",
         "Block display ads",
+        "Block update prompts",
         "Chat appearance",
         "Chat keywords",
         "Chat overlay",
@@ -22667,6 +22672,7 @@
         "Default startup tab",
         "Disable analytics",
         "Disable autoplay",
+        "Don't save searches",
         "Emote and badge info",
         "Fill screen",
         "Fix notifications",
@@ -22683,6 +22689,7 @@
         "Refresh stream",
         "Remove tracking permissions",
         "Show deleted messages",
+        "Show exact counts",
         "Sleep timer",
         "Tablet layout",
         "Third-party badges",
@@ -22691,8 +22698,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "twitch-lurk-v31.8.0-arm64-v8a.apk": {
       "name": "twitch-lurk",
@@ -22707,10 +22714,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -22722,6 +22729,7 @@
         "Block client ads",
         "Block cookie notice",
         "Block display ads",
+        "Block update prompts",
         "Chat appearance",
         "Chat keywords",
         "Chat overlay",
@@ -22732,6 +22740,7 @@
         "Default startup tab",
         "Disable analytics",
         "Disable autoplay",
+        "Don't save searches",
         "Emote and badge info",
         "Fill screen",
         "Fix notifications",
@@ -22748,6 +22757,7 @@
         "Refresh stream",
         "Remove tracking permissions",
         "Show deleted messages",
+        "Show exact counts",
         "Sleep timer",
         "Tablet layout",
         "Third-party badges",
@@ -22756,8 +22766,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "tiktok-lite-kurageno8156-v43.5.3-all.apk": {
       "name": "tiktok-lite-kurageno8156",
@@ -23327,10 +23337,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23357,6 +23367,8 @@
         "Lurk in account menu",
         "Mute stitched live ads",
         "Normal latency",
+        "Player gestures",
+        "Refresh stream",
         "Remove tracking permissions",
         "Seek interval",
         "Show deleted messages",
@@ -23364,10 +23376,11 @@
         "Show video stats",
         "Sleep timer",
         "Stay on channel when it hosts",
+        "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "kick-lurk-v40.34.0-arm-v7a.apk": {
       "name": "kick-lurk",
@@ -23382,10 +23395,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.16.1.mpp"
+        "jordanwoodson/patches-1.17.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -23412,6 +23425,8 @@
         "Lurk in account menu",
         "Mute stitched live ads",
         "Normal latency",
+        "Player gestures",
+        "Refresh stream",
         "Remove tracking permissions",
         "Seek interval",
         "Show deleted messages",
@@ -23419,10 +23434,11 @@
         "Show video stats",
         "Sleep timer",
         "Stay on channel when it hosts",
+        "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260470",
-      "publishedAt": "2026-11-05T16:41:37Z"
+      "originBuild": "260545",
+      "publishedAt": "2026-11-16T00:00:55Z"
     },
     "messenger-devanced-v586.0.0.55.92-arm64-v8a.apk": {
       "name": "messenger-devanced",
@@ -23887,94 +23903,6 @@
       ],
       "originBuild": "260490",
       "publishedAt": "2026-11-08T15:24:28Z"
-    },
-    "discord-rain-v352.17-Stable-arm64-v8a.apk": {
-      "name": "discord-rain",
-      "version": "352.17-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260467",
-      "publishedAt": "2026-11-05T06:38:34Z"
-    },
-    "discord-rain-v352.17-Stable-arm-v7a.apk": {
-      "name": "discord-rain",
-      "version": "352.17-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260467",
-      "publishedAt": "2026-11-05T06:38:34Z"
-    },
-    "discord-revenge-v352.17-Stable-arm-v7a.apk": {
-      "name": "discord-revenge",
-      "version": "352.17-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260467",
-      "publishedAt": "2026-11-05T06:38:34Z"
-    },
-    "discord-revenge-v352.17-Stable-arm64-v8a.apk": {
-      "name": "discord-revenge",
-      "version": "352.17-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260467",
-      "publishedAt": "2026-11-05T06:38:34Z"
     },
     "twitter-piko-newx-v12.40.1-prod.01-arm64-v8a.apk": {
       "name": "twitter-piko-newx",
