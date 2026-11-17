@@ -3067,7 +3067,7 @@
         "variant": "Unclone",
         "app-name": "Google Photos",
         "pkg-name": "com.google.android.apps.photos",
-        "included-patches": "'Official package name'",
+        "included-patches": "'Keep official package name'",
         "arch": "both",
         "build-mode": "apk"
       }
@@ -3653,6 +3653,20 @@
         "pkg-name": "com.waze",
         "included-patches": "'Alert distances' 'All moods' 'Average speed zone bar' 'Bigger alert pins' 'Bigger speedometer' 'Change app name' 'Flock cameras' 'Full black' 'Hide Work shortcut' 'Hide ads' 'Map skin' 'Map theme' 'Navigation distances' 'No AI reporting' 'No Google Assistant' 'Open without device location' 'Patched YouTube Music' 'Remove permissions' 'Remove sign-in prompts' 'Remove telemetry' 'Report speed limit' 'Share alerts with Maps' 'Speed camera alerts' 'Speed camera sound at any speed' 'Speed cameras everywhere' 'Speed limit sign' 'Stay awake in the background'",
         "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "AlboSaveAndOrganize-hxreborn": {
+      "arches": [
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Albo: Save & Organize",
+        "pkg-name": "com.thesortdapp.sortd",
+        "included-patches": "'GmsCore support'",
+        "arch": "both",
         "build-mode": "apk"
       }
     }
