@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-17T00:30:58Z"
+    "publishedAt": "2026-11-17T07:54:17Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -2973,10 +2973,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.piko",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.1.mpp"
+        "crimera/patches-3.12.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
@@ -2995,6 +2995,7 @@
         "Disable double tap like",
         "Disable explore",
         "Disable highlights",
+        "Disable onboarding permission prompts",
         "Disable screenshot detection",
         "Disable stories",
         "Disable story flipping",
@@ -3046,8 +3047,8 @@
         "Disable Play Store updates",
         "Clone"
       ],
-      "originBuild": "260553",
-      "publishedAt": "2026-11-17T00:30:10Z"
+      "originBuild": "260555",
+      "publishedAt": "2026-11-17T07:53:42Z"
     },
     "instagram-piko-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko",
@@ -3062,10 +3063,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.1.mpp"
+        "crimera/patches-3.12.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3084,6 +3085,7 @@
         "Disable double tap like",
         "Disable explore",
         "Disable highlights",
+        "Disable onboarding permission prompts",
         "Disable screenshot detection",
         "Disable stories",
         "Disable story flipping",
@@ -3134,8 +3136,8 @@
         "View story mentions",
         "Disable Play Store updates"
       ],
-      "originBuild": "260553",
-      "publishedAt": "2026-11-17T00:30:10Z"
+      "originBuild": "260555",
+      "publishedAt": "2026-11-17T07:53:42Z"
     },
     "instagram-piko-module-v452.1.0.53.64-arm64-v8a.zip": {
       "name": "instagram-piko",
@@ -3150,10 +3152,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.1.mpp"
+        "crimera/patches-3.12.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.1"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.2"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3172,6 +3174,7 @@
         "Disable double tap like",
         "Disable explore",
         "Disable highlights",
+        "Disable onboarding permission prompts",
         "Disable screenshot detection",
         "Disable stories",
         "Disable story flipping",
@@ -3222,8 +3225,8 @@
         "View story mentions",
         "Disable Play Store updates"
       ],
-      "originBuild": "260553",
-      "publishedAt": "2026-11-17T00:30:10Z"
+      "originBuild": "260555",
+      "publishedAt": "2026-11-17T07:53:42Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm64-v8a.apk": {
       "name": "tiktok-icysymmetra",
