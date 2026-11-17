@@ -1,84 +1,16 @@
 {
   "stable": {
-    "AlboSaveAndOrganize-hxreborn": {
+    "NovaLauncher-hyzor": {
       "reason": "retry",
       "arches": [
-        "arm-v7a"
-      ],
-      "attempts": 3,
-      "parked": true,
-      "cfg": "908ad9fabd9d05840c24aa355f636dd4cada0af6",
-      "run": 44097061551,
-      "ts": "2026-11-17T13:56:49Z"
-    },
-    "ChessDotCom-hyzor": {
-      "reason": "new",
-      "arches": [
         "arm-v7a",
         "arm64-v8a"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "parked": false,
-      "cfg": "abe19ba4c58e8f4d56cc5125680fff95b8435a53"
-    },
-    "Duolingo-hyzor": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "11f8a49dc355f6c44e1653e9ceea30a3806c446d"
-    },
-    "FolderSync-hyzor": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "f05f2e1dad9e2e3654935d2b46aad5ae4a220e1f"
-    },
-    "NovaLauncher-hyzor": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "ea06d6abb445e974acaa8a04f204cf981d2fee91"
-    },
-    "ProjectivyLauncher-hyzor-AndroidTV": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "1dd1fcabfb9f43b3ec5cfa3006dc425715b31efa"
-    },
-    "SolidExplorer-hyzor": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "2813bbcd3f7adfa694e6aa72b2f130cb88a1adbf"
-    },
-    "TraktTV-hyzor": {
-      "reason": "new",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "d4dd3c8cca77ecedf3ddd7e69017cc1033ff4b29"
+      "cfg": "ea06d6abb445e974acaa8a04f204cf981d2fee91",
+      "run": 44138265442,
+      "ts": "2026-11-17T17:59:37Z"
     }
   },
   "beta": {}

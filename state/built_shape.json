@@ -3658,6 +3658,7 @@
     },
     "AlboSaveAndOrganize-hxreborn": {
       "arches": [
+        "arm-v7a",
         "arm64-v8a"
       ],
       "cfg": {
@@ -3681,6 +3682,90 @@
         "app-name": "JioHotstar",
         "pkg-name": "in.startv.hotstar",
         "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "ChessDotCom-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "app-name": "Chess.com",
+        "pkg-name": "com.chess",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Duolingo-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "app-name": "Duolingo",
+        "pkg-name": "com.duolingo",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "FolderSync-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "app-name": "FolderSync",
+        "pkg-name": "dk.tacit.android.foldersync.lite",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ProjectivyLauncher-hyzor-AndroidTV": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "variant": "Android TV",
+        "app-name": "Projectivy Launcher",
+        "pkg-name": "com.spocky.projengmenu",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "SolidExplorer-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patchess",
+        "brand": "hyzor",
+        "app-name": "Solid Explorer",
+        "pkg-name": "pl.solidexplorer2",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "TraktTV-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "app-name": "trakt.TV",
+        "pkg-name": "tv.trakt.trakt",
+        "arch": "both",
         "build-mode": "apk"
       }
     }
