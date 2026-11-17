@@ -801,7 +801,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "Hermit-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.chimbori.hermitcrab",
     "app-name": "Hermit",
     "patch-folder": "hermit",
@@ -1694,7 +1694,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
   "Poweramp-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.maxmpz.audioplayer",
     "app-name": "Poweramp",
     "brand": "mwbra130",
@@ -2338,7 +2338,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/plus-messenger/org.telegram.plus"
   },
   "Telegram-HushTelegram-FOSS": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.telegram.messenger.web",
     "app-name": "Telegram",
     "variant": "FOSS",
@@ -2349,7 +2349,7 @@
     "direct-dlurl": "https://telegram.org/dl/android/apk"
   },
   "Telegram-HushTelegram-GooglePlay": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.telegram.messenger",
     "app-name": "Telegram",
     "variant": "Google Play",
@@ -2605,7 +2605,7 @@
     "apkpure-dlurl": "https://apkpure.com/waze-navigation-live-traffic/com.waze"
   },
   "WebVideoCast-mwbra130": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instantbits.cast.webvideo",
     "app-name": "Web Video Cast",
     "brand": "mwbra130",
