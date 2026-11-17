@@ -1,0 +1,14 @@
+[JioHotstar-Paresh]
+enabled = true
+pkg-name = "in.startv.hotstar"
+app-name = "JioHotstar"
+brand = "Paresh"
+arch = "all"
+patches-source-host = "gitlab"
+patches-source = "Paresh-Maheshwari/paresh-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4"
+
+
+
+
+
