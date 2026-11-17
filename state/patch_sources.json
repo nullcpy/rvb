@@ -63,8 +63,8 @@
     "stable_date": "2026-11-07T15:02:12Z"
   },
   "MorpheApp/morphe-patches": {
-    "beta": "v2.3.0-dev.9",
-    "beta_date": "2026-11-16T11:07:51Z",
+    "beta": "v2.4.0-dev.1",
+    "beta_date": "2026-11-17T14:10:26Z",
     "blocked": false,
     "host": "github",
     "repo": "MorpheApp/morphe-patches",
@@ -86,8 +86,8 @@
     "blocked": false,
     "host": "github",
     "repo": "Piracola/Pixiv-Patched",
-    "stable": "v1.7.2",
-    "stable_date": "2026-11-12T16:30:41Z"
+    "stable": "v1.8.0",
+    "stable_date": "2026-11-17T14:59:22Z"
   },
   "PrathxmOp/Prathxm-Patches": {
     "beta": "v1.15.0-dev.1",
@@ -459,13 +459,31 @@
     "stable_date": "2026-09-27T18:29:23Z"
   },
   "hxreborn/morphe-patches": {
-    "beta": "v1.82.0-dev.1",
-    "beta_date": "2026-11-17T13:45:16Z",
+    "beta": "v1.82.0-dev.2",
+    "beta_date": "2026-11-17T17:34:13Z",
     "blocked": false,
     "host": "github",
     "repo": "hxreborn/morphe-patches",
     "stable": "v1.81.0",
     "stable_date": "2026-11-17T09:34:48Z"
+  },
+  "hyzor/hyzor-morphe-patches": {
+    "beta": "v1.10.0-dev.2",
+    "beta_date": "2026-11-16T02:14:02Z",
+    "blocked": false,
+    "host": "github",
+    "repo": "hyzor/hyzor-morphe-patches",
+    "stable": "v1.10.0",
+    "stable_date": "2026-11-16T16:30:54Z"
+  },
+  "hyzor/hyzor-morphe-patchess": {
+    "beta": "",
+    "beta_date": "",
+    "blocked": true,
+    "host": "github",
+    "repo": "hyzor/hyzor-morphe-patchess",
+    "stable": "",
+    "stable_date": ""
   },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": "v0.11.0-dev.7",
@@ -567,8 +585,8 @@
     "stable_date": "2026-11-16T03:59:20Z"
   },
   "kveld9/kveld-morphe-patches": {
-    "beta": "v2.12.0-experimental.1",
-    "beta_date": "2026-11-16T23:26:20Z",
+    "beta": "v2.12.0-experimental.2",
+    "beta_date": "2026-11-17T15:23:05Z",
     "blocked": false,
     "host": "github",
     "repo": "kveld9/kveld-morphe-patches",
@@ -693,13 +711,13 @@
     "stable_date": "2026-10-08T17:58:34Z"
   },
   "wchill/patcheddit": {
-    "beta": "v2.3.0-dev.4",
-    "beta_date": "2026-11-16T22:15:45Z",
+    "beta": "v2.4.0-dev.1",
+    "beta_date": "2026-11-17T16:59:34Z",
     "blocked": false,
     "host": "github",
     "repo": "wchill/patcheddit",
-    "stable": "v2.3.0",
-    "stable_date": "2026-11-16T22:57:22Z"
+    "stable": "v2.4.0",
+    "stable_date": "2026-11-17T17:27:12Z"
   },
   "zeldrisho/morphe-patches": {
     "beta": "v1.13.0-dev.2",

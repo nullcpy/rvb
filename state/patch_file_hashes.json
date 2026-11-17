@@ -322,6 +322,18 @@
       "shared": "0aa44246bd1d229e8a77dd81f7264675"
     }
   },
+  "hyzor/hyzor-morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.chess": "9e7469ddfefb9283e2298a56e0fda848",
+      "com.duolingo": "9a9e4dc625decb3d3f238d9a50412c11",
+      "com.spocky.projengmenu": "8f858a70a9a1f0159e2674041bc066ab",
+      "com.teslacoilsw.launcher": "f5bf14379ca9f2ac57e2a27aa5e772fb",
+      "dk.tacit.android.foldersync.lite": "66c80c8cd4460c8e6e414bb7ba6f6b6f",
+      "shared": "d41d8cd98f00b204e9800998ecf8427e",
+      "tv.trakt.trakt": "c34cb490e01892a5e5eb3569ad8161a9"
+    }
+  },
   "icysymmetra/tiktok-patches-for-morphe": {
     "beta": {
       "com.zhiliaoapp.musically": "6c493867c535b601f61ff6a9f856b7c4",
@@ -445,10 +457,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "e46398df179c37761aa86ad25912e086",
-      "com.google.android.youtube": "bfda500df262da1a9f05dda701214434",
-      "com.reddit.frontpage": "4146a108c15067fae73312586efc2dde",
-      "shared": "19c080895fc4849a352c98f64dc0d767"
+      "com.google.android.apps.youtube.music": "1362d2a7f348c1cf74e01f3021206be7",
+      "com.google.android.youtube": "06da4c03b0873fd861e950a3d0bc9111",
+      "com.reddit.frontpage": "e409d16faa1b623c360687fb1a8f7d0e",
+      "shared": "a60041478ed5264cdf168e755b5c37b3"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "e46398df179c37761aa86ad25912e086",
@@ -509,8 +521,8 @@
   "piracola/pixiv-patched": {
     "beta": {},
     "stable": {
-      "jp.pxv.android": "07dfaa0b857af1fd750db04b03318cc0",
-      "shared": "9e22ed4065016714a9e1bf556b361d82"
+      "jp.pxv.android": "b41cd264656b0833643c65cd18234581",
+      "shared": "1f1e8851f82c816bf01237c4db6974be"
     }
   },
   "prathxmop/prathxm-patches": {
@@ -693,8 +705,8 @@
   "wchill/patcheddit": {
     "beta": {},
     "stable": {
-      "com.rubenmayayo.reddit": "d369ed5e9ce4e930e5f8be86352dfaeb",
-      "shared": "c9d58f78e4b7178cd32d4574c38c2c16"
+      "com.rubenmayayo.reddit": "4a9e910669e61ea50f5f044bdef00c5e",
+      "shared": "83b77dae8c68478b7b3872d0a68ef232"
     }
   },
   "xbadfellax/badfella-patches": {

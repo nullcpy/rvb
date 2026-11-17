@@ -259,7 +259,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
   "AlboSaveAndOrganize-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
@@ -330,7 +330,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -372,6 +372,28 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
     "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
     "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+  },
+  "ChessDotCom-Prathxm": {
+    "enabled": false,
+    "pkg-name": "com.chess",
+    "app-name": "Chess.com",
+    "brand": "Prathxm",
+    "patches-source": "PrathxmOp/Prathxm-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chess-com/chess-play-learn",
+    "uptodown-dlurl": "https://chess-play-and-learn.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/chess-play-and-learn-online/com.chess",
+    "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
+  },
+  "ChessDotCom-hyzor": {
+    "enabled": true,
+    "pkg-name": "com.chess",
+    "app-name": "Chess.com",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chess-com/chess-play-learn",
+    "uptodown-dlurl": "https://chess-play-and-learn.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/chess-play-and-learn-online/com.chess",
+    "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "Meesho-debakarr": {
     "enabled": false,
@@ -523,6 +545,28 @@
     "apkpure-dlurl": "https://apkpure.com/google-news-daily-headlines/com.google.android.apps.magazines",
     "apkcombo-dlurl": "https://apkcombo.com/google-news/com.google.android.apps.magazines"
   },
+  "Duolingo-hoodles": {
+    "enabled": false,
+    "pkg-name": "com.duolingo",
+    "app-name": "Duolingo",
+    "brand": "hoodles",
+    "patches-source": "hoo-dles/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo",
+    "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/duolingo-learn-languages/com.duolingo",
+    "apkcombo-dlurl": "https://apkcombo.com/duolingo/com.duolingo"
+  },
+  "Duolingo-hyzor": {
+    "enabled": true,
+    "pkg-name": "com.duolingo",
+    "app-name": "Duolingo",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo",
+    "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/duolingo-learn-languages/com.duolingo",
+    "apkcombo-dlurl": "https://apkcombo.com/duolingo/com.duolingo"
+  },
   "Facebook-Froggo": {
     "enabled": false,
     "pkg-name": "com.facebook.katana",
@@ -592,6 +636,28 @@
     "arch": "all",
     "uptodown-dlurl": "https://firsty.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/firsty-global-mobile-network-app/com.firsty.app"
+  },
+  "FolderSync-hooman": {
+    "enabled": false,
+    "pkg-name": "dk.tacit.android.foldersync.lite",
+    "app-name": "FolderSync",
+    "brand": "hooman",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tacit-dynamics/foldersync",
+    "uptodown-dlurl": "https://foldersync-lite.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite",
+    "apkcombo-dlurl": "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
+  },
+  "FolderSync-hyzor": {
+    "enabled": true,
+    "pkg-name": "dk.tacit.android.foldersync.lite",
+    "app-name": "FolderSync",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tacit-dynamics/foldersync",
+    "uptodown-dlurl": "https://foldersync-lite.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite",
+    "apkcombo-dlurl": "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
   },
   "ByAir-franticg33k": {
     "patches-source": "franticg33k/morphe-patches",
@@ -767,17 +833,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/sofascore/soccer-scores-and-sports-livescore-sofascore",
     "apkpure-dlurl": "https://apkpure.com/sofascore-sports-live-scores/com.sofascore.results"
   },
-  "Duolingo-hoodles": {
-    "patches-source": "hoo-dles/morphe-patches",
-    "brand": "hoodles",
-    "enabled": false,
-    "pkg-name": "com.duolingo",
-    "app-name": "Duolingo",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo",
-    "uptodown-dlurl": "https://duolingo.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/duolingo-learn-languages/com.duolingo",
-    "apkcombo-dlurl": "https://apkcombo.com/duolingo/com.duolingo"
-  },
   "WPSOffice-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
     "brand": "hoodles",
@@ -799,17 +854,6 @@
     "uptodown-dlurl": "https://wallpaperscraft.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/wallpaper-4k-hd-%E2%80%93-wallcraft/com.wallpaperscraft.wallpaper",
     "apkcombo-dlurl": "https://apkcombo.com/wallpaper-4k-hd-wallcraft/com.wallpaperscraft.wallpaper"
-  },
-  "SolidExplorer-hoodles": {
-    "patches-source": "hoo-dles/morphe-patches",
-    "brand": "hoodles",
-    "enabled": false,
-    "pkg-name": "pl.solidexplorer2",
-    "app-name": "Solid Explorer",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
-    "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/solid-explorer-file-manager/pl.solidexplorer2",
-    "apkcombo-dlurl": "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
   },
   "IconPacker-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
@@ -881,20 +925,6 @@
     "apkpure-dlurl": "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.videorecorder.screenrecorder",
     "apkcombo-dlurl": "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder",
     "uptodown-dlurl": "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
-  },
-  "NovaLauncher-hoodles": {
-    "patches-source": "hoo-dles/morphe-patches",
-    "brand": "hoodles",
-    "enabled": false,
-    "pkg-name": "com.teslacoilsw.launcher",
-    "app-name": "Nova Launcher",
-    "patch-folder": "nova",
-    "build-mode": "both",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher",
-    "uptodown-dlurl": "https://nova-launcher.en.uptodown.com/android",
-    "apkcombo-dlurl": "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
-    "apkpure-dlurl": "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
-    "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
   },
   "Ventusky-hoodles": {
     "patches-source": "hoo-dles/morphe-patches",
@@ -1019,17 +1049,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv",
     "apkpure-dlurl": "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
   },
-  "ProjectivyLauncher-hooman-AndroidTV": {
-    "patches-source": "arandomhooman/hoomans-morphe-patches",
-    "brand": "hooman",
-    "enabled": false,
-    "pkg-name": "com.spocky.projengmenu",
-    "app-name": "Projectivy Launcher",
-    "variant": "Android TV",
-    "arch": "all",
-    "apkpure-dlurl": "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu",
-    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
-  },
   "AdobeAcrobat-hooman": {
     "patches-source": "arandomhooman/hoomans-morphe-patches",
     "brand": "hooman",
@@ -1081,17 +1100,6 @@
     "uptodown-dlurl": "https://swiftkey-keyboard.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey",
     "apkcombo-dlurl": "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
-  },
-  "FolderSync-hooman": {
-    "patches-source": "arandomhooman/hoomans-morphe-patches",
-    "brand": "hooman",
-    "enabled": false,
-    "pkg-name": "dk.tacit.android.foldersync.lite",
-    "app-name": "FolderSync",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/tacit-dynamics/foldersync",
-    "uptodown-dlurl": "https://foldersync-lite.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/foldersync/dk.tacit.android.foldersync.lite",
-    "apkcombo-dlurl": "https://apkcombo.com/foldersync/dk.tacit.android.foldersync.lite"
   },
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
@@ -1511,6 +1519,34 @@
     "uptodown-dlurl": "https://calorie-counter-myfitnesspal.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
   },
+  "NovaLauncher-hoodles": {
+    "enabled": false,
+    "pkg-name": "com.teslacoilsw.launcher",
+    "app-name": "Nova Launcher",
+    "patch-folder": "nova",
+    "build-mode": "both",
+    "brand": "hoodles",
+    "patches-source": "hoo-dles/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher",
+    "uptodown-dlurl": "https://nova-launcher.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
+    "apkpure-dlurl": "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+  },
+  "NovaLauncher-hyzor": {
+    "enabled": true,
+    "pkg-name": "com.teslacoilsw.launcher",
+    "app-name": "Nova Launcher",
+    "patch-folder": "nova",
+    "build-mode": "both",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher",
+    "uptodown-dlurl": "https://nova-launcher.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
+    "apkpure-dlurl": "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher",
+    "archive-dlurl": "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+  },
   "Cricbuzz-Paresh": {
     "patches-source": "Paresh-Maheshwari/paresh-patches",
     "patches-source-host": "gitlab",
@@ -1635,7 +1671,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/pixiv/jp.pxv.android"
   },
   "pixiv-Piracola": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "jp.pxv.android",
     "app-name": "pixiv",
     "brand": "Piracola",
@@ -1669,16 +1705,27 @@
     "apkpure-dlurl": "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer",
     "apkcombo-dlurl": "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
   },
-  "ChessDotCom-Prathxm": {
-    "patches-source": "PrathxmOp/Prathxm-Patches",
-    "brand": "Prathxm",
+  "ProjectivyLauncher-hooman-AndroidTV": {
     "enabled": false,
-    "pkg-name": "com.chess",
-    "app-name": "Chess.com",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/chess-com/chess-play-learn",
-    "uptodown-dlurl": "https://chess-play-and-learn.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/chess-play-and-learn-online/com.chess",
-    "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
+    "pkg-name": "com.spocky.projengmenu",
+    "app-name": "Projectivy Launcher",
+    "variant": "Android TV",
+    "arch": "all",
+    "brand": "hooman",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "apkpure-dlurl": "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu",
+    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
+  },
+  "ProjectivyLauncher-hyzor-AndroidTV": {
+    "enabled": true,
+    "pkg-name": "com.spocky.projengmenu",
+    "app-name": "Projectivy Launcher",
+    "variant": "Android TV",
+    "arch": "all",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
+    "apkpure-dlurl": "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu",
+    "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
   },
   "ProtonLumo-hxreborn": {
     "enabled": false,
@@ -2103,6 +2150,28 @@
     "arch": "all",
     "apkpure-dlurl": "https://apkpure.com/ricardo-nem-lopot/ricardonemlopot.nemlopot"
   },
+  "SolidExplorer-hoodles": {
+    "enabled": false,
+    "pkg-name": "pl.solidexplorer2",
+    "app-name": "Solid Explorer",
+    "brand": "hoodles",
+    "patches-source": "hoo-dles/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
+    "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/solid-explorer-file-manager/pl.solidexplorer2",
+    "apkcombo-dlurl": "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
+  },
+  "SolidExplorer-hyzor": {
+    "enabled": true,
+    "pkg-name": "pl.solidexplorer2",
+    "app-name": "Solid Explorer",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patchess",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/lmicp/solid-explorer-file-manager",
+    "uptodown-dlurl": "https://solid-explorer-file-manager.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/solid-explorer-file-manager/pl.solidexplorer2",
+    "apkcombo-dlurl": "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
+  },
   "SonyMusic-bearinmindcat": {
     "enabled": false,
     "pkg-name": "com.sonyericsson.music",
@@ -2404,6 +2473,17 @@
     "app-name": "trakt.TV",
     "brand": "Proteus",
     "patches-source": "ineednotitle/Proteus-Patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
+    "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
+    "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
+  },
+  "TraktTV-hyzor": {
+    "enabled": true,
+    "pkg-name": "tv.trakt.trakt",
+    "app-name": "trakt.TV",
+    "brand": "hyzor",
+    "patches-source": "hyzor/hyzor-morphe-patches",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/trakt",
     "uptodown-dlurl": "https://trakt.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt",
