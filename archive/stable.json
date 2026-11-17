@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-17T07:58:59Z"
+    "publishedAt": "2026-11-17T11:40:54Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -12107,17 +12107,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12132,17 +12132,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -16638,10 +16638,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16654,8 +16654,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -16670,10 +16670,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16686,8 +16686,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -17724,10 +17724,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -17741,8 +17741,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -17757,10 +17757,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Fix Google login",
@@ -17774,8 +17774,8 @@
         "Show backup count",
         "Unlock Premium Plus"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "fairemail-heval99-v1.2339-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -18098,16 +18098,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -18122,16 +18122,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm-v7a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -18146,16 +18146,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.castplugin",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Remove app protection"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "instagram-instafel-clone-v453.0.0.55.79-arm-v7a.apk": {
       "name": "instagram-instafel-clone",
@@ -20245,10 +20245,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -20266,8 +20266,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "byair-franticg33k-v2.42.0-arm64-v8a.apk": {
       "name": "byair-franticg33k",
@@ -21526,10 +21526,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21544,8 +21544,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "proton-mail-hxreborn-v7.11.12-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -21560,10 +21560,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -21578,8 +21578,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "ticktick-paresh-v8.2.4.0-arm-v7a.apk": {
       "name": "ticktick-paresh",
@@ -21768,18 +21768,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "kick-lurk-v40.33.0-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -22254,10 +22254,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -22265,8 +22265,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "proton-vpn-hxreborn-v5.21.9.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -22281,10 +22281,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -22302,8 +22302,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "xiaomi-recorder-bearinmindcat-v7.7.9-all.apk": {
       "name": "xiaomi-recorder-bearinmindcat",
@@ -25074,10 +25074,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -25090,8 +25090,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -25106,10 +25106,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -25122,8 +25122,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -32123,10 +32123,10 @@
       "subVariant": null,
       "packageName": "com.thesortdapp.sortd",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.81.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.81.0"
       ],
       "appliedPatches": [
         "Enable guest sign-in",
@@ -32134,8 +32134,38 @@
         "Remove bulk import limit",
         "Unlock premium"
       ],
-      "originBuild": "260556",
-      "publishedAt": "2026-11-17T07:58:28Z"
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
+    },
+    "jiohotstar-paresh-v26.04.27.10-all.apk": {
+      "name": "jiohotstar-paresh",
+      "version": "26.04.27.10",
+      "appKey": "jiohotstar",
+      "appName": "JioHotstar",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "paresh",
+      "brandName": "Paresh",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "in.startv.hotstar",
+      "patchSources": [
+        "Paresh-Maheshwari/patches-1.20.1.mpp"
+      ],
+      "changelogs": [
+        "https://gitlab.com/Paresh-Maheshwari/paresh-patches/-/releases/v1.20.1"
+      ],
+      "appliedPatches": [
+        "Bypass signature check",
+        "Enable all codecs",
+        "Enable screen mirroring",
+        "Enable screenshots",
+        "Force HDR10",
+        "Premium unlock",
+        "Remove ads"
+      ],
+      "originBuild": "260557",
+      "publishedAt": "2026-11-17T11:40:20Z"
     }
   }
 }
