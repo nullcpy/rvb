@@ -1,0 +1,394 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260559",
+    "channel": "stable",
+    "publishedAt": "2026-11-17T18:00:48Z"
+  },
+  "files": {
+    "boost-for-reddit-wchill-v1.14.4-all.apk": {
+      "name": "boost-for-reddit-wchill",
+      "version": "1.14.4",
+      "appKey": "boostforreddit",
+      "appName": "Boost For Reddit",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "wchill",
+      "brandName": "wchill",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.rubenmayayo.reddit",
+      "patchSources": [
+        "wchill/patches-2.4.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/wchill/patcheddit/releases/tag/v2.4.0"
+      ],
+      "appliedPatches": [
+        "Add Boost Search bottom navigation",
+        "Add archive links to context menu",
+        "Anchor Boost Snackbars above bottom navigation",
+        "Animate media in Boost gallery previews",
+        "Auto-load next page after filtered results",
+        "Automatically undelete Imgur images",
+        "Automatically undelete Reddit content",
+        "Boost Morphe settings",
+        "Boost search default discovery",
+        "Configure editor image hosting",
+        "Disable Boost Crashlytics startup network calls",
+        "Fix Boost FAB nested scroll",
+        "Fix Boost code block rendering",
+        "Fix Boost navigation bar overlap",
+        "Fix Hide crash",
+        "Fix escaped URLs",
+        "Import and export OAuth tokens",
+        "Log exceptions",
+        "Prefer high refresh rate",
+        "Preview images in the editor",
+        "Readable Boost flair labels",
+        "Reddit API fixes",
+        "Remove obsolete profile tabs",
+        "Repeat Boost thread level colors",
+        "Restore Boost sidebar Trending today",
+        "Restore GIF URL insertion",
+        "Show end of feed",
+        "Show strip query parameters option",
+        "Stabilize Boost subreddit bottom navigation surface",
+        "Standardize Boost Home bottom navigation",
+        "Standardize Boost Inbox and Profile bottom navigation",
+        "Standardize Boost bottom navigation",
+        "Standardize Boost bottom-navigation FAB clearance",
+        "Support keyboard GIF insertion",
+        "Tune Boost image dismissal",
+        "Use Reddit for image uploads"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "chess-com-hyzor-v4.10.27-googleplay-arm64-v8a.apk": {
+      "name": "chess-com-hyzor",
+      "version": "4.10.27-googleplay",
+      "appKey": "chesscom",
+      "appName": "Chess.com",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.chess",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Accent color",
+        "Arcade animations",
+        "Arrows in games",
+        "Board colors",
+        "Customize Home screen",
+        "Customize bottom bar",
+        "Hide Premium-only content",
+        "Lichess Puzzles",
+        "Limits as toasts",
+        "No ads",
+        "No rating prompts",
+        "Noam's Patches settings",
+        "Stockfish analysis",
+        "Time controls under a minute",
+        "Unlimited Game Review",
+        "Unlimited Play Coach",
+        "Unlock Premium content",
+        "Unlock all bots"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "chess-com-hyzor-v4.10.27-googleplay-arm-v7a.apk": {
+      "name": "chess-com-hyzor",
+      "version": "4.10.27-googleplay",
+      "appKey": "chesscom",
+      "appName": "Chess.com",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.chess",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Accent color",
+        "Arcade animations",
+        "Arrows in games",
+        "Board colors",
+        "Customize Home screen",
+        "Customize bottom bar",
+        "Hide Premium-only content",
+        "Lichess Puzzles",
+        "Limits as toasts",
+        "No ads",
+        "No rating prompts",
+        "Noam's Patches settings",
+        "Stockfish analysis",
+        "Time controls under a minute",
+        "Unlimited Game Review",
+        "Unlimited Play Coach",
+        "Unlock Premium content",
+        "Unlock all bots"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "duolingo-hyzor-v6.104.5-arm-v7a.apk": {
+      "name": "duolingo-hyzor",
+      "version": "6.104.5",
+      "appKey": "duolingo",
+      "appName": "Duolingo",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.duolingo",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Enable Premium"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "duolingo-hyzor-v6.104.5-arm64-v8a.apk": {
+      "name": "duolingo-hyzor",
+      "version": "6.104.5",
+      "appKey": "duolingo",
+      "appName": "Duolingo",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.duolingo",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Enable Premium"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "foldersync-hyzor-v4.14.0-arm-v7a.apk": {
+      "name": "foldersync-hyzor",
+      "version": "4.14.0",
+      "appKey": "foldersync",
+      "appName": "FolderSync",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "dk.tacit.android.foldersync.lite",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "foldersync-hyzor-v4.14.0-arm64-v8a.apk": {
+      "name": "foldersync-hyzor",
+      "version": "4.14.0",
+      "appKey": "foldersync",
+      "appName": "FolderSync",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "dk.tacit.android.foldersync.lite",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "projectivy-launcher-hyzor-android-tv-v4.73-all.apk": {
+      "name": "projectivy-launcher-hyzor-android-tv",
+      "version": "4.73",
+      "appKey": "projectivylauncher",
+      "appName": "Projectivy Launcher",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": "Android TV",
+      "subVariant": null,
+      "packageName": "com.spocky.projengmenu",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "trakt-tv-hyzor-v3.28.0-arm-v7a.apk": {
+      "name": "trakt-tv-hyzor",
+      "version": "3.28.0",
+      "appKey": "trakttv",
+      "appName": "trakt.TV",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.trakt.trakt",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Fix sign-in",
+        "Unlock VIP"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "trakt-tv-hyzor-v3.28.0-arm64-v8a.apk": {
+      "name": "trakt-tv-hyzor",
+      "version": "3.28.0",
+      "appKey": "trakttv",
+      "appName": "trakt.TV",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "tv.trakt.trakt",
+      "patchSources": [
+        "hyzor/patches-1.10.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.0"
+      ],
+      "appliedPatches": [
+        "Fix sign-in",
+        "Unlock VIP"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "pixiv-piracola-v6.203.0-arm-v7a.apk": {
+      "name": "pixiv-piracola",
+      "version": "6.203.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "piracola",
+      "brandName": "Piracola",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "Piracola/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Piracola/Pixiv-Patched/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Pixiv AI Work Flagger",
+        "Pixiv Adblocker",
+        "Pixiv Bookmark Threshold",
+        "Pixiv Browsing History",
+        "Pixiv Downloader",
+        "Pixiv Enhanced Viewer & Instant Zoom",
+        "Pixiv Novel Text Copy",
+        "Pixiv OLED Dark Theme",
+        "Pixiv Popular Search Trial",
+        "Pixiv Premium Features",
+        "Pixiv Search Ranking",
+        "Pixiv-Patched Drawer Entry"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    },
+    "pixiv-piracola-v6.203.0-arm64-v8a.apk": {
+      "name": "pixiv-piracola",
+      "version": "6.203.0",
+      "appKey": "pixiv",
+      "appName": "pixiv",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "piracola",
+      "brandName": "Piracola",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "jp.pxv.android",
+      "patchSources": [
+        "Piracola/patches-1.8.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Piracola/Pixiv-Patched/releases/tag/v1.8.0"
+      ],
+      "appliedPatches": [
+        "Pixiv AI Work Flagger",
+        "Pixiv Adblocker",
+        "Pixiv Bookmark Threshold",
+        "Pixiv Browsing History",
+        "Pixiv Downloader",
+        "Pixiv Enhanced Viewer & Instant Zoom",
+        "Pixiv Novel Text Copy",
+        "Pixiv OLED Dark Theme",
+        "Pixiv Popular Search Trial",
+        "Pixiv Premium Features",
+        "Pixiv Search Ranking",
+        "Pixiv-Patched Drawer Entry"
+      ],
+      "originBuild": "260559",
+      "publishedAt": "2026-11-17T18:00:48Z"
+    }
+  }
+}
