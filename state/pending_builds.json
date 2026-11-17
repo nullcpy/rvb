@@ -21,16 +21,5 @@
       "cfg": "f5967b36e58ca578b114f5b92bd0e6ee8004bea7"
     }
   },
-  "beta": {
-    "GooglePhotos-AkashSriram-Unclone": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "f5967b36e58ca578b114f5b92bd0e6ee8004bea7"
-    }
-  }
+  "beta": {}
 }
