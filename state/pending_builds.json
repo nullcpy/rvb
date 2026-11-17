@@ -5,20 +5,11 @@
       "arches": [
         "arm-v7a"
       ],
-      "attempts": 1,
+      "attempts": 2,
       "parked": false,
       "cfg": "908ad9fabd9d05840c24aa355f636dd4cada0af6",
-      "run": 44041317508,
-      "ts": "2026-11-17T07:57:33Z"
-    },
-    "JioHotstar-Paresh": {
-      "reason": "new",
-      "arches": [
-        "all"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "19dfd4ad65e08a1125f75f60620f3542573a2647"
+      "run": 44074238114,
+      "ts": "2026-11-17T11:39:19Z"
     }
   },
   "beta": {}

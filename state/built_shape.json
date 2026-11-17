@@ -3669,6 +3669,20 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "JioHotstar-Paresh": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "Paresh-Maheshwari/paresh-patches",
+        "patches-source-host": "gitlab",
+        "brand": "Paresh",
+        "app-name": "JioHotstar",
+        "pkg-name": "in.startv.hotstar",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
