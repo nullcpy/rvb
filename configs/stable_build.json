@@ -258,6 +258,15 @@
     "apkpure-dlurl": "https://apkpure.com/netflix-android-tv-app/com.netflix.ninja",
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
+  "AlboSaveAndOrganize-hxreborn": {
+    "enabled": true,
+    "pkg-name": "com.thesortdapp.sortd",
+    "app-name": "Albo: Save & Organize",
+    "brand": "hxreborn",
+    "patches-source": "hxreborn/morphe-patches",
+    "included-patches": "'GmsCore support'",
+    "apkpure-dlurl": "https://apkpure.net/albo-save-organize/com.thesortdapp.sortd"
+  },
   "AliExpress-Quantro100": {
     "enabled": false,
     "pkg-name": "com.alibaba.aliexpresshd",
@@ -702,13 +711,13 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
     "variant": "Unclone",
     "preferred-format": "apk",
-    "included-patches": "'Official package name'",
+    "included-patches": "'Keep official package name'",
     "patches-source": "Akash-Sriram/morphe-google-photos",
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/photos",
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"

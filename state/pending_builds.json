@@ -1,4 +1,36 @@
 {
-  "stable": {},
-  "beta": {}
+  "stable": {
+    "AlboSaveAndOrganize-hxreborn": {
+      "reason": "new",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "908ad9fabd9d05840c24aa355f636dd4cada0af6"
+    },
+    "GooglePhotos-AkashSriram-Unclone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "f5967b36e58ca578b114f5b92bd0e6ee8004bea7"
+    }
+  },
+  "beta": {
+    "GooglePhotos-AkashSriram-Unclone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "f5967b36e58ca578b114f5b92bd0e6ee8004bea7"
+    }
+  }
 }
