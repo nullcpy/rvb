@@ -157,14 +157,14 @@
       ]
     },
     "reddit-morphe-v2026.40.0-arm64-v8a": {
-      "hash": "1123207428a24c6190297cd07f4de173",
+      "hash": "8cd0344fefed25600271736dd15dee3e",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-v2026.40.0-arm-v7a": {
-      "hash": "c2c1e7c22d814057bdb4a7da7a1bd0dd",
+      "hash": "eaeb722570be497a86eeb363d376402a",
       "kinds": [
         "apk",
         "module"
@@ -198,28 +198,28 @@
       ]
     },
     "youtube-morphe-v21.30.216-arm64-v8a": {
-      "hash": "0002d33316c61244fae482df30e824d8",
+      "hash": "4fb46469c233e73c562b732409003733",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-v21.30.216-arm-v7a": {
-      "hash": "b8754264ae00090dd76fa5295c235fc8",
+      "hash": "0056a9885a4a3afd8ac46635943824a5",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-v9.30.53-arm64-v8a": {
-      "hash": "37cf73a94df5f4bcf5ebd18b18288c2f",
+      "hash": "9208366eb3423bcfc9dad85070afdd12",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-v9.30.53-arm-v7a": {
-      "hash": "c9e54f30276406d2870cfbb6ff77ad6f",
+      "hash": "913eff9c8eec7368906777a4c3dfc737",
       "kinds": [
         "apk",
         "module"
@@ -359,21 +359,21 @@
       ]
     },
     "reddit-morphe-experimental-v2026.46.0-arm64-v8a": {
-      "hash": "d8e39d9069a3b46faf83fa03e285ec69",
+      "hash": "52b56bb20d43304303b651e2691600ec",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "reddit-morphe-experimental-v2026.46.0-arm-v7a": {
-      "hash": "f7c229b73c0629800651f4e345ef9ce2",
+      "hash": "f1ad3f06a52eb19c7e5aa3ea3d9dfd15",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-experimental-v9.46.51-arm64-v8a": {
-      "hash": "8ee133405d5820fb6d9ca6d82b66a39c",
+      "hash": "5508df9945efb7825858aa1a67475310",
       "kinds": [
         "apk",
         "module"
@@ -440,6 +440,27 @@
     },
     "twitter-piko-v12.43.0-prod.01-arm-v7a": {
       "hash": "1ae4a3e38366203d2a90ed67914b509d",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-music-morphe-experimental-v9.46.51-arm-v7a": {
+      "hash": "773123cc0f7f19f07458d42a9c737cf0",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-morphe-experimental-v21.46.522-arm64-v8a": {
+      "hash": "70272588512b4e7df18c8c6778a25b78",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-morphe-experimental-v21.46.522-arm-v7a": {
+      "hash": "9595a338688cb3bd0b391d572d3e9041",
       "kinds": [
         "apk",
         "module"
