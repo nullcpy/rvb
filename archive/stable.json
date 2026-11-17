@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-17T00:35:01Z"
+    "publishedAt": "2026-11-17T07:58:59Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -20053,22 +20053,20 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
         "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name",
-        "GmsCore support"
+        "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260556",
+      "publishedAt": "2026-11-17T07:58:28Z"
     },
     "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -20083,22 +20081,20 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.17.11.mpp"
+        "Akash-Sriram/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.17.11"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "DCIM & backup control",
         "Flag manager & Toolkit",
         "Media engine & AI fixes",
-        "Spoof features",
-        "Official package name",
-        "GmsCore support"
+        "Spoof features"
       ],
-      "originBuild": "260481",
-      "publishedAt": "2026-11-07T11:46:09Z"
+      "originBuild": "260556",
+      "publishedAt": "2026-11-17T07:58:28Z"
     },
     "google-photos-akashsriram-v7.99.0.1007655401-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -32113,6 +32109,33 @@
       ],
       "originBuild": "260552",
       "publishedAt": "2026-11-16T22:55:48Z"
+    },
+    "albo-save-organize-hxreborn-v1.25.6-arm64-v8a.apk": {
+      "name": "albo-save-organize-hxreborn",
+      "version": "1.25.6",
+      "appKey": "albosaveorganize",
+      "appName": "Albo: Save & Organize",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.thesortdapp.sortd",
+      "patchSources": [
+        "hxreborn/patches-1.80.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+      ],
+      "appliedPatches": [
+        "Enable guest sign-in",
+        "GmsCore support",
+        "Remove bulk import limit",
+        "Unlock premium"
+      ],
+      "originBuild": "260556",
+      "publishedAt": "2026-11-17T07:58:28Z"
     }
   }
 }
