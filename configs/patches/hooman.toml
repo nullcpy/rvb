@@ -24,15 +24,6 @@ arch = "all"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/cute-little-apps/at4k-launcher-android-tv"
 apkpure-dlurl = "https://apkpure.com/at4k-launcher/com.overdevs.at4k"
 
-[ProjectivyLauncher-hooman-AndroidTV]
-enabled = true
-pkg-name = "com.spocky.projengmenu"
-app-name = "Projectivy Launcher"
-variant = "Android TV"
-arch = "all"
-apkpure-dlurl = "https://apkpure.com/projectivy-launcher/com.spocky.projengmenu"
-apkcombo-dlurl = "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
-
 [AdobeAcrobat-hooman]
 enabled = true
 pkg-name = "com.adobe.reader"
