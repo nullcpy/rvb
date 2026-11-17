@@ -1,0 +1,24 @@
+[Duolingo-hoodles]
+enabled = true
+pkg-name = "com.duolingo"
+app-name = "Duolingo"
+brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/duolingo-learn-languages/com.duolingo"
+apkcombo-dlurl = "https://apkcombo.com/duolingo/com.duolingo"
+
+[Duolingo-hyzor]
+enabled = true
+pkg-name = "com.duolingo"
+app-name = "Duolingo"
+brand = "hyzor"
+patches-source = "hyzor/hyzor-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/duolingo-learn-languages/com.duolingo"
+apkcombo-dlurl = "https://apkcombo.com/duolingo/com.duolingo"
+
+
+
