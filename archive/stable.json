@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-16T22:56:24Z"
+    "publishedAt": "2026-11-17T00:35:01Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -13096,54 +13096,6 @@
       "originBuild": "260537",
       "publishedAt": "2026-11-15T00:04:14Z"
     },
-    "fairemail-heval99-v1.2338-arm64-v8a.apk": {
-      "name": "fairemail-heval99",
-      "version": "1.2338",
-      "appKey": "fairemail",
-      "appName": "FairEmail",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "eu.faircode.email",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Enable Pro"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
-    "fairemail-heval99-v1.2338-arm-v7a.apk": {
-      "name": "fairemail-heval99",
-      "version": "1.2338",
-      "appKey": "fairemail",
-      "appName": "FairEmail",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "eu.faircode.email",
-      "patchSources": [
-        "heval99/patches-1.18.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v1.18.0"
-      ],
-      "appliedPatches": [
-        "Enable Pro"
-      ],
-      "originBuild": "260341",
-      "publishedAt": "2026-10-22T17:54:51Z"
-    },
     "f-droid-patchweaver-v1.23.2-arm64-v8a.apk": {
       "name": "f-droid-patchweaver",
       "version": "1.23.2",
@@ -22550,70 +22502,6 @@
       "originBuild": "260451",
       "publishedAt": "2026-11-03T04:49:32Z"
     },
-    "instagram-instafel-v454.0.0.54.77-arm64-v8a.apk": {
-      "name": "instagram-instafel",
-      "version": "454.0.0.54.77",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260451",
-      "publishedAt": "2026-11-03T04:49:32Z"
-    },
-    "instagram-instafel-v454.0.0.54.77-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "454.0.0.54.77",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260451",
-      "publishedAt": "2026-11-03T04:49:32Z"
-    },
     "tiktok-kveld9-v47.6.3-arm-v7a.apk": {
       "name": "tiktok-kveld9",
       "version": "47.6.3",
@@ -30351,10 +30239,10 @@
       "subVariant": null,
       "packageName": "com.rubenmayayo.reddit",
       "patchSources": [
-        "wchill/patches-2.2.0.mpp"
+        "wchill/patches-2.3.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/wchill/patcheddit/releases/tag/v2.2.0"
+        "https://github.com/wchill/patcheddit/releases/tag/v2.3.0"
       ],
       "appliedPatches": [
         "Add Boost Search bottom navigation",
@@ -30368,25 +30256,23 @@
         "Boost search default discovery",
         "Configure editor image hosting",
         "Disable Boost Crashlytics startup network calls",
-        "Fix /r/all",
-        "Fix /s/ links",
         "Fix Boost FAB nested scroll",
         "Fix Boost code block rendering",
         "Fix Boost navigation bar overlap",
         "Fix Hide crash",
-        "Fix Reddit API lookups",
-        "Fix loading more comments",
-        "Fix profile About scrolling",
+        "Fix escaped URLs",
         "Import and export OAuth tokens",
         "Log exceptions",
-        "Modify login WebView",
         "Prefer high refresh rate",
         "Preview images in the editor",
         "Readable Boost flair labels",
+        "Reddit API fixes",
         "Remove obsolete profile tabs",
+        "Repeat Boost thread level colors",
         "Restore Boost sidebar Trending today",
         "Restore GIF URL insertion",
         "Show end of feed",
+        "Show strip query parameters option",
         "Stabilize Boost subreddit bottom navigation surface",
         "Standardize Boost Home bottom navigation",
         "Standardize Boost Inbox and Profile bottom navigation",
@@ -30396,8 +30282,8 @@
         "Tune Boost image dismissal",
         "Use Reddit for image uploads"
       ],
-      "originBuild": "260538",
-      "publishedAt": "2026-11-15T06:20:00Z"
+      "originBuild": "260554",
+      "publishedAt": "2026-11-17T00:34:46Z"
     },
     "telegram-hushtelegram-foss-v13.2.1-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
