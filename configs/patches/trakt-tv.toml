@@ -21,4 +21,14 @@ uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
 apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
 
+[TraktTV-hyzor]
+enabled = true
+pkg-name = "tv.trakt.trakt"
+app-name = "trakt.TV"
+brand = "hyzor"
+patches-source = "hyzor/hyzor-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+uptodown-dlurl = "https://trakt.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/trakt-tv-time-to-watch/tv.trakt.trakt"
+apkcombo-dlurl = "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
 
