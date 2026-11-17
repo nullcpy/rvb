@@ -1,0 +1,29 @@
+[NovaLauncher-hoodles]
+enabled = true
+pkg-name = "com.teslacoilsw.launcher"
+app-name = "Nova Launcher"
+patch-folder = "nova"
+build-mode = "both"
+brand = "hoodles"
+patches-source = "hoo-dles/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
+uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+
+[NovaLauncher-hyzor]
+enabled = true
+pkg-name = "com.teslacoilsw.launcher"
+app-name = "Nova Launcher"
+patch-folder = "nova"
+build-mode = "both"
+brand = "hyzor"
+patches-source = "hyzor/hyzor-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
+uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+
+

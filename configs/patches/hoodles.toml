@@ -1,15 +1,6 @@
 patches-source = "hoo-dles/morphe-patches"
 brand = "hoodles"
 
-[Duolingo-hoodles]
-enabled = true
-pkg-name = "com.duolingo"
-app-name = "Duolingo"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo"
-uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/duolingo-learn-languages/com.duolingo"
-apkcombo-dlurl = "https://apkcombo.com/duolingo/com.duolingo"
-
 [WPSOffice-hoodles]
 enabled = true
 pkg-name = "cn.wps.moffice_eng"
@@ -95,18 +86,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc-2/screen-recorder-vi
 apkpure-dlurl = "https://apkpure.com/screen-recorder-xrecorder-app/videoeditor.videorecorder.screenrecorder"
 apkcombo-dlurl = "https://apkcombo.com/xrecorder/videoeditor.videorecorder.screenrecorder"
 uptodown-dlurl = "https://videoeditor-videorecorder-screenrecorder.en.uptodown.com/android"
-
-[NovaLauncher-hoodles]
-enabled = true
-pkg-name = "com.teslacoilsw.launcher"
-app-name = "Nova Launcher"
-patch-folder = "nova"
-build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
-uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
-apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
-archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
 
 [Ventusky-hoodles]
 enabled = true
