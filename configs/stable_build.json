@@ -93,7 +93,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -280,7 +280,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "AliExpress-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "AliExpress",
     "brand": "hxreborn",
@@ -711,7 +711,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1096,7 +1096,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1107,7 +1107,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1116,7 +1116,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1126,7 +1126,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1137,7 +1137,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1249,7 +1249,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "InternetSpeedMeterLite-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.internet.speed.meter.lite",
     "app-name": "Internet Speed Meter Lite",
     "brand": "hxreborn",
@@ -1287,6 +1287,16 @@
     "apkpure-dlurl": "https://apkpure.com/gboard-the-google-keyboard-app/com.google.android.inputmethod.latin",
     "apkcombo-dlurl": "https://apkcombo.com/gboard/com.google.android.inputmethod.latin",
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.google.android.inputmethod.latin"
+  },
+  "JioHotstar-Paresh": {
+    "enabled": true,
+    "pkg-name": "in.startv.hotstar",
+    "app-name": "JioHotstar",
+    "brand": "Paresh",
+    "arch": "all",
+    "patches-source-host": "gitlab",
+    "patches-source": "Paresh-Maheshwari/paresh-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4"
   },
   "Kick-Lurk": {
     "enabled": false,
@@ -1461,7 +1471,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1471,7 +1481,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1671,7 +1681,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/chess/com.chess"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -1681,7 +1691,7 @@
     "github-regex": "lumo-v{version}-release\\.apk"
   },
   "ProtonMail-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1739,7 +1749,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1818,7 +1828,7 @@
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
   },
   "RidmikKeyboard-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ridmik.keyboard",
     "app-name": "Ridmik Keyboard",
     "brand": "hxreborn",
