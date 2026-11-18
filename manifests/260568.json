@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260568",
+    "channel": "stable",
+    "publishedAt": "2026-11-18T17:23:39Z"
+  },
+  "files": {
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260568",
+      "publishedAt": "2026-11-18T17:23:39Z"
+    },
+    "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm64-v8a.apk": {
+      "name": "google-photos-akashsriram-unclone",
+      "version": "8.0.0.1011730683",
+      "appKey": "googlephotos",
+      "appName": "Google Photos",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "akashsriram",
+      "brandName": "AkashSriram",
+      "variant": "Unclone",
+      "subVariant": null,
+      "packageName": "app.morphe.android.apps.photos",
+      "patchSources": [
+        "Akash-Sriram/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "DCIM & backup control",
+        "Flag manager & Toolkit",
+        "Media engine & AI fixes",
+        "Spoof features",
+        "GmsCore support"
+      ],
+      "originBuild": "260568",
+      "publishedAt": "2026-11-18T17:23:39Z"
+    },
+    "zalo-zeldrisho-clone-v26.10.02-all.apk": {
+      "name": "zalo-zeldrisho-clone",
+      "version": "26.10.02",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.zing.zalo.morphe",
+      "patchSources": [
+        "zeldrisho/patches-1.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.13.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Change Zalo app name",
+        "Change Zalo package name",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Enable stranger notifications",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide Newsfeed promotions",
+        "Hide chat list ads",
+        "Hide navigation tabs",
+        "Hide zStyle conversation",
+        "Keep expired media accessible",
+        "Keep recalled messages",
+        "Native backup interval settings",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260568",
+      "publishedAt": "2026-11-18T17:23:39Z"
+    },
+    "zalo-zeldrisho-v26.10.02-all.apk": {
+      "name": "zalo-zeldrisho",
+      "version": "26.10.02",
+      "appKey": "zalo",
+      "appName": "Zalo",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "zeldrisho",
+      "brandName": "zeldrisho",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.zing.zalo",
+      "patchSources": [
+        "zeldrisho/patches-1.13.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/zeldrisho/morphe-patches/releases/tag/v1.13.0"
+      ],
+      "appliedPatches": [
+        "Bypass Zalo Drive Contacts permission gate",
+        "Bypass native startup tamper check",
+        "Disable ads",
+        "Disable sponsored placements",
+        "Disable telemetry and crash reporting",
+        "Enable Google Drive photo backup",
+        "Enable avatar saving",
+        "Enable profile cover saving",
+        "Enable stranger notifications",
+        "Filter promo notifications",
+        "Hide Business Box",
+        "Hide Media Box",
+        "Hide Newsfeed promotions",
+        "Hide chat list ads",
+        "Hide navigation tabs",
+        "Hide zStyle conversation",
+        "Keep expired media accessible",
+        "Keep recalled messages",
+        "Native backup interval settings",
+        "Prefer original photo quality",
+        "Remove AD_ID permission",
+        "Remove media backup age limit",
+        "Suppress outbound seen status",
+        "Suppress outbound typing status",
+        "microG Drive support"
+      ],
+      "originBuild": "260568",
+      "publishedAt": "2026-11-18T17:23:39Z"
+    }
+  }
+}
