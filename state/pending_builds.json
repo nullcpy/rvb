@@ -1,4 +1,14 @@
 {
-  "stable": {},
+  "stable": {
+    "PicsArt-WaggBR": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "0aa7d31d239e65fcd8fcd90bf40c4bdec716b22b"
+    }
+  },
   "beta": {}
 }

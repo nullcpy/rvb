@@ -592,7 +592,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -604,7 +604,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-HushFacebook-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "SysAdminDoc/HushFacebook",
@@ -1613,6 +1613,26 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/f-droid-limited/f-droid",
     "apkpure-dlurl": "https://apkpure.com/f-droid/org.fdroid.fdroid"
   },
+  "PicsArt-rushiranpise": {
+    "enabled": false,
+    "pkg-name": "com.picsart.studio",
+    "app-name": "PicsArt",
+    "arch": "all",
+    "brand": "rushiranpise",
+    "patches-source": "rushiranpise/morphe-patches",
+    "uptodown-dlurl": "https://picsart-estudio.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/picsart/com.picsart.studio"
+  },
+  "PicsArt-WaggBR": {
+    "enabled": true,
+    "pkg-name": "com.picsart.studio",
+    "app-name": "PicsArt",
+    "arch": "all",
+    "brand": "WaggBR",
+    "patches-source": "WaggBR/Wagg13Patch_Morphe",
+    "uptodown-dlurl": "https://picsart-estudio.en.uptodown.com/android",
+    "apkcombo-dlurl": "https://apkcombo.com/picsart/com.picsart.studio"
+  },
   "Pinterest-binarymend": {
     "enabled": false,
     "pkg-name": "com.pinterest",
@@ -1624,7 +1644,7 @@
     "apkpure-dlurl": "https://apkpure.com/pinterest/com.pinterest"
   },
   "Pinterest-browzomje": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "browzomje/browzomje-patches",
@@ -2053,16 +2073,6 @@
     "apkpure-dlurl": "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv",
     "apkcombo-dlurl": "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
   },
-  "PicsArt-rushiranpise": {
-    "patches-source": "rushiranpise/morphe-patches",
-    "brand": "rushiranpise",
-    "enabled": false,
-    "pkg-name": "com.picsart.studio",
-    "app-name": "PicsArt",
-    "arch": "all",
-    "uptodown-dlurl": "https://picsart-estudio.en.uptodown.com/android",
-    "apkcombo-dlurl": "https://apkcombo.com/picsart/com.picsart.studio"
-  },
   "AdobeScan-rushiranpise": {
     "patches-source": "rushiranpise/morphe-patches",
     "brand": "rushiranpise",
@@ -2398,7 +2408,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",

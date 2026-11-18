@@ -648,8 +648,8 @@
   "sysadmindoc/hushfeed": {
     "beta": {},
     "stable": {
-      "com.zhiliaoapp.musically": "362a08857fe8e0a1b5047e6edb74a5ab",
-      "shared": "24beab6ef3dfa4ab55320442b0d1d400"
+      "com.zhiliaoapp.musically": "3ec4f399d089b664dab8e36b958fee56",
+      "shared": "01493dbe3ca1d3059af50c11a41ef041"
     }
   },
   "sysadmindoc/hushgram": {
@@ -700,6 +700,13 @@
     "stable": {
       "com.discord": "6bacc5f932d8870523b4ac59d9c5f82a",
       "shared": "9b1c9a22435cf7362a9e7de7e8eca429"
+    }
+  },
+  "waggbr/wagg13patch_morphe": {
+    "beta": {},
+    "stable": {
+      "com.picsart.studio": "ff992a5ad7c7ccd3db181bb2973ad2f4",
+      "shared": "e1662622daed52d9fe23009f4010be47"
     }
   },
   "wchill/patcheddit": {
