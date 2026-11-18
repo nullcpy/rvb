@@ -1,21 +1,13 @@
-[VPNify-BholeyKaBhakt]
+[NovaLauncher-hyzor]
 enabled = true
-pkg-name = "com.vpn.free.hotspot.secure.vpnify"
-app-name = "VPNify"
-patches-source = "BholeyKaBhakt/revanced-patches-xtra"
-brand = "BholeyKaBhakt"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy"
-apkpure-dlurl = "https://apkpure.com/vpnify-unlimited-vpn-proxy/com.vpn.free.hotspot.secure.vpnify"
-apkcombo-dlurl = "https://apkcombo.com/vpnify/com.vpn.free.hotspot.secure.vpnify"
-
-[Poweramp-mwbra130]
-enabled = true
-pkg-name = "com.maxmpz.audioplayer"
-app-name = "Poweramp"
-brand = "mwbra130"
-arch = "all"
-patches-source = "mwbra130/Retro-Bowl-College"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/max-mp/poweramp"
-uptodown-dlurl = "https://poweramp-music-player.en.uptodown.com/android"
-apkpure-dlurl = "https://apkpure.com/poweramp-music-player-trial-app/com.maxmpz.audioplayer"
-apkcombo-dlurl = "https://apkcombo.com/poweramp/com.maxmpz.audioplayer"
+pkg-name = "com.teslacoilsw.launcher"
+app-name = "Nova Launcher"
+patch-folder = "nova"
+build-mode = "both"
+brand = "hyzor"
+patches-source = "hyzor/hyzor-morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
+uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
