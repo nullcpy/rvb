@@ -170,6 +170,31 @@ _rekey_to_bytes uptodown "$META_VERSIONNAME" || fail "spacing difference was rea
 [ "$GATE_CALLS" = 0 ] || fail "spacing difference re-ran the gate ($GATE_CALLS)"
 [ "$version_f" = "348.10-Stable" ] || fail "label rewritten for nothing: '$version_f'"
 
+# --- 7b. a vendor's parenthetical version annotation is display metadata ------------
+# Nova's versionName is "89700 (8.9.7)" (upstream hyzor 5be3bb31); its patch bundle and
+# the requested label are "89700". Folding the bytes to "89700(8.9.7)" makes the gate
+# refuse a perfectly good fetch, which left both Nova arches unbuilt in run 44138265442.
+[ "$(_ver_key '89700 (8.9.7)')" = "89700" ] || fail "_ver_key did not fold a spaced parenthetical"
+[ "$(_ver_key '89700(8.9.7)')" = "89700" ] || fail "_ver_key did not fold a joined parenthetical"
+[ "$(_ver_key '2.1.5-gms')" = "2.1.5-gms" ] || fail "_ver_key changed a plain version"
+reset_scope "89700" "89700"
+META_VERSIONNAME="89700 (8.9.7)"
+_rekey_to_bytes uptodown "$META_VERSIONNAME" || fail "parenthetical annotation was read as a mismatch"
+[ "$GATE_CALLS" = 0 ] || fail "parenthetical annotation re-ran the gate ($GATE_CALLS)"
+[ "$version_f" = "89700" ] || fail "label rewritten to '$version_f'"
+[ "$version" = "89700" ] || fail "version rewritten to '$version'"
+[ "$vc_infix" = "-89700" ] || fail "infix rewritten: '$vc_infix'"
+[ -f "$stock_apk" ] || fail "artifact moved on a parenthetical-only difference"
+
+# Negative control: a textual parenthetical is a flavour, not a version annotation.
+# Folding it away would collapse two genuinely different builds into one cache key.
+[ "$(_ver_key '1.0 (beta)')" = "1.0(beta)" ] || fail "_ver_key folded a textual parenthetical"
+reset_scope "1.0" ""
+META_VERSIONNAME="1.0 (beta)"
+_rekey_to_bytes uptodown "$META_VERSIONNAME" || fail "a textual parenthetical build was discarded"
+[ "$GATE_CALLS" = 1 ] || fail "textual parenthetical did not re-run the gate ($GATE_CALLS)"
+[ "$version_f" = "1.0(beta)" ] || fail "textual parenthetical was folded away: '$version_f'"
+
 # --- 8. a cached file is judged by its bytes too -----------------------------------
 reset_scope "2.1.5-nogms" "79"
 META_VERSIONNAME="2.1.5-gms"
@@ -180,6 +205,8 @@ META_VERSIONNAME=""
 ! _cached_identity_disagrees "$stock_apk" "$version_f" || fail "unreadable cache identity read as a lie"
 META_VERSIONNAME=" 2.1.5-nogms "
 ! _cached_identity_disagrees "$stock_apk" "2.1.5-nogms" || fail "surrounding spaces fooled the fold"
+META_VERSIONNAME="89700 (8.9.7)"
+! _cached_identity_disagrees "$stock_apk" "89700" || fail "a parenthetical annotation fooled the cache name test"
 
 # --- 9. the zero-patch refusal's testable half ----------------------------------
 # The gate itself sits inside build_rv (documented as not exercised by this harness), so

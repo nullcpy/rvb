@@ -428,6 +428,13 @@ Supporting machinery:
   the versionCode as well, since a bare link claims no code while a store row has already
   been checked against the target; a versionCode written by hand in `version-code` survives
   as an order and still rejects the artifact.
+  A vendor can print its human-readable version in parentheses after the build number —
+  Nova's `versionName` is `89700 (8.9.7)` (upstream hyzor commit `5be3bb31`) while its patch
+  bundle pins the key `89700` — so `_ver_key` folds a trailing digit-leading parenthetical
+  off both the bytes and the bundle before the name is judged. The parenthetical is display
+  metadata, not a flavour: a textual ` (beta)` is kept and still reads as a different build
+  ([decisions/0017](decisions/0017-parenthetical-versions-are-display-metadata.md), CI run
+  44138265442).
 - **A cache hit is judged by the same name test** — `_cached_identity_disagrees` reads the
   cached file's `versionName` before the loop adopts it (a cache hit skips every fetch
   gate). A label the bytes deny is a false name, so the entry and its sidecars are deleted

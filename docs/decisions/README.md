@@ -47,6 +47,7 @@ document.
 | [0014](0014-config-changes-that-earn-a-rebuild.md) | Only a config change that earns an artifact may force a rebuild | `retry_tracked_keys`, `state/built_shape.json` `{arches, cfg}`, `reason: "config"`, `changed_apps.json`, `state/build_content_hashes.json` `{hash, kinds}`, `check_duplicate_build` |
 | [0015](0015-builds-are-mirrored-to-a-permanent-archive-repo.md) | Builds are mirrored to a permanent archive repo | `build.yml` mirror + manifest steps, `ARCHIVE_REPO`/`ARCHIVE_REPO_TOKEN`, `nullcpy/archive` + its `website` branch, `build.archive.md`, notify link targets |
 | [0016](0016-archive-pages-are-generated-markdown-on-main.md) | The archive is generated markdown on its own branches | `build_archive_pages.py`, `nullcpy/archive` `main` README + `site` Pages sources, its `pages.yml`, `Notify archive pages` step, `PUBLISHED` output |
+| [0017](0017-parenthetical-versions-are-display-metadata.md) | A parenthetical version annotation is display metadata | `scripts/utils.sh` `_ver_key` / `version_f` / `_rekey_to_bytes` / `_cached_identity_disagrees`, frozen filename grammar |
 
 Candidates still unwritten, because the reasoning currently lives only in commit
 messages: pinning a patch source's `patches-version` to a tag vs resolving the

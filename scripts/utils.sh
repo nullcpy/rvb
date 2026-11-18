@@ -1119,6 +1119,11 @@ _get_patch_last_supported_ver() {
 	if [ -z "$pcount" ]; then
 		return
 	fi
+	# The greedy ` (.* patch.*` strip deliberately reduces a listing like
+	# "89700 (8.9.7) (1 patch)" to the bare key "89700": the parenthetical is display
+	# metadata, and _ver_key folds it off on the other side of every comparison too.
+	# Do not narrow this to the final patch-count group — resolution, labels and the
+	# compatibility gate must all speak the same key.
 	grep -F "($pcount patch" <<<"$op" | sed 's/ (.* patch.*//' | sed 's/ \[.*//' | sort_vers || return 1
 }
 
@@ -1489,9 +1494,24 @@ _patches_list() {
 # The engine's canonical form of a version string. Bundles print names like
 # "348.10 - Stable", while build_rv's version_f (and every cache filename) has its
 # spaces removed, so the two sides of every comparison have to be folded the same way:
-# strip whitespace, then one leading v/V. This is the shape the pre-table gate used
-# with ${version// /} and ${v_raw// /}.
-_ver_key() { local v=${1// /}; v="${v#v}"; v="${v#V}"; printf '%s' "$v"; }
+# strip whitespace, drop a trailing vendor version annotation, then one leading v/V.
+# This is the shape the pre-table gate used with ${version// /} and ${v_raw// /}.
+#
+# A vendor may print its human-readable version in parentheses after the build number:
+# Nova's versionName is "89700 (8.9.7)" (upstream hyzor commit 5be3bb31) while its patch
+# bundle pins the key "89700". The parenthetical is display metadata, not part of the
+# key, so both sides of every comparison fold to the key — otherwise _rekey_to_bytes
+# re-labels a good fetch as "89700(8.9.7)" and has_compatible_patches refuses it, which
+# is what left both Nova arches unbuilt in CI run 44138265442. Only a digit-leading
+# parenthetical folds: a textual flavour suffix ("1.0 (beta)") is a different build
+# ([decisions/0017](decisions/0017-parenthetical-versions-are-display-metadata.md)).
+_ver_key() {
+	local v=${1// /}
+	v=${v%%([0-9]*}
+	v="${v#v}"
+	v="${v#V}"
+	printf '%s' "$v"
+}
 
 # Map a build arch onto the ABI token a patch bundle uses in its version-code
 # annotation ("[versionCodes: ARM64_V8A=3327]" / "3.15.3: ARM64_V8A=3327"). The one
@@ -5965,8 +5985,11 @@ build_rv() {
 		fi
 
 		pr "Choosing version '${version}' for ${table}"
-		local version_f=${version// /}
-		version_f=${version_f#v}
+		# One canonical label for filenames, gates and cache keys. Deriving it through
+		# _ver_key also keeps a config-supplied full version string from leaking a
+		# parenthetical (or an uppercase V) into the frozen filename grammar.
+		local version_f
+		version_f=$(_ver_key "$version")
 
 		if ! has_compatible_patches "$cli_jar" "$patches_jar" "$pkg_name" "$version_f" "${args[cli_source]:-}" "${args[included_patches]:-}"; then
 			wpr "No compatible patches found in '${args[patches_src]:-${args[cli_source]:-}}' for '$pkg_name' v${version_f}. Skipping ${table}."
