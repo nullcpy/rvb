@@ -8,8 +8,30 @@
       "attempts": 1,
       "parked": false,
       "run": 44313994067,
-      "ts": "2026-11-18T13:56:43Z"
+      "ts": "2026-11-18T13:56:43Z",
+      "cfg": "908ad9fabd9d05840c24aa355f636dd4cada0af6"
+    },
+    "GooglePhotos-AkashSriram-Unclone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "cc632860503dfd53cb1a86925874a318f76ea877"
     }
   },
-  "beta": {}
+  "beta": {
+    "GooglePhotos-AkashSriram-Unclone": {
+      "reason": "config",
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "cc632860503dfd53cb1a86925874a318f76ea877"
+    }
+  }
 }
