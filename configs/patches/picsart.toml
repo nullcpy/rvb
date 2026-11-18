@@ -1,0 +1,19 @@
+[PicsArt-rushiranpise]
+enabled = true
+pkg-name = "com.picsart.studio"
+app-name = "PicsArt"
+arch = "all"
+brand = "rushiranpise"
+patches-source = "rushiranpise/morphe-patches"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
+
+[PicsArt-WaggBR]
+enabled = true
+pkg-name = "com.picsart.studio"
+app-name = "PicsArt"
+arch = "all"
+brand = "WaggBR"
+patches-source = "WaggBR/Wagg13Patch_Morphe"
+uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"

@@ -113,14 +113,6 @@ uptodown-dlurl = "https://send-files-to-tv.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/send-files-to-tv-app/com.yablio.sendfilestotv"
 apkcombo-dlurl = "https://apkcombo.com/send-files-to-tv/com.yablio.sendfilestotv"
 
-[PicsArt-rushiranpise]
-enabled = true
-pkg-name = "com.picsart.studio"
-app-name = "PicsArt"
-arch = "all"
-uptodown-dlurl = "https://picsart-estudio.en.uptodown.com/android"
-apkcombo-dlurl = "https://apkcombo.com/picsart/com.picsart.studio"
-
 [AdobeScan-rushiranpise]
 enabled = true
 pkg-name = "com.adobe.scan.android"
