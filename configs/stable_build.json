@@ -259,10 +259,11 @@
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
   "AlboSaveAndOrganize-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
+    "arch": "arm64-v8a",
     "patches-source": "hxreborn/morphe-patches",
     "included-patches": "'GmsCore support'",
     "apkpure-dlurl": "https://apkpure.net/albo-save-organize/com.thesortdapp.sortd"
@@ -777,7 +778,7 @@
     "uptodown-dlurl": "https://google-photos.en.uptodown.com/android"
   },
   "GooglePhotos-AkashSriram-Unclone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.photos",
     "app-name": "Google Photos",
     "brand": "AkashSriram",
@@ -1307,7 +1308,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4"
   },
   "Kick-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1926,7 +1927,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
@@ -2478,7 +2479,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/trakt-tv-series-et-films/tv.trakt.trakt"
   },
   "TraktTV-Proteus": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "tv.trakt.trakt",
     "app-name": "trakt.TV",
     "brand": "Proteus",
@@ -2545,7 +2546,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
@@ -2796,7 +2797,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Zalo-zeldrisho": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
@@ -2809,7 +2810,7 @@
     "apkpure-dlurl": "https://apkpure.com/zalo/com.zing.zalo"
   },
   "Zalo-zeldrisho-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
