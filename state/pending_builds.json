@@ -1,13 +1,15 @@
 {
   "stable": {
     "PicsArt-WaggBR": {
-      "reason": "new",
+      "reason": "retry",
       "arches": [
         "all"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "parked": false,
-      "cfg": "0aa7d31d239e65fcd8fcd90bf40c4bdec716b22b"
+      "cfg": "0aa7d31d239e65fcd8fcd90bf40c4bdec716b22b",
+      "run": 44257232566,
+      "ts": "2026-11-18T07:19:45Z"
     }
   },
   "beta": {}
