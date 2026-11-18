@@ -3782,6 +3782,19 @@
         "arch": "both",
         "build-mode": "both"
       }
+    },
+    "PicsArt-WaggBR": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "WaggBR/Wagg13Patch_Morphe",
+        "brand": "WaggBR",
+        "app-name": "PicsArt",
+        "pkg-name": "com.picsart.studio",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
