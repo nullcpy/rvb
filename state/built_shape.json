@@ -3768,6 +3768,20 @@
         "arch": "both",
         "build-mode": "apk"
       }
+    },
+    "NovaLauncher-hyzor": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "hyzor/hyzor-morphe-patches",
+        "brand": "hyzor",
+        "app-name": "Nova Launcher",
+        "pkg-name": "com.teslacoilsw.launcher",
+        "arch": "both",
+        "build-mode": "both"
+      }
     }
   },
   "beta": {
