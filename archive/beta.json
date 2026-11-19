@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-19T14:16:02Z"
+    "publishedAt": "2026-11-19T21:13:54Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -368,10 +368,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -406,6 +406,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -446,11 +447,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko-material-you",
@@ -465,10 +467,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -503,6 +505,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -543,11 +546,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-material-you-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko-material-you",
@@ -562,10 +566,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -600,6 +604,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -640,11 +645,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-material-you-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko-material-you",
@@ -659,10 +665,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -697,6 +703,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -737,11 +744,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-v12.19.1-release.0-arm64-v8a.apk": {
       "name": "twitter-piko",
@@ -756,10 +764,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -792,6 +800,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -832,11 +841,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm64-v8a.zip": {
       "name": "twitter-piko",
@@ -851,10 +861,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -887,6 +897,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -927,11 +938,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-module-v12.19.1-release.0-arm-v7a.zip": {
       "name": "twitter-piko",
@@ -946,10 +958,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -982,6 +994,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -1022,11 +1035,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "twitter-piko-v12.19.1-release.0-arm-v7a.apk": {
       "name": "twitter-piko",
@@ -1041,10 +1055,10 @@
       "subVariant": null,
       "packageName": "com.twitter.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add ability to copy media link",
@@ -1077,6 +1091,7 @@
         "Enable Undo Posts",
         "Enable debug menu for posts",
         "Enable force HD videos",
+        "Fix 20 photos support",
         "Force enable translate",
         "Handle custom twitter links",
         "Hide Banner",
@@ -1117,11 +1132,12 @@
         "Show poll results",
         "Show post source label",
         "Show sensitive media",
+        "Spoof client version",
         "Support external downloader",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "youtube-anddea-v21.07.247-arm64-v8a.apk": {
       "name": "youtube-anddea",
@@ -3257,10 +3273,10 @@
       "subVariant": "Clone",
       "packageName": "com.instagram.android.piko",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3322,6 +3338,7 @@
         "Save Instants",
         "Save deleted messages",
         "Save media comment",
+        "Send keyboard GIFs",
         "Theme",
         "Unlock developer options",
         "View DMs anonymously",
@@ -3331,8 +3348,8 @@
         "Disable Play Store updates",
         "Clone"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "instagram-piko-v452.1.0.53.64-arm64-v8a.apk": {
       "name": "instagram-piko",
@@ -3347,10 +3364,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3412,6 +3429,7 @@
         "Save Instants",
         "Save deleted messages",
         "Save media comment",
+        "Send keyboard GIFs",
         "Theme",
         "Unlock developer options",
         "View DMs anonymously",
@@ -3420,8 +3438,8 @@
         "View story mentions",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "instagram-piko-module-v452.1.0.53.64-arm64-v8a.zip": {
       "name": "instagram-piko",
@@ -3436,10 +3454,10 @@
       "subVariant": null,
       "packageName": "com.instagram.android",
       "patchSources": [
-        "crimera/patches-3.12.0-dev.3.mpp"
+        "crimera/patches-3.12.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.3"
+        "https://github.com/crimera/piko/releases/tag/v3.12.0-dev.4"
       ],
       "appliedPatches": [
         "Add settings",
@@ -3501,6 +3519,7 @@
         "Save Instants",
         "Save deleted messages",
         "Save media comment",
+        "Send keyboard GIFs",
         "Theme",
         "Unlock developer options",
         "View DMs anonymously",
@@ -3509,8 +3528,8 @@
         "View story mentions",
         "Disable Play Store updates"
       ],
-      "originBuild": "260560",
-      "publishedAt": "2026-11-17T21:33:56Z"
+      "originBuild": "260576",
+      "publishedAt": "2026-11-19T21:12:56Z"
     },
     "tiktok-icysymmetra-v47.4.3-arm64-v8a.apk": {
       "name": "tiktok-icysymmetra",
@@ -7458,64 +7477,6 @@
       ],
       "originBuild": "260573",
       "publishedAt": "2026-11-19T14:14:46Z"
-    },
-    "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm-v7a.apk": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.99.0.1007655401",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.1.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.1"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
-      ],
-      "originBuild": "260565",
-      "publishedAt": "2026-11-18T13:45:16Z"
-    },
-    "google-photos-akashsriram-unclone-v7.99.0.1007655401-arm64-v8a.apk": {
-      "name": "google-photos-akashsriram-unclone",
-      "version": "7.99.0.1007655401",
-      "appKey": "googlephotos",
-      "appName": "Google Photos",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "akashsriram",
-      "brandName": "AkashSriram",
-      "variant": "Unclone",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.photos",
-      "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.1.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.1"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "DCIM & backup control",
-        "Flag manager & Toolkit",
-        "Media engine & AI fixes",
-        "Spoof features",
-        "GmsCore support"
-      ],
-      "originBuild": "260565",
-      "publishedAt": "2026-11-18T13:45:16Z"
     },
     "twitter-piko-module-v12.43.0-prod.01-arm-v7a.zip": {
       "name": "twitter-piko",
