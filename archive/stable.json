@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-18T21:09:58Z"
+    "publishedAt": "2026-11-19T01:59:05Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -1826,10 +1826,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -1838,8 +1838,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -2715,18 +2715,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2741,16 +2741,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11837,17 +11837,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -20244,116 +20244,6 @@
       "originBuild": "260566",
       "publishedAt": "2026-11-18T13:58:09Z"
     },
-    "kick-lurk-v40.33.0-arm64-v8a.apk": {
-      "name": "kick-lurk",
-      "version": "40.33.0",
-      "appKey": "kick",
-      "appName": "Kick",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "lurk",
-      "brandName": "Lurk",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.kick.mobile",
-      "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
-      ],
-      "appliedPatches": [
-        "AMOLED black",
-        "Anonymous chat",
-        "Background audio",
-        "Block update prompts",
-        "Chat keywords",
-        "Chat text size",
-        "Chat timestamps",
-        "Clean share links",
-        "Default startup tab",
-        "Disable analytics",
-        "Disable autoplay",
-        "Don't save searches",
-        "Fill screen",
-        "Hide Clips",
-        "Hide Home sections",
-        "Hide KICKs tipping",
-        "Hide chat highlights",
-        "Hide mature-content warning",
-        "Hide rating prompt",
-        "Hide subscription upsells",
-        "Lurk icon",
-        "Lurk in account menu",
-        "Mute stitched live ads",
-        "Normal latency",
-        "Remove tracking permissions",
-        "Seek interval",
-        "Show deleted messages",
-        "Show exact counts",
-        "Show video stats",
-        "Sleep timer",
-        "Stay on channel when it hosts",
-        "Third-party emotes"
-      ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
-    "kick-lurk-v40.33.0-arm-v7a.apk": {
-      "name": "kick-lurk",
-      "version": "40.33.0",
-      "appKey": "kick",
-      "appName": "Kick",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "lurk",
-      "brandName": "Lurk",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.kick.mobile",
-      "patchSources": [
-        "jordanwoodson/patches-1.15.1.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.15.1"
-      ],
-      "appliedPatches": [
-        "AMOLED black",
-        "Anonymous chat",
-        "Background audio",
-        "Block update prompts",
-        "Chat keywords",
-        "Chat text size",
-        "Chat timestamps",
-        "Clean share links",
-        "Default startup tab",
-        "Disable analytics",
-        "Disable autoplay",
-        "Don't save searches",
-        "Fill screen",
-        "Hide Clips",
-        "Hide Home sections",
-        "Hide KICKs tipping",
-        "Hide chat highlights",
-        "Hide mature-content warning",
-        "Hide rating prompt",
-        "Hide subscription upsells",
-        "Lurk icon",
-        "Lurk in account menu",
-        "Mute stitched live ads",
-        "Normal latency",
-        "Remove tracking permissions",
-        "Seek interval",
-        "Show deleted messages",
-        "Show exact counts",
-        "Show video stats",
-        "Sleep timer",
-        "Stay on channel when it hosts",
-        "Third-party emotes"
-      ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
     "pinterest-hushpinterest-v14.41.0-arm64-v8a.apk": {
       "name": "pinterest-hushpinterest",
       "version": "14.41.0",
@@ -21335,136 +21225,6 @@
         "Hide inbox subtabs",
         "Open links externally",
         "Remove Meta AI"
-      ],
-      "originBuild": "260465",
-      "publishedAt": "2026-11-04T20:25:05Z"
-    },
-    "twitch-lurk-v31.9.0-arm64-v8a.apk": {
-      "name": "twitch-lurk",
-      "version": "31.9.0",
-      "appKey": "twitch",
-      "appName": "Twitch",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "lurk",
-      "brandName": "Lurk",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "tv.twitch.android.app",
-      "patchSources": [
-        "jordanwoodson/patches-1.16.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
-      ],
-      "appliedPatches": [
-        "AMOLED black",
-        "Anonymous chat",
-        "Auto-claim Drops",
-        "Auto-claim channel points",
-        "Avoid stitched ads",
-        "Background audio",
-        "Block client ads",
-        "Block cookie notice",
-        "Block display ads",
-        "Chat appearance",
-        "Chat keywords",
-        "Chat overlay",
-        "Chat timestamps",
-        "Clean share links",
-        "Clip download",
-        "Compact chat",
-        "Default startup tab",
-        "Disable analytics",
-        "Disable autoplay",
-        "Emote and badge info",
-        "Fill screen",
-        "Fix notifications",
-        "Fix stuck start screen",
-        "Force ExoPlayer",
-        "Force landscape",
-        "Highlight first-time chatters",
-        "Latency badge",
-        "Lurk icon",
-        "Mute stitched ads",
-        "Navigation bar position",
-        "Normal latency",
-        "Player gestures",
-        "Refresh stream",
-        "Remove tracking permissions",
-        "Show deleted messages",
-        "Sleep timer",
-        "Tablet layout",
-        "Third-party badges",
-        "Third-party emotes",
-        "Use native player",
-        "VOD chapters",
-        "Watch without signing in"
-      ],
-      "originBuild": "260465",
-      "publishedAt": "2026-11-04T20:25:05Z"
-    },
-    "twitch-lurk-v31.9.0-arm-v7a.apk": {
-      "name": "twitch-lurk",
-      "version": "31.9.0",
-      "appKey": "twitch",
-      "appName": "Twitch",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "lurk",
-      "brandName": "Lurk",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "tv.twitch.android.app",
-      "patchSources": [
-        "jordanwoodson/patches-1.16.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.16.0"
-      ],
-      "appliedPatches": [
-        "AMOLED black",
-        "Anonymous chat",
-        "Auto-claim Drops",
-        "Auto-claim channel points",
-        "Avoid stitched ads",
-        "Background audio",
-        "Block client ads",
-        "Block cookie notice",
-        "Block display ads",
-        "Chat appearance",
-        "Chat keywords",
-        "Chat overlay",
-        "Chat timestamps",
-        "Clean share links",
-        "Clip download",
-        "Compact chat",
-        "Default startup tab",
-        "Disable analytics",
-        "Disable autoplay",
-        "Emote and badge info",
-        "Fill screen",
-        "Fix notifications",
-        "Fix stuck start screen",
-        "Force ExoPlayer",
-        "Force landscape",
-        "Highlight first-time chatters",
-        "Latency badge",
-        "Lurk icon",
-        "Mute stitched ads",
-        "Navigation bar position",
-        "Normal latency",
-        "Player gestures",
-        "Refresh stream",
-        "Remove tracking permissions",
-        "Show deleted messages",
-        "Sleep timer",
-        "Tablet layout",
-        "Third-party badges",
-        "Third-party emotes",
-        "Use native player",
-        "VOD chapters",
-        "Watch without signing in"
       ],
       "originBuild": "260465",
       "publishedAt": "2026-11-04T20:25:05Z"
@@ -24107,10 +23867,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -24120,8 +23880,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -26003,17 +25763,17 @@
       "subVariant": null,
       "packageName": "com.univision.prendetv",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.56.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
       ],
       "appliedPatches": [
         "Override certificate pinning",
         "Skip ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -27631,10 +27391,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.17.1.mpp"
+        "browzomje/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.17.1"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "Choose startup tab",
@@ -27674,8 +27434,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260562",
-      "publishedAt": "2026-11-18T02:38:06Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "pinterest-browzomje-v14.44.0-arm64-v8a.apk": {
       "name": "pinterest-browzomje",
@@ -27690,10 +27450,10 @@
       "subVariant": null,
       "packageName": "com.pinterest",
       "patchSources": [
-        "browzomje/patches-1.17.1.mpp"
+        "browzomje/patches-1.18.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.17.1"
+        "https://github.com/browzomje/browzomje-patches/releases/tag/v1.18.0"
       ],
       "appliedPatches": [
         "Choose startup tab",
@@ -27733,8 +27493,8 @@
         "Show pin image information",
         "Use the system share sheet"
       ],
-      "originBuild": "260562",
-      "publishedAt": "2026-11-18T02:38:06Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "microsoft-edge-quantavil-v157.0.4341.53-arm64-v8a.apk": {
       "name": "microsoft-edge-quantavil",
@@ -32847,10 +32607,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32889,8 +32649,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "kick-lurk-v40.35.4-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -32905,10 +32665,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32947,8 +32707,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "rumble-lurk-v3.22.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
@@ -32963,10 +32723,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -33010,8 +32770,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "rumble-lurk-v3.22.0-arm-v7a.apk": {
       "name": "rumble-lurk",
@@ -33026,10 +32786,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -33073,8 +32833,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "twitch-lurk-v32.1.0-arm-v7a.apk": {
       "name": "twitch-lurk",
@@ -33089,10 +32849,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -33141,8 +32901,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     },
     "twitch-lurk-v32.1.0-arm64-v8a.apk": {
       "name": "twitch-lurk",
@@ -33157,10 +32917,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.17.1.mpp"
+        "jordanwoodson/patches-1.17.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.1"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -33209,8 +32969,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260570",
-      "publishedAt": "2026-11-18T21:09:27Z"
+      "originBuild": "260571",
+      "publishedAt": "2026-11-19T01:58:28Z"
     }
   }
 }
