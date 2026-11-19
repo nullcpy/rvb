@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-19T17:24:08Z"
+    "publishedAt": "2026-11-19T21:18:36Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -32347,10 +32347,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32358,6 +32358,7 @@
         "Background audio",
         "Block update prompts",
         "Chat keywords",
+        "Chat search",
         "Chat text size",
         "Chat timestamps",
         "Clean share links",
@@ -32389,8 +32390,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "kick-lurk-v40.35.4-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -32405,10 +32406,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32416,6 +32417,7 @@
         "Background audio",
         "Block update prompts",
         "Chat keywords",
+        "Chat search",
         "Chat text size",
         "Chat timestamps",
         "Clean share links",
@@ -32447,8 +32449,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "rumble-lurk-v3.22.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
@@ -32463,10 +32465,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32510,8 +32512,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "rumble-lurk-v3.22.0-arm-v7a.apk": {
       "name": "rumble-lurk",
@@ -32526,10 +32528,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32573,8 +32575,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "twitch-lurk-v32.1.0-arm-v7a.apk": {
       "name": "twitch-lurk",
@@ -32589,10 +32591,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32623,6 +32625,7 @@
         "Force ExoPlayer",
         "Force landscape",
         "Highlight first-time chatters",
+        "Keep Drops banner",
         "Latency badge",
         "Lurk icon",
         "Mute stitched ads",
@@ -32641,8 +32644,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "twitch-lurk-v32.1.0-arm64-v8a.apk": {
       "name": "twitch-lurk",
@@ -32657,10 +32660,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.17.2.mpp"
+        "jordanwoodson/patches-1.19.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.17.2"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.19.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32691,6 +32694,7 @@
         "Force ExoPlayer",
         "Force landscape",
         "Highlight first-time chatters",
+        "Keep Drops banner",
         "Latency badge",
         "Lurk icon",
         "Mute stitched ads",
@@ -32709,8 +32713,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260577",
+      "publishedAt": "2026-11-19T21:18:12Z"
     },
     "instagram-instafel-v456.1.0.56.78-arm-v7a.apk": {
       "name": "instagram-instafel",
