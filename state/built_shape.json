@@ -3067,7 +3067,7 @@
         "variant": "Unclone",
         "app-name": "Google Photos",
         "pkg-name": "com.google.android.apps.photos",
-        "included-patches": "'GmsCore support' 'Keep official package name'",
+        "patcher-args": "-e \"GmsCore support\" -OkeepOfficialPackageName=\"true\"",
         "arch": "both",
         "build-mode": "apk"
       }

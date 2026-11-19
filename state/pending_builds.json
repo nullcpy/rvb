@@ -1,15 +1,4 @@
 {
-  "stable": {
-    "GooglePhotos-AkashSriram-Unclone": {
-      "reason": "config",
-      "arches": [
-        "arm-v7a",
-        "arm64-v8a"
-      ],
-      "attempts": 0,
-      "parked": false,
-      "cfg": "d1b0f94242f1f70b21ada7bf54dfd55a704bb8f4"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
