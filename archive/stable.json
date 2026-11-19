@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-19T14:43:26Z"
+    "publishedAt": "2026-11-19T17:24:08Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -12741,64 +12741,6 @@
       "originBuild": "260190",
       "publishedAt": "2026-10-06T05:52:20Z"
     },
-    "terabox-hxreborn-v4.26.5-arm64-v8a.apk": {
-      "name": "terabox-hxreborn",
-      "version": "4.26.5",
-      "appKey": "terabox",
-      "appName": "TeraBox",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.dubox.drive",
-      "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
-      ],
-      "appliedPatches": [
-        "Fix Google login",
-        "Hide ads",
-        "Hide consent form",
-        "Hide promotions",
-        "Hide video recommendations",
-        "Unlock Premium Plus"
-      ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
-    },
-    "terabox-hxreborn-v4.26.5-arm-v7a.apk": {
-      "name": "terabox-hxreborn",
-      "version": "4.26.5",
-      "appKey": "terabox",
-      "appName": "TeraBox",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.dubox.drive",
-      "patchSources": [
-        "hxreborn/patches-1.60.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.60.0"
-      ],
-      "appliedPatches": [
-        "Fix Google login",
-        "Hide ads",
-        "Hide consent form",
-        "Hide promotions",
-        "Hide video recommendations",
-        "Unlock Premium Plus"
-      ],
-      "originBuild": "260363",
-      "publishedAt": "2026-10-24T16:43:37Z"
-    },
     "termius-rushiranpise-v7.9.0-arm64-v8a.apk": {
       "name": "termius-rushiranpise",
       "version": "7.9.0",
@@ -16689,78 +16631,6 @@
       "originBuild": "260574",
       "publishedAt": "2026-11-19T14:42:27Z"
     },
-    "proton-vpn-hxreborn-v5.20.98.0-arm64-v8a.apk": {
-      "name": "proton-vpn-hxreborn",
-      "version": "5.20.98.0",
-      "appKey": "protonvpn",
-      "appName": "Proton VPN",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "ch.protonvpn.android",
-      "patchSources": [
-        "hxreborn/patches-1.66.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.66.0"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Custom accent color",
-        "Disable telemetry",
-        "Hide upgrade promotions",
-        "Material 3 switches",
-        "Remove server change delay",
-        "Show free server locations",
-        "Unlock LAN connections",
-        "Unlock NetShield",
-        "Unlock connection preferences",
-        "Unlock custom DNS",
-        "Unlock profiles",
-        "Unlock split tunneling"
-      ],
-      "originBuild": "260411",
-      "publishedAt": "2026-10-29T15:19:10Z"
-    },
-    "proton-vpn-hxreborn-v5.20.98.0-arm-v7a.apk": {
-      "name": "proton-vpn-hxreborn",
-      "version": "5.20.98.0",
-      "appKey": "protonvpn",
-      "appName": "Proton VPN",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "ch.protonvpn.android",
-      "patchSources": [
-        "hxreborn/patches-1.66.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.66.0"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Custom accent color",
-        "Disable telemetry",
-        "Hide upgrade promotions",
-        "Material 3 switches",
-        "Remove server change delay",
-        "Show free server locations",
-        "Unlock LAN connections",
-        "Unlock NetShield",
-        "Unlock connection preferences",
-        "Unlock custom DNS",
-        "Unlock profiles",
-        "Unlock split tunneling"
-      ],
-      "originBuild": "260411",
-      "publishedAt": "2026-10-29T15:19:10Z"
-    },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",
       "version": "2.9.6",
@@ -17406,74 +17276,6 @@
       ],
       "originBuild": "260374",
       "publishedAt": "2026-10-25T15:56:22Z"
-    },
-    "proton-mail-hxreborn-v7.11.11-arm-v7a.apk": {
-      "name": "proton-mail-hxreborn",
-      "version": "7.11.11",
-      "appKey": "protonmail",
-      "appName": "Proton Mail",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "ch.protonmail.android",
-      "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Custom accent color",
-        "Hide layout components",
-        "Hide upgrade promotions",
-        "M3E loading indicator",
-        "Material 3 switches",
-        "Remove 'Sent from' signature",
-        "Remove free accounts limit",
-        "Scheduled Trash and Spam deletion",
-        "Swipe to switch accounts",
-        "Unlock custom time picker"
-      ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
-    },
-    "proton-mail-hxreborn-v7.11.11-arm64-v8a.apk": {
-      "name": "proton-mail-hxreborn",
-      "version": "7.11.11",
-      "appKey": "protonmail",
-      "appName": "Proton Mail",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "ch.protonmail.android",
-      "patchSources": [
-        "hxreborn/patches-1.67.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.67.0"
-      ],
-      "appliedPatches": [
-        "AMOLED dark theme",
-        "Custom accent color",
-        "Hide layout components",
-        "Hide upgrade promotions",
-        "M3E loading indicator",
-        "Material 3 switches",
-        "Remove 'Sent from' signature",
-        "Remove free accounts limit",
-        "Scheduled Trash and Spam deletion",
-        "Swipe to switch accounts",
-        "Unlock custom time picker"
-      ],
-      "originBuild": "260424",
-      "publishedAt": "2026-10-31T11:01:53Z"
     },
     "reddit-adobo-v2026.43.0-arm-v7a.apk": {
       "name": "reddit-adobo",
@@ -25688,70 +25490,6 @@
       "originBuild": "260504",
       "publishedAt": "2026-11-10T20:25:38Z"
     },
-    "instagram-instafel-v455.0.0.51.72-arm64-v8a.apk": {
-      "name": "instagram-instafel",
-      "version": "455.0.0.51.72",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
-    "instagram-instafel-v455.0.0.51.72-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "455.0.0.51.72",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
     "vix-ajstrick81-android-tv-v4.52.0_tv-all.apk": {
       "name": "vix-ajstrick81-android-tv",
       "version": "4.52.0_tv",
@@ -33296,6 +33034,72 @@
       ],
       "originBuild": "260574",
       "publishedAt": "2026-11-19T14:42:27Z"
+    },
+    "whatsapp-mightymich-v2.26.45.93-arm-v7a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.45.93",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260575",
+      "publishedAt": "2026-11-19T17:23:47Z"
+    },
+    "whatsapp-mightymich-v2.26.45.93-arm64-v8a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.45.93",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260575",
+      "publishedAt": "2026-11-19T17:23:47Z"
     }
   }
 }

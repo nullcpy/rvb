@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260575",
+    "channel": "stable",
+    "publishedAt": "2026-11-19T17:23:47Z"
+  },
+  "files": {
+    "whatsapp-mightymich-v2.26.45.93-arm-v7a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.45.93",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260575",
+      "publishedAt": "2026-11-19T17:23:47Z"
+    },
+    "whatsapp-mightymich-v2.26.45.93-arm64-v8a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.45.93",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.17.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.17.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260575",
+      "publishedAt": "2026-11-19T17:23:47Z"
+    }
+  }
+}
