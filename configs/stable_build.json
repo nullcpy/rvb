@@ -1308,7 +1308,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4"
   },
   "Kick-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1927,7 +1927,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
@@ -2546,7 +2546,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
@@ -2627,7 +2627,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
