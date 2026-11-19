@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-18T21:03:59Z"
+    "publishedAt": "2026-11-19T07:21:21Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -5785,176 +5785,6 @@
       "originBuild": "260530",
       "publishedAt": "2026-11-14T12:05:18Z"
     },
-    "truecaller-heval99-module-v26.43.5-arm64-v8a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.43.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.3.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Privacy defaults",
-        "Show caller number in call log",
-        "Spoof signature",
-        "Turn off Ad Campaign Analytics",
-        "Use SMS for verification codes",
-        "Patch settings"
-      ],
-      "originBuild": "260499",
-      "publishedAt": "2026-11-09T22:50:55Z"
-    },
-    "truecaller-heval99-v26.43.5-arm64-v8a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.43.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.3.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Privacy defaults",
-        "Show caller number in call log",
-        "Spoof signature",
-        "Turn off Ad Campaign Analytics",
-        "Use SMS for verification codes",
-        "Patch settings"
-      ],
-      "originBuild": "260499",
-      "publishedAt": "2026-11-09T22:50:55Z"
-    },
-    "truecaller-heval99-v26.43.5-arm-v7a.apk": {
-      "name": "truecaller-heval99",
-      "version": "26.43.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.3.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "GmsCore support",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Privacy defaults",
-        "Show caller number in call log",
-        "Spoof signature",
-        "Turn off Ad Campaign Analytics",
-        "Use SMS for verification codes",
-        "Patch settings"
-      ],
-      "originBuild": "260499",
-      "publishedAt": "2026-11-09T22:50:55Z"
-    },
-    "truecaller-heval99-module-v26.43.5-arm-v7a.zip": {
-      "name": "truecaller-heval99",
-      "version": "26.43.5",
-      "appKey": "truecaller",
-      "appName": "Truecaller",
-      "arch": "arm",
-      "fileType": "Module",
-      "brandKey": "heval99",
-      "brandName": "heval99",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.truecaller",
-      "patchSources": [
-        "heval99/patches-2.3.0-dev.6.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v2.3.0-dev.6"
-      ],
-      "appliedPatches": [
-        "Disable ads",
-        "Disable auto-launch",
-        "Disable contact upload",
-        "Disable nags",
-        "Disable telemetry",
-        "Disable update prompts",
-        "Enable Premium",
-        "Hide Blocking tab",
-        "Hide Premium tab",
-        "Hide Scam feed",
-        "Hide Wear OS settings",
-        "Hide family button",
-        "Hide promotions",
-        "Privacy defaults",
-        "Show caller number in call log",
-        "Spoof signature",
-        "Turn off Ad Campaign Analytics",
-        "Use SMS for verification codes",
-        "Patch settings"
-      ],
-      "originBuild": "260499",
-      "publishedAt": "2026-11-09T22:50:55Z"
-    },
     "reddit-morphe-experimental-module-v2026.45.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
       "version": "2026.45.0",
@@ -8784,10 +8614,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8797,8 +8627,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "google-photos-akashsriram-unclone-v8.2.0.1023899193-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -8813,10 +8643,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8826,8 +8656,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "google-photos-akashsriram-module-v8.2.0.1023899193-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -8842,10 +8672,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8854,8 +8684,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "google-photos-akashsriram-v8.2.0.1023899193-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -8870,10 +8700,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8883,8 +8713,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "google-photos-akashsriram-module-v8.2.0.1023899193-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -8899,10 +8729,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8911,8 +8741,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "google-photos-akashsriram-v8.2.0.1023899193-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -8927,10 +8757,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.2.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.2"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.3"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8940,8 +8770,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260567",
-      "publishedAt": "2026-11-18T17:17:36Z"
+      "originBuild": "260572",
+      "publishedAt": "2026-11-19T07:20:44Z"
     },
     "truecaller-heval99-module-v26.45.5-arm-v7a.zip": {
       "name": "truecaller-heval99",
