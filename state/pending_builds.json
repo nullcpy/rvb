@@ -1,4 +1,23 @@
 {
-  "stable": {},
+  "stable": {
+    "BoostForReddit-wchill": {
+      "reason": "config",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "d31820ed85c8cd6610cfd1d58a9ece3ce28fea72"
+    },
+    "SyncForReddit-RashKash103": {
+      "reason": "new",
+      "arches": [
+        "all"
+      ],
+      "attempts": 0,
+      "parked": false,
+      "cfg": "b6b5643ad591c12ec29ee370297201be6a89f772"
+    }
+  },
   "beta": {}
 }

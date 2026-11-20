@@ -331,13 +331,12 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
     "arch": "all",
     "patches-source": "wchill/patcheddit",
-    "included-patches": "'Add Boost Search bottom navigation' 'Add archive links to context menu' 'Anchor Boost Snackbars above bottom navigation' 'Animate media in Boost gallery previews' 'Auto-load next page after filtered results' 'Automatically undelete Imgur images' 'Automatically undelete Reddit content' 'Boost Morphe settings' 'Boost search default discovery' 'Configure editor image hosting' 'Disable Boost Crashlytics startup network calls' 'Fix /r/all' 'Fix /s/ links' 'Fix Boost FAB nested scroll' 'Fix Boost code block rendering' 'Fix Boost image widget click target' 'Fix Boost navigation bar overlap' 'Fix Hide crash' 'Fix Reddit API lookups' 'Fix loading more comments' 'Fix profile About scrolling' 'Import and export OAuth tokens' 'Log exceptions' 'Modify login WebView' 'Prefer high refresh rate' 'Preview images in the editor' 'Readable Boost flair labels' 'Remove obsolete profile tabs' 'Restore Boost sidebar Trending today' 'Restore GIF URL insertion' 'Show end of feed' 'Stabilize Boost subreddit bottom navigation surface' 'Standardize Boost Home bottom navigation' 'Standardize Boost Inbox and Profile bottom navigation' 'Standardize Boost bottom navigation' 'Standardize Boost bottom-navigation FAB clearance' 'Support keyboard GIF insertion' 'Tune Boost image dismissal' 'Use Reddit for image uploads'",
     "excluded-patches": "'Spoof client'",
     "github-dlurl": "https://github.com/rubenmayayo/boost-for-reddit",
     "github-regex": "^boost-for-reddit-.*\\.apk$"
@@ -1187,7 +1186,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-InstaFel": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1198,7 +1197,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram"
   },
   "Instagram-InstaFel-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -2260,6 +2259,17 @@
     "uptodown-dlurl": "https://swamp-attack-2.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
   },
+  "SyncForReddit-RashKash103": {
+    "enabled": true,
+    "pkg-name": "com.laurencedawson.reddit_sync",
+    "app-name": "Sync For Reddit",
+    "brand": "RashKash103",
+    "arch": "all",
+    "patches-source": "RashKash103/sync-up",
+    "uptodown-dlurl": "https://sync-for-reddit.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/red-apps-ltd/sync-for-reddit",
+    "apkpure-dlurl": "https://apkpure.com/sync-for-reddit/com.laurencedawson.reddit_sync"
+  },
   "Telegram-Aunali321-GooglePlay": {
     "enabled": false,
     "pkg-name": "org.telegram.messenger",
@@ -2797,7 +2807,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Zalo-zeldrisho": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
@@ -2810,7 +2820,7 @@
     "apkpure-dlurl": "https://apkpure.com/zalo/com.zing.zalo"
   },
   "Zalo-zeldrisho-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
