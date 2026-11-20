@@ -2797,7 +2797,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Zalo-zeldrisho": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
@@ -2810,7 +2810,7 @@
     "apkpure-dlurl": "https://apkpure.com/zalo/com.zing.zalo"
   },
   "Zalo-zeldrisho-Clone": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zing.zalo",
     "app-name": "Zalo",
     "patches-source": "zeldrisho/morphe-patches",
