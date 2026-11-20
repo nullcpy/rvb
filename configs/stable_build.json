@@ -93,7 +93,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -259,7 +259,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
   "AlboSaveAndOrganize-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
@@ -281,7 +281,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "AliExpress-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "AliExpress",
     "brand": "hxreborn",
@@ -331,7 +331,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -363,7 +363,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -1104,7 +1104,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1115,7 +1115,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1124,7 +1124,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1134,7 +1134,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1145,7 +1145,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1186,7 +1186,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-InstaFel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1197,7 +1197,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram"
   },
   "Instagram-InstaFel-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1257,7 +1257,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "InternetSpeedMeterLite-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.internet.speed.meter.lite",
     "app-name": "Internet Speed Meter Lite",
     "brand": "hxreborn",
@@ -1307,7 +1307,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4"
   },
   "Kick-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.kick.mobile",
     "app-name": "Kick",
     "brand": "Lurk",
@@ -1479,7 +1479,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1489,7 +1489,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1644,7 +1644,7 @@
     "apkpure-dlurl": "https://apkpure.com/pinterest/com.pinterest"
   },
   "Pinterest-browzomje": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.pinterest",
     "app-name": "Pinterest",
     "patches-source": "browzomje/browzomje-patches",
@@ -1748,7 +1748,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -1758,7 +1758,7 @@
     "github-regex": "lumo-v{version}-release\\.apk"
   },
   "ProtonMail-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1816,7 +1816,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1885,7 +1885,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.reddit.frontpage"
   },
   "RemoteforAndroidTV-XBadFellaX": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tech.simha.androidtvremote",
     "app-name": "Remote for Android TV",
     "brand": "XBadFellaX",
@@ -1895,7 +1895,7 @@
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
   },
   "RidmikKeyboard-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ridmik.keyboard",
     "app-name": "Ridmik Keyboard",
     "brand": "hxreborn",
@@ -1926,7 +1926,7 @@
     "apkpure-dlurl": "https://apkpure.com/rumble-app/com.rumble.battles"
   },
   "Rumble-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rumble.battles",
     "app-name": "Rumble",
     "brand": "Lurk",
@@ -2239,7 +2239,7 @@
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
   },
   "SwampAttack-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.outfit7.movingeye.swampattack",
     "app-name": "Swamp Attack",
     "brand": "byehi98",
@@ -2250,7 +2250,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
   },
   "SwampAttack2-byehi98": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.hyperdotstudios.swampattack2",
     "app-name": "Swamp Attack 2",
     "brand": "byehi98",
@@ -2260,7 +2260,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
   },
   "SyncForReddit-RashKash103": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.laurencedawson.reddit_sync",
     "app-name": "Sync For Reddit",
     "brand": "RashKash103",
@@ -2556,7 +2556,7 @@
     "apkpure-dlurl": "https://apkpure.com/twitch-livestream-multiplayer-games-esports-app/tv.twitch.android.app"
   },
   "Twitch-Lurk": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "tv.twitch.android.app",
     "app-name": "Twitch",
     "patches-source": "jordanwoodson/lurk-morphe-patches",
