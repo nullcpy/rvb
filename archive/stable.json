@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-20T17:32:23Z"
+    "publishedAt": "2026-11-20T20:55:17Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -1826,10 +1826,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -1838,8 +1838,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "tiktok-kveld9-asia-v46.9.3-arm64-v8a.apk": {
       "name": "tiktok-kveld9-asia",
@@ -2715,18 +2715,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2741,16 +2741,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11837,17 +11837,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -23560,10 +23560,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -23573,8 +23573,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -25392,17 +25392,17 @@
       "subVariant": null,
       "packageName": "com.univision.prendetv",
       "patchSources": [
-        "ajstrick81/patches-1.56.0.mpp"
+        "ajstrick81/patches-1.60.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.56.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
       ],
       "appliedPatches": [
         "Override certificate pinning",
         "Skip ads"
       ],
-      "originBuild": "260571",
-      "publishedAt": "2026-11-19T01:58:28Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -27535,32 +27535,6 @@
         "Free Store",
         "Instant Rewards",
         "Remove Ads"
-      ],
-      "originBuild": "260533",
-      "publishedAt": "2026-11-14T16:54:27Z"
-    },
-    "swamp-attack-2-byehi98-v1.4.1-all.apk": {
-      "name": "swamp-attack-2-byehi98",
-      "version": "1.4.1",
-      "appKey": "swampattack2",
-      "appName": "Swamp Attack 2",
-      "arch": "all",
-      "fileType": "APK",
-      "brandKey": "byehi98",
-      "brandName": "byehi98",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.hyperdotstudios.swampattack2",
-      "patchSources": [
-        "byehi98/patches-1.50.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.50.0"
-      ],
-      "appliedPatches": [
-        "Swamp Attack 2: Instant Rewarded Ads",
-        "Swamp Attack 2: Remove Ads",
-        "Swamp Attack 2: Unlimited Currency"
       ],
       "originBuild": "260533",
       "publishedAt": "2026-11-14T16:54:27Z"
@@ -32236,10 +32210,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32279,8 +32253,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "kick-lurk-v40.35.4-arm64-v8a.apk": {
       "name": "kick-lurk",
@@ -32295,10 +32269,10 @@
       "subVariant": null,
       "packageName": "com.kick.mobile",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32338,8 +32312,8 @@
         "Third-party badges",
         "Third-party emotes"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "rumble-lurk-v3.22.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
@@ -32354,10 +32328,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32392,6 +32366,7 @@
         "Player gestures",
         "Refresh stream",
         "Remember playback speed",
+        "Remote control",
         "Remove tracking permissions",
         "Resume videos when signed out",
         "Seek interval",
@@ -32401,8 +32376,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "rumble-lurk-v3.22.0-arm-v7a.apk": {
       "name": "rumble-lurk",
@@ -32417,10 +32392,10 @@
       "subVariant": null,
       "packageName": "com.rumble.battles",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32455,6 +32430,7 @@
         "Player gestures",
         "Refresh stream",
         "Remember playback speed",
+        "Remote control",
         "Remove tracking permissions",
         "Resume videos when signed out",
         "Seek interval",
@@ -32464,8 +32440,8 @@
         "Sleep timer",
         "Unlock Premium"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "twitch-lurk-v32.1.0-arm-v7a.apk": {
       "name": "twitch-lurk",
@@ -32480,10 +32456,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32511,6 +32487,7 @@
         "Fill screen",
         "Fix notifications",
         "Fix stuck start screen",
+        "Fix web page errors",
         "Force ExoPlayer",
         "Force landscape",
         "Hide content label",
@@ -32534,8 +32511,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "twitch-lurk-v32.1.0-arm64-v8a.apk": {
       "name": "twitch-lurk",
@@ -32550,10 +32527,10 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "jordanwoodson/patches-1.20.0.mpp"
+        "jordanwoodson/patches-1.21.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.20.0"
+        "https://github.com/jordanwoodson/lurk-morphe-patches/releases/tag/v1.21.0"
       ],
       "appliedPatches": [
         "AMOLED black",
@@ -32581,6 +32558,7 @@
         "Fill screen",
         "Fix notifications",
         "Fix stuck start screen",
+        "Fix web page errors",
         "Force ExoPlayer",
         "Force landscape",
         "Hide content label",
@@ -32604,8 +32582,8 @@
         "VOD chapters",
         "Watch without signing in"
       ],
-      "originBuild": "260581",
-      "publishedAt": "2026-11-20T17:31:19Z"
+      "originBuild": "260582",
+      "publishedAt": "2026-11-20T20:54:55Z"
     },
     "instagram-instafel-v456.1.0.56.78-arm-v7a.apk": {
       "name": "instagram-instafel",
