@@ -1,0 +1,370 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260584",
+    "channel": "stable",
+    "publishedAt": "2026-11-21T13:09:30Z"
+  },
+  "files": {
+    "automate-bholeykabhakt-v1.54.0-play-arm64-v8a.apk": {
+      "name": "automate-bholeykabhakt",
+      "version": "1.54.0-play",
+      "appKey": "automate",
+      "appName": "Automate",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.llamalab.automate",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Bypass Blocks Limit"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "automate-bholeykabhakt-module-v1.54.0-play-arm64-v8a.zip": {
+      "name": "automate-bholeykabhakt",
+      "version": "1.54.0-play",
+      "appKey": "automate",
+      "appName": "Automate",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.llamalab.automate",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Bypass Blocks Limit"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "automate-bholeykabhakt-module-v1.54.0-play-arm-v7a.zip": {
+      "name": "automate-bholeykabhakt",
+      "version": "1.54.0-play",
+      "appKey": "automate",
+      "appName": "Automate",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.llamalab.automate",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Bypass Blocks Limit"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "automate-bholeykabhakt-v1.54.0-play-arm-v7a.apk": {
+      "name": "automate-bholeykabhakt",
+      "version": "1.54.0-play",
+      "appKey": "automate",
+      "appName": "Automate",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.llamalab.automate",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Bypass Blocks Limit"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "autosync-bholeykabhakt-v7.8.3-arm64-v8a.apk": {
+      "name": "autosync-bholeykabhakt",
+      "version": "7.8.3",
+      "appKey": "autosync",
+      "appName": "Autosync",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.ttxapps.autosync",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "backdrops-bholeykabhakt-v6.6-arm64-v8a.apk": {
+      "name": "backdrops-bholeykabhakt",
+      "version": "6.6",
+      "appKey": "backdrops",
+      "appName": "Backdrops",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.backdrops.wallpapers",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "backdrops-bholeykabhakt-v6.6-arm-v7a.apk": {
+      "name": "backdrops-bholeykabhakt",
+      "version": "6.6",
+      "appKey": "backdrops",
+      "appName": "Backdrops",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.backdrops.wallpapers",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+      "name": "facebook-andrewliang25",
+      "version": "577.0.0.50.72",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "andrewliang25",
+      "brandName": "andrewliang25",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "andrewliang25/patches-4.0.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v4.0.0"
+      ],
+      "appliedPatches": [
+        "[Ad] Block ad telemetry",
+        "[Ad] Block background ad prefetch",
+        "[Ad] Disable Audience Network",
+        "[Feed] Block feed auto refresh",
+        "[Feed] Hide page suggestions and promo cards",
+        "[Feed] Hide post prompts",
+        "[Feed] Hide sponsored posts",
+        "[Fix] Restore screens on re-signed builds",
+        "[General] AMOLED black theme",
+        "[General] Andrew's Patch Setting",
+        "[General] Hide affiliate product links",
+        "[General] Open links in external browser",
+        "[Reels] Download any reel",
+        "[Reels] Hide interest prompts",
+        "[Reels] Hide sponsored reels",
+        "[Reels] Picture-in-picture",
+        "[Stories] Disable auto advance",
+        "[Stories] Download any story",
+        "[Stories] Hide sponsored stories",
+        "[Stories] View stories anonymously"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "inshorts-bholeykabhakt-v6.13.04-arm-v7a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.13.04",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "inshorts-bholeykabhakt-v6.13.04-arm64-v8a.apk": {
+      "name": "inshorts-bholeykabhakt",
+      "version": "6.13.04",
+      "appKey": "inshorts",
+      "appName": "Inshorts",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.nis.app",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Remove Ads",
+        "Skip Login"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "speedtest-bholeykabhakt-v7.1.4-arm-v7a.apk": {
+      "name": "speedtest-bholeykabhakt",
+      "version": "7.1.4",
+      "appKey": "speedtest",
+      "appName": "Speedtest",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.zwanoo.android.speedtest",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "AdFree Account",
+        "Disable Logging(analytics)"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "speedtest-bholeykabhakt-v7.1.4-arm64-v8a.apk": {
+      "name": "speedtest-bholeykabhakt",
+      "version": "7.1.4",
+      "appKey": "speedtest",
+      "appName": "Speedtest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.zwanoo.android.speedtest",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "AdFree Account",
+        "Disable Logging(analytics)"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "vpnify-bholeykabhakt-v2.2.9-arm-v7a.apk": {
+      "name": "vpnify-bholeykabhakt",
+      "version": "2.2.9",
+      "appKey": "vpnify",
+      "appName": "VPNify",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.vpn.free.hotspot.secure.vpnify",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    },
+    "vpnify-bholeykabhakt-v2.2.9-arm64-v8a.apk": {
+      "name": "vpnify-bholeykabhakt",
+      "version": "2.2.9",
+      "appKey": "vpnify",
+      "appName": "VPNify",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.vpn.free.hotspot.secure.vpnify",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.15.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260584",
+      "publishedAt": "2026-11-21T13:09:30Z"
+    }
+  }
+}
