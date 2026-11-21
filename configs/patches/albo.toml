@@ -3,7 +3,6 @@ enabled = true
 pkg-name = "com.thesortdapp.sortd"
 app-name = "Albo: Save & Organize"
 brand = "hxreborn"
-arch = "arm64-v8a"
 patches-source = "hxreborn/morphe-patches"
 included-patches = "'GmsCore support'"
 apkpure-dlurl = "https://apkpure.net/albo-save-organize/com.thesortdapp.sortd"
