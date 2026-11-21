@@ -1,16 +1,4 @@
 {
-  "stable": {
-    "AlboSaveAndOrganize-hxreborn": {
-      "reason": "retry",
-      "arches": [
-        "arm64-v8a"
-      ],
-      "attempts": 1,
-      "parked": false,
-      "run": 44922607975,
-      "ts": "2026-11-21T16:16:43Z",
-      "cfg": "06fdbdb1a7aef5633dc898369dc47260cc887056"
-    }
-  },
+  "stable": {},
   "beta": {}
 }
