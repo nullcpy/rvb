@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260587",
+    "channel": "stable",
+    "publishedAt": "2026-11-21T20:10:57Z"
+  },
+  "files": {
+    "albo-save-organize-hxreborn-v1.28.1-arm64-v8a.apk": {
+      "name": "albo-save-organize-hxreborn",
+      "version": "1.28.1",
+      "appKey": "albosaveorganize",
+      "appName": "Albo: Save & Organize",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.thesortdapp.sortd",
+      "patchSources": [
+        "hxreborn/patches-1.85.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+      ],
+      "appliedPatches": [
+        "Enable guest sign-in",
+        "GmsCore support",
+        "Remove bulk import limit",
+        "Unlock premium"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "imdb-adobo-v9.3.7.109370600-all.apk": {
+      "name": "imdb-adobo",
+      "version": "9.3.7.109370600",
+      "appKey": "imdb",
+      "appName": "IMDb",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.imdb.mobile",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Remove IMDb's ads, trackers, and analytics"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "reddit-adobo-v2026.47.0-arm64-v8a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.47.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "reddit-adobo-v2026.47.0-arm-v7a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.47.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "vpnify-bholeykabhakt-v2.2.9-arm64-v8a.apk": {
+      "name": "vpnify-bholeykabhakt",
+      "version": "2.2.9",
+      "appKey": "vpnify",
+      "appName": "VPNify",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "bholeykabhakt",
+      "brandName": "BholeyKaBhakt",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.vpn.free.hotspot.secure.vpnify",
+      "patchSources": [
+        "BholeyKaBhakt/patches-2.16.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.16.0"
+      ],
+      "appliedPatches": [
+        "Unlock Premium"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    }
+  }
+}

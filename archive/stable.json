@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-21T16:19:11Z"
+    "publishedAt": "2026-11-21T20:11:23Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -8401,16 +8401,16 @@
       "subVariant": null,
       "packageName": "com.vpn.free.hotspot.secure.vpnify",
       "patchSources": [
-        "BholeyKaBhakt/patches-2.15.0.mpp"
+        "BholeyKaBhakt/patches-2.16.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.15.0"
+        "https://github.com/BholeyKaBhakt/revanced-patches-xtra/releases/tag/v2.16.0"
       ],
       "appliedPatches": [
         "Unlock Premium"
       ],
-      "originBuild": "260584",
-      "publishedAt": "2026-11-21T13:09:30Z"
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
     },
     "youtube-anddea-mocha-theme-module-v20.51.39-arm-v7a.zip": {
       "name": "youtube-anddea-mocha-theme",
@@ -17340,72 +17340,6 @@
       ],
       "originBuild": "260374",
       "publishedAt": "2026-10-25T15:56:22Z"
-    },
-    "terabox-hxreborn-v4.27.5-arm64-v8a.apk": {
-      "name": "terabox-hxreborn",
-      "version": "4.27.5",
-      "appKey": "terabox",
-      "appName": "TeraBox",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.dubox.drive",
-      "patchSources": [
-        "hxreborn/patches-1.82.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.82.0"
-      ],
-      "appliedPatches": [
-        "Fix Google login",
-        "Fix transfers over VPN",
-        "Hide ads",
-        "Hide consent form",
-        "Hide home shortcuts",
-        "Hide promotions",
-        "Hide video recommendations",
-        "Remove recent panel",
-        "Show backup count",
-        "Unlock Premium Plus"
-      ],
-      "originBuild": "260566",
-      "publishedAt": "2026-11-18T13:58:09Z"
-    },
-    "terabox-hxreborn-v4.27.5-arm-v7a.apk": {
-      "name": "terabox-hxreborn",
-      "version": "4.27.5",
-      "appKey": "terabox",
-      "appName": "TeraBox",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "hxreborn",
-      "brandName": "hxreborn",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.dubox.drive",
-      "patchSources": [
-        "hxreborn/patches-1.82.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.82.0"
-      ],
-      "appliedPatches": [
-        "Fix Google login",
-        "Fix transfers over VPN",
-        "Hide ads",
-        "Hide consent form",
-        "Hide home shortcuts",
-        "Hide promotions",
-        "Hide video recommendations",
-        "Remove recent panel",
-        "Show backup count",
-        "Unlock Premium Plus"
-      ],
-      "originBuild": "260566",
-      "publishedAt": "2026-11-18T13:58:09Z"
     },
     "fairemail-heval99-v1.2339-arm64-v8a.apk": {
       "name": "fairemail-heval99",
@@ -33405,6 +33339,121 @@
       ],
       "originBuild": "260585",
       "publishedAt": "2026-11-21T16:18:23Z"
+    },
+    "albo-save-organize-hxreborn-v1.28.1-arm64-v8a.apk": {
+      "name": "albo-save-organize-hxreborn",
+      "version": "1.28.1",
+      "appKey": "albosaveorganize",
+      "appName": "Albo: Save & Organize",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.thesortdapp.sortd",
+      "patchSources": [
+        "hxreborn/patches-1.85.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+      ],
+      "appliedPatches": [
+        "Enable guest sign-in",
+        "GmsCore support",
+        "Remove bulk import limit",
+        "Unlock premium"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "imdb-adobo-v9.3.7.109370600-all.apk": {
+      "name": "imdb-adobo",
+      "version": "9.3.7.109370600",
+      "appKey": "imdb",
+      "appName": "IMDb",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.imdb.mobile",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Remove IMDb's ads, trackers, and analytics"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "reddit-adobo-v2026.47.0-arm64-v8a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.47.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "reddit-adobo-v2026.47.0-arm-v7a.apk": {
+      "name": "reddit-adobo",
+      "version": "2026.47.0",
+      "appKey": "reddit",
+      "appName": "Reddit",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "adobo",
+      "brandName": "adobo",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.reddit.frontpage",
+      "patchSources": [
+        "jkennethcarino/patches-2.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/jkennethcarino/adobo/releases/tag/v2.0.1"
+      ],
+      "appliedPatches": [
+        "Colorize comment indent lines",
+        "Disable home screen redirect",
+        "Disable screenshot banner",
+        "Hide community menu badge",
+        "Hide post view counts",
+        "Hide related posts",
+        "Open external links directly",
+        "Remove ads and telemetry",
+        "Sanitize share links"
+      ],
+      "originBuild": "260587",
+      "publishedAt": "2026-11-21T20:10:57Z"
     }
   }
 }
