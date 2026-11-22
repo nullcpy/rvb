@@ -347,7 +347,10 @@ Step order, with the reason each is where it is:
     `if: !cancelled() && NEXT_VER_CODE != ''`, `continue-on-error`): the one
     additive sink. One discussion per build, titled
     `Build <tag> · <Stable|Beta> · <UTC date>`, in the category named by
-    `vars.GH_BUILDLOG_CATEGORY`. Its body is written once: `## 📦 Downloads`
+    `vars.GH_BUILDLOG_CATEGORY`. The build number is the identity; the date is
+    when the discussion was first created, so a retry after UTC midnight
+    matches by tag prefix and edits that discussion rather than making a
+    second one. Its body is written once: `## 📦 Downloads`
     (a compact `App | Version | APK | Module` table rendered from
     `build.archive.md`, so every link points at the permanent mirror and
     survives deletion of the numbered rvb release), then `## 🚨 Build Report`

@@ -23,8 +23,11 @@ from several runs of the same day would also race.
 Add a **third, additive** sink. Telegram and Discord are untouched. Each build
 gets its own discussion in the category named by the `GH_BUILDLOG_CATEGORY`
 repository variable (unset means the feature is off), titled
-`Build <tag> · <Stable|Beta> · <UTC date>`. An exact title match resolves a
-retry; zero creates, one reuses, more than one is an error.
+`Build <tag> · <Stable|Beta> · <UTC date>`. The **build number is the identity**,
+the date is display metadata from when the discussion was first created: an
+exact title match is tried first, then a `Build <tag> ·` prefix match so a retry
+after UTC midnight reuses the existing discussion instead of creating a second
+one. Zero creates, one reuses, more than one is an error.
 
 The body is written in one pass, with `## 📦 Downloads` above `## 🚨 Build
 Report`. The download table is rendered from `build.archive.md`, so its URLs
