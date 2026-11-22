@@ -30,6 +30,14 @@ discussion)
 	sub=${1:-}; shift || true
 	case "$sub" in
 	list)
+		# --search is deliberately unsupported: its index lags writes, so a
+		# lookup that uses it would miss a discussion created moments earlier.
+		for arg in "$@"; do
+			if [ "$arg" = "--search" ]; then
+				echo "stub: --search is not available" >&2
+				exit 1
+			fi
+		done
 		if [ "${GH_STUB_BAD_LIST:-0}" = 1 ]; then
 			printf '[]\n'
 		else

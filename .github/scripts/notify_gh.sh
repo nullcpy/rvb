@@ -39,15 +39,17 @@ gh_require_targets() {
 }
 
 # gh_log_find <exact-title> — set GH_LOG_NUMBER and GH_LOG_FIND_COUNT.
-# --search matches bodies too, so the jq exact-title filter is load-bearing.
+# List the category and match the title exactly in jq. --search was tried and
+# removed: its index lags writes, so a discussion created moments earlier was
+# invisible to the post-create lookup (run 45060205121). A high --limit keeps
+# the whole category in one reply; the exact match rejects near-miss titles.
 gh_log_find() {
 	local title=$1 out
 	out=$(gh discussion list \
 		--category "$GH_BUILDLOG_CATEGORY" \
-		--search "$title" \
 		--state all \
 		--json number,title,url \
-		--limit 100) || return 1
+		--limit 1000) || return 1
 	# `gh discussion list --json` answers {"discussions":[...],"totalCount":N},
 	# not a bare array. Fail loudly on any other shape rather than reading an
 	# empty count from an error object and creating a duplicate discussion.
