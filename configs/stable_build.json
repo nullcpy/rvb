@@ -3,7 +3,7 @@
   "Automate-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.llamalab.automate",
     "app-name": "Automate",
     "build-mode": "both",
@@ -13,7 +13,7 @@
   "Speedtest-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.zwanoo.android.speedtest",
     "app-name": "Speedtest",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
@@ -22,7 +22,7 @@
   "Autosync-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ttxapps.autosync",
     "app-name": "Autosync",
     "arch": "arm64-v8a",
@@ -32,7 +32,7 @@
   "Inshorts-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.nis.app",
     "app-name": "Inshorts",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
@@ -41,7 +41,7 @@
   "VPNify-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.vpn.free.hotspot.secure.vpnify",
     "app-name": "VPNify",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy",
@@ -51,7 +51,7 @@
   "Backdrops-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.backdrops.wallpapers",
     "app-name": "Backdrops",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers",
@@ -137,7 +137,7 @@
   "IMDb-adobo": {
     "patches-source": "jkennethcarino/adobo",
     "brand": "adobo",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.imdb.mobile",
     "app-name": "IMDb",
     "arch": "all",
@@ -259,7 +259,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
   "AlboSaveAndOrganize-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
@@ -330,7 +330,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -1270,7 +1270,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -1285,7 +1285,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -1340,7 +1340,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "Letterboxd-mvaishak": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -1352,7 +1352,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/letterboxd/com.letterboxd.letterboxd"
   },
   "Letterboxd-mvaishak-MaterialYou": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -1781,7 +1781,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/ch.protonmail.android"
   },
   "ProtonMail-dhrubonai": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "patches-source": "dhrubonai/morphe-patches",
@@ -1872,7 +1872,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/reddit/com.reddit.frontpage"
   },
   "Reddit-adobo": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.reddit.frontpage",
     "app-name": "Reddit",
     "patches-source": "jkennethcarino/adobo",
