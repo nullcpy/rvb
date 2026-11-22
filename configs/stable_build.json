@@ -263,6 +263,7 @@
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
+    "arch": "arm64-v8a",
     "patches-source": "hxreborn/morphe-patches",
     "included-patches": "'GmsCore support'",
     "apkpure-dlurl": "https://apkpure.com/albo-save-organize/com.thesortdapp.sortd"
@@ -330,7 +331,7 @@
     "apkpure-dlurl": "https://apkpure.com/block-blast/com.block.juggle"
   },
   "BoostForReddit-wchill": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.rubenmayayo.reddit",
     "app-name": "Boost For Reddit",
     "brand": "wchill",
@@ -1270,7 +1271,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "build-mode": "both",
@@ -1285,7 +1286,7 @@
     "patches-source": "jasonwu1994/Gboard-patches",
     "brand": "jasonwu1994",
     "arch": "arm64-v8a",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.inputmethod.latin",
     "app-name": "Google Keyboard",
     "variant": "Clone",
@@ -1340,7 +1341,7 @@
     "github-regex": "arm64-v8a: BraveMonoarm64\\.apk | arm-v7a: BraveMonoarm\\.apk"
   },
   "Letterboxd-mvaishak": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -1352,7 +1353,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/letterboxd/com.letterboxd.letterboxd"
   },
   "Letterboxd-mvaishak-MaterialYou": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.letterboxd.letterboxd",
     "app-name": "Letterboxd",
     "brand": "mvaishak",
@@ -2259,7 +2260,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
   },
   "SyncForReddit-RashKash103": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.laurencedawson.reddit_sync",
     "app-name": "Sync For Reddit",
     "brand": "RashKash103",
