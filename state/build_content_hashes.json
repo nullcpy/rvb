@@ -2700,13 +2700,13 @@
       ]
     },
     "fairemail-heval99-v1.2341-arm64-v8a": {
-      "hash": "cde70004b5c779b652badab96fc01e11",
+      "hash": "bd09facaf0d80728cf6315fd54762faa",
       "kinds": [
         "apk"
       ]
     },
     "fairemail-heval99-v1.2341-arm-v7a": {
-      "hash": "4219258547827318d7e91790b9abf175",
+      "hash": "6ed8fad26f01bf70c38887debfea34d4",
       "kinds": [
         "apk"
       ]
@@ -3079,6 +3079,44 @@
       "hash": "c86e9c74fb90bd2b54dc72a6b3a5bef2",
       "kinds": [
         "apk"
+      ]
+    },
+    "sofascore-heval99-v26.11.09-arm64-v8a": {
+      "hash": "6a8a35efd40ed7c128ca4de8a35c830c",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.46.0-arm64-v8a": {
+      "hash": "e17e045769cc969406f0e8881eac8cb4",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "sofascore-heval99-v26.11.09-arm-v7a": {
+      "hash": "3ebc5e24dcbadba896d0227fc95dd200",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "myfitnesspal-heval99-v26.46.0-arm-v7a": {
+      "hash": "ff302317957e3ba492ed5f2110f22c33",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "truecaller-heval99-v26.45.5-arm64-v8a": {
+      "hash": "4f2f95fac35497f3e799c45c52d8ad08",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "truecaller-heval99-v26.45.5-arm-v7a": {
+      "hash": "c5871d5589ca32e72ccf58d1d333ba35",
+      "kinds": [
+        "apk",
+        "module"
       ]
     }
   }
