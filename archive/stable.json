@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-22T06:40:38Z"
+    "publishedAt": "2026-11-22T19:27:30Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -12552,120 +12552,6 @@
       ],
       "originBuild": "260180",
       "publishedAt": "2026-10-04T20:07:08Z"
-    },
-    "letterboxd-mvaishak-material-you-v3.5.8-arm64-v8a.apk": {
-      "name": "letterboxd-mvaishak-material-you",
-      "version": "3.5.8",
-      "appKey": "letterboxd",
-      "appName": "Letterboxd",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "mvaishak",
-      "brandName": "mvaishak",
-      "variant": "Material You",
-      "subVariant": null,
-      "packageName": "com.letterboxd.letterboxd",
-      "patchSources": [
-        "mvaishak/patches-2.2.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
-      ],
-      "appliedPatches": [
-        "Appearance",
-        "Brighter Watched-by stars",
-        "Denser poster grid",
-        "Hide ads",
-        "Material You theme",
-        "Mod settings"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
-    },
-    "letterboxd-mvaishak-material-you-v3.5.8-arm-v7a.apk": {
-      "name": "letterboxd-mvaishak-material-you",
-      "version": "3.5.8",
-      "appKey": "letterboxd",
-      "appName": "Letterboxd",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "mvaishak",
-      "brandName": "mvaishak",
-      "variant": "Material You",
-      "subVariant": null,
-      "packageName": "com.letterboxd.letterboxd",
-      "patchSources": [
-        "mvaishak/patches-2.2.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
-      ],
-      "appliedPatches": [
-        "Appearance",
-        "Brighter Watched-by stars",
-        "Denser poster grid",
-        "Hide ads",
-        "Material You theme",
-        "Mod settings"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
-    },
-    "letterboxd-mvaishak-v3.5.8-arm-v7a.apk": {
-      "name": "letterboxd-mvaishak",
-      "version": "3.5.8",
-      "appKey": "letterboxd",
-      "appName": "Letterboxd",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "mvaishak",
-      "brandName": "mvaishak",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.letterboxd.letterboxd",
-      "patchSources": [
-        "mvaishak/patches-2.2.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
-      ],
-      "appliedPatches": [
-        "Appearance",
-        "Brighter Watched-by stars",
-        "Denser poster grid",
-        "Hide ads",
-        "Mod settings"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
-    },
-    "letterboxd-mvaishak-v3.5.8-arm64-v8a.apk": {
-      "name": "letterboxd-mvaishak",
-      "version": "3.5.8",
-      "appKey": "letterboxd",
-      "appName": "Letterboxd",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "mvaishak",
-      "brandName": "mvaishak",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.letterboxd.letterboxd",
-      "patchSources": [
-        "mvaishak/patches-2.2.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v2.2.0"
-      ],
-      "appliedPatches": [
-        "Appearance",
-        "Brighter Watched-by stars",
-        "Denser poster grid",
-        "Hide ads",
-        "Mod settings"
-      ],
-      "originBuild": "260189",
-      "publishedAt": "2026-10-06T05:42:03Z"
     },
     "inshorts-bholeykabhakt-v6.12.15-arm-v7a.apk": {
       "name": "inshorts-bholeykabhakt",
@@ -29359,16 +29245,16 @@
       "subVariant": null,
       "packageName": "eu.faircode.email",
       "patchSources": [
-        "heval99/patches-3.0.0.mpp"
+        "heval99/patches-3.1.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
       ],
       "appliedPatches": [
         "Enable Pro"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
     },
     "fairemail-heval99-v1.2341-arm-v7a.apk": {
       "name": "fairemail-heval99",
@@ -29383,16 +29269,16 @@
       "subVariant": null,
       "packageName": "eu.faircode.email",
       "patchSources": [
-        "heval99/patches-3.0.0.mpp"
+        "heval99/patches-3.1.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.0.0"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
       ],
       "appliedPatches": [
         "Enable Pro"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
     },
     "instagram-instafel-v456.0.0.53.78-arm64-v8a.apk": {
       "name": "instagram-instafel",
@@ -33519,6 +33405,300 @@
       ],
       "originBuild": "260588",
       "publishedAt": "2026-11-22T06:40:13Z"
+    },
+    "myfitnesspal-heval99-v26.46.0-arm-v7a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.46.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "myfitnesspal-heval99-v26.46.0-arm64-v8a.apk": {
+      "name": "myfitnesspal-heval99",
+      "version": "26.46.0",
+      "appKey": "myfitnesspal",
+      "appName": "MyFitnessPal",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.myfitnesspal.android",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable Datadog telemetry",
+        "Enable Premium+"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "sofascore-heval99-v26.11.09-arm-v7a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.11.09",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Clean shared links",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable screenshot prompt",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide promo pop-ups",
+        "Spoiler-free mode",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "sofascore-heval99-v26.11.09-arm64-v8a.apk": {
+      "name": "sofascore-heval99",
+      "version": "26.11.09",
+      "appKey": "sofascore",
+      "appName": "Sofascore",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.sofascore.results",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Block marketing notifications",
+        "Clean shared links",
+        "Disable Facebook SDK",
+        "Disable ads",
+        "Disable rating prompts",
+        "Disable screenshot prompt",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide promo pop-ups",
+        "Spoiler-free mode",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "truecaller-heval99-module-v26.45.5-arm-v7a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.45.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Hide surveys",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "truecaller-heval99-v26.45.5-arm-v7a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.45.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Hide surveys",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "truecaller-heval99-v26.45.5-arm64-v8a.apk": {
+      "name": "truecaller-heval99",
+      "version": "26.45.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "GmsCore support",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Hide surveys",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
+    },
+    "truecaller-heval99-module-v26.45.5-arm64-v8a.zip": {
+      "name": "truecaller-heval99",
+      "version": "26.45.5",
+      "appKey": "truecaller",
+      "appName": "Truecaller",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "heval99",
+      "brandName": "heval99",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.truecaller",
+      "patchSources": [
+        "heval99/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Disable ads",
+        "Disable auto-launch",
+        "Disable contact upload",
+        "Disable nags",
+        "Disable telemetry",
+        "Disable update prompts",
+        "Enable Premium",
+        "Hide Blocking tab",
+        "Hide Premium tab",
+        "Hide Scam feed",
+        "Hide Wear OS settings",
+        "Hide family button",
+        "Hide promotions",
+        "Hide surveys",
+        "Privacy defaults",
+        "Show caller number in call log",
+        "Spoof signature",
+        "Turn off Ad Campaign Analytics",
+        "Use SMS for verification codes",
+        "Patch settings"
+      ],
+      "originBuild": "260592",
+      "publishedAt": "2026-11-22T19:26:57Z"
     }
   }
 }
