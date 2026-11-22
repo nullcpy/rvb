@@ -3666,7 +3666,7 @@
         "app-name": "Albo: Save & Organize",
         "pkg-name": "com.thesortdapp.sortd",
         "included-patches": "'GmsCore support'",
-        "arch": "both",
+        "arch": "arm64-v8a",
         "build-mode": "apk"
       }
     },
