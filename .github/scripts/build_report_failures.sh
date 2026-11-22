@@ -66,19 +66,38 @@ FAILURES_DIR="temp/failures"
 TG_LIMIT=4096
 XIPE_URL_BASE="https://xi.pe"
 
-if [ -z "${TG_TOKEN:-}" ]; then
-	echo "TG_TOKEN is not set. Skipping failure report."
-	exit 0
-fi
+# The machine-readable twin of the Telegram message. build_notify_gh.sh groups
+# these rows into the GitHub body's tables and posts the referenced log files as
+# durable comments. It is written even when Telegram is unconfigured: GitHub is
+# additive, so a fork with no TG_TOKEN still gets its build log.
+GH_ROWS="temp/gh_buildlog/failures.tsv"
+mkdir -p "$(dirname "$GH_ROWS")"
+: > "$GH_ROWS"
+
+gh_row() { # <section> <app> <arch> <detail> <link> <logfile>
+	local a b c d e f
+	a=$(printf '%s' "${1:-}" | tr '\t\r\n' '   ')
+	b=$(printf '%s' "${2:-}" | tr '\t\r\n' '   ')
+	c=$(printf '%s' "${3:-}" | tr '\t\r\n' '   ')
+	d=$(printf '%s' "${4:-}" | tr '\t\r\n' '   ')
+	e=$(printf '%s' "${5:-}" | tr '\t\r\n' '   ')
+	f=$(printf '%s' "${6:-}" | tr '\t\r\n' '   ')
+	printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$a" "$b" "$c" "$d" "$e" "$f" >> "$GH_ROWS"
+}
+
+# search_links <pkg> <base> <ver> — three engine links to locate the missing APK.
+# Defined before the collectors because the GitHub manifest uses it too.
+search_links() { # $1=pkg $2=base $3=ver(label, maybe 'vX')
+	local enc q
+	q="${1:-$2}${3:+ ${3#v}} android apk"
+	enc="$(jq -rn --arg q "$q" '$q|@uri')"
+	printf 'Search [Google](https://www.google.com/search?q=%s) / [DuckDuckGo](https://duckduckgo.com/?q=%s) / [Brave](https://search.brave.com/search?q=%s)' "$enc" "$enc" "$enc"
+}
+
 if [ ! -d "$FAILURES_DIR" ] || ! find "$FAILURES_DIR" -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
 	echo "No failure records in $FAILURES_DIR; nothing to report."
 	exit 0
 fi
-# Checked after the "nothing to report" exit so a clean build never fails this
-# step over routing config it did not need.
-tg_require_targets \
-	"TG_CHAT_ID=${TG_CHAT_ID:-}" \
-	"TG_THREAD_NOTIFY=${TG_THREAD_NOTIFY:-}" || exit 1
 
 # Markdown (legacy) has no escape-all helper; strip the few characters that
 # would corrupt a [label](url) or a *bold* run in app-authored text.
@@ -134,14 +153,20 @@ for json in "$FAILURES_DIR"/*.json; do
 	vc="$(jq -r '.vc // empty' "$json")"
 	patches="$(jq -r '.patches_src // empty' "$json")"
 
-	# Upload the log; a non-URL response means no link (the app is still listed).
+	# The xi.pe link is for Telegram only. The GitHub publisher embeds the raw log
+	# itself, so a fork without TG_TOKEN still gets a complete build log.
 	logurl=""
+	gh_logfile="-"
 	if [ -f "$FAILURES_DIR/$slug.log" ]; then
-		link="$(curl -sS --data-binary "@$FAILURES_DIR/$slug.log" "$XIPE_URL_BASE/" 2> /dev/null || true)"
-		case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+		gh_logfile="$FAILURES_DIR/$slug.log"
+		if [ -n "${TG_TOKEN:-}" ]; then
+			link="$(curl -sS --data-binary "@$FAILURES_DIR/$slug.log" "$XIPE_URL_BASE/" 2> /dev/null || true)"
+			case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+		fi
 	fi
-
 	base="$(app_base "$app" "$arch")"
+	gh_row "build" "$base" "$arch" "build aborted" "$logurl" "$gh_logfile"
+
 	# A build that failed even after the engine's version-code arch fallback is a
 	# genuine incompatibility, not a transient miss - flag it for the note below.
 	[ "$(jq -r '.vc_fallback // false' "$json")" = "true" ] && VCFB[$base]=1
@@ -164,17 +189,22 @@ for json in "$FAILURES_DIR"/*_pf.json; do
 	vc="$(jq -r '.vc // empty' "$json")"
 	patches="$(jq -r '.patches_src // empty' "$json")"
 	logurl=""
+	gh_logfile="-"
 	# The parent relocates the captured log to <slug>_pf.log on the rc-0 sweep;
 	# a leftover <slug>.log (its plain descriptor gone, so not a hard abort) is
 	# the serial-mode alternative.
 	for _pfl in "$FAILURES_DIR/${slug}.log" "$FAILURES_DIR/${base_log}.log"; do
 		if [ -f "$_pfl" ]; then
-			link="$(curl -sS --data-binary "@$_pfl" "$XIPE_URL_BASE/" 2> /dev/null || true)"
-			case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+			gh_logfile="$_pfl"
+			if [ -n "${TG_TOKEN:-}" ]; then
+				link="$(curl -sS --data-binary "@$_pfl" "$XIPE_URL_BASE/" 2> /dev/null || true)"
+				case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+			fi
 			break
 		fi
 	done
 	base="$(app_base "$app" "$arch")"
+	gh_row "build" "$base" "$arch" "patcher aborted" "$logurl" "$gh_logfile"
 	if [ "$(jq -r '.vc_fallback // false' "$json")" = "true" ]; then VCFB[$base]=1; fi
 	BREC[$base]+="${arch}|${ver}|${vc}|${logurl}|${patches}|${NL}"
 	if [ -z "${BORDERSET[$base]:-}" ]; then BORDER+="${base}${NL}"; BORDERSET[$base]=1; fi
@@ -190,6 +220,7 @@ for json in "$FAILURES_DIR"/*_dl.json; do
 	# No log and no patches for a download failure; blob must still be 6 fields
 	# (arch|ver|vc|log|patches|pkg) so the reader's columns line up.
 	DREC[$base]+="${arch}|${ver}|${vc}|||${pkg}${NL}"
+	gh_row "dl" "$base" "$arch" "sources exhausted" "$(search_links "$pkg" "$base" "$ver")" "-"
 	[ -z "${DORDERSET[$base]:-}" ] && { DORDER+="${base}${NL}"; DORDERSET[$base]=1; }
 done
 
@@ -215,6 +246,13 @@ for json in "$FAILURES_DIR"/*_np.json; do
 	# Columns: arch|ver|vc|log|patches|pkg|patch_url|bytes; the log is absent because
 	# build_rv returned clean, and patch_url names the bundle release that refused.
 	NREC[$base]+="${arch}|${ver}|${vc}||${patches}|${pkg}|${patch_url}|${bytes}${NL}"
+	gh_extra="[Patch bundle](https://github.com/${patches})"
+	if [ -n "$patch_url" ]; then
+		gh_extra="$(md_clean "$patches") ([$(md_clean "${patch_url##*/}")]($patch_url))"
+	fi
+	gh_detail="bundle refused"
+	[ -n "$ver" ] && gh_detail="bundle refused ${ver}"
+	gh_row "np" "$base" "$arch" "$gh_detail" "$gh_extra" "-"
 	[ -z "${NORDERSET[$base]:-}" ] && { NORDER+="${base}${NL}"; NORDERSET[$base]=1; }
 done
 
@@ -233,6 +271,11 @@ for json in "$FAILURES_DIR"/*_npa.json; do
 	patch_url="$(jq -r '.patch_url // empty' "$json")"
 	base="$(app_base "$app" "$arch")"
 	AREC[$base]+="${arch}|${ver}|${vc}||${patches}|${pkg}|${patch_url}|${NL}"
+	gh_extra="[Patch bundle](https://github.com/${patches})"
+	if [ -n "$patch_url" ]; then
+		gh_extra="$(md_clean "$patches") ([$(md_clean "${patch_url##*/}")]($patch_url))"
+	fi
+	gh_row "npa" "$base" "$arch" "0 patches applied" "$gh_extra" "-"
 	[ -z "${AORDERSET[$base]:-}" ] && { AORDER+="${base}${NL}"; AORDERSET[$base]=1; }
 done
 
@@ -251,16 +294,21 @@ for json in "$FAILURES_DIR"/*_lb.json; do
 	patches="$(jq -r '.patches_src // empty' "$json")"
 	cli="$(jq -r '.cli_source // empty' "$json")"
 	logurl=""
+	gh_logfile="-"
 	# The relocated <slug>_lb.log is "<slug>_lb" + ".log" = $slug.log; the serial tee
 	# log basename <slug>.log is the fallback.
 	for _lbl in "$FAILURES_DIR/${slug}.log" "$FAILURES_DIR/${base_log}.log"; do
 		if [ -f "$_lbl" ]; then
-			link="$(curl -sS --data-binary "@$_lbl" "$XIPE_URL_BASE/" 2> /dev/null || true)"
-			case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+			gh_logfile="$_lbl"
+			if [ -n "${TG_TOKEN:-}" ]; then
+				link="$(curl -sS --data-binary "@$_lbl" "$XIPE_URL_BASE/" 2> /dev/null || true)"
+				case "$link" in "$XIPE_URL_BASE/"*) logurl="$link" ;; esac
+			fi
 			break
 		fi
 	done
 	base="$(app_base "$app" "$arch")"
+	gh_row "lb" "$base" "$arch" "bundle unreadable" "$logurl" "$gh_logfile"
 	# Columns match render_app_group's read (arch|ver|vc|log|patches|cli|patch_url);
 	# ver/vc are empty (none was resolved) and the 6th column carries the cli_source.
 	LREC[$base]+="${arch}|||${logurl}|${patches}|${cli}|${NL}"
@@ -274,14 +322,6 @@ arch_token() { # $1=ver $2=vc
 	local ver=$1 vc=$2
 	[ -z "$ver" ] && { [ -n "$vc" ] && printf '(%s)' "$vc"; return 0; }
 	printf '`%s%s`' "$ver" "${vc:+ ($vc)}"
-}
-
-# search_links <pkg> <base> <ver> — three engine links to locate the missing APK.
-search_links() { # $1=pkg $2=base $3=ver(label, maybe 'vX')
-	local enc q
-	q="${1:-$2}${3:+ ${3#v}} android apk"
-	enc="$(jq -rn --arg q "$q" '$q|@uri')"
-	printf 'Search [Google](https://www.google.com/search?q=%s) / [DuckDuckGo](https://duckduckgo.com/?q=%s) / [Brave](https://search.brave.com/search?q=%s)' "$enc" "$enc" "$enc"
 }
 
 # render_app_group <base> <blob> <mode build|lb|dl|np> — one grouped app block. All
@@ -371,6 +411,16 @@ if [ "$cbuild" = 0 ] && [ "$clb" = 0 ] && [ "$cdl" = 0 ] && [ "$cnp" = 0 ] && [ 
 	echo "Failure records present but nothing renderable; no report sent."
 	exit 0
 fi
+
+# Telegram-only guards, deliberately after the GitHub manifest is written. A
+# fork with no TG_TOKEN still leaves a complete failure report for the build log.
+if [ -z "${TG_TOKEN:-}" ]; then
+	echo "TG_TOKEN is not set. Skipping failure report."
+	exit 0
+fi
+tg_require_targets \
+	"TG_CHAT_ID=${TG_CHAT_ID:-}" \
+	"TG_THREAD_NOTIFY=${TG_THREAD_NOTIFY:-}" || exit 1
 
 MSG=""
 # Each section carries its own hint directly beneath it, so the guidance sits next

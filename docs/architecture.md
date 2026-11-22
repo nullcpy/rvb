@@ -178,7 +178,11 @@ Cloudflare-bypass sidecar service on `:8000`:
 9. `merge_archive_branch.sh` merges this build's manifest into `website`
    (`manifests/<tag>.json` + cumulative `archive/<channel>.json`), live-filtered
    against the archive release's actual files.
-10. Telegram notification for the build.
+10. Telegram notification for the build, plus an additive GitHub Discussions
+    build log: one discussion per build with the archive-linked download table
+    at the top of the body, the failure report beneath it and the full failure
+    logs in a dedicated comment ([decision
+    0018](decisions/0018-github-discussions-are-an-additive-build-log.md)).
 
 **Cleanup** — `cleanup.yml`, called after a successful build:
 

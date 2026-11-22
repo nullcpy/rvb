@@ -227,6 +227,14 @@ Step order, with the reason each is where it is:
    `trigger_notify_failure` forwards as `already_reported` so
    `notify_send_telegram.sh` skips the generic "🔴 CI #N failed" alert for that
    run (Route B) — non-build failures still notify normally.
+    The same step also writes `temp/gh_buildlog/failures.tsv`, a tab-separated
+    twin of the report (section, app, arch, derived detail, link, log path).
+    It is written whether or not Telegram is configured: the GitHub build log
+    is additive, so a fork without `TG_TOKEN` still gets its failure report.
+    Details come from the record class the engine already wrote — `patcher
+    aborted` for `_pf`, `bundle unreadable` for `_lb`, `sources exhausted` for
+    `_dl`, `bundle refused <version>` for `_np`, `0 patches applied` for `_npa`,
+    `build aborted` for a plain build record — never from invented prose.
 7b2. **Reconcile pending-build state** (`build_update_retry_list.sh`,
    `if: !cancelled()`): reads the same `temp/failures/` records and updates
    `state/built_shape.json` + `state/pending_builds.json` for this channel. **Only
@@ -335,6 +343,27 @@ Step order, with the reason each is where it is:
     archive mirror (11b) landed and `build.md` otherwise, so a successful mirror makes
     Telegram and Discord link the permanent copy while a failed one — or a fork with no
     archive repo — keeps linking rvb and never advertises a file that is not there.
+18. **Publish build log to GitHub Discussions** (`build_notify_gh.sh`,
+    `if: !cancelled() && NEXT_VER_CODE != ''`, `continue-on-error`): the one
+    additive sink. One discussion per build, titled
+    `Build <tag> · <Stable|Beta> · <UTC date>`, in the category named by
+    `vars.GH_BUILDLOG_CATEGORY`. Its body is written once: `## 📦 Downloads`
+    (a compact `App | Version | APK | Module` table rendered from
+    `build.archive.md`, so every link points at the permanent mirror and
+    survives deletion of the numbered rvb release), then `## 🚨 Build Report`
+    (the failure tables from step 7b's TSV). Full failure logs are NOT in the
+    body — they live in a `## 📄 Failure Log` comment, one collapsed
+    `<details>` block per app+arch, sanitised and fenced past any backticks in
+    the log. The comment is created before the body so its
+    `#discussioncomment-…` URL can be linked from each failure row; a retry
+    finds the anchored comment and edits it in place, so neither the comment
+    nor the discussion is duplicated.
+    A shipped build requires a successful archive mirror (`NOTES_FILE` must be
+    `build.archive.md`) — there is no silent fallback to rvb links. A body
+    over the measured UTF-16 budget fails loudly instead of being truncated.
+    No files and no failures is a no-op, and a fork with no category skips
+    cleanly. Replaces neither Telegram nor Discord ([decision
+    0018](decisions/0018-github-discussions-are-an-additive-build-log.md)).
 
 ## Cleanup (`cleanup.yml`)
 
@@ -534,6 +563,7 @@ the runner's git config.
 | var | `APKS_REPO`, `WEBSITE_REPO` | build, cleanup | alternate cache/site repos for forks |
 | var | `ARCHIVE_REPO` | build | the permanent mirror repo (`nullcpy/archive`); **unset disables the whole archive feature** — no mirror, no manifest push, no page rebuild, notes stay rvb-linked ([decisions/0015](decisions/0015-builds-are-mirrored-to-a-permanent-archive-repo.md)) |
 | var | `TG_CHAT_ID`, `TG_CHAT_ID_BROADCAST`, `TG_THREAD_CI`, `TG_THREAD_STABLE`, `TG_THREAD_BETA`, `TG_THREAD_NOTIFY`, `TG_THREAD_ANNOUNCE` | notifications | the chat handle and every topic ID come from here only, and an unset one fails its notify step (see the target guard above) instead of falling back to a written-in chat; `TG_THREAD_NOTIFY` is the log topic and receives two separate kinds of message — the per-app build/download failure report, and the watcher's build-queue notice listing what the run resolved to build; `TG_THREAD_ANNOUNCE` is the announcement topic — config additions and config-change rebuild notices together (that step is `continue-on-error`, so an unset one only skips the notice). It replaced `TG_THREAD_NEWAPPS`, which pointed at the same topic under the narrower name |
+| var | `GH_BUILDLOG_CATEGORY` | build | the GitHub Discussions category for the per-build log; **unset skips the additive log entirely**, it is never defaulted to a written-in name ([decision 0018](decisions/0018-github-discussions-are-an-additive-build-log.md)) |
 | var | `RELEASE_NOTES_DISCORD_LINK`, `RELEASE_NOTES_DONATE_LINK`, `RELEASE_NOTES_WEBSITE_LINK` | build, watcher | the footer links of the generated release body; `RELEASE_NOTES_WEBSITE_LINK` doubles as the announcement's download link (`WEBSITE_LINK`). No URL is written into the workflows or the scripts, so an unset var drops its entry — the announcement loses the whole download line — instead of inventing a target |
 | var | `RVB_MORPHE_PASSTHROUGH` | build | bundle handling escape hatch |
 | var | `RVB_MORPHE_STRIPLIBS` | build | bisect switch for morphe's own `--striplibs`, which is then the **only** native-lib strip a plain-APK input gets — the engine stops rewriting that input, because deleting entries from it would delete its signing block ([build-engine.md](build-engine.md)); `false` restores the engine `zip -d` rewrite and drops the flag (bundle trims are unaffected) |
@@ -561,6 +591,7 @@ and a maintainer reads it on failure.
 |---|---|
 | Engine functions (`utils.sh`) | `bash .github/traces/trace_runner.sh verify` — offline, no network |
 | A shell script CI calls | a stubbed-binary harness in `temp/` (see [contributing.md](contributing.md)) |
+| GitHub build log | `bash .github/traces/test_build_log_gh.sh` — stubbed `gh`, asserts title, body order, archive links, sanitised log comment, retry-in-place and the fail-loud guards |
 | Release/upload behaviour | the metadata matrix harness + a `workflow_dispatch` of Manual CI against `configs/config.manual.toml` |
 | Watcher gating | Manual CI with a chosen config, or read the previous run's flags in the Actions UI |
 | Website-facing formats | rebuild the site catalogue with `dry_run: true` on `rebuild-catalog.yml` |

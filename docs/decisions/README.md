@@ -48,6 +48,7 @@ document.
 | [0015](0015-builds-are-mirrored-to-a-permanent-archive-repo.md) | Builds are mirrored to a permanent archive repo | `build.yml` mirror + manifest steps, `ARCHIVE_REPO`/`ARCHIVE_REPO_TOKEN`, `nullcpy/archive` + its `website` branch, `build.archive.md`, notify link targets |
 | [0016](0016-archive-pages-are-generated-markdown-on-main.md) | The archive is generated markdown on its own branches | `build_archive_pages.py`, `nullcpy/archive` `main` README + `site` Pages sources, its `pages.yml`, `Notify archive pages` step, `PUBLISHED` output |
 | [0017](0017-parenthetical-versions-are-display-metadata.md) | A parenthetical version annotation is display metadata | `scripts/utils.sh` `_ver_key` / `version_f` / `_rekey_to_bytes` / `_cached_identity_disagrees`, frozen filename grammar |
+| [0018](0018-github-discussions-are-an-additive-build-log.md) | GitHub Discussions are an additive build log | `build.yml`, `build_notify_gh.sh`, `notify_gh.sh`, `build_gh_download_table.py`, `GH_BUILDLOG_CATEGORY`, `Build Log` category |
 
 Candidates still unwritten, because the reasoning currently lives only in commit
 messages: pinning a patch source's `patches-version` to a tag vs resolving the

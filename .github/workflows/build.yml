@@ -44,6 +44,9 @@ jobs:
       reported_failures: ${{ steps.failure_report.outputs.reported_failures }}
     permissions:
       contents: write
+      # Additive GitHub build log: one discussion per build, failures in the
+      # body and full logs in a comment. Telegram/Discord keep their own paths.
+      discussions: write
     runs-on: ubuntu-latest
     timeout-minutes: 120
     # Performance tuning knobs — version-controlled here instead of repo
@@ -398,3 +401,22 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           NOTES_FILE: ${{ steps.archive_mirror.outcome == 'success' && 'build.archive.md' || 'build.md' }}
         run: bash .github/scripts/build_notify_telegram.sh
+
+      - name: Publish build log to GitHub Discussions
+        if: ${{ !cancelled() && steps.version.outputs.NEXT_VER_CODE != '' }}
+        # Last step: the failure report has written its machine-readable rows and
+        # the publish chain has produced build.archive.md. Additive and fail-soft:
+        # a Discussions outage must never redden a run whose files already shipped.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_BUILDLOG_CATEGORY: ${{ vars.GH_BUILDLOG_CATEGORY }}
+          ARCHIVE_REPO: ${{ vars.ARCHIVE_REPO }}
+          BUILD_TAG: ${{ steps.version.outputs.NEXT_VER_CODE }}
+          CHANNEL_LABEL: ${{ steps.context.outputs.IS_PRERELEASE == 'true' && 'Beta' || 'Stable' }}
+          HAS_NEW_FILES: ${{ steps.no_change.outputs.HAS_NEW_FILES }}
+          NOTES_FILE: ${{ steps.archive_mirror.outcome == 'success' && 'build.archive.md' || '' }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: bash .github/scripts/build_notify_gh.sh

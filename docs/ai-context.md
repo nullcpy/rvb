@@ -70,6 +70,7 @@ Releases, records build metadata on a Git branch, and feeds a static download si
 | `.github/workflows/manual-ci.yml` | human-triggered single build, including `remove_apks` cache eviction |
 | `.github/workflows/trace-verify.yml` | offline regression gate on engine pushes |
 | `.github/scripts/` | CI-side tooling; the [index](../.github/scripts/README.md) describes each script's contract |
+| `.github/scripts/build_notify_gh.sh`, `notify_gh.sh`, `build_gh_download_table.py` | the additive per-build GitHub Discussions log: body = archive-linked downloads + failure report, comment = full failure logs ([decision 0018](decisions/0018-github-discussions-are-an-additive-build-log.md)) |
 | `.github/traces/` | fixtures + `curl`/`java` stubs + golden argv files; the engine's safety net |
 | `configs/patches/*.toml` *(on `data`)* | the actual app configuration — one file per patch-source family |
 | `state/*.json` *(on `data`)* | watcher memory: patch source tags/blocked flags, app versions, bundle hashes, published artifact fingerprints |
@@ -123,6 +124,7 @@ source and the arch goes unbuilt if none supplies it
 | The archive upload step passes no title/notes/prerelease | CI does not own release prose → [decisions/0001](decisions/0001-release-metadata-ownership.md) |
 | `--clobber` is unconditional on asset upload | retried runs must be idempotent; absence is not expressible for a file list |
 | `continue-on-error: true` on the archive upload, `|| true` on Telegram/usage tracker | one failed upload must not lose the other 60 apps' release |
+| The GitHub build log refuses to write when the archive mirror did not land, and is silent without `GH_BUILDLOG_CATEGORY` | it must never advertise rvb links that break when a numbered release is pruned, nor invent a category name ([decision 0018](decisions/0018-github-discussions-are-an-additive-build-log.md)) |
 | The archive mirror is opt-in and its steps are `continue-on-error` | an unset `ARCHIVE_REPO` changes nothing; a mirror or manifest-push miss must not lose the rvb release or redden a live run → [decisions/0015](decisions/0015-builds-are-mirrored-to-a-permanent-archive-repo.md) |
 | `merge_archive_branch.sh` has no "start from empty" fallback; fetch failure kills the job | the 2026-09-24 archive collapse |
 | `get_prebuilts` is called outside `$( )` | it writes `__PREBUILTS_CACHE__`; a subshell discards it |
@@ -150,6 +152,7 @@ source and the arch goes unbuilt if none supplies it
 | Debug a cache miss or a vanished stock APK | `dl_cache_repo`, `usage.json` in `nullcpy/apks` | [cache-repo.md](cache-repo.md) debugging checklist |
 | Change patch invocation/flags | `scripts/utils.sh:patch_apk`, `.github/scripts/patchers.sh` | `trace_runner.sh verify` (goldens will diff — read them) |
 | Change release upload semantics | `.github/scripts/build_upload_release.sh` | stubbed-`gh` metadata matrix harness |
+| Change the GitHub build log | `.github/scripts/build_notify_gh.sh`, `notify_gh.sh`, `build_gh_download_table.py`, `build.yml` | `bash .github/traces/test_build_log_gh.sh` (stubbed `gh`) |
 | Change what gets built when | `.github/scripts/ci_*.sh` and `.py` | read the previous run's flags; dispatch CI |
 | Change manifest/catalogue format | `build_make_manifest.py` (+ `naming.py`, shared by import) then site `rebuild_catalog.py` | site rebuild `dry_run: true` + diff |
 | Change module update wiring | `scripts/utils.sh:update_json_path/module_prop`, `build_update_changelog.sh` | inspect `update` branch after a build |

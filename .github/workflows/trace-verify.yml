@@ -28,6 +28,10 @@ on:
       # real against a stubbed curl and asserts the sections a maintainer reads, so a change
       # to it must run the suite rather than only surface in the next build's notification.
       - ".github/scripts/build_report_failures.sh"
+      # The GitHub build log is tested by test_build_log_gh.sh with a stubbed gh.
+      - ".github/scripts/build_notify_gh.sh"
+      - ".github/scripts/notify_gh.sh"
+      - ".github/scripts/build_gh_download_table.py"
       - ".github/scripts/sync_patch_sources.py"
       - ".github/scripts/compile_patch_configs.py"
       - ".github/traces/**"
@@ -68,4 +72,5 @@ jobs:
           bash .github/traces/test_archive_mirror.sh
           bash .github/traces/test_archive_pages.sh
           bash .github/traces/test_failure_report.sh
+          bash .github/traces/test_build_log_gh.sh
           bash .github/traces/test_version_watch.sh
