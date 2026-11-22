@@ -813,7 +813,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/hermit-lite-apps-browser/com.chimbori.hermitcrab"
   },
   "FairEmail-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "eu.faircode.email",
     "app-name": "FairEmail",
     "brand": "heval99",
@@ -824,7 +824,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/fairemail-privacy-aware-email/eu.faircode.email"
   },
   "Sofascore-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sofascore.results",
     "app-name": "Sofascore",
     "brand": "heval99",
@@ -1510,7 +1510,7 @@
     "apkpure-dlurl": "https://apkpure.com/myfitnesspal-calorie-counter/com.myfitnesspal.android"
   },
   "MyFitnessPal-heval99": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.myfitnesspal.android",
     "app-name": "MyFitnessPal",
     "brand": "heval99",
@@ -2419,7 +2419,7 @@
     "apkpure-dlurl": "https://apkpure.com/threads-app/com.instagram.barcelona"
   },
   "TikTok-hushfeed": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.zhiliaoapp.musically",
     "app-name": "TikTok",
     "patches-source": "SysAdminDoc/hushfeed",
@@ -2540,7 +2540,7 @@
     "brand": "heval99",
     "patches-source": "heval99/Heval-Morphe-Patches",
     "build-mode": "both",
-    "included-patches": "'Fix T9 contact search 'Hide Assistant tab' 'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab' 'Show caller number in call log' 'Turn off Ad Campaign Analytics'",
+    "included-patches": "'Fix T9 contact search' 'Hide Assistant tab' 'GmsCore support' 'Hide Premium tab' 'Hide Scam feed' 'Hide family button' 'Spoof signature' 'Use SMS for verification codes' 'Hide Blocking tab' 'Show caller number in call log' 'Turn off Ad Campaign Analytics'",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block",
     "uptodown-dlurl": "https://truecaller.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/truecaller-caller-id-block-for-android-2024/com.truecaller"
