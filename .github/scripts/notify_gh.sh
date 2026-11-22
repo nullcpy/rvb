@@ -48,13 +48,20 @@ gh_log_find() {
 		--state all \
 		--json number,title,url \
 		--limit 100) || return 1
-	GH_LOG_FIND_COUNT=$(printf '%s' "$out" | jq -r --arg t "$title" '[.[] | select(.title == $t)] | length' | tr -d '\r')
+	# `gh discussion list --json` answers {"discussions":[...],"totalCount":N},
+	# not a bare array. Fail loudly on any other shape rather than reading an
+	# empty count from an error object and creating a duplicate discussion.
+	if ! printf '%s' "$out" | jq -e 'type == "object" and (.discussions | type) == "array"' >/dev/null; then
+		echo "::error::Unexpected gh discussion list output; cannot resolve '${title}'. Refusing to guess." >&2
+		return 1
+	fi
+	GH_LOG_FIND_COUNT=$(printf '%s' "$out" | jq -r --arg t "$title" '[.discussions[] | select(.title == $t)] | length' | tr -d '\r')
 	GH_LOG_NUMBER=""
 	if [ "$GH_LOG_FIND_COUNT" -gt 1 ]; then
 		echo "::error::More than one discussion is titled '${title}'. Refusing to guess which one belongs to this build." >&2
 		return 1
 	elif [ "$GH_LOG_FIND_COUNT" -eq 1 ]; then
-		GH_LOG_NUMBER=$(printf '%s' "$out" | jq -r --arg t "$title" '.[] | select(.title == $t) | .number' | tr -d '\r')
+		GH_LOG_NUMBER=$(printf '%s' "$out" | jq -r --arg t "$title" '.discussions[] | select(.title == $t) | .number' | tr -d '\r')
 	fi
 	return 0
 }

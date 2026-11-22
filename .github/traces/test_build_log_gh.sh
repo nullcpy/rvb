@@ -17,7 +17,7 @@ fail() { echo "FAIL: $*"; exit 1; }
 
 mkdir -p "$t/bin" "$t/work/temp/failures" "$t/state"
 : > "$t/state/discussions.json"
-printf '[]\n' > "$t/state/discussions.json"
+printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
 : > "$t/state/calls"
 
 cat > "$t/bin/gh" << 'STUB'
@@ -30,7 +30,11 @@ discussion)
 	sub=${1:-}; shift || true
 	case "$sub" in
 	list)
-		cat "$state/discussions.json"
+		if [ "${GH_STUB_BAD_LIST:-0}" = 1 ]; then
+			printf '[]\n'
+		else
+			cat "$state/discussions.json"
+		fi
 		;;
 	create)
 		title=""
@@ -44,7 +48,7 @@ discussion)
 		done
 		[ -f "$bodyfile" ] || exit 1
 		cp "$bodyfile" "$state/body.md"
-		jq -n --arg t "$title" '[{"number":412,"title":$t,"url":"https://github.com/nullcpy/rvb/discussions/412"}]' > "$state/discussions.json"
+		jq -n --arg t "$title" '{discussions:[{"number":412,"title":$t,"url":"https://github.com/nullcpy/rvb/discussions/412"}],totalCount:1}' > "$state/discussions.json"
 		printf 'https://github.com/nullcpy/rvb/discussions/412\n'
 		;;
 	comment)
@@ -203,25 +207,29 @@ grep -q 'target not configured' "$t/no_category.stdout" || fail "unset category 
 [ "$(wc -l < "$t/state/calls")" -eq "$before" ] || fail "unset category still called gh"
 
 # ---- 6. negative: ambiguous title fails loudly -------------------------------
-jq -n '[{"number":411,"title":"Build 260141 · Stable · '"$(date -u +%F)"'","url":"x"},{"number":412,"title":"Build 260141 · Stable · '"$(date -u +%F)"'","url":"y"}]' \
+jq -n --arg day "$(date -u +%F)" '{discussions:[{"number":411,"title":("Build 260141 · Stable · " + $day),"url":"x"},{"number":412,"title":("Build 260141 · Stable · " + $day),"url":"y"}],totalCount:2}' \
 	> "$t/state/discussions.json"
 if run_log ambiguous; then fail "ambiguous title did not fail"; fi
 grep -q 'More than one discussion' "$t/ambiguous.stdout" || fail "ambiguity error missing"
 
+# ---- 6b. negative: a wrong list shape must not be read as "no discussion" -----
+if run_log bad_list env GH_STUB_BAD_LIST=1; then fail "unexpected list shape did not fail"; fi
+grep -q 'Unexpected gh discussion list output' "$t/bad_list.stdout" || fail "shape error missing"
+
 # ---- 7. negative: a shipped build without the archive note fails -------------
-printf '[]\n' > "$t/state/discussions.json"
+printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
 if run_log no_note env NOTES_FILE=; then fail "missing archive note did not fail"; fi
 grep -q 'build.archive.md' "$t/no_note.stdout" || fail "missing-note error missing"
 
 # ---- 8. negative: body over budget fails instead of truncating ---------------
-printf '[]\n' > "$t/state/discussions.json"
+printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
 long=$(printf 'X%.0s' {1..70000})
 printf 'build\t%s\tarm64-v8a\tbuild aborted\t-\t-\n' "$long" >> "$t/work/temp/gh_buildlog/failures.tsv"
 if run_log oversized; then fail "oversized body did not fail"; fi
 grep -q 'budget' "$t/oversized.stdout" || fail "oversize error missing"
 
 # ---- 9. no failures and no files: a quiet no-op ------------------------------
-printf '[]\n' > "$t/state/discussions.json"
+printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
 : > "$t/work/temp/gh_buildlog/failures.tsv"
 run_log noop env HAS_NEW_FILES=false GH_BUILDLOG_CATEGORY=
 grep -q 'Nothing to publish' "$t/noop.stdout" || fail "no-op did not say so"
