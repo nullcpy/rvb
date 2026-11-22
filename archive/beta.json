@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-22T19:15:38Z"
+    "publishedAt": "2026-11-22T20:05:57Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -8302,10 +8302,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.1.0-dev.1.mpp"
+        "heval99/patches-3.1.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8315,6 +8315,8 @@
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Fix T9 contact search",
+        "Hide Assistant tab",
         "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
@@ -8329,8 +8331,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260569",
-      "publishedAt": "2026-11-18T21:03:26Z"
+      "originBuild": "260593",
+      "publishedAt": "2026-11-22T20:05:33Z"
     },
     "truecaller-heval99-module-v26.45.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -8345,10 +8347,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.1.0-dev.1.mpp"
+        "heval99/patches-3.1.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8358,6 +8360,8 @@
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Fix T9 contact search",
+        "Hide Assistant tab",
         "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
@@ -8372,8 +8376,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260569",
-      "publishedAt": "2026-11-18T21:03:26Z"
+      "originBuild": "260593",
+      "publishedAt": "2026-11-22T20:05:33Z"
     },
     "truecaller-heval99-v26.45.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -8388,10 +8392,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.1.0-dev.1.mpp"
+        "heval99/patches-3.1.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8401,7 +8405,9 @@
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Fix T9 contact search",
         "GmsCore support",
+        "Hide Assistant tab",
         "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
@@ -8416,8 +8422,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260569",
-      "publishedAt": "2026-11-18T21:03:26Z"
+      "originBuild": "260593",
+      "publishedAt": "2026-11-22T20:05:33Z"
     },
     "truecaller-heval99-v26.45.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -8432,10 +8438,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.1.0-dev.1.mpp"
+        "heval99/patches-3.1.0-dev.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.1.0-dev.2"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8445,7 +8451,9 @@
         "Disable telemetry",
         "Disable update prompts",
         "Enable Premium",
+        "Fix T9 contact search",
         "GmsCore support",
+        "Hide Assistant tab",
         "Hide Blocking tab",
         "Hide Premium tab",
         "Hide Scam feed",
@@ -8460,8 +8468,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260569",
-      "publishedAt": "2026-11-18T21:03:26Z"
+      "originBuild": "260593",
+      "publishedAt": "2026-11-22T20:05:33Z"
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
       "name": "google-photos-akashsriram-unclone",
