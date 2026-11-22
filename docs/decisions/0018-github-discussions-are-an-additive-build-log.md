@@ -4,7 +4,7 @@
 **Affects:** `build.yml`, `build_report_failures.sh`, `build_notify_gh.sh`,
 `notify_gh.sh`, `build_gh_download_table.py`, `GH_BUILDLOG_CATEGORY`, the
 `discussions: write` permission, the `Build Log` discussion category and the
-`build_log`, `stable`, `beta` and `build_issue` labels.
+`build_log`, `stable_build`, `beta_build` and `build_issue` labels.
 
 ## Context
 
@@ -29,7 +29,7 @@ the date is display metadata from when the discussion was first created: an
 exact title match is tried first, then a `Build <tag> ·` prefix match so a retry
 after UTC midnight reuses the existing discussion instead of creating a second
 one. Zero creates, one reuses, more than one is an error. Every discussion is
-labelled `build_log` plus `stable` or `beta` (from the workflow's own channel
+labelled `build_log` plus `stable_build` or `beta_build` (from the workflow's own channel
 context — an unrecognised value is refused, not guessed), and `build_issue`
 whenever the build has failure records; a clean retry removes that label so it
 cannot go stale. Labels are cosmetic, so a fork missing them only warns and

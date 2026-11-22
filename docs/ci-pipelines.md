@@ -350,8 +350,8 @@ Step order, with the reason each is where it is:
     `vars.GH_BUILDLOG_CATEGORY`. The build number is the identity; the date is
     when the discussion was first created, so a retry after UTC midnight
     matches by tag prefix and edits that discussion rather than making a
-    second one. Every discussion is labelled `build_log` plus `stable` or
-    `beta`, and `build_issue` when the build has failures (removed on a clean
+    second one. Every discussion is labelled `build_log` plus `stable_build` or
+    `beta_build`, and `build_issue` when the build has failures (removed on a clean
     retry); a missing label only warns. Its body is written once: `## 📦 Downloads`
     (a compact `App | Version | APK | Module` table rendered from
     `build.archive.md`, so every link points at the permanent mirror and

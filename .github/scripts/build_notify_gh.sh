@@ -49,8 +49,8 @@ gh_require_targets \
 # Channel names come from the workflow's own context; an unrecognised value is
 # an error, never a guess at which label to apply.
 case "$CHANNEL_LABEL" in
-Stable) CHANNEL_SLUG=stable ;;
-Beta) CHANNEL_SLUG=beta ;;
+Stable) CHANNEL_SLUG=stable_build ;;
+Beta) CHANNEL_SLUG=beta_build ;;
 *)
 	echo "::error::Unrecognised CHANNEL_LABEL '${CHANNEL_LABEL}'; expected Stable or Beta." >&2
 	exit 1

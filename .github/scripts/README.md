@@ -151,7 +151,7 @@ into a `## 📄 Failure Log` comment, one sanitised, safely-fenced `<details>`
 block per app+arch; the comment is created before the body so its
 `#discussioncomment-…` URL can be linked from the failure row, and a retry
 edits the anchored comment instead of posting another. Every discussion gets
-`build_log`, `stable`/`beta` and (when failures exist) `build_issue` labels; a
+`build_log`, `stable_build`/`beta_build` and (when failures exist) `build_issue` labels; a
 fork without them only warns. Global constants in
 `notify_gh.sh`: `GH_BODY_LIMIT=65000`, `GH_COMMENT_LIMIT=60000` — an oversized
 body fails loudly rather than being truncated. A shipped build without a
