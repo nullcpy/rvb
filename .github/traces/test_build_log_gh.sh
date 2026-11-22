@@ -87,6 +87,7 @@ discussion)
 			case "$1" in
 			--body-file) bodyfile=${2:-}; shift 2 ;;
 			--add-label) shift 2 ;;
+			--remove-label) shift 2 ;;
 			*) shift ;;
 			esac
 		done
@@ -184,7 +185,7 @@ run_log first
 [ -f "$t/state/body.md" ] || fail "no discussion body written"
 body="$t/state/body.md"
 grep -qF "$TITLE" <<< "$(cat "$t/state/discussions.json")" || fail "wrong discussion title"
-grep -qF 'discussion edit 412 --add-label build_log' "$t/state/calls" || fail "build_log label was not applied"
+grep -qF 'discussion edit 412 --add-label build_log,stable,build_issue' "$t/state/calls" || fail "stable/build_issue labels were not applied"
 grep -qF '## 📦 Downloads' "$body" || fail "downloads heading missing"
 grep -qF '## 🚨 Build Report' "$body" || fail "report heading missing"
 dl_pos=$(grep -nF '## 📦 Downloads' "$body" | cut -d: -f1)
@@ -253,5 +254,20 @@ printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
 : > "$t/work/temp/gh_buildlog/failures.tsv"
 run_log noop env HAS_NEW_FILES=false GH_BUILDLOG_CATEGORY=
 grep -q 'Nothing to publish' "$t/noop.stdout" || fail "no-op did not say so"
+
+# ---- 10. a beta build gets the beta label, not stable ------------------------
+printf '{"discussions":[],"totalCount":0}\n' > "$t/state/discussions.json"
+printf 'build\tApp\tarm64-v8a\tbuild aborted\t-\t-\n' > "$t/work/temp/gh_buildlog/failures.tsv"
+run_log beta env CHANNEL_LABEL=Beta
+grep -qF 'discussion edit 412 --add-label build_log,beta,build_issue' "$t/state/calls" || fail "beta label not applied"
+
+# ---- 11. a clean retry removes the stale build_issue label -------------------
+: > "$t/work/temp/gh_buildlog/failures.tsv"
+run_log clean_labels
+grep -qF 'discussion edit 412 --add-label build_log,stable --remove-label build_issue' "$t/state/calls" || fail "clean retry kept build_issue"
+
+# ---- 12. negative: an unknown channel is refused, not guessed ---------------
+if run_log bad_channel env CHANNEL_LABEL=Gamma; then fail "unknown channel did not fail"; fi
+grep -q 'Unrecognised CHANNEL_LABEL' "$t/bad_channel.stdout" || fail "channel error missing"
 
 echo "github build log: all cases passed"

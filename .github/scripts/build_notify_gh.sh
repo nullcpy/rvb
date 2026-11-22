@@ -46,6 +46,17 @@ gh_require_targets \
 	"CHANNEL_LABEL=${CHANNEL_LABEL:-}" \
 	"GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-}" || exit 1
 
+# Channel names come from the workflow's own context; an unrecognised value is
+# an error, never a guess at which label to apply.
+case "$CHANNEL_LABEL" in
+Stable) CHANNEL_SLUG=stable ;;
+Beta) CHANNEL_SLUG=beta ;;
+*)
+	echo "::error::Unrecognised CHANNEL_LABEL '${CHANNEL_LABEL}'; expected Stable or Beta." >&2
+	exit 1
+	;;
+esac
+
 if [ "${HAS_NEW_FILES:-false}" = "true" ]; then
 	if [ "${NOTES_FILE:-}" != "build.archive.md" ] || [ ! -f "${NOTES_FILE:-}" ]; then
 		echo "::error::GitHub build log needs build.archive.md (the archive mirror must have landed); got '${NOTES_FILE:-none}'. Refusing to link files that are not in the permanent mirror." >&2
@@ -72,10 +83,20 @@ if [ "$GH_LOG_FIND_COUNT" -eq 0 ]; then
 	fi
 fi
 
-# Apply the label after resolution so it also lands on a discussion created by
-# an earlier run. A missing label must not lose the report, so this warns only.
-if ! gh discussion edit "$GH_LOG_NUMBER" --add-label "$GH_BUILDLOG_LABEL" >/dev/null; then
-	echo "::warning::Could not add the ${GH_BUILDLOG_LABEL} label; the build log body is still published."
+# Apply labels after resolution so they also land on a discussion created by an
+# earlier run. build_issue marks a build with failure records; on a clean retry
+# it is removed so a recovered build does not keep a stale error label. Labels
+# are cosmetic — a fork missing them only warns, it still gets the report.
+LABELS="${GH_BUILDLOG_LABEL},${CHANNEL_SLUG}"
+if [ "${#ROWS[@]}" -gt 0 ]; then
+	LABELS="${LABELS},build_issue"
+	if ! gh discussion edit "$GH_LOG_NUMBER" --add-label "$LABELS" >/dev/null; then
+		echo "::warning::Could not add labels ${LABELS}; the build log body is still published."
+	fi
+else
+	if ! gh discussion edit "$GH_LOG_NUMBER" --add-label "$LABELS" --remove-label build_issue >/dev/null; then
+		echo "::warning::Could not update labels ${LABELS}; the build log body is still published."
+	fi
 fi
 
 # ---- Full failure logs: one comment (or more, on overflow) --------------------
