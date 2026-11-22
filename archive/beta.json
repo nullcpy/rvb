@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-22T16:29:11Z"
+    "publishedAt": "2026-11-22T19:15:38Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -8476,10 +8476,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8489,8 +8489,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm64-v8a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -8505,10 +8505,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -8518,8 +8518,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     },
     "reddit-morphe-experimental-module-v2026.47.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
@@ -9061,10 +9061,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -9074,8 +9074,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     },
     "google-photos-akashsriram-module-v8.2.0.1026567706-arm-v7a.zip": {
       "name": "google-photos-akashsriram",
@@ -9090,10 +9090,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -9102,8 +9102,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     },
     "google-photos-akashsriram-module-v8.2.0.1026567706-arm64-v8a.zip": {
       "name": "google-photos-akashsriram",
@@ -9118,10 +9118,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -9130,8 +9130,8 @@
         "Media engine & AI fixes",
         "Spoof features"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     },
     "google-photos-akashsriram-v8.2.0.1026567706-arm64-v8a.apk": {
       "name": "google-photos-akashsriram",
@@ -9146,10 +9146,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "Akash-Sriram/patches-1.19.0-dev.5.mpp"
+        "Akash-Sriram/patches-1.19.0-dev.6.mpp"
       ],
       "changelogs": [
-        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.5"
+        "https://github.com/Akash-Sriram/morphe-google-photos/releases/tag/v1.19.0-dev.6"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -9159,8 +9159,8 @@
         "Spoof features",
         "GmsCore support"
       ],
-      "originBuild": "260589",
-      "publishedAt": "2026-11-22T12:59:46Z"
+      "originBuild": "260591",
+      "publishedAt": "2026-11-22T19:14:57Z"
     }
   }
 }
