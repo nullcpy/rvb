@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-21T20:11:23Z"
+    "publishedAt": "2026-11-22T06:40:38Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -6759,30 +6759,6 @@
       ],
       "originBuild": null,
       "publishedAt": "2026-09-08T11:26:01Z"
-    },
-    "imdb-adobo-v9.3.4-all.apk": {
-      "name": "imdb-adobo",
-      "version": "9.3.4",
-      "appKey": "imdb",
-      "appName": "IMDb",
-      "arch": "all",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.imdb.mobile",
-      "patchSources": [
-        "jkennethcarino/patches-1.4.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.4.0"
-      ],
-      "appliedPatches": [
-        "Remove IMDb's ads, trackers, and analytics "
-      ],
-      "originBuild": null,
-      "publishedAt": "2026-09-08T10:42:38Z"
     },
     "inshot-hooman-v2.214.1539-arm-v7a.apk": {
       "name": "inshot-hooman",
@@ -15730,68 +15706,6 @@
       "originBuild": "260361",
       "publishedAt": "2026-10-24T12:57:28Z"
     },
-    "reddit-adobo-v2026.42.0-arm64-v8a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.42.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.6.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.6.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines",
-        "Disable home screen redirect",
-        "Disable screenshot banner",
-        "Hide community menu badge",
-        "Hide post view counts",
-        "Open external links directly",
-        "Remove ads and telemetry",
-        "Sanitize share links"
-      ],
-      "originBuild": "260309",
-      "publishedAt": "2026-10-18T16:16:27Z"
-    },
-    "reddit-adobo-v2026.42.0-arm-v7a.apk": {
-      "name": "reddit-adobo",
-      "version": "2026.42.0",
-      "appKey": "reddit",
-      "appName": "Reddit",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "adobo",
-      "brandName": "adobo",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.reddit.frontpage",
-      "patchSources": [
-        "jkennethcarino/patches-1.6.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/jkennethcarino/adobo/releases/tag/v1.6.0"
-      ],
-      "appliedPatches": [
-        "Colorize comment indent lines",
-        "Disable home screen redirect",
-        "Disable screenshot banner",
-        "Hide community menu badge",
-        "Hide post view counts",
-        "Open external links directly",
-        "Remove ads and telemetry",
-        "Sanitize share links"
-      ],
-      "originBuild": "260309",
-      "publishedAt": "2026-10-18T16:16:27Z"
-    },
     "acalendar-hxreborn-v2.9.5-arm64-v8a.apk": {
       "name": "acalendar-hxreborn",
       "version": "2.9.5",
@@ -17402,10 +17316,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.3.0.mpp"
+        "jasonwu1994/patches-4.4.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -17442,6 +17356,7 @@
         "Quick Insert",
         "Rounded Keyboard Panel",
         "Settings Homepage Override",
+        "Shift + Backspace Forward Delete",
         "Simple Calculator",
         "Swipe Down to Dismiss Keyboard",
         "Swipeable Custom Top Row",
@@ -17454,8 +17369,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260519",
-      "publishedAt": "2026-11-13T01:12:03Z"
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -17470,10 +17385,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.3.0.mpp"
+        "jasonwu1994/patches-4.4.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -17510,6 +17425,7 @@
         "Quick Insert",
         "Rounded Keyboard Panel",
         "Settings Homepage Override",
+        "Shift + Backspace Forward Delete",
         "Simple Calculator",
         "Swipe Down to Dismiss Keyboard",
         "Swipeable Custom Top Row",
@@ -17521,8 +17437,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260519",
-      "publishedAt": "2026-11-13T01:12:03Z"
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -17537,10 +17453,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.3.0.mpp"
+        "jasonwu1994/patches-4.4.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.3.0"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -17577,6 +17493,7 @@
         "Quick Insert",
         "Rounded Keyboard Panel",
         "Settings Homepage Override",
+        "Shift + Backspace Forward Delete",
         "Simple Calculator",
         "Swipe Down to Dismiss Keyboard",
         "Swipeable Custom Top Row",
@@ -17588,8 +17505,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260519",
-      "publishedAt": "2026-11-13T01:12:03Z"
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
     },
     "musicolet-hxreborn-v6.14.1build540-arm-v7a.apk": {
       "name": "musicolet-hxreborn",
@@ -27660,10 +27577,10 @@
       "subVariant": null,
       "packageName": "com.rubenmayayo.reddit",
       "patchSources": [
-        "wchill/patches-2.4.0.mpp"
+        "wchill/patches-2.5.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/wchill/patcheddit/releases/tag/v2.4.0"
+        "https://github.com/wchill/patcheddit/releases/tag/v2.5.0"
       ],
       "appliedPatches": [
         "Add Boost Search bottom navigation",
@@ -27681,13 +27598,18 @@
         "Fix Boost code block rendering",
         "Fix Boost navigation bar overlap",
         "Fix Hide crash",
+        "Fix comment video links",
         "Fix escaped URLs",
+        "Fix image search",
+        "Full Boost backup",
         "Import and export OAuth tokens",
+        "Load all inline media",
         "Log exceptions",
         "Prefer high refresh rate",
         "Preview images in the editor",
         "Readable Boost flair labels",
         "Reddit API fixes",
+        "Remember collapsed comments",
         "Remove obsolete profile tabs",
         "Repeat Boost thread level colors",
         "Restore Boost sidebar Trending today",
@@ -27701,10 +27623,11 @@
         "Standardize Boost bottom-navigation FAB clearance",
         "Support keyboard GIF insertion",
         "Tune Boost image dismissal",
-        "Use Reddit for image uploads"
+        "Use Reddit for image uploads",
+        "Fix broken markdown links"
       ],
-      "originBuild": "260559",
-      "publishedAt": "2026-11-17T18:00:48Z"
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
     },
     "telegram-hushtelegram-foss-v13.2.1-arm64-v8a.apk": {
       "name": "telegram-hushtelegram-foss",
@@ -33454,6 +33377,148 @@
       ],
       "originBuild": "260587",
       "publishedAt": "2026-11-21T20:10:57Z"
+    },
+    "letterboxd-mvaishak-material-you-v3.6.9-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Material You theme",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
+    },
+    "letterboxd-mvaishak-material-you-v3.6.9-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Material You theme",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
+    },
+    "letterboxd-mvaishak-v3.6.9-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
+    },
+    "letterboxd-mvaishak-v3.6.9-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260588",
+      "publishedAt": "2026-11-22T06:40:13Z"
     }
   }
 }
