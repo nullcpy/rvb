@@ -30,7 +30,10 @@ surface to its own branch:
   table beneath it, so the list sits above the builds it describes. A block is keyed by
   the patch set of every kind and arch in the build, which is what lets a patch line
   carry a scope tag such as `module omit`, `arm omit`, `arm64 only`, or an explicit
-  list like `arm64 module` `arm apk omit` when no single phrase covers it.
+  list like `arm64 module` `arm apk omit` when no single phrase covers it. A set
+  is compared as a set: when a newer patch bundle only reorders its
+  `appliedPatches` array, those builds fold into the existing block instead of
+  forking a duplicate with the same rendered list.
 - Data stays on `website` (`manifests/` and nothing else). Nothing on `main` links
   into `website`, so the data layer can change shape without breaking a visible link.
 - rvb triggers a rebuild with a `workflow_dispatch`, once per run, from `cleanup.yml`

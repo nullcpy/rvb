@@ -59,6 +59,46 @@ run "$t/gen.py" 50 "$t/p" --counts "$COUNTS"
 diff -r "$t/a" "$t/p" >/dev/null \
 	&& fail "swapping the arch order changed nothing; arch sorting is not applied"
 
+# A patch set is a set: a newer bundle that only reorders appliedPatches must fold
+# into the existing block. Two copies of one manifest carry the same patches in a
+# different order. The control adds a real patch to the Standard files, which must
+# split the block — without it, "one block" could pass vacuously.
+ord="$t/order-manifests"
+mkdir -p "$ord"
+python3 - "$FIX/260001.json" "$ord" <<'PY'
+import json, os, sys
+src, dest = sys.argv[1], sys.argv[2]
+base = json.load(open(src, encoding="utf-8"))
+for tag in ("260099", "260098"):
+    m = json.loads(json.dumps(base))
+    m["meta"]["build"] = tag
+    for e in m["files"].values():
+        patches = list(e["appliedPatches"])
+        if tag == "260099":
+            patches.reverse()
+        elif not e.get("variant"):
+            patches.append("delta")
+        e["appliedPatches"] = patches
+    with open(os.path.join(dest, tag + ".json"), "w", encoding="utf-8", newline="\n") as fh:
+        json.dump(m, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+PY
+cp "$FIX/260001.json" "$ord/260001.json"
+mkdir -p "$t/order-only"
+cp "$ord/260001.json" "$ord/260099.json" "$t/order-only/"
+python3 "$GEN" --manifests "$t/order-only" --out "$t/order-out" >/dev/null \
+	|| fail "generator failed on reordered patch lists"
+[ "$(grep -c '<details>' "$t/order-out/apps/youtube/README.md")" = 2 ] \
+	|| fail "a reordered patch list forked a duplicate block"
+grep -qF ' . 2 build(s)</summary>' "$t/order-out/apps/youtube/README.md" \
+	|| fail "the reordered builds did not fold into one block"
+grep -q 'releases/tag/260099)' "$t/order-out/apps/youtube/README.md" \
+	|| fail "the reordered build vanished from the folded block"
+python3 "$GEN" --manifests "$ord" --out "$t/order-split" >/dev/null \
+	|| fail "generator failed on a genuine patch difference"
+[ "$(grep -c '<details>' "$t/order-split/apps/youtube/README.md")" = 3 ] \
+	|| fail "a real patch difference no longer splits the block"
+
 # No relative links anywhere: they 404 when a README is read while logged out of
 # github.com, which is most of this site's audience.
 targets=$(grep -rho ']([^)]*)' "$t/a" | sed -e 's/^](//' -e 's/)$//')

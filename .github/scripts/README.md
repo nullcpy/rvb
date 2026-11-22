@@ -99,9 +99,10 @@ line pointing anyone after the newest versions or Obtainium adds at NullStore) a
 scope folded once above the build table it covers. A block is keyed by the patch set of
 every kind and arch in the build, so a patch line can carry a scope tag (`module omit`,
 `arm omit`, `arm64 only`, or an explicit audience list) whenever some artifact lacks
-it. Stdlib only, no network, and every collection sorted with a tie-break, because
-unstable order would
-rewrite files whose data did not change. The counters are therefore fetched by the
+it. The key compares sets, not `appliedPatches` array order: a bundle that merely
+reorders its patches does not fork a duplicate block. Stdlib only, no network, and
+every collection sorted with a tie-break, because unstable order would rewrite
+files whose data did not change. The counters are therefore fetched by the
 workflow into a `{tag: {asset: downloads}}` map and passed as `--counts`; without the
 flag the column is not rendered at all, and an app the map never mentions gets an empty
 cell rather than a `0`, because no data is not the same as nobody downloading.

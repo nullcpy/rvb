@@ -23,8 +23,10 @@ clone of this repo's `main`, the same import-not-copy rule as naming.py.
 Layout choices that are deliberate, not incidental:
 - Blocks are keyed by the whole scope signature, the patch set of every kind and
   arch in the build, not by one reference list. That is what lets a patch carry a
-  marker: inside a block the marker holds for every build in it. Measured on the
-  current archive, 138 blocks become 144.
+  marker: inside a block the marker holds for every build in it. A set is compared
+  as a set: a patch bundle that only reorders `appliedPatches` must not fork a
+  duplicate block with an identical rendered list. Measured on the current
+  archive, 138 blocks become 144.
 - A patch line is tagged only when some artifact lacks it, with the shortest exact
   phrase: `module omit`, `arm omit`, `arm64 only`, or an explicit list such as
   `arm apk` `arm64 module omit` when no single phrase covers the lacking set.
@@ -105,7 +107,9 @@ def load_manifests(src_dir):
                     "kind": entry.get("fileType") or "APK",
                     "version": entry.get("version") or "",
                     "fname": fname,
-                    "patches": tuple(dict.fromkeys(entry.get("appliedPatches") or [])),
+                    # The block key below compares these tuples element by element,
+                    # so normalise order here: a patch set is not a patch sequence.
+                    "patches": tuple(sorted(set(entry.get("appliedPatches") or []))),
                 }
             )
     rows.sort(key=lambda r: r["tag"], reverse=True)
