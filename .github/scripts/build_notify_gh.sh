@@ -18,6 +18,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/notify_gh.sh"
 
 GH_ROWS="temp/gh_buildlog/failures.tsv"
+# The label is cosmetic: a fork without it still gets the body and the logs.
+GH_BUILDLOG_LABEL="build_log"
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 
@@ -68,6 +70,12 @@ if [ "$GH_LOG_FIND_COUNT" -eq 0 ]; then
 		echo "::error::Discussion '${TITLE}' was created but could not be resolved to exactly one number." >&2
 		exit 1
 	fi
+fi
+
+# Apply the label after resolution so it also lands on a discussion created by
+# an earlier run. A missing label must not lose the report, so this warns only.
+if ! gh discussion edit "$GH_LOG_NUMBER" --add-label "$GH_BUILDLOG_LABEL" >/dev/null; then
+	echo "::warning::Could not add the ${GH_BUILDLOG_LABEL} label; the build log body is still published."
 fi
 
 # ---- Full failure logs: one comment (or more, on overflow) --------------------

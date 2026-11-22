@@ -86,11 +86,14 @@ discussion)
 		while [ $# -gt 0 ]; do
 			case "$1" in
 			--body-file) bodyfile=${2:-}; shift 2 ;;
+			--add-label) shift 2 ;;
 			*) shift ;;
 			esac
 		done
-		[ -f "$bodyfile" ] || exit 1
-		cp "$bodyfile" "$state/body.md"
+		if [ -n "$bodyfile" ]; then
+			[ -f "$bodyfile" ] || exit 1
+			cp "$bodyfile" "$state/body.md"
+		fi
 		;;
 	*) exit 1 ;;
 	esac
@@ -181,6 +184,7 @@ run_log first
 [ -f "$t/state/body.md" ] || fail "no discussion body written"
 body="$t/state/body.md"
 grep -qF "$TITLE" <<< "$(cat "$t/state/discussions.json")" || fail "wrong discussion title"
+grep -qF 'discussion edit 412 --add-label build_log' "$t/state/calls" || fail "build_log label was not applied"
 grep -qF '## 📦 Downloads' "$body" || fail "downloads heading missing"
 grep -qF '## 🚨 Build Report' "$body" || fail "report heading missing"
 dl_pos=$(grep -nF '## 📦 Downloads' "$body" | cut -d: -f1)

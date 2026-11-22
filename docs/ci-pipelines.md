@@ -350,7 +350,8 @@ Step order, with the reason each is where it is:
     `vars.GH_BUILDLOG_CATEGORY`. The build number is the identity; the date is
     when the discussion was first created, so a retry after UTC midnight
     matches by tag prefix and edits that discussion rather than making a
-    second one. Its body is written once: `## 📦 Downloads`
+    second one. Every discussion is labelled `build_log` (a missing label only
+    warns). Its body is written once: `## 📦 Downloads`
     (a compact `App | Version | APK | Module` table rendered from
     `build.archive.md`, so every link points at the permanent mirror and
     survives deletion of the numbered rvb release), then `## 🚨 Build Report`
