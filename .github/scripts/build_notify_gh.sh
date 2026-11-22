@@ -54,6 +54,11 @@ fi
 TITLE="Build ${BUILD_TAG} · ${CHANNEL_LABEL} · $(date -u +%F)"
 gh_log_find "$TITLE" || exit 1
 if [ "$GH_LOG_FIND_COUNT" -eq 0 ]; then
+	# A retry can land after UTC midnight; the build tag is the identity, the
+	# date in an existing title is just when it was first created.
+	gh_log_find_tag "$BUILD_TAG" || exit 1
+fi
+if [ "$GH_LOG_FIND_COUNT" -eq 0 ]; then
 	printf '<!-- rvb:buildlog:%s:seed -->\n' "$BUILD_TAG" > "$WORK/seed.md"
 	gh discussion create --title "$TITLE" \
 		--category "$GH_BUILDLOG_CATEGORY" \

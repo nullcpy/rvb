@@ -43,8 +43,8 @@ gh_require_targets() {
 # removed: its index lags writes, so a discussion created moments earlier was
 # invisible to the post-create lookup (run 45060205121). A high --limit keeps
 # the whole category in one reply; the exact match rejects near-miss titles.
-gh_log_find() {
-	local title=$1 out
+gh_log_list() {
+	local out
 	out=$(gh discussion list \
 		--category "$GH_BUILDLOG_CATEGORY" \
 		--state all \
@@ -54,16 +54,45 @@ gh_log_find() {
 	# not a bare array. Fail loudly on any other shape rather than reading an
 	# empty count from an error object and creating a duplicate discussion.
 	if ! printf '%s' "$out" | jq -e 'type == "object" and (.discussions | type) == "array"' >/dev/null; then
-		echo "::error::Unexpected gh discussion list output; cannot resolve '${title}'. Refusing to guess." >&2
+		echo "::error::Unexpected gh discussion list output; cannot resolve the build discussion. Refusing to guess." >&2
 		return 1
 	fi
-	GH_LOG_FIND_COUNT=$(printf '%s' "$out" | jq -r --arg t "$title" '[.discussions[] | select(.title == $t)] | length' | tr -d '\r')
+	GH_LOG_LIST=$out
+	return 0
+}
+
+GH_LOG_LIST=""
+
+# gh_log_find <exact-title> — exact title, used for the normal same-day retry.
+gh_log_find() {
+	local title=$1
+	gh_log_list || return 1
+	GH_LOG_FIND_COUNT=$(printf '%s' "$GH_LOG_LIST" | jq -r --arg t "$title" '[.discussions[] | select(.title == $t)] | length' | tr -d '\r')
 	GH_LOG_NUMBER=""
 	if [ "$GH_LOG_FIND_COUNT" -gt 1 ]; then
 		echo "::error::More than one discussion is titled '${title}'. Refusing to guess which one belongs to this build." >&2
 		return 1
 	elif [ "$GH_LOG_FIND_COUNT" -eq 1 ]; then
-		GH_LOG_NUMBER=$(printf '%s' "$out" | jq -r --arg t "$title" '.discussions[] | select(.title == $t) | .number' | tr -d '\r')
+		GH_LOG_NUMBER=$(printf '%s' "$GH_LOG_LIST" | jq -r --arg t "$title" '.discussions[] | select(.title == $t) | .number' | tr -d '\r')
+	fi
+	return 0
+}
+
+# gh_log_find_tag <build-tag> — fallback for a retry after UTC midnight: the
+# title carries the date resolved when the discussion was first created, so the
+# exact-title lookup would miss it and create a second discussion for one build.
+# The build number is the identity; the date is display metadata.
+gh_log_find_tag() {
+	local tag=$1
+	local prefix="Build ${tag} ·"
+	gh_log_list || return 1
+	GH_LOG_FIND_COUNT=$(printf '%s' "$GH_LOG_LIST" | jq -r --arg p "$prefix" '[.discussions[] | select(.title | startswith($p))] | length' | tr -d '\r')
+	GH_LOG_NUMBER=""
+	if [ "$GH_LOG_FIND_COUNT" -gt 1 ]; then
+		echo "::error::More than one discussion starts with '${prefix}'. Refusing to guess which one belongs to this build." >&2
+		return 1
+	elif [ "$GH_LOG_FIND_COUNT" -eq 1 ]; then
+		GH_LOG_NUMBER=$(printf '%s' "$GH_LOG_LIST" | jq -r --arg p "$prefix" '.discussions[] | select(.title | startswith($p)) | .number' | tr -d '\r')
 	fi
 	return 0
 }

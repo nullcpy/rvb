@@ -86,6 +86,11 @@ def render(lines):
 
 
 def main():
+    # The GFM body is assembled on the runner; keep its newlines identical on
+    # Linux and on a Windows developer machine (where stdout would turn \n into
+    # \r\n and leave the body with mixed endings).
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(newline="\n")
     path = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("NOTES_FILE", "build.archive.md")
     try:
         with open(path, "r", encoding="utf-8") as handle:

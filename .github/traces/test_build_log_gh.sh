@@ -208,6 +208,14 @@ run_log retry
 [ "$(grep -c 'discussion create' "$t/state/calls")" -eq 1 ] || fail "retry created a second discussion"
 grep -qF '[github](https://github.com/nullcpy/rvb/discussions/412#discussioncomment-1)' "$body" || fail "retry lost the stable comment URL"
 
+# ---- 4b. a retry after UTC midnight reuses the same build's discussion -------
+jq -n '{discussions:[{"number":411,"title":"Build 260141 · Stable · 2000-01-01","url":"x"}],totalCount:1}' \
+	> "$t/state/discussions.json"
+creates_before=$(grep -c 'discussion create' "$t/state/calls")
+run_log midnight
+[ "$(grep -c 'discussion create' "$t/state/calls")" -eq "$creates_before" ] || fail "cross-midnight retry created a duplicate"
+grep -qF '## 📦 Downloads' "$t/state/body.md" || fail "cross-midnight retry did not update the body"
+
 # ---- 5. negative: unset category fails before any gh call --------------------
 before=$(wc -l < "$t/state/calls")
 if run_log no_category env GH_BUILDLOG_CATEGORY=; then fail "unset category did not fail"; fi
