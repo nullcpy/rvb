@@ -26,8 +26,8 @@
   },
   "anddea/revanced-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "f058ce0cb9c93e90390b758b3be7b509",
-      "com.google.android.youtube": "56ffea443981ca3fe4f679ce89dc20a6",
+      "com.google.android.apps.youtube.music": "cf3d5595b3e48a68f37ed883838aaa46",
+      "com.google.android.youtube": "18dad016a51a0d1186fb7c747f2a9634",
       "shared": "60d9f3483e2fb719ad1b2c05ca048ed2"
     },
     "stable": {
@@ -84,12 +84,12 @@
   "bholeykabhakt/revanced-patches-xtra": {
     "beta": {},
     "stable": {
-      "com.backdrops.wallpapers": "e36ba69410ab2090987dcf82ae0b4700",
-      "com.llamalab.automate": "7fd7e005b784b95dd1c6d50e80bc4694",
-      "com.nis.app": "0c064ff6ff16157bc5c0af28f95e40bf",
-      "com.ttxapps.autosync": "153cbbf5bac1c131973d68ef54d7a30d",
-      "com.vpn.free.hotspot.secure.vpnify": "c2233abe499e78a180c91b58377429ca",
-      "org.zwanoo.android.speedtest": "f8ef8533d39840cc1e10db7775826236",
+      "com.backdrops.wallpapers": "6cc76bdb191b50dca4cce9e2b80cb92b",
+      "com.llamalab.automate": "c11dbcc5c0ec7bc5008909c9b946a465",
+      "com.nis.app": "e0b2a358c0f8e8c5311644f83a9f4409",
+      "com.ttxapps.autosync": "5bb30a1e8a579a77365064f820f3bcf8",
+      "com.vpn.free.hotspot.secure.vpnify": "240f52946e8fe7bcb3358eb270f1bba4",
+      "org.zwanoo.android.speedtest": "5e25a52f501bad49b59d49f5cc5825c5",
       "shared": "ed8715e242840dbe97fdf40b95a235fa"
     }
   },
@@ -133,9 +133,9 @@
   },
   "crimera/piko": {
     "beta": {
-      "com.instagram.android": "99a2ce937fae8092e3da38744a97bd0d",
-      "com.twitter.android": "4e203cd611054ecc96dcb2caf861da5d",
-      "shared": "4d08802f6c684b60a81b52177f121ba6"
+      "com.instagram.android": "b411d6d004de490fc51bdbf92d2ab2d6",
+      "com.twitter.android": "321bd110b16a8d1f2da94e0e71866d67",
+      "shared": "c01db3a472f6fb27f437ac8d68f14db5"
     },
     "stable": {
       "com.instagram.android": "c13b67ded64f5888dbca1c35c14977ad",
@@ -304,22 +304,22 @@
   "hxreborn/morphe-patches": {
     "beta": {},
     "stable": {
-      "ch.protonmail.android": "ad92211f8e2b021c8f0de0ffc3fc533c",
-      "ch.protonvpn.android": "636c5660e9ea4db7d74f742826e120df",
-      "com.alibaba.aliexpresshd": "88248df0c95af671b7d10858c63a1e53",
-      "com.dubox.drive": "f7e0e59c5bfd60b72b450ce83d3b4b7a",
-      "com.greenstone.pocketwhip": "79a70ebdb472e6555e92a03cd8a67bff",
-      "com.internet.speed.meter.lite": "083183e2fd56a602d995b014a23397c5",
-      "com.michaldrabik.showly2": "626d55fdd2ce3b8640c3e50e4d2a855f",
-      "com.thesortdapp.sortd": "083183e2fd56a602d995b014a23397c5",
-      "dev.vodik7.atvtools": "24a73b94b61f583bdfbbaca6a2f4f3f7",
-      "in.krosbits.castplugin": "df4a9b4160c504954d96b03d59877872",
-      "in.krosbits.musicolet": "60cb6a8b9cccfe04d88d0d49a5438855",
-      "me.proton.android.lumo": "1f4f512bf1f6e7be2804c145295a3219",
-      "org.withouthat.acalendar": "126e5773cfd9d7c7174f867e9cffd5ae",
-      "proton.android.pass": "d137c493f04f492fa4dea442368dce24",
-      "ridmik.keyboard": "58d6c79b638c02ecd15296af579cd1ac",
-      "shared": "44d4de5fee38a91e8041b8f54a684db3"
+      "ch.protonmail.android": "6db45301735231d9ed215760aa0ecfe9",
+      "ch.protonvpn.android": "33a57abc539b23b76804dda50f90bddf",
+      "com.alibaba.aliexpresshd": "33730f0169e1eab3a369295dc5734f6c",
+      "com.dubox.drive": "0d8ff811eac98c990eb77042c78ee935",
+      "com.greenstone.pocketwhip": "77856dceedd4cdd36c25e5e347ed79c3",
+      "com.internet.speed.meter.lite": "036b537810c02df131188e4070556cdc",
+      "com.michaldrabik.showly2": "13308ac5bcd830e58412ca5b70bd7be6",
+      "com.thesortdapp.sortd": "036b537810c02df131188e4070556cdc",
+      "dev.vodik7.atvtools": "b2f1af8a68c3c5449453b9f54941473d",
+      "in.krosbits.castplugin": "28f5ad79728b06034897ae46ed9dcca9",
+      "in.krosbits.musicolet": "997a27d6e58ec2f074767609ca7105cf",
+      "me.proton.android.lumo": "141fa52453035e49aa737491c19d39d1",
+      "org.withouthat.acalendar": "423f47fae839ddeafe2adf7f5aa77315",
+      "proton.android.pass": "c7dc807186881b5f7d9e449da080547f",
+      "ridmik.keyboard": "893a773a95f53030494a5d030b7d25cc",
+      "shared": "e577c00674e4297c7b253c7765efd6af"
     }
   },
   "hyzor/hyzor-morphe-patches": {
@@ -378,8 +378,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "90182e8f89e6e5d56eaeeacf4f70f4c0",
-      "shared": "dbbdb6ae34d434f01a5cc09f2bb3b678"
+      "com.google.android.inputmethod.latin": "da4b342d4aa85702234cea8a6a5eb3a4",
+      "shared": "ffe1b71cfcf4dc4e5cad1481b76b53d3"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "196924deda7a232e39b9d014156306fe",
@@ -457,10 +457,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "92b25bcb8ec8331bce741f617e4459b9",
-      "com.google.android.youtube": "8a62cd64b7cd2ebe99657e6a3c64e9a2",
-      "com.reddit.frontpage": "ca1d72ebe5e3562f7624a2dd00447661",
-      "shared": "1fda3a80d6a892f9945b7b34aa786be3"
+      "com.google.android.apps.youtube.music": "377c220978f29df1b4abcc1d557b2bfe",
+      "com.google.android.youtube": "c7893660ac5887bb61d11cc6635e1ae2",
+      "com.reddit.frontpage": "36c6b30c5db79003b64df2e8d664fbed",
+      "shared": "6326914611498b5875abf3216f035d87"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "e46398df179c37761aa86ad25912e086",
@@ -497,7 +497,7 @@
   "pablobaro/pablobaro-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.spotify.music": "b15e78e1c498086010254641a2033e7e",
+      "com.spotify.music": "bcd76d7b594585392145ae3d793040bb",
       "shared": "9d6ba55976c4ed752bd7d69c6be19179"
     }
   },
