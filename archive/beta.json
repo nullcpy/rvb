@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-23T00:51:27Z"
+    "publishedAt": "2026-11-23T07:31:28Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -4378,10 +4378,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.4.0-dev.5.mpp"
+        "jasonwu1994/patches-4.5.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4431,8 +4431,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260583",
-      "publishedAt": "2026-11-21T01:32:58Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -4447,10 +4447,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.4.0-dev.5.mpp"
+        "jasonwu1994/patches-4.5.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4499,8 +4499,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260583",
-      "publishedAt": "2026-11-21T01:32:58Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -4515,10 +4515,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.4.0-dev.5.mpp"
+        "jasonwu1994/patches-4.5.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.4.0-dev.5"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.1"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4567,8 +4567,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260583",
-      "publishedAt": "2026-11-21T01:32:58Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -8302,10 +8302,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.2.1-dev.1.mpp"
+        "heval99/patches-3.3.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.2.1-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8331,8 +8331,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260596",
-      "publishedAt": "2026-11-23T00:50:56Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "truecaller-heval99-module-v26.45.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -8347,10 +8347,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.2.1-dev.1.mpp"
+        "heval99/patches-3.3.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.2.1-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8376,8 +8376,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260596",
-      "publishedAt": "2026-11-23T00:50:56Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "truecaller-heval99-v26.45.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -8392,10 +8392,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.2.1-dev.1.mpp"
+        "heval99/patches-3.3.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.2.1-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8422,8 +8422,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260596",
-      "publishedAt": "2026-11-23T00:50:56Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "truecaller-heval99-v26.45.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -8438,10 +8438,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.2.1-dev.1.mpp"
+        "heval99/patches-3.3.0-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.2.1-dev.1"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.1"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -8468,8 +8468,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260596",
-      "publishedAt": "2026-11-23T00:50:56Z"
+      "originBuild": "260598",
+      "publishedAt": "2026-11-23T07:31:00Z"
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
       "name": "google-photos-akashsriram-unclone",
