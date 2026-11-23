@@ -2,10 +2,10 @@
   "ajstrick81/morphe-androidtv-patches": {
     "beta": {},
     "stable": {
-      "com.amazon.amazonvideo.livingroom": "3ad81af66f716c321949386905b011cd",
+      "com.amazon.amazonvideo.livingroom": "e84e87abd0da56b81fa72ced443e32f8",
       "com.disney.disneyplus": "a5eb9bd1a07781d29db4c46da1e512e4",
       "com.netflix.ninja": "76e540ffbd06d29b1015cd271522b357",
-      "com.peacocktv.peacockandroid": "fd369c36ba65c72d7297980fb92ebb83",
+      "com.peacocktv.peacockandroid": "52fc5b0c039b50d96bbac780c73e715a",
       "com.tubitv": "fc311c606f9ce12c99fca616dda555d7",
       "com.univision.prendetv": "639530c7738b9564382d855894b1ccc4",
       "com.wbd.hbomax": "c76f0522add98f1ea0479980ffa64673",
@@ -222,8 +222,8 @@
   },
   "heval99/heval-morphe-patches": {
     "beta": {
-      "com.truecaller": "bda011eeac7fdb93360ab8bf9c464422",
-      "shared": "72bea1b10a739d8fb6db83d84a41f9d4"
+      "com.truecaller": "2c25121010e27777d7fdd60bfac46be7",
+      "shared": "ab8caa4fc2e2b395f0c479576566d769"
     },
     "stable": {
       "com.myfitnesspal.android": "4432945134170ff51e36812c2ec5876b",
@@ -378,8 +378,8 @@
   },
   "jasonwu1994/gboard-patches": {
     "beta": {
-      "com.google.android.inputmethod.latin": "707922b5d945a7a40385f56bbdbaeda6",
-      "shared": "7a2a8373e3d0d649a2449d1c2bcffdde"
+      "com.google.android.inputmethod.latin": "90182e8f89e6e5d56eaeeacf4f70f4c0",
+      "shared": "dbbdb6ae34d434f01a5cc09f2bb3b678"
     },
     "stable": {
       "com.google.android.inputmethod.latin": "196924deda7a232e39b9d014156306fe",
@@ -719,8 +719,8 @@
   "wchill/patcheddit": {
     "beta": {},
     "stable": {
-      "com.rubenmayayo.reddit": "db37df7cc90f2589d78b04522e37305c",
-      "shared": "9be93cd7e5b80ef4f3ec661dc3e78ad0"
+      "com.rubenmayayo.reddit": "1d249c6b2a18b86383030afe5044f7c5",
+      "shared": "036db719979584d768acee87b6d3c9ab"
     }
   },
   "xbadfellax/badfella-patches": {
