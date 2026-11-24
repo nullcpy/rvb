@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-24T00:32:55Z"
+    "publishedAt": "2026-11-24T03:07:45Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.60.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260582",
-      "publishedAt": "2026-11-20T20:54:55Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -2715,18 +2715,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.60.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260582",
-      "publishedAt": "2026-11-20T20:54:55Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2741,16 +2741,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.60.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260582",
-      "publishedAt": "2026-11-20T20:54:55Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11813,17 +11813,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.61.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260599",
-      "publishedAt": "2026-11-23T07:35:09Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -16592,16 +16592,16 @@
       "subVariant": null,
       "packageName": "com.tubitv",
       "patchSources": [
-        "ajstrick81/patches-1.55.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.55.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Skip ads"
       ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "block-blast-imnoammm-v10.8.1-all.apk": {
       "name": "block-blast-imnoammm",
@@ -23023,10 +23023,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.61.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -23036,8 +23036,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260599",
-      "publishedAt": "2026-11-23T07:35:09Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -24754,94 +24754,6 @@
       "originBuild": "260568",
       "publishedAt": "2026-11-18T17:23:39Z"
     },
-    "discord-rain-v353.11-Stable-arm64-v8a.apk": {
-      "name": "discord-rain",
-      "version": "353.11-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
-    "discord-rain-v353.11-Stable-arm-v7a.apk": {
-      "name": "discord-rain",
-      "version": "353.11-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "rain",
-      "brandName": "rain",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "raincord/app-release.apk"
-      ],
-      "changelogs": [
-        "https://codeberg.org/raincord/rainXposed/releases/tag/1130"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
-    "discord-revenge-v353.11-Stable-arm64-v8a.apk": {
-      "name": "discord-revenge",
-      "version": "353.11-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
-    "discord-revenge-v353.11-Stable-arm-v7a.apk": {
-      "name": "discord-revenge",
-      "version": "353.11-Stable",
-      "appKey": "discord",
-      "appName": "Discord",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "revenge",
-      "brandName": "revenge",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.discord",
-      "patchSources": [
-        "revenge-mod/app-release.apk"
-      ],
-      "changelogs": [
-        "https://github.com/revenge-mod/revenge-xposed/releases/tag/1904"
-      ],
-      "appliedPatches": [],
-      "originBuild": "260504",
-      "publishedAt": "2026-11-10T20:25:38Z"
-    },
     "vix-ajstrick81-android-tv-v4.52.0_tv-all.apk": {
       "name": "vix-ajstrick81-android-tv",
       "version": "4.52.0_tv",
@@ -24855,17 +24767,17 @@
       "subVariant": null,
       "packageName": "com.univision.prendetv",
       "patchSources": [
-        "ajstrick81/patches-1.60.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.60.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Override certificate pinning",
         "Skip ads"
       ],
-      "originBuild": "260582",
-      "publishedAt": "2026-11-20T20:54:55Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -33529,10 +33441,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.61.0.mpp"
+        "ajstrick81/patches-1.61.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.0"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -33541,8 +33453,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260599",
-      "publishedAt": "2026-11-23T07:35:09Z"
+      "originBuild": "260604",
+      "publishedAt": "2026-11-24T03:07:27Z"
     },
     "discord-rain-v355.10-Stable-arm-v7a.apk": {
       "name": "discord-rain",
