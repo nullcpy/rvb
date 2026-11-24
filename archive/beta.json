@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-23T15:52:45Z"
+    "publishedAt": "2026-11-24T03:03:36Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -4426,10 +4426,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.2.mpp"
+        "jasonwu1994/patches-4.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.2"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4479,8 +4479,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260600",
-      "publishedAt": "2026-11-23T15:51:03Z"
+      "originBuild": "260603",
+      "publishedAt": "2026-11-24T03:03:18Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -4495,10 +4495,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.2.mpp"
+        "jasonwu1994/patches-4.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.2"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4547,8 +4547,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260600",
-      "publishedAt": "2026-11-23T15:51:03Z"
+      "originBuild": "260603",
+      "publishedAt": "2026-11-24T03:03:18Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -4563,10 +4563,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.2.mpp"
+        "jasonwu1994/patches-4.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.2"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4615,8 +4615,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260600",
-      "publishedAt": "2026-11-23T15:51:03Z"
+      "originBuild": "260603",
+      "publishedAt": "2026-11-24T03:03:18Z"
     },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
