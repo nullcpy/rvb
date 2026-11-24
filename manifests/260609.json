@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260609",
+    "channel": "stable",
+    "publishedAt": "2026-11-24T15:37:00Z"
+  },
+  "files": {
+    "nova-launcher-hyzor-v90100-arm-v7a.apk": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-module-v90100-arm-v7a.zip": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-v90100-arm64-v8a.apk": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-module-v90100-arm64-v8a.zip": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    }
+  }
+}

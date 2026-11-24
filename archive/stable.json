@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-24T10:30:32Z"
+    "publishedAt": "2026-11-24T15:37:18Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -17823,40 +17823,6 @@
       "originBuild": "260402",
       "publishedAt": "2026-10-28T21:22:56Z"
     },
-    "instagram-instafel-clone-v453.0.0.57.79-arm-v7a.apk": {
-      "name": "instagram-instafel-clone",
-      "version": "453.0.0.57.79",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "com.instafel.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger",
-        "Clone General",
-        "Replace Instagram Strings"
-      ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
     "firsty-trimpsuz-v1.8.23-all.apk": {
       "name": "firsty-trimpsuz",
       "version": "1.8.23",
@@ -27984,38 +27950,6 @@
       "originBuild": "260592",
       "publishedAt": "2026-11-22T19:26:57Z"
     },
-    "instagram-instafel-v456.0.0.53.78-arm-v7a.apk": {
-      "name": "instagram-instafel",
-      "version": "456.0.0.53.78",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
-    },
     "albo-save-organize-hxreborn-v1.25.6-arm64-v8a.apk": {
       "name": "albo-save-organize-hxreborn",
       "version": "1.25.6",
@@ -33609,6 +33543,102 @@
       ],
       "originBuild": "260607",
       "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "nova-launcher-hyzor-v90100-arm-v7a.apk": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-module-v90100-arm-v7a.zip": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-v90100-arm64-v8a.apk": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
+    },
+    "nova-launcher-hyzor-module-v90100-arm64-v8a.zip": {
+      "name": "nova-launcher-hyzor",
+      "version": "90100",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "hyzor",
+      "brandName": "hyzor",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "hyzor/patches-1.10.2.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hyzor/hyzor-morphe-patches/releases/tag/v1.10.2"
+      ],
+      "appliedPatches": [
+        "Enable Prime"
+      ],
+      "originBuild": "260609",
+      "publishedAt": "2026-11-24T15:37:00Z"
     }
   }
 }
