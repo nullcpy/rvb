@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-24T15:33:42Z"
+    "publishedAt": "2026-11-24T22:54:08Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -4446,10 +4446,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.3.mpp"
+        "jasonwu1994/patches-4.5.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4499,8 +4499,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260603",
-      "publishedAt": "2026-11-24T03:03:18Z"
+      "originBuild": "260610",
+      "publishedAt": "2026-11-24T22:53:45Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -4515,10 +4515,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.3.mpp"
+        "jasonwu1994/patches-4.5.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4567,8 +4567,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260603",
-      "publishedAt": "2026-11-24T03:03:18Z"
+      "originBuild": "260610",
+      "publishedAt": "2026-11-24T22:53:45Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -4583,10 +4583,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.3.mpp"
+        "jasonwu1994/patches-4.5.0-dev.4.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.3"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4635,8 +4635,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260603",
-      "publishedAt": "2026-11-24T03:03:18Z"
+      "originBuild": "260610",
+      "publishedAt": "2026-11-24T22:53:45Z"
     },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -5662,161 +5662,6 @@
       "brandKey": "morphe",
       "brandName": "Morphe",
       "variant": null,
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.3.0-dev.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.3.0-dev.5"
-      ],
-      "appliedPatches": [
-        "A-B loop",
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable audio ducking",
-        "Disable auto captions",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Open system share sheet",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist tags",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remember video quality",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SoundProof",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260530",
-      "publishedAt": "2026-11-14T12:05:18Z"
-    },
-    "youtube-music-morphe-experimental-v9.45.51-arm64-v8a.apk": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.45.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
-      "subVariant": null,
-      "packageName": "app.morphe.android.apps.youtube.music",
-      "patchSources": [
-        "MorpheApp/patches-2.3.0-dev.5.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.3.0-dev.5"
-      ],
-      "appliedPatches": [
-        "A-B loop",
-        "Android Auto",
-        "App refresh rate",
-        "Change header",
-        "Change miniplayer color",
-        "Change start page",
-        "Check watch history domain name resolution",
-        "Crossfade",
-        "Custom branding",
-        "Custom font",
-        "Disable DRC audio",
-        "Disable QUIC protocol",
-        "Disable audio ducking",
-        "Disable auto captions",
-        "Disable dislike redirection",
-        "Downloads",
-        "Enable audio/video switch",
-        "Enable debugging",
-        "Enable exclusive audio playback",
-        "Enable forced miniplayer",
-        "Enable swipe to dismiss miniplayer",
-        "Force original audio",
-        "Force portrait orientation",
-        "GmsCore support",
-        "Hide ads",
-        "Hide buttons",
-        "Hide flyout menu components",
-        "Hide layout components",
-        "Hide music action buttons",
-        "Jam queue sharing",
-        "Media notification controls",
-        "Miniplayer previous and next buttons",
-        "Navigation bar",
-        "Open system share sheet",
-        "Play albums songs",
-        "Playback speed",
-        "Playlist tags",
-        "Playlist track tap action",
-        "PoToken provider",
-        "Remember repeat state",
-        "Remember shuffle state",
-        "Remember video quality",
-        "Remove background playback restrictions",
-        "Remove viewer discretion dialog",
-        "Return YouTube Dislike",
-        "Sanitize sharing links",
-        "Scrobbling",
-        "Settings menu filter",
-        "Skip silence",
-        "SoundProof",
-        "SponsorBlock",
-        "Spoof app version",
-        "Spoof video streams",
-        "Theme",
-        "Third-party lyrics"
-      ],
-      "originBuild": "260530",
-      "publishedAt": "2026-11-14T12:05:18Z"
-    },
-    "youtube-music-morphe-experimental-module-v9.45.51-arm64-v8a.zip": {
-      "name": "youtube-music-morphe-experimental",
-      "version": "9.45.51",
-      "appKey": "youtubemusic",
-      "appName": "YouTube Music",
-      "arch": "arm64",
-      "fileType": "Module",
-      "brandKey": "morphe",
-      "brandName": "Morphe",
-      "variant": "Experimental",
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
