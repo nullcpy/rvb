@@ -18,13 +18,13 @@
     "stable_date": "2026-03-23T06:50:11Z"
   },
   "BholeyKaBhakt/revanced-patches-xtra": {
-    "beta": "v2.16.2-dev.1",
-    "beta_date": "2026-11-24T04:01:25Z",
+    "beta": "v2.0.4-dev.1",
+    "beta_date": "2026-05-20T08:17:53Z",
     "blocked": false,
     "host": "github",
     "repo": "BholeyKaBhakt/revanced-patches-xtra",
-    "stable": "v2.16.2",
-    "stable_date": "2026-11-24T04:04:15Z"
+    "stable": "v2.16.3",
+    "stable_date": "2026-11-24T05:01:36Z"
   },
   "Entree3k/Morning-Entree-Patches": {
     "beta": "",
@@ -63,8 +63,8 @@
     "stable_date": "2026-11-07T15:02:12Z"
   },
   "MorpheApp/morphe-patches": {
-    "beta": "v2.4.0-dev.9",
-    "beta_date": "2026-11-23T10:40:33Z",
+    "beta": "v2.4.0-dev.10",
+    "beta_date": "2026-11-24T07:59:52Z",
     "blocked": false,
     "host": "github",
     "repo": "MorpheApp/morphe-patches",
@@ -248,8 +248,8 @@
     "blocked": false,
     "host": "github",
     "repo": "XBadFellaX/BadFella-Patches",
-    "stable": "v1.6.0",
-    "stable_date": "2026-11-20T16:28:57Z"
+    "stable": "v1.7.0",
+    "stable_date": "2026-11-24T06:36:50Z"
   },
   "ajstrick81/morphe-androidtv-patches": {
     "beta": "pv-v15-fix-260",
@@ -477,13 +477,13 @@
     "stable_date": "2026-09-27T18:29:23Z"
   },
   "hxreborn/morphe-patches": {
-    "beta": "v1.87.0-dev.2",
-    "beta_date": "2026-11-23T23:09:39Z",
+    "beta": "v1.87.0-dev.3",
+    "beta_date": "2026-11-24T07:47:18Z",
     "blocked": false,
     "host": "github",
     "repo": "hxreborn/morphe-patches",
-    "stable": "v1.86.0",
-    "stable_date": "2026-11-23T13:00:56Z"
+    "stable": "v1.87.0",
+    "stable_date": "2026-11-24T08:23:04Z"
   },
   "hyzor/hyzor-morphe-patches": {
     "beta": "v1.10.0-dev.2",
@@ -596,7 +596,7 @@
   "kveld9/kveld-extra-morphe-patches": {
     "beta": "",
     "beta_date": "",
-    "blocked": false,
+    "blocked": true,
     "host": "github",
     "repo": "kveld9/kveld-extra-morphe-patches",
     "stable": "v1.33.0",
@@ -605,7 +605,7 @@
   "kveld9/kveld-morphe-patches": {
     "beta": "v2.12.0-experimental.5",
     "beta_date": "2026-11-22T06:00:31Z",
-    "blocked": false,
+    "blocked": true,
     "host": "github",
     "repo": "kveld9/kveld-morphe-patches",
     "stable": "v2.11.0",
