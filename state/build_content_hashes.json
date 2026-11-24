@@ -157,28 +157,28 @@
       ]
     },
     "youtube-morphe-v21.30.216-arm64-v8a": {
-      "hash": "8f11da8af06b6631fe04897791aec4c4",
+      "hash": "339fe0797ef51920890040438629a244",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-v21.30.216-arm-v7a": {
-      "hash": "f301e3642a81854b1d1b87da639459d2",
+      "hash": "1e7453350c22f4d47fdd7fa83b37680b",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-v9.30.53-arm64-v8a": {
-      "hash": "2bcd6f8990a30d2011d27a2dffbcea10",
+      "hash": "75d35d00f31fa8085f50947374063181",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-music-morphe-v9.30.53-arm-v7a": {
-      "hash": "40ee8390ca8cc5e7c599aee840e33b78",
+      "hash": "1015fcede7067abdfcf6038514de1003",
       "kinds": [
         "apk",
         "module"
@@ -370,7 +370,7 @@
       ]
     },
     "youtube-music-morphe-experimental-v9.46.51-arm-v7a": {
-      "hash": "fbec357d5b852131cf79080ac855e623",
+      "hash": "71fd885b2d32ce4cab702cc263b0ba20",
       "kinds": [
         "apk",
         "module"
@@ -486,14 +486,21 @@
       ]
     },
     "youtube-morphe-experimental-v21.47.483-arm64-v8a": {
-      "hash": "f1efd38e221df775292e459ffc05eb22",
+      "hash": "bc4bc9c0656e25650bfde1125fd6d848",
       "kinds": [
         "apk",
         "module"
       ]
     },
     "youtube-morphe-experimental-v21.47.483-arm-v7a": {
-      "hash": "e9bd334089fb06e7f3342b0318180c99",
+      "hash": "298d3d58eb7c2afc97ffacc84c698324",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "youtube-music-morphe-experimental-v9.47.51-arm64-v8a": {
+      "hash": "b87be50af77c460626bf9d66c3a7bc83",
       "kinds": [
         "apk",
         "module"
