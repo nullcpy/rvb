@@ -1,0 +1,509 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260607",
+    "channel": "stable",
+    "publishedAt": "2026-11-24T10:29:42Z"
+  },
+  "files": {
+    "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
+      "name": "aliexpress-hxreborn",
+      "version": "8.180.1",
+      "appKey": "aliexpress",
+      "appName": "AliExpress",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.alibaba.aliexpresshd",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable update prompts",
+        "Enable image saving",
+        "Fix dark mode",
+        "GmsCore support",
+        "Remove promotional popups",
+        "Remove sponsored items",
+        "Skip splash promotions",
+        "Spoof signature"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "aliexpress-hxreborn-v8.180.1-arm64-v8a.apk": {
+      "name": "aliexpress-hxreborn",
+      "version": "8.180.1",
+      "appKey": "aliexpress",
+      "appName": "AliExpress",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.alibaba.aliexpresshd",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "Disable analytics",
+        "Disable update prompts",
+        "Enable image saving",
+        "Fix dark mode",
+        "GmsCore support",
+        "Remove promotional popups",
+        "Remove sponsored items",
+        "Skip splash promotions",
+        "Spoof signature"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-clone-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-clone-v457.0.0.55.73-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-v457.0.0.55.73-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "internet-speed-meter-lite-hxreborn-v1.7.0-lite-all.apk": {
+      "name": "internet-speed-meter-lite-hxreborn",
+      "version": "1.7.0-lite",
+      "appKey": "internetspeedmeterlite",
+      "appName": "Internet Speed Meter Lite",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.internet.speed.meter.lite",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "Disable tracking",
+        "Remove ads",
+        "Unlock premium"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-mail-hxreborn-v7.12.1-arm-v7a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.12.1",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-mail-hxreborn-v7.12.1-arm64-v8a.apk": {
+      "name": "proton-mail-hxreborn",
+      "version": "7.12.1",
+      "appKey": "protonmail",
+      "appName": "Proton Mail",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonmail.android",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Remove 'Sent from' signature",
+        "Remove free accounts limit",
+        "Scheduled Trash and Spam deletion",
+        "Swipe to switch accounts",
+        "Unlock custom time picker"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Floating navigation bar"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-pass-hxreborn-v1.41.5-arm-v7a.apk": {
+      "name": "proton-pass-hxreborn",
+      "version": "1.41.5",
+      "appKey": "protonpass",
+      "appName": "Proton Pass",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "proton.android.pass",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Hide layout components",
+        "Hide navigation bar on scroll",
+        "Hide promotional messages",
+        "Hide upgrade promotions",
+        "M3E loading indicator",
+        "Material 3 switches",
+        "Floating navigation bar"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-vpn-hxreborn-v5.21.57.0-arm64-v8a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.21.57.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Floating navigation bar",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "proton-vpn-hxreborn-v5.21.57.0-arm-v7a.apk": {
+      "name": "proton-vpn-hxreborn",
+      "version": "5.21.57.0",
+      "appKey": "protonvpn",
+      "appName": "Proton VPN",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "ch.protonvpn.android",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "AMOLED dark theme",
+        "Custom accent color",
+        "Disable telemetry",
+        "Floating navigation bar",
+        "Hide upgrade promotions",
+        "Material 3 switches",
+        "Remove server change delay",
+        "Show free server locations",
+        "Unlock LAN connections",
+        "Unlock NetShield",
+        "Unlock connection preferences",
+        "Unlock custom DNS",
+        "Unlock profiles",
+        "Unlock split tunneling"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "terabox-hxreborn-v4.29.0-arm64-v8a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.29.0",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "Download generated files",
+        "Fix transfers over VPN",
+        "Hide ads",
+        "Hide consent form",
+        "Hide home shortcuts",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Remove recent panel",
+        "Show backup count",
+        "Sort by original date",
+        "Unlock Premium Plus",
+        "GmsCore support"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "terabox-hxreborn-v4.29.0-arm-v7a.apk": {
+      "name": "terabox-hxreborn",
+      "version": "4.29.0",
+      "appKey": "terabox",
+      "appName": "TeraBox",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.dubox.drive",
+      "patchSources": [
+        "hxreborn/patches-1.87.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+      ],
+      "appliedPatches": [
+        "Download generated files",
+        "Fix transfers over VPN",
+        "Hide ads",
+        "Hide consent form",
+        "Hide home shortcuts",
+        "Hide promotions",
+        "Hide video recommendations",
+        "Remove recent panel",
+        "Show backup count",
+        "Sort by original date",
+        "Unlock Premium Plus",
+        "GmsCore support"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    }
+  }
+}

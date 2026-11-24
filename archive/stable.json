@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-24T04:55:28Z"
+    "publishedAt": "2026-11-24T10:30:32Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -16380,10 +16380,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16396,8 +16396,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -16412,10 +16412,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16428,8 +16428,8 @@
         "Material 3 switches",
         "Floating navigation bar"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",
@@ -17822,40 +17822,6 @@
       ],
       "originBuild": "260402",
       "publishedAt": "2026-10-28T21:22:56Z"
-    },
-    "instagram-instafel-clone-v453.0.0.57.79-arm64-v8a.apk": {
-      "name": "instagram-instafel-clone",
-      "version": "453.0.0.57.79",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": "Clone",
-      "subVariant": null,
-      "packageName": "com.instafel.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger",
-        "Clone General",
-        "Replace Instagram Strings"
-      ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
     },
     "instagram-instafel-clone-v453.0.0.57.79-arm-v7a.apk": {
       "name": "instagram-instafel-clone",
@@ -19661,18 +19627,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "pinterest-hushpinterest-v14.41.0-arm64-v8a.apk": {
       "name": "pinterest-hushpinterest",
@@ -22117,10 +22083,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -22133,8 +22099,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -22149,10 +22115,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -22165,8 +22131,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -28018,38 +27984,6 @@
       "originBuild": "260592",
       "publishedAt": "2026-11-22T19:26:57Z"
     },
-    "instagram-instafel-v456.0.0.53.78-arm64-v8a.apk": {
-      "name": "instagram-instafel",
-      "version": "456.0.0.53.78",
-      "appKey": "instagram",
-      "appName": "Instagram",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "instafel",
-      "brandName": "Instafel",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.instagram.android",
-      "patchSources": [
-        "instafel/ifl-patcher-core-b7764c7.jar"
-      ],
-      "changelogs": [
-        "https://github.com/instafel/pc-rel/releases/tag/b7764c7-4.7.0"
-      ],
-      "appliedPatches": [
-        "Unlock Developer Options",
-        "Remove Snooze Warning",
-        "Remove Ads",
-        "AMOLED Theme",
-        "Get Generation Info",
-        "Copy Instafel Sources",
-        "Add Initialize Instafel",
-        "Change Home Long Click",
-        "Add App Trigger"
-      ],
-      "originBuild": "260552",
-      "publishedAt": "2026-11-16T22:55:48Z"
-    },
     "instagram-instafel-v456.0.0.53.78-arm-v7a.apk": {
       "name": "instagram-instafel",
       "version": "456.0.0.53.78",
@@ -31214,10 +31148,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -31232,8 +31166,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "proton-mail-hxreborn-v7.12.1-arm64-v8a.apk": {
       "name": "proton-mail-hxreborn",
@@ -31248,10 +31182,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -31266,8 +31200,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -31282,10 +31216,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -31303,8 +31237,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -31319,10 +31253,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -31340,8 +31274,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "ridmik-keyboard-hxreborn-v20.0.0-all.apk": {
       "name": "ridmik-keyboard-hxreborn",
@@ -31876,10 +31810,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "Download generated files",
@@ -31895,8 +31829,8 @@
         "Unlock Premium Plus",
         "GmsCore support"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "terabox-hxreborn-v4.29.0-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -31911,10 +31845,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.87.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
       ],
       "appliedPatches": [
         "Download generated files",
@@ -31930,8 +31864,8 @@
         "Unlock Premium Plus",
         "GmsCore support"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "albo-save-organize-hxreborn-v1.28.1-arm64-v8a.apk": {
       "name": "albo-save-organize-hxreborn",
@@ -33575,8 +33509,8 @@
         "Clone General",
         "Replace Instagram Strings"
       ],
-      "originBuild": "260605",
-      "publishedAt": "2026-11-24T04:54:58Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     },
     "instagram-instafel-v457.0.0.55.73-arm64-v8a.apk": {
       "name": "instagram-instafel",
@@ -33607,8 +33541,74 @@
         "Change Home Long Click",
         "Add App Trigger"
       ],
-      "originBuild": "260605",
-      "publishedAt": "2026-11-24T04:54:58Z"
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-clone-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
+    },
+    "instagram-instafel-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-aa5afbc.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/aa5afbc-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260607",
+      "publishedAt": "2026-11-24T10:29:42Z"
     }
   }
 }
