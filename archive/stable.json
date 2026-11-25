@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-25T18:43:34Z"
+    "publishedAt": "2026-11-25T22:24:43Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -16938,18 +16938,18 @@
       "subVariant": null,
       "packageName": "com.soundcloud.android",
       "patchSources": [
-        "kondratjev/patches-1.28.0.mpp"
+        "kondratjev/patches-1.29.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.28.0"
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.29.1"
       ],
       "appliedPatches": [
         "Disable analytics",
         "Disable consent popup",
         "Enable SoundCloud Go"
       ],
-      "originBuild": "260359",
-      "publishedAt": "2026-10-24T09:35:38Z"
+      "originBuild": "260618",
+      "publishedAt": "2026-11-25T22:24:26Z"
     },
     "medium-bufferk-v4.5.1784910928-arm64-v8a.apk": {
       "name": "medium-bufferk",
@@ -25127,18 +25127,18 @@
       "subVariant": null,
       "packageName": "com.fatsecret.android",
       "patchSources": [
-        "kondratjev/patches-1.29.0.mpp"
+        "kondratjev/patches-1.29.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.29.0"
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.29.1"
       ],
       "appliedPatches": [
         "Disable community tab",
         "Disable force update dialog",
         "Unlock Premium"
       ],
-      "originBuild": "260526",
-      "publishedAt": "2026-11-13T22:15:43Z"
+      "originBuild": "260618",
+      "publishedAt": "2026-11-25T22:24:26Z"
     },
     "calorie-counter-kondratjev-v11.10.0.3-arm-v7a.apk": {
       "name": "calorie-counter-kondratjev",
@@ -25153,18 +25153,18 @@
       "subVariant": null,
       "packageName": "com.fatsecret.android",
       "patchSources": [
-        "kondratjev/patches-1.29.0.mpp"
+        "kondratjev/patches-1.29.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.29.0"
+        "https://github.com/kondratjev/morphe-patches/releases/tag/v1.29.1"
       ],
       "appliedPatches": [
         "Disable community tab",
         "Disable force update dialog",
         "Unlock Premium"
       ],
-      "originBuild": "260526",
-      "publishedAt": "2026-11-13T22:15:43Z"
+      "originBuild": "260618",
+      "publishedAt": "2026-11-25T22:24:26Z"
     },
     "letterboxd-mvaishak-material-you-v3.6.7-arm-v7a.apk": {
       "name": "letterboxd-mvaishak-material-you",
@@ -33823,6 +33823,87 @@
       ],
       "originBuild": "260615",
       "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "pinterest-hushpinterest-v14.45.0-arm64-v8a.apk": {
+      "name": "pinterest-hushpinterest",
+      "version": "14.45.0",
+      "appKey": "pinterest",
+      "appName": "Pinterest",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hushpinterest",
+      "brandName": "HushPinterest",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.pinterest",
+      "patchSources": [
+        "SysAdminDoc/patches-0.0.15.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/SysAdminDoc/HushPinterest/releases/tag/v0.0.15"
+      ],
+      "appliedPatches": [
+        "AMOLED black",
+        "Best video quality",
+        "Board order when saving",
+        "Custom font",
+        "Custom save sound",
+        "Custom splash logo",
+        "Customize board tabs",
+        "Disable analytics",
+        "Disable update nag",
+        "Download board",
+        "Download pins",
+        "Expand board list",
+        "Filter feed",
+        "Filter pin menu",
+        "Fix push notifications",
+        "Fold related pins",
+        "Full-size profile photos",
+        "GmsCore support",
+        "Hide AI-labeled pins",
+        "Hide Assistant",
+        "Hide Inbox updates",
+        "Hide ads",
+        "Hide advertising ID",
+        "Hide blue highlight ring",
+        "Hide closeup buttons",
+        "Hide comments",
+        "Hide creator name on pins",
+        "Hide header buttons",
+        "Hide navigation buttons",
+        "Hide pin author",
+        "Hide pin title and description",
+        "Hide pop-up banners",
+        "Hide related pins",
+        "Hide save toasts",
+        "Hide search history",
+        "Hide shopping and product pins",
+        "Hide suggested boards",
+        "Hide survey prompts",
+        "Hide topic suggestions",
+        "Hide visual search thumbnails",
+        "HushPinterest settings",
+        "Keep Home feed",
+        "Let the screen sleep",
+        "Like and comment history",
+        "Long-press download",
+        "No screenshot share menu",
+        "Open links in your browser",
+        "Original-quality images",
+        "Pin video playback",
+        "Pinch to zoom only",
+        "Quiet email reminders",
+        "Remove ad tracking permissions",
+        "Show image size",
+        "Show posted date",
+        "Spoof signature for Google sign-in",
+        "Strip link tracking",
+        "Swipe down to close pins",
+        "System share sheet"
+      ],
+      "originBuild": "260618",
+      "publishedAt": "2026-11-25T22:24:26Z"
     }
   }
 }
