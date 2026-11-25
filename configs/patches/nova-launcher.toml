@@ -26,4 +26,19 @@ apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw
 apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
 archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
 
+[NovaLauncher-springfurst]
+enabled = true
+pkg-name = "com.teslacoilsw.launcher"
+app-name = "Nova Launcher"
+patch-folder = "nova"
+build-mode = "both"
+brand = "springfurst"
+patches-source = "springfurst/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instabridge-sweden-ab/nova-launcher"
+uptodown-dlurl = "https://nova-launcher.en.uptodown.com/android"
+apkcombo-dlurl = "https://apkcombo.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+apkpure-dlurl = "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
+archive-dlurl = "https://archive.org/download/geologically/apks/com.teslacoilsw.launcher"
+
+
 
