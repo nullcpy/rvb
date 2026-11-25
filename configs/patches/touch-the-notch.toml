@@ -1,0 +1,9 @@
+[TouchTheNotch-epxec]
+enabled = true
+pkg-name = "com.notch.touch"
+app-name = "Touch The Notch"
+brand = "epxec"
+arch = "all"
+patches-source = "epxec/android-patches"
+uptodown-dlurl = "https://touch-the-notch.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/touch-the-notch-action-button/com.notch.touch"
