@@ -3807,6 +3807,72 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "NovaLauncher-springfurst": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "springfurst/morphe-patches",
+        "brand": "springfurst",
+        "app-name": "Nova Launcher",
+        "pkg-name": "com.teslacoilsw.launcher",
+        "arch": "both",
+        "build-mode": "both"
+      }
+    },
+    "Quranify-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Quranify",
+        "pkg-name": "com.mchutov.Quranify",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "TouchTheNotch-epxec": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "epxec/android-patches",
+        "brand": "epxec",
+        "app-name": "Touch The Notch",
+        "pkg-name": "com.notch.touch",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "XPloreFileManager-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "X-plore File Manager",
+        "pkg-name": "com.lonelycatgames.Xplore",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "Yuka-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Yuka - Food & Cosmetic Scanner",
+        "pkg-name": "io.yuka.android",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
