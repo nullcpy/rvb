@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260615",
+    "channel": "stable",
+    "publishedAt": "2026-11-25T16:35:42Z"
+  },
+  "files": {
+    "nova-launcher-springfurst-v89700-arm-v7a.apk": {
+      "name": "nova-launcher-springfurst",
+      "version": "89700",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "springfurst",
+      "brandName": "springfurst",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "springfurst/patches-1.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/springfurst/morphe-patches/releases/tag/v1.0.1"
+      ],
+      "appliedPatches": [
+        "Disable telemetry",
+        "Enable Prime",
+        "Remove internet & tracking permissions"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "nova-launcher-springfurst-v89700-arm64-v8a.apk": {
+      "name": "nova-launcher-springfurst",
+      "version": "89700",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "springfurst",
+      "brandName": "springfurst",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "springfurst/patches-1.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/springfurst/morphe-patches/releases/tag/v1.0.1"
+      ],
+      "appliedPatches": [
+        "Disable telemetry",
+        "Enable Prime",
+        "Remove internet & tracking permissions"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "nova-launcher-springfurst-module-v89700-arm-v7a.zip": {
+      "name": "nova-launcher-springfurst",
+      "version": "89700",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm",
+      "fileType": "Module",
+      "brandKey": "springfurst",
+      "brandName": "springfurst",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "springfurst/patches-1.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/springfurst/morphe-patches/releases/tag/v1.0.1"
+      ],
+      "appliedPatches": [
+        "Disable telemetry",
+        "Enable Prime",
+        "Remove internet & tracking permissions"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "nova-launcher-springfurst-module-v89700-arm64-v8a.zip": {
+      "name": "nova-launcher-springfurst",
+      "version": "89700",
+      "appKey": "novalauncher",
+      "appName": "Nova Launcher",
+      "arch": "arm64",
+      "fileType": "Module",
+      "brandKey": "springfurst",
+      "brandName": "springfurst",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.teslacoilsw.launcher",
+      "patchSources": [
+        "springfurst/patches-1.0.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/springfurst/morphe-patches/releases/tag/v1.0.1"
+      ],
+      "appliedPatches": [
+        "Disable telemetry",
+        "Enable Prime",
+        "Remove internet & tracking permissions"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "quranify-hxreborn-v2.4.0-all.apk": {
+      "name": "quranify-hxreborn",
+      "version": "2.4.0",
+      "appKey": "quranify",
+      "appName": "Quranify",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.mchutov.Quranify",
+      "patchSources": [
+        "hxreborn/patches-1.88.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "x-plore-file-manager-hxreborn-v4.53.05-all.apk": {
+      "name": "x-plore-file-manager-hxreborn",
+      "version": "4.53.05",
+      "appKey": "xplorefilemanager",
+      "appName": "X-plore File Manager",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.lonelycatgames.Xplore",
+      "patchSources": [
+        "hxreborn/patches-1.88.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    },
+    "yuka-food-cosmetic-scanner-hxreborn-v5.9.1-all.apk": {
+      "name": "yuka-food-cosmetic-scanner-hxreborn",
+      "version": "5.9.1",
+      "appKey": "yukafoodcosmeticscanner",
+      "appName": "Yuka - Food & Cosmetic Scanner",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "io.yuka.android",
+      "patchSources": [
+        "hxreborn/patches-1.88.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260615",
+      "publishedAt": "2026-11-25T16:35:42Z"
+    }
+  }
+}
