@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-25T15:17:00Z"
+    "publishedAt": "2026-11-25T16:31:57Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -9469,6 +9469,72 @@
       ],
       "originBuild": "260612",
       "publishedAt": "2026-11-25T15:16:04Z"
+    },
+    "boost-for-reddit-wchill-v1.14.4-all.apk": {
+      "name": "boost-for-reddit-wchill",
+      "version": "1.14.4",
+      "appKey": "boostforreddit",
+      "appName": "Boost For Reddit",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "wchill",
+      "brandName": "wchill",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.rubenmayayo.reddit",
+      "patchSources": [
+        "wchill/patches-2.6.0-dev.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/wchill/patcheddit/releases/tag/v2.6.0-dev.4"
+      ],
+      "appliedPatches": [
+        "Add Boost Search bottom navigation",
+        "Add archive links to context menu",
+        "Anchor Boost Snackbars above bottom navigation",
+        "Animate media in Boost gallery previews",
+        "Auto-load next page after filtered results",
+        "Automatically undelete Imgur images",
+        "Automatically undelete Reddit content",
+        "Boost Morphe settings",
+        "Boost search default discovery",
+        "Configure editor image hosting",
+        "Disable Boost Crashlytics startup network calls",
+        "Fix Boost FAB nested scroll",
+        "Fix Boost code block rendering",
+        "Fix Boost navigation bar overlap",
+        "Fix Hide crash",
+        "Fix comment video links",
+        "Fix escaped URLs",
+        "Fix image search",
+        "Fix random subreddit",
+        "Full Boost backup",
+        "Import and export OAuth tokens",
+        "Load all inline media",
+        "Log exceptions",
+        "Prefer high refresh rate",
+        "Preview images in the editor",
+        "Readable Boost flair labels",
+        "Reddit API fixes",
+        "Remember collapsed comments",
+        "Remove obsolete profile tabs",
+        "Repeat Boost thread level colors",
+        "Restore Boost sidebar Trending today",
+        "Restore GIF URL insertion",
+        "Show end of feed",
+        "Show strip query parameters option",
+        "Stabilize Boost subreddit bottom navigation surface",
+        "Standardize Boost Home bottom navigation",
+        "Standardize Boost Inbox and Profile bottom navigation",
+        "Standardize Boost bottom navigation",
+        "Standardize Boost bottom-navigation FAB clearance",
+        "Support keyboard GIF insertion",
+        "Tune Boost image dismissal",
+        "Use Reddit for image uploads",
+        "Fix broken markdown links"
+      ],
+      "originBuild": "260614",
+      "publishedAt": "2026-11-25T16:31:44Z"
     }
   }
 }
