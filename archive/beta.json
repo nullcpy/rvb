@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-24T22:54:08Z"
+    "publishedAt": "2026-11-25T15:17:00Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -4122,10 +4122,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4139,6 +4139,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -4150,13 +4151,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -4180,15 +4186,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-module-v2026.40.0-arm-v7a.zip": {
       "name": "reddit-morphe",
@@ -4203,10 +4211,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4220,6 +4228,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -4231,13 +4240,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -4261,15 +4275,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-v2026.40.0-arm64-v8a.apk": {
       "name": "reddit-morphe",
@@ -4284,10 +4300,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4301,6 +4317,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -4312,13 +4329,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -4342,15 +4364,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-v2026.40.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -4365,10 +4389,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4382,6 +4406,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -4393,13 +4418,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -4423,15 +4453,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -4446,10 +4478,10 @@
       "subVariant": null,
       "packageName": "dev.jason.com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.4.mpp"
+        "jasonwu1994/patches-4.5.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.7"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4499,8 +4531,8 @@
         "Zhuyin Slide Input",
         "Package Rename"
       ],
-      "originBuild": "260610",
-      "publishedAt": "2026-11-24T22:53:45Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "google-keyboard-jasonwu1994-module-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.zip": {
       "name": "google-keyboard-jasonwu1994",
@@ -4515,10 +4547,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.4.mpp"
+        "jasonwu1994/patches-4.5.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.7"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4567,8 +4599,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260610",
-      "publishedAt": "2026-11-24T22:53:45Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "google-keyboard-jasonwu1994-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994",
@@ -4583,10 +4615,10 @@
       "subVariant": null,
       "packageName": "com.google.android.inputmethod.latin",
       "patchSources": [
-        "jasonwu1994/patches-4.5.0-dev.4.mpp"
+        "jasonwu1994/patches-4.5.0-dev.7.mpp"
       ],
       "changelogs": [
-        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.4"
+        "https://github.com/jasonwu1994/Gboard-patches/releases/tag/v4.5.0-dev.7"
       ],
       "appliedPatches": [
         "AI Writing Tools",
@@ -4635,8 +4667,8 @@
         "Zhuyin Quick Traditional/Simplified Toggle",
         "Zhuyin Slide Input"
       ],
-      "originBuild": "260610",
-      "publishedAt": "2026-11-24T22:53:45Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-module-v21.30.216-arm-v7a.zip": {
       "name": "youtube-morphe",
@@ -4651,10 +4683,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4785,8 +4817,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-module-v21.30.216-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -4801,10 +4833,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4935,8 +4967,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-v21.30.216-arm-v7a.apk": {
       "name": "youtube-morphe",
@@ -4951,10 +4983,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5086,8 +5118,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-v21.30.216-arm64-v8a.apk": {
       "name": "youtube-morphe",
@@ -5102,10 +5134,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5237,8 +5269,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -5253,14 +5285,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -5320,8 +5353,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm-v7a.zip": {
       "name": "youtube-music-morphe",
@@ -5336,14 +5369,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -5403,8 +5437,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-v9.30.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -5419,14 +5453,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -5487,8 +5522,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-v9.30.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -5503,14 +5538,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -5571,8 +5607,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-v9.43.51-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -7354,14 +7390,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -7422,8 +7459,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-experimental-module-v9.46.51-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -7438,14 +7475,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -7505,8 +7543,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "google-photos-akashsriram-unclone-v8.2.0.1023899193-arm-v7a.apk": {
       "name": "google-photos-akashsriram-unclone",
@@ -7933,10 +7971,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -7950,6 +7988,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -7961,13 +8000,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -7991,15 +8035,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-experimental-v2026.47.0-arm-v7a.apk": {
       "name": "reddit-morphe-experimental",
@@ -8014,10 +8060,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -8031,6 +8077,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -8042,13 +8089,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -8072,15 +8124,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-experimental-v2026.47.0-arm64-v8a.apk": {
       "name": "reddit-morphe-experimental",
@@ -8095,10 +8149,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -8112,6 +8166,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -8123,13 +8178,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -8153,15 +8213,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "reddit-morphe-experimental-module-v2026.47.0-arm-v7a.zip": {
       "name": "reddit-morphe-experimental",
@@ -8176,10 +8238,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.10.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.10"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -8193,6 +8255,7 @@
         "Disable bottom bar auto-hide",
         "Disable home feed auto-refresh",
         "Disable modern home",
+        "Disable post detail swipe",
         "Disable refresh on back to exit",
         "Disable screenshot popup",
         "Download all from gallery",
@@ -8204,13 +8267,18 @@
         "Force system font",
         "Full width feed media",
         "Full-screen reply",
+        "Glass navigation bar",
+        "Hide Answers preview",
         "Hide Ask button",
         "Hide People also search for section",
         "Hide Related Posts section",
         "Hide Trending shelves",
         "Hide Videos for you shelf",
         "Hide ads",
+        "Hide comment flairs and badges",
         "Hide communities shelf",
+        "Hide community highlights",
+        "Hide community menu badge",
         "Hide home tabs",
         "Hide interactive posts",
         "Hide media viewer components",
@@ -8234,15 +8302,17 @@
         "Remove subreddit dialog",
         "Sanitize sharing links",
         "Search hidden profiles",
+        "See-through status bar",
         "Share post content",
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest",
         "Swipe up for comments",
-        "Tablet grid feed"
+        "Tablet grid feed",
+        "Video playback speed"
       ],
-      "originBuild": "260606",
-      "publishedAt": "2026-11-24T10:01:09Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "instagram-piko-clone-v456.0.0.53.78-arm64-v8a.apk": {
       "name": "instagram-piko-clone",
@@ -8642,10 +8712,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8777,8 +8847,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-experimental-v21.47.483-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -8793,10 +8863,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8928,8 +8998,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-experimental-module-v21.47.483-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -8944,10 +9014,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -9078,8 +9148,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-morphe-experimental-module-v21.47.483-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -9094,10 +9164,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -9228,8 +9298,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-experimental-module-v9.47.51-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -9244,14 +9314,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -9311,8 +9382,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     },
     "youtube-music-morphe-experimental-v9.47.51-arm64-v8a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -9327,14 +9398,15 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.4.0-dev.11.mpp"
+        "MorpheApp/patches-2.4.0-dev.12.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.11"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.4.0-dev.12"
       ],
       "appliedPatches": [
         "A-B loop",
         "Android Auto",
+        "Android Auto third-party apps",
         "App refresh rate",
         "Apple Music animated artwork",
         "Change header",
@@ -9395,8 +9467,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260608",
-      "publishedAt": "2026-11-24T15:32:26Z"
+      "originBuild": "260612",
+      "publishedAt": "2026-11-25T15:16:04Z"
     }
   }
 }
