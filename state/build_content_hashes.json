@@ -1152,13 +1152,13 @@
       ]
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a": {
-      "hash": "82a6ff662ccb83b8c4803c49e191642b",
+      "hash": "07acbec4ce59835e6280f8aba7834451",
       "kinds": [
         "apk"
       ]
     },
     "proton-pass-hxreborn-v1.41.5-arm-v7a": {
-      "hash": "a4bd6a14160e0f76405a78d69f497b61",
+      "hash": "c4ec46de571f859f0883389614b3fa9e",
       "kinds": [
         "apk"
       ]
@@ -2038,13 +2038,13 @@
       ]
     },
     "aliexpress-hxreborn-v8.180.1-arm64-v8a": {
-      "hash": "4d0837fa9a3eb1281a7885e74c86ca55",
+      "hash": "e1c2ffc24406747c22cefea32ae3a6e9",
       "kinds": [
         "apk"
       ]
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a": {
-      "hash": "e212f7860d4ddb94379771d32f100100",
+      "hash": "a3409cffd9d825919674e9dd0caf1b96",
       "kinds": [
         "apk"
       ]
@@ -2878,25 +2878,25 @@
       ]
     },
     "proton-mail-hxreborn-v7.12.1-arm64-v8a": {
-      "hash": "958334426deb0965f1f5dfdae07dea4b",
+      "hash": "f7760c20226bfaa0588320a0cb5ec3df",
       "kinds": [
         "apk"
       ]
     },
     "proton-mail-hxreborn-v7.12.1-arm-v7a": {
-      "hash": "7ba7fc20085ad192336fdff3f5f2795d",
+      "hash": "d84939c174b7b697c10a000bc491e03d",
       "kinds": [
         "apk"
       ]
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm64-v8a": {
-      "hash": "73f5e1559a20307fbf0ab71254a0779d",
+      "hash": "3e28ebe7bb5eadffc45dd588a2c55e22",
       "kinds": [
         "apk"
       ]
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm-v7a": {
-      "hash": "ee8626e117af712c2c7aab4b67ea1ae2",
+      "hash": "ff0032aba66fee6667ada39e77c8f045",
       "kinds": [
         "apk"
       ]
@@ -2952,13 +2952,13 @@
       ]
     },
     "terabox-hxreborn-v4.29.0-arm64-v8a": {
-      "hash": "bdf7e1db2be854e8759ebfe6702cd2e3",
+      "hash": "fd077fb3fc1b824337a9d98236113c63",
       "kinds": [
         "apk"
       ]
     },
     "terabox-hxreborn-v4.29.0-arm-v7a": {
-      "hash": "c6bc323472da5065ec3893fddb43f6f1",
+      "hash": "7a6f7dad294404c43895761e078610ac",
       "kinds": [
         "apk"
       ]
@@ -3074,25 +3074,25 @@
       ]
     },
     "facebook-hushfacebook-v588.0.0.42.55-arm64-v8a": {
-      "hash": "5cd818fd4ef0161d2d5552d025c10e0f",
+      "hash": "2d2ac56d019bcbe05ac746776d7d2063",
       "kinds": [
         "apk"
       ]
     },
     "facebook-hushfacebook-v588.0.0.42.55-arm-v7a": {
-      "hash": "ad7504af96255004f7dde9b5e0d82ae2",
+      "hash": "af3e7165b26a21489c2073046c6348e9",
       "kinds": [
         "apk"
       ]
     },
     "facebook-hushfacebook-material-you-v588.0.0.42.55-arm64-v8a": {
-      "hash": "48cf4432440a90f8cdb88d7fa47ac5a7",
+      "hash": "3bd3045eb395cbc53a74896bd00e7383",
       "kinds": [
         "apk"
       ]
     },
     "facebook-hushfacebook-material-you-v588.0.0.42.55-arm-v7a": {
-      "hash": "674aa538a1f9ab5fbd9294177206e558",
+      "hash": "f19d6e4e9bccd4ede5dc6c8be8528995",
       "kinds": [
         "apk"
       ]
@@ -3115,6 +3115,42 @@
       "kinds": [
         "apk",
         "module"
+      ]
+    },
+    "pinterest-browzomje-v14.45.0-arm64-v8a": {
+      "hash": "3492e18ab5c9f2837658a22c521deebd",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "pinterest-browzomje-v14.45.0-arm-v7a": {
+      "hash": "1df3b811ca3a5c5a2dab27519d100ecc",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "telegram-hushtelegram-foss-v13.3.1-arm64-v8a": {
+      "hash": "f1f4bc0b6ceeb10231c0477828dee66d",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "telegram-hushtelegram-foss-v13.3.1-arm-v7a": {
+      "hash": "0481ed0639ea610cf1d86a0c1ede8777",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "telegram-hushtelegram-google-play-v13.3.1-arm64-v8a": {
+      "hash": "8317116a3a2754f5dd6a3373b46e6cb2",
+      "kinds": [
+        "apk"
+      ]
+    },
+    "telegram-hushtelegram-google-play-v13.3.1-arm-v7a": {
+      "hash": "153fd3a56009bf517a18ef01493ffe30",
+      "kinds": [
+        "apk"
       ]
     }
   }
