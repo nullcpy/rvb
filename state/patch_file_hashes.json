@@ -196,6 +196,13 @@
       "shared": "429cf9adc1a48161baa574e5278115c3"
     }
   },
+  "epxec/android-patches": {
+    "beta": {},
+    "stable": {
+      "com.notch.touch": "fe2130e18c9eca4650959ad801541551",
+      "shared": "e4b7f67cfc9a47792a88c86bf3a91ae7"
+    }
+  },
   "franticg33k/morphe-patches": {
     "beta": {
       "com.byairapp.android": "56242293516f595ae51b46c37d9c66b3",
@@ -643,6 +650,13 @@
     "stable": {
       "com.spotify.music": "b6c317f930e4db07ba57b9de12b0d0ea",
       "shared": "1b05a35b1fdd2f827b94b270c21363b6"
+    }
+  },
+  "springfurst/morphe-patches": {
+    "beta": {},
+    "stable": {
+      "com.teslacoilsw.launcher": "d72b05c47b499fb9cc4019e1f2b896c7",
+      "shared": "d41d8cd98f00b204e9800998ecf8427e"
     }
   },
   "sysadmindoc/hushfacebook": {
