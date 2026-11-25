@@ -5,6 +5,7 @@ app-name = "Boost For Reddit"
 brand = "wchill"
 arch = "all"
 patches-source = "wchill/patcheddit"
+patches-version = "both"
 excluded-patches = "'Spoof client'"
 github-dlurl = "https://github.com/rubenmayayo/boost-for-reddit"
 github-regex = '^boost-for-reddit-.*\.apk$'
