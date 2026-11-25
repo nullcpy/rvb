@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-24T15:37:18Z"
+    "publishedAt": "2026-11-25T08:26:08Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -32373,10 +32373,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.84.0.mpp"
+        "SysAdminDoc/patches-0.85.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.84.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.85.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -32426,6 +32426,7 @@
         "Fit the video to the screen",
         "Fix Google login",
         "Fix Spotify login",
+        "Fix notifications on OPPO, OnePlus and realme",
         "Foldable split comment view",
         "Follow diagnostics",
         "Freeze TikTok's experiments",
@@ -32533,8 +32534,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260594",
-      "publishedAt": "2026-11-22T20:12:21Z"
+      "originBuild": "260611",
+      "publishedAt": "2026-11-25T08:25:08Z"
     },
     "tiktok-hushfeed-v47.9.3-arm-v7a.apk": {
       "name": "tiktok-hushfeed",
@@ -32549,10 +32550,10 @@
       "subVariant": null,
       "packageName": "com.zhiliaoapp.musically",
       "patchSources": [
-        "SysAdminDoc/patches-0.84.0.mpp"
+        "SysAdminDoc/patches-0.85.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.84.0"
+        "https://github.com/SysAdminDoc/hushfeed/releases/tag/v0.85.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -32602,6 +32603,7 @@
         "Fit the video to the screen",
         "Fix Google login",
         "Fix Spotify login",
+        "Fix notifications on OPPO, OnePlus and realme",
         "Foldable split comment view",
         "Follow diagnostics",
         "Freeze TikTok's experiments",
@@ -32709,8 +32711,8 @@
         "Use non-personalized search",
         "Use system font"
       ],
-      "originBuild": "260594",
-      "publishedAt": "2026-11-22T20:12:21Z"
+      "originBuild": "260611",
+      "publishedAt": "2026-11-25T08:25:08Z"
     },
     "facebook-hushfacebook-material-you-v588.0.0.42.55-arm-v7a.apk": {
       "name": "facebook-hushfacebook-material-you",
