@@ -580,7 +580,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -1546,7 +1546,7 @@
     "apkpure-dlurl": "https://apkpure.com/nova-launcher-home-screen/com.teslacoilsw.launcher"
   },
   "NovaLauncher-springfurst": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.teslacoilsw.launcher",
     "app-name": "Nova Launcher",
     "patch-folder": "nova",
@@ -1857,7 +1857,7 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Quranify-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.mchutov.Quranify",
     "app-name": "Quranify",
     "brand": "hxreborn",
@@ -2498,7 +2498,7 @@
     "apkpure-dlurl": "https://apkpure.com/tiktok-lite-app/com.ss.android.ugc.tiktok.lite"
   },
   "TouchTheNotch-epxec": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.notch.touch",
     "app-name": "Touch The Notch",
     "brand": "epxec",
@@ -2678,7 +2678,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XPloreFileManager-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.lonelycatgames.Xplore",
     "app-name": "X-plore File Manager",
     "brand": "hxreborn",
@@ -2850,7 +2850,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Yuka-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "io.yuka.android",
     "app-name": "Yuka - Food & Cosmetic Scanner",
     "brand": "hxreborn",
