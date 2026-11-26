@@ -1,0 +1,269 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260624",
+    "channel": "stable",
+    "publishedAt": "2026-11-26T22:19:36Z"
+  },
+  "files": {
+    "instagram-instafel-clone-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-1149fe2.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/1149fe2-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "instagram-instafel-clone-v457.0.0.55.73-arm64-v8a.apk": {
+      "name": "instagram-instafel-clone",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": "Clone",
+      "subVariant": null,
+      "packageName": "com.instafel.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-1149fe2.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/1149fe2-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger",
+        "Clone General",
+        "Replace Instagram Strings"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "instagram-instafel-v457.0.0.55.73-arm-v7a.apk": {
+      "name": "instagram-instafel",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-1149fe2.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/1149fe2-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "instagram-instafel-v457.0.0.55.73-arm64-v8a.apk": {
+      "name": "instagram-instafel",
+      "version": "457.0.0.55.73",
+      "appKey": "instagram",
+      "appName": "Instagram",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "instafel",
+      "brandName": "Instafel",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.instagram.android",
+      "patchSources": [
+        "instafel/ifl-patcher-core-1149fe2.jar"
+      ],
+      "changelogs": [
+        "https://github.com/instafel/pc-rel/releases/tag/1149fe2-4.7.0"
+      ],
+      "appliedPatches": [
+        "Unlock Developer Options",
+        "Remove Snooze Warning",
+        "Remove Ads",
+        "AMOLED Theme",
+        "Get Generation Info",
+        "Copy Instafel Sources",
+        "Add Initialize Instafel",
+        "Change Home Long Click",
+        "Add App Trigger"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "spotify-spicetify-v9.2.4.2644-arm64-v8a.apk": {
+      "name": "spotify-spicetify",
+      "version": "9.2.4.2644",
+      "appKey": "spotify",
+      "appName": "Spotify",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "spicetify",
+      "brandName": "Spicetify",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.spotify.music",
+      "patchSources": [
+        "spicetify/patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/spicetify/morphe-patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Clean sharing links",
+        "Hide Home and Browse ads",
+        "Hide Premium tab",
+        "Hide player ad cards",
+        "Pin shortcuts on Home",
+        "Spicetify extensions",
+        "Theme colors"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "spotify-spicetify-v9.2.4.2644-arm-v7a.apk": {
+      "name": "spotify-spicetify",
+      "version": "9.2.4.2644",
+      "appKey": "spotify",
+      "appName": "Spotify",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "spicetify",
+      "brandName": "Spicetify",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.spotify.music",
+      "patchSources": [
+        "spicetify/patches-1.3.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/spicetify/morphe-patches/releases/tag/v1.3.0"
+      ],
+      "appliedPatches": [
+        "Clean sharing links",
+        "Hide Home and Browse ads",
+        "Hide Premium tab",
+        "Hide player ad cards",
+        "Pin shortcuts on Home",
+        "Spicetify extensions",
+        "Theme colors"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "whatsapp-mightymich-v2.26.46.82-arm64-v8a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.46.82",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    },
+    "whatsapp-mightymich-v2.26.46.82-arm-v7a.apk": {
+      "name": "whatsapp-mightymich",
+      "version": "2.26.46.82",
+      "appKey": "whatsapp",
+      "appName": "WhatsApp",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mightymich",
+      "brandName": "MightyMich",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.whatsapp",
+      "patchSources": [
+        "mich111discord/patches-1.18.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.0"
+      ],
+      "appliedPatches": [
+        "Enable local backup (gates)",
+        "Enable local backup (manifest)",
+        "Keep deleted messages",
+        "MicroG compatibility",
+        "Mods settings entry",
+        "Mods settings resources",
+        "Read receipts",
+        "Remove Meta AI",
+        "Usage data",
+        "View once media"
+      ],
+      "originBuild": "260624",
+      "publishedAt": "2026-11-26T22:19:36Z"
+    }
+  }
+}
