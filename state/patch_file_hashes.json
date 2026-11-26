@@ -464,10 +464,10 @@
   },
   "morpheapp/morphe-patches": {
     "beta": {
-      "com.google.android.apps.youtube.music": "ead56be607e62b2ef0bae5a1fbd3c022",
-      "com.google.android.youtube": "dc1c1d4142e8ed030c83780d2537e058",
-      "com.reddit.frontpage": "e1e006db4d7113d8eb0dff6b14cdb99d",
-      "shared": "0d29397ab2146f8cf779114eb5c28afa"
+      "com.google.android.apps.youtube.music": "c4de07e4543ea677ccf7c3ea889c9b61",
+      "com.google.android.youtube": "186f73957110d9ee6d7717524ab890f6",
+      "com.reddit.frontpage": "37481eb47f3cdf26e3e41d00aa0605f1",
+      "shared": "68538fa20773c87b6443d10f3b68cbdb"
     },
     "stable": {
       "com.google.android.apps.youtube.music": "e46398df179c37761aa86ad25912e086",
@@ -479,7 +479,7 @@
   "mvaishak/letterboxd-morphe-patches": {
     "beta": {},
     "stable": {
-      "com.letterboxd.letterboxd": "1c6364ea410648e10f01017acaca2a6b",
+      "com.letterboxd.letterboxd": "aa8cce220b9b6c074adb75624d538493",
       "shared": "c9b415e5dde5f9c078c68863d52cf677"
     }
   },
