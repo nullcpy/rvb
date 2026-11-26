@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260621",
+    "channel": "stable",
+    "publishedAt": "2026-11-26T08:25:03Z"
+  },
+  "files": {
+    "letterboxd-mvaishak-material-you-v3.6.9-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Material You theme",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
+    },
+    "letterboxd-mvaishak-material-you-v3.6.9-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak-material-you",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": "Material You",
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Material You theme",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
+    },
+    "letterboxd-mvaishak-v3.6.9-arm64-v8a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
+    },
+    "letterboxd-mvaishak-v3.6.9-arm-v7a.apk": {
+      "name": "letterboxd-mvaishak",
+      "version": "3.6.9",
+      "appKey": "letterboxd",
+      "appName": "Letterboxd",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "mvaishak",
+      "brandName": "mvaishak",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.letterboxd.letterboxd",
+      "patchSources": [
+        "mvaishak/patches-3.1.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
+      ],
+      "appliedPatches": [
+        "Appearance",
+        "Brighter Watched-by stars",
+        "Change app icon",
+        "Copy lists",
+        "Custom artwork",
+        "Denser poster grid",
+        "Film release alerts",
+        "Hide ads",
+        "Hide sponsored content",
+        "Mod settings",
+        "Smooth film credits tabs",
+        "Where to Watch"
+      ],
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
+    }
+  }
+}

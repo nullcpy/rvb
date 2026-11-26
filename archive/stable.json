@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-26T00:39:35Z"
+    "publishedAt": "2026-11-26T08:25:30Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -31355,10 +31355,10 @@
       "subVariant": null,
       "packageName": "com.letterboxd.letterboxd",
       "patchSources": [
-        "mvaishak/patches-3.1.0.mpp"
+        "mvaishak/patches-3.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
       ],
       "appliedPatches": [
         "Appearance",
@@ -31375,8 +31375,8 @@
         "Smooth film credits tabs",
         "Where to Watch"
       ],
-      "originBuild": "260588",
-      "publishedAt": "2026-11-22T06:40:13Z"
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
     },
     "letterboxd-mvaishak-material-you-v3.6.9-arm64-v8a.apk": {
       "name": "letterboxd-mvaishak-material-you",
@@ -31391,10 +31391,10 @@
       "subVariant": null,
       "packageName": "com.letterboxd.letterboxd",
       "patchSources": [
-        "mvaishak/patches-3.1.0.mpp"
+        "mvaishak/patches-3.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
       ],
       "appliedPatches": [
         "Appearance",
@@ -31411,8 +31411,8 @@
         "Smooth film credits tabs",
         "Where to Watch"
       ],
-      "originBuild": "260588",
-      "publishedAt": "2026-11-22T06:40:13Z"
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
     },
     "letterboxd-mvaishak-v3.6.9-arm64-v8a.apk": {
       "name": "letterboxd-mvaishak",
@@ -31427,10 +31427,10 @@
       "subVariant": null,
       "packageName": "com.letterboxd.letterboxd",
       "patchSources": [
-        "mvaishak/patches-3.1.0.mpp"
+        "mvaishak/patches-3.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
       ],
       "appliedPatches": [
         "Appearance",
@@ -31446,8 +31446,8 @@
         "Smooth film credits tabs",
         "Where to Watch"
       ],
-      "originBuild": "260588",
-      "publishedAt": "2026-11-22T06:40:13Z"
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
     },
     "letterboxd-mvaishak-v3.6.9-arm-v7a.apk": {
       "name": "letterboxd-mvaishak",
@@ -31462,10 +31462,10 @@
       "subVariant": null,
       "packageName": "com.letterboxd.letterboxd",
       "patchSources": [
-        "mvaishak/patches-3.1.0.mpp"
+        "mvaishak/patches-3.1.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.0"
+        "https://github.com/mvaishak/letterboxd-morphe-patches/releases/tag/v3.1.1"
       ],
       "appliedPatches": [
         "Appearance",
@@ -31481,8 +31481,8 @@
         "Smooth film credits tabs",
         "Where to Watch"
       ],
-      "originBuild": "260588",
-      "publishedAt": "2026-11-22T06:40:13Z"
+      "originBuild": "260621",
+      "publishedAt": "2026-11-26T08:25:03Z"
     },
     "myfitnesspal-heval99-v26.46.0-arm-v7a.apk": {
       "name": "myfitnesspal-heval99",
