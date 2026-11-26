@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-25T22:24:43Z"
+    "publishedAt": "2026-11-26T00:39:35Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -1721,17 +1721,17 @@
       "subVariant": null,
       "packageName": "com.wbd.hbomax",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "HBO Max - Disable Ads",
         "HBO Max - Prefer Ad-Free Stream"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "disney-ajstrick81-android-tv-v26.16.0+rc2-2026.09.08-all.apk": {
       "name": "disney-ajstrick81-android-tv",
@@ -2715,18 +2715,18 @@
       "subVariant": null,
       "packageName": "tv.pluto.android",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Mask live ad breaks (black screen + mute)",
         "Skip ads"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "twitch-ajstrick81-android-tv-v13.0.0.2-all.apk": {
       "name": "twitch-ajstrick81-android-tv",
@@ -2741,16 +2741,16 @@
       "subVariant": null,
       "packageName": "tv.twitch.android.app",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Block TV ads"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "facebook-andrewliang25-v577.0.0.50.72-arm-v7a.apk": {
       "name": "facebook-andrewliang25",
@@ -11813,17 +11813,17 @@
       "subVariant": null,
       "packageName": "com.peacocktv.peacockandroid",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Disable auto-updates",
         "Skip ads"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "tubi-ajstrick81-android-tv-v10.36.5000-all.apk": {
       "name": "tubi-ajstrick81-android-tv",
@@ -19608,62 +19608,6 @@
       "originBuild": "260607",
       "publishedAt": "2026-11-24T10:29:42Z"
     },
-    "pinterest-hushpinterest-v14.41.0-arm64-v8a.apk": {
-      "name": "pinterest-hushpinterest",
-      "version": "14.41.0",
-      "appKey": "pinterest",
-      "appName": "Pinterest",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "hushpinterest",
-      "brandName": "HushPinterest",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.pinterest",
-      "patchSources": [
-        "SysAdminDoc/patches-0.0.13.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/SysAdminDoc/HushPinterest/releases/tag/v0.0.13"
-      ],
-      "appliedPatches": [
-        "AMOLED black",
-        "Disable analytics",
-        "Disable update nag",
-        "Download board",
-        "Download pins",
-        "Filter feed",
-        "Filter pin menu",
-        "Fix push notifications",
-        "GmsCore support",
-        "Hide AI-labeled pins",
-        "Hide ads",
-        "Hide advertising ID",
-        "Hide closeup buttons",
-        "Hide comments",
-        "Hide header buttons",
-        "Hide navigation buttons",
-        "Hide save toasts",
-        "Hide search history",
-        "Hide shopping and product pins",
-        "Hide survey prompts",
-        "Hide topic suggestions",
-        "HushPinterest settings",
-        "Keep Home feed",
-        "Long-press download",
-        "No screenshot share menu",
-        "Open links in your browser",
-        "Original-quality images",
-        "Quiet email reminders",
-        "Remove ad tracking permissions",
-        "Show posted date",
-        "Spoof signature for Google sign-in",
-        "Strip link tracking",
-        "System share sheet"
-      ],
-      "originBuild": "260435",
-      "publishedAt": "2026-11-01T14:43:11Z"
-    },
     "rumble-lurk-v3.21.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
       "version": "3.21.0",
@@ -22841,10 +22785,10 @@
       "subVariant": "Clone",
       "packageName": "com.amazon.amazonvideo.livingroom.mod",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -22854,8 +22798,8 @@
         "Skip ads",
         "Clone Prime Video"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "twitter-piko-newx-v12.41.0-prod.01-arm-v7a.apk": {
       "name": "twitter-piko-newx",
@@ -24585,17 +24529,17 @@
       "subVariant": null,
       "packageName": "com.univision.prendetv",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Override certificate pinning",
         "Skip ads"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "sofascore-heval99-v26.11.03-arm64-v8a.apk": {
       "name": "sofascore-heval99",
@@ -32797,10 +32741,10 @@
       "subVariant": null,
       "packageName": "com.amazon.amazonvideo.livingroom",
       "patchSources": [
-        "ajstrick81/patches-1.61.1.mpp"
+        "ajstrick81/patches-1.61.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.1"
+        "https://github.com/ajstrick81/morphe-androidtv-patches/releases/tag/v1.61.2"
       ],
       "appliedPatches": [
         "Bundle native ad-strip hook",
@@ -32809,8 +32753,8 @@
         "Prime Video extension",
         "Skip ads"
       ],
-      "originBuild": "260604",
-      "publishedAt": "2026-11-24T03:07:27Z"
+      "originBuild": "260619",
+      "publishedAt": "2026-11-26T00:39:15Z"
     },
     "discord-rain-v355.10-Stable-arm-v7a.apk": {
       "name": "discord-rain",
