@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-26T22:20:16Z"
+    "publishedAt": "2026-11-27T00:52:53Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -10001,16 +10001,16 @@
       "subVariant": null,
       "packageName": "dev.vodik7.atvtools",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "atvtools-hxreborn-v1.3.2-arm64-v8a.apk": {
       "name": "atvtools-hxreborn",
@@ -10025,16 +10025,16 @@
       "subVariant": null,
       "packageName": "dev.vodik7.atvtools",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "tiktok-hushfeed-v47.1.3-all.apk": {
       "name": "tiktok-hushfeed",
@@ -12058,17 +12058,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "showly-hxreborn-v3.72.0-arm64-v8a.apk": {
       "name": "showly-hxreborn",
@@ -12083,17 +12083,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "showly-hxreborn-v3.72.0-arm-v7a.apk": {
       "name": "showly-hxreborn",
@@ -12108,17 +12108,17 @@
       "subVariant": null,
       "packageName": "com.michaldrabik.showly2",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
         "Unlock premium"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "reddit-morphe-v2026.24.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -12341,17 +12341,17 @@
       "subVariant": null,
       "packageName": "com.greenstone.pocketwhip",
       "patchSources": [
-        "hxreborn/patches-1.80.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.80.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Hide ads",
         "Unlock premium"
       ],
-      "originBuild": "260548",
-      "publishedAt": "2026-11-16T09:59:28Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "facebook-devanced-v580.0.0.51.74-arm64-v8a.apk": {
       "name": "facebook-devanced",
@@ -16380,10 +16380,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16397,8 +16397,8 @@
         "Remove free accounts limit",
         "Floating navigation bar"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "proton-pass-hxreborn-v1.41.5-arm64-v8a.apk": {
       "name": "proton-pass-hxreborn",
@@ -16413,10 +16413,10 @@
       "subVariant": null,
       "packageName": "proton.android.pass",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -16430,8 +16430,8 @@
         "Remove free accounts limit",
         "Floating navigation bar"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "acalendar-hxreborn-v2.9.6-arm-v7a.apk": {
       "name": "acalendar-hxreborn",
@@ -16446,16 +16446,16 @@
       "subVariant": null,
       "packageName": "org.withouthat.acalendar",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock aCalendar+"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "acalendar-hxreborn-v2.9.6-arm64-v8a.apk": {
       "name": "acalendar-hxreborn",
@@ -16470,16 +16470,16 @@
       "subVariant": null,
       "packageName": "org.withouthat.acalendar",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock aCalendar+"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "brave-browser-dh6k-beta-v1.99.49-arm-v7a.apk": {
       "name": "brave-browser-dh6k-beta",
@@ -17433,16 +17433,16 @@
       "subVariant": null,
       "packageName": "in.krosbits.musicolet",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "musicolet-cast-plugin-hxreborn-v1.9-arm64-v8a.apk": {
       "name": "musicolet-cast-plugin-hxreborn",
@@ -19811,18 +19811,18 @@
       "subVariant": null,
       "packageName": "com.internet.speed.meter.lite",
       "patchSources": [
-        "hxreborn/patches-1.87.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.87.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Disable tracking",
         "Remove ads",
         "Unlock premium"
       ],
-      "originBuild": "260607",
-      "publishedAt": "2026-11-24T10:29:42Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "rumble-lurk-v3.21.0-arm64-v8a.apk": {
       "name": "rumble-lurk",
@@ -21200,10 +21200,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -21216,8 +21216,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "aliexpress-hxreborn-v8.180.1-arm-v7a.apk": {
       "name": "aliexpress-hxreborn",
@@ -21232,10 +21232,10 @@
       "subVariant": null,
       "packageName": "com.alibaba.aliexpresshd",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Disable analytics",
@@ -21248,8 +21248,8 @@
         "Skip splash promotions",
         "Spoof signature"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "instagram-hushgram-clone-v454.0.0.54.77-arm-v7a.apk": {
       "name": "instagram-hushgram-clone",
@@ -24124,66 +24124,6 @@
       ],
       "originBuild": "260559",
       "publishedAt": "2026-11-17T18:00:48Z"
-    },
-    "whatsapp-mightymich-v2.26.43.76-arm64-v8a.apk": {
-      "name": "whatsapp-mightymich",
-      "version": "2.26.43.76",
-      "appKey": "whatsapp",
-      "appName": "WhatsApp",
-      "arch": "arm64",
-      "fileType": "APK",
-      "brandKey": "mightymich",
-      "brandName": "MightyMich",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.whatsapp",
-      "patchSources": [
-        "mich111discord/patches-1.16.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.16.0"
-      ],
-      "appliedPatches": [
-        "Keep deleted messages",
-        "Mods settings entry",
-        "Mods settings resources",
-        "Read receipts",
-        "Remove Meta AI",
-        "Usage data",
-        "View once media"
-      ],
-      "originBuild": "260523",
-      "publishedAt": "2026-11-13T13:01:11Z"
-    },
-    "whatsapp-mightymich-v2.26.43.76-arm-v7a.apk": {
-      "name": "whatsapp-mightymich",
-      "version": "2.26.43.76",
-      "appKey": "whatsapp",
-      "appName": "WhatsApp",
-      "arch": "arm",
-      "fileType": "APK",
-      "brandKey": "mightymich",
-      "brandName": "MightyMich",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.whatsapp",
-      "patchSources": [
-        "mich111discord/patches-1.16.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.16.0"
-      ],
-      "appliedPatches": [
-        "Keep deleted messages",
-        "Mods settings entry",
-        "Mods settings resources",
-        "Read receipts",
-        "Remove Meta AI",
-        "Usage data",
-        "View once media"
-      ],
-      "originBuild": "260523",
-      "publishedAt": "2026-11-13T13:01:11Z"
     },
     "threads-hushthreads-v455.0.0.55.72-arm64-v8a.apk": {
       "name": "threads-hushthreads",
@@ -29657,10 +29597,10 @@
       "subVariant": null,
       "packageName": "me.proton.android.lumo",
       "patchSources": [
-        "hxreborn/patches-1.86.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.86.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Material 3 switches",
@@ -29668,8 +29608,8 @@
         "Store encryption key in TEE",
         "Unlock premium"
       ],
-      "originBuild": "260601",
-      "publishedAt": "2026-11-23T16:05:19Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "proton-mail-hxreborn-v7.12.1-arm-v7a.apk": {
       "name": "proton-mail-hxreborn",
@@ -29684,10 +29624,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -29702,8 +29642,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "proton-mail-hxreborn-v7.12.1-arm64-v8a.apk": {
       "name": "proton-mail-hxreborn",
@@ -29718,10 +29658,10 @@
       "subVariant": null,
       "packageName": "ch.protonmail.android",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -29736,8 +29676,8 @@
         "Swipe to switch accounts",
         "Unlock custom time picker"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm64-v8a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -29752,10 +29692,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -29773,8 +29713,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "proton-vpn-hxreborn-v5.21.57.0-arm-v7a.apk": {
       "name": "proton-vpn-hxreborn",
@@ -29789,10 +29729,10 @@
       "subVariant": null,
       "packageName": "ch.protonvpn.android",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "AMOLED dark theme",
@@ -29810,8 +29750,8 @@
         "Unlock profiles",
         "Unlock split tunneling"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "ridmik-keyboard-hxreborn-v20.0.0-all.apk": {
       "name": "ridmik-keyboard-hxreborn",
@@ -29826,16 +29766,16 @@
       "subVariant": null,
       "packageName": "ridmik.keyboard",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Remove ads"
       ],
-      "originBuild": "260585",
-      "publishedAt": "2026-11-21T16:18:23Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "terabox-hxreborn-v4.28.5-arm64-v8a.apk": {
       "name": "terabox-hxreborn",
@@ -30346,10 +30286,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Download generated files",
@@ -30365,8 +30305,8 @@
         "Unlock Premium Plus",
         "GmsCore support"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "terabox-hxreborn-v4.29.0-arm-v7a.apk": {
       "name": "terabox-hxreborn",
@@ -30381,10 +30321,10 @@
       "subVariant": null,
       "packageName": "com.dubox.drive",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Download generated files",
@@ -30400,8 +30340,8 @@
         "Unlock Premium Plus",
         "GmsCore support"
       ],
-      "originBuild": "260613",
-      "publishedAt": "2026-11-25T15:31:54Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "albo-save-organize-hxreborn-v1.28.1-arm64-v8a.apk": {
       "name": "albo-save-organize-hxreborn",
@@ -30416,10 +30356,10 @@
       "subVariant": null,
       "packageName": "com.thesortdapp.sortd",
       "patchSources": [
-        "hxreborn/patches-1.85.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.85.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Enable guest sign-in",
@@ -30427,8 +30367,8 @@
         "Remove bulk import limit",
         "Unlock premium"
       ],
-      "originBuild": "260587",
-      "publishedAt": "2026-11-21T20:10:57Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "imdb-adobo-v9.3.7.109370600-all.apk": {
       "name": "imdb-adobo",
@@ -32885,16 +32825,16 @@
       "subVariant": null,
       "packageName": "com.mchutov.Quranify",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260615",
-      "publishedAt": "2026-11-25T16:35:42Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "x-plore-file-manager-hxreborn-v4.53.05-all.apk": {
       "name": "x-plore-file-manager-hxreborn",
@@ -32909,16 +32849,16 @@
       "subVariant": null,
       "packageName": "com.lonelycatgames.Xplore",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
         "Unlock premium"
       ],
-      "originBuild": "260615",
-      "publishedAt": "2026-11-25T16:35:42Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "yuka-food-cosmetic-scanner-hxreborn-v5.9.1-all.apk": {
       "name": "yuka-food-cosmetic-scanner-hxreborn",
@@ -32933,16 +32873,17 @@
       "subVariant": null,
       "packageName": "io.yuka.android",
       "patchSources": [
-        "hxreborn/patches-1.88.0.mpp"
+        "hxreborn/patches-1.89.0.mpp"
       ],
       "changelogs": [
-        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.88.0"
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
       ],
       "appliedPatches": [
+        "Hide Search tab",
         "Unlock premium"
       ],
-      "originBuild": "260615",
-      "publishedAt": "2026-11-25T16:35:42Z"
+      "originBuild": "260625",
+      "publishedAt": "2026-11-27T00:52:03Z"
     },
     "pinterest-hushpinterest-v14.45.0-arm64-v8a.apk": {
       "name": "pinterest-hushpinterest",
