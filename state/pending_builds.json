@@ -1,14 +1,15 @@
 {
   "stable": {
     "Quranify-hxreborn": {
-      "reason": "config",
+      "reason": "retry",
       "arches": [
-        "arm-v7a",
-        "arm64-v8a"
+        "arm-v7a"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "parked": false,
-      "cfg": "e81a25aa700e4e5c3798f87de32d5c28557e3b8c"
+      "cfg": "e81a25aa700e4e5c3798f87de32d5c28557e3b8c",
+      "run": 46015419521,
+      "ts": "2026-11-27T14:45:14Z"
     }
   },
   "beta": {}
