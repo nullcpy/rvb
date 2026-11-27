@@ -320,7 +320,7 @@
     "uptodown-dlurl": "https://calcnote-notepad-calculator.en.uptodown.com/android"
   },
   "BlockBlast-ImNoammm": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.block.juggle",
     "app-name": "Block Blast",
     "brand": "ImNoammm",
@@ -363,7 +363,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/medium/com.medium.reader"
   },
   "SwiftBackup-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.swiftapps.swiftbackup",
     "app-name": "Swift Backup",
     "patches-source": "byehi98/okish-morphe-patches",
@@ -1857,11 +1857,10 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Quranify-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.mchutov.Quranify",
     "app-name": "Quranify",
     "brand": "hxreborn",
-    "arch": "all",
     "patches-source": "hxreborn/morphe-patches",
     "uptodown-dlurl": "https://quranify.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/quranify-quran-audio-player/com.mchutov.Quranify"
@@ -2260,7 +2259,7 @@
     "apkpure-dlurl": "https://apkpure.com/spotify-app/com.spotify.music"
   },
   "SwampAttack-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.outfit7.movingeye.swampattack",
     "app-name": "Swamp Attack",
     "brand": "byehi98",
@@ -2271,7 +2270,7 @@
     "apkpure-dlurl": "https://apkpure.com/swamp-attack/com.outfit7.movingeye.swampattack"
   },
   "SwampAttack2-byehi98": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.hyperdotstudios.swampattack2",
     "app-name": "Swamp Attack 2",
     "brand": "byehi98",
