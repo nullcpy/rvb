@@ -681,7 +681,7 @@
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
   },
   "GoogleMaps-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -695,7 +695,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -707,7 +707,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/google-maps/com.google.android.apps.maps"
   },
   "GoogleMaps-bearinmindcat-UnGoogled-MicroG": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.google.android.apps.maps",
     "app-name": "Google Maps",
     "brand": "bearinmindcat",
@@ -2203,7 +2203,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/solid-explorer/pl.solidexplorer2"
   },
   "SonyMusic-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.sonyericsson.music",
     "app-name": "Sony Music",
     "brand": "bearinmindcat",
@@ -2644,7 +2644,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Waze-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.waze",
     "app-name": "Waze",
     "brand": "bearinmindcat",
@@ -2689,7 +2689,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-plore-file-manager-app/com.lonelycatgames.Xplore"
   },
   "XiaomiRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.android.soundrecorder",
     "app-name": "Xiaomi Recorder",
     "brand": "bearinmindcat",
@@ -2700,7 +2700,7 @@
     "apkpure-dlurl": "https://apkpure.com/xiaomi-recorder/com.android.soundrecorder"
   },
   "XiaomiScreenRecorder-bearinmindcat": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.miui.screenrecorder",
     "app-name": "Xiaomi Screen Recorder",
     "brand": "bearinmindcat",
