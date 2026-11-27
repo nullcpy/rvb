@@ -93,7 +93,7 @@
     "apkpure-dlurl": "https://apkpure.com/acalendar-your-calendar/org.withouthat.acalendar"
   },
   "aCalendar-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "org.withouthat.acalendar",
     "app-name": "aCalendar",
     "patches-source": "hxreborn/morphe-patches",
@@ -259,7 +259,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/netflix-tv/com.netflix.ninja"
   },
   "AlboSaveAndOrganize-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.thesortdapp.sortd",
     "app-name": "Albo: Save & Organize",
     "brand": "hxreborn",
@@ -281,7 +281,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
   "AliExpress-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.alibaba.aliexpresshd",
     "app-name": "AliExpress",
     "brand": "hxreborn",
@@ -1104,7 +1104,7 @@
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.michaldrabik.showly2",
     "app-name": "Showly",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/trakt/showly",
@@ -1115,7 +1115,7 @@
   "AtvTools-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "dev.vodik7.atvtools",
     "app-name": "atvTools",
     "apkpure-dlurl": "https://apkpure.com/atvtools/dev.vodik7.atvtools",
@@ -1124,7 +1124,7 @@
   "PocketWhip-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.greenstone.pocketwhip",
     "app-name": "Pocket Whip",
     "uptodown-dlurl": "https://com-greenstone-pocketwhip.en.uptodown.com/android",
@@ -1134,7 +1134,7 @@
   "Terabox-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.dubox.drive",
     "app-name": "TeraBox",
     "patch-folder": "terabox",
@@ -1145,7 +1145,7 @@
   "ProtonPass-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "proton.android.pass",
     "app-name": "Proton Pass",
     "patch-folder": "protonpass",
@@ -1186,7 +1186,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "Instagram-InstaFel": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1197,7 +1197,7 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/instagram/instagram-instagram"
   },
   "Instagram-InstaFel-Clone": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.instagram.android",
     "app-name": "Instagram",
     "patches-source": "instafel/pc-rel",
@@ -1257,7 +1257,7 @@
     "archive-dlurl": "https://archive.org/download/geologically/apks/com.instagram.android"
   },
   "InternetSpeedMeterLite-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.internet.speed.meter.lite",
     "app-name": "Internet Speed Meter Lite",
     "brand": "hxreborn",
@@ -1479,7 +1479,7 @@
     "apkpure-dlurl": "https://apkpure.com/microsoft-word-edit-documents/com.microsoft.office.word"
   },
   "Musicolet-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.musicolet",
     "app-name": "Musicolet",
     "brand": "hxreborn",
@@ -1489,7 +1489,7 @@
     "apkpure-dlurl": "https://apkpure.com/musicolet-music-player-app/in.krosbits.musicolet"
   },
   "MusicoletCastPlugin-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "in.krosbits.castplugin",
     "app-name": "Musicolet Cast Plugin",
     "brand": "hxreborn",
@@ -1759,7 +1759,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/projectivy-launcher/com.spocky.projengmenu/"
   },
   "ProtonLumo-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "me.proton.android.lumo",
     "app-name": "Proton Lumo",
     "brand": "hxreborn",
@@ -1769,7 +1769,7 @@
     "github-regex": "lumo-v{version}-release\\.apk"
   },
   "ProtonMail-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonmail.android",
     "app-name": "Proton Mail",
     "brand": "hxreborn",
@@ -1827,7 +1827,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/proton-vpn/ch.protonvpn.android"
   },
   "ProtonVPN-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ch.protonvpn.android",
     "app-name": "Proton VPN",
     "patches-source": "hxreborn/morphe-patches",
@@ -1857,7 +1857,7 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Quranify-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.mchutov.Quranify",
     "app-name": "Quranify",
     "brand": "hxreborn",
@@ -1916,7 +1916,7 @@
     "apkpure-dlurl": "https://apkpure.com/remote-for-android-tv/tech.simha.androidtvremote"
   },
   "RidmikKeyboard-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "ridmik.keyboard",
     "app-name": "Ridmik Keyboard",
     "brand": "hxreborn",
@@ -2238,7 +2238,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/soundcloud/com.soundcloud.android"
   },
   "Spotify-Spicetify": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.spotify.music",
     "app-name": "Spotify",
     "patches-source": "spicetify/morphe-patches",
@@ -2668,7 +2668,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
@@ -2678,7 +2678,7 @@
     "apkpure-dlurl": "https://apkpure.com/whatsapp-android/com.whatsapp"
   },
   "XPloreFileManager-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.lonelycatgames.Xplore",
     "app-name": "X-plore File Manager",
     "brand": "hxreborn",
@@ -2850,7 +2850,7 @@
     "apkmirror-dlurl": "https://apkmirror.com/apk/google-inc/youtube"
   },
   "Yuka-hxreborn": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "io.yuka.android",
     "app-name": "Yuka - Food & Cosmetic Scanner",
     "brand": "hxreborn",
