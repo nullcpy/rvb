@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-27T14:46:32Z"
+    "publishedAt": "2026-11-27T21:47:04Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -34314,25 +34314,23 @@
       "subVariant": null,
       "packageName": "com.whatsapp",
       "patchSources": [
-        "mich111discord/patches-1.18.0.mpp"
+        "mich111discord/patches-1.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.0"
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.1"
       ],
       "appliedPatches": [
         "Enable local backup (gates)",
         "Enable local backup (manifest)",
         "Keep deleted messages",
         "MicroG compatibility",
-        "Mods settings entry",
-        "Mods settings resources",
         "Read receipts",
         "Remove Meta AI",
         "Usage data",
         "View once media"
       ],
-      "originBuild": "260624",
-      "publishedAt": "2026-11-26T22:19:36Z"
+      "originBuild": "260630",
+      "publishedAt": "2026-11-27T21:46:40Z"
     },
     "whatsapp-mightymich-v2.26.46.82-arm-v7a.apk": {
       "name": "whatsapp-mightymich",
@@ -34347,25 +34345,23 @@
       "subVariant": null,
       "packageName": "com.whatsapp",
       "patchSources": [
-        "mich111discord/patches-1.18.0.mpp"
+        "mich111discord/patches-1.18.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.0"
+        "https://github.com/mich111discord/MightyMichs-Patches/releases/tag/v1.18.1"
       ],
       "appliedPatches": [
         "Enable local backup (gates)",
         "Enable local backup (manifest)",
         "Keep deleted messages",
         "MicroG compatibility",
-        "Mods settings entry",
-        "Mods settings resources",
         "Read receipts",
         "Remove Meta AI",
         "Usage data",
         "View once media"
       ],
-      "originBuild": "260624",
-      "publishedAt": "2026-11-26T22:19:36Z"
+      "originBuild": "260630",
+      "publishedAt": "2026-11-27T21:46:40Z"
     },
     "swamp-attack-byehi98-v4.9.0.0-all.apk": {
       "name": "swamp-attack-byehi98",
