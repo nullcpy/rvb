@@ -3,7 +3,6 @@ enabled = true
 pkg-name = "com.mchutov.Quranify"
 app-name = "Quranify"
 brand = "hxreborn"
-arch = "all"
 patches-source = "hxreborn/morphe-patches"
 uptodown-dlurl = "https://quranify.en.uptodown.com/android"
 apkpure-dlurl = "https://apkpure.com/quranify-quran-audio-player/com.mchutov.Quranify"
