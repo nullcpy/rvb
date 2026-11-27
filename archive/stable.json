@@ -4,7 +4,7 @@
   "meta": {
     "build": "stable",
     "channel": "stable",
-    "publishedAt": "2026-11-27T08:26:25Z"
+    "publishedAt": "2026-11-27T14:46:32Z"
   },
   "files": {
     "twitter-piko-material-you-module-v12.19.1-release.0-arm64-v8a.zip": {
@@ -25144,10 +25144,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25184,8 +25184,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-ungoogled-microg-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled-microg",
@@ -25200,10 +25200,10 @@
       "subVariant": "MicroG",
       "packageName": "org.ungoogled.android.apps.maps.microg",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25240,8 +25240,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.44.06.1006895251-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -25256,10 +25256,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25295,8 +25295,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-ungoogled-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat-ungoogled",
@@ -25311,10 +25311,10 @@
       "subVariant": null,
       "packageName": "org.ungoogled.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25350,8 +25350,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-module-v26.44.06.1006895251-arm64-v8a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -25366,10 +25366,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25403,8 +25403,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-v26.44.06.1006895251-arm64-v8a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -25419,10 +25419,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25457,8 +25457,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-v26.44.06.1006895251-arm-v7a.apk": {
       "name": "google-maps-bearinmindcat",
@@ -25473,10 +25473,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25511,8 +25511,8 @@
         "Power saving mode",
         "Add microG-RE support"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-maps-bearinmindcat-module-v26.44.06.1006895251-arm-v7a.zip": {
       "name": "google-maps-bearinmindcat",
@@ -25527,10 +25527,10 @@
       "subVariant": null,
       "packageName": "com.google.android.apps.maps",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "120 refresh rate",
@@ -25564,8 +25564,8 @@
         "Zoom controls in navigation",
         "Power saving mode"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "discord-rain-v354.12-Stable-arm64-v8a.apk": {
       "name": "discord-rain",
@@ -25898,14 +25898,15 @@
       "subVariant": null,
       "packageName": "com.waze",
       "patchSources": [
-        "bearinmindcat/patches-2.10.1.mpp"
+        "bearinmindcat/patches-2.10.2.mpp"
       ],
       "changelogs": [
-        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.1"
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.2"
       ],
       "appliedPatches": [
         "Alert distances",
         "All moods",
+        "Any media app",
         "Average speed zone bar",
         "Bigger alert pins",
         "Bigger speedometer",
@@ -25932,8 +25933,8 @@
         "Speed limit sign",
         "Stay awake in the background"
       ],
-      "originBuild": "260626",
-      "publishedAt": "2026-11-27T08:25:45Z"
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     },
     "google-photos-akashsriram-v8.0.0.1011730683-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
@@ -26257,32 +26258,6 @@
         "Show flairs in home feed",
         "Spoof signature",
         "Start as guest"
-      ],
-      "originBuild": "260551",
-      "publishedAt": "2026-11-16T18:41:05Z"
-    },
-    "swamp-attack-2-byehi98-v1.5.0-all.apk": {
-      "name": "swamp-attack-2-byehi98",
-      "version": "1.5.0",
-      "appKey": "swampattack2",
-      "appName": "Swamp Attack 2",
-      "arch": "all",
-      "fileType": "APK",
-      "brandKey": "byehi98",
-      "brandName": "byehi98",
-      "variant": null,
-      "subVariant": null,
-      "packageName": "com.hyperdotstudios.swampattack2",
-      "patchSources": [
-        "byehi98/patches-1.51.0.mpp"
-      ],
-      "changelogs": [
-        "https://github.com/byehi98/okish-morphe-patches/releases/tag/v1.51.0"
-      ],
-      "appliedPatches": [
-        "Swamp Attack 2: Instant Rewarded Ads",
-        "Swamp Attack 2: Remove Ads",
-        "Swamp Attack 2: Unlimited Currency"
       ],
       "originBuild": "260551",
       "publishedAt": "2026-11-16T18:41:05Z"
@@ -34443,6 +34418,30 @@
       ],
       "originBuild": "260626",
       "publishedAt": "2026-11-27T08:25:45Z"
+    },
+    "quranify-hxreborn-v2.4.0-arm64-v8a.apk": {
+      "name": "quranify-hxreborn",
+      "version": "2.4.0",
+      "appKey": "quranify",
+      "appName": "Quranify",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.mchutov.Quranify",
+      "patchSources": [
+        "hxreborn/patches-1.89.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
+      ],
+      "appliedPatches": [
+        "Unlock premium"
+      ],
+      "originBuild": "260628",
+      "publishedAt": "2026-11-27T14:45:54Z"
     }
   }
 }
