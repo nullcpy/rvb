@@ -276,13 +276,13 @@
       ]
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm64-v8a": {
-      "hash": "ce748b1adda736655b31e9336f247488",
+      "hash": "877d53c297d26d7e6770674c5af30a91",
       "kinds": [
         "apk"
       ]
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a": {
-      "hash": "16ae101c7b801ced0d9f08dc1e82a8e1",
+      "hash": "0d213e6ce311ef2b0e10e42853cee643",
       "kinds": [
         "apk"
       ]
@@ -493,6 +493,20 @@
     },
     "youtube-music-morphe-experimental-v9.47.52-arm-v7a": {
       "hash": "a0b89123b51fcfe9c6d24bd211530243",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-photos-akashsriram-v8.2.1.1030128190-arm64-v8a": {
+      "hash": "3ef886fe5dc778301011da6804b0b2fa",
+      "kinds": [
+        "apk",
+        "module"
+      ]
+    },
+    "google-photos-akashsriram-v8.2.1.1030128190-arm-v7a": {
+      "hash": "86e108bf3f977fc7f9687d39a56c580f",
       "kinds": [
         "apk",
         "module"
