@@ -8,6 +8,20 @@ uptodown-dlurl = "https://linkedin.en.uptodown.com/android"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/linkedin/linkedin-linkedin"
 apkpure-dlurl = "https://apkpure.com/linkedin-network-job-finder/com.linkedin.android"
 
+[LinkedIn-lokesh]
+enabled = true
+pkg-name = "com.linkedin.android"
+app-name = "LinkedIn"
+brand = "lokesh"
+patches-source = "lokesh-sparrow/loki-patches"
+uptodown-dlurl = "https://linkedin.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/linkedin/linkedin-linkedin"
+apkpure-dlurl = "https://apkpure.com/linkedin-network-job-finder/com.linkedin.android"
+
+
+
+
+
 
 
 
