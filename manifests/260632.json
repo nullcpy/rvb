@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260632",
+    "channel": "stable",
+    "publishedAt": "2026-11-28T02:40:48Z"
+  },
+  "files": {
+    "waze-bearinmindcat-v5.27.5.0-all.apk": {
+      "name": "waze-bearinmindcat",
+      "version": "5.27.5.0",
+      "appKey": "waze",
+      "appName": "Waze",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.waze",
+      "patchSources": [
+        "bearinmindcat/patches-2.10.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.3"
+      ],
+      "appliedPatches": [
+        "Alert distances",
+        "All moods",
+        "Any media app",
+        "Average speed zone bar",
+        "Bigger alert pins",
+        "Bigger speedometer",
+        "Change app name",
+        "Flock cameras",
+        "Full black",
+        "Hide Work shortcut",
+        "Hide ads",
+        "Map skin",
+        "Map theme",
+        "Navigation distances",
+        "No AI reporting",
+        "No Google Assistant",
+        "Open without device location",
+        "Patched YouTube Music",
+        "Remove permissions",
+        "Remove sign-in prompts",
+        "Remove telemetry",
+        "Report speed limit",
+        "Share alerts with Maps",
+        "Speed camera alerts",
+        "Speed camera sound at any speed",
+        "Speed cameras everywhere",
+        "Speed limit sign",
+        "Stay awake in the background"
+      ],
+      "originBuild": "260632",
+      "publishedAt": "2026-11-28T02:40:48Z"
+    }
+  }
+}
