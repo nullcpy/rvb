@@ -3825,6 +3825,7 @@
     "Quranify-hxreborn": {
       "arches": [
         "all",
+        "arm-v7a",
         "arm64-v8a"
       ],
       "cfg": {
