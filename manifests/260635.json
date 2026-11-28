@@ -1,0 +1,382 @@
+{
+  "schema": 1,
+  "kind": "build",
+  "meta": {
+    "build": "260635",
+    "channel": "stable",
+    "publishedAt": "2026-11-28T14:04:14Z"
+  },
+  "files": {
+    "athan-hxreborn-v11.0.8-all.apk": {
+      "name": "athan-hxreborn",
+      "version": "11.0.8",
+      "appKey": "athan",
+      "appName": "Athan",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.athan",
+      "patchSources": [
+        "hxreborn/patches-1.89.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
+      ],
+      "appliedPatches": [
+        "Dark theme",
+        "Disable tracking",
+        "Remove ads",
+        "Remove promotions",
+        "Save images to gallery",
+        "Unlock premium"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "capcut-durgesh0505-v20.0.0-arm-v7a.apk": {
+      "name": "capcut-durgesh0505",
+      "version": "20.0.0",
+      "appKey": "capcut",
+      "appName": "CapCut",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "durgesh0505",
+      "brandName": "durgesh0505",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.lemon.lvoverseas",
+      "patchSources": [
+        "durgesh0505/patches-1.27.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/durgesh0505/chiggi_morphe_patches/releases/tag/v1.27.8"
+      ],
+      "appliedPatches": [
+        "Allow Functional Network Hosts",
+        "Block All Login Screens",
+        "Block Telemetry & Trackers",
+        "Bypass Effects Region Restriction",
+        "Bypass GeoBlock Region Restriction",
+        "Bypass Signature Check",
+        "Bypass Unsafe Package Modal",
+        "Disable Forced Update",
+        "Hide VPN and Proxy Flags",
+        "Neutralize Play Billing",
+        "Remove Ads",
+        "Remove Login Prompts",
+        "Remove Watermark",
+        "Spoof Region to USA",
+        "Unlock Premium",
+        "Unlock Premium Templates",
+        "Unlock Ultra HD Export",
+        "Unlock Ultra Plan"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "capcut-durgesh0505-v20.0.0-arm64-v8a.apk": {
+      "name": "capcut-durgesh0505",
+      "version": "20.0.0",
+      "appKey": "capcut",
+      "appName": "CapCut",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "durgesh0505",
+      "brandName": "durgesh0505",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.lemon.lvoverseas",
+      "patchSources": [
+        "durgesh0505/patches-1.27.8.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/durgesh0505/chiggi_morphe_patches/releases/tag/v1.27.8"
+      ],
+      "appliedPatches": [
+        "Allow Functional Network Hosts",
+        "Block All Login Screens",
+        "Block Telemetry & Trackers",
+        "Bypass Effects Region Restriction",
+        "Bypass GeoBlock Region Restriction",
+        "Bypass Signature Check",
+        "Bypass Unsafe Package Modal",
+        "Disable Forced Update",
+        "Hide VPN and Proxy Flags",
+        "Neutralize Play Billing",
+        "Remove Ads",
+        "Remove Login Prompts",
+        "Remove Watermark",
+        "Spoof Region to USA",
+        "Unlock Premium",
+        "Unlock Premium Templates",
+        "Unlock Ultra HD Export",
+        "Unlock Ultra Plan"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "facebook-andrewliang25-v577.0.0.50.72-arm64-v8a.apk": {
+      "name": "facebook-andrewliang25",
+      "version": "577.0.0.50.72",
+      "appKey": "facebook",
+      "appName": "Facebook",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "andrewliang25",
+      "brandName": "andrewliang25",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.facebook.katana",
+      "patchSources": [
+        "andrewliang25/patches-4.2.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/andrewliang25/morphe-patches/releases/tag/v4.2.0"
+      ],
+      "appliedPatches": [
+        "[Ad] Block ad telemetry",
+        "[Ad] Block background ad prefetch",
+        "[Ad] Disable Audience Network",
+        "[Feed] Block feed auto refresh",
+        "[Feed] Hide page suggestions and promo cards",
+        "[Feed] Hide post prompts",
+        "[Feed] Hide sponsored posts",
+        "[Fix] Restore screens on re-signed builds",
+        "[General] AMOLED black theme",
+        "[General] Andrew's Patch Setting",
+        "[General] Hide affiliate product links",
+        "[General] Open links in external browser",
+        "[Reels] Download any reel",
+        "[Reels] Hide interest prompts",
+        "[Reels] Hide sponsored reels",
+        "[Reels] Picture-in-picture",
+        "[Stories] Disable auto advance",
+        "[Stories] Download any story",
+        "[Stories] Hide sponsored stories",
+        "[Stories] View stories anonymously"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "gmail-bearinmindcat-v2026.11.02.1012472355.Release-all.apk": {
+      "name": "gmail-bearinmindcat",
+      "version": "2026.11.02.1012472355.Release",
+      "appKey": "gmail",
+      "appName": "Gmail",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "bearinmindcat",
+      "brandName": "bearinmindcat",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.google.android.gm",
+      "patchSources": [
+        "bearinmindcat/patches-2.10.3.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.10.3"
+      ],
+      "appliedPatches": [
+        "Block remote images",
+        "Hide AI",
+        "Hide ads",
+        "Hide upsells",
+        "Mark as read in notifications",
+        "Remove telemetry",
+        "Strip link trackers",
+        "Turn off Smart Compose"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "linkedin-lokesh-v4.1.1276-arm64-v8a.apk": {
+      "name": "linkedin-lokesh",
+      "version": "4.1.1276",
+      "appKey": "linkedin",
+      "appName": "LinkedIn",
+      "arch": "arm64",
+      "fileType": "APK",
+      "brandKey": "lokesh",
+      "brandName": "lokesh",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.linkedin.android",
+      "patchSources": [
+        "lokesh-sparrow/patches-3.6.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/lokesh-sparrow/loki-patches/releases/tag/v3.6.1"
+      ],
+      "appliedPatches": [
+        "Anonymous profile viewing",
+        "Block tracking",
+        "Copy text",
+        "Disable double-tap like",
+        "Disable screenshot share sheet",
+        "Download media",
+        "Expand posts",
+        "Feed filters",
+        "Hide Premium upsells",
+        "Hide ads",
+        "Hide bottom tabs",
+        "Hide promoted jobs",
+        "Hide suggested posts",
+        "Keep feed on reopen",
+        "Messaging",
+        "Open links directly",
+        "Post menu items",
+        "Sanitize share links",
+        "Swipe between feeds",
+        "Tap to hide in viewers"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "linkedin-lokesh-v4.1.1276-arm-v7a.apk": {
+      "name": "linkedin-lokesh",
+      "version": "4.1.1276",
+      "appKey": "linkedin",
+      "appName": "LinkedIn",
+      "arch": "arm",
+      "fileType": "APK",
+      "brandKey": "lokesh",
+      "brandName": "lokesh",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.linkedin.android",
+      "patchSources": [
+        "lokesh-sparrow/patches-3.6.1.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/lokesh-sparrow/loki-patches/releases/tag/v3.6.1"
+      ],
+      "appliedPatches": [
+        "Anonymous profile viewing",
+        "Block tracking",
+        "Copy text",
+        "Disable double-tap like",
+        "Disable screenshot share sheet",
+        "Download media",
+        "Expand posts",
+        "Feed filters",
+        "Hide Premium upsells",
+        "Hide ads",
+        "Hide bottom tabs",
+        "Hide promoted jobs",
+        "Hide suggested posts",
+        "Keep feed on reopen",
+        "Messaging",
+        "Open links directly",
+        "Post menu items",
+        "Sanitize share links",
+        "Swipe between feeds",
+        "Tap to hide in viewers"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "readera-hxreborn-v26.11.06+2360-all.apk": {
+      "name": "readera-hxreborn",
+      "version": "26.11.06+2360",
+      "appKey": "readera",
+      "appName": "ReadEra",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "org.readera",
+      "patchSources": [
+        "hxreborn/patches-1.89.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
+      ],
+      "appliedPatches": [
+        "Accent color",
+        "App theme",
+        "Background listening",
+        "Colored quotes",
+        "Copy with source",
+        "Custom fonts",
+        "Dictionary section",
+        "Dictionary word colors",
+        "Full book descriptions",
+        "Library full screen",
+        "Library view modes",
+        "Lock screen on Read chapter aloud",
+        "Material 3 controls",
+        "More sleep timer choices",
+        "Omit words and symbols",
+        "Page counter in long chapters",
+        "Page thumbnails",
+        "Quotes and notes section",
+        "Read aloud from selection",
+        "Read aloud notification controls",
+        "Read chapter aloud",
+        "Read footnotes aloud",
+        "Remove nags",
+        "Search selection in book",
+        "Skip headers and footers",
+        "Speech pitch slider",
+        "Speech rate slider"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "tasker-kinoosaki-v6.7.8-all.apk": {
+      "name": "tasker-kinoosaki",
+      "version": "6.7.8",
+      "appKey": "tasker",
+      "appName": "Tasker",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "kinoosaki",
+      "brandName": "kinoosaki",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "net.dinglisch.android.taskerm",
+      "patchSources": [
+        "kinoosaki/patches-4.1.4.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/kinoosaki/Kinos-Patches/releases/tag/v4.1.4"
+      ],
+      "appliedPatches": [
+        "Enable Full Version",
+        "GmsCore support"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    },
+    "ilovepdf-hxreborn-v4.2.3-all.apk": {
+      "name": "ilovepdf-hxreborn",
+      "version": "4.2.3",
+      "appKey": "ilovepdf",
+      "appName": "iLovePDF",
+      "arch": "all",
+      "fileType": "APK",
+      "brandKey": "hxreborn",
+      "brandName": "hxreborn",
+      "variant": null,
+      "subVariant": null,
+      "packageName": "com.ilovepdf.www",
+      "patchSources": [
+        "hxreborn/patches-1.89.0.mpp"
+      ],
+      "changelogs": [
+        "https://github.com/hxreborn/morphe-patches/releases/tag/v1.89.0"
+      ],
+      "appliedPatches": [
+        "GmsCore support",
+        "Unlock premium"
+      ],
+      "originBuild": "260635",
+      "publishedAt": "2026-11-28T14:04:14Z"
+    }
+  }
+}
