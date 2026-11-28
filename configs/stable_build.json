@@ -1857,7 +1857,7 @@
     "uptodown-dlurl": "https://microsoft-edge.en.uptodown.com/android"
   },
   "Quranify-hxreborn": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.mchutov.Quranify",
     "app-name": "Quranify",
     "brand": "hxreborn",
@@ -2644,7 +2644,7 @@
     "apkpure-dlurl": "https://apkpure.com/x-formerly-twitter/com.twitter.android"
   },
   "Waze-bearinmindcat": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.waze",
     "app-name": "Waze",
     "brand": "bearinmindcat",
@@ -2667,7 +2667,7 @@
     "apkpure-dlurl": "https://apkpure.com/web-video-cast-browser-to-tv-app/com.instantbits.cast.webvideo"
   },
   "WhatsApp-MightyMich": {
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.whatsapp",
     "app-name": "WhatsApp",
     "brand": "MightyMich",
