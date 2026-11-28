@@ -1,0 +1,10 @@
+[Tasker-kinoosaki]
+enabled = true
+pkg-name = "net.dinglisch.android.taskerm"
+app-name = "Tasker"
+brand = "kinoosaki"
+arch = "all"
+patches-source = "kinoosaki/Kinos-Patches"
+included-patches = "'Enable Full Version' 'GmsCore support'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker"
+apkpure-dlurl = "https://apkpure.com/tasker/net.dinglisch.android.taskerm"
