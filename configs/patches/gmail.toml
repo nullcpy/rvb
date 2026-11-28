@@ -1,0 +1,14 @@
+[Gmail-bearinmindcat]
+enabled = true
+pkg-name = "com.google.android.gm"
+app-name = "Gmail"
+brand = "bearinmindcat"
+arch = "all"
+patches-source = "bearinmindcat/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/gmail"
+uptodown-dlurl = "https://gmail.en.uptodown.com/android"
+apkpure-dlurl = "https://apkpure.com/gmail/com.google.android.gm"
+
+
+
+
