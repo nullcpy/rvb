@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-28T13:56:02Z"
+    "publishedAt": "2026-11-28T16:56:31Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -20,17 +20,17 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.6.4-dev.1.mpp"
+        "RookieEnough/patches-1.6.5-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4-dev.1"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.5-dev.1"
       ],
       "appliedPatches": [
         "Fix selected account persistence",
         "Spoof features"
       ],
-      "originBuild": "260454",
-      "publishedAt": "2026-11-03T12:43:22Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "google-photos-devanced-v7.92.0.977185651-arm64-v8a.apk": {
       "name": "google-photos-devanced",
@@ -45,18 +45,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.6.4-dev.1.mpp"
+        "RookieEnough/patches-1.6.5-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4-dev.1"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.5-dev.1"
       ],
       "appliedPatches": [
         "Fix selected account persistence",
         "GmsCore support",
         "Spoof features"
       ],
-      "originBuild": "260454",
-      "publishedAt": "2026-11-03T12:43:22Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "google-photos-devanced-module-v7.92.0.977185651-arm-v7a.zip": {
       "name": "google-photos-devanced",
@@ -71,17 +71,17 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.6.4-dev.1.mpp"
+        "RookieEnough/patches-1.6.5-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4-dev.1"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.5-dev.1"
       ],
       "appliedPatches": [
         "Fix selected account persistence",
         "Spoof features"
       ],
-      "originBuild": "260454",
-      "publishedAt": "2026-11-03T12:43:22Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "google-photos-devanced-v7.92.0.977185651-arm-v7a.apk": {
       "name": "google-photos-devanced",
@@ -96,18 +96,18 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.photos",
       "patchSources": [
-        "RookieEnough/patches-1.6.4-dev.1.mpp"
+        "RookieEnough/patches-1.6.5-dev.1.mpp"
       ],
       "changelogs": [
-        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.4-dev.1"
+        "https://github.com/RookieEnough/De-Vanced/releases/tag/v1.6.5-dev.1"
       ],
       "appliedPatches": [
         "Fix selected account persistence",
         "GmsCore support",
         "Spoof features"
       ],
-      "originBuild": "260454",
-      "publishedAt": "2026-11-03T12:43:22Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "nuvio-liongalahad-android-tv-clone-v0.9.0-beta-arm64-v8a.apk": {
       "name": "nuvio-liongalahad-android-tv-clone",
@@ -7061,10 +7061,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.3.0-dev.4.mpp"
+        "heval99/patches-3.3.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.5"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7090,8 +7090,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260631",
-      "publishedAt": "2026-11-28T00:14:56Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "truecaller-heval99-module-v26.45.5-arm64-v8a.zip": {
       "name": "truecaller-heval99",
@@ -7106,10 +7106,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.3.0-dev.4.mpp"
+        "heval99/patches-3.3.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.5"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7135,8 +7135,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260631",
-      "publishedAt": "2026-11-28T00:14:56Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "truecaller-heval99-v26.45.5-arm-v7a.apk": {
       "name": "truecaller-heval99",
@@ -7151,10 +7151,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.3.0-dev.4.mpp"
+        "heval99/patches-3.3.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.5"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7181,8 +7181,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260631",
-      "publishedAt": "2026-11-28T00:14:56Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "truecaller-heval99-v26.45.5-arm64-v8a.apk": {
       "name": "truecaller-heval99",
@@ -7197,10 +7197,10 @@
       "subVariant": null,
       "packageName": "com.truecaller",
       "patchSources": [
-        "heval99/patches-3.3.0-dev.4.mpp"
+        "heval99/patches-3.3.0-dev.5.mpp"
       ],
       "changelogs": [
-        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.4"
+        "https://github.com/heval99/Heval-Morphe-Patches/releases/tag/v3.3.0-dev.5"
       ],
       "appliedPatches": [
         "Disable ads",
@@ -7227,8 +7227,8 @@
         "Use SMS for verification codes",
         "Patch settings"
       ],
-      "originBuild": "260631",
-      "publishedAt": "2026-11-28T00:14:56Z"
+      "originBuild": "260636",
+      "publishedAt": "2026-11-28T16:55:46Z"
     },
     "google-photos-akashsriram-unclone-v8.0.0.1011730683-arm-v7a.apk": {
       "name": "google-photos-akashsriram-unclone",
