@@ -4,7 +4,7 @@
   "meta": {
     "build": "beta",
     "channel": "beta",
-    "publishedAt": "2026-11-28T00:15:29Z"
+    "publishedAt": "2026-11-28T13:56:02Z"
   },
   "files": {
     "google-photos-devanced-module-v7.92.0.977185651-arm64-v8a.zip": {
@@ -4122,10 +4122,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4170,6 +4170,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -4196,8 +4197,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-module-v2026.40.0-arm-v7a.zip": {
       "name": "reddit-morphe",
@@ -4212,10 +4213,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4260,6 +4261,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -4286,8 +4288,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-v2026.40.0-arm64-v8a.apk": {
       "name": "reddit-morphe",
@@ -4302,10 +4304,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4350,6 +4352,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -4376,8 +4379,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-v2026.40.0-arm-v7a.apk": {
       "name": "reddit-morphe",
@@ -4392,10 +4395,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -4440,6 +4443,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -4466,8 +4470,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "google-keyboard-jasonwu1994-clone-v18.5.4.993608717-release-arm64-v8a-arm64-v8a.apk": {
       "name": "google-keyboard-jasonwu1994-clone",
@@ -4687,10 +4691,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4788,6 +4792,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -4821,8 +4826,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-module-v21.30.216-arm64-v8a.zip": {
       "name": "youtube-morphe",
@@ -4837,10 +4842,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -4938,6 +4943,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -4971,8 +4977,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-v21.30.216-arm-v7a.apk": {
       "name": "youtube-morphe",
@@ -4987,10 +4993,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5089,6 +5095,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -5122,8 +5129,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-v21.30.216-arm64-v8a.apk": {
       "name": "youtube-morphe",
@@ -5138,10 +5145,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -5240,6 +5247,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -5273,8 +5281,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm64-v8a.zip": {
       "name": "youtube-music-morphe",
@@ -5289,10 +5297,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -5357,8 +5365,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-module-v9.30.53-arm-v7a.zip": {
       "name": "youtube-music-morphe",
@@ -5373,10 +5381,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -5441,8 +5449,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-v9.30.53-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -5457,10 +5465,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -5526,8 +5534,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-v9.30.53-arm64-v8a.apk": {
       "name": "youtube-music-morphe",
@@ -5542,10 +5550,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -5611,8 +5619,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-v9.43.51-arm-v7a.apk": {
       "name": "youtube-music-morphe",
@@ -8032,10 +8040,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8134,6 +8142,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -8167,8 +8176,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-experimental-v21.47.483-arm64-v8a.apk": {
       "name": "youtube-morphe-experimental",
@@ -8183,10 +8192,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8285,6 +8294,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -8318,8 +8328,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-experimental-module-v21.47.483-arm64-v8a.zip": {
       "name": "youtube-morphe-experimental",
@@ -8334,10 +8344,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8435,6 +8445,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -8468,8 +8479,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-morphe-experimental-module-v21.47.483-arm-v7a.zip": {
       "name": "youtube-morphe-experimental",
@@ -8484,10 +8495,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.youtube",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "AI channel filter",
@@ -8585,6 +8596,7 @@
         "Remove background playback restrictions",
         "Remove viewer discretion dialog",
         "Replay slower button",
+        "Restore old Cast behavior",
         "Restore original titles",
         "Return YouTube Dislike",
         "Return YouTube Username",
@@ -8618,8 +8630,8 @@
         "Enable debugging",
         "Android Auto parked app mode"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-experimental-module-v9.47.51-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -8869,10 +8881,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -8917,6 +8929,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -8943,8 +8956,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-experimental-module-v2026.48.0-arm64-v8a.zip": {
       "name": "reddit-morphe-experimental",
@@ -8959,10 +8972,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -9007,6 +9020,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -9033,8 +9047,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-experimental-module-v2026.48.0-arm-v7a.zip": {
       "name": "reddit-morphe-experimental",
@@ -9049,10 +9063,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -9097,6 +9111,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -9123,8 +9138,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "reddit-morphe-experimental-v2026.48.0-arm-v7a.apk": {
       "name": "reddit-morphe-experimental",
@@ -9139,10 +9154,10 @@
       "subVariant": null,
       "packageName": "com.reddit.frontpage",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "Always show Hide",
@@ -9187,6 +9202,7 @@
         "Hide post buttons",
         "Hide sidebar components",
         "High quality avatars",
+        "High-contrast navigation buttons",
         "Home feed tabs",
         "Keep feed position",
         "Keep media viewer in subreddit",
@@ -9213,8 +9229,8 @@
         "Tablet grid feed",
         "Video playback speed"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-experimental-module-v9.47.52-arm-v7a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -9229,10 +9245,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -9297,8 +9313,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-experimental-v9.47.52-arm-v7a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -9313,10 +9329,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -9382,8 +9398,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-experimental-v9.47.52-arm64-v8a.apk": {
       "name": "youtube-music-morphe-experimental",
@@ -9398,10 +9414,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -9467,8 +9483,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "youtube-music-morphe-experimental-module-v9.47.52-arm64-v8a.zip": {
       "name": "youtube-music-morphe-experimental",
@@ -9483,10 +9499,10 @@
       "subVariant": null,
       "packageName": "app.morphe.android.apps.youtube.music",
       "patchSources": [
-        "MorpheApp/patches-2.5.0-dev.2.mpp"
+        "MorpheApp/patches-2.5.0-dev.3.mpp"
       ],
       "changelogs": [
-        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.2"
+        "https://github.com/MorpheApp/morphe-patches/releases/tag/v2.5.0-dev.3"
       ],
       "appliedPatches": [
         "A-B loop",
@@ -9551,8 +9567,8 @@
         "Video effects",
         "Third-party lyrics"
       ],
-      "originBuild": "260627",
-      "publishedAt": "2026-11-27T14:36:39Z"
+      "originBuild": "260634",
+      "publishedAt": "2026-11-28T13:55:17Z"
     },
     "google-photos-akashsriram-v8.2.1.1030128190-arm-v7a.apk": {
       "name": "google-photos-akashsriram",
