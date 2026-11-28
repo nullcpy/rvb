@@ -3875,6 +3875,114 @@
         "arch": "all",
         "build-mode": "apk"
       }
+    },
+    "Athan-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "Athan",
+        "pkg-name": "com.athan",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "CapCut-durgesh0505": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "durgesh0505/chiggi_morphe_patches",
+        "brand": "durgesh0505",
+        "app-name": "CapCut",
+        "pkg-name": "com.lemon.lvoverseas",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Gmail-bearinmindcat": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "bearinmindcat/morphe-patches",
+        "brand": "bearinmindcat",
+        "app-name": "Gmail",
+        "pkg-name": "com.google.android.gm",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "iLovePDF-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "iLovePDF",
+        "pkg-name": "com.ilovepdf.www",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "LinkedIn-lokesh": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "lokesh-sparrow/loki-patches",
+        "brand": "lokesh",
+        "app-name": "LinkedIn",
+        "pkg-name": "com.linkedin.android",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "ReadEra-hxreborn": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "hxreborn/morphe-patches",
+        "brand": "hxreborn",
+        "app-name": "ReadEra",
+        "pkg-name": "org.readera",
+        "arch": "all",
+        "build-mode": "apk"
+      }
+    },
+    "MicrosoftSwiftKey-murilosimao": {
+      "arches": [
+        "arm-v7a",
+        "arm64-v8a"
+      ],
+      "cfg": {
+        "patches-source": "murilosimao/swiftkey-patch",
+        "brand": "murilosimao",
+        "app-name": "Microsoft Swiftkey",
+        "pkg-name": "com.touchtype.swiftkey",
+        "arch": "both",
+        "build-mode": "apk"
+      }
+    },
+    "Tasker-kinoosaki": {
+      "arches": [
+        "all"
+      ],
+      "cfg": {
+        "patches-source": "kinoosaki/Kinos-Patches",
+        "brand": "kinoosaki",
+        "app-name": "Tasker",
+        "pkg-name": "net.dinglisch.android.taskerm",
+        "included-patches": "'Enable Full Version' 'GmsCore support'",
+        "arch": "all",
+        "build-mode": "apk"
+      }
     }
   },
   "beta": {
