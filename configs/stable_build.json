@@ -3,7 +3,7 @@
   "Automate-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.llamalab.automate",
     "app-name": "Automate",
     "build-mode": "both",
@@ -13,7 +13,7 @@
   "Speedtest-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "org.zwanoo.android.speedtest",
     "app-name": "Speedtest",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ookla/speedtest",
@@ -22,7 +22,7 @@
   "Autosync-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.ttxapps.autosync",
     "app-name": "Autosync",
     "arch": "arm64-v8a",
@@ -32,7 +32,7 @@
   "Inshorts-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.nis.app",
     "app-name": "Inshorts",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2",
@@ -41,7 +41,7 @@
   "VPNify-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.vpn.free.hotspot.secure.vpnify",
     "app-name": "VPNify",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy",
@@ -51,7 +51,7 @@
   "Backdrops-BholeyKaBhakt": {
     "patches-source": "BholeyKaBhakt/revanced-patches-xtra",
     "brand": "BholeyKaBhakt",
-    "enabled": true,
+    "enabled": false,
     "pkg-name": "com.backdrops.wallpapers",
     "app-name": "Backdrops",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers",
@@ -291,6 +291,16 @@
     "apkpure-dlurl": "https://apkpure.com/aliexpress/com.alibaba.aliexpresshd",
     "apkcombo-dlurl": "https://apkcombo.com/aliexpress-shopping-app/com.alibaba.aliexpresshd"
   },
+  "Athan-hxreborn": {
+    "enabled": true,
+    "pkg-name": "com.athan",
+    "app-name": "Athan",
+    "brand": "hxreborn",
+    "arch": "all",
+    "patches-source": "hxreborn/morphe-patches",
+    "uptodown-dlurl": "https://athan-prayer-times-quran-more.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/athan-prayer-times-dua-azkar/com.athan"
+  },
   "MoonPlusReader-binarymend": {
     "patches-source": "binarymend/morphe-patches",
     "brand": "binarymend",
@@ -372,6 +382,26 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftapps-org/swift-backup",
     "apkpure-dlurl": "https://apkpure.com/swift-backup/org.swiftapps.swiftbackup",
     "apkcombo-dlurl": "https://apkcombo.com/swift-backup/org.swiftapps.swiftbackup"
+  },
+  "CapCut-riky": {
+    "enabled": false,
+    "pkg-name": "com.lemon.lvoverseas",
+    "app-name": "CapCut",
+    "brand": "riky",
+    "patches-source": "riky-dev/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
+    "uptodown-dlurl": "https://viamaker.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
+  },
+  "CapCut-durgesh0505": {
+    "enabled": true,
+    "pkg-name": "com.lemon.lvoverseas",
+    "app-name": "CapCut",
+    "brand": "durgesh0505",
+    "patches-source": "durgesh0505/chiggi_morphe_patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
+    "uptodown-dlurl": "https://viamaker.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
   },
   "ChessDotCom-Prathxm": {
     "enabled": false,
@@ -580,7 +610,7 @@
     "apkcombo-dlurl": "https://apkcombo.com/facebook/com.facebook.katana"
   },
   "Facebook-andrewliang25": {
-    "enabled": false,
+    "enabled": true,
     "pkg-name": "com.facebook.katana",
     "app-name": "Facebook",
     "patches-source": "andrewliang25/morphe-patches",
@@ -679,6 +709,17 @@
     "uptodown-dlurl": "https://offline-games-no-wifi-games.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/jindoblu/offline-games-no-wifi-games",
     "apkpure-dlurl": "https://apkpure.com/offline-games-no-wifi-games/com.JindoBlu.OfflineGames"
+  },
+  "Gmail-bearinmindcat": {
+    "enabled": true,
+    "pkg-name": "com.google.android.gm",
+    "app-name": "Gmail",
+    "brand": "bearinmindcat",
+    "arch": "all",
+    "patches-source": "bearinmindcat/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/google-inc/gmail",
+    "uptodown-dlurl": "https://gmail.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/gmail/com.google.android.gm"
   },
   "GoogleMaps-bearinmindcat": {
     "enabled": false,
@@ -1090,17 +1131,6 @@
     "apkpure-dlurl": "https://apkpure.com/tumblr-1-for-android-app/com.tumblr",
     "apkcombo-dlurl": "https://apkcombo.com/tumblr/com.tumblr"
   },
-  "MicrosoftSwiftKey-hooman": {
-    "patches-source": "arandomhooman/hoomans-morphe-patches",
-    "brand": "hooman",
-    "enabled": false,
-    "pkg-name": "com.touchtype.swiftkey",
-    "app-name": "Microsoft Swiftkey",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard",
-    "uptodown-dlurl": "https://swiftkey-keyboard.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey",
-    "apkcombo-dlurl": "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
-  },
   "Showly-hxreborn": {
     "patches-source": "hxreborn/morphe-patches",
     "brand": "hxreborn",
@@ -1152,6 +1182,17 @@
     "uptodown-dlurl": "https://proton-pass.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/proton-technologies-ag/proton-pass-password-manager",
     "apkpure-dlurl": "https://apkpure.com/password-manager-proton-pass/proton.android.pass"
+  },
+  "iLovePDF-hxreborn": {
+    "enabled": true,
+    "pkg-name": "com.ilovepdf.www",
+    "app-name": "iLovePDF",
+    "brand": "hxreborn",
+    "arch": "all",
+    "patches-source": "hxreborn/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/ilovepdf/ilovepdf-pdf-editor-scanner",
+    "uptodown-dlurl": "https://ilovepdf.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/ilovepdf-pdf-editor-scanner/com.ilovepdf.www"
   },
   "Instagram-Aunali321": {
     "enabled": false,
@@ -1452,6 +1493,16 @@
     "app-name": "LinkedIn",
     "brand": "michii",
     "patches-source": "heyymichii/michii-patches",
+    "uptodown-dlurl": "https://linkedin.en.uptodown.com/android",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/linkedin/linkedin-linkedin",
+    "apkpure-dlurl": "https://apkpure.com/linkedin-network-job-finder/com.linkedin.android"
+  },
+  "LinkedIn-lokesh": {
+    "enabled": true,
+    "pkg-name": "com.linkedin.android",
+    "app-name": "LinkedIn",
+    "brand": "lokesh",
+    "patches-source": "lokesh-sparrow/loki-patches",
     "uptodown-dlurl": "https://linkedin.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/linkedin/linkedin-linkedin",
     "apkpure-dlurl": "https://apkpure.com/linkedin-network-job-finder/com.linkedin.android"
@@ -1865,6 +1916,16 @@
     "uptodown-dlurl": "https://quranify.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/quranify-quran-audio-player/com.mchutov.Quranify"
   },
+  "ReadEra-hxreborn": {
+    "enabled": true,
+    "pkg-name": "org.readera",
+    "app-name": "ReadEra",
+    "brand": "hxreborn",
+    "arch": "all",
+    "patches-source": "hxreborn/morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/readera-llc/readera-free-ebook-reader",
+    "apkpure-dlurl": "https://apkpure.com/readera-%E2%80%93-book-reader-pdf-epub/org.readera"
+  },
   "Reddit-Morphe": {
     "enabled": false,
     "pkg-name": "com.reddit.frontpage",
@@ -1924,16 +1985,6 @@
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/ridmik-labs/ridmik-keyboard",
     "uptodown-dlurl": "https://ridmik-keyboard.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/ridmik-keyboard/ridmik.keyboard"
-  },
-  "CapCut-riky": {
-    "patches-source": "riky-dev/morphe-patches",
-    "brand": "riky",
-    "enabled": false,
-    "pkg-name": "com.lemon.lvoverseas",
-    "app-name": "CapCut",
-    "apkmirror-dlurl": "https://www.apkmirror.com/apk/bytedance-pte-ltd/capcut",
-    "uptodown-dlurl": "https://viamaker.en.uptodown.com/android",
-    "apkpure-dlurl": "https://apkpure.com/capcut-video-editor/com.lemon.lvoverseas"
   },
   "Rumble-hooman": {
     "enabled": false,
@@ -2279,6 +2330,28 @@
     "uptodown-dlurl": "https://swamp-attack-2.en.uptodown.com/android",
     "apkpure-dlurl": "https://apkpure.com/swamp-attack-2/com.hyperdotstudios.swampattack2"
   },
+  "MicrosoftSwiftKey-hooman": {
+    "enabled": false,
+    "pkg-name": "com.touchtype.swiftkey",
+    "app-name": "Microsoft Swiftkey",
+    "brand": "hooman",
+    "patches-source": "arandomhooman/hoomans-morphe-patches",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard",
+    "uptodown-dlurl": "https://swiftkey-keyboard.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey",
+    "apkcombo-dlurl": "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
+  },
+  "MicrosoftSwiftKey-murilosimao": {
+    "enabled": true,
+    "pkg-name": "com.touchtype.swiftkey",
+    "app-name": "Microsoft Swiftkey",
+    "brand": "murilosimao",
+    "patches-source": "murilosimao/swiftkey-patch",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/swiftkey/swiftkey-keyboard",
+    "uptodown-dlurl": "https://swiftkey-keyboard.en.uptodown.com/android",
+    "apkpure-dlurl": "https://apkpure.com/microsoft-swiftkey-keyboard/com.touchtype.swiftkey",
+    "apkcombo-dlurl": "https://apkcombo.com/microsoft-swiftkey-ai-keyboard/com.touchtype.swiftkey"
+  },
   "SyncForReddit-RashKash103": {
     "enabled": false,
     "pkg-name": "com.laurencedawson.reddit_sync",
@@ -2289,6 +2362,17 @@
     "uptodown-dlurl": "https://sync-for-reddit.en.uptodown.com/android",
     "apkmirror-dlurl": "https://www.apkmirror.com/apk/red-apps-ltd/sync-for-reddit",
     "apkpure-dlurl": "https://apkpure.com/sync-for-reddit/com.laurencedawson.reddit_sync"
+  },
+  "Tasker-kinoosaki": {
+    "enabled": true,
+    "pkg-name": "net.dinglisch.android.taskerm",
+    "app-name": "Tasker",
+    "brand": "kinoosaki",
+    "arch": "all",
+    "patches-source": "kinoosaki/Kinos-Patches",
+    "included-patches": "'Enable Full Version' 'GmsCore support'",
+    "apkmirror-dlurl": "https://www.apkmirror.com/apk/joaomgcd/tasker",
+    "apkpure-dlurl": "https://apkpure.com/tasker/net.dinglisch.android.taskerm"
   },
   "Telegram-Aunali321-GooglePlay": {
     "enabled": false,
