@@ -1,0 +1,9 @@
+[ReadEra-hxreborn]
+enabled = true
+pkg-name = "org.readera"
+app-name = "ReadEra"
+brand = "hxreborn"
+arch = "all"
+patches-source = "hxreborn/morphe-patches"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/readera-llc/readera-free-ebook-reader"
+apkpure-dlurl = "https://apkpure.com/readera-%E2%80%93-book-reader-pdf-epub/org.readera"
